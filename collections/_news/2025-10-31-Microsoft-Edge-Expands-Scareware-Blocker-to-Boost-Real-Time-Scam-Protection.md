@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Edge Expands Scareware Blocker to Boost Real-Time Scam Protection"
-description: "This article describes how Microsoft Edge's Scareware blocker is now enabled by default on most Windows and Mac devices, offering advanced AI-powered protection against scam websites. It highlights technical improvements, new real-time integration with Microsoft Defender SmartScreen, and enterprise controls for IT professionals. Readers will learn about the architecture of the blocker, results from its preview, and future advances in scam detection and user protection."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/msedgedev/2025/10/31/protecting-more-edge-users-with-expanded-scareware-blocker-availability-and-real-time-protection/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Edge Expands Scareware Blocker to Boost Real-Time Scam Protection
+author: stclarke
+canonical_url: https://blogs.windows.com/msedgedev/2025/10/31/protecting-more-edge-users-with-expanded-scareware-blocker-availability-and-real-time-protection/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-31 16:40:39 +00:00
-permalink: "/2025-10-31-Microsoft-Edge-Expands-Scareware-Blocker-to-Boost-Real-Time-Scam-Protection.html"
-categories: ["Security"]
-tags: ["AI", "AI Powered Security", "Browser Security", "Company News", "Computer Vision", "Cybersecurity", "Enterprise Policy", "IT Pro", "Mac", "Microsoft Edge", "News", "Phishing Protection", "Real Time Protection", "Scareware Blocker", "Security", "SmartScreen", "Threat Intelligence", "User Feedback", "Windows"]
-tags_normalized: ["ai", "ai powered security", "browser security", "company news", "computer vision", "cybersecurity", "enterprise policy", "it pro", "mac", "microsoft edge", "news", "phishing protection", "real time protection", "scareware blocker", "security", "smartscreen", "threat intelligence", "user feedback", "windows"]
+permalink: /security/news/Microsoft-Edge-Expands-Scareware-Blocker-to-Boost-Real-Time-Scam-Protection
+tags:
+- AI
+- AI Powered Security
+- Browser Security
+- Company News
+- Computer Vision
+- Cybersecurity
+- Enterprise Policy
+- IT Pro
+- Mac
+- Microsoft Edge
+- News
+- Phishing Protection
+- Real Time Protection
+- Scareware Blocker
+- Security
+- SmartScreen
+- Threat Intelligence
+- User Feedback
+- Windows
+section_names:
+- security
 ---
-
 stclarke details how Microsoft Edge's Scareware blocker now shields more users by default, integrating closely with Defender SmartScreen for faster, AI-driven detection and robust browser security.<!--excerpt_end-->
 
 # Protecting More Edge Users with Expanded Scareware Blocker Availability and Real-Time Protection

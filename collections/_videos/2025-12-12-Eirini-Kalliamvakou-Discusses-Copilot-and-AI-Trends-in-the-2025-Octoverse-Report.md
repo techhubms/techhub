@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report"
-description: "This video features GitHub Research Advisor Eirini Kalliamvakou offering expert insights on the 2025 Octoverse report, including the impact of GitHub Copilot on pull requests, onboarding, AI sentiment shifts among developers, and how these AI tools are influencing developer teams and organizational dynamics."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=riTyEDJdpEw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=riTyEDJdpEw
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-12 15:01:50 +00:00
-permalink: "/2025-12-12-Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Sentiment", "AI Trends", "Developer Onboarding", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "Octoverse", "Pull Requests", "Research Insights", "Software Development", "Team Dynamics", "Videos"]
-tags_normalized: ["ai", "ai sentiment", "ai trends", "developer onboarding", "developer productivity", "devops", "github", "github copilot", "octoverse", "pull requests", "research insights", "software development", "team dynamics", "videos"]
+permalink: /github-copilot/videos/Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report
+tags:
+- AI
+- AI Sentiment
+- AI Trends
+- Developer Onboarding
+- Developer Productivity
+- DevOps
+- GitHub
+- GitHub Copilot
+- Octoverse
+- Pull Requests
+- Research Insights
+- Software Development
+- Team Dynamics
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub's Eirini Kalliamvakou shares valuable insights from the 2025 Octoverse report, focusing on GitHub Copilot's role in pull requests, developer onboarding, and team dynamics.<!--excerpt_end-->
 
 {% youtube riTyEDJdpEw %}

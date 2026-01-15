@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Security Risks from Deleted GitHub Commits: Admin Access to Istio Exposed"
-description: "This article details how a security researcher discovered that supposedly deleted commits on GitHub can linger and reveal sensitive secrets. By analyzing public commit archives, the researcher uncovered a token granting admin access to all Istio repositories—demonstrating real-world risks from mishandled secrets in source control, persistent repository history, and third-party archives. The incident underscores the importance of proper key revocation, advanced repository hygiene techniques, and proactive developer education. GitHub's guidance for cleaning histories, community tools for secret detection, and best practices to mitigate similar issues are also discussed."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: 'Security Risks from Deleted GitHub Commits: Admin Access to Istio Exposed'
+author: Tim Anderson
+canonical_url: https://devclass.com/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2025-07-03 14:48:30 +00:00
-permalink: "/2025-07-03-Security-Risks-from-Deleted-GitHub-Commits-Admin-Access-to-Istio-Exposed.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Credential Leaks", "DevOps", "DevOps Security", "DevSecOps", "GH Archive", "Git", "Git Filter Repo", "GitHub", "Infosec", "Istio", "Kubernetes", "Personal Access Token", "Repository Hygiene", "Secret Management", "Security", "Service Mesh", "Source Control", "Token Revocation", "Truffle Security"]
-tags_normalized: ["blogs", "credential leaks", "devops", "devops security", "devsecops", "gh archive", "git", "git filter repo", "github", "infosec", "istio", "kubernetes", "personal access token", "repository hygiene", "secret management", "security", "service mesh", "source control", "token revocation", "truffle security"]
+permalink: /devops/blogs/Security-Risks-from-Deleted-GitHub-Commits-Admin-Access-to-Istio-Exposed
+tags:
+- Blogs
+- Credential Leaks
+- DevOps
+- DevOps Security
+- DevSecOps
+- GH Archive
+- Git
+- Git Filter Repo
+- GitHub
+- Infosec
+- Istio
+- Kubernetes
+- Personal Access Token
+- Repository Hygiene
+- Secret Management
+- Security
+- Service Mesh
+- Source Control
+- Token Revocation
+- Truffle Security
+section_names:
+- devops
+- security
 ---
-
 Tim Anderson's article explores how lingering commit history on GitHub enabled a researcher to find secrets—including admin tokens for Istio—highlighting security risks and mitigation strategies for developers.<!--excerpt_end-->
 
 # Security Risks from Deleted GitHub Commits: Admin Access to Istio Exposed

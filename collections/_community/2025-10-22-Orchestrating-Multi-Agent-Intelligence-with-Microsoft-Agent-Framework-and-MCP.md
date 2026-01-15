@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP"
-description: "This in-depth article by heenaugale demonstrates how to build modular, stateful, and orchestrated AI systems with Microsoft's Agent Framework and Model Context Protocol (MCP). The content covers multi-agent patterns—including Single Agent, Reflection, Handoff, and Magentic Orchestration—using Cosmos DB for session state and FastAPI for backend orchestration. It features a real-world customer support chatbot scenario, memory and state management design, and practical pattern implementations, all focused on reliable, auditable, and flexible AI coordination."
-author: "heenaugale"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP
+author: heenaugale
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 17:59:16 +00:00
-permalink: "/2025-10-22-Orchestrating-Multi-Agent-Intelligence-with-Microsoft-Agent-Framework-and-MCP.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Orchestration", "Azure", "Coding", "Community", "Cosmos DB", "Customer Support Bot", "FastAPI", "Handoff Pattern", "Magentic Orchestration", "MCP", "Microsoft Agent Framework", "Multi Agent Systems", "Python", "React", "Reflection Pattern", "Session Memory", "State Management", "Vector Embeddings"]
-tags_normalized: ["ai", "ai orchestration", "azure", "coding", "community", "cosmos db", "customer support bot", "fastapi", "handoff pattern", "magentic orchestration", "mcp", "microsoft agent framework", "multi agent systems", "python", "react", "reflection pattern", "session memory", "state management", "vector embeddings"]
+permalink: /ai/community/Orchestrating-Multi-Agent-Intelligence-with-Microsoft-Agent-Framework-and-MCP
+tags:
+- AI
+- AI Orchestration
+- Azure
+- Coding
+- Community
+- Cosmos DB
+- Customer Support Bot
+- FastAPI
+- Handoff Pattern
+- Magentic Orchestration
+- MCP
+- Microsoft Agent Framework
+- Multi Agent Systems
+- Python
+- React
+- Reflection Pattern
+- Session Memory
+- State Management
+- Vector Embeddings
+section_names:
+- ai
+- azure
+- coding
 ---
-
 heenaugale explores how the Microsoft Agent Framework and Model Context Protocol enable modular AI orchestration, showcasing practical multi-agent collaboration patterns built on Azure technology.<!--excerpt_end-->
 
 # Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP

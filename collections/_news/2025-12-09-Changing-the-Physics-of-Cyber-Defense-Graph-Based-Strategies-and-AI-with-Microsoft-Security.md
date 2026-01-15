@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Changing the Physics of Cyber Defense: Graph-Based Strategies and AI with Microsoft Security"
-description: "This article by John Lambert, CTO and Security Fellow at Microsoft, explores how organizations can strengthen their cyber defenses using graph-powered data analysis and AI-driven security tools. It covers attack graph construction, security hygiene best practices, the importance of collaboration and intelligence sharing, and how advanced AI and graph-based approaches enable defenders to stay ahead of evolving threats."
-author: "John Lambert"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Changing the Physics of Cyber Defense: Graph-Based Strategies and AI with Microsoft Security'
+author: John Lambert
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-09 17:00:00 +00:00
-permalink: "/2025-12-09-Changing-the-Physics-of-Cyber-Defense-Graph-Based-Strategies-and-AI-with-Microsoft-Security.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI in Security", "Attack Graphs", "Azure", "Azure Data Explorer", "Best Practices", "Collaboration", "Cyber Defense", "Defender For Endpoint", "Entitlement Management", "Identity Management", "Incident Response", "Kusto Query Language", "Microsoft Security", "Microsoft Threat Intelligence Center", "Multifactor Authentication", "News", "Security", "Security Analytics", "Security Data Visualization", "Security Frameworks", "Security Hygiene", "Telemetry", "Threat Detection"]
-tags_normalized: ["ai", "ai in security", "attack graphs", "azure", "azure data explorer", "best practices", "collaboration", "cyber defense", "defender for endpoint", "entitlement management", "identity management", "incident response", "kusto query language", "microsoft security", "microsoft threat intelligence center", "multifactor authentication", "news", "security", "security analytics", "security data visualization", "security frameworks", "security hygiene", "telemetry", "threat detection"]
+permalink: /ai/news/Changing-the-Physics-of-Cyber-Defense-Graph-Based-Strategies-and-AI-with-Microsoft-Security
+tags:
+- AI
+- AI in Security
+- Attack Graphs
+- Azure
+- Azure Data Explorer
+- Best Practices
+- Collaboration
+- Cyber Defense
+- Defender For Endpoint
+- Entitlement Management
+- Identity Management
+- Incident Response
+- Kusto Query Language
+- Microsoft Security
+- Microsoft Threat Intelligence Center
+- Multifactor Authentication
+- News
+- Security
+- Security Analytics
+- Security Data Visualization
+- Security Frameworks
+- Security Hygiene
+- Telemetry
+- Threat Detection
+section_names:
+- ai
+- azure
+- security
 ---
-
 In this article, John Lambert shares practical guidance for cyber defense, emphasizing attack graphs, AI tools, and Microsoft Security best practices to help practitioners read threats and improve their security posture.<!--excerpt_end-->
 
 # Changing the Physics of Cyber Defense: Graph-Based Strategies and AI

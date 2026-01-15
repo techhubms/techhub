@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Build Partner Advantage: Drive Key AI Use-Cases with Azure Tech Stack"
-description: "This session from Microsoft Ignite 2025 explores how partners can harness the Azure tech stack—including app, data, and AI platforms—to create impactful apps and agents for customers. It covers the integration of Azure AI, Fabric data services, Azure Web Apps, collaboration resources, and strategies for global deployment and partnership growth, along with available certifications and engineering support for partners."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4Hfx6QLyIag"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Build Partner Advantage: Drive Key AI Use-Cases with Azure Tech Stack'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=4Hfx6QLyIag
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:23:06 +00:00
-permalink: "/2025-11-24-Build-Partner-Advantage-Drive-Key-AI-Use-Cases-with-Azure-Tech-Stack.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "App Development", "Automation", "Azure", "Azure AI", "Azure Foundry", "Azure Web Apps", "Campaign in A Box", "Cloud Partners", "Data Platforms", "Engineering Collaboration", "Fabric Data Integration", "Global Deployment", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Ecosystem", "Partner Funding", "Specializations", "Videos"]
-tags_normalized: ["ai", "ai agents", "app development", "automation", "azure", "azure ai", "azure foundry", "azure web apps", "campaign in a box", "cloud partners", "data platforms", "engineering collaboration", "fabric data integration", "global deployment", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner ecosystem", "partner funding", "specializations", "videos"]
+permalink: /ai/videos/Build-Partner-Advantage-Drive-Key-AI-Use-Cases-with-Azure-Tech-Stack
+tags:
+- AI
+- AI Agents
+- App Development
+- Automation
+- Azure
+- Azure AI
+- Azure Foundry
+- Azure Web Apps
+- Campaign in A Box
+- Cloud Partners
+- Data Platforms
+- Engineering Collaboration
+- Fabric Data Integration
+- Global Deployment
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Ecosystem
+- Partner Funding
+- Specializations
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this session presented by Ashley Asdourian, Tim Denley, and Don Scott at Microsoft Ignite 2025, partners learn to drive key AI use-cases using the full Azure tech stack and supporting resources.<!--excerpt_end-->
 
 {% youtube 4Hfx6QLyIag %}

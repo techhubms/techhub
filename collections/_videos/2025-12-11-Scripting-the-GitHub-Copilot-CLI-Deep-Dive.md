@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Scripting the GitHub Copilot CLI - Deep Dive"
-description: "This video presents an in-depth look at advanced usage of the GitHub Copilot CLI. Led by John, it goes beyond introductory tutorials to illustrate techniques for scripting and automating developer workflows using Copilot CLI in the context of modern development environments, with a focus on practical automation for daily development activities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ed3uQYdr3Wc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Scripting the GitHub Copilot CLI - Deep Dive
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Ed3uQYdr3Wc
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 22:29:17 +00:00
-permalink: "/2025-12-11-Scripting-the-GitHub-Copilot-CLI-Deep-Dive.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development Tools", "Automation", "CLI Automation", "Cloud Computing", "Coding", "Copilot", "Dev", "Developer", "Developer Productivity", "Development", "Development Workflows", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft", "Scripting", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai development tools", "automation", "cli automation", "cloud computing", "coding", "copilot", "dev", "developer", "developer productivity", "development", "development workflows", "github copilot", "github copilot cli", "microsoft", "scripting", "tech", "technology", "videos", "vs code"]
+permalink: /github-copilot/videos/Scripting-the-GitHub-Copilot-CLI-Deep-Dive
+tags:
+- AI
+- AI Development Tools
+- Automation
+- CLI Automation
+- Cloud Computing
+- Coding
+- Copilot
+- Dev
+- Developer
+- Developer Productivity
+- Development
+- Development Workflows
+- GitHub Copilot
+- GitHub Copilot CLI
+- Microsoft
+- Scripting
+- Tech
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this video, Microsoft Developer's John explores advanced scripting and automation strategies using the GitHub Copilot CLI, providing practical guidance for developers seeking to enhance their workflow.<!--excerpt_end-->
 
 {% youtube Ed3uQYdr3Wc %}

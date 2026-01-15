@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Variable Library Support Now Available in Microsoft Fabric Notebooks"
-description: "Microsoft Fabric introduces Variable Library support for notebooks, enabling developers and data engineers to centrally manage configuration across environments. This feature streamlines CI/CD workflows, simplifies Spark parameterization, and offers robust integration with NotebookUtils and Service Principal authentication for enterprise automation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Variable Library Support Now Available in Microsoft Fabric Notebooks
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 10:00:00 +00:00
-permalink: "/2025-12-11-Variable-Library-Support-Now-Available-in-Microsoft-Fabric-Notebooks.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Azure", "CI/CD", "Coding", "Configuration Management", "Data Engineering", "DevOps", "Dynamic Runtime Settings", "Enterprise Automation", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebooks", "NotebookUtils", "Parameterization", "Service Principal", "Spark Development", "SPN Authentication", "Variable Library"]
-tags_normalized: ["azure", "cislashcd", "coding", "configuration management", "data engineering", "devops", "dynamic runtime settings", "enterprise automation", "lakehouse", "microsoft fabric", "ml", "news", "notebooks", "notebookutils", "parameterization", "service principal", "spark development", "spn authentication", "variable library"]
+permalink: /ml/news/Variable-Library-Support-Now-Available-in-Microsoft-Fabric-Notebooks
+tags:
+- Azure
+- CI/CD
+- Coding
+- Configuration Management
+- Data Engineering
+- DevOps
+- Dynamic Runtime Settings
+- Enterprise Automation
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Notebooks
+- NotebookUtils
+- Parameterization
+- Service Principal
+- Spark Development
+- SPN Authentication
+- Variable Library
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog explains how Variable Library support in notebooks streamlines configuration management, CI/CD flows, and secure automation for developers and data engineers.<!--excerpt_end-->
 
 # Variable Library Support Now Available in Microsoft Fabric Notebooks

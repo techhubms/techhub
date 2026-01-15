@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Modernizing ERP with RISE with SAP on Microsoft Azure"
-description: "This session from Microsoft Ignite 2025 explores how SAP customers can modernize their ERP systems using the Microsoft Cloud. It covers Azure infrastructure innovations for RISE with SAP, AI-driven monitoring, security enhancements with Microsoft Defender and Sentinel, and how organizations meet compliance requirements. The session also features demonstrations of Copilot and Joule for SAP data workflows and integration with business process solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=q7PdMVpW-04"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing ERP with RISE with SAP on Microsoft Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=q7PdMVpW-04
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:48:41 +00:00
-permalink: "/2025-11-20-Modernizing-ERP-with-RISE-with-SAP-on-Microsoft-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Monitoring", "Azure", "Azure Infrastructure", "Business Process Solutions", "Compliance", "Copilot", "Data Sovereignty", "High SLA", "Joule", "Microsoft Azure", "Microsoft Defender", "Microsoft Sentinel", "Migrateandmodernizeyourestate", "MSIgnite", "Performance Optimization", "RISE With SAP", "SAP BDC", "SAP BTP", "SAP Business Suite", "Security", "Videos"]
-tags_normalized: ["ai", "ai monitoring", "azure", "azure infrastructure", "business process solutions", "compliance", "copilot", "data sovereignty", "high sla", "joule", "microsoft azure", "microsoft defender", "microsoft sentinel", "migrateandmodernizeyourestate", "msignite", "performance optimization", "rise with sap", "sap bdc", "sap btp", "sap business suite", "security", "videos"]
+permalink: /ai/videos/Modernizing-ERP-with-RISE-with-SAP-on-Microsoft-Azure
+tags:
+- AI
+- AI Monitoring
+- Azure
+- Azure Infrastructure
+- Business Process Solutions
+- Compliance
+- Copilot
+- Data Sovereignty
+- High SLA
+- Joule
+- Microsoft Azure
+- Microsoft Defender
+- Microsoft Sentinel
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Performance Optimization
+- RISE With SAP
+- SAP BDC
+- SAP BTP
+- SAP Business Suite
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 In this Microsoft Ignite session, Wael Elkabbany and Hiren Shah demonstrate how organizations can modernize their ERP through RISE with SAP on Microsoft Azure, highlighting infrastructure, AI-driven monitoring, security, and workflow integrations.<!--excerpt_end-->
 
 {% youtube q7PdMVpW-04 %}

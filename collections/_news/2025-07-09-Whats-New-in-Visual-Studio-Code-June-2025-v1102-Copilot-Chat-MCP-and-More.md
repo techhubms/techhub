@@ -1,20 +1,43 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Visual Studio Code June 2025 (v1.102): Copilot Chat, MCP, and More"
-description: "The June 2025 release of Visual Studio Code (v1.102) introduces major improvements for developers, including the open sourcing of the GitHub Copilot Chat extension, general availability of MCP server support with profile integration, enhanced agent-based automation, and numerous coding, DevOps, and AI advancements. This release also features a host of usability, accessibility, terminal, and Python development updates."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_102"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_102
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-07-09 17:00:00 +00:00
-permalink: "/2025-07-09-Whats-New-in-Visual-Studio-Code-June-2025-v1102-Copilot-Chat-MCP-and-More.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Mode", "AI", "AI Tools", "Chat Mode", "Coding", "Custom Instructions", "DevOps", "Extension Development", "GitHub Copilot", "GitHub Copilot Chat", "MCP Servers", "News", "Open Source", "Pull Requests", "Pylance", "Python", "Release Notes", "Settings Sync", "Terminal Automation", "TypeScript", "VS Code", "VS Code 1.102"]
-tags_normalized: ["accessibility", "agent mode", "ai", "ai tools", "chat mode", "coding", "custom instructions", "devops", "extension development", "github copilot", "github copilot chat", "mcp servers", "news", "open source", "pull requests", "pylance", "python", "release notes", "settings sync", "terminal automation", "typescript", "vs code", "vs code 1dot102"]
+permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-June-2025-v1102-Copilot-Chat-MCP-and-More
+tags:
+- Accessibility
+- Agent Mode
+- AI
+- AI Tools
+- Chat Mode
+- Coding
+- Custom Instructions
+- DevOps
+- Extension Development
+- GitHub Copilot
+- GitHub Copilot Chat
+- MCP Servers
+- News
+- Open Source
+- Pull Requests
+- Pylance
+- Python
+- Release Notes
+- Settings Sync
+- Terminal Automation
+- TypeScript
+- VS Code
+- VS Code 1.102
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Visual Studio Code Team highlights the key features of the June 2025 (v1.102) release, including the open sourced GitHub Copilot Chat extension, integrated MCP server management, and advanced AI and coding workflows.<!--excerpt_end-->
 
 # Visual Studio Code June 2025 Release Notes (v1.102)

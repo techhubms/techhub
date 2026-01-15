@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security"
-description: "This article introduces the Microsoft Security Store, a newly launched unified marketplace where organizations can discover, purchase, and deploy trusted security solutions and AI-powered agents verified to work with Microsoft Security products. The store features offerings from Microsoft and leading partners, covering threat protection, identity management, compliance, AI-driven security automation, and more. Both customers and partners benefit from streamlined discovery, deployment, and monetization within a single, security-centric experience integrated with Microsoft Azure billing and ecosystem."
-author: "Dorothy Li"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security'
+author: Dorothy Li
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-21 16:00:00 +00:00
-permalink: "/2025-10-21-The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agents", "Automation", "Cloud Security", "Compliance Automation", "Endpoint Security", "Identity Management", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "Microsoft Security Store", "Microsoft Sentinel", "News", "SaaS Solutions", "Security", "Security Copilot", "Security Marketplace", "Threat Protection", "Zero Trust"]
-tags_normalized: ["ai", "ai agents", "automation", "cloud security", "compliance automation", "endpoint security", "identity management", "microsoft defender", "microsoft entra", "microsoft purview", "microsoft security store", "microsoft sentinel", "news", "saas solutions", "security", "security copilot", "security marketplace", "threat protection", "zero trust"]
+permalink: /ai/news/The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security
+tags:
+- AI
+- AI Agents
+- Automation
+- Cloud Security
+- Compliance Automation
+- Endpoint Security
+- Identity Management
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- Microsoft Security Store
+- Microsoft Sentinel
+- News
+- SaaS Solutions
+- Security
+- Security Copilot
+- Security Marketplace
+- Threat Protection
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Dorothy Li explores how the Microsoft Security Store brings together curated security solutions and AI agents from Microsoft and partners, streamlining discovery, purchase, and deployment for organizations looking to strengthen their security posture.<!--excerpt_end-->
 
 # The New Microsoft Security Store: Uniting Partners and Innovation

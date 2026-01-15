@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "New Trusted Publishing Enhances Security on NuGet.org"
-description: "This announcement introduces Trusted Publishing on NuGet.org, a major security improvement for package publishing. The new system utilizes short-lived GitHub OIDC tokens, replacing long-lived API keys. The article details setup steps, policy management, workflows, and migration guidance for developers using GitHub Actions to publish .NET packages."
-author: "Evgeny Tvorun, Sean"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: New Trusted Publishing Enhances Security on NuGet.org
+author: Evgeny Tvorun, Sean
+canonical_url: https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-22 15:40:00 +00:00
-permalink: "/2025-09-22-New-Trusted-Publishing-Enhances-Security-on-NuGetorg.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: [".NET", "API Key Rotation", "CI/CD", "Coding", "DevOps", "GitHub Actions", "News", "NuGet", "OIDC", "OpenSSF", "Package Security", "Policy Management", "Securing Software Supply Chain", "Security", "Security Best Practices", "Trusted Publishing", "Workflow Automation"]
-tags_normalized: ["dotnet", "api key rotation", "cislashcd", "coding", "devops", "github actions", "news", "nuget", "oidc", "openssf", "package security", "policy management", "securing software supply chain", "security", "security best practices", "trusted publishing", "workflow automation"]
+permalink: /coding/news/New-Trusted-Publishing-Enhances-Security-on-NuGetorg
+tags:
+- .NET
+- API Key Rotation
+- CI/CD
+- Coding
+- DevOps
+- GitHub Actions
+- News
+- NuGet
+- OIDC
+- OpenSSF
+- Package Security
+- Policy Management
+- Securing Software Supply Chain
+- Security
+- Security Best Practices
+- Trusted Publishing
+- Workflow Automation
+section_names:
+- coding
+- devops
+- security
 ---
-
 Evgeny Tvorun and Sean highlight Trusted Publishing on NuGet.org, guiding developers to secure package publishing by using GitHub OIDC tokens instead of long-lived API keys.<!--excerpt_end-->
 
 # New Trusted Publishing Enhances Security on NuGet.org

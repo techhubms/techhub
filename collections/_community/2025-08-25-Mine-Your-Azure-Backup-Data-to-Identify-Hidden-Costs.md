@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Mine Your Azure Backup Data to Identify Hidden Costs"
-description: "This post explains how to use Power BI and PowerShell scripts to analyze Azure backup data for potential wasted costs caused by orphaned backups. By combining data from Azure's Business Continuity Center with custom metadata extraction, the author demonstrates how to visualize and audit backup usage over time, find forgotten or obsolete backups, and reduce unnecessary charges."
-author: "Adeelaziz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Mine Your Azure Backup Data to Identify Hidden Costs
+author: Adeelaziz
+canonical_url: https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-25 19:13:57 +00:00
-permalink: "/2025-08-25-Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Backup", "Backup Automation", "Business Continuity Center", "Cloud Cost Optimization", "Cloud Operations", "Community", "Data Analysis", "Power BI", "PowerShell", "Soft Delete", "Virtual Machines"]
-tags_normalized: ["azure", "azure backup", "backup automation", "business continuity center", "cloud cost optimization", "cloud operations", "community", "data analysis", "power bi", "powershell", "soft delete", "virtual machines"]
+permalink: /azure/community/Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs
+tags:
+- Azure
+- Azure Backup
+- Backup Automation
+- Business Continuity Center
+- Cloud Cost Optimization
+- Cloud Operations
+- Community
+- Data Analysis
+- Power BI
+- PowerShell
+- Soft Delete
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Adeelaziz shares a practical method for identifying hidden costs in Azure by analyzing backup data with Power BI and PowerShell, providing tips for optimizing cloud storage spend.<!--excerpt_end-->
 
 # Mine Your Azure Backup Data to Identify Hidden Costs

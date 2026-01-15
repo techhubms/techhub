@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "New Enforcement Date for GitHub Actions Cache Eviction Policy"
-description: "This news update announces that the enforcement of a revised cache eviction policy for GitHub Actions repositories has been postponed from mid-October to November. It outlines how the cache limit operates, details the upcoming change from daily to hourly eviction intervals, discusses related impacts on workflow cache usage, and offers guidance for repository maintainers to prepare."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: New Enforcement Date for GitHub Actions Cache Eviction Policy
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-29 22:02:07 +00:00
-permalink: "/2025-09-29-New-Enforcement-Date-for-GitHub-Actions-Cache-Eviction-Policy.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "Cache Eviction", "Cache Management", "CI/CD", "Continuous Integration", "DevOps", "GitHub Actions", "News", "Policy Change", "Repository Management", "Retired", "Workflow Optimization"]
-tags_normalized: ["actions", "automation", "cache eviction", "cache management", "cislashcd", "continuous integration", "devops", "github actions", "news", "policy change", "repository management", "retired", "workflow optimization"]
+permalink: /devops/news/New-Enforcement-Date-for-GitHub-Actions-Cache-Eviction-Policy
+tags:
+- Actions
+- Automation
+- Cache Eviction
+- Cache Management
+- CI/CD
+- Continuous Integration
+- DevOps
+- GitHub Actions
+- News
+- Policy Change
+- Repository Management
+- Retired
+- Workflow Optimization
+section_names:
+- devops
 ---
-
 Allison reports on the postponement of GitHub Actions' new cache eviction policy, providing guidance for developers and organizations to review workflows before enforcement begins.<!--excerpt_end-->
 
 # New Enforcement Date for GitHub Actions Cache Eviction Policy

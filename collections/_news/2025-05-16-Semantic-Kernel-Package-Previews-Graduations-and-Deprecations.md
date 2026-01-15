@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Semantic Kernel: Package Previews, Graduations & Deprecations"
-description: "The article summarizes recent updates to the Semantic Kernel .NET codebase, including package graduations, deprecations, API alignments, new plugin improvements, and enhanced maintainability focused on structure, APIs, and security. Migration guides and integration tests are highlighted for smooth transitions and reliability."
-author: "Sophia Lagerkrans-Pandey, Sergey Menshykh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-package-previews-graduations-deprecations/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: 'Semantic Kernel: Package Previews, Graduations & Deprecations'
+author: Sophia Lagerkrans-Pandey, Sergey Menshykh
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-package-previews-graduations-deprecations/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-16 08:32:47 +00:00
-permalink: "/2025-05-16-Semantic-Kernel-Package-Previews-Graduations-and-Deprecations.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "API Updates", "Azure Code Interpreter", "Coding", "HTTP Consistency", "Integration Tests", "Migration Guide", "News", "OpenAPI", "Package Deprecation", "Package Graduation", "Plugin Development", "Python Plugin", "Semantic Kernel"]
-tags_normalized: ["dotnet", "ai", "api updates", "azure code interpreter", "coding", "http consistency", "integration tests", "migration guide", "news", "openapi", "package deprecation", "package graduation", "plugin development", "python plugin", "semantic kernel"]
+permalink: /ai/news/Semantic-Kernel-Package-Previews-Graduations-and-Deprecations
+tags:
+- .NET
+- AI
+- API Updates
+- Azure Code Interpreter
+- Coding
+- HTTP Consistency
+- Integration Tests
+- Migration Guide
+- News
+- OpenAPI
+- Package Deprecation
+- Package Graduation
+- Plugin Development
+- Python Plugin
+- Semantic Kernel
+section_names:
+- ai
+- coding
 ---
-
 Authored by Sophia Lagerkrans-Pandey and Sergey Menshykh, this article details the latest Semantic Kernel .NET updates, highlighting package maturations, deprecations, and technical enhancements for developers.<!--excerpt_end-->
 
 # Semantic Kernel: Package Previews, Graduations & Deprecations

@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Atlassian Rovo Dev: AI Coding Agent Now Generally Available"
-description: "This article covers the general availability of Atlassian's Rovo Dev, an AI-powered coding agent for writing, reviewing, and planning code. It discusses Rovo Dev's integration with Bitbucket CI/CD, Compass, and DX metrics tools, and explores the impact of AI agents on software development productivity and DevOps orchestration."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/atlassian-makes-ai-coding-agent-generally-available/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Atlassian Rovo Dev: AI Coding Agent Now Generally Available'
+author: Mike Vizard
+canonical_url: https://devops.com/atlassian-makes-ai-coding-agent-generally-available/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-09 12:45:40 +00:00
-permalink: "/2025-10-09-Atlassian-Rovo-Dev-AI-Coding-Agent-Now-Generally-Available.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Code Review", "AI Coding Agent", "AI DevOps Tools", "AI For Software Development", "AI in CI/CD", "AI in Software Development", "AI Project Planning", "AI Software Orchestration", "Anthropic MCP", "Atlassian AI", "Atlassian Compass", "Atlassian Rovo Dev", "Atlassian Team 25", "Bitbucket CI/CD", "Blogs", "Business Of DevOps", "CLI Tools", "Code Review", "Coding", "Compass", "DevOps", "DevOps Automation", "DX Engineering Metrics", "Jira Integration", "MCP", "Social Facebook", "Social LinkedIn", "Social X", "Software Orchestration"]
-tags_normalized: ["ai", "ai code review", "ai coding agent", "ai devops tools", "ai for software development", "ai in cislashcd", "ai in software development", "ai project planning", "ai software orchestration", "anthropic mcp", "atlassian ai", "atlassian compass", "atlassian rovo dev", "atlassian team 25", "bitbucket cislashcd", "blogs", "business of devops", "cli tools", "code review", "coding", "compass", "devops", "devops automation", "dx engineering metrics", "jira integration", "mcp", "social facebook", "social linkedin", "social x", "software orchestration"]
+permalink: /ai/blogs/Atlassian-Rovo-Dev-AI-Coding-Agent-Now-Generally-Available
+tags:
+- AI
+- AI Code Review
+- AI Coding Agent
+- AI DevOps Tools
+- AI For Software Development
+- AI in CI/CD
+- AI in Software Development
+- AI Project Planning
+- AI Software Orchestration
+- Anthropic MCP
+- Atlassian AI
+- Atlassian Compass
+- Atlassian Rovo Dev
+- Atlassian Team 25
+- Bitbucket CI/CD
+- Blogs
+- Business Of DevOps
+- CLI Tools
+- Code Review
+- Coding
+- Compass
+- DevOps
+- DevOps Automation
+- DX Engineering Metrics
+- Jira Integration
+- MCP
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Orchestration
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Mike Vizard introduces Atlassian's AI coding agent, Rovo Dev, explaining its features for code writing, code review, project planning, and integration with major DevOps tools.<!--excerpt_end-->
 
 # Atlassian Rovo Dev: AI Coding Agent Now Generally Available

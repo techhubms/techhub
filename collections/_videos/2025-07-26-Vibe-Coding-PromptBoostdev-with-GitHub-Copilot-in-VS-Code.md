@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code"
-description: "Oren joins the Visual Studio Code team for a live coding session focused on building and experimenting with promptboost.dev using GitHub Copilot. The episode demonstrates collaborative coding workflows in VS Code, highlights the use of AI-powered features for productivity, and explores practical tips for leveraging Copilot in real-world projects."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NrIc3ytJQU4"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=NrIc3ytJQU4
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-26 04:19:42 +00:00
-permalink: "/2025-07-26-Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Code Collaboration", "Coding", "Copilot Integration", "Development Workflow", "GitHub Copilot", "Live Coding", "Productivity Tools", "Prompt Engineering", "Promptboost.dev", "Software Engineering", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai development", "code collaboration", "coding", "copilot integration", "development workflow", "github copilot", "live coding", "productivity tools", "prompt engineering", "promptboostdotdev", "software engineering", "videos", "vs code", "vs code extensions"]
+permalink: /github-copilot/videos/Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code
+tags:
+- AI
+- AI Development
+- Code Collaboration
+- Coding
+- Copilot Integration
+- Development Workflow
+- GitHub Copilot
+- Live Coding
+- Productivity Tools
+- Prompt Engineering
+- Promptboost.dev
+- Software Engineering
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code hosts Oren for a collaborative coding session using GitHub Copilot to work on promptboost.dev, showcasing how AI can enhance coding productivity.<!--excerpt_end-->
 
 {% youtube NrIc3ytJQU4 %}

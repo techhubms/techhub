@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing the First Beta Release of the Azure SDK for Rust"
-description: "Microsoft announces the first beta release of the Azure SDK for Rust, featuring libraries for Identity, Key Vault (secrets & keys), Event Hubs, and Cosmos DB. The blog post details getting started, the unique strengths of Rust for Azure development, supported services, and future plans."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/rust-in-time-announcing-the-azure-sdk-for-rust-beta/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Announcing the First Beta Release of the Azure SDK for Rust
+author: Ronnie Geraghty
+canonical_url: https://devblogs.microsoft.com/azure-sdk/rust-in-time-announcing-the-azure-sdk-for-rust-beta/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-19 18:19:05 +00:00
-permalink: "/2025-02-19-Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure SDK", "Beta Release", "Cloud Development", "Coding", "Cosmos DB", "Developer Tools", "Event Hubs", "Identity", "Key Vault", "Memory Safety", "Microsoft", "News", "Open Source", "Rust", "Secure Coding"]
-tags_normalized: ["azure", "azure sdk", "beta release", "cloud development", "coding", "cosmos db", "developer tools", "event hubs", "identity", "key vault", "memory safety", "microsoft", "news", "open source", "rust", "secure coding"]
+permalink: /coding/news/Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust
+tags:
+- Azure
+- Azure SDK
+- Beta Release
+- Cloud Development
+- Coding
+- Cosmos DB
+- Developer Tools
+- Event Hubs
+- Identity
+- Key Vault
+- Memory Safety
+- Microsoft
+- News
+- Open Source
+- Rust
+- Secure Coding
+section_names:
+- azure
+- coding
 ---
-
 In this post, Ronnie Geraghty announces the first beta release of the Azure SDK for Rust, providing official support for Rust developers working with Azure services like Identity, Key Vault, Event Hubs, and Cosmos DB.<!--excerpt_end-->
 
 ## Rust in time! Announcing the Azure SDK for Rust Beta

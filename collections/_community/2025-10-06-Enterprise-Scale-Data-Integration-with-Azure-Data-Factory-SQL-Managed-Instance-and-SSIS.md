@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enterprise-Scale Data Integration with Azure Data Factory, SQL Managed Instance, and SSIS"
-description: "This guide offers a detailed, step-by-step walkthrough for cloud architects and data engineering teams on configuring Azure Data Factory (ADF) with Azure SQL Managed Instance (SQLMI) and SQL Server Integration Services (SSIS), including enterprise network setup, permissions, SSIS runtime creation, and seamless integration with Microsoft Fabric (Power BI). It provides actionable instructions, relevant configuration options, and links to official Microsoft documentation to facilitate robust, scalable enterprise data solutions."
-author: "PeterLo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba-p/4459525"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enterprise-Scale Data Integration with Azure Data Factory, SQL Managed Instance, and SSIS
+author: PeterLo
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba-p/4459525
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 21:02:48 +00:00
-permalink: "/2025-10-06-Enterprise-Scale-Data-Integration-with-Azure-Data-Factory-SQL-Managed-Instance-and-SSIS.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Factory", "Azure SQL Managed Instance", "Cloud Solution Architecture", "Community", "Data Engineering", "Data Integration", "Data Pipelines", "Enterprise Edition", "Microsoft Entra ID", "Microsoft Fabric", "ML", "Power BI", "Self Hosted Integration Runtime", "SQL Server Integration Services", "SSIS", "Virtual Network"]
-tags_normalized: ["azure", "azure data factory", "azure sql managed instance", "cloud solution architecture", "community", "data engineering", "data integration", "data pipelines", "enterprise edition", "microsoft entra id", "microsoft fabric", "ml", "power bi", "self hosted integration runtime", "sql server integration services", "ssis", "virtual network"]
+permalink: /ml/community/Enterprise-Scale-Data-Integration-with-Azure-Data-Factory-SQL-Managed-Instance-and-SSIS
+tags:
+- Azure
+- Azure Data Factory
+- Azure SQL Managed Instance
+- Cloud Solution Architecture
+- Community
+- Data Engineering
+- Data Integration
+- Data Pipelines
+- Enterprise Edition
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- Power BI
+- Self Hosted Integration Runtime
+- SQL Server Integration Services
+- SSIS
+- Virtual Network
+section_names:
+- azure
+- ml
 ---
-
 PeterLo presents a thorough enterprise data integration guide using Azure Data Factory, SQL Managed Instance, and SSIS, guiding engineering teams through secure cloud deployment and end-to-end pipeline setup.<!--excerpt_end-->
 
 # Enterprise-Scale Data Integration with Azure Data Factory, SQL Managed Instance, and SSIS

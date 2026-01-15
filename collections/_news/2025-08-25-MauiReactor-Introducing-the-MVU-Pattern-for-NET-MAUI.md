@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "MauiReactor: Introducing the MVU Pattern for .NET MAUI"
-description: "This article presents MauiReactor, an open-source UI library that brings the Model-View-Update (MVU) architectural pattern to .NET MAUI development. It covers the background, technical benefits, comparison with MVVM, production usage, testing, performance, and integration tips for building cross-platform apps with C#."
-author: "David Ortinau"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'MauiReactor: Introducing the MVU Pattern for .NET MAUI'
+author: David Ortinau
+canonical_url: https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-25 17:15:00 +00:00
-permalink: "/2025-08-25-MauiReactor-Introducing-the-MVU-Pattern-for-NET-MAUI.html"
-categories: ["Coding"]
-tags: [".NET", "App Architecture", "C#", "Coding", "Component Integration", "Cross Platform", "Hot Reload", "MAUI", "MauiReactor", "MVU", "MVU Pattern", "MVVM", "News", "Open Source", "Performance", "State Management", "Testing", "UI Development", "XAML"]
-tags_normalized: ["dotnet", "app architecture", "csharp", "coding", "component integration", "cross platform", "hot reload", "maui", "mauireactor", "mvu", "mvu pattern", "mvvm", "news", "open source", "performance", "state management", "testing", "ui development", "xaml"]
+permalink: /coding/news/MauiReactor-Introducing-the-MVU-Pattern-for-NET-MAUI
+tags:
+- .NET
+- App Architecture
+- C#
+- Coding
+- Component Integration
+- Cross Platform
+- Hot Reload
+- MAUI
+- MauiReactor
+- MVU
+- MVU Pattern
+- MVVM
+- News
+- Open Source
+- Performance
+- State Management
+- Testing
+- UI Development
+- XAML
+section_names:
+- coding
 ---
-
 David Ortinau features guest author Adolfo Marinucci, who explores MauiReactor—a library that makes the MVU architectural pattern accessible for .NET MAUI developers, offering insights on productivity, technical implementation, and practical usage.<!--excerpt_end-->
 
 # MauiReactor: An MVU Approach for .NET MAUI

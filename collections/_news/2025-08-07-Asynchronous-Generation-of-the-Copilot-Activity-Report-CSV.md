@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Asynchronous Generation of the Copilot Activity Report CSV"
-description: "This news update details a recent improvement to the Copilot activity report download process: the report is now generated asynchronously. Admins requesting the report will receive an email with a download link when the CSV is ready, increasing reliability and scalability, especially for large organizations using GitHub Copilot."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Asynchronous Generation of the Copilot Activity Report CSV
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-07 23:17:25 +00:00
-permalink: "/2025-08-07-Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Tools", "AI", "Asynchronous Processing", "Copilot Activity Report", "CSV Export", "Email Notification", "GitHub Copilot", "GitHub Enterprise", "News", "Reliability", "Report Generation", "Scalability"]
-tags_normalized: ["admin tools", "ai", "asynchronous processing", "copilot activity report", "csv export", "email notification", "github copilot", "github enterprise", "news", "reliability", "report generation", "scalability"]
+permalink: /github-copilot/news/Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV
+tags:
+- Admin Tools
+- AI
+- Asynchronous Processing
+- Copilot Activity Report
+- CSV Export
+- Email Notification
+- GitHub Copilot
+- GitHub Enterprise
+- News
+- Reliability
+- Report Generation
+- Scalability
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how the process for downloading Copilot activity reports has been upgraded to asynchronous generation, offering improved performance and user experience for admins.<!--excerpt_end-->
 
 # Asynchronous Generation of the Copilot Activity Report CSV

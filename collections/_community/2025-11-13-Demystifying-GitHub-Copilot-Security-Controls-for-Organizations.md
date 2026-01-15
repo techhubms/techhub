@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Demystifying GitHub Copilot Security Controls for Organizations"
-description: "This blog post breaks down the major security, privacy, and compliance controls built into GitHub Copilot, with a focus on addressing the concerns organizations and development teams may have about modernizing workflows. It covers data handling, IP indemnification, regulatory adherence, configuration options for exclusions, and industry certifications, helping technical leaders confidently adopt AI-powered coding tools."
-author: "jorgebalderas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Demystifying GitHub Copilot Security Controls for Organizations
+author: jorgebalderas
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 08:00:00 +00:00
-permalink: "/2025-11-13-Demystifying-GitHub-Copilot-Security-Controls-for-Organizations.html"
-categories: ["AI", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "Application Security", "Community", "Copilot Agent", "Data Retention", "Duplicate Detection Filter", "Enterprise Configuration", "GitHub Copilot", "Intellectual Property", "ISO 27001", "MCP Registry", "Regulatory Compliance", "Security", "SOC2", "Trust Center", "VS Code", "Vulnerability Protection"]
-tags_normalized: ["ai", "ai security", "application security", "community", "copilot agent", "data retention", "duplicate detection filter", "enterprise configuration", "github copilot", "intellectual property", "iso 27001", "mcp registry", "regulatory compliance", "security", "soc2", "trust center", "vs code", "vulnerability protection"]
+permalink: /github-copilot/community/Demystifying-GitHub-Copilot-Security-Controls-for-Organizations
+tags:
+- AI
+- AI Security
+- Application Security
+- Community
+- Copilot Agent
+- Data Retention
+- Duplicate Detection Filter
+- Enterprise Configuration
+- GitHub Copilot
+- Intellectual Property
+- ISO 27001
+- MCP Registry
+- Regulatory Compliance
+- Security
+- SOC2
+- Trust Center
+- VS Code
+- Vulnerability Protection
+section_names:
+- ai
+- github-copilot
+- security
 ---
-
 Jorge Balderas discusses key security and compliance features of GitHub Copilot, providing organizations with a practical guide to safely adopting AI-driven coding with confidence.<!--excerpt_end-->
 
 # Demystifying GitHub Copilot Security Controls: Easing Concerns for Organizational Adoption

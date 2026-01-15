@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How Chemist Warehouse Uses Azure AI Foundry for HR Transformation"
-description: "This post details how Chemist Warehouse, in partnership with Insurgence AI and Microsoft, revolutionized its HR Advisory operations using AIHRA—a solution built on Microsoft Azure AI Foundry and Power Platform. The article explores the technical and organizational impact of automating HR email query responses, providing insights into real-world use of Microsoft AI services in large-scale enterprise environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Chemist Warehouse Uses Azure AI Foundry for HR Transformation
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: "/2025-08-26-How-Chemist-Warehouse-Uses-Azure-AI-Foundry-for-HR-Transformation.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "AI Solutions", "AIHRA", "Azure", "Azure AI Foundry", "Business Transformation", "Company News", "Email Automation", "Enterprise AI", "Governance", "HR Automation", "Insurgence AI", "Microsoft Azure", "Microsoft Partner", "News", "Power Platform", "Workforce Productivity"]
-tags_normalized: ["ai", "ai integration", "ai solutions", "aihra", "azure", "azure ai foundry", "business transformation", "company news", "email automation", "enterprise ai", "governance", "hr automation", "insurgence ai", "microsoft azure", "microsoft partner", "news", "power platform", "workforce productivity"]
+permalink: /ai/news/How-Chemist-Warehouse-Uses-Azure-AI-Foundry-for-HR-Transformation
+tags:
+- AI
+- AI Integration
+- AI Solutions
+- AIHRA
+- Azure
+- Azure AI Foundry
+- Business Transformation
+- Company News
+- Email Automation
+- Enterprise AI
+- Governance
+- HR Automation
+- Insurgence AI
+- Microsoft Azure
+- Microsoft Partner
+- News
+- Power Platform
+- Workforce Productivity
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on how Chemist Warehouse transformed its HR operations by deploying AIHRA, an AI-powered solution leveraging Microsoft Azure AI Foundry, delivering significant efficiency and engagement gains.<!--excerpt_end-->
 
 # How Chemist Warehouse Uses Azure AI Foundry for HR Transformation

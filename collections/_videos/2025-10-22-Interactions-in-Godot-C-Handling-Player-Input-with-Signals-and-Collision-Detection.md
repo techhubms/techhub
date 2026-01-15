@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Interactions in Godot C#: Handling Player Input with Signals and Collision Detection"
-description: "This episode from the Godot C# training series demonstrates how to create interactive game worlds by using Godot’s Area3D nodes, signals, and C#. It covers detecting player interaction, event-driven communication between systems like inventory and UI, setting up collision layers, and emitting custom signals for dynamic gameplay."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=E9WACDWjWzI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Interactions in Godot C#: Handling Player Input with Signals and Collision Detection'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=E9WACDWjWzI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:04 +00:00
-permalink: "/2025-10-22-Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection.html"
-categories: ["Coding"]
-tags: [".NET", "Area3D", "C#", "Coding", "Collision Detection", "Crafting System", "Custom Signals", "Game Development", "Game Manager", "Godot", "Inventory System", "Microsoft Developer", "Player Interaction", "Scripting", "Signals", "UI Communication", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "area3d", "csharp", "coding", "collision detection", "crafting system", "custom signals", "game development", "game manager", "godot", "inventory system", "microsoft developer", "player interaction", "scripting", "signals", "ui communication", "videos", "vs code"]
+permalink: /coding/videos/Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection
+tags:
+- .NET
+- Area3D
+- C#
+- Coding
+- Collision Detection
+- Crafting System
+- Custom Signals
+- Game Development
+- Game Manager
+- Godot
+- Inventory System
+- Microsoft Developer
+- Player Interaction
+- Scripting
+- Signals
+- UI Communication
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 dotnet presents practical guidance on using Godot C# to handle player interactions, focusing on signals, collision detection, and inter-system communication for dynamic gameplay.<!--excerpt_end-->
 
 {% youtube E9WACDWjWzI %}

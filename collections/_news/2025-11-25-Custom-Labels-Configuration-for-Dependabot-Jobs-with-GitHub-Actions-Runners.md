@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners"
-description: "This update introduces custom label support for routing Dependabot jobs to specific self-hosted and larger GitHub-hosted Actions runners, improving operational control. Learn how organizations can segment workloads, enhance governance, and avoid friction by leveraging label-based targeting for their CI/CD infrastructure within GitHub Actions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 16:07:42 +00:00
-permalink: "/2025-11-25-Custom-Labels-Configuration-for-Dependabot-Jobs-with-GitHub-Actions-Runners.html"
-categories: ["DevOps", "Security"]
-tags: ["CI/CD", "Configuration", "Continuous Integration", "Custom Labels", "Dependabot", "DevOps", "GitHub Actions", "Improvement", "Job Queuing", "Kubernetes Runners", "News", "Operational Governance", "Organization Scope", "Runner Groups", "Security", "Self Hosted Runners", "Supply Chain Security", "Workflow Management"]
-tags_normalized: ["cislashcd", "configuration", "continuous integration", "custom labels", "dependabot", "devops", "github actions", "improvement", "job queuing", "kubernetes runners", "news", "operational governance", "organization scope", "runner groups", "security", "self hosted runners", "supply chain security", "workflow management"]
+permalink: /devops/news/Custom-Labels-Configuration-for-Dependabot-Jobs-with-GitHub-Actions-Runners
+tags:
+- CI/CD
+- Configuration
+- Continuous Integration
+- Custom Labels
+- Dependabot
+- DevOps
+- GitHub Actions
+- Improvement
+- Job Queuing
+- Kubernetes Runners
+- News
+- Operational Governance
+- Organization Scope
+- Runner Groups
+- Security
+- Self Hosted Runners
+- Supply Chain Security
+- Workflow Management
+section_names:
+- devops
+- security
 ---
-
 Allison outlines the new ability for Dependabot jobs to use custom labels on self-hosted and larger GitHub-hosted Actions runners, enabling granular workload management for organizations and improved supply chain security.<!--excerpt_end-->
 
 # Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners

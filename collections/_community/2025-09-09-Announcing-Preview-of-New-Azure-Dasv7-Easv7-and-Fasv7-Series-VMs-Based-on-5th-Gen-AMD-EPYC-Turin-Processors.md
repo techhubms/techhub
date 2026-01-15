@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors"
-description: "Microsoft introduces the preview of its new Azure AMD-based Virtual Machines (VMs), powered by 5th Gen AMD EPYC™ ‘Turin’ processors. These VMs offer improved CPU and memory performance, optimized VM families for various workloads, enhanced security features, and cutting-edge technologies like Azure Boost and MANA to increase performance and flexibility for diverse enterprise needs."
-author: "ArpitaChatterjee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors
+author: ArpitaChatterjee
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 13:36:43 +00:00
-permalink: "/2025-09-09-Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors.html"
-categories: ["Azure"]
-tags: ["AMD EPYC", "Azure", "Azure Boost", "Azure Disk Storage", "Azure HSM", "Azure Virtual Machines", "Cloud Infrastructure", "Community", "Compute Optimization", "Dasv7", "Easv7", "Fasv7", "MANA", "Memory Optimization", "NVMe", "Turin", "Virtualization", "VM Performance"]
-tags_normalized: ["amd epyc", "azure", "azure boost", "azure disk storage", "azure hsm", "azure virtual machines", "cloud infrastructure", "community", "compute optimization", "dasv7", "easv7", "fasv7", "mana", "memory optimization", "nvme", "turin", "virtualization", "vm performance"]
+permalink: /azure/community/Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors
+tags:
+- AMD EPYC
+- Azure
+- Azure Boost
+- Azure Disk Storage
+- Azure HSM
+- Azure Virtual Machines
+- Cloud Infrastructure
+- Community
+- Compute Optimization
+- Dasv7
+- Easv7
+- Fasv7
+- MANA
+- Memory Optimization
+- NVMe
+- Turin
+- Virtualization
+- VM Performance
+section_names:
+- azure
 ---
-
 ArpitaChatterjee details Microsoft's preview launch of high-performance Azure Virtual Machines using 5th Gen AMD EPYC™ processors, highlighting advanced scaling, storage, and security features for demanding workloads.<!--excerpt_end-->
 
 # Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors

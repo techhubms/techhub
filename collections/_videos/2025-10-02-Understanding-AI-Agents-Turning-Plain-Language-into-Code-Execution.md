@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Understanding AI Agents: Turning Plain Language into Code Execution"
-description: "In this video, Seth Juarez from Microsoft Developer explains the concept of an 'AI agent', clarifying what makes AI agents distinct and how they operate as control structures that transform human language into executable code. The discussion explores how AI agents fit into today's developer ecosystem using Microsoft AI technologies."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xG3py56UBUo"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Understanding AI Agents: Turning Plain Language into Code Execution'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=xG3py56UBUo
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-02 17:36:29 +00:00
-permalink: "/2025-10-02-Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "AI Architecture", "AI Development", "AI Tutorial", "Developer Tools", "Microsoft", "Natural Language Processing", "OneDevQuestion", "Plain Language To Code", "Seth Juarez", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai architecture", "ai development", "ai tutorial", "developer tools", "microsoft", "natural language processing", "onedevquestion", "plain language to code", "seth juarez", "videos"]
+permalink: /ai/videos/Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution
+tags:
+- AI
+- AI Agent
+- AI Architecture
+- AI Development
+- AI Tutorial
+- Developer Tools
+- Microsoft
+- Natural Language Processing
+- OneDevQuestion
+- Plain Language To Code
+- Seth Juarez
+- Videos
+section_names:
+- ai
 ---
-
 Seth Juarez from Microsoft Developer demystifies the term 'AI agent', explaining for viewers how these entities interpret human language and execute real code, supporting developers with insights into Microsoft AI technologies.<!--excerpt_end-->
 
 {% youtube xG3py56UBUo %}

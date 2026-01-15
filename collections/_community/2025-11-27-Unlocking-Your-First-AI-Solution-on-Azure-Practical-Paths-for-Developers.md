@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Unlocking Your First AI Solution on Azure: Practical Paths for Developers"
-description: "This Microsoft Ignite 2025 SMB session recap by Joshua Huang details two accessible approaches for developers and SMB teams to implement their first AI solution on Azure. The article showcases how to either quickly build with Microsoft Foundry templates, or buy a production-ready solution on the Azure Marketplace. Real-world scenarios, deployment walkthroughs, and key reasons for selecting Azure as an AI platform are discussed, enabling developers to make informed, practical choices about introducing AI capabilities within their organizations."
-author: "JoshuaHuang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Unlocking Your First AI Solution on Azure: Practical Paths for Developers'
+author: JoshuaHuang
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-27 08:00:00 +00:00
-permalink: "/2025-11-27-Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Chatbot", "AI Security", "AI Solution", "Azure", "Azure AI Foundry", "Azure Deployment", "Azure Marketplace", "Cloud Development", "Community", "Data Integration", "GitHub", "Microsoft Azure", "Production Ready", "Prompt Engineering", "Startup Technology", "UnifyCloud"]
-tags_normalized: ["ai", "ai chatbot", "ai security", "ai solution", "azure", "azure ai foundry", "azure deployment", "azure marketplace", "cloud development", "community", "data integration", "github", "microsoft azure", "production ready", "prompt engineering", "startup technology", "unifycloud"]
+permalink: /ai/community/Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers
+tags:
+- AI
+- AI Chatbot
+- AI Security
+- AI Solution
+- Azure
+- Azure AI Foundry
+- Azure Deployment
+- Azure Marketplace
+- Cloud Development
+- Community
+- Data Integration
+- GitHub
+- Microsoft Azure
+- Production Ready
+- Prompt Engineering
+- Startup Technology
+- UnifyCloud
+section_names:
+- ai
+- azure
 ---
-
 Joshua Huang recaps the Microsoft Ignite 2025 SMB session, offering developers clear paths to launching their first AI solution on Azure—either by building with Foundry templates or buying a ready-made solution from the Marketplace.<!--excerpt_end-->
 
 # Unlocking Your First AI Solution on Azure: Practical Paths for Developers

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerate Data and AI Transformation with Azure Databricks"
-description: "This Microsoft Ignite 2025 session explores how Azure Databricks acts as a unified platform for advanced data analytics and AI, integrating with Power BI, Power Apps, and Microsoft Foundry. The session covers real-time decision-making, secure analytics with Unity Catalog, and new tools such as Genie for AI agents and Knowledge Assistant, highlighting practical customer implementation and new product releases."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HhtEAfo3cb4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerate Data and AI Transformation with Azure Databricks
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=HhtEAfo3cb4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:32:26 +00:00
-permalink: "/2025-11-24-Accelerate-Data-and-AI-Transformation-with-Azure-Databricks.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Azure Databricks", "Conversational Analytics", "Data Analytics", "Data Platform Integration", "Genie", "Knowledge Assistant", "Microsoft Foundry", "Microsoft Ignite", "ML", "Monitoring Tools", "MSIgnite", "Multi Agent Supervisor", "Power Apps", "Power BI", "Real Time Insights", "Unifyyourdataplatform", "Unity Catalog", "Videos"]
-tags_normalized: ["ai", "ai agents", "azure", "azure databricks", "conversational analytics", "data analytics", "data platform integration", "genie", "knowledge assistant", "microsoft foundry", "microsoft ignite", "ml", "monitoring tools", "msignite", "multi agent supervisor", "power apps", "power bi", "real time insights", "unifyyourdataplatform", "unity catalog", "videos"]
+permalink: /ai/videos/Accelerate-Data-and-AI-Transformation-with-Azure-Databricks
+tags:
+- AI
+- AI Agents
+- Azure
+- Azure Databricks
+- Conversational Analytics
+- Data Analytics
+- Data Platform Integration
+- Genie
+- Knowledge Assistant
+- Microsoft Foundry
+- Microsoft Ignite
+- ML
+- Monitoring Tools
+- MSIgnite
+- Multi Agent Supervisor
+- Power Apps
+- Power BI
+- Real Time Insights
+- Unifyyourdataplatform
+- Unity Catalog
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events feature William Hendry, Miranda Luna, and Anavi Nahar presenting Azure Databricks as the backbone for unified data and AI analytics, with deep integration into the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube HhtEAfo3cb4 %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Modernizing DNS/DHCP: Micetro for Hybrid and Cloud Environments"
-description: "Explore how to enhance network reliability by modernizing DNS and DHCP using Micetro across hybrid and cloud infrastructures. The session covers the importance of integrated DNS telemetry, centralized IP address management (IPAM), and third-party API gateways. Learn how these combined solutions contribute to faster detection, reduced MTTR, and more proactive network operations management."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EeaDXQEhy_o"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Modernizing DNS/DHCP: Micetro for Hybrid and Cloud Environments'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=EeaDXQEhy_o
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:41:16 +00:00
-permalink: "/2025-11-19-Modernizing-DNSDHCP-Micetro-for-Hybrid-and-Cloud-Environments.html"
-categories: ["Azure"]
-tags: ["Active Directory", "API Gateway", "Automation", "Azure", "DHCP", "DNS", "Hybrid Cloud", "IP Address Management", "IPAM", "Micetro", "Migrateandmodernizeyourestate", "MSIgnite", "NetOps", "Network Observability", "Network Optimizations", "ServiceNow Integration", "Videos"]
-tags_normalized: ["active directory", "api gateway", "automation", "azure", "dhcp", "dns", "hybrid cloud", "ip address management", "ipam", "micetro", "migrateandmodernizeyourestate", "msignite", "netops", "network observability", "network optimizations", "servicenow integration", "videos"]
+permalink: /azure/videos/Modernizing-DNSDHCP-Micetro-for-Hybrid-and-Cloud-Environments
+tags:
+- Active Directory
+- API Gateway
+- Automation
+- Azure
+- DHCP
+- DNS
+- Hybrid Cloud
+- IP Address Management
+- IPAM
+- Micetro
+- Migrateandmodernizeyourestate
+- MSIgnite
+- NetOps
+- Network Observability
+- Network Optimizations
+- ServiceNow Integration
+- Videos
+section_names:
+- azure
 ---
-
 Microsoft Events and Scott Penney explain how Micetro and integrated observability tools help modernize DNS/DHCP operations across hybrid and cloud environments, highlighting root-cause detection, centralized management, and cloud integrations.<!--excerpt_end-->
 
 {% youtube EeaDXQEhy_o %}

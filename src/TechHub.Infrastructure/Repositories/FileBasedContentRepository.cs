@@ -307,9 +307,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
         var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
 
-        // Map 'categories' (regular content) or 'section' (custom pages) to lowercase section names
-        var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
-        var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal)).ToList();
+        // Read section_names directly (ContentFixer has already normalized these to lowercase with hyphens)
+        var sectionNames = _frontMatterParser.GetListValue(frontMatter, "section_names");
 
         var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
         var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
@@ -369,11 +368,22 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         var primarySection = tempItem.GetPrimarySectionUrl();
         var currentPagePath = tempItem.GetUrl();
 
-        var renderedHtml = _markdownService.RenderToHtml(
-            processedMarkdown,
-            currentPagePath,
-            primarySection,
-            tempItem.CollectionName);
+        string renderedHtml;
+        try
+        {
+            renderedHtml = _markdownService.RenderToHtml(
+                processedMarkdown,
+                currentPagePath,
+                primarySection,
+                tempItem.CollectionName);
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException(
+                $"Failed to render markdown for file: {filePath}. " +
+                $"Slug: '{fileName}', Collection: '{collection}', Sections: [{string.Join(", ", sectionNames)}]",
+                ex);
+        }
 
         var item = new ContentItem
         {

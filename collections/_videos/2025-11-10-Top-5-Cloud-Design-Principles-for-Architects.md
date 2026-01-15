@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Top 5 Cloud Design Principles for Architects"
-description: "This content focuses on fundamental cloud design principles crucial for anyone architecting solutions in the cloud, with a significant emphasis on Azure. It covers core requirements analysis, designing for failure, elasticity and scale, infrastructure as code (IaC), governance, and security. These best practices are discussed through the lens of practical cloud architecture, offering actionable guidance for consultants and solution designers working with Microsoft Azure and other cloud environments."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FWZvoFlChBs"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Top 5 Cloud Design Principles for Architects
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=FWZvoFlChBs
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-10 15:01:30 +00:00
-permalink: "/2025-11-10-Top-5-Cloud-Design-Principles-for-Architects.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Architect", "AWS", "Azure", "Cloud", "Cloud Architecture", "Cloud Consulting", "Cloud Engineer", "Consultant", "Design Principles", "DevOps", "Elasticity", "GCP", "Governance", "IaC", "Scale", "Security", "Solution Design", "Videos"]
-tags_normalized: ["architect", "aws", "azure", "cloud", "cloud architecture", "cloud consulting", "cloud engineer", "consultant", "design principles", "devops", "elasticity", "gcp", "governance", "iac", "scale", "security", "solution design", "videos"]
+permalink: /azure/videos/Top-5-Cloud-Design-Principles-for-Architects
+tags:
+- Architect
+- AWS
+- Azure
+- Cloud
+- Cloud Architecture
+- Cloud Consulting
+- Cloud Engineer
+- Consultant
+- Design Principles
+- DevOps
+- Elasticity
+- GCP
+- Governance
+- IaC
+- Scale
+- Security
+- Solution Design
+- Videos
+section_names:
+- azure
+- devops
+- security
 ---
-
 John Savill's Technical Training outlines the top 5 cloud design principles, with a strong focus on Azure, emphasizing core architectural best practices for consultants and architects.<!--excerpt_end-->
 
 {% youtube FWZvoFlChBs %}

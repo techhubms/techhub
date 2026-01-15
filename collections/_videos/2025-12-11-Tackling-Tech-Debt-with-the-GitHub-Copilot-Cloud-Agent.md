@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Tackling Tech Debt with the GitHub Copilot Cloud Agent"
-description: "This session explores how AI agents, specifically GitHub Copilot Cloud Agent, are transforming the management of technical debt in software projects. It covers strategies for modernizing and refactoring legacy codebases using AI, featuring demonstrations of Copilot's practical applications in real-world development environments and insights on keeping codebases up to date."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gaejtW5dKsY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Tackling Tech Debt with the GitHub Copilot Cloud Agent
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=gaejtW5dKsY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 22:29:20 +00:00
-permalink: "/2025-12-11-Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "AI Development", "Cloud Computing", "Cloud Development", "Code Refactoring", "Coding", "Copilot Cloud Agent", "Dev", "Developer", "Development", "GitHub Copilot", "Legacy Modernization", "Microsoft", "Microsoft Foundry", "Software Modernization", "Tech", "Technical Debt", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "ai development", "cloud computing", "cloud development", "code refactoring", "coding", "copilot cloud agent", "dev", "developer", "development", "github copilot", "legacy modernization", "microsoft", "microsoft foundry", "software modernization", "tech", "technical debt", "technology", "videos", "vs code"]
+permalink: /github-copilot/videos/Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent
+tags:
+- AI
+- AI Agents
+- AI Development
+- Cloud Computing
+- Cloud Development
+- Code Refactoring
+- Coding
+- Copilot Cloud Agent
+- Dev
+- Developer
+- Development
+- GitHub Copilot
+- Legacy Modernization
+- Microsoft
+- Microsoft Foundry
+- Software Modernization
+- Tech
+- Technical Debt
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer discusses how to tackle technical debt by leveraging GitHub Copilot Cloud Agent. The talk highlights practical approaches for modernizing codebases and demonstrates the use of AI agents in software development.<!--excerpt_end-->
 
 {% youtube gaejtW5dKsY %}

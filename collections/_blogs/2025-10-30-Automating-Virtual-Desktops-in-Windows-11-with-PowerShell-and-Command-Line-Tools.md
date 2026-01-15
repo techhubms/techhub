@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools"
-description: "This in-depth guide by Dellenny explores how developers and power users can automate the creation, management, and movement of virtual desktops in Windows 11 using scripting and command-line tools. The tutorial focuses on leveraging the VirtualDesktop PowerShell module, third-party utilities like VirtualDesktopCmd, and AutoHotkey to streamline workspace organization and productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools
+author: Dellenny
+canonical_url: https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-30 06:56:21 +00:00
-permalink: "/2025-10-30-Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools.html"
-categories: ["Coding"]
-tags: ["AutoHotkey", "Automation", "Batch Scripts", "Blogs", "Coding", "Command Line Automation", "Desktop Management", "PowerShell", "Productivity Tools", "Scripting", "VirtualDesktop Module", "VirtualDesktopCmd", "Windows 11", "Workspace Customization"]
-tags_normalized: ["autohotkey", "automation", "batch scripts", "blogs", "coding", "command line automation", "desktop management", "powershell", "productivity tools", "scripting", "virtualdesktop module", "virtualdesktopcmd", "windows 11", "workspace customization"]
+permalink: /coding/blogs/Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools
+tags:
+- AutoHotkey
+- Automation
+- Batch Scripts
+- Blogs
+- Coding
+- Command Line Automation
+- Desktop Management
+- PowerShell
+- Productivity Tools
+- Scripting
+- VirtualDesktop Module
+- VirtualDesktopCmd
+- Windows 11
+- Workspace Customization
+section_names:
+- coding
 ---
-
 Dellenny presents a practical guide to automating virtual desktop management in Windows 11, illustrating use of PowerShell, third-party tools, and scripting for improved efficiency.<!--excerpt_end-->
 
 # Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools

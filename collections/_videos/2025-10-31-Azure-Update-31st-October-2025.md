@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Update - 31st October 2025"
-description: "This video provides a weekly roundup of Azure platform changes and news as of October 31st, 2025. John Savill covers the latest on Azure Functions retirement, deployment best practices, Azure Front Door incidents, private endpoints improvements, storage migrations, PostgreSQL updates, and Azure ML preview retirements. Useful links and learning resources are included."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kdk0Ye47tfE"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 31st October 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=kdk0Ye47tfE
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-31 14:55:29 +00:00
-permalink: "/2025-10-31-Azure-Update-31st-October-2025.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["AFD WAF", "AFS Migration", "ASM NFS", "Azure", "Azure Cloud", "Azure Front Door", "Azure Functions", "Azure Machine Learning", "Azure Storage", "Azure Update", "Cloud", "Cloud Infrastructure", "DevOps", "Incident Management", "Microsoft", "Microsoft Azure", "ML", "Node.js 20", "PgBouncer", "PostgreSQL Flexible Server", "Private Endpoints", "Videos", "Zero Downtime Deployment"]
-tags_normalized: ["afd waf", "afs migration", "asm nfs", "azure", "azure cloud", "azure front door", "azure functions", "azure machine learning", "azure storage", "azure update", "cloud", "cloud infrastructure", "devops", "incident management", "microsoft", "microsoft azure", "ml", "nodedotjs 20", "pgbouncer", "postgresql flexible server", "private endpoints", "videos", "zero downtime deployment"]
+permalink: /ml/videos/Azure-Update-31st-October-2025
+tags:
+- AFD WAF
+- AFS Migration
+- ASM NFS
+- Azure
+- Azure Cloud
+- Azure Front Door
+- Azure Functions
+- Azure Machine Learning
+- Azure Storage
+- Azure Update
+- Cloud
+- Cloud Infrastructure
+- DevOps
+- Incident Management
+- Microsoft
+- Microsoft Azure
+- ML
+- Node.js 20
+- PgBouncer
+- PostgreSQL Flexible Server
+- Private Endpoints
+- Videos
+- Zero Downtime Deployment
+section_names:
+- azure
+- devops
+- ml
 ---
-
 John Savill's Technical Training delivers a concise Azure update for October 31st, 2025, summarizing recent news on Azure Functions, Azure Front Door outages, storage migrations, PostgreSQL, and Azure ML. Key highlights and resource links are provided.<!--excerpt_end-->
 
 {% youtube kdk0Ye47tfE %}

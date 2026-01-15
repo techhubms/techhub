@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "OpenAI’s gpt‑oss Models Now Available on Azure AI Foundry and Windows AI Foundry"
-description: "Microsoft announces the availability of OpenAI's open-source gpt-oss models on Azure AI Foundry and Windows AI Foundry. The release empowers developers and enterprises to run, fine-tune, and deploy AI models with enhanced flexibility, control, and transparency—spanning cloud, edge, and local deployments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/openais-open%E2%80%91source-model-gpt%E2%80%91oss-on-azure-ai-foundry-and-windows-ai-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: OpenAI’s gpt‑oss Models Now Available on Azure AI Foundry and Windows AI Foundry
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/openais-open%E2%80%91source-model-gpt%E2%80%91oss-on-azure-ai-foundry-and-windows-ai-foundry/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 13:10:10 +00:00
-permalink: "/2025-08-06-OpenAIs-gptoss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Customization", "AI Model Catalog", "AI Transparency", "Azure", "Azure AI Foundry", "Company News", "Enterprise AI", "Foundry Local", "Gpt Oss", "Hybrid AI", "Intelligent Agents", "Model Deployment", "Model Fine Tuning", "News", "On Device Inference", "Open Source AI", "OpenAI", "Windows AI Foundry"]
-tags_normalized: ["ai", "ai customization", "ai model catalog", "ai transparency", "azure", "azure ai foundry", "company news", "enterprise ai", "foundry local", "gpt oss", "hybrid ai", "intelligent agents", "model deployment", "model fine tuning", "news", "on device inference", "open source ai", "openai", "windows ai foundry"]
+permalink: /ai/news/OpenAIs-gptoss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-AI-Foundry
+tags:
+- AI
+- AI Customization
+- AI Model Catalog
+- AI Transparency
+- Azure
+- Azure AI Foundry
+- Company News
+- Enterprise AI
+- Foundry Local
+- Gpt Oss
+- Hybrid AI
+- Intelligent Agents
+- Model Deployment
+- Model Fine Tuning
+- News
+- On Device Inference
+- Open Source AI
+- OpenAI
+- Windows AI Foundry
+section_names:
+- ai
+- azure
 ---
-
 In this in-depth news post, author stclarke explores how Microsoft brings OpenAI's open-weight gpt‑oss models to Azure AI Foundry and Windows AI Foundry, vastly expanding possibilities for developers and enterprises.<!--excerpt_end-->
 
 # OpenAI’s Open‑Source Model: gpt‑oss on Azure AI Foundry and Windows AI Foundry

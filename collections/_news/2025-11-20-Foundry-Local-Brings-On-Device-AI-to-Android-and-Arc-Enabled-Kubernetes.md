@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Foundry Local Brings On-Device AI to Android and Arc-Enabled Kubernetes"
-description: "This announcement introduces Foundry Local for Android, enabling developers to deploy Microsoft AI models directly on mobile devices and on-premises infrastructure. Key new features include an SDK for easy integration, on-device speech-to-text powered by Whisper, OpenAI-compatible APIs, and seamless support for hybrid and disconnected environments via Azure Arc-enabled Kubernetes. The update underscores performance, privacy, and flexibility, offering insights and code samples for developers looking to leverage on-device AI with Microsoft Foundry Local."
-author: "Raji Rajagopalan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/foundry-local-comes-to-android/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Foundry Local Brings On-Device AI to Android and Arc-Enabled Kubernetes
+author: Raji Rajagopalan
+canonical_url: https://devblogs.microsoft.com/foundry/foundry-local-comes-to-android/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:30:12 +00:00
-permalink: "/2025-11-20-Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Development", "AI Tools", "Android Development", "AnythingLLM", "Azure", "Azure AI Foundry", "Azure Arc", "Coding", "Container Deployment", "Deep Learning Models", "Edge AI", "Foundry Local", "FoundryLocal", "GPT OSS", "Hybrid Cloud", "Kubernetes", "LangChain Integration", "Mistral", "MSIgnite", "News", "On Device AI", "OpenAI API", "Phi", "Qwen", "SDK", "Speech API", "Whisper Speech To Text", "Windows ML"]
-tags_normalized: ["ai", "ai development", "ai tools", "android development", "anythingllm", "azure", "azure ai foundry", "azure arc", "coding", "container deployment", "deep learning models", "edge ai", "foundry local", "foundrylocal", "gpt oss", "hybrid cloud", "kubernetes", "langchain integration", "mistral", "msignite", "news", "on device ai", "openai api", "phi", "qwen", "sdk", "speech api", "whisper speech to text", "windows ml"]
+permalink: /ai/news/Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes
+tags:
+- AI
+- AI Development
+- AI Tools
+- Android Development
+- AnythingLLM
+- Azure
+- Azure AI Foundry
+- Azure Arc
+- Coding
+- Container Deployment
+- Deep Learning Models
+- Edge AI
+- Foundry Local
+- FoundryLocal
+- GPT OSS
+- Hybrid Cloud
+- Kubernetes
+- LangChain Integration
+- Mistral
+- MSIgnite
+- News
+- On Device AI
+- OpenAI API
+- Phi
+- Qwen
+- SDK
+- Speech API
+- Whisper Speech To Text
+- Windows ML
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Raji Rajagopalan introduces Foundry Local's expansion to Android and on-prem with Arc-enabled Kubernetes, covering new SDK capabilities and on-device AI powered by Microsoft’s open-source models.<!--excerpt_end-->
 
 # Foundry Local Brings On-Device AI to Android and Arc-Enabled Kubernetes

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Build Modular Agents with Logic Apps MCP Servers (Public Preview)"
-description: "This announcement introduces the public preview of using Azure Logic Apps (Standard) as Model Context Protocol (MCP) servers. The post walks through two main approaches: registering Logic Apps connectors as MCP servers with Azure API Center, and enabling Logic Apps as remote MCP servers for greater control and flexibility. Developers and IT admins can leverage these capabilities to compose modular, reusable MCP tools, streamline integration, and centralize management via API Center, all within Azure’s enterprise-grade workflow platform."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build Modular Agents with Logic Apps MCP Servers (Public Preview)
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 20:37:35 +00:00
-permalink: "/2025-09-08-Build-Modular-Agents-with-Logic-Apps-MCP-Servers-Public-Preview.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Solutions", "AI", "API Integration", "Azure", "Azure API Center", "Azure Logic Apps", "Cloud Integration", "Community", "Connectors", "Easy Auth", "Enterprise Integration", "MCP Server", "Microsoft Entra", "Modular Tools", "Public Preview", "Workflow Automation"]
-tags_normalized: ["agent solutions", "ai", "api integration", "azure", "azure api center", "azure logic apps", "cloud integration", "community", "connectors", "easy auth", "enterprise integration", "mcp server", "microsoft entra", "modular tools", "public preview", "workflow automation"]
+permalink: /ai/community/Build-Modular-Agents-with-Logic-Apps-MCP-Servers-Public-Preview
+tags:
+- Agent Solutions
+- AI
+- API Integration
+- Azure
+- Azure API Center
+- Azure Logic Apps
+- Cloud Integration
+- Community
+- Connectors
+- Easy Auth
+- Enterprise Integration
+- MCP Server
+- Microsoft Entra
+- Modular Tools
+- Public Preview
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 KentWeareMSFT announces the public preview of MCP server support in Azure Logic Apps, describing new ways for developers to build and manage modular agents with improved integration and governance.<!--excerpt_end-->
 
 # Build Modular Agents with Logic Apps MCP Servers (Public Preview)

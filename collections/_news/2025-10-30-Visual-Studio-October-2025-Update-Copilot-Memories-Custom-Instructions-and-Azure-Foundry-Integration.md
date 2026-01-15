@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration"
-description: "The October 2025 update for Visual Studio 2022 (v17.14) introduces significant improvements for developers, including new model options (Claude Sonnet 4.5 and Claude Haiku 4.5), enhanced Copilot memories for project-aware assistance, planning features for complex tasks, custom instruction files for codebase-specific guidance, chat thread management commands, and integration with Azure Foundry for bringing your own AI models."
-author: "Jessie Houghton"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration'
+author: Jessie Houghton
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-30 12:00:36 +00:00
-permalink: "/2025-10-30-Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI Integration", "Azure", "Azure Foundry", "Chat Management", "Claude Haiku 4.5", "Claude Sonnet 4.5", "Coding", "Coding Standards", "Copilot Memories", "Custom Instructions", "Developer Tools", "GitHub Copilot", "Instruction Files", "News", "Planning Feature", "Project Aware AI", "V17.14", "VS"]
-tags_normalized: ["agentic workflows", "ai", "ai integration", "azure", "azure foundry", "chat management", "claude haiku 4dot5", "claude sonnet 4dot5", "coding", "coding standards", "copilot memories", "custom instructions", "developer tools", "github copilot", "instruction files", "news", "planning feature", "project aware ai", "v17dot14", "vs"]
+permalink: /github-copilot/news/Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration
+tags:
+- Agentic Workflows
+- AI
+- AI Integration
+- Azure
+- Azure Foundry
+- Chat Management
+- Claude Haiku 4.5
+- Claude Sonnet 4.5
+- Coding
+- Coding Standards
+- Copilot Memories
+- Custom Instructions
+- Developer Tools
+- GitHub Copilot
+- Instruction Files
+- News
+- Planning Feature
+- Project Aware AI
+- V17.14
+- VS
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Jessie Houghton details the new features in Visual Studio 2022's October 2025 update, focusing on expanded Copilot capabilities, model choices, planning, and Azure Foundry integration for developers.<!--excerpt_end-->
 
 # Visual Studio October 2025 Update: New Models, Memories, Planning, and More

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "MOSAIC: A Wide-and-Slow MicroLED Network Architecture for Next-Gen AI Infrastructure"
-description: "This article introduces MOSAIC, a novel optical interconnect architecture developed by Microsoft Research, Azure, and M365 to address critical AI infrastructure bottlenecks. It explains how wide-and-slow microLED arrays can overcome the power, reliability, and scalability limits of traditional copper and optical links, unlocking new potential for large-scale, efficient AI deployments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'MOSAIC: A Wide-and-Slow MicroLED Network Architecture for Next-Gen AI Infrastructure'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 17:05:53 +00:00
-permalink: "/2025-09-09-MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Company News", "Datacenter Networking", "Energy Efficiency", "GPU Interconnect", "Hardware Co Design", "Microled", "Microsoft Research", "MOSAIC", "Network Bottleneck", "News", "Optical Interconnect", "Optical Transmission", "Parallel Low Speed Channels", "SIGCOMM", "Wide And Slow Architecture"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "company news", "datacenter networking", "energy efficiency", "gpu interconnect", "hardware co design", "microled", "microsoft research", "mosaic", "network bottleneck", "news", "optical interconnect", "optical transmission", "parallel low speed channels", "sigcomm", "wide and slow architecture"]
+permalink: /ai/news/MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Company News
+- Datacenter Networking
+- Energy Efficiency
+- GPU Interconnect
+- Hardware Co Design
+- Microled
+- Microsoft Research
+- MOSAIC
+- Network Bottleneck
+- News
+- Optical Interconnect
+- Optical Transmission
+- Parallel Low Speed Channels
+- SIGCOMM
+- Wide And Slow Architecture
+section_names:
+- ai
+- azure
 ---
-
 stclarke describes how Microsoft’s MOSAIC project uses microLED arrays in a wide-and-slow optical interconnect to dramatically improve AI infrastructure scalability, power efficiency, and reliability.<!--excerpt_end-->
 
 # MOSAIC: A Wide-and-Slow MicroLED Network Architecture for Next-Gen AI Infrastructure

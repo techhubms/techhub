@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Enhancing GitHub Copilot’s Next Edit Suggestions with Custom Model Training"
-description: "This news post details how GitHub Copilot’s Next Edit Suggestions (NES) feature has evolved to deliver smarter and faster code edit recommendations inside Visual Studio Code. The piece covers the technical challenges of predicting code edits, the custom dataset collection, supervised fine-tuning, reinforcement learning improvements, prompt optimization, synthetic data usage, and ongoing evaluation and developer feedback integration. It also previews upcoming enhancements relating to cross-file edits and adaptive behaviors for developer workflows."
-author: "Kevin Merchant"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/evolving-github-copilots-next-edit-suggestions-through-custom-model-training/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Enhancing GitHub Copilot’s Next Edit Suggestions with Custom Model Training
+author: Kevin Merchant
+canonical_url: https://github.blog/ai-and-ml/github-copilot/evolving-github-copilots-next-edit-suggestions-through-custom-model-training/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-20 18:02:21 +00:00
-permalink: "/2025-11-20-Enhancing-GitHub-Copilots-Next-Edit-Suggestions-with-Custom-Model-Training.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["A/B Testing", "AI", "AI & ML", "AI Model Training", "Coding", "Coding Assistant", "Data Pipeline", "Developer Experience", "Developer Tools", "GitHub Copilot", "IDE Enhancements", "IDE Integration", "LLMs", "Machine Learning", "Model Evaluation", "Model Training", "NES", "News", "Next Edit Suggestions", "Next Edit Suggestions (nes)", "Prompt Engineering", "Reinforcement Learning", "Supervised Fine Tuning", "Synthetic Data", "VS Code"]
-tags_normalized: ["aslashb testing", "ai", "ai and ml", "ai model training", "coding", "coding assistant", "data pipeline", "developer experience", "developer tools", "github copilot", "ide enhancements", "ide integration", "llms", "machine learning", "model evaluation", "model training", "nes", "news", "next edit suggestions", "next edit suggestions nes", "prompt engineering", "reinforcement learning", "supervised fine tuning", "synthetic data", "vs code"]
+permalink: /github-copilot/news/Enhancing-GitHub-Copilots-Next-Edit-Suggestions-with-Custom-Model-Training
+tags:
+- A/B Testing
+- AI
+- AI & ML
+- AI Model Training
+- Coding
+- Coding Assistant
+- Data Pipeline
+- Developer Experience
+- Developer Tools
+- GitHub Copilot
+- IDE Enhancements
+- IDE Integration
+- LLMs
+- Machine Learning
+- Model Evaluation
+- Model Training
+- NES
+- News
+- Next Edit Suggestions
+- Next Edit Suggestions (nes)
+- Prompt Engineering
+- Reinforcement Learning
+- Supervised Fine Tuning
+- Synthetic Data
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Kevin Merchant explores the evolution of GitHub Copilot’s Next Edit Suggestions, revealing how custom model training, reinforcement learning, and continuous developer feedback have dramatically improved real-time code recommendations.<!--excerpt_end-->
 
 # Enhancing GitHub Copilot’s Next Edit Suggestions with Custom Model Training

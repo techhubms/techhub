@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Magentic Marketplace: Open-Source Simulation for Agentic Markets Research"
-description: "This news article presents Magentic Marketplace, Microsoft's open-source platform for simulating and studying agent-based AI markets. It details platform features, experimental methodologies, results on agent behavior, model vulnerabilities, and the significance for researchers exploring the dynamics and fairness of emerging digital marketplaces involving autonomous agents."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Magentic Marketplace: Open-Source Simulation for Agentic Markets Research'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 19:04:07 +00:00
-permalink: "/2025-11-05-Magentic-Marketplace-Open-Source-Simulation-for-Agentic-Markets-Research.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Based Simulation", "Agentic Economy", "AI", "Autonomous Agents", "Azure", "Azure AI", "Company News", "Experimentation", "Gemini 2.5 Flash", "GPT 4", "GPT 5", "Magentic Marketplace", "Manipulation Resistance", "Market Dynamics", "Microsoft Research", "Multi Agent Systems", "News", "Open Source", "REST API", "Systemic Bias"]
-tags_normalized: ["agent based simulation", "agentic economy", "ai", "autonomous agents", "azure", "azure ai", "company news", "experimentation", "gemini 2dot5 flash", "gpt 4", "gpt 5", "magentic marketplace", "manipulation resistance", "market dynamics", "microsoft research", "multi agent systems", "news", "open source", "rest api", "systemic bias"]
+permalink: /ai/news/Magentic-Marketplace-Open-Source-Simulation-for-Agentic-Markets-Research
+tags:
+- Agent Based Simulation
+- Agentic Economy
+- AI
+- Autonomous Agents
+- Azure
+- Azure AI
+- Company News
+- Experimentation
+- Gemini 2.5 Flash
+- GPT 4
+- GPT 5
+- Magentic Marketplace
+- Manipulation Resistance
+- Market Dynamics
+- Microsoft Research
+- Multi Agent Systems
+- News
+- Open Source
+- REST API
+- Systemic Bias
+section_names:
+- ai
+- azure
 ---
-
 stclarke introduces Magentic Marketplace, an open-source simulation from Microsoft for researching agentic markets. The article covers technical features, agent behavior findings, and practical guidance for researchers.<!--excerpt_end-->
 
 # Magentic Marketplace: Open-Source Simulation for Agentic Markets Research

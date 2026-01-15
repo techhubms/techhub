@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "From Code to Real Results: AI Impact with Foundry Models at Microsoft Ignite"
-description: "This session from Microsoft Ignite 2025 presents real-world success stories of organizations leveraging Microsoft Foundry models to build innovative AI solutions on Azure. Featuring leaders from Adobe, eClinicalWorks, and others, the talk explores AI-powered customer experiences, document processing architectures, advanced security, and scalable enterprise implementation. The speakers highlight practical demos, architectural deep dives, and first-hand testimonials, providing technical insight into how Azure AI accelerates development and drives organizational impact."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3h20ZV5Ey7w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'From Code to Real Results: AI Impact with Foundry Models at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=3h20ZV5Ey7w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:31:17 +00:00
-permalink: "/2025-11-21-From-Code-to-Real-Results-AI-Impact-with-Foundry-Models-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["Advanced AI", "AI", "AI Agents", "AI Architecture", "AI Models", "Azure", "Azure AI", "Conversation Relay", "Customer Experience", "Document Processing", "Enterprise AI", "InnovatewithAzureAIappsandagents", "Innovation", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Omnichannel", "Scalability", "Videos"]
-tags_normalized: ["advanced ai", "ai", "ai agents", "ai architecture", "ai models", "azure", "azure ai", "conversation relay", "customer experience", "document processing", "enterprise ai", "innovatewithazureaiappsandagents", "innovation", "microsoft foundry", "microsoft ignite", "msignite", "omnichannel", "scalability", "videos"]
+permalink: /ai/videos/From-Code-to-Real-Results-AI-Impact-with-Foundry-Models-at-Microsoft-Ignite
+tags:
+- Advanced AI
+- AI
+- AI Agents
+- AI Architecture
+- AI Models
+- Azure
+- Azure AI
+- Conversation Relay
+- Customer Experience
+- Document Processing
+- Enterprise AI
+- InnovatewithAzureAIappsandagents
+- Innovation
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Omnichannel
+- Scalability
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events brings together pioneers from industry leaders like Adobe and eClinicalWorks to demonstrate how Microsoft Foundry models enable breakthrough AI solutions on Azure, emphasizing technical implementation and organizational impact.<!--excerpt_end-->
 
 {% youtube 3h20ZV5Ey7w %}

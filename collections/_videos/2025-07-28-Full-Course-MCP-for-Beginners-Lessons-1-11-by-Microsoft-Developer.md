@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer"
-description: "This comprehensive video series introduces the Model Context Protocol (MCP), a framework for building secure, scalable AI agents. Hosted by April Gittens, the course covers core MCP concepts, security practices, hands-on development, deployment in Visual Studio Code, contributing to the community, and best practices from industry adopters."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VfZlglOWWZw"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=VfZlglOWWZw
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:51 +00:00
-permalink: "/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html"
-categories: ["AI", "Coding", "Security"]
-tags: ["AI", "AI Agents", "AI Development", "AI Toolkit", "Best Practices", "Coding", "Deployment", "MCP", "Real World Case Studies", "Scalability", "Security", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "ai development", "ai toolkit", "best practices", "coding", "deployment", "mcp", "real world case studies", "scalability", "security", "videos", "vs code"]
+permalink: /ai/videos/Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer
+tags:
+- AI
+- AI Agents
+- AI Development
+- AI Toolkit
+- Best Practices
+- Coding
+- Deployment
+- MCP
+- Real World Case Studies
+- Scalability
+- Security
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- security
 ---
-
 Microsoft Developer presents an in-depth MCP for Beginners course led by April Gittens, covering everything from MCP fundamentals to building and deploying AI agents in Visual Studio Code.<!--excerpt_end-->
 
 {% youtube VfZlglOWWZw %}

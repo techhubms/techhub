@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Survey Reveals Rapid AI Adoption to Strengthen DevSecOps Practices"
-description: "A global survey of 1,015 IT professionals, conducted by Fastly, explores the increasing integration of AI into DevSecOps and application security workflows. The findings highlight how organizations are leveraging AI to automate security processes, the challenges they face such as integration complexity and false positives, and their ongoing efforts to improve trust and efficiency in AI-driven security solutions."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals Rapid AI Adoption to Strengthen DevSecOps Practices
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-15 14:01:27 +00:00
-permalink: "/2025-10-15-Survey-Reveals-Rapid-AI-Adoption-to-Strengthen-DevSecOps-Practices.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Adoption", "Application Security", "Audit", "Automation", "Blogs", "CDN", "Compliance", "DevOps", "DevSecOps", "False Positives", "Fastly", "Integration", "Logging", "Remediation", "Sandboxing", "Security", "Security Tooling", "Social Facebook", "Social LinkedIn", "Social X", "Vulnerability Detection"]
-tags_normalized: ["ai", "ai adoption", "application security", "audit", "automation", "blogs", "cdn", "compliance", "devops", "devsecops", "false positives", "fastly", "integration", "logging", "remediation", "sandboxing", "security", "security tooling", "social facebook", "social linkedin", "social x", "vulnerability detection"]
+permalink: /ai/blogs/Survey-Reveals-Rapid-AI-Adoption-to-Strengthen-DevSecOps-Practices
+tags:
+- AI
+- AI Adoption
+- Application Security
+- Audit
+- Automation
+- Blogs
+- CDN
+- Compliance
+- DevOps
+- DevSecOps
+- False Positives
+- Fastly
+- Integration
+- Logging
+- Remediation
+- Sandboxing
+- Security
+- Security Tooling
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Vulnerability Detection
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard summarizes a Fastly survey showing rapid AI adoption for DevSecOps, detailing the integration level, trust factors, and challenges as organizations automate application security.<!--excerpt_end-->
 
 # Survey Reveals Rapid AI Adoption to Strengthen DevSecOps Practices

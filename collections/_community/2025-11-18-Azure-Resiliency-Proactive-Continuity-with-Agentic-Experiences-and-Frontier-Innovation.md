@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Azure Resiliency: Proactive Continuity with Agentic Experiences and Frontier Innovation"
-description: "This post introduces Azure's updated resiliency framework, focusing on the transition from Azure Business Continuity Center to integrated resiliency capabilities powered by agentic experiences and the new Azure Copilot resiliency agent. It explains the framework’s pillars—infrastructure, data, and cyber recovery—and demonstrates how AI-driven workflows automate risk detection, backup, and recovery. Readers learn lifecycle best practices for designing, monitoring, and sustaining high availability and rapid recovery across Azure workloads, plus recommended tools and Ignite session resources."
-author: "molina_sharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-resiliency-proactive-continuity-with-agentic-experiences/ba-p/4469693"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Resiliency: Proactive Continuity with Agentic Experiences and Frontier Innovation'
+author: molina_sharma
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-resiliency-proactive-continuity-with-agentic-experiences/ba-p/4469693
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:40 +00:00
-permalink: "/2025-11-18-Azure-Resiliency-Proactive-Continuity-with-Agentic-Experiences-and-Frontier-Innovation.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Experiences", "AI", "AI Driven Automation", "Azure", "Azure Backup", "Azure Copilot", "Azure Monitor", "Business Continuity", "Chaos Studio", "Cloud Architecture", "Community", "Compliance", "Cyber Recovery", "Data Recovery", "Disaster Recovery", "High Availability", "Infrastructure Resiliency", "Microsoft Ignite", "Operational Continuity", "Policy Management", "Posture Assessment", "Ransomware Protection", "Resiliency Agent", "Security", "Site Recovery"]
-tags_normalized: ["agentic experiences", "ai", "ai driven automation", "azure", "azure backup", "azure copilot", "azure monitor", "business continuity", "chaos studio", "cloud architecture", "community", "compliance", "cyber recovery", "data recovery", "disaster recovery", "high availability", "infrastructure resiliency", "microsoft ignite", "operational continuity", "policy management", "posture assessment", "ransomware protection", "resiliency agent", "security", "site recovery"]
+permalink: /ai/community/Azure-Resiliency-Proactive-Continuity-with-Agentic-Experiences-and-Frontier-Innovation
+tags:
+- Agentic Experiences
+- AI
+- AI Driven Automation
+- Azure
+- Azure Backup
+- Azure Copilot
+- Azure Monitor
+- Business Continuity
+- Chaos Studio
+- Cloud Architecture
+- Community
+- Compliance
+- Cyber Recovery
+- Data Recovery
+- Disaster Recovery
+- High Availability
+- Infrastructure Resiliency
+- Microsoft Ignite
+- Operational Continuity
+- Policy Management
+- Posture Assessment
+- Ransomware Protection
+- Resiliency Agent
+- Security
+- Site Recovery
+section_names:
+- ai
+- azure
+- security
 ---
-
 molina_sharma dives into Azure’s new resiliency framework, highlighting the Azure Copilot resiliency agent’s role in automating continuity and recovery with AI-driven workflows across infrastructure, data, and cyber resilience.<!--excerpt_end-->
 
 # Azure Resiliency: Proactive Continuity with Agentic Experiences and Frontier Innovation

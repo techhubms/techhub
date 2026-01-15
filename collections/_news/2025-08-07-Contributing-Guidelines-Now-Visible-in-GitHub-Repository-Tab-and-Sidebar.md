@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Contributing Guidelines Now Visible in GitHub Repository Tab and Sidebar"
-description: "GitHub has enhanced the discoverability of contributing guidelines for repositories by making them prominently visible in both the repository overview and sidebar. This update aims to reduce onboarding friction for new contributors by ensuring easy access to contribution instructions whenever a CONTRIBUTING.md file is present. The change supports open source community growth and contributor engagement."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-07-contributing-guidelines-now-visible-in-repository-tab-and-sidebar"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Contributing Guidelines Now Visible in GitHub Repository Tab and Sidebar
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-07-contributing-guidelines-now-visible-in-repository-tab-and-sidebar
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-07 19:22:34 +00:00
-permalink: "/2025-08-07-Contributing-Guidelines-Now-Visible-in-GitHub-Repository-Tab-and-Sidebar.html"
-categories: ["DevOps"]
-tags: ["Collaboration Tools", "Community Growth", "Contributing Guidelines", "Developer Experience", "Developer Onboarding", "DevOps", "GitHub", "GitHub UI Update", "News", "Open Source", "Repository Management", "Repository Overview"]
-tags_normalized: ["collaboration tools", "community growth", "contributing guidelines", "developer experience", "developer onboarding", "devops", "github", "github ui update", "news", "open source", "repository management", "repository overview"]
+permalink: /devops/news/Contributing-Guidelines-Now-Visible-in-GitHub-Repository-Tab-and-Sidebar
+tags:
+- Collaboration Tools
+- Community Growth
+- Contributing Guidelines
+- Developer Experience
+- Developer Onboarding
+- DevOps
+- GitHub
+- GitHub UI Update
+- News
+- Open Source
+- Repository Management
+- Repository Overview
+section_names:
+- devops
 ---
-
 Allison introduces a GitHub platform update that surfaces contributing guidelines in the repository overview tab and sidebar, improving new contributor onboarding and repository usability.<!--excerpt_end-->
 
 # Contributing Guidelines Now Visible in Repository Tab and Sidebar

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Expands Copilot Features in Visual Studio Code 1.102"
-description: "This article examines the major Copilot-centric update to Visual Studio Code (VS Code) version 1.102, detailing new AI-driven capabilities, the general availability of Model Context Protocol (MCP), enhanced Copilot Chat integration, custom instruction support, and emerging developer concerns over AI feature dominance. It discusses technical specifics and implications for developer workflow."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: Microsoft Expands Copilot Features in Visual Studio Code 1.102
+author: Tim Anderson
+canonical_url: https://devclass.com/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2025-07-14 16:58:30 +00:00
-permalink: "/2025-07-14-Microsoft-Expands-Copilot-Features-in-Visual-Studio-Code-1102.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agent Safety", "AI Bloat", "AI Coding Tools", "AI/ML", "Blogs", "CLI Tools", "Coding", "Copilot", "Copilot Chat", "Custom Instructions", "Developer Experience", "Development", "GitHub Copilot", "IDE Integrations", "LLM Evaluation", "MCP", "MCP Servers", "Microsoft", "Terminal Command Auto Approval", "VS Code", "VS Code 1.102"]
-tags_normalized: ["ai", "ai agent safety", "ai bloat", "ai coding tools", "aislashml", "blogs", "cli tools", "coding", "copilot", "copilot chat", "custom instructions", "developer experience", "development", "github copilot", "ide integrations", "llm evaluation", "mcp", "mcp servers", "microsoft", "terminal command auto approval", "vs code", "vs code 1dot102"]
+permalink: /github-copilot/blogs/Microsoft-Expands-Copilot-Features-in-Visual-Studio-Code-1102
+tags:
+- AI
+- AI Agent Safety
+- AI Bloat
+- AI Coding Tools
+- AI/ML
+- Blogs
+- CLI Tools
+- Coding
+- Copilot
+- Copilot Chat
+- Custom Instructions
+- Developer Experience
+- Development
+- GitHub Copilot
+- IDE Integrations
+- LLM Evaluation
+- MCP
+- MCP Servers
+- Microsoft
+- Terminal Command Auto Approval
+- VS Code
+- VS Code 1.102
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Tim Anderson reports on Microsoft's latest update to Visual Studio Code, focusing on new Copilot and AI-related features, developer reactions, and potential impacts on coding workflows.<!--excerpt_end-->
 
 # Microsoft Expands Copilot Features in Visual Studio Code 1.102

@@ -1,20 +1,55 @@
----
-layout: "post"
-title: "Rewriting the Rules of Software Quality: Why Agentic QA is the Future CIOs Must Champion"
-description: "This article by Chirag Gandhi explores the transformative role of agentic (AI-powered) quality assurance in enterprise software development. It outlines how autonomous intelligent agents are embedded throughout the software lifecycle, enabling continuous and adaptive QA that keeps pace with modern, dynamic systems. The piece discusses the shift from traditional scripted tests to AI-driven validation, the cultural changes needed for QA professionals, and the importance of governance for successful adoption."
-author: "Chirag Gandhi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Rewriting the Rules of Software Quality: Why Agentic QA is the Future CIOs Must Champion'
+author: Chirag Gandhi
+canonical_url: https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-24 08:15:17 +00:00
-permalink: "/2025-10-24-Rewriting-the-Rules-of-Software-Quality-Why-Agentic-QA-is-the-Future-CIOs-Must-Champion.html"
-categories: ["AI", "DevOps"]
-tags: ["Adaptive Testing", "Agentic QA", "Agentic Systems in DevOps", "AI", "AI DevSecOps", "AI Driven QA", "AI Enabled QA Frameworks", "AI For CIOs", "AI Governance", "AI in Enterprise Software", "AI in Software Development", "AI in Software Testing", "AI Quality Automation", "AI Software Lifecycle", "AI Software Quality", "Autonomous QA Systems", "Autonomous Quality Assurance", "Autonomous Software Testing", "Blogs", "Business Of DevOps", "Continuous Testing", "Continuous Testing With AI", "Contributed Content", "DevOps", "DevSecOps", "Digital Transformation", "Enterprise AI", "Enterprise Software", "Ethical AI Testing", "Generative AI QA", "Intelligent Agents", "QA Automation", "Quality Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality Assurance"]
-tags_normalized: ["adaptive testing", "agentic qa", "agentic systems in devops", "ai", "ai devsecops", "ai driven qa", "ai enabled qa frameworks", "ai for cios", "ai governance", "ai in enterprise software", "ai in software development", "ai in software testing", "ai quality automation", "ai software lifecycle", "ai software quality", "autonomous qa systems", "autonomous quality assurance", "autonomous software testing", "blogs", "business of devops", "continuous testing", "continuous testing with ai", "contributed content", "devops", "devsecops", "digital transformation", "enterprise ai", "enterprise software", "ethical ai testing", "generative ai qa", "intelligent agents", "qa automation", "quality automation", "social facebook", "social linkedin", "social x", "software quality assurance"]
+permalink: /ai/blogs/Rewriting-the-Rules-of-Software-Quality-Why-Agentic-QA-is-the-Future-CIOs-Must-Champion
+tags:
+- Adaptive Testing
+- Agentic QA
+- Agentic Systems in DevOps
+- AI
+- AI DevSecOps
+- AI Driven QA
+- AI Enabled QA Frameworks
+- AI For CIOs
+- AI Governance
+- AI in Enterprise Software
+- AI in Software Development
+- AI in Software Testing
+- AI Quality Automation
+- AI Software Lifecycle
+- AI Software Quality
+- Autonomous QA Systems
+- Autonomous Quality Assurance
+- Autonomous Software Testing
+- Blogs
+- Business Of DevOps
+- Continuous Testing
+- Continuous Testing With AI
+- Contributed Content
+- DevOps
+- DevSecOps
+- Digital Transformation
+- Enterprise AI
+- Enterprise Software
+- Ethical AI Testing
+- Generative AI QA
+- Intelligent Agents
+- QA Automation
+- Quality Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Quality Assurance
+section_names:
+- ai
+- devops
 ---
-
 Chirag Gandhi discusses how agentic, AI-powered QA systems are transforming enterprise software quality assurance by embedding intelligent agents throughout the development lifecycle to deliver more adaptive and resilient testing.<!--excerpt_end-->
 
 # Rewriting the Rules of Software Quality: Why Agentic QA is the Future CIOs Must Champion

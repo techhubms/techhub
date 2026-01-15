@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration"
-description: "This article by Tim D'haeyer explores a practical strategy for migrating complex BizTalk integrations to Azure. By reusing WCF-SQL XML data structures and leveraging Azure Functions alongside Logic Apps, the migration circumvents many of the obstacles typically encountered, especially around complex XSLT mappings and SQL connector limitations."
-author: "tim.dhaeyer@zure.com (Tim D'haeyer)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration
+author: tim.dhaeyer@zure.com (Tim D'haeyer)
+canonical_url: https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-10-30 12:50:02 +00:00
-permalink: "/2025-10-30-How-Reusing-WCF-SQL-XML-Simplified-Our-BizTalk-to-Azure-Migration.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Functions", "Azure Key Vault", "BizTalk Migration", "Blogs", "Coding", "DevOps", "Enterprise Integration", "Legacy System Modernization", "LINQ To XML", "Logic Apps", "SAP Integration", "SQL Server", "Staging Database", "Stored Procedures", "User Defined Table Types", "WCF SQL", "XML Integration", "XSLT Mapping"]
-tags_normalized: ["azure", "azure functions", "azure key vault", "biztalk migration", "blogs", "coding", "devops", "enterprise integration", "legacy system modernization", "linq to xml", "logic apps", "sap integration", "sql server", "staging database", "stored procedures", "user defined table types", "wcf sql", "xml integration", "xslt mapping"]
+permalink: /coding/blogs/How-Reusing-WCF-SQL-XML-Simplified-Our-BizTalk-to-Azure-Migration
+tags:
+- Azure
+- Azure Functions
+- Azure Key Vault
+- BizTalk Migration
+- Blogs
+- Coding
+- DevOps
+- Enterprise Integration
+- Legacy System Modernization
+- LINQ To XML
+- Logic Apps
+- SAP Integration
+- SQL Server
+- Staging Database
+- Stored Procedures
+- User Defined Table Types
+- WCF SQL
+- XML Integration
+- XSLT Mapping
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Tim D'haeyer shares his experience migrating BizTalk flows to Azure by reusing WCF-SQL XML, enabling a more streamlined integration with SAP and SQL Server. His approach, detailed in this article, helped accelerate migration while preserving reliability.<!--excerpt_end-->
 
 # How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration

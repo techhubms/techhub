@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "GA: Enhanced Audit in Azure Security Baseline for Linux"
-description: "This post introduces the General Availability of the Enhanced Azure Security Baseline for Linux, which brings scalable audit capabilities to over 1.6 million Linux devices across Azure and hybrid cloud environments. It explains how organizations can leverage Azure Policy and Azure Machine Configuration to continuously audit Linux machines, align with industry benchmarks, and surface compliance data for large-scale visibility. Key features include broad distribution support, granular reporting, integration with Azure OSConfig, and seamless enterprise reporting through Azure dashboards and Microsoft Defender for Cloud."
-author: "AmirB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'GA: Enhanced Audit in Azure Security Baseline for Linux'
+author: AmirB
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 16:00:00 +00:00
-permalink: "/2025-09-02-GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Only", "Azure", "Azure Arc", "Azure Governance", "Azure Machine Configuration", "Azure Policy", "Azure Security Baseline", "CIS Controls", "Cloud Security", "Community", "Compliance", "Configuration Drift", "Enterprise Security", "Hybrid Cloud", "Industry Benchmarks", "Linux", "Microsoft Defender For Cloud", "OSConfig", "Remediation", "Reporting", "Resource Graph Explorer", "Security", "Security Auditing"]
-tags_normalized: ["audit only", "azure", "azure arc", "azure governance", "azure machine configuration", "azure policy", "azure security baseline", "cis controls", "cloud security", "community", "compliance", "configuration drift", "enterprise security", "hybrid cloud", "industry benchmarks", "linux", "microsoft defender for cloud", "osconfig", "remediation", "reporting", "resource graph explorer", "security", "security auditing"]
+permalink: /azure/community/GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux
+tags:
+- Audit Only
+- Azure
+- Azure Arc
+- Azure Governance
+- Azure Machine Configuration
+- Azure Policy
+- Azure Security Baseline
+- CIS Controls
+- Cloud Security
+- Community
+- Compliance
+- Configuration Drift
+- Enterprise Security
+- Hybrid Cloud
+- Industry Benchmarks
+- Linux
+- Microsoft Defender For Cloud
+- OSConfig
+- Remediation
+- Reporting
+- Resource Graph Explorer
+- Security
+- Security Auditing
+section_names:
+- azure
+- security
 ---
-
 AmirB details the GA release of Enhanced Azure Security Baseline for Linux, highlighting audit-focused capabilities that help enterprises monitor Linux security compliance at scale.<!--excerpt_end-->
 
 # GA: Enhanced Audit in Azure Security Baseline for Linux

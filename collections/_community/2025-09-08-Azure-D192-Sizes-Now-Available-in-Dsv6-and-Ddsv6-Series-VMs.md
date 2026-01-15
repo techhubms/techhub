@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs"
-description: "This announcement by Sarah Zhou details the general availability of Azure D192 VM sizes in the Azure Dsv6 and Ddsv6-series, leveraging the 5th Generation Intel Xeon Platinum 8573C processor. The post covers technical specifications, suitable workloads, performance features (such as Azure Boost, NVMe storage, and Intel TME security), and provides guidance on region support, pricing, and getting started. Aimed at architects and developers deploying demanding enterprise applications, the article helps identify optimal VM configurations for large-scale, memory-intensive, and secure workloads."
-author: "sarah-zhou"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs
+author: sarah-zhou
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 23:49:26 +00:00
-permalink: "/2025-09-08-Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Ddsv6 Series", "Azure Dsv6 Series", "Azure Pricing", "Cloud Infrastructure", "Community", "D192 VM Size", "Data Center", "Enterprise Workloads", "in Memory Analytics", "Intel Xeon Platinum 8573C", "Large Databases", "Managed Disks", "NVMe Storage", "Regional Availability", "SAP", "SQL Server", "Total Memory Encryption", "Virtual Machines", "Virtualization"]
-tags_normalized: ["azure", "azure boost", "azure ddsv6 series", "azure dsv6 series", "azure pricing", "cloud infrastructure", "community", "d192 vm size", "data center", "enterprise workloads", "in memory analytics", "intel xeon platinum 8573c", "large databases", "managed disks", "nvme storage", "regional availability", "sap", "sql server", "total memory encryption", "virtual machines", "virtualization"]
+permalink: /azure/community/Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs
+tags:
+- Azure
+- Azure Boost
+- Azure Ddsv6 Series
+- Azure Dsv6 Series
+- Azure Pricing
+- Cloud Infrastructure
+- Community
+- D192 VM Size
+- Data Center
+- Enterprise Workloads
+- in Memory Analytics
+- Intel Xeon Platinum 8573C
+- Large Databases
+- Managed Disks
+- NVMe Storage
+- Regional Availability
+- SAP
+- SQL Server
+- Total Memory Encryption
+- Virtual Machines
+- Virtualization
+section_names:
+- azure
 ---
-
 Sarah Zhou introduces the availability of Azure D192 VM sizes in the Dsv6 and Ddsv6-series, outlining their technical specs, performance capabilities, and applicability for enterprise workloads.<!--excerpt_end-->
 
 # Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs

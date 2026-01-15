@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Generating Full-Stack .NET Apps with Uno Platform and AI"
-description: "This video introduces the Uno Platform, detailing how developers can build cross-platform .NET applications—mobile, web, desktop, and embedded—from a single codebase. It highlights productivity features like Hot Design and demonstrates how AI now enables rapid full-stack app generation. Major .NET updates such as .NET 10, .NET Aspire 13, ASP.NET Core 10, .NET MAUI 10, C# 14, F# 10, and Visual Studio 2026 are referenced, emphasizing their roles in modern, intelligent, and unified app development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=g4A_3ZCwwWg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Generating Full-Stack .NET Apps with Uno Platform and AI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=g4A_3ZCwwWg
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:20:55 +00:00
-permalink: "/2025-11-14-Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "AI", "AI Integration", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform Development", "F# 10", "Full Stack App", "Hot Design", "Modern Web Development", "Productivity Tools", "Single Codebase", "Uno Platform", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "ai", "ai integration", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform development", "fsharp 10", "full stack app", "hot design", "modern web development", "productivity tools", "single codebase", "uno platform", "videos", "vs"]
+permalink: /ai/videos/Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI
+tags:
+- .NET
+- .NET 10
+- .NET Aspire 13
+- .NET MAUI 10
+- AI
+- AI Integration
+- ASP.NET Core 10
+- C# 14
+- Cloud Native
+- Coding
+- Cross Platform Development
+- F# 10
+- Full Stack App
+- Hot Design
+- Modern Web Development
+- Productivity Tools
+- Single Codebase
+- Uno Platform
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Presented by the dotnet team, this video showcases how Uno Platform and AI enable developers to quickly generate full-stack, cross-platform .NET applications, while highlighting new productivity features and the latest .NET advancements.<!--excerpt_end-->
 
 {% youtube g4A_3ZCwwWg %}

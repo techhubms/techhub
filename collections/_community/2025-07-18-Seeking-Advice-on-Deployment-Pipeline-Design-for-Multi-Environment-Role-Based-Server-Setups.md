@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Seeking Advice on Deployment Pipeline Design for Multi-Environment, Role-Based Server Setups"
-description: "The author seeks input on best practices for architecting a deployment pipeline across Prod, PreProd, Test, and Dev environments with various server roles and application dependencies. They describe challenges with Azure DevOps Variable Groups and role assignments, and ask for tools or patterns to manage dynamic deployment targets and dependencies."
-author: "Effective_Being_8048"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m2vtfz/looking_for_advice_on_architecting_a_deployment/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Seeking Advice on Deployment Pipeline Design for Multi-Environment, Role-Based Server Setups
+author: Effective_Being_8048
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1m2vtfz/looking_for_advice_on_architecting_a_deployment/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-18 07:20:38 +00:00
-permalink: "/2025-07-18-Seeking-Advice-on-Deployment-Pipeline-Design-for-Multi-Environment-Role-Based-Server-Setups.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Dependencies", "Automation", "Azure", "Azure DevOps", "Community", "Deployment Pipeline", "DevOps", "DevOps Patterns", "Environment Management", "Infrastructure Mapping", "Inventory Management", "Server Roles", "Variable Groups", "VM Tagging"]
-tags_normalized: ["application dependencies", "automation", "azure", "azure devops", "community", "deployment pipeline", "devops", "devops patterns", "environment management", "infrastructure mapping", "inventory management", "server roles", "variable groups", "vm tagging"]
+permalink: /azure/community/Seeking-Advice-on-Deployment-Pipeline-Design-for-Multi-Environment-Role-Based-Server-Setups
+tags:
+- Application Dependencies
+- Automation
+- Azure
+- Azure DevOps
+- Community
+- Deployment Pipeline
+- DevOps
+- DevOps Patterns
+- Environment Management
+- Infrastructure Mapping
+- Inventory Management
+- Server Roles
+- Variable Groups
+- VM Tagging
+section_names:
+- azure
+- devops
 ---
-
 Effective_Being_8048 asks for practical advice on architecting a deployment pipeline that manages multiple environments, server roles, and application dependencies without hardcoding configurations. This summary explores their setup, challenges, and desired solutions.<!--excerpt_end-->
 
 ## Article Summary

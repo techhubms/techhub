@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Govern in OneLake Catalog for Fabric Admins (Preview)"
-description: "This article introduces the new governance features in OneLake catalog for Microsoft Fabric administrators. It describes how admins can use actionable insights, governance tools, and recommended actions within the OneLake catalog to manage, secure, and optimize their organization's data estate. The preview includes enhanced reporting, compliance insights, and integration with Copilot for interactive exploration, supporting robust data governance and compliance strategies."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Govern in OneLake Catalog for Fabric Admins (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 09:30:00 +00:00
-permalink: "/2025-11-21-Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Admin Tools", "Azure", "Capacity Management", "Compliance", "Copilot", "Data Estate", "Data Governance", "Data Protection", "Data Security", "Fabric Admin", "Fabric Insights", "Governance Dashboard", "Microsoft Fabric", "ML", "News", "OneLake Catalog", "Security", "Sensitivity Labels"]
-tags_normalized: ["admin tools", "azure", "capacity management", "compliance", "copilot", "data estate", "data governance", "data protection", "data security", "fabric admin", "fabric insights", "governance dashboard", "microsoft fabric", "ml", "news", "onelake catalog", "security", "sensitivity labels"]
+permalink: /ml/news/Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview
+tags:
+- Admin Tools
+- Azure
+- Capacity Management
+- Compliance
+- Copilot
+- Data Estate
+- Data Governance
+- Data Protection
+- Data Security
+- Fabric Admin
+- Fabric Insights
+- Governance Dashboard
+- Microsoft Fabric
+- ML
+- News
+- OneLake Catalog
+- Security
+- Sensitivity Labels
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog presents an overview of new governance capabilities in the OneLake catalog for Fabric admins, offering practical guidance and insights on securing and managing organizational data.<!--excerpt_end-->
 
 # Govern in OneLake Catalog for Fabric Admins (Preview)

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Ask Better Questions, Get Better Code"
-description: "This article explores how asking clear, direct questions enhances GitHub Copilot's ability to deliver relevant coding assistance. It provides practical prompt improvement examples, tips for crafting effective questions, and actionable advice for developers looking to maximize Copilot's usefulness by treating it like a collaborative coding partner."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Ask Better Questions, Get Better Code
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-03-21 00:00:00 +00:00
-permalink: "/2025-03-21-Ask-Better-Questions-Get-Better-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Best Practices", "Blogs", "Code Quality", "Coding", "Coding Assistance", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Prompt Engineering", "Question Clarity", "Software Development"]
-tags_normalized: ["ai", "ai pair programming", "best practices", "blogs", "code quality", "coding", "coding assistance", "copilot chat", "developer productivity", "github copilot", "prompt engineering", "question clarity", "software development"]
+permalink: /github-copilot/blogs/Ask-Better-Questions-Get-Better-Code
+tags:
+- AI
+- AI Pair Programming
+- Best Practices
+- Blogs
+- Code Quality
+- Coding
+- Coding Assistance
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- Prompt Engineering
+- Question Clarity
+- Software Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shares actionable strategies for using GitHub Copilot more effectively by improving the questions you ask, including real-world examples and prompt optimization tips.<!--excerpt_end-->
 
 # Ask Better Questions, Get Better Code

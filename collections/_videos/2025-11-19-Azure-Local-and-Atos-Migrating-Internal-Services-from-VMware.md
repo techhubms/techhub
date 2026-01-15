@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Local and Atos: Migrating Internal Services from VMware"
-description: "This session from Microsoft Ignite 2025 details how Atos transitioned key on-premises IT services away from aging VMware clusters to Azure Local. The talk explains the motivations behind selecting Azure Local, highlights the advantages gained, and provides insights into the technical migration process, including new operational models, hardware choices, and the integration of Azure Arc for modernized SQL and PostgreSQL management."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HcuOtjT6NCc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Azure Local and Atos: Migrating Internal Services from VMware'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=HcuOtjT6NCc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:18:43 +00:00
-permalink: "/2025-11-19-Azure-Local-and-Atos-Migrating-Internal-Services-from-VMware.html"
-categories: ["Azure"]
-tags: ["Atos", "Azure", "Azure Arc", "Azure Local", "Cloud Transformation", "Hybrid Cloud", "Internal IT Services", "Licensing Flexibility", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Readiness", "NVMe Storage", "On Premises Infrastructure", "Operational Model", "PostgreSQL", "SQL Modernization", "Storage Spaces Direct", "Videos", "VMware Migration"]
-tags_normalized: ["atos", "azure", "azure arc", "azure local", "cloud transformation", "hybrid cloud", "internal it services", "licensing flexibility", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network readiness", "nvme storage", "on premises infrastructure", "operational model", "postgresql", "sql modernization", "storage spaces direct", "videos", "vmware migration"]
+permalink: /azure/videos/Azure-Local-and-Atos-Migrating-Internal-Services-from-VMware
+tags:
+- Atos
+- Azure
+- Azure Arc
+- Azure Local
+- Cloud Transformation
+- Hybrid Cloud
+- Internal IT Services
+- Licensing Flexibility
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Network Readiness
+- NVMe Storage
+- On Premises Infrastructure
+- Operational Model
+- PostgreSQL
+- SQL Modernization
+- Storage Spaces Direct
+- Videos
+- VMware Migration
+section_names:
+- azure
 ---
-
 Microsoft Events presents a session led by Adam Dolman, describing Atos’s migration from expiring VMware clusters to Azure Local. The talk covers technical choices and operational benefits for internal IT services.<!--excerpt_end-->
 
 {% youtube HcuOtjT6NCc %}

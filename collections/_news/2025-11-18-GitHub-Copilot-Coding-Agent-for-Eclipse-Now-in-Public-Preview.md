@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent for Eclipse Now in Public Preview"
-description: "This announcement details the public preview release of GitHub Copilot's coding agent for Eclipse, bringing advanced AI-powered coding automation into native Eclipse IDE workflows. The update introduces features like delegated task execution, live job tracking, and integrated pull request management, enabling developers to seamlessly leverage Copilot directly within Eclipse for enhanced productivity."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Coding Agent for Eclipse Now in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
-permalink: "/2025-11-18-GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistant", "Copilot", "Copilot Chat", "Copilot Coding Agent", "Developer Tools", "Eclipse IDE", "GitHub", "GitHub Copilot", "IDE Integration", "Job Tracking", "News", "Public Preview", "Pull Request Automation", "Task Delegation"]
-tags_normalized: ["ai", "ai code assistant", "copilot", "copilot chat", "copilot coding agent", "developer tools", "eclipse ide", "github", "github copilot", "ide integration", "job tracking", "news", "public preview", "pull request automation", "task delegation"]
+permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview
+tags:
+- AI
+- AI Code Assistant
+- Copilot
+- Copilot Chat
+- Copilot Coding Agent
+- Developer Tools
+- Eclipse IDE
+- GitHub
+- GitHub Copilot
+- IDE Integration
+- Job Tracking
+- News
+- Public Preview
+- Pull Request Automation
+- Task Delegation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the public preview of GitHub Copilot's coding agent for Eclipse, enabling developers to delegate coding tasks, track job status, and manage pull requests directly within the Eclipse IDE using Copilot's AI capabilities.<!--excerpt_end-->
 
 # GitHub Copilot Coding Agent for Eclipse: Public Preview

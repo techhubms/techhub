@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Rx.NET Packaging Plan 2025: Progress, Testing, and Community Feedback"
-description: "This community discussion highlights Ian Griffiths' recent update on Rx.NET's packaging approach for the upcoming v7 release. The conversation covers efforts to reduce package bloat, the introduction of the Rx Gauntlet test suite, and the use of Power BI for reporting. It also features debate over moving Rx into the .NET Base Class Library, as well as commentary on Microsoft’s ongoing support for the library."
-author: "hm_vr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Rx.NET Packaging Plan 2025: Progress, Testing, and Community Feedback'
+author: hm_vr
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 07:47:10 +00:00
-permalink: "/2025-08-07-RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "AsyncEnumerable", "Automation", "Base Class Library", "Coding", "Community", "IObservable", "NuGet Packages", "Open Source Maintenance", "Power BI", "Rx.NET", "Software Packaging", "System.Linq.Async", "System.Reactive", "Unit Testing"]
-tags_normalized: ["dotnet", "dotnet 10", "asyncenumerable", "automation", "base class library", "coding", "community", "iobservable", "nuget packages", "open source maintenance", "power bi", "rxdotnet", "software packaging", "systemdotlinqdotasync", "systemdotreactive", "unit testing"]
+permalink: /coding/community/RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback
+tags:
+- .NET
+- .NET 10
+- AsyncEnumerable
+- Automation
+- Base Class Library
+- Coding
+- Community
+- IObservable
+- NuGet Packages
+- Open Source Maintenance
+- Power BI
+- Rx.NET
+- Software Packaging
+- System.Linq.Async
+- System.Reactive
+- Unit Testing
+section_names:
+- coding
 ---
-
 hm_vr and other community members discuss Ian Griffiths' update on Rx.NET's packaging improvements, automated testing, and future plans for v7, including the challenges of BCL integration.<!--excerpt_end-->
 
 # Rx.NET Packaging Plan 2025: Progress and Community Discussion

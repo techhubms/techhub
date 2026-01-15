@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Agent Loop Expands AI Automation in Azure Logic Apps with New Features"
-description: "This announcement details the general availability and new public preview features for Agent Loop in Azure Logic Apps, empowering developers to build secure, agentic workflows with AI-first capabilities. It covers AI-driven automation, model integration via APIM AI Gateway, support for MCP tool calling, deployment to Teams, document-level security for RAG, Okta identity integration, and a redesigned workflow designer. The update offers production-ready, scalable solutions for integrating intelligent agents into enterprise systems, supporting advanced governance, observability, and rapid development within Azure and Microsoft 365 ecosystems."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-new-set-of-ai-features-arrive-in-public-preview/ba-p/4470764"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Agent Loop Expands AI Automation in Azure Logic Apps with New Features
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-new-set-of-ai-features-arrive-in-public-preview/ba-p/4470764
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:43:59 +00:00
-permalink: "/2025-11-18-Agent-Loop-Expands-AI-Automation-in-Azure-Logic-Apps-with-New-Features.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Loop", "AI", "AI Automation", "APIM AI Gateway", "Automation", "Azure", "Azure Logic Apps", "Bring Your Own Model", "Community", "Conversational Agents", "Document Level Permissions", "Enterprise Integration", "Identity Management", "MCP", "Microsoft Entra ID", "Observability", "Okta", "Preview Features", "RAG Security", "Security", "Serverless", "Teams Integration", "Tool Calling", "Workflow Designer"]
-tags_normalized: ["agent loop", "ai", "ai automation", "apim ai gateway", "automation", "azure", "azure logic apps", "bring your own model", "community", "conversational agents", "document level permissions", "enterprise integration", "identity management", "mcp", "microsoft entra id", "observability", "okta", "preview features", "rag security", "security", "serverless", "teams integration", "tool calling", "workflow designer"]
+permalink: /ai/community/Agent-Loop-Expands-AI-Automation-in-Azure-Logic-Apps-with-New-Features
+tags:
+- Agent Loop
+- AI
+- AI Automation
+- APIM AI Gateway
+- Automation
+- Azure
+- Azure Logic Apps
+- Bring Your Own Model
+- Community
+- Conversational Agents
+- Document Level Permissions
+- Enterprise Integration
+- Identity Management
+- MCP
+- Microsoft Entra ID
+- Observability
+- Okta
+- Preview Features
+- RAG Security
+- Security
+- Serverless
+- Teams Integration
+- Tool Calling
+- Workflow Designer
+section_names:
+- ai
+- azure
+- security
 ---
-
 DivSwa shares an in-depth look at the latest AI-first updates for Agent Loop in Azure Logic Apps, including secure agentic automation, advanced model integration, tool extensibility, and new workflow designer enhancements.<!--excerpt_end-->
 
 # Agent Loop Expands AI Automation in Azure Logic Apps with New Features

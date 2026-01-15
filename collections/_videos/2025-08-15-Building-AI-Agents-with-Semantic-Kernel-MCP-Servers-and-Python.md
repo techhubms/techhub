@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building AI Agents with Semantic Kernel, MCP Servers, and Python"
-description: "This episode explores practical approaches to constructing intelligent AI agents using Microsoft's Semantic Kernel, MCP Servers, and Python. Viewers will see step-by-step demonstrations of invoking MCP tools within Semantic Kernel, integrating with GitHub and Microsoft Learn MCP Servers, and understanding the role of Azure AI Foundry. The content is geared towards developers and engineers interested in hands-on AI agent development and showcases real-world implementations, open-source resources, and community contribution opportunities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/jKViNM42u9M"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building AI Agents with Semantic Kernel, MCP Servers, and Python
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/jKViNM42u9M
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-15 16:15:45 +00:00
-permalink: "/2025-08-15-Building-AI-Agents-with-Semantic-Kernel-MCP-Servers-and-Python.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Workflows", "AI", "AI Agents", "AI Toolbox", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Coding", "Dev", "Development", "Development Demos", "GitHub", "Hands On Tutorial", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Learn", "Open Source", "Plugin Integration", "Python", "Semantic Kernel", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent workflows", "ai", "ai agents", "ai toolbox", "azure", "azure ai foundry", "cloud ai", "cloud computing", "coding", "dev", "development", "development demos", "github", "hands on tutorial", "mcp server", "microsoft", "microsoft azure", "microsoft learn", "open source", "plugin integration", "python", "semantic kernel", "tech", "technology", "videos"]
+permalink: /ai/videos/Building-AI-Agents-with-Semantic-Kernel-MCP-Servers-and-Python
+tags:
+- Agent Workflows
+- AI
+- AI Agents
+- AI Toolbox
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Cloud Computing
+- Coding
+- Dev
+- Development
+- Development Demos
+- GitHub
+- Hands On Tutorial
+- MCP Server
+- Microsoft
+- Microsoft Azure
+- Microsoft Learn
+- Open Source
+- Plugin Integration
+- Python
+- Semantic Kernel
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer presents an in-depth look at building AI agents using Semantic Kernel, MCP Servers, and Python, with demonstrations led by Evan Mattson and resources for hands-on experimentation.<!--excerpt_end-->
 
 {% youtube jKViNM42u9M %}

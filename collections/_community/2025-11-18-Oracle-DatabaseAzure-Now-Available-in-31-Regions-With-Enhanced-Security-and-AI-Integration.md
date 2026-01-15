@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Oracle Database@Azure Now Available in 31 Regions With Enhanced Security and AI Integration"
-description: "This overview highlights the latest expansion of Oracle Database@Azure to 31 world regions, with significant enhancements like Azure Key Vault integration for increased security, support for Oracle Autonomous AI Database, deep Azure services integration, and new AI-ready analytics and automation capabilities for enterprises adopting hybrid architectures."
-author: "KalyanKaki"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Oracle Database@Azure Now Available in 31 Regions With Enhanced Security and AI Integration
+author: KalyanKaki
+canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 20:29:14 +00:00
-permalink: "/2025-11-18-Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Integration", "Apache Iceberg", "Autonomous AI Database", "Azure", "Azure Arc", "Azure Key Vault", "Cloud Security", "Community", "Enterprise Data", "Exadata Database", "Governance", "Hybrid Cloud", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Fabric", "Microsoft Purview", "Microsoft Sentinel", "OCI GoldenGate", "OneLake", "Operational Automation", "Oracle Database@Azure", "Power BI", "Security", "Transparent Data Encryption"]
-tags_normalized: ["ai", "ai integration", "apache iceberg", "autonomous ai database", "azure", "azure arc", "azure key vault", "cloud security", "community", "enterprise data", "exadata database", "governance", "hybrid cloud", "microsoft defender", "microsoft entra id", "microsoft fabric", "microsoft purview", "microsoft sentinel", "oci goldengate", "onelake", "operational automation", "oracle databaseatazure", "power bi", "security", "transparent data encryption"]
+permalink: /ai/community/Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration
+tags:
+- AI
+- AI Integration
+- Apache Iceberg
+- Autonomous AI Database
+- Azure
+- Azure Arc
+- Azure Key Vault
+- Cloud Security
+- Community
+- Enterprise Data
+- Exadata Database
+- Governance
+- Hybrid Cloud
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Fabric
+- Microsoft Purview
+- Microsoft Sentinel
+- OCI GoldenGate
+- OneLake
+- Operational Automation
+- Oracle Database@Azure
+- Power BI
+- Security
+- Transparent Data Encryption
+section_names:
+- ai
+- azure
+- security
 ---
-
 KalyanKaki outlines the global expansion and new security features of Oracle Database@Azure, including Azure Key Vault support, AI database integration, and enhanced governance for enterprise workloads.<!--excerpt_end-->
 
 # Oracle Database@Azure: Global Expansion and Technical Enhancements

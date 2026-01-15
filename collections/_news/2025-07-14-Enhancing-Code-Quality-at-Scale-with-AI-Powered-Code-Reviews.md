@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Enhancing Code Quality at Scale with AI-Powered Code Reviews"
-description: "This article by Sneha Tuli explores Microsoft's adoption and impact of an AI-powered code review assistant that automates routine pull request reviews, suggests improvements, enables Q&A, and improves developer onboarding. The technology’s co-evolution influenced GitHub Copilot’s code review, highlighting benefits for both internal teams and the developer community."
-author: "Sneha Tuli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+layout: post
+title: Enhancing Code Quality at Scale with AI-Powered Code Reviews
+author: Sneha Tuli
+canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-07-14 15:21:05 +00:00
-permalink: "/2025-07-14-Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "AI Apps", "AI in Software Development", "AI Powered Code Review", "Automated Code Reviews", "Best Practices", "Code Quality", "Code Review Assistant", "Code Reviews", "Code Suggestions", "Coding", "Customizable Code Review", "Developer Onboarding", "Developer Productivity", "DevOps", "Engineering Workflow", "Engineering@Microsoft", "GitHub Copilot", "Microsoft", "News", "Pull Requests"]
-tags_normalized: ["ai", "ai agent", "ai apps", "ai in software development", "ai powered code review", "automated code reviews", "best practices", "code quality", "code review assistant", "code reviews", "code suggestions", "coding", "customizable code review", "developer onboarding", "developer productivity", "devops", "engineering workflow", "engineeringatmicrosoft", "github copilot", "microsoft", "news", "pull requests"]
+permalink: /github-copilot/news/Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews
+tags:
+- AI
+- AI Agent
+- AI Apps
+- AI in Software Development
+- AI Powered Code Review
+- Automated Code Reviews
+- Best Practices
+- Code Quality
+- Code Review Assistant
+- Code Reviews
+- Code Suggestions
+- Coding
+- Customizable Code Review
+- Developer Onboarding
+- Developer Productivity
+- DevOps
+- Engineering Workflow
+- Engineering@Microsoft
+- GitHub Copilot
+- Microsoft
+- News
+- Pull Requests
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Authored by Sneha Tuli, this article details how Microsoft's AI-powered code review assistant revolutionizes pull request workflows, boosts code quality, and shapes GitHub Copilot’s code review process to benefit developers worldwide.<!--excerpt_end-->
 
 # Enhancing Code Quality at Scale with AI-Powered Code Reviews

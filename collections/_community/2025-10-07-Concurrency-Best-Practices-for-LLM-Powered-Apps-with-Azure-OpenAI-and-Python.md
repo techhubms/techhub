@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Concurrency Best Practices for LLM-Powered Apps with Azure OpenAI and Python"
-description: "This guide by Pamela Fox details how concurrency and asynchronous backend frameworks, such as FastAPI and Quart, are essential for building fast and responsive LLM-powered applications with Azure OpenAI Service. The article provides practical insights, example code, and sample repositories that demonstrate async patterns for Azure AI integration in Python backends."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Concurrency Best Practices for LLM-Powered Apps with Azure OpenAI and Python
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 16:05:02 +00:00
-permalink: "/2025-10-07-Concurrency-Best-Practices-for-LLM-Powered-Apps-with-Azure-OpenAI-and-Python.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Application", "API Integration", "Asynchronous", "AsyncIO", "Azure", "Azure AI Search", "Azure OpenAI Service", "Backend Development", "Coding", "Community", "FastAPI", "Gunicorn", "LLM", "Microsoft", "OpenAI Python SDK", "Python", "Quart", "RAG", "Uvicorn"]
-tags_normalized: ["ai", "ai application", "api integration", "asynchronous", "asyncio", "azure", "azure ai search", "azure openai service", "backend development", "coding", "community", "fastapi", "gunicorn", "llm", "microsoft", "openai python sdk", "python", "quart", "rag", "uvicorn"]
+permalink: /ai/community/Concurrency-Best-Practices-for-LLM-Powered-Apps-with-Azure-OpenAI-and-Python
+tags:
+- AI
+- AI Application
+- API Integration
+- Asynchronous
+- AsyncIO
+- Azure
+- Azure AI Search
+- Azure OpenAI Service
+- Backend Development
+- Coding
+- Community
+- FastAPI
+- Gunicorn
+- LLM
+- Microsoft
+- OpenAI Python SDK
+- Python
+- Quart
+- RAG
+- Uvicorn
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Pamela Fox shares actionable best practices for building LLM-powered apps on Azure, emphasizing asynchronous Python frameworks to ensure speed and reliability when integrating Azure OpenAI Service and Azure AI Search.<!--excerpt_end-->
 
 # Concurrency Best Practices for LLM-Powered Apps with Azure OpenAI and Python

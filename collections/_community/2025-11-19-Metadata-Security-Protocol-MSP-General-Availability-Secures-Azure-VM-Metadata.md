@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Metadata Security Protocol (MSP) General Availability Secures Azure VM Metadata"
-description: "This announcement details the General Availability of Azure's Metadata Security Protocol (MSP)—the first major cloud-native solution to introduce robust authentication and authorization at the platform layer for virtual machines. MSP implements a default-closed security design for Azure's Instance Metadata Service (IMDS) and WireServer, using trusted delegates, HMAC signatures, and process-level RBAC to dramatically decrease metadata-related attack surface. The post explains how MSP mitigates SSRF attacks, enforces fine-grained access control inside VMs, and aligns with zero-trust principles. Practical onboarding steps are outlined for Azure customers."
-author: "Amjad_Shaik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/introducing-metadata-security-protocol-msp-elevating-platform/ba-p/4471204"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Metadata Security Protocol (MSP) General Availability Secures Azure VM Metadata
+author: Amjad_Shaik
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/introducing-metadata-security-protocol-msp-elevating-platform/ba-p/4471204
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 19:36:55 +00:00
-permalink: "/2025-11-19-Metadata-Security-Protocol-MSP-General-Availability-Secures-Azure-VM-Metadata.html"
-categories: ["Azure", "Security"]
-tags: ["Allowlisting", "Audit Mode", "Authentication", "Authorization", "Azure", "Azure Virtual Machines", "Cloud Security", "Community", "Ebpf", "Guest Proxy Agent", "HMAC", "IMDS", "Instance Metadata Service", "Metadata Security Protocol", "MSP", "RBAC", "Role Based Access Control", "Security", "Security Best Practices", "Server Side Request Forgery", "SSRF", "WireServer", "Zero Trust"]
-tags_normalized: ["allowlisting", "audit mode", "authentication", "authorization", "azure", "azure virtual machines", "cloud security", "community", "ebpf", "guest proxy agent", "hmac", "imds", "instance metadata service", "metadata security protocol", "msp", "rbac", "role based access control", "security", "security best practices", "server side request forgery", "ssrf", "wireserver", "zero trust"]
+permalink: /azure/community/Metadata-Security-Protocol-MSP-General-Availability-Secures-Azure-VM-Metadata
+tags:
+- Allowlisting
+- Audit Mode
+- Authentication
+- Authorization
+- Azure
+- Azure Virtual Machines
+- Cloud Security
+- Community
+- Ebpf
+- Guest Proxy Agent
+- HMAC
+- IMDS
+- Instance Metadata Service
+- Metadata Security Protocol
+- MSP
+- RBAC
+- Role Based Access Control
+- Security
+- Security Best Practices
+- Server Side Request Forgery
+- SSRF
+- WireServer
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Amjad_Shaik introduces Azure's Metadata Security Protocol (MSP) for Virtual Machines, describing its security enhancements, attack mitigation strategies, and step-by-step guidance for platform deployment.<!--excerpt_end-->
 
 # Metadata Security Protocol (MSP): General Availability for Azure Virtual Machines

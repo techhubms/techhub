@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Adaptive Model Selection with Azure AI Foundry Model Router in TypeScript"
-description: "This article, authored by Julia Muiruri, introduces the Model Router feature (preview) within Azure AI Foundry. The Model Router enables developers to send a chat request and have Azure select the optimal underlying model (such as gpt-4.1-mini, gpt-5 variants) for each prompt, optimizing cost and performance. The blog discusses use cases, implementation in TypeScript, versioning, monitoring, and practical limitations. It also covers real-world scenarios of dynamic model selection, configuration details, and monitoring strategies using Azure services."
-author: "Julia_Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adaptive-model-selection-in-typescript-with-the-model-router/ba-p/4465192"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Adaptive Model Selection with Azure AI Foundry Model Router in TypeScript
+author: Julia_Muiruri
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/adaptive-model-selection-in-typescript-with-the-model-router/ba-p/4465192
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 08:00:00 +00:00
-permalink: "/2025-11-11-Adaptive-Model-Selection-with-Azure-AI-Foundry-Model-Router-in-TypeScript.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Authentication", "Application Insights", "Azure", "Azure AI Foundry", "Azure Inference SDK", "Azure Monitor", "Chat Models", "Coding", "Community", "Cost Optimization", "Dynamic Model Selection", "GPT 4.1", "GPT 5", "Latency Monitoring", "LLM Routing", "Microsoft Entra ID", "Model Router", "Observability", "Reasoning Models", "TypeScript", "Versioning"]
-tags_normalized: ["ai", "api authentication", "application insights", "azure", "azure ai foundry", "azure inference sdk", "azure monitor", "chat models", "coding", "community", "cost optimization", "dynamic model selection", "gpt 4dot1", "gpt 5", "latency monitoring", "llm routing", "microsoft entra id", "model router", "observability", "reasoning models", "typescript", "versioning"]
+permalink: /ai/community/Adaptive-Model-Selection-with-Azure-AI-Foundry-Model-Router-in-TypeScript
+tags:
+- AI
+- API Authentication
+- Application Insights
+- Azure
+- Azure AI Foundry
+- Azure Inference SDK
+- Azure Monitor
+- Chat Models
+- Coding
+- Community
+- Cost Optimization
+- Dynamic Model Selection
+- GPT 4.1
+- GPT 5
+- Latency Monitoring
+- LLM Routing
+- Microsoft Entra ID
+- Model Router
+- Observability
+- Reasoning Models
+- TypeScript
+- Versioning
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Julia Muiruri shares how to use Azure AI Foundry's Model Router in TypeScript for intelligent model selection per prompt, showing implementation, architecture, and monitoring best practices.<!--excerpt_end-->
 
 # Adaptive Model Selection with Azure AI Foundry Model Router in TypeScript

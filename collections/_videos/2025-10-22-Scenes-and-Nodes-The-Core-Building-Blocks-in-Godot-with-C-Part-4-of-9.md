@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)"
-description: "This episode in the Godot C# training series led by dotnet explores foundational concepts in Godot game development, focusing on scenes and nodes. It demonstrates creating level scenes, adding collision, building reusable characters, and setting up third-person camera systems, using C# and Godot's node-based architecture. You'll learn through hands-on walkthroughs with code, practical GitHub resources, and a learning challenge."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=o4uqehEAu3M"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=o4uqehEAu3M
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:21 +00:00
-permalink: "/2025-10-22-Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "CharacterBody3D", "Coding", "Collision Detection", "Game Development", "Godot Engine", "Lighting", "MeshInstance3D", "Microsoft Developer", "Node Hierarchy", "Nodes", "Scene Instancing", "Scenes", "SpringArm3D", "Third Person Camera", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "csharp", "characterbody3d", "coding", "collision detection", "game development", "godot engine", "lighting", "meshinstance3d", "microsoft developer", "node hierarchy", "nodes", "scene instancing", "scenes", "springarm3d", "third person camera", "videos", "vs code"]
+permalink: /coding/videos/Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9
+tags:
+- .NET
+- C#
+- CharacterBody3D
+- Coding
+- Collision Detection
+- Game Development
+- Godot Engine
+- Lighting
+- MeshInstance3D
+- Microsoft Developer
+- Node Hierarchy
+- Nodes
+- Scene Instancing
+- Scenes
+- SpringArm3D
+- Third Person Camera
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 dotnet guides you through building foundational systems in Godot using C#, including scenes, nodes, collision, and third-person camera setups in this practical game development tutorial.<!--excerpt_end-->
 
 {% youtube o4uqehEAu3M %}

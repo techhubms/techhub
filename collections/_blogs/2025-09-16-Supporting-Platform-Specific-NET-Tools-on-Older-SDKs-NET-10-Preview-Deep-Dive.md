@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive"
-description: "Andrew Lock examines the new platform-specific, self-contained, and Native AOT .NET tool features introduced in .NET 10. The article explains their effects on tool authors, discusses backwards compatibility with previous SDKs, and offers detailed guidance and case studies on NuGet packaging strategies for mixed SDK environments."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-16 10:00:00 +00:00
-permalink: "/2025-09-16-Supporting-Platform-Specific-NET-Tools-on-Older-SDKs-NET-10-Preview-Deep-Dive.html"
-categories: ["Coding"]
-tags: [".csproj", ".NET 10", ".NET Core", ".NET SDK", "Andrew Lock", "AOT", "Blogs", "Coding", "Compatibility", "Datadog", "DotnetToolSettings.xml", "Framework Dependent", "Multi Targeting", "Native AOT", "Netcoreapp3.1", "NuGet", "Performance", "Platform Specific Tools", "Self Contained Deployment", "Tool Packaging"]
-tags_normalized: ["dotcsproj", "dotnet 10", "dotnet core", "dotnet sdk", "andrew lock", "aot", "blogs", "coding", "compatibility", "datadog", "dotnettoolsettingsdotxml", "framework dependent", "multi targeting", "native aot", "netcoreapp3dot1", "nuget", "performance", "platform specific tools", "self contained deployment", "tool packaging"]
+permalink: /coding/blogs/Supporting-Platform-Specific-NET-Tools-on-Older-SDKs-NET-10-Preview-Deep-Dive
+tags:
+- .csproj
+- .NET 10
+- .NET Core
+- .NET SDK
+- Andrew Lock
+- AOT
+- Blogs
+- Coding
+- Compatibility
+- Datadog
+- DotnetToolSettings.xml
+- Framework Dependent
+- Multi Targeting
+- Native AOT
+- Netcoreapp3.1
+- NuGet
+- Performance
+- Platform Specific Tools
+- Self Contained Deployment
+- Tool Packaging
+section_names:
+- coding
 ---
-
 Andrew Lock provides a thorough guide on leveraging the new .NET 10 platform-specific tool features, highlighting technical strategies and trade-offs for maintaining compatibility with older .NET SDKs.<!--excerpt_end-->
 
 # Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive

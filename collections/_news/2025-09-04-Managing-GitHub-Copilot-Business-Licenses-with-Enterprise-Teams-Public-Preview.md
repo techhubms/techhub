@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Managing GitHub Copilot Business Licenses with Enterprise Teams (Public Preview)"
-description: "This announcement details the new public preview of Enterprise Teams in GitHub Enterprise Cloud, focusing on improved management of users and GitHub Copilot Business licenses at the enterprise level. It covers streamlined onboarding, group management via SCIM, and enhanced licensing flexibility for organizations. The update is primarily intended for enterprise administrators responsible for user lifecycle and Copilot license assignments within large-scale GitHub environments."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-04-manage-copilot-and-users-via-enterprise-teams-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Managing GitHub Copilot Business Licenses with Enterprise Teams (Public Preview)
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-04-manage-copilot-and-users-via-enterprise-teams-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 16:59:13 +00:00
-permalink: "/2025-09-04-Managing-GitHub-Copilot-Business-Licenses-with-Enterprise-Teams-Public-Preview.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Admin Tools", "AI", "Copilot Business", "DevOps", "Enterprise Managed Users", "Enterprise Teams", "GitHub Copilot", "GitHub Enterprise Cloud", "Group Management", "Identity Provider", "License Management", "News", "Public Preview", "SCIM", "User Management"]
-tags_normalized: ["admin tools", "ai", "copilot business", "devops", "enterprise managed users", "enterprise teams", "github copilot", "github enterprise cloud", "group management", "identity provider", "license management", "news", "public preview", "scim", "user management"]
+permalink: /github-copilot/news/Managing-GitHub-Copilot-Business-Licenses-with-Enterprise-Teams-Public-Preview
+tags:
+- Admin Tools
+- AI
+- Copilot Business
+- DevOps
+- Enterprise Managed Users
+- Enterprise Teams
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- Group Management
+- Identity Provider
+- License Management
+- News
+- Public Preview
+- SCIM
+- User Management
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison explains the new public preview of Enterprise Teams in GitHub Enterprise Cloud, highlighting how enterprises can streamline user and Copilot Business license management at scale.<!--excerpt_end-->
 
 # Managing GitHub Copilot Business Licenses with Enterprise Teams (Public Preview)

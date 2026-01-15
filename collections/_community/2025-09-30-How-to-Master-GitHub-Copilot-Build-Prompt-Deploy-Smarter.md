@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How to Master GitHub Copilot: Build, Prompt, Deploy Smarter"
-description: "This in-depth community guide by AprilYoho offers developers a practical, hands-on workshop for mastering GitHub Copilot as a development partner. It covers Copilot's evolving capabilities, effective prompting, language-specific tutorials, advanced features, and integrating Copilot into real-world software engineering, including cloud and AI-assisted coding scenarios."
-author: "AprilYoho"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'How to Master GitHub Copilot: Build, Prompt, Deploy Smarter'
+author: AprilYoho
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 05:00:00 +00:00
-permalink: "/2025-09-30-How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Automation", "Azure", "Best Practices", "C#", "Cloud Deployments", "Code Quality", "Coding", "Community", "Developer Productivity", "GitHub Copilot", "Hands On Workshop", "JavaScript", "Jupyter Notebooks", "Legacy Code Upgrade", "MCP", "Paired Programming", "Prompt Engineering", "Python", "Software Engineering", "SQL"]
-tags_normalized: ["ai", "ai assisted development", "automation", "azure", "best practices", "csharp", "cloud deployments", "code quality", "coding", "community", "developer productivity", "github copilot", "hands on workshop", "javascript", "jupyter notebooks", "legacy code upgrade", "mcp", "paired programming", "prompt engineering", "python", "software engineering", "sql"]
+permalink: /github-copilot/community/How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter
+tags:
+- AI
+- AI Assisted Development
+- Automation
+- Azure
+- Best Practices
+- C#
+- Cloud Deployments
+- Code Quality
+- Coding
+- Community
+- Developer Productivity
+- GitHub Copilot
+- Hands On Workshop
+- JavaScript
+- Jupyter Notebooks
+- Legacy Code Upgrade
+- MCP
+- Paired Programming
+- Prompt Engineering
+- Python
+- Software Engineering
+- SQL
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 AprilYoho presents a hands-on workshop and guide to mastering GitHub Copilot, highlighting effective techniques for prompting, language integration, real-world development, and deploying applications (including Azure) with AI-powered assistance.<!--excerpt_end-->
 
 # How to Master GitHub Copilot: Build, Prompt, Deploy Smarter

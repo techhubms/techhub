@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Major Updates to Copilot Spaces: Public Spaces and Code View Integration"
-description: "This GitHub Blog update details significant improvements to Copilot Spaces, including the introduction of public spaces, individual sharing functionality, and the direct addition of files from the github.com code viewer. The post explains how these features enable broader collaboration, maintain robust privacy and security standards, and streamline workflows for developers using GitHub and Copilot Spaces."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Major Updates to Copilot Spaces: Public Spaces and Code View Integration'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-01 23:35:29 +00:00
-permalink: "/2025-12-01-Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Code Viewer", "Collaboration", "Copilot", "Copilot Spaces", "DevOps", "GitHub", "GitHub Copilot", "Individual Sharing", "News", "Open Source", "Public Spaces", "Role Based Access Control", "Workflow Integration"]
-tags_normalized: ["ai", "code viewer", "collaboration", "copilot", "copilot spaces", "devops", "github", "github copilot", "individual sharing", "news", "open source", "public spaces", "role based access control", "workflow integration"]
+permalink: /github-copilot/news/Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration
+tags:
+- AI
+- Code Viewer
+- Collaboration
+- Copilot
+- Copilot Spaces
+- DevOps
+- GitHub
+- GitHub Copilot
+- Individual Sharing
+- News
+- Open Source
+- Public Spaces
+- Role Based Access Control
+- Workflow Integration
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison summarizes three new enhancements to Copilot Spaces, focusing on public accessibility, granular file sharing, and seamless integration with the GitHub code viewer for improved developer workflows.<!--excerpt_end-->
 
 # Major Updates to Copilot Spaces: Public Spaces and Code View Integration

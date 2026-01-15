@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "C# Tool to Run Any App as a Windows Service: Managed Alternative to NSSM"
-description: "AdUnhappy5308 introduces a C#-based tool that allows users to run any executable as a Windows service, offering a managed alternative to NSSM. The tool supports customizable service names, descriptions, startup types, working directories, and parameters, and is compatible with Windows 7–11 and Windows Server."
-author: "AdUnhappy5308"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mgewsc/just_built_a_tool_that_turns_any_app_into_a/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'C# Tool to Run Any App as a Windows Service: Managed Alternative to NSSM'
+author: AdUnhappy5308
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mgewsc/just_built_a_tool_that_turns_any_app_into_a/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-03 09:21:26 +00:00
-permalink: "/2025-08-03-C-Tool-to-Run-Any-App-as-a-Windows-Service-Managed-Alternative-to-NSSM.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Community", "Custom Working Directory", "NSSM Alternative", "Open Source", "Process Wrapper", "Service Management", "Startup Type", "Windows App Deployment", "Windows Service"]
-tags_normalized: ["dotnet", "csharp", "coding", "community", "custom working directory", "nssm alternative", "open source", "process wrapper", "service management", "startup type", "windows app deployment", "windows service"]
+permalink: /coding/community/C-Tool-to-Run-Any-App-as-a-Windows-Service-Managed-Alternative-to-NSSM
+tags:
+- .NET
+- C#
+- Coding
+- Community
+- Custom Working Directory
+- NSSM Alternative
+- Open Source
+- Process Wrapper
+- Service Management
+- Startup Type
+- Windows App Deployment
+- Windows Service
+section_names:
+- coding
 ---
-
 AdUnhappy5308 shares details about a new C# tool that runs any app as a Windows service, highlighting its capabilities and differences from NSSM.<!--excerpt_end-->
 
 ## Overview

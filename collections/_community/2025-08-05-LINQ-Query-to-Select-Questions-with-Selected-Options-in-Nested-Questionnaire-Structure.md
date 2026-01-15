@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "LINQ Query to Select Questions with Selected Options in Nested Questionnaire Structure"
-description: "This community discussion addresses a common .NET/C# problem: efficiently querying nested questionnaire data using LINQ to find all questions with at least one selected option. The discussion highlights practical LINQ patterns, explains the use of SelectMany, and offers insights into optimizing queries for complex object models."
-author: "GreatlyUnknown"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mikvpz/im_sure_there_is_a_linq_query_for_this_but_i_just/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: LINQ Query to Select Questions with Selected Options in Nested Questionnaire Structure
+author: GreatlyUnknown
+canonical_url: https://www.reddit.com/r/csharp/comments/1mikvpz/im_sure_there_is_a_linq_query_for_this_but_i_just/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-05 20:46:37 +00:00
-permalink: "/2025-08-05-LINQ-Query-to-Select-Questions-with-Selected-Options-in-Nested-Questionnaire-Structure.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Community", "Data Query", "Functional Programming", "LINQ", "Nested Collections", "Options Pattern", "Query Optimization", "Questionnaire", "Questions Filtering", "SelectMany"]
-tags_normalized: ["dotnet", "csharp", "coding", "community", "data query", "functional programming", "linq", "nested collections", "options pattern", "query optimization", "questionnaire", "questions filtering", "selectmany"]
+permalink: /coding/community/LINQ-Query-to-Select-Questions-with-Selected-Options-in-Nested-Questionnaire-Structure
+tags:
+- .NET
+- C#
+- Coding
+- Community
+- Data Query
+- Functional Programming
+- LINQ
+- Nested Collections
+- Options Pattern
+- Query Optimization
+- Questionnaire
+- Questions Filtering
+- SelectMany
+section_names:
+- coding
 ---
-
 GreatlyUnknown seeks advice on writing a LINQ query to retrieve questions with selected options from a nested questionnaire structure, sparking a discussion about effective usage of SelectMany in C#.<!--excerpt_end-->
 
 # LINQ Query to Select Questions with Selected Options in Nested Questionnaire Structure

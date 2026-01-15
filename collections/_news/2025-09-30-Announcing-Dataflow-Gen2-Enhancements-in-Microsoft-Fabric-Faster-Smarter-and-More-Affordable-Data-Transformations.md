@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Announcing Dataflow Gen2 Enhancements in Microsoft Fabric: Faster, Smarter, and More Affordable Data Transformations"
-description: "Microsoft has introduced a major set of updates to Dataflow Gen2 in Microsoft Fabric, delivering significant improvements to data transformation speed, pricing, and usability. Enhancements include new pricing tiers, parallelized query execution, extended destination options (including Lakehouse, Azure Data Lake Storage Gen2, Snowflake, and SharePoint), better design-time performance, Copilot AI integration, and advanced parameterization. These features aim to streamline enterprise-scale data prep, enable more flexible and secure data integrations, and empower organizations to migrate smoothly from Gen1 to Gen2 dataflows, while leveraging AI-powered capabilities for modern data transformation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-the-next-generation-of-data-transformations-with-dataflow-gen2-fabcon-europe-2025-announcements/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Announcing Dataflow Gen2 Enhancements in Microsoft Fabric: Faster, Smarter, and More Affordable Data Transformations'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-the-next-generation-of-data-transformations-with-dataflow-gen2-fabcon-europe-2025-announcements/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 09:00:00 +00:00
-permalink: "/2025-09-30-Announcing-Dataflow-Gen2-Enhancements-in-Microsoft-Fabric-Faster-Smarter-and-More-Affordable-Data-Transformations.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Powered Transformation", "Azure", "Azure Data Lake Storage Gen2", "CI/CD", "Copilot", "Data Transformation", "Dataflow Gen2", "Lakehouse", "Microsoft Fabric", "Migration", "ML", "Modern Query Evaluation", "Natural Language Data Ingestion", "News", "OneLake Catalog", "Parameterized Dataflows", "Performance Optimization", "Pricing Model", "SharePoint Integration", "Snowflake", "Variable Libraries"]
-tags_normalized: ["ai", "ai powered transformation", "azure", "azure data lake storage gen2", "cislashcd", "copilot", "data transformation", "dataflow gen2", "lakehouse", "microsoft fabric", "migration", "ml", "modern query evaluation", "natural language data ingestion", "news", "onelake catalog", "parameterized dataflows", "performance optimization", "pricing model", "sharepoint integration", "snowflake", "variable libraries"]
+permalink: /ai/news/Announcing-Dataflow-Gen2-Enhancements-in-Microsoft-Fabric-Faster-Smarter-and-More-Affordable-Data-Transformations
+tags:
+- AI
+- AI Powered Transformation
+- Azure
+- Azure Data Lake Storage Gen2
+- CI/CD
+- Copilot
+- Data Transformation
+- Dataflow Gen2
+- Lakehouse
+- Microsoft Fabric
+- Migration
+- ML
+- Modern Query Evaluation
+- Natural Language Data Ingestion
+- News
+- OneLake Catalog
+- Parameterized Dataflows
+- Performance Optimization
+- Pricing Model
+- SharePoint Integration
+- Snowflake
+- Variable Libraries
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the latest Dataflow Gen2 enhancements for Microsoft Fabric, offering faster runtimes, better pricing, AI-driven transformations, and expanded integration options for enterprise data engineers and architects.<!--excerpt_end-->
 
 # Unlocking the Next Generation of Data Transformations with Dataflow Gen2 – FabCon Europe 2025 Announcements

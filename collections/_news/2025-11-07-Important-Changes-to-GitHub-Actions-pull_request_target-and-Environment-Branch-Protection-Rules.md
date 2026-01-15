@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Important Changes to GitHub Actions: pull_request_target and Environment Branch Protection Rules"
-description: "This news article details critical upcoming changes to GitHub Actions’ pull_request_target event and environment branch protection rules, set to take effect December 8, 2025. It covers how workflow execution, branch reference evaluation, and environment rule enforcement will be updated for pull request events to reduce security vulnerabilities. The content outlines expected impacts, required updates to workflows and branch filters, mitigation strategies for workflow security, and recommendations for updating permissions and enabling code scanning. Microsoft consultants and developers should assess any dependencies on these features in their CI/CD pipelines and update their configurations for continued secure operation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Important Changes to GitHub Actions: pull_request_target and Environment Branch Protection Rules'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-07 16:18:15 +00:00
-permalink: "/2025-11-07-Important-Changes-to-GitHub-Actions-pull_request_target-and-Environment-Branch-Protection-Rules.html"
-categories: ["DevOps", "Security"]
-tags: ["Actions", "Branch Protection Rules", "CI/CD", "Code Scanning", "CodeQL", "Default Branch", "DevOps", "Environment Branch Protection", "GitHub Actions", "Improvement", "Merge Commit", "News", "Permissions", "Pull Request Target", "Secrets Management", "Security", "Security Best Practices", "Workflow Security"]
-tags_normalized: ["actions", "branch protection rules", "cislashcd", "code scanning", "codeql", "default branch", "devops", "environment branch protection", "github actions", "improvement", "merge commit", "news", "permissions", "pull request target", "secrets management", "security", "security best practices", "workflow security"]
+permalink: /devops/news/Important-Changes-to-GitHub-Actions-pull_request_target-and-Environment-Branch-Protection-Rules
+tags:
+- Actions
+- Branch Protection Rules
+- CI/CD
+- Code Scanning
+- CodeQL
+- Default Branch
+- DevOps
+- Environment Branch Protection
+- GitHub Actions
+- Improvement
+- Merge Commit
+- News
+- Permissions
+- Pull Request Target
+- Secrets Management
+- Security
+- Security Best Practices
+- Workflow Security
+section_names:
+- devops
+- security
 ---
-
 Allison explains upcoming security-focused changes to how GitHub Actions handles pull_request_target events and environment branch protection rules, impacting workflow behavior for all developers and DevOps engineers.<!--excerpt_end-->
 
 # Important Changes to GitHub Actions: pull_request_target and Environment Branch Protection Rules

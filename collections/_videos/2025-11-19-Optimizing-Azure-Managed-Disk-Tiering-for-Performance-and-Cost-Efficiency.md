@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Optimizing Azure Managed Disk Tiering for Performance and Cost Efficiency"
-description: "This session from Microsoft Ignite 2025 explores strategies for managing Azure Managed Disk storage tiers to achieve both better application performance and cost savings. It addresses common challenges teams face with tier selection, such as concerns about downtime and insufficient insights into usage. The presentation introduces Lucidity’s solution for smarter, automated disk tier management, demonstrates real-world use cases, and shares results around improved efficiency."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0PVcB1u_ZV4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Optimizing Azure Managed Disk Tiering for Performance and Cost Efficiency
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=0PVcB1u_ZV4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:47:25 +00:00
-permalink: "/2025-11-19-Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency.html"
-categories: ["Azure"]
-tags: ["AutoScaler", "Azure", "Azure Managed Disks", "Cloud Storage", "Cost Management", "Disk Tiering", "Downtime Mitigation", "Enterprise IT", "Infrastructure", "Lucidity", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Performance Tuning", "Storage Management", "Storage Optimization", "Videos"]
-tags_normalized: ["autoscaler", "azure", "azure managed disks", "cloud storage", "cost management", "disk tiering", "downtime mitigation", "enterprise it", "infrastructure", "lucidity", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "performance tuning", "storage management", "storage optimization", "videos"]
+permalink: /azure/videos/Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency
+tags:
+- AutoScaler
+- Azure
+- Azure Managed Disks
+- Cloud Storage
+- Cost Management
+- Disk Tiering
+- Downtime Mitigation
+- Enterprise IT
+- Infrastructure
+- Lucidity
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration
+- MSIgnite
+- Performance Tuning
+- Storage Management
+- Storage Optimization
+- Videos
+section_names:
+- azure
 ---
-
 Microsoft Events presents a session featuring Vatsal Rastogi, focusing on how to optimize Azure Managed Disk tiering to enhance app performance and maximize ROI. The talk covers challenges, introduces Lucidity’s advanced storage management solution, and shares practical results.<!--excerpt_end-->
 
 {% youtube 0PVcB1u_ZV4 %}

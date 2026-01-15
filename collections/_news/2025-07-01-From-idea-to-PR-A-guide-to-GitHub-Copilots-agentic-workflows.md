@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "From idea to PR - A guide to GitHub Copilot’s agentic workflows"
-description: "A practical guide by Chris Reddington on using GitHub Copilot's agentic coding, chat modes, and remote MCP server for efficient, test-driven PR workflows."
-author: "Chris Reddington"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pr-a-guide-to-github-copilots-agentic-workflows/"
-viewing_mode: "external"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: From idea to PR - A guide to GitHub Copilot’s agentic workflows
+author: Chris Reddington
+canonical_url: https://github.blog/ai-and-ml/github-copilot/from-idea-to-pr-a-guide-to-github-copilots-agentic-workflows/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-01 18:57:22 +00:00
-permalink: "/2025-07-01-From-idea-to-PR-A-guide-to-GitHub-Copilots-agentic-workflows.html"
-tags: ["Agentic AI", "AI", "AI & ML", "Automation", "Chat Modes", "Coding Agents", "Generative AI", "GitHub Copilot", "MCP Server", "News", "Pull Requests", "Software Development"]
-tags_normalized: ["agentic ai", "ai", "ai and ml", "automation", "chat modes", "coding agents", "generative ai", "github copilot", "mcp server", "news", "pull requests", "software development"]
+permalink: /github-copilot/news/From-idea-to-PR-A-guide-to-GitHub-Copilots-agentic-workflows
+tags:
+- Agentic AI
+- AI
+- AI & ML
+- Automation
+- Chat Modes
+- Coding Agents
+- Generative AI
+- GitHub Copilot
+- MCP Server
+- News
+- Pull Requests
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, Chris Reddington explores how developers can leverage GitHub Copilot’s agentic coding agent, its chat modes, and the remote MCP server to efficiently transform issues into thoroughly tested pull requests. <!--excerpt_end--> The guide avoids unnecessary hype and instead presents clear, actionable steps for maximizing Copilot’s features in real-world scenarios.
 
 ## Introduction to Agentic Coding

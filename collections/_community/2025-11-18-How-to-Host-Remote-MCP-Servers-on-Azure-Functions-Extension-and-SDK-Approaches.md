@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "How to Host Remote MCP Servers on Azure Functions: Extension and SDK Approaches"
-description: "This guide by lily-ma explains how to host Model Context Protocol (MCP) servers on Azure Functions, detailing two hosting options: the Azure Functions MCP extension and the self-hosted SDK method. It covers platform features such as support for streamable-http transport, built-in authentication with Microsoft Entra, secure configuration via host.json, and integration tips for C#, Java, JavaScript, Python, and TypeScript. The guide provides practical quickstarts and documentation links for developers aiming to deploy scalable, reliable, and secure MCP servers in a serverless environment."
-author: "lily-ma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-remote-mcp-servers-on-azure-functions/ba-p/4471047"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'How to Host Remote MCP Servers on Azure Functions: Extension and SDK Approaches'
+author: lily-ma
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-remote-mcp-servers-on-azure-functions/ba-p/4471047
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:15:00 +00:00
-permalink: "/2025-11-18-How-to-Host-Remote-MCP-Servers-on-Azure-Functions-Extension-and-SDK-Approaches.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: [".NET", "AI", "API Center", "Authentication", "Authorization", "Azure", "Azure Foundry", "Azure Functions", "C#", "Coding", "Community", "Custom Handler", "Flex Consumption", "Host.json", "Identity Providers", "Java", "JavaScript", "Maven Build Plugin", "MCP", "MCP Extension", "MCP Server", "MCP Tool Trigger", "Microsoft Entra ID", "OAuth", "OBO Auth", "Python", "SDK", "Security", "Server Sent Events", "Serverless", "Stateless Server", "Streamable HTTP", "TypeScript"]
-tags_normalized: ["dotnet", "ai", "api center", "authentication", "authorization", "azure", "azure foundry", "azure functions", "csharp", "coding", "community", "custom handler", "flex consumption", "hostdotjson", "identity providers", "java", "javascript", "maven build plugin", "mcp", "mcp extension", "mcp server", "mcp tool trigger", "microsoft entra id", "oauth", "obo auth", "python", "sdk", "security", "server sent events", "serverless", "stateless server", "streamable http", "typescript"]
+permalink: /ai/community/How-to-Host-Remote-MCP-Servers-on-Azure-Functions-Extension-and-SDK-Approaches
+tags:
+- .NET
+- AI
+- API Center
+- Authentication
+- Authorization
+- Azure
+- Azure Foundry
+- Azure Functions
+- C#
+- Coding
+- Community
+- Custom Handler
+- Flex Consumption
+- Host.json
+- Identity Providers
+- Java
+- JavaScript
+- Maven Build Plugin
+- MCP
+- MCP Extension
+- MCP Server
+- MCP Tool Trigger
+- Microsoft Entra ID
+- OAuth
+- OBO Auth
+- Python
+- SDK
+- Security
+- Server Sent Events
+- Serverless
+- Stateless Server
+- Streamable HTTP
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 lily-ma presents a comprehensive overview of hosting remote Model Context Protocol (MCP) servers on Azure Functions, helping developers deploy secure, scalable agent tools using extension or SDK hosting options.<!--excerpt_end-->
 
 # How to Host Remote MCP Servers on Azure Functions

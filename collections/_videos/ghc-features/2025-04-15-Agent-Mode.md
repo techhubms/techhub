@@ -1,22 +1,25 @@
----
-layout: "post"
-title: "Agent Mode"
-description: "AI agent iterates and improves your prompts automatically"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/JtJ3_ATBsTY"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Agent Mode
+author: Fokko Veegens
+canonical_url: https://youtu.be/JtJ3_ATBsTY
 date: 2025-04-15 14:14:07 +00:00
-permalink: "/2025-04-15-Agent-Mode.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["Agent Mode", "AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["agent mode", "ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Agent-Mode
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- Agent Mode
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Agent Mode feature. How Agent Mode helps you by iterating over your prompt by itself.<!--excerpt_end-->
 
 {% youtube JtJ3_ATBsTY %}

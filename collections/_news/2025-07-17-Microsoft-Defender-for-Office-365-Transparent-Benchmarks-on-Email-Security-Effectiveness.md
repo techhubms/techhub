@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Defender for Office 365: Transparent Benchmarks on Email Security Effectiveness"
-description: "This news article introduces Microsoft's latest initiatives to improve transparency in email security, sharing real-world benchmark data for Microsoft Defender for Office 365 and comparisons with other email security vendors. It details a new dashboard that helps organizations understand how well Defender for Office 365 protects email users, and presents benchmarking studies on Secure Email Gateways (SEGs) and Integrated Cloud Email Security (ICES) vendors. Data-driven results, methodologies, and third-party validation are provided to empower customers' security decisions."
-author: "Ramya Chitrakar and Scott Woodgate"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/07/17/transparency-on-microsoft-defender-for-office-365-email-security-effectiveness/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Defender for Office 365: Transparent Benchmarks on Email Security Effectiveness'
+author: Ramya Chitrakar and Scott Woodgate
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/17/transparency-on-microsoft-defender-for-office-365-email-security-effectiveness/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-17 16:00:00 +00:00
-permalink: "/2025-07-17-Microsoft-Defender-for-Office-365-Transparent-Benchmarks-on-Email-Security-Effectiveness.html"
-categories: ["Security"]
-tags: ["Benchmark Reports", "Cybersecurity", "Dashboard", "Data Driven Security", "Email Security", "Integrated Cloud Email Security", "Microsoft Defender For Office 365", "Microsoft Security", "Mitigation", "News", "Office 365", "Secure Email Gateway", "Security", "Security Benchmarking", "Spam Filtering", "Threat Detection", "Transparency"]
-tags_normalized: ["benchmark reports", "cybersecurity", "dashboard", "data driven security", "email security", "integrated cloud email security", "microsoft defender for office 365", "microsoft security", "mitigation", "news", "office 365", "secure email gateway", "security", "security benchmarking", "spam filtering", "threat detection", "transparency"]
+permalink: /security/news/Microsoft-Defender-for-Office-365-Transparent-Benchmarks-on-Email-Security-Effectiveness
+tags:
+- Benchmark Reports
+- Cybersecurity
+- Dashboard
+- Data Driven Security
+- Email Security
+- Integrated Cloud Email Security
+- Microsoft Defender For Office 365
+- Microsoft Security
+- Mitigation
+- News
+- Office 365
+- Secure Email Gateway
+- Security
+- Security Benchmarking
+- Spam Filtering
+- Threat Detection
+- Transparency
+section_names:
+- security
 ---
-
 Ramya Chitrakar and Scott Woodgate present Microsoft's latest efforts to make email security performance more transparent, including dashboards and benchmarking reports for Defender for Office 365 and comparisons with other security vendors.<!--excerpt_end-->
 
 # Microsoft Defender for Office 365: Transparent Benchmarks on Email Security Effectiveness

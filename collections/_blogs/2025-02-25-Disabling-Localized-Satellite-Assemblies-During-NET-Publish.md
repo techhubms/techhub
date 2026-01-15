@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Disabling Localized Satellite Assemblies During .NET Publish"
-description: "Andrew Lock demonstrates how to reduce .NET app publish size by excluding unnecessary localization satellite assemblies. This guide includes explanations of localization resources, configuring .NET projects to control which cultures are included, and practical troubleshooting tips."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Disabling Localized Satellite Assemblies During .NET Publish
+author: Andrew Lock
+canonical_url: https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-02-25 09:00:00 +00:00
-permalink: "/2025-02-25-Disabling-Localized-Satellite-Assemblies-During-NET-Publish.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "Coding", "Configuration", "Globalization", "Hosting", "InvariantGlobalization", "Localization", "MSBuild", "Publish Output", "Satellite Assemblies", "SatelliteResourceLanguages", "System.CommandLine"]
-tags_normalized: ["dotnet", "blogs", "coding", "configuration", "globalization", "hosting", "invariantglobalization", "localization", "msbuild", "publish output", "satellite assemblies", "satelliteresourcelanguages", "systemdotcommandline"]
+permalink: /coding/blogs/Disabling-Localized-Satellite-Assemblies-During-NET-Publish
+tags:
+- .NET
+- Blogs
+- Coding
+- Configuration
+- Globalization
+- Hosting
+- InvariantGlobalization
+- Localization
+- MSBuild
+- Publish Output
+- Satellite Assemblies
+- SatelliteResourceLanguages
+- System.CommandLine
+section_names:
+- coding
 ---
-
 In this post, Andrew Lock explores how .NET developers can prevent unnecessary localization satellite assemblies from being included in publish outputs to reduce app size.<!--excerpt_end-->
 
 # Disabling Localized Satellite Assemblies During .NET Publish

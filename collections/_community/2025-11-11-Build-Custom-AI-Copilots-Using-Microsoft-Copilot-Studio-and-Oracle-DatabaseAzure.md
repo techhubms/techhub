@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure"
-description: "This guide demonstrates how enterprises can leverage Microsoft Copilot Studio to build custom AI copilots that securely interact with live Oracle data hosted on Oracle Database@Azure. The article outlines the integration workflow, key security and governance features leveraging Microsoft Entra ID and Purview, and practical steps for creating AI-powered conversational experiences in Teams and Microsoft 365."
-author: "RajyaLaxmiYellajosyula"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/build-your-own-custom-copilots-with-microsoft-copilot-studio-and/ba-p/4468211"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure
+author: RajyaLaxmiYellajosyula
+canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/build-your-own-custom-copilots-with-microsoft-copilot-studio-and/ba-p/4468211
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 22:04:57 +00:00
-permalink: "/2025-11-11-Build-Custom-AI-Copilots-Using-Microsoft-Copilot-Studio-and-Oracle-DatabaseAzure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Copilots", "Azure", "Azure Security", "Community", "Conversational AI", "Copilot Studio", "Data Governance", "Enterprise Data", "Identity Management", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Purview", "Microsoft Sentinel", "Oracle Database@Azure", "Role Based Access Control", "Secure Data Integration", "Security", "Teams Integration"]
-tags_normalized: ["ai", "ai copilots", "azure", "azure security", "community", "conversational ai", "copilot studio", "data governance", "enterprise data", "identity management", "microsoft defender", "microsoft entra id", "microsoft purview", "microsoft sentinel", "oracle databaseatazure", "role based access control", "secure data integration", "security", "teams integration"]
+permalink: /ai/community/Build-Custom-AI-Copilots-Using-Microsoft-Copilot-Studio-and-Oracle-DatabaseAzure
+tags:
+- AI
+- AI Copilots
+- Azure
+- Azure Security
+- Community
+- Conversational AI
+- Copilot Studio
+- Data Governance
+- Enterprise Data
+- Identity Management
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Purview
+- Microsoft Sentinel
+- Oracle Database@Azure
+- Role Based Access Control
+- Secure Data Integration
+- Security
+- Teams Integration
+section_names:
+- ai
+- azure
+- security
 ---
-
 RajyaLaxmiYellajosyula guides enterprises through building secure AI copilots with Microsoft Copilot Studio and Oracle Database@Azure, outlining integration steps, governance, and the transformation of enterprise data workflows.<!--excerpt_end-->
 
 # Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure

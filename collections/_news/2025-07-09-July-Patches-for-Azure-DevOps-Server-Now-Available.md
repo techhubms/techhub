@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "July Patches for Azure DevOps Server Now Available"
-description: "Microsoft has released new patches for Azure DevOps Server, addressing a critical issue in multi-repo trigger functionality. The post urges all users to upgrade to the latest, most secure release and provides details on downloading and verifying patch installation for Azure DevOps Server 2020.1.2 Patch 17."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: July Patches for Azure DevOps Server Now Available
+author: Gloridel Morales
+canonical_url: https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-09 15:37:13 +00:00
-permalink: "/2025-07-09-July-Patches-for-Azure-DevOps-Server-Now-Available.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps Server", "DevOps", "Microsoft", "Multi Repo Trigger", "News", "Null Reference Exception", "On Premises DevOps", "Patch Installation", "Patches", "Release Notes", "Security", "Security Update", "YAML Pipelines"]
-tags_normalized: ["azure", "azure devops server", "devops", "microsoft", "multi repo trigger", "news", "null reference exception", "on premises devops", "patch installation", "patches", "release notes", "security", "security update", "yaml pipelines"]
+permalink: /azure/news/July-Patches-for-Azure-DevOps-Server-Now-Available
+tags:
+- Azure
+- Azure DevOps Server
+- DevOps
+- Microsoft
+- Multi Repo Trigger
+- News
+- Null Reference Exception
+- On Premises DevOps
+- Patch Installation
+- Patches
+- Release Notes
+- Security
+- Security Update
+- YAML Pipelines
+section_names:
+- azure
+- devops
+- security
 ---
-
 Authored by Gloridel Morales, this post announces July patches for Azure DevOps Server, highlighting key fixes and steps for users to ensure secure and updated deployments.<!--excerpt_end-->
 
 ## July Patches for Azure DevOps Server

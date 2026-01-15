@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Intelligent Troubleshooting with Azure Copilot Observability Agent"
-description: "This article introduces the Azure Copilot observability agent, a new AI-powered tool for deep, actionable investigations across your entire Azure environment. Learn how it leverages machine learning, anomaly detection, and natural language insights to help operators diagnose and resolve issues in complex Azure deployments, including VMs and AKS clusters. Explore its capabilities, integration with Azure workflows, extended regional availability, and future roadmap."
-author: "EfratNauerman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Intelligent Troubleshooting with Azure Copilot Observability Agent
+author: EfratNauerman
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:02:34 +00:00
-permalink: "/2025-11-18-Intelligent-Troubleshooting-with-Azure-Copilot-Observability-Agent.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Driven Investigations", "AKS", "Anomaly Detection", "Application Services", "Azure", "Azure Copilot Observability Agent", "Azure Monitor", "Azure Portal", "Cloud Operations", "Community", "Copilot Integration", "Deep Preview", "Diagnostics", "Investigation Workflow", "LLMs", "Machine Learning", "Metric Analysis", "Observability", "Resource Health", "Root Cause Analysis", "Virtual Machines"]
-tags_normalized: ["ai", "ai driven investigations", "aks", "anomaly detection", "application services", "azure", "azure copilot observability agent", "azure monitor", "azure portal", "cloud operations", "community", "copilot integration", "deep preview", "diagnostics", "investigation workflow", "llms", "machine learning", "metric analysis", "observability", "resource health", "root cause analysis", "virtual machines"]
+permalink: /ai/community/Intelligent-Troubleshooting-with-Azure-Copilot-Observability-Agent
+tags:
+- AI
+- AI Driven Investigations
+- AKS
+- Anomaly Detection
+- Application Services
+- Azure
+- Azure Copilot Observability Agent
+- Azure Monitor
+- Azure Portal
+- Cloud Operations
+- Community
+- Copilot Integration
+- Deep Preview
+- Diagnostics
+- Investigation Workflow
+- LLMs
+- Machine Learning
+- Metric Analysis
+- Observability
+- Resource Health
+- Root Cause Analysis
+- Virtual Machines
+section_names:
+- ai
+- azure
 ---
-
 EfratNauerman shares an overview of the Azure Copilot observability agent, explaining its AI-powered approach to diagnostic investigations and how it enhances troubleshooting, visibility, and recovery across the Azure stack.<!--excerpt_end-->
 
 # Intelligent Troubleshooting with Azure Copilot Observability Agent

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Cloud and AI Strength Fuels Q4 2025 Financial Results"
-description: "Microsoft's Q4 2025 results highlight substantial growth driven by its cloud and AI business. Azure revenue surpassed $75 billion, with overall cloud revenue rising 27%. Productivity and Intelligent Cloud segments also demonstrated significant year-over-year increases. The report details robust performance, strategic investments, and continued emphasis on AI innovation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Cloud and AI Strength Fuels Q4 2025 Financial Results
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:10:38 +00:00
-permalink: "/2025-07-30-Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Cloud Revenue", "Company News", "Dynamics 365", "Earnings Call", "Financial Results", "Intelligent Cloud", "Investor Relations", "LinkedIn", "Microsoft 365", "Microsoft Cloud", "News", "Productivity And Business Processes", "Q4", "Windows", "Xbox"]
-tags_normalized: ["ai", "azure", "cloud revenue", "company news", "dynamics 365", "earnings call", "financial results", "intelligent cloud", "investor relations", "linkedin", "microsoft 365", "microsoft cloud", "news", "productivity and business processes", "q4", "windows", "xbox"]
+permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results
+tags:
+- AI
+- Azure
+- Cloud Revenue
+- Company News
+- Dynamics 365
+- Earnings Call
+- Financial Results
+- Intelligent Cloud
+- Investor Relations
+- LinkedIn
+- Microsoft 365
+- Microsoft Cloud
+- News
+- Productivity And Business Processes
+- Q4
+- Windows
+- Xbox
+section_names:
+- ai
+- azure
 ---
-
 Authored by stclarke, this summary reviews Microsoft's Q4 2025 financial results, highlighting major gains in cloud and AI segments and outlining revenues, growth drivers, and business outlook.<!--excerpt_end-->
 
 ## Overview

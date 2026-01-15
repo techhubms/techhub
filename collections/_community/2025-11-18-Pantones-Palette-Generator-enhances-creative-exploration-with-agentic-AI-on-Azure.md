@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure"
-description: "This article explores how Pantone built the Palette Generator, an AI-powered design tool leveraging Microsoft Foundry, Azure AI Search, Azure Cosmos DB, and GitHub Copilot to help creators generate color palettes. It covers the technical architecture, multi-agent orchestration, use of agentic retrieval-augmented generation (RAG), prompt engineering, and data persistence strategies. The Pantone team shares their hands-on experience integrating advanced Azure services, reducing development effort, and moving towards a scalable, serverless future with Azure Functions."
-author: "mtoiba"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure
+author: mtoiba
+canonical_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:54:22 +00:00
-permalink: "/2025-11-18-Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agentic RAG", "AI", "AI Orchestration", "Azure", "Azure AI Search", "Azure Cosmos DB", "Azure Functions", "Azure OpenAI", "Coding", "Color Science", "Community", "Data Persistence", "Design Automation", "Developer Tools", "GitHub Copilot", "LLM Integration", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Agent Architecture", "Pantone Palette Generator", "Prompt Engineering", "Serverless Deployment", "Trend Forecasting", "Vector Search"]
-tags_normalized: ["agentic rag", "ai", "ai orchestration", "azure", "azure ai search", "azure cosmos db", "azure functions", "azure openai", "coding", "color science", "community", "data persistence", "design automation", "developer tools", "github copilot", "llm integration", "microsoft agent framework", "microsoft foundry", "multi agent architecture", "pantone palette generator", "prompt engineering", "serverless deployment", "trend forecasting", "vector search"]
+permalink: /github-copilot/community/Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure
+tags:
+- Agentic RAG
+- AI
+- AI Orchestration
+- Azure
+- Azure AI Search
+- Azure Cosmos DB
+- Azure Functions
+- Azure OpenAI
+- Coding
+- Color Science
+- Community
+- Data Persistence
+- Design Automation
+- Developer Tools
+- GitHub Copilot
+- LLM Integration
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Multi Agent Architecture
+- Pantone Palette Generator
+- Prompt Engineering
+- Serverless Deployment
+- Trend Forecasting
+- Vector Search
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 mtoiba details how Pantone's Palette Generator leverages Microsoft Azure AI, GitHub Copilot, and multi-agent systems to enable designers to generate color palettes in seconds, transforming creative workflows.<!--excerpt_end-->
 
 # Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI Data Governance Made Easy: How Microsoft Purview Tackles GenAI Risks and Builds Trust"
-description: "This article summarizes a webinar by Microsoft experts on how Microsoft Purview enables data governance, security, and compliance for AI-driven applications. It addresses regulatory challenges with GenAI, showcases Purview's real-time DLP and audit controls, integration with Microsoft Copilot and Azure AI, and guidance for developers via APIs."
-author: "vicperdana"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'AI Data Governance Made Easy: How Microsoft Purview Tackles GenAI Risks and Builds Trust'
+author: vicperdana
+canonical_url: https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-04 21:26:39 +00:00
-permalink: "/2025-08-04-AI-Data-Governance-Made-Easy-How-Microsoft-Purview-Tackles-GenAI-Risks-and-Builds-Trust.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Security", "Audit Trails", "Azure", "Azure AI Foundry", "Azure AI Studio", "Community", "Compliance", "Confidential Data Protection", "Copilot Studio", "Data Governance", "Data Loss Prevention", "DevOps", "GenAI", "Microsoft Copilot", "Microsoft Graph APIs", "Microsoft Purview", "ML", "Security"]
-tags_normalized: ["ai", "ai security", "audit trails", "azure", "azure ai foundry", "azure ai studio", "community", "compliance", "confidential data protection", "copilot studio", "data governance", "data loss prevention", "devops", "genai", "microsoft copilot", "microsoft graph apis", "microsoft purview", "ml", "security"]
+permalink: /ai/community/AI-Data-Governance-Made-Easy-How-Microsoft-Purview-Tackles-GenAI-Risks-and-Builds-Trust
+tags:
+- AI
+- AI Security
+- Audit Trails
+- Azure
+- Azure AI Foundry
+- Azure AI Studio
+- Community
+- Compliance
+- Confidential Data Protection
+- Copilot Studio
+- Data Governance
+- Data Loss Prevention
+- DevOps
+- GenAI
+- Microsoft Copilot
+- Microsoft Graph APIs
+- Microsoft Purview
+- ML
+- Security
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Authored by vicperdana, this article explores how Microsoft Purview streamlines AI data governance and compliance, mitigating GenAI risks for enterprises.<!--excerpt_end-->
 
 ## Introduction

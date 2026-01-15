@@ -1,17 +1,38 @@
----
-layout: "post"
-title: "AI Agents, DevOps Changes, and Platform Security: Weekly Technology Update"
-description: "Review the latest developments in AI coding assistants, updates to DevOps platforms, and new approaches to enterprise security. This roundup highlights GitHub Copilot’s new features for organizations, Microsoft’s expanded offerings for AI and ML applications, and Azure’s improvements to infrastructure and developer workflows. Learn about responses to critical vulnerabilities and updated security controls alongside ongoing changes to coding tools and engineering practices."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: 'AI Agents, DevOps Changes, and Platform Security: Weekly Technology Update'
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-12-22 09:00:00 +00:00
-permalink: "/2025-12-22-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "Automation", "Azure", "Cloud Computing", "Code Review", "Coding", "Data Engineering", "Dependabot", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft Fabric", "ML", "Orchestration", "Prompt Engineering", "Roundups", "Security", "VS Code"]
-tags_normalized: ["ai", "automation", "azure", "cloud computing", "code review", "coding", "data engineering", "dependabot", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "orchestration", "prompt engineering", "roundups", "security", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- AI
+- Automation
+- Azure
+- Cloud Computing
+- Code Review
+- Coding
+- Data Engineering
+- Dependabot
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Microsoft Fabric
+- ML
+- Orchestration
+- Prompt Engineering
+- Roundups
+- Security
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 This week's biggest news: GitHub Copilot adds GPT-5.2, Claude Opus 4.5, and Gemini 3 Flash models alongside new Agent Skills and Mission Control for workflow automation. Microsoft Azure AI Foundry expands its agentic AI ecosystem with hosted agents and the Model Router going GA. On the security front, teams are responding to the React2Shell vulnerability (CVE-2025-55182) affecting Next.js workloads, while GitHub Actions announces pricing changes for self-hosted runners starting March 2026.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -78,13 +99,13 @@ GitHub Copilot’s list of supported AI models continues to grow. GPT-5.2 is now
 Developers can now use Agent Skills to organize and share reusable instructions following the open Skills.md standard. This helps standardize workflows and encourages sharing across teams. Community-curated repositories—such as 'github/awesome-copilot'—enable faster onboarding and foster workflow automation. These additions support earlier work on creating repeatable, integrated DevOps flows.
 
 - [GitHub Copilot Now Supports Agent Skills](https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills)
-- [Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code]({{ "/videos/2025-12-17-Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code.html" | relative_url }})
+- [Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code](/videos/2025-12-17-Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code.html)
 
 ### Integrated Workflows and Mission Control
 
 Mission Control is now available as a central tool for managing and observing agents, promoting better visibility into automated workflows. With real-time monitoring and tools for ensuring workflow consistency between local and cloud setups, Mission Control improves process management. The integration of Azure Boards with Copilot connects DevOps tracking directly with AI-aided code generation. New workflow options like manual branch selection and feedback tracking through Kanban boards also add to operational flexibility.
 
-- [Manage All GitHub Copilot Agents with Mission Control]({{ "/videos/2025-12-16-Manage-All-GitHub-Copilot-Agents-with-Mission-Control.html" | relative_url }})
+- [Manage All GitHub Copilot Agents with Mission Control](/videos/2025-12-16-Manage-All-GitHub-Copilot-Agents-with-Mission-Control.html)
 - [Azure Boards Now Integrates Directly with GitHub Copilot Coding Agent](https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/)
 - [GitHub Copilot Coding Agent: Practical Automation Examples](https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example)
 
@@ -104,7 +125,7 @@ Visual Studio 2026 delivers a new debugging experience powered by Copilot for fa
 
 - [Debugging, but Without the Drama: Visual Studio 2026’s Copilot-Powered Experience](https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/)
 - [C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders Public Preview](https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview)
-- [Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL]({{ "/videos/2025-12-17-Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL.html" | relative_url }})
+- [Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL](/videos/2025-12-17-Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL.html)
 
 ### Prompt Engineering and Context Management
 
@@ -123,8 +144,8 @@ Copilot introduces early access for repository-specific memory to Pro and Pro+ u
 
 Developer onboarding metrics show strong Copilot adoption. This week’s discussions reinforce the importance of AI fluency, prompt design, and open governance through standards like the Model Context Protocol. Security news—including the React2Shell vulnerability—connects to wider conversations about platform resilience and best practices.
 
-- [The Download: React2Shell Vulnerability, GPT 5.2 in GitHub Copilot, and Open Source News]({{ "/videos/2025-12-21-The-Download-React2Shell-Vulnerability-GPT-52-in-GitHub-Copilot-and-Open-Source-News.html" | relative_url }})
-- [A New Kind of Developer is Emerging on GitHub]({{ "/videos/2025-12-21-A-New-Kind-of-Developer-is-Emerging-on-GitHub.html" | relative_url }})
+- [The Download: React2Shell Vulnerability, GPT 5.2 in GitHub Copilot, and Open Source News](/videos/2025-12-21-The-Download-React2Shell-Vulnerability-GPT-52-in-GitHub-Copilot-and-Open-Source-News.html)
+- [A New Kind of Developer is Emerging on GitHub](/videos/2025-12-21-A-New-Kind-of-Developer-is-Emerging-on-GitHub.html)
 
 ### Effective Use of Copilot in Domain-Specific Contexts
 
@@ -147,22 +168,22 @@ Azure AI Foundry expands with hosted agents, Model Router GA, and broader LLM su
 Azure AI Foundry brings new open-source components for orchestrating secure and flexible AI agents. Hosted Agents now provide persistent memory and simplified management, with deployment and onboarding tools supporting rapid development. The bring-your-own-model (BYO Model Gateway) now includes broader LLM support, such as Claude, Sora 2, and Mistral. Developers can use the Model Router, now generally available, to optimize AI model usage and manage costs. New Foundry Tools and security enhancements with Entra Agent ID centralize AI governance. Feedback from Discord and GitHub channels continues to shape feature planning and onboarding.
 
 - [What's New in Microsoft Foundry: Agents, Models, and Enterprise-Grade AI (October–November 2025)](https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/)
-- [Getting Started with Azure AI Foundry: A Beginner’s Guide]({{ "/videos/2025-12-15-Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide.html" | relative_url }})
-- [Getting Started with Azure AI Foundry]({{ "/videos/2025-12-15-Getting-Started-with-Azure-AI-Foundry.html" | relative_url }})
+- [Getting Started with Azure AI Foundry: A Beginner’s Guide](/videos/2025-12-15-Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide.html)
+- [Getting Started with Azure AI Foundry](/videos/2025-12-15-Getting-Started-with-Azure-AI-Foundry.html)
 
 ### Agent-Oriented Architecture: Durable Task Extension and Orchestration Guides
 
 Durable Task Extension enhances agent orchestration, making it simpler to manage dependable workflows. Examples like the AI Travel Planner demonstrate how agents can operate in sequence or in parallel. Human oversight and rollback features are supported for easier troubleshooting. Guides using Azure Functions, Static Web Apps, and OpenTelemetry continue to encourage best practices for agent communication and security.
 
 - [Building Reliable AI Travel Agents with the Durable Task Extension for Microsoft Agent Framework](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913)
-- [Best Practices for Architecting AI Agents in Enterprise Systems]({{ "/videos/2025-12-16-Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems.html" | relative_url }})
+- [Best Practices for Architecting AI Agents in Enterprise Systems](/videos/2025-12-16-Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems.html)
 
 ### Model Context Protocol (MCP) and Model Router in Developer Workflows
 
 The Model Context Protocol (MCP) now features sessions that clarify how to link AI models, APIs, and data sources in daily work. Hands-on workshops and labs continue to build on this, while the new Model Router lets developers tune model use and integrate policies into agent workflows with better control.
 
-- [Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development]({{ "/videos/2025-12-18-Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development.html" | relative_url }})
-- [Using Foundry's Model Router to Simplify Optimal AI Model Selection]({{ "/videos/2025-12-15-Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection.html" | relative_url }})
+- [Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development](/videos/2025-12-18-Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development.html)
+- [Using Foundry's Model Router to Simplify Optimal AI Model Selection](/videos/2025-12-15-Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection.html)
 
 ### Autonomous Agents and AI-Powered Data Transformation in Microsoft Fabric
 
@@ -227,7 +248,7 @@ Updated guidance covers building and deploying MCP servers with Python, using Az
 
 - [Azure Developer CLI (azd) December 2025: Extensions, Foundry, and Pipeline Updates](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/)
 - [Building and Deploying MCP Servers with Python and Azure](https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402)
-- [Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions]({{ "/videos/2025-12-18-Python-on-Azure-2025-Year-in-Review-Trends-Learning-and-Future-Directions.html" | relative_url }})
+- [Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions](/videos/2025-12-18-Python-on-Azure-2025-Year-in-Review-Trends-Learning-and-Future-Directions.html)
 
 ### Messaging Patterns, Data Engineering, and Microsoft Fabric Features
 
@@ -252,7 +273,7 @@ A new Azure schema language, JSON Structure, offers advanced typing, contract en
 Developers can now manage Azure NetApp Files from VS Code using an extension with AI-powered features. The Azure Update for December 19th covers improvements for Service Bus triggers, NetApp ransomware protection, data platform enhancements, and more. Azure Arc monthly forum brings upgrades for agent automation and Linux support. There are also troubleshooting guides for Azure Virtual Desktop and Data Gateway releases. Microsoft continues contributions to Fedora Linux and now offers GitHub Enterprise Cloud data residency in Japan. SQL Server and Azure SQL year-in-review posts track overall advancement in the data ecosystem.
 
 - [Streamline Azure NetApp Files Management Directly from VS Code](https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122)
-- [Azure Update - 19th December 2025: Service Improvements, AI, and Security News]({{ "/videos/2025-12-19-Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News.html" | relative_url }})
+- [Azure Update - 19th December 2025: Service Improvements, AI, and Security News](/videos/2025-12-19-Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News.html)
 - [Azure Arc Monthly Forum Recap – November 2025](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127)
 - [Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967)
 - [On-Premises Data Gateway December 2025 Release: Manual Update Preview and Power BI Desktop Compatibility](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-december-2025-release/)
@@ -269,14 +290,14 @@ VS Code 1.107 launches inline chat editing and persistent local agents. ASP.NET 
 A .NET MAUI walkthrough demonstrates how to build interactive iOS widgets leveraging shared .NET logic and integrating Swift for platform-specific needs. ASP.NET Core’s .NET 11 planning is underway, with opportunities for community input and transparent discussions—helping teams prepare for migration and long-term design decisions.
 
 - [Building iOS Widgets with .NET MAUI: From Setup to Interactive Features](https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/)
-- [ASP.NET Core Planning Kickoff for .NET 11]({{ "/videos/2025-12-16-ASPNET-Core-Planning-Kickoff-for-NET-11.html" | relative_url }})
-- [ASP.NET Core Server & APIs Roadmap Discussion for .NET 11]({{ "/videos/2025-12-19-ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11.html" | relative_url }})
+- [ASP.NET Core Planning Kickoff for .NET 11](/videos/2025-12-16-ASPNET-Core-Planning-Kickoff-for-NET-11.html)
+- [ASP.NET Core Server & APIs Roadmap Discussion for .NET 11](/videos/2025-12-19-ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11.html)
 
 ### Editor Experiences: VS Code and Cursor AI Updates
 
 VS Code 1.107 launches inline chat editing, advanced renaming, and persistent local agents for background tasks. Cursor AI Editor 2.2 introduces a visual workflow designer and quick access to LLM options but continues to draw developer concerns over frequent interface changes and complex pricing. These updates feed into broader conversations about balancing speed, usability, and control.
 
-- [VS Code 1.107 Release Highlights]({{ "/videos/2025-12-16-VS-Code-1107-Release-Highlights.html" | relative_url }})
+- [VS Code 1.107 Release Highlights](/videos/2025-12-16-VS-Code-1107-Release-Highlights.html)
 - [AI-Driven Cursor Editor Adds Visual Designer Amid Developer Frustrations](https://devclass.com/2025/12/16/cursor-ai-editor-gets-visual-designer-but-bugs-and-ever-changing-ui-irk-developers/)
 
 ### Practical Profiling and Feedback Workflows
@@ -317,7 +338,7 @@ Azure DevOps now fully supports Microsoft.Testing.Platform—streamlining .NET t
 
 Microsoft Fabric now features direct guides for automating SQL database deployment with Azure DevOps. Secure connection support (service principal, OAuth 2.0) enables better CI/CD integration and supports complex automation scenarios across cloud environments.
 
-- [Performing CI/CD for SQL Databases in Fabric Using Azure DevOps]({{ "/videos/2025-12-15-Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps.html" | relative_url }})
+- [Performing CI/CD for SQL Databases in Fabric Using Azure DevOps](/videos/2025-12-15-Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps.html)
 - [How to Connect Microsoft Fabric to Azure DevOps Using Service Principal](https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/)
 
 ### Other DevOps News

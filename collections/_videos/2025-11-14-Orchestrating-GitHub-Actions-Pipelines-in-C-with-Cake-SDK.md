@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Orchestrating GitHub Actions Pipelines in C# with Cake SDK"
-description: "This session explores how developers can build and release DevOps pipelines for GitHub Actions by writing configuration as code using C# and the Cake SDK. Instead of relying on YAML or JSON markup, developers utilize the expressive features of C#, including control flow, structured logic, and debugging capabilities within familiar IDEs like Visual Studio Code. The approach leverages .NET 10 for enhanced build orchestration, enabling local testing, reducing CI cycle times, and allowing teams to reuse their existing language expertise for DevOps workflows."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=e7hkKyQEcN8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Orchestrating GitHub Actions Pipelines in C# with Cake SDK
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=e7hkKyQEcN8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 08:00:06 +00:00
-permalink: "/2025-11-14-Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET 10", "Build Automation", "C#", "Cake SDK", "CI/CD", "Coding", "Configuration as Code", "Continuous Delivery", "Continuous Integration", "Debugging", "Developer Tools", "DevOps", "GitHub Actions", "Pipelines as Code", "Testing", "Videos", "VS Code"]
-tags_normalized: ["dotnet 10", "build automation", "csharp", "cake sdk", "cislashcd", "coding", "configuration as code", "continuous delivery", "continuous integration", "debugging", "developer tools", "devops", "github actions", "pipelines as code", "testing", "videos", "vs code"]
+permalink: /coding/videos/Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK
+tags:
+- .NET 10
+- Build Automation
+- C#
+- Cake SDK
+- CI/CD
+- Coding
+- Configuration as Code
+- Continuous Delivery
+- Continuous Integration
+- Debugging
+- Developer Tools
+- DevOps
+- GitHub Actions
+- Pipelines as Code
+- Testing
+- Videos
+- VS Code
+section_names:
+- coding
+- devops
 ---
-
 dotnet presents a .NET Conf 2025 session on using C# and Cake SDK to orchestrate GitHub Actions DevOps pipelines, focusing on code-driven workflows, local testing, and leveraging developer skills.<!--excerpt_end-->
 
 {% youtube e7hkKyQEcN8 %}

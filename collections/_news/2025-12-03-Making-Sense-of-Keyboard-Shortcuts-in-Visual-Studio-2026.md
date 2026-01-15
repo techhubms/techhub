@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Making Sense of Keyboard Shortcuts in Visual Studio 2026"
-description: "This article explores the history and complexity behind keyboard shortcut management in Visual Studio 2026. It covers how legacy workflows, developer profiles, keyboard schemes, scopes, and sequence shortcuts all shape the shortcut experience. You'll learn why remapping keys like Ctrl+W is tricky, how Visual Studio balances new standards with veteran habits, and practical steps for customizing shortcuts while preserving workflow integrity."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Making Sense of Keyboard Shortcuts in Visual Studio 2026
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-03 15:00:13 +00:00
-permalink: "/2025-12-03-Making-Sense-of-Keyboard-Shortcuts-in-Visual-Studio-2026.html"
-categories: ["Coding"]
-tags: ["C# Profile", "Coding", "Ctrl+W", "Customization", "Developer Profiles", "IDE Customization", "IDE Settings", "Keybinding", "Keyboard Schemes", "Keyboard Shortcuts", "News", "Productivity", "Scopes", "Sequenced Shortcuts", "Usability", "VS", "Workflow Management"]
-tags_normalized: ["csharp profile", "coding", "ctrlplusw", "customization", "developer profiles", "ide customization", "ide settings", "keybinding", "keyboard schemes", "keyboard shortcuts", "news", "productivity", "scopes", "sequenced shortcuts", "usability", "vs", "workflow management"]
+permalink: /coding/news/Making-Sense-of-Keyboard-Shortcuts-in-Visual-Studio-2026
+tags:
+- C# Profile
+- Coding
+- Ctrl+W
+- Customization
+- Developer Profiles
+- IDE Customization
+- IDE Settings
+- Keybinding
+- Keyboard Schemes
+- Keyboard Shortcuts
+- News
+- Productivity
+- Scopes
+- Sequenced Shortcuts
+- Usability
+- VS
+- Workflow Management
+section_names:
+- coding
 ---
-
 Mads Kristensen takes an honest look at why changing keyboard shortcuts in Visual Studio 2026 is complicated, detailing the history, profiles, schemes, and technical trade-offs for developers.<!--excerpt_end-->
 
 # Making Sense of Keyboard Shortcuts in Visual Studio 2026

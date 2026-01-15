@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Advanced Capabilities and Innovation of Azure Storage Solutions"
-description: "This Microsoft Ignite session explores the newest innovations in Azure Storage, covering a range of features for cloud-scale workloads, AI inference optimization, and business continuity. It provides practical insights on modernizing data estates, tiered storage, security advancements, and collaboration with partners like NVIDIA. The session includes demonstrations of key tools and highlights strategies for migrating, optimizing, and managing data using Azure Storage solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yFFMGDNVMZ8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Advanced Capabilities and Innovation of Azure Storage Solutions
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=yFFMGDNVMZ8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:28:54 +00:00
-permalink: "/2025-11-21-Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Inference", "Azure", "Azure Files", "Azure Storage", "Blob Storage", "Business Continuity", "Cloud Migration", "FS Spec Compatibility", "Identity Authentication", "Instant Snapshots", "Kaito Framework", "Lustre", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NAS Migration", "NetApp Files Migration Assistant", "NVIDIA DGX Cloud", "NVMe", "Priority Replication", "Smart Tiering", "Videos"]
-tags_normalized: ["ai", "ai inference", "azure", "azure files", "azure storage", "blob storage", "business continuity", "cloud migration", "fs spec compatibility", "identity authentication", "instant snapshots", "kaito framework", "lustre", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nas migration", "netapp files migration assistant", "nvidia dgx cloud", "nvme", "priority replication", "smart tiering", "videos"]
+permalink: /ai/videos/Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions
+tags:
+- AI
+- AI Inference
+- Azure
+- Azure Files
+- Azure Storage
+- Blob Storage
+- Business Continuity
+- Cloud Migration
+- FS Spec Compatibility
+- Identity Authentication
+- Instant Snapshots
+- Kaito Framework
+- Lustre
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- NAS Migration
+- NetApp Files Migration Assistant
+- NVIDIA DGX Cloud
+- NVMe
+- Priority Replication
+- Smart Tiering
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an Ignite session featuring Yuemin Lu, Aung Oo, and Lena Ye, offering in-depth guidance on the latest Azure Storage innovations and their application in modern cloud and AI workloads.<!--excerpt_end-->
 
 {% youtube yFFMGDNVMZ8 %}

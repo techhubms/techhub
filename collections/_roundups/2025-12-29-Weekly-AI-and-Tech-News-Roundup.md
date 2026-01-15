@@ -1,17 +1,39 @@
----
-layout: "post"
-title: "AI Agent Frameworks, Copilot Automation, and Security Improvements: Weekly Tech Highlights"
-description: "This week’s roundup covers key changes in AI agent frameworks, with GitHub Copilot and Microsoft’s Agent Framework providing updated tools for workflow automation and customization. Azure introduces new features for reliability and security, including improved SRE automation, secure secrets handling for Databricks, and AI-powered load testing. Security remains a prominent topic, with practical guidance for supply chain protection, while updates in coding and DevOps bring new resources for productivity, compliance, and sustainable growth."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: 'AI Agent Frameworks, Copilot Automation, and Security Improvements: Weekly Tech Highlights'
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-12-29 09:00:00 +00:00
-permalink: "/2025-12-29-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Framework", "AI", "AI Agents", "Automation", "Azure", "Azure Databricks", "Azure SRE", "CI/CD", "Coding", "DevOps", "GitHub Copilot", "Load Testing", "MCP (model Context Protocol)", "ML", "Open Source", "Roundups", "Security", "Supply Chain Security", "VS Code"]
-tags_normalized: ["agent framework", "ai", "ai agents", "automation", "azure", "azure databricks", "azure sre", "cislashcd", "coding", "devops", "github copilot", "load testing", "mcp model context protocol", "ml", "open source", "roundups", "security", "supply chain security", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- Agent Framework
+- AI
+- AI Agents
+- Automation
+- Azure
+- Azure Databricks
+- Azure SRE
+- CI/CD
+- Coding
+- DevOps
+- GitHub Copilot
+- Load Testing
+- MCP (model Context Protocol)
+- ML
+- Open Source
+- Roundups
+- Security
+- Supply Chain Security
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s roundup of tech updates, focusing on advances in AI agent frameworks, workflow automation, and practical security measures. GitHub Copilot and Microsoft’s Agent Framework continue to develop tools that help embed automation into everyday development work. Azure offers updated reliability features and more streamlined DevOps tools. Security takes priority with guidance on supply chain issues, and the coding and DevOps sections highlight ways to improve productivity, compliance, and sustainability for development teams.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -60,8 +82,8 @@ Custom agents can now be shared at the organization level, with repository-based
 
 Security processes, project-specific skills, and review controls build on last week's coverage of compliance, review assignments, and tailored AI integration, keeping Copilot headed toward a broad-use productivity solution that addresses enterprise needs.
 
-- [VS Code 2025: Year in Review with Burke Holland & Pierce Boggan]({{ "/2025-12-23-VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan.html" | relative_url }})
-- [Visual Studio Code and GitHub Copilot - What's new in 1.107]({{ "/2025-12-22-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107.html" | relative_url }})
+- [VS Code 2025: Year in Review with Burke Holland & Pierce Boggan](/2025-12-23-VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan.html)
+- [Visual Studio Code and GitHub Copilot - What's new in 1.107](/2025-12-22-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107.html)
 
 ### Agentic Copilot Workflows in Visual Studio and Project Management
 
@@ -91,7 +113,7 @@ Microsoft’s open-source Agent Framework is designed for building advanced AI a
 
 Continuing themes from Azure AI Foundry and its ecosystem, this framework brings orchestration, hosting, and model routing under a single solution. It combines methods like Durable Task Extension with orchestration models to support Microsoft’s efforts to unify agent development for cloud and enterprise use.
 
-- [What Is Microsoft Agent Framework & Why Another Agent Framework?]({{ "/2025-12-22-What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework.html" | relative_url }})
+- [What Is Microsoft Agent Framework & Why Another Agent Framework?](/2025-12-22-What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework.html)
 
 ### Streamlining Agent Customization and Integration in Developer Tooling
 
@@ -99,7 +121,7 @@ Visual Studio Code now supports an Agent Skills feature, letting developers conf
 
 Recent updates to Agent Skills and the Skills.md standard complement Copilot and Azure AI Foundry improvements introduced last week. The current focus is on integrated skills editing in VS Code, building on positive community feedback about consistent, shareable configuration. These enhancements further the effort to make agent customization accessible across toolsets.
 
-- [Customizing AI Agents in VS Code with Agent Skills]({{ "/2025-12-26-Customizing-AI-Agents-in-VS-Code-with-Agent-Skills.html" | relative_url }})
+- [Customizing AI Agents in VS Code with Agent Skills](/2025-12-26-Customizing-AI-Agents-in-VS-Code-with-Agent-Skills.html)
 
 ### Hosting and Scaling ChatGPT Apps with Azure Functions
 
@@ -175,7 +197,7 @@ VS Code’s browser supports integration with AI-powered features and code autom
 
 Planned updates will further integrate development and browser features, ensuring consistent improvements for web developers using VS Code.
 
-- [Unlocking the Power of VS Code's Simple Browser Feature]({{ "/2025-12-22-Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature.html" | relative_url }})
+- [Unlocking the Power of VS Code's Simple Browser Feature](/2025-12-22-Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature.html)
 
 ## DevOps
 

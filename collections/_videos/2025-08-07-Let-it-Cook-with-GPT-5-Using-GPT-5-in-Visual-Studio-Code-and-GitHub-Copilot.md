@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Let it Cook with GPT-5: Using GPT-5 in Visual Studio Code and GitHub Copilot"
-description: "In Episode 11 of 'Let it Cook with GPT-5', the Visual Studio Code team demonstrates how to take advantage of the latest GPT-5 model integration inside Visual Studio Code and GitHub Copilot. The episode spotlights new AI-powered features in VS Code, including Copilot enhancements, and provides hands-on demos for developers on customizing workflows. Presenters include Burke Holland, Pierce Boggan, and James Montemagno, who walk viewers through practical use cases and new capabilities tailored for software developers working with Microsoft's AI tools."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0Epo_gRJJ1s"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Let it Cook with GPT-5: Using GPT-5 in Visual Studio Code and GitHub Copilot'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=0Epo_gRJJ1s
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-07 23:16:05 +00:00
-permalink: "/2025-08-07-Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Models", "AI Powered Development", "Burke Holland", "Code", "Coding", "Copilot Workflow", "Demo", "Developer", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT5", "James Montemagno", "Microsoft", "Microsoft AI", "Pierce Boggan", "Software Developer", "Vibecoding", "Videos", "VS Code", "VS Code Extensions", "Workflow Customization"]
-tags_normalized: ["ai", "ai integration", "ai models", "ai powered development", "burke holland", "code", "coding", "copilot workflow", "demo", "developer", "developer tools", "github copilot", "gpt 5", "gpt5", "james montemagno", "microsoft", "microsoft ai", "pierce boggan", "software developer", "vibecoding", "videos", "vs code", "vs code extensions", "workflow customization"]
+permalink: /github-copilot/videos/Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot
+tags:
+- AI
+- AI Integration
+- AI Models
+- AI Powered Development
+- Burke Holland
+- Code
+- Coding
+- Copilot Workflow
+- Demo
+- Developer
+- Developer Tools
+- GitHub Copilot
+- GPT 5
+- GPT5
+- James Montemagno
+- Microsoft
+- Microsoft AI
+- Pierce Boggan
+- Software Developer
+- Vibecoding
+- Videos
+- VS Code
+- VS Code Extensions
+- Workflow Customization
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Pierce Boggan and James Montemagno, with guest Burke Holland, demonstrate the integration of GPT-5 and Copilot into Visual Studio Code, showcasing new AI-powered developer workflows.<!--excerpt_end-->
 
 {% youtube 0Epo_gRJJ1s %}

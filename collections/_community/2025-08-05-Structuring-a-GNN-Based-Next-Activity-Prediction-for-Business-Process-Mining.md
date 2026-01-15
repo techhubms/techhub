@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Structuring a GNN-Based Next Activity Prediction for Business Process Mining"
-description: "A hands-on community discussion where a practitioner seeks advice on building a next activity prediction model using Graph Neural Networks (GNNs) for helpdesk process data. The original poster shares their approach, dataset details, and key architectural questions around modeling individual process traces as graphs, with an emphasis on both the technical and methodological aspects of using GNNs like Graph Convolutional Networks (GCN) for process mining tasks."
-author: "Street_Car_1297"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/"
-viewing_mode: "external"
-feed_name: "Reddit Machine Learning"
-feed_url: "https://www.reddit.com/r/MachineLearning/.rss"
+﻿---
+layout: post
+title: Structuring a GNN-Based Next Activity Prediction for Business Process Mining
+author: Street_Car_1297
+canonical_url: https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/
+viewing_mode: external
+feed_name: Reddit Machine Learning
+feed_url: https://www.reddit.com/r/MachineLearning/.rss
 date: 2025-08-05 17:05:11 +00:00
-permalink: "/2025-08-05-Structuring-a-GNN-Based-Next-Activity-Prediction-for-Business-Process-Mining.html"
-categories: ["ML"]
-tags: ["Batch Processing", "Business Process Analysis", "Community", "CSV", "GCN", "GNN Training", "Graph Neural Networks", "Graph Representation", "Machine Learning", "MachineLearning", "ML", "Model Architecture", "Next Activity Prediction", "Node Classification", "Prefix Graph", "Process Instance", "Process Mining", "Python"]
-tags_normalized: ["batch processing", "business process analysis", "community", "csv", "gcn", "gnn training", "graph neural networks", "graph representation", "machine learning", "machinelearning", "ml", "model architecture", "next activity prediction", "node classification", "prefix graph", "process instance", "process mining", "python"]
+permalink: /ml/community/Structuring-a-GNN-Based-Next-Activity-Prediction-for-Business-Process-Mining
+tags:
+- Batch Processing
+- Business Process Analysis
+- Community
+- CSV
+- GCN
+- GNN Training
+- Graph Neural Networks
+- Graph Representation
+- Machine Learning
+- MachineLearning
+- ML
+- Model Architecture
+- Next Activity Prediction
+- Node Classification
+- Prefix Graph
+- Process Instance
+- Process Mining
+- Python
+section_names:
+- ml
 ---
-
 Street_Car_1297 seeks community input on designing a GNN solution for next activity prediction in business process mining, sharing project structure, dataset specifics, and open modeling questions.<!--excerpt_end-->
 
 # Structuring a GNN-Based Next Activity Prediction for Business Process Mining

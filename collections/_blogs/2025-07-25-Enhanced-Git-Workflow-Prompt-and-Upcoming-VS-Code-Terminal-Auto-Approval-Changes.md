@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes"
-description: "Reinier van Maanen discusses updates to his custom Git workflow prompt, major terminal automation improvements using GitHub Copilot Chat, and important upcoming changes to the terminal auto-approval feature in Visual Studio Code, requiring configuration updates for seamless developer workflows."
-author: "Reinier van Maanen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html"
-viewing_mode: "external"
-feed_name: "Reinier van Maanen's blog"
-feed_url: "https://r-vm.com/feed.xml"
+﻿---
+layout: post
+title: Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes
+author: Reinier van Maanen
+canonical_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
+viewing_mode: external
+feed_name: Reinier van Maanen's blog
+feed_url: https://r-vm.com/feed.xml
 date: 2025-07-25 00:00:00 +00:00
-permalink: "/2025-07-25-Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Blogs", "Branch Protection", "Coding", "Configuration", "Configuration Changes", "Custom Prompts", "Developer Tools", "DevOps", "Git", "Git Workflow", "GitHub Copilot", "GitHub Copilot Chat", "MCP Server", "PowerShell Scripts", "Progress Bars", "Prompt Engineering", "Pull Requests", "Regex Support", "Terminal", "Terminal Auto Approval", "Version Control", "Visual Studio Code Extensions", "VS Code", "Workflow", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "blogs", "branch protection", "coding", "configuration", "configuration changes", "custom prompts", "developer tools", "devops", "git", "git workflow", "github copilot", "github copilot chat", "mcp server", "powershell scripts", "progress bars", "prompt engineering", "pull requests", "regex support", "terminal", "terminal auto approval", "version control", "visual studio code extensions", "vs code", "workflow", "workflow automation"]
+permalink: /github-copilot/blogs/Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes
+tags:
+- AI
+- Automation
+- Blogs
+- Branch Protection
+- Coding
+- Configuration
+- Configuration Changes
+- Custom Prompts
+- Developer Tools
+- DevOps
+- Git
+- Git Workflow
+- GitHub Copilot
+- GitHub Copilot Chat
+- MCP Server
+- PowerShell Scripts
+- Progress Bars
+- Prompt Engineering
+- Pull Requests
+- Regex Support
+- Terminal
+- Terminal Auto Approval
+- Version Control
+- Visual Studio Code Extensions
+- VS Code
+- Workflow
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 In this post, Reinier van Maanen details his improved Git workflow prompt, VS Code and GitHub Copilot Chat integration, and provides a warning about breaking changes to the terminal auto-approval configuration coming to VS Code.<!--excerpt_end-->
 
 # Enhanced Git Workflow Custom Prompt & Upcoming VS Code Change Warning

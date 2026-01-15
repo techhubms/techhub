@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Forcing Chain-of-Thought to Non-Thinking Models in AI IDEs like VS Code & Copilot"
-description: "Cobuter_Man explores leveraging Chain-of-Thought (CoT) prompting with non-thinking AI models in IDEs such as VS Code with Copilot and Cursor, demonstrating improved planning and brainstorming. The approach involves using APM Agent Mode to manage project planning efficiently within AI-powered coding environments."
-author: "Cobuter_Man"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Forcing Chain-of-Thought to Non-Thinking Models in AI IDEs like VS Code & Copilot
+author: Cobuter_Man
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-29 13:33:13 +00:00
-permalink: "/2025-07-29-Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI IDE", "APM Agent", "Chain Of Thought", "Community", "Cursor IDE", "GitHub Copilot", "Planning", "Project Management", "Prompt Engineering", "Sonnet 4", "VS Code"]
-tags_normalized: ["ai", "ai ide", "apm agent", "chain of thought", "community", "cursor ide", "github copilot", "planning", "project management", "prompt engineering", "sonnet 4", "vs code"]
+permalink: /github-copilot/community/Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot
+tags:
+- AI
+- AI IDE
+- APM Agent
+- Chain Of Thought
+- Community
+- Cursor IDE
+- GitHub Copilot
+- Planning
+- Project Management
+- Prompt Engineering
+- Sonnet 4
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Authored by Cobuter_Man, this article details a strategy for enhancing planning and brainstorming workflows in AI IDEs like VS Code with Copilot by applying Chain-of-Thought techniques to non-thinking models using the APM Agent Mode.<!--excerpt_end-->
 
 ## Overview

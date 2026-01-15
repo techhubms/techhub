@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Real-Time AI Streaming with Azure OpenAI and SignalR"
-description: "This guide walks through building a real-time AI chat experience using Azure OpenAI for streaming responses and ASP.NET Core SignalR to broadcast those responses live to Angular clients. It covers architecture, code examples, scaling with Azure SignalR Service, and security best practices such as using Microsoft Entra ID, streaming code integration, Angular frontend design, and handling content filtering in AI streaming scenarios."
-author: "pranav_pratik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Real-Time AI Streaming with Azure OpenAI and SignalR
+author: pranav_pratik
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 09:38:46 +00:00
-permalink: "/2025-11-12-Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET 8", "AI", "AI Integration", "Angular", "ASP.NET Core", "Azure", "Azure OpenAI", "Azure SignalR Service", "Cloud Scale", "Coding", "Community", "Content Filtering", "DefaultAzureCredential", "DevOps", "Entra ID", "Frontend Integration", "Live Chat", "Real Time UX", "SignalR", "Streaming Responses", "WebSockets"]
-tags_normalized: ["dotnet 8", "ai", "ai integration", "angular", "aspdotnet core", "azure", "azure openai", "azure signalr service", "cloud scale", "coding", "community", "content filtering", "defaultazurecredential", "devops", "entra id", "frontend integration", "live chat", "real time ux", "signalr", "streaming responses", "websockets"]
+permalink: /ai/community/Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR
+tags:
+- .NET 8
+- AI
+- AI Integration
+- Angular
+- ASP.NET Core
+- Azure
+- Azure OpenAI
+- Azure SignalR Service
+- Cloud Scale
+- Coding
+- Community
+- Content Filtering
+- DefaultAzureCredential
+- DevOps
+- Entra ID
+- Frontend Integration
+- Live Chat
+- Real Time UX
+- SignalR
+- Streaming Responses
+- WebSockets
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 pranav_pratik demonstrates how to deliver a ChatGPT-style streaming AI experience in your own apps by integrating Azure OpenAI Service with real-time SignalR communication and Angular frontend, covering the end-to-end architecture and best practices.<!--excerpt_end-->
 
 # Real-Time AI Streaming with Azure OpenAI and SignalR

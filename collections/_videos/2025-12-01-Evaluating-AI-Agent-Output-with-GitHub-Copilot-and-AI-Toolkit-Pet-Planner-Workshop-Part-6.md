@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)"
-description: "This video, part of the AI Toolkit + GitHub Copilot Pet Planner workshop series by Microsoft Developer, guides viewers through evaluating an AI agent's output using GitHub Copilot and Microsoft AI Toolkit. April demonstrates practical steps—choosing evaluators, creating datasets, and scripting evaluations—helping developers assess agent results efficiently. The content also covers using Copilot in Agent mode, leveraging Microsoft Foundry, and assembling comprehensive evaluation reports, making it highly relevant for those building and testing AI-powered applications with Microsoft technologies."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=i_245SwkBAI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=i_245SwkBAI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:16 +00:00
-permalink: "/2025-12-01-Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Evaluation", "Agent Mode", "Agent Output", "AI", "AI Development", "AI Toolkit", "Azure", "Cloud Computing", "Cloud Tools", "Coding", "Dataset Creation", "Dev", "Developer Workshop", "Development", "Evaluation Script", "GitHub Copilot", "Microsoft", "Microsoft Foundry", "Pet Planner", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent evaluation", "agent mode", "agent output", "ai", "ai development", "ai toolkit", "azure", "cloud computing", "cloud tools", "coding", "dataset creation", "dev", "developer workshop", "development", "evaluation script", "github copilot", "microsoft", "microsoft foundry", "pet planner", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6
+tags:
+- Agent Evaluation
+- Agent Mode
+- Agent Output
+- AI
+- AI Development
+- AI Toolkit
+- Azure
+- Cloud Computing
+- Cloud Tools
+- Coding
+- Dataset Creation
+- Dev
+- Developer Workshop
+- Development
+- Evaluation Script
+- GitHub Copilot
+- Microsoft
+- Microsoft Foundry
+- Pet Planner
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 April from Microsoft Developer presents practical techniques for evaluating AI agent output using GitHub Copilot and AI Toolkit, offering step-by-step insights for developers in this Pet Planner workshop segment.<!--excerpt_end-->
 
 {% youtube i_245SwkBAI %}

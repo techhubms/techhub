@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Architectural Patterns and Secure Onboarding for Azure Arc in Air-Gapped Environments"
-description: "This comprehensive guide by AkashKumarSingh explores architectural patterns and security considerations for deploying Azure Arc in air-gapped and highly regulated environments. It covers air gap challenges, control plane and data plane separation, and provides actionable Azure Arc connectivity patterns to ensure compliance, zero trust architecture, and operational efficiency for organizations in finance, healthcare, government, and other regulated industries."
-author: "AkashKumarSingh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba-p/4458748"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Architectural Patterns and Secure Onboarding for Azure Arc in Air-Gapped Environments
+author: AkashKumarSingh
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba-p/4458748
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 14:00:00 +00:00
-permalink: "/2025-10-06-Architectural-Patterns-and-Secure-Onboarding-for-Azure-Arc-in-Air-Gapped-Environments.html"
-categories: ["Azure", "Security"]
-tags: ["Air Gapped Environments", "Arc Gateway", "Azure", "Azure Arc", "Azure Firewall", "Azure Monitor", "Community", "Compliance", "Control Plane", "Data Plane", "Firewall", "Hybrid Cloud", "Network Isolation", "Private Link", "Regulated Industries", "Security", "Security Architecture", "Zero Trust"]
-tags_normalized: ["air gapped environments", "arc gateway", "azure", "azure arc", "azure firewall", "azure monitor", "community", "compliance", "control plane", "data plane", "firewall", "hybrid cloud", "network isolation", "private link", "regulated industries", "security", "security architecture", "zero trust"]
+permalink: /azure/community/Architectural-Patterns-and-Secure-Onboarding-for-Azure-Arc-in-Air-Gapped-Environments
+tags:
+- Air Gapped Environments
+- Arc Gateway
+- Azure
+- Azure Arc
+- Azure Firewall
+- Azure Monitor
+- Community
+- Compliance
+- Control Plane
+- Data Plane
+- Firewall
+- Hybrid Cloud
+- Network Isolation
+- Private Link
+- Regulated Industries
+- Security
+- Security Architecture
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 AkashKumarSingh outlines best practices and architecture patterns for secure Azure Arc deployment in air-gapped and highly regulated environments, focusing on security, governance, and operational effectiveness.<!--excerpt_end-->
 
 # Architectural Patterns, Control and Data Plane Separation, and Options Analysis

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Visual Studio Code March 2025 (v1.99) Release Notes"
-description: "An in-depth overview of the new features and improvements in Visual Studio Code March 2025 (version 1.99). This release brings general availability of agent mode and Model Context Protocol (MCP) server support, unified AI-powered chat, notebook enhancements, Terminal IntelliSense improvements, and more. Learn how the latest changes and AI coding tools help streamline development workflows."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_99"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Visual Studio Code March 2025 (v1.99) Release Notes
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_99
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-04-03 17:00:00 +00:00
-permalink: "/2025-04-03-Visual-Studio-Code-March-2025-v199-Release-Notes.html"
-categories: ["AI", "Coding"]
-tags: ["Accessibility", "Agent Mode", "AI", "AI Coding", "Chat", "Coding", "Copilot", "Extension API", "Jupyter Notebook", "MCP", "MCP Servers", "News", "Next Edit Suggestions", "Pylance", "Remote Development", "Source Control", "Terminal IntelliSense", "VS Code"]
-tags_normalized: ["accessibility", "agent mode", "ai", "ai coding", "chat", "coding", "copilot", "extension api", "jupyter notebook", "mcp", "mcp servers", "news", "next edit suggestions", "pylance", "remote development", "source control", "terminal intellisense", "vs code"]
+permalink: /ai/news/Visual-Studio-Code-March-2025-v199-Release-Notes
+tags:
+- Accessibility
+- Agent Mode
+- AI
+- AI Coding
+- Chat
+- Coding
+- Copilot
+- Extension API
+- Jupyter Notebook
+- MCP
+- MCP Servers
+- News
+- Next Edit Suggestions
+- Pylance
+- Remote Development
+- Source Control
+- Terminal IntelliSense
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 Visual Studio Code Team details the March 2025 (v1.99) release, showcasing features like agent mode with AI-assisted coding, unified chat, advanced notebook tools, and major improvements to developer productivity.<!--excerpt_end-->
 
 # Visual Studio Code March 2025 (version 1.99) Release Notes

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity"
-description: "This article by Dirk_Brinkmann examines the scenario where enterprise customers allow service providers to manage their Azure subscriptions while retaining control over billing and commitments. It explains cost implications, billing relationships, commitment management, and governance, providing clear guidance for both customers and service providers on structuring operations within Azure using Enterprise Agreements (EA) or Microsoft Customer Agreements (MCA-E)."
-author: "Dirk_Brinkmann"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity'
+author: Dirk_Brinkmann
+canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-29 04:48:21 +00:00
-permalink: "/2025-08-29-Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Billing", "Azure Subscription Management", "Billing Policies", "Community", "Cost Management", "Enterprise Agreement", "FinOps", "MACC", "Microsoft Customer Agreement", "Microsoft Entra ID", "RBAC", "Reservations", "Resource Management", "Savings Plans", "Service Provider", "Subscription Ownership"]
-tags_normalized: ["azure", "azure billing", "azure subscription management", "billing policies", "community", "cost management", "enterprise agreement", "finops", "macc", "microsoft customer agreement", "microsoft entra id", "rbac", "reservations", "resource management", "savings plans", "service provider", "subscription ownership"]
+permalink: /azure/community/Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity
+tags:
+- Azure
+- Azure Billing
+- Azure Subscription Management
+- Billing Policies
+- Community
+- Cost Management
+- Enterprise Agreement
+- FinOps
+- MACC
+- Microsoft Customer Agreement
+- Microsoft Entra ID
+- RBAC
+- Reservations
+- Resource Management
+- Savings Plans
+- Service Provider
+- Subscription Ownership
+section_names:
+- azure
 ---
-
 Dirk_Brinkmann analyzes how enterprise customers can maintain cost control and commitment clarity in Azure by allowing service providers to manage subscriptions, detailing billing and governance implications.<!--excerpt_end-->
 
 # Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity

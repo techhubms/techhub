@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Monitoring Microsoft Fabric Capacity with Real-Time Hub Events"
-description: "This article explains how organizations can leverage new real-time events in Microsoft Fabric's Real-Time Hub to monitor and react to capacity usage. It covers the features of capacity summary and state events, demonstrates automation scenarios with Activator and Eventstream, and provides resources to accelerate implementation using community-built tools."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-capacity-events-in-real-time-hub-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Monitoring Microsoft Fabric Capacity with Real-Time Hub Events
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-capacity-events-in-real-time-hub-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Monitoring-Microsoft-Fabric-Capacity-with-Real-Time-Hub-Events.html"
-categories: ["Azure", "ML"]
-tags: ["Activator", "Advanced Analysis", "Automation", "Azure", "Capacity Administration", "Capacity Events", "Capacity Monitoring", "Capacity State", "Capacity Summary", "Dashboard", "Data Retention", "Event Processing", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "News", "Process Automation", "Real Time Hub", "Schema Reference", "Teams Notification"]
-tags_normalized: ["activator", "advanced analysis", "automation", "azure", "capacity administration", "capacity events", "capacity monitoring", "capacity state", "capacity summary", "dashboard", "data retention", "event processing", "eventhouse", "eventstream", "microsoft fabric", "ml", "news", "process automation", "real time hub", "schema reference", "teams notification"]
+permalink: /ml/news/Monitoring-Microsoft-Fabric-Capacity-with-Real-Time-Hub-Events
+tags:
+- Activator
+- Advanced Analysis
+- Automation
+- Azure
+- Capacity Administration
+- Capacity Events
+- Capacity Monitoring
+- Capacity State
+- Capacity Summary
+- Dashboard
+- Data Retention
+- Event Processing
+- Eventhouse
+- Eventstream
+- Microsoft Fabric
+- ML
+- News
+- Process Automation
+- Real Time Hub
+- Schema Reference
+- Teams Notification
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces real-time event monitoring in Fabric’s Real-Time Hub, guiding capacity administrators on using new event types and automation tooling for operational visibility and control.<!--excerpt_end-->
 
 # Monitoring Microsoft Fabric Capacity with Real-Time Hub Events

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How GitHub Engineers Solve Platform Problems: Best Practices and Lessons from Infrastructure"
-description: "Fabian Aguilar Gomez outlines best practices for platform engineering at GitHub, focusing on problem identification, resolution, and prevention at scale. The article covers domain understanding, platform skills, the importance of knowledge sharing, assessing change impacts, careful testing, and building resilient, scalable systems."
-author: "Fabian Aguilar Gomez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/infrastructure/how-github-engineers-tackle-platform-problems/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+layout: post
+title: 'How GitHub Engineers Solve Platform Problems: Best Practices and Lessons from Infrastructure'
+author: Fabian Aguilar Gomez
+canonical_url: https://github.blog/engineering/infrastructure/how-github-engineers-tackle-platform-problems/
+viewing_mode: external
+feed_name: GitHub Engineering Blog
+feed_url: https://github.blog/engineering/feed/
 date: 2025-06-10 16:00:00 +00:00
-permalink: "/2025-06-10-How-GitHub-Engineers-Solve-Platform-Problems-Best-Practices-and-Lessons-from-Infrastructure.html"
-categories: ["DevOps"]
-tags: ["Ansible", "Collaboration", "DevOps", "Distributed Systems", "Engineering", "GitHub", "IaC", "Incident Response", "Infrastructure", "Knowledge Sharing", "Monitoring", "Network Fundamentals", "News", "Platform Engineering", "Problem Solving", "System Reliability", "Terraform", "Testing"]
-tags_normalized: ["ansible", "collaboration", "devops", "distributed systems", "engineering", "github", "iac", "incident response", "infrastructure", "knowledge sharing", "monitoring", "network fundamentals", "news", "platform engineering", "problem solving", "system reliability", "terraform", "testing"]
+permalink: /devops/news/How-GitHub-Engineers-Solve-Platform-Problems-Best-Practices-and-Lessons-from-Infrastructure
+tags:
+- Ansible
+- Collaboration
+- DevOps
+- Distributed Systems
+- Engineering
+- GitHub
+- IaC
+- Incident Response
+- Infrastructure
+- Knowledge Sharing
+- Monitoring
+- Network Fundamentals
+- News
+- Platform Engineering
+- Problem Solving
+- System Reliability
+- Terraform
+- Testing
+section_names:
+- devops
 ---
-
 Fabian Aguilar Gomez shares GitHub's approach to tackling platform problems, offering insights into best practices for engineers in large-scale infrastructure and platform teams.<!--excerpt_end-->
 
 # How GitHub Engineers Solve Platform Problems: Best Practices from Infrastructure

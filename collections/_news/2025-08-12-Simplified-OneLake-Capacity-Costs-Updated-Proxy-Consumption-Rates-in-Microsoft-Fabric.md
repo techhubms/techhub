@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric"
-description: "This update from the Microsoft Fabric team announces a major simplification to OneLake’s capacity utilization model. The change aligns the consumption rate for OneLake transactions made via proxy with those made via redirect, making it easier to manage costs and scale data workloads across different access paths. The post details how the rates for key OneLake operations (Read, Write, Iterative Read, and Other Operations) have been reduced and unified, ensuring more predictable billing for users, regardless of how their workloads access OneLake. The announcement emphasizes the broader aim of making OneLake open, extensible, and well integrated with various analytics tools."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 10:00:00 +00:00
-permalink: "/2025-08-12-Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-Rates-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["ADLS", "Analytics", "Azure", "Azure Data Lake Storage", "Billing", "Capacity Utilization", "Cost Optimization", "CU Seconds", "Data Engineering", "Data Lake", "Data Storage", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Proxy Access", "Redirect Access", "Warehouse"]
-tags_normalized: ["adls", "analytics", "azure", "azure data lake storage", "billing", "capacity utilization", "cost optimization", "cu seconds", "data engineering", "data lake", "data storage", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "proxy access", "redirect access", "warehouse"]
+permalink: /ml/news/Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-Rates-in-Microsoft-Fabric
+tags:
+- ADLS
+- Analytics
+- Azure
+- Azure Data Lake Storage
+- Billing
+- Capacity Utilization
+- Cost Optimization
+- CU Seconds
+- Data Engineering
+- Data Lake
+- Data Storage
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Proxy Access
+- Redirect Access
+- Warehouse
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details a new update that simplifies OneLake capacity utilization costs, authored by the Microsoft Fabric team. The change aligns proxy and redirect transaction rates, improving cost management and billing predictability for organizations using OneLake.<!--excerpt_end-->
 
 # Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores"
-description: "This announcement introduces the public preview of Azure VM Customization, featuring the ability to disable simultaneous multithreading (SMT/HT) and set constrained vCPU counts. These capabilities provide developers and IT pros with advanced control over CPU configurations, optimizing performance and software licensing costs. The features support high-performance, database, and analytics workloads and are accessible via the Azure portal, ARM templates, Azure CLI, and PowerShell in select regions."
-author: "eehindero"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores'
+author: eehindero
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 21:52:05 +00:00
-permalink: "/2025-10-17-Public-Preview-VM-Customization-in-Azure-Enables-Disabling-Multithreading-and-Constrained-Cores.html"
-categories: ["Azure"]
-tags: ["ARM Templates", "Azure", "Azure CLI", "Bring Your Own License", "Community", "Compliance", "Constrained Cores", "HPC", "Hyperthreading", "Performance Optimization", "PowerShell", "Simultaneous Multithreading", "SMT", "SQL Server", "Vcpu", "Virtual Machines", "VM Customization"]
-tags_normalized: ["arm templates", "azure", "azure cli", "bring your own license", "community", "compliance", "constrained cores", "hpc", "hyperthreading", "performance optimization", "powershell", "simultaneous multithreading", "smt", "sql server", "vcpu", "virtual machines", "vm customization"]
+permalink: /azure/community/Public-Preview-VM-Customization-in-Azure-Enables-Disabling-Multithreading-and-Constrained-Cores
+tags:
+- ARM Templates
+- Azure
+- Azure CLI
+- Bring Your Own License
+- Community
+- Compliance
+- Constrained Cores
+- HPC
+- Hyperthreading
+- Performance Optimization
+- PowerShell
+- Simultaneous Multithreading
+- SMT
+- SQL Server
+- Vcpu
+- Virtual Machines
+- VM Customization
+section_names:
+- azure
 ---
-
 eehindero announces the public preview of Azure VM Customization, highlighting new support for disabling SMT/hyperthreading and setting constrained core counts, which empowers users to optimize performance and licensing costs.<!--excerpt_end-->
 
 # Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores

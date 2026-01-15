@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "HashiCorp Introduces Agentic AI and Enhanced Automation for IT Infrastructure"
-description: "This article, authored by Mike Vizard, discusses the latest enhancements HashiCorp announced at HashiConf 2025, including integration of artificial intelligence agents, improved multi-framework automation (with connectivity to Microsoft and AWS platforms), and new lifecycle/security innovations for enterprise infrastructure management and secrets handling."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: HashiCorp Introduces Agentic AI and Enhanced Automation for IT Infrastructure
+author: Mike Vizard
+canonical_url: https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-25 16:00:10 +00:00
-permalink: "/2025-09-25-HashiCorp-Introduces-Agentic-AI-and-Enhanced-Automation-for-IT-Infrastructure.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Ansible", "Automation", "Blogs", "Credentials Injection", "DevOps", "HashiCorp Cloud Platform", "HashiCorp Cloud Platform HCP", "HCP Terraform", "IaC", "IDEs Plugins", "Infrastructure as Code (iac)", "IT Infrastructure Lifecycle Management", "IT Operations", "MCP Server", "Microsoft Integration", "Model Context Protocol MCP Server", "Project Infragraph", "SBOM", "Secrets Management", "Security", "Security Lifecycle Management", "Social Facebook", "Social LinkedIn", "Social X", "Vault Enterprise", "Vault Enterprise 1.21", "Windows RDP Security", "Zero Trust", "Zero Trust Automation"]
-tags_normalized: ["agentic ai", "ai", "ansible", "automation", "blogs", "credentials injection", "devops", "hashicorp cloud platform", "hashicorp cloud platform hcp", "hcp terraform", "iac", "ides plugins", "infrastructure as code iac", "it infrastructure lifecycle management", "it operations", "mcp server", "microsoft integration", "model context protocol mcp server", "project infragraph", "sbom", "secrets management", "security", "security lifecycle management", "social facebook", "social linkedin", "social x", "vault enterprise", "vault enterprise 1dot21", "windows rdp security", "zero trust", "zero trust automation"]
+permalink: /ai/blogs/HashiCorp-Introduces-Agentic-AI-and-Enhanced-Automation-for-IT-Infrastructure
+tags:
+- Agentic AI
+- AI
+- Ansible
+- Automation
+- Blogs
+- Credentials Injection
+- DevOps
+- HashiCorp Cloud Platform
+- HashiCorp Cloud Platform HCP
+- HCP Terraform
+- IaC
+- IDEs Plugins
+- Infrastructure as Code (iac)
+- IT Infrastructure Lifecycle Management
+- IT Operations
+- MCP Server
+- Microsoft Integration
+- Model Context Protocol MCP Server
+- Project Infragraph
+- SBOM
+- Secrets Management
+- Security
+- Security Lifecycle Management
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Vault Enterprise
+- Vault Enterprise 1.21
+- Windows RDP Security
+- Zero Trust
+- Zero Trust Automation
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard covers HashiCorp’s updates at HashiConf 2025, highlighting new AI agent capabilities, cross-platform automation (including Microsoft integrations), and advanced security tools for streamlined IT infrastructure management.<!--excerpt_end-->
 
 # HashiCorp Introduces Agentic AI and Enhanced Automation for IT Infrastructure

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Use AI Agents to Scale Privacy Programs with Microsoft Sentinel"
-description: "This Microsoft Ignite session explores how OneTrust utilizes AI agents to enhance privacy risk assessments in collaboration with Microsoft. The presentation covers privacy as a data problem, demonstrates product features, and highlights Microsoft's role in scalable privacy processes using tools like Microsoft Sentinel. Key topics include privacy strategies, regulatory challenges, and agent-driven risk assessment workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1f7LZzGt79Q"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Use AI Agents to Scale Privacy Programs with Microsoft Sentinel
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=1f7LZzGt79Q
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:34:12 +00:00
-permalink: "/2025-11-19-Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agents", "Compliance", "Data Governance", "Data Protection", "Microsoft Events", "Microsoft Ignite", "Microsoft Sentinel", "MSIgnite", "OneTrust", "Privacy Program", "Privacy Scalability", "Regulatory Challenges", "Risk Assessment", "Secureyourdata", "Security", "Security Automation", "Videos"]
-tags_normalized: ["ai", "ai agents", "compliance", "data governance", "data protection", "microsoft events", "microsoft ignite", "microsoft sentinel", "msignite", "onetrust", "privacy program", "privacy scalability", "regulatory challenges", "risk assessment", "secureyourdata", "security", "security automation", "videos"]
+permalink: /ai/videos/Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel
+tags:
+- AI
+- AI Agents
+- Compliance
+- Data Governance
+- Data Protection
+- Microsoft Events
+- Microsoft Ignite
+- Microsoft Sentinel
+- MSIgnite
+- OneTrust
+- Privacy Program
+- Privacy Scalability
+- Regulatory Challenges
+- Risk Assessment
+- Secureyourdata
+- Security
+- Security Automation
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an advanced session with Kevin Jones and Ojas Rege, showcasing OneTrust's AI-driven approach to privacy risk assessment in partnership with Microsoft, focusing on scalable privacy solutions and data security.<!--excerpt_end-->
 
 {% youtube 1f7LZzGt79Q %}

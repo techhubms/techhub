@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric"
-description: "This news update introduces version 1.0.14.0 of OneLake File Explorer, highlighting its new features and improvements aimed at streamlining local file management within the Microsoft Fabric ecosystem. Key updates include smarter sync handling for temporary files, improved application stability, and migration to .NET 8, making the tool more reliable and secure for data workflow management."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 09:00:00 +00:00
-permalink: "/2025-09-10-OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: [".NET 8", "Azure", "Data Engineering", "Data Upload", "Data Workflow", "Diagnostic Logging", "File Management", "Lakehouse", "Lakehouse Integration", "Microsoft Ecosystem", "Microsoft Fabric", "ML", "News", "OneLake File Explorer", "Sync Reliability", "Windows Integration", "Workspace Management"]
-tags_normalized: ["dotnet 8", "azure", "data engineering", "data upload", "data workflow", "diagnostic logging", "file management", "lakehouse", "lakehouse integration", "microsoft ecosystem", "microsoft fabric", "ml", "news", "onelake file explorer", "sync reliability", "windows integration", "workspace management"]
+permalink: /ml/news/OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric
+tags:
+- .NET 8
+- Azure
+- Data Engineering
+- Data Upload
+- Data Workflow
+- Diagnostic Logging
+- File Management
+- Lakehouse
+- Lakehouse Integration
+- Microsoft Ecosystem
+- Microsoft Fabric
+- ML
+- News
+- OneLake File Explorer
+- Sync Reliability
+- Windows Integration
+- Workspace Management
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces OneLake File Explorer version 1.0.14.0, featuring smarter sync, better stability, and .NET 8 migration for enhanced data workflow integration.<!--excerpt_end-->
 
 # OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric

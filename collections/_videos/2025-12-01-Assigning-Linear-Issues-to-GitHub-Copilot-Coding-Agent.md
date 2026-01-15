@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Assigning Linear Issues to GitHub Copilot Coding Agent"
-description: "This video introduces the new GitHub app for Linear, enabling collaboration with GitHub Copilot directly within Linear issues. The release features the Copilot coding agent, which helps turn issue descriptions into code and pull requests, streamlining development workflows between GitHub and Linear."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dI4H5ZyYOx0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Assigning Linear Issues to GitHub Copilot Coding Agent
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=dI4H5ZyYOx0
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-01 14:58:19 +00:00
-permalink: "/2025-12-01-Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Code Automation", "Coding Agent", "Collaboration Tools", "Copilot Coding Agent", "CopilotCodingAgent", "Development Workflow", "DevOps", "DevOps Integration", "GitHub", "GitHub Copilot", "Issue Management", "Linear", "Pull Requests", "Videos"]
-tags_normalized: ["ai", "ai powered development", "code automation", "coding agent", "collaboration tools", "copilot coding agent", "copilotcodingagent", "development workflow", "devops", "devops integration", "github", "github copilot", "issue management", "linear", "pull requests", "videos"]
+permalink: /github-copilot/videos/Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent
+tags:
+- AI
+- AI Powered Development
+- Code Automation
+- Coding Agent
+- Collaboration Tools
+- Copilot Coding Agent
+- CopilotCodingAgent
+- Development Workflow
+- DevOps
+- DevOps Integration
+- GitHub
+- GitHub Copilot
+- Issue Management
+- Linear
+- Pull Requests
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub's video, authored by their team, showcases the integration of Copilot coding agent with Linear, allowing developers to assign issues and automate code creation and pull requests using GitHub Copilot.<!--excerpt_end-->
 
 {% youtube dI4H5ZyYOx0 %}

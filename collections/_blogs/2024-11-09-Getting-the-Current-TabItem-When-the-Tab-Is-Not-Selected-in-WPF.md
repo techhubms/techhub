@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Getting the Current TabItem When the Tab Is Not Selected in WPF"
-description: "Rick Strahl explains how to detect which TabItem in a WPF TabControl is currently hovered, even if it is not selected. The post gives practical code and techniques for accessing hovered items to provide context-sensitive features like tooltips and context menus in WPF applications."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2024/Nov/08/Getting-the-Current-TabItem-when-the-Tab-is-not-selected-in-WPF"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Getting the Current TabItem When the Tab Is Not Selected in WPF
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2024/Nov/08/Getting-the-Current-TabItem-when-the-Tab-is-not-selected-in-WPF
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2024-11-09 09:10:44 +00:00
-permalink: "/2024-11-09-Getting-the-Current-TabItem-When-the-Tab-Is-Not-Selected-in-WPF.html"
-categories: ["Coding"]
-tags: ["Blogs", "C#", "Coding", "Context Menu", "Event Handling", "FindAncestor", "Hover Detection", "MahApps.Metro", "MetroTabItem", "SelectedItem", "TabControl", "TabItem", "Tooltip", "UI Automation", "UI Development", "Visual Tree", "WPF"]
-tags_normalized: ["blogs", "csharp", "coding", "context menu", "event handling", "findancestor", "hover detection", "mahappsdotmetro", "metrotabitem", "selecteditem", "tabcontrol", "tabitem", "tooltip", "ui automation", "ui development", "visual tree", "wpf"]
+permalink: /coding/blogs/Getting-the-Current-TabItem-When-the-Tab-Is-Not-Selected-in-WPF
+tags:
+- Blogs
+- C#
+- Coding
+- Context Menu
+- Event Handling
+- FindAncestor
+- Hover Detection
+- MahApps.Metro
+- MetroTabItem
+- SelectedItem
+- TabControl
+- TabItem
+- Tooltip
+- UI Automation
+- UI Development
+- Visual Tree
+- WPF
+section_names:
+- coding
 ---
-
 In this article, Rick Strahl shares insights into handling hover detection in WPF TabControls, demonstrating how to access non-selected TabItems for context-sensitive operations.<!--excerpt_end-->
 
 # Getting the Current TabItem When the Tab Is Not Selected in WPF

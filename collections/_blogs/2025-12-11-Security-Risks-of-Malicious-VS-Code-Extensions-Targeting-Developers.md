@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Security Risks of Malicious VS Code Extensions Targeting Developers"
-description: "This article examines recent attacks involving two malicious Visual Studio Code (VS Code) extensions—Bitcoin Black and Codo AI—used to deliver sophisticated infostealer malware. It covers how these extensions bypassed detection, targeted developer systems, exploited trust in code repositories, and posed significant risks to software supply chains."
-author: "Jeff Burt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Security Risks of Malicious VS Code Extensions Targeting Developers
+author: Jeff Burt
+canonical_url: https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-12-11 01:03:47 +00:00
-permalink: "/2025-12-11-Security-Risks-of-Malicious-VS-Code-Extensions-Targeting-Developers.html"
-categories: ["DevOps", "Security"]
-tags: ["AI", "AI Coding Assistant", "Blogs", "CI/CD", "Crates.io", "Crates.io Security", "DevOps", "DevSecOps", "DLL Hijacking", "GitHub", "Information Security", "Infostealer", "Koi Security", "Lightshot", "Malicious Extensions", "npm Registry", "OpenAI", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Threat Intelligence", "VS Code"]
-tags_normalized: ["ai", "ai coding assistant", "blogs", "cislashcd", "cratesdotio", "cratesdotio security", "devops", "devsecops", "dll hijacking", "github", "information security", "infostealer", "koi security", "lightshot", "malicious extensions", "npm registry", "openai", "security", "social facebook", "social linkedin", "social x", "software supply chain", "threat intelligence", "vs code"]
+permalink: /devops/blogs/Security-Risks-of-Malicious-VS-Code-Extensions-Targeting-Developers
+tags:
+- AI
+- AI Coding Assistant
+- Blogs
+- CI/CD
+- Crates.io
+- Crates.io Security
+- DevOps
+- DevSecOps
+- DLL Hijacking
+- GitHub
+- Information Security
+- Infostealer
+- Koi Security
+- Lightshot
+- Malicious Extensions
+- npm Registry
+- OpenAI
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Threat Intelligence
+- VS Code
+section_names:
+- devops
+- security
 ---
-
 Jeff Burt reports on the discovery of two malicious VS Code extensions targeting developers, detailing how these plugins exploited developer environments and posed significant software supply chain security risks.<!--excerpt_end-->
 
 # Security Risks of Malicious VS Code Extensions Targeting Developers

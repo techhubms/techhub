@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Real-World .NET Profiling with Visual Studio"
-description: "This session, presented by Nik, explores advanced performance profiling for .NET developers. Attendees will learn to utilize Visual Studio Profiler for CPU and memory allocation analysis, integrate BenchmarkDotNet for benchmarking, and leverage GitHub Copilot for code optimization. The talk focuses on practical techniques and workflows valuable for both open source contributors and anyone aiming to enhance their .NET applications’ performance."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IjDRYqtRkWA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Real-World .NET Profiling with Visual Studio
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=IjDRYqtRkWA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html"
-categories: ["Coding", "GitHub Copilot"]
-tags: [".NET", "BenchmarkDotNet", "Benchmarking", "C#", "Code Improvement", "Coding", "CPU Tracing", "Developer Tools", "GitHub Copilot", "Memory Allocation", "Open Source", "Performance Optimization", "Performance Profiling", "Profiling Techniques", "Software Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "benchmarkdotnet", "benchmarking", "csharp", "code improvement", "coding", "cpu tracing", "developer tools", "github copilot", "memory allocation", "open source", "performance optimization", "performance profiling", "profiling techniques", "software development", "videos", "vs"]
+permalink: /github-copilot/videos/Real-World-NET-Profiling-with-Visual-Studio
+tags:
+- .NET
+- BenchmarkDotNet
+- Benchmarking
+- C#
+- Code Improvement
+- Coding
+- CPU Tracing
+- Developer Tools
+- GitHub Copilot
+- Memory Allocation
+- Open Source
+- Performance Optimization
+- Performance Profiling
+- Profiling Techniques
+- Software Development
+- Videos
+- VS
+section_names:
+- coding
+- github-copilot
 ---
-
 Nik from the dotnet team shares practical .NET performance profiling strategies in Visual Studio, including benchmarking and using GitHub Copilot, aimed at developers seeking to optimize and improve application performance.<!--excerpt_end-->
 
 {% youtube IjDRYqtRkWA %}

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps"
-description: "This session from Microsoft Ignite 2025 explores how modern DevOps workflows can be enhanced by integrating GitHub Copilot, Azure DevOps, and Azure services. It covers hybrid migration from Azure Repos to GitHub, maintaining investments in Azure Boards and Pipelines, and best practices for agentic, AI-enabled DevOps. Practical demos show Copilot integrations for pipeline YAML, automated code reviews, and branch management, along with agent-based workflow patterns."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LP9Z8iF6TYs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=LP9Z8iF6TYs
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:23:43 +00:00
-permalink: "/2025-11-20-AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic DevOps", "AI", "Automation", "Azure", "Azure Boards", "Azure DevOps", "Azure Pipelines", "Branch Management", "CI/CD", "Code Review", "Coding", "DevOps", "DevOps Strategy", "GitHub", "GitHub Copilot", "Hybrid Adoption", "InnovatewithAzureAIappsandagents", "MCP Servers", "Microsoft Ignite", "MSIgnite", "Playwright", "Sessions", "Videos", "Work Item Traceability", "YAML"]
-tags_normalized: ["agentic devops", "ai", "automation", "azure", "azure boards", "azure devops", "azure pipelines", "branch management", "cislashcd", "code review", "coding", "devops", "devops strategy", "github", "github copilot", "hybrid adoption", "innovatewithazureaiappsandagents", "mcp servers", "microsoft ignite", "msignite", "playwright", "sessions", "videos", "work item traceability", "yaml"]
+permalink: /github-copilot/videos/AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps
+tags:
+- Agentic DevOps
+- AI
+- Automation
+- Azure
+- Azure Boards
+- Azure DevOps
+- Azure Pipelines
+- Branch Management
+- CI/CD
+- Code Review
+- Coding
+- DevOps
+- DevOps Strategy
+- GitHub
+- GitHub Copilot
+- Hybrid Adoption
+- InnovatewithAzureAIappsandagents
+- MCP Servers
+- Microsoft Ignite
+- MSIgnite
+- Playwright
+- Sessions
+- Videos
+- Work Item Traceability
+- YAML
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents an advanced Ignite 2025 breakout on AI-powered DevOps, featuring Dave Burnison and Dan Hellem, with demos of GitHub Copilot, Azure Boards, and Pipelines.<!--excerpt_end-->
 
 {% youtube LP9Z8iF6TYs %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Automating HPC Workflows with Copilot Agents"
-description: "This article demonstrates how Copilot Agents, leveraging AI models, streamline high performance computing (HPC) scripting tasks such as Slurm job submissions. Covering best practices, workflow steps, error handling, and iterative improvement, it illustrates how Copilot Agents enable faster, more reliable automation for scientific computing applications like OpenFOAM."
-author: "xpillons"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automating HPC Workflows with Copilot Agents
+author: xpillons
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 10:43:26 +00:00
-permalink: "/2025-12-03-Automating-HPC-Workflows-with-Copilot-Agents.html"
-categories: ["AI"]
-tags: ["AI", "AI Powered Automation", "AI Workflow", "Bash Scripting", "Community", "Copilot Agents", "Error Reduction", "GPT 5", "High Performance Computing", "HPC Automation", "Iterative Development", "Job Submission", "OpenFOAM", "Resource Management", "Scaling", "Script Generation", "Slurm", "Validation"]
-tags_normalized: ["ai", "ai powered automation", "ai workflow", "bash scripting", "community", "copilot agents", "error reduction", "gpt 5", "high performance computing", "hpc automation", "iterative development", "job submission", "openfoam", "resource management", "scaling", "script generation", "slurm", "validation"]
+permalink: /ai/community/Automating-HPC-Workflows-with-Copilot-Agents
+tags:
+- AI
+- AI Powered Automation
+- AI Workflow
+- Bash Scripting
+- Community
+- Copilot Agents
+- Error Reduction
+- GPT 5
+- High Performance Computing
+- HPC Automation
+- Iterative Development
+- Job Submission
+- OpenFOAM
+- Resource Management
+- Scaling
+- Script Generation
+- Slurm
+- Validation
+section_names:
+- ai
 ---
-
 xpillons discusses how Copilot Agents employ artificial intelligence to automate HPC job scripts for scientific computing, detailing iterative workflow enhancements and error reduction strategies.<!--excerpt_end-->
 
 # Automating HPC Workflows with Copilot Agents

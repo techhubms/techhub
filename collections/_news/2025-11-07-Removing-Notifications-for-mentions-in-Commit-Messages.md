@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Removing Notifications for @mentions in Commit Messages"
-description: "GitHub is updating its notification system by no longer triggering alerts for user or team mentions within commit messages. This change is designed to reduce spam and help developers concentrate on more relevant notifications. Discussions and mentions in issues, pull requests, and discussions will continue to generate notifications. The update takes effect from December 8th."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-07-removing-notifications-for-mentions-in-commit-messages"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Removing Notifications for @mentions in Commit Messages
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-07-removing-notifications-for-mentions-in-commit-messages
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-07 16:22:05 +00:00
-permalink: "/2025-11-07-Removing-Notifications-for-mentions-in-Commit-Messages.html"
-categories: ["DevOps"]
-tags: ["Change Management", "Commit Messages", "Community Engagement", "Community Feedback", "Developer Productivity", "DevOps", "GitHub", "Issue Tracking", "Mentions", "News", "Retired", "Software Development", "Team Collaboration"]
-tags_normalized: ["change management", "commit messages", "community engagement", "community feedback", "developer productivity", "devops", "github", "issue tracking", "mentions", "news", "retired", "software development", "team collaboration"]
+permalink: /devops/news/Removing-Notifications-for-mentions-in-Commit-Messages
+tags:
+- Change Management
+- Commit Messages
+- Community Engagement
+- Community Feedback
+- Developer Productivity
+- DevOps
+- GitHub
+- Issue Tracking
+- Mentions
+- News
+- Retired
+- Software Development
+- Team Collaboration
+section_names:
+- devops
 ---
-
 Allison details GitHub's removal of notifications triggered by mentions in commit messages, explaining how this change aims to reduce spam and streamline developer workflow.<!--excerpt_end-->
 
 # Removing Notifications for @mentions in Commit Messages

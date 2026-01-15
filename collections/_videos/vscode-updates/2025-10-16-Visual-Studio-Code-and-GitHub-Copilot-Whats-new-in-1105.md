@@ -1,24 +1,35 @@
----
-layout: "post"
-title: "Visual Studio Code and GitHub Copilot - What's new in 1.105"
-description: "Fokko Veegens provides a comprehensive walkthrough of Visual Studio Code 1.105, released in October 2025, highlighting significant enhancements to GitHub Copilot integration and developer productivity tools. The release introduces AI-powered assistance for complex workflows, improved terminal integration, and enhanced code testing capabilities."
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zsCBEVCQ98I"
-viewing_mode: "internal"
-youtube_id: "zsCBEVCQ98I"
+﻿---
+layout: post
+title: Visual Studio Code and GitHub Copilot - What's new in 1.105
+author: Fokko Veegens
+canonical_url: https://www.youtube.com/watch?v=zsCBEVCQ98I
+viewing_mode: internal
+youtube_id: zsCBEVCQ98I
 date: 2025-10-16 07:12:43 +00:00
-permalink: "/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html"
-categories: ["AI", "GitHub Copilot"]
-section: "github-copilot"
-alt-collection: "vscode-updates"
-tags: ["AI", "Chain Of Thought", "Chat Terminal", "Code Coverage", "Developer Tools", "GitHub Copilot", "MCP Marketplace", "Merge Conflicts", "Productivity", "Terminal Profiles", "Videos", "VS Code", "VS Code 1.105"]
-tags_normalized: ["ai", "chain of thought", "chat terminal", "code coverage", "developer tools", "github copilot", "mcp marketplace", "merge conflicts", "productivity", "terminal profiles", "videos", "vs code", "vs code 1dot105"]
+permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105
+section: github-copilot
+alt-collection: vscode-updates
+tags:
+- AI
+- Chain Of Thought
+- Chat Terminal
+- Code Coverage
+- Developer Tools
+- GitHub Copilot
+- MCP Marketplace
+- Merge Conflicts
+- Productivity
+- Terminal Profiles
+- Videos
+- VS Code
+- VS Code 1.105
+section_names:
+- ai
+- github-copilot
 ---
+Fokko Veegens provides a comprehensive walkthrough of Visual Studio Code 1.105, released in October 2025, highlighting significant enhancements to GitHub Copilot integration and developer productivity tools. The release introduces AI-powered assistance for complex workflows, improved terminal integration, and enhanced code testing capabilities.<!--excerpt_end-->
 
-{{ page.description }}<!--excerpt_end-->
-
-{% youtube page.youtube_id %}
+{% youtube EZx42sdoUj4 %}
 
 ## Full summary based on transcript
 
@@ -76,4 +87,4 @@ The release includes several other notable improvements. Apple ID login is now s
 
 Fokko demonstrates each feature with practical examples throughout the video, making it easy to understand how these enhancements integrate into daily development workflows.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v={{ page.youtube_id }})
+[Watch the video on YouTube](https://www.youtube.com/watch?v=zsCBEVCQ98I)

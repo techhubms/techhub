@@ -1,20 +1,36 @@
----
-layout: "post"
-title: ".NET 10 Migration and New Features for Enterprise Blazor Applications"
-description: "This video demonstrates the migration of a large-scale enterprise Blazor application to .NET 10, covering upgrade strategies and highlighting performance and capability improvements over previous .NET versions. It explores new features such as ASP.NET Core Identity Passkeys, improvements in .NET Aspire, ASP.NET Core, .NET MAUI, and updates to C#, F#, and Visual Studio, all aimed at enhancing productivity and cloud-native development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cBZopiZeuL8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET 10 Migration and New Features for Enterprise Blazor Applications
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=cBZopiZeuL8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:30 +00:00
-permalink: "/2025-11-14-NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "ASP.NET Core", "ASP.NET Core Identity", "Blazor", "C# 14", "Cloud Native Apps", "Coding", "Enterprise Migration", "F# 10", "Full Stack Development", "MAUI", "Passkeys", "Performance Optimization", "Secure Authentication", "Videos", "VS", "Web Development"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "aspdotnet core", "aspdotnet core identity", "blazor", "csharp 14", "cloud native apps", "coding", "enterprise migration", "fsharp 10", "full stack development", "maui", "passkeys", "performance optimization", "secure authentication", "videos", "vs", "web development"]
+permalink: /coding/videos/NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- ASP.NET Core
+- ASP.NET Core Identity
+- Blazor
+- C# 14
+- Cloud Native Apps
+- Coding
+- Enterprise Migration
+- F# 10
+- Full Stack Development
+- MAUI
+- Passkeys
+- Performance Optimization
+- Secure Authentication
+- Videos
+- VS
+- Web Development
+section_names:
+- coding
 ---
-
 dotnet presents a deep dive into migrating enterprise Blazor applications to .NET 10, emphasizing upgrade strategies, new features, and performance gains.<!--excerpt_end-->
 
 {% youtube cBZopiZeuL8 %}

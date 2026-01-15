@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Announcing Deep Integration between Microsoft OneLake and Azure Databricks"
-description: "This announcement explores Microsoft and Databricks’ extended partnership through new integrations between Microsoft OneLake and Azure Databricks. It details current and upcoming capabilities, including mirroring, native reading, and future native writing of data, all focused on delivering an open, interoperable lakehouse architecture for analytics, AI, and governance within Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Announcing Deep Integration between Microsoft OneLake and Azure Databricks
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Azure Databricks", "Catalog API", "Cloud Data Platform", "Copilot Studio", "Data Analytics", "Data Engineering", "Data Governance", "Data Integration", "Data Interoperability", "Data Lake", "Data Mirroring", "Data Sharing", "Delta Lake", "Lakehouse Architecture", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "Open Data", "Power BI", "Unity Catalog"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "azure databricks", "catalog api", "cloud data platform", "copilot studio", "data analytics", "data engineering", "data governance", "data integration", "data interoperability", "data lake", "data mirroring", "data sharing", "delta lake", "lakehouse architecture", "microsoft fabric", "microsoft onelake", "ml", "news", "open data", "power bi", "unity catalog"]
+permalink: /ai/news/Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Databricks
+- Catalog API
+- Cloud Data Platform
+- Copilot Studio
+- Data Analytics
+- Data Engineering
+- Data Governance
+- Data Integration
+- Data Interoperability
+- Data Lake
+- Data Mirroring
+- Data Sharing
+- Delta Lake
+- Lakehouse Architecture
+- Microsoft Fabric
+- Microsoft OneLake
+- ML
+- News
+- Open Data
+- Power BI
+- Unity Catalog
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces deeper Azure Databricks and OneLake integration, detailed by Adam Conway and Arun Ulag, empowering organizations with open lakehouse architecture, integrated analytics, and AI.<!--excerpt_end-->
 
 # Announcing Deep Integration between Microsoft OneLake and Azure Databricks

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "GitHub Code Quality Public Preview: Inline Findings and Copilot Fixes"
-description: "This announcement introduces GitHub Code Quality, now in public preview for GitHub Enterprise Cloud and Team. The feature provides developers and engineering teams with actionable, in-context code quality findings in pull requests, one-click Copilot-powered fixes, reliability and maintainability scoring, and roadmap details like test coverage metrics and APIs for automation. Support extends to several languages, including C#, Java, Python, JavaScript, Go, and Ruby. Availability and enablement instructions are also included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Code Quality Public Preview: Inline Findings and Copilot Fixes'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:28:45 +00:00
-permalink: "/2025-10-28-GitHub-Code-Quality-Public-Preview-Inline-Findings-and-Copilot-Fixes.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "Application Security", "Automated Fixes", "C#", "Code Review", "CodeQL", "Coding", "Copilot", "DevOps", "GitHub Code Quality", "GitHub Copilot", "Go", "Java", "JavaScript", "Maintainability", "News", "Platform Governance", "Pull Requests", "Python", "Reliability", "Ruby", "Security", "Software Quality", "Static Analysis", "Technical Debt", "Universe25"]
-tags_normalized: ["ai", "application security", "automated fixes", "csharp", "code review", "codeql", "coding", "copilot", "devops", "github code quality", "github copilot", "go", "java", "javascript", "maintainability", "news", "platform governance", "pull requests", "python", "reliability", "ruby", "security", "software quality", "static analysis", "technical debt", "universe25"]
+permalink: /github-copilot/news/GitHub-Code-Quality-Public-Preview-Inline-Findings-and-Copilot-Fixes
+tags:
+- AI
+- Application Security
+- Automated Fixes
+- C#
+- Code Review
+- CodeQL
+- Coding
+- Copilot
+- DevOps
+- GitHub Code Quality
+- GitHub Copilot
+- Go
+- Java
+- JavaScript
+- Maintainability
+- News
+- Platform Governance
+- Pull Requests
+- Python
+- Reliability
+- Ruby
+- Security
+- Software Quality
+- Static Analysis
+- Technical Debt
+- Universe25
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Allison shares the public preview of GitHub Code Quality, offering developers inline code review findings, Copilot-powered fixes, and repository health scores directly in pull requests.<!--excerpt_end-->
 
 # GitHub Code Quality in Public Preview: Inline Findings and Copilot Fixes

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents"
-description: "This session from Microsoft Ignite 2025 demonstrates how development teams can streamline Azure application delivery using GitHub Copilot and specialized AI agents. Covering every stage from design, planning, and coding to deployment and production operations, it explores how tools like the Coding Agent, App Modernization agent, and SRE Agent simplify DevOps workflows. The presentation highlights hands-on integrations with GitHub Copilot for Azure and Azure MCP Server, showcasing deployment automation and diagnostic improvements for complex cloud projects."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JxoC8siCf8Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=JxoC8siCf8Y
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:19:32 +00:00
-permalink: "/2025-11-21-Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "App Modernization Agent", "Automation", "Azure", "Azure Container Apps", "Azure MCP Server", "Coding Agent", "Datadog", "DevOps", "GitHub Copilot", "GitHub Copilot For Azure", "Incident Response", "InnovatewithAzureAIappsandagents", "MSIgnite", "PagerDuty", "Production Diagnostics", "Quality Assurance", "SRE Agent", "Testing Agent", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "app modernization agent", "automation", "azure", "azure container apps", "azure mcp server", "coding agent", "datadog", "devops", "github copilot", "github copilot for azure", "incident response", "innovatewithazureaiappsandagents", "msignite", "pagerduty", "production diagnostics", "quality assurance", "sre agent", "testing agent", "videos", "vs code"]
+permalink: /github-copilot/videos/Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents
+tags:
+- AI
+- AI Agents
+- App Modernization Agent
+- Automation
+- Azure
+- Azure Container Apps
+- Azure MCP Server
+- Coding Agent
+- Datadog
+- DevOps
+- GitHub Copilot
+- GitHub Copilot For Azure
+- Incident Response
+- InnovatewithAzureAIappsandagents
+- MSIgnite
+- PagerDuty
+- Production Diagnostics
+- Quality Assurance
+- SRE Agent
+- Testing Agent
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents an in-depth session revealing how Nir Mashkowski and Mandy Whaley use GitHub Copilot and AI agents to automate Azure app development, DevOps, and operations.<!--excerpt_end-->
 
 {% youtube JxoC8siCf8Y %}

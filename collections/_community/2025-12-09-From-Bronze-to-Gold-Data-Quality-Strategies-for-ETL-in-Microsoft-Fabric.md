@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric"
-description: "This guide explains how to enforce robust data quality across every layer of the Medallion Architecture within Microsoft Fabric, using the open-source Great Expectations framework. Learn practical techniques for automated, reusable validation in ETL pipelines, including schema, primary key, volume drift, and anomaly checks, plus integration into Fabric notebooks and pipelines. The article focuses on actionable steps for real-world data engineering, featuring code examples and production workflow recommendations."
-author: "Sally_Dabbah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric'
+author: Sally_Dabbah
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 08:12:15 +00:00
-permalink: "/2025-12-09-From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Automated Testing", "Azure", "Bronze Layer", "Community", "Data Drift", "Data Quality", "Data Validation", "ETL", "Fabric Pipeline", "Gold Layer", "Great Expectations", "Lakehouse", "Medallion Architecture", "Microsoft Fabric", "ML", "NYC Taxi Dataset", "Observability", "Power BI", "Primary Key Uniqueness", "PySpark", "Schema Compliance", "Silver Layer", "Time Series Validation"]
-tags_normalized: ["automated testing", "azure", "bronze layer", "community", "data drift", "data quality", "data validation", "etl", "fabric pipeline", "gold layer", "great expectations", "lakehouse", "medallion architecture", "microsoft fabric", "ml", "nyc taxi dataset", "observability", "power bi", "primary key uniqueness", "pyspark", "schema compliance", "silver layer", "time series validation"]
+permalink: /ml/community/From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric
+tags:
+- Automated Testing
+- Azure
+- Bronze Layer
+- Community
+- Data Drift
+- Data Quality
+- Data Validation
+- ETL
+- Fabric Pipeline
+- Gold Layer
+- Great Expectations
+- Lakehouse
+- Medallion Architecture
+- Microsoft Fabric
+- ML
+- NYC Taxi Dataset
+- Observability
+- Power BI
+- Primary Key Uniqueness
+- PySpark
+- Schema Compliance
+- Silver Layer
+- Time Series Validation
+section_names:
+- azure
+- ml
 ---
-
 Sally Dabbah provides a technical walkthrough on implementing enterprise-grade data quality checks in Microsoft Fabric ETL pipelines, showcasing Great Expectations integration at every architecture layer.<!--excerpt_end-->
 
 # From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric

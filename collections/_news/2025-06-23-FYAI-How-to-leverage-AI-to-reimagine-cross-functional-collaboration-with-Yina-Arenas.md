@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "FYAI: How to leverage AI to reimagine cross-functional collaboration with Yina Arenas"
-description: "This article highlights insights from Yina Arenas, VP of Product for Azure AI Foundry, on empowering developers to utilize AI for enhancing cross-functional collaboration. The discussion focuses on strategies, tools, and visions for shaping more effective teamwork using Microsoft’s AI solutions."
-author: "Toby Bowers"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/06/23/fyai-how-to-leverage-ai-to-reimagine-cross-functional-collaboration-with-yina-arenas/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'FYAI: How to leverage AI to reimagine cross-functional collaboration with Yina Arenas'
+author: Toby Bowers
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/06/23/fyai-how-to-leverage-ai-to-reimagine-cross-functional-collaboration-with-yina-arenas/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-23 21:10:28 +00:00
-permalink: "/2025-06-23-FYAI-How-to-leverage-AI-to-reimagine-cross-functional-collaboration-with-Yina-Arenas.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Empowerment", "AI Strategies", "Azure", "Azure AI Foundry", "Copilot", "Cross Functional Collaboration", "Developer Tools", "Enterprise Productivity", "Microsoft AI", "News", "Teamwork", "Yina Arenas"]
-tags_normalized: ["ai", "ai plus machine learning", "ai empowerment", "ai strategies", "azure", "azure ai foundry", "copilot", "cross functional collaboration", "developer tools", "enterprise productivity", "microsoft ai", "news", "teamwork", "yina arenas"]
+permalink: /ai/news/FYAI-How-to-leverage-AI-to-reimagine-cross-functional-collaboration-with-Yina-Arenas
+tags:
+- AI
+- AI + Machine Learning
+- AI Empowerment
+- AI Strategies
+- Azure
+- Azure AI Foundry
+- Copilot
+- Cross Functional Collaboration
+- Developer Tools
+- Enterprise Productivity
+- Microsoft AI
+- News
+- Teamwork
+- Yina Arenas
+section_names:
+- ai
+- azure
 ---
-
 Toby Bowers reports on insights from Yina Arenas, VP of Product, Azure AI Foundry, discussing how developers can leverage AI to enhance cross-functional collaboration within organizations.<!--excerpt_end-->
 
 ## FYAI: How to leverage AI to reimagine cross-functional collaboration with Yina Arenas

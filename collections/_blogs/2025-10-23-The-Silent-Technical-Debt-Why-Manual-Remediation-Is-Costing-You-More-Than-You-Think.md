@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "The Silent Technical Debt: Why Manual Remediation Is Costing You More Than You Think"
-description: "This article by Bob Shaker explores the hidden costs of manual vulnerability remediation in software development, focusing on the impact of remediation debt on productivity, innovation, and security. Drawing from the 2025 Vulnerability Management and Intelligent Remediation Report, it uncovers how traditional manual processes consume significant engineering resources, exacerbate developer dissatisfaction, and expose organizations to prolonged risk. The author discusses the need for intelligent remediation and DevSecOps evolution to address these challenges and unlock engineering potential."
-author: "Bob Shaker"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'The Silent Technical Debt: Why Manual Remediation Is Costing You More Than You Think'
+author: Bob Shaker
+canonical_url: https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 07:30:29 +00:00
-permalink: "/2025-10-23-The-Silent-Technical-Debt-Why-Manual-Remediation-Is-Costing-You-More-Than-You-Think.html"
-categories: ["DevOps", "Security"]
-tags: ["ActiveState Report", "Blogs", "Business Of DevOps", "Continuous Remediation", "Contributed Content", "Cybersecurity Efficiency", "Dependency Management", "Developer Productivity", "DevOps", "Devsecops", "Engineering Performance", "Innovation Tax", "Intelligent Remediation", "KubeCon", "KubeCon + CloudNativeCon Europe", "Manual Remediation", "Mean Time To Remediate", "Mttr", "Open Source Security", "Remediation Debt", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Vulnerabilities", "Technical Debt", "Transitive Dependencies", "Vulnerability Management", "Vulnerability Remediation"]
-tags_normalized: ["activestate report", "blogs", "business of devops", "continuous remediation", "contributed content", "cybersecurity efficiency", "dependency management", "developer productivity", "devops", "devsecops", "engineering performance", "innovation tax", "intelligent remediation", "kubecon", "kubecon plus cloudnativecon europe", "manual remediation", "mean time to remediate", "mttr", "open source security", "remediation debt", "security", "security automation", "social facebook", "social linkedin", "social x", "software vulnerabilities", "technical debt", "transitive dependencies", "vulnerability management", "vulnerability remediation"]
+permalink: /devops/blogs/The-Silent-Technical-Debt-Why-Manual-Remediation-Is-Costing-You-More-Than-You-Think
+tags:
+- ActiveState Report
+- Blogs
+- Business Of DevOps
+- Continuous Remediation
+- Contributed Content
+- Cybersecurity Efficiency
+- Dependency Management
+- Developer Productivity
+- DevOps
+- Devsecops
+- Engineering Performance
+- Innovation Tax
+- Intelligent Remediation
+- KubeCon
+- KubeCon + CloudNativeCon Europe
+- Manual Remediation
+- Mean Time To Remediate
+- Mttr
+- Open Source Security
+- Remediation Debt
+- Security
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Vulnerabilities
+- Technical Debt
+- Transitive Dependencies
+- Vulnerability Management
+- Vulnerability Remediation
+section_names:
+- devops
+- security
 ---
-
 Bob Shaker analyzes how manual remediation of software vulnerabilities creates substantial technical debt, drains developer time, and increases organizational risk. The article proposes intelligent remediation as a solution to these DevSecOps challenges.<!--excerpt_end-->
 
 # The Silent Technical Debt: Why Manual Remediation Is Costing You More Than You Think

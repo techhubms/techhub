@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Measuring What Matters: Offline Evaluation of GitHub MCP Server"
-description: "This article by Ksenia Bobrova provides an in-depth look at how the GitHub MCP Server team uses automated offline evaluation pipelines to ensure the reliability and effectiveness of GitHub Copilot's tool integration. It details the metrics, benchmarks, and methodologies that enable accurate tool selection, argument correctness, and ongoing improvements, highlighting the ways systematic evaluation leads to better developer experiences."
-author: "Ksenia Bobrova"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Measuring What Matters: Offline Evaluation of GitHub MCP Server'
+author: Ksenia Bobrova
+canonical_url: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-30 21:46:07 +00:00
-permalink: "/2025-10-30-Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "Argument Validation", "Automated Testing", "Benchmarking", "Classification Metrics", "Confusion Matrix", "Developer Tools", "DevOps", "DevOps Pipeline", "F1 Score", "Generative AI", "GitHub Copilot", "GitHub MCP Server", "LLM Evaluation", "Machine Learning", "MCP", "News", "Offline Evaluation", "Tool Selection"]
-tags_normalized: ["ai", "ai and ml", "argument validation", "automated testing", "benchmarking", "classification metrics", "confusion matrix", "developer tools", "devops", "devops pipeline", "f1 score", "generative ai", "github copilot", "github mcp server", "llm evaluation", "machine learning", "mcp", "news", "offline evaluation", "tool selection"]
+permalink: /github-copilot/news/Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server
+tags:
+- AI
+- AI & ML
+- Argument Validation
+- Automated Testing
+- Benchmarking
+- Classification Metrics
+- Confusion Matrix
+- Developer Tools
+- DevOps
+- DevOps Pipeline
+- F1 Score
+- Generative AI
+- GitHub Copilot
+- GitHub MCP Server
+- LLM Evaluation
+- Machine Learning
+- MCP
+- News
+- Offline Evaluation
+- Tool Selection
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Ksenia Bobrova explains how the GitHub MCP Server team employs rigorous offline evaluation methods to improve GitHub Copilot's integration with AI models, ensuring high-quality, accurate developer workflows.<!--excerpt_end-->
 
 # Measuring What Matters: Offline Evaluation of GitHub MCP Server

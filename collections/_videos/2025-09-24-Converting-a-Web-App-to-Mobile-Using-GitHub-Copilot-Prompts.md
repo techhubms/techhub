@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Converting a Web App to Mobile Using GitHub Copilot Prompts"
-description: "This video demonstrates how developers can leverage prompt engineering techniques with GitHub Copilot to convert a web application into a mobile application, focusing on hands-on workflows in Visual Studio Code. The session covers essential features such as Plan Mode, Voice Prompting, and Model Picker, providing insights into accelerating development processes with minimal coding and maximizing productivity in a developer tooling environment."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sKW4LUVlOSo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Converting a Web App to Mobile Using GitHub Copilot Prompts
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=sKW4LUVlOSo
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-24 14:01:37 +00:00
-permalink: "/2025-09-24-Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "MCP", "Microsoft", "Mobile Development", "Model Picker", "Plan Mode", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Software Developer", "Videos", "Voice Prompting", "VS Code", "Web App Conversion"]
-tags_normalized: ["ai", "code", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "github copilot", "mcp", "microsoft", "mobile development", "model picker", "plan mode", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "software developer", "videos", "voice prompting", "vs code", "web app conversion"]
+permalink: /github-copilot/videos/Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts
+tags:
+- AI
+- Code
+- Coding
+- Copilot
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub Copilot
+- MCP
+- Microsoft
+- Mobile Development
+- Model Picker
+- Plan Mode
+- Prompt Driven Development
+- Prompt Engineering
+- Promptdrivendevelopment
+- Software Developer
+- Videos
+- Voice Prompting
+- VS Code
+- Web App Conversion
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code’s Reynald Adolphe demonstrates how developers can use GitHub Copilot and prompt engineering to transform a web app into a mobile app with minimal coding effort.<!--excerpt_end-->
 
 {% youtube sKW4LUVlOSo %}

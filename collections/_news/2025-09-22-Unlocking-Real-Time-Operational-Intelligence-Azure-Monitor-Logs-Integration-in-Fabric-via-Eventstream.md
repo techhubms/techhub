@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream"
-description: "This article introduces a new integration between Azure Monitor Diagnostic Logs and Microsoft Fabric via Eventstream. It explains how organizations can now directly ingest Azure resource logs into Fabric-native analytics workflows, reducing setup complexity and enabling real-time, actionable insights. The guide covers usage scenarios, configuration steps, and the benefits of unified operational monitoring."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 17:00:00 +00:00
-permalink: "/2025-09-22-Unlocking-Real-Time-Operational-Intelligence-Azure-Monitor-Logs-Integration-in-Fabric-via-Eventstream.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics Workflow", "Azure", "Azure Integration", "Azure Monitor", "Business Intelligence", "Cloud Monitoring", "Data Ingestion", "Data Transformation", "Diagnostic Logs", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "Monitoring Logs", "News", "Operational Monitoring", "Real Time Intelligence", "Streaming Analytics"]
-tags_normalized: ["analytics workflow", "azure", "azure integration", "azure monitor", "business intelligence", "cloud monitoring", "data ingestion", "data transformation", "diagnostic logs", "eventhouse", "eventstream", "microsoft fabric", "ml", "monitoring logs", "news", "operational monitoring", "real time intelligence", "streaming analytics"]
+permalink: /ml/news/Unlocking-Real-Time-Operational-Intelligence-Azure-Monitor-Logs-Integration-in-Fabric-via-Eventstream
+tags:
+- Analytics Workflow
+- Azure
+- Azure Integration
+- Azure Monitor
+- Business Intelligence
+- Cloud Monitoring
+- Data Ingestion
+- Data Transformation
+- Diagnostic Logs
+- Eventhouse
+- Eventstream
+- Microsoft Fabric
+- ML
+- Monitoring Logs
+- News
+- Operational Monitoring
+- Real Time Intelligence
+- Streaming Analytics
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how the new Azure Monitor Logs to Fabric Eventstream integration helps organizations unify operational intelligence by enabling real-time, code-free data ingestion and analytics.<!--excerpt_end-->
 
 # Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream

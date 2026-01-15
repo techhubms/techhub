@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Boards Now Integrates Directly with GitHub Copilot Coding Agent"
-description: "This announcement details the general availability of the Azure Boards integration with GitHub Copilot, letting development teams send work items from Azure DevOps to Copilot for automated coding, branch and pull request generation, and progress tracking. It covers requirements, new features from customer feedback, upcoming enhancements and rollout information."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Azure Boards Now Integrates Directly with GitHub Copilot Coding Agent
+author: Dan Hellem
+canonical_url: https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-16 13:17:08 +00:00
-permalink: "/2025-12-16-Azure-Boards-Now-Integrates-Directly-with-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Branch Management", "Copilot Coding Agent", "Custom Agents", "DevOps", "Enterprise Integration", "Feature Rollout", "GitHub Copilot", "Kanban Board", "MCP Server", "Model Selection", "News", "Pull Request Workflow", "Repository Integration", "REST API", "Work Item Automation"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure and cloud", "azure boards", "azure devops", "branch management", "copilot coding agent", "custom agents", "devops", "enterprise integration", "feature rollout", "github copilot", "kanban board", "mcp server", "model selection", "news", "pull request workflow", "repository integration", "rest api", "work item automation"]
+permalink: /github-copilot/news/Azure-Boards-Now-Integrates-Directly-with-GitHub-Copilot-Coding-Agent
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Branch Management
+- Copilot Coding Agent
+- Custom Agents
+- DevOps
+- Enterprise Integration
+- Feature Rollout
+- GitHub Copilot
+- Kanban Board
+- MCP Server
+- Model Selection
+- News
+- Pull Request Workflow
+- Repository Integration
+- REST API
+- Work Item Automation
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Dan Hellem reports on the general availability of Azure Boards and GitHub Copilot integration, which streamlines work item automation and coding workflow for development teams.<!--excerpt_end-->
 
 # Azure Boards Now Integrates Directly with GitHub Copilot Coding Agent

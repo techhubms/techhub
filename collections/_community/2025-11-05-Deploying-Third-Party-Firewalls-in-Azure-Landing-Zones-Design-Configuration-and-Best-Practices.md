@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices"
-description: "This detailed guide explores the architecture, deployment models, configuration strategies, and operational best practices involved in integrating third-party firewall appliances (such as Palo Alto, Fortinet, or Check Point) in Microsoft Azure Landing Zones. The article covers the rationale for using third-party solutions over Azure Firewall, hub-and-spoke networking, traffic flow patterns, key configuration concerns like routing and NAT, licensing, operational caveats, and how to maximize security, scalability, and high availability in enterprise environments."
-author: "PramodPalukuru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices'
+author: PramodPalukuru
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 06:11:28 +00:00
-permalink: "/2025-11-05-Deploying-Third-Party-Firewalls-in-Azure-Landing-Zones-Design-Configuration-and-Best-Practices.html"
-categories: ["Azure", "Security"]
-tags: ["Active Active Deployment", "Active Passive Deployment", "Azure", "Azure Firewall", "Azure Load Balancer", "Azure Monitor", "Azure Sentinel", "BYOL", "Check Point", "Community", "Fortinet", "High Availability", "Hub And Spoke Architecture", "IDS/IPS", "Intrusion Detection", "Landing Zone", "NAT Rules", "Network Security", "Palo Alto", "Security", "Third Party Firewall", "User Defined Routes", "Virtual Network", "Zero Trust"]
-tags_normalized: ["active active deployment", "active passive deployment", "azure", "azure firewall", "azure load balancer", "azure monitor", "azure sentinel", "byol", "check point", "community", "fortinet", "high availability", "hub and spoke architecture", "idsslaships", "intrusion detection", "landing zone", "nat rules", "network security", "palo alto", "security", "third party firewall", "user defined routes", "virtual network", "zero trust"]
+permalink: /azure/community/Deploying-Third-Party-Firewalls-in-Azure-Landing-Zones-Design-Configuration-and-Best-Practices
+tags:
+- Active Active Deployment
+- Active Passive Deployment
+- Azure
+- Azure Firewall
+- Azure Load Balancer
+- Azure Monitor
+- Azure Sentinel
+- BYOL
+- Check Point
+- Community
+- Fortinet
+- High Availability
+- Hub And Spoke Architecture
+- IDS/IPS
+- Intrusion Detection
+- Landing Zone
+- NAT Rules
+- Network Security
+- Palo Alto
+- Security
+- Third Party Firewall
+- User Defined Routes
+- Virtual Network
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 PramodPalukuru delivers a comprehensive overview of deploying third-party firewalls in Azure Landing Zones, sharing actionable design, configuration, and security best practices for enterprise-scale cloud environments.<!--excerpt_end-->
 
 # Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices

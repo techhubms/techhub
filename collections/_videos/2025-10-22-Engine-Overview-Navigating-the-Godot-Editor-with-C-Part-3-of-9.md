@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)"
-description: "This episode in the Godot C# training series provides a hands-on overview of the Godot game engine and editor. The content guides viewers through project creation and management, the Godot editor's main panels (Scene, File System, Inspector), and workspace views (2D, 3D, Script, Game, Asset Library). It aims to give developers foundational knowledge for efficient game development using C# in Godot, leveraging resources from the Microsoft developer ecosystem and integrating coding with Visual Studio Code."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RdciTS7sRhw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=RdciTS7sRhw
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:11 +00:00
-permalink: "/2025-10-22-Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9.html"
-categories: ["Coding"]
-tags: [".NET", "Beginner Tutorial", "C#", "Coding", "Debugging", "Editor Views", "File System", "Game Development", "Godot", "Godot Editor", "Godot Project Manager", "Inspector", "Microsoft Developer", "Scene Panel", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "beginner tutorial", "csharp", "coding", "debugging", "editor views", "file system", "game development", "godot", "godot editor", "godot project manager", "inspector", "microsoft developer", "scene panel", "videos", "vs code"]
+permalink: /coding/videos/Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9
+tags:
+- .NET
+- Beginner Tutorial
+- C#
+- Coding
+- Debugging
+- Editor Views
+- File System
+- Game Development
+- Godot
+- Godot Editor
+- Godot Project Manager
+- Inspector
+- Microsoft Developer
+- Scene Panel
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 dotnet presents a practical walkthrough of the Godot game engine editor, focusing on project setup and editor navigation for C# game developers.<!--excerpt_end-->
 
 {% youtube RdciTS7sRhw %}

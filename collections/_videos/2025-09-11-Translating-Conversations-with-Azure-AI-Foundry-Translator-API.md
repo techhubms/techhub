@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Translating Conversations with Azure AI Foundry Translator API"
-description: "This episode showcases the Azure AI Foundry Translator API (Public Preview), guiding viewers through translating conversations between English-speaking support agents and French-speaking customers. It demonstrates using neural machine translation (NMT) and large language model (LLM) translation, including handling tone and gender. Step-by-step setup instructions for Azure and Azure AI Foundry resources are provided, along with links to sample code and further documentation. The content emphasizes practical usage, comparing NMT and LLM approaches, and illustrates how to configure translation for nuanced customer interactions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Xam_QQnb5wQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Translating Conversations with Azure AI Foundry Translator API
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Xam_QQnb5wQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-11 17:57:05 +00:00
-permalink: "/2025-09-11-Translating-Conversations-with-Azure-AI-Foundry-Translator-API.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Integration", "Azure", "Azure AI Foundry", "Azure Cloud", "Cloud Computing", "Dev", "Developer Tutorial", "Development", "Gender Accommodation", "Large Language Models", "LLM Translation", "Microsoft", "Microsoft AI", "Natural Language Processing", "Neural Machine Translation", "NMT", "Tech", "Technology", "Text Translation", "Tone Detection", "Translation API", "Translator API", "Videos"]
-tags_normalized: ["ai", "api integration", "azure", "azure ai foundry", "azure cloud", "cloud computing", "dev", "developer tutorial", "development", "gender accommodation", "large language models", "llm translation", "microsoft", "microsoft ai", "natural language processing", "neural machine translation", "nmt", "tech", "technology", "text translation", "tone detection", "translation api", "translator api", "videos"]
+permalink: /ai/videos/Translating-Conversations-with-Azure-AI-Foundry-Translator-API
+tags:
+- AI
+- API Integration
+- Azure
+- Azure AI Foundry
+- Azure Cloud
+- Cloud Computing
+- Dev
+- Developer Tutorial
+- Development
+- Gender Accommodation
+- Large Language Models
+- LLM Translation
+- Microsoft
+- Microsoft AI
+- Natural Language Processing
+- Neural Machine Translation
+- NMT
+- Tech
+- Technology
+- Text Translation
+- Tone Detection
+- Translation API
+- Translator API
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer demonstrates how to use the Azure AI Foundry Translator API to translate multilingual conversations with advanced features like tone and gender accommodation.<!--excerpt_end-->
 
 {% youtube Xam_QQnb5wQ %}

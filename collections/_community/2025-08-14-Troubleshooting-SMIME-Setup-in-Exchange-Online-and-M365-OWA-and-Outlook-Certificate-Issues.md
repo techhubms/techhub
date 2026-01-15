@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Troubleshooting S/MIME Setup in Exchange Online and M365: OWA and Outlook Certificate Issues"
-description: "This detailed troubleshooting post by JChristiansen covers challenges encountered during the deployment and configuration of S/MIME on Microsoft 365 Exchange Online, specifically addressing cross-platform certificate publishing and related errors in Outlook (Windows and Mac) as well as OWA. It outlines steps taken for certificate enrollment, Intune deployment, Exchange Online configuration, and current working scenarios, along with cases where certificate trust errors block encrypted email functionality."
-author: "JChristiansen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/exchange/smime-not-working-in-owa/m-p/4443230#M16650"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Troubleshooting S/MIME Setup in Exchange Online and M365: OWA and Outlook Certificate Issues'
+author: JChristiansen
+canonical_url: https://techcommunity.microsoft.com/t5/exchange/smime-not-working-in-owa/m-p/4443230#M16650
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 09:58:31 +00:00
-permalink: "/2025-08-14-Troubleshooting-SMIME-Setup-in-Exchange-Online-and-M365-OWA-and-Outlook-Certificate-Issues.html"
-categories: ["Security"]
-tags: ["Certificate Enrollment", "Certificate Trust", "Community", "Connect ExchangeOnline", "Email Security", "Encryption", "Exchange Online", "GAL", "Intermediate Certificate", "Intune", "Macos", "Microsoft 365", "Outlook", "OWA", "PowerShell", "Root Certificate", "S/MIME", "Security", "SMIMECertificateIssuingCA", "Windows"]
-tags_normalized: ["certificate enrollment", "certificate trust", "community", "connect exchangeonline", "email security", "encryption", "exchange online", "gal", "intermediate certificate", "intune", "macos", "microsoft 365", "outlook", "owa", "powershell", "root certificate", "sslashmime", "security", "smimecertificateissuingca", "windows"]
+permalink: /security/community/Troubleshooting-SMIME-Setup-in-Exchange-Online-and-M365-OWA-and-Outlook-Certificate-Issues
+tags:
+- Certificate Enrollment
+- Certificate Trust
+- Community
+- Connect ExchangeOnline
+- Email Security
+- Encryption
+- Exchange Online
+- GAL
+- Intermediate Certificate
+- Intune
+- Macos
+- Microsoft 365
+- Outlook
+- OWA
+- PowerShell
+- Root Certificate
+- S/MIME
+- Security
+- SMIMECertificateIssuingCA
+- Windows
+section_names:
+- security
 ---
-
 JChristiansen provides a hands-on report documenting their S/MIME deployment experience with Exchange Online, Intune, and mixed Windows/macOS endpoints, focusing on certificate publishing and troubleshooting Outlook/OWA trust issues.<!--excerpt_end-->
 
 # Troubleshooting S/MIME Setup with Exchange Online and Microsoft 365

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Assign Azure Boards Work Items to GitHub Copilot Coding Agent in Public Preview"
-description: "This announcement introduces the integration between Azure Boards and GitHub Copilot’s new autonomous coding agent. Developers can now delegate tasks directly from Azure Boards to the Copilot coding agent, allowing automated background work and draft pull request creation. The integration streamlines tracking and collaboration for teams using both Azure DevOps and GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Assign Azure Boards Work Items to GitHub Copilot Coding Agent in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 19:43:27 +00:00
-permalink: "/2025-09-18-Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "Azure", "Azure Boards", "Azure DevOps", "Copilot", "Copilot Chat", "Copilot Coding Agent", "Developer Tools", "DevOps", "DevOps Automation", "GitHub", "GitHub Copilot", "GitHub Issues", "News", "Preview Release", "Pull Request Automation", "Raycast", "Software Development", "Task Assignment"]
-tags_normalized: ["ai", "ai agent", "azure", "azure boards", "azure devops", "copilot", "copilot chat", "copilot coding agent", "developer tools", "devops", "devops automation", "github", "github copilot", "github issues", "news", "preview release", "pull request automation", "raycast", "software development", "task assignment"]
+permalink: /github-copilot/news/Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview
+tags:
+- AI
+- AI Agent
+- Azure
+- Azure Boards
+- Azure DevOps
+- Copilot
+- Copilot Chat
+- Copilot Coding Agent
+- Developer Tools
+- DevOps
+- DevOps Automation
+- GitHub
+- GitHub Copilot
+- GitHub Issues
+- News
+- Preview Release
+- Pull Request Automation
+- Raycast
+- Software Development
+- Task Assignment
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Allison details the public preview integration of Azure Boards with GitHub Copilot’s coding agent, enabling developers to assign and track work directly through automated background agents.<!--excerpt_end-->
 
 # Assign Azure Boards Work Items to GitHub Copilot Coding Agent in Public Preview

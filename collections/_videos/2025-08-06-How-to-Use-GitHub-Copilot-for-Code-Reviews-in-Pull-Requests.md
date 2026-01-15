@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to Use GitHub Copilot for Code Reviews in Pull Requests"
-description: "This video demonstrates how developers can leverage GitHub Copilot as an initial code reviewer within pull requests. It covers requesting Copilot reviews, handling single or batched suggestions, and streamlining code improvements before engaging the wider team, enhancing code quality and development workflow."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/jYW9MorrE_w"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Use GitHub Copilot for Code Reviews in Pull Requests
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/jYW9MorrE_w
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-06 14:01:17 +00:00
-permalink: "/2025-08-06-How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automated Code Review", "Code Quality", "Code Review", "CodeReview", "Developer Workflow", "DevOps", "DevOps Practices", "GitHub", "GitHub Copilot", "Pull Request", "Review Suggestions", "Videos"]
-tags_normalized: ["ai", "ai assistant", "automated code review", "code quality", "code review", "codereview", "developer workflow", "devops", "devops practices", "github", "github copilot", "pull request", "review suggestions", "videos"]
+permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests
+tags:
+- AI
+- AI Assistant
+- Automated Code Review
+- Code Quality
+- Code Review
+- CodeReview
+- Developer Workflow
+- DevOps
+- DevOps Practices
+- GitHub
+- GitHub Copilot
+- Pull Request
+- Review Suggestions
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this resource, GitHub explains how to utilize GitHub Copilot as your first code reviewer in pull requests. The guide outlines the workflow for leveraging Copilot to streamline reviews before involving your team.<!--excerpt_end-->
 
 {% youtube jYW9MorrE_w %}

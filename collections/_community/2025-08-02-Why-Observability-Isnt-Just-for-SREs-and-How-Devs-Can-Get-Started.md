@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Why Observability Isn’t Just for SREs (and How Devs Can Get Started)"
-description: "elizObserves emphasizes the importance of observability for all developers, not just SREs. The article provides practical advice and resources to help developers understand and get started with observability practices, highlighting the growing relevance of these skills for modern software development and operations."
-author: "elizObserves"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mfsvq8/why_observability_isnt_just_for_sres_and_how_devs/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Why Observability Isn’t Just for SREs (and How Devs Can Get Started)
+author: elizObserves
+canonical_url: https://www.reddit.com/r/devops/comments/1mfsvq8/why_observability_isnt_just_for_sres_and_how_devs/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 15:09:58 +00:00
-permalink: "/2025-08-02-Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started.html"
-categories: ["DevOps"]
-tags: ["Application Performance", "Community", "Developer Practices", "DevOps", "Logging", "Metrics", "Monitoring", "Observability", "Open Source", "Site Reliability", "Software Engineering", "SRE", "Tracing"]
-tags_normalized: ["application performance", "community", "developer practices", "devops", "logging", "metrics", "monitoring", "observability", "open source", "site reliability", "software engineering", "sre", "tracing"]
+permalink: /devops/community/Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started
+tags:
+- Application Performance
+- Community
+- Developer Practices
+- DevOps
+- Logging
+- Metrics
+- Monitoring
+- Observability
+- Open Source
+- Site Reliability
+- Software Engineering
+- SRE
+- Tracing
+section_names:
+- devops
 ---
-
 Authored by elizObserves, this article advocates for making observability a core discipline for developers, not just SREs, and offers a practical entry point for those new to the topic.<!--excerpt_end-->
 
 ## Summary

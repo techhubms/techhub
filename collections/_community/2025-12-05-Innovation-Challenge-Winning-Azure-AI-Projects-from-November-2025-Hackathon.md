@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Innovation Challenge: Winning Azure AI Projects from November 2025 Hackathon"
-description: "This article highlights the top developer teams and their winning projects from the November 2025 Innovation Challenge hackathon, which focuses on building advanced AI solutions using Azure. Participants tackled real-world use cases such as automated service desks, civic engagement platforms, and customer personalization orchestrators powered by multi-agent AI architectures. The challenge brought together over 300 developers, resulting in 76 technically sophisticated projects leveraging Azure AI services and cognitive APIs."
-author: "macalde"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Innovation Challenge: Winning Azure AI Projects from November 2025 Hackathon'
+author: macalde
+canonical_url: https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-05 17:34:53 +00:00
-permalink: "/2025-12-05-Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["A/B Testing", "AI", "AI Agents", "AI Orchestration", "Automation", "Azure", "Azure AI", "Azure Cognitive Services", "Civic Engagement", "Coding", "Community", "Customer Personalization", "Developer Community", "Education Technology", "Hackathon", "Marketing Automation", "Microsoft Azure", "Multi Agent Systems", "Service Desk Automation"]
-tags_normalized: ["aslashb testing", "ai", "ai agents", "ai orchestration", "automation", "azure", "azure ai", "azure cognitive services", "civic engagement", "coding", "community", "customer personalization", "developer community", "education technology", "hackathon", "marketing automation", "microsoft azure", "multi agent systems", "service desk automation"]
+permalink: /ai/community/Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon
+tags:
+- A/B Testing
+- AI
+- AI Agents
+- AI Orchestration
+- Automation
+- Azure
+- Azure AI
+- Azure Cognitive Services
+- Civic Engagement
+- Coding
+- Community
+- Customer Personalization
+- Developer Community
+- Education Technology
+- Hackathon
+- Marketing Automation
+- Microsoft Azure
+- Multi Agent Systems
+- Service Desk Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 macalde presents the winners and standout technical solutions from the November 2025 Innovation Challenge hackathon, showcasing AI-powered Azure solutions from top developer teams.<!--excerpt_end-->
 
 # Innovation Challenge: Winning Azure AI Projects from November 2025 Hackathon

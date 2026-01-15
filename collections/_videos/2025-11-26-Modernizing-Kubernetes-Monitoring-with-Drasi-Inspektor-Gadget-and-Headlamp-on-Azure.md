@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modernizing Kubernetes Monitoring with Drasi, Inspektor Gadget, and Headlamp on Azure"
-description: "This session from Microsoft Ignite explores how open source tools like Drasi, Inspektor Gadget, and Headlamp can enhance real-time visibility and control of Azure Kubernetes Service (AKS) clusters. It covers monitoring strategies, live state change detection, runtime insights, and management interface improvements, demonstrating solutions on AKS with a universal, cloud-agnostic approach. The talk focuses on practical techniques for managing and observing Kubernetes environments, particularly in Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Jejnhz9ZwD8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing Kubernetes Monitoring with Drasi, Inspektor Gadget, and Headlamp on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Jejnhz9ZwD8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:47:08 +00:00
-permalink: "/2025-11-26-Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Cloud Agnostic", "Cloud Native", "Cluster Management", "Container Orchestration", "DevOps", "Drasi", "Headlamp", "Inspektor Gadget", "Kubernetes", "Management Interface", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Observability", "Open Source Tools", "Real Time Insights", "Videos"]
-tags_normalized: ["aks", "azure", "cloud agnostic", "cloud native", "cluster management", "container orchestration", "devops", "drasi", "headlamp", "inspektor gadget", "kubernetes", "management interface", "microsoft ignite", "migrateandmodernizeyourestate", "monitoring", "msignite", "observability", "open source tools", "real time insights", "videos"]
+permalink: /azure/videos/Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure
+tags:
+- AKS
+- Azure
+- Cloud Agnostic
+- Cloud Native
+- Cluster Management
+- Container Orchestration
+- DevOps
+- Drasi
+- Headlamp
+- Inspektor Gadget
+- Kubernetes
+- Management Interface
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Monitoring
+- MSIgnite
+- Observability
+- Open Source Tools
+- Real Time Insights
+- Videos
+section_names:
+- azure
+- devops
 ---
-
 Microsoft Events delivers an Ignite session featuring advanced Kubernetes monitoring and management strategies using Drasi, Inspektor Gadget, and Headlamp on Azure Kubernetes Service (AKS).<!--excerpt_end-->
 
 {% youtube Jejnhz9ZwD8 %}

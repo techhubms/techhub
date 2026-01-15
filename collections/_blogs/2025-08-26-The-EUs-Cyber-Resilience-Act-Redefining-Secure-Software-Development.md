@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "The EU’s Cyber Resilience Act: Redefining Secure Software Development"
-description: "This article by Thabang Mashologu explains the implications of the European Union’s Cyber Resilience Act (CRA) on modern software development. It focuses on mandated security-by-design practices, SBOM management, vulnerability handling, and compliance obligations, with a direct impact on DevOps and security teams across the development lifecycle."
-author: "Thabang Mashologu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-eus-cyber-resilience-act-redefining-secure-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=the-eus-cyber-resilience-act-redefining-secure-software-development"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'The EU’s Cyber Resilience Act: Redefining Secure Software Development'
+author: Thabang Mashologu
+canonical_url: https://devops.com/the-eus-cyber-resilience-act-redefining-secure-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=the-eus-cyber-resilience-act-redefining-secure-software-development
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-26 13:55:02 +00:00
-permalink: "/2025-08-26-The-EUs-Cyber-Resilience-Act-Redefining-Secure-Software-Development.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Compliance", "Cyber Resilience Act", "DevOps", "DevSecOps", "ENISA", "EU", "EU Regulations", "Incident Reporting", "Open Source", "Patch Management", "Risk Analysis", "SBOM", "Secure Software Development", "Security", "Security By Design", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Lifecycle", "Software Updates", "Techstrong Council", "Vulnerability Management"]
-tags_normalized: ["blogs", "compliance", "cyber resilience act", "devops", "devsecops", "enisa", "eu", "eu regulations", "incident reporting", "open source", "patch management", "risk analysis", "sbom", "secure software development", "security", "security by design", "social facebook", "social linkedin", "social x", "software development", "software lifecycle", "software updates", "techstrong council", "vulnerability management"]
+permalink: /devops/blogs/The-EUs-Cyber-Resilience-Act-Redefining-Secure-Software-Development
+tags:
+- Blogs
+- Compliance
+- Cyber Resilience Act
+- DevOps
+- DevSecOps
+- ENISA
+- EU
+- EU Regulations
+- Incident Reporting
+- Open Source
+- Patch Management
+- Risk Analysis
+- SBOM
+- Secure Software Development
+- Security
+- Security By Design
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+- Software Lifecycle
+- Software Updates
+- Techstrong Council
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Thabang Mashologu discusses the transformative impact of the EU’s Cyber Resilience Act on software development practices, outlining core security and compliance requirements for DevOps and security teams.<!--excerpt_end-->
 
 # The EU’s Cyber Resilience Act: Redefining Secure Software Development

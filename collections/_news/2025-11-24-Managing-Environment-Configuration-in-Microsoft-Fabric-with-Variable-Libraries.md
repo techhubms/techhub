@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Managing Environment Configuration in Microsoft Fabric with Variable Libraries"
-description: "This article explores how data engineers can efficiently handle environment-specific configurations in Microsoft Fabric using variable libraries. The tutorial demonstrates integration of Fabric Variable Libraries within User Data Functions for managing Lakehouse names, file paths, schema names, and secure secrets. It provides step-by-step guidance on connecting Fabric services and injecting variables into CI/CD pipelines for robust, secure, and flexible data engineering workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Managing Environment Configuration in Microsoft Fabric with Variable Libraries
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 12:47:12 +00:00
-permalink: "/2025-11-24-Managing-Environment-Configuration-in-Microsoft-Fabric-with-Variable-Libraries.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "Azure", "Azure Key Vault", "Azure OpenAI", "CI/CD", "Coding", "Data Engineering", "Deployment Pipeline", "Dynamic Configuration", "Environment Configuration", "Lakehouse", "Microsoft Fabric", "ML", "News", "Python", "Schema Management", "Secrets Management", "Secure Variables", "User Data Functions", "Variable Libraries"]
-tags_normalized: ["ai", "azure", "azure key vault", "azure openai", "cislashcd", "coding", "data engineering", "deployment pipeline", "dynamic configuration", "environment configuration", "lakehouse", "microsoft fabric", "ml", "news", "python", "schema management", "secrets management", "secure variables", "user data functions", "variable libraries"]
+permalink: /ai/news/Managing-Environment-Configuration-in-Microsoft-Fabric-with-Variable-Libraries
+tags:
+- AI
+- Azure
+- Azure Key Vault
+- Azure OpenAI
+- CI/CD
+- Coding
+- Data Engineering
+- Deployment Pipeline
+- Dynamic Configuration
+- Environment Configuration
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Python
+- Schema Management
+- Secrets Management
+- Secure Variables
+- User Data Functions
+- Variable Libraries
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog offers practical insights for data engineers on managing environment configuration with variable libraries in Fabric User Data Functions. The tutorial includes code examples for secure integration with Azure OpenAI and Azure Key Vault.<!--excerpt_end-->
 
 # Managing Environment Configuration in Microsoft Fabric with Variable Libraries

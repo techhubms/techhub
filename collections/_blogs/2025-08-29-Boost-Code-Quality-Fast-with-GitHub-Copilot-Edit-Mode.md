@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Boost Code Quality Fast with GitHub Copilot Edit Mode"
-description: "This guide explains how to use GitHub Copilot Edit Mode and Agent Mode for quick, targeted improvements in your codebase. Learn techniques to simplify logic, enforce consistent coding styles, and add error handling efficiently using Copilot’s AI-driven suggestions. Includes practical tips and prompt examples to help developers enhance reliability and maintainability."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Boost Code Quality Fast with GitHub Copilot Edit Mode
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-08-29 00:00:00 +00:00
-permalink: "/2025-08-29-Boost-Code-Quality-Fast-with-GitHub-Copilot-Edit-Mode.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Code Generation", "Async/Await", "Blogs", "Code Quality", "Code Refactoring", "Coding", "Coding Style", "Developer Tools", "Edit Mode", "Error Handling", "GitHub Copilot", "JavaScript", "JSDoc", "Productivity", "XML Comments"]
-tags_normalized: ["agent mode", "ai", "ai code generation", "asyncslashawait", "blogs", "code quality", "code refactoring", "coding", "coding style", "developer tools", "edit mode", "error handling", "github copilot", "javascript", "jsdoc", "productivity", "xml comments"]
+permalink: /github-copilot/blogs/Boost-Code-Quality-Fast-with-GitHub-Copilot-Edit-Mode
+tags:
+- Agent Mode
+- AI
+- AI Code Generation
+- Async/Await
+- Blogs
+- Code Quality
+- Code Refactoring
+- Coding
+- Coding Style
+- Developer Tools
+- Edit Mode
+- Error Handling
+- GitHub Copilot
+- JavaScript
+- JSDoc
+- Productivity
+- XML Comments
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels demonstrates how developers can streamline code improvements using GitHub Copilot Edit Mode and Agent Mode for quick enhancements and consistent coding practices.<!--excerpt_end-->
 
 # Use Edit Mode for Quick, Targeted Improvements

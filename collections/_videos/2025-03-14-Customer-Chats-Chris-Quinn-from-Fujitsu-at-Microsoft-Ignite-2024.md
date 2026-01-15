@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Customer Chats: Chris Quinn from Fujitsu at Microsoft Ignite 2024"
-description: "In this insightful interview, Pierre Roman sits down with Chris Quinn from Fujitsu at Microsoft Ignite 2024. The discussion explores Fujitsu's approach to key technology trends including AI innovation, Linux workloads on Azure, cloud migration strategies, and best practices for cloud security. Chris shares practical lessons from Fujitsu's long-term partnership with Microsoft and offers actionable advice for organizations adopting cloud technologies, with a special focus on automation, DevOps, and building secure, scalable platforms using Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sCg7oSTiW1M"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Customer Chats: Chris Quinn from Fujitsu at Microsoft Ignite 2024'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=sCg7oSTiW1M
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-14 15:01:17 +00:00
-permalink: "/2025-03-14-Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Innovations", "Automation", "Azure", "Chris Quinn", "Cloud Adoption", "Cloud Migration", "Cloud Security", "DevOps", "Fujitsu", "Linux On Azure", "Microsoft", "Microsoft Events", "Microsoft Ignite", "Microsoft Strategic Partner", "Security", "Security Best Practices", "Videos"]
-tags_normalized: ["ai", "ai innovations", "automation", "azure", "chris quinn", "cloud adoption", "cloud migration", "cloud security", "devops", "fujitsu", "linux on azure", "microsoft", "microsoft events", "microsoft ignite", "microsoft strategic partner", "security", "security best practices", "videos"]
+permalink: /ai/videos/Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024
+tags:
+- AI
+- AI Innovations
+- Automation
+- Azure
+- Chris Quinn
+- Cloud Adoption
+- Cloud Migration
+- Cloud Security
+- DevOps
+- Fujitsu
+- Linux On Azure
+- Microsoft
+- Microsoft Events
+- Microsoft Ignite
+- Microsoft Strategic Partner
+- Security
+- Security Best Practices
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Pierre Roman interviews Chris Quinn from Fujitsu at Microsoft Ignite 2024. The conversation highlights AI advancements, Linux on Azure, cloud migration, security, automation, and DevOps. Chris shares actionable advice for technology leaders and insights from Fujitsu's Azure-centric cloud journey.<!--excerpt_end-->
 
 {% youtube sCg7oSTiW1M %}

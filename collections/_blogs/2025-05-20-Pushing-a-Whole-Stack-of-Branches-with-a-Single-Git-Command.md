@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Pushing a Whole Stack of Branches with a Single Git Command"
-description: "Andrew Lock demonstrates how to streamline the workflow for stacked branches in Git by creating custom Git aliases. The post details the implementation and usage of a 'git push-stack' command to push multiple dependent branches at once, enhancing code review and collaboration efficiency."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Pushing a Whole Stack of Branches with a Single Git Command
+author: Andrew Lock
+canonical_url: https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-05-20 09:00:00 +00:00
-permalink: "/2025-05-20-Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command.html"
-categories: ["DevOps"]
-tags: ["Blogs", "Branch Management", "Code Review", "DevOps", "Force With Lease", "Git", "Git Aliases", "Git Push Stack", "GitHub", "PR Workflow", "Repository Collaboration", "Stacked Branches"]
-tags_normalized: ["blogs", "branch management", "code review", "devops", "force with lease", "git", "git aliases", "git push stack", "github", "pr workflow", "repository collaboration", "stacked branches"]
+permalink: /devops/blogs/Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command
+tags:
+- Blogs
+- Branch Management
+- Code Review
+- DevOps
+- Force With Lease
+- Git
+- Git Aliases
+- Git Push Stack
+- GitHub
+- PR Workflow
+- Repository Collaboration
+- Stacked Branches
+section_names:
+- devops
 ---
-
 In this post, Andrew Lock introduces a method for pushing an entire stack of Git branches using a custom alias, streamlining PR workflows and branch management for large features or incremental development.<!--excerpt_end-->
 
 ## Overview

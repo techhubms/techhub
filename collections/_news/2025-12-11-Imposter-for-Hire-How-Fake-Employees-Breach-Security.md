@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Imposter for Hire: How Fake Employees Breach Security"
-description: "This news article from Microsoft Incident Response analyzes a real-world cyberattack in which fake employees infiltrated organizations by bypassing HR checks, using PiKVM devices for remote control, and exploiting Microsoft security technologies. It presents the investigation, response strategies, and actionable recommendations, focusing on Microsoft Defender, Entra ID, and Purview security tools."
-author: "Microsoft Incident Response"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Imposter for Hire: How Fake Employees Breach Security'
+author: Microsoft Incident Response
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-11 17:00:00 +00:00
-permalink: "/2025-12-11-Imposter-for-Hire-How-Fake-Employees-Breach-Security.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Azure", "Cloud Security", "Cyberattack", "DART", "Detection And Response", "Endpoint Security", "Incident Investigation", "Insider Risk Management", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Incident Response", "Microsoft Purview", "News", "PiKVM", "Security", "Security Operations", "Threat Intelligence"]
-tags_normalized: ["active directory", "azure", "cloud security", "cyberattack", "dart", "detection and response", "endpoint security", "incident investigation", "insider risk management", "microsoft defender", "microsoft entra id", "microsoft incident response", "microsoft purview", "news", "pikvm", "security", "security operations", "threat intelligence"]
+permalink: /azure/news/Imposter-for-Hire-How-Fake-Employees-Breach-Security
+tags:
+- Active Directory
+- Azure
+- Cloud Security
+- Cyberattack
+- DART
+- Detection And Response
+- Endpoint Security
+- Incident Investigation
+- Insider Risk Management
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Incident Response
+- Microsoft Purview
+- News
+- PiKVM
+- Security
+- Security Operations
+- Threat Intelligence
+section_names:
+- azure
+- security
 ---
-
 Microsoft Incident Response outlines how fake employees gained access to corporate resources and the security measures the team used to detect and neutralize the threat. The analysis provides practical guidance for organizations facing similar cyber risks.<!--excerpt_end-->
 
 # Imposter for Hire: How Fake Employees Breach Security

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhancing Visual Studio Copilot Chat with Semantic Code Search"
-description: "This article introduces the new Remote Semantic Search integration in Visual Studio Copilot Chat, included in release 17.14.11. It explains the transition from BM25 keyword-based search to semantic search powered by advanced AI models, enabling smarter, context-aware code discovery across Azure DevOps and GitHub repositories. Examples highlight improved accuracy and developer productivity."
-author: "Pablo Gonzalez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Enhancing Visual Studio Copilot Chat with Semantic Code Search
+author: Pablo Gonzalez
+canonical_url: https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-14 12:00:59 +00:00
-permalink: "/2025-08-14-Enhancing-Visual-Studio-Copilot-Chat-with-Semantic-Code-Search.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Azure DevOps", "BM25", "Code Search", "Codebase Awareness", "Coding", "Contextual Search", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "GitHub Copilot Chat", "GitHub Integration", "Microsoft", "News", "Release 17.14.11", "Remote Semantic Search", "Semantic Search", "Vector Embeddings", "VS"]
-tags_normalized: ["ai", "ai models", "azure devops", "bm25", "code search", "codebase awareness", "coding", "contextual search", "copilot chat", "developer productivity", "github copilot", "github copilot chat", "github integration", "microsoft", "news", "release 17dot14dot11", "remote semantic search", "semantic search", "vector embeddings", "vs"]
+permalink: /github-copilot/news/Enhancing-Visual-Studio-Copilot-Chat-with-Semantic-Code-Search
+tags:
+- AI
+- AI Models
+- Azure DevOps
+- BM25
+- Code Search
+- Codebase Awareness
+- Coding
+- Contextual Search
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- GitHub Copilot Chat
+- GitHub Integration
+- Microsoft
+- News
+- Release 17.14.11
+- Remote Semantic Search
+- Semantic Search
+- Vector Embeddings
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Pablo Gonzalez details how Visual Studio Copilot Chat now leverages semantic AI search, improving codebase comprehension and search relevance for developers through advanced contextual understanding.<!--excerpt_end-->
 
 # Enhancing Visual Studio Copilot Chat with Semantic Code Search

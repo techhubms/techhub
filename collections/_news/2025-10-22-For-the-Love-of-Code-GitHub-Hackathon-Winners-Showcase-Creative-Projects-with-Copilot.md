@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "For the Love of Code: GitHub Hackathon Winners Showcase Creative Projects with Copilot"
-description: "A comprehensive roundup of GitHub’s 'For the Love of Code' hackathon, highlighting winning open source projects built for fun, experimentation, and creativity. The article spotlights hardware hacks, AI-powered tools, retro terminal applications, web experiments, and games, with frequent mentions of GitHub Copilot assisting participants in coding and debugging. Readers will learn how developers leveraged Copilot to prototype, refactor, document, and enhance a variety of inventive projects across multiple domains."
-author: "Lee Reilly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/from-karaoke-terminals-to-ai-resumes-the-winners-of-githubs-for-the-love-of-code-challenge/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'For the Love of Code: GitHub Hackathon Winners Showcase Creative Projects with Copilot'
+author: Lee Reilly
+canonical_url: https://github.blog/open-source/from-karaoke-terminals-to-ai-resumes-the-winners-of-githubs-for-the-love-of-code-challenge/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-22 20:30:35 +00:00
-permalink: "/2025-10-22-For-the-Love-of-Code-GitHub-Hackathon-Winners-Showcase-Creative-Projects-with-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "APIs", "Arduino", "Automation", "Bots", "Coding", "Developer Experience", "Developer Tools", "Express", "Framer Motion", "Game Development", "GitHub Copilot", "Hackathon", "News", "Open Source", "Open Source Community", "Python", "Raspberry Pi", "React", "Rust", "Tailwind CSS", "VS Code", "Web Applications"]
-tags_normalized: ["ai", "ai development", "apis", "arduino", "automation", "bots", "coding", "developer experience", "developer tools", "express", "framer motion", "game development", "github copilot", "hackathon", "news", "open source", "open source community", "python", "raspberry pi", "react", "rust", "tailwind css", "vs code", "web applications"]
+permalink: /github-copilot/news/For-the-Love-of-Code-GitHub-Hackathon-Winners-Showcase-Creative-Projects-with-Copilot
+tags:
+- AI
+- AI Development
+- APIs
+- Arduino
+- Automation
+- Bots
+- Coding
+- Developer Experience
+- Developer Tools
+- Express
+- Framer Motion
+- Game Development
+- GitHub Copilot
+- Hackathon
+- News
+- Open Source
+- Open Source Community
+- Python
+- Raspberry Pi
+- React
+- Rust
+- Tailwind CSS
+- VS Code
+- Web Applications
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Lee Reilly recaps the 'For the Love of Code' GitHub hackathon, highlighting inventive open source projects and showing how developers—often with the help of GitHub Copilot—brought creative technical ideas to life.<!--excerpt_end-->
 
 # For the Love of Code: GitHub Hackathon Winners Showcase Creative Projects with Copilot

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse"
-description: "This news article highlights the release of a new, user-friendly visual interface for SQL Audit Logs in Microsoft Fabric Data Warehouse. It details improvements for configuring, enabling, and managing audit logs, including granular event selection and flexible retention options—enhancing data governance, compliance, and security for organizations using Fabric Warehouse."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/experience-the-new-visual-sql-audit-logs-configuration-in-fabric-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/experience-the-new-visual-sql-audit-logs-configuration-in-fabric-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-31 07:00:00 +00:00
-permalink: "/2025-07-31-Experience-the-New-Visual-SQL-Audit-Logs-Configuration-in-Fabric-Warehouse.html"
-categories: ["ML", "Security"]
-tags: ["Administration", "Audit Logging", "Auditing", "Compliance", "Data Governance", "Data Platform", "Data Warehouse", "Event Selection", "Fabric Warehouse", "Log Retention", "Microsoft Fabric", "ML", "News", "OneLake", "Security", "SQL Audit Logs", "User Interface"]
-tags_normalized: ["administration", "audit logging", "auditing", "compliance", "data governance", "data platform", "data warehouse", "event selection", "fabric warehouse", "log retention", "microsoft fabric", "ml", "news", "onelake", "security", "sql audit logs", "user interface"]
+permalink: /ml/news/Experience-the-New-Visual-SQL-Audit-Logs-Configuration-in-Fabric-Warehouse
+tags:
+- Administration
+- Audit Logging
+- Auditing
+- Compliance
+- Data Governance
+- Data Platform
+- Data Warehouse
+- Event Selection
+- Fabric Warehouse
+- Log Retention
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Security
+- SQL Audit Logs
+- User Interface
+section_names:
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces a new visual experience for configuring SQL Audit Logs in Fabric Data Warehouse, detailing improved audit management and compliance flexibility for data professionals.<!--excerpt_end-->
 
 # Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Event-Driven to Change-Driven: Low-cost Dependency Inversion"
-description: "This article by Daniel Gerlag critiques the complexity of event-driven architectures and introduces Drasi, a change-driven architecture tool. It details how Drasi enables reactive, real-time features using continuous queries on existing data sources, reducing complexity and boilerplate for modern distributed systems across databases including Azure SQL and Cosmos DB."
-author: "CollinBrian"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Event-Driven to Change-Driven: Low-cost Dependency Inversion'
+author: CollinBrian
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 22:22:37 +00:00
-permalink: "/2025-12-17-Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion.html"
-categories: ["Azure"]
-tags: ["Anti Corruption Layer", "Azure", "Azure SQL", "Change Driven Architecture", "Community", "Continuous Queries", "Cosmos DB", "CQRS", "Database Integration", "Declarative Queries", "Dependency Inversion", "Drasi", "Event Driven Architecture", "Event Sourcing", "Microservices", "Reactive Systems", "Real Time Data"]
-tags_normalized: ["anti corruption layer", "azure", "azure sql", "change driven architecture", "community", "continuous queries", "cosmos db", "cqrs", "database integration", "declarative queries", "dependency inversion", "drasi", "event driven architecture", "event sourcing", "microservices", "reactive systems", "real time data"]
+permalink: /azure/community/Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion
+tags:
+- Anti Corruption Layer
+- Azure
+- Azure SQL
+- Change Driven Architecture
+- Community
+- Continuous Queries
+- Cosmos DB
+- CQRS
+- Database Integration
+- Declarative Queries
+- Dependency Inversion
+- Drasi
+- Event Driven Architecture
+- Event Sourcing
+- Microservices
+- Reactive Systems
+- Real Time Data
+section_names:
+- azure
 ---
-
 Daniel Gerlag offers insights into architecting reactive systems by contrasting event-driven patterns with Drasi's change-driven approach, highlighting how continuous queries deliver efficient dependency inversion and real-time updates, with a focus on Azure and Cosmos DB integration.<!--excerpt_end-->
 
 # Event-Driven to Change-Driven: Low-cost Dependency Inversion

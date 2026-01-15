@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Blue-Green Deployment in Azure Container Apps with Azure Developer CLI"
-description: "This article demonstrates how to implement blue-green deployment strategies in Azure Container Apps (ACA) using the Azure Developer CLI (azd). Readers learn how revision-based deployments simplify rollout and rollback, leverage Bicep for IaC, automate CI/CD with GitHub Actions, and manage immutability and traffic splits between application versions. The tutorial is practical, technical, and highlights integration with Python and Docker workflows."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Blue-Green Deployment in Azure Container Apps with Azure Developer CLI
+author: PuiChee (PC) Chan
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-12-09 18:34:22 +00:00
-permalink: "/2025-12-09-Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Bicep", "Blue Green Deployment", "CI/CD", "Coding", "Containerization", "Deployment Strategies", "DevOps", "Docker", "GitHub Actions", "IaC", "Immutable Deployments", "News", "Python", "Revision Based Deployment", "Traffic Splitting"]
-tags_normalized: ["azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "blue green deployment", "cislashcd", "coding", "containerization", "deployment strategies", "devops", "docker", "github actions", "iac", "immutable deployments", "news", "python", "revision based deployment", "traffic splitting"]
+permalink: /coding/news/Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI
+tags:
+- Azd
+- Azure
+- Azure Container Apps
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- Blue Green Deployment
+- CI/CD
+- Coding
+- Containerization
+- Deployment Strategies
+- DevOps
+- Docker
+- GitHub Actions
+- IaC
+- Immutable Deployments
+- News
+- Python
+- Revision Based Deployment
+- Traffic Splitting
+section_names:
+- azure
+- coding
+- devops
 ---
-
 PuiChee (PC) Chan provides a technical overview of blue-green deployment in Azure Container Apps using the Azure Developer CLI, with hands-on steps for setup, revision management, and CI/CD automation.<!--excerpt_end-->
 
 # Blue-Green Deployment in Azure Container Apps Using Azure Developer CLI

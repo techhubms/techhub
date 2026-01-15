@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "AI Agents and MCP in Production: Azure App Platform at Microsoft Ignite"
-description: "This intermediate session from Microsoft Ignite 2025 explores the deployment and management of AI agents using the Azure App Platform and MCP tools. Key topics include scalable agent lifecycle management, secure authentication, and policy enforcement for reliable, governed operations. Demonstrations center on upgrading apps with GitHub Copilot, orchestrating maintenance agents with Azure AI Foundry, and integrating authentication in MCP environments. The session concludes with actionable insights for AI modernization and security best practices."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vnJP6xWHhO0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Agents and MCP in Production: Azure App Platform at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=vnJP6xWHhO0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:16:49 +00:00
-permalink: "/2025-11-20-AI-Agents-and-MCP-in-Production-Azure-App-Platform-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: [".NET 10", "Agent Framework", "AI", "AI Agents", "App Modernization", "Authentication", "Azure", "Azure AI Foundry", "Azure App Platform", "Coding", "Content Moderation", "Easy Auth", "GitHub Copilot", "Governance", "InnovatewithAzureAIappsandagents", "MCP", "MSIgnite", "Observability", "Policy Enforcement", "Security", "Videos", "VS Code"]
-tags_normalized: ["dotnet 10", "agent framework", "ai", "ai agents", "app modernization", "authentication", "azure", "azure ai foundry", "azure app platform", "coding", "content moderation", "easy auth", "github copilot", "governance", "innovatewithazureaiappsandagents", "mcp", "msignite", "observability", "policy enforcement", "security", "videos", "vs code"]
+permalink: /github-copilot/videos/AI-Agents-and-MCP-in-Production-Azure-App-Platform-at-Microsoft-Ignite
+tags:
+- .NET 10
+- Agent Framework
+- AI
+- AI Agents
+- App Modernization
+- Authentication
+- Azure
+- Azure AI Foundry
+- Azure App Platform
+- Coding
+- Content Moderation
+- Easy Auth
+- GitHub Copilot
+- Governance
+- InnovatewithAzureAIappsandagents
+- MCP
+- MSIgnite
+- Observability
+- Policy Enforcement
+- Security
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 Presented by Microsoft Events, this Ignite 2025 session details AI agent deployment on Azure with MCP, featuring demos on GitHub Copilot modernization and Azure AI Foundry for secure, scalable operations.<!--excerpt_end-->
 
 {% youtube vnJP6xWHhO0 %}

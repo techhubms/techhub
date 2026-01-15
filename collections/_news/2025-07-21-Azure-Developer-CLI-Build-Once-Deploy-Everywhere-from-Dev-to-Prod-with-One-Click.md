@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click"
-description: "This post demonstrates how to use Azure Developer CLI (azd) to implement a 'build once, deploy everywhere' approach. It covers conditional Bicep deployments, environment variables, package artifact management in GitHub Actions, and automated CI/CD promotion from development to production environments."
-author: "PuiChee (PC) Chan, Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-one-click/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click'
+author: PuiChee (PC) Chan, Kristen Womack
+canonical_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-one-click/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-21 16:17:37 +00:00
-permalink: "/2025-07-21-Azure-Developer-CLI-Build-Once-Deploy-Everywhere-from-Dev-to-Prod-with-One-Click.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azd", "Azure", "Azure & Cloud", "Azure Developer CLI", "Azure Developer CLI (azd)", "Bicep", "Build Artifacts", "CI/CD", "Cloud Deployment", "Coding", "Conditional Deployment", "DevOps", "Environment Variables", "GitHub Actions", "IaC", "News"]
-tags_normalized: ["automation", "azd", "azure", "azure and cloud", "azure developer cli", "azure developer cli azd", "bicep", "build artifacts", "cislashcd", "cloud deployment", "coding", "conditional deployment", "devops", "environment variables", "github actions", "iac", "news"]
+permalink: /coding/news/Azure-Developer-CLI-Build-Once-Deploy-Everywhere-from-Dev-to-Prod-with-One-Click
+tags:
+- Automation
+- Azd
+- Azure
+- Azure & Cloud
+- Azure Developer CLI
+- Azure Developer CLI (azd)
+- Bicep
+- Build Artifacts
+- CI/CD
+- Cloud Deployment
+- Coding
+- Conditional Deployment
+- DevOps
+- Environment Variables
+- GitHub Actions
+- IaC
+- News
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Authored by PuiChee (PC) Chan and Kristen Womack, this post guides readers through implementing a 'build once, deploy everywhere' CI/CD pipeline using Azure Developer CLI, conditional Bicep templates, and GitHub Actions for efficient dev-to-prod promotions.<!--excerpt_end-->
 
 # Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click

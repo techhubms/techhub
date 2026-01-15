@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How Copilot Spaces gives your AI the right project context"
-description: "A practical explainer video led by Vanessa Kalu, Product Manager at GitHub, demonstrating how GitHub Copilot Spaces helps developers provide relevant project context to Copilot for more accurate suggestions. The video covers adding files, repositories, and issues to Spaces, iterating on pull requests, collaboration features, and useful use cases, focusing on Copilot's improved ability to assist with bug fixes and coding tasks."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=noVdaj7sEWA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How Copilot Spaces gives your AI the right project context
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=noVdaj7sEWA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-18 15:01:39 +00:00
-permalink: "/2025-11-18-How-Copilot-Spaces-gives-your-AI-the-right-project-context.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Bug Fixing", "Code Completion", "Collaboration", "Copilot Spaces", "CopilotSpaces", "Developer Tools", "GitHub", "GitHub Copilot", "IDE Integration", "Project Context", "Pull Requests", "Repository Management", "Vanessa Kalu", "Videos"]
-tags_normalized: ["ai", "ai assistant", "bug fixing", "code completion", "collaboration", "copilot spaces", "copilotspaces", "developer tools", "github", "github copilot", "ide integration", "project context", "pull requests", "repository management", "vanessa kalu", "videos"]
+permalink: /github-copilot/videos/How-Copilot-Spaces-gives-your-AI-the-right-project-context
+tags:
+- AI
+- AI Assistant
+- Bug Fixing
+- Code Completion
+- Collaboration
+- Copilot Spaces
+- CopilotSpaces
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- IDE Integration
+- Project Context
+- Pull Requests
+- Repository Management
+- Vanessa Kalu
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a deep dive featuring Vanessa Kalu, illustrating how GitHub Copilot Spaces empowers developers by giving Copilot the right context for more accurate code assistance.<!--excerpt_end-->
 
 {% youtube noVdaj7sEWA %}

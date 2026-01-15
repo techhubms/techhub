@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance"
-description: "This community post by pallakatos introduces the availability of Center for Internet Security (CIS) Benchmarks natively within Azure services, covering all Azure-endorsed Linux distributions at no extra cost. The new compliance engine, developed by the Azure Core Linux team, enables real-time, scalable audit of Linux systems against official CIS specifications, supports exceptions, and lays the groundwork for future auto-remediation capabilities. The solution integrates with Azure Arc to manage compliance across cloud, hybrid, and on-premises environments and is certified by CIS for Benchmark assessment, ensuring trustworthy results and streamlined regulatory compliance."
-author: "pallakatos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance'
+author: pallakatos
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Automation", "Azure", "Azure Arc", "Azure Osconfig", "CIS Benchmarks", "Cloud Security", "Community", "Compliance as Code", "Custom Configuration", "Ebpf", "GuestConfig", "HIPAA", "Hybrid Cloud", "Linux Security", "Machine Configuration", "Microsoft Certification", "NIST", "OVAL/XCCDF", "PCI DSS", "Policy Management", "Regulatory Compliance", "Security", "STIG"]
-tags_normalized: ["audit automation", "azure", "azure arc", "azure osconfig", "cis benchmarks", "cloud security", "community", "compliance as code", "custom configuration", "ebpf", "guestconfig", "hipaa", "hybrid cloud", "linux security", "machine configuration", "microsoft certification", "nist", "ovalslashxccdf", "pci dss", "policy management", "regulatory compliance", "security", "stig"]
+permalink: /azure/community/Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance
+tags:
+- Audit Automation
+- Azure
+- Azure Arc
+- Azure Osconfig
+- CIS Benchmarks
+- Cloud Security
+- Community
+- Compliance as Code
+- Custom Configuration
+- Ebpf
+- GuestConfig
+- HIPAA
+- Hybrid Cloud
+- Linux Security
+- Machine Configuration
+- Microsoft Certification
+- NIST
+- OVAL/XCCDF
+- PCI DSS
+- Policy Management
+- Regulatory Compliance
+- Security
+- STIG
+section_names:
+- azure
+- security
 ---
-
 pallakatos showcases the launch of built-in CIS Benchmarks for Linux workloads on Azure, detailing secure configuration, hybrid cloud support, and Azure Arc integration for scalable compliance and security management.<!--excerpt_end-->
 
 # Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance

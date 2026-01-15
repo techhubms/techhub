@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerating Enterprise AI Adoption with Azure AI Landing Zone"
-description: "This article by VimalVerma gives a foundational overview of the Azure AI Landing Zone (AI ALZ) framework, explaining how it enables enterprises to adopt artificial intelligence securely and efficiently on Azure. It covers the role of Microsoft's Cloud Adoption Framework (CAF), Well-Architected Framework (WAF), and Azure AI Foundry in designing scalable and compliant AI environments. The post outlines the architectural principles, core components, compute options, implementation approaches, and assessment processes that help organizations build a production-ready, secure AI foundation."
-author: "VimalVerma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Accelerating Enterprise AI Adoption with Azure AI Landing Zone
+author: VimalVerma
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-10 02:35:21 +00:00
-permalink: "/2025-10-10-Accelerating-Enterprise-AI-Adoption-with-Azure-AI-Landing-Zone.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI ALZ", "AI Governance", "AI Security", "AKS", "App Service", "AVM", "Azure", "Azure AI Foundry", "Azure AI Landing Zone", "Azure Container Apps", "Azure Functions", "Bicep", "Cloud Adoption Framework", "Community", "Compliance", "Enterprise AI", "IaC", "Reference Architecture", "Terraform", "WAF", "Well Architected Framework"]
-tags_normalized: ["ai", "ai alz", "ai governance", "ai security", "aks", "app service", "avm", "azure", "azure ai foundry", "azure ai landing zone", "azure container apps", "azure functions", "bicep", "cloud adoption framework", "community", "compliance", "enterprise ai", "iac", "reference architecture", "terraform", "waf", "well architected framework"]
+permalink: /ai/community/Accelerating-Enterprise-AI-Adoption-with-Azure-AI-Landing-Zone
+tags:
+- AI
+- AI ALZ
+- AI Governance
+- AI Security
+- AKS
+- App Service
+- AVM
+- Azure
+- Azure AI Foundry
+- Azure AI Landing Zone
+- Azure Container Apps
+- Azure Functions
+- Bicep
+- Cloud Adoption Framework
+- Community
+- Compliance
+- Enterprise AI
+- IaC
+- Reference Architecture
+- Terraform
+- WAF
+- Well Architected Framework
+section_names:
+- ai
+- azure
 ---
-
 VimalVerma details how enterprises can adopt AI at scale with Azure AI Landing Zone by leveraging proven Microsoft frameworks and Azure AI Foundry. The post covers architectural choices, governance, and practical steps for secure and reliable AI environments.<!--excerpt_end-->
 
 # Accelerating Enterprise AI Adoption with Azure AI Landing Zone

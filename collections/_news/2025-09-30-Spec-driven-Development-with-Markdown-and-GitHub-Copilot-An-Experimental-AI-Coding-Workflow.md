@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Spec-driven Development with Markdown and GitHub Copilot: An Experimental AI Coding Workflow"
-description: "This article by Tomas Vesely explores an experimental, specification-driven approach to application development, where Markdown files serve as the primary source of truth. The workflow leverages GitHub Copilot's ability to compile markdown-based specifications into Go code, discussing tools, best practices, file layouts, and the interplay of documentation and implementation. Real-world observations and tips for working with AI coding agents are included."
-author: "Tomas Vesely"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Spec-driven Development with Markdown and GitHub Copilot: An Experimental AI Coding Workflow'
+author: Tomas Vesely
+canonical_url: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-30 19:07:46 +00:00
-permalink: "/2025-09-30-Spec-driven-Development-with-Markdown-and-GitHub-Copilot-An-Experimental-AI-Coding-Workflow.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Agents", "AI Development Workflow", "Automation", "CLIs", "Coding", "Command Line Tools", "Compile.prompt.md", "Copilot Instructions.md", "Generative AI", "GitHub Brain MCP Server", "GitHub Copilot", "Go Language", "Linting", "Main.md", "Markdown", "Markdown Programming", "MCP", "News", "README.md", "Spec Driven Development", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai coding agents", "ai development workflow", "automation", "clis", "coding", "command line tools", "compiledotpromptdotmd", "copilot instructionsdotmd", "generative ai", "github brain mcp server", "github copilot", "go language", "linting", "maindotmd", "markdown", "markdown programming", "mcp", "news", "readmedotmd", "spec driven development", "vs code"]
+permalink: /github-copilot/news/Spec-driven-Development-with-Markdown-and-GitHub-Copilot-An-Experimental-AI-Coding-Workflow
+tags:
+- AI
+- AI & ML
+- AI Coding Agents
+- AI Development Workflow
+- Automation
+- CLIs
+- Coding
+- Command Line Tools
+- Compile.prompt.md
+- Copilot Instructions.md
+- Generative AI
+- GitHub Brain MCP Server
+- GitHub Copilot
+- Go Language
+- Linting
+- Main.md
+- Markdown
+- Markdown Programming
+- MCP
+- News
+- README.md
+- Spec Driven Development
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Tomas Vesely introduces a practical workflow where GitHub Copilot compiles app logic directly from Markdown specifications, illustrating the approach using a Go-based CLI project. Learn how this spec-driven method synchronizes documentation and code.<!--excerpt_end-->
 
 # Spec-driven Development with Markdown and GitHub Copilot

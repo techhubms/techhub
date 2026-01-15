@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Let Copilot Help You Name Things"
-description: "This practical guide demonstrates how developers can use GitHub Copilot to generate better, more descriptive names for variables, functions, classes, and more. Covering Copilot Chat, Edit Mode, and Agent Mode, it guides users in leveraging AI suggestions to maintain clear and consistent code throughout their projects."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Let Copilot Help You Name Things
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-04 00:00:00 +00:00
-permalink: "/2025-04-04-Let-Copilot-Help-You-Name-Things.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Blogs", "Code Quality", "Coding", "Coding Best Practices", "Copilot Agent Mode", "Copilot Chat", "Developer Productivity", "Edit Mode", "Function Naming", "GitHub Copilot", "Naming Conventions", "Programming Tips", "Refactoring", "Variable Naming"]
-tags_normalized: ["ai", "ai coding assistant", "blogs", "code quality", "coding", "coding best practices", "copilot agent mode", "copilot chat", "developer productivity", "edit mode", "function naming", "github copilot", "naming conventions", "programming tips", "refactoring", "variable naming"]
+permalink: /github-copilot/blogs/Let-Copilot-Help-You-Name-Things
+tags:
+- AI
+- AI Coding Assistant
+- Blogs
+- Code Quality
+- Coding
+- Coding Best Practices
+- Copilot Agent Mode
+- Copilot Chat
+- Developer Productivity
+- Edit Mode
+- Function Naming
+- GitHub Copilot
+- Naming Conventions
+- Programming Tips
+- Refactoring
+- Variable Naming
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels demonstrates how GitHub Copilot can help developers generate more effective names for code elements, making software easier to maintain and understand.<!--excerpt_end-->
 
 # Let Copilot Help You Name Things

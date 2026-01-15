@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "How to Keep key.properties Private in a Public GitHub Repository"
-description: "The author seeks advice on making a sensitive file (key.properties) private within a public GitHub repository used for Android app development. They wonder if it's possible to keep the file hidden without making the whole repository private or duplicating the repository."
-author: "el_psy_kongree"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mgrtc3/private_file_in_github_repo/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: How to Keep key.properties Private in a Public GitHub Repository
+author: el_psy_kongree
+canonical_url: https://www.reddit.com/r/github/comments/1mgrtc3/private_file_in_github_repo/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 19:16:38 +00:00
-permalink: "/2025-08-03-How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository.html"
-categories: ["DevOps"]
-tags: [".gitignore", "Android Development", "Community", "DevOps", "GitHub", "Key.properties", "Private Files", "Public Repository", "Repository Privacy", "Secrets Management", "Sensitive Data", "Version Control"]
-tags_normalized: ["dotgitignore", "android development", "community", "devops", "github", "keydotproperties", "private files", "public repository", "repository privacy", "secrets management", "sensitive data", "version control"]
+permalink: /devops/community/How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository
+tags:
+- .gitignore
+- Android Development
+- Community
+- DevOps
+- GitHub
+- Key.properties
+- Private Files
+- Public Repository
+- Repository Privacy
+- Secrets Management
+- Sensitive Data
+- Version Control
+section_names:
+- devops
 ---
-
 Author el_psy_kongree discusses strategies for keeping the key.properties file private in a public GitHub repo for Android app development.<!--excerpt_end-->
 
 In the process of publishing an Android mobile app, the author encounters a common challenge: safeguarding sensitive files—such as the key.properties file—within a public GitHub repository. The key.properties file contains important security credentials and should not be exposed publicly.

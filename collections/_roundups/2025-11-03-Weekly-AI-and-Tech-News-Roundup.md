@@ -1,17 +1,40 @@
----
-layout: "post"
-title: "Agents, Automation, and AI: A New Week for GitHub Copilot and Cloud Platforms"
-description: "This week brought new developments in AI-powered development, agent orchestration, and enterprise integration, highlighted by updates across GitHub Copilot, Azure, and AI toolkits. Developers now have enhanced agent management, smarter code review, and automated workflows, with improvements in security, cloud infrastructure, and observability aimed at supporting scalable, compliant, and collaborative engineering. The progress at GitHub Universe for Copilot, advances in Azure’s agent platforms, and Microsoft Fabric enhancements all reflect the current trends in agent-driven workflows, integrated solutions, and the combination of productivity, modernization, and governance on a global scale."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: 'Agents, Automation, and AI: A New Week for GitHub Copilot and Cloud Platforms'
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-11-03 09:00:00 +00:00
-permalink: "/2025-11-03-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "AI Agents", "AI Security", "App Modernization", "Azure", "Coding", "Developer Tools", "DevOps", "Generative AI", "GitHub Copilot", "Machine Learning", "Microsoft Fabric", "ML", "Open Source", "Quantum Computing", "Roundups", "Security", "Vector Search", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai agents", "ai security", "app modernization", "azure", "coding", "developer tools", "devops", "generative ai", "github copilot", "machine learning", "microsoft fabric", "ml", "open source", "quantum computing", "roundups", "security", "vector search", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- .NET
+- AI
+- AI Agents
+- AI Security
+- App Modernization
+- Azure
+- Coding
+- Developer Tools
+- DevOps
+- Generative AI
+- GitHub Copilot
+- Machine Learning
+- Microsoft Fabric
+- ML
+- Open Source
+- Quantum Computing
+- Roundups
+- Security
+- Vector Search
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s technology update, highlighting new changes in AI-driven development. There is continued progress for GitHub Copilot, which expands beyond code suggestions into a multi-agent platform embedded across developer workflows. Key updates like Mission Control and Agent HQ, along with new integrations, offer improved coding, code review, and enterprise oversight—extending automation throughout the engineering process.
 
 At the same time, Azure continues to grow. Updates this week include enterprise-ready agent platforms, more stable MCP server releases, and updated cloud and GPU infrastructure, providing modular AI solutions, hybrid deployment options, and scalable engineering. DevOps, security, and observability are evolving too. These areas benefit from better automation and risk management, while coding events and open-source discussions foster community learning, cloud-native skills, and responsible technology adoption. Read on for a detailed look at a week where intelligent agents, secure automation, and connected solutions are shaping software engineering.
@@ -78,7 +101,7 @@ Copilot’s expanding collaboration with platforms such as Linear and Slack demo
 Enterprise AI Controls and the public preview of Agent Control Plane give administrators new tools to manage agents, control policy, and monitor usage—supporting wider adoption of agent-centric features in large organizations.
 
 - [A Mission Control for Managing Copilot Coding Agent Tasks on GitHub](https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks)
-- [Introducing Agent HQ Mission Control for GitHub Copilot]({{ "/videos/2025-10-28-Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot.html" | relative_url }})
+- [Introducing Agent HQ Mission Control for GitHub Copilot](/videos/2025-10-28-Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot.html)
 - [Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot](https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot)
 - [Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC](https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners)
 - [GitHub Copilot Coding Agent for Linear Enters Public Preview](https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview)
@@ -97,7 +120,7 @@ The release of custom agents for .NET, including C# Expert and WinForms Expert, 
 Workflow customization using copilot-instructions.md and the introduction of Visual Studio memory features build on recent improvements to agent contextualization, helping teams create consistent and efficient workflows.
 
 - [Visual Studio Copilot Gets Planning Mode for Complex Tasks](https://devops.com/visual-studio-copilot-gets-planning-mode-for-complex-tasks/)
-- [Introducing Plan Mode: Build Better Plans with GitHub Copilot]({{ "/videos/2025-10-29-Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot.html" | relative_url }})
+- [Introducing Plan Mode: Build Better Plans with GitHub Copilot](/videos/2025-10-29-Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot.html)
 - [New Public Preview Features in Copilot Code Review: Smarter, AI-Driven Code Reviews](https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture)
 - [Custom Agents for .NET Developers: C# Expert and WinForms Expert](https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/)
 - [Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration](https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/)
@@ -112,13 +135,13 @@ Universe sessions featured the use of Copilot and the Agent Framework in buildin
 
 Advances in MCP integration, cloud operations, and isolated sub-agents for processes like TDD and code research expand on previous technical deep dives.
 
-- [GitHub Universe 2025 Day 1 Recap: Announcements and New Features]({{ "/videos/2025-10-29-GitHub-Universe-2025-Day-1-Recap-Announcements-and-New-Features.html" | relative_url }})
-- [GitHub Universe Day 1 Keynote Recap: Agent HQ, Mission Control, and Custom Agents]({{ "/videos/2025-10-28-GitHub-Universe-Day-1-Keynote-Recap-Agent-HQ-Mission-Control-and-Custom-Agents.html" | relative_url }})
+- [GitHub Universe 2025 Day 1 Recap: Announcements and New Features](/videos/2025-10-29-GitHub-Universe-2025-Day-1-Recap-Announcements-and-New-Features.html)
+- [GitHub Universe Day 1 Keynote Recap: Agent HQ, Mission Control, and Custom Agents](/videos/2025-10-28-GitHub-Universe-Day-1-Keynote-Recap-Agent-HQ-Mission-Control-and-Custom-Agents.html)
 - [GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage](https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/)
 - [Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code](https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069)
 - [From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework](https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework)
 - [GitHub Copilot in Visual Studio Code Upgraded with OpenAI Codex and New Agent Features](https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded)
-- [OpenAI Codex Now Available in VS Code with GitHub Copilot Pro+]({{ "/videos/2025-10-28-OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro.html" | relative_url }})
+- [OpenAI Codex Now Available in VS Code with GitHub Copilot Pro+](/videos/2025-10-28-OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro.html)
 
 ### AI-Driven Code Quality, Review, and Modernization
 
@@ -129,8 +152,8 @@ Updates for app modernization bring new tools for Java upgrades, AWS-to-Azure mi
 Smarter code review, integrating AI-driven suggestions and static analysis, automates more of the review process and reduces manual work.
 
 - [GitHub Code Quality Public Preview: Inline Findings and Copilot Fixes](https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview)
-- [AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot]({{ "/videos/2025-11-01-AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot.html" | relative_url }})
-- [Upgrade MSVC with GitHub Copilot App Modernization for C++]({{ "/videos/2025-10-29-Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C.html" | relative_url }})
+- [AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot](/videos/2025-11-01-AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot.html)
+- [Upgrade MSVC with GitHub Copilot App Modernization for C++](/videos/2025-10-29-Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C.html)
 
 ### Copilot Coding Agent: Expanding Roles and Use Cases
 
@@ -138,8 +161,8 @@ The Copilot Coding Agent is now more deeply integrated with GitHub workflows, in
 
 New guides and demos illustrate the agent’s daily use, sharing practical benefits and productivity data.
 
-- [Introduction to GitHub Copilot Coding Agent]({{ "/videos/2025-10-30-Introduction-to-GitHub-Copilot-Coding-Agent.html" | relative_url }})
-- [Exploring GitHub Copilot Coding Agent: Beyond Code Suggestions]({{ "/videos/2025-10-30-Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions.html" | relative_url }})
+- [Introduction to GitHub Copilot Coding Agent](/videos/2025-10-30-Introduction-to-GitHub-Copilot-Coding-Agent.html)
+- [Exploring GitHub Copilot Coding Agent: Beyond Code Suggestions](/videos/2025-10-30-Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions.html)
 
 ### Copilot in Context: Language Trends, Ecosystem Growth, and Analytics
 
@@ -155,8 +178,8 @@ Expanded best practices cover Copilot integration with the Model Context Protoco
 
 Offline MCP Server evaluation pipelines now provide a way to benchmark Copilot’s reliability and performance, reflecting ongoing interest in robust offline validation and iterative dataset evaluation.
 
-- [MCP and Java Apps: Building a Server]({{ "/videos/2025-10-30-MCP-and-Java-Apps-Building-a-Server.html" | relative_url }})
-- [Building MCP Clients: Java Integration and GitHub Copilot Use Cases]({{ "/videos/2025-10-31-Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases.html" | relative_url }})
+- [MCP and Java Apps: Building a Server](/videos/2025-10-30-MCP-and-Java-Apps-Building-a-Server.html)
+- [Building MCP Clients: Java Integration and GitHub Copilot Use Cases](/videos/2025-10-31-Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases.html)
 - [Measuring What Matters: Offline Evaluation of GitHub MCP Server](https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/)
 
 ### Promoting Code Quality and Workflow Best Practices
@@ -166,14 +189,14 @@ Continued guidance focuses on code quality, prompt engineering, and effective Co
 AI-driven game design and hardware hack projects show how Copilot can be used for creative learning as well as engineering work. Resources include preparation guides for the Copilot certification exam and highlights from university events, promoting skill building and learning verification.
 
 - [Writing Cleaner Code with GitHub Copilot Suggestions](https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/)
-- [Context Engineering for Java Ecosystem]({{ "/videos/2025-10-31-Context-Engineering-for-Java-Ecosystem.html" | relative_url }})
+- [Context Engineering for Java Ecosystem](/videos/2025-10-31-Context-Engineering-for-Java-Ecosystem.html)
 - [Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot](https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/)
 - [Context Engineering Recipes: The Reflection Pattern for GitHub Copilot](https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-reflection-pattern.html)
-- [Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot]({{ "/videos/2025-10-30-Building-a-2D-Platformer-with-Spec-Kit-VS-Code-and-GitHub-Copilot.html" | relative_url }})
-- [How GitHub Copilot Hacked a Furby]({{ "/videos/2025-10-30-How-GitHub-Copilot-Hacked-a-Furby.html" | relative_url }})
+- [Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot](/videos/2025-10-30-Building-a-2D-Platformer-with-Spec-Kit-VS-Code-and-GitHub-Copilot.html)
+- [How GitHub Copilot Hacked a Furby](/videos/2025-10-30-How-GitHub-Copilot-Hacked-a-Furby.html)
 - [How to Register and Prepare for the GitHub Copilot Certification Exam](https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/)
 - [Sprint to Imagine Cup: Igniting Innovation on Campus](https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230)
-- [Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development]({{ "/videos/2025-10-29-Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development.html" | relative_url }})
+- [Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development](/videos/2025-10-29-Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development.html)
 
 ## AI
 
@@ -188,8 +211,8 @@ The Microsoft Agent Framework for .NET continues to replace Semantic Kernel and 
 Copilot Studio now supports multi-agent orchestration with SAP, ServiceNow, and Salesforce integrations. Recent guides combine low-code and professional automation approaches, showing how to generate secure business process workflows through Azure Logic Apps and support hybrid automation.
 
 - [Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows](https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/)
-- [Deep Dive into Microsoft Agent Framework for AutoGen Users]({{ "/videos/2025-10-30-Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users.html" | relative_url }})
-- [Building Real-World AI Agents with Agent Framework on .NET Live]({{ "/videos/2025-11-02-Building-Real-World-AI-Agents-with-Agent-Framework-on-NET-Live.html" | relative_url }})
+- [Deep Dive into Microsoft Agent Framework for AutoGen Users](/videos/2025-10-30-Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users.html)
+- [Building Real-World AI Agents with Agent Framework on .NET Live](/videos/2025-11-02-Building-Real-World-AI-Agents-with-Agent-Framework-on-NET-Live.html)
 - [Building Multi-Agent AI Systems on Azure App Service with Microsoft Agent Framework](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-2-build-long-running-ai-agents-on-azure-app-service-with/ba-p/4465825)
 - [Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce](https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049)
 
@@ -216,7 +239,7 @@ Anthropic’s Claude Agent Skills feature modular workflow skills for developmen
 
 - [Cursor 2.0 Brings Faster AI Coding and Multi-Agent Workflows](https://devops.com/cursor-2-0-brings-faster-ai-coding-and-multi-agent-workflows/)
 - [Claude Introduces Agent Skills for Custom AI Workflows](https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/)
-- [Introducing Agent HQ: Your Mission Control for AI Agents]({{ "/videos/2025-10-28-Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents.html" | relative_url }})
+- [Introducing Agent HQ: Your Mission Control for AI Agents](/videos/2025-10-28-Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents.html)
 
 ### .NET and Java: Responsible AI, Evaluation, and Application Patterns
 
@@ -226,12 +249,12 @@ Microsoft.Extensions.AI.Evaluation adds support for automated AI testing using M
 
 New Java tutorials extend the multi-week focus on RAG, generative apps, and hybrid cloud. They now include Codespaces workflows, multi-turn chat, LLM completions, and comparisons of MCP, browser LLMs, and Foundry Local.
 
-- [Responsible AI for Java Developers: Building Safe and Trustworthy Applications]({{ "/videos/2025-10-30-Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications.html" | relative_url }})
+- [Responsible AI for Java Developers: Building Safe and Trustworthy Applications](/videos/2025-10-30-Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications.html)
 - [Put your AI to the Test with Microsoft.Extensions.AI.Evaluation](https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation)
-- [Getting Started with Generative AI for Java Developers Using GitHub Codespaces]({{ "/videos/2025-10-28-Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces.html" | relative_url }})
-- [GenAI for Java Developers 2: Core Techniques Explained]({{ "/videos/2025-10-29-GenAI-for-Java-Developers-2-Core-Techniques-Explained.html" | relative_url }})
-- [Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local]({{ "/videos/2025-10-29-Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local.html" | relative_url }})
-- [Intro to Java and AI for Beginners]({{ "/videos/2025-10-28-Intro-to-Java-and-AI-for-Beginners.html" | relative_url }})
+- [Getting Started with Generative AI for Java Developers Using GitHub Codespaces](/videos/2025-10-28-Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces.html)
+- [GenAI for Java Developers 2: Core Techniques Explained](/videos/2025-10-29-GenAI-for-Java-Developers-2-Core-Techniques-Explained.html)
+- [Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local](/videos/2025-10-29-Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local.html)
+- [Intro to Java and AI for Beginners](/videos/2025-10-28-Intro-to-Java-and-AI-for-Beginners.html)
 
 ### Copilot Studio Cost Management and Migration
 
@@ -250,7 +273,7 @@ Application integration guides now offer workflow refinement and Power Automate 
 The Octoverse 2025 report summarizes ongoing trends in generative AI, adoption, and global architectural robustness.
 
 - [Using Copilot Studio with Dataverse: A Developer’s Guide](https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/)
-- [Octoverse 2025: AI, India, and TypeScript's Rise]({{ "/videos/2025-10-28-Octoverse-2025-AI-India-and-TypeScripts-Rise.html" | relative_url }})
+- [Octoverse 2025: AI, India, and TypeScript's Rise](/videos/2025-10-28-Octoverse-2025-AI-India-and-TypeScripts-Rise.html)
 
 ### Other AI News
 
@@ -274,7 +297,7 @@ SQL Server 2025 now offers built-in vector search, highlighted in the Data Expos
 
 Resources include setup walkthroughs, query examples, and architectural details for Azure SQL, continuing the availability of public samples and deployment tools for vector-aware development.
 
-- [Implementing Vector Search in Your Application with SQL Server 2025]({{ "/videos/2025-10-27-Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025.html" | relative_url }})
+- [Implementing Vector Search in Your Application with SQL Server 2025](/videos/2025-10-27-Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025.html)
 
 ## Azure
 
@@ -286,8 +309,8 @@ Microsoft Fabric now includes additional resources related to analytics capacity
 
 - [Overload to Optimal: Tuning Microsoft Fabric Capacity](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639)
 - [Microsoft Fabric October 2025 Feature Summary: Security, Data Engineering, Integration Enhancements](https://blog.fabric.microsoft.com/en-US/blog/fabric-october-2025feature-summary/)
-- [Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL]({{ "/videos/2025-10-30-Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL.html" | relative_url }})
-- [Optimize Savings with Microsoft Fabric Reservations]({{ "/videos/2025-10-30-Optimize-Savings-with-Microsoft-Fabric-Reservations.html" | relative_url }})
+- [Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL](/videos/2025-10-30-Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL.html)
+- [Optimize Savings with Microsoft Fabric Reservations](/videos/2025-10-30-Optimize-Savings-with-Microsoft-Fabric-Reservations.html)
 - [Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code](https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/)
 - [Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/)
 
@@ -313,8 +336,8 @@ Additional reserved instance resources continue to expand on budgeting and alloc
 
 - [Optimize Azure Costs with Reserved Instances](https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/)
 - [Streamline Cloud Spend with Azure Reserved VM Instances](https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773)
-- [Optimize Azure Costs with Reserved VM Instances]({{ "/videos/2025-10-28-Optimize-Azure-Costs-with-Reserved-VM-Instances.html" | relative_url }})
-- [Understanding Shared Capacity Reservations in Azure]({{ "/videos/2025-10-27-Understanding-Shared-Capacity-Reservations-in-Azure.html" | relative_url }})
+- [Optimize Azure Costs with Reserved VM Instances](/videos/2025-10-28-Optimize-Azure-Costs-with-Reserved-VM-Instances.html)
+- [Understanding Shared Capacity Reservations in Azure](/videos/2025-10-27-Understanding-Shared-Capacity-Reservations-in-Azure.html)
 
 ### Azure Core Developer and Platform Updates
 
@@ -332,7 +355,7 @@ Microsoft’s presence at KubeCon NA 2025 focuses on distributed AI, workflow au
 
 A range of operational updates address infrastructure reliability and automation. Azure Front Door now comes with WAF CAPTCHA and improved outage monitoring. Node.js 20 retirement for Azure Functions moves forward migration planning. ASM NFS migration and instant restore features enhance backup and dev/test workflows. Resources continue to address PostgreSQL Flexible Server and Azure Migrate for Azure Local, along with static IP workflow support and RHEL software reservation for Linux VM management.
 
-- [Azure Update - 31st October 2025]({{ "/videos/2025-10-31-Azure-Update-31st-October-2025.html" | relative_url }})
+- [Azure Update - 31st October 2025](/videos/2025-10-31-Azure-Update-31st-October-2025.html)
 - [Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789)
 - [Red Hat Enterprise Linux Software Reservations Now Available on Azure](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214)
 
@@ -359,7 +382,7 @@ Resource management guides, including detailed ARM explanations, help teams orga
 
 Migration playbooks, including moving from AD to Entra ID and multi-region deployment strategies, provide step-by-step support for identity modernization and improved resilience.
 
-- [Changing User Source of Authority from AD to Entra ID]({{ "/videos/2025-10-29-Changing-User-Source-of-Authority-from-AD-to-Entra-ID.html" | relative_url }})
+- [Changing User Source of Authority from AD to Entra ID](/videos/2025-10-29-Changing-User-Source-of-Authority-from-AD-to-Entra-ID.html)
 - [Multi-region Expansion Strategies for Azure Deployments in Financial Services](https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/)
 
 Infrastructure articles cover certificate renewal and global Azure architecture for foundational understanding and secure deployment.
@@ -377,7 +400,7 @@ This week, developers benefited from future-focused events, hands-on tutorials, 
 In anticipation of .NET Conf 2025, developers look forward to previews of Visual Studio 2026, .NET 10, and broader Copilot support. These sessions highlight easier upgrades and expanded cross-platform, AI-powered coding techniques. The sustainability conversation, guided by Nick Chapsas, addresses open-source library contributions, volunteer burnout, and donor options—following the recent rollout of NuGet.org Sponsorships.
 
 - [Join .NET Conf to Explore Visual Studio 2026 and .NET Innovation](https://devblogs.microsoft.com/visualstudio/join-us-at-net-conf-dive-into-the-future-of-development-with-visual-studio-2026/)
-- [.NET Libraries: Monetization Models and Open Source Challenges]({{ "/videos/2025-10-28-NET-Libraries-Monetization-Models-and-Open-Source-Challenges.html" | relative_url }})
+- [.NET Libraries: Monetization Models and Open Source Challenges](/videos/2025-10-28-NET-Libraries-Monetization-Models-and-Open-Source-Challenges.html)
 
 ### PowerToys and Windows 11: Customization and Productivity Automation
 
@@ -385,7 +408,7 @@ Building on previous extension and toolchain updates, Kayla Cinnamon’s PowerTo
 
 Dellenny’s walkthrough on automating Windows 11 virtual desktops with PowerShell and command-line tools extends earlier workflow enhancements, giving users more control over workspace management.
 
-- [Getting Started with PowerToys Command Palette Extension Development]({{ "/videos/2025-10-31-Getting-Started-with-PowerToys-Command-Palette-Extension-Development.html" | relative_url }})
+- [Getting Started with PowerToys Command Palette Extension Development](/videos/2025-10-31-Getting-Started-with-PowerToys-Command-Palette-Extension-Development.html)
 - [Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools](https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/)
 
 ### GitHub Game Off 2025: Programming Meets Creativity
@@ -409,9 +432,9 @@ Guides for integrating agents with Azure AI Foundry and managed identities exten
 VS Code integrations from Universe emphasize collaboration, faster CI/CD feedback, and more practical DevOps workflows.
 
 - [GitHub Launches Agent HQ for Unified AI Agent Management in DevOps Workflows](https://devops.com/github-adds-platform-for-managing-ai-agents-embedded-in-devops-workflows/)
-- [Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation]({{ "/videos/2025-10-31-Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation.html" | relative_url }})
+- [Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation](/videos/2025-10-31-Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation.html)
 - [Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools](https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more)
-- [VS Code Live: Highlights from GitHub Universe Announcements]({{ "/videos/2025-10-27-VS-Code-Live-Highlights-from-GitHub-Universe-Announcements.html" | relative_url }})
+- [VS Code Live: Highlights from GitHub Universe Announcements](/videos/2025-10-27-VS-Code-Live-Highlights-from-GitHub-Universe-Announcements.html)
 
 ### Modern Approaches to DevOps Observability
 

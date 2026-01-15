@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Extending Point-in-Time Retention in Fabric SQL DB: From 7 to 35 Days"
-description: "This article announces and explains the new capability in Microsoft Fabric SQL DB that allows users to extend point-in-time restore (PITR) retention from 7 to 35 days. It covers the benefits of extended retention for compliance and operational recovery, outlines how to configure the feature in the Fabric portal, and explains its impact on backup strategy, billing, and observability. The guide emphasizes practical steps for database administrators and data platform engineers to enhance data resilience with Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Extending Point-in-Time Retention in Fabric SQL DB: From 7 to 35 Days'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 11:00:00 +00:00
-permalink: "/2025-10-02-Extending-Point-in-Time-Retention-in-Fabric-SQL-DB-From-7-to-35-Days.html"
-categories: ["Azure", "ML"]
-tags: ["Automated Backups", "Azure", "Backup Retention", "Compliance", "Data Platform", "Database Management", "Database Recovery", "Disaster Recovery", "Enterprise Data", "Fabric SQL DB", "Microsoft Fabric", "ML", "News", "PITR", "Point in Time Restore", "Sys.dm Database Backups", "ZRS"]
-tags_normalized: ["automated backups", "azure", "backup retention", "compliance", "data platform", "database management", "database recovery", "disaster recovery", "enterprise data", "fabric sql db", "microsoft fabric", "ml", "news", "pitr", "point in time restore", "sysdotdm database backups", "zrs"]
+permalink: /ml/news/Extending-Point-in-Time-Retention-in-Fabric-SQL-DB-From-7-to-35-Days
+tags:
+- Automated Backups
+- Azure
+- Backup Retention
+- Compliance
+- Data Platform
+- Database Management
+- Database Recovery
+- Disaster Recovery
+- Enterprise Data
+- Fabric SQL DB
+- Microsoft Fabric
+- ML
+- News
+- PITR
+- Point in Time Restore
+- Sys.dm Database Backups
+- ZRS
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team details the extension of point-in-time restore retention in Fabric SQL DB from 7 to 35 days, providing step-by-step guidance for database administrators to strengthen data protection strategies.<!--excerpt_end-->
 
 # Extending Point-in-Time Retention in Fabric SQL DB: From 7 to 35 Days

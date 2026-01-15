@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon"
-description: "This video features Shaltiel Shmidman, Deep Learning Developer at DICTA, as he discusses building a high-performance, real-time AI chat app using C#, ASP.NET Core, and SignalR. Key topics include safe streaming, connection resumption, multi-tab synchronization, and the developer experience of .NET for robust AI solutions."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RaZc-2tfh9k"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=RaZc-2tfh9k
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-29 18:12:29 +00:00
-permalink: "/2025-07-29-Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Chat", "Aichat", "ASP.NET Core", "C#", "Coding", "Connection Resumption", "Deep Learning", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Microsoft", "Real Time Applications", "Safe Streaming", "SignalR", "Software Developer", "Synchronization", "T3 Chat Cloneathon", "Videos", "Web Development"]
-tags_normalized: ["dotnet", "ai", "ai chat", "aichat", "aspdotnet core", "csharp", "coding", "connection resumption", "deep learning", "demo", "developer", "developer community", "dotnetdeveloper", "microsoft", "real time applications", "safe streaming", "signalr", "software developer", "synchronization", "t3 chat cloneathon", "videos", "web development"]
+permalink: /ai/videos/Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon
+tags:
+- .NET
+- AI
+- AI Chat
+- Aichat
+- ASP.NET Core
+- C#
+- Coding
+- Connection Resumption
+- Deep Learning
+- Demo
+- Developer
+- Developer Community
+- Dotnetdeveloper
+- Microsoft
+- Real Time Applications
+- Safe Streaming
+- SignalR
+- Software Developer
+- Synchronization
+- T3 Chat Cloneathon
+- Videos
+- Web Development
+section_names:
+- ai
+- coding
 ---
-
 Presented by dotnet and featuring Shaltiel Shmidman, this session explores the development of high-performance, real-time AI chat applications using C#, ASP.NET Core, and SignalR, with demonstrations and expert guidance.<!--excerpt_end-->
 
 {% youtube RaZc-2tfh9k %}

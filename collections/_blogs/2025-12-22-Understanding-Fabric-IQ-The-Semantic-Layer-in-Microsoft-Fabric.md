@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Understanding Fabric IQ: The Semantic Layer in Microsoft Fabric"
-description: "This article by Lauri Lehman provides a detailed overview of Microsoft Fabric IQ, emphasizing its role as a semantic layer that connects organizational data with consumers, notably AI agents. It explains Fabric IQ's core components—Ontology and Graph—clarifying their technical value for developers building AI-driven solutions on Microsoft's data platform."
-author: "lauri.lehman@zure.com (Lauri Lehman)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/fabric-iq-the-new-semantic-layer-for-your-organizational-data"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: 'Understanding Fabric IQ: The Semantic Layer in Microsoft Fabric'
+author: lauri.lehman@zure.com (Lauri Lehman)
+canonical_url: https://zure.com/blog/fabric-iq-the-new-semantic-layer-for-your-organizational-data
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-12-22 08:26:46 +00:00
-permalink: "/2025-12-22-Understanding-Fabric-IQ-The-Semantic-Layer-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Blogs", "Business Logic", "Data Agents", "Data Catalog", "Data Governance", "Data Integration", "Data Modeling", "Data Quality", "Data Warehouse", "Fabric IQ", "Graph Data", "Graph Query Language", "Lakehouse", "Microsoft Fabric", "Microsoft OneLake", "Microsoft Purview", "ML", "Ontology", "Semantic Layer"]
-tags_normalized: ["ai", "ai agents", "azure", "blogs", "business logic", "data agents", "data catalog", "data governance", "data integration", "data modeling", "data quality", "data warehouse", "fabric iq", "graph data", "graph query language", "lakehouse", "microsoft fabric", "microsoft onelake", "microsoft purview", "ml", "ontology", "semantic layer"]
+permalink: /ai/blogs/Understanding-Fabric-IQ-The-Semantic-Layer-in-Microsoft-Fabric
+tags:
+- AI
+- AI Agents
+- Azure
+- Blogs
+- Business Logic
+- Data Agents
+- Data Catalog
+- Data Governance
+- Data Integration
+- Data Modeling
+- Data Quality
+- Data Warehouse
+- Fabric IQ
+- Graph Data
+- Graph Query Language
+- Lakehouse
+- Microsoft Fabric
+- Microsoft OneLake
+- Microsoft Purview
+- ML
+- Ontology
+- Semantic Layer
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Lauri Lehman introduces Fabric IQ, Microsoft's new semantic layer for organizational data, assisting developers and data professionals in building advanced AI agents and ensuring data quality.<!--excerpt_end-->
 
 # Fabric IQ – The New Semantic Layer for Your Organizational Data

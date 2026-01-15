@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID"
-description: "This community guide by Farooque explains how to issue custom claims in Microsoft Entra ID using directory extension attributes. It details the process of registering attributes via Microsoft Graph, assigning them to users, and configuring claims in Enterprise Applications based on group membership. The guide also includes troubleshooting common claim mapping errors and step-by-step instructions for testing the configuration, allowing organizations to implement dynamic and conditional SSO claims tailored to business needs."
-author: "Farooque"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID
+author: Farooque
+canonical_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 05:54:53 +00:00
-permalink: "/2025-08-11-Issuing-Custom-Claims-Using-Directory-Extension-Attributes-in-Microsoft-Entra-ID.html"
-categories: ["Security"]
-tags: ["Acceptmappedclaims", "Azure Active Directory", "Claims Issuance", "Cloud Identity", "Community", "Conditional Access", "Directory Extension Attributes", "Enterprise Applications", "Group Based Claims", "JWT", "Microsoft Entra ID", "Microsoft Graph API", "OIDC", "SAML", "Security", "Single Sign On", "User Attributes"]
-tags_normalized: ["acceptmappedclaims", "azure active directory", "claims issuance", "cloud identity", "community", "conditional access", "directory extension attributes", "enterprise applications", "group based claims", "jwt", "microsoft entra id", "microsoft graph api", "oidc", "saml", "security", "single sign on", "user attributes"]
+permalink: /security/community/Issuing-Custom-Claims-Using-Directory-Extension-Attributes-in-Microsoft-Entra-ID
+tags:
+- Acceptmappedclaims
+- Azure Active Directory
+- Claims Issuance
+- Cloud Identity
+- Community
+- Conditional Access
+- Directory Extension Attributes
+- Enterprise Applications
+- Group Based Claims
+- JWT
+- Microsoft Entra ID
+- Microsoft Graph API
+- OIDC
+- SAML
+- Security
+- Single Sign On
+- User Attributes
+section_names:
+- security
 ---
-
 Farooque shares a practical walkthrough on issuing custom SSO claims in Microsoft Entra ID by leveraging directory extension attributes and group-based conditions. The article covers attribute registration, claim configuration, and troubleshooting.<!--excerpt_end-->
 
 # Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID

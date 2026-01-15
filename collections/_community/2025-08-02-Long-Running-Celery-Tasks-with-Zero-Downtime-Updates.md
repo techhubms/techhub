@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Long Running Celery Tasks with Zero Downtime Updates"
-description: "The author seeks advice on deploying backend changes for a Celery app without causing downtime or interrupting long-running tasks. Using Docker, Coolify, Redis, and MySQL, the main concern is handling upgrades or blue-green deployments in a way that preserves currently running jobs. Solutions and peer experiences are requested."
-author: "Lazy_Economy_6851"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Long Running Celery Tasks with Zero Downtime Updates
+author: Lazy_Economy_6851
+canonical_url: https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 13:13:29 +00:00
-permalink: "/2025-08-02-Long-Running-Celery-Tasks-with-Zero-Downtime-Updates.html"
-categories: ["DevOps"]
-tags: ["Background Jobs", "Blue Green Deployment", "Celery", "Community", "Coolify", "Deployment Strategies", "DevOps", "Docker", "Mysql", "Redis", "Task Management", "Zero Downtime"]
-tags_normalized: ["background jobs", "blue green deployment", "celery", "community", "coolify", "deployment strategies", "devops", "docker", "mysql", "redis", "task management", "zero downtime"]
+permalink: /devops/community/Long-Running-Celery-Tasks-with-Zero-Downtime-Updates
+tags:
+- Background Jobs
+- Blue Green Deployment
+- Celery
+- Community
+- Coolify
+- Deployment Strategies
+- DevOps
+- Docker
+- Mysql
+- Redis
+- Task Management
+- Zero Downtime
+section_names:
+- devops
 ---
-
 Lazy_Economy_6851 discusses challenges in redeploying an app with Celery-backed long-running jobs, aiming for zero downtime. The post explores risks to running tasks and seeks peer advice on deployment strategies.<!--excerpt_end-->
 
 ## Summary

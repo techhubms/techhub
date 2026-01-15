@@ -1,20 +1,28 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Let's Learn MCP: Java"
-description: "This workshop introduces the Model Context Protocol (MCP), a framework for standardizing AI model and client app interactions. Visual Studio Code team members demonstrate setting up an MCP server in Java and discuss core MCP concepts, providing resources and a demo code link for hands-on learning."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xek__V_Dt84"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=xek__V_Dt84
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-15 17:28:28 +00:00
-permalink: "/2025-07-15-Lets-Learn-MCP-Java.html"
-categories: ["AI"]
-tags: ["AI", "AI Models", "Client Applications", "Demo", "Java", "Mcp", "Server Creation", "Standardization", "Videos", "VS Code", "Workshop"]
-tags_normalized: ["ai", "ai models", "client applications", "demo", "java", "mcp", "server creation", "standardization", "videos", "vs code", "workshop"]
+permalink: /ai/videos/Lets-Learn-MCP-Java
+tags:
+- AI
+- AI Models
+- Client Applications
+- Demo
+- Java
+- Mcp
+- Server Creation
+- Standardization
+- Videos
+- VS Code
+- Workshop
+section_names:
+- ai
 ---
-
 Visual Studio Code presents an introductory workshop on MCP for Java, featuring Bruno Borges and Sandra Ahlgrimm, guiding viewers through MCP fundamentals and a live server demo.<!--excerpt_end-->
 
 {% youtube xek__V_Dt84 %}

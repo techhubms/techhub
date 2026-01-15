@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How to Show a Spinner on Form Submit Without Disrupting MVC Behavior"
-description: "The author seeks advice on displaying a spinner in a submit button during form submission in an ASP.NET MVC context, without interfering with the default form behavior or causing duplicate server requests or actions. The post outlines their struggle with approaches that interfere with regular submission or double-trigger server-side effects."
-author: "Fragrant_Ride_29"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mfpq2m/how_do_i_show_a_spinner_btn_on_form_submit/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: How to Show a Spinner on Form Submit Without Disrupting MVC Behavior
+author: Fragrant_Ride_29
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mfpq2m/how_do_i_show_a_spinner_btn_on_form_submit/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 12:47:54 +00:00
-permalink: "/2025-08-02-How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior.html"
-categories: ["Coding"]
-tags: [".NET", "AJAX", "ASP.NET MVC", "Client Side Validation", "Coding", "Community", "Double Requests", "Form Submission", "JavaScript", "MVC Forms", "Spinner Button", "UI Feedback", "UX"]
-tags_normalized: ["dotnet", "ajax", "aspdotnet mvc", "client side validation", "coding", "community", "double requests", "form submission", "javascript", "mvc forms", "spinner button", "ui feedback", "ux"]
+permalink: /coding/community/How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior
+tags:
+- .NET
+- AJAX
+- ASP.NET MVC
+- Client Side Validation
+- Coding
+- Community
+- Double Requests
+- Form Submission
+- JavaScript
+- MVC Forms
+- Spinner Button
+- UI Feedback
+- UX
+section_names:
+- coding
 ---
-
 Fragrant_Ride_29 discusses the challenges of displaying a spinner inside a submit button in ASP.NET MVC forms without causing double server requests or breaking the framework's default submission behavior.<!--excerpt_end-->
 
 Fragrant_Ride_29 is looking for an effective way to show a loading spinner within a submit button in an ASP.NET MVC application. The primary concern is to provide real-time feedback to users by displaying a spinner while the form is submitting—without interfering with the default form submission workflow or inadvertently triggering duplicate server actions.

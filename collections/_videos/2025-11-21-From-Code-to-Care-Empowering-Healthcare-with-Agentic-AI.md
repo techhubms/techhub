@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "From Code to Care: Empowering Healthcare with Agentic AI"
-description: "This Microsoft Ignite 2025 session explores the use of low-code and pro-code tools to build task-specific AI agents for healthcare. Highlighting collaborations with Oxford and tackling challenges in cancer treatment planning, presenters demonstrate how Azure AI and agentic solutions streamline complex healthcare workflows and enhance patient outcomes. The session covers real-world healthcare AI applications, ethical issues, and architectural considerations for scalability, reusability, and integration with legacy systems like Medicare. Built-in security, unified data, and emerging Microsoft tools form the backbone of these innovative healthcare solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cFJH00a12lo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'From Code to Care: Empowering Healthcare with Agentic AI'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=cFJH00a12lo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:37:26 +00:00
-permalink: "/2025-11-21-From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Orchestration", "Azure", "Azure AI", "Cancer Care", "Data Security", "Ethical AI", "Healthcare AI", "Healthcare Interoperability", "InnovatewithAzureAIappsandagents", "Low Code", "Microsoft Ignite", "MSIgnite", "Oncology", "Pro Code", "Trustworthy AI", "Unified Data", "Videos", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai orchestration", "azure", "azure ai", "cancer care", "data security", "ethical ai", "healthcare ai", "healthcare interoperability", "innovatewithazureaiappsandagents", "low code", "microsoft ignite", "msignite", "oncology", "pro code", "trustworthy ai", "unified data", "videos", "workflow automation"]
+permalink: /ai/videos/From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Orchestration
+- Azure
+- Azure AI
+- Cancer Care
+- Data Security
+- Ethical AI
+- Healthcare AI
+- Healthcare Interoperability
+- InnovatewithAzureAIappsandagents
+- Low Code
+- Microsoft Ignite
+- MSIgnite
+- Oncology
+- Pro Code
+- Trustworthy AI
+- Unified Data
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 In this Microsoft Ignite 2025 session, Andrew Soltan and Naveen Valluri showcase how Azure-powered agentic AI transforms healthcare processes. The session highlights real-world projects, system integrations, and future AI opportunities in medicine.<!--excerpt_end-->
 
 {% youtube cFJH00a12lo %}

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Securing Sensitive Mobile Operations with Device-Bound Request Signing"
-description: "This article, published on Microsoft for Developers, explores Device-Bound Request Signing (DBRS) as an advanced mechanism to address gaps in traditional mobile authentication. It details how cryptographically binding API requests to hardware-protected device keys enhances security, reviews enrollment strategies, outlines architecture and threat model considerations, and highlights design tradeoffs and practical implementation tips."
-author: "Fernando de Oliveira, Daiane Galvão, Wesley Rodrigues"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Securing Sensitive Mobile Operations with Device-Bound Request Signing
+author: Fernando de Oliveira, Daiane Galvão, Wesley Rodrigues
+canonical_url: https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-02 18:00:18 +00:00
-permalink: "/2025-12-02-Securing-Sensitive-Mobile-Operations-with-Device-Bound-Request-Signing.html"
-categories: ["Security"]
-tags: ["Android Keystore", "API Protection", "API Security", "Compliance", "Cryptographic Signatures", "Device Bound Request Signing", "ECDSA", "Ed25519", "Hardware Backed Keys", "Ios Secure Enclave", "Key Attestation", "Microsoft", "Mobile", "Mobile Apps", "Mobile Security", "MTLS", "News", "OAuth", "Post Quantum Cryptography", "Proof Of Possession", "RASP", "Security", "STRIDE", "Threat Modeling", "Zero Trust"]
-tags_normalized: ["android keystore", "api protection", "api security", "compliance", "cryptographic signatures", "device bound request signing", "ecdsa", "ed25519", "hardware backed keys", "ios secure enclave", "key attestation", "microsoft", "mobile", "mobile apps", "mobile security", "mtls", "news", "oauth", "post quantum cryptography", "proof of possession", "rasp", "security", "stride", "threat modeling", "zero trust"]
+permalink: /security/news/Securing-Sensitive-Mobile-Operations-with-Device-Bound-Request-Signing
+tags:
+- Android Keystore
+- API Protection
+- API Security
+- Compliance
+- Cryptographic Signatures
+- Device Bound Request Signing
+- ECDSA
+- Ed25519
+- Hardware Backed Keys
+- Ios Secure Enclave
+- Key Attestation
+- Microsoft
+- Mobile
+- Mobile Apps
+- Mobile Security
+- MTLS
+- News
+- OAuth
+- Post Quantum Cryptography
+- Proof Of Possession
+- RASP
+- Security
+- STRIDE
+- Threat Modeling
+- Zero Trust
+section_names:
+- security
 ---
-
 Fernando de Oliveira, Daiane Galvão, and Wesley Rodrigues present advanced strategies for securing mobile operations by linking requests to hardware-backed device keys, providing detailed threat modeling and practical architecture guidance.<!--excerpt_end-->
 
 # Securing Sensitive Mobile Operations with Device-Bound Request Signing

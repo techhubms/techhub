@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Kick off and Track Copilot Coding Agent Sessions from the GitHub CLI"
-description: "This article introduces the new GitHub CLI 2.80.0 features for managing Copilot coding agent tasks. It covers how developers can start, track, and review asynchronous code tasks delegated to Copilot directly from the CLI, using the new `agent-task` commands and related aliases. The content emphasizes workflow automation through code review and background pull request creation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Kick off and Track Copilot Coding Agent Sessions from the GitHub CLI
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-26 09:00:02 +00:00
-permalink: "/2025-09-26-Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Background Tasks", "CLI Tools", "Client Apps", "Code Review", "Coding", "Command Line", "Copilot", "Copilot Coding Agent", "Developer Productivity", "DevOps", "Gh Agent Task", "GitHub", "GitHub CLI", "GitHub Copilot", "News", "Pull Request", "Release V2.80.0", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "background tasks", "cli tools", "client apps", "code review", "coding", "command line", "copilot", "copilot coding agent", "developer productivity", "devops", "gh agent task", "github", "github cli", "github copilot", "news", "pull request", "release v2dot80dot0", "workflow automation"]
+permalink: /github-copilot/news/Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI
+tags:
+- AI
+- Automation
+- Background Tasks
+- CLI Tools
+- Client Apps
+- Code Review
+- Coding
+- Command Line
+- Copilot
+- Copilot Coding Agent
+- Developer Productivity
+- DevOps
+- Gh Agent Task
+- GitHub
+- GitHub CLI
+- GitHub Copilot
+- News
+- Pull Request
+- Release V2.80.0
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Allison explains how developers can use GitHub CLI 2.80.0 to manage Copilot coding agent sessions, enabling background code automation and review through new command-line integrations.<!--excerpt_end-->
 
 # Kick off and Track Copilot Coding Agent Sessions from the GitHub CLI

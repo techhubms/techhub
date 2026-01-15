@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Advanced Security for Azure DevOps"
-description: "Rob Bos reviews GitHub Advanced Security integration in Azure DevOps, detailing features, setup, key differences, and practical use cases from Build 2023's public preview."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps"
-viewing_mode: "external"
-categories: ["DevOps", "Security", "Azure"]
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: GitHub Advanced Security for Azure DevOps
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-05-23 00:00:00 +00:00
-permalink: "/2023-05-23-GitHub-Advanced-Security-for-Azure-DevOps.html"
-tags: ["Azure", "Azure DevOps", "Blogs", "Code Scanning", "CodeQL", "Dependency Scanning", "DevOps", "DevSecOps", "GitHub Advanced Security", "Microsoft Build", "Pipeline Security", "Secret Scanning", "Security", "Security Automation"]
-tags_normalized: ["azure", "azure devops", "blogs", "code scanning", "codeql", "dependency scanning", "devops", "devsecops", "github advanced security", "microsoft build", "pipeline security", "secret scanning", "security", "security automation"]
+permalink: /azure/blogs/GitHub-Advanced-Security-for-Azure-DevOps
+tags:
+- Azure
+- Azure DevOps
+- Blogs
+- Code Scanning
+- CodeQL
+- Dependency Scanning
+- DevOps
+- DevSecOps
+- GitHub Advanced Security
+- Microsoft Build
+- Pipeline Security
+- Secret Scanning
+- Security
+- Security Automation
+section_names:
+- devops
+- security
+- azure
 ---
-
 In this article, Rob Bos explores the public preview of GitHub Advanced Security (GHAS) features recently introduced to Azure DevOps, as announced at Microsoft Build 2023, and shares firsthand experiences and key distinctions compared to GitHub's native implementation.
 <!--excerpt_end-->
 

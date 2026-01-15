@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How to Build Secure and Scalable Remote MCP Servers"
-description: "This guide by Den Delimarsky explores security and scalability best practices for implementing Model Context Protocol (MCP) servers, emphasizing authorization with OAuth 2.1, secrets management, multi-user scenarios, observability, and use of AI/API gateways. Learn how to build robust MCP integrations for AI agent connectivity."
-author: "Den Delimarsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How to Build Secure and Scalable Remote MCP Servers
+author: Den Delimarsky
+canonical_url: https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-25 17:12:02 +00:00
-permalink: "/2025-07-25-How-to-Build-Secure-and-Scalable-Remote-MCP-Servers.html"
-categories: ["AI", "Security", "Azure"]
-tags: ["AI", "AI & ML", "AI Agents", "AI Gateway", "APIs", "Authorization", "Azure", "Azure Key Vault", "Distributed Tracing", "Generative AI", "MCP", "Multi Tenancy", "News", "OAuth 2.1", "OpenTelemetry", "Secrets Management", "Security", "Security Best Practices", "Token Validation"]
-tags_normalized: ["ai", "ai and ml", "ai agents", "ai gateway", "apis", "authorization", "azure", "azure key vault", "distributed tracing", "generative ai", "mcp", "multi tenancy", "news", "oauth 2dot1", "opentelemetry", "secrets management", "security", "security best practices", "token validation"]
+permalink: /ai/news/How-to-Build-Secure-and-Scalable-Remote-MCP-Servers
+tags:
+- AI
+- AI & ML
+- AI Agents
+- AI Gateway
+- APIs
+- Authorization
+- Azure
+- Azure Key Vault
+- Distributed Tracing
+- Generative AI
+- MCP
+- Multi Tenancy
+- News
+- OAuth 2.1
+- OpenTelemetry
+- Secrets Management
+- Security
+- Security Best Practices
+- Token Validation
+section_names:
+- ai
+- security
+- azure
 ---
-
 Authored by Den Delimarsky, this article offers a thorough walkthrough for developers on building secure, scalable MCP servers. It focuses on robust security, authorization, secrets management, and architectural practices needed to safely enable AI agent connectivity and operations.<!--excerpt_end-->
 
 ## Introduction

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Drive Growth, Profitability and Resilience with Agentic Supply Chains"
-description: "This Microsoft Ignite session explores the evolution of supply chains into intelligent, autonomous networks powered by AI agents. Speakers discuss transforming planning, logistics, and fulfillment with AI-driven agents, showcasing how unified data platforms, Microsoft Fabric, and Azure AI solutions drive real-time visibility, predictive insights, and automated operations for modern supply chains."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NcrMVachthU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Drive Growth, Profitability and Resilience with Agentic Supply Chains
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=NcrMVachthU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:14:51 +00:00
-permalink: "/2025-11-24-Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Autonomous Networks", "Azure", "Azure AI", "Blue Yonder", "Connected Supply Chain", "Cummins", "Data Engineering", "Data Platform", "Logistics Optimization", "Manufacturing Technology", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Operational Resilience", "Predictive Analytics", "Supply Chain", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "ai agents", "autonomous networks", "azure", "azure ai", "blue yonder", "connected supply chain", "cummins", "data engineering", "data platform", "logistics optimization", "manufacturing technology", "microsoft fabric", "microsoft ignite", "ml", "msignite", "operational resilience", "predictive analytics", "supply chain", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains
+tags:
+- AI
+- AI Agents
+- Autonomous Networks
+- Azure
+- Azure AI
+- Blue Yonder
+- Connected Supply Chain
+- Cummins
+- Data Engineering
+- Data Platform
+- Logistics Optimization
+- Manufacturing Technology
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Operational Resilience
+- Predictive Analytics
+- Supply Chain
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Presented by Chris Burchett, Armando Duran, and Yury Gomez at Microsoft Ignite 2025, this session demonstrates how AI-driven agents, Microsoft Fabric, and unified data strategies are reshaping supply chain management for businesses.<!--excerpt_end-->
 
 {% youtube NcrMVachthU %}

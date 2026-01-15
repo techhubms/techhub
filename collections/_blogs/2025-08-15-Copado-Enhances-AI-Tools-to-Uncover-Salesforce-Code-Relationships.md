@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Copado Enhances AI Tools to Uncover Salesforce Code Relationships"
-description: "This article details Copado’s latest AI-driven enhancements for its DevOps platform targeting Salesforce application development. It introduces the Org Intelligence module, which analyzes Salesforce metadata to surface code and object relationships, enabling faster impact analysis, better reuse, and improved DevOps best practices for both professional and citizen developers working in Salesforce environments."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/copado-extends-ai-reach-to-surface-relationships-between-salesforce-code/?utm_source=rss&utm_medium=rss&utm_campaign=copado-extends-ai-reach-to-surface-relationships-between-salesforce-code"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Copado Enhances AI Tools to Uncover Salesforce Code Relationships
+author: Mike Vizard
+canonical_url: https://devops.com/copado-extends-ai-reach-to-surface-relationships-between-salesforce-code/?utm_source=rss&utm_medium=rss&utm_campaign=copado-extends-ai-reach-to-surface-relationships-between-salesforce-code
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-15 12:50:22 +00:00
-permalink: "/2025-08-15-Copado-Enhances-AI-Tools-to-Uncover-Salesforce-Code-Relationships.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI in Application Development", "AI in DevOps", "AI Platform", "Application Development", "Blogs", "Business Of DevOps", "Change Impact Analysis", "Citizen Development", "Copado", "Copado AI", "DevOps", "DevOps Best Practices", "Incident Response", "Object Relationships", "Org Intelligence", "SaaS Development", "Salesforce", "Salesforce Change Impact Analysis", "Salesforce Code Analysis", "Salesforce DevOps", "Salesforce Metadata", "Salesforce Object Relationships", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering"]
-tags_normalized: ["ai", "ai in application development", "ai in devops", "ai platform", "application development", "blogs", "business of devops", "change impact analysis", "citizen development", "copado", "copado ai", "devops", "devops best practices", "incident response", "object relationships", "org intelligence", "saas development", "salesforce", "salesforce change impact analysis", "salesforce code analysis", "salesforce devops", "salesforce metadata", "salesforce object relationships", "social facebook", "social linkedin", "social x", "software engineering"]
+permalink: /ai/blogs/Copado-Enhances-AI-Tools-to-Uncover-Salesforce-Code-Relationships
+tags:
+- AI
+- AI in Application Development
+- AI in DevOps
+- AI Platform
+- Application Development
+- Blogs
+- Business Of DevOps
+- Change Impact Analysis
+- Citizen Development
+- Copado
+- Copado AI
+- DevOps
+- DevOps Best Practices
+- Incident Response
+- Object Relationships
+- Org Intelligence
+- SaaS Development
+- Salesforce
+- Salesforce Change Impact Analysis
+- Salesforce Code Analysis
+- Salesforce DevOps
+- Salesforce Metadata
+- Salesforce Object Relationships
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Engineering
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard explains how Copado’s new Org Intelligence module brings AI-powered relationship mapping to Salesforce code, improving object reuse, impact analysis, and DevOps practices for developers.<!--excerpt_end-->
 
 # Copado Enhances AI Tools to Uncover Salesforce Code Relationships

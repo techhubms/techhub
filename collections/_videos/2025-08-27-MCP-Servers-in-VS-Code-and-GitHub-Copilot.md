@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "MCP Servers in VS Code and GitHub Copilot"
-description: "A practical walkthrough of using MCP Servers in Visual Studio Code for GitHub Copilot agent mode, demonstrating setup, remote usage, and building custom local MCP servers. The video guides developers through installation steps, integration details, and best practices for enhancing the code completion workflow with Model Context Protocol servers in VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vUQfqW5GKAQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: MCP Servers in VS Code and GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=vUQfqW5GKAQ
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-27 18:42:25 +00:00
-permalink: "/2025-08-27-MCP-Servers-in-VS-Code-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Code", "Code Completion", "Coding", "Copilot", "Custom MCP Server", "Demo", "Developer", "Developer Workflow", "Extension", "GitHub Copilot", "Integration", "Mcp", "MCP Servers", "MCP Setup", "Mcpserver", "Remote Servers", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "ai", "code", "code completion", "coding", "copilot", "custom mcp server", "demo", "developer", "developer workflow", "extension", "github copilot", "integration", "mcp", "mcp servers", "mcp setup", "mcpserver", "remote servers", "software developer", "videos", "vs code"]
+permalink: /github-copilot/videos/MCP-Servers-in-VS-Code-and-GitHub-Copilot
+tags:
+- Agent Mode
+- AI
+- Code
+- Code Completion
+- Coding
+- Copilot
+- Custom MCP Server
+- Demo
+- Developer
+- Developer Workflow
+- Extension
+- GitHub Copilot
+- Integration
+- Mcp
+- MCP Servers
+- MCP Setup
+- Mcpserver
+- Remote Servers
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code demonstrates how developers can leverage MCP Servers and GitHub Copilot agent mode to boost code completion and workflow efficiency, including steps for building and integrating local and remote MCP servers.<!--excerpt_end-->
 
 {% youtube vUQfqW5GKAQ %}

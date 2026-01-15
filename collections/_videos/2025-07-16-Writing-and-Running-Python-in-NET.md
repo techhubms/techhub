@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Writing and Running Python in .NET"
-description: "Nick Chapsas demonstrates how to write and run Python code within .NET applications using Python.NET. He explores the integration process, potential use cases—especially with Python's popularity in AI—and explains how C# developers can leverage Python libraries inside their .NET projects."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6N2oFh6YTTc"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Writing and Running Python in .NET
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=6N2oFh6YTTc
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-16 11:00:23 +00:00
-permalink: "/2025-07-16-Writing-and-Running-Python-in-NET.html"
-categories: ["Coding", "ML"]
-tags: [".NET", "AI", "AI Workflows", "C#", "Coding", "Cross Language", "Interoperability", "ML", "Nick Chapsas", "Python Integration", "Python Libraries", "Python.NET", "Video Tutorial", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai workflows", "csharp", "coding", "cross language", "interoperability", "ml", "nick chapsas", "python integration", "python libraries", "pythondotnet", "video tutorial", "videos"]
+permalink: /ml/videos/Writing-and-Running-Python-in-NET
+tags:
+- .NET
+- AI
+- AI Workflows
+- C#
+- Coding
+- Cross Language
+- Interoperability
+- ML
+- Nick Chapsas
+- Python Integration
+- Python Libraries
+- Python.NET
+- Video Tutorial
+- Videos
+section_names:
+- coding
+- ml
 ---
-
 Nick Chapsas guides viewers through integrating Python with .NET using Python.NET, providing practical steps for C# developers to leverage Python code.<!--excerpt_end-->
 
 {% youtube 6N2oFh6YTTc %}

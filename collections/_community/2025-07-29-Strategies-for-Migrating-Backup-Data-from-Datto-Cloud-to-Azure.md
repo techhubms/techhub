@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Strategies for Migrating Backup Data from Datto Cloud to Azure"
-description: "The author seeks community insight on efficiently transferring backup data from Datto cloud/on-premises devices to Azure. While time constraints pose challenges, options such as using Azure containers and azcopy are considered. The author details issues with VHDX snapshots compatibility and requests advice or shared migration experiences."
-author: "Armlessbastard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mccydp/moving_backup_data_from_datto_cloud_to_azure/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Strategies for Migrating Backup Data from Datto Cloud to Azure
+author: Armlessbastard
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mccydp/moving_backup_data_from_datto_cloud_to_azure/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 14:29:22 +00:00
-permalink: "/2025-07-29-Strategies-for-Migrating-Backup-Data-from-Datto-Cloud-to-Azure.html"
-categories: ["Azure"]
-tags: ["Azcopy", "Azure", "Backup Data", "Backup Provider Change", "Cloud Migration", "Community", "Containers", "Data Transfer", "Datto", "Restore Points", "VHDX Compatibility"]
-tags_normalized: ["azcopy", "azure", "backup data", "backup provider change", "cloud migration", "community", "containers", "data transfer", "datto", "restore points", "vhdx compatibility"]
+permalink: /azure/community/Strategies-for-Migrating-Backup-Data-from-Datto-Cloud-to-Azure
+tags:
+- Azcopy
+- Azure
+- Backup Data
+- Backup Provider Change
+- Cloud Migration
+- Community
+- Containers
+- Data Transfer
+- Datto
+- Restore Points
+- VHDX Compatibility
+section_names:
+- azure
 ---
-
 Armlessbastard outlines the challenges and considerations in moving backup data from Datto cloud or on-prem devices to Azure, seeking community advice and sharing preliminary solutions.<!--excerpt_end-->
 
 ## Overview

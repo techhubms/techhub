@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection"
-description: "This community post by thomhurst introduces a new TUnit feature for orchestrating complex test setups in .NET projects. It highlights nested property injection with data sources, parallel initialisation of Docker-based dependencies (like SQL Server, Redis, RabbitMQ), and intelligent object reuse, allowing for efficient and maintainable integration tests without third-party dependencies."
-author: "thomhurst"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection'
+author: thomhurst
+canonical_url: https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 20:59:12 +00:00
-permalink: "/2025-08-06-TUnit-Test-Orchestration-Advanced-Setup-and-Parallel-Dependency-Injection.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "ClassDataSource", "Coding", "Community", "Dependency Injection", "Docker", "Integration Testing", "Parallel Initialization", "PerTestSession", "RabbitMQ", "Redis", "ReSharper", "Rider", "SQL Server", "Test Orchestration", "TestContainers", "Testing Framework", "TUnit", "VS"]
-tags_normalized: ["dotnet", "csharp", "classdatasource", "coding", "community", "dependency injection", "docker", "integration testing", "parallel initialization", "pertestsession", "rabbitmq", "redis", "resharper", "rider", "sql server", "test orchestration", "testcontainers", "testing framework", "tunit", "vs"]
+permalink: /coding/community/TUnit-Test-Orchestration-Advanced-Setup-and-Parallel-Dependency-Injection
+tags:
+- .NET
+- C#
+- ClassDataSource
+- Coding
+- Community
+- Dependency Injection
+- Docker
+- Integration Testing
+- Parallel Initialization
+- PerTestSession
+- RabbitMQ
+- Redis
+- ReSharper
+- Rider
+- SQL Server
+- Test Orchestration
+- TestContainers
+- Testing Framework
+- TUnit
+- VS
+section_names:
+- coding
 ---
-
 thomhurst presents a major enhancement to the TUnit testing framework, enabling .NET developers to orchestrate complex integrations—like Docker-based SQL Server, Redis, and RabbitMQ—using powerful nested property injection and parallel initialisation.<!--excerpt_end-->
 
 # TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection

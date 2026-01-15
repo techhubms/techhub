@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "How Microsoft and its partners are reenvisioning energy with AI"
-description: "This article explores how Microsoft, in collaboration with its partners, is transforming the energy sector through AI technologies. It highlights innovative projects, strategies, and solutions that use AI to modernize energy infrastructure, optimize grid management, and promote sustainability in the industry."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2025/07/28/driving-the-grid-of-the-future-how-microsoft-and-our-partners-are-reenvisioning-energy-with-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Microsoft and its partners are reenvisioning energy with AI
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2025/07/28/driving-the-grid-of-the-future-how-microsoft-and-our-partners-are-reenvisioning-energy-with-ai/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 18:04:45 +00:00
-permalink: "/2025-07-28-How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI.html"
-categories: ["AI"]
-tags: ["AI", "Company News", "Energy Infrastructure", "Energy Innovation", "Energy Sector", "Grid Modernization", "Microsoft", "News", "Partners", "Sustainability", "Technology Transformation"]
-tags_normalized: ["ai", "company news", "energy infrastructure", "energy innovation", "energy sector", "grid modernization", "microsoft", "news", "partners", "sustainability", "technology transformation"]
+permalink: /ai/news/How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI
+tags:
+- AI
+- Company News
+- Energy Infrastructure
+- Energy Innovation
+- Energy Sector
+- Grid Modernization
+- Microsoft
+- News
+- Partners
+- Sustainability
+- Technology Transformation
+section_names:
+- ai
 ---
-
 Written by stclarke, this article examines Microsoft's partnership-driven efforts to revolutionize the energy industry using AI-powered solutions.<!--excerpt_end-->
 
 ## Overview

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology"
-description: "The author seeks advice on configuring an NVA (Network Virtual Appliance) in an Azure hub-spoke network to direct all internet-bound and inter-subnet traffic from spoke VMs through the NVA, replacing the existing VPN gateway. The discussion focuses on route table configurations, UDRs, peering settings, and preserving future architectural flexibility."
-author: "HDClown"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology
+author: HDClown
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-03 15:34:00 +00:00
-permalink: "/2025-08-03-Implementing-NVA-for-Internet-Egress-and-Inter-Subnet-Routing-in-Azure-Hub-Spoke-Topology.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Load Balancer", "Cato Networks", "Community", "Hub Spoke Topology", "Inter Subnet Routing", "Internet Egress", "LAN/WAN", "Network Virtual Appliance", "Public IP", "Route Tables", "SASE", "UDR", "Vnet Peering", "VPN Gateway"]
-tags_normalized: ["azure", "azure load balancer", "cato networks", "community", "hub spoke topology", "inter subnet routing", "internet egress", "lanslashwan", "network virtual appliance", "public ip", "route tables", "sase", "udr", "vnet peering", "vpn gateway"]
+permalink: /azure/community/Implementing-NVA-for-Internet-Egress-and-Inter-Subnet-Routing-in-Azure-Hub-Spoke-Topology
+tags:
+- Azure
+- Azure Load Balancer
+- Cato Networks
+- Community
+- Hub Spoke Topology
+- Inter Subnet Routing
+- Internet Egress
+- LAN/WAN
+- Network Virtual Appliance
+- Public IP
+- Route Tables
+- SASE
+- UDR
+- Vnet Peering
+- VPN Gateway
+section_names:
+- azure
 ---
-
 HDClown discusses the integration of a Network Virtual Appliance into an Azure hub-spoke architecture and seeks advice on achieving internet egress and inter-subnet routing through the NVA.<!--excerpt_end-->
 
 ## Scenario Overview

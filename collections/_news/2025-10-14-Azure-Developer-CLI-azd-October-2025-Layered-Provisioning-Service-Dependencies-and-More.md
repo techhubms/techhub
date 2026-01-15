@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) October 2025: Layered Provisioning, Service Dependencies, and More"
-description: "Explore the major updates in Azure Developer CLI (azd) releases 1.19.0 and 1.20.0. This post highlights new features such as layered provisioning with service dependencies, the new 'azd publish' command, enhanced extension management, authentication improvements, and a wealth of community-driven app templates for Azure developers. Bug fixes, upgraded dependencies, and documentation updates are also covered, providing a comprehensive overview for anyone building or deploying apps on Azure."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) October 2025: Layered Provisioning, Service Dependencies, and More'
+author: PuiChee (PC) Chan
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-14 21:54:15 +00:00
-permalink: "/2025-10-14-Azure-Developer-CLI-azd-October-2025-Layered-Provisioning-Service-Dependencies-and-More.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "AKS", "Authentication", "Azd", "Azure", "Azure App Service", "Azure Developer CLI", "Azure SDK", "Bicep", "CI/CD", "Cloud Development", "Codespaces", "Coding", "Community Templates", "Container Apps", "DevOps", "Docker", "Extension Management", "GitHub", "IaC", "Java", "JavaScript", "Kubernetes", "Layered Provisioning", "Managed Identity", "News", "Python", "Service Dependencies", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "aks", "authentication", "azd", "azure", "azure app service", "azure developer cli", "azure sdk", "bicep", "cislashcd", "cloud development", "codespaces", "coding", "community templates", "container apps", "devops", "docker", "extension management", "github", "iac", "java", "javascript", "kubernetes", "layered provisioning", "managed identity", "news", "python", "service dependencies", "templates", "typescript", "vs code"]
+permalink: /coding/news/Azure-Developer-CLI-azd-October-2025-Layered-Provisioning-Service-Dependencies-and-More
+tags:
+- .NET
+- AKS
+- Authentication
+- Azd
+- Azure
+- Azure App Service
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- CI/CD
+- Cloud Development
+- Codespaces
+- Coding
+- Community Templates
+- Container Apps
+- DevOps
+- Docker
+- Extension Management
+- GitHub
+- IaC
+- Java
+- JavaScript
+- Kubernetes
+- Layered Provisioning
+- Managed Identity
+- News
+- Python
+- Service Dependencies
+- Templates
+- Typescript
+- VS Code
+section_names:
+- azure
+- coding
+- devops
 ---
-
 PuiChee (PC) Chan details the October 2025 Azure Developer CLI (azd) releases, introducing layered provisioning, service dependencies, the new azd publish command, and significant improvements to extension management and development features.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – October 2025 Release Notes

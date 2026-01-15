@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server"
-description: "This community post by daisami provides a step-by-step guide for building a custom Model Context Protocol (MCP) server with ASP.NET Core and integrating it with GitHub Copilot Agent. It covers how to set up MCP server features to enforce business-specific naming conventions, explains the relevant C# code implementation, and details configuration for enterprise environments, including secure Azure deployment. Practical insights include using Copilot Agent tools, working with config files, and how this enables developer productivity and compliance in .NET projects."
-author: "daisami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server
+author: daisami
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-19 16:26:20 +00:00
-permalink: "/2025-08-19-Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "ASP.NET Core", "Azure", "Azure App Service", "Business Logic", "C#", "Class Generation", "Coding", "Community", "Copilot Agent", "Dependency Injection", "Enterprise Compliance", "ExpressRoute", "GitHub Copilot", "GitHub Spark", "MCP", "MCP Server", "Naming Convention", "NuGet", "Virtual Network", "VS", "VS Code", "Workspace Settings"]
-tags_normalized: ["dotnet", "ai", "aspdotnet core", "azure", "azure app service", "business logic", "csharp", "class generation", "coding", "community", "copilot agent", "dependency injection", "enterprise compliance", "expressroute", "github copilot", "github spark", "mcp", "mcp server", "naming convention", "nuget", "virtual network", "vs", "vs code", "workspace settings"]
+permalink: /github-copilot/community/Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server
+tags:
+- .NET
+- AI
+- ASP.NET Core
+- Azure
+- Azure App Service
+- Business Logic
+- C#
+- Class Generation
+- Coding
+- Community
+- Copilot Agent
+- Dependency Injection
+- Enterprise Compliance
+- ExpressRoute
+- GitHub Copilot
+- GitHub Spark
+- MCP
+- MCP Server
+- Naming Convention
+- NuGet
+- Virtual Network
+- VS
+- VS Code
+- Workspace Settings
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 daisami explains how to set up a custom MCP server with ASP.NET Core and integrate it with GitHub Copilot Agent, enabling developers to automate naming conventions and customize agent behavior for enterprise .NET projects.<!--excerpt_end-->
 
 # Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server

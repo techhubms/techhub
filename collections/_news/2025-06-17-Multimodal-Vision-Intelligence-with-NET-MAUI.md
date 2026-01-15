@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Multimodal Vision Intelligence with .NET MAUI"
-description: "David Ortinau explores how to enhance .NET MAUI apps with multimodal AI capabilities, focusing on integrating image capture and AI-driven analysis. The article covers technical steps to add camera and photo gallery features, process images, and use Microsoft.Extensions.AI for extracting structured data, enabling advanced, user-friendly mobile experiences."
-author: "David Ortinau"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Multimodal Vision Intelligence with .NET MAUI
+author: David Ortinau
+canonical_url: https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-06-17 19:30:00 +00:00
-permalink: "/2025-06-17-Multimodal-Vision-Intelligence-with-NET-MAUI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "Azure AI Foundry", "C#", "Coding", "Community Toolkit", "Computer Vision", "Copilot", "IChatClient", "Image Analysis", "MAUI", "MediaPicker", "Microsoft.Extensions.AI", "Mobile Development", "Multimodal", "News", "Prompt Engineering"]
-tags_normalized: ["dotnet", "ai", "azure ai foundry", "csharp", "coding", "community toolkit", "computer vision", "copilot", "ichatclient", "image analysis", "maui", "mediapicker", "microsoftdotextensionsdotai", "mobile development", "multimodal", "news", "prompt engineering"]
+permalink: /ai/news/Multimodal-Vision-Intelligence-with-NET-MAUI
+tags:
+- .NET
+- AI
+- Azure AI Foundry
+- C#
+- Coding
+- Community Toolkit
+- Computer Vision
+- Copilot
+- IChatClient
+- Image Analysis
+- MAUI
+- MediaPicker
+- Microsoft.Extensions.AI
+- Mobile Development
+- Multimodal
+- News
+- Prompt Engineering
+section_names:
+- ai
+- coding
 ---
-
 In this article, David Ortinau details the process of building multimodal, AI-powered image analysis into .NET MAUI apps, leveraging .NET tooling and Microsoft.Extensions.AI.<!--excerpt_end-->
 
 ## Overview

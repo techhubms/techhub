@@ -1,20 +1,37 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "AMA Spotlight: Build Smarter with Azure Developer CLI 'AZD'"
-description: "This community post spotlights a recurring Ask Me Anything (AMA) event featuring Kristen Womack, Product Manager for the Azure Developer CLI (azd), and the engineering team behind it. The session targets AI engineers and developers working with scalable, agentic AI deployments using Azure AI Foundry and the azd CLI. Participants can ask questions about orchestrating multi-agent systems, deploying LLM-powered applications, reproducible workflows, and infrastructure setups. The event is designed for hands-on knowledge sharing on using the Azure Developer CLI for real-world AI and Azure automation."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 07:00:00 +00:00
-permalink: "/2025-10-20-AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azd", "Azure", "Azure AI Foundry", "Azure Developer CLI", "CI/CD", "Community", "Debugging", "Deployment", "Developer Experience", "DevOps", "Enterprise AI", "Infrastructure Automation", "Live AMA", "LLM Deployment", "Multi Agent Systems", "Templates", "Workflow Reproducibility"]
-tags_normalized: ["ai", "azd", "azure", "azure ai foundry", "azure developer cli", "cislashcd", "community", "debugging", "deployment", "developer experience", "devops", "enterprise ai", "infrastructure automation", "live ama", "llm deployment", "multi agent systems", "templates", "workflow reproducibility"]
+permalink: /ai/community/AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD
+tags:
+- AI
+- Azd
+- Azure
+- Azure AI Foundry
+- Azure Developer CLI
+- CI/CD
+- Community
+- Debugging
+- Deployment
+- Developer Experience
+- DevOps
+- Enterprise AI
+- Infrastructure Automation
+- Live AMA
+- LLM Deployment
+- Multi Agent Systems
+- Templates
+- Workflow Reproducibility
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Lee_Stott features a weekly AMA with Kristen Womack and the Azure Developer CLI engineering team, inviting developers to discuss deployment, automation, and scaling of AI-driven solutions using Azure tools and best practices.<!--excerpt_end-->
 
 # Weekly AMA 'Ask Me Anything': Build Smarter with Azure Developer CLI

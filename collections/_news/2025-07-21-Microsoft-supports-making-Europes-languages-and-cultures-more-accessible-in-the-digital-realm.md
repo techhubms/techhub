@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Microsoft supports making Europe’s languages and cultures more accessible in the digital realm"
-description: "Microsoft backs initiatives to enhance digital accessibility for Europe's diverse languages and cultures, aiming to foster inclusion and innovation across the continent."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/"
-categories: ["AI"]
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft supports making Europe’s languages and cultures more accessible in the digital realm
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-21 16:42:58 +00:00
-permalink: "/2025-07-21-Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm.html"
-viewing_mode: "external"
-tags: ["AI", "Company News", "Cultural Diversity", "Digital Accessibility", "Europe", "European Languages", "Inclusion", "Innovation", "Linguistic Technology", "Localization", "Microsoft", "News", "On The Issues", "Technology"]
-tags_normalized: ["ai", "company news", "cultural diversity", "digital accessibility", "europe", "european languages", "inclusion", "innovation", "linguistic technology", "localization", "microsoft", "news", "on the issues", "technology"]
+permalink: /ai/news/Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm
+viewing_mode: external
+tags:
+- AI
+- Company News
+- Cultural Diversity
+- Digital Accessibility
+- Europe
+- European Languages
+- Inclusion
+- Innovation
+- Linguistic Technology
+- Localization
+- Microsoft
+- News
+- On The Issues
+- Technology
+section_names:
+- ai
 ---
-
 Written by stclarke, this article highlights Microsoft's commitment to fostering digital accessibility for Europe's many languages and cultures. The focus is on making technology more inclusive, promoting innovation, and ensuring that digital transformation benefits a linguistically and culturally diverse continent.<!--excerpt_end-->
 
 ## Microsoft’s Efforts for Linguistic and Cultural Accessibility in Europe

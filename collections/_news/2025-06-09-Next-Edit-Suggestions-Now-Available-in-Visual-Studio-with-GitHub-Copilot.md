@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Next Edit Suggestions Now Available in Visual Studio with GitHub Copilot"
-description: "Simona Liao introduces Next Edit Suggestions (NES) for Visual Studio 2022 17.14. NES leverages GitHub Copilot’s AI to predict and suggest logical code edits, enhancing code refactoring and maintenance beyond typical autocompletions. The article covers NES activation, workflow, and usage scenarios to streamline code editing in Visual Studio."
-author: "Simona Liao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: Next Edit Suggestions Now Available in Visual Studio with GitHub Copilot
+author: Simona Liao
+canonical_url: https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-09 15:00:39 +00:00
-permalink: "/2025-06-09-Next-Edit-Suggestions-Now-Available-in-Visual-Studio-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Code Editing", "Code Refactoring", "Coding", "Copilot", "Copilot Completions", "Developer Tools", "GitHub Copilot", "NES", "News", "Next Edit Suggestions", "Next Edits Suggestion", "Productivity", "Simona Liao", "VS"]
-tags_normalized: ["ai", "ai assisted coding", "code editing", "code refactoring", "coding", "copilot", "copilot completions", "developer tools", "github copilot", "nes", "news", "next edit suggestions", "next edits suggestion", "productivity", "simona liao", "vs"]
+permalink: /github-copilot/news/Next-Edit-Suggestions-Now-Available-in-Visual-Studio-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Coding
+- Code Editing
+- Code Refactoring
+- Coding
+- Copilot
+- Copilot Completions
+- Developer Tools
+- GitHub Copilot
+- NES
+- News
+- Next Edit Suggestions
+- Next Edits Suggestion
+- Productivity
+- Simona Liao
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Authored by Simona Liao, this article details the launch of Next Edit Suggestions in Visual Studio, an AI-powered Copilot feature that enhances code editing and refactoring workflows.<!--excerpt_end-->
 
 # Next Edit Suggestions Now Available in Visual Studio with GitHub Copilot

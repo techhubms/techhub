@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building Adaptive Multilingual Apps Using TypeScript and Azure AI Translator API"
-description: "This blog by Julia Muiruri explores the enhanced capabilities of the Azure AI Translator API's 2025-05-01-preview release, highlighting new Large Language Model (LLM) translation options in addition to traditional Neural Machine Translation (NMT). It details how TypeScript developers can implement tone and gender adaptation, hybrid translation flows, and adaptive customizations for better application localization and multilingual support. Practical migration steps, compliance considerations, and TypeScript code examples are provided."
-author: "Julia_Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Adaptive Multilingual Apps Using TypeScript and Azure AI Translator API
+author: Julia_Muiruri
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 14:45:00 +00:00
-permalink: "/2025-11-06-Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Version 05 01 Preview", "Azure", "Azure AI Foundry", "Azure AI Translator", "Brand Voice", "Coding", "Community", "Compliance", "Gender Specificity", "GPT 4o", "GPT 4o Mini", "Hybrid Translation", "Large Language Model", "LLM", "Localization", "Migration", "Multilingual Apps", "Neural Machine Translation", "NMT", "REST API", "Tone Adaptation", "Translation API", "TypeScript"]
-tags_normalized: ["ai", "api version 05 01 preview", "azure", "azure ai foundry", "azure ai translator", "brand voice", "coding", "community", "compliance", "gender specificity", "gpt 4o", "gpt 4o mini", "hybrid translation", "large language model", "llm", "localization", "migration", "multilingual apps", "neural machine translation", "nmt", "rest api", "tone adaptation", "translation api", "typescript"]
+permalink: /ai/community/Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API
+tags:
+- AI
+- API Version 05 01 Preview
+- Azure
+- Azure AI Foundry
+- Azure AI Translator
+- Brand Voice
+- Coding
+- Community
+- Compliance
+- Gender Specificity
+- GPT 4o
+- GPT 4o Mini
+- Hybrid Translation
+- Large Language Model
+- LLM
+- Localization
+- Migration
+- Multilingual Apps
+- Neural Machine Translation
+- NMT
+- REST API
+- Tone Adaptation
+- Translation API
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Julia Muiruri guides developers through leveraging the 2025-05-01-preview Azure AI Translator API in TypeScript applications, with a focus on adaptive translation, LLM integration, and migration best practices.<!--excerpt_end-->
 
 # Building Adaptive Multilingual Apps Using TypeScript and Azure AI Translator API

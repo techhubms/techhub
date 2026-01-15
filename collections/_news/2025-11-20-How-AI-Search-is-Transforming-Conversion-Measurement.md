@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How AI Search is Transforming Conversion Measurement"
-description: "This article provides a detailed exploration of how AI-powered search, particularly Microsoft Copilot and Bing, is revolutionizing the measurement of conversions for marketers and publishers. It highlights the shift from traditional click-based tracking to visibility and engagement signals such as impressions, citations, and session metrics. Supported by research, it discusses how structured content enhances AI citation opportunities and why tools like Bing Webmaster Tools and Microsoft Clarity are essential for tracking new forms of user engagement in the age of conversational AI search."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How AI Search is Transforming Conversion Measurement
+author: stclarke
+canonical_url: https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 18:05:30 +00:00
-permalink: "/2025-11-20-How-AI-Search-is-Transforming-Conversion-Measurement.html"
-categories: ["AI"]
-tags: ["AI", "AI Powered Experiences", "AI Search", "Bing", "Bing Webmaster Tools", "Citations", "Company News", "Conversion Tracking", "Copilot Sessions", "Engagement Signals", "Metrics", "Microsoft Clarity", "Microsoft Copilot", "News", "Schema Markup", "Structured Content", "User Intent", "Visibility Signals", "Zero Click Visibility"]
-tags_normalized: ["ai", "ai powered experiences", "ai search", "bing", "bing webmaster tools", "citations", "company news", "conversion tracking", "copilot sessions", "engagement signals", "metrics", "microsoft clarity", "microsoft copilot", "news", "schema markup", "structured content", "user intent", "visibility signals", "zero click visibility"]
+permalink: /ai/news/How-AI-Search-is-Transforming-Conversion-Measurement
+tags:
+- AI
+- AI Powered Experiences
+- AI Search
+- Bing
+- Bing Webmaster Tools
+- Citations
+- Company News
+- Conversion Tracking
+- Copilot Sessions
+- Engagement Signals
+- Metrics
+- Microsoft Clarity
+- Microsoft Copilot
+- News
+- Schema Markup
+- Structured Content
+- User Intent
+- Visibility Signals
+- Zero Click Visibility
+section_names:
+- ai
 ---
-
 Written by stclarke, this in-depth article outlines how Microsoft AI search tools and Copilot are shifting conversion measurement from traditional clicks to richer visibility and intent signals, offering actionable strategies for marketers and publishers.<!--excerpt_end-->
 
 # How AI Search is Transforming Conversion Measurement

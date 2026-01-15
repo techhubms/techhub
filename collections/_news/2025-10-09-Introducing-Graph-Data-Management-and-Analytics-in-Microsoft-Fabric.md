@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Introducing Graph Data Management and Analytics in Microsoft Fabric"
-description: "This announcement introduces Microsoft Fabric's new native graph data management, analytics, and visualization service. The service enables organizations to model complex relationships, perform multi-hop analytics without complex joins, and gain actionable insights. It supports business users, analysts, data engineers, and developers with tools for both no-code and advanced query experiences, all powered by Microsoft Fabric's scalable data infrastructure."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/graph-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Graph Data Management and Analytics in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/graph-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 08:00:00 +00:00
-permalink: "/2025-10-09-Introducing-Graph-Data-Management-and-Analytics-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Reasoning", "Azure", "Data Integration", "Data Modeling", "Data Visualization", "Enterprise Data", "Fraud Detection", "Generative AI", "GQL", "Graph Analytics", "Graph Databases", "Microsoft Fabric", "ML", "Multi Hop Queries", "News", "No Code Tools", "OneLake", "Real Time Analytics", "Relationship Data"]
-tags_normalized: ["ai", "ai reasoning", "azure", "data integration", "data modeling", "data visualization", "enterprise data", "fraud detection", "generative ai", "gql", "graph analytics", "graph databases", "microsoft fabric", "ml", "multi hop queries", "news", "no code tools", "onelake", "real time analytics", "relationship data"]
+permalink: /ai/news/Introducing-Graph-Data-Management-and-Analytics-in-Microsoft-Fabric
+tags:
+- AI
+- AI Reasoning
+- Azure
+- Data Integration
+- Data Modeling
+- Data Visualization
+- Enterprise Data
+- Fraud Detection
+- Generative AI
+- GQL
+- Graph Analytics
+- Graph Databases
+- Microsoft Fabric
+- ML
+- Multi Hop Queries
+- News
+- No Code Tools
+- OneLake
+- Real Time Analytics
+- Relationship Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces a new native graph data management and analytics service in Microsoft Fabric. This service empowers enterprises to harness relationship-rich insights, with features for business users, analysts, data engineers, and developers.<!--excerpt_end-->
 
 # Introducing Graph Data Management and Analytics in Microsoft Fabric

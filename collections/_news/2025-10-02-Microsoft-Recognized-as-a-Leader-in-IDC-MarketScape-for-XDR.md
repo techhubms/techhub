@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Recognized as a Leader in IDC MarketScape for XDR"
-description: "This news post examines Microsoft's recognition as a Leader in the IDC MarketScape for Worldwide Extended Detection and Response (XDR) Software for 2025. It explores Microsoft's integrated security solutions, AI innovation in cybersecurity, operational impact of Microsoft Defender XDR, and highlights from the IDC report, including the role of automation and analytics for modern security operations centers."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/02/microsoft-named-a-leader-in-the-idc-marketscape-for-xdr/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as a Leader in IDC MarketScape for XDR
+author: Rob Lefferts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/02/microsoft-named-a-leader-in-the-idc-marketscape-for-xdr/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-02 17:00:00 +00:00
-permalink: "/2025-10-02-Microsoft-Recognized-as-a-Leader-in-IDC-MarketScape-for-XDR.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI in Security", "Attack Disruption", "Automation", "Cybersecurity", "Exposure Management", "Extended Detection And Response", "IDC MarketScape", "Incident Response", "Kusto Query Language", "Microsoft Defender XDR", "Microsoft Security Copilot", "News", "Security", "Security Operations", "SIEM", "Threat Hunting", "XDR"]
-tags_normalized: ["ai", "ai in security", "attack disruption", "automation", "cybersecurity", "exposure management", "extended detection and response", "idc marketscape", "incident response", "kusto query language", "microsoft defender xdr", "microsoft security copilot", "news", "security", "security operations", "siem", "threat hunting", "xdr"]
+permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-IDC-MarketScape-for-XDR
+tags:
+- AI
+- AI in Security
+- Attack Disruption
+- Automation
+- Cybersecurity
+- Exposure Management
+- Extended Detection And Response
+- IDC MarketScape
+- Incident Response
+- Kusto Query Language
+- Microsoft Defender XDR
+- Microsoft Security Copilot
+- News
+- Security
+- Security Operations
+- SIEM
+- Threat Hunting
+- XDR
+section_names:
+- ai
+- security
 ---
-
 Rob Lefferts covers Microsoft's designation as a Leader in the IDC MarketScape for XDR, highlighting Defender XDR's AI-driven automation, unified security operations, and deep integration across Microsoft security tools.<!--excerpt_end-->
 
 # Microsoft Recognized as a Leader in IDC MarketScape for XDR

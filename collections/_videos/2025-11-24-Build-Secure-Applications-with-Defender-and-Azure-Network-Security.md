@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Build Secure Applications with Defender and Azure Network Security"
-description: "This session, led by Microsoft network security experts during Microsoft Ignite 2025, explores how to strengthen application security using Azure Network Security products and Microsoft Defender for Cloud. Key topics include defense-in-depth strategies, Azure Firewall, DDoS Protection, live demonstrations of threat mitigation, new feature announcements, and practical steps to increase security posture in cloud environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fjXZx1HrH2g"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Build Secure Applications with Defender and Azure Network Security
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fjXZx1HrH2g
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:38:59 +00:00
-permalink: "/2025-11-24-Build-Secure-Applications-with-Defender-and-Azure-Network-Security.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Logging", "Azure", "Azure Bastion", "Azure Firewall", "Azure Network Security", "Cloud Security", "DDoS Protection", "Defense in Depth", "Microsoft Defender For Cloud", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Security", "Security", "Security Posture", "Session Recording", "Videos", "Web Application Firewall", "Zero Trust Security"]
-tags_normalized: ["audit logging", "azure", "azure bastion", "azure firewall", "azure network security", "cloud security", "ddos protection", "defense in depth", "microsoft defender for cloud", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network security", "security", "security posture", "session recording", "videos", "web application firewall", "zero trust security"]
+permalink: /azure/videos/Build-Secure-Applications-with-Defender-and-Azure-Network-Security
+tags:
+- Audit Logging
+- Azure
+- Azure Bastion
+- Azure Firewall
+- Azure Network Security
+- Cloud Security
+- DDoS Protection
+- Defense in Depth
+- Microsoft Defender For Cloud
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Network Security
+- Security
+- Security Posture
+- Session Recording
+- Videos
+- Web Application Firewall
+- Zero Trust Security
+section_names:
+- azure
+- security
 ---
-
 Presented by Microsoft Events with speakers Gopal Shankar and Anupam Vij, this session demonstrates how to use Azure Network Security and Microsoft Defender for Cloud to build secure applications and defend against advanced cyber threats.<!--excerpt_end-->
 
 {% youtube fjXZx1HrH2g %}

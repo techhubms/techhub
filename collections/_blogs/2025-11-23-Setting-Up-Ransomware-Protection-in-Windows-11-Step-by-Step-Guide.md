@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Setting Up Ransomware Protection in Windows 11: Step-by-Step Guide"
-description: "This guide by John Edward explains how to enable and configure ransomware protection in Windows 11 using built-in security tools like Controlled Folder Access and OneDrive backup. It covers step-by-step instructions for turning on these features, customizing protected folders, allowing trusted apps, and shares best practices for safe computing."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/setting-up-ransomware-protection-in-windows-11-a-simple-and-complete-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Setting Up Ransomware Protection in Windows 11: Step-by-Step Guide'
+author: John Edward
+canonical_url: https://dellenny.com/setting-up-ransomware-protection-in-windows-11-a-simple-and-complete-guide/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-23 17:10:25 +00:00
-permalink: "/2025-11-23-Setting-Up-Ransomware-Protection-in-Windows-11-Step-by-Step-Guide.html"
-categories: ["Security"]
-tags: ["Blogs", "Cloud Backup", "Controlled Folder Access", "Cybersecurity", "File Recovery", "Malware Defense", "OneDrive", "Ransomware", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
-tags_normalized: ["blogs", "cloud backup", "controlled folder access", "cybersecurity", "file recovery", "malware defense", "onedrive", "ransomware", "ransomware protection", "security", "windows 11", "windows security"]
+permalink: /security/blogs/Setting-Up-Ransomware-Protection-in-Windows-11-Step-by-Step-Guide
+tags:
+- Blogs
+- Cloud Backup
+- Controlled Folder Access
+- Cybersecurity
+- File Recovery
+- Malware Defense
+- OneDrive
+- Ransomware
+- Ransomware Protection
+- Security
+- Windows 11
+- Windows Security
+section_names:
+- security
 ---
-
 John Edward presents a practical walkthrough for enabling ransomware protection on Windows 11, highlighting essential security settings and backup strategies to safeguard your files.<!--excerpt_end-->
 
 # Setting Up Ransomware Protection in Windows 11

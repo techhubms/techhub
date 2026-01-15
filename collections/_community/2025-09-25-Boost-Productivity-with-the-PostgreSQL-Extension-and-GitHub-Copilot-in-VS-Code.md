@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Boost Productivity with the PostgreSQL Extension and GitHub Copilot in VS Code"
-description: "This guide by TELAWRENCE details Microsoft's new PostgreSQL extension for Visual Studio Code, designed to streamline database development workflows. It covers installation steps, connection configurations (including Azure Database for PostgreSQL and Docker), Object Explorer features, interactive query editing with IntelliSense, and deep integration with GitHub Copilot for AI-powered SQL assistance, explanations, and optimizations. Developers can rapidly prototype, manage, and query PostgreSQL databases while leveraging Copilot’s intelligent chat and automation features. The article highlights improved productivity, secure authentication with Microsoft Entra ID, real-time performance analysis, and seamless integration for building intelligent and data-driven applications—all within the VS Code environment."
-author: "TELAWRENCE"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/talk-to-your-data-postgresql-gets-a-voice-in-vs-code/ba-p/4453695"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Boost Productivity with the PostgreSQL Extension and GitHub Copilot in VS Code
+author: TELAWRENCE
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/talk-to-your-data-postgresql-gets-a-voice-in-vs-code/ba-p/4453695
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 05:00:00 +00:00
-permalink: "/2025-09-25-Boost-Productivity-with-the-PostgreSQL-Extension-and-GitHub-Copilot-in-VS-Code.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "Azure", "Azure Database For PostgreSQL", "Coding", "Community", "Copilot Chat", "Database Development", "Developer Productivity", "Docker", "Extension Marketplace", "GitHub Copilot", "IntelliSense", "Microsoft Entra ID", "PostgreSQL", "Semantic Kernel", "SQL Optimization", "VS Code"]
-tags_normalized: ["ai", "azure", "azure database for postgresql", "coding", "community", "copilot chat", "database development", "developer productivity", "docker", "extension marketplace", "github copilot", "intellisense", "microsoft entra id", "postgresql", "semantic kernel", "sql optimization", "vs code"]
+permalink: /github-copilot/community/Boost-Productivity-with-the-PostgreSQL-Extension-and-GitHub-Copilot-in-VS-Code
+tags:
+- AI
+- Azure
+- Azure Database For PostgreSQL
+- Coding
+- Community
+- Copilot Chat
+- Database Development
+- Developer Productivity
+- Docker
+- Extension Marketplace
+- GitHub Copilot
+- IntelliSense
+- Microsoft Entra ID
+- PostgreSQL
+- Semantic Kernel
+- SQL Optimization
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 TELAWRENCE demonstrates how to supercharge PostgreSQL development inside Visual Studio Code using Microsoft’s new extension and GitHub Copilot AI. Learn how to set up, connect, and leverage intelligent features to streamline your workflow.<!--excerpt_end-->
 
 # Boost Productivity with the PostgreSQL Extension and GitHub Copilot in VS Code

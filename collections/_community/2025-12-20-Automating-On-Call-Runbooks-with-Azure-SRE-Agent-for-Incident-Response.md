@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Automating On-Call Runbooks with Azure SRE Agent for Incident Response"
-description: "This detailed community post by dchelupati explains how to leverage Azure SRE Agent and AI-driven runbook automation to streamline and enhance incident response for DevOps engineers and SREs. Learn how to set up an automated workflow, from creating the agent to integrating it with your incident management tools, and experience reduced MTTR, consistent execution, and better evidence collection for postmortems."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automating On-Call Runbooks with Azure SRE Agent for Incident Response
+author: dchelupati
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-20 15:52:24 +00:00
-permalink: "/2025-12-20-Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Application Insights", "Automated Diagnostics", "Az CLI", "Azure", "Azure App Service", "Azure Container Apps", "Azure Monitor", "Azure SRE Agent", "Cloud Operations", "Community", "DevOps", "Email Integration", "Incident Response", "KQL", "Log Analytics", "PagerDuty", "Runbook Automation", "Runbooks", "ServiceNow", "SRE"]
-tags_normalized: ["ai", "application insights", "automated diagnostics", "az cli", "azure", "azure app service", "azure container apps", "azure monitor", "azure sre agent", "cloud operations", "community", "devops", "email integration", "incident response", "kql", "log analytics", "pagerduty", "runbook automation", "runbooks", "servicenow", "sre"]
+permalink: /ai/community/Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response
+tags:
+- AI
+- Application Insights
+- Automated Diagnostics
+- Az CLI
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Operations
+- Community
+- DevOps
+- Email Integration
+- Incident Response
+- KQL
+- Log Analytics
+- PagerDuty
+- Runbook Automation
+- Runbooks
+- ServiceNow
+- SRE
+section_names:
+- ai
+- azure
+- devops
 ---
-
 In this post, dchelupati details how Azure SRE Agent can automate the tedious on-call runbook execution process for DevOps and SRE teams, enabling faster, more reliable incident diagnostics.<!--excerpt_end-->
 
 # Automating On-Call Runbooks with Azure SRE Agent for Incident Response

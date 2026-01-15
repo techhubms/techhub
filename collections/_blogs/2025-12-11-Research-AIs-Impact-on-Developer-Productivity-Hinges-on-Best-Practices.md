@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Research: AI's Impact on Developer Productivity Hinges on Best Practices"
-description: "This article examines recent research into the effect of generative AI on software development productivity and quality. Drawing from data by Atlassian’s DX, Google DORA, and LaunchDarkly, it highlights that while AI can automate code writing and boost productivity, the outcome strongly depends on pre-existing development practices such as code hygiene and psychological safety within teams. The article notes that time savings from AI vary by programming language and developer seniority, and outlines the most frequent use cases for AI in development environments."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+author: Tim Anderson
+canonical_url: https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2025-12-11 11:32:34 +00:00
-permalink: "/2025-12-11-Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices.html"
-categories: ["AI"]
-tags: ["AI", "AI Assisted Coding", "AI/ML", "Atlassian", "Atlassian DX", "Blogs", "Code Hygiene", "Code Quality", "Developer Productivity", "Developer Research", "Development", "Generative AI", "Google DORA", "LaunchDarkly", "Programming Languages", "Pull Requests", "Software Development Lifecycle", "Stack Trace Analysis", "Team Dynamics"]
-tags_normalized: ["ai", "ai assisted coding", "aislashml", "atlassian", "atlassian dx", "blogs", "code hygiene", "code quality", "developer productivity", "developer research", "development", "generative ai", "google dora", "launchdarkly", "programming languages", "pull requests", "software development lifecycle", "stack trace analysis", "team dynamics"]
+permalink: /ai/blogs/Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices
+tags:
+- AI
+- AI Assisted Coding
+- AI/ML
+- Atlassian
+- Atlassian DX
+- Blogs
+- Code Hygiene
+- Code Quality
+- Developer Productivity
+- Developer Research
+- Development
+- Generative AI
+- Google DORA
+- LaunchDarkly
+- Programming Languages
+- Pull Requests
+- Software Development Lifecycle
+- Stack Trace Analysis
+- Team Dynamics
+section_names:
+- ai
 ---
-
 Tim Anderson reviews research on how generative AI affects software development, revealing that longstanding best practices play a bigger role in success than the specific AI tools themselves.<!--excerpt_end-->
 
 # Research: AI's Impact on Developer Productivity Hinges on Best Practices

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Microsoft Previews MCP Tool for SQL Server: Enhancing AI-Driven Database Interaction"
-description: "This article examines Microsoft's preview release of an MCP (Model Context Protocol) tool for SQL Server, designed to interface with AI agents like GitHub Copilot. Implemented for both Node.js and .NET, the review covers installation, supported features, integration with Azure SQL, and practical limitations. It also discusses the opportunity and frustrations of natural language-based data interaction for developers and non-experts alike."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: 'Microsoft Previews MCP Tool for SQL Server: Enhancing AI-Driven Database Interaction'
+author: Tim Anderson
+canonical_url: https://devclass.com/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2025-07-02 16:00:20 +00:00
-permalink: "/2025-07-02-Microsoft-Previews-MCP-Tool-for-SQL-Server-Enhancing-AI-Driven-Database-Interaction.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Agents", "AI/ML", "Azure", "Azure SQL", "Blogs", "Claude Desktop", "Cloud Data", "Coding", "Database Automation", "Database Development", "Databases", "Development", "Entra ID", "Gemini CLI", "Mcp", "Microsoft", "Mysql", "Natural Language Database", "Node.js", "Open Source", "Postgresql", "Schema Management", "SQL AI", "SQL Server", "SQL Tools"]
-tags_normalized: ["dotnet", "ai", "ai agents", "aislashml", "azure", "azure sql", "blogs", "claude desktop", "cloud data", "coding", "database automation", "database development", "databases", "development", "entra id", "gemini cli", "mcp", "microsoft", "mysql", "natural language database", "nodedotjs", "open source", "postgresql", "schema management", "sql ai", "sql server", "sql tools"]
+permalink: /ai/blogs/Microsoft-Previews-MCP-Tool-for-SQL-Server-Enhancing-AI-Driven-Database-Interaction
+tags:
+- .NET
+- AI
+- AI Agents
+- AI/ML
+- Azure
+- Azure SQL
+- Blogs
+- Claude Desktop
+- Cloud Data
+- Coding
+- Database Automation
+- Database Development
+- Databases
+- Development
+- Entra ID
+- Gemini CLI
+- Mcp
+- Microsoft
+- Mysql
+- Natural Language Database
+- Node.js
+- Open Source
+- Postgresql
+- Schema Management
+- SQL AI
+- SQL Server
+- SQL Tools
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Tim Anderson analyzes Microsoft's MCP tool for SQL Server, highlighting its AI-powered capabilities, practical frustrations, and integration with Node.js, .NET, and Azure SQL for developers.<!--excerpt_end-->
 
 # Microsoft Previews MCP Tool for SQL Server: Enhancing AI-Driven Database Interaction

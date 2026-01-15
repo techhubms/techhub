@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "On-Premises Data Gateway October 2025 Release Overview"
-description: "This news provides details about the October 2025 release of the on-premises data gateway (version 3000.290), including bug fixes, compatibility updates with Power BI Desktop, and download links for both standard and personal modes. The update ensures consistent query execution between Power BI Desktop and the data gateway, benefiting report publishing and data refresh operations. Key technical fixes address proxy configuration persistence for the FabricPipelineWorker service."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: On-Premises Data Gateway October 2025 Release Overview
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-30 11:21:57 +00:00
-permalink: "/2025-10-30-On-Premises-Data-Gateway-October-2025-Release-Overview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Bug Fix", "Connector Compatibility", "Data Connectivity", "Data Gateway Update", "Data Integration", "Data Refresh", "Enterprise BI", "FabricPipelineWorker", "Gateway Version 3000.290", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Release October"]
-tags_normalized: ["azure", "bug fix", "connector compatibility", "data connectivity", "data gateway update", "data integration", "data refresh", "enterprise bi", "fabricpipelineworker", "gateway version 3000dot290", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "release october"]
+permalink: /ml/news/On-Premises-Data-Gateway-October-2025-Release-Overview
+tags:
+- Azure
+- Bug Fix
+- Connector Compatibility
+- Data Connectivity
+- Data Gateway Update
+- Data Integration
+- Data Refresh
+- Enterprise BI
+- FabricPipelineWorker
+- Gateway Version 3000.290
+- Microsoft Fabric
+- ML
+- News
+- On Premises Data Gateway
+- Power BI
+- Power BI Desktop
+- Release October
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog shares technical updates and bug fixes for the October 2025 release of the on-premises data gateway, detailing new compatibility and data integration features.<!--excerpt_end-->
 
 # On-Premises Data Gateway October 2025 Release Overview

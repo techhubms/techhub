@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Integrating Azure AI Foundry Models with GitHub Copilot via AI Toolkit"
-description: "This video walkthrough demonstrates how to connect GitHub Copilot to Azure AI Foundry models using the AI Toolkit. Presented by April Gittens, it covers the entire process: creating an Azure AI Foundry project, installing the AI Toolkit extension in Visual Studio Code, signing into Azure, configuring your project, deploying models, and connecting both cloud and local models to GitHub Copilot. The tutorial targets developers aiming to enhance Copilot’s capabilities with custom or enterprise-grade language models hosted on Azure."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=k8TjuskSeEw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Integrating Azure AI Foundry Models with GitHub Copilot via AI Toolkit
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=k8TjuskSeEw
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-18 23:01:00 +00:00
-permalink: "/2025-09-18-Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Toolkit", "Aitoolkit", "Azure", "Azure AI Foundry", "Cloud AI", "Code", "Coding", "Copilot Custom Models", "Demo", "Developer", "Developer Tools", "Extension", "Foundry Local Models", "GitHub Copilot", "Microsoft", "Model Deployment", "Project Setup", "Sign in Azure", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai toolkit", "aitoolkit", "azure", "azure ai foundry", "cloud ai", "code", "coding", "copilot custom models", "demo", "developer", "developer tools", "extension", "foundry local models", "github copilot", "microsoft", "model deployment", "project setup", "sign in azure", "software developer", "videos", "vs code"]
+permalink: /github-copilot/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit
+tags:
+- AI
+- AI Toolkit
+- Aitoolkit
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Code
+- Coding
+- Copilot Custom Models
+- Demo
+- Developer
+- Developer Tools
+- Extension
+- Foundry Local Models
+- GitHub Copilot
+- Microsoft
+- Model Deployment
+- Project Setup
+- Sign in Azure
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Visual Studio Code, with presenter April Gittens, demonstrates how to use the AI Toolkit to connect GitHub Copilot with Azure AI Foundry models, covering project creation, model deployment, and developer workflow enhancements.<!--excerpt_end-->
 
 {% youtube k8TjuskSeEw %}

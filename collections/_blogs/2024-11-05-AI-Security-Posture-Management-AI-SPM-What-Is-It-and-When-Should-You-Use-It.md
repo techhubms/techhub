@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI Security Posture Management (AI-SPM): What Is It and When Should You Use It?"
-description: "Kim Grönberg explains the concept of AI Security Posture Management (AI-SPM), how it extends traditional Cloud Security Posture Management (CSPM) to AI services, key scenarios for its use, differences between AI-SPM and CSPM, and Microsoft's approach to implementing AI-SPM within Defender for Cloud."
-author: "Kim Grönberg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/ai-security-posture-management-what-it-is/"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
+﻿---
+layout: post
+title: 'AI Security Posture Management (AI-SPM): What Is It and When Should You Use It?'
+author: Kim Grönberg
+canonical_url: https://zure.com/blog/ai-security-posture-management-what-it-is/
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-05 07:14:57 +00:00
-permalink: "/2024-11-05-AI-Security-Posture-Management-AI-SPM-What-Is-It-and-When-Should-You-Use-It.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Model Security", "AI Risk Management", "AI Security Posture Management", "AI SPM", "AI Vulnerabilities", "Blogs", "Cloud Security", "Compliance", "CSPM", "Data & AI", "Data Security", "GenAI Security", "Microsoft Defender For Cloud", "Security", "Security Monitoring", "Security Posture", "Shadow AI"]
-tags_normalized: ["ai", "ai model security", "ai risk management", "ai security posture management", "ai spm", "ai vulnerabilities", "blogs", "cloud security", "compliance", "cspm", "data and ai", "data security", "genai security", "microsoft defender for cloud", "security", "security monitoring", "security posture", "shadow ai"]
+permalink: /ai/blogs/AI-Security-Posture-Management-AI-SPM-What-Is-It-and-When-Should-You-Use-It
+tags:
+- AI
+- AI Model Security
+- AI Risk Management
+- AI Security Posture Management
+- AI SPM
+- AI Vulnerabilities
+- Blogs
+- Cloud Security
+- Compliance
+- CSPM
+- Data & AI
+- Data Security
+- GenAI Security
+- Microsoft Defender For Cloud
+- Security
+- Security Monitoring
+- Security Posture
+- Shadow AI
+section_names:
+- ai
+- security
 ---
-
 In this post, Kim Grönberg discusses the fundamentals of AI Security Posture Management (AI-SPM), how it compares with traditional CSPM solutions, its use cases, and why organizations should consider adopting it, especially as Microsoft prepares to release AI-SPM features.<!--excerpt_end-->
 
 # AI Security Posture Management (AI-SPM): What Is It All About and Considerations for It

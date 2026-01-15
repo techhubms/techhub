@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Empowering Healthcare Through Scalable AI for Trusted Partners"
-description: "This session from Microsoft Ignite 2025 highlights how Microsoft partners can leverage agentic AI, data, and platform innovations to deliver scalable, intelligent solutions in healthcare. The presentation covers Microsoft's investments in responsible AI, specialized healthcare solutions, partner programs, and marketplace unification. Attendees gain insights into generative and ambient AI in healthcare, Dragon Copilot expansion, and opportunities for partners to extend workflows and build specialized clinical applications. The content is targeted at technology partners seeking to enhance healthcare outcomes through Microsoft’s AI ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=F4Alob9iYnQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Empowering Healthcare Through Scalable AI for Trusted Partners
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=F4Alob9iYnQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:04:53 +00:00
-permalink: "/2025-11-21-Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI in Healthcare", "Ambient AI", "Azure", "Clinical Applications", "Data Platforms", "Dragon Copilot", "Generative AI", "Healthcare Solutions", "ISV", "Marketplace", "Microsoft AI Cloud Partner Program", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Ecosystem", "Responsible AI", "Videos", "Workflow Migration"]
-tags_normalized: ["agentic ai", "ai", "ai in healthcare", "ambient ai", "azure", "clinical applications", "data platforms", "dragon copilot", "generative ai", "healthcare solutions", "isv", "marketplace", "microsoft ai cloud partner program", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner ecosystem", "responsible ai", "videos", "workflow migration"]
+permalink: /ai/videos/Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners
+tags:
+- Agentic AI
+- AI
+- AI in Healthcare
+- Ambient AI
+- Azure
+- Clinical Applications
+- Data Platforms
+- Dragon Copilot
+- Generative AI
+- Healthcare Solutions
+- ISV
+- Marketplace
+- Microsoft AI Cloud Partner Program
+- Microsoft Azure
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Ecosystem
+- Responsible AI
+- Videos
+- Workflow Migration
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an Ignite 2025 session where Cornelis Hertogh and Feliz Fuentes Montpellier discuss how technology partners can drive healthcare innovation through Microsoft's scalable AI and platform initiatives.<!--excerpt_end-->
 
 {% youtube F4Alob9iYnQ %}

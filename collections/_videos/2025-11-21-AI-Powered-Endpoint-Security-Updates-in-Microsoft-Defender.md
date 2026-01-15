@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "AI-Powered Endpoint Security Updates in Microsoft Defender"
-description: "This session from Microsoft Ignite 2025 explores the latest advancements in Microsoft Defender's endpoint security, emphasizing AI-driven approaches to threat detection, autonomous protection, and comprehensive device coverage. It covers expanded support for older Windows platforms, proactive enforcement mechanisms, real-world security effectiveness, demos of predictive shielding, and contextual incident analytics."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5FvIbLwRqzg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Powered Endpoint Security Updates in Microsoft Defender
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=5FvIbLwRqzg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:28:56 +00:00
-permalink: "/2025-11-21-AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Autonomous Protection", "Device Protection", "Endpoint Security", "Incident Analytics", "Microsoft Defender", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Predictive Shielding", "Real Time Protection", "SecOps", "Security", "Security Demo", "Server R2", "Threat Detection", "Threat Landscape", "Videos", "Windows 7 Support"]
-tags_normalized: ["ai", "ai security", "autonomous protection", "device protection", "endpoint security", "incident analytics", "microsoft defender", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "predictive shielding", "real time protection", "secops", "security", "security demo", "server r2", "threat detection", "threat landscape", "videos", "windows 7 support"]
+permalink: /ai/videos/AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender
+tags:
+- AI
+- AI Security
+- Autonomous Protection
+- Device Protection
+- Endpoint Security
+- Incident Analytics
+- Microsoft Defender
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Predictive Shielding
+- Real Time Protection
+- SecOps
+- Security
+- Security Demo
+- Server R2
+- Threat Detection
+- Threat Landscape
+- Videos
+- Windows 7 Support
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events present insights into AI-powered endpoint security with Defender, featuring Dana Bargury Shina and Kim Kischel at Ignite 2025. This session highlights new AI capabilities in security and threat protection.<!--excerpt_end-->
 
 {% youtube 5FvIbLwRqzg %}

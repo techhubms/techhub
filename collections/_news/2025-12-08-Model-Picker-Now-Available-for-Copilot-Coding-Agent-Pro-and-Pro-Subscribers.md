@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Model Picker Now Available for Copilot Coding Agent (Pro and Pro+ Subscribers)"
-description: "This update highlights the new model selection capability in GitHub Copilot coding agent for Copilot Pro and Pro+ subscribers. Developers can now choose between multiple AI models—including OpenAI and Anthropic options—when using the Copilot coding agent via GitHub and related integrations. The new picker is designed to optimize coding workflow flexibility and performance, with additional integration support planned."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-08-model-picker-for-copilot-coding-agent-for-copilot-pro-and-pro-subscribers"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Model Picker Now Available for Copilot Coding Agent (Pro and Pro+ Subscribers)
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-08-model-picker-for-copilot-coding-agent-for-copilot-pro-and-pro-subscribers
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-08 08:56:18 +00:00
-permalink: "/2025-12-08-Model-Picker-Now-Available-for-Copilot-Coding-Agent-Pro-and-Pro-Subscribers.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Models", "Anthropic Claude Opus", "Anthropic Claude Sonnet", "Copilot", "Copilot Coding Agent", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub Copilot", "GitHub Mobile", "Model Selection", "News", "OpenAI GPT 5.1 Codex Max", "Product Update", "Visual Studio Code Integration"]
-tags_normalized: ["ai", "ai development", "ai models", "anthropic claude opus", "anthropic claude sonnet", "copilot", "copilot coding agent", "copilot pro", "copilot proplus", "developer tools", "github copilot", "github mobile", "model selection", "news", "openai gpt 5dot1 codex max", "product update", "visual studio code integration"]
+permalink: /github-copilot/news/Model-Picker-Now-Available-for-Copilot-Coding-Agent-Pro-and-Pro-Subscribers
+tags:
+- AI
+- AI Development
+- AI Models
+- Anthropic Claude Opus
+- Anthropic Claude Sonnet
+- Copilot
+- Copilot Coding Agent
+- Copilot Pro
+- Copilot Pro+
+- Developer Tools
+- GitHub Copilot
+- GitHub Mobile
+- Model Selection
+- News
+- OpenAI GPT 5.1 Codex Max
+- Product Update
+- Visual Studio Code Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the new model picker for GitHub Copilot coding agent, available to Copilot Pro and Pro+ subscribers, enabling flexible selection between multiple advanced AI models.<!--excerpt_end-->
 
 # Model Picker Now Available for Copilot Coding Agent (Pro and Pro+ Subscribers)

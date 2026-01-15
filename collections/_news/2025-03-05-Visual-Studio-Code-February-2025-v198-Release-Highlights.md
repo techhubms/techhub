@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Visual Studio Code February 2025 (v1.98) Release Highlights"
-description: "The February 2025 (1.98) update to Visual Studio Code brings significant improvements focused on developer productivity and AI-powered workflows. Major advancements include enhanced GitHub Copilot features, expanded agent mode, notebook editing, terminal IntelliSense, TypeScript 5.8 integration, and a smoother authentication experience. The release also delivers UI refinements, accessibility improvements, and a wide range of bug fixes and enhancements for core VS Code workflows. This update enables deeper, more intelligent code assistance and streamlines daily development tasks."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_98"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Visual Studio Code February 2025 (v1.98) Release Highlights
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_98
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-03-05 17:00:00 +00:00
-permalink: "/2025-03-05-Visual-Studio-Code-February-2025-v198-Release-Highlights.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "Authentication", "Claude 3.7 Sonnet", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edits", "DevOps", "GitHub Copilot", "GPT 4.5", "News", "Notebook Editing", "Python", "Release Notes", "Remote Development", "Terminal IntelliSense", "TypeScript 5.8", "V1.98", "VS Code"]
-tags_normalized: ["accessibility", "ai", "authentication", "claude 3dot7 sonnet", "coding", "copilot agent mode", "copilot chat", "copilot edits", "devops", "github copilot", "gpt 4dot5", "news", "notebook editing", "python", "release notes", "remote development", "terminal intellisense", "typescript 5dot8", "v1dot98", "vs code"]
+permalink: /github-copilot/news/Visual-Studio-Code-February-2025-v198-Release-Highlights
+tags:
+- Accessibility
+- AI
+- Authentication
+- Claude 3.7 Sonnet
+- Coding
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Edits
+- DevOps
+- GitHub Copilot
+- GPT 4.5
+- News
+- Notebook Editing
+- Python
+- Release Notes
+- Remote Development
+- Terminal IntelliSense
+- TypeScript 5.8
+- V1.98
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team delivers the February 2025 (v1.98) release with major updates by introducing advanced GitHub Copilot features, new AI-driven workflows, and core improvements, enhancing developer productivity and coding experience.<!--excerpt_end-->
 
 # Visual Studio Code February 2025 (v1.98) Release Highlights

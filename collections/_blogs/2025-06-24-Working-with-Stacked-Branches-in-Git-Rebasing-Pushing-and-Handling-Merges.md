@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Working with Stacked Branches in Git: Rebasing, Pushing, and Handling Merges"
-description: "Andrew Lock explains advanced workflows when working with stacked branches in Git, focusing on how to rebase after changes to 'main', push rebased stacks efficiently, and handle stack rebases after merging. The post provides practical commands, tips on --update-refs, and solutions for common challenges."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/working-with-stacked-branches-in-git-part-2/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Working with Stacked Branches in Git: Rebasing, Pushing, and Handling Merges'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-2/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-24 09:00:00 +00:00
-permalink: "/2025-06-24-Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges.html"
-categories: ["DevOps"]
-tags: ["Blogs", "Branch Management", "Continuous Integration", "DevOps", "Feature Branches", "Git", "Git Alias", "Merge Conflicts", "PR Workflow", "Push Stack", "Rebase", "Stacked Branches", "Update Refs"]
-tags_normalized: ["blogs", "branch management", "continuous integration", "devops", "feature branches", "git", "git alias", "merge conflicts", "pr workflow", "push stack", "rebase", "stacked branches", "update refs"]
+permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges
+tags:
+- Blogs
+- Branch Management
+- Continuous Integration
+- DevOps
+- Feature Branches
+- Git
+- Git Alias
+- Merge Conflicts
+- PR Workflow
+- Push Stack
+- Rebase
+- Stacked Branches
+- Update Refs
+section_names:
+- devops
 ---
-
 In this detailed post, Andrew Lock discusses workflows for managing stacked branches in Git. He provides advanced advice on rebasing, merging, and pushing branch stacks to streamline feature development and improve code review processes.<!--excerpt_end-->
 
 ## Working with Stacked Branches in Git: Advanced Scenarios

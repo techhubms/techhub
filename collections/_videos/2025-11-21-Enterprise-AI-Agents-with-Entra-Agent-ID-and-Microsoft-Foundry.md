@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enterprise AI Agents with Entra Agent ID and Microsoft Foundry"
-description: "This session from Microsoft Ignite 2025 explores how organizations can securely deploy, manage, and scale enterprise AI agents using Microsoft Foundry and Entra Agent ID. The talk covers identity management, networking, tool integration, and comprehensive lifecycle governance, offering real-world guidance for technical teams looking to roll out advanced AI agent architectures at scale."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YE9KxGPV0ic"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Enterprise AI Agents with Entra Agent ID and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=YE9KxGPV0ic
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:25:11 +00:00
-permalink: "/2025-11-21-Enterprise-AI-Agents-with-Entra-Agent-ID-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Lifecycle", "AI", "AI Agents", "Azure", "Compliance", "Control Plane", "Enterprise AI", "Entra Agent ID", "Governance", "Identity Management", "InnovatewithAzureAIappsandagents", "Microsoft Entra ID", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Networking", "Security", "Tenant Management", "Tool Integration", "Videos"]
-tags_normalized: ["agent lifecycle", "ai", "ai agents", "azure", "compliance", "control plane", "enterprise ai", "entra agent id", "governance", "identity management", "innovatewithazureaiappsandagents", "microsoft entra id", "microsoft foundry", "microsoft ignite", "msignite", "networking", "security", "tenant management", "tool integration", "videos"]
+permalink: /ai/videos/Enterprise-AI-Agents-with-Entra-Agent-ID-and-Microsoft-Foundry
+tags:
+- Agent Lifecycle
+- AI
+- AI Agents
+- Azure
+- Compliance
+- Control Plane
+- Enterprise AI
+- Entra Agent ID
+- Governance
+- Identity Management
+- InnovatewithAzureAIappsandagents
+- Microsoft Entra ID
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Networking
+- Security
+- Tenant Management
+- Tool Integration
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a deep dive into how Commerzbank and other enterprises leverage Entra Agent ID and Microsoft Foundry to deploy secure, scalable AI agents. Speakers cover key topics like agent identity, networking, and lifecycle management.<!--excerpt_end-->
 
 {% youtube YE9KxGPV0ic %}

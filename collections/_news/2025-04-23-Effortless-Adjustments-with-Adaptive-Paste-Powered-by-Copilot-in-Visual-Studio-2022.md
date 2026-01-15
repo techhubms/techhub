@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Effortless Adjustments with Adaptive Paste Powered by Copilot in Visual Studio 2022"
-description: "Visual Studio 2022 introduces 'adaptive paste', a new Copilot-powered feature that streamlines code modifications after pasting. This capability intelligently adapts pasted code to your current project's context, correcting styling, errors, and even implementing missing code patterns for faster, less tedious coding."
-author: "Leah Tran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/effortless-adjustments-with-an-adaptive-paste/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: Effortless Adjustments with Adaptive Paste Powered by Copilot in Visual Studio 2022
+author: Leah Tran
+canonical_url: https://devblogs.microsoft.com/visualstudio/effortless-adjustments-with-an-adaptive-paste/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-04-23 14:51:46 +00:00
-permalink: "/2025-04-23-Effortless-Adjustments-with-Adaptive-Paste-Powered-by-Copilot-in-Visual-Studio-2022.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Adaptive Paste", "AI", "Code Adaptation", "Code Modification", "Coding", "Copilot", "Developer Productivity", "Editor Features", "GitHub Copilot", "Interface Implementation", "News", "Productivity", "Software Development", "VS", "Workflow Efficiency"]
-tags_normalized: ["adaptive paste", "ai", "code adaptation", "code modification", "coding", "copilot", "developer productivity", "editor features", "github copilot", "interface implementation", "news", "productivity", "software development", "vs", "workflow efficiency"]
+permalink: /github-copilot/news/Effortless-Adjustments-with-Adaptive-Paste-Powered-by-Copilot-in-Visual-Studio-2022
+tags:
+- Adaptive Paste
+- AI
+- Code Adaptation
+- Code Modification
+- Coding
+- Copilot
+- Developer Productivity
+- Editor Features
+- GitHub Copilot
+- Interface Implementation
+- News
+- Productivity
+- Software Development
+- VS
+- Workflow Efficiency
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Leah Tran details how Visual Studio 2022’s new Copilot-powered 'adaptive paste' feature reduces manual code adjustments, helping developers integrate and modify pasted code more efficiently.<!--excerpt_end-->
 
 ## Effortless Adjustments with Adaptive Paste in Visual Studio 2022

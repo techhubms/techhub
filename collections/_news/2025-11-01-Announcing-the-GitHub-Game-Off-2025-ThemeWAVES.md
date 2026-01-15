@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Announcing the GitHub Game Off 2025: Theme—WAVES"
-description: "GitHub Game Off 2025 invites developers of all skill levels to participate in a month-long game jam centered around the theme 'WAVES.' The event encourages creative interpretations, provides inspiration, and supports participants with tips, technical resources, and a welcoming community. Join solo or with a team, use any programming language or game engine, and leverage version control on GitHub. Submissions will be open from November through December, with judging based on gameplay, innovation, and more."
-author: "Lee Reilly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/company/github-game-off-2025-theme-announcement/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Announcing the GitHub Game Off 2025: Theme—WAVES'
+author: Lee Reilly
+canonical_url: https://github.blog/company/github-game-off-2025-theme-announcement/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-01 20:37:00 +00:00
-permalink: "/2025-11-01-Announcing-the-GitHub-Game-Off-2025-ThemeWAVES.html"
-categories: ["Coding", "DevOps"]
-tags: ["C#", "Coding", "Company", "Competition", "DevOps", "Game Development", "Game Engines", "Game Jam", "GitHub", "GitHub Game Off", "Godot", "JavaScript", "News", "Open Source", "Phaser", "Programming", "Pygame", "Python", "Unity", "Unreal Engine", "Version Control", "WAVES"]
-tags_normalized: ["csharp", "coding", "company", "competition", "devops", "game development", "game engines", "game jam", "github", "github game off", "godot", "javascript", "news", "open source", "phaser", "programming", "pygame", "python", "unity", "unreal engine", "version control", "waves"]
+permalink: /coding/news/Announcing-the-GitHub-Game-Off-2025-ThemeWAVES
+tags:
+- C#
+- Coding
+- Company
+- Competition
+- DevOps
+- Game Development
+- Game Engines
+- Game Jam
+- GitHub
+- GitHub Game Off
+- Godot
+- JavaScript
+- News
+- Open Source
+- Phaser
+- Programming
+- Pygame
+- Python
+- Unity
+- Unreal Engine
+- Version Control
+- WAVES
+section_names:
+- coding
+- devops
 ---
-
 Lee Reilly announces the theme WAVES for the GitHub Game Off 2025, outlining how developers can join, create games, and celebrate creativity with the global GitHub community.<!--excerpt_end-->
 
 # GitHub Game Off 2025: Theme Announcement — WAVES

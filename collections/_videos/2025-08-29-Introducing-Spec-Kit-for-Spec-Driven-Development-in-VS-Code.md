@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Introducing Spec Kit for Spec-Driven Development in VS Code"
-description: "This episode introduces Spec Kit, a new open-source project from GitHub that enables Spec-Driven Development. Den Delimarsky and hosts demonstrate how executable specifications can drive implementation using Spec Kit, and how it integrates with AI tools like GitHub Copilot, reimagining coding workflows in Visual Studio Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DTw9X7MtU5s"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Introducing Spec Kit for Spec-Driven Development in VS Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=DTw9X7MtU5s
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-29 19:51:24 +00:00
-permalink: "/2025-08-29-Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automation", "Code", "Code Generation", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "Executable Specifications", "GitHub", "GitHub Copilot", "Live Coding", "Microsoft", "Open Source", "Software Developer", "Software Development", "Spec Driven Development", "Spec Kit", "Specdrivendevelopement", "Specification Driven", "Speckit", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "automation", "code", "code generation", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "executable specifications", "github", "github copilot", "live coding", "microsoft", "open source", "software developer", "software development", "spec driven development", "spec kit", "specdrivendevelopement", "specification driven", "speckit", "videos", "vs code"]
+permalink: /github-copilot/videos/Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code
+tags:
+- AI
+- AI Tools
+- Automation
+- Code
+- Code Generation
+- Coding
+- Copilot
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Executable Specifications
+- GitHub
+- GitHub Copilot
+- Live Coding
+- Microsoft
+- Open Source
+- Software Developer
+- Software Development
+- Spec Driven Development
+- Spec Kit
+- Specdrivendevelopement
+- Specification Driven
+- Speckit
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's team, featuring Den Delimarsky, guides viewers through using the Spec Kit project for Spec-Driven Development. The episode explores how executable specifications and AI tools like GitHub Copilot can transform software development workflows.<!--excerpt_end-->
 
 {% youtube DTw9X7MtU5s %}

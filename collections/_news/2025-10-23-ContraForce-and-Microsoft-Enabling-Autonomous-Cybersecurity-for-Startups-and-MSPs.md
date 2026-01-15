@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "ContraForce and Microsoft: Enabling Autonomous Cybersecurity for Startups and MSPs"
-description: "This article explores how ContraForce—a Microsoft Pegasus Program startup—is transforming security operations for managed service providers using automation, AI agents, and deep integration with Microsoft security products like Sentinel, Defender XDR, and Entra ID. By leveraging the Microsoft AI Co-Innovation Lab and Azure AI Foundry, ContraForce empowers MSPs to offer enterprise-grade security services at scale, significantly reducing incident costs and response times. The collaboration with Microsoft for Startups has accelerated ContraForce’s growth and ecosystem integration, setting the stage for a secure and scalable future for businesses of all sizes."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'ContraForce and Microsoft: Enabling Autonomous Cybersecurity for Startups and MSPs'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-23 13:46:00 +00:00
-permalink: "/2025-10-23-ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agents", "Automation", "Azure", "Azure AI Foundry", "Azure Security", "Company News", "ContraForce", "Cybersecurity Automation", "Incident Response", "Managed Service Providers", "Microsoft Defender XDR", "Microsoft Entra ID", "Microsoft For Startups", "Microsoft Sentinel", "News", "Pegasus Program", "Security", "Security Operations", "SIEM", "XDR"]
-tags_normalized: ["ai", "ai agents", "automation", "azure", "azure ai foundry", "azure security", "company news", "contraforce", "cybersecurity automation", "incident response", "managed service providers", "microsoft defender xdr", "microsoft entra id", "microsoft for startups", "microsoft sentinel", "news", "pegasus program", "security", "security operations", "siem", "xdr"]
+permalink: /ai/news/ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs
+tags:
+- AI
+- AI Agents
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure Security
+- Company News
+- ContraForce
+- Cybersecurity Automation
+- Incident Response
+- Managed Service Providers
+- Microsoft Defender XDR
+- Microsoft Entra ID
+- Microsoft For Startups
+- Microsoft Sentinel
+- News
+- Pegasus Program
+- Security
+- Security Operations
+- SIEM
+- XDR
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke provides a deep dive into ContraForce’s journey as a Microsoft startup, highlighting their use of AI-driven automation and Microsoft security integrations to empower managed service providers to combat cybercrime more effectively.<!--excerpt_end-->
 
 # ContraForce and Microsoft: Enabling Autonomous Cybersecurity for Startups and MSPs

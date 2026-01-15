@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage"
-description: "This post provides an in-depth overview of GitHub Universe 2025, highlighting key announcements around agentic workflows, GitHub Copilot advancements, and deep Azure integration. It details Microsoft's new tools and infrastructure supporting AI-assisted development, including the launch of Azure MCP Server, Visual Studio Code agent development features, and a broader vision for agent-driven software engineering. Record growth metrics, ecosystem trends, and practical examples showcase how developers and organizations are shipping smarter, AI-powered solutions with Microsoft's cloud platform and GitHub's developer-first ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage'
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-30 15:38:23 +00:00
-permalink: "/2025-10-30-GitHub-Universe-2025-AI-Driven-Developer-Innovation-Takes-Center-Stage.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentic Development", "AI", "AI Agents", "AI Toolkit", "App Development", "Azure", "Azure MCP Server", "Cloud Native", "Coding", "Company News", "Developer Tools", "DevOps", "Enterprise Security", "GitHub Copilot", "GitHub Universe", "MCP", "Microsoft Azure", "News", "Open Source", "Python", "TypeScript", "VS Code"]
-tags_normalized: ["agent hq", "agentic development", "ai", "ai agents", "ai toolkit", "app development", "azure", "azure mcp server", "cloud native", "coding", "company news", "developer tools", "devops", "enterprise security", "github copilot", "github universe", "mcp", "microsoft azure", "news", "open source", "python", "typescript", "vs code"]
+permalink: /github-copilot/news/GitHub-Universe-2025-AI-Driven-Developer-Innovation-Takes-Center-Stage
+tags:
+- Agent HQ
+- Agentic Development
+- AI
+- AI Agents
+- AI Toolkit
+- App Development
+- Azure
+- Azure MCP Server
+- Cloud Native
+- Coding
+- Company News
+- Developer Tools
+- DevOps
+- Enterprise Security
+- GitHub Copilot
+- GitHub Universe
+- MCP
+- Microsoft Azure
+- News
+- Open Source
+- Python
+- TypeScript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 stclarke delivers a comprehensive recap of GitHub Universe 2025, examining the rise of AI-powered developer agents, integration of GitHub Copilot with Azure, and how Microsoft's latest innovations are transforming software engineering.<!--excerpt_end-->
 
 # GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage

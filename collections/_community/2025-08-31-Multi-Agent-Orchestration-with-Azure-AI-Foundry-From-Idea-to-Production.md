@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production"
-description: "This guide breaks down the design and implementation of multi-agent AI workflows using Azure AI Foundry, covering real-world enterprise examples and hands-on steps. It walks developers through establishing agent roles, integrating Azure and external tools, implementing advanced workflow logic, and ensuring observability, compliance, and security. The article supplies architecture patterns, conceptual code, and practical design advice for shipping robust, production-ready solutions using Azure AI Foundry’s native agent management capabilities."
-author: "lakshaymalik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production'
+author: lakshaymalik
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-31 14:59:26 +00:00
-permalink: "/2025-08-31-Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Idea-to-Production.html"
-categories: ["AI", "Azure"]
-tags: ["A2A", "Agent Orchestration", "AI", "AI Architecture", "Azure", "Azure AI Foundry", "Azure AI Search", "Community", "Compliance", "Connected Agents", "Enterprise AI", "Functions", "Human in The Loop", "Logic Apps", "MCP", "Multi Agent Systems", "Observability", "OpenAPI", "Policy Engine", "SDK Integration", "Stateful Workflows", "Workflow Automation"]
-tags_normalized: ["a2a", "agent orchestration", "ai", "ai architecture", "azure", "azure ai foundry", "azure ai search", "community", "compliance", "connected agents", "enterprise ai", "functions", "human in the loop", "logic apps", "mcp", "multi agent systems", "observability", "openapi", "policy engine", "sdk integration", "stateful workflows", "workflow automation"]
+permalink: /ai/community/Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Idea-to-Production
+tags:
+- A2A
+- Agent Orchestration
+- AI
+- AI Architecture
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Community
+- Compliance
+- Connected Agents
+- Enterprise AI
+- Functions
+- Human in The Loop
+- Logic Apps
+- MCP
+- Multi Agent Systems
+- Observability
+- OpenAPI
+- Policy Engine
+- SDK Integration
+- Stateful Workflows
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 lakshaymalik provides a thorough, practical guide to building multi-agent AI systems with Azure AI Foundry, detailing architectural patterns, workflow design, real-world scenarios, and best practices for enterprise-grade deployment.<!--excerpt_end-->
 
 # Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production

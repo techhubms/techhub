@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Empowering Youth in the Age of AI: Research, Policy, and the AI Futures Youth Council"
-description: "This article discusses Microsoft's ongoing commitment to empowering young people with safe and responsible use of AI. It highlights new research on youth perspectives, the launch of the AI Futures Youth Council, and policy recommendations to improve online safety and age assurance practices. The content focuses on the intersection of AI technology, digital policy, child privacy, and responsible design, offering actionable insights for policymakers, families, and technology providers."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Empowering Youth in the Age of AI: Research, Policy, and the AI Futures Youth Council'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 17:28:19 +00:00
-permalink: "/2025-11-12-Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council.html"
-categories: ["AI"]
-tags: ["Age Assurance", "AI", "AI Companions", "AI Policy", "Child Privacy", "Company News", "Digital Identity", "Digital Wellbeing", "Family Safety", "Global Research", "Guardrails", "Microsoft", "News", "On The Issues", "Online Safety", "Parental Guidance", "Responsible AI", "Technology Regulation", "Youth And Technology"]
-tags_normalized: ["age assurance", "ai", "ai companions", "ai policy", "child privacy", "company news", "digital identity", "digital wellbeing", "family safety", "global research", "guardrails", "microsoft", "news", "on the issues", "online safety", "parental guidance", "responsible ai", "technology regulation", "youth and technology"]
+permalink: /ai/news/Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council
+tags:
+- Age Assurance
+- AI
+- AI Companions
+- AI Policy
+- Child Privacy
+- Company News
+- Digital Identity
+- Digital Wellbeing
+- Family Safety
+- Global Research
+- Guardrails
+- Microsoft
+- News
+- On The Issues
+- Online Safety
+- Parental Guidance
+- Responsible AI
+- Technology Regulation
+- Youth And Technology
+section_names:
+- ai
 ---
-
 stclarke explores Microsoft's initiatives for promoting youth empowerment and online safety in the AI era, introducing the AI Futures Youth Council and highlighting new research and policy recommendations.<!--excerpt_end-->
 
 # Empowering Youth in the Age of AI: Research, Policy, and the AI Futures Youth Council

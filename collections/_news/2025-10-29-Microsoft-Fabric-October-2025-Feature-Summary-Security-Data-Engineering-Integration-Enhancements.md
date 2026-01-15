@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Microsoft Fabric October 2025 Feature Summary: Security, Data Engineering, Integration Enhancements"
-description: "This summary details the latest advancements in Microsoft Fabric as of October 2025, highlighting new security capabilities, data engineering innovations, expanded integrations, and workflow improvements. It covers updates such as Outbound Access Protection, Workspace-Level Private Link, Adaptive Target File Size, Data Agent developments, and a suite of features across OneLake, Spark, Data Warehouse, and more. The update emphasizes better collaboration, governance, and productivity for data professionals and engineers working with Microsoft’s unified analytics platform."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-october-2025feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric October 2025 Feature Summary: Security, Data Engineering, Integration Enhancements'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-october-2025feature-summary/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-29 09:00:00 +00:00
-permalink: "/2025-10-29-Microsoft-Fabric-October-2025-Feature-Summary-Security-Data-Engineering-Integration-Enhancements.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Adaptive Target File Size", "Azure", "Concurrency", "Data Agent", "Data Engineering", "Data Factory", "Data Warehouse", "Delta Lake", "Eventstream", "Export Query Results", "Graph Data Management", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Outbound Access Protection", "Power BI", "Python", "Real Time Intelligence", "Security", "Spark", "SQL", "Workspace Level Private Link"]
-tags_normalized: ["adaptive target file size", "azure", "concurrency", "data agent", "data engineering", "data factory", "data warehouse", "delta lake", "eventstream", "export query results", "graph data management", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "outbound access protection", "power bi", "python", "real time intelligence", "security", "spark", "sql", "workspace level private link"]
+permalink: /ml/news/Microsoft-Fabric-October-2025-Feature-Summary-Security-Data-Engineering-Integration-Enhancements
+tags:
+- Adaptive Target File Size
+- Azure
+- Concurrency
+- Data Agent
+- Data Engineering
+- Data Factory
+- Data Warehouse
+- Delta Lake
+- Eventstream
+- Export Query Results
+- Graph Data Management
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Outbound Access Protection
+- Power BI
+- Python
+- Real Time Intelligence
+- Security
+- Spark
+- SQL
+- Workspace Level Private Link
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog provides a detailed summary of October 2025 platform updates, focusing on enhanced security, smarter data engineering, new integrations, and workflow improvements for data professionals.<!--excerpt_end-->
 
 # Fabric October 2025 Feature Summary

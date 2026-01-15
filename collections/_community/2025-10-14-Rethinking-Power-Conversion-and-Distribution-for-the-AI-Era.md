@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Rethinking Power Conversion and Distribution for the AI Era"
-description: "This post by Ehsan Nasr, Director of Energy Technology at Microsoft, examines how AI-driven data center growth is outpacing traditional power delivery models. It explores Microsoft's industry collaborations, the Mt Diablo disaggregated power architecture, and the adoption of solid-state transformers (SSTs) for efficient, high-density, AI-capable infrastructure. The article highlights the need for radically new power topologies, centralized conversion, and flexible, high-voltage DC distribution to support next-generation compute workloads."
-author: "EhsanNasr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/rethinking-power-conversion-and-distribution-for-the-ai-era/ba-p/4460759"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Rethinking Power Conversion and Distribution for the AI Era
+author: EhsanNasr
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/rethinking-power-conversion-and-distribution-for-the-ai-era/ba-p/4460759
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/2025-10-14-Rethinking-Power-Conversion-and-Distribution-for-the-AI-Era.html"
-categories: ["Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Cloud Infrastructure", "Community", "Data Center Architecture", "Disaggregated Power", "Energy Efficiency", "Energy Technology", "GPU Clusters", "High Voltage DC", "Microsoft", "Mt Diablo", "Power Conversion", "Power Distribution", "Rack Density", "Solid State Transformer", "SST"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "cloud infrastructure", "community", "data center architecture", "disaggregated power", "energy efficiency", "energy technology", "gpu clusters", "high voltage dc", "microsoft", "mt diablo", "power conversion", "power distribution", "rack density", "solid state transformer", "sst"]
+permalink: /azure/community/Rethinking-Power-Conversion-and-Distribution-for-the-AI-Era
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Cloud Infrastructure
+- Community
+- Data Center Architecture
+- Disaggregated Power
+- Energy Efficiency
+- Energy Technology
+- GPU Clusters
+- High Voltage DC
+- Microsoft
+- Mt Diablo
+- Power Conversion
+- Power Distribution
+- Rack Density
+- Solid State Transformer
+- SST
+section_names:
+- azure
 ---
-
 Ehsan Nasr of Microsoft explores how data centers must rethink power systems for the AI era, focusing on the adoption of solid-state transformers, centralized high-voltage DC delivery, and innovative architectures to enable high-density, AI-ready infrastructure.<!--excerpt_end-->
 
 # Rethinking Power Conversion and Distribution for the AI Era

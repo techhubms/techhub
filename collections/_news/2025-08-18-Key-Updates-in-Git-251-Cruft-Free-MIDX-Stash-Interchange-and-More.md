@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More"
-description: "Taylor Blau summarizes the major enhancements and technical changes introduced in Git 2.51, diving into new features such as cruft-free multi-pack indexes, stash interchange format, path walk for packing, and other noteworthy evolutions. The article includes detailed technical explanations, performance enhancements, updated command behaviors, and development process reforms."
-author: "Taylor Blau"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/git/highlights-from-git-2-51/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More'
+author: Taylor Blau
+canonical_url: https://github.blog/open-source/git/highlights-from-git-2-51/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-18 17:04:36 +00:00
-permalink: "/2025-08-18-Key-Updates-in-Git-251-Cruft-Free-MIDX-Stash-Interchange-and-More.html"
-categories: ["Coding", "DevOps"]
-tags: ["Bloom Filter", "Coding", "Commit Graph", "Cruft Pack", "Delta Compression", "DevOps", "Git", "Git 2.51", "Git Cat File", "Git Restore", "Git Switch", "Git Whatchanged", "Multi Pack Index", "News", "Open Source", "Path Walk", "RefTable", "Release Notes", "Repack.midxmustcontaincruft", "SHA 256", "Stash Interchange", "Version Control"]
-tags_normalized: ["bloom filter", "coding", "commit graph", "cruft pack", "delta compression", "devops", "git", "git 2dot51", "git cat file", "git restore", "git switch", "git whatchanged", "multi pack index", "news", "open source", "path walk", "reftable", "release notes", "repackdotmidxmustcontaincruft", "sha 256", "stash interchange", "version control"]
+permalink: /coding/news/Key-Updates-in-Git-251-Cruft-Free-MIDX-Stash-Interchange-and-More
+tags:
+- Bloom Filter
+- Coding
+- Commit Graph
+- Cruft Pack
+- Delta Compression
+- DevOps
+- Git
+- Git 2.51
+- Git Cat File
+- Git Restore
+- Git Switch
+- Git Whatchanged
+- Multi Pack Index
+- News
+- Open Source
+- Path Walk
+- RefTable
+- Release Notes
+- Repack.midxmustcontaincruft
+- SHA 256
+- Stash Interchange
+- Version Control
+section_names:
+- coding
+- devops
 ---
-
 In this technical write-up, Taylor Blau guides readers through the most significant improvements and new features in Git 2.51, highlighting technical details and practical implications for developers and DevOps practitioners.<!--excerpt_end-->
 
 # Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More

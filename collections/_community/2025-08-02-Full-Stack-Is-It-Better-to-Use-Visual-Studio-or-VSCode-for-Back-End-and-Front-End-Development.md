@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Full Stack: Is It Better to Use Visual Studio or VSCode for Back-End and Front-End Development?"
-description: "The article discusses whether full-stack developers should use a single IDE (Visual Studio) for both backend and frontend, or split (Visual Studio for .NET backend, VSCode for JavaScript/TypeScript frontend). It also explores repository organization preferences: monorepo versus separate repos for frontend and backend."
-author: "RankedMan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mfuefu/full_stack_visual_studio_or_vscode/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Full Stack: Is It Better to Use Visual Studio or VSCode for Back-End and Front-End Development?'
+author: RankedMan
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mfuefu/full_stack_visual_studio_or_vscode/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 16:12:59 +00:00
-permalink: "/2025-08-02-Full-Stack-Is-It-Better-to-Use-Visual-Studio-or-VSCode-for-Back-End-and-Front-End-Development.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "ASP.NET", "Backend", "Coding", "Community", "DevOps", "Frontend", "Full Stack Development", "GitHub", "IDE", "Monorepo", "Project Structure", "Repository Organization", "TypeScript", "VS", "VS Code"]
-tags_normalized: ["dotnet", "aspdotnet", "backend", "coding", "community", "devops", "frontend", "full stack development", "github", "ide", "monorepo", "project structure", "repository organization", "typescript", "vs", "vs code"]
+permalink: /coding/community/Full-Stack-Is-It-Better-to-Use-Visual-Studio-or-VSCode-for-Back-End-and-Front-End-Development
+tags:
+- .NET
+- ASP.NET
+- Backend
+- Coding
+- Community
+- DevOps
+- Frontend
+- Full Stack Development
+- GitHub
+- IDE
+- Monorepo
+- Project Structure
+- Repository Organization
+- TypeScript
+- VS
+- VS Code
+section_names:
+- coding
+- devops
 ---
-
 In this post, RankedMan raises key questions for full-stack developers about IDE choices (Visual Studio vs. VSCode) for backend and frontend work, as well as preferences for organizing code repositories.<!--excerpt_end-->
 
 ### Summary

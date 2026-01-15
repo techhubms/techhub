@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Best Practices for Deploying Custom OpenSSH Packages Across Multiple Linux Machines"
-description: "This community discussion explores strategies for installing newer OpenSSH versions across Linux machines—especially when packages aren’t available in system repositories like Almalinux. Contributors share methods such as building RPMs, setting up internal package repositories, and automating deployments with configuration management tools like Chef."
-author: "antonioefx"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mk0byh/installing_packages_not_available_in_linux_repos/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Best Practices for Deploying Custom OpenSSH Packages Across Multiple Linux Machines
+author: antonioefx
+canonical_url: https://www.reddit.com/r/devops/comments/1mk0byh/installing_packages_not_available_in_linux_repos/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-07 13:37:34 +00:00
-permalink: "/2025-08-07-Best-Practices-for-Deploying-Custom-OpenSSH-Packages-Across-Multiple-Linux-Machines.html"
-categories: ["DevOps"]
-tags: ["Almalinux", "Artifactory", "Chef", "Community", "Configuration Management", "Deployment Pipeline", "DevOps", "DevOps Automation", "Docker Build Environment", "Fleet Operations", "FPM", "Internal Yum Repository", "Linux Packaging", "Nexus", "OpenSSH", "RPM"]
-tags_normalized: ["almalinux", "artifactory", "chef", "community", "configuration management", "deployment pipeline", "devops", "devops automation", "docker build environment", "fleet operations", "fpm", "internal yum repository", "linux packaging", "nexus", "openssh", "rpm"]
+permalink: /devops/community/Best-Practices-for-Deploying-Custom-OpenSSH-Packages-Across-Multiple-Linux-Machines
+tags:
+- Almalinux
+- Artifactory
+- Chef
+- Community
+- Configuration Management
+- Deployment Pipeline
+- DevOps
+- DevOps Automation
+- Docker Build Environment
+- Fleet Operations
+- FPM
+- Internal Yum Repository
+- Linux Packaging
+- Nexus
+- OpenSSH
+- RPM
+section_names:
+- devops
 ---
-
 antonioefx and community members outline practical steps for managing custom OpenSSH deployments on multiple Linux servers, emphasizing custom RPM creation, repository setup, and integrating with Chef for automation.<!--excerpt_end-->
 
 # Best Practices for Deploying Custom OpenSSH Packages Across Multiple Linux Machines

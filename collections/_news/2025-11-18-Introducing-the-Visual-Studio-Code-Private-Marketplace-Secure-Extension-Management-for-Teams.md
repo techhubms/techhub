@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing the Visual Studio Code Private Marketplace: Secure Extension Management for Teams"
-description: "This news announcement introduces the Private Marketplace for VS Code, enabling organizations to securely manage and curate extension catalogs for their development teams. Targeted at GitHub Enterprise customers, it offers central control over internal and trusted public extensions, supporting secure, compliant, and streamlined deployment workflows within enterprise environments."
-author: "Sean Iyer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/11/18/PrivateMarketplace"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Introducing the Visual Studio Code Private Marketplace: Secure Extension Management for Teams'
+author: Sean Iyer
+canonical_url: https://code.visualstudio.com/blogs/2025/11/18/PrivateMarketplace
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-18 00:00:00 +00:00
-permalink: "/2025-11-18-Introducing-the-Visual-Studio-Code-Private-Marketplace-Secure-Extension-Management-for-Teams.html"
-categories: ["Coding", "DevOps"]
-tags: ["Code Security", "Coding", "Developer Experience", "DevOps", "Enterprise Software", "Extension Deployment", "Extension Management", "GitHub Enterprise", "Internal Extensions", "IT Security", "News", "Organization Tools", "Private Marketplace", "Secure Development", "VS Code", "VS Code Extensions"]
-tags_normalized: ["code security", "coding", "developer experience", "devops", "enterprise software", "extension deployment", "extension management", "github enterprise", "internal extensions", "it security", "news", "organization tools", "private marketplace", "secure development", "vs code", "vs code extensions"]
+permalink: /coding/news/Introducing-the-Visual-Studio-Code-Private-Marketplace-Secure-Extension-Management-for-Teams
+tags:
+- Code Security
+- Coding
+- Developer Experience
+- DevOps
+- Enterprise Software
+- Extension Deployment
+- Extension Management
+- GitHub Enterprise
+- Internal Extensions
+- IT Security
+- News
+- Organization Tools
+- Private Marketplace
+- Secure Development
+- VS Code
+- VS Code Extensions
+section_names:
+- coding
+- devops
 ---
-
 Sean Iyer introduces the Private Marketplace for Visual Studio Code, providing enterprise teams with secure and curated management of extensions through GitHub Enterprise integration.<!--excerpt_end-->
 
 # Introducing the Visual Studio Code Private Marketplace: Secure Extension Management for Teams

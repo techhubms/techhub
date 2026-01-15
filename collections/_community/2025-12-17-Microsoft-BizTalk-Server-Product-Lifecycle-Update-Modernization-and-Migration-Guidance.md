@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance"
-description: "This announcement covers the end-of-life timeline for Microsoft BizTalk Server, the transition recommendations, and future support strategies. It highlights BizTalk Server 2020 as the last release, details support phases, introduces modernization options with Azure Logic Apps, addresses hybrid/mainframe integration, and provides migration resources for enterprise customers planning their integration strategy."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance'
+author: hcamposu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 15:02:12 +00:00
-permalink: "/2025-12-17-Microsoft-BizTalk-Server-Product-Lifecycle-Update-Modernization-and-Migration-Guidance.html"
-categories: ["Azure", "DevOps"]
-tags: ["API Management", "ARM Templates", "Azure", "Azure Integration Services", "Azure Logic Apps", "Azure Monitor", "B2B Messaging", "Bicep", "BizTalk Server", "Community", "DevOps", "DevOps Tooling", "Enterprise Integration", "Host Integration Server", "Hybrid Integration", "IaC", "Integration Modernization", "Mainframe Connectivity", "Migration Guidance", "OpenTelemetry", "Service Bus", "VS Code"]
-tags_normalized: ["api management", "arm templates", "azure", "azure integration services", "azure logic apps", "azure monitor", "b2b messaging", "bicep", "biztalk server", "community", "devops", "devops tooling", "enterprise integration", "host integration server", "hybrid integration", "iac", "integration modernization", "mainframe connectivity", "migration guidance", "opentelemetry", "service bus", "vs code"]
+permalink: /azure/community/Microsoft-BizTalk-Server-Product-Lifecycle-Update-Modernization-and-Migration-Guidance
+tags:
+- API Management
+- ARM Templates
+- Azure
+- Azure Integration Services
+- Azure Logic Apps
+- Azure Monitor
+- B2B Messaging
+- Bicep
+- BizTalk Server
+- Community
+- DevOps
+- DevOps Tooling
+- Enterprise Integration
+- Host Integration Server
+- Hybrid Integration
+- IaC
+- Integration Modernization
+- Mainframe Connectivity
+- Migration Guidance
+- OpenTelemetry
+- Service Bus
+- VS Code
+section_names:
+- azure
+- devops
 ---
-
 hcamposu presents an update on the BizTalk Server product lifecycle, providing guidance on long-term support, migration to Azure Logic Apps, and roadmap considerations for enterprises managing mission-critical integration workloads.<!--excerpt_end-->
 
 # Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance

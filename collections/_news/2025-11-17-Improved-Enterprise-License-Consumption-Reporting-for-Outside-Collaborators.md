@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Improved Enterprise License Consumption Reporting for Outside Collaborators"
-description: "This update details a significant enhancement to GitHub's enterprise licensing CSV export, enabling more transparent tracking of license consumption by outside collaborators across multiple organizations. The changes facilitate better budget management for enterprise owners and billing managers, specifically by associating collaborators to organizations in export data."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-17-improved-enterprise-license-consumption-reporting-for-outside-collaborators-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Enterprise License Consumption Reporting for Outside Collaborators
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-17-improved-enterprise-license-consumption-reporting-for-outside-collaborators-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-17 18:47:08 +00:00
-permalink: "/2025-11-17-Improved-Enterprise-License-Consumption-Reporting-for-Outside-Collaborators.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Billing Optimization", "Compliance", "CSV Export", "DevOps", "Enterprise Billing", "Enterprise Management Tools", "Enterprise Tools", "GitHub Enterprise", "Improvement", "License Management", "Member Roles", "News", "Organization Management", "Outside Collaborators", "Reporting"]
-tags_normalized: ["account management", "billing optimization", "compliance", "csv export", "devops", "enterprise billing", "enterprise management tools", "enterprise tools", "github enterprise", "improvement", "license management", "member roles", "news", "organization management", "outside collaborators", "reporting"]
+permalink: /devops/news/Improved-Enterprise-License-Consumption-Reporting-for-Outside-Collaborators
+tags:
+- Account Management
+- Billing Optimization
+- Compliance
+- CSV Export
+- DevOps
+- Enterprise Billing
+- Enterprise Management Tools
+- Enterprise Tools
+- GitHub Enterprise
+- Improvement
+- License Management
+- Member Roles
+- News
+- Organization Management
+- Outside Collaborators
+- Reporting
+section_names:
+- devops
 ---
-
 Allison outlines an update to GitHub Enterprise Cloud licensing reports, making it easier for billing managers to track license consumption by outside collaborators across organizations.<!--excerpt_end-->
 
 # Improved Enterprise License Consumption Reporting for Outside Collaborators

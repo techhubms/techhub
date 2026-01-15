@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How AI Is Transforming Healthcare in Kenya: Beyond Patient Care"
-description: "This article explores how artificial intelligence, with support from Microsoft initiatives, is reshaping healthcare in Kenya. It discusses the transformative impact of AI on patient outcomes, system efficiency, infrastructure, workforce skill development, and the broader economic landscape. The piece highlights the importance of infrastructure investment and public-private collaborations for unlocking AI’s potential in healthcare."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'How AI Is Transforming Healthcare in Kenya: Beyond Patient Care'
+author: stclarke
+canonical_url: https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-02 14:37:57 +00:00
-permalink: "/2025-09-02-How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care.html"
-categories: ["AI"]
-tags: ["Africa", "AI", "AI Adoption", "Cloud Infrastructure", "Company News", "Connected Care", "Data Driven Insights", "Datacentres", "Digital Skills", "Digital Transformation", "Health", "Health Systems", "Healthcare", "Kenya", "Microsoft", "News", "Public Private Partnerships", "Workforce Development"]
-tags_normalized: ["africa", "ai", "ai adoption", "cloud infrastructure", "company news", "connected care", "data driven insights", "datacentres", "digital skills", "digital transformation", "health", "health systems", "healthcare", "kenya", "microsoft", "news", "public private partnerships", "workforce development"]
+permalink: /ai/news/How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care
+tags:
+- Africa
+- AI
+- AI Adoption
+- Cloud Infrastructure
+- Company News
+- Connected Care
+- Data Driven Insights
+- Datacentres
+- Digital Skills
+- Digital Transformation
+- Health
+- Health Systems
+- Healthcare
+- Kenya
+- Microsoft
+- News
+- Public Private Partnerships
+- Workforce Development
+section_names:
+- ai
 ---
-
 Authored by Phyllis Migwi and presented by stclarke, this article examines the role of AI in transforming healthcare in Kenya, focusing on infrastructure, workforce development, and equity.<!--excerpt_end-->
 
 # How AI Is Transforming Healthcare in Kenya: Beyond Patient Care

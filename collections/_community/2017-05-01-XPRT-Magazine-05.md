@@ -1,17 +1,32 @@
----
-layout: "post"
-title: "XPRT Magazine 05"
-description: "This issue covers Azure Event Grid, ARM templates, cloud transition, containerization, deployment pipelines, and scaling Scrum."
-categories: ["Azure", "DevOps"]
+﻿---
+layout: post
+title: XPRT Magazine 05
 date: 2017-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2017-05-01-XPRT-Magazine-05.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["ARM Templates", "Automation", "Azure", "Best Practices", "Cloud", "Cloud Transition", "Communities", "Community", "Containers", "Deployment Pipelines", "DevOps", "Event Grid", "Magazines", "Scaling", "Scrum", "Testing", "Web Applications"]
-tags_normalized: ["arm templates", "automation", "azure", "best practices", "cloud", "cloud transition", "communities", "community", "containers", "deployment pipelines", "devops", "event grid", "magazines", "scaling", "scrum", "testing", "web applications"]
+author: Xebia
+viewing_mode: external
+permalink: /azure/community/XPRT-Magazine-05
+tags:
+- ARM Templates
+- Automation
+- Azure
+- Best Practices
+- Cloud
+- Cloud Transition
+- Communities
+- Community
+- Containers
+- Deployment Pipelines
+- DevOps
+- Event Grid
+- Magazines
+- Scaling
+- Scrum
+- Testing
+- Web Applications
+section_names:
+- azure
+- devops
 ---
-
 XPRT Magazine 05 explores Azure Event Grid, best practices for ARM templates, cloud transition strategies, containerized testing, deployment pipelines, and scaling Scrum. This issue provides actionable insights for building resilient, scalable, and modern cloud solutions.
 <!--excerpt_end-->
 

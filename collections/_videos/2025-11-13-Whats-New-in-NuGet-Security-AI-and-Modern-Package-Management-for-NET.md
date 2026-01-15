@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in NuGet: Security, AI, and Modern Package Management for .NET"
-description: "This session explores significant updates to NuGet, the primary package management tool for .NET developers. Key topics include the introduction of the Model Context Protocol (MCP) Server for AI-powered package workflows, NuGet.org's new role as an MCP registry, enhanced security through NuGet Audit and Trusted Publishing, and improved package discovery and sponsorship options. Learn how these advancements provide more secure, productive, and modern development experiences in the .NET ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=blGOP6adqa4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=blGOP6adqa4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:49 +00:00
-permalink: "/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html"
-categories: ["AI", "Coding", "Security"]
-tags: [".NET", "AI", "AI Productivity", "Coding", "Dependency Mitigation", "Developer Tools", "MCP", "MCP Registry", "MCP Server", "Microsoft", "NuGet", "NuGet Audit", "Package Discovery", "Package Management", "Secure Dependencies", "Security", "Sponsorship", "Trusted Publishing", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai productivity", "coding", "dependency mitigation", "developer tools", "mcp", "mcp registry", "mcp server", "microsoft", "nuget", "nuget audit", "package discovery", "package management", "secure dependencies", "security", "sponsorship", "trusted publishing", "videos"]
+permalink: /ai/videos/Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET
+tags:
+- .NET
+- AI
+- AI Productivity
+- Coding
+- Dependency Mitigation
+- Developer Tools
+- MCP
+- MCP Registry
+- MCP Server
+- Microsoft
+- NuGet
+- NuGet Audit
+- Package Discovery
+- Package Management
+- Secure Dependencies
+- Security
+- Sponsorship
+- Trusted Publishing
+- Videos
+section_names:
+- ai
+- coding
+- security
 ---
-
 dotnet presents the latest innovations in NuGet, focusing on AI-driven workflows, improved security features, and enhanced package management for .NET developers.<!--excerpt_end-->
 
 {% youtube blGOP6adqa4 %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Choose the Right Model for Your AI Agent: A Developer’s Guide"
-description: "This article by April_Gittens outlines practical steps for developers to select an appropriate AI model when building agents, with a focus on capability, performance vs. cost, and deployment considerations. It emphasizes mapping use case requirements and demonstrates how to leverage the Azure AI Foundry Model Catalog to compare and select models tailored for specific agent workflows."
-author: "April_Gittens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'How to Choose the Right Model for Your AI Agent: A Developer’s Guide'
+author: April_Gittens
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-18 21:56:23 +00:00
-permalink: "/2025-08-18-How-to-Choose-the-Right-Model-for-Your-AI-Agent-A-Developers-Guide.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Support", "AI", "AI Agent Development", "API Hosting", "Azure", "Azure AI Foundry", "Community", "Cost Analysis", "Licensing", "Model Capabilities", "Model Cards", "Model Catalog", "Model Deployment", "Model Selection", "Multimodal Models", "Performance Optimization", "Self Hosted Models", "Token Costs"]
-tags_normalized: ["agent support", "ai", "ai agent development", "api hosting", "azure", "azure ai foundry", "community", "cost analysis", "licensing", "model capabilities", "model cards", "model catalog", "model deployment", "model selection", "multimodal models", "performance optimization", "self hosted models", "token costs"]
+permalink: /ai/community/How-to-Choose-the-Right-Model-for-Your-AI-Agent-A-Developers-Guide
+tags:
+- Agent Support
+- AI
+- AI Agent Development
+- API Hosting
+- Azure
+- Azure AI Foundry
+- Community
+- Cost Analysis
+- Licensing
+- Model Capabilities
+- Model Cards
+- Model Catalog
+- Model Deployment
+- Model Selection
+- Multimodal Models
+- Performance Optimization
+- Self Hosted Models
+- Token Costs
+section_names:
+- ai
+- azure
 ---
-
 April_Gittens explains how developers can choose the right AI model for their agents, considering factors like input types, cost, licensing, and deployment, with actionable guidance using the Azure AI Foundry Model Catalog.<!--excerpt_end-->
 
 # How to Choose the Right Model for Your AI Agent: A Developer’s Guide

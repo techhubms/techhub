@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions"
-description: "Nick Alteen explores IssueOps—turning GitHub Issues into command centers for automation. The article explains how to automate CI/CD, approvals, and more using GitHub Issues, GitHub Actions, and pull requests, providing detailed examples and workflow patterns, including a membership approval process."
-author: "Nick Alteen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+layout: post
+title: 'IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions'
+author: Nick Alteen
+canonical_url: https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/
+viewing_mode: external
+feed_name: GitHub Engineering Blog
+feed_url: https://github.blog/engineering/feed/
 date: 2025-03-19 16:00:24 +00:00
-permalink: "/2025-03-19-IssueOps-Automate-CICD-and-more-with-GitHub-Issues-and-Actions.html"
-categories: ["DevOps"]
-tags: ["Approval Workflows", "Automation", "CI/CD", "DevOps", "Engineering", "Finite State Machine", "GitHub Actions", "GitHub Issues", "Issue Templates", "IssueOps", "News", "Pull Requests", "State Machines", "Team Management", "Workflow Automation"]
-tags_normalized: ["approval workflows", "automation", "cislashcd", "devops", "engineering", "finite state machine", "github actions", "github issues", "issue templates", "issueops", "news", "pull requests", "state machines", "team management", "workflow automation"]
+permalink: /devops/news/IssueOps-Automate-CICD-and-more-with-GitHub-Issues-and-Actions
+tags:
+- Approval Workflows
+- Automation
+- CI/CD
+- DevOps
+- Engineering
+- Finite State Machine
+- GitHub Actions
+- GitHub Issues
+- Issue Templates
+- IssueOps
+- News
+- Pull Requests
+- State Machines
+- Team Management
+- Workflow Automation
+section_names:
+- devops
 ---
-
 In this comprehensive article, Nick Alteen introduces the concept of IssueOps, showing how GitHub Issues can be leveraged to automate CI/CD workflows, approval processes, and more using GitHub Actions and pull requests.<!--excerpt_end-->
 
 # IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions
@@ -86,7 +98,6 @@ Create a GitHub issue form to standardize user requests (e.g., for team membersh
 
 ```yaml
 name: Team Membership Request
-description: Submit a new membership request
 title: New Team Membership Request
 labels:
   - team-membership

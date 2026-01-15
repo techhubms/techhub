@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The New Industrial Frontier: AI Collaboration and Copilot Agents in Manufacturing (BRK377)"
-description: "This session from Microsoft Ignite 2025 explores how industrial companies can transform their operations by integrating human expertise with Microsoft AI services, Copilot agents, and Azure IoT technologies. It features real-world demos, customer case studies, and insights from industry leaders focused on productivity, safety, and innovation in manufacturing environments through AI-driven automation and orchestration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8R7f78cG-Gc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'The New Industrial Frontier: AI Collaboration and Copilot Agents in Manufacturing (BRK377)'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=8R7f78cG-Gc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:14:24 +00:00
-permalink: "/2025-11-21-The-New-Industrial-Frontier-AI-Collaboration-and-Copilot-Agents-in-Manufacturing-BRK377.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Autonomous Operations", "Azure", "Azure IoT", "Copilot Agents", "Copilotandagentsatwork", "Device Management", "Frontline Workforce", "Generative AI", "Industrial AI", "Industrial Automation", "Manufacturing Innovation", "Microsoft Ignite", "MSIgnite", "Robotics", "Sensors", "Videos", "Virtual Support Agents"]
-tags_normalized: ["ai", "autonomous operations", "azure", "azure iot", "copilot agents", "copilotandagentsatwork", "device management", "frontline workforce", "generative ai", "industrial ai", "industrial automation", "manufacturing innovation", "microsoft ignite", "msignite", "robotics", "sensors", "videos", "virtual support agents"]
+permalink: /ai/videos/The-New-Industrial-Frontier-AI-Collaboration-and-Copilot-Agents-in-Manufacturing-BRK377
+tags:
+- AI
+- Autonomous Operations
+- Azure
+- Azure IoT
+- Copilot Agents
+- Copilotandagentsatwork
+- Device Management
+- Frontline Workforce
+- Generative AI
+- Industrial AI
+- Industrial Automation
+- Manufacturing Innovation
+- Microsoft Ignite
+- MSIgnite
+- Robotics
+- Sensors
+- Videos
+- Virtual Support Agents
+section_names:
+- ai
+- azure
 ---
-
 Presented by Microsoft Events, this Ignite 2025 breakout session highlights how leaders blend AI capabilities, Azure IoT, and Copilot agents to enhance productivity and adaptability in manufacturing and industrial sectors.<!--excerpt_end-->
 
 {% youtube 8R7f78cG-Gc %}

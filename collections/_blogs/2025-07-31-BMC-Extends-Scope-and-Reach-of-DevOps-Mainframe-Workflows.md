@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "BMC Extends Scope and Reach of DevOps Mainframe Workflows"
-description: "BMC enhances its mainframe DevOps analytics with new Git data integration and AI-powered assistant, introduces security connectors for Okta, and upgrades cloud data protection, aiming to streamline DevOps practices across hybrid and mainframe environments."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: BMC Extends Scope and Reach of DevOps Mainframe Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-07-31 12:58:31 +00:00
-permalink: "/2025-07-31-BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Assistant", "Automation", "Blogs", "BMC", "BMC AMI Cloud", "BMC AMI Zadviser Enterprise", "Business Of DevOps", "Cloud Object Storage", "DevOps", "DevOps Analytics", "Git Integration", "Identity Management", "IT Operations", "Mainframe", "Okta", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security", "Workflow Optimization"]
-tags_normalized: ["ai", "ai assistant", "automation", "blogs", "bmc", "bmc ami cloud", "bmc ami zadviser enterprise", "business of devops", "cloud object storage", "devops", "devops analytics", "git integration", "identity management", "it operations", "mainframe", "okta", "social facebook", "social linkedin", "social x", "software supply chain security", "workflow optimization"]
+permalink: /ai/blogs/BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows
+tags:
+- AI
+- AI Assistant
+- Automation
+- Blogs
+- BMC
+- BMC AMI Cloud
+- BMC AMI Zadviser Enterprise
+- Business Of DevOps
+- Cloud Object Storage
+- DevOps
+- DevOps Analytics
+- Git Integration
+- Identity Management
+- IT Operations
+- Mainframe
+- Okta
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain Security
+- Workflow Optimization
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard explores BMC's latest advancements in DevOps analytics for mainframe environments, highlighting new AI capabilities, improved security, and enhanced cloud data management.<!--excerpt_end-->
 
 # BMC Extends Scope and Reach of DevOps Mainframe Workflows

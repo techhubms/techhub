@@ -1,22 +1,27 @@
----
-layout: "post"
-title: "CLI Assistance"
-description: "Streamline command line tasks with AI assistance"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/Yhu2xzId2U0"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: CLI Assistance
+author: Rob Bos
+canonical_url: https://youtu.be/Yhu2xzId2U0
 date: 2024-08-14 19:53:21 +00:00
-permalink: "/2024-08-14-CLI-Assistance.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Pro", "Business"]
-alt-collection: "features"
-tags: ["AI", "CLI", "Commands", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "cli", "commands", "github copilot", "videos"]
+permalink: /github-copilot/videos/CLI-Assistance
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Pro
+- Business
+alt-collection: features
+tags:
+- AI
+- CLI
+- Commands
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's CLI Assistance feature. Streamline your command line tasks with Copilot's CLI assistance.<!--excerpt_end-->
 
 {% youtube Yhu2xzId2U0 %}

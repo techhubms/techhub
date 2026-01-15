@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "CodeQL 2.23.5 Adds New Language Support and Security Query Improvements"
-description: "This update covers CodeQL 2.23.5, the static analysis engine used in GitHub code scanning, highlighting expanded support for Swift 6.2 and notable improvements in Java, C#, Python, and Rust security detection. It details enhancements to security queries, false positive reduction, and expanded framework compatibility. The release information includes guidance for GitHub.com and GitHub Enterprise Server users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL 2.23.5 Adds New Language Support and Security Query Improvements
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-19 19:43:03 +00:00
-permalink: "/2025-11-19-CodeQL-2235-Adds-New-Language-Support-and-Security-Query-Improvements.html"
-categories: ["DevOps", "Security"]
-tags: [".NET", "Actix Web", "Application Security", "C# Compiler", "CodeQL", "CodeQL 2.23.5", "Concurrency Issues", "DevOps", "GHES", "GitHub Code Scanning", "Improvement", "Java Security", "Mysql Async", "News", "Python", "Query Pack", "Rust", "Security", "Security Queries", "Sensitive Data", "Static Analysis", "Swift 6.2", "Thread Safety", "Vulnerability Detection"]
-tags_normalized: ["dotnet", "actix web", "application security", "csharp compiler", "codeql", "codeql 2dot23dot5", "concurrency issues", "devops", "ghes", "github code scanning", "improvement", "java security", "mysql async", "news", "python", "query pack", "rust", "security", "security queries", "sensitive data", "static analysis", "swift 6dot2", "thread safety", "vulnerability detection"]
+permalink: /devops/news/CodeQL-2235-Adds-New-Language-Support-and-Security-Query-Improvements
+tags:
+- .NET
+- Actix Web
+- Application Security
+- C# Compiler
+- CodeQL
+- CodeQL 2.23.5
+- Concurrency Issues
+- DevOps
+- GHES
+- GitHub Code Scanning
+- Improvement
+- Java Security
+- Mysql Async
+- News
+- Python
+- Query Pack
+- Rust
+- Security
+- Security Queries
+- Sensitive Data
+- Static Analysis
+- Swift 6.2
+- Thread Safety
+- Vulnerability Detection
+section_names:
+- devops
+- security
 ---
-
 Allison discusses the features and improvements in CodeQL 2.23.5, focusing on enhanced language support and more accurate security analysis for GitHub code scanning.<!--excerpt_end-->
 
 # CodeQL 2.23.5 Adds New Language Support and Security Query Improvements

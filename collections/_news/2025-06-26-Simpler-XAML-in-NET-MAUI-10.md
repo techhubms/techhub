@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Simpler XAML in .NET MAUI 10"
-description: "David Ortinau introduces implicit and global XAML namespaces in .NET MAUI 10 Preview. The update reduces verbosity by allowing global namespace declarations, eliminating repetitive namespace and prefix usage in XAML files. The article covers usage, configuration, code examples, and current limitations."
-author: "David Ortinau"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/simpler-xaml-in-dotnet-maui-10/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Simpler XAML in .NET MAUI 10
+author: David Ortinau
+canonical_url: https://devblogs.microsoft.com/dotnet/simpler-xaml-in-dotnet-maui-10/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-06-26 19:15:00 +00:00
-permalink: "/2025-06-26-Simpler-XAML-in-NET-MAUI-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "AlohaKit Animations", "Coding", "Community Toolkit", "Global Namespaces", "Hot Reload", "Implicit Namespaces", "MAUI", "Namespace Prefixes", "News", "NuGet Packages", "Syncfusion Toolkit", "VS", "Xaml", "XmlnsDefinition", "XmlnsPrefix"]
-tags_normalized: ["dotnet", "dotnet 10", "alohakit animations", "coding", "community toolkit", "global namespaces", "hot reload", "implicit namespaces", "maui", "namespace prefixes", "news", "nuget packages", "syncfusion toolkit", "vs", "xaml", "xmlnsdefinition", "xmlnsprefix"]
+permalink: /coding/news/Simpler-XAML-in-NET-MAUI-10
+tags:
+- .NET
+- .NET 10
+- AlohaKit Animations
+- Coding
+- Community Toolkit
+- Global Namespaces
+- Hot Reload
+- Implicit Namespaces
+- MAUI
+- Namespace Prefixes
+- News
+- NuGet Packages
+- Syncfusion Toolkit
+- VS
+- Xaml
+- XmlnsDefinition
+- XmlnsPrefix
+section_names:
+- coding
 ---
-
 David Ortinau discusses new features in .NET MAUI 10 that streamline XAML development, focusing on implicit and global namespaces to minimize verbosity and improve maintainability.<!--excerpt_end-->
 
 ## Overview

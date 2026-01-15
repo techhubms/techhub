@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ"
-description: "This news piece covers the highlights of Git Merge 2025 at GitHub HQ, marking two decades of Git. The event featured technical talks, live demos, community collaborations, open technical discussions, and forward-looking sessions with contributions from maintainers, educators, and hobbyists worldwide. Attendees explored topics ranging from Git internals and creative workflows to future interoperability and visualization tools."
-author: "Lee Reilly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ'
+author: Lee Reilly
+canonical_url: https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-09 08:00:00 +00:00
-permalink: "/2025-10-09-Git-Merge-2025-Celebrating-20-Years-of-Git-at-GitHub-HQ.html"
-categories: ["DevOps"]
-tags: ["Branching Strategies", "Collaboration", "Developer Tools", "DevOps", "Git", "Git Merge", "GitButler", "GitHub", "Jujutsu", "News", "Open Source", "Repository Visualization", "SHA 256", "Software Community", "Technical Conference", "Version Control", "Workflow"]
-tags_normalized: ["branching strategies", "collaboration", "developer tools", "devops", "git", "git merge", "gitbutler", "github", "jujutsu", "news", "open source", "repository visualization", "sha 256", "software community", "technical conference", "version control", "workflow"]
+permalink: /devops/news/Git-Merge-2025-Celebrating-20-Years-of-Git-at-GitHub-HQ
+tags:
+- Branching Strategies
+- Collaboration
+- Developer Tools
+- DevOps
+- Git
+- Git Merge
+- GitButler
+- GitHub
+- Jujutsu
+- News
+- Open Source
+- Repository Visualization
+- SHA 256
+- Software Community
+- Technical Conference
+- Version Control
+- Workflow
+section_names:
+- devops
 ---
-
 Lee Reilly reports on Git Merge 2025, a milestone gathering at GitHub HQ celebrating 20 years of Git with global talks, live demos, and vibrant community collaboration.<!--excerpt_end-->
 
 # Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ

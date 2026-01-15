@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Announcing .NET 10 Release Candidate 1"
-description: ".NET 10 Release Candidate 1 introduces enhancements across the platform, including libraries, ASP.NET Core, Blazor, .NET MAUI, Windows Forms, and Entity Framework Core. Supported in Visual Studio 2026 Insiders and Visual Studio Code, this release provides a go-live license for production use, new features, performance improvements, and expanded support for developers."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Announcing .NET 10 Release Candidate 1
+author: .NET Team
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-09 18:45:00 +00:00
-permalink: "/2025-09-09-Announcing-NET-10-Release-Candidate-1.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "ASP.NET Core", "Blazor", "C#", "C# Dev Kit", "Coding", "Community Standup", "Cosmos DB", "Diagnostics", "EF Core", "Featured", "HybridWebView", "MAUI", "Metrics", "Minimal APIs", "News", "OpenAPI", "Post Quantum Cryptography", "SQL Server", "Tensor", "Visual Studio Insiders", "VS Code", "Windows Forms"]
-tags_normalized: ["dotnet", "dotnet 10", "aspdotnet core", "blazor", "csharp", "csharp dev kit", "coding", "community standup", "cosmos db", "diagnostics", "ef core", "featured", "hybridwebview", "maui", "metrics", "minimal apis", "news", "openapi", "post quantum cryptography", "sql server", "tensor", "visual studio insiders", "vs code", "windows forms"]
+permalink: /coding/news/Announcing-NET-10-Release-Candidate-1
+tags:
+- .NET
+- .NET 10
+- ASP.NET Core
+- Blazor
+- C#
+- C# Dev Kit
+- Coding
+- Community Standup
+- Cosmos DB
+- Diagnostics
+- EF Core
+- Featured
+- HybridWebView
+- MAUI
+- Metrics
+- Minimal APIs
+- News
+- OpenAPI
+- Post Quantum Cryptography
+- SQL Server
+- Tensor
+- Visual Studio Insiders
+- VS Code
+- Windows Forms
+section_names:
+- coding
 ---
-
 .NET Team presents the first release candidate of .NET 10, with new features and improvements for libraries, ASP.NET Core, Blazor, .NET MAUI, and more. Learn what's new for developers in this broad platform update.<!--excerpt_end-->
 
 # Announcing .NET 10 Release Candidate 1

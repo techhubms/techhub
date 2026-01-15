@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Logic apps - how do you export it to vscode?"
-description: "The author discusses challenges with Azure Logic Apps, specifically difficulties exporting app content and integrating with standard development workflows using source control and CI/CD. The post highlights issues with local development and designer loading, questioning Logic Apps' applicability beyond quick solutions."
-author: "your-lost-elephant"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mh6hop/logic_apps_how_do_you_export_it_to_vscode/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Logic apps - how do you export it to vscode?
+author: your-lost-elephant
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mh6hop/logic_apps_how_do_you_export_it_to_vscode/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 06:56:51 +00:00
-permalink: "/2025-08-04-Logic-apps-how-do-you-export-it-to-vscode.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Logic Apps", "CI/CD", "Community", "Deployment", "Designer", "DevOps", "Export", "Integration", "Local Development", "Source Code Management", "VS Code", "Workflow Automation"]
-tags_normalized: ["azure", "azure logic apps", "cislashcd", "community", "deployment", "designer", "devops", "export", "integration", "local development", "source code management", "vs code", "workflow automation"]
+permalink: /azure/community/Logic-apps-how-do-you-export-it-to-vscode
+tags:
+- Azure
+- Azure Logic Apps
+- CI/CD
+- Community
+- Deployment
+- Designer
+- DevOps
+- Export
+- Integration
+- Local Development
+- Source Code Management
+- VS Code
+- Workflow Automation
+section_names:
+- azure
+- devops
 ---
-
 Author your-lost-elephant shares their difficulties exporting Azure Logic Apps to VS Code, citing issues with development practices and deployment.<!--excerpt_end-->
 
 ## Logic Apps - Exporting to VS Code and CI/CD Challenges

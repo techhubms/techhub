@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Deep Dive into Microsoft Agent Framework for AutoGen Users"
-description: "This video provides an in-depth look at the Microsoft Agent Framework (MAF) designed for AutoGen users. Eric Zhu guides viewers through the migration from AutoGen to MAF, detailing key similarities and changes, critical features like model client setup, single and multi-agent orchestration, MCP support, agent-as-a-tool, and practical code comparisons. The session highlights architectural patterns and showcases how MAF converges Semantic Kernel and AutoGen into a single SDK for building advanced multi-agent AI systems on Microsoft technologies."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JlzteydCK_Q"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Deep Dive into Microsoft Agent Framework for AutoGen Users
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=JlzteydCK_Q
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 16:00:39 +00:00
-permalink: "/2025-10-30-Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent as A Tool", "Agent Orchestration", "AI", "AI Agents", "AutoGen", "Azure", "Cloud Computing", "Coding", "Debug Tools", "Dev", "Development", "Event Driven Runtime", "GraphFlow", "LLMs", "MCP Support", "Microsoft", "Microsoft Agent Framework", "Model Clients", "Multi Agent Systems", "Open Source", "Orchestration", "Pro Code Development", "SDK", "Semantic Kernel", "Tech", "Technology", "Videos", "Workflow"]
-tags_normalized: ["agent as a tool", "agent orchestration", "ai", "ai agents", "autogen", "azure", "cloud computing", "coding", "debug tools", "dev", "development", "event driven runtime", "graphflow", "llms", "mcp support", "microsoft", "microsoft agent framework", "model clients", "multi agent systems", "open source", "orchestration", "pro code development", "sdk", "semantic kernel", "tech", "technology", "videos", "workflow"]
+permalink: /ai/videos/Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users
+tags:
+- Agent as A Tool
+- Agent Orchestration
+- AI
+- AI Agents
+- AutoGen
+- Azure
+- Cloud Computing
+- Coding
+- Debug Tools
+- Dev
+- Development
+- Event Driven Runtime
+- GraphFlow
+- LLMs
+- MCP Support
+- Microsoft
+- Microsoft Agent Framework
+- Model Clients
+- Multi Agent Systems
+- Open Source
+- Orchestration
+- Pro Code Development
+- SDK
+- Semantic Kernel
+- Tech
+- Technology
+- Videos
+- Workflow
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Eric Zhu from Microsoft Developer presents a thorough guide for AutoGen users transitioning to the Microsoft Agent Framework, exploring migration strategies and new multi-agent architecture capabilities.<!--excerpt_end-->
 
 {% youtube JlzteydCK_Q %}

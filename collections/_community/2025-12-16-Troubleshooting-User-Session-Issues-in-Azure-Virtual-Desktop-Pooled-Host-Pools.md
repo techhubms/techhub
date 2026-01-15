@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)"
-description: "This community post details ongoing session and connectivity issues in an Azure Virtual Desktop (AVD) pooled host pool with Windows 10/11 multi-session, utilizing FSLogix user profiles. The author seeks guidance on resolving unexpected session disconnects, identifying user sessions across hosts, and best practices for detecting and cleaning up stuck sessions using Azure Portal or PowerShell."
-author: "StormShadow007"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)
+author: StormShadow007
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-16 22:47:32 +00:00
-permalink: "/2025-12-16-Troubleshooting-User-Session-Issues-in-Azure-Virtual-Desktop-Pooled-Host-Pools.html"
-categories: ["Azure"]
-tags: ["AVD", "Azure", "Azure Portal", "Azure Virtual Desktop", "Community", "Disconnection Issue", "FSLogix", "Pooled Host Pool", "PowerShell", "Profile Lock", "Remote Desktop", "Session Host", "Session Management", "Troubleshooting", "User Sessions", "Windows 10 Enterprise Multi Session", "Windows 11 Enterprise Multi Session"]
-tags_normalized: ["avd", "azure", "azure portal", "azure virtual desktop", "community", "disconnection issue", "fslogix", "pooled host pool", "powershell", "profile lock", "remote desktop", "session host", "session management", "troubleshooting", "user sessions", "windows 10 enterprise multi session", "windows 11 enterprise multi session"]
+permalink: /azure/community/Troubleshooting-User-Session-Issues-in-Azure-Virtual-Desktop-Pooled-Host-Pools
+tags:
+- AVD
+- Azure
+- Azure Portal
+- Azure Virtual Desktop
+- Community
+- Disconnection Issue
+- FSLogix
+- Pooled Host Pool
+- PowerShell
+- Profile Lock
+- Remote Desktop
+- Session Host
+- Session Management
+- Troubleshooting
+- User Sessions
+- Windows 10 Enterprise Multi Session
+- Windows 11 Enterprise Multi Session
+section_names:
+- azure
 ---
-
 StormShadow007 describes challenges with user session disconnects in Azure Virtual Desktop pooled environments, seeking advice on session tracking and cleanup—especially with FSLogix-enabled hosts.<!--excerpt_end-->
 
 # Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)

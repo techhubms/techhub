@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Upgrade Azure VMs with Trusted Launch: In-Place Security Enhancement Now Available"
-description: "This guide provides an in-depth overview of upgrading existing Azure Virtual Machines and Scale Sets to Trusted Launch using the newly available in-place upgrade functionality. It explains key security features such as Secure Boot, vTPM, and attestation, outlines compliance requirements, and provides step-by-step resources and best practices to help administrators secure their infrastructure with minimal disruption."
-author: "AjKundnani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/increase-security-for-azure-vms-trusted-launch-in-place-upgrade/ba-p/4440584"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Upgrade Azure VMs with Trusted Launch: In-Place Security Enhancement Now Available'
+author: AjKundnani
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/increase-security-for-azure-vms-trusted-launch-in-place-upgrade/ba-p/4440584
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-04 05:50:05 +00:00
-permalink: "/2025-09-04-Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Security Benchmark", "Azure Virtual Machines", "Boot Integrity Monitoring", "Cloud Security", "Community", "Compliance", "FedRAMP", "Gen1 VM", "Gen2 VM", "HIPAA", "in Place Upgrade", "Infrastructure Security", "Microsoft Azure", "PCI DSS", "Scale Set", "Secure Boot", "Security", "Trusted Launch", "Vtpm"]
-tags_normalized: ["azure", "azure security benchmark", "azure virtual machines", "boot integrity monitoring", "cloud security", "community", "compliance", "fedramp", "gen1 vm", "gen2 vm", "hipaa", "in place upgrade", "infrastructure security", "microsoft azure", "pci dss", "scale set", "secure boot", "security", "trusted launch", "vtpm"]
+permalink: /azure/community/Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available
+tags:
+- Azure
+- Azure Security Benchmark
+- Azure Virtual Machines
+- Boot Integrity Monitoring
+- Cloud Security
+- Community
+- Compliance
+- FedRAMP
+- Gen1 VM
+- Gen2 VM
+- HIPAA
+- in Place Upgrade
+- Infrastructure Security
+- Microsoft Azure
+- PCI DSS
+- Scale Set
+- Secure Boot
+- Security
+- Trusted Launch
+- Vtpm
+section_names:
+- azure
+- security
 ---
-
 AjKundnani introduces the new in-place upgrade support for Trusted Launch in Azure Virtual Machines and Scale Sets, helping administrators strengthen security without complex migrations.<!--excerpt_end-->
 
 # Upgrade Azure VMs with Trusted Launch: In-Place Security Enhancement Now Available

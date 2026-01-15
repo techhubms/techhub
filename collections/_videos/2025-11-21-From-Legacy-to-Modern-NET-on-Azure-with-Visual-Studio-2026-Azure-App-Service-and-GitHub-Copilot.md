@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot"
-description: "This session from Microsoft Ignite 2025 showcases how developers can accelerate the modernization of legacy .NET applications using Visual Studio 2026, .NET, GitHub Copilot, and Azure App Service. It covers new tooling, AI-assisted upgrades, tackling compatibility issues, achieving scalable and secure deployments, and leveraging deep observability and cost efficiency. Key demos include Copilot-driven request handling, AI-generated SQL in WinForms, secure integration with Azure Key Vault, and practical modernization workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4SA8Iu5su6c"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=4SA8Iu5su6c
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:37:23 +00:00
-permalink: "/2025-11-21-From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Powered Development", "App Compatibility", "Azure", "Azure App Service", "Azure Key Vault", "Azure Managed Instance", "Cloud Deployment", "Coding", "Cost Efficiency", "DevOps", "GitHub Copilot", "Legacy Modernization", "Migrateandmodernizeyourestate", "MSIgnite", "MVC Music Store", "Observability", "Secure Deployments", "Videos", "VS", "WinForms"]
-tags_normalized: ["dotnet", "ai", "ai powered development", "app compatibility", "azure", "azure app service", "azure key vault", "azure managed instance", "cloud deployment", "coding", "cost efficiency", "devops", "github copilot", "legacy modernization", "migrateandmodernizeyourestate", "msignite", "mvc music store", "observability", "secure deployments", "videos", "vs", "winforms"]
+permalink: /github-copilot/videos/From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot
+tags:
+- .NET
+- AI
+- AI Powered Development
+- App Compatibility
+- Azure
+- Azure App Service
+- Azure Key Vault
+- Azure Managed Instance
+- Cloud Deployment
+- Coding
+- Cost Efficiency
+- DevOps
+- GitHub Copilot
+- Legacy Modernization
+- Migrateandmodernizeyourestate
+- MSIgnite
+- MVC Music Store
+- Observability
+- Secure Deployments
+- Videos
+- VS
+- WinForms
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Presented by Jon Galloway and Gaurav Seth, this Microsoft Ignite 2025 session demonstrates how to upgrade legacy .NET apps using Visual Studio 2026, GitHub Copilot, and Azure App Service, offering developers practical paths to scalable, secure, AI-ready cloud solutions.<!--excerpt_end-->
 
 {% youtube 4SA8Iu5su6c %}

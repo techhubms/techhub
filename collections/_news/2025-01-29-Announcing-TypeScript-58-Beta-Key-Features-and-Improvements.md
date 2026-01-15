@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing TypeScript 5.8 Beta: Key Features and Improvements"
-description: "Daniel Rosenwasser introduces the TypeScript 5.8 Beta, highlighting new features such as checked returns for conditional and indexed access types, improved CommonJS and ESM interoperability, new compiler flags for advanced workflows, and optimizations for program performance. The post guides developers through technical changes and how to leverage them."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript 5.8 Beta: Key Features and Improvements'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-01-29 18:51:38 +00:00
-permalink: "/2025-01-29-Announcing-TypeScript-58-Beta-Key-Features-and-Improvements.html"
-categories: ["Coding"]
-tags: ["Checked Return Types", "Coding", "CommonJS", "Compiler Flags", "Conditional Types", "Declaration Files", "Erasablesyntaxonly", "ESM", "Indexed Access Types", "JavaScript", "Libreplacement", "Module Node18", "Module Nodenext", "News", "Node.js", "Program Optimization", "TypeScript", "TypeScript 5.8"]
-tags_normalized: ["checked return types", "coding", "commonjs", "compiler flags", "conditional types", "declaration files", "erasablesyntaxonly", "esm", "indexed access types", "javascript", "libreplacement", "module node18", "module nodenext", "news", "nodedotjs", "program optimization", "typescript", "typescript 5dot8"]
+permalink: /coding/news/Announcing-TypeScript-58-Beta-Key-Features-and-Improvements
+tags:
+- Checked Return Types
+- Coding
+- CommonJS
+- Compiler Flags
+- Conditional Types
+- Declaration Files
+- Erasablesyntaxonly
+- ESM
+- Indexed Access Types
+- JavaScript
+- Libreplacement
+- Module Node18
+- Module Nodenext
+- News
+- Node.js
+- Program Optimization
+- TypeScript
+- TypeScript 5.8
+section_names:
+- coding
 ---
-
 Daniel Rosenwasser and the TypeScript Team unveil TypeScript 5.8 Beta, outlining key new features for developers, including advanced typing improvements and module interoperability.<!--excerpt_end-->
 
 # Announcing TypeScript 5.8 Beta: Key Features and Improvements

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Getting Started with Azure AI Foundry: A Beginner’s Guide"
-description: "This introduction to Azure AI Foundry, led by Seth Juarez, provides developers with a clear roadmap for exploring Microsoft's AI platform. The session covers model selection and agent creation, reducing the complexity for those new to Azure AI Foundry. The walkthrough aims to help users understand foundational concepts and how Azure AI Foundry can shape coding practices in modern AI-driven applications."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yZgC1KhfSxo"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Getting Started with Azure AI Foundry: A Beginner’s Guide'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=yZgC1KhfSxo
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-15 17:29:32 +00:00
-permalink: "/2025-12-15-Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Building", "AI", "AI Agents", "AI Development", "AI Platform", "AIDevelopers", "Azure", "Azure AI", "Azure AI Foundry", "Cloud AI", "Developer Guide", "Microsoft Azure", "Microsoft Developer", "Model Selection", "OneDevQuestion", "Seth Juarez", "Videos"]
-tags_normalized: ["agent building", "ai", "ai agents", "ai development", "ai platform", "aidevelopers", "azure", "azure ai", "azure ai foundry", "cloud ai", "developer guide", "microsoft azure", "microsoft developer", "model selection", "onedevquestion", "seth juarez", "videos"]
+permalink: /ai/videos/Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide
+tags:
+- Agent Building
+- AI
+- AI Agents
+- AI Development
+- AI Platform
+- AIDevelopers
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Cloud AI
+- Developer Guide
+- Microsoft Azure
+- Microsoft Developer
+- Model Selection
+- OneDevQuestion
+- Seth Juarez
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer’s Seth Juarez demystifies Azure AI Foundry, guiding viewers through model selection and agent building with practical advice for newcomers.<!--excerpt_end-->
 
 {% youtube yZgC1KhfSxo %}

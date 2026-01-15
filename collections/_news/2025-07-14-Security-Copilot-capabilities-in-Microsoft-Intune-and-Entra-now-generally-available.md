@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Security Copilot capabilities in Microsoft Intune and Entra now generally available"
-description: "Microsoft announces general availability of Security Copilot features in Intune and Entra, enhancing security automation and management across its platforms."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/"
-categories: ["AI", "Security"]
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Security Copilot capabilities in Microsoft Intune and Entra now generally available
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-14 17:23:42 +00:00
-permalink: "/2025-07-14-Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available.html"
-viewing_mode: "external"
-tags: ["AI", "AI Driven Security", "Compliance", "Endpoint Management", "General Availability", "Microsoft 365", "Microsoft Entra", "Microsoft Intune", "News", "Security", "Security Automation", "Security Copilot", "Threat Management"]
-tags_normalized: ["ai", "ai driven security", "compliance", "endpoint management", "general availability", "microsoft 365", "microsoft entra", "microsoft intune", "news", "security", "security automation", "security copilot", "threat management"]
+permalink: /ai/news/Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available
+viewing_mode: external
+tags:
+- AI
+- AI Driven Security
+- Compliance
+- Endpoint Management
+- General Availability
+- Microsoft 365
+- Microsoft Entra
+- Microsoft Intune
+- News
+- Security
+- Security Automation
+- Security Copilot
+- Threat Management
+section_names:
+- ai
+- security
 ---
-
 In this article, author stclarke discusses the general availability of Security Copilot capabilities within Microsoft Intune and Microsoft Entra. The announcement highlights how these integrations bring enhanced AI-driven security automation, streamlined threat management, and compliance capabilities directly into Microsoft's security and management platforms.<!--excerpt_end-->
 
 ## Overview

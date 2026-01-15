@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport"
-description: "This article by DeepGanguly demonstrates how to deploy and run a Model Context Protocol (MCP) server using the HTTP transport mechanism on Azure Container Apps (ACA). It details building a live forex converter server, integrating external APIs for real-time data, and configuring connectivity for AI assistants like VS Code Chat. The guide covers local development, Azure deployment steps with Bicep, and setup for cloud-based scaling, monitoring, and updates."
-author: "DeepGanguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport
+author: DeepGanguly
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 04:22:11 +00:00
-permalink: "/2025-10-15-Hosting-Remote-MCP-Server-on-Azure-Container-Apps-Using-HTTP-Transport.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Azure", "Azure Container Apps", "Azure Deployment", "Bicep", "Cloud Scaling", "Coding", "Community", "Containerization", "Currency Conversion", "HTTP Transport", "JSON RPC", "Live Forex Rates", "MCP", "Node.js", "REST API", "Serverless", "VS Code Chat"]
-tags_normalized: ["ai", "azure", "azure container apps", "azure deployment", "bicep", "cloud scaling", "coding", "community", "containerization", "currency conversion", "http transport", "json rpc", "live forex rates", "mcp", "nodedotjs", "rest api", "serverless", "vs code chat"]
+permalink: /ai/community/Hosting-Remote-MCP-Server-on-Azure-Container-Apps-Using-HTTP-Transport
+tags:
+- AI
+- Azure
+- Azure Container Apps
+- Azure Deployment
+- Bicep
+- Cloud Scaling
+- Coding
+- Community
+- Containerization
+- Currency Conversion
+- HTTP Transport
+- JSON RPC
+- Live Forex Rates
+- MCP
+- Node.js
+- REST API
+- Serverless
+- VS Code Chat
+section_names:
+- ai
+- azure
+- coding
 ---
-
 DeepGanguly presents a step-by-step guide to hosting a Model Context Protocol (MCP) server with HTTP transport on Azure Container Apps, enabling integration with external APIs and use in tools like VS Code Chat.<!--excerpt_end-->
 
 # Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport

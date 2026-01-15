@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Customer-Managed Keys for Microsoft Fabric Workspaces Now in Public Preview"
-description: "This announcement details the public preview release of customer-managed keys (CMK) for Microsoft Fabric workspaces, now available in all public regions. The update enables organizations worldwide to better address compliance needs and data protection strategies by allowing the use of their own encryption keys, including support for Azure Managed HSM. The release builds on existing default encryption with Microsoft-managed keys (MMK), providing more granular control for customers with strict regulatory requirements. Links to setup guides and further resources are included."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-available-in-all-public-regions-now-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Customer-Managed Keys for Microsoft Fabric Workspaces Now in Public Preview
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-available-in-all-public-regions-now-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 11:57:18 +00:00
-permalink: "/2025-08-11-Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-in-Public-Preview.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Key Vault", "Azure Managed HSM", "Cloud Security", "CMK", "Compliance", "Customer Managed Keys", "Data Encryption", "Data Protection", "Key Management", "Microsoft Fabric", "Microsoft Managed Keys", "ML", "News", "Public Preview", "Regulatory Requirements", "Security", "Workspace Encryption"]
-tags_normalized: ["azure", "azure key vault", "azure managed hsm", "cloud security", "cmk", "compliance", "customer managed keys", "data encryption", "data protection", "key management", "microsoft fabric", "microsoft managed keys", "ml", "news", "public preview", "regulatory requirements", "security", "workspace encryption"]
+permalink: /ml/news/Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-in-Public-Preview
+tags:
+- Azure
+- Azure Key Vault
+- Azure Managed HSM
+- Cloud Security
+- CMK
+- Compliance
+- Customer Managed Keys
+- Data Encryption
+- Data Protection
+- Key Management
+- Microsoft Fabric
+- Microsoft Managed Keys
+- ML
+- News
+- Public Preview
+- Regulatory Requirements
+- Security
+- Workspace Encryption
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog announces the public preview of customer-managed keys (CMK) for Fabric workspaces, allowing teams to implement stronger data protection and compliance measures. Authored by the Microsoft Fabric Blog team, this update introduces Azure Managed HSM support and enhanced encryption options.<!--excerpt_end-->
 
 # Customer-Managed Keys for Microsoft Fabric Workspaces Now in Public Preview

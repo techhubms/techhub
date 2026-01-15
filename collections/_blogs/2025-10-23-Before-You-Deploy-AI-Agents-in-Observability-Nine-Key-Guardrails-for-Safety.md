@@ -1,20 +1,58 @@
----
-layout: "post"
-title: "Before You Deploy AI Agents in Observability: Nine Key Guardrails for Safety"
-description: "This article by Pankaj Thakkar provides a practical guide to safely integrating agentic AI into observability platforms. It details nine actionable guardrails, including identity management, policy controls, privacy, auditing, gradual rollout, human oversight, rate limiting, cost controls, and continuous improvement. Readers will learn how to reduce operational risk and improve accountability when deploying autonomous AI agents within their DevOps workflows."
-author: "Pankaj Thakkar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/before-you-go-agentic-top-guardrails-to-safely-deploy-ai-agents-in-observability/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Before You Deploy AI Agents in Observability: Nine Key Guardrails for Safety'
+author: Pankaj Thakkar
+canonical_url: https://devops.com/before-you-go-agentic-top-guardrails-to-safely-deploy-ai-agents-in-observability/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 07:00:21 +00:00
-permalink: "/2025-10-23-Before-You-Deploy-AI-Agents-in-Observability-Nine-Key-Guardrails-for-Safety.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "AI Audit Trails", "AI Cost Management", "AI Deployment Controls", "AI Governance", "AI Guardrails", "AI in DevOps", "AI Observability Safety", "AI Operations", "AI Policy Validation", "AI Rate Limiting", "Audit Trails", "Autonomous Agents", "Blogs", "Business Of DevOps", "Continuous Testing", "Contributed Content", "Cost Management", "Data Privacy", "DevOps", "Human in The Loop", "Identity And Access Control", "KubeCon", "KubeCon + CNC NA", "Logging", "Monitoring", "Monitoring And Observability", "Observability", "OpenTelemetry", "Policy Validation", "Rate Limiting", "Role Based Access Control", "Security", "Self Healing Infrastructure", "Social Facebook", "Social LinkedIn", "Social X", "Zero Trust"]
-tags_normalized: ["agentic ai", "ai", "ai audit trails", "ai cost management", "ai deployment controls", "ai governance", "ai guardrails", "ai in devops", "ai observability safety", "ai operations", "ai policy validation", "ai rate limiting", "audit trails", "autonomous agents", "blogs", "business of devops", "continuous testing", "contributed content", "cost management", "data privacy", "devops", "human in the loop", "identity and access control", "kubecon", "kubecon plus cnc na", "logging", "monitoring", "monitoring and observability", "observability", "opentelemetry", "policy validation", "rate limiting", "role based access control", "security", "self healing infrastructure", "social facebook", "social linkedin", "social x", "zero trust"]
+permalink: /ai/blogs/Before-You-Deploy-AI-Agents-in-Observability-Nine-Key-Guardrails-for-Safety
+tags:
+- Agentic AI
+- AI
+- AI Audit Trails
+- AI Cost Management
+- AI Deployment Controls
+- AI Governance
+- AI Guardrails
+- AI in DevOps
+- AI Observability Safety
+- AI Operations
+- AI Policy Validation
+- AI Rate Limiting
+- Audit Trails
+- Autonomous Agents
+- Blogs
+- Business Of DevOps
+- Continuous Testing
+- Contributed Content
+- Cost Management
+- Data Privacy
+- DevOps
+- Human in The Loop
+- Identity And Access Control
+- KubeCon
+- KubeCon + CNC NA
+- Logging
+- Monitoring
+- Monitoring And Observability
+- Observability
+- OpenTelemetry
+- Policy Validation
+- Rate Limiting
+- Role Based Access Control
+- Security
+- Self Healing Infrastructure
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Zero Trust
+section_names:
+- ai
+- devops
+- security
 ---
-
 Pankaj Thakkar outlines nine essential guardrails for deploying AI agents in observability platforms, balancing automation benefits with safety, security, and human oversight.<!--excerpt_end-->
 
 # Before You Deploy AI Agents in Observability: Nine Key Guardrails for Safety

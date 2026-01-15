@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi"
-description: "This session explores automating the beer brewing process using Raspberry Pi and Meadow boards running .NET. Learn practical techniques for developing IoT machine control systems on low-powered devices, and how .NET can be leveraged for embedded hardware projects aimed at automation and device management."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Yi6Uf5DojaU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Yi6Uf5DojaU
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 02:30:06 +00:00
-permalink: "/2025-11-14-If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Conf", "Coding", "Device Automation", "Embedded Systems", "Hardware Integration", "IoT", "Low Powered Devices", "Machine Control", "Meadow Board", "Raspberry Pi", "Software Development", "Tech Conference", "Videos"]
-tags_normalized: ["dotnet", "dotnet conf", "coding", "device automation", "embedded systems", "hardware integration", "iot", "low powered devices", "machine control", "meadow board", "raspberry pi", "software development", "tech conference", "videos"]
+permalink: /coding/videos/If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi
+tags:
+- .NET
+- .NET Conf
+- Coding
+- Device Automation
+- Embedded Systems
+- Hardware Integration
+- IoT
+- Low Powered Devices
+- Machine Control
+- Meadow Board
+- Raspberry Pi
+- Software Development
+- Tech Conference
+- Videos
+section_names:
+- coding
 ---
-
 dotnet presents a hands-on journey into automating beer brewing using .NET on Raspberry Pi and Meadow boards, providing guidance for developers interested in IoT device automation.<!--excerpt_end-->
 
 {% youtube Yi6Uf5DojaU %}

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Seeking Insights: Working with Large Modular Monoliths in C# Over Time"
-description: "The author invites developers to share their experiences maintaining and scaling large modular monolith solutions in C#. The post raises concerns about managing complexity as the number of modules grows and seeks recommendations on module communication and team workflow in such architectures."
-author: "Background-Brick-157"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhzuoj/long_term_experience_with_large_modular_monolith/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Seeking Insights: Working with Large Modular Monoliths in C# Over Time'
+author: Background-Brick-157
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mhzuoj/long_term_experience_with_large_modular_monolith/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-05 04:38:09 +00:00
-permalink: "/2025-08-05-Seeking-Insights-Working-with-Large-Modular-Monoliths-in-C-Over-Time.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Community", "Modular Architecture", "Modular Monolith", "Module Communication", "Project Structure", "Scalability", "Software Architecture", "Solution Organization", "Team Workflow"]
-tags_normalized: ["dotnet", "csharp", "coding", "community", "modular architecture", "modular monolith", "module communication", "project structure", "scalability", "software architecture", "solution organization", "team workflow"]
+permalink: /coding/community/Seeking-Insights-Working-with-Large-Modular-Monoliths-in-C-Over-Time
+tags:
+- .NET
+- C#
+- Coding
+- Community
+- Modular Architecture
+- Modular Monolith
+- Module Communication
+- Project Structure
+- Scalability
+- Software Architecture
+- Solution Organization
+- Team Workflow
+section_names:
+- coding
 ---
-
 Background-Brick-157 seeks community insight on handling large modular monolith solutions in C#, focusing on scalability, module organization, and team impact as these systems grow.<!--excerpt_end-->
 
 # Seeking Insights: Long-Term Experience with Large Modular Monolith Codebases in C#

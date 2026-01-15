@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent for Linear Enters Public Preview"
-description: "This news post announces the public preview of the GitHub Copilot coding agent integration with Linear. It describes how developers can now assign Linear issues to an autonomous Copilot agent, which will analyze issues, make code changes in an isolated environment using GitHub Actions, run tests, and submit pull requests for review. It highlights workflow benefits and outlines steps to get started with the integration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Coding Agent for Linear Enters Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:25:36 +00:00
-permalink: "/2025-10-28-GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Integration", "AI", "Automation", "Autonomous Agents", "Code Review", "Continuous Integration", "Copilot", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Copilot", "Linear", "News", "Pull Requests", "Universe25", "Workflow Automation"]
-tags_normalized: ["agent integration", "ai", "automation", "autonomous agents", "code review", "continuous integration", "copilot", "developer tools", "devops", "github actions", "github copilot", "linear", "news", "pull requests", "universe25", "workflow automation"]
+permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview
+tags:
+- Agent Integration
+- AI
+- Automation
+- Autonomous Agents
+- Code Review
+- Continuous Integration
+- Copilot
+- Developer Tools
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Linear
+- News
+- Pull Requests
+- Universe25
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces the GitHub Copilot coding agent for Linear, now in public preview, outlining how developers can automate issue resolution and code contributions using AI-powered autonomous agents.<!--excerpt_end-->
 
 # GitHub Copilot for Linear Available in Public Preview

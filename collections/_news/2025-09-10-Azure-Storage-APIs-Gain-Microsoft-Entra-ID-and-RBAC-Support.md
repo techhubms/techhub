@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Storage APIs Gain Microsoft Entra ID and RBAC Support"
-description: "This article covers the general availability of Microsoft Entra ID and RBAC support for several Azure Storage data plane APIs. It explains benefits of OAuth 2.0 authentication, changes in REST API error handling, and provides a .NET code example demonstrating how to use DefaultAzureCredential for secure access. The post highlights security improvements and recommends best practices for developers transitioning to OAuth-based authentication for Azure Storage, detailing the advantages over traditional SAS and account key mechanisms."
-author: "Christine Chen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure Storage APIs Gain Microsoft Entra ID and RBAC Support
+author: Christine Chen
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-09-10 18:24:47 +00:00
-permalink: "/2025-09-10-Azure-Storage-APIs-Gain-Microsoft-Entra-ID-and-RBAC-Support.html"
-categories: ["Azure", "Coding", "Security"]
-tags: [".NET", "Access Control", "API Integration", "Authentication", "Authorization", "Azure", "Azure SDK", "Azure Storage", "Blob Storage", "Coding", "DefaultAzureCredential", "Error Handling", "Microsoft Entra ID", "News", "OAuth 2.0", "RBAC", "REST API", "Security", "Security Best Practices", "Storage"]
-tags_normalized: ["dotnet", "access control", "api integration", "authentication", "authorization", "azure", "azure sdk", "azure storage", "blob storage", "coding", "defaultazurecredential", "error handling", "microsoft entra id", "news", "oauth 2dot0", "rbac", "rest api", "security", "security best practices", "storage"]
+permalink: /coding/news/Azure-Storage-APIs-Gain-Microsoft-Entra-ID-and-RBAC-Support
+tags:
+- .NET
+- Access Control
+- API Integration
+- Authentication
+- Authorization
+- Azure
+- Azure SDK
+- Azure Storage
+- Blob Storage
+- Coding
+- DefaultAzureCredential
+- Error Handling
+- Microsoft Entra ID
+- News
+- OAuth 2.0
+- RBAC
+- REST API
+- Security
+- Security Best Practices
+- Storage
+section_names:
+- azure
+- coding
+- security
 ---
-
 Christine Chen discusses the newly available Microsoft Entra ID and RBAC support for Azure Storage APIs, offering guidance on OAuth-based authentication and updated security practices.<!--excerpt_end-->
 
 # Azure Storage APIs Gain Microsoft Entra ID and RBAC Support

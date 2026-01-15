@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Optimize Your Cloud Environment with Azure Copilot's Agentic AI"
-description: "Discover how Azure Copilot's new optimization agent leverages AI to streamline cloud operations. This guide explains how the agent can help IT professionals and FinOps teams manage costs, improve sustainability, and automate governance tasks through actionable recommendations, CLI/PowerShell integration, and unified insights for spend and carbon emissions."
-author: "riteshkini"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/optimize-your-cloud-environment-using-agentic-ai/ba-p/4469772"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Optimize Your Cloud Environment with Azure Copilot's Agentic AI
+author: riteshkini
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/optimize-your-cloud-environment-using-agentic-ai/ba-p/4469772
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:20:32 +00:00
-permalink: "/2025-11-18-Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "Azure", "Azure Copilot", "Azure Management", "Azure Portal", "Carbon Insights", "CLI Automation", "Cloud Operations", "Community", "Compliance", "Cost Management", "FinOps", "Governance", "Microsoft Ignite", "Operational Excellence", "Optimization Agent", "PowerShell", "Resource Optimization", "Sustainability", "Virtual Machines", "Well Architected Framework"]
-tags_normalized: ["agentic workflows", "ai", "azure", "azure copilot", "azure management", "azure portal", "carbon insights", "cli automation", "cloud operations", "community", "compliance", "cost management", "finops", "governance", "microsoft ignite", "operational excellence", "optimization agent", "powershell", "resource optimization", "sustainability", "virtual machines", "well architected framework"]
+permalink: /ai/community/Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI
+tags:
+- Agentic Workflows
+- AI
+- Azure
+- Azure Copilot
+- Azure Management
+- Azure Portal
+- Carbon Insights
+- CLI Automation
+- Cloud Operations
+- Community
+- Compliance
+- Cost Management
+- FinOps
+- Governance
+- Microsoft Ignite
+- Operational Excellence
+- Optimization Agent
+- PowerShell
+- Resource Optimization
+- Sustainability
+- Virtual Machines
+- Well Architected Framework
+section_names:
+- ai
+- azure
 ---
-
 riteshkini demonstrates how Azure Copilot’s optimization agent uses AI to help teams manage cloud costs, streamline resources, and improve sustainability—all through a unified portal and automation features.<!--excerpt_end-->
 
 # Optimize Your Cloud Environment with Azure Copilot's Agentic AI

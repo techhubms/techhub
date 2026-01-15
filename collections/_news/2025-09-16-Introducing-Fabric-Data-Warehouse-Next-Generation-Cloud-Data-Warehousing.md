@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing"
-description: "An in-depth introduction to Fabric Data Warehouse, showcasing its modern, lakehouse-based architecture, enterprise-grade features, rapid performance gains, and developer-oriented tooling. The article highlights recent improvements, major new capabilities, customer success stories, and migration innovations for organizations transitioning from legacy data platforms such as Azure Synapse."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:30:00 +00:00
-permalink: "/2025-09-16-Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Audit Logs", "Azure", "Coding", "Copilot", "Customer Managed Keys", "Data Engineering", "Data Migration", "Dbt Connector", "Enterprise Data Warehousing", "Fabric Data Warehouse", "Lakehouse Architecture", "Microsoft Fabric", "Migration Assistant", "ML", "News", "OPENROWSET(JSONL)", "Performance Benchmarking", "PrivateLink", "Serverless Data", "SQL Optimization", "SSMS Integration"]
-tags_normalized: ["audit logs", "azure", "coding", "copilot", "customer managed keys", "data engineering", "data migration", "dbt connector", "enterprise data warehousing", "fabric data warehouse", "lakehouse architecture", "microsoft fabric", "migration assistant", "ml", "news", "openrowsetjsonl", "performance benchmarking", "privatelink", "serverless data", "sql optimization", "ssms integration"]
+permalink: /ml/news/Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing
+tags:
+- Audit Logs
+- Azure
+- Coding
+- Copilot
+- Customer Managed Keys
+- Data Engineering
+- Data Migration
+- Dbt Connector
+- Enterprise Data Warehousing
+- Fabric Data Warehouse
+- Lakehouse Architecture
+- Microsoft Fabric
+- Migration Assistant
+- ML
+- News
+- OPENROWSET(JSONL)
+- Performance Benchmarking
+- PrivateLink
+- Serverless Data
+- SQL Optimization
+- SSMS Integration
+section_names:
+- azure
+- coding
+- ml
 ---
-
 This post from Microsoft Fabric Blog introduces Fabric Data Warehouse and its architectural, performance, and security advances for data professionals and developers, with contributions and insights from the Microsoft Fabric team.<!--excerpt_end-->
 
 # Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing

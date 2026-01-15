@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Exploring HPC and AI Innovation with Microsoft and AMD at the HPC Roundtable 2025"
-description: "This article covers Microsoft's and AMD's collaboration at the HPC Roundtable 2025 in Turin, focusing on how Azure High Performance Computing (HPC) is enabling cloud-native engineering and AI workloads. It details key sessions such as Polestar's adoption of Azure-based HPC and a roundtable on the convergence of HPC and AI infrastructure, offering insights into the transformation of simulation, engineering, and intelligent workloads using Microsoft technologies."
-author: "Fernando_Aznar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Exploring HPC and AI Innovation with Microsoft and AMD at the HPC Roundtable 2025
+author: Fernando_Aznar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-29 20:12:58 +00:00
-permalink: "/2025-09-29-Exploring-HPC-and-AI-Innovation-with-Microsoft-and-AMD-at-the-HPC-Roundtable-2025.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AMD", "Azure", "Azure HB Series", "Azure HPC Blog", "Azure Managed Lustre", "Cloud Computing", "Community", "Engineering Innovation", "High Performance Computing", "HPC", "Hybrid Compute", "Intelligent Workloads", "Microsoft Azure", "Panel Discussion", "Parallel Storage", "Simulation", "Turin"]
-tags_normalized: ["ai", "ai infrastructure", "amd", "azure", "azure hb series", "azure hpc blog", "azure managed lustre", "cloud computing", "community", "engineering innovation", "high performance computing", "hpc", "hybrid compute", "intelligent workloads", "microsoft azure", "panel discussion", "parallel storage", "simulation", "turin"]
+permalink: /ai/community/Exploring-HPC-and-AI-Innovation-with-Microsoft-and-AMD-at-the-HPC-Roundtable-2025
+tags:
+- AI
+- AI Infrastructure
+- AMD
+- Azure
+- Azure HB Series
+- Azure HPC Blog
+- Azure Managed Lustre
+- Cloud Computing
+- Community
+- Engineering Innovation
+- High Performance Computing
+- HPC
+- Hybrid Compute
+- Intelligent Workloads
+- Microsoft Azure
+- Panel Discussion
+- Parallel Storage
+- Simulation
+- Turin
+section_names:
+- ai
+- azure
 ---
-
 Fernando_Aznar offers an overview of Microsoft and AMD at the HPC Roundtable 2025 in Turin, highlighting advanced Azure HPC infrastructure for engineering, simulation, and AI innovation.<!--excerpt_end-->
 
 # Exploring HPC and AI Innovation: Microsoft + AMD at HPC Roundtable 2025

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Onboarding Your AI Peer Programmer: Success with GitHub Copilot Coding Agent"
-description: "This guide by Christopher Harrison walks through configuring, optimizing, and extending GitHub Copilot’s coding agent, focusing on environmental setup, project structure, custom instructions, and use of MCP servers to improve AI-driven development workflows."
-author: "Christopher Harrison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Onboarding Your AI Peer Programmer: Success with GitHub Copilot Coding Agent'
+author: Christopher Harrison
+canonical_url: https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-31 17:12:43 +00:00
-permalink: "/2025-07-31-Onboarding-Your-AI-Peer-Programmer-Success-with-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Peer Programming", "Azure Bicep", "Copilot Coding Agent", "Custom Instructions", "Development Environment", "DevOps", "Firewall Configuration", "Generative AI", "GitHub Actions", "GitHub Copilot", "MCP Servers", "News", "Project Onboarding", "Repositories", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai peer programming", "azure bicep", "copilot coding agent", "custom instructions", "development environment", "devops", "firewall configuration", "generative ai", "github actions", "github copilot", "mcp servers", "news", "project onboarding", "repositories", "workflow automation"]
+permalink: /github-copilot/news/Onboarding-Your-AI-Peer-Programmer-Success-with-GitHub-Copilot-Coding-Agent
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Peer Programming
+- Azure Bicep
+- Copilot Coding Agent
+- Custom Instructions
+- Development Environment
+- DevOps
+- Firewall Configuration
+- Generative AI
+- GitHub Actions
+- GitHub Copilot
+- MCP Servers
+- News
+- Project Onboarding
+- Repositories
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Christopher Harrison guides readers through best practices for configuring and onboarding GitHub Copilot coding agent as an AI peer programmer. Discover strategies for environment setup, project optimization, custom instructions, and extending Copilot with MCP servers.<!--excerpt_end-->
 
 # Onboarding Your AI Peer Programmer: Setting Up GitHub Copilot Coding Agent for Success

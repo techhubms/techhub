@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Models: Test and Compare AI Code Models"
-description: "Damian Brady from Microsoft Developer introduces GitHub Models, a tool designed to help developers test, compare, and evaluate over 40 different AI models to find the best fit for coding workflows. The video covers practical approaches to AI model selection for development scenarios."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/u7sEMJTIQCw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'GitHub Models: Test and Compare AI Code Models'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/u7sEMJTIQCw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 16:00:27 +00:00
-permalink: "/2025-12-04-GitHub-Models-Test-and-Compare-AI-Code-Models.html"
-categories: ["AI"]
-tags: ["AI", "AI Comparison", "AI For Developers", "AI Integration", "AI Models", "AIForDevelopers", "Code Generation", "Coding Assistant", "Developer Tools", "GitHub Models", "GitHubModels", "Machine Learning", "Microsoft Developer", "Model Evaluation", "Model Testing", "Prompt Engineering", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai comparison", "ai for developers", "ai integration", "ai models", "aifordevelopers", "code generation", "coding assistant", "developer tools", "github models", "githubmodels", "machine learning", "microsoft developer", "model evaluation", "model testing", "prompt engineering", "software development", "videos"]
+permalink: /ai/videos/GitHub-Models-Test-and-Compare-AI-Code-Models
+tags:
+- AI
+- AI Comparison
+- AI For Developers
+- AI Integration
+- AI Models
+- AIForDevelopers
+- Code Generation
+- Coding Assistant
+- Developer Tools
+- GitHub Models
+- GitHubModels
+- Machine Learning
+- Microsoft Developer
+- Model Evaluation
+- Model Testing
+- Prompt Engineering
+- Software Development
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer’s Damian Brady presents GitHub Models, showing developers how to systematically test and compare 40+ AI models for code generation and developer productivity.<!--excerpt_end-->
 
 {% youtube u7sEMJTIQCw %}

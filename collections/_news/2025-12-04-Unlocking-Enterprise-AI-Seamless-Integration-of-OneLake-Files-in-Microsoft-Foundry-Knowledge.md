@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge"
-description: "This article introduces the integration of Microsoft Fabric’s OneLake with Azure AI Foundry Knowledge, enabling organizations to use both structured and unstructured data for AI applications without redundant data copies or complicated pipelines. It highlights unified access, governance, and the simplification of leveraging enterprise data for AI and analytics workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 09:00:00 +00:00
-permalink: "/2025-12-04-Unlocking-Enterprise-AI-Seamless-Integration-of-OneLake-Files-in-Microsoft-Foundry-Knowledge.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "AI Integration", "Amazon S3", "Analytics", "Azure", "Azure AI Foundry", "Azure Data Lake Storage", "Data Governance", "Data Lake", "Data Pipelines", "Data Security", "Enterprise Data", "Knowledge Indexing", "Microsoft Fabric", "ML", "News", "OneLake", "Unstructured Data"]
-tags_normalized: ["ai", "ai agents", "ai integration", "amazon s3", "analytics", "azure", "azure ai foundry", "azure data lake storage", "data governance", "data lake", "data pipelines", "data security", "enterprise data", "knowledge indexing", "microsoft fabric", "ml", "news", "onelake", "unstructured data"]
+permalink: /ai/news/Unlocking-Enterprise-AI-Seamless-Integration-of-OneLake-Files-in-Microsoft-Foundry-Knowledge
+tags:
+- AI
+- AI Agents
+- AI Integration
+- Amazon S3
+- Analytics
+- Azure
+- Azure AI Foundry
+- Azure Data Lake Storage
+- Data Governance
+- Data Lake
+- Data Pipelines
+- Data Security
+- Enterprise Data
+- Knowledge Indexing
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Unstructured Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog examines how native integration between OneLake and Azure AI Foundry Knowledge empowers teams to use all enterprise data in AI solutions, combining governance, security, and ease of access.<!--excerpt_end-->
 
 # Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge

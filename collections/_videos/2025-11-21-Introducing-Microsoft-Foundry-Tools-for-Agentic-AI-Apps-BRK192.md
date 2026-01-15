@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Introducing Microsoft Foundry Tools for Agentic AI Apps | BRK192"
-description: "This session from Microsoft Ignite 2025 introduces a comprehensive suite of production-ready tools in Microsoft Foundry, aimed at enhancing agentic AI applications with capabilities such as document parsing, transcription, translation, and more—all integrated with LLMs. It covers real-world scenarios, live demos, data integration with Azure and Cosmos DB, model version management, and privacy-focused features like data redaction."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JDXRDgnQ8Ko"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Introducing Microsoft Foundry Tools for Agentic AI Apps | BRK192
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=JDXRDgnQ8Ko
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:17:10 +00:00
-permalink: "/2025-11-21-Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "APIs", "Azure", "Azure AI", "Azure Database", "Cosmos DB", "Custom Translation", "Data Privacy", "Document Parsing", "GPT 4", "InnovatewithAzureAIappsandagents", "Insurance Claims", "LLM Integration", "MCP Server", "Microsoft Foundry", "Microsoft Ignite", "Model Versioning", "MSIgnite", "Transcription", "Videos"]
-tags_normalized: ["ai", "ai agents", "apis", "azure", "azure ai", "azure database", "cosmos db", "custom translation", "data privacy", "document parsing", "gpt 4", "innovatewithazureaiappsandagents", "insurance claims", "llm integration", "mcp server", "microsoft foundry", "microsoft ignite", "model versioning", "msignite", "transcription", "videos"]
+permalink: /ai/videos/Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192
+tags:
+- AI
+- AI Agents
+- APIs
+- Azure
+- Azure AI
+- Azure Database
+- Cosmos DB
+- Custom Translation
+- Data Privacy
+- Document Parsing
+- GPT 4
+- InnovatewithAzureAIappsandagents
+- Insurance Claims
+- LLM Integration
+- MCP Server
+- Microsoft Foundry
+- Microsoft Ignite
+- Model Versioning
+- MSIgnite
+- Transcription
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an Ignite 2025 session by Xiaoying Guo, Vinod Kurpad, and Zhuoqun Li on Microsoft Foundry Tools—a new suite for agentic AI applications, featuring demos, data integration techniques, and privacy solutions.<!--excerpt_end-->
 
 {% youtube JDXRDgnQ8Ko %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Creating Custom Plugins and Connectors in Copilot Studio"
-description: "This article by Dellenny offers a detailed walkthrough on building custom plugins and connectors inside Microsoft Copilot Studio. It covers defining plugin schemas, implementing integration logic, testing, and deployment steps. The guide also highlights best practices for extensibility, API usage, authentication, and security, enabling developers to tailor copilots for organization-specific workflows."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Creating Custom Plugins and Connectors in Copilot Studio
+author: Dellenny
+canonical_url: https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-19 14:52:34 +00:00
-permalink: "/2025-08-19-Creating-Custom-Plugins-and-Connectors-in-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "API Authentication", "Automation", "Blogs", "Copilot", "Copilot Extensions", "Copilot Studio", "Custom Connectors", "Custom Plugins", "Enterprise Integration", "Microsoft", "Node.js", "OpenAPI", "Plugin Schema", "Python", "Workflow"]
-tags_normalized: ["ai", "ai integration", "api authentication", "automation", "blogs", "copilot", "copilot extensions", "copilot studio", "custom connectors", "custom plugins", "enterprise integration", "microsoft", "nodedotjs", "openapi", "plugin schema", "python", "workflow"]
+permalink: /ai/blogs/Creating-Custom-Plugins-and-Connectors-in-Copilot-Studio
+tags:
+- AI
+- AI Integration
+- API Authentication
+- Automation
+- Blogs
+- Copilot
+- Copilot Extensions
+- Copilot Studio
+- Custom Connectors
+- Custom Plugins
+- Enterprise Integration
+- Microsoft
+- Node.js
+- OpenAPI
+- Plugin Schema
+- Python
+- Workflow
+section_names:
+- ai
 ---
-
 Dellenny explains how to develop custom plugins and connectors in Copilot Studio, guiding developers through schema definition, integration best practices, and secure deployment of AI-driven copilots.<!--excerpt_end-->
 
 # Creating Custom Plugins and Connectors in Copilot Studio

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series"
-description: "This nine-part YouTube live stream series, led by Pamela Fox, is designed for developers who want to master generative AI with Python. The sessions cover large language models (LLMs), embedding models, RAG, vision AI, structured outputs, AI safety, tool/function calling, AI agents, and robust integration of Microsoft and open AI tooling including Azure AI services and Semantic Kernel."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series'
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 17:46:34 +00:00
-permalink: "/2025-10-06-Level-Up-Your-Python-Gen-AI-Skills-Nine-Part-YouTube-Stream-Series.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Frameworks", "AI", "AI Content Safety", "AI Evaluation SDK", "Azure", "Azure AI Search", "Azure AI Services", "Coding", "Community", "Full Stack AI", "Generative AI", "LangChain", "Large Language Models", "LLM", "MCP", "Prompt Engineering", "Python", "RAG", "Retrieval Augmented Generation", "Semantic Kernel", "Structured Outputs", "Vector Embeddings", "Vision Models"]
-tags_normalized: ["agent frameworks", "ai", "ai content safety", "ai evaluation sdk", "azure", "azure ai search", "azure ai services", "coding", "community", "full stack ai", "generative ai", "langchain", "large language models", "llm", "mcp", "prompt engineering", "python", "rag", "retrieval augmented generation", "semantic kernel", "structured outputs", "vector embeddings", "vision models"]
+permalink: /ai/community/Level-Up-Your-Python-Gen-AI-Skills-Nine-Part-YouTube-Stream-Series
+tags:
+- Agent Frameworks
+- AI
+- AI Content Safety
+- AI Evaluation SDK
+- Azure
+- Azure AI Search
+- Azure AI Services
+- Coding
+- Community
+- Full Stack AI
+- Generative AI
+- LangChain
+- Large Language Models
+- LLM
+- MCP
+- Prompt Engineering
+- Python
+- RAG
+- Retrieval Augmented Generation
+- Semantic Kernel
+- Structured Outputs
+- Vector Embeddings
+- Vision Models
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Pamela Fox presents a comprehensive nine-part YouTube series teaching developers how to harness generative AI in Python, including Azure AI services, LLMs, vision AI, RAG, safety, agents, and real-world coding techniques.<!--excerpt_end-->
 
 # Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series

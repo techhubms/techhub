@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Integrating Copilot Agents and Security Copilot into Enterprise-Grade AI Security Architecture"
-description: "This article by Petrus Vasenius covers the technical implementation of Microsoft Copilot Agents, Security Copilot, Azure AI Foundry, and related security tooling in building an enterprise-grade AI security architecture. It addresses agent identity, runtime guardrails, DevSecOps telemetry, data protection, and compliance workflows, with actionable steps for practitioners deploying and securing AI-powered agents in enterprise environments."
-author: "petrus.vasenius@zure.com (Petrus Vasenius)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/integrating-copilot-agents-and-security-copilot-into-enterprise-grade-ai-security-architecture"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: Integrating Copilot Agents and Security Copilot into Enterprise-Grade AI Security Architecture
+author: petrus.vasenius@zure.com (Petrus Vasenius)
+canonical_url: https://zure.com/blog/integrating-copilot-agents-and-security-copilot-into-enterprise-grade-ai-security-architecture
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-06-24 09:27:30 +00:00
-permalink: "/2025-06-24-Integrating-Copilot-Agents-and-Security-Copilot-into-Enterprise-Grade-AI-Security-Architecture.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Agent Identity", "Audit", "Azure", "Azure AI Foundry", "Azure Monitor", "Blog", "Blogs", "Compliance Manager", "Conditional Access", "Copilot Studio", "Data Protection", "Defender For Cloud", "DevOps", "DevSecOps", "Enterprise Security", "Managed Identity", "Microsoft Copilot Agents", "Microsoft Entra ID", "Plugin Integration", "Prompt Injection", "Purview DSPM", "Security", "Security Copilot", "Task Adherence Evaluation"]
-tags_normalized: ["ai", "ai agent identity", "audit", "azure", "azure ai foundry", "azure monitor", "blog", "blogs", "compliance manager", "conditional access", "copilot studio", "data protection", "defender for cloud", "devops", "devsecops", "enterprise security", "managed identity", "microsoft copilot agents", "microsoft entra id", "plugin integration", "prompt injection", "purview dspm", "security", "security copilot", "task adherence evaluation"]
+permalink: /ai/blogs/Integrating-Copilot-Agents-and-Security-Copilot-into-Enterprise-Grade-AI-Security-Architecture
+tags:
+- AI
+- AI Agent Identity
+- Audit
+- Azure
+- Azure AI Foundry
+- Azure Monitor
+- Blog
+- Blogs
+- Compliance Manager
+- Conditional Access
+- Copilot Studio
+- Data Protection
+- Defender For Cloud
+- DevOps
+- DevSecOps
+- Enterprise Security
+- Managed Identity
+- Microsoft Copilot Agents
+- Microsoft Entra ID
+- Plugin Integration
+- Prompt Injection
+- Purview DSPM
+- Security
+- Security Copilot
+- Task Adherence Evaluation
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Petrus Vasenius explores integrating Microsoft Copilot Agents and Security Copilot into robust AI security architectures. He details agent identity with Entra, runtime guardrails, Foundry-Defender integration, and compliance strategies for enterprise Microsoft AI deployments.<!--excerpt_end-->
 
 # Integrating Copilot Agents and Security Copilot into Enterprise-Grade AI Security Architecture

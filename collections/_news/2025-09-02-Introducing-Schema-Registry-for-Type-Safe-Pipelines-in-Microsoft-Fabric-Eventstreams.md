@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Introducing Schema Registry for Type-Safe Pipelines in Microsoft Fabric Eventstreams"
-description: "This article announces the public preview of the Schema Registry within Microsoft Fabric Real-Time Intelligence (RTI), introducing a unified, contract-based approach to managing data schemas in Fabric Eventstreams. It explains the registry’s benefits for data quality, governance, versioning, and downstream pipeline reliability, while providing an overview of core concepts, supported features, current limitations, best practices, and upcoming enhancements."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/schema-registry-creating-type-safe-pipelines-using-schemas-and-eventstreams-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Schema Registry for Type-Safe Pipelines in Microsoft Fabric Eventstreams
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/schema-registry-creating-type-safe-pipelines-using-schemas-and-eventstreams-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-02 11:30:00 +00:00
-permalink: "/2025-09-02-Introducing-Schema-Registry-for-Type-Safe-Pipelines-in-Microsoft-Fabric-Eventstreams.html"
-categories: ["Azure", "ML"]
-tags: ["Avro", "Azure", "Azure SQL CDC", "Data Governance", "Data Management", "Data Pipeline", "Data Quality", "Event Schema Sets", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "News", "Preview Features", "Real Time Intelligence", "Schema Registry", "Schema Validation", "Streaming Analytics", "Versioning"]
-tags_normalized: ["avro", "azure", "azure sql cdc", "data governance", "data management", "data pipeline", "data quality", "event schema sets", "eventhouse", "eventstream", "microsoft fabric", "ml", "news", "preview features", "real time intelligence", "schema registry", "schema validation", "streaming analytics", "versioning"]
+permalink: /ml/news/Introducing-Schema-Registry-for-Type-Safe-Pipelines-in-Microsoft-Fabric-Eventstreams
+tags:
+- Avro
+- Azure
+- Azure SQL CDC
+- Data Governance
+- Data Management
+- Data Pipeline
+- Data Quality
+- Event Schema Sets
+- Eventhouse
+- Eventstream
+- Microsoft Fabric
+- ML
+- News
+- Preview Features
+- Real Time Intelligence
+- Schema Registry
+- Schema Validation
+- Streaming Analytics
+- Versioning
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Schema Registry for Real-Time Intelligence, providing a robust foundation for type-safe, reliable pipelines in streaming data applications.<!--excerpt_end-->
 
 # Schema Registry: Creating Type-Safe Pipelines Using Schemas and Eventstreams (Preview)

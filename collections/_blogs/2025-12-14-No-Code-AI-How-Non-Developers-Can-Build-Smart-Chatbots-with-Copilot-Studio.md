@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "No-Code AI: How Non-Developers Can Build Smart Chatbots with Copilot Studio"
-description: "This blog post by John Edward provides a step-by-step guide for non-developers to create AI-powered chatbots using Microsoft Copilot Studio, a no-code platform built on the Power Platform. The article covers the rationale behind no-code AI, practical steps for building and deploying chatbots, integration of enterprise data sources, enabling generative AI features, and best practices for successful chatbot projects."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio-2/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'No-Code AI: How Non-Developers Can Build Smart Chatbots with Copilot Studio'
+author: John Edward
+canonical_url: https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio-2/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-12-14 11:19:02 +00:00
-permalink: "/2025-12-14-No-Code-AI-How-Non-Developers-Can-Build-Smart-Chatbots-with-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Chatbot Design", "Azure AI Services", "Blogs", "Bot Deployment", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Dataverse", "Generative AI", "Microsoft 365 Integration", "Microsoft Copilot Studio", "No Code AI", "Power Platform", "User Experience", "Visual Flow Builder"]
-tags_normalized: ["ai", "ai chatbot design", "azure ai services", "blogs", "bot deployment", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "dataverse", "generative ai", "microsoft 365 integration", "microsoft copilot studio", "no code ai", "power platform", "user experience", "visual flow builder"]
+permalink: /ai/blogs/No-Code-AI-How-Non-Developers-Can-Build-Smart-Chatbots-with-Copilot-Studio
+tags:
+- AI
+- AI Chatbot Design
+- Azure AI Services
+- Blogs
+- Bot Deployment
+- Business Automation
+- Chatbots
+- Conversational AI
+- Copilot
+- Copilot Studio
+- Dataverse
+- Generative AI
+- Microsoft 365 Integration
+- Microsoft Copilot Studio
+- No Code AI
+- Power Platform
+- User Experience
+- Visual Flow Builder
+section_names:
+- ai
 ---
-
 John Edward offers a practical, non-technical guide on building intelligent chatbots with Microsoft Copilot Studio, empowering non-developers to leverage no-code AI and create business-ready copilots.<!--excerpt_end-->
 
 # No-Code AI: How Non-Developers Can Build Smart Chatbots with Copilot Studio

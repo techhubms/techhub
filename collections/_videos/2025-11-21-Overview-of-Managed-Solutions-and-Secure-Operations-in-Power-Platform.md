@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Overview of Managed Solutions and Secure Operations in Power Platform"
-description: "This video session from Microsoft Ignite 2025 delves into strategies and tools for securing, governing, and monitoring the Microsoft Power Platform. It highlights managed solutions, compliance best practices, and the use of Copilot Studio for building and managing AI-powered agents. IT leaders and platform owners learn about security, scalable governance, monitoring, and streamlined app development with a focus on operational health within Microsoft’s low-code platform."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3lIrMl2Y8f0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Overview of Managed Solutions and Secure Operations in Power Platform
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=3lIrMl2Y8f0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:29:26 +00:00
-permalink: "/2025-11-21-Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agents", "Alerting", "ALM", "Application Lifecycle Management", "Compliance", "Copilot Studio", "Dataverse", "Enterprise IT", "Governance", "Innovatewithlow", "Low Code", "Managed Solutions", "Microsoft Ignite", "Monitoring", "MSIgnite", "Operational Health", "Power Platform", "Security", "Source Control", "Videos"]
-tags_normalized: ["ai", "ai agents", "alerting", "alm", "application lifecycle management", "compliance", "copilot studio", "dataverse", "enterprise it", "governance", "innovatewithlow", "low code", "managed solutions", "microsoft ignite", "monitoring", "msignite", "operational health", "power platform", "security", "source control", "videos"]
+permalink: /ai/videos/Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform
+tags:
+- AI
+- AI Agents
+- Alerting
+- ALM
+- Application Lifecycle Management
+- Compliance
+- Copilot Studio
+- Dataverse
+- Enterprise IT
+- Governance
+- Innovatewithlow
+- Low Code
+- Managed Solutions
+- Microsoft Ignite
+- Monitoring
+- MSIgnite
+- Operational Health
+- Power Platform
+- Security
+- Source Control
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an in-depth session on using Copilot Studio and Power Platform to secure, monitor, and govern enterprise solutions, with insights from Ryan Jones at Microsoft Ignite.<!--excerpt_end-->
 
 {% youtube 3lIrMl2Y8f0 %}

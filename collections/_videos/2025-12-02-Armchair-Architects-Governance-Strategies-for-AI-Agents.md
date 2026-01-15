@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Armchair Architects: Governance Strategies for AI Agents"
-description: "This episode of Armchair Architects (Azure Essentials Show) features Uli, Eric, and David discussing the distinct challenges of governing AI agents as opposed to traditional microservices. The conversation delves into agent observability, cognitive monitoring, identity, evaluation, and security implications for enterprise-scale AI deployment. The episode provides actionable advice and points to Microsoft resources on responsible AI operations."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=te_om7KPb8k"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Armchair Architects: Governance Strategies for AI Agents'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=te_om7KPb8k
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-02 08:01:12 +00:00
-permalink: "/2025-12-02-Armchair-Architects-Governance-Strategies-for-AI-Agents.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Deployment", "Agent Observability", "Agentic AI", "AI", "AI Evaluation", "AI Governance", "Azure", "Azure Essentials", "Cognitive Monitoring", "Copilot Studio", "Enterprise AI", "Guardrails", "Identity Management", "Implement", "Microsoft Purview", "Model Routing", "Responsible AI", "Security", "Videos"]
-tags_normalized: ["agent deployment", "agent observability", "agentic ai", "ai", "ai evaluation", "ai governance", "azure", "azure essentials", "cognitive monitoring", "copilot studio", "enterprise ai", "guardrails", "identity management", "implement", "microsoft purview", "model routing", "responsible ai", "security", "videos"]
+permalink: /ai/videos/Armchair-Architects-Governance-Strategies-for-AI-Agents
+tags:
+- Agent Deployment
+- Agent Observability
+- Agentic AI
+- AI
+- AI Evaluation
+- AI Governance
+- Azure
+- Azure Essentials
+- Cognitive Monitoring
+- Copilot Studio
+- Enterprise AI
+- Guardrails
+- Identity Management
+- Implement
+- Microsoft Purview
+- Model Routing
+- Responsible AI
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Uli Homann, Eric Charran, and David Blank-Edelman discuss the unique governance and security challenges of deploying AI agents at scale, emphasizing observability, evaluation, and novel monitoring strategies.<!--excerpt_end-->
 
 {% youtube te_om7KPb8k %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CodeQL 2.23.1 Released: Java 25, TypeScript 5.9, and Swift 6.1.3 Support"
-description: "This update details the recent release of CodeQL 2.23.1, the static analysis engine behind GitHub code scanning. The release brings support for Java 25, TypeScript 5.9, and Swift 6.1.3, along with new and improved security queries across various programming languages. Notable enhancements include a new SSRF query for Rust, refined Java null dereference checks, and improved observability in GitHub Actions. The update benefits code security, static analysis, and development workflows for organizations using GitHub and GitHub Enterprise Server."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-26-codeql-2-23-1-adds-support-for-java-25-typescript-5-9-and-swift-6-1-3"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'CodeQL 2.23.1 Released: Java 25, TypeScript 5.9, and Swift 6.1.3 Support'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-26-codeql-2-23-1-adds-support-for-java-25-typescript-5-9-and-swift-6-1-3
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-26 19:28:56 +00:00
-permalink: "/2025-09-26-CodeQL-2231-Released-Java-25-TypeScript-59-and-Swift-613-Support.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "C#", "Code Scanning", "CodeQL", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "Improvement", "Java 25", "JavaScript", "News", "Observability", "Python", "Query Suite", "Rust", "Security", "Security Queries", "Static Analysis", "Swift 6.1.3", "TypeScript 5.9"]
-tags_normalized: ["application security", "csharp", "code scanning", "codeql", "devops", "github", "github actions", "github enterprise server", "improvement", "java 25", "javascript", "news", "observability", "python", "query suite", "rust", "security", "security queries", "static analysis", "swift 6dot1dot3", "typescript 5dot9"]
+permalink: /devops/news/CodeQL-2231-Released-Java-25-TypeScript-59-and-Swift-613-Support
+tags:
+- Application Security
+- C#
+- Code Scanning
+- CodeQL
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Enterprise Server
+- Improvement
+- Java 25
+- JavaScript
+- News
+- Observability
+- Python
+- Query Suite
+- Rust
+- Security
+- Security Queries
+- Static Analysis
+- Swift 6.1.3
+- TypeScript 5.9
+section_names:
+- devops
+- security
 ---
-
 Allison reports on the release of CodeQL 2.23.1, highlighting enhanced language support and improved security analysis queries, offering stronger code scanning capabilities for GitHub users and organizations.<!--excerpt_end-->
 
 # CodeQL 2.23.1 Released: Java 25, TypeScript 5.9, and Swift 6.1.3 Support

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Aembit Launches IAM Solution for Agentic AI in Enterprise Environments"
-description: "This announcement details Aembit's introduction of an identity and access management (IAM) platform tailored for agentic AI in enterprise settings. The solution, featuring Blended Identity and the MCP Identity Gateway, lets organizations assign verifiable identities to AI agents, enforce access policies in real time, and maintain complete audit trails for AI-powered workloads. Aembit’s IAM is designed to bridge the security gaps presented by autonomous AI agents operating across hybrid IT infrastructures. This platform targets both operational and security use cases and supports compliance needs."
-author: "cybernewswire"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/aembit-introduces-identity-and-access-management-for-agentic-ai/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Aembit Launches IAM Solution for Agentic AI in Enterprise Environments
+author: cybernewswire
+canonical_url: https://devops.com/aembit-introduces-identity-and-access-management-for-agentic-ai/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-30 12:02:04 +00:00
-permalink: "/2025-10-30-Aembit-Launches-IAM-Solution-for-Agentic-AI-in-Enterprise-Environments.html"
-categories: ["AI", "Security"]
-tags: ["Access Control", "Access Policy", "Aembit", "Agentic AI", "AI", "AI Security", "Audit Trail", "Blended Identity", "Blogs", "Credential Management", "Cyberwire", "Enterprise AI", "Hybrid Cloud", "IAM", "Identity And Access Management", "MCP Identity Gateway", "Policy Enforcement", "Runtime Security", "Security", "Workload IAM"]
-tags_normalized: ["access control", "access policy", "aembit", "agentic ai", "ai", "ai security", "audit trail", "blended identity", "blogs", "credential management", "cyberwire", "enterprise ai", "hybrid cloud", "iam", "identity and access management", "mcp identity gateway", "policy enforcement", "runtime security", "security", "workload iam"]
+permalink: /ai/blogs/Aembit-Launches-IAM-Solution-for-Agentic-AI-in-Enterprise-Environments
+tags:
+- Access Control
+- Access Policy
+- Aembit
+- Agentic AI
+- AI
+- AI Security
+- Audit Trail
+- Blended Identity
+- Blogs
+- Credential Management
+- Cyberwire
+- Enterprise AI
+- Hybrid Cloud
+- IAM
+- Identity And Access Management
+- MCP Identity Gateway
+- Policy Enforcement
+- Runtime Security
+- Security
+- Workload IAM
+section_names:
+- ai
+- security
 ---
-
 cybernewswire covers Aembit's new IAM for Agentic AI, a solution giving enterprises fine-grained control and auditability over AI agent access to sensitive resources, featuring cryptographically verified identities and centralized policy management.<!--excerpt_end-->
 
 # Aembit Launches IAM Solution for Agentic AI in Enterprise Environments

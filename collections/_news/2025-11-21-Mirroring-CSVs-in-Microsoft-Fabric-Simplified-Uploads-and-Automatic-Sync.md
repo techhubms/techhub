@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Mirroring CSVs in Microsoft Fabric: Simplified Uploads and Automatic Sync"
-description: "This news update from the Microsoft Fabric Blog highlights recent improvements to open mirroring in Microsoft Fabric. Users can now upload CSV and parquet files for mirroring in OneLake without the need to specify primary keys, making the setup process faster and less complex. Advanced options remain available for those needing fine-grained control, while automatic synchronization ensures seamless updates. The workflow enables frictionless data integration, optimized for downstream AI and BI analytics, and eliminates traditional ETL overhead."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Mirroring CSVs in Microsoft Fabric: Simplified Uploads and Automatic Sync'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 11:30:00 +00:00
-permalink: "/2025-11-21-Mirroring-CSVs-in-Microsoft-Fabric-Simplified-Uploads-and-Automatic-Sync.html"
-categories: ["Azure", "ML"]
-tags: ["AI", "AI Workflows", "Automatic Synchronization", "Azure", "BI", "Change Tracking", "CSV Upload", "Data Integration", "Data Pipeline", "ETL", "Free Storage", "Microsoft Fabric", "Mirroring", "ML", "News", "OneLake", "Parquet Files", "Primary Key", "SQL Analytics Endpoint"]
-tags_normalized: ["ai", "ai workflows", "automatic synchronization", "azure", "bi", "change tracking", "csv upload", "data integration", "data pipeline", "etl", "free storage", "microsoft fabric", "mirroring", "ml", "news", "onelake", "parquet files", "primary key", "sql analytics endpoint"]
+permalink: /ml/news/Mirroring-CSVs-in-Microsoft-Fabric-Simplified-Uploads-and-Automatic-Sync
+tags:
+- AI
+- AI Workflows
+- Automatic Synchronization
+- Azure
+- BI
+- Change Tracking
+- CSV Upload
+- Data Integration
+- Data Pipeline
+- ETL
+- Free Storage
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- OneLake
+- Parquet Files
+- Primary Key
+- SQL Analytics Endpoint
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog shares improvements to open mirroring, allowing CSV and parquet files to be uploaded without primary keys. This update streamlines data integration and empowers advanced analytics. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Mirroring CSVs in Microsoft Fabric: Simplified Uploads and Automatic Sync

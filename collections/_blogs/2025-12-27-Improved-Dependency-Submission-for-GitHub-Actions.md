@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Improved Dependency Submission for GitHub Actions"
-description: "This article by Jesse Houwing explains a key limitation in GitHub Actions' security visibility when actions are pinned by SHA, which prevents vulnerabilities from surfacing in the Dependency Graph or being flagged by Dependabot. The author introduces a custom action to improve dependency submission, mapping SHAs and organizational forks to the correct upstream versions, thus restoring full ecosystem security features."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/github-actions-improved-dependency-submission/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+layout: post
+title: Improved Dependency Submission for GitHub Actions
+author: Jesse Houwing
+canonical_url: https://jessehouwing.net/github-actions-improved-dependency-submission/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-12-27 18:47:09 +00:00
-permalink: "/2025-12-27-Improved-Dependency-Submission-for-GitHub-Actions.html"
-categories: ["DevOps", "Security"]
-tags: ["Actions Dependency Submission", "Automated Security", "Blogs", "CI/CD", "Dependabot", "Dependency Graph", "Dependency Submission", "DevOps", "GitHub", "GitHub Actions", "Open Source Security", "Permissions", "Security", "Security Advisories", "Supply Chain Security", "Supplychain Security", "Vulnerability Management", "YAML Workflow"]
-tags_normalized: ["actions dependency submission", "automated security", "blogs", "cislashcd", "dependabot", "dependency graph", "dependency submission", "devops", "github", "github actions", "open source security", "permissions", "security", "security advisories", "supply chain security", "supplychain security", "vulnerability management", "yaml workflow"]
+permalink: /devops/blogs/Improved-Dependency-Submission-for-GitHub-Actions
+tags:
+- Actions Dependency Submission
+- Automated Security
+- Blogs
+- CI/CD
+- Dependabot
+- Dependency Graph
+- Dependency Submission
+- DevOps
+- GitHub
+- GitHub Actions
+- Open Source Security
+- Permissions
+- Security
+- Security Advisories
+- Supply Chain Security
+- Supplychain Security
+- Vulnerability Management
+- YAML Workflow
+section_names:
+- devops
+- security
 ---
-
 Jesse Houwing addresses a visibility gap in GitHub Actions security when actions are pinned by SHA. The post details a workflow extension ensuring vulnerabilities are properly surfaced in the Dependency Graph and by Dependabot.<!--excerpt_end-->
 
 # Improved Dependency Submission for GitHub Actions

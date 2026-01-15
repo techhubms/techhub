@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "General Availability of Automatic Identity Management (AIM) for Entra ID on Azure Databricks"
-description: "This announcement details the general availability of Automatic Identity Management (AIM) for integrating Microsoft Entra ID with Azure Databricks. It highlights the move from manual and script-based identity management to seamless, automated provisioning for users, groups, and service principals, with additional dashboard sharing, automation via APIs, and streamlined admin workflows."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/general-availability-automatic-identity-management-aim-for-entra/ba-p/4452206"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Automatic Identity Management (AIM) for Entra ID on Azure Databricks
+author: AnaviNahar
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/general-availability-automatic-identity-management-aim-for-entra/ba-p/4452206
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-10 16:00:00 +00:00
-permalink: "/2025-09-10-General-Availability-of-Automatic-Identity-Management-AIM-for-Entra-ID-on-Azure-Databricks.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Admin Console", "AIM", "API Automation", "Automation", "Azure", "Azure Databricks", "Community", "Dashboards", "Entra ID", "Identity Management", "Microsoft Entra", "Nested Groups", "Security", "User Provisioning"]
-tags_normalized: ["access control", "admin console", "aim", "api automation", "automation", "azure", "azure databricks", "community", "dashboards", "entra id", "identity management", "microsoft entra", "nested groups", "security", "user provisioning"]
+permalink: /azure/community/General-Availability-of-Automatic-Identity-Management-AIM-for-Entra-ID-on-Azure-Databricks
+tags:
+- Access Control
+- Admin Console
+- AIM
+- API Automation
+- Automation
+- Azure
+- Azure Databricks
+- Community
+- Dashboards
+- Entra ID
+- Identity Management
+- Microsoft Entra
+- Nested Groups
+- Security
+- User Provisioning
+section_names:
+- azure
+- security
 ---
-
 AnaviNahar announces the general availability of Automatic Identity Management (AIM) for seamless integration between Entra ID and Azure Databricks, eliminating manual user management and enabling enterprise-scale automation.<!--excerpt_end-->
 
 # General Availability of Automatic Identity Management (AIM) for Entra ID on Azure Databricks

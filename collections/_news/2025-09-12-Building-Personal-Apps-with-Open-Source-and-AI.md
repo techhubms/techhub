@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Personal Apps with Open Source and AI"
-description: "Kedasha Kerr shares practical insights on building small, effective personal tools using open source and AI. Drawing on experiences from the GitHub Developer Advocacy team, the author discusses how automation and community contributions streamline workflows, and how AI tools like GitHub Copilot empower faster prototyping and debugging for developers of all skill levels."
-author: "Kedasha Kerr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Building Personal Apps with Open Source and AI
+author: Kedasha Kerr
+canonical_url: https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-12 16:00:00 +00:00
-permalink: "/2025-09-12-Building-Personal-Apps-with-Open-Source-and-AI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automation", "Coding", "Community Collaboration", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Podcast", "Maintainers", "Markdown Tools", "News", "Open Source", "Open Source Community", "Personal Apps", "Productivity", "Project Sharing", "Scripting", "Workflow Improvement"]
-tags_normalized: ["ai", "automation", "coding", "community collaboration", "developer tools", "github", "github copilot", "github podcast", "maintainers", "markdown tools", "news", "open source", "open source community", "personal apps", "productivity", "project sharing", "scripting", "workflow improvement"]
+permalink: /github-copilot/news/Building-Personal-Apps-with-Open-Source-and-AI
+tags:
+- AI
+- Automation
+- Coding
+- Community Collaboration
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Podcast
+- Maintainers
+- Markdown Tools
+- News
+- Open Source
+- Open Source Community
+- Personal Apps
+- Productivity
+- Project Sharing
+- Scripting
+- Workflow Improvement
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Kedasha Kerr, from the GitHub Developer Advocacy team, explores how open source and AI tools like GitHub Copilot help developers create impactful personal apps and streamline workflows.<!--excerpt_end-->
 
 # Building Personal Apps with Open Source and AI

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing the General Availability of Arc Gateway for Azure Local"
-description: "This article introduces the General Availability of the Arc Gateway for Azure Local, detailing how it simplifies and secures connectivity between on-premises or edge environments and Azure. It explains reduced firewall complexity, secure traffic management, integration with Azure Local VMs and AKS clusters, enterprise proxy support, and provides documentation for deployment and configuration."
-author: "Cristian Edwards Sabathe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing the General Availability of Arc Gateway for Azure Local
+author: Cristian Edwards Sabathe
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 13:15:23 +00:00
-permalink: "/2025-09-25-Announcing-the-General-Availability-of-Arc-Gateway-for-Azure-Local.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Arc Gateway", "Azure", "Azure Arc", "Azure Local", "Cloud Integration", "Community", "Connectivity", "Edge Computing", "Enterprise Proxy", "Firewall Management", "General Availability", "HTTPS Traffic", "Hybrid Cloud", "Microsoft Azure", "Network Security", "Security", "Virtual Machines"]
-tags_normalized: ["aks", "arc gateway", "azure", "azure arc", "azure local", "cloud integration", "community", "connectivity", "edge computing", "enterprise proxy", "firewall management", "general availability", "https traffic", "hybrid cloud", "microsoft azure", "network security", "security", "virtual machines"]
+permalink: /azure/community/Announcing-the-General-Availability-of-Arc-Gateway-for-Azure-Local
+tags:
+- AKS
+- Arc Gateway
+- Azure
+- Azure Arc
+- Azure Local
+- Cloud Integration
+- Community
+- Connectivity
+- Edge Computing
+- Enterprise Proxy
+- Firewall Management
+- General Availability
+- HTTPS Traffic
+- Hybrid Cloud
+- Microsoft Azure
+- Network Security
+- Security
+- Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 Cristian Edwards Sabathe announces the general availability of Arc Gateway for Azure Local, explaining its impact on secure and unified connectivity for on-premises and edge environments connecting to Azure.<!--excerpt_end-->
 
 # Announcing the General Availability of Arc Gateway for Azure Local

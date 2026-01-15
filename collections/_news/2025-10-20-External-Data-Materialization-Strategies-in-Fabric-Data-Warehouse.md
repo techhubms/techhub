@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "External Data Materialization Strategies in Fabric Data Warehouse"
-description: "This post explores the core design choices when accessing external data in Microsoft Fabric Data Warehouse. It explains the difference between data virtualization (using views) and materialization (ingesting files as tables), offering practical advice for selecting the appropriate approach based on performance, data freshness, and analytics requirements. Key usage patterns, performance optimizations, and schema tuning strategies are discussed, with code examples and real-world guidance for analytics and data engineering scenarios."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: External Data Materialization Strategies in Fabric Data Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 09:00:00 +00:00
-permalink: "/2025-10-20-External-Data-Materialization-Strategies-in-Fabric-Data-Warehouse.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Azure Data Lake Storage", "CSV", "CTAS", "Data Engineering", "Data Modeling", "Data Virtualization", "Fabric Data Warehouse", "JSONL", "Materialization", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Performance Optimization", "Schema Inference", "SQL Views"]
-tags_normalized: ["analytics", "azure", "azure data lake storage", "csv", "ctas", "data engineering", "data modeling", "data virtualization", "fabric data warehouse", "jsonl", "materialization", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "performance optimization", "schema inference", "sql views"]
+permalink: /ml/news/External-Data-Materialization-Strategies-in-Fabric-Data-Warehouse
+tags:
+- Analytics
+- Azure
+- Azure Data Lake Storage
+- CSV
+- CTAS
+- Data Engineering
+- Data Modeling
+- Data Virtualization
+- Fabric Data Warehouse
+- JSONL
+- Materialization
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- OPENROWSET
+- Parquet
+- Performance Optimization
+- Schema Inference
+- SQL Views
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details strategies for accessing and managing external data in Fabric Data Warehouse, guiding data engineers and analysts through virtualization versus materialization with practical examples and trade-off analysis.<!--excerpt_end-->
 
 # External Data Materialization Strategies in Fabric Data Warehouse

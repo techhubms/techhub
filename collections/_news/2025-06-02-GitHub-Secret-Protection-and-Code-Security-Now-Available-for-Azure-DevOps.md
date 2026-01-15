@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Secret Protection and Code Security Now Available for Azure DevOps"
-description: "Laura Jiang details the release of GitHub Secret Protection and GitHub Code Security as standalone products for Azure DevOps, outlining features, pricing, and guidance for administrators on enabling these security solutions within their organizations."
-author: "Laura Jiang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/github-secret-protection-and-github-code-security-for-azure-devops/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: GitHub Secret Protection and Code Security Now Available for Azure DevOps
+author: Laura Jiang
+canonical_url: https://devblogs.microsoft.com/devops/github-secret-protection-and-github-code-security-for-azure-devops/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-02 14:30:55 +00:00
-permalink: "/2025-06-02-GitHub-Secret-Protection-and-Code-Security-Now-Available-for-Azure-DevOps.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps", "Code Security", "CodeQL", "Dependency Alerts", "DevOps", "Enterprise Security", "GitHub", "GitHub Advanced Security", "News", "Pricing", "Repository Protection", "Secret Protection", "Secret Scanning", "Security", "Security Overview"]
-tags_normalized: ["azure", "azure devops", "code security", "codeql", "dependency alerts", "devops", "enterprise security", "github", "github advanced security", "news", "pricing", "repository protection", "secret protection", "secret scanning", "security", "security overview"]
+permalink: /azure/news/GitHub-Secret-Protection-and-Code-Security-Now-Available-for-Azure-DevOps
+tags:
+- Azure
+- Azure DevOps
+- Code Security
+- CodeQL
+- Dependency Alerts
+- DevOps
+- Enterprise Security
+- GitHub
+- GitHub Advanced Security
+- News
+- Pricing
+- Repository Protection
+- Secret Protection
+- Secret Scanning
+- Security
+- Security Overview
+section_names:
+- azure
+- devops
+- security
 ---
-
 Laura Jiang introduces the new standalone GitHub Secret Protection and GitHub Code Security products for Azure DevOps, highlighting their features, pricing structure, and steps for implementation within organizations.<!--excerpt_end-->
 
 ## GitHub Secret Protection and Code Security for Azure DevOps

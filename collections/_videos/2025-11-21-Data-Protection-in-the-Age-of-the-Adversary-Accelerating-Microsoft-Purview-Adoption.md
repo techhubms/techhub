@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption"
-description: "This session from Microsoft Ignite 2025 delves into the evolving landscape of cyber threats, highlighting the growing sophistication of attacks fueled by large-scale data and AI. Speakers Quentin Rhoads-Herrera and Caleb McDowell share frontline insights and outline a four-phase strategy for deploying Microsoft Purview to secure sensitive data. The discussion covers real-world AI threat examples, defense tactics leveraging Security Copilot, and practical steps to boost data governance, visibility, and compliance in enterprise environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vuqgC2AiZgY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=vuqgC2AiZgY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:38:55 +00:00
-permalink: "/2025-11-21-Data-Protection-in-the-Age-of-the-Adversary-Accelerating-Microsoft-Purview-Adoption.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Compliance", "Continuous Learning", "Cybersecurity", "Data Auditing", "Data Governance", "Data Protection", "Document Tagging", "Enterprise Security", "Frontline Stories", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Secureyourdata", "Security", "Security Copilot", "Sensitive Data", "Threat Defense", "Videos"]
-tags_normalized: ["ai", "ai security", "compliance", "continuous learning", "cybersecurity", "data auditing", "data governance", "data protection", "document tagging", "enterprise security", "frontline stories", "microsoft ignite", "microsoft purview", "msignite", "secureyourdata", "security", "security copilot", "sensitive data", "threat defense", "videos"]
+permalink: /ai/videos/Data-Protection-in-the-Age-of-the-Adversary-Accelerating-Microsoft-Purview-Adoption
+tags:
+- AI
+- AI Security
+- Compliance
+- Continuous Learning
+- Cybersecurity
+- Data Auditing
+- Data Governance
+- Data Protection
+- Document Tagging
+- Enterprise Security
+- Frontline Stories
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Secureyourdata
+- Security
+- Security Copilot
+- Sensitive Data
+- Threat Defense
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events brings Quentin Rhoads-Herrera and Caleb McDowell together at Ignite 2025 to discuss AI-driven threats and a practical roadmap for adopting Microsoft Purview to safeguard sensitive data.<!--excerpt_end-->
 
 {% youtube vuqgC2AiZgY %}

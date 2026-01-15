@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "SesameOp: Novel Backdoor Abuses OpenAI Assistants API for Stealth Command and Control"
-description: "This in-depth analysis from Microsoft Incident Response’s DART team explores the discovery of a sophisticated backdoor, SesameOp, which leverages the OpenAI Assistants API for command-and-control (C2) operations. The post discusses how attackers use this API to relay commands and results, details the technical implementation of the malware, its obfuscation and persistence mechanisms, and the coordinated investigation and response with OpenAI. The article also provides practical mitigation steps and threat hunting queries for defenders."
-author: "Microsoft Incident Response"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'SesameOp: Novel Backdoor Abuses OpenAI Assistants API for Stealth Command and Control'
+author: Microsoft Incident Response
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-03 17:00:00 +00:00
-permalink: "/2025-11-03-SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control.html"
-categories: ["AI", "Security"]
-tags: [".NET", "AI", "API Abuse", "AppDomainManager Injection", "Backdoor", "Command And Control", "Cybersecurity", "Eazfuscator.NET", "Encryption", "Incident Response", "Malware", "Microsoft DART", "Microsoft Defender", "News", "OpenAI Assistants API", "Security", "SesameOp", "Threat Intelligence", "VS"]
-tags_normalized: ["dotnet", "ai", "api abuse", "appdomainmanager injection", "backdoor", "command and control", "cybersecurity", "eazfuscatordotnet", "encryption", "incident response", "malware", "microsoft dart", "microsoft defender", "news", "openai assistants api", "security", "sesameop", "threat intelligence", "vs"]
+permalink: /ai/news/SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control
+tags:
+- .NET
+- AI
+- API Abuse
+- AppDomainManager Injection
+- Backdoor
+- Command And Control
+- Cybersecurity
+- Eazfuscator.NET
+- Encryption
+- Incident Response
+- Malware
+- Microsoft DART
+- Microsoft Defender
+- News
+- OpenAI Assistants API
+- Security
+- SesameOp
+- Threat Intelligence
+- VS
+section_names:
+- ai
+- security
 ---
-
 Microsoft Incident Response’s DART team, led by their security researchers, uncovers and analyzes SesameOp—a covert backdoor abusing the OpenAI Assistants API for command and control, with detailed technical breakdown and defense guidance.<!--excerpt_end-->
 
 # SesameOp: Novel Backdoor Abuses OpenAI Assistants API for Command and Control

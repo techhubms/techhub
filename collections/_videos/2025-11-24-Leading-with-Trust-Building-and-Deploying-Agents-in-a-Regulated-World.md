@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Leading with Trust: Building & Deploying Agents in a Regulated World"
-description: "This session from Microsoft Ignite 2025 demonstrates how organizations can use Microsoft Purview Compliance Manager, Regulatory Navigator, and Defender for Cloud to align their security and compliance posture with global AI and cybersecurity regulations like the EU AI Act, NIS2, DORA, and DPDP India. The speakers elaborate on embedding Responsible AI principles, automating compliance evaluations, activating regulatory templates, and maintaining resilient security for AI agent lifecycles."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2srbflqimJQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Leading with Trust: Building & Deploying Agents in a Regulated World'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=2srbflqimJQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:52:17 +00:00
-permalink: "/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html"
-categories: ["AI", "Security"]
-tags: ["Agent Lifecycle", "AI", "AI Security", "Compliance Automation", "Compliance Manager", "Cyber Resilience", "Defender For Cloud", "DORA", "DPDP India", "EU AI Act", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Multi Layer Security", "NIS2", "ProtectcloudAIplatformandapps", "Real Time Compliance Monitoring", "Regulatory Navigator", "Regulatory Templates", "Responsible AI", "Security", "Videos"]
-tags_normalized: ["agent lifecycle", "ai", "ai security", "compliance automation", "compliance manager", "cyber resilience", "defender for cloud", "dora", "dpdp india", "eu ai act", "microsoft ignite", "microsoft purview", "msignite", "multi layer security", "nis2", "protectcloudaiplatformandapps", "real time compliance monitoring", "regulatory navigator", "regulatory templates", "responsible ai", "security", "videos"]
+permalink: /ai/videos/Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World
+tags:
+- Agent Lifecycle
+- AI
+- AI Security
+- Compliance Automation
+- Compliance Manager
+- Cyber Resilience
+- Defender For Cloud
+- DORA
+- DPDP India
+- EU AI Act
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Multi Layer Security
+- NIS2
+- ProtectcloudAIplatformandapps
+- Real Time Compliance Monitoring
+- Regulatory Navigator
+- Regulatory Templates
+- Responsible AI
+- Security
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents compliance experts Sourabh Pandey, Manny Sahota, and Tony Thampan discussing how tools like Purview and Defender for Cloud support regulatory resilience and secure AI agent development.<!--excerpt_end-->
 
 {% youtube 2srbflqimJQ %}

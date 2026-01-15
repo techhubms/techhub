@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building MCP Servers with Azure Logic Apps: Demo Collection"
-description: "This post shares practical demonstrations on using Azure Logic Apps and API Center to build Model Context Protocol (MCP) servers that enable integration with business systems like Salesforce and ServiceNow. It includes links to official Microsoft documentation and provides actionable use cases for automating agent connectivity in enterprise scenarios. The focus is on leveraging Logic Apps connectors, enabling IT automation, and exposing MCP server endpoints."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building MCP Servers with Azure Logic Apps: Demo Collection'
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 20:32:48 +00:00
-permalink: "/2025-09-08-Building-MCP-Servers-with-Azure-Logic-Apps-Demo-Collection.html"
-categories: ["Azure", "DevOps"]
-tags: ["API Center", "API Management", "Automation", "Azure", "Azure Logic Apps", "Cloud Automation", "Community", "Connectors", "DevOps", "Enterprise Integration", "MCP", "MCP Server", "Microsoft Integration Services", "Salesforce Integration", "ServiceNow Integration", "Workflow"]
-tags_normalized: ["api center", "api management", "automation", "azure", "azure logic apps", "cloud automation", "community", "connectors", "devops", "enterprise integration", "mcp", "mcp server", "microsoft integration services", "salesforce integration", "servicenow integration", "workflow"]
+permalink: /azure/community/Building-MCP-Servers-with-Azure-Logic-Apps-Demo-Collection
+tags:
+- API Center
+- API Management
+- Automation
+- Azure
+- Azure Logic Apps
+- Cloud Automation
+- Community
+- Connectors
+- DevOps
+- Enterprise Integration
+- MCP
+- MCP Server
+- Microsoft Integration Services
+- Salesforce Integration
+- ServiceNow Integration
+- Workflow
+section_names:
+- azure
+- devops
 ---
-
 KentWeareMSFT presents an overview and demonstrations of using Azure Logic Apps and API Center to create MCP servers, showcasing integrations with Salesforce and ServiceNow for practical automation.<!--excerpt_end-->
 
 # Building MCP Servers with Azure Logic Apps: Demo Collection

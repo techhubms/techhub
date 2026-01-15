@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI"
-description: "Yina Arenas details the critical role of agent observability for enterprise AI solutions. This post outlines practical guidance on monitoring, evaluation, tracing, governance, and end-to-end lifecycle management of AI agents using Azure AI Foundry Observability, including integration with CI/CD, security measures like red teaming, and advanced assessment tools for safety and compliance."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI'
+author: Yina Arenas
+canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-27 15:00:00 +00:00
-permalink: "/2025-08-27-Agent-Factory-Top-5-Agent-Observability-Best-Practices-for-Reliable-AI.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agent Benchmarking", "Agent Factory", "Agent Observability", "AI", "AI + Machine Learning", "AI Agents", "AI Governance", "Azure", "Azure AI Foundry", "Azure Monitor", "CI/CD Pipelines", "Compliance", "DevOps", "Enterprise AI", "Evaluation Metrics", "Microsoft Purview", "News", "Performance Monitoring", "Red Teaming", "Security"]
-tags_normalized: ["agent benchmarking", "agent factory", "agent observability", "ai", "ai plus machine learning", "ai agents", "ai governance", "azure", "azure ai foundry", "azure monitor", "cislashcd pipelines", "compliance", "devops", "enterprise ai", "evaluation metrics", "microsoft purview", "news", "performance monitoring", "red teaming", "security"]
+permalink: /ai/news/Agent-Factory-Top-5-Agent-Observability-Best-Practices-for-Reliable-AI
+tags:
+- Agent Benchmarking
+- Agent Factory
+- Agent Observability
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Governance
+- Azure
+- Azure AI Foundry
+- Azure Monitor
+- CI/CD Pipelines
+- Compliance
+- DevOps
+- Enterprise AI
+- Evaluation Metrics
+- Microsoft Purview
+- News
+- Performance Monitoring
+- Red Teaming
+- Security
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Yina Arenas shares best practices for implementing observability in AI agents, covering lifecycle evaluation, monitoring, security, and governance with Azure AI Foundry Observability.<!--excerpt_end-->
 
 # Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI

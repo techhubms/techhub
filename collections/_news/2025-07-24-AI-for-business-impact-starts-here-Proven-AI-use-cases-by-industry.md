@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "AI for business impact starts here - Proven AI use cases by industry"
-description: "This article, originally published on Microsoft's official blog, highlights real-world AI applications driving business transformation across several industries. It outlines how enterprises are leveraging Microsoft's AI solutions to create measurable impact, and provides examples of sector-specific use cases to inspire adoption and innovation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/21/ai-for-business-impact-starts-here-proven-ai-use-cases-by-industry/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: AI for business impact starts here - Proven AI use cases by industry
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/21/ai-for-business-impact-starts-here-proven-ai-use-cases-by-industry/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 13:46:56 +00:00
-permalink: "/2025-07-24-AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Adoption", "AI Impact", "AI Solutions", "Azure", "Business Transformation", "Cloud Services", "Company News", "Digital Transformation", "Enterprise AI", "Industry Use Cases", "Microsoft AI", "News", "Sector Specific AI"]
-tags_normalized: ["ai", "ai adoption", "ai impact", "ai solutions", "azure", "business transformation", "cloud services", "company news", "digital transformation", "enterprise ai", "industry use cases", "microsoft ai", "news", "sector specific ai"]
+permalink: /ai/news/AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry
+tags:
+- AI
+- AI Adoption
+- AI Impact
+- AI Solutions
+- Azure
+- Business Transformation
+- Cloud Services
+- Company News
+- Digital Transformation
+- Enterprise AI
+- Industry Use Cases
+- Microsoft AI
+- News
+- Sector Specific AI
+section_names:
+- ai
+- azure
 ---
-
 Written by stclarke, this article explores how organizations across industries are utilizing Microsoft AI technologies for tangible business outcomes, offering proven use cases and best practices.<!--excerpt_end-->
 
 ## Summary

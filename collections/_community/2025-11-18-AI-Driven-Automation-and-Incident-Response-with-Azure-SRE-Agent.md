@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "AI-Driven Automation and Incident Response with Azure SRE Agent"
-description: "This article explores the latest release of Azure SRE Agent, highlighting its AI-powered automation capabilities for IT operations on Azure and hybrid environments. Discover new features such as the no-code sub-agent builder, event-driven triggers, advanced integration with incident management tools, expanded data connectivity, and custom actions for operational workflows. Detailed examples show how the SRE Agent streamlines incident response, root cause analysis, and integrates with GitHub Copilot, Azure DevOps, and more to improve team efficiency and reliability."
-author: "vyomnagrani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/reimagining-ai-ops-with-azure-sre-agent-new-automation/ba-p/4462613"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI-Driven Automation and Incident Response with Azure SRE Agent
+author: vyomnagrani
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/reimagining-ai-ops-with-azure-sre-agent-new-automation/ba-p/4462613
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-AI-Driven-Automation-and-Incident-Response-with-Azure-SRE-Agent.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AIOps", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Monitor", "Azure SRE Agent", "CI/CD Integration", "Community", "Continuous Integration", "Custom Actions", "DevOps", "DevOps Workflows", "Event Driven Triggers", "GitHub Copilot", "Hybrid Cloud", "IaC Drift Detection", "Incident Response", "Log Analytics", "No Code Sub Agent", "Observability", "Operational Playbooks", "Root Cause Analysis"]
-tags_normalized: ["ai", "aiops", "application insights", "automation", "azure", "azure devops", "azure monitor", "azure sre agent", "cislashcd integration", "community", "continuous integration", "custom actions", "devops", "devops workflows", "event driven triggers", "github copilot", "hybrid cloud", "iac drift detection", "incident response", "log analytics", "no code sub agent", "observability", "operational playbooks", "root cause analysis"]
+permalink: /github-copilot/community/AI-Driven-Automation-and-Incident-Response-with-Azure-SRE-Agent
+tags:
+- AI
+- AIOps
+- Application Insights
+- Automation
+- Azure
+- Azure DevOps
+- Azure Monitor
+- Azure SRE Agent
+- CI/CD Integration
+- Community
+- Continuous Integration
+- Custom Actions
+- DevOps
+- DevOps Workflows
+- Event Driven Triggers
+- GitHub Copilot
+- Hybrid Cloud
+- IaC Drift Detection
+- Incident Response
+- Log Analytics
+- No Code Sub Agent
+- Observability
+- Operational Playbooks
+- Root Cause Analysis
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 vyomnagrani introduces the upgraded Azure SRE Agent, detailing new AI-powered automation features for incident response, DevOps, and operational management across Azure and hybrid environments.<!--excerpt_end-->
 
 # AI-Driven Automation and Incident Response with Azure SRE Agent

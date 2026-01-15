@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Git 2.52: Features and Performance Enhancements"
-description: "This article provides a technical overview of the latest Git 2.52 release, highlighting new commands, performance improvements, repository maintenance features, and upcoming changes for developers working with version control. Topics include tree-level blame, the new git last-modified command, geometric repacking strategies, reference operations, SHA-256 migration, optional Rust support, Bloom filter expansion, and sparse-checkout clean-up. The post is authored by Taylor Blau and offers actionable insights and benchmarks to help technical users leverage recent Git advancements."
-author: "Taylor Blau"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/git/highlights-from-git-2-52/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+author: Taylor Blau
+canonical_url: https://github.blog/open-source/git/highlights-from-git-2-52/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-17 17:54:31 +00:00
-permalink: "/2025-11-17-Whats-New-in-Git-252-Features-and-Performance-Enhancements.html"
-categories: ["Coding", "DevOps"]
-tags: ["Bloom Filters", "Branch Management", "Coding", "Commit History", "DevOps", "Geometric Repacking", "Git", "Git 2.52", "Git Last Modified", "Git Maintenance", "Git Refs", "News", "Open Source", "Performance Benchmark", "Reference Backends", "Repository Maintenance", "Rust Integration", "SHA 256", "Sparse Checkout", "Version Control"]
-tags_normalized: ["bloom filters", "branch management", "coding", "commit history", "devops", "geometric repacking", "git", "git 2dot52", "git last modified", "git maintenance", "git refs", "news", "open source", "performance benchmark", "reference backends", "repository maintenance", "rust integration", "sha 256", "sparse checkout", "version control"]
+permalink: /coding/news/Whats-New-in-Git-252-Features-and-Performance-Enhancements
+tags:
+- Bloom Filters
+- Branch Management
+- Coding
+- Commit History
+- DevOps
+- Geometric Repacking
+- Git
+- Git 2.52
+- Git Last Modified
+- Git Maintenance
+- Git Refs
+- News
+- Open Source
+- Performance Benchmark
+- Reference Backends
+- Repository Maintenance
+- Rust Integration
+- SHA 256
+- Sparse Checkout
+- Version Control
+section_names:
+- coding
+- devops
 ---
-
 Taylor Blau explores the technical highlights of the Git 2.52 release, discussing new commands, repository maintenance strategies, performance optimizations, and upcoming changes for developers.<!--excerpt_end-->
 
 # What's New in Git 2.52: Features and Performance Enhancements

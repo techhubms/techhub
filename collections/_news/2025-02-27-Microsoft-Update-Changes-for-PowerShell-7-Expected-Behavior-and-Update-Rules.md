@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft Update Changes for PowerShell 7: Expected Behavior and Update Rules"
-description: "Steven Bucher details changes to Microsoft Update (MU) for PowerShell 7, outlining how updates are handled for LTS, stable, and preview releases, guidance for enabling MU, and timing of releases. The post clarifies update scenarios and provides resources for further information."
-author: "Steven Bucher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: 'Microsoft Update Changes for PowerShell 7: Expected Behavior and Update Rules'
+author: Steven Bucher
+canonical_url: https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-27 22:28:17 +00:00
-permalink: "/2025-02-27-Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules.html"
-categories: ["Coding"]
-tags: ["Automation", "Coding", "LTS", "Microsoft Update", "News", "PowerShell", "PowerShell Installation", "Preview Releases", "SCCM", "Stable Releases", "Update Process", "Versioning", "Windows Server Update Services", "Windows Updates", "WSUS"]
-tags_normalized: ["automation", "coding", "lts", "microsoft update", "news", "powershell", "powershell installation", "preview releases", "sccm", "stable releases", "update process", "versioning", "windows server update services", "windows updates", "wsus"]
+permalink: /coding/news/Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules
+tags:
+- Automation
+- Coding
+- LTS
+- Microsoft Update
+- News
+- PowerShell
+- PowerShell Installation
+- Preview Releases
+- SCCM
+- Stable Releases
+- Update Process
+- Versioning
+- Windows Server Update Services
+- Windows Updates
+- WSUS
+section_names:
+- coding
 ---
-
 In this blog post, Steven Bucher from the PowerShell Team explains important changes to how Microsoft Update handles PowerShell 7 updates, including expected behaviors for LTS, stable, and preview versions.<!--excerpt_end-->
 
 # Microsoft Update (MU) Changes for PowerShell 7

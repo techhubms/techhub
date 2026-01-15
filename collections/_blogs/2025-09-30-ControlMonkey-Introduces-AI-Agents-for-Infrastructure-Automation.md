@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "ControlMonkey Introduces AI Agents for Infrastructure Automation"
-description: "This article introduces new AI agents integrated into ControlMonkey’s infrastructure automation platform. Highlighting the KoMo AI extension, it describes how these AI agents help developers securely provision infrastructure as code (IaC) using Terraform, improve code quality, reduce misconfigurations, and close the cloud skills gap by enforcing policy and compliance automatically."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: ControlMonkey Introduces AI Agents for Infrastructure Automation
+author: Mike Vizard
+canonical_url: https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-30 18:48:35 +00:00
-permalink: "/2025-09-30-ControlMonkey-Introduces-AI-Agents-for-Infrastructure-Automation.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Automation", "Blogs", "Cloud Provisioning", "Cloud Security", "Code Quality", "Compliance", "ControlMonkey", "Cybersecurity", "DevOps", "DevOps Platform", "Human Readable Explanations", "IaC", "Infrastructure Automation", "KoMo AI", "Policy Enforcement", "Social Facebook", "Social LinkedIn", "Social X", "Terraform"]
-tags_normalized: ["ai", "ai agents", "automation", "blogs", "cloud provisioning", "cloud security", "code quality", "compliance", "controlmonkey", "cybersecurity", "devops", "devops platform", "human readable explanations", "iac", "infrastructure automation", "komo ai", "policy enforcement", "social facebook", "social linkedin", "social x", "terraform"]
+permalink: /ai/blogs/ControlMonkey-Introduces-AI-Agents-for-Infrastructure-Automation
+tags:
+- AI
+- AI Agents
+- Automation
+- Blogs
+- Cloud Provisioning
+- Cloud Security
+- Code Quality
+- Compliance
+- ControlMonkey
+- Cybersecurity
+- DevOps
+- DevOps Platform
+- Human Readable Explanations
+- IaC
+- Infrastructure Automation
+- KoMo AI
+- Policy Enforcement
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Terraform
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard examines ControlMonkey’s integration of AI agents with its infrastructure automation platform, showing how KoMo AI helps developers securely provision and manage infrastructure as code while raising code quality and taming misconfiguration risk.<!--excerpt_end-->
 
 # ControlMonkey Introduces AI Agents for Infrastructure Automation

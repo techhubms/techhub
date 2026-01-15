@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads"
-description: "This video explores how SQL Server 2025, in partnership with HPE, empowers developers to build next-generation AI-powered analytics platforms. The presentation covers hybrid cloud and edge deployment models with Azure integration, enhanced T-SQL features for Retrieval Augmented Generation (RAG), and reliable infrastructure for modern enterprise data workloads using HPE storage solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QCF0C7NpBcE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=QCF0C7NpBcE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-02 16:00:49 +00:00
-permalink: "/2025-10-02-HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Applications", "Alletra Storage", "Azure", "Azure Arc", "Cloud Computing", "Cloud Infrastructure", "Data Platform", "Dev", "Development", "Edge Computing", "Enterprise Data", "HPE", "Hybrid Cloud", "Hybrid Workloads", "Microsoft", "Mission Critical Analytics", "ML", "Retrieval Augmented Generation", "SQL Server", "T SQL", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai applications", "alletra storage", "azure", "azure arc", "cloud computing", "cloud infrastructure", "data platform", "dev", "development", "edge computing", "enterprise data", "hpe", "hybrid cloud", "hybrid workloads", "microsoft", "mission critical analytics", "ml", "retrieval augmented generation", "sql server", "t sql", "tech", "technology", "videos"]
+permalink: /ai/videos/HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads
+tags:
+- AI
+- AI Applications
+- Alletra Storage
+- Azure
+- Azure Arc
+- Cloud Computing
+- Cloud Infrastructure
+- Data Platform
+- Dev
+- Development
+- Edge Computing
+- Enterprise Data
+- HPE
+- Hybrid Cloud
+- Hybrid Workloads
+- Microsoft
+- Mission Critical Analytics
+- ML
+- Retrieval Augmented Generation
+- SQL Server
+- T SQL
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Developer presents how SQL Server 2025 and HPE's hybrid cloud infrastructure enable enterprise-grade analytics and AI solutions on Azure and edge, with integrated AI, RAG capabilities, and robust storage.<!--excerpt_end-->
 
 {% youtube QCF0C7NpBcE %}

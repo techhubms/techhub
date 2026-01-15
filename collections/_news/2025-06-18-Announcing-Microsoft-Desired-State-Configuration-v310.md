@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing Microsoft Desired State Configuration v3.1.0"
-description: "Microsoft announces the general availability of Desired State Configuration (DSC) v3.1.0, introducing cross-platform enhancements, better integration with WinGet, improved resource authoring, and more robust diagnostics. The update delivers features based on partner and community feedback, and provides installation guidance for Windows, Linux, and macOS."
-author: "Jason Helmick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/announcing-dsc-v3-1-0/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: Announcing Microsoft Desired State Configuration v3.1.0
+author: Jason Helmick
+canonical_url: https://devblogs.microsoft.com/powershell/announcing-dsc-v3-1-0/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-06-18 14:12:40 +00:00
-permalink: "/2025-06-18-Announcing-Microsoft-Desired-State-Configuration-v310.html"
-categories: ["Coding", "DevOps"]
-tags: ["Automation", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "IaC", "Linux", "News", "PowerShell", "PowerShell DSC", "Resource Authoring", "Windows", "WinGet"]
-tags_normalized: ["automation", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "iac", "linux", "news", "powershell", "powershell dsc", "resource authoring", "windows", "winget"]
+permalink: /coding/news/Announcing-Microsoft-Desired-State-Configuration-v310
+tags:
+- Automation
+- Coding
+- Configuration Management
+- Cross Platform
+- Desired State Configuration
+- DevOps
+- DSC
+- IaC
+- Linux
+- News
+- PowerShell
+- PowerShell DSC
+- Resource Authoring
+- Windows
+- WinGet
+section_names:
+- coding
+- devops
 ---
-
 Authored by Jason Helmick, this post announces the general availability of Microsoft Desired State Configuration (DSC) v3.1.0, outlining its new features, improvements, and installation instructions for different platforms.<!--excerpt_end-->
 
 ## Announcing Microsoft Desired State Configuration v3.1.0

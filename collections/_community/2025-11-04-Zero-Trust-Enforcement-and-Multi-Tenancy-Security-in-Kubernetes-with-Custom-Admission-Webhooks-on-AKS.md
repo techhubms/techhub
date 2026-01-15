@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Zero-Trust Enforcement and Multi-Tenancy Security in Kubernetes with Custom Admission Webhooks on AKS"
-description: "This article provides a hands-on guide to implementing Zero Trust security in Kubernetes clusters, focusing on Azure Kubernetes Service (AKS). It covers using custom admission webhooks, OPA Gatekeeper, Kyverno, and integrations with Azure Policy to enforce security policies such as trusted registries, privileged escalation blocking, resource quotas, and multi-tenant isolation. Step-by-step implementation details, Python code samples, and best practices for supply chain and runtime security are included."
-author: "divyaan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Zero-Trust Enforcement and Multi-Tenancy Security in Kubernetes with Custom Admission Webhooks on AKS
+author: divyaan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 16:22:40 +00:00
-permalink: "/2025-11-04-Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in-Kubernetes-with-Custom-Admission-Webhooks-on-AKS.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Admission Controller", "AKS", "Azure", "Azure AD", "Azure Policy", "Community", "Custom Webhooks", "DevOps", "Flask", "Kubernetes", "Kyverno", "Microsoft Sentinel", "Multi Tenancy", "NetworkPolicy", "OPA Gatekeeper", "Policy as Code", "Python", "RBAC", "ResourceQuota", "Runtime Security", "Security", "Supply Chain Security", "TLS", "Zero Trust"]
-tags_normalized: ["admission controller", "aks", "azure", "azure ad", "azure policy", "community", "custom webhooks", "devops", "flask", "kubernetes", "kyverno", "microsoft sentinel", "multi tenancy", "networkpolicy", "opa gatekeeper", "policy as code", "python", "rbac", "resourcequota", "runtime security", "security", "supply chain security", "tls", "zero trust"]
+permalink: /azure/community/Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in-Kubernetes-with-Custom-Admission-Webhooks-on-AKS
+tags:
+- Admission Controller
+- AKS
+- Azure
+- Azure AD
+- Azure Policy
+- Community
+- Custom Webhooks
+- DevOps
+- Flask
+- Kubernetes
+- Kyverno
+- Microsoft Sentinel
+- Multi Tenancy
+- NetworkPolicy
+- OPA Gatekeeper
+- Policy as Code
+- Python
+- RBAC
+- ResourceQuota
+- Runtime Security
+- Security
+- Supply Chain Security
+- TLS
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 divyaan demonstrates practical approaches to enforcing Zero Trust and multi-tenancy in Kubernetes using custom admission webhooks on AKS, with code examples, Azure integrations, and actionable security policies.<!--excerpt_end-->
 
 # Zero-Trust Enforcement and Multi-Tenancy Security in Kubernetes with Custom Admission Webhooks on AKS

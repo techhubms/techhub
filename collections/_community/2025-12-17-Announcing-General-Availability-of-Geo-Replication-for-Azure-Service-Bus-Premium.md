@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing General Availability of Geo-Replication for Azure Service Bus Premium"
-description: "This article from Eldert Grootenboer introduces the general availability of Geo-Replication for Azure Service Bus Premium. It explains how this feature enhances resilience by replicating metadata and data across Azure regions, details the primary-secondary replication model, describes the differences between synchronous and asynchronous modes, and covers promotion scenarios and pricing. The post helps practitioners understand disaster recovery options for messaging architectures in Microsoft Azure."
-author: "EldertGrootenboer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing General Availability of Geo-Replication for Azure Service Bus Premium
+author: EldertGrootenboer
+canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 17:00:00 +00:00
-permalink: "/2025-12-17-Announcing-General-Availability-of-Geo-Replication-for-Azure-Service-Bus-Premium.html"
-categories: ["Azure"]
-tags: ["Asynchronous Replication", "Availability Zones", "Azure", "Azure Messaging", "Azure Regions", "Azure Service Bus", "Business Continuity", "Cloud Architecture", "Community", "Disaster Recovery", "Geo Replication", "High Availability", "Messaging Unit", "Metadata Replication", "Namespace Replication", "Premium Tier", "Synchronous Replication"]
-tags_normalized: ["asynchronous replication", "availability zones", "azure", "azure messaging", "azure regions", "azure service bus", "business continuity", "cloud architecture", "community", "disaster recovery", "geo replication", "high availability", "messaging unit", "metadata replication", "namespace replication", "premium tier", "synchronous replication"]
+permalink: /azure/community/Announcing-General-Availability-of-Geo-Replication-for-Azure-Service-Bus-Premium
+tags:
+- Asynchronous Replication
+- Availability Zones
+- Azure
+- Azure Messaging
+- Azure Regions
+- Azure Service Bus
+- Business Continuity
+- Cloud Architecture
+- Community
+- Disaster Recovery
+- Geo Replication
+- High Availability
+- Messaging Unit
+- Metadata Replication
+- Namespace Replication
+- Premium Tier
+- Synchronous Replication
+section_names:
+- azure
 ---
-
 Eldert Grootenboer announces the GA release of Geo-Replication for Azure Service Bus Premium, outlining technical details on replication modes, region promotion, and disaster recovery approaches.<!--excerpt_end-->
 
 # Announcing General Availability of Geo-Replication for Azure Service Bus Premium

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Use Copilot and MCP to Query Microsoft Learn Docs"
-description: "This video demonstrates how to use the Microsoft Docs Model Context Protocol (MCP) server tools in conjunction with GitHub Copilot and a custom Python client to obtain answers based on official Microsoft Documentation. It covers an overview of the MCP, hands-on demo queries, and resources for further learning. The presentation is hosted by Carlotta Castelluccio and highlights development workflows in Visual Studio Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JJJ6pbq7Aac"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Use Copilot and MCP to Query Microsoft Learn Docs
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=JJJ6pbq7Aac
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-22 14:00:26 +00:00
-permalink: "/2025-09-22-Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Integration", "Coding", "Demo", "Developer Community", "Developer Tools", "Documentation Query", "GitHub Copilot", "Machine Learning", "MCP", "Microsoft", "Microsoft Docs", "Microsoft Learn", "Prompt Driven Development", "Promptdrivendevelopment", "Python", "Python Client", "Videos", "VS Code"]
-tags_normalized: ["ai", "api integration", "coding", "demo", "developer community", "developer tools", "documentation query", "github copilot", "machine learning", "mcp", "microsoft", "microsoft docs", "microsoft learn", "prompt driven development", "promptdrivendevelopment", "python", "python client", "videos", "vs code"]
+permalink: /github-copilot/videos/Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs
+tags:
+- AI
+- API Integration
+- Coding
+- Demo
+- Developer Community
+- Developer Tools
+- Documentation Query
+- GitHub Copilot
+- Machine Learning
+- MCP
+- Microsoft
+- Microsoft Docs
+- Microsoft Learn
+- Prompt Driven Development
+- Promptdrivendevelopment
+- Python
+- Python Client
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code, with Carlotta Castelluccio, showcases how developers can use GitHub Copilot and the MCP server to programmatically interact with Microsoft Learn Docs for grounded, documentation-based AI answers.<!--excerpt_end-->
 
 {% youtube JJJ6pbq7Aac %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Reimagining Software Development with GitHub Copilot and AI Agents"
-description: "This Microsoft Ignite session explores how modern DevOps teams can harness GitHub Copilot and AI agents to accelerate, scale, and secure software development. Through demonstrations, the session covers the integration of Copilot, coding agents, and mission control features, highlighting enterprise deployment, SRE automation, permissions, and the evolving future of GitHub as an open collaboration platform for both humans and agents."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5Kfb2Zicn0A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Reimagining Software Development with GitHub Copilot and AI Agents
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=5Kfb2Zicn0A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:24:03 +00:00
-permalink: "/2025-11-21-Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic DevOps", "AI", "AI Agents", "Automation", "Cloud Development", "Coding", "Copilot Controls", "Developer Productivity", "DevOps", "Enterprise Deployment", "GitHub", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Mission Control", "MSIgnite", "PagerDuty", "PR Integration", "Software Development", "SRE Agents", "Videos"]
-tags_normalized: ["agentic devops", "ai", "ai agents", "automation", "cloud development", "coding", "copilot controls", "developer productivity", "devops", "enterprise deployment", "github", "github copilot", "innovatewithazureaiappsandagents", "mission control", "msignite", "pagerduty", "pr integration", "software development", "sre agents", "videos"]
+permalink: /github-copilot/videos/Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents
+tags:
+- Agentic DevOps
+- AI
+- AI Agents
+- Automation
+- Cloud Development
+- Coding
+- Copilot Controls
+- Developer Productivity
+- DevOps
+- Enterprise Deployment
+- GitHub
+- GitHub Copilot
+- InnovatewithAzureAIappsandagents
+- Mission Control
+- MSIgnite
+- PagerDuty
+- PR Integration
+- Software Development
+- SRE Agents
+- Videos
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Presented by Mario Rodriguez and Luke Hoban, this session from Microsoft Ignite shows how GitHub Copilot and AI agents can transform software development practices for DevOps teams with automation and integrated cloud tooling.<!--excerpt_end-->
 
 {% youtube 5Kfb2Zicn0A %}

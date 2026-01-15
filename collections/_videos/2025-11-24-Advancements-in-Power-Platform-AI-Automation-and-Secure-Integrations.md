@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Advancements in Power Platform: AI, Automation, and Secure Integrations"
-description: "This session from Microsoft Ignite 2025 explores the latest innovations in the Power Platform, focusing on Power Apps, Power Automate, and Power Pages. It highlights new AI integrations, enhancements in automation, responsive app authoring, secure connector improvements, RPA, governance, and the growing capabilities for building robust enterprise solutions with low-code tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=A3twnNTBXvk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Advancements in Power Platform: AI, Automation, and Secure Integrations'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=A3twnNTBXvk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:20:28 +00:00
-permalink: "/2025-11-24-Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Automation", "Copilot Studio", "Data Visualization", "Governance", "Innovatewithlow", "Low Code Development", "Microsoft Ignite", "MSIgnite", "Observability", "Power Apps", "Power Automate", "Power Pages", "Power Platform", "RPA", "Secure Connectors", "Server Side Logic", "Videos"]
-tags_normalized: ["ai", "ai integration", "automation", "copilot studio", "data visualization", "governance", "innovatewithlow", "low code development", "microsoft ignite", "msignite", "observability", "power apps", "power automate", "power pages", "power platform", "rpa", "secure connectors", "server side logic", "videos"]
+permalink: /ai/videos/Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations
+tags:
+- AI
+- AI Integration
+- Automation
+- Copilot Studio
+- Data Visualization
+- Governance
+- Innovatewithlow
+- Low Code Development
+- Microsoft Ignite
+- MSIgnite
+- Observability
+- Power Apps
+- Power Automate
+- Power Pages
+- Power Platform
+- RPA
+- Secure Connectors
+- Server Side Logic
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Marc Schweigert and Tiffany Treacy at Microsoft Ignite 2025, this session reviews new AI-powered features and automation enhancements in Power Platform apps to enable more intelligent and secure enterprise solutions.<!--excerpt_end-->
 
 {% youtube A3twnNTBXvk %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Accessible and Responsible AI: Agentic Systems at Microsoft Ignite BRK402"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft is shaping the future of agentic AI by prioritizing accessibility and responsibility. Led by Jenny Lay-Flurrie and Natasha Crampton, the talk provides real-world examples of accessible AI applications, risk identification in autonomous systems, and the interconnection between responsible AI and accessibility, especially for developers and organizations building with Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=boFoMk9dEVk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Building Accessible and Responsible AI: Agentic Systems at Microsoft Ignite BRK402'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=boFoMk9dEVk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:09:41 +00:00
-permalink: "/2025-11-21-Building-Accessible-and-Responsible-AI-Agentic-Systems-at-Microsoft-Ignite-BRK402.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Accessibility", "AI Safety", "Alternative Text", "Data Accuracy", "Data Governance", "Developer Tools", "GitHub Accessibility Scanner", "Microsoft Ignite", "MSIgnite", "Other", "Python", "Red Teaming", "Responsible AI", "Risk Identification", "Videos", "Visual Accessibility"]
-tags_normalized: ["agentic ai", "ai", "ai accessibility", "ai safety", "alternative text", "data accuracy", "data governance", "developer tools", "github accessibility scanner", "microsoft ignite", "msignite", "other", "python", "red teaming", "responsible ai", "risk identification", "videos", "visual accessibility"]
+permalink: /ai/videos/Building-Accessible-and-Responsible-AI-Agentic-Systems-at-Microsoft-Ignite-BRK402
+tags:
+- Agentic AI
+- AI
+- AI Accessibility
+- AI Safety
+- Alternative Text
+- Data Accuracy
+- Data Governance
+- Developer Tools
+- GitHub Accessibility Scanner
+- Microsoft Ignite
+- MSIgnite
+- Other
+- Python
+- Red Teaming
+- Responsible AI
+- Risk Identification
+- Videos
+- Visual Accessibility
+section_names:
+- ai
 ---
-
 Presented by Jenny Lay-Flurrie and Natasha Crampton, this Microsoft Ignite session details Microsoft's approach to accessible and responsible AI, including developer tools, risk mitigation, and real-world use cases from the agentic AI landscape.<!--excerpt_end-->
 
 {% youtube boFoMk9dEVk %}

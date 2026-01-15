@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "November Security Patches Released for Azure DevOps Server"
-description: "This release note details the November patches for Azure DevOps Server 2022.2, emphasizing important security and stability fixes. Key updates include upgrading the TFVC Proxy hash algorithm, resolving issues with unsigned binaries in build tasks, and performance improvements. The post guides administrators through the patch installation and verification process to maintain a secure DevOps environment."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/november-patches-for-azure-devops-server-2/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: November Security Patches Released for Azure DevOps Server
+author: Gloridel Morales
+canonical_url: https://devblogs.microsoft.com/devops/november-patches-for-azure-devops-server-2/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-11-11 17:25:03 +00:00
-permalink: "/2025-11-11-November-Security-Patches-Released-for-Azure-DevOps-Server.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps Server", "Build Tasks", "DevOps", "Microsoft Azure", "MSBuildV1", "News", "Patch Management", "Patches", "Performance Optimization", "Release Notes", "Security", "Security Update", "Self Hosted DevOps", "Server Administration", "SHA 1", "SHA 256", "TFVC Proxy", "VSBuildV1"]
-tags_normalized: ["azure", "azure devops server", "build tasks", "devops", "microsoft azure", "msbuildv1", "news", "patch management", "patches", "performance optimization", "release notes", "security", "security update", "self hosted devops", "server administration", "sha 1", "sha 256", "tfvc proxy", "vsbuildv1"]
+permalink: /azure/news/November-Security-Patches-Released-for-Azure-DevOps-Server
+tags:
+- Azure
+- Azure DevOps Server
+- Build Tasks
+- DevOps
+- Microsoft Azure
+- MSBuildV1
+- News
+- Patch Management
+- Patches
+- Performance Optimization
+- Release Notes
+- Security
+- Security Update
+- Self Hosted DevOps
+- Server Administration
+- SHA 1
+- SHA 256
+- TFVC Proxy
+- VSBuildV1
+section_names:
+- azure
+- devops
+- security
 ---
-
 Gloridel Morales announces critical November patches for Azure DevOps Server, highlighting security and performance fixes, and provides guidance for patch installation and verification.<!--excerpt_end-->
 
 # November Security Patches Released for Azure DevOps Server

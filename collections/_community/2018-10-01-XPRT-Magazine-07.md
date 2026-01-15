@@ -1,17 +1,36 @@
----
-layout: "post"
-title: "XPRT Magazine 07"
-description: "This issue covers value streams, Kubernetes, AI, property-based testing, Azure security, bots, containers, and more."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 07
 date: 2018-10-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2018-10-01-XPRT-Magazine-07.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Azure Security", "Bots", "Cloud", "Coding", "Community", "Containers", "DevOps", "Kubernetes", "Magazines", "Property Based Testing", "Security", "Techorama", "Unit Testing", "Value Stream", "VS Code"]
-tags_normalized: ["ai", "automation", "azure", "azure security", "bots", "cloud", "coding", "community", "containers", "devops", "kubernetes", "magazines", "property based testing", "security", "techorama", "unit testing", "value stream", "vs code"]
+author: Xebia
+viewing_mode: external
+permalink: /ai/community/XPRT-Magazine-07
+tags:
+- AI
+- Automation
+- Azure
+- Azure Security
+- Bots
+- Cloud
+- Coding
+- Community
+- Containers
+- DevOps
+- Kubernetes
+- Magazines
+- Property Based Testing
+- Security
+- Techorama
+- Unit Testing
+- Value Stream
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 XPRT Magazine 07 explores value stream management, Kubernetes metrics, AI in pop culture, property-based testing, Azure security as code, bots, containers, and more. This issue provides practical strategies and technical insights for building secure, scalable, and innovative solutions.
 <!--excerpt_end-->
 

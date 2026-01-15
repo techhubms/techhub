@@ -1,20 +1,31 @@
----
-layout: "post"
-title: ".NET and .NET Framework July 2025 Servicing Releases Updates"
-description: "This article summarizes the key changes and improvements introduced in the July 2025 servicing updates for .NET and .NET Framework. It provides details on fixes, enhancements, and important updates developers should consider for maintaining secure and up-to-date applications."
-author: "Tara Overfield, Victor Israel-Bolarinwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: .NET and .NET Framework July 2025 Servicing Releases Updates
+author: Tara Overfield, Victor Israel-Bolarinwa
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-08 19:00:00 +00:00
-permalink: "/2025-07-08-NET-and-NET-Framework-July-2025-Servicing-Releases-Updates.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET Framework", "Bug Fixes", "Coding", "Framework", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Patches", "Release Notes", "Security", "Servicing Update"]
-tags_normalized: ["dotnet", "dotnet framework", "bug fixes", "coding", "framework", "maintenance", "maintenance and updates", "microsoft", "news", "patches", "release notes", "security", "servicing update"]
+permalink: /coding/news/NET-and-NET-Framework-July-2025-Servicing-Releases-Updates
+tags:
+- .NET
+- .NET Framework
+- Bug Fixes
+- Coding
+- Framework
+- Maintenance
+- Maintenance & Updates
+- Microsoft
+- News
+- Patches
+- Release Notes
+- Security
+- Servicing Update
+section_names:
+- coding
+- security
 ---
-
 Authored by Tara Overfield and Victor Israel-Bolarinwa, this article outlines the latest servicing updates released for .NET and .NET Framework in July 2025.<!--excerpt_end-->
 
 ### Overview

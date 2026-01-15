@@ -1,18 +1,26 @@
----
-layout: "post"
-title: "VS Code extension marketplace wars: Cursor users hit roadblocks"
-description: "Microsoft's enforcement of extension marketplace terms creates new obstacles for Cursor IDE users, highlighting the challenges of open source alternatives and the evolving landscape of developer tooling."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/04/08/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks/"
-viewing_mode: "external"
-categories: ["DevOps"]
+﻿---
+layout: post
+title: 'VS Code extension marketplace wars: Cursor users hit roadblocks'
+author: Tim Anderson
+canonical_url: https://devclass.com/2025/04/08/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks/
+viewing_mode: external
 date: 2025-04-08 00:00:00 +00:00
-permalink: "/2025-04-08-vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks.html"
-tags: ["C/C++", "Community", "Compliance", "Cursor", "Developer Tools", "DevOps", "Extension Marketplace", "IDE", "Microsoft", "Open VSX", "VS Code"]
-tags_normalized: ["cslashcplusplus", "community", "compliance", "cursor", "developer tools", "devops", "extension marketplace", "ide", "microsoft", "open vsx", "vs code"]
+permalink: /devops/community/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks
+tags:
+- C/C++
+- Community
+- Compliance
+- Cursor
+- Developer Tools
+- DevOps
+- Extension Marketplace
+- IDE
+- Microsoft
+- Open VSX
+- VS Code
+section_names:
+- devops
 ---
-
 Microsoft's stricter enforcement of its Visual Studio Code extension marketplace terms has left users of Cursor, an AI-powered coding editor, facing new roadblocks—especially with popular Microsoft extensions like C/C++. <!--excerpt_end-->
 
 Cursor, built on the open source foundation of VS Code, has long allowed developers to install extensions from Microsoft's marketplace. However, recent changes mean that while installation may succeed, key features—such as "Find all references" in the C/C++ extension—are now blocked, with pop-up notices citing usage restrictions. This shift has caused confusion, as Cursor still recommends these extensions for relevant projects, but their functionality is increasingly limited.

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "What’s New in Fabric Warehouse: August 2025 Recap"
-description: "This August 2025 roundup from the Microsoft Fabric Blog covers significant updates to Fabric Warehouse, including enhancements in data ingestion, management, security, and integration with AI. New features such as JSON Lines support, improved Copy jobs, advanced security with Private Link, AI/agentic workflows, and modern CI/CD tooling are highlighted for data engineers and developers."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'What’s New in Fabric Warehouse: August 2025 Recap'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 10:30:00 +00:00
-permalink: "/2025-09-03-Whats-New-in-Fabric-Warehouse-August-2025-Recap.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["AI", "AzCopy", "Azure", "Azure AI Foundry", "CI/CD", "Coding", "Copilot Studio", "Data Agents", "Data Ingestion", "Database Projects", "DevOps", "ETL", "Fabric Warehouse", "JSON Lines", "Microsoft Fabric", "ML", "News", "NuGet", "Private Link", "Scheduler", "Security", "SQL Analytics Endpoint", "T SQL", "VS Code"]
-tags_normalized: ["ai", "azcopy", "azure", "azure ai foundry", "cislashcd", "coding", "copilot studio", "data agents", "data ingestion", "database projects", "devops", "etl", "fabric warehouse", "json lines", "microsoft fabric", "ml", "news", "nuget", "private link", "scheduler", "security", "sql analytics endpoint", "t sql", "vs code"]
+permalink: /ai/news/Whats-New-in-Fabric-Warehouse-August-2025-Recap
+tags:
+- AI
+- AzCopy
+- Azure
+- Azure AI Foundry
+- CI/CD
+- Coding
+- Copilot Studio
+- Data Agents
+- Data Ingestion
+- Database Projects
+- DevOps
+- ETL
+- Fabric Warehouse
+- JSON Lines
+- Microsoft Fabric
+- ML
+- News
+- NuGet
+- Private Link
+- Scheduler
+- Security
+- SQL Analytics Endpoint
+- T SQL
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
+- security
 ---
-
 This recap by the Microsoft Fabric Blog team highlights August 2025 updates in Fabric Warehouse, including enhanced data ingestion, automation, security, and AI-driven workflows for developers and data engineers.<!--excerpt_end-->
 
 # What’s New in Fabric Warehouse – August 2025 Recap

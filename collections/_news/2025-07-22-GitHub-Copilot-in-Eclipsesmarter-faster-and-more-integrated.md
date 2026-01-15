@@ -1,21 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot in Eclipse—smarter, faster, and more integrated"
-description: "GitHub Copilot for Eclipse adds improved compatibility, smarter commit suggestions, and better context awareness in its latest update."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: GitHub Copilot in Eclipse—smarter, faster, and more integrated
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-22 17:41:06 +00:00
-permalink: "/2025-07-22-GitHub-Copilot-in-Eclipsesmarter-faster-and-more-integrated.html"
-viewing_mode: "external"
-page: "news"
-tags: ["AI", "AI Assisted Coding", "Commit Message Generation", "Compatibility", "Context Understanding", "Development Tools", "Eclipse", "GitHub Copilot", "IDE", "News", "Productivity", "Software Updates"]
-tags_normalized: ["ai", "ai assisted coding", "commit message generation", "compatibility", "context understanding", "development tools", "eclipse", "github copilot", "ide", "news", "productivity", "software updates"]
+permalink: /github-copilot/news/GitHub-Copilot-in-Eclipsesmarter-faster-and-more-integrated
+viewing_mode: external
+page: news
+tags:
+- AI
+- AI Assisted Coding
+- Commit Message Generation
+- Compatibility
+- Context Understanding
+- Development Tools
+- Eclipse
+- GitHub Copilot
+- IDE
+- News
+- Productivity
+- Software Updates
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, Allison introduces recent updates to GitHub Copilot for Eclipse. The enhancements cover improved compatibility with newer Eclipse versions, more intelligent commit message generation, and better context awareness. The piece provides insights into how these changes help streamline the developer workflow.<!--excerpt_end-->
 
 ## Summary of GitHub Copilot for Eclipse Updates

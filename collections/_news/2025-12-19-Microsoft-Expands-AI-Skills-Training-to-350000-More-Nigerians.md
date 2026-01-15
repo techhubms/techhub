@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Expands AI Skills Training to 350,000 More Nigerians"
-description: "This article reports on Microsoft's AI National Skills Initiative (AINSI) reaching over 350,000 Nigerians with new AI and technical skills through collaborative efforts with government, academia, and industry. It details how the initiative targets leaders, developers, public sector participants, and everyday tech users. Major highlights include upskilling programmes, public sector leadership training, developer workshops, and broad outreach efforts supporting digital transformation and workforce readiness in Nigeria."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Expands AI Skills Training to 350,000 More Nigerians
+author: stclarke
+canonical_url: https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 14:23:41 +00:00
-permalink: "/2025-12-19-Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians.html"
-categories: ["AI"]
-tags: ["AI", "AI Hackathon", "AI National Skills Initiative", "AI Skills", "AINSI", "Company News", "Data Science Nigeria", "Developer Training", "Digital Literacy", "Ethical AI", "Lagos Business School", "Machine Learning", "Microsoft Nigeria", "News", "Nigeria Digital Transformation", "Public Sector Training", "Skills Development"]
-tags_normalized: ["ai", "ai hackathon", "ai national skills initiative", "ai skills", "ainsi", "company news", "data science nigeria", "developer training", "digital literacy", "ethical ai", "lagos business school", "machine learning", "microsoft nigeria", "news", "nigeria digital transformation", "public sector training", "skills development"]
+permalink: /ai/news/Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians
+tags:
+- AI
+- AI Hackathon
+- AI National Skills Initiative
+- AI Skills
+- AINSI
+- Company News
+- Data Science Nigeria
+- Developer Training
+- Digital Literacy
+- Ethical AI
+- Lagos Business School
+- Machine Learning
+- Microsoft Nigeria
+- News
+- Nigeria Digital Transformation
+- Public Sector Training
+- Skills Development
+section_names:
+- ai
 ---
-
 stclarke explores Microsoft's milestone of training over 350,000 Nigerians through the AI National Skills Initiative, highlighting collaborative skilling efforts with developers, business leaders, and the Nigerian government.<!--excerpt_end-->
 
 # Microsoft Expands AI Skills Training to 350,000 More Nigerians

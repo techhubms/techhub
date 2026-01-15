@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "GenAI for Java Developers 2: Core Techniques Explained"
-description: "This video episode, hosted by Ayan Gupta and Rory, provides a hands-on exploration of the essential generative AI techniques Java developers can leverage. Building on the prior environment setup, the session demonstrates practical applications of LLM completions, multi-turn chat, interactive chat, Retrieval Augmented Generation (RAG), and function calling, all within GitHub Codespaces. Viewers learn not only the theory behind each technique but also see working code examples aligned to developing intelligent, context-aware Java applications using generative AI. The episode sets the stage for building complete AI applications in future sessions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3UoDsdemIdA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'GenAI for Java Developers 2: Core Techniques Explained'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=3UoDsdemIdA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-29 00:00:14 +00:00
-permalink: "/2025-10-29-GenAI-for-Java-Developers-2-Core-Techniques-Explained.html"
-categories: ["AI"]
-tags: ["AI", "AI Applications", "AI Tutorial", "AITechniques", "Chatbot Development", "ChatGPT", "Function Calling", "FunctionCalling", "Generative AI", "GenerativeAI", "GitHub Codespaces", "GitHubModels", "Interactive Chat", "Java", "Java Development", "JavaDevelopment", "JavaTutorial", "LLM", "Machine Learning", "MachineLearning", "Multi Turn Chat", "OpenAI", "RAG", "Retrieval Augmented Generation", "Videos"]
-tags_normalized: ["ai", "ai applications", "ai tutorial", "aitechniques", "chatbot development", "chatgpt", "function calling", "functioncalling", "generative ai", "generativeai", "github codespaces", "githubmodels", "interactive chat", "java", "java development", "javadevelopment", "javatutorial", "llm", "machine learning", "machinelearning", "multi turn chat", "openai", "rag", "retrieval augmented generation", "videos"]
+permalink: /ai/videos/GenAI-for-Java-Developers-2-Core-Techniques-Explained
+tags:
+- AI
+- AI Applications
+- AI Tutorial
+- AITechniques
+- Chatbot Development
+- ChatGPT
+- Function Calling
+- FunctionCalling
+- Generative AI
+- GenerativeAI
+- GitHub Codespaces
+- GitHubModels
+- Interactive Chat
+- Java
+- Java Development
+- JavaDevelopment
+- JavaTutorial
+- LLM
+- Machine Learning
+- MachineLearning
+- Multi Turn Chat
+- OpenAI
+- RAG
+- Retrieval Augmented Generation
+- Videos
+section_names:
+- ai
 ---
-
 Ayan Gupta and Rory present hands-on generative AI techniques for Java developers. Learn LLM completions, chat interactions, RAG, and AI function calling with practical code and clear explanations.<!--excerpt_end-->
 
 {% youtube 3UoDsdemIdA %}

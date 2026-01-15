@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry"
-description: "This news post introduces the Microsoft Agent Framework, highlighting its role in enterprise-scale AI economics by enabling efficient token factories and highly performant agent frameworks. The framework integrates Azure AI Foundry, AutoGen runtime, and Semantic Kernel for building, orchestrating, and scaling multi-agent AI systems, with enterprise-ready features including compliance and observability."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 17:35:44 +00:00
-permalink: "/2025-10-01-Microsoft-Agent-Framework-Powers-Multi-Agent-Systems-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Framework", "AI", "AI Economics", "AI Orchestration", "AutoGen", "Azure", "Azure AI Foundry", "Azure Integration", "Company News", "Compliance", "Enterprise AI", "LinkedIn Post", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "Scalable AI", "Semantic Kernel", "Token Factory"]
-tags_normalized: ["agent framework", "ai", "ai economics", "ai orchestration", "autogen", "azure", "azure ai foundry", "azure integration", "company news", "compliance", "enterprise ai", "linkedin post", "microsoft agent framework", "multi agent systems", "news", "observability", "scalable ai", "semantic kernel", "token factory"]
+permalink: /ai/news/Microsoft-Agent-Framework-Powers-Multi-Agent-Systems-in-Azure-AI-Foundry
+tags:
+- Agent Framework
+- AI
+- AI Economics
+- AI Orchestration
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Azure Integration
+- Company News
+- Compliance
+- Enterprise AI
+- LinkedIn Post
+- Microsoft Agent Framework
+- Multi Agent Systems
+- News
+- Observability
+- Scalable AI
+- Semantic Kernel
+- Token Factory
+section_names:
+- ai
+- azure
 ---
-
 stclarke summarizes Microsoft’s launch of the Agent Framework, a new enterprise-focused AI orchestration tool within Azure AI Foundry, designed for building and scaling multi-agent systems.<!--excerpt_end-->
 
 # Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Building a Master Prompt System for SEO Blog Generation with Psychological Engagement"
-description: "This community post by Sajil_ali details a comprehensive 'master prompt' system designed for generating SEO-optimized blog content using prompt engineering. It covers expert persona installation, structured workflows, SEO strategies, and the integration of psychological engagement techniques to create compelling and high-ranking blog articles with AI."
-author: "Sajil_ali"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/ArtificialInteligence/comments/1mkqmeg/i_built_a_master_prompt_for_generating_seo_blogs/"
-viewing_mode: "external"
-feed_name: "Reddit Artificial Inteligence"
-feed_url: "https://www.reddit.com/r/ArtificialInteligence/.rss"
+﻿---
+layout: post
+title: Building a Master Prompt System for SEO Blog Generation with Psychological Engagement
+author: Sajil_ali
+canonical_url: https://www.reddit.com/r/ArtificialInteligence/comments/1mkqmeg/i_built_a_master_prompt_for_generating_seo_blogs/
+viewing_mode: external
+feed_name: Reddit Artificial Inteligence
+feed_url: https://www.reddit.com/r/ArtificialInteligence/.rss
 date: 2025-08-08 09:28:36 +00:00
-permalink: "/2025-08-08-Building-a-Master-Prompt-System-for-SEO-Blog-Generation-with-Psychological-Engagement.html"
-categories: ["AI"]
-tags: ["AI", "AI Content Creation", "ArtificialInteligence", "Community", "Content Structure", "Engagement Psychology", "Expert Persona", "FOMO", "Keyword Optimization", "Meta Description", "Open Loops", "Prompt Engineering", "Psychological Hooks", "SEO Blog Writing", "Storytelling", "Structured Prompts"]
-tags_normalized: ["ai", "ai content creation", "artificialinteligence", "community", "content structure", "engagement psychology", "expert persona", "fomo", "keyword optimization", "meta description", "open loops", "prompt engineering", "psychological hooks", "seo blog writing", "storytelling", "structured prompts"]
+permalink: /ai/community/Building-a-Master-Prompt-System-for-SEO-Blog-Generation-with-Psychological-Engagement
+tags:
+- AI
+- AI Content Creation
+- ArtificialInteligence
+- Community
+- Content Structure
+- Engagement Psychology
+- Expert Persona
+- FOMO
+- Keyword Optimization
+- Meta Description
+- Open Loops
+- Prompt Engineering
+- Psychological Hooks
+- SEO Blog Writing
+- Storytelling
+- Structured Prompts
+section_names:
+- ai
 ---
-
 Sajil_ali shares their approach to developing a 'master prompt' for generating SEO blog posts with built-in psychological engagement, unpacking the workflow, structure, and techniques behind effective prompt engineering.<!--excerpt_end-->
 
 # Building a Master Prompt System for SEO Blog Generation with Psychological Engagement

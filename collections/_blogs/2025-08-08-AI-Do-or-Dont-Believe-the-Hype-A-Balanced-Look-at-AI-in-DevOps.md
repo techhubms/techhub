@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps"
-description: "This article, authored by Alan Shimel, explores the polarized perspectives surrounding the impact of AI on developer productivity within DevOps. Drawing on executive surveys, controlled studies, and first-hand anecdotes from professionals, it weighs the substantial business optimism around AI against practical challenges faced by seasoned developers, highlighting use case nuances, measurement complexities, and trust issues in real-world environments."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps'
+author: Alan Shimel
+canonical_url: https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-08 19:43:40 +00:00
-permalink: "/2025-08-08-AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Powered Development Tools", "Blogs", "Claude Sonnet", "Code Review", "Code Scaffolding", "Cursor Pro", "Developer Productivity", "DevOps", "Documentation Automation", "GitLab–Harris Poll", "METR Study", "MTTR", "Platform Engineering", "QA Automation", "Security Concerns", "Social Facebook", "Social LinkedIn", "Social X", "Software Lifecycle", "SRE", "Stack Overflow Survey", "Test Generation"]
-tags_normalized: ["ai", "ai powered development tools", "blogs", "claude sonnet", "code review", "code scaffolding", "cursor pro", "developer productivity", "devops", "documentation automation", "gitlabharris poll", "metr study", "mttr", "platform engineering", "qa automation", "security concerns", "social facebook", "social linkedin", "social x", "software lifecycle", "sre", "stack overflow survey", "test generation"]
+permalink: /ai/blogs/AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps
+tags:
+- AI
+- AI Powered Development Tools
+- Blogs
+- Claude Sonnet
+- Code Review
+- Code Scaffolding
+- Cursor Pro
+- Developer Productivity
+- DevOps
+- Documentation Automation
+- GitLab–Harris Poll
+- METR Study
+- MTTR
+- Platform Engineering
+- QA Automation
+- Security Concerns
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Lifecycle
+- SRE
+- Stack Overflow Survey
+- Test Generation
+section_names:
+- ai
+- devops
 ---
-
 Alan Shimel examines the current state of AI in the DevOps world, analyzing business hype, empirical studies, and ground-level developer experiences.<!--excerpt_end-->
 
 # AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Model Validation Best Practices in .NET Using FluentValidation"
-description: "The article discusses best practices for model validation in .NET, specifically using FluentValidation. The author inquires about the pros and cons of automatic versus manual validation, where to handle duplicate user checks, and implementation strategies such as action filters, base controllers, or extension methods for cleaner, maintainable code."
-author: "ErfanBaghdadi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mg49nf/model_validation_best_practices/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Model Validation Best Practices in .NET Using FluentValidation
+author: ErfanBaghdadi
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mg49nf/model_validation_best_practices/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 23:20:30 +00:00
-permalink: "/2025-08-02-Model-Validation-Best-Practices-in-NET-Using-FluentValidation.html"
-categories: ["Coding"]
-tags: [".NET", "Action Filters", "Clean Code", "Coding", "Community", "Controller Design", "Custom Validators", "Data Annotations", "Extension Methods", "FluentValidation", "Maintainability", "Model Validation", "Validation Best Practices"]
-tags_normalized: ["dotnet", "action filters", "clean code", "coding", "community", "controller design", "custom validators", "data annotations", "extension methods", "fluentvalidation", "maintainability", "model validation", "validation best practices"]
+permalink: /coding/community/Model-Validation-Best-Practices-in-NET-Using-FluentValidation
+tags:
+- .NET
+- Action Filters
+- Clean Code
+- Coding
+- Community
+- Controller Design
+- Custom Validators
+- Data Annotations
+- Extension Methods
+- FluentValidation
+- Maintainability
+- Model Validation
+- Validation Best Practices
+section_names:
+- coding
 ---
-
 In this community post, ErfanBaghdadi seeks advice on best practices for implementing model validation in .NET with FluentValidation, focusing on maintainability and clean code.<!--excerpt_end-->
 
 ## Summary

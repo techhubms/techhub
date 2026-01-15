@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How College Students Can Claim Free Azure Credits and Start Building in the Cloud"
-description: "This guide explains how college students can obtain $100 in free Azure credits annually through Microsoft's Azure for Students program. It details the eligibility requirements, step-by-step sign-up process, verification methods, and highlights various cloud projects students can build, including web apps, AI tools, and machine learning models."
-author: "KalpanaGupta-3282"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How College Students Can Claim Free Azure Credits and Start Building in the Cloud
+author: KalpanaGupta-3282
+canonical_url: https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 14:58:10 +00:00
-permalink: "/2025-11-20-How-College-Students-Can-Claim-Free-Azure-Credits-and-Start-Building-in-the-Cloud.html"
-categories: ["Azure"]
-tags: ["Academic Cloud", "AI", "AI Tools", "App Services", "Azure", "Azure For Students", "Azure Functions", "Big Data", "Cloud Computing", "Cloud Platform", "Community", "Education Technology", "Free Credits", "Kubernetes", "Machine Learning", "Microsoft Azure", "Student Credits", "Student Technology"]
-tags_normalized: ["academic cloud", "ai", "ai tools", "app services", "azure", "azure for students", "azure functions", "big data", "cloud computing", "cloud platform", "community", "education technology", "free credits", "kubernetes", "machine learning", "microsoft azure", "student credits", "student technology"]
+permalink: /azure/community/How-College-Students-Can-Claim-Free-Azure-Credits-and-Start-Building-in-the-Cloud
+tags:
+- Academic Cloud
+- AI
+- AI Tools
+- App Services
+- Azure
+- Azure For Students
+- Azure Functions
+- Big Data
+- Cloud Computing
+- Cloud Platform
+- Community
+- Education Technology
+- Free Credits
+- Kubernetes
+- Machine Learning
+- Microsoft Azure
+- Student Credits
+- Student Technology
+section_names:
+- azure
 ---
-
 KalpanaGupta-3282 provides a step-by-step guide for college students to claim $100 in free Azure credits, empowering them to experiment and build in the cloud without worrying about costs.<!--excerpt_end-->
 
 # How College Students Can Claim Free Azure Credits and Start Building in the Cloud

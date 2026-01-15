@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "The Evolving Blueprint: What’s Next for the Software Architect Role?"
-description: "This article explores the changing responsibilities of software architects in the era of cloud-native development, AI-driven systems, DevOps, and event-driven design. It highlights technical and strategic skill sets required for architects to thrive, including mastery of cloud platforms like Azure, fluency in ML/AI lifecycles, and turning architecture into executable code. The piece discusses shifts from deep coding towards technical leadership and business alignment, emphasizing the need for security-first and scalable architectures."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/the-evolving-blueprint-whats-next-for-the-software-architect-role/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'The Evolving Blueprint: What’s Next for the Software Architect Role?'
+author: John Edward
+canonical_url: https://dellenny.com/the-evolving-blueprint-whats-next-for-the-software-architect-role/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-20 17:34:19 +00:00
-permalink: "/2025-11-20-The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "Architecture", "Architecture as Code", "Azure", "Blogs", "CI/CD", "Cloud Native", "DevOps", "Distributed Systems", "Event Driven Architecture", "Governance", "Machine Learning", "Microservices", "MLOps", "Security", "Software Architecture", "Solution Architecture", "System Design", "Zero Trust"]
-tags_normalized: ["ai", "architecture", "architecture as code", "azure", "blogs", "cislashcd", "cloud native", "devops", "distributed systems", "event driven architecture", "governance", "machine learning", "microservices", "mlops", "security", "software architecture", "solution architecture", "system design", "zero trust"]
+permalink: /ai/blogs/The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role
+tags:
+- AI
+- Architecture
+- Architecture as Code
+- Azure
+- Blogs
+- CI/CD
+- Cloud Native
+- DevOps
+- Distributed Systems
+- Event Driven Architecture
+- Governance
+- Machine Learning
+- Microservices
+- MLOps
+- Security
+- Software Architecture
+- Solution Architecture
+- System Design
+- Zero Trust
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 John Edward examines how the software architect role is evolving, focusing on technical leadership, cloud-native patterns, AI integration, DevOps, and security-driven design.<!--excerpt_end-->
 
 # The Evolving Blueprint: What’s Next for the Software Architect Role?

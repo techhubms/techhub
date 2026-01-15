@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Accelerate AI Applications with Semantic Caching on Azure Managed Redis"
-description: "This blog post by Satish explores how to implement semantic caching for AI applications using Azure Managed Redis. It covers the benefits of vector search, integration with Azure OpenAI, typical use cases, architectural patterns, and provides sample code, highlighting improvements to application latency and cost efficiency."
-author: "Satish"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/accelerate-ai-applications-with-semantic-caching-on-azure-managed-redis/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Accelerate AI Applications with Semantic Caching on Azure Managed Redis
+author: Satish
+canonical_url: https://devblogs.microsoft.com/all-things-azure/accelerate-ai-applications-with-semantic-caching-on-azure-managed-redis/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-13 21:18:06 +00:00
-permalink: "/2025-05-13-Accelerate-AI-Applications-with-Semantic-Caching-on-Azure-Managed-Redis.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Active Geo Replication", "AI", "AI Apps", "All Things Azure", "API Management", "Azure", "Azure Cache For Redis", "Azure Managed Redis", "Azure OpenAI", "Azure Redis", "Coding", "LLM", "News", "Python", "Redis", "Semantic Caching", "Vector Embeddings", "Vector Search", "Zone Redundancy"]
-tags_normalized: ["active geo replication", "ai", "ai apps", "all things azure", "api management", "azure", "azure cache for redis", "azure managed redis", "azure openai", "azure redis", "coding", "llm", "news", "python", "redis", "semantic caching", "vector embeddings", "vector search", "zone redundancy"]
+permalink: /ai/news/Accelerate-AI-Applications-with-Semantic-Caching-on-Azure-Managed-Redis
+tags:
+- Active Geo Replication
+- AI
+- AI Apps
+- All Things Azure
+- API Management
+- Azure
+- Azure Cache For Redis
+- Azure Managed Redis
+- Azure OpenAI
+- Azure Redis
+- Coding
+- LLM
+- News
+- Python
+- Redis
+- Semantic Caching
+- Vector Embeddings
+- Vector Search
+- Zone Redundancy
+section_names:
+- ai
+- azure
+- coding
 ---
-
 In this blog post, Satish discusses how to implement semantic caching on Azure Managed Redis for AI applications, combining vector search and caching strategies for enhanced performance.<!--excerpt_end-->
 
 ## Accelerate AI Applications with Semantic Caching on Azure Managed Redis

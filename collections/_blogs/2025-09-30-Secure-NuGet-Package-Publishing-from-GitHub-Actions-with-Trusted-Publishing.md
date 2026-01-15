@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Secure NuGet Package Publishing from GitHub Actions with Trusted Publishing"
-description: "This guide by Andrew Lock details how to automate the publishing of NuGet packages to nuget.org using the new Trusted Publishing feature. It covers traditional methods, explains the OpenID Connect-based Trusted Publishing workflow with GitHub Actions, and outlines step-by-step setup, configuration, and security improvements users can expect."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/easily-publishing-nuget-packages-from-github-actions-with-trusted-publishing/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Secure NuGet Package Publishing from GitHub Actions with Trusted Publishing
+author: Andrew Lock
+canonical_url: https://andrewlock.net/easily-publishing-nuget-packages-from-github-actions-with-trusted-publishing/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-30 10:00:00 +00:00
-permalink: "/2025-09-30-Secure-NuGet-Package-Publishing-from-GitHub-Actions-with-Trusted-Publishing.html"
-categories: ["DevOps", "Security"]
-tags: [".NET", "API Key Management", "Blogs", "CI/CD", "DevOps", "GitHub", "GitHub Actions", "Identity Provider", "JWT", "NuGet", "NuGet Package Publishing", "OpenID Connect", "Secrets Management", "Secure Automation", "Security", "Security Best Practices", "Trusted Publishing", "Workflow Automation", "YAML"]
-tags_normalized: ["dotnet", "api key management", "blogs", "cislashcd", "devops", "github", "github actions", "identity provider", "jwt", "nuget", "nuget package publishing", "openid connect", "secrets management", "secure automation", "security", "security best practices", "trusted publishing", "workflow automation", "yaml"]
+permalink: /devops/blogs/Secure-NuGet-Package-Publishing-from-GitHub-Actions-with-Trusted-Publishing
+tags:
+- .NET
+- API Key Management
+- Blogs
+- CI/CD
+- DevOps
+- GitHub
+- GitHub Actions
+- Identity Provider
+- JWT
+- NuGet
+- NuGet Package Publishing
+- OpenID Connect
+- Secrets Management
+- Secure Automation
+- Security
+- Security Best Practices
+- Trusted Publishing
+- Workflow Automation
+- YAML
+section_names:
+- devops
+- security
 ---
-
 Andrew Lock explains how to safely automate NuGet package publishing directly from GitHub Actions using the Trusted Publishing feature on nuget.org, reducing credential risk and streamlining release workflows.<!--excerpt_end-->
 
 # Secure NuGet Package Publishing from GitHub Actions with Trusted Publishing
@@ -85,14 +102,13 @@ steps:
         dotnet nuget push ---
 layout: "post"
 title: "Secure NuGet Package Publishing from GitHub Actions with Trusted Publishing"
-description: "This guide by Andrew Lock details how to automate the publishing of NuGet packages to nuget.org using the new Trusted Publishing feature. It covers traditional methods, explains the OpenID Connect-based Trusted Publishing workflow with GitHub Actions, and outlines step-by-step setup, configuration, and security improvements users can expect."
 author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://andrewlock.net/easily-publishing-nuget-packages-from-github-actions-with-trusted-publishing/"
 viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: https://andrewlock.net/rss.xml
-date: 2025-09-30 10:00:00 +00:00
+date: "2025-09-30 10:00:00 +00:00"
 permalink: "2025-09-30-Secure-NuGet-Package-Publishing-from-GitHub-Actions-with-Trusted-Publishing.html"
 categories: ["DevOps", "Security"]
 tags: [".NET", "API Key Management", "CI/CD", "DevOps", "GitHub", "GitHub Actions", "Identity Provider", "JWT", "NuGet", "NuGet Package Publishing", "OpenID Connect", "Blogs", "Secrets Management", "Secure Automation", "Security", "Security Best Practices", "Trusted Publishing", "Workflow Automation", "YAML"]

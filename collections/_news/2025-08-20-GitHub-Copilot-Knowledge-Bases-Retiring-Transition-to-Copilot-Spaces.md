@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces"
-description: "This announcement details the upcoming retirement of GitHub Copilot knowledge bases and their full replacement by Copilot Spaces, effective September 12, 2025. It outlines changes for Copilot users, highlights new features in Copilot Spaces such as flexible context management and organizational sharing, and provides resources for transition."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-20 21:43:40 +00:00
-permalink: "/2025-08-20-GitHub-Copilot-Knowledge-Bases-Retiring-Transition-to-Copilot-Spaces.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "AI Tools", "Code Sharing", "Context Management", "Copilot Business", "Copilot Enterprise", "Copilot Spaces", "Developer Tools", "Documentation", "GitHub", "GitHub Copilot", "Knowledge Bases", "Markdown", "News", "Team Collaboration"]
-tags_normalized: ["ai", "ai powered development", "ai tools", "code sharing", "context management", "copilot business", "copilot enterprise", "copilot spaces", "developer tools", "documentation", "github", "github copilot", "knowledge bases", "markdown", "news", "team collaboration"]
+permalink: /github-copilot/news/GitHub-Copilot-Knowledge-Bases-Retiring-Transition-to-Copilot-Spaces
+tags:
+- AI
+- AI Powered Development
+- AI Tools
+- Code Sharing
+- Context Management
+- Copilot Business
+- Copilot Enterprise
+- Copilot Spaces
+- Developer Tools
+- Documentation
+- GitHub
+- GitHub Copilot
+- Knowledge Bases
+- Markdown
+- News
+- Team Collaboration
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the retirement of GitHub Copilot knowledge bases, urging users to transition to Copilot Spaces, which offers enhanced context sharing and management for development teams.<!--excerpt_end-->
 
 # GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces

@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j"
-description: "This video, the final episode in the Java and AI for Beginners series, showcases how Azure Container Apps Dynamic Sessions can persist AI workloads in containers, enabling stateful, interactive sessions across multiple requests. Brian Benz demonstrates integrating LangChain4j and OpenAI to enable dynamic code execution environments for Java developers."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=oCNqsEXKnoA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=oCNqsEXKnoA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-05 17:01:32 +00:00
-permalink: "/2025-11-05-Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Integration", "AI Workloads", "AIIntegration", "AIWorkloads", "Azure", "Azure Container Apps", "AzureContainerApps", "Cloud Native", "CloudNative", "Code Execution", "CodeExecution", "Coding", "Containerized AI", "ContainerizedAI", "Dynamic Sessions", "DynamicSessions", "Java", "Java Development", "JavaAI", "JavaDevelopment", "LangChain4j", "OpenAI", "Persistent Environment", "Python Integration", "Session Pools", "Stateful Containers", "StatefulContainers", "Videos"]
-tags_normalized: ["ai", "ai integration", "ai workloads", "aiintegration", "aiworkloads", "azure", "azure container apps", "azurecontainerapps", "cloud native", "cloudnative", "code execution", "codeexecution", "coding", "containerized ai", "containerizedai", "dynamic sessions", "dynamicsessions", "java", "java development", "javaai", "javadevelopment", "langchain4j", "openai", "persistent environment", "python integration", "session pools", "stateful containers", "statefulcontainers", "videos"]
+permalink: /ai/videos/Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j
+tags:
+- AI
+- AI Integration
+- AI Workloads
+- AIIntegration
+- AIWorkloads
+- Azure
+- Azure Container Apps
+- AzureContainerApps
+- Cloud Native
+- CloudNative
+- Code Execution
+- CodeExecution
+- Coding
+- Containerized AI
+- ContainerizedAI
+- Dynamic Sessions
+- DynamicSessions
+- Java
+- Java Development
+- JavaAI
+- JavaDevelopment
+- LangChain4j
+- OpenAI
+- Persistent Environment
+- Python Integration
+- Session Pools
+- Stateful Containers
+- StatefulContainers
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer, joined by Brian Benz, guides Java developers through using Azure Container Apps Dynamic Sessions and LangChain4j to create persistent, interactive AI code execution environments powered by OpenAI.<!--excerpt_end-->
 
 {% youtube oCNqsEXKnoA %}

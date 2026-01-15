@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Migrating from AWS Application Load Balancer to Azure Application Gateway"
-description: "This guide by Michael_Bender_MS details the end-to-end process of migrating from AWS Application Load Balancer (ALB) to Azure Application Gateway. It provides actionable strategies for assessment, preparation, migration execution, validation, and optimization. The article emphasizes Azure's features, best practices for enterprise migrations, and how to leverage Microsoft-native security and monitoring tools."
-author: "Michael_Bender_MS"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Migrating from AWS Application Load Balancer to Azure Application Gateway
+author: Michael_Bender_MS
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 22:43:07 +00:00
-permalink: "/2025-09-03-Migrating-from-AWS-Application-Load-Balancer-to-Azure-Application-Gateway.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automation", "AWS Application Load Balancer", "Azure", "Azure Application Gateway", "Azure Key Vault", "Azure Monitor", "Certificate Management", "Cloud Migration", "Cloud Networking", "Community", "DevOps", "DNS Cutover", "Enterprise Migration", "Health Probes", "IaC", "Log Analytics", "Performance Optimization", "Routing", "Security", "SSL/TLS Termination", "Web Application Firewall", "Zone Redundancy"]
-tags_normalized: ["automation", "aws application load balancer", "azure", "azure application gateway", "azure key vault", "azure monitor", "certificate management", "cloud migration", "cloud networking", "community", "devops", "dns cutover", "enterprise migration", "health probes", "iac", "log analytics", "performance optimization", "routing", "security", "sslslashtls termination", "web application firewall", "zone redundancy"]
+permalink: /azure/community/Migrating-from-AWS-Application-Load-Balancer-to-Azure-Application-Gateway
+tags:
+- Automation
+- AWS Application Load Balancer
+- Azure
+- Azure Application Gateway
+- Azure Key Vault
+- Azure Monitor
+- Certificate Management
+- Cloud Migration
+- Cloud Networking
+- Community
+- DevOps
+- DNS Cutover
+- Enterprise Migration
+- Health Probes
+- IaC
+- Log Analytics
+- Performance Optimization
+- Routing
+- Security
+- SSL/TLS Termination
+- Web Application Firewall
+- Zone Redundancy
+section_names:
+- azure
+- devops
+- security
 ---
-
 Michael_Bender_MS shares practical insights and best practices for migrating from AWS Application Load Balancer to Azure Application Gateway, focusing on technical planning and security strategies.<!--excerpt_end-->
 
 # Migrating from AWS Application Load Balancer to Azure Application Gateway

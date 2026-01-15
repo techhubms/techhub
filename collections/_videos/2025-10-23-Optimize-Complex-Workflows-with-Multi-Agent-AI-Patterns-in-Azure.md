@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Optimize Complex Workflows with Multi-Agent AI Patterns in Azure"
-description: "This video from the Azure Essentials Show dives into multi-agent AI orchestration with Thomas Maurer and Clayton Siemens. It explains the roles of large language models (LLMs) and small language models (SLMs) in agentic AI, outlines key orchestration patterns (sequential, concurrent, group chat, hand-off), and discusses real-world applications for enterprise automation using Azure AI Foundry and Semantic Kernel. Viewers will gain practical strategies for designing, governing, and deploying multi-agent AI systems within Microsoft Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eobRfdy8tu4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Optimize Complex Workflows with Multi-Agent AI Patterns in Azure
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=eobRfdy8tu4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-23 07:00:39 +00:00
-permalink: "/2025-10-23-Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Orchestration", "AI", "AI Agent", "AI Patterns", "Automation", "Azure", "Azure AI Foundry", "Azure Essentials Show", "AzureEssentialsShow", "Enterprise Automation", "Governance", "LLM", "Microsoft Azure", "MicrosoftAzure", "Multi Agent AI", "Orchestration Patterns", "Scalability", "Semantic Kernel", "SLM", "Videos"]
-tags_normalized: ["agent orchestration", "ai", "ai agent", "ai patterns", "automation", "azure", "azure ai foundry", "azure essentials show", "azureessentialsshow", "enterprise automation", "governance", "llm", "microsoft azure", "microsoftazure", "multi agent ai", "orchestration patterns", "scalability", "semantic kernel", "slm", "videos"]
+permalink: /ai/videos/Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure
+tags:
+- Agent Orchestration
+- AI
+- AI Agent
+- AI Patterns
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure Essentials Show
+- AzureEssentialsShow
+- Enterprise Automation
+- Governance
+- LLM
+- Microsoft Azure
+- MicrosoftAzure
+- Multi Agent AI
+- Orchestration Patterns
+- Scalability
+- Semantic Kernel
+- SLM
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this Azure Essentials Show episode, Thomas Maurer and Clayton Siemens from Microsoft break down practical multi-agent AI orchestration patterns for enterprise workflow optimization.<!--excerpt_end-->
 
 {% youtube eobRfdy8tu4 %}

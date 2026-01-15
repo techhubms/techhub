@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Join Microsoft at SC25: HPC and AI Innovations in St. Louis"
-description: "Microsoft invites the technical community to SC25 in St. Louis, November 16–21, 2025. Explore the latest in high-performance computing (HPC) and AI at Booth #1627, join technical sessions and demos, and discover new advancements in Azure HPC & AI infrastructure, hardware, and scientific workflows. Detailed schedules for workshops, panels, and partner events are included."
-author: "Fernando_Aznar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Join Microsoft at SC25: HPC and AI Innovations in St. Louis'
+author: Fernando_Aznar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 20:46:40 +00:00
-permalink: "/2025-11-14-Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Infrastructure", "AMD", "Azure", "Azure AI", "Azure Arc", "Azure HPC", "Cloud Computing", "Community", "Data Center", "High Performance Computing", "HPC", "Hybrid Cloud", "Hybrid HPC", "LoRA Fine Tuning", "NVIDIA", "Scientific Computing", "Silicon", "Virtual Machines", "Workload Optimization"]
-tags_normalized: ["agentic ai", "ai", "ai infrastructure", "amd", "azure", "azure ai", "azure arc", "azure hpc", "cloud computing", "community", "data center", "high performance computing", "hpc", "hybrid cloud", "hybrid hpc", "lora fine tuning", "nvidia", "scientific computing", "silicon", "virtual machines", "workload optimization"]
+permalink: /ai/community/Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis
+tags:
+- Agentic AI
+- AI
+- AI Infrastructure
+- AMD
+- Azure
+- Azure AI
+- Azure Arc
+- Azure HPC
+- Cloud Computing
+- Community
+- Data Center
+- High Performance Computing
+- HPC
+- Hybrid Cloud
+- Hybrid HPC
+- LoRA Fine Tuning
+- NVIDIA
+- Scientific Computing
+- Silicon
+- Virtual Machines
+- Workload Optimization
+section_names:
+- ai
+- azure
 ---
-
 Fernando Aznar shares an in-depth preview of Microsoft’s schedule and technical programming for SC25, highlighting Azure HPC & AI innovations, interactive demos, and expert-led sessions.<!--excerpt_end-->
 
 # Join Microsoft at SC25: HPC and AI Innovations in St. Louis

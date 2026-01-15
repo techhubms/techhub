@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Scenario-Based Feature Flag Management in Azure App Configuration Portal"
-description: "This post introduces a new, scenario-driven experience for feature flag creation within Azure App Configuration. It details how developers can easily manage feature rollouts, experimentation, and safe deployment of AI and other features using the updated portal, emphasizing the benefit of choosing flag configurations based on intent rather than technical knowledge of feature flag architectures."
-author: "nuzhat-minhaz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Scenario-Based Feature Flag Management in Azure App Configuration Portal
+author: nuzhat-minhaz
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 22:42:56 +00:00
-permalink: "/2025-11-18-Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["A/B Testing", "AI", "AI Deployment", "Application Insights", "Azure", "Azure App Configuration", "Azure Portal", "Canary Deployments", "Community", "DevOps", "Experimentation", "Feature Flags", "Feature Management", "Model Versioning", "Operations", "Rollouts", "Switch Rollout Experiment", "Telemetry"]
-tags_normalized: ["aslashb testing", "ai", "ai deployment", "application insights", "azure", "azure app configuration", "azure portal", "canary deployments", "community", "devops", "experimentation", "feature flags", "feature management", "model versioning", "operations", "rollouts", "switch rollout experiment", "telemetry"]
+permalink: /ai/community/Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal
+tags:
+- A/B Testing
+- AI
+- AI Deployment
+- Application Insights
+- Azure
+- Azure App Configuration
+- Azure Portal
+- Canary Deployments
+- Community
+- DevOps
+- Experimentation
+- Feature Flags
+- Feature Management
+- Model Versioning
+- Operations
+- Rollouts
+- Switch Rollout Experiment
+- Telemetry
+section_names:
+- ai
+- azure
+- devops
 ---
-
 nuzhat-minhaz presents a practical guide on the new scenario-based feature flag experience in Azure App Configuration, simplifying complex deployments for AI and cloud applications.<!--excerpt_end-->
 
 # Scenario-Based Feature Flag Management in Azure App Configuration Portal

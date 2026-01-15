@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Agentic Apps with Azure Speech and Voice Live API"
-description: "This session from Microsoft Ignite 2025 explores the next generation of Azure Speech, covering real-time agentic voice applications and multimodal translation tools. It highlights new APIs such as Voice Live API and large language model integration, discusses advanced audio enhancements, and demonstrates custom speech models—including branded voices and avatars. Developers and technical practitioners will learn how to leverage Azure Speech for intelligent, adaptive, and scalable conversational AI experiences."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mQHsytPpHmU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Agentic Apps with Azure Speech and Voice Live API
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mQHsytPpHmU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:30:56 +00:00
-permalink: "/2025-11-24-Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API.html"
-categories: ["AI", "Azure"]
-tags: ["Adaptive Conversation", "AI", "AI Agents", "Audio Enhancements", "Azure", "Azure AI", "Azure Speech", "Branded Voices", "Custom Avatars", "Custom Speech Models", "InnovatewithAzureAIappsandagents", "Large Language Models", "LLM Speech API", "Microsoft Ignite", "MSIgnite", "Multimodal Translation", "Neural HD Voices", "Prompt Engineering", "Real Time Voice", "Videos", "Voice Assistant", "Voice Live API"]
-tags_normalized: ["adaptive conversation", "ai", "ai agents", "audio enhancements", "azure", "azure ai", "azure speech", "branded voices", "custom avatars", "custom speech models", "innovatewithazureaiappsandagents", "large language models", "llm speech api", "microsoft ignite", "msignite", "multimodal translation", "neural hd voices", "prompt engineering", "real time voice", "videos", "voice assistant", "voice live api"]
+permalink: /ai/videos/Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API
+tags:
+- Adaptive Conversation
+- AI
+- AI Agents
+- Audio Enhancements
+- Azure
+- Azure AI
+- Azure Speech
+- Branded Voices
+- Custom Avatars
+- Custom Speech Models
+- InnovatewithAzureAIappsandagents
+- Large Language Models
+- LLM Speech API
+- Microsoft Ignite
+- MSIgnite
+- Multimodal Translation
+- Neural HD Voices
+- Prompt Engineering
+- Real Time Voice
+- Videos
+- Voice Assistant
+- Voice Live API
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events showcases Azure Speech innovations, featuring speakers Jacky Kang, James McMahon, Heiko Rahmel, and Sidd Shah, who detail how developers can create agentic AI apps and voice-enabled agents using the latest Azure Speech APIs.<!--excerpt_end-->
 
 {% youtube mQHsytPpHmU %}

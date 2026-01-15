@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Granular Controls for GitHub App Requests Now in Public Preview"
-description: "This announcement outlines new options for organizations to manage who can request GitHub Apps and OAuth apps. The update introduces three graduated settings to help organizations enforce stricter governance while maintaining flexibility, enhancing app request and approval workflows to bolster security and compliance. The feature is available in public preview."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Granular Controls for GitHub App Requests Now in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-22 15:02:08 +00:00
-permalink: "/2025-12-22-Granular-Controls-for-GitHub-App-Requests-Now-in-Public-Preview.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Management", "App Access Requests", "App Governance", "DevOps", "Enterprise Management Tools", "Enterprise Security", "GHES 3.21", "GitHub", "Governance Policy", "Improvement", "Member Privileges", "News", "OAuth Apps", "Organization Settings", "Security"]
-tags_normalized: ["access management", "app access requests", "app governance", "devops", "enterprise management tools", "enterprise security", "ghes 3dot21", "github", "governance policy", "improvement", "member privileges", "news", "oauth apps", "organization settings", "security"]
+permalink: /devops/news/Granular-Controls-for-GitHub-App-Requests-Now-in-Public-Preview
+tags:
+- Access Management
+- App Access Requests
+- App Governance
+- DevOps
+- Enterprise Management Tools
+- Enterprise Security
+- GHES 3.21
+- GitHub
+- Governance Policy
+- Improvement
+- Member Privileges
+- News
+- OAuth Apps
+- Organization Settings
+- Security
+section_names:
+- devops
+- security
 ---
-
 Allison details new organizational controls for GitHub and OAuth app requests, giving admins more flexibility and security through graduated policy options for managing third-party app access.<!--excerpt_end-->
 
 # Granular Controls for GitHub App Requests Now in Public Preview

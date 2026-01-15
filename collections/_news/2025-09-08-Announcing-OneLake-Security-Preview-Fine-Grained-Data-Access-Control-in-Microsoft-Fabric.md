@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Announcing OneLake Security (Preview): Fine-Grained Data Access Control in Microsoft Fabric"
-description: "This article introduces the public preview of OneLake security in Microsoft Fabric, offering a comprehensive overview of its fine-grained access control model for data lakes. It covers core concepts, key features (role-based access, row/column-level security, integration with SQL Analytics, Lakehouse, Spark, and Power BI), performance improvements, and how data owners can secure and democratize data access without duplicating data. Readers will learn practical steps to manage permissions and streamline security for analytics workloads across Fabric, enabling secure, scalable data governance."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Announcing OneLake Security (Preview): Fine-Grained Data Access Control in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-08 08:00:00 +00:00
-permalink: "/2025-09-08-Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access-Control-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Control", "API", "Azure", "CLS", "Column Level Security", "Data Democratization", "Data Governance", "Data Lake Security", "Fabric Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "RLS", "Role Based Access", "Row Level Security", "Security", "Security Roles", "Shortcuts", "Spark", "SQL Analytics Endpoint"]
-tags_normalized: ["access control", "api", "azure", "cls", "column level security", "data democratization", "data governance", "data lake security", "fabric lakehouse", "microsoft fabric", "ml", "news", "onelake", "power bi", "rls", "role based access", "row level security", "security", "security roles", "shortcuts", "spark", "sql analytics endpoint"]
+permalink: /ml/news/Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access-Control-in-Microsoft-Fabric
+tags:
+- Access Control
+- API
+- Azure
+- CLS
+- Column Level Security
+- Data Democratization
+- Data Governance
+- Data Lake Security
+- Fabric Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Power BI
+- RLS
+- Role Based Access
+- Row Level Security
+- Security
+- Security Roles
+- Shortcuts
+- Spark
+- SQL Analytics Endpoint
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces the public preview of OneLake security, highlighting author-driven best practices for securing data lakes with advanced, unified access controls across Fabric workloads.<!--excerpt_end-->
 
 # OneLake Security (Preview) in Microsoft Fabric

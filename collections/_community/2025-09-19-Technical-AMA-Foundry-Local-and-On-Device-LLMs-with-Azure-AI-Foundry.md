@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry"
-description: "This session is a technical deep dive and Q&A focused on Foundry Local, a set of development tools for building, evaluating, and running LLM applications locally with seamless integration to Azure AI Foundry. Attendees will gain practical insights into local inference, model customization, cost-efficient AI, and hybrid development workflows that leverage both on-device and cloud capabilities. The AMA targets AI practitioners interested in scalable, private, and efficient edge AI solutions using Microsoft tools."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-19 07:00:00 +00:00
-permalink: "/2025-09-19-Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Frameworks", "AI Workflow", "API Integration", "Azure", "Azure AI Foundry", "CLI Tools", "Cloud Transition", "Community", "Cost Efficiency", "Edge AI", "Foundry Local", "Large Language Models", "LLM", "Local Development", "Microsoft", "Model Customization", "On Device Inference", "Private AI", "Prompt Engineering", "SDK"]
-tags_normalized: ["ai", "ai frameworks", "ai workflow", "api integration", "azure", "azure ai foundry", "cli tools", "cloud transition", "community", "cost efficiency", "edge ai", "foundry local", "large language models", "llm", "local development", "microsoft", "model customization", "on device inference", "private ai", "prompt engineering", "sdk"]
+permalink: /ai/community/Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry
+tags:
+- AI
+- AI Frameworks
+- AI Workflow
+- API Integration
+- Azure
+- Azure AI Foundry
+- CLI Tools
+- Cloud Transition
+- Community
+- Cost Efficiency
+- Edge AI
+- Foundry Local
+- Large Language Models
+- LLM
+- Local Development
+- Microsoft
+- Model Customization
+- On Device Inference
+- Private AI
+- Prompt Engineering
+- SDK
+section_names:
+- ai
+- azure
 ---
-
 Lee_Stott invites the community and AI developers to a hands-on AMA about Foundry Local—Microsoft’s edge AI toolkit for running and customizing LLMs on local hardware, with seamless integration to Azure AI Foundry.<!--excerpt_end-->
 
 # Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry

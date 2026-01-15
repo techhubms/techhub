@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Frontier Firms Drive Business Transformation with Microsoft AI"
-description: "This article summarizes Microsoft and IDC’s 2025 study on how leading 'Frontier firms' leverage Microsoft AI technologies for large-scale business transformation. It outlines five lessons from global enterprises—including financial services, manufacturing, and retail—detailing the adoption of custom AI solutions, industry-specific value, agentic AI, and the growing importance of robust infrastructure and organizational readiness. Case studies from BlackRock, Mercedes-Benz, Ralph Lauren, and Dow illustrate the practical impacts of Microsoft Azure AI, Copilot Studio, and Azure OpenAI Service on real-world operations."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Frontier Firms Drive Business Transformation with Microsoft AI
+author: stclarke
+canonical_url: https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-11 15:22:57 +00:00
-permalink: "/2025-11-11-How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Budgets", "AI Transformation", "Azure", "Azure AI Foundry", "Azure OpenAI", "Business Transformation", "Company News", "Copilot Studio", "Custom AI Solutions", "Digital Factory", "Financial Services", "Frontier Firms", "Governance", "IDC Study", "Industry Specific AI", "Manufacturing", "Microsoft AI", "News", "Retail AI"]
-tags_normalized: ["agentic ai", "ai", "ai budgets", "ai transformation", "azure", "azure ai foundry", "azure openai", "business transformation", "company news", "copilot studio", "custom ai solutions", "digital factory", "financial services", "frontier firms", "governance", "idc study", "industry specific ai", "manufacturing", "microsoft ai", "news", "retail ai"]
+permalink: /ai/news/How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI
+tags:
+- Agentic AI
+- AI
+- AI Budgets
+- AI Transformation
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Business Transformation
+- Company News
+- Copilot Studio
+- Custom AI Solutions
+- Digital Factory
+- Financial Services
+- Frontier Firms
+- Governance
+- IDC Study
+- Industry Specific AI
+- Manufacturing
+- Microsoft AI
+- News
+- Retail AI
+section_names:
+- ai
+- azure
 ---
-
 stclarke reviews IDC’s 2025 study, commissioned by Microsoft, on how 'Frontier firms' use Microsoft’s AI technologies—like Azure AI and Copilot Studio—to achieve business transformation, compete strategically, and overcome key scaling challenges.<!--excerpt_end-->
 
 # How Frontier Firms Drive Business Transformation with Microsoft AI

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Premier League Scaled Data-Driven Fan Engagement with Microsoft Fabric and Azure"
-description: "This session from Microsoft Ignite 2025 explores how the Premier League and Microsoft partnered to transform decades of match data, editorial content, and video into a real-time, intelligent fan experience. The talk details the data strategy, AI orchestration, and scalable technical architecture underpinning a personalized platform for millions worldwide, with actionable lessons from Microsoft and Premier League leadership. Technical highlights include cloud-based data ingestion, API-driven containerized services, real-time personalization, and the use of Microsoft Fabric and Azure AI tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jXb9A20Ysdc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: How Premier League Scaled Data-Driven Fan Engagement with Microsoft Fabric and Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=jXb9A20Ysdc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:26:43 +00:00
-permalink: "/2025-11-21-How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Orchestration", "API Architecture", "Azure", "Cloud Scalability", "Containerization", "Data Ingestion", "Data Platform", "Fan Engagement", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Opta Data", "Personalization", "Premier League", "Real Time Data", "Sports Analytics", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "ai orchestration", "api architecture", "azure", "cloud scalability", "containerization", "data ingestion", "data platform", "fan engagement", "microsoft fabric", "microsoft ignite", "ml", "msignite", "opta data", "personalization", "premier league", "real time data", "sports analytics", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure
+tags:
+- AI
+- AI Orchestration
+- API Architecture
+- Azure
+- Cloud Scalability
+- Containerization
+- Data Ingestion
+- Data Platform
+- Fan Engagement
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Opta Data
+- Personalization
+- Premier League
+- Real Time Data
+- Sports Analytics
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events showcases how Premier League leaders, alongside Microsoft, built a real-time, AI-driven fan engagement platform leveraging Microsoft Fabric, Azure, and advanced data strategies.<!--excerpt_end-->
 
 {% youtube jXb9A20Ysdc %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Gemini 2.5 Pro Model Now Available for GitHub Copilot Users"
-description: "This news update announces the general availability of Google's Gemini 2.5 Pro AI model for GitHub Copilot customers. It explains how Copilot Pro, Pro+, Business, and Enterprise users can access the model in various IDEs and provides links to configuration details and community discussions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Gemini 2.5 Pro Model Now Available for GitHub Copilot Users
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-20 13:46:28 +00:00
-permalink: "/2025-08-20-Gemini-25-Pro-Model-Now-Available-for-GitHub-Copilot-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "AI Reasoning", "Copilot Business", "Copilot Chat", "Copilot Pro", "Eclipse", "Enterprise IT Administration", "Gemini 2.5 Pro", "GitHub Copilot", "Google Gemini", "JetBrains IDEs", "Model Selector", "News", "Software Development Tools", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai models", "ai reasoning", "copilot business", "copilot chat", "copilot pro", "eclipse", "enterprise it administration", "gemini 2dot5 pro", "github copilot", "google gemini", "jetbrains ides", "model selector", "news", "software development tools", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/Gemini-25-Pro-Model-Now-Available-for-GitHub-Copilot-Users
+tags:
+- AI
+- AI Models
+- AI Reasoning
+- Copilot Business
+- Copilot Chat
+- Copilot Pro
+- Eclipse
+- Enterprise IT Administration
+- Gemini 2.5 Pro
+- GitHub Copilot
+- Google Gemini
+- JetBrains IDEs
+- Model Selector
+- News
+- Software Development Tools
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports that Google's Gemini 2.5 Pro AI model is now available for GitHub Copilot customers, with access details for Pro, Business, and Enterprise users, plus related documentation and feedback channels.<!--excerpt_end-->
 
 # Gemini 2.5 Pro Model Now Available for GitHub Copilot Users

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams"
-description: "This article explores the rapid evolution of GitHub Copilot and its deep integration with Azure DevOps, focusing on agentic AI, seamless migration, and workflow enhancements. Readers will learn about migrating repositories, leveraging Copilot's agentic capabilities across platforms, and how new features and governance streamline developer productivity, automation, and security."
-author: "Rajesh Ramamurthy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-devops-and-github-repositories-next-steps-in-the-path-to-agentic-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams'
+author: Rajesh Ramamurthy
+canonical_url: https://devblogs.microsoft.com/devops/azure-devops-and-github-repositories-next-steps-in-the-path-to-agentic-ai/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-11-18 17:21:58 +00:00
-permalink: "/2025-11-18-Azure-DevOps-and-GitHub-Repositories-Unlocking-Agentic-AI-for-Developer-Teams.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent HQ", "Agentic AI", "AI", "Automation", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Azure Pipelines", "Code Quality", "Coding", "Continuous Integration", "DevOps", "Enterprise Cloud", "GitHub Copilot", "GitHub Enterprise Importer", "Governance", "IDE Integration", "MCP Server", "Migration", "News", "Security", "VS"]
-tags_normalized: ["agent hq", "agentic ai", "ai", "automation", "azure", "azure and cloud", "azure boards", "azure devops", "azure pipelines", "code quality", "coding", "continuous integration", "devops", "enterprise cloud", "github copilot", "github enterprise importer", "governance", "ide integration", "mcp server", "migration", "news", "security", "vs"]
+permalink: /github-copilot/news/Azure-DevOps-and-GitHub-Repositories-Unlocking-Agentic-AI-for-Developer-Teams
+tags:
+- Agent HQ
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Azure Pipelines
+- Code Quality
+- Coding
+- Continuous Integration
+- DevOps
+- Enterprise Cloud
+- GitHub Copilot
+- GitHub Enterprise Importer
+- Governance
+- IDE Integration
+- MCP Server
+- Migration
+- News
+- Security
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Rajesh Ramamurthy details how GitHub Copilot's agentic AI, integrated with Azure DevOps and enhanced governance, can transform developer workflows, migration strategies, and productivity.<!--excerpt_end-->
 
 # Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams

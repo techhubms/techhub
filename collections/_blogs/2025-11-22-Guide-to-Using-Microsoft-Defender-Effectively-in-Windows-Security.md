@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Guide to Using Microsoft Defender Effectively in Windows Security"
-description: "This guide by John Edward walks users through the practical use of Windows Security and Microsoft Defender Antivirus. It covers setup, key features such as real-time and cloud-delivered protection, ransomware safeguards, firewall management, and best practices for keeping your Windows PC secure. The article is aimed at everyday users seeking reliable protection and sensible configuration for their devices."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/unleash-the-power-of-windows-security-a-simple-guide-to-using-defender-effectively/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Guide to Using Microsoft Defender Effectively in Windows Security
+author: John Edward
+canonical_url: https://dellenny.com/unleash-the-power-of-windows-security-a-simple-guide-to-using-defender-effectively/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-22 08:19:01 +00:00
-permalink: "/2025-11-22-Guide-to-Using-Microsoft-Defender-Effectively-in-Windows-Security.html"
-categories: ["Security"]
-tags: ["App & Browser Control", "Blogs", "Cloud Delivered Protection", "Controlled Folder Access", "Exploit Protection", "Firewall", "General", "Microsoft Defender Antivirus", "Ransomware Protection", "Real Time Protection", "Security", "SmartScreen", "Threat Intelligence", "Virus & Threat Protection", "Windows Firewall", "Windows Security", "Windows Updates"]
-tags_normalized: ["app and browser control", "blogs", "cloud delivered protection", "controlled folder access", "exploit protection", "firewall", "general", "microsoft defender antivirus", "ransomware protection", "real time protection", "security", "smartscreen", "threat intelligence", "virus and threat protection", "windows firewall", "windows security", "windows updates"]
+permalink: /security/blogs/Guide-to-Using-Microsoft-Defender-Effectively-in-Windows-Security
+tags:
+- App & Browser Control
+- Blogs
+- Cloud Delivered Protection
+- Controlled Folder Access
+- Exploit Protection
+- Firewall
+- General
+- Microsoft Defender Antivirus
+- Ransomware Protection
+- Real Time Protection
+- Security
+- SmartScreen
+- Threat Intelligence
+- Virus & Threat Protection
+- Windows Firewall
+- Windows Security
+- Windows Updates
+section_names:
+- security
 ---
-
 John Edward provides a user-friendly guide detailing how to leverage Windows Security and Microsoft Defender Antivirus to keep your PC safe from malware and ransomware.<!--excerpt_end-->
 
 # Guide to Using Microsoft Defender Effectively in Windows Security

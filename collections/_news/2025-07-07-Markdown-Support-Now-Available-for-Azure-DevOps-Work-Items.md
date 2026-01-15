@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Markdown Support Now Available for Azure DevOps Work Items"
-description: "Azure DevOps introduces general availability of Markdown support in large text fields for work items. Users can now opt-in to Markdown editors, benefit from best-effort HTML-to-Markdown conversion, and manage their editor preferences for new and existing items. REST API updates and rollout stages are also detailed."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/markdown-support-arrives-for-work-items/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Markdown Support Now Available for Azure DevOps Work Items
+author: Dan Hellem
+canonical_url: https://devblogs.microsoft.com/devops/markdown-support-arrives-for-work-items/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-07 19:32:46 +00:00
-permalink: "/2025-07-07-Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agile", "Azure", "Azure & Cloud", "Azure Cloud", "Azure DevOps", "DevOps", "Editor", "HTML Conversion", "Large Text Fields", "Markdown", "News", "Release Process", "REST API", "User Feedback", "Work Items"]
-tags_normalized: ["agile", "azure", "azure and cloud", "azure cloud", "azure devops", "devops", "editor", "html conversion", "large text fields", "markdown", "news", "release process", "rest api", "user feedback", "work items"]
+permalink: /azure/news/Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items
+tags:
+- Agile
+- Azure
+- Azure & Cloud
+- Azure Cloud
+- Azure DevOps
+- DevOps
+- Editor
+- HTML Conversion
+- Large Text Fields
+- Markdown
+- News
+- Release Process
+- REST API
+- User Feedback
+- Work Items
+section_names:
+- azure
+- devops
 ---
-
 Dan Hellem introduces general availability of Markdown support for large text fields in Azure DevOps work items, detailing opt-in features, conversion steps, REST API usage, and release process.<!--excerpt_end-->
 
 # Markdown Support Now Available for Azure DevOps Work Items

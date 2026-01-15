@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Running Load Tests as Part of Azure Chaos Studio Experiments"
-description: "This article explores how to integrate Azure Chaos Studio with Azure Load Testing to simulate real-world failures under load, helping teams identify resiliency gaps in their applications. It walks through orchestration of load tests alongside injected faults, analysis of system behavior under stress, and how to use Azure-native observability tools for holistic insights."
-author: "Nikita_Nallamothu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Running Load Tests as Part of Azure Chaos Studio Experiments
+author: Nikita_Nallamothu
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 15:00:00 +00:00
-permalink: "/2025-10-22-Running-Load-Tests-as-Part-of-Azure-Chaos-Studio-Experiments.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["App Service", "Application Insights", "Autoscaling", "Azure", "Azure Chaos Studio", "Azure Load Testing", "Chaos Engineering", "CI/CD", "Cloud Reliability", "Community", "DevOps", "Fault Injection", "Load Testing", "Log Analytics", "Microsoft Azure", "Monitoring", "Performance Testing", "Resiliency", "Security", "SQL Database"]
-tags_normalized: ["app service", "application insights", "autoscaling", "azure", "azure chaos studio", "azure load testing", "chaos engineering", "cislashcd", "cloud reliability", "community", "devops", "fault injection", "load testing", "log analytics", "microsoft azure", "monitoring", "performance testing", "resiliency", "security", "sql database"]
+permalink: /azure/community/Running-Load-Tests-as-Part-of-Azure-Chaos-Studio-Experiments
+tags:
+- App Service
+- Application Insights
+- Autoscaling
+- Azure
+- Azure Chaos Studio
+- Azure Load Testing
+- Chaos Engineering
+- CI/CD
+- Cloud Reliability
+- Community
+- DevOps
+- Fault Injection
+- Load Testing
+- Log Analytics
+- Microsoft Azure
+- Monitoring
+- Performance Testing
+- Resiliency
+- Security
+- SQL Database
+section_names:
+- azure
+- devops
+- security
 ---
-
 Nikita Nallamothu demonstrates how to combine Azure Chaos Studio and Azure Load Testing to uncover resilience blind spots by orchestrating load tests with fault injections, providing actionable strategies for cloud reliability engineering.<!--excerpt_end-->
 
 # Running Load Tests as Part of Azure Chaos Studio Experiments

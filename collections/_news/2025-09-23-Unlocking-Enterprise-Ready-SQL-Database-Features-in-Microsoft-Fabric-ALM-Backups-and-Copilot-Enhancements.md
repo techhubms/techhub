@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements"
-description: "This article from the Microsoft Fabric Blog, coauthored by Joanne Wong, explores the latest developer-focused enhancements to SQL Database within Microsoft Fabric. Topics include Copilot-integrated query management, REST API-driven ALM, backup and restore improvements, VS Code integrations, Performance Dashboard metrics, database mirroring, and enterprise-grade auditing for compliance and security."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/2025-09-23-Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["AI", "ALM", "Application Lifecycle Management", "Azure", "Coding", "Copilot", "Data Platform", "Database Recovery", "Developer Productivity", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Performance Dashboard", "Point in Time Restore", "Query Management", "Replication", "REST API", "Security", "SQL Auditing", "SQL Database", "VS Code Integration"]
-tags_normalized: ["ai", "alm", "application lifecycle management", "azure", "coding", "copilot", "data platform", "database recovery", "developer productivity", "microsoft entra id", "microsoft fabric", "ml", "news", "performance dashboard", "point in time restore", "query management", "replication", "rest api", "security", "sql auditing", "sql database", "vs code integration"]
+permalink: /ai/news/Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements
+tags:
+- AI
+- ALM
+- Application Lifecycle Management
+- Azure
+- Coding
+- Copilot
+- Data Platform
+- Database Recovery
+- Developer Productivity
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- Performance Dashboard
+- Point in Time Restore
+- Query Management
+- Replication
+- REST API
+- Security
+- SQL Auditing
+- SQL Database
+- VS Code Integration
+section_names:
+- ai
+- azure
+- coding
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog, with Joanne Wong as coauthor, details critical updates to SQL Database in Microsoft Fabric, highlighting Copilot features, ALM APIs, advanced security options, VS Code integrations, and new enterprise capabilities for developers.<!--excerpt_end-->
 
 # Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements

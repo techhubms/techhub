@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Distributed Applications with Microsoft Orleans and Event Sourcing Using Sekiban"
-description: "This episode explores building distributed applications leveraging Microsoft Orleans and event sourcing through the open-source Sekiban framework. Guest Tomohisa Takaoka discusses CQRS, integration with C#, developer productivity improvements, and seamless LLM agent support in VS Code."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=n5ie6XBdlL8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Distributed Applications with Microsoft Orleans and Event Sourcing Using Sekiban
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=n5ie6XBdlL8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-04 23:30:19 +00:00
-permalink: "/2025-08-04-Distributed-Applications-with-Microsoft-Orleans-and-Event-Sourcing-Using-Sekiban.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "CQRS", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Dotnetdeveloper", "Event Sourcing", "LLM Integration", "Microsoft Orleans", "Microsoftorleans", "Open Source", "Orleans", "Productivity", "Sekiban", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "csharp", "coding", "cqrs", "demo", "developer", "developer community", "developer productivity", "developer tools", "dotnetdeveloper", "event sourcing", "llm integration", "microsoft orleans", "microsoftorleans", "open source", "orleans", "productivity", "sekiban", "software developer", "videos", "vs code"]
+permalink: /coding/videos/Distributed-Applications-with-Microsoft-Orleans-and-Event-Sourcing-Using-Sekiban
+tags:
+- .NET
+- C#
+- Coding
+- CQRS
+- Demo
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- Dotnetdeveloper
+- Event Sourcing
+- LLM Integration
+- Microsoft Orleans
+- Microsoftorleans
+- Open Source
+- Orleans
+- Productivity
+- Sekiban
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 Hosted by dotnet with guest Tomohisa Takaoka, this discussion delves into developing distributed applications using Microsoft Orleans, event sourcing, and the Sekiban C# framework.<!--excerpt_end-->
 
 {% youtube n5ie6XBdlL8 %}

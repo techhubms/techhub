@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric"
-description: "This news update introduces Outbound Access Protection (OAP) for Spark workloads in Microsoft Fabric workspaces, a security feature designed to restrict outbound connectivity and help prevent data exfiltration. Organizations can now govern how Spark jobs connect to external destinations and other Fabric workspaces within the same tenant. The announcement also shares plans to extend OAP support to Data Factory artifacts in future updates, emphasizing Microsoft's focus on granular security controls."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 14:00:00 +00:00
-permalink: "/2025-10-01-Outbound-Access-Protection-for-Spark-Now-Generally-Available-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Cloud Security", "Connectivity Control", "Data Exfiltration", "Data Factory", "Fabric Workspaces", "General Availability", "Microsoft Fabric", "ML", "ML Workloads", "News", "Outbound Access Protection", "Security", "Spark", "Tenant Isolation", "Workspace Governance"]
-tags_normalized: ["azure", "cloud security", "connectivity control", "data exfiltration", "data factory", "fabric workspaces", "general availability", "microsoft fabric", "ml", "ml workloads", "news", "outbound access protection", "security", "spark", "tenant isolation", "workspace governance"]
+permalink: /ml/news/Outbound-Access-Protection-for-Spark-Now-Generally-Available-in-Microsoft-Fabric
+tags:
+- Azure
+- Cloud Security
+- Connectivity Control
+- Data Exfiltration
+- Data Factory
+- Fabric Workspaces
+- General Availability
+- Microsoft Fabric
+- ML
+- ML Workloads
+- News
+- Outbound Access Protection
+- Security
+- Spark
+- Tenant Isolation
+- Workspace Governance
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog announces the general availability of Outbound Access Protection (OAP) for Spark workloads, providing workspace-level controls to restrict outbound connectivity and strengthen security.<!--excerpt_end-->
 
 # Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric

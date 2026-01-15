@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Exploring Microsoft Intune: Manage and Secure your Devices and Apps"
-description: "This community post explores the capabilities of Microsoft Intune for managing and securing endpoints in hybrid and remote work environments. It highlights Intune’s cloud-native approach to device and app management, integration with other Microsoft services like Azure AD and Defender, best practices for compliance and security, and real-world scenarios improving IT efficiency and data protection for organizations."
-author: "Pouya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Exploring Microsoft Intune: Manage and Secure your Devices and Apps'
+author: Pouya
+canonical_url: https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 05:58:39 +00:00
-permalink: "/2025-08-11-Exploring-Microsoft-Intune-Manage-and-Secure-your-Devices-and-Apps.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "App Management", "Azure", "Azure AD", "Community", "Compliance", "Data Protection", "Device Security", "Endpoint Management", "Enterprise Mobility + Security", "Hybrid Work", "Identity Management", "Microsoft 365 Integration", "Microsoft Defender", "Microsoft Intune", "Remote Work Security", "Security"]
-tags_normalized: ["access control", "app management", "azure", "azure ad", "community", "compliance", "data protection", "device security", "endpoint management", "enterprise mobility plus security", "hybrid work", "identity management", "microsoft 365 integration", "microsoft defender", "microsoft intune", "remote work security", "security"]
+permalink: /azure/community/Exploring-Microsoft-Intune-Manage-and-Secure-your-Devices-and-Apps
+tags:
+- Access Control
+- App Management
+- Azure
+- Azure AD
+- Community
+- Compliance
+- Data Protection
+- Device Security
+- Endpoint Management
+- Enterprise Mobility + Security
+- Hybrid Work
+- Identity Management
+- Microsoft 365 Integration
+- Microsoft Defender
+- Microsoft Intune
+- Remote Work Security
+- Security
+section_names:
+- azure
+- security
 ---
-
 Pouya shares practical insights on using Microsoft Intune to manage and secure devices and applications for hybrid and remote work, emphasizing best practices and integration with Azure and Microsoft security services.<!--excerpt_end-->
 
 # Exploring Microsoft Intune: Manage and Secure your Devices and Apps

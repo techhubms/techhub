@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building Agentic Workflows with n8n and Azure Container Apps"
-description: "This guide by simonjj details how to deploy the n8n workflow automation engine on Azure leveraging Azure Container Apps (ACA) and Azure OpenAI Service. It explains three deployment patterns—from experimentation to production—while highlighting how Azure’s managed infrastructure supports scaling and secure operations. Readers learn how to infuse n8n workflows with advanced AI capabilities by integrating Azure OpenAI models, unlocking new automation scenarios such as content generation, intelligent routing, and summarization. A link is provided to the GitHub repository with deployment templates and step-by-step instructions."
-author: "simonjj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Agentic Workflows with n8n and Azure Container Apps
+author: simonjj
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 05:55:41 +00:00
-permalink: "/2025-09-09-Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Automation Templates", "Azure", "Azure Container Apps", "Azure OpenAI Service", "Cloud Infrastructure", "Community", "Containerization", "Intelligent Workflows", "N8n", "OpenAI Models", "Production Deployment", "Scaling", "Summarization", "Workflow Automation"]
-tags_normalized: ["ai", "ai integration", "automation templates", "azure", "azure container apps", "azure openai service", "cloud infrastructure", "community", "containerization", "intelligent workflows", "n8n", "openai models", "production deployment", "scaling", "summarization", "workflow automation"]
+permalink: /ai/community/Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps
+tags:
+- AI
+- AI Integration
+- Automation Templates
+- Azure
+- Azure Container Apps
+- Azure OpenAI Service
+- Cloud Infrastructure
+- Community
+- Containerization
+- Intelligent Workflows
+- N8n
+- OpenAI Models
+- Production Deployment
+- Scaling
+- Summarization
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 simonjj shows how to use n8n with Azure Container Apps and Azure OpenAI Service to build scalable, agentic workflows. Learn to deploy, scale, and integrate AI into your automations.<!--excerpt_end-->
 
 # Building Agentic Workflows with n8n and Azure Container Apps

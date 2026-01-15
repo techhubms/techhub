@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building sleep-pc: A .NET Native AOT Tool for Automating Windows Sleep"
-description: "This in-depth post by Andrew Lock walks through creating 'sleep-pc,' a small, native AOT-compiled .NET tool that puts a Windows PC to sleep after a specified timeout. The guide covers Win32 API usage, command-line parsing with ConsoleAppFramework, Native AOT support, project packaging, and optimizing for small binary size, providing a practical look at modern .NET 8+ capabilities and tool development."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Building sleep-pc: A .NET Native AOT Tool for Automating Windows Sleep'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-23 10:00:00 +00:00
-permalink: "/2025-09-23-Building-sleep-pc-A-NET-Native-AOT-Tool-for-Automating-Windows-Sleep.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 8", ".NET Core", "AOT", "Blogs", "C#", "Coding", "Command Line Parsing", "Command Line Tool", "ConsoleAppFramework", "Csproj", "DllImport", "Native AOT", "NuGet", "P/Invoke", "PackAsTool", "SetSuspendState", "Source Generators", "Task.Delay", "Win32 API", "Windows"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 8", "dotnet core", "aot", "blogs", "csharp", "coding", "command line parsing", "command line tool", "consoleappframework", "csproj", "dllimport", "native aot", "nuget", "pslashinvoke", "packastool", "setsuspendstate", "source generators", "taskdotdelay", "win32 api", "windows"]
+permalink: /coding/blogs/Building-sleep-pc-A-NET-Native-AOT-Tool-for-Automating-Windows-Sleep
+tags:
+- .NET
+- .NET 10
+- .NET 8
+- .NET Core
+- AOT
+- Blogs
+- C#
+- Coding
+- Command Line Parsing
+- Command Line Tool
+- ConsoleAppFramework
+- Csproj
+- DllImport
+- Native AOT
+- NuGet
+- P/Invoke
+- PackAsTool
+- SetSuspendState
+- Source Generators
+- Task.Delay
+- Win32 API
+- Windows
+section_names:
+- coding
 ---
-
 Andrew Lock details the development of 'sleep-pc,' a native AOT .NET tool for putting Windows PCs to sleep after a timeout, highlighting his approach, toolchain choices, and packaging for NuGet.<!--excerpt_end-->
 
 # sleep-pc: A .NET Native AOT Tool to Make Windows Sleep After a Timeout

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "VS Code Live: Highlights from the v1.103 Release"
-description: "This live video event features the Visual Studio Code team discussing and demonstrating new features and highlights from the July v1.103 release. Panelists share insights on updates, improvements, and answer questions from the developer community, with practical demos and interactive discussion."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EYMiry0gYQA"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live: Highlights from the v1.103 Release'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=EYMiry0gYQA
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-07 17:44:15 +00:00
-permalink: "/2025-08-07-VS-Code-Live-Highlights-from-the-v1103-Release.html"
-categories: ["Coding"]
-tags: ["Code", "Code Demo", "Code Editor", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Live Q&A", "Microsoft", "New Features", "Newfeatures", "Productivity", "Release Highlights", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code V1.103", "Vscoderelease"]
-tags_normalized: ["code", "code demo", "code editor", "coding", "demo", "developer", "developer community", "developer tools", "live qanda", "microsoft", "new features", "newfeatures", "productivity", "release highlights", "software developer", "software development", "videos", "vs code", "vs code v1dot103", "vscoderelease"]
+permalink: /coding/videos/VS-Code-Live-Highlights-from-the-v1103-Release
+tags:
+- Code
+- Code Demo
+- Code Editor
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Live Q&A
+- Microsoft
+- New Features
+- Newfeatures
+- Productivity
+- Release Highlights
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+- VS Code V1.103
+- Vscoderelease
+section_names:
+- coding
 ---
-
 Join Olivia McVicker and the Visual Studio Code team for a live walkthrough of new features in the July v1.103 release, including demos and Q&A for developers.<!--excerpt_end-->
 
 {% youtube EYMiry0gYQA %}

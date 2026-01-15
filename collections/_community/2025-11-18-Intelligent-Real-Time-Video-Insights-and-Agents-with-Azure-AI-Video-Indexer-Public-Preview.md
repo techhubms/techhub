@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Intelligent Real-Time Video Insights and Agents with Azure AI Video Indexer: Public Preview"
-description: "This guide introduces Azure AI Video Indexer’s new live video analysis capabilities, powered by Azure Arc edge-native deployment and agent-based intelligence. Learn how organizations can leverage custom AI models, real-time operational monitoring, and conversational interfaces for actionable insights, privacy, and scalability across retail, manufacturing, and public safety environments."
-author: "MaayanYedidia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/ignite-2025-preview-intelligent-real-time-video-insights-and/ba-p/4470704"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Intelligent Real-Time Video Insights and Agents with Azure AI Video Indexer: Public Preview'
+author: MaayanYedidia
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/ignite-2025-preview-intelligent-real-time-video-insights-and/ba-p/4470704
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:14 +00:00
-permalink: "/2025-11-18-Intelligent-Real-Time-Video-Insights-and-Agents-with-Azure-AI-Video-Indexer-Public-Preview.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "API Integration", "Azure", "Azure AI Video Indexer", "Azure Arc", "Community", "Conversational AI", "Custom AI Models", "Edge Native", "Event Investigation", "Foundry Gen AI", "Kubernetes", "Live Video Intelligence", "Manufacturing Safety", "Operational Monitoring", "Privacy Compliance", "Public Safety", "Real Time Video Analysis", "RetailOps Agent", "Scalability", "Security Agent", "Video Summarization"]
-tags_normalized: ["agentic ai", "ai", "api integration", "azure", "azure ai video indexer", "azure arc", "community", "conversational ai", "custom ai models", "edge native", "event investigation", "foundry gen ai", "kubernetes", "live video intelligence", "manufacturing safety", "operational monitoring", "privacy compliance", "public safety", "real time video analysis", "retailops agent", "scalability", "security agent", "video summarization"]
+permalink: /ai/community/Intelligent-Real-Time-Video-Insights-and-Agents-with-Azure-AI-Video-Indexer-Public-Preview
+tags:
+- Agentic AI
+- AI
+- API Integration
+- Azure
+- Azure AI Video Indexer
+- Azure Arc
+- Community
+- Conversational AI
+- Custom AI Models
+- Edge Native
+- Event Investigation
+- Foundry Gen AI
+- Kubernetes
+- Live Video Intelligence
+- Manufacturing Safety
+- Operational Monitoring
+- Privacy Compliance
+- Public Safety
+- Real Time Video Analysis
+- RetailOps Agent
+- Scalability
+- Security Agent
+- Video Summarization
+section_names:
+- ai
+- azure
 ---
-
 MaayanYedidia details the Azure AI Video Indexer public preview, offering real-time video analysis and AI-powered agents via Azure Arc for privacy-first, scalable operational intelligence.<!--excerpt_end-->
 
 # Intelligent Real-Time Video Insights and Agents with Azure AI Video Indexer: Public Preview

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Automatically Signing Windows Executables with Azure Trusted Signing, dotnet sign, and GitHub Actions"
-description: "Scott Hanselman presents a hands-on guide to setting up automated code signing for Windows .exe files using Azure Trusted Signing, the dotnet sign tool, and GitHub Actions workflows. The tutorial covers Azure resource setup, identity validation, certificate profile creation, local and CI/CD-based signing, troubleshooting common issues, and understanding the short-lived certificate lifecycle with timestamping. Developers learn how to ensure their executables are trusted by Windows Defender SmartScreen, integrate signing into build pipelines, and manage cost and security trade-offs."
-author: "Scott Hanselman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions"
-viewing_mode: "external"
-feed_name: "Scott Hanselman's Blog"
-feed_url: "https://www.hanselman.com/blog/SyndicationService.asmx/GetRss"
+﻿---
+layout: post
+title: Automatically Signing Windows Executables with Azure Trusted Signing, dotnet sign, and GitHub Actions
+author: Scott Hanselman
+canonical_url: https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions
+viewing_mode: external
+feed_name: Scott Hanselman's Blog
+feed_url: https://www.hanselman.com/blog/SyndicationService.asmx/GetRss
 date: 2025-11-28 19:31:25 +00:00
-permalink: "/2025-11-28-Automatically-Signing-Windows-Executables-with-Azure-Trusted-Signing-dotnet-sign-and-GitHub-Actions.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", ".NET Sign", "Azure", "Azure CLI", "Azure Trusted Signing", "Blogs", "Certificate Profile", "CI/CD Pipeline", "Code Signing Certificate", "Coding", "DevOps", "Digital Signature", "DotNetCore", "GitHub Actions", "Identity Validation", "Role Based Access Control", "Security", "Service Principal", "SmartScreen Reputation", "Windows Executable Signing", "YAML Workflow"]
-tags_normalized: ["dotnet", "dotnet sign", "azure", "azure cli", "azure trusted signing", "blogs", "certificate profile", "cislashcd pipeline", "code signing certificate", "coding", "devops", "digital signature", "dotnetcore", "github actions", "identity validation", "role based access control", "security", "service principal", "smartscreen reputation", "windows executable signing", "yaml workflow"]
+permalink: /coding/blogs/Automatically-Signing-Windows-Executables-with-Azure-Trusted-Signing-dotnet-sign-and-GitHub-Actions
+tags:
+- .NET
+- .NET Sign
+- Azure
+- Azure CLI
+- Azure Trusted Signing
+- Blogs
+- Certificate Profile
+- CI/CD Pipeline
+- Code Signing Certificate
+- Coding
+- DevOps
+- Digital Signature
+- DotNetCore
+- GitHub Actions
+- Identity Validation
+- Role Based Access Control
+- Security
+- Service Principal
+- SmartScreen Reputation
+- Windows Executable Signing
+- YAML Workflow
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Scott Hanselman guides developers through the full process of signing Windows executables using Azure Trusted Signing, dotnet sign, and GitHub Actions. The tutorial blends practical, real-world experience with detailed step-by-step instructions and security insights.<!--excerpt_end-->
 
 # Automatically Signing Windows Executables with Azure Trusted Signing, dotnet sign, and GitHub Actions

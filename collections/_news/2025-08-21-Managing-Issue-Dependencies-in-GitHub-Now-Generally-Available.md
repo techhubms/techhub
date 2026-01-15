@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Managing Issue Dependencies in GitHub Now Generally Available"
-description: "This announcement details the general availability of issue dependencies in GitHub. Teams can now specify which issues block or are blocked by others, facilitating better project planning and workflow management. The update covers usage within the UI, searching via new filters, and support through REST and GraphQL APIs as well as webhooks."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-21-dependencies-on-issues"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Managing Issue Dependencies in GitHub Now Generally Available
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-21-dependencies-on-issues
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 16:32:58 +00:00
-permalink: "/2025-08-21-Managing-Issue-Dependencies-in-GitHub-Now-Generally-Available.html"
-categories: ["DevOps"]
-tags: ["Agile Practices", "Blocked Issues", "DevOps", "GitHub", "GraphQL API", "Issue Dependencies", "News", "Project Management", "REST API", "Software Development", "Team Collaboration", "Webhooks", "Workflow Automation"]
-tags_normalized: ["agile practices", "blocked issues", "devops", "github", "graphql api", "issue dependencies", "news", "project management", "rest api", "software development", "team collaboration", "webhooks", "workflow automation"]
+permalink: /devops/news/Managing-Issue-Dependencies-in-GitHub-Now-Generally-Available
+tags:
+- Agile Practices
+- Blocked Issues
+- DevOps
+- GitHub
+- GraphQL API
+- Issue Dependencies
+- News
+- Project Management
+- REST API
+- Software Development
+- Team Collaboration
+- Webhooks
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison announces that issue dependencies are now generally available in GitHub, empowering teams to manage blocking relationships between issues and streamline project workflows.<!--excerpt_end-->
 
 # Managing Issue Dependencies in GitHub Now Generally Available

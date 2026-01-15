@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Work Smarter Across Multiple Files with GitHub Copilot"
-description: "This post demonstrates how GitHub Copilot’s multi-file context empowers developers to handle tasks that span multiple files, such as controllers, models, and tests. It highlights practical strategies for using Copilot Chat, Edit Mode, and Agent Mode to understand project-wide logic, refactor code across files, and surface actionable insights throughout a codebase."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Work Smarter Across Multiple Files with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-22 00:00:00 +00:00
-permalink: "/2025-08-22-Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Authentication", "Blogs", "Code Navigation", "Code Refactoring", "Copilot Chat", "Cross File Editing", "Developer Workflow", "Edit Mode", "GitHub Copilot", "Multi File Context", "Project Structure", "Testing"]
-tags_normalized: ["agent mode", "ai", "authentication", "blogs", "code navigation", "code refactoring", "copilot chat", "cross file editing", "developer workflow", "edit mode", "github copilot", "multi file context", "project structure", "testing"]
+permalink: /github-copilot/blogs/Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot
+tags:
+- Agent Mode
+- AI
+- Authentication
+- Blogs
+- Code Navigation
+- Code Refactoring
+- Copilot Chat
+- Cross File Editing
+- Developer Workflow
+- Edit Mode
+- GitHub Copilot
+- Multi File Context
+- Project Structure
+- Testing
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels explains how to leverage GitHub Copilot’s multi-file context abilities to connect logic, refactor code, and reason across entire projects for smarter development.<!--excerpt_end-->
 
 # Work Smarter Across Multiple Files with GitHub Copilot

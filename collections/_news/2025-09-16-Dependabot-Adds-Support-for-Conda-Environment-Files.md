@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Dependabot Adds Support for Conda Environment Files"
-description: "This news update announces that Dependabot now supports parsing and updating `environment.yml` Conda files for Python projects. It highlights automated security and version updates, the importance for teams managing dependencies with Conda, and how the feature complements supply chain security on GitHub. The release applies to users of github.com and is coming to GitHub Enterprise Server soon."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Adds Support for Conda Environment Files
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 18:01:54 +00:00
-permalink: "/2025-09-16-Dependabot-Adds-Support-for-Conda-Environment-Files.html"
-categories: ["DevOps", "Security"]
-tags: ["Conda", "Dependabot", "Dependency Graph", "Dependency Management", "Dependency Submission API", "DevOps", "Environment.yml", "GitHub", "GitHub Enterprise Server", "Improvement", "News", "pip", "Python", "Security", "Security Updates", "Software Supply Chain", "Supply Chain Security", "Vulnerability Management"]
-tags_normalized: ["conda", "dependabot", "dependency graph", "dependency management", "dependency submission api", "devops", "environmentdotyml", "github", "github enterprise server", "improvement", "news", "pip", "python", "security", "security updates", "software supply chain", "supply chain security", "vulnerability management"]
+permalink: /devops/news/Dependabot-Adds-Support-for-Conda-Environment-Files
+tags:
+- Conda
+- Dependabot
+- Dependency Graph
+- Dependency Management
+- Dependency Submission API
+- DevOps
+- Environment.yml
+- GitHub
+- GitHub Enterprise Server
+- Improvement
+- News
+- pip
+- Python
+- Security
+- Security Updates
+- Software Supply Chain
+- Supply Chain Security
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Allison announces that Dependabot now supports Conda environment files, offering automated security and version updates for Conda-based Python projects and enhancing supply chain security on GitHub.<!--excerpt_end-->
 
 # Dependabot Adds Support for Conda Environment Files

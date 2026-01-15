@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Expanded File Type Support for GitHub Attachments"
-description: "This update details the new capability in GitHub that allows uploading a wider variety of file types as attachments in issues, pull requests, and discussions. The change makes it easier for users to share code, data, documents, and media directly in collaborative threads, improving workflow efficiency and flexibility for development teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-13-expanded-file-type-support-for-attachments-across-issues-pull-requests-and-discussions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Expanded File Type Support for GitHub Attachments
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-13-expanded-file-type-support-for-attachments-across-issues-pull-requests-and-discussions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 07:00:31 +00:00
-permalink: "/2025-08-14-Expanded-File-Type-Support-for-GitHub-Attachments.html"
-categories: ["DevOps"]
-tags: ["Attachments", "Code Sharing", "Collaboration", "Developer Tools", "DevOps", "Discussions", "File Types", "GitHub", "Issue Tracking", "News", "Productivity", "Pull Requests", "Workflow"]
-tags_normalized: ["attachments", "code sharing", "collaboration", "developer tools", "devops", "discussions", "file types", "github", "issue tracking", "news", "productivity", "pull requests", "workflow"]
+permalink: /devops/news/Expanded-File-Type-Support-for-GitHub-Attachments
+tags:
+- Attachments
+- Code Sharing
+- Collaboration
+- Developer Tools
+- DevOps
+- Discussions
+- File Types
+- GitHub
+- Issue Tracking
+- News
+- Productivity
+- Pull Requests
+- Workflow
+section_names:
+- devops
 ---
-
 Allison explains recent improvements to GitHub that enable uploading a broader range of file types as attachments in issues, pull requests, and discussions, enhancing collaboration for developers.<!--excerpt_end-->
 
 # Expanded File Type Support for GitHub Attachments

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Node.js 24 Now Available on Azure App Service for Linux"
-description: "This announcement details the availability of Node.js 24 LTS on Azure App Service for Linux, highlighting improvements such as a faster V8 engine, enhanced testing workflows with node:test, support for modern JavaScript features, and deployment options through the Azure portal, CLI, and ARM/Bicep templates. Developers can now leverage new JavaScript capabilities, improved performance, and stable long-term support in their cloud-hosted Node.js applications."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Node.js 24 Now Available on Azure App Service for Linux
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 04:10:13 +00:00
-permalink: "/2025-11-11-Nodejs-24-Now-Available-on-Azure-App-Service-for-Linux.html"
-categories: ["Azure", "Coding"]
-tags: ["App Service Deployment", "ARM Templates", "Azure", "Azure App Service", "Bicep Templates", "CI Workflows", "Coding", "Community", "Continuous Integration", "JavaScript", "Linux", "Node:test", "Node.js 24", "npm 11", "Testing", "V8 Engine"]
-tags_normalized: ["app service deployment", "arm templates", "azure", "azure app service", "bicep templates", "ci workflows", "coding", "community", "continuous integration", "javascript", "linux", "nodetest", "nodedotjs 24", "npm 11", "testing", "v8 engine"]
+permalink: /coding/community/Nodejs-24-Now-Available-on-Azure-App-Service-for-Linux
+tags:
+- App Service Deployment
+- ARM Templates
+- Azure
+- Azure App Service
+- Bicep Templates
+- CI Workflows
+- Coding
+- Community
+- Continuous Integration
+- JavaScript
+- Linux
+- Node:test
+- Node.js 24
+- npm 11
+- Testing
+- V8 Engine
+section_names:
+- azure
+- coding
 ---
-
 TulikaC announces that Node.js 24 LTS is now supported on Azure App Service for Linux, enabling developers to deploy faster, modern JavaScript apps with improved testing and deployment capabilities.<!--excerpt_end-->
 
 # Node.js 24 Now Available on Azure App Service for Linux

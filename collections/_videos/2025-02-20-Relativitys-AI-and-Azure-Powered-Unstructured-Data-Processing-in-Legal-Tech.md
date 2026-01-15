@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Relativity's AI and Azure-Powered Unstructured Data Processing in Legal Tech"
-description: "This Microsoft Ignite video features Rick Claus and Keith Carlson from Relativity, discussing how AI and Microsoft Azure technologies—including Azure Data Lake Storage—are leveraged to efficiently analyze and process unstructured data in the legal industry. The conversation explores challenges with growing data volumes, generative AI's impact on document analysis, innovations in AI and storage, and strategies for near real-time video file processing. Attendees will gain actionable insights on legal data management, advanced AI adoption, and the evolving Microsoft partnership with legal technology providers."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cr8I4Z2RsS0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Relativity's AI and Azure-Powered Unstructured Data Processing in Legal Tech
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=cr8I4Z2RsS0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-02-20 14:00:51 +00:00
-permalink: "/2025-02-20-Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Innovation", "Azure", "Azure Data Lake Storage", "Data Management", "Document Analysis", "Generative AI", "Legal Industry", "Legal Technology", "Microsoft", "Microsoft Azure", "Microsoft Ignite", "ML", "Relativity", "Unstructured Data", "Video Processing", "Videos"]
-tags_normalized: ["ai", "ai innovation", "azure", "azure data lake storage", "data management", "document analysis", "generative ai", "legal industry", "legal technology", "microsoft", "microsoft azure", "microsoft ignite", "ml", "relativity", "unstructured data", "video processing", "videos"]
+permalink: /ai/videos/Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech
+tags:
+- AI
+- AI Innovation
+- Azure
+- Azure Data Lake Storage
+- Data Management
+- Document Analysis
+- Generative AI
+- Legal Industry
+- Legal Technology
+- Microsoft
+- Microsoft Azure
+- Microsoft Ignite
+- ML
+- Relativity
+- Unstructured Data
+- Video Processing
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 In this Microsoft Ignite video, Microsoft Events hosts Rick Claus and guest Keith Carlson from Relativity to discuss how AI and Azure are transforming unstructured data analysis in the legal sector.<!--excerpt_end-->
 
 {% youtube cr8I4Z2RsS0 %}

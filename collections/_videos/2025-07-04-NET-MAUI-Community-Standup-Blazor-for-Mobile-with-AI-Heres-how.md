@@ -1,20 +1,34 @@
----
-layout: "post"
-title: ".NET MAUI Community Standup - Blazor for Mobile with AI? Here's how."
-description: "Beth Massi demonstrates enhancing a web app with native mobile features and AI, utilizing Blazor, .NET MAUI, and Azure AI Foundry, with input from David Ortinau."
-author: "Dotnet's Youtube channel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=31zDPcvZLRI"
-categories: ["AI", "Azure", "Coding"]
-feed_name: "dotnet"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET MAUI Community Standup - Blazor for Mobile with AI? Here's how.
+author: Dotnet's Youtube channel
+canonical_url: https://www.youtube.com/watch?v=31zDPcvZLRI
+feed_name: dotnet
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-04 06:10:58 +00:00
-permalink: "/2025-07-04-NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how.html"
-viewing_mode: "internal"
-tags: [".NET", "AI", "App Enhancement", "Azure", "Azure AI Foundry", "Beth Massi", "Blazor", "Coding", "Community Links", "David Ortinau", "Dotnetmaui", "MAUI", "Native Mobile Features", "Videos", "Web App"]
-tags_normalized: ["dotnet", "ai", "app enhancement", "azure", "azure ai foundry", "beth massi", "blazor", "coding", "community links", "david ortinau", "dotnetmaui", "maui", "native mobile features", "videos", "web app"]
+permalink: /ai/videos/NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how
+viewing_mode: internal
+tags:
+- .NET
+- AI
+- App Enhancement
+- Azure
+- Azure AI Foundry
+- Beth Massi
+- Blazor
+- Coding
+- Community Links
+- David Ortinau
+- Dotnetmaui
+- MAUI
+- Native Mobile Features
+- Videos
+- Web App
+section_names:
+- ai
+- azure
+- coding
 ---
-
 In this article, dotnet highlights Beth Massi's walkthrough on augmenting a web app with native mobile capabilities and AI integration. Using Blazor and .NET MAUI, along with Microsoft's Azure AI Foundry, Massi showcases how to bring AI and platform-specific enhancements to cross-platform applications. The article also features contributions from David Ortinau and provides links for deeper community engagement.<!--excerpt_end-->
 
 {% youtube 31zDPcvZLRI %}

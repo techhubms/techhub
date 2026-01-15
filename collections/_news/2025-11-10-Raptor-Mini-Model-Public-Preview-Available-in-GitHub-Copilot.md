@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Raptor Mini Model Public Preview Available in GitHub Copilot"
-description: "This news update details the public preview rollout of Raptor mini, a new experimental model now accessible in GitHub Copilot for Pro, Pro+, and Free plan users in Visual Studio Code. The release covers availability, how to access the new model, and where to find additional resources and provide feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Raptor Mini Model Public Preview Available in GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 16:15:49 +00:00
-permalink: "/2025-11-10-Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Model", "Copilot", "Copilot Chat", "Experimental Model", "GitHub Copilot", "Model Picker", "News", "Pro Plan", "Public Preview", "Raptor Mini", "Software Release", "VS Code"]
-tags_normalized: ["ai", "ai development", "ai model", "copilot", "copilot chat", "experimental model", "github copilot", "model picker", "news", "pro plan", "public preview", "raptor mini", "software release", "vs code"]
+permalink: /github-copilot/news/Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot
+tags:
+- AI
+- AI Development
+- AI Model
+- Copilot
+- Copilot Chat
+- Experimental Model
+- GitHub Copilot
+- Model Picker
+- News
+- Pro Plan
+- Public Preview
+- Raptor Mini
+- Software Release
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the public preview rollout of Raptor mini, a new experimental model for GitHub Copilot users in Visual Studio Code, highlighting accessibility and ways to learn more.<!--excerpt_end-->
 
 # Raptor Mini Model Public Preview for GitHub Copilot

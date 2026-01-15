@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025"
-description: "This video session from Microsoft Ignite 2025 explores how partners can leverage migration and modernization strategies in Azure to drive business growth. It addresses technical challenges, automation, agentic capabilities, the role of modern cloud foundations in AI transformation, VMware environments, security and compliance, and connecting IT and business teams to unlock greater value."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6JAurnFr5e4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=6JAurnFr5e4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:13:05 +00:00
-permalink: "/2025-11-25-Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Capabilities", "AI", "AI Transformation", "Automation", "Azure", "Azure Migration", "Cloud Modernization", "Human Agent Collaboration", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Modern Cloud Foundations", "MSIgnite", "Partner Growth", "Security", "Security Compliance", "Technical Debt", "Videos", "VMware Migration"]
-tags_normalized: ["agentic capabilities", "ai", "ai transformation", "automation", "azure", "azure migration", "cloud modernization", "human agent collaboration", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "modern cloud foundations", "msignite", "partner growth", "security", "security compliance", "technical debt", "videos", "vmware migration"]
+permalink: /ai/videos/Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025
+tags:
+- Agentic Capabilities
+- AI
+- AI Transformation
+- Automation
+- Azure
+- Azure Migration
+- Cloud Modernization
+- Human Agent Collaboration
+- Microsoft AI Cloud Partner Program
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- Modern Cloud Foundations
+- MSIgnite
+- Partner Growth
+- Security
+- Security Compliance
+- Technical Debt
+- Videos
+- VMware Migration
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events hosts a session at Ignite 2025 featuring Randy Holloway and colleagues, guiding partners through Azure migration, AI-driven modernization, and security practices for sustained growth.<!--excerpt_end-->
 
 {% youtube 6JAurnFr5e4 %}

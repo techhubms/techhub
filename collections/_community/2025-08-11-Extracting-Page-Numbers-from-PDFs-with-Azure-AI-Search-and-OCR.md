@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Extracting Page Numbers from PDFs with Azure AI Search and OCR"
-description: "This tutorial provides a practical guide to configuring Azure AI Search for high-precision, page-aware PDF search. It covers setting up Azure Blob Storage, skillsets to split and OCR documents at the page level, index definitions for storing page-level metadata, and using an indexer to tie everything together for reliable, context-rich AI-powered search across large document collections."
-author: "samsarka"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-paas-blog/finding-the-right-page-number-in-pdfs-with-ai-search/ba-p/4440758"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Extracting Page Numbers from PDFs with Azure AI Search and OCR
+author: samsarka
+canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/finding-the-right-page-number-in-pdfs-with-ai-search/ba-p/4440758
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 09:10:39 +00:00
-permalink: "/2025-08-11-Extracting-Page-Numbers-from-PDFs-with-Azure-AI-Search-and-OCR.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Search", "Azure", "Azure AI Search", "Azure Blob Storage", "Azure Cognitive Search", "Community", "Document Cracking", "Index Definition", "Index Projection", "Indexer", "Knowledge Mining", "Managed Identity", "Microsoft Azure", "OCR Skill", "Page Number Extraction", "Parent Child Indexing", "PDF Indexing", "RBAC", "REST API Integration", "Search Pipeline", "Skillset", "Text Merger"]
-tags_normalized: ["ai", "ai search", "azure", "azure ai search", "azure blob storage", "azure cognitive search", "community", "document cracking", "index definition", "index projection", "indexer", "knowledge mining", "managed identity", "microsoft azure", "ocr skill", "page number extraction", "parent child indexing", "pdf indexing", "rbac", "rest api integration", "search pipeline", "skillset", "text merger"]
+permalink: /ai/community/Extracting-Page-Numbers-from-PDFs-with-Azure-AI-Search-and-OCR
+tags:
+- AI
+- AI Search
+- Azure
+- Azure AI Search
+- Azure Blob Storage
+- Azure Cognitive Search
+- Community
+- Document Cracking
+- Index Definition
+- Index Projection
+- Indexer
+- Knowledge Mining
+- Managed Identity
+- Microsoft Azure
+- OCR Skill
+- Page Number Extraction
+- Parent Child Indexing
+- PDF Indexing
+- RBAC
+- REST API Integration
+- Search Pipeline
+- Skillset
+- Text Merger
+section_names:
+- ai
+- azure
 ---
-
 samsarka describes how to use Azure AI Search and OCR to extract and index PDF page numbers, enabling fast and context-aware knowledge discovery in large document repositories.<!--excerpt_end-->
 
 # Extracting Page Numbers from PDFs with Azure AI Search and OCR

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Announcing the Copilot Profiler Agent: AI-Powered Performance Analysis in Visual Studio 2026"
-description: "This article introduces the Copilot Profiler Agent, a new AI-powered performance assistant integrated into Visual Studio 2026 Insiders. Designed to work seamlessly with GitHub Copilot, the Profiler Agent helps developers analyze CPU and memory usage, identify bottlenecks, generate and validate benchmarks, and apply actionable performance improvements to real-world codebases."
-author: "Harshada Hole"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/copilot-profiler-agent-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Announcing the Copilot Profiler Agent: AI-Powered Performance Analysis in Visual Studio 2026'
+author: Harshada Hole
+canonical_url: https://devblogs.microsoft.com/visualstudio/copilot-profiler-agent-visual-studio/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-11 16:05:09 +00:00
-permalink: "/2025-09-11-Announcing-the-Copilot-Profiler-Agent-AI-Powered-Performance-Analysis-in-Visual-Studio-2026.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Assistant", "BenchmarkDotNet", "Coding", "Copilot Profiler Agent", "CPU Analysis", "Debugging And Diagnostics", "Developer Productivity", "GitHub Copilot", "Memory Optimization", "News", "Open Source", "Performance Improvements", "Performance Profiling", "Profiling", "Profiling Tools", "SharpZipLib", "Software Optimization", "VS"]
-tags_normalized: ["dotnet", "ai", "ai assistant", "benchmarkdotnet", "coding", "copilot profiler agent", "cpu analysis", "debugging and diagnostics", "developer productivity", "github copilot", "memory optimization", "news", "open source", "performance improvements", "performance profiling", "profiling", "profiling tools", "sharpziplib", "software optimization", "vs"]
+permalink: /github-copilot/news/Announcing-the-Copilot-Profiler-Agent-AI-Powered-Performance-Analysis-in-Visual-Studio-2026
+tags:
+- .NET
+- AI
+- AI Assistant
+- BenchmarkDotNet
+- Coding
+- Copilot Profiler Agent
+- CPU Analysis
+- Debugging And Diagnostics
+- Developer Productivity
+- GitHub Copilot
+- Memory Optimization
+- News
+- Open Source
+- Performance Improvements
+- Performance Profiling
+- Profiling
+- Profiling Tools
+- SharpZipLib
+- Software Optimization
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Harshada Hole explores the capabilities of the Copilot Profiler Agent, showcasing how this AI-powered assistant in Visual Studio 2026 helps developers analyze, optimize, and validate performance improvements directly within their workflow.<!--excerpt_end-->
 
 # Announcing the Copilot Profiler Agent: AI-Powered Performance Analysis in Visual Studio 2026

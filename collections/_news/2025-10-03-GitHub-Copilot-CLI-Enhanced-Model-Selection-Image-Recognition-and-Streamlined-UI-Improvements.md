@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements"
-description: "This update details the latest enhancements to GitHub Copilot CLI, including support for Anthropic Claude Sonnet 4.5, an improved model selection UI, image input support, direct shell command execution, refined session management, and increased permission controls. The changelog covers improvements targeting developer workflows, security, and user experience in the GitHub Copilot CLI tool."
-author: "Dylan Birtolo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements'
+author: Dylan Birtolo
+canonical_url: https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-03 16:23:18 +00:00
-permalink: "/2025-10-03-GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Anthropic Claude Sonnet", "Client Apps", "Coding", "Command Line Interface", "Copilot", "Developer Tools", "Enterprise Authentication", "GitHub Copilot", "GitHub Copilot CLI", "Image Recognition", "Improvement", "Markdown Rendering", "Model Selection", "News", "npm", "PowerShell", "Security Permissions", "Session Management", "Shell Commands", "Usage Statistics"]
-tags_normalized: ["ai", "ai coding assistant", "anthropic claude sonnet", "client apps", "coding", "command line interface", "copilot", "developer tools", "enterprise authentication", "github copilot", "github copilot cli", "image recognition", "improvement", "markdown rendering", "model selection", "news", "npm", "powershell", "security permissions", "session management", "shell commands", "usage statistics"]
+permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements
+tags:
+- AI
+- AI Coding Assistant
+- Anthropic Claude Sonnet
+- Client Apps
+- Coding
+- Command Line Interface
+- Copilot
+- Developer Tools
+- Enterprise Authentication
+- GitHub Copilot
+- GitHub Copilot CLI
+- Image Recognition
+- Improvement
+- Markdown Rendering
+- Model Selection
+- News
+- npm
+- PowerShell
+- Security Permissions
+- Session Management
+- Shell Commands
+- Usage Statistics
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Dylan Birtolo announces significant updates to GitHub Copilot CLI, including model selection improvements, image support, and enhanced UI for developers.<!--excerpt_end-->
 
 # GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements

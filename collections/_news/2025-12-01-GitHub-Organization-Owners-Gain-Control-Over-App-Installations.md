@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Organization Owners Gain Control Over App Installations"
-description: "This news update explains how GitHub organization owners can now restrict repository administrators from installing GitHub Apps on their own, enhancing security and governance. The new setting allows only organization owners to install GitHub Apps, reducing unauthorized or unexpected app installations and helping organizations meet compliance requirements."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-01-block-repository-admins-from-installing-github-apps-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Organization Owners Gain Control Over App Installations
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-01-block-repository-admins-from-installing-github-apps-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-01 20:45:29 +00:00
-permalink: "/2025-12-01-GitHub-Organization-Owners-Gain-Control-Over-App-Installations.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Compliance", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub", "GitHub Apps", "Governance", "Improvement", "News", "Organization Administration", "Permission Management", "Repository Admin", "Security", "Settings Management"]
-tags_normalized: ["access control", "compliance", "devops", "enterprise management", "enterprise management tools", "github", "github apps", "governance", "improvement", "news", "organization administration", "permission management", "repository admin", "security", "settings management"]
+permalink: /devops/news/GitHub-Organization-Owners-Gain-Control-Over-App-Installations
+tags:
+- Access Control
+- Compliance
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub
+- GitHub Apps
+- Governance
+- Improvement
+- News
+- Organization Administration
+- Permission Management
+- Repository Admin
+- Security
+- Settings Management
+section_names:
+- devops
+- security
 ---
-
 Allison shares how GitHub organization owners now have increased control over who can install GitHub Apps, reducing risks and improving compliance across repositories.<!--excerpt_end-->
 
 # GitHub Organization Owners Gain Control Over App Installations

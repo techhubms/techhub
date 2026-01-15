@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Driving Business Value with Agentic AI in Microsoft Environments"
-description: "This session from Microsoft Ignite 2025 features NTT DATA’s Agentic AI services, demonstrating how organizations can move from proof-of-concept to production using Microsoft’s scalable AI frameworks. Topics covered include building secure AI-powered platforms, integrating AI agents for enhanced collaboration, and leveraging Microsoft technologies to unlock ROI and sustainable automation across multiple industries."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tdF-_Qy7XDQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Driving Business Value with Agentic AI in Microsoft Environments
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tdF-_Qy7XDQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:29:29 +00:00
-permalink: "/2025-11-24-Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Framework", "AI Production", "AI Services", "Automation", "Business Value", "Collaboration", "Customer Experience", "Generative AI", "Industry Solutions", "Microsoft Ignite", "Microsoft Technologies", "MSIgnite", "NTT DATA", "Secure AI Platform", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai framework", "ai production", "ai services", "automation", "business value", "collaboration", "customer experience", "generative ai", "industry solutions", "microsoft ignite", "microsoft technologies", "msignite", "ntt data", "secure ai platform", "videos"]
+permalink: /ai/videos/Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Framework
+- AI Production
+- AI Services
+- Automation
+- Business Value
+- Collaboration
+- Customer Experience
+- Generative AI
+- Industry Solutions
+- Microsoft Ignite
+- Microsoft Technologies
+- MSIgnite
+- NTT DATA
+- Secure AI Platform
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Microsoft Events, this Microsoft Ignite session explores how NTT DATA leverages Microsoft agentic AI services to accelerate AI adoption and connect teams, agents, and automation for measurable results.<!--excerpt_end-->
 
 {% youtube tdF-_Qy7XDQ %}

@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Outages and Security Threats in DevOps Tooling: Cracks in the Foundation"
-description: "Alan Shimel examines how outages and security breaches in core DevOps tools like GitHub and Jira expose systemic risks for software delivery. The article details recent incidents, explores root causes such as SaaS overreliance and integration complexity, and provides actionable steps for DevOps teams to increase resilience, security, and vendor accountability throughout the toolchain."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Outages and Security Threats in DevOps Tooling: Cracks in the Foundation'
+author: Alan Shimel
+canonical_url: https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-16 08:13:33 +00:00
-permalink: "/2025-09-16-Outages-and-Security-Threats-in-DevOps-Tooling-Cracks-in-the-Foundation.html"
-categories: ["DevOps", "Security"]
-tags: ["AI", "AI in DevOps", "AI Native Workflows", "Blogs", "Business Of DevOps", "CI/CD Pipeline Security", "CI/CD Pipelines", "Cloud Native Pipelines", "Credential Management", "DevOps", "DevOps Best Practices", "DevOps Breaches", "DevOps Outages", "DevOps Resilience", "DevOps Tooling", "GitHub Outages", "Incident Response", "Jira Vulnerabilities", "Observability", "Platform Engineering", "Redundancy", "SaaS Reliability", "Secure Delivery", "Security", "Security Hardening", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Supply Chain Security", "Vendor Management"]
-tags_normalized: ["ai", "ai in devops", "ai native workflows", "blogs", "business of devops", "cislashcd pipeline security", "cislashcd pipelines", "cloud native pipelines", "credential management", "devops", "devops best practices", "devops breaches", "devops outages", "devops resilience", "devops tooling", "github outages", "incident response", "jira vulnerabilities", "observability", "platform engineering", "redundancy", "saas reliability", "secure delivery", "security", "security hardening", "social facebook", "social linkedin", "social x", "software supply chain", "supply chain security", "vendor management"]
+permalink: /devops/blogs/Outages-and-Security-Threats-in-DevOps-Tooling-Cracks-in-the-Foundation
+tags:
+- AI
+- AI in DevOps
+- AI Native Workflows
+- Blogs
+- Business Of DevOps
+- CI/CD Pipeline Security
+- CI/CD Pipelines
+- Cloud Native Pipelines
+- Credential Management
+- DevOps
+- DevOps Best Practices
+- DevOps Breaches
+- DevOps Outages
+- DevOps Resilience
+- DevOps Tooling
+- GitHub Outages
+- Incident Response
+- Jira Vulnerabilities
+- Observability
+- Platform Engineering
+- Redundancy
+- SaaS Reliability
+- Secure Delivery
+- Security
+- Security Hardening
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Supply Chain Security
+- Vendor Management
+section_names:
+- devops
+- security
 ---
-
 Alan Shimel highlights the risks of outages and breaches in DevOps toolchains and urges platform engineers to design for resilience and strengthen security measures for sustained delivery performance.<!--excerpt_end-->
 
 # Outages and Security Threats in DevOps Tooling: Cracks in the Foundation

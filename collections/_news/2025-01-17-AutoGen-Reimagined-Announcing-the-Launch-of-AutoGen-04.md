@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "AutoGen Reimagined: Announcing the Launch of AutoGen 0.4"
-description: "The AutoGen team unveils version 0.4, marking a complete redesign focused on asynchronous workflows, modularity, cross-language support, and enhanced developer tools. This major release sets a new foundation for scalable, agentic AI systems and unveils a roadmap for future extensions and applications."
-author: "Friederike Niedtner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/autogen/feed/"
+﻿---
+layout: post
+title: 'AutoGen Reimagined: Announcing the Launch of AutoGen 0.4'
+author: Friederike Niedtner
+canonical_url: https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/autogen/feed/
 date: 2025-01-17 23:39:51 +00:00
-permalink: "/2025-01-17-AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04.html"
-categories: ["AI"]
-tags: [".NET", "Agentic Workflows", "AI", "Asynchronous Messaging", "Autogen", "AutoGen Studio", "Cross Language Support", "Developer Tools", "Layered Architecture", "Magentic One", "Modular AI", "New Release", "News", "OpenTelemetry", "Python"]
-tags_normalized: ["dotnet", "agentic workflows", "ai", "asynchronous messaging", "autogen", "autogen studio", "cross language support", "developer tools", "layered architecture", "magentic one", "modular ai", "new release", "news", "opentelemetry", "python"]
+permalink: /ai/news/AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04
+tags:
+- .NET
+- Agentic Workflows
+- AI
+- Asynchronous Messaging
+- Autogen
+- AutoGen Studio
+- Cross Language Support
+- Developer Tools
+- Layered Architecture
+- Magentic One
+- Modular AI
+- New Release
+- News
+- OpenTelemetry
+- Python
+section_names:
+- ai
 ---
-
 Friederike Niedtner presents the release of AutoGen v0.4, a major update focusing on robust, scalable agentic AI workflows with improved architecture, developer tools, and cross-language support. Learn about its new features, migration guidance, and roadmap.<!--excerpt_end-->
 
 ## AutoGen Reimagined: Launching AutoGen 0.4

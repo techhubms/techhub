@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Exploring the .NET Boot Process via Host Tracing"
-description: "This post by Andrew Lock walks developers through the process of enabling host tracing to troubleshoot and understand how a .NET application boots, from muxer through hostfxr to hostpolicy.dll and finally the CoreCLR runtime. It details each component's responsibility and provides practical guidance for setting environment variables and interpreting tracing logs. Clear explanations help readers understand .NET runtime selection, framework resolution, and application launch sequence, equipping them with diagnostic techniques for early startup problems."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Exploring the .NET Boot Process via Host Tracing
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-11-25 10:00:00 +00:00
-permalink: "/2025-11-25-Exploring-the-NET-Boot-Process-via-Host-Tracing.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET CLI", ".NET Core", ".NET Muxer", "Apphost", "BCL", "Blogs", "Coding", "Context Switches", "CoreCLR", "Dependency Resolution", "Deps.json", "Diagnostics", "Environment Variables", "Global.json", "Hostfxr", "Hostpolicy.dll", "Logging", "Runtimeconfig.json", "SDK", "TPA", "Trusted Platform Assemblies"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet cli", "dotnet core", "dotnet muxer", "apphost", "bcl", "blogs", "coding", "context switches", "coreclr", "dependency resolution", "depsdotjson", "diagnostics", "environment variables", "globaldotjson", "hostfxr", "hostpolicydotdll", "logging", "runtimeconfigdotjson", "sdk", "tpa", "trusted platform assemblies"]
+permalink: /coding/blogs/Exploring-the-NET-Boot-Process-via-Host-Tracing
+tags:
+- .NET
+- .NET 10
+- .NET CLI
+- .NET Core
+- .NET Muxer
+- Apphost
+- BCL
+- Blogs
+- Coding
+- Context Switches
+- CoreCLR
+- Dependency Resolution
+- Deps.json
+- Diagnostics
+- Environment Variables
+- Global.json
+- Hostfxr
+- Hostpolicy.dll
+- Logging
+- Runtimeconfig.json
+- SDK
+- TPA
+- Trusted Platform Assemblies
+section_names:
+- coding
 ---
-
 Andrew Lock provides a technical walkthrough exploring .NET's boot process using host tracing, offering developers step-by-step insights into muxer, hostfxr, and hostpolicy.dll components.<!--excerpt_end-->
 
 # Exploring the .NET Boot Process via Host Tracing

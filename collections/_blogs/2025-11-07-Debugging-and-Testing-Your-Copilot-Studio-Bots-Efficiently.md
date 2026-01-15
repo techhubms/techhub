@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Debugging and Testing Your Copilot Studio Bots Efficiently"
-description: "This article by Dellenny provides a thorough guide for developers and makers using Copilot Studio to build conversational agents, focusing on efficient strategies and tools for debugging and testing bots. It covers structured workflows, built-in Copilot Studio features, telemetry, and practical tips to identify, diagnose, and resolve issues—helping you deliver reliable, user-friendly bots."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/debugging-and-testing-your-copilot-studio-bots-efficiently/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Debugging and Testing Your Copilot Studio Bots Efficiently
+author: Dellenny
+canonical_url: https://dellenny.com/debugging-and-testing-your-copilot-studio-bots-efficiently/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-07 09:52:36 +00:00
-permalink: "/2025-11-07-Debugging-and-Testing-Your-Copilot-Studio-Bots-Efficiently.html"
-categories: ["AI"]
-tags: ["AI", "Application Insights", "Blogs", "Bot Testing", "Chatbot Development", "Conversational AI", "Copilot", "Copilot Studio", "Custom Connectors", "Debugging", "Error Handling", "Generative AI", "Microsoft", "Telemetry", "Test Automation", "Topic Flow", "Variable Logic", "Workflow"]
-tags_normalized: ["ai", "application insights", "blogs", "bot testing", "chatbot development", "conversational ai", "copilot", "copilot studio", "custom connectors", "debugging", "error handling", "generative ai", "microsoft", "telemetry", "test automation", "topic flow", "variable logic", "workflow"]
+permalink: /ai/blogs/Debugging-and-Testing-Your-Copilot-Studio-Bots-Efficiently
+tags:
+- AI
+- Application Insights
+- Blogs
+- Bot Testing
+- Chatbot Development
+- Conversational AI
+- Copilot
+- Copilot Studio
+- Custom Connectors
+- Debugging
+- Error Handling
+- Generative AI
+- Microsoft
+- Telemetry
+- Test Automation
+- Topic Flow
+- Variable Logic
+- Workflow
+section_names:
+- ai
 ---
-
 Dellenny walks through practical strategies and best practices for efficiently debugging and testing bots built with Copilot Studio, offering valuable advice for conversational AI developers.<!--excerpt_end-->
 
 # Debugging and Testing Your Copilot Studio Bots Efficiently

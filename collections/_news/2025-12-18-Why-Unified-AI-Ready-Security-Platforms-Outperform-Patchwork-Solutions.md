@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Why Unified, AI-Ready Security Platforms Outperform Patchwork Solutions"
-description: "This news release from Scott Woodgate highlights key insights from Microsoft's new e-book, demonstrating how unified, AI-enabled security platforms—powered by tools like Microsoft Defender, Sentinel, and Security Copilot—help organizations move beyond the limitations of fragmented point solutions. The article explains operational, analytic, and cost benefits of consolidating cybersecurity management, with actionable examples drawn from real organizations and expert analysis."
-author: "Scott Woodgate"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Why Unified, AI-Ready Security Platforms Outperform Patchwork Solutions
+author: Scott Woodgate
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-18 17:00:00 +00:00
-permalink: "/2025-12-18-Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Security", "Azure", "Cloud Security", "Cybersecurity", "Exposure Management", "Incident Response", "Microsoft Defender", "Microsoft Sentinel", "News", "Ransomware Protection", "Security", "Security Analytics", "Security Copilot", "Security Data Lake", "SIEM", "SOC", "Threat Detection", "Unified Security Platform"]
-tags_normalized: ["ai", "ai security", "azure", "cloud security", "cybersecurity", "exposure management", "incident response", "microsoft defender", "microsoft sentinel", "news", "ransomware protection", "security", "security analytics", "security copilot", "security data lake", "siem", "soc", "threat detection", "unified security platform"]
+permalink: /ai/news/Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions
+tags:
+- AI
+- AI Security
+- Azure
+- Cloud Security
+- Cybersecurity
+- Exposure Management
+- Incident Response
+- Microsoft Defender
+- Microsoft Sentinel
+- News
+- Ransomware Protection
+- Security
+- Security Analytics
+- Security Copilot
+- Security Data Lake
+- SIEM
+- SOC
+- Threat Detection
+- Unified Security Platform
+section_names:
+- ai
+- azure
+- security
 ---
-
 Scott Woodgate shares how a unified, AI-powered security platform from Microsoft—combining Defender, Sentinel, and Security Copilot—transforms organizational defense and boosts efficiency, as detailed in their new e-book.<!--excerpt_end-->
 
 # Why Unified, AI-Ready Security Platforms Outperform Patchwork Solutions

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing Data Clustering in Microsoft Fabric Data Warehouse"
-description: "This article introduces Data Clustering in Microsoft Fabric Data Warehouse—a new storage-level feature that drastically improves query speed and resource efficiency for large-scale data analytics. It explains how clustering works, demonstrates performance gains and provides SQL examples and real-world metrics comparing clustered versus standard tables. Readers learn about clustering syntax, how it impacts query scanning and resource use, and how to use it for optimized big data solutions in Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-data-clustering-in-fabric-data-warehouse-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Announcing Data Clustering in Microsoft Fabric Data Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-data-clustering-in-fabric-data-warehouse-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 14:00:00 +00:00
-permalink: "/2025-11-20-Announcing-Data-Clustering-in-Microsoft-Fabric-Data-Warehouse.html"
-categories: ["ML"]
-tags: ["Analytics", "Big Data", "CLUSTER BY", "Data Clustering", "Data Engineering", "Data Storage", "Data Warehouse", "Exec Requests History", "Microsoft Fabric", "ML", "News", "Performance Tuning", "Preview Feature", "Query Insights", "Query Optimization", "Resource Optimization", "SQL"]
-tags_normalized: ["analytics", "big data", "cluster by", "data clustering", "data engineering", "data storage", "data warehouse", "exec requests history", "microsoft fabric", "ml", "news", "performance tuning", "preview feature", "query insights", "query optimization", "resource optimization", "sql"]
+permalink: /ml/news/Announcing-Data-Clustering-in-Microsoft-Fabric-Data-Warehouse
+tags:
+- Analytics
+- Big Data
+- CLUSTER BY
+- Data Clustering
+- Data Engineering
+- Data Storage
+- Data Warehouse
+- Exec Requests History
+- Microsoft Fabric
+- ML
+- News
+- Performance Tuning
+- Preview Feature
+- Query Insights
+- Query Optimization
+- Resource Optimization
+- SQL
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog explains the newly released Data Clustering feature for Fabric Data Warehouse, offering dramatic improvements in query speed and efficiency for analytics workloads.<!--excerpt_end-->
 
 # Announcing Data Clustering in Microsoft Fabric Data Warehouse

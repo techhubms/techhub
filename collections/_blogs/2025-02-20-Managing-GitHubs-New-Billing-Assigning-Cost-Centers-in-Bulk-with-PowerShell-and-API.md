@@ -1,20 +1,29 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+author: Jesse Houwing
+canonical_url: https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-02-20 14:10:17 +00:00
-permalink: "/2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
-categories: ["DevOps"]
-tags: ["API", "Automation", "Billing", "Blogs", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "PowerShell", "Resource Assignment"]
-tags_normalized: ["api", "automation", "billing", "blogs", "cost centers", "devops", "enterprise", "github", "github enterprise", "organizational management", "powershell", "resource assignment"]
+permalink: /devops/blogs/Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API
+tags:
+- API
+- Automation
+- Billing
+- Blogs
+- Cost Centers
+- DevOps
+- Enterprise
+- GitHub
+- GitHub Enterprise
+- Organizational Management
+- PowerShell
+- Resource Assignment
+section_names:
+- devops
 ---
-
 In this guide, Jesse Houwing discusses how to organize GitHub enterprise billing using new cost center functionality, focusing on automation and best practices for large teams.<!--excerpt_end-->
 
 # Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API
@@ -73,14 +82,13 @@ function Update-CostCenterResources {
         $handle = ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -96,14 +104,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
         return (($costCenter.resources | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -118,14 +125,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
 .type -eq "User" } | ?{---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -146,14 +152,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
         $handle = ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -169,14 +174,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
         return (($costCenter.resources | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -191,14 +195,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
 .type -eq "User" } | ?{---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -225,14 +228,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
       ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -259,14 +261,13 @@ $costCenters = (invoke-gh -fromJson -- api /enterprises/$enterprise/settings/bil
 $costCenterNL = $costCenters | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -286,14 +287,13 @@ $handles = @("jessehouwing", "jessehouwing-demo")
 $costCenters | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -309,14 +309,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
   ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -331,14 +330,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
  | ?{ $.resources | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -353,14 +351,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
 .type -eq "User" -and ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -376,14 +373,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
   %{ Update-CostCenterResources -handles $handles -action "Delete" -CostCenter ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -416,14 +412,13 @@ $costCenters = (gh api /enterprises/$enterprise/settings/billing/cost-centers | 
 $currentCostCenter = $costCenters | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -438,14 +433,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
 .resources | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -460,14 +454,13 @@ This post appeared first on "Jesse Houwing's Blog". [Read the entire article her
 .type -eq "User" -and ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]
@@ -487,14 +480,13 @@ $enterpriseUsers = gh api https://api.github.com/enterprises/$enterprise/consume
 $currentCostCenter = ($enterpriseUsers | ?{ ---
 layout: "post"
 title: "Managing GitHub's New Billing: Assigning Cost Centers in Bulk with PowerShell and API"
-description: "Jesse Houwing explains how to leverage GitHub's new cost center billing features for enterprise customers, including practical guidance for bulk assignment of users, repositories, and organizations via the API. The post outlines challenges, PowerShell automation, and lessons learned during the implementation."
 author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/"
 viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: https://jessehouwing.net/rss/
-date: 2025-02-20 14:10:17 +00:00
+date: "2025-02-20 14:10:17 +00:00"
 permalink: "2025-02-20-Managing-GitHubs-New-Billing-Assigning-Cost-Centers-in-Bulk-with-PowerShell-and-API.html"
 categories: ["DevOps"]
 tags: ["API", "Automation", "Billing", "Cost Centers", "DevOps", "Enterprise", "GitHub", "GitHub Enterprise", "Organizational Management", "Blogs", "PowerShell", "Resource Assignment"]

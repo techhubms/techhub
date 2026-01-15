@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Building Multi-Agent AI Systems with LangChain4j and Java"
-description: "This session, led by Ayan Gupta and guest Julien Dubois for Microsoft Developer, focuses on advanced AI development by constructing multi-agent systems using LangChain4j. The episode covers orchestrating several specialized agents in a Java environment, including AI text generation with GPT-4o Mini and Mistral 3B, text-to-speech conversion with MaryTTS, and coordination using workflow orchestration. The tutorial demonstrates how to build, configure, and connect individual agents, culminating in a full-stack, intelligent solution capable of producing poetry and audio output automatically."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YlbeQkTRbAY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building Multi-Agent AI Systems with LangChain4j and Java
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=YlbeQkTRbAY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 17:00:57 +00:00
-permalink: "/2025-11-04-Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java.html"
-categories: ["AI"]
-tags: ["Agent Orchestration", "AgentOrchestration", "AI", "AI Agents", "Audio Generation", "Docker", "DockerContainers", "GPT 4o Mini", "Intelligent Applications", "IntelligentSystems", "Java", "JavaAI", "JavaDevelopment", "LangChain4j", "MaryTTS", "Mistral", "Mistral 3B", "Multi Agent Systems", "MultiAgent", "OpenAI", "SequenceBuilder", "Text To Speech", "TextToSpeech", "Videos", "Workflow Automation"]
-tags_normalized: ["agent orchestration", "agentorchestration", "ai", "ai agents", "audio generation", "docker", "dockercontainers", "gpt 4o mini", "intelligent applications", "intelligentsystems", "java", "javaai", "javadevelopment", "langchain4j", "marytts", "mistral", "mistral 3b", "multi agent systems", "multiagent", "openai", "sequencebuilder", "text to speech", "texttospeech", "videos", "workflow automation"]
+permalink: /ai/videos/Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java
+tags:
+- Agent Orchestration
+- AgentOrchestration
+- AI
+- AI Agents
+- Audio Generation
+- Docker
+- DockerContainers
+- GPT 4o Mini
+- Intelligent Applications
+- IntelligentSystems
+- Java
+- JavaAI
+- JavaDevelopment
+- LangChain4j
+- MaryTTS
+- Mistral
+- Mistral 3B
+- Multi Agent Systems
+- MultiAgent
+- OpenAI
+- SequenceBuilder
+- Text To Speech
+- TextToSpeech
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Microsoft Developer’s session with Ayan Gupta and Julien Dubois explores building advanced multi-agent AI systems in Java using LangChain4j, with hands-on agent orchestration, GPT-4o Mini, and speech synthesis. Learn how these technologies work together to automate creative and practical AI workflows.<!--excerpt_end-->
 
 {% youtube YlbeQkTRbAY %}

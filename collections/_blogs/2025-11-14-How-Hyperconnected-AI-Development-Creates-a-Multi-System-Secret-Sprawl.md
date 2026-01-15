@@ -1,20 +1,61 @@
----
-layout: "post"
-title: "How Hyperconnected AI Development Creates a Multi-System Secret Sprawl"
-description: "This article by Guillaume Valadon explores the security risks emerging from hyperconnected AI development environments. It analyzes data from over 1,700 leaked secrets found in AI-related configuration files on GitHub, highlighting how tools like MCP, Cursor, and Claude Code drive rapid integration at the cost of secret sprawl across databases, APIs, and cloud services. The piece offers practical strategies for managing secrets, using automated guardrails and pre-commit scanning to reduce risk."
-author: "Guillaume Valadon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Hyperconnected AI Development Creates a Multi-System Secret Sprawl
+author: Guillaume Valadon
+canonical_url: https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-14 10:17:05 +00:00
-permalink: "/2025-11-14-How-Hyperconnected-AI-Development-Creates-a-Multi-System-Secret-Sprawl.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Development Security", "AI Secret Leaks", "API Key Exposure", "API Key Sprawl", "Blogs", "Business Of DevOps", "Claude Code", "Claude Code Security", "Cloud Security", "Configuration File Security", "Contributed Content", "Credential Hygiene", "Credential Leaks", "Cursor IDE", "Cursor IDE Risks", "Database Credential Leaks", "Database Security", "DevOps", "DevOps Best Practices", "Ggshield", "GitHub Secret Exposure", "GitHub Secrets", "Hyperconnected AI Workflows", "Hyperconnected Workflows", "Large Language Model Security", "Leaked API Keys", "MCP", "MCP Configuration Files", "MCP Security Risks", "Mcp.json Leaks", "OWASP AI Testing", "OWASP AI Testing Guide", "Pre Commit Scanning", "Secret Management", "Secret Scanning Tools", "Secrets Sprawl", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["ai", "ai development security", "ai secret leaks", "api key exposure", "api key sprawl", "blogs", "business of devops", "claude code", "claude code security", "cloud security", "configuration file security", "contributed content", "credential hygiene", "credential leaks", "cursor ide", "cursor ide risks", "database credential leaks", "database security", "devops", "devops best practices", "ggshield", "github secret exposure", "github secrets", "hyperconnected ai workflows", "hyperconnected workflows", "large language model security", "leaked api keys", "mcp", "mcp configuration files", "mcp security risks", "mcpdotjson leaks", "owasp ai testing", "owasp ai testing guide", "pre commit scanning", "secret management", "secret scanning tools", "secrets sprawl", "security", "security automation", "social facebook", "social linkedin", "social x"]
+permalink: /ai/blogs/How-Hyperconnected-AI-Development-Creates-a-Multi-System-Secret-Sprawl
+tags:
+- AI
+- AI Development Security
+- AI Secret Leaks
+- API Key Exposure
+- API Key Sprawl
+- Blogs
+- Business Of DevOps
+- Claude Code
+- Claude Code Security
+- Cloud Security
+- Configuration File Security
+- Contributed Content
+- Credential Hygiene
+- Credential Leaks
+- Cursor IDE
+- Cursor IDE Risks
+- Database Credential Leaks
+- Database Security
+- DevOps
+- DevOps Best Practices
+- Ggshield
+- GitHub Secret Exposure
+- GitHub Secrets
+- Hyperconnected AI Workflows
+- Hyperconnected Workflows
+- Large Language Model Security
+- Leaked API Keys
+- MCP
+- MCP Configuration Files
+- MCP Security Risks
+- Mcp.json Leaks
+- OWASP AI Testing
+- OWASP AI Testing Guide
+- Pre Commit Scanning
+- Secret Management
+- Secret Scanning Tools
+- Secrets Sprawl
+- Security
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- ai
+- devops
+- security
 ---
-
 Guillaume Valadon examines how hyperconnected AI development workflows lead to an explosion in secret sprawl, leaking real credentials into public code repositories. The article diagnoses the causes and provides actionable security strategies for developers.<!--excerpt_end-->
 
 # How Hyperconnected AI Development Creates a Multi-System Secret Sprawl

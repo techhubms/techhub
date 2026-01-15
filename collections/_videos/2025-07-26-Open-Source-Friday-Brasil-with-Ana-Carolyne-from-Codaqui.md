@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Open Source Friday Brasil with Ana Carolyne from Codaqui"
-description: "In this video, GitHub hosts an Open Source Friday Brasil session featuring Ana Carolyne from Codaqui. The discussion centers on open source contributions, community engagement, and the Brazilian developer ecosystem. Ana shares insights into best practices for getting started with open source and growing technical communities."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wy7khJTIv3w"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Open Source Friday Brasil with Ana Carolyne from Codaqui
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=wy7khJTIv3w
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-26 05:06:15 +00:00
-permalink: "/2025-07-26-Open-Source-Friday-Brasil-with-Ana-Carolyne-from-Codaqui.html"
-categories: ["DevOps"]
-tags: ["Ana Carolyne", "Brazil", "Codaqui", "Collaboration", "Contributions", "Developer Ecosystem", "DevOps", "GitHub", "Open Source", "Software Development", "Videos"]
-tags_normalized: ["ana carolyne", "brazil", "codaqui", "collaboration", "contributions", "developer ecosystem", "devops", "github", "open source", "software development", "videos"]
+permalink: /devops/videos/Open-Source-Friday-Brasil-with-Ana-Carolyne-from-Codaqui
+tags:
+- Ana Carolyne
+- Brazil
+- Codaqui
+- Collaboration
+- Contributions
+- Developer Ecosystem
+- DevOps
+- GitHub
+- Open Source
+- Software Development
+- Videos
+section_names:
+- devops
 ---
-
 In this GitHub-hosted video, Ana Carolyne from Codaqui joins Open Source Friday Brasil to discuss open source contributions and fostering community engagement.<!--excerpt_end-->
 
 {% youtube wy7khJTIv3w %}

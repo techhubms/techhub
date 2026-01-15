@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Efficient Azure Firewall and NSG Rule Management with Terraform and CSV"
-description: "This guide by AbhishekShaw demonstrates an effective approach to managing Azure Firewall, Network Security Group (NSG), and route table rules at scale using Terraform and CSV files. It showcases how automation and code organization can simplify bulk rule management, minimize code clutter, and enhance auditability. The workflow leverages Visual Studio Code extensions and open source Terraform modules, offering practical strategies for infrastructure as code (IaC) practitioners working with complex Azure environments."
-author: "AbhishekShaw"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Efficient Azure Firewall and NSG Rule Management with Terraform and CSV
+author: AbhishekShaw
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-07 02:53:43 +00:00
-permalink: "/2025-11-07-Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Infrastructure", "Azure Route Table", "Cloud Security", "Community", "CSV Integration", "DevOps", "Edit CSV", "Firewall Rules", "IaC", "Network Security Group", "NSG", "Rainbow CSV", "Resource Automation", "Rule Management", "Security", "Terraform", "VS Code Extensions"]
-tags_normalized: ["azure", "azure firewall", "azure infrastructure", "azure route table", "cloud security", "community", "csv integration", "devops", "edit csv", "firewall rules", "iac", "network security group", "nsg", "rainbow csv", "resource automation", "rule management", "security", "terraform", "vs code extensions"]
+permalink: /azure/community/Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV
+tags:
+- Azure
+- Azure Firewall
+- Azure Infrastructure
+- Azure Route Table
+- Cloud Security
+- Community
+- CSV Integration
+- DevOps
+- Edit CSV
+- Firewall Rules
+- IaC
+- Network Security Group
+- NSG
+- Rainbow CSV
+- Resource Automation
+- Rule Management
+- Security
+- Terraform
+- VS Code Extensions
+section_names:
+- azure
+- devops
+- security
 ---
-
 AbhishekShaw provides a practical tutorial on streamlining the management of Azure Firewall and NSG rules using Terraform resource blocks and CSV files, empowering Azure engineers to handle complex rule sets more efficiently.<!--excerpt_end-->
 
 # Efficient Azure Firewall and NSG Rule Management with Terraform and CSV

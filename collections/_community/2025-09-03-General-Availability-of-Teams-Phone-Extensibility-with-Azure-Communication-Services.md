@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "General Availability of Teams Phone Extensibility with Azure Communication Services"
-description: "This post announces the general availability of Teams Phone extensibility (TPE) powered by Azure Communication Services. It details how TPE allows Contact Center as a Service (CCaaS) vendors to deeply integrate with Teams Phone, consolidating UCaaS and CCaaS, enabling conversational AI, advanced call controls, recording, and compliance features, and improving operational efficiency. Key capabilities include AI-powered insights, automated meeting summaries, PII redaction, and call automation APIs for building robust, scalable integrations. The post also covers benefits for developers, ISVs, and organizations looking to enhance their telephony platform with Microsoft's secure and extensible communication tools."
-author: "AnkurAgarwal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Teams Phone Extensibility with Azure Communication Services
+author: AnkurAgarwal
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 15:22:37 +00:00
-permalink: "/2025-09-03-General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure Communication Services", "Azure SDK", "Call Automation API", "Call Recording", "CCaaS", "Community", "Compliance", "Conversational AI", "ISV Solutions", "Language Detection", "Meeting Summaries", "Microsoft Teams", "PII Redaction", "Real Time Analytics", "Teams Phone Extensibility", "Telephony Integration", "UCaaS", "Unified Communications"]
-tags_normalized: ["ai", "azure", "azure communication services", "azure sdk", "call automation api", "call recording", "ccaas", "community", "compliance", "conversational ai", "isv solutions", "language detection", "meeting summaries", "microsoft teams", "pii redaction", "real time analytics", "teams phone extensibility", "telephony integration", "ucaas", "unified communications"]
+permalink: /ai/community/General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services
+tags:
+- AI
+- Azure
+- Azure Communication Services
+- Azure SDK
+- Call Automation API
+- Call Recording
+- CCaaS
+- Community
+- Compliance
+- Conversational AI
+- ISV Solutions
+- Language Detection
+- Meeting Summaries
+- Microsoft Teams
+- PII Redaction
+- Real Time Analytics
+- Teams Phone Extensibility
+- Telephony Integration
+- UCaaS
+- Unified Communications
+section_names:
+- ai
+- azure
 ---
-
 Ankur Agarwal introduces the general availability of Teams Phone extensibility, showing how Azure Communication Services empowers CCaaS vendors and developers to deliver AI-powered, compliant, and integrated telephony solutions inside Microsoft Teams.<!--excerpt_end-->
 
 # General Availability of Teams Phone Extensibility with Azure Communication Services

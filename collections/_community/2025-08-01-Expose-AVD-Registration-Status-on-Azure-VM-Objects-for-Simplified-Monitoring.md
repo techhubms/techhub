@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Expose AVD Registration Status on Azure VM Objects for Simplified Monitoring"
-description: "The article by Vu_Hoang proposes surfacing Azure Virtual Desktop (AVD) registration status directly on Azure VM objects. This feature would allow administrators to access registration status via Azure Portal, Resource Graph, PowerShell/CLI, or REST API, making automation and monitoring of large-scale AVD deployments easier."
-author: "Vu_Hoang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/expose-avd-registration-status-on-azure-vm-objects/idi-p/4439107"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Expose AVD Registration Status on Azure VM Objects for Simplified Monitoring
+author: Vu_Hoang
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/expose-avd-registration-status-on-azure-vm-objects/idi-p/4439107
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-01 18:00:09 +00:00
-permalink: "/2025-08-01-Expose-AVD-Registration-Status-on-Azure-VM-Objects-for-Simplified-Monitoring.html"
-categories: ["Azure"]
-tags: ["Automation", "AVD", "Azure", "Azure Portal", "Azure Resource Graph", "Azure Virtual Desktop", "Azure VM", "CLI", "Community", "Monitoring", "PowerShell", "Registration Status", "REST API"]
-tags_normalized: ["automation", "avd", "azure", "azure portal", "azure resource graph", "azure virtual desktop", "azure vm", "cli", "community", "monitoring", "powershell", "registration status", "rest api"]
+permalink: /azure/community/Expose-AVD-Registration-Status-on-Azure-VM-Objects-for-Simplified-Monitoring
+tags:
+- Automation
+- AVD
+- Azure
+- Azure Portal
+- Azure Resource Graph
+- Azure Virtual Desktop
+- Azure VM
+- CLI
+- Community
+- Monitoring
+- PowerShell
+- Registration Status
+- REST API
+section_names:
+- azure
 ---
-
 Vu_Hoang suggests exposing Azure Virtual Desktop registration status directly on Azure VM objects to streamline monitoring and automation in enterprise deployments.<!--excerpt_end-->
 
 ## Proposal: Surfacing AVD Registration Status on Azure VM Objects

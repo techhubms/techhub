@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Control AI Spending with Budget Tracking for GitHub AI Tools"
-description: "This announcement introduces new budget tracking features for GitHub Copilot coding agent and GitHub Spark, including premium request SKUs, bundled and product-specific budgets, and enhanced policy controls for enterprise and team administrators. It explains how these updates increase financial control for AI-powered development and ensure ongoing cost management as GitHub's AI ecosystem grows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-03-control-ai-spending-with-budget-tracking-for-github-ai-tools"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Control AI Spending with Budget Tracking for GitHub AI Tools
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-03-control-ai-spending-with-budget-tracking-for-github-ai-tools
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 08:00:30 +00:00
-permalink: "/2025-11-03-Control-AI-Spending-with-Budget-Tracking-for-GitHub-AI-Tools.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Account Management", "AI", "AI Cost Management", "AI Spending", "AI Tooling", "Budget Migration", "Budget Tracking", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Premium Request", "Developer Workflows", "Enterprise Governance", "GitHub Copilot", "GitHub Enterprise", "GitHub Spark", "Improvement", "News", "Policy Controls", "Premium SKUs"]
-tags_normalized: ["account management", "ai", "ai cost management", "ai spending", "ai tooling", "budget migration", "budget tracking", "copilot", "copilot business", "copilot enterprise", "copilot premium request", "developer workflows", "enterprise governance", "github copilot", "github enterprise", "github spark", "improvement", "news", "policy controls", "premium skus"]
+permalink: /github-copilot/news/Control-AI-Spending-with-Budget-Tracking-for-GitHub-AI-Tools
+tags:
+- Account Management
+- AI
+- AI Cost Management
+- AI Spending
+- AI Tooling
+- Budget Migration
+- Budget Tracking
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Copilot Premium Request
+- Developer Workflows
+- Enterprise Governance
+- GitHub Copilot
+- GitHub Enterprise
+- GitHub Spark
+- Improvement
+- News
+- Policy Controls
+- Premium SKUs
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces new budget tracking and control options for GitHub Copilot coding agent and Spark, giving teams and administrators more granular and predictable management of AI tool spending.<!--excerpt_end-->
 
 # Control AI Spending with Budget Tracking for GitHub AI Tools

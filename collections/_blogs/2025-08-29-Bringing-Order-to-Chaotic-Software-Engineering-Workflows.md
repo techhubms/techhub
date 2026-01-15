@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Bringing Order to Chaotic Software Engineering Workflows"
-description: "This article by Mike Vizard explores the persistent challenges of software engineering workflows in the modern era. Drawing on insights from Shannon Mason of Tempo, it discusses the impact of AI tools, low-code trends, and increasing workflow complexity. The piece offers practical organizational strategies for teams to improve visibility, reduce overload, and adopt effective planning techniques."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Bringing Order to Chaotic Software Engineering Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-29 16:16:47 +00:00
-permalink: "/2025-08-29-Bringing-Order-to-Chaotic-Software-Engineering-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI in Software Development", "Application Development", "Blogs", "Citizen Developers", "Development Culture", "DevOps", "DevOps Practices", "Low Code Tools", "Process Improvement", "Software Engineering", "Team Productivity", "Tempo", "Video Interviews", "Workflow Optimization"]
-tags_normalized: ["ai", "ai in software development", "application development", "blogs", "citizen developers", "development culture", "devops", "devops practices", "low code tools", "process improvement", "software engineering", "team productivity", "tempo", "video interviews", "workflow optimization"]
+permalink: /ai/blogs/Bringing-Order-to-Chaotic-Software-Engineering-Workflows
+tags:
+- AI
+- AI in Software Development
+- Application Development
+- Blogs
+- Citizen Developers
+- Development Culture
+- DevOps
+- DevOps Practices
+- Low Code Tools
+- Process Improvement
+- Software Engineering
+- Team Productivity
+- Tempo
+- Video Interviews
+- Workflow Optimization
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard shares Shannon Mason's perspective on addressing chaos in software engineering workflows, detailing the nuanced impact of AI, the growth of low-code development, and actionable strategies for developers and teams.<!--excerpt_end-->
 
 # Bringing Order to Chaotic Software Engineering Workflows

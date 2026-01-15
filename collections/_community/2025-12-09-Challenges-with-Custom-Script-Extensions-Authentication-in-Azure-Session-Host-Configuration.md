@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration"
-description: "This community post discusses the authentication limitations of Custom Script Extensions (CSE) in Azure Session Host configurations. The author highlights that currently, script URLs must use anonymous Blob access or expose tokens in plain text, and asks about secure alternatives such as Azure Key Vault or Managed Identities."
-author: "kristokruuser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration
+author: kristokruuser
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 13:51:03 +00:00
-permalink: "/2025-12-09-Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration.html"
-categories: ["Azure", "Security"]
-tags: ["Authentication", "Azure", "Azure Key Vault", "Azure Portal", "Azure Security", "Azure Virtual Desktop", "Community", "Credential Management", "Custom Script Extension", "Managed Identity", "SAS Token", "Security", "Session Host Configuration", "Storage Account"]
-tags_normalized: ["authentication", "azure", "azure key vault", "azure portal", "azure security", "azure virtual desktop", "community", "credential management", "custom script extension", "managed identity", "sas token", "security", "session host configuration", "storage account"]
+permalink: /azure/community/Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration
+tags:
+- Authentication
+- Azure
+- Azure Key Vault
+- Azure Portal
+- Azure Security
+- Azure Virtual Desktop
+- Community
+- Credential Management
+- Custom Script Extension
+- Managed Identity
+- SAS Token
+- Security
+- Session Host Configuration
+- Storage Account
+section_names:
+- azure
+- security
 ---
-
 Kristo Kruuser raises concerns about securely authenticating Custom Script Extensions in Azure Session Host Configuration, discussing the drawbacks of current approaches and exploring potential solutions.<!--excerpt_end-->
 
 # Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration

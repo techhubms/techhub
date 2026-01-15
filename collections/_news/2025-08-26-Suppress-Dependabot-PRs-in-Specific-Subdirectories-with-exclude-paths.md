@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Suppress Dependabot PRs in Specific Subdirectories with `exclude-paths`"
-description: "This news update covers the latest Dependabot feature allowing users to exclude dependency manifests in specific subdirectories of their GitHub repositories. By using the new `exclude-paths` option in the `dependabot.yml` configuration, teams can reduce unwanted update pull requests, streamline large monorepos, and exercise more granular control over automation in their DevOps workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-dependabot-can-now-exclude-automatic-pull-requests-for-manifests-in-selected-subdirectories"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Suppress Dependabot PRs in Specific Subdirectories with `exclude-paths`
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-dependabot-can-now-exclude-automatic-pull-requests-for-manifests-in-selected-subdirectories
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 17:53:23 +00:00
-permalink: "/2025-08-26-Suppress-Dependabot-PRs-in-Specific-Subdirectories-with-exclude-paths.html"
-categories: ["DevOps"]
-tags: ["Automation", "Change Management", "CI/CD", "Configuration", "Dependabot", "Dependabot.yml", "Dependency Management", "DevOps", "Exclude Paths", "GitHub", "Monorepo", "News", "Pull Requests", "Repository Management", "Software Maintenance", "Subdirectory"]
-tags_normalized: ["automation", "change management", "cislashcd", "configuration", "dependabot", "dependabotdotyml", "dependency management", "devops", "exclude paths", "github", "monorepo", "news", "pull requests", "repository management", "software maintenance", "subdirectory"]
+permalink: /devops/news/Suppress-Dependabot-PRs-in-Specific-Subdirectories-with-exclude-paths
+tags:
+- Automation
+- Change Management
+- CI/CD
+- Configuration
+- Dependabot
+- Dependabot.yml
+- Dependency Management
+- DevOps
+- Exclude Paths
+- GitHub
+- Monorepo
+- News
+- Pull Requests
+- Repository Management
+- Software Maintenance
+- Subdirectory
+section_names:
+- devops
 ---
-
 Allison explains how GitHub's Dependabot now supports excluding dependency manifests in chosen subdirectories, making it easier for teams to control update noise in monorepos and refine DevOps automation.<!--excerpt_end-->
 
 # Suppress Dependabot PRs in Specific Subdirectories with `exclude-paths`

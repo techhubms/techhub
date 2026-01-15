@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions"
-description: "This update covers the expansion of Oracle Database@Azure, now supporting Oracle Database 19c on Exadata Database Service with Exascale Infrastructure and newly available in UAE North and UAE Central regions. The article details technical capabilities, migration benefits, integration with Microsoft services, and region availability for organizations adopting Azure for mission-critical Oracle workloads."
-author: "SparshAgrawat"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions
+author: SparshAgrawat
+canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 17:02:27 +00:00
-permalink: "/2025-10-03-Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions.html"
-categories: ["Azure"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Cloud Migration", "Community", "Compliance", "Copilot Studio", "Database Modernization", "Disaster Recovery", "Exadata Exascale Infrastructure", "Microsoft Fabric", "Multicloud", "Oracle Database 19c", "Oracle Database@Azure", "Regional Availability", "Sentinel", "UAE Central", "UAE North"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "cloud migration", "community", "compliance", "copilot studio", "database modernization", "disaster recovery", "exadata exascale infrastructure", "microsoft fabric", "multicloud", "oracle database 19c", "oracle databaseatazure", "regional availability", "sentinel", "uae central", "uae north"]
+permalink: /azure/community/Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Cloud Migration
+- Community
+- Compliance
+- Copilot Studio
+- Database Modernization
+- Disaster Recovery
+- Exadata Exascale Infrastructure
+- Microsoft Fabric
+- Multicloud
+- Oracle Database 19c
+- Oracle Database@Azure
+- Regional Availability
+- Sentinel
+- UAE Central
+- UAE North
+section_names:
+- azure
 ---
-
 SparshAgrawat announces Oracle Database@Azure support for Oracle Database 19c on Exadata Exascale Infrastructure, alongside expanded UAE regional availability. The content describes technical migration benefits and options for organizations modernizing Oracle workloads with Azure services.<!--excerpt_end-->
 
 # Oracle Database 19c Support on Exadata Exascale and Oracle Database@Azure – Plus UAE Regional Expansion

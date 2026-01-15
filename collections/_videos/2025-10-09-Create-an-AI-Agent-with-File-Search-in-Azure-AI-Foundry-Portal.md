@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Create an AI Agent with File Search in Azure AI Foundry (Portal)"
-description: "This step-by-step guide demonstrates how to build an AI Agent utilizing the File Search tool within the Azure AI Foundry portal. Without writing any code, users can upload files, configure the agent to search across those files, and experiment with chat-based queries. Ideal for those new to agent development, the walkthrough covers agent creation, testing in the playground, file ingestion, and additional evaluation tools available in Azure AI Foundry."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dBu3il7db0o"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Create an AI Agent with File Search in Azure AI Foundry (Portal)
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=dBu3il7db0o
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-09 17:04:28 +00:00
-permalink: "/2025-10-09-Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Configuration", "Agent Playground", "AI", "AI Agent", "AI Development", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Dev", "Development", "File Search", "File Upload", "Microsoft", "Microsoft Azure", "Model Mondays", "No Code Development", "Portal Tools", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent configuration", "agent playground", "ai", "ai agent", "ai development", "azure", "azure ai foundry", "cloud ai", "cloud computing", "dev", "development", "file search", "file upload", "microsoft", "microsoft azure", "model mondays", "no code development", "portal tools", "tech", "technology", "videos"]
+permalink: /ai/videos/Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal
+tags:
+- Agent Configuration
+- Agent Playground
+- AI
+- AI Agent
+- AI Development
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Cloud Computing
+- Dev
+- Development
+- File Search
+- File Upload
+- Microsoft
+- Microsoft Azure
+- Model Mondays
+- No Code Development
+- Portal Tools
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents a beginner-friendly walkthrough on creating an AI Agent with File Search in Azure AI Foundry, highlighting no-code agent creation and configuration techniques.<!--excerpt_end-->
 
 {% youtube dBu3il7db0o %}

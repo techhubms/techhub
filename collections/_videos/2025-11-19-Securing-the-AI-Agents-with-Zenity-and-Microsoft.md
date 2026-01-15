@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Securing the AI Agents with Zenity and Microsoft"
-description: "This session from Microsoft Ignite 2025 discusses defense-in-depth strategies for AI agents built on Microsoft 365 Copilot, Copilot Studio, and Microsoft Foundry. The focus is on complementing Microsoft security solutions using Zenity’s platform to achieve AI observability, posture management, detection and response, inline prevention, governance, risk mitigation, and compliance within the Microsoft AI ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tOF4_bqLCiQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Securing the AI Agents with Zenity and Microsoft
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tOF4_bqLCiQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:41:34 +00:00
-permalink: "/2025-11-19-Securing-the-AI-Agents-with-Zenity-and-Microsoft.html"
-categories: ["AI", "Security"]
-tags: ["Agent Vulnerabilities", "AI", "AI Agents", "AI Governance", "Compliance", "Copilot Studio", "Defense in Depth", "Detection And Response", "Innovatewithlow", "Microsoft 365 Copilot", "Microsoft Foundry", "MSIgnite", "Observability", "OWASP Agent Standard", "Posture Management", "Runtime Activity", "Security", "Security Solutions", "Threat Graph", "Videos", "Zenity"]
-tags_normalized: ["agent vulnerabilities", "ai", "ai agents", "ai governance", "compliance", "copilot studio", "defense in depth", "detection and response", "innovatewithlow", "microsoft 365 copilot", "microsoft foundry", "msignite", "observability", "owasp agent standard", "posture management", "runtime activity", "security", "security solutions", "threat graph", "videos", "zenity"]
+permalink: /ai/videos/Securing-the-AI-Agents-with-Zenity-and-Microsoft
+tags:
+- Agent Vulnerabilities
+- AI
+- AI Agents
+- AI Governance
+- Compliance
+- Copilot Studio
+- Defense in Depth
+- Detection And Response
+- Innovatewithlow
+- Microsoft 365 Copilot
+- Microsoft Foundry
+- MSIgnite
+- Observability
+- OWASP Agent Standard
+- Posture Management
+- Runtime Activity
+- Security
+- Security Solutions
+- Threat Graph
+- Videos
+- Zenity
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents a session on security and governance for AI agents built on Microsoft Copilot platforms, featuring Shaun Van Staden and practical strategies using Zenity’s platform.<!--excerpt_end-->
 
 {% youtube tOF4_bqLCiQ %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How AI-Created Code Will Strain DevOps Workflows"
-description: "This article features Nick Durkin, Field CTO at Harness, explaining how the widespread adoption of AI tools for code generation is set to introduce new challenges and bottlenecks in DevOps workflows. He explores the need for scalable, template-driven CI/CD pipelines and discusses how AI shifts organizational approaches to software delivery and engineering governance."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How AI-Created Code Will Strain DevOps Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-21 16:30:04 +00:00
-permalink: "/2025-08-21-How-AI-Created-Code-Will-Strain-DevOps-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Code Generation", "Automation", "Blogs", "CI/CD", "CI/CD Pipelines", "Continuous Deployment", "Continuous Integration", "DevOps", "DevOps Workflows", "Governance", "Infrastructure Management", "Pipeline Scalability", "Pipeline Templates", "Platform Engineering", "Software Delivery", "Test Generation", "Troubleshooting", "Video Interviews"]
-tags_normalized: ["ai", "ai adoption", "ai code generation", "automation", "blogs", "cislashcd", "cislashcd pipelines", "continuous deployment", "continuous integration", "devops", "devops workflows", "governance", "infrastructure management", "pipeline scalability", "pipeline templates", "platform engineering", "software delivery", "test generation", "troubleshooting", "video interviews"]
+permalink: /ai/blogs/How-AI-Created-Code-Will-Strain-DevOps-Workflows
+tags:
+- AI
+- AI Adoption
+- AI Code Generation
+- Automation
+- Blogs
+- CI/CD
+- CI/CD Pipelines
+- Continuous Deployment
+- Continuous Integration
+- DevOps
+- DevOps Workflows
+- Governance
+- Infrastructure Management
+- Pipeline Scalability
+- Pipeline Templates
+- Platform Engineering
+- Software Delivery
+- Test Generation
+- Troubleshooting
+- Video Interviews
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard shares insights from Nick Durkin on how the increasing reliance on AI-generated code impacts DevOps workflows, highlighting necessary pipeline changes and the importance of modern engineering governance.<!--excerpt_end-->
 
 # How AI-Created Code Will Strain DevOps Workflows

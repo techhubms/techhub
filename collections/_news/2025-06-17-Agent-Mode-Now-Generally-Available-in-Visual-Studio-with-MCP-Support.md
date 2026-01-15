@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Agent Mode Now Generally Available in Visual Studio with MCP Support"
-description: "The Visual Studio June update brings GitHub Copilot agent mode to general availability, introducing autonomous AI capabilities for end-to-end task automation. With Model Context Protocol (MCP) integration, developers can extend agent abilities, connect external tools, and streamline coding workflows using advanced AI-driven development features."
-author: "Rhea Patel, Filisha Shah, Allie Barry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/agent-mode-is-now-generally-available-with-mcp-support/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: Agent Mode Now Generally Available in Visual Studio with MCP Support
+author: Rhea Patel, Filisha Shah, Allie Barry
+canonical_url: https://devblogs.microsoft.com/visualstudio/agent-mode-is-now-generally-available-with-mcp-support/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-17 18:24:08 +00:00
-permalink: "/2025-06-17-Agent-Mode-Now-Generally-Available-in-Visual-Studio-with-MCP-Support.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent Mode", "Agents Toolkit", "AI", "AI Assisted Development", "Automation", "Coding", "Copilot", "Copilot Chat", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 4.1", "MCP", "News", "Prompt Sharing", "Tool Calling", "VS"]
-tags_normalized: ["dotnet", "agent mode", "agents toolkit", "ai", "ai assisted development", "automation", "coding", "copilot", "copilot chat", "gemini 2dot5 pro", "github copilot", "gpt 4dot1", "mcp", "news", "prompt sharing", "tool calling", "vs"]
+permalink: /github-copilot/news/Agent-Mode-Now-Generally-Available-in-Visual-Studio-with-MCP-Support
+tags:
+- .NET
+- Agent Mode
+- Agents Toolkit
+- AI
+- AI Assisted Development
+- Automation
+- Coding
+- Copilot
+- Copilot Chat
+- Gemini 2.5 Pro
+- GitHub Copilot
+- GPT 4.1
+- MCP
+- News
+- Prompt Sharing
+- Tool Calling
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Authored by Rhea Patel, Filisha Shah, and Allie Barry, this piece covers the Visual Studio June update featuring general availability of Copilot agent mode with MCP integration, enabling sophisticated autonomous AI development support in Visual Studio.<!--excerpt_end-->
 
 # Copilot Agent Mode Now Generally Available with MCP Support

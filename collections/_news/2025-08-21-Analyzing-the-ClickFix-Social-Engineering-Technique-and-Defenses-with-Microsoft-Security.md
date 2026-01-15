@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security"
-description: "This blog post presents an in-depth analysis of the ClickFix social engineering attack chain, showing how threat actors exploit user behavior to run malicious commands via phishing, malvertising, and drive-by attacks. Microsoft Threat Intelligence and Defender Experts detail attack vectors, malware delivery, investigation techniques, guidance for detection using Microsoft Defender XDR, and practical protection strategies tailored for enterprise environments."
-author: "Microsoft Threat Intelligence and Microsoft Defender Experts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security
+author: Microsoft Threat Intelligence and Microsoft Defender Experts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-21 16:00:00 +00:00
-permalink: "/2025-08-21-Analyzing-the-ClickFix-Social-Engineering-Technique-and-Defenses-with-Microsoft-Security.html"
-categories: ["Azure", "Security"]
-tags: ["Attack Chain", "Azure", "ClickFix", "Detection", "Drive By Compromise", "Endpoint Protection", "Incident Response", "Infostealer", "LOLBins", "Macos Security", "Malvertising", "Malware", "Microsoft Defender", "Microsoft Defender For Office 365", "Microsoft Defender XDR", "Microsoft Security Copilot", "Microsoft Threat Intelligence", "News", "Phishing", "PowerShell", "RunMRU", "Security", "Security Mitigation", "Social Engineering", "Windows Security"]
-tags_normalized: ["attack chain", "azure", "clickfix", "detection", "drive by compromise", "endpoint protection", "incident response", "infostealer", "lolbins", "macos security", "malvertising", "malware", "microsoft defender", "microsoft defender for office 365", "microsoft defender xdr", "microsoft security copilot", "microsoft threat intelligence", "news", "phishing", "powershell", "runmru", "security", "security mitigation", "social engineering", "windows security"]
+permalink: /azure/news/Analyzing-the-ClickFix-Social-Engineering-Technique-and-Defenses-with-Microsoft-Security
+tags:
+- Attack Chain
+- Azure
+- ClickFix
+- Detection
+- Drive By Compromise
+- Endpoint Protection
+- Incident Response
+- Infostealer
+- LOLBins
+- Macos Security
+- Malvertising
+- Malware
+- Microsoft Defender
+- Microsoft Defender For Office 365
+- Microsoft Defender XDR
+- Microsoft Security Copilot
+- Microsoft Threat Intelligence
+- News
+- Phishing
+- PowerShell
+- RunMRU
+- Security
+- Security Mitigation
+- Social Engineering
+- Windows Security
+section_names:
+- azure
+- security
 ---
-
 Microsoft Threat Intelligence and Defender Experts offer a comprehensive analysis of the evolving ClickFix social engineering campaigns targeting enterprise users, with detailed recommendations for detecting, responding, and mitigating these attacks using Microsoft security solutions.<!--excerpt_end-->
 
 # Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security

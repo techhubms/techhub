@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "L&G Reinvents Customer Care with AI-Powered Microsoft Platform"
-description: "This article details Legal & General's (L&G) collaboration with Microsoft to create an AI-enhanced customer service platform. Leveraging Microsoft Dynamics 365 Contact Centre and Copilot, the solution unifies disparate systems, streamlines workflows for 2,800 employees, and improves service for over 12 million customers. The project emphasizes human-centered AI, improved security, and scalable infrastructure using Microsoft's Azure and Power Platform. Insights from Craig Brown, Chief Operating Officer, describe how the technology frees staff for more meaningful customer interactions, provides real-time analytics, and supports the company's long-term digital transformation strategy."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: L&G Reinvents Customer Care with AI-Powered Microsoft Platform
+author: stclarke
+canonical_url: https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:55:53 +00:00
-permalink: "/2025-10-16-LandG-Reinvents-Customer-Care-with-AI-Powered-Microsoft-Platform.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Powered Customer Service", "Azure", "Business Intelligence", "Case Summarization", "Company News", "Contact Centre", "Customer Data Security", "Digital Transformation", "Financial Services", "Microsoft Copilot", "Microsoft Dynamics 365", "Microsoft Ecosystem", "News", "Power Platform", "Process Automation", "Sentiment Analysis", "UK Financial Services"]
-tags_normalized: ["ai", "ai powered customer service", "azure", "business intelligence", "case summarization", "company news", "contact centre", "customer data security", "digital transformation", "financial services", "microsoft copilot", "microsoft dynamics 365", "microsoft ecosystem", "news", "power platform", "process automation", "sentiment analysis", "uk financial services"]
+permalink: /ai/news/LandG-Reinvents-Customer-Care-with-AI-Powered-Microsoft-Platform
+tags:
+- AI
+- AI Powered Customer Service
+- Azure
+- Business Intelligence
+- Case Summarization
+- Company News
+- Contact Centre
+- Customer Data Security
+- Digital Transformation
+- Financial Services
+- Microsoft Copilot
+- Microsoft Dynamics 365
+- Microsoft Ecosystem
+- News
+- Power Platform
+- Process Automation
+- Sentiment Analysis
+- UK Financial Services
+section_names:
+- ai
+- azure
 ---
-
 stclarke explains how Legal & General is transforming customer care by integrating Microsoft AI, Azure, and Dynamics 365 Contact Centre, delivering smarter and unified experiences for millions.<!--excerpt_end-->
 
 # L&G Reinvents Customer Care with AI-Powered Microsoft Platform

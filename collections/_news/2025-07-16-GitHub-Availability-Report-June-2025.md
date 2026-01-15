@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GitHub Availability Report: June 2025"
-description: "The June 2025 GitHub Availability Report details three service incidents affecting Actions, Copilot, and general site availability. The report outlines causes, impacts, mitigation efforts, and preventive actions, providing transparency into GitHub's ongoing operational improvements."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-june-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Availability Report: June 2025'
+author: Jakub Oleksy
+canonical_url: https://github.blog/news-insights/company-news/github-availability-report-june-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-16 21:06:17 +00:00
-permalink: "/2025-07-16-GitHub-Availability-Report-June-2025.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Claude Models", "Company News", "Copilot Chat", "Copilot Coding Agent", "DevOps", "Error Rates", "Gemini Models", "GitHub Actions", "GitHub Availability Report", "GitHub Copilot", "Incident Report", "JetBrains IDEs", "Mitigation", "Network Routing", "News", "News & Insights", "Service Outage", "Site Reliability", "VS Code"]
-tags_normalized: ["ai", "claude models", "company news", "copilot chat", "copilot coding agent", "devops", "error rates", "gemini models", "github actions", "github availability report", "github copilot", "incident report", "jetbrains ides", "mitigation", "network routing", "news", "news and insights", "service outage", "site reliability", "vs code"]
+permalink: /github-copilot/news/GitHub-Availability-Report-June-2025
+tags:
+- AI
+- Claude Models
+- Company News
+- Copilot Chat
+- Copilot Coding Agent
+- DevOps
+- Error Rates
+- Gemini Models
+- GitHub Actions
+- GitHub Availability Report
+- GitHub Copilot
+- Incident Report
+- JetBrains IDEs
+- Mitigation
+- Network Routing
+- News
+- News & Insights
+- Service Outage
+- Site Reliability
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Jakub Oleksy reviews service incidents that impacted GitHub, including Copilot and Actions, in the June 2025 Availability Report.<!--excerpt_end-->
 
 ## Summary of the June 2025 GitHub Availability Report

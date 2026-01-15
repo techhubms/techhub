@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Migrating to Microsoft Fabric: Unifying Your Data Journey"
-description: "This session from Microsoft Ignite 2025 explores how organizations can streamline migration from Azure Synapse Gen 2 and Azure Data Factory to Microsoft Fabric. Key topics include migration scenarios, best practices, platform integration strategies, and how Fabric provides a unified solution for data integration, transformation, and analytics. The presentation offers both strategic and technical guidance for modernizing your data estate while reducing complexity and accelerating projects."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FwMIgQ2e17A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Migrating to Microsoft Fabric: Unifying Your Data Journey'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=FwMIgQ2e17A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:28:39 +00:00
-permalink: "/2025-11-20-Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Factory", "Azure Synapse Gen 2", "Cloud Data Warehouse", "Copy Job", "Data Analytics", "Data Integration", "Data Migration", "Data Transformation", "Fabric Warehouse", "Ignite2025", "Microsoft Fabric", "Migration Best Practices", "Migration Pathways", "ML", "Modern Data Estate", "MSIgnite", "Spark Engineering", "Statsig", "Unifyyourdataplatform", "Videos", "Warehouse Native"]
-tags_normalized: ["azure", "azure data factory", "azure synapse gen 2", "cloud data warehouse", "copy job", "data analytics", "data integration", "data migration", "data transformation", "fabric warehouse", "ignite2025", "microsoft fabric", "migration best practices", "migration pathways", "ml", "modern data estate", "msignite", "spark engineering", "statsig", "unifyyourdataplatform", "videos", "warehouse native"]
+permalink: /ml/videos/Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey
+tags:
+- Azure
+- Azure Data Factory
+- Azure Synapse Gen 2
+- Cloud Data Warehouse
+- Copy Job
+- Data Analytics
+- Data Integration
+- Data Migration
+- Data Transformation
+- Fabric Warehouse
+- Ignite2025
+- Microsoft Fabric
+- Migration Best Practices
+- Migration Pathways
+- ML
+- Modern Data Estate
+- MSIgnite
+- Spark Engineering
+- Statsig
+- Unifyyourdataplatform
+- Videos
+- Warehouse Native
+section_names:
+- azure
+- ml
 ---
-
 Presented by Jenny Jiang, Mark Kromer, Priyanka Langade, and Pushpendra Nagtode, this Ignite 2025 session details the migration process to Microsoft Fabric and how it unifies complex data operations for enterprises.<!--excerpt_end-->
 
 {% youtube FwMIgQ2e17A %}

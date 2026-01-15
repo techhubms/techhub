@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "System Initiative Introduces Autonomous AI Agents for Infrastructure Automation"
-description: "This article discusses System Initiative’s integration of autonomous AI agents into its infrastructure automation platform. The AI agents use digital twins to allow DevOps teams to optimize IT infrastructure by proposing, validating, and automating changes while ensuring compliance and operational efficiency."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/system-initiative-adds-ai-agents-to-infrastructure-automation-platform/?utm_source=rss&utm_medium=rss&utm_campaign=system-initiative-adds-ai-agents-to-infrastructure-automation-platform"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: System Initiative Introduces Autonomous AI Agents for Infrastructure Automation
+author: Mike Vizard
+canonical_url: https://devops.com/system-initiative-adds-ai-agents-to-infrastructure-automation-platform/?utm_source=rss&utm_medium=rss&utm_campaign=system-initiative-adds-ai-agents-to-infrastructure-automation-platform
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-27 15:00:22 +00:00
-permalink: "/2025-08-27-System-Initiative-Introduces-Autonomous-AI-Agents-for-Infrastructure-Automation.html"
-categories: ["AI", "DevOps"]
-tags: ["Adam Jacob", "AI", "AI Agents", "AI in DevOps", "AI Powered DevOps", "Automation Platform", "Autonomous AI", "Blogs", "Business Of DevOps", "Cloud Automation", "Compliance Guardrails", "DevOps", "DevOps Automation", "DevOps Engineers", "DevOps Workflows", "Digital Twin", "IaC", "Infrastructure Automation", "Infrastructure Misconfigurations", "Infrastructure Optimization", "Infrastructure Resilience", "IT Infrastructure Management", "IT Operations", "Knowledge Graph", "Natural Language Prompts", "Policy Checks", "Social Facebook", "Social LinkedIn", "Social X", "System Initiative"]
-tags_normalized: ["adam jacob", "ai", "ai agents", "ai in devops", "ai powered devops", "automation platform", "autonomous ai", "blogs", "business of devops", "cloud automation", "compliance guardrails", "devops", "devops automation", "devops engineers", "devops workflows", "digital twin", "iac", "infrastructure automation", "infrastructure misconfigurations", "infrastructure optimization", "infrastructure resilience", "it infrastructure management", "it operations", "knowledge graph", "natural language prompts", "policy checks", "social facebook", "social linkedin", "social x", "system initiative"]
+permalink: /ai/blogs/System-Initiative-Introduces-Autonomous-AI-Agents-for-Infrastructure-Automation
+tags:
+- Adam Jacob
+- AI
+- AI Agents
+- AI in DevOps
+- AI Powered DevOps
+- Automation Platform
+- Autonomous AI
+- Blogs
+- Business Of DevOps
+- Cloud Automation
+- Compliance Guardrails
+- DevOps
+- DevOps Automation
+- DevOps Engineers
+- DevOps Workflows
+- Digital Twin
+- IaC
+- Infrastructure Automation
+- Infrastructure Misconfigurations
+- Infrastructure Optimization
+- Infrastructure Resilience
+- IT Infrastructure Management
+- IT Operations
+- Knowledge Graph
+- Natural Language Prompts
+- Policy Checks
+- Social Facebook
+- Social LinkedIn
+- Social X
+- System Initiative
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard explores how System Initiative is adding autonomous AI agents to its infrastructure automation platform, allowing DevOps teams to use digital twins for faster and safer IT operations.<!--excerpt_end-->
 
 # System Initiative Introduces Autonomous AI Agents for Infrastructure Automation

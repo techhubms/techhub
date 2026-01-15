@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Debugging, but Without the Drama: Visual Studio 2026’s Copilot-Powered Experience"
-description: "Discover how Visual Studio 2026 streamlines debugging for developers by leveraging GitHub Copilot's integrated features. This story follows Sam, a developer who benefits from faster debugging launches, context-aware exception analysis, inline variable inspection, and AI-driven test debugging. Visual Studio 2026 aims to ease the debugging workflow without replacing developer control, bringing smarter assistance directly into the editor. Key highlights include contextual Copilot Chat, inline values, and AI-guided test debugging—all designed to make bug fixing less stressful and more productive."
-author: "Harshada Hole"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Debugging, but Without the Drama: Visual Studio 2026’s Copilot-Powered Experience'
+author: Harshada Hole
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-16 15:00:12 +00:00
-permalink: "/2025-12-16-Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Debugging", "Bug Fixing", "Code Analysis", "Coding", "Copilot Chat", "Debugger Agent", "Debugging And Diagnostics", "Developer Productivity", "Editor Integration", "Exception Assistance", "GitHub Copilot", "Inline Values", "News", "Performance", "Software Development", "Test Debugging", "VS"]
-tags_normalized: ["ai", "ai debugging", "bug fixing", "code analysis", "coding", "copilot chat", "debugger agent", "debugging and diagnostics", "developer productivity", "editor integration", "exception assistance", "github copilot", "inline values", "news", "performance", "software development", "test debugging", "vs"]
+permalink: /github-copilot/news/Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience
+tags:
+- AI
+- AI Debugging
+- Bug Fixing
+- Code Analysis
+- Coding
+- Copilot Chat
+- Debugger Agent
+- Debugging And Diagnostics
+- Developer Productivity
+- Editor Integration
+- Exception Assistance
+- GitHub Copilot
+- Inline Values
+- News
+- Performance
+- Software Development
+- Test Debugging
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Harshada Hole showcases how Visual Studio 2026 integrates GitHub Copilot for a more intuitive and effective debugging experience, highlighting real-world scenarios where AI-driven features add value.<!--excerpt_end-->
 
 # Debugging, but Without the Drama: A Visual Studio 2026 Story

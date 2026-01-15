@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "What's New in Visual Studio Code August 2025 (v1.104)"
-description: "Explore the key features and improvements in the Visual Studio Code August 2025 (1.104) release. Learn about AI-assisted development with GitHub Copilot integration, new chat and agent capabilities, enhanced security features for sensitive operations, productivity tools, extension APIs, language-specific updates, and more. This release is packed with enhancements for developers working across languages and DevOps workflows, from safer automation to improved semantic code search."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_104"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: What's New in Visual Studio Code August 2025 (v1.104)
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_104
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-09-11 17:00:00 +00:00
-permalink: "/2025-09-11-Whats-New-in-Visual-Studio-Code-August-2025-v1104.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Chat Features", "Coding", "Coding Agents", "DevOps", "Extension APIs", "GitHub Copilot", "JavaScript", "Model Selection", "News", "Productivity Tools", "Python", "Release Notes", "Source Control", "Terminal Improvements", "TypeScript", "VS Code", "VS Code 1.104"]
-tags_normalized: ["ai", "ai powered development", "chat features", "coding", "coding agents", "devops", "extension apis", "github copilot", "javascript", "model selection", "news", "productivity tools", "python", "release notes", "source control", "terminal improvements", "typescript", "vs code", "vs code 1dot104"]
+permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-August-2025-v1104
+tags:
+- AI
+- AI Powered Development
+- Chat Features
+- Coding
+- Coding Agents
+- DevOps
+- Extension APIs
+- GitHub Copilot
+- JavaScript
+- Model Selection
+- News
+- Productivity Tools
+- Python
+- Release Notes
+- Source Control
+- Terminal Improvements
+- TypeScript
+- VS Code
+- VS Code 1.104
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Visual Studio Code Team's August 2025 release introduces AI-powered features and tighter GitHub Copilot integration, boosting developer productivity and security with expanded chat, coding agents, and model selection improvements.<!--excerpt_end-->
 
 # What's New in Visual Studio Code August 2025 (v1.104)

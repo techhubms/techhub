@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Create GitHub Copilot Instructions in Just One Click"
-description: "This video demonstrates how to leverage GitHub Copilot's new 'Generate instructions' feature to automatically analyze your repository and create tailored instructions for Copilot's coding assistant. Viewers will learn how this capability enhances Copilot's context awareness, resulting in more accurate code suggestions and improved AI assistance, all with a single click."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/wOV0ebsqb88"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Create GitHub Copilot Instructions in Just One Click
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/wOV0ebsqb88
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-31 14:01:22 +00:00
-permalink: "/2025-08-31-Create-GitHub-Copilot-Instructions-in-Just-One-Click.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Integration", "Codebase Context", "Coding Productivity", "Copilot Features", "Custom Instructions", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Repository Analysis", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai coding assistant", "ai integration", "codebase context", "coding productivity", "copilot features", "custom instructions", "developer", "developer tools", "github", "github copilot", "repository analysis", "software development", "videos"]
+permalink: /github-copilot/videos/Create-GitHub-Copilot-Instructions-in-Just-One-Click
+tags:
+- AI
+- AI Coding Assistant
+- AI Integration
+- Codebase Context
+- Coding Productivity
+- Copilot Features
+- Custom Instructions
+- Developer
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Repository Analysis
+- Software Development
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this GitHub video, the team demonstrates how developers can use the new 'Generate instructions' feature in GitHub Copilot. The video, presented by GitHub, highlights how providing full repository context leads to more targeted AI-powered coding assistance.<!--excerpt_end-->
 
 {% youtube wOV0ebsqb88 %}

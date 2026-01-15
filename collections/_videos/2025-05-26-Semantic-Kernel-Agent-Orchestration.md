@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Semantic Kernel Agent Orchestration"
-description: "This video explores how Semantic Kernel empowers developers to build and orchestrate multi-agent AI systems. It explains how coordinating multiple intelligent agents with specialized skills leads to smarter, adaptive solutions for complex real-world problems. Semantic Kernel’s agent orchestration capabilities, design patterns for collaboration, and flexible coordination strategies are demonstrated, all within a Microsoft-centric AI developer context."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3ZEjxKwaKjQ"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: Semantic Kernel Agent Orchestration
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=3ZEjxKwaKjQ
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-05-26 10:48:05 +00:00
-permalink: "/2025-05-26-Semantic-Kernel-Agent-Orchestration.html"
-categories: ["AI", "Coding"]
-tags: ["Adaptive Solutions", "Agent Coordination", "Agent Orchestration", "AI", "AI Development", "AI Frameworks", "AI Orchestration", "AI Systems", "Coding", "Collaboration Patterns", "Intelligent Agents", "Microsoft", "Microsoft AI", "Multi Agent Systems", "Semantic Kernel", "Videos"]
-tags_normalized: ["adaptive solutions", "agent coordination", "agent orchestration", "ai", "ai development", "ai frameworks", "ai orchestration", "ai systems", "coding", "collaboration patterns", "intelligent agents", "microsoft", "microsoft ai", "multi agent systems", "semantic kernel", "videos"]
+permalink: /ai/videos/Semantic-Kernel-Agent-Orchestration
+tags:
+- Adaptive Solutions
+- Agent Coordination
+- Agent Orchestration
+- AI
+- AI Development
+- AI Frameworks
+- AI Orchestration
+- AI Systems
+- Coding
+- Collaboration Patterns
+- Intelligent Agents
+- Microsoft
+- Microsoft AI
+- Multi Agent Systems
+- Semantic Kernel
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Learn Microsoft AI presents a video on building multi-agent systems through Semantic Kernel, demonstrating how agent orchestration leads to smarter, more adaptive AI solutions.<!--excerpt_end-->
 
 {% youtube 3ZEjxKwaKjQ %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response"
-description: "This session from Microsoft Ignite 2025 examines how organizations can boost their security operations by integrating Lumen Defender with Microsoft’s native security stack. Speakers highlight practical challenges SOC teams face, explain the role of Black Lotus Labs in providing threat intelligence, and detail the capabilities of Microsoft Security platforms. Attendees are equipped with actionable guidance for strengthening their security posture and using network-level intelligence to complement endpoint protections."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Hk1o8zMqPA8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Hk1o8zMqPA8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:05:46 +00:00
-permalink: "/2025-11-24-Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response.html"
-categories: ["Security"]
-tags: ["Black Lotus Labs", "Compliance", "Early Warning Systems", "Endpoint Protection", "Incident Response", "Lumen Defender", "Microsoft Ignite", "Microsoft Security", "MSIgnite", "Network Visibility", "Secureyourdata", "Security", "Security Connectors", "Security Platform", "Security Store", "SOC Operations", "Threat Detection", "Threat Intelligence", "Videos"]
-tags_normalized: ["black lotus labs", "compliance", "early warning systems", "endpoint protection", "incident response", "lumen defender", "microsoft ignite", "microsoft security", "msignite", "network visibility", "secureyourdata", "security", "security connectors", "security platform", "security store", "soc operations", "threat detection", "threat intelligence", "videos"]
+permalink: /security/videos/Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response
+tags:
+- Black Lotus Labs
+- Compliance
+- Early Warning Systems
+- Endpoint Protection
+- Incident Response
+- Lumen Defender
+- Microsoft Ignite
+- Microsoft Security
+- MSIgnite
+- Network Visibility
+- Secureyourdata
+- Security
+- Security Connectors
+- Security Platform
+- Security Store
+- SOC Operations
+- Threat Detection
+- Threat Intelligence
+- Videos
+section_names:
+- security
 ---
-
 Presented by Microsoft Events, this Ignite 2025 session features Ankur Arora, Craig D’Abreo, and Susmita Nayak discussing how Lumen Defender augments Microsoft Security solutions and empowers SOC teams with advanced threat intelligence.<!--excerpt_end-->
 
 {% youtube Hk1o8zMqPA8 %}

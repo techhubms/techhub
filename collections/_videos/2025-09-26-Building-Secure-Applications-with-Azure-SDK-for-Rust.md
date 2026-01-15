@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Secure Applications with Azure SDK for Rust"
-description: "This session explores the Azure SDK for Rust, focusing on how developers can build secure, memory-safe, and high-performance cloud applications. With practical examples, such as managing secrets using Azure Key Vault, viewers are guided through best practices for creating secure-by-default solutions on Azure. Whether you're new to Rust or a seasoned developer, the talk delivers actionable insights and demonstrates real-world use cases for integrating Rust with Azure services."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2a94mcuzGQE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building Secure Applications with Azure SDK for Rust
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=2a94mcuzGQE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-26 22:29:01 +00:00
-permalink: "/2025-09-26-Building-Secure-Applications-with-Azure-SDK-for-Rust.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Azure", "Azure Key Vault", "Azure SDK", "Cloud Development", "Coding", "Developer Tools", "High Performance Computing", "Memory Safety", "Microsoft Build", "MSBuild", "Programming Languages", "Rust", "Secrets Management", "Secure Applications", "Security", "Security Best Practices", "Videos"]
-tags_normalized: ["azure", "azure key vault", "azure sdk", "cloud development", "coding", "developer tools", "high performance computing", "memory safety", "microsoft build", "msbuild", "programming languages", "rust", "secrets management", "secure applications", "security", "security best practices", "videos"]
+permalink: /coding/videos/Building-Secure-Applications-with-Azure-SDK-for-Rust
+tags:
+- Azure
+- Azure Key Vault
+- Azure SDK
+- Cloud Development
+- Coding
+- Developer Tools
+- High Performance Computing
+- Memory Safety
+- Microsoft Build
+- MSBuild
+- Programming Languages
+- Rust
+- Secrets Management
+- Secure Applications
+- Security
+- Security Best Practices
+- Videos
+section_names:
+- azure
+- coding
+- security
 ---
-
 Heath Stewart of Microsoft Developer presents a session on how to leverage the Azure SDK for Rust to build secure and high-performance cloud applications with robust secrets management and memory safety.<!--excerpt_end-->
 
 {% youtube 2a94mcuzGQE %}

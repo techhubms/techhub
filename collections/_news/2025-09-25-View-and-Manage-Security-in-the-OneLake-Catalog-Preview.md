@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "View and Manage Security in the OneLake Catalog (Preview)"
-description: "This article introduces the Secure tab in the OneLake catalog for Microsoft Fabric, offering governance teams and workspace owners a streamlined experience for viewing and managing permissions across Fabric items. The Secure tab centralizes user and security role reviews, supports workspace filtering, and enables editing of row-level and column-level security to promote robust least-privilege access management."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/view-and-manage-security-in-the-onelake-catalog-now-in-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: View and Manage Security in the OneLake Catalog (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/view-and-manage-security-in-the-onelake-catalog-now-in-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-25 15:00:00 +00:00
-permalink: "/2025-09-25-View-and-Manage-Security-in-the-OneLake-Catalog-Preview.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure Data Platform", "Column Level Security", "Data Governance", "Fabric Governance", "Least Privilege", "Microsoft Fabric", "News", "OneLake Catalog", "Permissions Management", "Role Management", "Row Level Security", "Secure Tab", "Security", "Security Roles", "Workspace Roles"]
-tags_normalized: ["access control", "azure", "azure data platform", "column level security", "data governance", "fabric governance", "least privilege", "microsoft fabric", "news", "onelake catalog", "permissions management", "role management", "row level security", "secure tab", "security", "security roles", "workspace roles"]
+permalink: /azure/news/View-and-Manage-Security-in-the-OneLake-Catalog-Preview
+tags:
+- Access Control
+- Azure
+- Azure Data Platform
+- Column Level Security
+- Data Governance
+- Fabric Governance
+- Least Privilege
+- Microsoft Fabric
+- News
+- OneLake Catalog
+- Permissions Management
+- Role Management
+- Row Level Security
+- Secure Tab
+- Security
+- Security Roles
+- Workspace Roles
+section_names:
+- azure
+- security
 ---
-
 The Microsoft Fabric Blog details how workspace owners and governance teams can use the Secure tab in the OneLake catalog to efficiently manage access and security roles. Author: Microsoft Fabric Blog.<!--excerpt_end-->
 
 # View and Manage Security in the OneLake Catalog (Preview)

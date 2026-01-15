@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deploying Hybrid Azure Logic Apps on K3s for Lightweight, On-Premises Integration"
-description: "This guide by praveensri explains how to deploy Azure Logic Apps Standard in hybrid mode on a K3s Kubernetes cluster, enabling integration scenarios close to on-premises data sources. The article provides step-by-step setup including K3s installation, Azure Arc integration, storage configuration with SQL and SMB, and Logic Apps workflow creation. Designed for environments where full-scale Kubernetes may not be practical, the walkthrough demonstrates leveraging lightweight infrastructure with full Azure Logic Apps functionality."
-author: "praveensri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying Hybrid Azure Logic Apps on K3s for Lightweight, On-Premises Integration
+author: praveensri
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-27 18:22:42 +00:00
-permalink: "/2025-08-27-Deploying-Hybrid-Azure-Logic-Apps-on-K3s-for-Lightweight-On-Premises-Integration.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Arc", "Azure Logic Apps", "Cluster Management", "Coding", "Community", "DevOps", "Docker Desktop", "Edge Computing", "Hybrid Deployment", "IaC", "K3s", "Kubernetes", "Logic Apps Standard", "PowerShell", "SMB File Share", "SQL Server", "Workflow Automation"]
-tags_normalized: ["azure", "azure arc", "azure logic apps", "cluster management", "coding", "community", "devops", "docker desktop", "edge computing", "hybrid deployment", "iac", "k3s", "kubernetes", "logic apps standard", "powershell", "smb file share", "sql server", "workflow automation"]
+permalink: /coding/community/Deploying-Hybrid-Azure-Logic-Apps-on-K3s-for-Lightweight-On-Premises-Integration
+tags:
+- Azure
+- Azure Arc
+- Azure Logic Apps
+- Cluster Management
+- Coding
+- Community
+- DevOps
+- Docker Desktop
+- Edge Computing
+- Hybrid Deployment
+- IaC
+- K3s
+- Kubernetes
+- Logic Apps Standard
+- PowerShell
+- SMB File Share
+- SQL Server
+- Workflow Automation
+section_names:
+- azure
+- coding
+- devops
 ---
-
 praveensri demonstrates how to deploy Hybrid Azure Logic Apps on a lightweight K3s Kubernetes cluster, detailing infrastructure setup, Azure Arc integration, and hybrid configuration for on-premises or edge environments.<!--excerpt_end-->
 
 # Deploying Hybrid Azure Logic Apps on K3s for Lightweight, On-Premises Integration
@@ -79,14 +96,13 @@ Hybrid deployments of Azure Logic Apps allow organizations to run workflows clos
         Write-Host "❌ Connection failed: $(---
 layout: "post"
 title: "Deploying Hybrid Azure Logic Apps on K3s for Lightweight, On-Premises Integration"
-description: "This guide by praveensri explains how to deploy Azure Logic Apps Standard in hybrid mode on a K3s Kubernetes cluster, enabling integration scenarios close to on-premises data sources. The article provides step-by-step setup including K3s installation, Azure Arc integration, storage configuration with SQL and SMB, and Logic Apps workflow creation. Designed for environments where full-scale Kubernetes may not be practical, the walkthrough demonstrates leveraging lightweight infrastructure with full Azure Logic Apps functionality."
 author: "praveensri"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
-date: 2025-08-27 18:22:42 +00:00
+date: "2025-08-27 18:22:42 +00:00"
 permalink: "2025-08-27-Deploying-Hybrid-Azure-Logic-Apps-on-K3s-for-Lightweight-On-Premises-Integration.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure Arc", "Azure Logic Apps", "Cluster Management", "Coding", "Community", "DevOps", "Docker Desktop", "Edge Computing", "Hybrid Deployment", "IaC", "K3s", "Kubernetes", "Logic Apps Standard", "PowerShell", "SMB File Share", "SQL Server", "Workflow Automation"]

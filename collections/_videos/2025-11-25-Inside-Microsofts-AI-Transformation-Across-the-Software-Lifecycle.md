@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Inside Microsoft's AI Transformation Across the Software Lifecycle"
-description: "This session from Microsoft Ignite 2025 explores the impact of AI and agentic automation on modern DevOps, detailing how Microsoft leverages tools such as GitHub Copilot, Microsoft Foundry, and Azure to drive faster, more secure software delivery. Speakers share practical insights, engineering standards, and AI-driven strategies that shape the future of team collaboration and innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=opq5Y3QyXmY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Inside Microsoft's AI Transformation Across the Software Lifecycle
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=opq5Y3QyXmY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:37:51 +00:00
-permalink: "/2025-11-25-Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agentic DevOps", "AI", "AI Powered Tools", "Automation", "Azure", "Azure AI", "Cloud Developer Infrastructure", "Code Alignment", "DevOps", "DevOps Transformation", "Engineering Standards", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "Migration Systems", "MSIgnite", "Pipeline Templates", "Software Engineering", "Technical Debt", "Videos"]
-tags_normalized: ["agentic devops", "ai", "ai powered tools", "automation", "azure", "azure ai", "cloud developer infrastructure", "code alignment", "devops", "devops transformation", "engineering standards", "github copilot", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "migration systems", "msignite", "pipeline templates", "software engineering", "technical debt", "videos"]
+permalink: /github-copilot/videos/Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle
+tags:
+- Agentic DevOps
+- AI
+- AI Powered Tools
+- Automation
+- Azure
+- Azure AI
+- Cloud Developer Infrastructure
+- Code Alignment
+- DevOps
+- DevOps Transformation
+- Engineering Standards
+- GitHub Copilot
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Microsoft Ignite
+- Migration Systems
+- MSIgnite
+- Pipeline Templates
+- Software Engineering
+- Technical Debt
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents a deep dive into how Amanda Silver, Jenny Ferries, and Karl Piteira lead Microsoft’s transformation of the software lifecycle using AI, DevOps automation, and cloud engineering standards.<!--excerpt_end-->
 
 {% youtube opq5Y3QyXmY %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Releases and Tags Disappearing: Troubleshooting GitHub Branch and Tag Issues"
-description: "The author describes confusion around disappearing branches, tags, and releases on GitHub when working with multiple branches and releases. Despite using standard git commands and having minimal automation, releases and tags seem to arbitrarily vanish. The article seeks advice for understanding and resolving these inconsistencies."
-author: "Discommodian"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mfuewy/releases_and_tags_disappearing/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: 'Releases and Tags Disappearing: Troubleshooting GitHub Branch and Tag Issues'
+author: Discommodian
+canonical_url: https://www.reddit.com/r/github/comments/1mfuewy/releases_and_tags_disappearing/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-02 16:13:34 +00:00
-permalink: "/2025-08-02-Releases-and-Tags-Disappearing-Troubleshooting-GitHub-Branch-and-Tag-Issues.html"
-categories: ["DevOps"]
-tags: ["Actions", "Branches", "Community", "DevOps", "Docker", "Git", "Git Push", "GitHub", "Snyk", "Tags", "Webhooks"]
-tags_normalized: ["actions", "branches", "community", "devops", "docker", "git", "git push", "github", "snyk", "tags", "webhooks"]
+permalink: /devops/community/Releases-and-Tags-Disappearing-Troubleshooting-GitHub-Branch-and-Tag-Issues
+tags:
+- Actions
+- Branches
+- Community
+- DevOps
+- Docker
+- Git
+- Git Push
+- GitHub
+- Snyk
+- Tags
+- Webhooks
+section_names:
+- devops
 ---
-
 Discommodian shares their experience with unpredictable disappearance of tags, branches, and releases in their GitHub repository, seeking advice from the community.<!--excerpt_end-->
 
 ## Introduction

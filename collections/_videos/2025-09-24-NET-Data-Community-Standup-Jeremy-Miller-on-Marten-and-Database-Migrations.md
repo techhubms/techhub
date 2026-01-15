@@ -1,20 +1,30 @@
----
-layout: "post"
-title: ".NET Data Community Standup: Jeremy Miller on Marten and Database Migrations"
-description: "This .NET Data Community Standup session features Jeremy Miller, the developer of Marten, as he discusses modern approaches to database migrations and the growing capabilities of the Marten library. The discussion covers the roles of Marten and Entity Framework Core (EF Core) in .NET development, migration strategies, architectural trends, and practical advice for .NET data practitioners."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_ICoF0utyt4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET Data Community Standup: Jeremy Miller on Marten and Database Migrations'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=_ICoF0utyt4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-24 23:13:32 +00:00
-permalink: "/2025-09-24-NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Data Architecture", "Data Persistence", "Database Migrations", "EF", "EF Core", "Jeremy Miller", "Marten", "Migrations", "ORM", "Videos"]
-tags_normalized: ["dotnet", "csharp", "coding", "data architecture", "data persistence", "database migrations", "ef", "ef core", "jeremy miller", "marten", "migrations", "orm", "videos"]
+permalink: /coding/videos/NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations
+tags:
+- .NET
+- C#
+- Coding
+- Data Architecture
+- Data Persistence
+- Database Migrations
+- EF
+- EF Core
+- Jeremy Miller
+- Marten
+- Migrations
+- ORM
+- Videos
+section_names:
+- coding
 ---
-
 Jeremy Miller joins the .NET Data Community Standup to discuss his perspectives on database migrations and the Marten library, in a session with Jiri Cincura and Shay Rojansky.<!--excerpt_end-->
 
 {% youtube _ICoF0utyt4 %}

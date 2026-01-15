@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Cost Management Updates: July & August 2025"
-description: "This post from Britt Henderson on the Microsoft Azure Blog summarizes the latest advancements in Microsoft Cost Management for July and August 2025. Key updates include improvements in cost monitoring, automation enhancements, pricing calculator tips, new cost-saving features such as Azure Firewall log transformation, and documentation. The article also highlights integration with Azure Active Directory, new video resources, and guidance for both partners and customers aiming to optimize and govern Azure spending effectively."
-author: "Britt Henderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Cost Management Updates: July & August 2025'
+author: Britt Henderson
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 15:00:00 +00:00
-permalink: "/2025-09-04-Microsoft-Cost-Management-Updates-July-and-August-2025.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Documentation", "Azure Firewall", "Azure Pricing Calculator", "Azure Storage Mover", "Billing", "Billing Automation", "Cloud Governance", "Cost Optimization", "Enterprise Agreement", "Log Analytics", "Management And Governance", "Microsoft Cost Management", "Migration", "News", "Role Based Access Control", "Savings Plan", "Service Principal"]
-tags_normalized: ["azure", "azure documentation", "azure firewall", "azure pricing calculator", "azure storage mover", "billing", "billing automation", "cloud governance", "cost optimization", "enterprise agreement", "log analytics", "management and governance", "microsoft cost management", "migration", "news", "role based access control", "savings plan", "service principal"]
+permalink: /azure/news/Microsoft-Cost-Management-Updates-July-and-August-2025
+tags:
+- Azure
+- Azure Documentation
+- Azure Firewall
+- Azure Pricing Calculator
+- Azure Storage Mover
+- Billing
+- Billing Automation
+- Cloud Governance
+- Cost Optimization
+- Enterprise Agreement
+- Log Analytics
+- Management And Governance
+- Microsoft Cost Management
+- Migration
+- News
+- Role Based Access Control
+- Savings Plan
+- Service Principal
+section_names:
+- azure
 ---
-
 Britt Henderson presents the July & August 2025 updates for Microsoft Cost Management, covering new features, automation improvements, and partner-focused enhancements to help Azure users monitor, control, and optimize their cloud expenditures.<!--excerpt_end-->
 
 # Microsoft Cost Management Updates—July & August 2025

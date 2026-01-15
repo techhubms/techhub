@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Data Integration with Microsoft Fabric: Unifying Your Data Universe"
-description: "This article explores Microsoft Fabric as a unified analytics platform for data integration, covering its core capabilities, such as Dataflows Gen2, integrated Azure Data Factory pipelines, real-time data movement, and the OneLake storage foundation. It provides practical use cases and discusses the benefits in governance, scalability, and collaboration for data-driven organizations."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Data Integration with Microsoft Fabric: Unifying Your Data Universe'
+author: Dellenny
+canonical_url: https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-03 08:17:00 +00:00
-permalink: "/2025-08-03-Data-Integration-with-Microsoft-Fabric-Unifying-Your-Data-Universe.html"
-categories: ["Azure", "ML"]
-tags: ["Architecture", "Azure", "Azure Data Factory", "Blogs", "Data Activator", "Data Engineering", "Data Governance", "Data Integration", "Data Lake", "Data Pipelines", "Dataflows Gen2", "Delta Lake", "ETL", "Event Streams", "Fabric", "Microsoft Fabric", "Microsoft Purview", "ML", "OneLake", "Power BI", "Real Time Data", "Synapse Data Engineering"]
-tags_normalized: ["architecture", "azure", "azure data factory", "blogs", "data activator", "data engineering", "data governance", "data integration", "data lake", "data pipelines", "dataflows gen2", "delta lake", "etl", "event streams", "fabric", "microsoft fabric", "microsoft purview", "ml", "onelake", "power bi", "real time data", "synapse data engineering"]
+permalink: /ml/blogs/Data-Integration-with-Microsoft-Fabric-Unifying-Your-Data-Universe
+tags:
+- Architecture
+- Azure
+- Azure Data Factory
+- Blogs
+- Data Activator
+- Data Engineering
+- Data Governance
+- Data Integration
+- Data Lake
+- Data Pipelines
+- Dataflows Gen2
+- Delta Lake
+- ETL
+- Event Streams
+- Fabric
+- Microsoft Fabric
+- Microsoft Purview
+- ML
+- OneLake
+- Power BI
+- Real Time Data
+- Synapse Data Engineering
+section_names:
+- azure
+- ml
 ---
-
 Dellenny discusses how Microsoft Fabric streamlines data integration across cloud and on-premises systems, detailing features like Dataflows Gen2, integrated Azure Data Factory, and real-time event processing within a unified analytics platform.<!--excerpt_end-->
 
 # Data Integration with Microsoft Fabric: Unifying Your Data Universe

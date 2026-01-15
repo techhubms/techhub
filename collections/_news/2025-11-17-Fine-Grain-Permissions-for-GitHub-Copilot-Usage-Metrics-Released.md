@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Fine-Grain Permissions for GitHub Copilot Usage Metrics Released"
-description: "GitHub has introduced a new enterprise role—View enterprise Copilot metrics—expanding access to Copilot Usage Metrics APIs and Dashboard beyond enterprise admins. Now, any user assigned this role can view granular Copilot usage insights for their organization. This update enables more stakeholders to access detailed metrics and leverage data-driven insights for Copilot adoption and performance. The setup involves updating AI Controls and assigning enterprise roles to users. These features are in public preview, and the UI may change."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Fine-Grain Permissions for GitHub Copilot Usage Metrics Released
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-17 16:57:55 +00:00
-permalink: "/2025-11-17-Fine-Grain-Permissions-for-GitHub-Copilot-Usage-Metrics-Released.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Controls", "API", "Copilot", "Copilot Usage Metrics", "Dashboard", "Enterprise Role", "GitHub Copilot", "Metrics", "News", "Permission Management", "User Access"]
-tags_normalized: ["ai", "ai controls", "api", "copilot", "copilot usage metrics", "dashboard", "enterprise role", "github copilot", "metrics", "news", "permission management", "user access"]
+permalink: /github-copilot/news/Fine-Grain-Permissions-for-GitHub-Copilot-Usage-Metrics-Released
+tags:
+- AI
+- AI Controls
+- API
+- Copilot
+- Copilot Usage Metrics
+- Dashboard
+- Enterprise Role
+- GitHub Copilot
+- Metrics
+- News
+- Permission Management
+- User Access
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison highlights GitHub's new enterprise role that allows broader access to Copilot usage metrics, helping teams gain deeper insights on Copilot adoption and performance.<!--excerpt_end-->
 
 # Fine-Grain Permissions for GitHub Copilot Usage Metrics Released

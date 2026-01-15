@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Facet v2: C# Source Generator for Lightweight Projections and Mappings"
-description: "Facet v2 is a C# source generator enabling the creation of lightweight projections (DTOs, API models) directly from domain models. It generates partial classes, records, structs, and LINQ projections at compile time, supporting custom mappings. This version reflects improvements based on community feedback."
-author: "Voiden0"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mh7x1b/facet_v2_a_source_generator_for_projections_and/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Facet v2: C# Source Generator for Lightweight Projections and Mappings'
+author: Voiden0
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mh7x1b/facet_v2_a_source_generator_for_projections_and/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 08:30:19 +00:00
-permalink: "/2025-08-04-Facet-v2-C-Source-Generator-for-Lightweight-Projections-and-Mappings.html"
-categories: ["Coding"]
-tags: [".NET", "API Models", "C#", "Coding", "Community", "Compile Time", "Custom Mappings", "DTOs", "Facet", "LINQ", "Partial Classes", "Projections", "Source Generator"]
-tags_normalized: ["dotnet", "api models", "csharp", "coding", "community", "compile time", "custom mappings", "dtos", "facet", "linq", "partial classes", "projections", "source generator"]
+permalink: /coding/community/Facet-v2-C-Source-Generator-for-Lightweight-Projections-and-Mappings
+tags:
+- .NET
+- API Models
+- C#
+- Coding
+- Community
+- Compile Time
+- Custom Mappings
+- DTOs
+- Facet
+- LINQ
+- Partial Classes
+- Projections
+- Source Generator
+section_names:
+- coding
 ---
-
 Authored by Voiden0, this article introduces Facet v2, a C# source generator for creating projections and mappings efficiently, highlighting recent improvements driven by community feedback.<!--excerpt_end-->
 
 ## Overview

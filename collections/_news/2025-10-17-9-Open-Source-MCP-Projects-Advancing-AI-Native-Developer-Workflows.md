@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "9 Open Source MCP Projects Advancing AI-Native Developer Workflows"
-description: "This article spotlights nine open source Model Context Protocol (MCP) projects sponsored by the GitHub Copilot and VS Code teams, in partnership with Microsoft's OSPO. The projects introduce new frameworks, tools, and assistants for AI-first developer productivity, agentic tooling, and seamless MCP integrations. Sections detail platform integrations, AI-enhanced coding experiences, and robust automation/testing tools, with practical project examples and links provided."
-author: "Kevin Crosby"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 9 Open Source MCP Projects Advancing AI-Native Developer Workflows
+author: Kevin Crosby
+canonical_url: https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-17 16:00:00 +00:00
-permalink: "/2025-10-17-9-Open-Source-MCP-Projects-Advancing-AI-Native-Developer-Workflows.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Tooling", "AI", "AI Native Workflows", "Automation", "Coding", "Context7", "Developer Productivity", "FastAPI", "Generative AI", "GitHub Copilot", "IDE Assistants", "Inspector", "LLM", "Machine Learning", "MCP", "N8n", "News", "Nuxt", "Open Source", "Orchestration", "Sandbox Execution", "Semantic Code Editing", "Testing", "Unity", "VS Code"]
-tags_normalized: ["agentic tooling", "ai", "ai native workflows", "automation", "coding", "context7", "developer productivity", "fastapi", "generative ai", "github copilot", "ide assistants", "inspector", "llm", "machine learning", "mcp", "n8n", "news", "nuxt", "open source", "orchestration", "sandbox execution", "semantic code editing", "testing", "unity", "vs code"]
+permalink: /github-copilot/news/9-Open-Source-MCP-Projects-Advancing-AI-Native-Developer-Workflows
+tags:
+- Agentic Tooling
+- AI
+- AI Native Workflows
+- Automation
+- Coding
+- Context7
+- Developer Productivity
+- FastAPI
+- Generative AI
+- GitHub Copilot
+- IDE Assistants
+- Inspector
+- LLM
+- Machine Learning
+- MCP
+- N8n
+- News
+- Nuxt
+- Open Source
+- Orchestration
+- Sandbox Execution
+- Semantic Code Editing
+- Testing
+- Unity
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Kevin Crosby, with support from the GitHub Copilot and VS Code teams, introduces nine open source MCP projects that empower developers with AI-native tools, frameworks, and agentic capabilities designed to accelerate developer workflows.<!--excerpt_end-->
 
 # 9 Open Source MCP Projects Advancing AI-Native Developer Workflows

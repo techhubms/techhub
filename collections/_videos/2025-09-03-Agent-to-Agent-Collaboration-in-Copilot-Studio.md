@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Agent-to-Agent Collaboration in Copilot Studio"
-description: "This video features Elaiza Benitez and Sudeep Ghatak demonstrating intelligent AI agent-to-agent collaboration within Microsoft Copilot Studio. They explore how multiple AI agents can automate key onboarding workflows such as HR registration, IT setup, and facilities access. Viewers will learn best practices for purpose-building agents to create scalable, efficient onboarding solutions, with a focus on advanced AI automation in enterprise environments. The session highlights the differentiation between bots and agents, provides a use case deep dive, and discusses current limitations as of the Preview release."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=d-oD3pApHAg"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Agent-to-Agent Collaboration in Copilot Studio
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=d-oD3pApHAg
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-03 07:00:38 +00:00
-permalink: "/2025-09-03-Agent-to-Agent-Collaboration-in-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["Agent Collaboration", "Agent Solution Design", "AI", "AI Agents", "Cloud Computing", "Copilot Studio", "Demo", "Dev", "Developer Tools", "Development", "Employee Onboarding", "Enterprise Solutions", "HR Automation", "Intelligent Automation", "IT Setup", "Microsoft", "Microsoft Copilot Studio", "Preview Feature", "Tech", "Technology", "Videos", "Workflow Automation"]
-tags_normalized: ["agent collaboration", "agent solution design", "ai", "ai agents", "cloud computing", "copilot studio", "demo", "dev", "developer tools", "development", "employee onboarding", "enterprise solutions", "hr automation", "intelligent automation", "it setup", "microsoft", "microsoft copilot studio", "preview feature", "tech", "technology", "videos", "workflow automation"]
+permalink: /ai/videos/Agent-to-Agent-Collaboration-in-Copilot-Studio
+tags:
+- Agent Collaboration
+- Agent Solution Design
+- AI
+- AI Agents
+- Cloud Computing
+- Copilot Studio
+- Demo
+- Dev
+- Developer Tools
+- Development
+- Employee Onboarding
+- Enterprise Solutions
+- HR Automation
+- Intelligent Automation
+- IT Setup
+- Microsoft
+- Microsoft Copilot Studio
+- Preview Feature
+- Tech
+- Technology
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Elaiza Benitez and Sudeep Ghatak discuss how Microsoft Copilot Studio enables intelligent AI agent-to-agent collaboration to automate employee onboarding tasks in this episode for developers and enterprise teams.<!--excerpt_end-->
 
 {% youtube d-oD3pApHAg %}

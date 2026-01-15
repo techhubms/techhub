@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Implementing Zero Trust Architecture in an Azure Environment"
-description: "This guide details how to implement Zero Trust Architecture using Microsoft Azure’s built-in security tools and services. It covers Zero Trust principles, key pillars such as identity, device, application, data, and infrastructure protection, and provides a practical roadmap for rolling out Zero Trust strategies in the cloud. Readers learn how to leverage Microsoft Entra ID, Conditional Access, Defender for Cloud, Microsoft Sentinel, and other Azure-native features to secure modern, hybrid environments and address common challenges."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Implementing Zero Trust Architecture in an Azure Environment
+author: Dellenny
+canonical_url: https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-07 08:16:33 +00:00
-permalink: "/2025-10-07-Implementing-Zero-Trust-Architecture-in-an-Azure-Environment.html"
-categories: ["Azure", "Security"]
-tags: ["Access Reviews", "Azure", "Azure Key Vault", "Azure Policy", "Azure Security", "Blogs", "Cloud Security", "Conditional Access", "Data Loss Prevention", "Defender For Endpoint", "Identity And Access Management", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Intune", "Microsoft Purview", "Microsoft Sentinel", "Multi Factor Authentication", "Network Segmentation", "Privileged Identity Management", "Security", "SIEM", "Solution Architecture", "Zero Trust Architecture"]
-tags_normalized: ["access reviews", "azure", "azure key vault", "azure policy", "azure security", "blogs", "cloud security", "conditional access", "data loss prevention", "defender for endpoint", "identity and access management", "microsoft defender", "microsoft entra id", "microsoft intune", "microsoft purview", "microsoft sentinel", "multi factor authentication", "network segmentation", "privileged identity management", "security", "siem", "solution architecture", "zero trust architecture"]
+permalink: /azure/blogs/Implementing-Zero-Trust-Architecture-in-an-Azure-Environment
+tags:
+- Access Reviews
+- Azure
+- Azure Key Vault
+- Azure Policy
+- Azure Security
+- Blogs
+- Cloud Security
+- Conditional Access
+- Data Loss Prevention
+- Defender For Endpoint
+- Identity And Access Management
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Intune
+- Microsoft Purview
+- Microsoft Sentinel
+- Multi Factor Authentication
+- Network Segmentation
+- Privileged Identity Management
+- Security
+- SIEM
+- Solution Architecture
+- Zero Trust Architecture
+section_names:
+- azure
+- security
 ---
-
 Dellenny offers a comprehensive walkthrough of Zero Trust implementation in Azure, illustrating practical use of Microsoft’s security tools and providing a step-by-step architecture roadmap for securing cloud environments.<!--excerpt_end-->
 
 # Implementing Zero Trust Architecture in an Azure Environment

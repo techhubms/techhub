@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Modernizing .NET Applications for the Cloud"
-description: "This session guides developers and architects through the process of modernizing legacy .NET applications for cloud-native deployment. It covers assessment strategies, incremental updates, containerization, cloud-native architecture patterns, and practical use of Azure services, along with tools for migration planning and execution. Relevant .NET releases and technologies are highlighted, giving actionable steps for transforming .NET Framework or older .NET Core apps into scalable, modern cloud solutions."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vrxn-y0tFTI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Modernizing .NET Applications for the Cloud
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=vrxn-y0tFTI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:49 +00:00
-permalink: "/2025-11-13-Modernizing-NET-Applications-for-the-Cloud.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Core", ".NET Framework", "Application Transformation", "ASP.NET Core", "Azure", "C# 14", "Cloud Architecture", "Cloud Native", "Coding", "Containerization", "DevOps", "F# 10", "MAUI", "Microservices", "Migration", "Modernization", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet core", "dotnet framework", "application transformation", "aspdotnet core", "azure", "csharp 14", "cloud architecture", "cloud native", "coding", "containerization", "devops", "fsharp 10", "maui", "microservices", "migration", "modernization", "videos", "vs"]
+permalink: /coding/videos/Modernizing-NET-Applications-for-the-Cloud
+tags:
+- .NET
+- .NET 10
+- .NET Core
+- .NET Framework
+- Application Transformation
+- ASP.NET Core
+- Azure
+- C# 14
+- Cloud Architecture
+- Cloud Native
+- Coding
+- Containerization
+- DevOps
+- F# 10
+- MAUI
+- Microservices
+- Migration
+- Modernization
+- Videos
+- VS
+section_names:
+- azure
+- coding
+- devops
 ---
-
 dotnet presents a practical roadmap for modernizing legacy .NET applications with cloud-native techniques, Azure services, and the latest .NET technologies.<!--excerpt_end-->
 
 {% youtube vrxn-y0tFTI %}

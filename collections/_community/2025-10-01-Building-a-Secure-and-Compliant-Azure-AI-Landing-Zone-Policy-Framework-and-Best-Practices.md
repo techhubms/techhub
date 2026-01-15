@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices"
-description: "This comprehensive guide by Madhur_Shukla explains how to establish a robust policy and compliance framework for the Azure AI Landing Zone (AI ALZ), addressing governance, security, and responsible AI within enterprise Azure environments. The article covers the architectural layers of AI ALZ, outlines essential policy categories, and demonstrates how to implement automated governance at scale using Enterprise Policy as Code (EPAC), integrating CI/CD, Azure Policy, Blueprints, and Infrastructure-as-Code for resilient, scalable AI solutions."
-author: "Madhur_Shukla"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices'
+author: Madhur_Shukla
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 04:36:49 +00:00
-permalink: "/2025-10-01-Building-a-Secure-and-Compliant-Azure-AI-Landing-Zone-Policy-Framework-and-Best-Practices.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AKS", "Azure", "Azure AI Landing Zone", "Azure Blueprints", "Azure Cognitive Services", "Azure DevOps", "Azure Key Vault", "Azure Machine Learning", "Azure OpenAI", "Azure Policy", "CI/CD", "Community", "Compliance", "Data Protection", "DevOps", "EPAC", "Governance", "IaC", "Identity Management", "Microsoft Entra ID", "Monitoring", "Networking", "Policy as Code", "Security"]
-tags_normalized: ["ai", "aks", "azure", "azure ai landing zone", "azure blueprints", "azure cognitive services", "azure devops", "azure key vault", "azure machine learning", "azure openai", "azure policy", "cislashcd", "community", "compliance", "data protection", "devops", "epac", "governance", "iac", "identity management", "microsoft entra id", "monitoring", "networking", "policy as code", "security"]
+permalink: /ai/community/Building-a-Secure-and-Compliant-Azure-AI-Landing-Zone-Policy-Framework-and-Best-Practices
+tags:
+- AI
+- AKS
+- Azure
+- Azure AI Landing Zone
+- Azure Blueprints
+- Azure Cognitive Services
+- Azure DevOps
+- Azure Key Vault
+- Azure Machine Learning
+- Azure OpenAI
+- Azure Policy
+- CI/CD
+- Community
+- Compliance
+- Data Protection
+- DevOps
+- EPAC
+- Governance
+- IaC
+- Identity Management
+- Microsoft Entra ID
+- Monitoring
+- Networking
+- Policy as Code
+- Security
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Madhur_Shukla presents an in-depth walkthrough on designing and implementing a policy-driven, secure, and compliant Azure AI Landing Zone, using EPAC and Azure native governance tools. Learn to operationalize responsible AI at scale.<!--excerpt_end-->
 
 # Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices

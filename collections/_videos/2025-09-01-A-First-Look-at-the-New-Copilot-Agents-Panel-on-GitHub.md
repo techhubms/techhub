@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "A First Look at the New Copilot Agents Panel on GitHub"
-description: "This overview introduces the new Copilot agents panel, now built directly into github.com. Developers can interact with GitHub Copilot within the browser, giving Copilot access to the full repository context, issues, and pull requests. The integration aims to streamline coding workflows, enabling tasks to be run entirely within the web interface."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/oBW4Xt6c_Uo"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: A First Look at the New Copilot Agents Panel on GitHub
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/oBW4Xt6c_Uo
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-01 14:01:20 +00:00
-permalink: "/2025-09-01-A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agents Panel", "AI", "AI Assistance", "Browser Integration", "Code Collaboration", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Issue Management", "Pull Requests", "Repository Management", "Videos", "Web Interface"]
-tags_normalized: ["agents panel", "ai", "ai assistance", "browser integration", "code collaboration", "developer", "developer tools", "github", "github copilot", "issue management", "pull requests", "repository management", "videos", "web interface"]
+permalink: /github-copilot/videos/A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub
+tags:
+- Agents Panel
+- AI
+- AI Assistance
+- Browser Integration
+- Code Collaboration
+- Developer
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Issue Management
+- Pull Requests
+- Repository Management
+- Videos
+- Web Interface
+section_names:
+- ai
+- github-copilot
 ---
-
 The GitHub team introduces the Copilot agents panel, now integrated directly into github.com, allowing developers to use Copilot’s AI-powered features with full repository context. This video highlights how the new panel streamlines the development workflow online.<!--excerpt_end-->
 
 {% youtube oBW4Xt6c_Uo %}

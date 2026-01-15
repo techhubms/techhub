@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Developer Workflows in 2025: Insights from 986 Million Code Pushes"
-description: "This article by Cassidy Williams analyzes the major shifts in developer workflows based on 2025 Octoverse data, highlighting the industry’s transition to rapid iteration, increased automation through CI/CD, feature flag adoption, and evolving team communication. It emphasizes how development speed, smaller code changes, and tool-driven collaboration define modern coding culture."
-author: "Cassidy Williams"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Developer Workflows in 2025: Insights from 986 Million Code Pushes'
+author: Cassidy Williams
+canonical_url: https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-07 16:00:00 +00:00
-permalink: "/2025-11-07-Developer-Workflows-in-2025-Insights-from-986-Million-Code-Pushes.html"
-categories: ["DevOps"]
-tags: ["Agentic Workflows", "Automation", "CI/CD", "Continuous Deployment", "Continuous Integration", "Developer Productivity", "Developer Workflows", "DevOps", "Engineering Practices", "Feature Flags", "GitHub", "GitHub Actions", "Modern Developer Practices", "News", "News & Insights", "Octoverse", "Pull Requests", "Team Communication", "Testing"]
-tags_normalized: ["agentic workflows", "automation", "cislashcd", "continuous deployment", "continuous integration", "developer productivity", "developer workflows", "devops", "engineering practices", "feature flags", "github", "github actions", "modern developer practices", "news", "news and insights", "octoverse", "pull requests", "team communication", "testing"]
+permalink: /devops/news/Developer-Workflows-in-2025-Insights-from-986-Million-Code-Pushes
+tags:
+- Agentic Workflows
+- Automation
+- CI/CD
+- Continuous Deployment
+- Continuous Integration
+- Developer Productivity
+- Developer Workflows
+- DevOps
+- Engineering Practices
+- Feature Flags
+- GitHub
+- GitHub Actions
+- Modern Developer Practices
+- News
+- News & Insights
+- Octoverse
+- Pull Requests
+- Team Communication
+- Testing
+section_names:
+- devops
 ---
-
 Cassidy Williams reviews the 2025 Octoverse data, revealing how nearly a billion code pushes reflect a new era of developer workflows with faster iteration, automated pipelines, and improved team processes.<!--excerpt_end-->
 
 # Developer Workflows in 2025: Insights from 986 Million Code Pushes

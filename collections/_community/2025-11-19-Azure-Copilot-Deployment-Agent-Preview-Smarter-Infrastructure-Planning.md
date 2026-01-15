@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure Copilot Deployment Agent Preview: Smarter Infrastructure Planning"
-description: "This announcement introduces the Deployment Agent for Azure Copilot, a cloud architecture assistant that streamlines workload planning and deployment on Azure. It leverages the Well-Architected Framework (WAF) to generate best-practice infrastructure plans, automatically creates Terraform templates, and integrates with VS Code for Web and GitHub for collaborative CI/CD deployment. Example prompts demonstrate deploying AI workloads, analytics pipelines, and production-ready environments with reduced manual effort."
-author: "Marvin_Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-deployment-capabilities-preview-in-azure-copilot/ba-p/4471169"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Copilot Deployment Agent Preview: Smarter Infrastructure Planning'
+author: Marvin_Morales
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-deployment-capabilities-preview-in-azure-copilot/ba-p/4471169
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 00:57:37 +00:00
-permalink: "/2025-11-19-Azure-Copilot-Deployment-Agent-Preview-Smarter-Infrastructure-Planning.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "Application Insights", "Azure", "Azure AD", "Azure Cognitive Search", "Azure Copilot", "Azure Key Vault", "CI/CD", "Cloud Architecture", "Coding", "Community", "Deployment Agent", "DevOps", "GenAI", "GitHub", "IaC", "Multi Turn Conversational Assistants", "OpenAI", "PostgreSQL", "Python", "Terraform", "VS Code For Web", "Well Architected Framework"]
-tags_normalized: ["ai", "application insights", "azure", "azure ad", "azure cognitive search", "azure copilot", "azure key vault", "cislashcd", "cloud architecture", "coding", "community", "deployment agent", "devops", "genai", "github", "iac", "multi turn conversational assistants", "openai", "postgresql", "python", "terraform", "vs code for web", "well architected framework"]
+permalink: /ai/community/Azure-Copilot-Deployment-Agent-Preview-Smarter-Infrastructure-Planning
+tags:
+- AI
+- Application Insights
+- Azure
+- Azure AD
+- Azure Cognitive Search
+- Azure Copilot
+- Azure Key Vault
+- CI/CD
+- Cloud Architecture
+- Coding
+- Community
+- Deployment Agent
+- DevOps
+- GenAI
+- GitHub
+- IaC
+- Multi Turn Conversational Assistants
+- OpenAI
+- PostgreSQL
+- Python
+- Terraform
+- VS Code For Web
+- Well Architected Framework
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Marvin_Morales announces Azure Copilot's Deployment Agent preview, detailing how it accelerates infrastructure planning, AI workload deployment, and code generation using modular templates and collaborative workflows.<!--excerpt_end-->
 
 # Azure Copilot Deployment Agent Preview

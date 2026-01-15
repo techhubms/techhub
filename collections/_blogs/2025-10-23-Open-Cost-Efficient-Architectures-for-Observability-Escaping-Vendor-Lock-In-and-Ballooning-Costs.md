@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Open Cost-Efficient Architectures for Observability: Escaping Vendor Lock-In and Ballooning Costs"
-description: "This comprehensive article by Mike Shi examines the challenges posed by high observability costs and vendor lock-in, analyzing the history and evolution of observability tools and data stores. It explores the trade-offs between proprietary solutions and open source, highlights OpenTelemetry's role in standardization, and argues for open, unified, developer-friendly architectures—supported by columnar databases—to achieve cost-effective, scalable, and flexible observability."
-author: "Mike Shi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Open Cost-Efficient Architectures for Observability: Escaping Vendor Lock-In and Ballooning Costs'
+author: Mike Shi
+canonical_url: https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 14:10:49 +00:00
-permalink: "/2025-10-23-Open-Cost-Efficient-Architectures-for-Observability-Escaping-Vendor-Lock-In-and-Ballooning-Costs.html"
-categories: ["DevOps"]
-tags: ["Blogs", "Cloud Native", "Columnar Databases", "Contributed Content", "Cost Optimization", "Datadog", "DevOps", "Elasticsearch", "Grafana", "Logging", "Logs", "Loki", "Metrics", "Monitoring And Observability", "Observability", "OpenTelemetry", "OTel", "Prometheus", "Schema On Read", "Schema On Write", "Social Facebook", "Social LinkedIn", "Social X", "Splunk", "SQL", "Tempo", "Traces", "Vendor Lock in"]
-tags_normalized: ["blogs", "cloud native", "columnar databases", "contributed content", "cost optimization", "datadog", "devops", "elasticsearch", "grafana", "logging", "logs", "loki", "metrics", "monitoring and observability", "observability", "opentelemetry", "otel", "prometheus", "schema on read", "schema on write", "social facebook", "social linkedin", "social x", "splunk", "sql", "tempo", "traces", "vendor lock in"]
+permalink: /devops/blogs/Open-Cost-Efficient-Architectures-for-Observability-Escaping-Vendor-Lock-In-and-Ballooning-Costs
+tags:
+- Blogs
+- Cloud Native
+- Columnar Databases
+- Contributed Content
+- Cost Optimization
+- Datadog
+- DevOps
+- Elasticsearch
+- Grafana
+- Logging
+- Logs
+- Loki
+- Metrics
+- Monitoring And Observability
+- Observability
+- OpenTelemetry
+- OTel
+- Prometheus
+- Schema On Read
+- Schema On Write
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Splunk
+- SQL
+- Tempo
+- Traces
+- Vendor Lock in
+section_names:
+- devops
 ---
-
 Mike Shi delves into the rising costs of observability, advocating for open, cost-efficient architectures powered by technologies like OpenTelemetry and columnar databases. This article guides DevOps practitioners in reducing vendor lock-in and building scalable, unified observability platforms.<!--excerpt_end-->
 
 # Open Cost-Efficient Architectures for Observability: Escaping Vendor Lock-In and Ballooning Costs

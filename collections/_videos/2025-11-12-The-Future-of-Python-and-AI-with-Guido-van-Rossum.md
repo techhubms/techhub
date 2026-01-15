@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "The Future of Python and AI with Guido van Rossum"
-description: "This interview brings together Guido van Rossum—the creator of Python—and Microsoft Developer advocates to discuss Python’s place in the AI era, the Microsoft TypeAgent project, adoption of AI programming tools like Copilot, and insights into type systems. Guido shares his thoughts on Python vs. TypeScript for AI, details about typechecking (Pyright), community values, inclusivity, and the enduring relevance of Python. Key chapters address AI-powered coding workflows in VS Code and practical advice for developers navigating modern technology trends."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cMRvgR8EpOE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: The Future of Python and AI with Guido van Rossum
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=cMRvgR8EpOE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-12 15:01:22 +00:00
-permalink: "/2025-11-12-The-Future-of-Python-and-AI-with-Guido-van-Rossum.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Era", "AI Programming Tools", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Copilot", "Dev", "Developer", "Developer Community", "Development", "Deverlopercommunity", "Guido Van Rossum", "Inclusivity", "Microsoft", "Microsoft TypeAgent", "Pyright", "Python", "Software Developer", "Tech", "Technology", "TypeAgent", "Typechecking", "TypeScript", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai era", "ai programming tools", "azure", "cloud computing", "cloud development", "coding", "copilot", "dev", "developer", "developer community", "development", "deverlopercommunity", "guido van rossum", "inclusivity", "microsoft", "microsoft typeagent", "pyright", "python", "software developer", "tech", "technology", "typeagent", "typechecking", "typescript", "videos", "vs code"]
+permalink: /ai/videos/The-Future-of-Python-and-AI-with-Guido-van-Rossum
+tags:
+- AI
+- AI Era
+- AI Programming Tools
+- Azure
+- Cloud Computing
+- Cloud Development
+- Coding
+- Copilot
+- Dev
+- Developer
+- Developer Community
+- Development
+- Deverlopercommunity
+- Guido Van Rossum
+- Inclusivity
+- Microsoft
+- Microsoft TypeAgent
+- Pyright
+- Python
+- Software Developer
+- Tech
+- Technology
+- TypeAgent
+- Typechecking
+- TypeScript
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer speaks with Guido van Rossum about Python's role in the AI era, leveraging Copilot and TypeAgent, and community-driven best practices.<!--excerpt_end-->
 
 {% youtube cMRvgR8EpOE %}

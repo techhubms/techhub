@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Purview Innovations for Fabric: Unifying Data Security and Governance for AI"
-description: "This news post covers Microsoft Purview's latest innovations for Microsoft Fabric, focusing on unified data security, governance, and AI readiness. Key announcements from the European Microsoft Fabric Community Conference include enhanced risk detection, information protection, insider risk management, and data quality governance features integrated directly with Fabric. The article explains how these updates empower organizations to confidently and securely activate data for analytics and AI workloads, ensuring trustworthy, discoverable, and well-governed information estates across cloud platforms."
-author: "Rudra Mitra"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/16/microsoft-purview-innovations-for-your-fabric-data-unify-data-security-and-governance-for-the-ai-era/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Purview Innovations for Fabric: Unifying Data Security and Governance for AI'
+author: Rudra Mitra
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/16/microsoft-purview-innovations-for-your-fabric-data-unify-data-security-and-governance-for-the-ai-era/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-16 16:00:00 +00:00
-permalink: "/2025-09-16-Microsoft-Purview-Innovations-for-Fabric-Unifying-Data-Security-and-Governance-for-AI.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Transformation", "Azure", "Cloud Governance", "Compliance", "Data Governance", "Data Loss Prevention", "Data Quality", "Data Risk Assessment", "Data Security", "Data Security Posture Management", "Information Protection", "Insider Risk Management", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "Power BI", "Security", "Unified Catalog"]
-tags_normalized: ["ai", "ai transformation", "azure", "cloud governance", "compliance", "data governance", "data loss prevention", "data quality", "data risk assessment", "data security", "data security posture management", "information protection", "insider risk management", "microsoft fabric", "microsoft purview", "ml", "news", "power bi", "security", "unified catalog"]
+permalink: /ai/news/Microsoft-Purview-Innovations-for-Fabric-Unifying-Data-Security-and-Governance-for-AI
+tags:
+- AI
+- AI Transformation
+- Azure
+- Cloud Governance
+- Compliance
+- Data Governance
+- Data Loss Prevention
+- Data Quality
+- Data Risk Assessment
+- Data Security
+- Data Security Posture Management
+- Information Protection
+- Insider Risk Management
+- Microsoft Fabric
+- Microsoft Purview
+- ML
+- News
+- Power BI
+- Security
+- Unified Catalog
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Rudra Mitra shares insights into new Microsoft Purview innovations for Microsoft Fabric, detailing unified strategies for data security, compliance, and governance to enable secure and scalable AI transformation for organizations.<!--excerpt_end-->
 
 # Microsoft Purview Innovations for Fabric: Unifying Data Security and Governance for AI

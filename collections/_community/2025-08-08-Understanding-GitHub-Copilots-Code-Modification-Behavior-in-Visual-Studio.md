@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding GitHub Copilot's Code Modification Behavior in Visual Studio"
-description: "This community post discusses user experiences with GitHub Copilot's tendency to insert new code rather than modify or remove old code in Visual Studio. It explores practical strategies for more effective Copilot usage and clarifies the limitations of LLM-based code suggestions, offering actionable advice for developers."
-author: "BusyCode"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1mkw756/copilot_does_not_remove_old_code/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Understanding GitHub Copilot's Code Modification Behavior in Visual Studio
+author: BusyCode
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1mkw756/copilot_does_not_remove_old_code/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-08-08 14:07:47 +00:00
-permalink: "/2025-08-08-Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistant", "Best Practices", "Code Modification", "Code Refactoring", "Coding", "Community", "Contextual Code", "Copilot Usage Tips", "Developer Experience", "GitHub Copilot", "LLM Limitations", "Prompt Engineering", "VS", "VS Integration"]
-tags_normalized: ["ai", "ai code assistant", "best practices", "code modification", "code refactoring", "coding", "community", "contextual code", "copilot usage tips", "developer experience", "github copilot", "llm limitations", "prompt engineering", "vs", "vs integration"]
+permalink: /github-copilot/community/Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio
+tags:
+- AI
+- AI Code Assistant
+- Best Practices
+- Code Modification
+- Code Refactoring
+- Coding
+- Community
+- Contextual Code
+- Copilot Usage Tips
+- Developer Experience
+- GitHub Copilot
+- LLM Limitations
+- Prompt Engineering
+- VS
+- VS Integration
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 BusyCode shares insights into using GitHub Copilot in Visual Studio, noting its challenges with modifying code and offering strategies for better results with AI code assistance.<!--excerpt_end-->
 
 # Understanding GitHub Copilot's Code Modification Limitations in Visual Studio

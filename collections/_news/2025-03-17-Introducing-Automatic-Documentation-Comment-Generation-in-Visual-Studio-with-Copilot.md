@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Introducing Automatic Documentation Comment Generation in Visual Studio with Copilot"
-description: "GitHub Copilot is now integrated into Visual Studio's editor to automatically generate doc comments for functions in C# and C++. This feature streamlines documentation by providing AI-generated summaries and parameter descriptions, enhancing developer productivity. Requires Copilot subscription; available in Visual Studio 17.14 Preview 2."
-author: "Sinem Akinci, Allie Barry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+﻿---
+layout: post
+title: Introducing Automatic Documentation Comment Generation in Visual Studio with Copilot
+author: Sinem Akinci, Allie Barry
+canonical_url: https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-03-17 15:00:10 +00:00
-permalink: "/2025-03-17-Introducing-Automatic-Documentation-Comment-Generation-in-Visual-Studio-with-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Generated Comments", "Automatic Doc Comments", "C#", "C++", "Coding", "Copilot", "Developer Tools", "Docs", "Documentation", "Doxygen", "Editor Integration", "GitHub Copilot", "News", "Preview Feature", "Productivity", "Settings", "Subscription", "VS", "XML Comments"]
-tags_normalized: ["ai", "ai generated comments", "automatic doc comments", "csharp", "cplusplus", "coding", "copilot", "developer tools", "docs", "documentation", "doxygen", "editor integration", "github copilot", "news", "preview feature", "productivity", "settings", "subscription", "vs", "xml comments"]
+permalink: /github-copilot/news/Introducing-Automatic-Documentation-Comment-Generation-in-Visual-Studio-with-Copilot
+tags:
+- AI
+- AI Generated Comments
+- Automatic Doc Comments
+- C#
+- C++
+- Coding
+- Copilot
+- Developer Tools
+- Docs
+- Documentation
+- Doxygen
+- Editor Integration
+- GitHub Copilot
+- News
+- Preview Feature
+- Productivity
+- Settings
+- Subscription
+- VS
+- XML Comments
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this post, authors Sinem Akinci and Allie Barry introduce how GitHub Copilot now auto-generates documentation comments directly in the Visual Studio editor for C# and C++, providing developers with AI-powered assistance in their daily workflow.<!--excerpt_end-->
 
 # Introducing Automatic Documentation Comment Generation in Visual Studio

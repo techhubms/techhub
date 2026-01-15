@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos"
-description: "This podcast episode dives into the Bring Your Own Key/Model (BYOK) API in Visual Studio Code, featuring engineer Logan Ramos. Discussion centers on configuring and integrating language models from various providers—including Azure, OpenAI, xAI, Anthropic, and Google—into VS Code. The episode highlights how developers and extension authors can leverage the new BYOK API to bring any model into their workflow, practical use cases, and technical guidance for extenders. Documentation links and resources are provided to help developers get started."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9pMJdzHVaNE"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=9pMJdzHVaNE
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-08 07:00:18 +00:00
-permalink: "/2025-09-08-Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "Anthropic", "API", "BYOK", "Coding", "Developer Tools", "Extension Development", "Google", "IDE", "Language Model API", "Language Models", "Model Integration", "OpenAI", "Videos", "VS Code", "VS Code API", "Xai"]
-tags_normalized: ["ai", "anthropic", "api", "byok", "coding", "developer tools", "extension development", "google", "ide", "language model api", "language models", "model integration", "openai", "videos", "vs code", "vs code api", "xai"]
+permalink: /ai/videos/Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos
+tags:
+- AI
+- Anthropic
+- API
+- BYOK
+- Coding
+- Developer Tools
+- Extension Development
+- Google
+- IDE
+- Language Model API
+- Language Models
+- Model Integration
+- OpenAI
+- Videos
+- VS Code
+- VS Code API
+- Xai
+section_names:
+- ai
+- coding
 ---
-
 In this episode, VS Code engineer Logan Ramos joins the VS Code Insiders Podcast to discuss the new Language Model Chat Provider (BYOK) API, sharing how developers can integrate various AI models—including Azure and OpenAI—directly into Visual Studio Code.<!--excerpt_end-->
 
 {% youtube 9pMJdzHVaNE %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: ".NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates"
-description: "This community standup focuses on the latest updates in .NET MAUI as it approaches a new major release. Topics include details about the RC1 (Release Candidate 1), support for iPhone development, and other new features and improvements for .NET MAUI developers. Hosted by David Ortinau and Gerald Versluis, the session provides insights into cross-platform development, C# use in mobile scenarios, and community resources for .NET MAUI."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Y8W56JPCqQo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Y8W56JPCqQo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-04 19:05:16 +00:00
-permalink: "/2025-09-04-NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates.html"
-categories: ["Coding"]
-tags: [".NET", "App Development", "C#", "Coding", "Community Standup", "Cross Platform", "David Ortinau", "Dotnetmaui", "Gerald Versluis", "Ios", "Iphone", "MAUI", "Mobile", "Mobile Apps", "Mobile Development", "RC1", "Release Candidate", "Videos"]
-tags_normalized: ["dotnet", "app development", "csharp", "coding", "community standup", "cross platform", "david ortinau", "dotnetmaui", "gerald versluis", "ios", "iphone", "maui", "mobile", "mobile apps", "mobile development", "rc1", "release candidate", "videos"]
+permalink: /coding/videos/NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates
+tags:
+- .NET
+- App Development
+- C#
+- Coding
+- Community Standup
+- Cross Platform
+- David Ortinau
+- Dotnetmaui
+- Gerald Versluis
+- Ios
+- Iphone
+- MAUI
+- Mobile
+- Mobile Apps
+- Mobile Development
+- RC1
+- Release Candidate
+- Videos
+section_names:
+- coding
 ---
-
 dotnet presents a .NET MAUI Community Standup featuring David Ortinau and Gerald Versluis, sharing key updates about RC1, iPhone support, and more for cross-platform mobile developers.<!--excerpt_end-->
 
 {% youtube Y8W56JPCqQo %}

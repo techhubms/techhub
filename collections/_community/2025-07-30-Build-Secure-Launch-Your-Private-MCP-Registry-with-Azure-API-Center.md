@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Build. Secure. Launch Your Private MCP Registry with Azure API Center."
-description: "This article introduces the benefits of creating a private MCP registry using Azure API Center. It highlights security, governance, simplified integration, and discovery for managing MCP servers and agentic tools across organizations. Early partner integrations and guidance for onboarding MCP servers are also discussed."
-author: "JuliaKa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build. Secure. Launch Your Private MCP Registry with Azure API Center.
+author: JuliaKa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 17:46:12 +00:00
-permalink: "/2025-07-30-Build-Secure-Launch-Your-Private-MCP-Registry-with-Azure-API-Center.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Tools", "AI", "AI Adoption", "API Governance", "Authentication", "Authorization", "Azure", "Azure API Center", "Azure API Management", "Cloud Infrastructure", "Community", "Enterprise AI", "MCP Center", "Private Registry", "Security", "Tool Discovery"]
-tags_normalized: ["agentic tools", "ai", "ai adoption", "api governance", "authentication", "authorization", "azure", "azure api center", "azure api management", "cloud infrastructure", "community", "enterprise ai", "mcp center", "private registry", "security", "tool discovery"]
+permalink: /ai/community/Build-Secure-Launch-Your-Private-MCP-Registry-with-Azure-API-Center
+tags:
+- Agentic Tools
+- AI
+- AI Adoption
+- API Governance
+- Authentication
+- Authorization
+- Azure
+- Azure API Center
+- Azure API Management
+- Cloud Infrastructure
+- Community
+- Enterprise AI
+- MCP Center
+- Private Registry
+- Security
+- Tool Discovery
+section_names:
+- ai
+- azure
+- security
 ---
-
 In this article, JuliaKa explores how organizations can harness Azure API Center to build secure and governed private MCP registries, supporting enterprise AI development.<!--excerpt_end-->
 
 ## Article Summary

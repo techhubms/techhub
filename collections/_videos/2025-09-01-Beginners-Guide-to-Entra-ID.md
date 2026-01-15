@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Beginners Guide to Entra ID"
-description: "This video by John Savill's Technical Training introduces Entra ID (formerly Azure Active Directory), explaining its core functions, integration options, and essential security features. Geared towards beginners, it covers concepts like user and device management, application integration, single sign-on, multi-factor authentication (MFA), conditional access, and the role of identity in modern security."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UP2kzp14WA0"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Beginners Guide to Entra ID
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=UP2kzp14WA0
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-01 14:09:40 +00:00
-permalink: "/2025-09-01-Beginners-Guide-to-Entra-ID.html"
-categories: ["Security"]
-tags: ["Active Directory", "AD", "Application Integration", "Azure Active Directory", "Azure AD", "Cloud", "Cloud Security", "Conditional Access", "Device Management", "Entra Id", "Identity Management", "John Savill", "MFA", "On Premises Integration", "Security", "Single Sign On", "Technical Training", "User Management", "Videos"]
-tags_normalized: ["active directory", "ad", "application integration", "azure active directory", "azure ad", "cloud", "cloud security", "conditional access", "device management", "entra id", "identity management", "john savill", "mfa", "on premises integration", "security", "single sign on", "technical training", "user management", "videos"]
+permalink: /security/videos/Beginners-Guide-to-Entra-ID
+tags:
+- Active Directory
+- AD
+- Application Integration
+- Azure Active Directory
+- Azure AD
+- Cloud
+- Cloud Security
+- Conditional Access
+- Device Management
+- Entra Id
+- Identity Management
+- John Savill
+- MFA
+- On Premises Integration
+- Security
+- Single Sign On
+- Technical Training
+- User Management
+- Videos
+section_names:
+- security
 ---
-
 John Savill's Technical Training provides a clear beginner's overview of Entra ID (formerly Azure AD), discussing its main features, integration points, and key security concepts in cloud identity management.<!--excerpt_end-->
 
 {% youtube UP2kzp14WA0 %}

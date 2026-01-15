@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions"
-description: "This post introduces the public preview of sharing Azure Capacity Reservation Groups (CRGs) across different subscriptions, enabling scenarios like resource reuse, centralized capacity management, and cost-effective scaling. It details the provider and consumer subscription model, limitations in preview, and provides links to additional documentation for hands-on implementation."
-author: "Tarannum91"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions'
+author: Tarannum91
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 22:47:39 +00:00
-permalink: "/2025-10-15-Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure API", "Azure Capacity Reservation Groups", "Azure Reserved Instances", "Azure Virtual Machines", "Centralized Capacity", "Cloud Scalability", "Community", "Cost Optimization", "CRG", "Disaster Recovery", "Public Preview", "Resource Management", "Subscription Management", "Virtual Machine Scale Sets"]
-tags_normalized: ["azure", "azure api", "azure capacity reservation groups", "azure reserved instances", "azure virtual machines", "centralized capacity", "cloud scalability", "community", "cost optimization", "crg", "disaster recovery", "public preview", "resource management", "subscription management", "virtual machine scale sets"]
+permalink: /azure/community/Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions
+tags:
+- Azure
+- Azure API
+- Azure Capacity Reservation Groups
+- Azure Reserved Instances
+- Azure Virtual Machines
+- Centralized Capacity
+- Cloud Scalability
+- Community
+- Cost Optimization
+- CRG
+- Disaster Recovery
+- Public Preview
+- Resource Management
+- Subscription Management
+- Virtual Machine Scale Sets
+section_names:
+- azure
 ---
-
 Tarannum91 details the new public preview for sharing Azure Capacity Reservation Groups (CRGs) between subscriptions. This feature enables resource reuse, simplified management, and more efficient scaling for Azure Virtual Machines.<!--excerpt_end-->
 
 # Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions

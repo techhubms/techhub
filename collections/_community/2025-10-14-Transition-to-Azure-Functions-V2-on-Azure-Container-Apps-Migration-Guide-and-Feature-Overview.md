@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Transition to Azure Functions V2 on Azure Container Apps: Migration Guide and Feature Overview"
-description: "This guide provides Microsoft developers and consultants with a comprehensive walkthrough for migrating Azure Functions from the V1 (Legacy Microsoft.Web RP Model) to the recommended V2 (Microsoft.App RP Model) deployment on Azure Container Apps. It details V1 limitations, V2 enhancements, recommended architecture practices, a step-by-step migration checklist, and real-world considerations for managing serverless workloads in containers. Readers will learn how to improve scalability, reliability, and operational experience while consolidating resources and leveraging new native features available in V2."
-author: "DeepGanguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Transition to Azure Functions V2 on Azure Container Apps: Migration Guide and Feature Overview'
+author: DeepGanguly
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 04:39:47 +00:00
-permalink: "/2025-10-14-Transition-to-Azure-Functions-V2-on-Azure-Container-Apps-Migration-Guide-and-Feature-Overview.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Alerting", "Application Insights", "Azure", "Azure Container Apps", "Azure Functions", "Azure Pipelines", "CI/CD", "Coding", "Community", "Containerization", "Custom Domains", "DAPR Integration", "Deployment Best Practices", "DevOps", "DevOps Automation", "Diagnostics", "Feature Comparison", "Function App", "GitHub Actions", "Health Probes", "Metrics", "Microsoft.App RP", "Microsoft.Web RP", "Private Endpoints", "Scaling", "Secrets Management", "Serverless", "V1 To V2 Migration"]
-tags_normalized: ["alerting", "application insights", "azure", "azure container apps", "azure functions", "azure pipelines", "cislashcd", "coding", "community", "containerization", "custom domains", "dapr integration", "deployment best practices", "devops", "devops automation", "diagnostics", "feature comparison", "function app", "github actions", "health probes", "metrics", "microsoftdotapp rp", "microsoftdotweb rp", "private endpoints", "scaling", "secrets management", "serverless", "v1 to v2 migration"]
+permalink: /coding/community/Transition-to-Azure-Functions-V2-on-Azure-Container-Apps-Migration-Guide-and-Feature-Overview
+tags:
+- Alerting
+- Application Insights
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Azure Pipelines
+- CI/CD
+- Coding
+- Community
+- Containerization
+- Custom Domains
+- DAPR Integration
+- Deployment Best Practices
+- DevOps
+- DevOps Automation
+- Diagnostics
+- Feature Comparison
+- Function App
+- GitHub Actions
+- Health Probes
+- Metrics
+- Microsoft.App RP
+- Microsoft.Web RP
+- Private Endpoints
+- Scaling
+- Secrets Management
+- Serverless
+- V1 To V2 Migration
+section_names:
+- azure
+- coding
+- devops
 ---
-
 DeepGanguly explains the migration from Azure Functions V1 to V2 on Azure Container Apps, highlighting technical improvements, resource model benefits, and a step-by-step guide for deploying serverless functions in container environments.<!--excerpt_end-->
 
 # Transition to Azure Functions V2 on Azure Container Apps

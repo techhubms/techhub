@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems"
-description: "This article explores how artificial intelligence (AI) is reshaping the way software systems are architected. Covering essential software architecture frameworks and new patterns emerging to meet AI's unique demands, the article examines challenges such as data pipelines, MLOps, governance, and the growing role of AI in shaping architectural practices."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems'
+author: Dellenny
+canonical_url: https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-26 16:33:15 +00:00
-permalink: "/2025-09-26-Software-Architecture-Frameworks-and-Artificial-Intelligence-Building-Smarter-Systems.html"
-categories: ["AI"]
-tags: ["AI", "AI Governance", "Architecture", "Architecture Frameworks", "Blogs", "C4 Model", "Continuous Deployment", "Data Mesh", "Ethics in AI", "Event Driven Architecture", "Hybrid Cloud", "Microservices", "MLOps", "Model Lifecycle Management", "Scalability", "Self Healing Systems", "Software Architecture", "Solution Architecture", "TOGAF", "Zachman Framework"]
-tags_normalized: ["ai", "ai governance", "architecture", "architecture frameworks", "blogs", "c4 model", "continuous deployment", "data mesh", "ethics in ai", "event driven architecture", "hybrid cloud", "microservices", "mlops", "model lifecycle management", "scalability", "self healing systems", "software architecture", "solution architecture", "togaf", "zachman framework"]
+permalink: /ai/blogs/Software-Architecture-Frameworks-and-Artificial-Intelligence-Building-Smarter-Systems
+tags:
+- AI
+- AI Governance
+- Architecture
+- Architecture Frameworks
+- Blogs
+- C4 Model
+- Continuous Deployment
+- Data Mesh
+- Ethics in AI
+- Event Driven Architecture
+- Hybrid Cloud
+- Microservices
+- MLOps
+- Model Lifecycle Management
+- Scalability
+- Self Healing Systems
+- Software Architecture
+- Solution Architecture
+- TOGAF
+- Zachman Framework
+section_names:
+- ai
 ---
-
 Dellenny investigates how the emergence of AI is driving new software architecture frameworks and transforming conventional system design, offering practical insights for technical teams and architects.<!--excerpt_end-->
 
 # Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems

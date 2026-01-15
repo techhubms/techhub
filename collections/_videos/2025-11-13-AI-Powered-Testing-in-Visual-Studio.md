@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "AI-Powered Testing in Visual Studio"
-description: "This session provides a deep dive into new AI-powered testing features in Visual Studio, explaining how artificial intelligence can improve test writing, edge case identification, test data generation, and overall code quality. The content also references the latest Microsoft development stacks including .NET 10, ASP.NET Core 10, and C# 14, with integration tips and official development resources provided for further exploration."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Bkn78klGhtc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: AI-Powered Testing in Visual Studio
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Bkn78klGhtc
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-AI-Powered-Testing-in-Visual-Studio.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Powered Testing", "ASP.NET Core 10", "Automated Testing", "Bug Detection", "C# 14", "Cloud Native Apps", "Coding", "F# 10", "Intelligent Features", "Quality Assurance", "Software Development", "Test Case Suggestion", "Test Coverage", "Test Data Generation", "Testing Workflow", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai powered testing", "aspdotnet core 10", "automated testing", "bug detection", "csharp 14", "cloud native apps", "coding", "fsharp 10", "intelligent features", "quality assurance", "software development", "test case suggestion", "test coverage", "test data generation", "testing workflow", "videos", "vs"]
+permalink: /ai/videos/AI-Powered-Testing-in-Visual-Studio
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Powered Testing
+- ASP.NET Core 10
+- Automated Testing
+- Bug Detection
+- C# 14
+- Cloud Native Apps
+- Coding
+- F# 10
+- Intelligent Features
+- Quality Assurance
+- Software Development
+- Test Case Suggestion
+- Test Coverage
+- Test Data Generation
+- Testing Workflow
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 dotnet showcases how AI-enhanced features in Visual Studio assist developers in writing better tests, improving coverage, and automating quality assurance processes.<!--excerpt_end-->
 
 {% youtube Bkn78klGhtc %}

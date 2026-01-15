@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos"
-description: "Resumen en profundidad de una serie educativa en español compuesta por nueve sesiones donde se exploran técnicas y herramientas avanzadas de inteligencia artificial con Python. El contenido abarca LLMs, embeddings, RAG, tool calling, agentes de IA y seguridad AI, mostrando ejemplos prácticos con GitHub Models, Azure AI Search, MCP, FastMCP y frameworks de Microsoft para construir aplicaciones IA de manera segura y moderna."
-author: "gwyneth-penas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos'
+author: gwyneth-penas
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-03 14:44:57 +00:00
-permalink: "/2025-11-03-Recapitulacion-de-la-Serie-Python-IA-Tecnicas-Modelos-y-Recursos.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML", "Security"]
-tags: ["Agentes De IA", "AI", "Aplicaciones Multimodales", "Azure", "Azure AI Content Safety", "Azure AI Search", "Community", "Embeddings", "Evaluación De Modelos", "FastMCP", "Framework De Agentes", "GitHub Copilot", "GitHub Models", "Inteligencia Artificial", "LangChain", "LangGraph", "LLMs", "MCP", "ML", "Pydantic", "Python", "Red Teaming", "Retrieval Augmented Generation", "Security", "Seguridad IA", "Tool Calling"]
-tags_normalized: ["agentes de ia", "ai", "aplicaciones multimodales", "azure", "azure ai content safety", "azure ai search", "community", "embeddings", "evaluacin de modelos", "fastmcp", "framework de agentes", "github copilot", "github models", "inteligencia artificial", "langchain", "langgraph", "llms", "mcp", "ml", "pydantic", "python", "red teaming", "retrieval augmented generation", "security", "seguridad ia", "tool calling"]
+permalink: /github-copilot/community/Recapitulacion-de-la-Serie-Python-IA-Tecnicas-Modelos-y-Recursos
+tags:
+- Agentes De IA
+- AI
+- Aplicaciones Multimodales
+- Azure
+- Azure AI Content Safety
+- Azure AI Search
+- Community
+- Embeddings
+- Evaluación De Modelos
+- FastMCP
+- Framework De Agentes
+- GitHub Copilot
+- GitHub Models
+- Inteligencia Artificial
+- LangChain
+- LangGraph
+- LLMs
+- MCP
+- ML
+- Pydantic
+- Python
+- Red Teaming
+- Retrieval Augmented Generation
+- Security
+- Seguridad IA
+- Tool Calling
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
+- security
 ---
-
 gwyneth-penas resume una serie completa sobre Python e inteligencia artificial, abordando desde LLMs hasta seguridad y agentes de IA, con ejemplos prácticos y recursos multimedia para aprender y enseñar el uso moderno de estos modelos.<!--excerpt_end-->
 
 # Resumen de la Serie Python + IA

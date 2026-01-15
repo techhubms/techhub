@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Questions About Azure DevOps Backlogs: Closed Work Items & Iteration Filtering"
-description: "This community post by Ozzy_Lemmy_is_god details two in-depth questions about the behavior of Azure DevOps (ADO) backlogs. The first question focuses on the visibility of closed work items (Epics, Features, User Stories) in the backlog and why their display no longer matches prior functionality. The second question examines how team-based iteration configuration in ADO backlogs affects what items team members see and explores whether the backlog's hierarchy overrides iteration-based filtering. The post offers concrete scenarios and seeks specific guidance on current limitations and best practices."
-author: "Ozzy_Lemmy_is_god"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1me1ts0/devops_backlog_questions/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: 'Questions About Azure DevOps Backlogs: Closed Work Items & Iteration Filtering'
+author: Ozzy_Lemmy_is_god
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1me1ts0/devops_backlog_questions/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-31 13:38:24 +00:00
-permalink: "/2025-07-31-Questions-About-Azure-DevOps-Backlogs-Closed-Work-Items-and-Iteration-Filtering.html"
-categories: ["Azure", "DevOps"]
-tags: ["ADO Backlog", "Azure", "Azure Boards", "Azure DevOps", "Board Configuration", "Closed Work Items", "Community", "DevOps", "Epics", "Hierarchy View", "Iteration Path", "Team Configuration", "User Stories", "Work Item Visibility"]
-tags_normalized: ["ado backlog", "azure", "azure boards", "azure devops", "board configuration", "closed work items", "community", "devops", "epics", "hierarchy view", "iteration path", "team configuration", "user stories", "work item visibility"]
+permalink: /azure/community/Questions-About-Azure-DevOps-Backlogs-Closed-Work-Items-and-Iteration-Filtering
+tags:
+- ADO Backlog
+- Azure
+- Azure Boards
+- Azure DevOps
+- Board Configuration
+- Closed Work Items
+- Community
+- DevOps
+- Epics
+- Hierarchy View
+- Iteration Path
+- Team Configuration
+- User Stories
+- Work Item Visibility
+section_names:
+- azure
+- devops
 ---
-
 Ozzy_Lemmy_is_god raises two detailed questions around Azure DevOps backlog functionality and iteration filtering, delving into changes in closed work item visibility and team-based backlog configuration.<!--excerpt_end-->
 
 # DEVOPS Backlog Questions: Azure DevOps Backlog Visibility and Iteration Filtering

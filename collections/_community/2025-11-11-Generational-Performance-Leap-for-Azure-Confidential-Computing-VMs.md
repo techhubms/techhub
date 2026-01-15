@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Generational Performance Leap for Azure Confidential Computing VMs"
-description: "This technical analysis highlights the significant performance gains and minimal security overhead delivered by Azure confidential virtual machines (VMs) powered by 4th Gen AMD EPYC processors. Independent research by Prowess Consulting quantifies performance improvements and security impacts using Microsoft’s latest confidential computing offerings, making secure cloud adoption practical for sensitive enterprise workloads. The article details hardware advancements, security technology (SEV-SNP), and real-world data for memory and CPU improvements, demonstrating that Azure confidential computing balances robust data-in-use protection and high-performance computing for compliance-bound organizations."
-author: "Rakeshginjupalli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/generational-performance-leap-for-azure-confidential-computing/ba-p/4468989"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Generational Performance Leap for Azure Confidential Computing VMs
+author: Rakeshginjupalli
+canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/generational-performance-leap-for-azure-confidential-computing/ba-p/4468989
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 17:38:14 +00:00
-permalink: "/2025-11-11-Generational-Performance-Leap-for-Azure-Confidential-Computing-VMs.html"
-categories: ["Azure", "Security"]
-tags: ["AMD EPYC", "Azure", "Azure Confidential Computing", "Cloud Security", "Community", "Compliance", "Confidential VMs", "CPU Throughput", "DDR5", "GDPR", "HIPAA", "Memory Bandwidth", "Performance Benchmark", "Prowess Consulting", "Redis", "Security", "SEV SNP", "Virtual Machines"]
-tags_normalized: ["amd epyc", "azure", "azure confidential computing", "cloud security", "community", "compliance", "confidential vms", "cpu throughput", "ddr5", "gdpr", "hipaa", "memory bandwidth", "performance benchmark", "prowess consulting", "redis", "security", "sev snp", "virtual machines"]
+permalink: /azure/community/Generational-Performance-Leap-for-Azure-Confidential-Computing-VMs
+tags:
+- AMD EPYC
+- Azure
+- Azure Confidential Computing
+- Cloud Security
+- Community
+- Compliance
+- Confidential VMs
+- CPU Throughput
+- DDR5
+- GDPR
+- HIPAA
+- Memory Bandwidth
+- Performance Benchmark
+- Prowess Consulting
+- Redis
+- Security
+- SEV SNP
+- Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 Rakeshginjupalli summarizes independent findings showing Azure confidential VMs with 4th Gen AMD EPYC processors deliver major performance boosts and strong security with minimal performance overhead, crucial for sensitive workloads.<!--excerpt_end-->
 
 # Generational Performance Leap for Azure Confidential Computing VMs

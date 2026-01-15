@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI-Powered Innovations in Azure Load Testing"
-description: "This post introduces new AI-driven capabilities in Azure Load Testing, focusing on streamlined authoring of JMeter scripts and actionable, automated performance insights. It explains how engineers can leverage browser-based scenario recording, intelligent script parameterization, and AI-assisted troubleshooting to elevate their load testing practices using Azure's scalable, reliable test infrastructure."
-author: "Nikita_Nallamothu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-powered-performance-testing/ba-p/4471029"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI-Powered Innovations in Azure Load Testing
+author: Nikita_Nallamothu
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-powered-performance-testing/ba-p/4471029
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:22:26 +00:00
-permalink: "/2025-11-18-AI-Powered-Innovations-in-Azure-Load-Testing.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Powered Insights", "Application Reliability", "Azure", "Azure Load Testing", "Baseline Comparison", "Cloud Scale Testing", "Community", "DevOps", "Dynamic Correlation", "Intelligent Recommendations", "JMeter", "Performance Testing", "Root Cause Analysis", "Script Authoring", "Test Automation", "Test Results Analysis", "Think Time Parameterization"]
-tags_normalized: ["ai", "ai powered insights", "application reliability", "azure", "azure load testing", "baseline comparison", "cloud scale testing", "community", "devops", "dynamic correlation", "intelligent recommendations", "jmeter", "performance testing", "root cause analysis", "script authoring", "test automation", "test results analysis", "think time parameterization"]
+permalink: /ai/community/AI-Powered-Innovations-in-Azure-Load-Testing
+tags:
+- AI
+- AI Powered Insights
+- Application Reliability
+- Azure
+- Azure Load Testing
+- Baseline Comparison
+- Cloud Scale Testing
+- Community
+- DevOps
+- Dynamic Correlation
+- Intelligent Recommendations
+- JMeter
+- Performance Testing
+- Root Cause Analysis
+- Script Authoring
+- Test Automation
+- Test Results Analysis
+- Think Time Parameterization
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Nikita_Nallamothu details how Azure Load Testing now uses AI to automate load test scripting and provide actionable analysis, changing how engineers approach performance testing.<!--excerpt_end-->
 
 # AI-Powered Innovations in Azure Load Testing

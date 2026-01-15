@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric"
-description: "This guide provides solution architects and BI developers with a comprehensive, step-by-step approach to migrating business intelligence from Tableau to Power BI and Microsoft Fabric. Emphasizing a semantic layer-first strategy, it covers best practices in data modeling, governance, migration complexity, and leveraging Fabric's AI-driven features for future readiness."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric'
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-29 20:42:54 +00:00
-permalink: "/2025-12-29-Tableau-to-Power-BI-Migration-A-Semantic-Layer-First-Architecture-for-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure SQL Database", "BI Architecture", "Business Intelligence", "Capacity Planning", "Community", "Copilot", "Data Agents", "Data Migration", "Data Modeling", "Dataflows", "DAX", "Deployment Pipelines", "Direct Lake", "ETL", "Fabric IQ", "Governance", "Microsoft Fabric", "ML", "OneLake", "Power BI", "Semantic Layer", "Tableau Migration"]
-tags_normalized: ["ai", "azure", "azure sql database", "bi architecture", "business intelligence", "capacity planning", "community", "copilot", "data agents", "data migration", "data modeling", "dataflows", "dax", "deployment pipelines", "direct lake", "etl", "fabric iq", "governance", "microsoft fabric", "ml", "onelake", "power bi", "semantic layer", "tableau migration"]
+permalink: /ai/community/Tableau-to-Power-BI-Migration-A-Semantic-Layer-First-Architecture-for-Microsoft-Fabric
+tags:
+- AI
+- Azure
+- Azure SQL Database
+- BI Architecture
+- Business Intelligence
+- Capacity Planning
+- Community
+- Copilot
+- Data Agents
+- Data Migration
+- Data Modeling
+- Dataflows
+- DAX
+- Deployment Pipelines
+- Direct Lake
+- ETL
+- Fabric IQ
+- Governance
+- Microsoft Fabric
+- ML
+- OneLake
+- Power BI
+- Semantic Layer
+- Tableau Migration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Rafia Aqil and colleagues deliver an in-depth migration playbook for cloud architects and BI developers, detailing how to approach Tableau to Power BI migration using a semantic layer-first methodology on Microsoft Fabric.<!--excerpt_end-->
 
 # Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric

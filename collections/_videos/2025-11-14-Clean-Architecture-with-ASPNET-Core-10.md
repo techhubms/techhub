@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Clean Architecture with ASP.NET Core 10"
-description: "This video explores how ASP.NET Core 10 enables clean, testable, and maintainable software architectures. It covers best practices for organizing projects and solutions, principles for creating loosely-coupled and maintainable code, and practical steps to refactor existing applications toward modern architectural standards. The content also mentions advancements in the .NET ecosystem including .NET 10, .NET Aspire 13, .NET MAUI 10, C# 14, F# 10, and new Visual Studio features."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rjefnUC9Z90"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Clean Architecture with ASP.NET Core 10
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=rjefnUC9Z90
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:17 +00:00
-permalink: "/2025-11-14-Clean-Architecture-with-ASPNET-Core-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "Clean Architecture", "Cloud Native Apps", "Coding", "F# 10", "Loosely Coupled Code", "Maintainable Code", "Project Structure", "Refactoring", "Software Architecture", "Solution Organization", "Testable Code", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "clean architecture", "cloud native apps", "coding", "fsharp 10", "loosely coupled code", "maintainable code", "project structure", "refactoring", "software architecture", "solution organization", "testable code", "videos", "vs"]
+permalink: /coding/videos/Clean-Architecture-with-ASPNET-Core-10
+tags:
+- .NET
+- .NET 10
+- .NET MAUI 10
+- ASP.NET Core 10
+- C# 14
+- Clean Architecture
+- Cloud Native Apps
+- Coding
+- F# 10
+- Loosely Coupled Code
+- Maintainable Code
+- Project Structure
+- Refactoring
+- Software Architecture
+- Solution Organization
+- Testable Code
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 This video by the .NET team demonstrates how to apply clean architecture principles using ASP.NET Core 10, with guidance on project organization, code maintainability, and refactoring techniques.<!--excerpt_end-->
 
 {% youtube rjefnUC9Z90 %}

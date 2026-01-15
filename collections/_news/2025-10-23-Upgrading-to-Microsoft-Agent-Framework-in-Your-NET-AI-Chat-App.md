@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Upgrading to Microsoft Agent Framework in Your .NET AI Chat App"
-description: "A practical, step-by-step guide for .NET developers on enhancing AI chat applications with the Microsoft Agent Framework. This post walks through upgrading from simple AI chatbots to fully orchestrated AI agents capable of reasoning, tool invocation, and integration with Azure OpenAI, using .NET 9, Aspire, and modern C# patterns."
-author: "Bruno Capuano"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Upgrading to Microsoft Agent Framework in Your .NET AI Chat App
+author: Bruno Capuano
+canonical_url: https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-23 17:00:00 +00:00
-permalink: "/2025-10-23-Upgrading-to-Microsoft-Agent-Framework-in-Your-NET-AI-Chat-App.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", ".NET Aspire", "AgentFx", "AI", "AI Agents", "AI Chat Application", "Aspire", "Azure", "Azure AI Foundry", "Azure OpenAI", "Blazor", "C#", "Coding", "Dependency Injection", "Microsoft Agent Framework", "Microsoft.Extensions.AI", "Multi Agent Systems", "News", "NuGet Packages", "Program.cs", "Semantic Search", "Telemetry", "Tool Invocation"]
-tags_normalized: ["dotnet", "dotnet aspire", "agentfx", "ai", "ai agents", "ai chat application", "aspire", "azure", "azure ai foundry", "azure openai", "blazor", "csharp", "coding", "dependency injection", "microsoft agent framework", "microsoftdotextensionsdotai", "multi agent systems", "news", "nuget packages", "programdotcs", "semantic search", "telemetry", "tool invocation"]
+permalink: /ai/news/Upgrading-to-Microsoft-Agent-Framework-in-Your-NET-AI-Chat-App
+tags:
+- .NET
+- .NET Aspire
+- AgentFx
+- AI
+- AI Agents
+- AI Chat Application
+- Aspire
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Blazor
+- C#
+- Coding
+- Dependency Injection
+- Microsoft Agent Framework
+- Microsoft.Extensions.AI
+- Multi Agent Systems
+- News
+- NuGet Packages
+- Program.cs
+- Semantic Search
+- Telemetry
+- Tool Invocation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Bruno Capuano shows developers how to upgrade a .NET AI chat app to the Microsoft Agent Framework, achieving better architecture, agent orchestration, and deeper Azure OpenAI integration.<!--excerpt_end-->
 
 # Upgrading to Microsoft Agent Framework in Your .NET AI Chat App

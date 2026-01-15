@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft's engineering teams are advancing their approach to incident communication, focusing on transparency and openness during outages. It covers lessons from recent Azure incidents, core principles behind public status sharing, practical tooling such as Service Health notifications, and actionable guidance for improving outage response and resilience."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KqLYINP9UpQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=KqLYINP9UpQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:43:19 +00:00
-permalink: "/2025-11-21-Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Front Door", "Azure Incident Response", "Azure Service Health", "DevOps", "Engineering Best Practices", "Incident Communication", "Incident Response", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Operations", "Outage Management", "Post Incident Review", "Resilience", "Security", "Shared Responsibility Model", "Status Page", "Transparency", "Videos"]
-tags_normalized: ["azure", "azure front door", "azure incident response", "azure service health", "devops", "engineering best practices", "incident communication", "incident response", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "operations", "outage management", "post incident review", "resilience", "security", "shared responsibility model", "status page", "transparency", "videos"]
+permalink: /azure/videos/Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams
+tags:
+- Azure
+- Azure Front Door
+- Azure Incident Response
+- Azure Service Health
+- DevOps
+- Engineering Best Practices
+- Incident Communication
+- Incident Response
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Operations
+- Outage Management
+- Post Incident Review
+- Resilience
+- Security
+- Shared Responsibility Model
+- Status Page
+- Transparency
+- Videos
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Events presents an Ignite 2025 session—led by Tajinder pal singh Ahluwalia and Rick Claus—on evolving incident communication for outages, emphasizing open engineering, transparency, and actionable learning for teams.<!--excerpt_end-->
 
 {% youtube KqLYINP9UpQ %}

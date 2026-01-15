@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Chat with Your Repo & Create PRs with Copilot on GitHub"
-description: "This video features Andrea Griffiths and Daniel Adams as they explore the capabilities of GitHub Copilot on the GitHub website, beyond its usage in IDEs. The walkthrough demonstrates how developers can interact with repositories using Copilot’s chat features to ask questions about files and issues, create pull requests, and manage conversations with AI. The session also highlights switching between different AI models, prototyping workflows, and how Copilot supports learning and modern, AI-native development directly from the GitHub platform."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HUZqoVeJ0uA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Chat with Your Repo & Create PRs with Copilot on GitHub
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=HUZqoVeJ0uA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-13 14:00:33 +00:00
-permalink: "/2025-08-13-How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Chat", "AI Control Center", "AI Models", "AI Native Development", "Code Collaboration", "Conversational AI", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Web Features", "IDE Integration", "Issue Management", "Prototyping", "Pull Requests", "Repository Q&A", "Software Engineering", "Videos"]
-tags_normalized: ["ai", "ai chat", "ai control center", "ai models", "ai native development", "code collaboration", "conversational ai", "developer tools", "github", "github copilot", "github web features", "ide integration", "issue management", "prototyping", "pull requests", "repository qanda", "software engineering", "videos"]
+permalink: /github-copilot/videos/How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub
+tags:
+- AI
+- AI Chat
+- AI Control Center
+- AI Models
+- AI Native Development
+- Code Collaboration
+- Conversational AI
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Web Features
+- IDE Integration
+- Issue Management
+- Prototyping
+- Pull Requests
+- Repository Q&A
+- Software Engineering
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 Andrea Griffiths and Daniel Adams from GitHub demonstrate how to harness GitHub Copilot directly on the GitHub website, revealing advanced AI-driven features and workflows for developers.<!--excerpt_end-->
 
 {% youtube HUZqoVeJ0uA %}

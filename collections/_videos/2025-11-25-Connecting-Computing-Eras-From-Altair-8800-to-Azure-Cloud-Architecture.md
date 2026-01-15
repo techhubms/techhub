@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture"
-description: "Scott Hanselman and Mark Russinovich deliver an advanced demo-driven exploration of computing evolution. The session traces architecture patterns from early personal computers like the Altair 8800 through assembler languages, bootloaders, and community programming to today's hyperscale cloud platforms. Real-world demos illustrate how architectural lessons from 1975 inform the way modern apps are designed, scaled, and delivered on Azure, including REST APIs and new uses for terminals. The talk features historical anecdotes, technical demonstrations, and insights into modern development practices rooted in classic computing."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8ye90oY60Fg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=8ye90oY60Fg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:07:51 +00:00
-permalink: "/2025-11-25-Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Altair 8800", "Assembler", "Azure", "BASIC", "Bootloaders", "Cloud Architecture", "Coding", "CP/M", "Development Practices", "DevOps", "Emulators", "Mark Russinovich", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Modern Apps", "MSIgnite", "Open Source", "Personal Computing", "REST APIs", "Scaling", "Scott Hanselman", "Sysinternals", "Terminal", "UEFI", "Videos"]
-tags_normalized: ["altair 8800", "assembler", "azure", "basic", "bootloaders", "cloud architecture", "coding", "cpslashm", "development practices", "devops", "emulators", "mark russinovich", "microsoft ignite", "migrateandmodernizeyourestate", "modern apps", "msignite", "open source", "personal computing", "rest apis", "scaling", "scott hanselman", "sysinternals", "terminal", "uefi", "videos"]
+permalink: /coding/videos/Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture
+tags:
+- Altair 8800
+- Assembler
+- Azure
+- BASIC
+- Bootloaders
+- Cloud Architecture
+- Coding
+- CP/M
+- Development Practices
+- DevOps
+- Emulators
+- Mark Russinovich
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Modern Apps
+- MSIgnite
+- Open Source
+- Personal Computing
+- REST APIs
+- Scaling
+- Scott Hanselman
+- Sysinternals
+- Terminal
+- UEFI
+- Videos
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Presented by Mark Russinovich and Scott Hanselman, this Ignite 2025 breakout session connects decades of computing innovation, illustrating how architectural patterns from early PCs shape today's Azure-based app development and cloud scaling.<!--excerpt_end-->
 
 {% youtube 8ye90oY60Fg %}

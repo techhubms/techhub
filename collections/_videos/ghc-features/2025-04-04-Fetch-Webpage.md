@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "Fetch Webpage"
-description: "Retrieve web pages as context for your prompts"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/UuIrbI-qX-0"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Fetch Webpage
+author: Fokko Veegens
+canonical_url: https://youtu.be/UuIrbI-qX-0
 date: 2025-04-04 11:28:40 +00:00
-permalink: "/2025-04-04-Fetch-Webpage.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos", "Web Scraping", "Web UI"]
-tags_normalized: ["ai", "github copilot", "videos", "web scraping", "web ui"]
+permalink: /github-copilot/videos/Fetch-Webpage
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+- Web Scraping
+- Web UI
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Fetch Webpage feature. Retrieve a web page as part of the context you provide with your prompt.<!--excerpt_end-->
 
 {% youtube UuIrbI-qX-0 %}

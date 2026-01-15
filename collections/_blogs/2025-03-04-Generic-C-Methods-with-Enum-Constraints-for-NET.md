@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Generic C# Methods with Enum Constraints for .NET"
-description: "Khalid Abuhakmeh demonstrates how to create generic helper methods in C# that work specifically with enums, using updated generic constraints in .NET. The post covers practical implementation, explains the value of constraining generics, and discusses real-world use cases for enum metadata extraction."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/generic-csharp-methods-with-enum-constraints-for-dotnet"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Generic C# Methods with Enum Constraints for .NET
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/generic-csharp-methods-with-enum-constraints-for-dotnet
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-03-04 00:00:00 +00:00
-permalink: "/2025-03-04-Generic-C-Methods-with-Enum-Constraints-for-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Enum", "Generics", "Helper Methods", "Metadata", "Reflection", "Tuples", "Type Constraints", "Web Applications"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "enum", "generics", "helper methods", "metadata", "reflection", "tuples", "type constraints", "web applications"]
+permalink: /coding/blogs/Generic-C-Methods-with-Enum-Constraints-for-NET
+tags:
+- .NET
+- Blogs
+- C#
+- Coding
+- Enum
+- Generics
+- Helper Methods
+- Metadata
+- Reflection
+- Tuples
+- Type Constraints
+- Web Applications
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh illustrates how to leverage modern C# features to create type-safe, generic helper methods for extracting enum metadata, offering practical insight for .NET developers.<!--excerpt_end-->
 
 # Generic C# Methods with Enum Constraints for .NET

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Prompting for More Than Code with GitHub Copilot"
-description: "This video explores creative uses of GitHub Copilot beyond code generation, highlighting how iterative interactions with Copilot can enhance prompt-driven development. The session demonstrates Copilot's application to meal planning, creative project ideation, and answers about recipe sets using Visual Studio Code. Viewers will learn how Copilot’s flexibility can be harnessed to build smarter, more interactive prompt-driven apps."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9g8tJvCnWz4"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Prompting for More Than Code with GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=9g8tJvCnWz4
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-01 14:00:27 +00:00
-permalink: "/2025-10-01-Prompting-for-More-Than-Code-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Application Development", "Code", "Copilot", "Copilot Chat", "Creative AI", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "GitHub Copilot", "Microsoft", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Prompts", "Recipe Planning", "Software Developer", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "application development", "code", "copilot", "copilot chat", "creative ai", "developer", "developer community", "developer productivity", "developer tools", "github copilot", "microsoft", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "prompts", "recipe planning", "software developer", "software development", "videos", "vs code"]
+permalink: /github-copilot/videos/Prompting-for-More-Than-Code-with-GitHub-Copilot
+tags:
+- AI
+- Application Development
+- Code
+- Copilot
+- Copilot Chat
+- Creative AI
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- GitHub Copilot
+- Microsoft
+- Prompt Driven Development
+- Prompt Engineering
+- Promptdrivendevelopment
+- Prompts
+- Recipe Planning
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Visual Studio Code's Matt Soucoup showcases creative prompt-driven development using GitHub Copilot, illustrating new ways developers can build and iterate with AI beyond traditional code generation.<!--excerpt_end-->
 
 {% youtube 9g8tJvCnWz4 %}

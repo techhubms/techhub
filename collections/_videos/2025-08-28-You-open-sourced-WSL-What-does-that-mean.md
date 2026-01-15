@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "You open sourced WSL. What does that mean?"
-description: "This video, presented by Craig Loewen from Microsoft, introduces the open sourcing of the core components of the Windows Subsystem for Linux (WSL). It dives into what open sourcing WSL entails, including the ability to start virtual machines, mount filesystems, access GPUs, and inspect or contribute to the WSL codebase. The video encourages developers to explore, learn, and potentially contribute to the newly available WSL source code, marking a significant moment for open-source development within Microsoft platforms."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FKanhfIwK-0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: You open sourced WSL. What does that mean?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=FKanhfIwK-0
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-28 15:35:34 +00:00
-permalink: "/2025-08-28-You-open-sourced-WSL-What-does-that-mean.html"
-categories: ["Coding"]
-tags: ["Coding", "Developer Tools", "File Systems", "GPU Access", "Linux On Windows", "Microsoft", "Open Source", "Platform Development", "Videos", "Virtual Machines", "Windows Subsystem For Linux", "WSL"]
-tags_normalized: ["coding", "developer tools", "file systems", "gpu access", "linux on windows", "microsoft", "open source", "platform development", "videos", "virtual machines", "windows subsystem for linux", "wsl"]
+permalink: /coding/videos/You-open-sourced-WSL-What-does-that-mean
+tags:
+- Coding
+- Developer Tools
+- File Systems
+- GPU Access
+- Linux On Windows
+- Microsoft
+- Open Source
+- Platform Development
+- Videos
+- Virtual Machines
+- Windows Subsystem For Linux
+- WSL
+section_names:
+- coding
 ---
-
 Presented by Craig Loewen from Microsoft Developer, this video discusses the open sourcing of WSL and what developers can explore and build with the newly available code.<!--excerpt_end-->
 
 {% youtube FKanhfIwK-0 %}

@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "DevGovOps: Embedding Governance into DevOps for the Age of AI"
-description: "This article explores the emerging concept of DevGovOps, which aims to integrate governance directly into DevOps pipelines, particularly in response to the growing influence of AI and increased regulatory demands. Drawing insights from JFrog’s swampUp conference, it discusses how structured, automated governance can enable responsible AI adoption without stifling innovation, highlighting practical challenges such as artifact trust, model verification, and compliance automation."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/devgovops-a-new-play-in-devops-or-is-it/?utm_source=rss&utm_medium=rss&utm_campaign=devgovops-a-new-play-in-devops-or-is-it"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'DevGovOps: Embedding Governance into DevOps for the Age of AI'
+author: Alan Shimel
+canonical_url: https://devops.com/devgovops-a-new-play-in-devops-or-is-it/?utm_source=rss&utm_medium=rss&utm_campaign=devgovops-a-new-play-in-devops-or-is-it
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-10 06:23:12 +00:00
-permalink: "/2025-09-10-DevGovOps-Embedding-Governance-into-DevOps-for-the-Age-of-AI.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Governance", "AI in DevOps", "AI Supply Chain Security", "Artifact Trust", "Blogs", "Compliance Automation", "Compliance in CI/CD", "Continuous Compliance", "DevGovOps", "DevOps", "DevOps Evolution", "DevOps Governance", "DevSecOps VS DevGovOps", "Enterprise AI Compliance", "Enterprise Compliance", "Governance Automation", "Governance in DevOps", "Governance Integration", "JFrog SwampUP", "JFrogswampUp2025", "Platform Governance", "Responsible AI Adoption", "Security", "Security Automation", "Shadow AI", "Shadow AI Management", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Software Supply Chain Compliance"]
-tags_normalized: ["ai", "ai governance", "ai in devops", "ai supply chain security", "artifact trust", "blogs", "compliance automation", "compliance in cislashcd", "continuous compliance", "devgovops", "devops", "devops evolution", "devops governance", "devsecops vs devgovops", "enterprise ai compliance", "enterprise compliance", "governance automation", "governance in devops", "governance integration", "jfrog swampup", "jfrogswampup2025", "platform governance", "responsible ai adoption", "security", "security automation", "shadow ai", "shadow ai management", "social facebook", "social linkedin", "social x", "software supply chain", "software supply chain compliance"]
+permalink: /ai/blogs/DevGovOps-Embedding-Governance-into-DevOps-for-the-Age-of-AI
+tags:
+- AI
+- AI Governance
+- AI in DevOps
+- AI Supply Chain Security
+- Artifact Trust
+- Blogs
+- Compliance Automation
+- Compliance in CI/CD
+- Continuous Compliance
+- DevGovOps
+- DevOps
+- DevOps Evolution
+- DevOps Governance
+- DevSecOps VS DevGovOps
+- Enterprise AI Compliance
+- Enterprise Compliance
+- Governance Automation
+- Governance in DevOps
+- Governance Integration
+- JFrog SwampUP
+- JFrogswampUp2025
+- Platform Governance
+- Responsible AI Adoption
+- Security
+- Security Automation
+- Shadow AI
+- Shadow AI Management
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Software Supply Chain Compliance
+section_names:
+- ai
+- devops
+- security
 ---
-
 Alan Shimel examines the rise of DevGovOps, arguing that integrating governance into DevOps is vital for responsible and secure AI adoption in enterprises.<!--excerpt_end-->
 
 # DevGovOps: Embedding Governance into DevOps for the Age of AI

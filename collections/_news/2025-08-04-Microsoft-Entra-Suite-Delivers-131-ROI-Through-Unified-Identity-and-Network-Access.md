@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Microsoft Entra Suite Delivers 131% ROI Through Unified Identity and Network Access"
-description: "This news article highlights findings from a Forrester Total Economic Impact™ study on the Microsoft Entra Suite. The study reveals significant financial and operational benefits of adopting Microsoft Entra Suite, including a 131% return on investment, rapid payback, and improved security by unifying identity governance and network access under a Zero Trust approach."
-author: "Irina Nechaeva"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/04/microsoft-entra-suite-delivers-131-roi-by-unifying-identity-and-network-access/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Entra Suite Delivers 131% ROI Through Unified Identity and Network Access
+author: Irina Nechaeva
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/04/microsoft-entra-suite-delivers-131-roi-by-unifying-identity-and-network-access/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-04 15:00:00 +00:00
-permalink: "/2025-08-04-Microsoft-Entra-Suite-Delivers-131-ROI-Through-Unified-Identity-and-Network-Access.html"
-categories: ["Security"]
-tags: ["Access Management", "Forrester Total Economic Impact", "Identity Governance", "Identity Protection", "Identity Security", "Least Privilege", "Microsoft Entra Suite", "Microsoft Security", "Network Access", "News", "ROI Study", "Security", "Security Operations", "Zero Trust"]
-tags_normalized: ["access management", "forrester total economic impact", "identity governance", "identity protection", "identity security", "least privilege", "microsoft entra suite", "microsoft security", "network access", "news", "roi study", "security", "security operations", "zero trust"]
+permalink: /security/news/Microsoft-Entra-Suite-Delivers-131-ROI-Through-Unified-Identity-and-Network-Access
+tags:
+- Access Management
+- Forrester Total Economic Impact
+- Identity Governance
+- Identity Protection
+- Identity Security
+- Least Privilege
+- Microsoft Entra Suite
+- Microsoft Security
+- Network Access
+- News
+- ROI Study
+- Security
+- Security Operations
+- Zero Trust
+section_names:
+- security
 ---
-
 Irina Nechaeva reports on a Forrester study showing that organizations using Microsoft Entra Suite achieved a 131% ROI by improving identity and network access security.<!--excerpt_end-->
 
 # Microsoft Entra Suite Delivers 131% ROI Through Unified Identity and Network Access

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Distributed Tracing Patterns for Microservices in Azure"
-description: "This article explores distributed tracing as an observability pattern for cloud-native microservices architectures on Azure. It covers the principles of distributed tracing, demonstrates how to implement tracing using Azure Monitor, Application Insights, and OpenTelemetry, and shares best practices for visualizing and analyzing end-to-end request flows, troubleshooting, and improving system performance in Azure environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/follow-the-thread-distributed-tracing-patterns-for-microservices-in-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Distributed Tracing Patterns for Microservices in Azure
+author: Dellenny
+canonical_url: https://dellenny.com/follow-the-thread-distributed-tracing-patterns-for-microservices-in-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-22 07:43:11 +00:00
-permalink: "/2025-10-22-Distributed-Tracing-Patterns-for-Microservices-in-Azure.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Insights", "Architecture", "Azure", "Azure Monitor", "Blogs", "Cloud Native", "Correlation ID", "DevOps", "Distributed Tracing", "Kusto Query Language", "Microservices", "Observability", "OpenTelemetry", "Performance Monitoring", "Python", "Solution Architecture", "Telemetry", "TelemetryClient", "Tracing"]
-tags_normalized: ["application insights", "architecture", "azure", "azure monitor", "blogs", "cloud native", "correlation id", "devops", "distributed tracing", "kusto query language", "microservices", "observability", "opentelemetry", "performance monitoring", "python", "solution architecture", "telemetry", "telemetryclient", "tracing"]
+permalink: /azure/blogs/Distributed-Tracing-Patterns-for-Microservices-in-Azure
+tags:
+- Application Insights
+- Architecture
+- Azure
+- Azure Monitor
+- Blogs
+- Cloud Native
+- Correlation ID
+- DevOps
+- Distributed Tracing
+- Kusto Query Language
+- Microservices
+- Observability
+- OpenTelemetry
+- Performance Monitoring
+- Python
+- Solution Architecture
+- Telemetry
+- TelemetryClient
+- Tracing
+section_names:
+- azure
+- devops
 ---
-
 Dellenny explains how to implement distributed tracing for microservices in Azure, describing essential observability patterns and Azure-native tools for tracking, visualizing, and improving complex request flows.<!--excerpt_end-->
 
 # Distributed Tracing Patterns for Microservices in Azure

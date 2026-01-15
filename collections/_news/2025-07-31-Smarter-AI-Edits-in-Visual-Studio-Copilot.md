@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Smarter AI Edits in Visual Studio Copilot"
-description: "This article explores the journey behind enhancing AI-powered code edits in Visual Studio Copilot. It covers the challenges of inserting AI-generated code changes, the shift from heuristic-based methods to speculative decoding with modern AI models, and improvements in balancing speed with accuracy. It highlights how these changes lay the groundwork for Agent Mode, which lets Copilot assist in building, debugging, and testing code more reliably."
-author: "Jessie Houghton, Oscar Obeso, Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Smarter AI Edits in Visual Studio Copilot
+author: Jessie Houghton, Oscar Obeso, Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-07-31 12:00:42 +00:00
-permalink: "/2025-07-31-Smarter-AI-Edits-in-Visual-Studio-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Agents", "AI Generated Edits", "AI Integration", "Bug Fixing", "Code Assistant", "Code Quality", "Coding", "Context Window", "Copilot", "Developer Tools", "GitHub Copilot", "GitHub Copilot Chat", "News", "Refactoring", "Smart Diff", "Speculative Decoding", "Streaming Edits", "Token Generation", "Visual Studio Copilot", "VS"]
-tags_normalized: ["agent mode", "ai", "ai agents", "ai generated edits", "ai integration", "bug fixing", "code assistant", "code quality", "coding", "context window", "copilot", "developer tools", "github copilot", "github copilot chat", "news", "refactoring", "smart diff", "speculative decoding", "streaming edits", "token generation", "visual studio copilot", "vs"]
+permalink: /github-copilot/news/Smarter-AI-Edits-in-Visual-Studio-Copilot
+tags:
+- Agent Mode
+- AI
+- AI Agents
+- AI Generated Edits
+- AI Integration
+- Bug Fixing
+- Code Assistant
+- Code Quality
+- Coding
+- Context Window
+- Copilot
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot Chat
+- News
+- Refactoring
+- Smart Diff
+- Speculative Decoding
+- Streaming Edits
+- Token Generation
+- Visual Studio Copilot
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Jessie Houghton, Oscar Obeso, and Rhea Patel detail how smarter AI edits were achieved in Visual Studio Copilot, discussing the move from heuristic-based to model-based approaches, speculative decoding, and improved code integration.<!--excerpt_end-->
 
 # Smarter AI Edits in Visual Studio Copilot

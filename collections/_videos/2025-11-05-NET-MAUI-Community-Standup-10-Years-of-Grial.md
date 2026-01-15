@@ -1,20 +1,39 @@
----
-layout: "post"
-title: ".NET MAUI Community Standup: 10 Years of Grial"
-description: "This .NET MAUI Community Standup celebrates Grial's 10-year journey, highlighting its evolution as a design toolkit for creating attractive mobile and desktop apps using .NET MAUI and Xamarin. Learn about Grial's legacy, new features, and how developers can leverage its latest capabilities with .NET 10."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bIl83DdhWoo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET MAUI Community Standup: 10 Years of Grial'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=bIl83DdhWoo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-05 19:50:05 +00:00
-permalink: "/2025-11-05-NET-MAUI-Community-Standup-10-Years-of-Grial.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "App Development", "Coding", "Community Standup", "David Ortinau", "Demo", "Desktop Applications", "Developer", "Developer Community", "Dotnetdeveloper", "Dotnetmaui", "Grial", "MAUI", "Microsoft", "Mobile Development", "Software Developer", "UI Design", "UI Toolkit", "UX Divers", "Videos", "Xamarin"]
-tags_normalized: ["dotnet", "dotnet 10", "app development", "coding", "community standup", "david ortinau", "demo", "desktop applications", "developer", "developer community", "dotnetdeveloper", "dotnetmaui", "grial", "maui", "microsoft", "mobile development", "software developer", "ui design", "ui toolkit", "ux divers", "videos", "xamarin"]
+permalink: /coding/videos/NET-MAUI-Community-Standup-10-Years-of-Grial
+tags:
+- .NET
+- .NET 10
+- App Development
+- Coding
+- Community Standup
+- David Ortinau
+- Demo
+- Desktop Applications
+- Developer
+- Developer Community
+- Dotnetdeveloper
+- Dotnetmaui
+- Grial
+- MAUI
+- Microsoft
+- Mobile Development
+- Software Developer
+- UI Design
+- UI Toolkit
+- UX Divers
+- Videos
+- Xamarin
+section_names:
+- coding
 ---
-
 David Ortinau and the UX Divers team reflect on Grial’s decade-long impact in the .NET ecosystem, explore its features for .NET MAUI and Xamarin, and unveil what's new for developers in .NET 10.<!--excerpt_end-->
 
 {% youtube bIl83DdhWoo %}

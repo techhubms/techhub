@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "New Public Preview Features in Copilot Code Review: Smarter, AI-Driven Code Reviews"
-description: "This news post announces new public preview features for GitHub Copilot Code Review (CCR), focusing on the integration of LLM-based AI detections with deterministic tools like ESLint and CodeQL. It highlights improvements such as rich project context gathering, advanced code analysis for security and quality, seamless handoff of fix suggestions to Copilot agents, and workflow customization across multiple development environments. These updates aim to provide more accurate, trustworthy, and actionable code reviews, adapting to team standards and helping developers ship cleaner code more efficiently."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'New Public Preview Features in Copilot Code Review: Smarter, AI-Driven Code Reviews'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:27:44 +00:00
-permalink: "/2025-10-28-New-Public-Preview-Features-in-Copilot-Code-Review-Smarter-AI-Driven-Code-Reviews.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Code Review", "Automation", "CodeQL", "Coding", "Copilot", "Copilot Code Review", "Custom Workflows", "Developer Tools", "DevOps", "ESLint", "GitHub Copilot", "JetBrains", "LLM", "News", "Pull Requests", "Quality Assurance", "Security", "Static Analysis", "Universe25", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai code review", "automation", "codeql", "coding", "copilot", "copilot code review", "custom workflows", "developer tools", "devops", "eslint", "github copilot", "jetbrains", "llm", "news", "pull requests", "quality assurance", "security", "static analysis", "universe25", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/New-Public-Preview-Features-in-Copilot-Code-Review-Smarter-AI-Driven-Code-Reviews
+tags:
+- AI
+- AI Code Review
+- Automation
+- CodeQL
+- Coding
+- Copilot
+- Copilot Code Review
+- Custom Workflows
+- Developer Tools
+- DevOps
+- ESLint
+- GitHub Copilot
+- JetBrains
+- LLM
+- News
+- Pull Requests
+- Quality Assurance
+- Security
+- Static Analysis
+- Universe25
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Allison introduces major upgrades to GitHub Copilot Code Review, showing how AI-powered and deterministic tools combine for smarter security and quality insights.<!--excerpt_end-->
 
 # New Public Preview Features in Copilot Code Review: AI Reviews that See the Full Picture

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Accelerate Enterprise Passkey Deployment with HID and Microsoft Entra ID"
-description: "This session from Microsoft Ignite 2025 demonstrates how HID and Microsoft Entra ID enable large-scale, secure passkey adoption within enterprises. It covers HID’s FIDO credentials, enterprise-grade passkey management, phishing-resistant MFA strategies, and best practices for integrating these solutions with Azure and Entra investments. Viewers learn about practical deployment approaches and industry insights for strengthening authentication systems."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OXao8OrGXb4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerate Enterprise Passkey Deployment with HID and Microsoft Entra ID
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=OXao8OrGXb4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:57:24 +00:00
-permalink: "/2025-11-19-Accelerate-Enterprise-Passkey-Deployment-with-HID-and-Microsoft-Entra-ID.html"
-categories: ["Azure", "Security"]
-tags: ["Access Management", "Authentication Strategies", "Azure", "Credential Management", "Enterprise Security", "FIDO", "HID", "Identity Management", "Microsoft Entra ID", "Microsoft Ignite", "MSIgnite", "Multi Factor Authentication", "Passkey Deployment", "Passwordless Authentication", "Phishing Resistant MFA", "Secureyourdata", "Security", "Videos"]
-tags_normalized: ["access management", "authentication strategies", "azure", "credential management", "enterprise security", "fido", "hid", "identity management", "microsoft entra id", "microsoft ignite", "msignite", "multi factor authentication", "passkey deployment", "passwordless authentication", "phishing resistant mfa", "secureyourdata", "security", "videos"]
+permalink: /azure/videos/Accelerate-Enterprise-Passkey-Deployment-with-HID-and-Microsoft-Entra-ID
+tags:
+- Access Management
+- Authentication Strategies
+- Azure
+- Credential Management
+- Enterprise Security
+- FIDO
+- HID
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Ignite
+- MSIgnite
+- Multi Factor Authentication
+- Passkey Deployment
+- Passwordless Authentication
+- Phishing Resistant MFA
+- Secureyourdata
+- Security
+- Videos
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events presents a session that explores at-scale passkey deployment using HID and Microsoft Entra ID, led by speaker Eric Williams. The session highlights enterprise authentication trends and practical deployment insights.<!--excerpt_end-->
 
 {% youtube OXao8OrGXb4 %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerating R&D and Scientific Breakthroughs with Microsoft Discovery"
-description: "This session from Microsoft Ignite 2025 introduces the Microsoft Discovery Platform, a new agentic R&D ecosystem that enables researchers to orchestrate teams of intelligent AI agents for accelerated innovation. The presentation covers Azure AI and Foundry integration, agent-based research workflows, advances in GraphRAG technology, quantum computing for science, challenges in scientific data management, and the impact of AI on product design. Presented by John Link, Auloke Mathur, Julie Mijajlovic, and Prashant Varshney."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8o3_cirYV2U"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating R&D and Scientific Breakthroughs with Microsoft Discovery
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=8o3_cirYV2U
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:57:10 +00:00
-permalink: "/2025-11-20-Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Agents", "Azure", "Azure AI", "Data Challenges", "Foundry", "GraphRAG", "Internal Chatbot", "Microsoft Discovery", "Microsoft Ignite", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Product Design", "Quantum Computing", "R&D", "Sales Tools", "Scientific Research", "Simulation", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "azure", "azure ai", "data challenges", "foundry", "graphrag", "internal chatbot", "microsoft discovery", "microsoft ignite", "migrateandmodernizeyourestate", "ml", "msignite", "product design", "quantum computing", "randd", "sales tools", "scientific research", "simulation", "videos"]
+permalink: /ai/videos/Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- Azure
+- Azure AI
+- Data Challenges
+- Foundry
+- GraphRAG
+- Internal Chatbot
+- Microsoft Discovery
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- ML
+- MSIgnite
+- Product Design
+- Quantum Computing
+- R&D
+- Sales Tools
+- Scientific Research
+- Simulation
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents an Ignite 2025 session on the Microsoft Discovery Platform, where John Link, Auloke Mathur, Julie Mijajlovic, and Prashant Varshney discuss the use of AI agents, Azure AI, and quantum computing to transform scientific research and development.<!--excerpt_end-->
 
 {% youtube 8o3_cirYV2U %}

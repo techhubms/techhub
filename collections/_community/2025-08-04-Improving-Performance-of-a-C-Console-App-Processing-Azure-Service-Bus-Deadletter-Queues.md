@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Improving Performance of a C# Console App Processing Azure Service Bus Deadletter Queues"
-description: "The author seeks advice on optimizing a C# console app method that processes and archives Azure Service Bus deadletter messages older than 7 days. With some subscriptions exceeding 80,000 messages, performance improvements are needed, especially as the app runs nightly in an Azure DevOps pipeline."
-author: "TTwelveUnits"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: Improving Performance of a C# Console App Processing Azure Service Bus Deadletter Queues
+author: TTwelveUnits
+canonical_url: https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 11:47:42 +00:00
-permalink: "/2025-08-04-Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Async Programming", "Azure", "Azure Service Bus", "Azure Storage", "C#", "Coding", "Community", "Console App", "Deadletter Queue", "DevOps", "DevOps Pipeline", "Message Processing", "Performance", "Subscription"]
-tags_normalized: ["async programming", "azure", "azure service bus", "azure storage", "csharp", "coding", "community", "console app", "deadletter queue", "devops", "devops pipeline", "message processing", "performance", "subscription"]
+permalink: /coding/community/Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues
+tags:
+- Async Programming
+- Azure
+- Azure Service Bus
+- Azure Storage
+- C#
+- Coding
+- Community
+- Console App
+- Deadletter Queue
+- DevOps
+- DevOps Pipeline
+- Message Processing
+- Performance
+- Subscription
+section_names:
+- azure
+- coding
+- devops
 ---
-
 TTwelveUnits asks for guidance on making a C# console app method more performant for processing Azure Service Bus deadletter messages, especially for large queues, as part of a nightly Azure DevOps pipeline.<!--excerpt_end-->
 
 ## Context

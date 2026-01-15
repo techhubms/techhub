@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Terraform Provider for Microsoft Fabric: Deploying Fabric Configs with GitHub Actions"
-description: "This article provides a practical guide to deploying Microsoft Fabric configurations using the Terraform provider and GitHub Actions for CI/CD automation. It walks through setting up OpenID Connect authentication for managed identities, configuring GitHub Actions workflows, handling Azure-specific environment variables, and best practices for secure deployment pipelines. The post is part of a series aimed at helping administrators leverage Terraform and Microsoft Fabric for declarative infrastructure and data analytics automation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-4-deploying-a-fabric-config-with-terraform-in-github-actions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Terraform Provider for Microsoft Fabric: Deploying Fabric Configs with GitHub Actions'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-4-deploying-a-fabric-config-with-terraform-in-github-actions/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-07 07:00:00 +00:00
-permalink: "/2025-08-07-Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions.html"
-categories: ["Azure", "Coding", "ML", "DevOps"]
-tags: ["Automation", "Azure", "Azure AD", "Azure Managed Identity", "Azure Resource Management", "Azure Storage", "CI/CD", "Cloud Deployment", "Coding", "Declarative Automation", "DevOps", "Environment Variables", "Federated Credential", "GitHub Actions", "GitHub CLI", "IaC", "Microsoft Fabric", "ML", "News", "OpenID Connect", "RBAC", "Terraform", "Terraform Provider", "Terraform Workflow", "YAML Pipelines"]
-tags_normalized: ["automation", "azure", "azure ad", "azure managed identity", "azure resource management", "azure storage", "cislashcd", "cloud deployment", "coding", "declarative automation", "devops", "environment variables", "federated credential", "github actions", "github cli", "iac", "microsoft fabric", "ml", "news", "openid connect", "rbac", "terraform", "terraform provider", "terraform workflow", "yaml pipelines"]
+permalink: /ml/news/Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions
+tags:
+- Automation
+- Azure
+- Azure AD
+- Azure Managed Identity
+- Azure Resource Management
+- Azure Storage
+- CI/CD
+- Cloud Deployment
+- Coding
+- Declarative Automation
+- DevOps
+- Environment Variables
+- Federated Credential
+- GitHub Actions
+- GitHub CLI
+- IaC
+- Microsoft Fabric
+- ML
+- News
+- OpenID Connect
+- RBAC
+- Terraform
+- Terraform Provider
+- Terraform Workflow
+- YAML Pipelines
+section_names:
+- azure
+- coding
+- ml
+- devops
 ---
-
 Microsoft Fabric Blog guides readers through deploying Microsoft Fabric configurations with Terraform in GitHub Actions, emphasizing secure automation with managed identities and OpenID Connect for robust Azure-based CI/CD workflows.<!--excerpt_end-->
 
 # Terraform Provider for Microsoft Fabric: Deploying Fabric Configs with GitHub Actions

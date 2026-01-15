@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints"
-description: "This guide by PramodPalukuru provides a technical walkthrough for securing Azure Confidential Virtual Machines (CVMs) using Recovery Services Vault (RSV) connected via private endpoints. It covers prerequisites, step-by-step backup configuration, security advantages, restore options, caveats around encrypted disks, permission management for Key Vault and Managed HSM, and best practices for resilient, encrypted backup of CVMs in Azure. Practical attention is given to Enhanced Backup policies, zone redundancy, DNS hygiene, and recommendations for working with the Azure Product Team to enable private preview features."
-author: "PramodPalukuru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints
+author: PramodPalukuru
+canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-29 08:26:10 +00:00
-permalink: "/2025-11-29-Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Attestation", "Azure", "Azure Confidential VM", "Azure Monitor", "Backup Extension", "Bicep", "CMK Support", "Community", "Confidential Computing", "Customer Managed Keys", "CVM Encryption", "DevOps", "DNS Zone", "Enhanced Backup Policy", "Key Vault", "Managed HSM", "Network Isolation", "PowerShell", "Private Endpoints", "RBAC", "Recovery Services Vault", "REST API", "Security", "Terraform", "Zone Redundant Storage"]
-tags_normalized: ["attestation", "azure", "azure confidential vm", "azure monitor", "backup extension", "bicep", "cmk support", "community", "confidential computing", "customer managed keys", "cvm encryption", "devops", "dns zone", "enhanced backup policy", "key vault", "managed hsm", "network isolation", "powershell", "private endpoints", "rbac", "recovery services vault", "rest api", "security", "terraform", "zone redundant storage"]
+permalink: /azure/community/Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints
+tags:
+- Attestation
+- Azure
+- Azure Confidential VM
+- Azure Monitor
+- Backup Extension
+- Bicep
+- CMK Support
+- Community
+- Confidential Computing
+- Customer Managed Keys
+- CVM Encryption
+- DevOps
+- DNS Zone
+- Enhanced Backup Policy
+- Key Vault
+- Managed HSM
+- Network Isolation
+- PowerShell
+- Private Endpoints
+- RBAC
+- Recovery Services Vault
+- REST API
+- Security
+- Terraform
+- Zone Redundant Storage
+section_names:
+- azure
+- devops
+- security
 ---
-
 PramodPalukuru details how to secure backups for Azure Confidential VMs using Recovery Services Vault with private endpoints, highlighting security, configuration steps, and best practices for cloud professionals.<!--excerpt_end-->
 
 # Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Will Large Language Model Memory Ever Be Solved Without Fine-Tuning?"
-description: "A community-driven discussion explores the persistent challenge of enabling effective memory in large language models (LLMs) without relying solely on prompt stuffing, retrieval-augmented generation (RAG), or fine-tuning. The conversation delves into the technical limitations of attention mechanisms, architecture differences, bio-inspired ideas, and potential future directions for integrating native memory handling into LLM runtimes."
-author: "shbong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/MachineLearning/comments/1mj3n3v/d_do_you_think_llm_memory_will_ever_be_solved/"
-viewing_mode: "external"
-feed_name: "Reddit Machine Learning"
-feed_url: "https://www.reddit.com/r/MachineLearning/.rss"
+﻿---
+layout: post
+title: Will Large Language Model Memory Ever Be Solved Without Fine-Tuning?
+author: shbong
+canonical_url: https://www.reddit.com/r/MachineLearning/comments/1mj3n3v/d_do_you_think_llm_memory_will_ever_be_solved/
+viewing_mode: external
+feed_name: Reddit Machine Learning
+feed_url: https://www.reddit.com/r/MachineLearning/.rss
 date: 2025-08-06 12:43:19 +00:00
-permalink: "/2025-08-06-Will-Large-Language-Model-Memory-Ever-Be-Solved-Without-Fine-Tuning.html"
-categories: ["AI"]
-tags: ["AI", "Attention Mechanisms", "Bio Inspired Architectures", "Community", "Context Window", "Fine Tuning", "FlashAttention", "Inference Infrastructure", "Large Language Models", "LLM Memory", "MachineLearning", "Memory Encoders", "Meta Learning", "Neural Turing Machines", "Persistent Memory", "Plasticity", "RAG", "Retrieval Augmented Generation", "RWKV", "Sparse Attention", "Transformer Models"]
-tags_normalized: ["ai", "attention mechanisms", "bio inspired architectures", "community", "context window", "fine tuning", "flashattention", "inference infrastructure", "large language models", "llm memory", "machinelearning", "memory encoders", "meta learning", "neural turing machines", "persistent memory", "plasticity", "rag", "retrieval augmented generation", "rwkv", "sparse attention", "transformer models"]
+permalink: /ai/community/Will-Large-Language-Model-Memory-Ever-Be-Solved-Without-Fine-Tuning
+tags:
+- AI
+- Attention Mechanisms
+- Bio Inspired Architectures
+- Community
+- Context Window
+- Fine Tuning
+- FlashAttention
+- Inference Infrastructure
+- Large Language Models
+- LLM Memory
+- MachineLearning
+- Memory Encoders
+- Meta Learning
+- Neural Turing Machines
+- Persistent Memory
+- Plasticity
+- RAG
+- Retrieval Augmented Generation
+- RWKV
+- Sparse Attention
+- Transformer Models
+section_names:
+- ai
 ---
-
 shbong leads a thought-provoking community conversation about whether effective, persistent memory for LLMs can be achieved without relying on fine-tuning or prompt engineering, examining practical limitations and innovative future research directions.<!--excerpt_end-->
 
 # Will Large Language Model Memory Ever Be Solved Without Fine-Tuning?

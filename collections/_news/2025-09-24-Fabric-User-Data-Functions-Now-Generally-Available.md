@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Fabric User Data Functions Now Generally Available"
-description: "This official announcement highlights the general availability of User Data Functions in Microsoft Fabric. The content covers the benefits and key features such as customization with Python, reusability in data architectures, integration with Fabric data sources, development tool support, OpenAPI specification generation, and the newest enhancements for developers using Power BI, Data Pipelines, and Notebooks."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-fabric-user-data-functions-now-in-general-availability/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric User Data Functions Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-fabric-user-data-functions-now-in-general-availability/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 11:00:00 +00:00
-permalink: "/2025-09-24-Fabric-User-Data-Functions-Now-Generally-Available.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["API Integration", "Async Functions", "Azure", "Coding", "Custom Functions", "Data Engineering", "Data Pipelines", "Fabric Lakehouse", "Fabric SQL Database", "Microsoft Fabric", "ML", "News", "Notebooks", "OpenAPI", "Pandas", "Power BI", "Python", "User Data Functions", "VS Code"]
-tags_normalized: ["api integration", "async functions", "azure", "coding", "custom functions", "data engineering", "data pipelines", "fabric lakehouse", "fabric sql database", "microsoft fabric", "ml", "news", "notebooks", "openapi", "pandas", "power bi", "python", "user data functions", "vs code"]
+permalink: /ml/news/Fabric-User-Data-Functions-Now-Generally-Available
+tags:
+- API Integration
+- Async Functions
+- Azure
+- Coding
+- Custom Functions
+- Data Engineering
+- Data Pipelines
+- Fabric Lakehouse
+- Fabric SQL Database
+- Microsoft Fabric
+- ML
+- News
+- Notebooks
+- OpenAPI
+- Pandas
+- Power BI
+- Python
+- User Data Functions
+- VS Code
+section_names:
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog details the general availability of User Data Functions, allowing developers and data engineers to build, customize, and deploy reusable business logic across the Fabric platform.<!--excerpt_end-->
 
 # Fabric User Data Functions Now Generally Available

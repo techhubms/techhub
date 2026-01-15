@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development"
-description: "This session from GitHub Universe discusses how AI-powered development tools like GitHub Copilot are shortening the gap between initial concepts and deployed applications. It features demos, customer spotlights, and community hackathon projects, exploring real-world examples of Copilot accelerating innovation, open source contributions, and developer creativity. Speakers from various backgrounds highlight the transformative impact of AI on both individual and team workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=q1IxyisKcZI"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=q1IxyisKcZI
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-29 22:06:44 +00:00
-permalink: "/2025-10-29-Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Ascii Motion", "ASOS", "Braillearn", "Community Development", "CrisisLens", "Digital Public Goods", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Hackathon Projects", "Innovation", "Open Source", "PyFluff Furby", "Python", "Software Engineering", "Videos"]
-tags_normalized: ["ai", "ai powered development", "ascii motion", "asos", "braillearn", "community development", "crisislens", "digital public goods", "github", "github copilot", "github universe", "githubuniverse", "hackathon projects", "innovation", "open source", "pyfluff furby", "python", "software engineering", "videos"]
+permalink: /github-copilot/videos/Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development
+tags:
+- AI
+- AI Powered Development
+- Ascii Motion
+- ASOS
+- Braillearn
+- Community Development
+- CrisisLens
+- Digital Public Goods
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Hackathon Projects
+- Innovation
+- Open Source
+- PyFluff Furby
+- Python
+- Software Engineering
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a compelling look at how AI and GitHub Copilot are closing the gap from ideas to impactful software, featuring insights and demos from leaders and innovators across the development community.<!--excerpt_end-->
 
 {% youtube q1IxyisKcZI %}

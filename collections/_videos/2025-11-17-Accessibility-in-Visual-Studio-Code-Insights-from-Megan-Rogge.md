@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Accessibility in Visual Studio Code: Insights from Megan Rogge"
-description: "This episode features Megan Rogge, a Software Engineer on the Visual Studio Code team, discussing the integration of accessibility into the design and development of VS Code. Topics include support for screen readers, accessibility testing processes, responsive UI enhancements such as sound signals, contrast themes, and the broader cultural commitment to accessible development within Microsoft’s IDE team."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=THF85BT8J7c"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Accessibility in Visual Studio Code: Insights from Megan Rogge'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=THF85BT8J7c
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-17 08:00:38 +00:00
-permalink: "/2025-11-17-Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge.html"
-categories: ["Coding"]
-tags: ["Accessibility", "Accessible Views", "Coding", "Color Contrast", "Developer Tools", "IDE", "Inclusive Development", "Microsoft", "Screen Reader", "Software Engineering", "Sound Signals", "Terminal Output", "UI Design", "Videos", "VS Code"]
-tags_normalized: ["accessibility", "accessible views", "coding", "color contrast", "developer tools", "ide", "inclusive development", "microsoft", "screen reader", "software engineering", "sound signals", "terminal output", "ui design", "videos", "vs code"]
+permalink: /coding/videos/Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge
+tags:
+- Accessibility
+- Accessible Views
+- Coding
+- Color Contrast
+- Developer Tools
+- IDE
+- Inclusive Development
+- Microsoft
+- Screen Reader
+- Software Engineering
+- Sound Signals
+- Terminal Output
+- UI Design
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 Visual Studio Code’s team, with insights from engineer Megan Rogge, shares practical approaches to accessibility—covering screen reader support, accessible interfaces, and culture-driven design decisions.<!--excerpt_end-->
 
 {% youtube THF85BT8J7c %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025"
-description: "This session from Microsoft Ignite 2025 focuses on practical strategies for building AI systems that are understandable, traceable, and accountable. Through real-world client stories, speakers discuss overcoming challenges like opaque models, complex workflows, and adoption barriers, offering actionable steps for fostering trust in AI applications built on Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kV3yjDYC8Hg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=kV3yjDYC8Hg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 20:02:48 +00:00
-permalink: "/2025-11-26-Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure"]
-tags: ["Accountability", "AI", "AI Adoption", "AI Auditing", "AI Governance", "AI Trust", "Azure", "Azure AI", "BRKSP480", "Client Stories", "English (us)", "Enterprise AI", "F5n1", "Go Beyond AI Hype To Build Systems You Can Trust And Track | BRKSP480", "Ignite", "Innovate With Azure AI Apps And Agents", "Microsoft", "Microsoft Events", "Microsoft Ignite", "Model Transparency", "Ms Ignite", "Msft Ignite", "Practical AI Solutions", "Technical", "Technical Strategy", "Videos", "Workflow Complexity"]
-tags_normalized: ["accountability", "ai", "ai adoption", "ai auditing", "ai governance", "ai trust", "azure", "azure ai", "brksp480", "client stories", "english us", "enterprise ai", "f5n1", "go beyond ai hype to build systems you can trust and track pipe brksp480", "ignite", "innovate with azure ai apps and agents", "microsoft", "microsoft events", "microsoft ignite", "model transparency", "ms ignite", "msft ignite", "practical ai solutions", "technical", "technical strategy", "videos", "workflow complexity"]
+permalink: /ai/videos/Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025
+tags:
+- Accountability
+- AI
+- AI Adoption
+- AI Auditing
+- AI Governance
+- AI Trust
+- Azure
+- Azure AI
+- BRKSP480
+- Client Stories
+- English (us)
+- Enterprise AI
+- F5n1
+- Go Beyond AI Hype To Build Systems You Can Trust And Track | BRKSP480
+- Ignite
+- Innovate With Azure AI Apps And Agents
+- Microsoft
+- Microsoft Events
+- Microsoft Ignite
+- Model Transparency
+- Ms Ignite
+- Msft Ignite
+- Practical AI Solutions
+- Technical
+- Technical Strategy
+- Videos
+- Workflow Complexity
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events delivers insights at Microsoft Ignite 2025 on building AI systems that are trustworthy and auditable, sharing strategies to ensure that enterprise solutions are both understandable and accountable.<!--excerpt_end-->
 
 {% youtube kV3yjDYC8Hg %}

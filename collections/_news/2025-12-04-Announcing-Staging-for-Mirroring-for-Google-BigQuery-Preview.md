@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing Staging for Mirroring for Google BigQuery (Preview)"
-description: "This official Microsoft Fabric Blog post details the introduction of staging support for Mirroring Google BigQuery in Microsoft Fabric. The new staging functionality significantly improves the performance, efficiency, and reliability of initial data replication from Google BigQuery to Fabric, enabling much faster data access for analytics and cross-cloud workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-staging-for-mirroring-for-google-bigquery-in-microsoft-fabricmirroring-for-gbq-staging-blog/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Announcing Staging for Mirroring for Google BigQuery (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-staging-for-mirroring-for-google-bigquery-in-microsoft-fabricmirroring-for-gbq-staging-blog/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 08:00:00 +00:00
-permalink: "/2025-12-04-Announcing-Staging-for-Mirroring-for-Google-BigQuery-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Bulk Data", "Cloud Data", "Cross Cloud", "Data Engineering", "Data Ingestion", "Data Replication", "ETL", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "Performance Optimization", "Preview Feature", "Staging"]
-tags_normalized: ["analytics", "azure", "bulk data", "cloud data", "cross cloud", "data engineering", "data ingestion", "data replication", "etl", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "performance optimization", "preview feature", "staging"]
+permalink: /ml/news/Announcing-Staging-for-Mirroring-for-Google-BigQuery-Preview
+tags:
+- Analytics
+- Azure
+- Bulk Data
+- Cloud Data
+- Cross Cloud
+- Data Engineering
+- Data Ingestion
+- Data Replication
+- ETL
+- Google BigQuery
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- Performance Optimization
+- Preview Feature
+- Staging
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces staging support for Mirroring Google BigQuery, explaining how this enhancement boosts replication speed and reliability for data engineers and analytics teams.<!--excerpt_end-->
 
 # Announcing Staging for Mirroring for Google BigQuery (Preview)

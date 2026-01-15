@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Pull Request “Files Changed” Public Preview: November 20 Updates"
-description: "This news post covers new improvements to GitHub's pull request experience, specifically enabling users to view the pull request description from within the revamped “Files changed” page. It highlights the public preview nature of this feature, ongoing performance improvements, and ways users can provide feedback. The content is relevant for development teams interested in version control workflows and GitHub platform enhancements."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Pull Request “Files Changed” Public Preview: November 20 Updates'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 21:29:04 +00:00
-permalink: "/2025-11-20-Pull-Request-Files-Changed-Public-Preview-November-20-Updates.html"
-categories: ["DevOps"]
-tags: ["Code Review", "Collaboration Tools", "Development Workflow", "DevOps", "Feedback", "Files Changed", "GitHub", "Improvement", "News", "Performance Improvements", "Public Preview", "Pull Requests", "UI Enhancement", "Version Control"]
-tags_normalized: ["code review", "collaboration tools", "development workflow", "devops", "feedback", "files changed", "github", "improvement", "news", "performance improvements", "public preview", "pull requests", "ui enhancement", "version control"]
+permalink: /devops/news/Pull-Request-Files-Changed-Public-Preview-November-20-Updates
+tags:
+- Code Review
+- Collaboration Tools
+- Development Workflow
+- DevOps
+- Feedback
+- Files Changed
+- GitHub
+- Improvement
+- News
+- Performance Improvements
+- Public Preview
+- Pull Requests
+- UI Enhancement
+- Version Control
+section_names:
+- devops
 ---
-
 Allison details the latest improvements to GitHub’s pull request workflow, focusing on new functionality in the 'Files changed' page and ongoing performance enhancements.<!--excerpt_end-->
 
 # Pull Request “Files Changed” Public Preview: November 20 Updates

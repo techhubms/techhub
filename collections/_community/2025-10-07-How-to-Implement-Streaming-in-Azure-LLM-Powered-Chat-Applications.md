@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How to Implement Streaming in Azure LLM-Powered Chat Applications"
-description: "This article by Pamela Fox explores the technical benefits, practical implementation, and user experience impacts of streaming for large language model (LLM) chat applications deployed on Azure. It details backend and frontend strategies, protocol choices, and the importance of making streaming optional, with sample app repositories and real-world code insights included."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Implement Streaming in Azure LLM-Powered Chat Applications
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 05:57:30 +00:00
-permalink: "/2025-10-07-How-to-Implement-Streaming-in-Azure-LLM-Powered-Chat-Applications.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Integration", "Azure", "Azure AI Search", "Azure OpenAI Service", "Backend Development", "Chat Applications", "Coding", "Community", "FastAPI", "Frontend Development", "JavaScript", "LLM", "NDJSON", "OpenAI Python SDK", "Python", "Quart", "RAG", "React", "Readable Streams", "Server Sent Events", "Streaming", "WebSockets"]
-tags_normalized: ["ai", "api integration", "azure", "azure ai search", "azure openai service", "backend development", "chat applications", "coding", "community", "fastapi", "frontend development", "javascript", "llm", "ndjson", "openai python sdk", "python", "quart", "rag", "react", "readable streams", "server sent events", "streaming", "websockets"]
+permalink: /ai/community/How-to-Implement-Streaming-in-Azure-LLM-Powered-Chat-Applications
+tags:
+- AI
+- API Integration
+- Azure
+- Azure AI Search
+- Azure OpenAI Service
+- Backend Development
+- Chat Applications
+- Coding
+- Community
+- FastAPI
+- Frontend Development
+- JavaScript
+- LLM
+- NDJSON
+- OpenAI Python SDK
+- Python
+- Quart
+- RAG
+- React
+- Readable Streams
+- Server Sent Events
+- Streaming
+- WebSockets
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Pamela Fox demonstrates the value and implementation of streaming for LLM-powered chat applications on Azure, guiding developers through backend and frontend techniques, complete with sample repositories and actionable tips.<!--excerpt_end-->
 
 # How to Implement Streaming in Azure LLM-Powered Chat Applications

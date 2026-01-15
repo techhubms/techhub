@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise"
-description: "A detailed overview of the skilling experiences at Microsoft Ignite 2025, highlighting the integration of hands-on labs, challenges, certifications, and learning pathways for developers and architects. Learn how Ignite accelerates careers by connecting Azure, AI services, GitHub Copilot, and community-driven technical ecosystems into a unified, continuous journey of cloud and AI mastery."
-author: "AaronStark"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise'
+author: AaronStark
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 22:14:11 +00:00
-permalink: "/2025-11-26-Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Skills Navigator", "Applied Learning", "Applied Skills", "Azure", "Azure AI Foundry", "Azure Skills Challenge", "Certification", "Cloud", "Coding", "Community", "Data Platforms", "Developer", "Hands On Labs", "Infrastructure Optimization", "Livestream", "Microsoft Ignite", "Microsoft Learn", "Microsoft Reactor", "Performance Based Testing"]
-tags_normalized: ["ai", "ai skills navigator", "applied learning", "applied skills", "azure", "azure ai foundry", "azure skills challenge", "certification", "cloud", "coding", "community", "data platforms", "developer", "hands on labs", "infrastructure optimization", "livestream", "microsoft ignite", "microsoft learn", "microsoft reactor", "performance based testing"]
+permalink: /ai/community/Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise
+tags:
+- AI
+- AI Skills Navigator
+- Applied Learning
+- Applied Skills
+- Azure
+- Azure AI Foundry
+- Azure Skills Challenge
+- Certification
+- Cloud
+- Coding
+- Community
+- Data Platforms
+- Developer
+- Hands On Labs
+- Infrastructure Optimization
+- Livestream
+- Microsoft Ignite
+- Microsoft Learn
+- Microsoft Reactor
+- Performance Based Testing
+section_names:
+- ai
+- azure
+- coding
 ---
-
 AaronStark delves into the diverse Azure skilling experiences available at Microsoft Ignite 2025, emphasizing the career benefits of hands-on labs, certification pathways, and the integration of AI, Azure, and developer platforms.<!--excerpt_end-->
 
 # Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise

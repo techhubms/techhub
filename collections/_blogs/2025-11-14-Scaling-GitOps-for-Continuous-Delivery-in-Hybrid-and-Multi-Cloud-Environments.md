@@ -1,20 +1,67 @@
----
-layout: "post"
-title: "Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments"
-description: "This article by Ankur Mahida explores how GitOps, an extension of DevOps principles using Git as the source of truth, enables efficient, consistent, and auditable software delivery across hybrid and multi-cloud platforms. It examines real-world practices, including architectural models, policy-as-code governance, security hardening, observability with Prometheus, and cultural transformation—in particular, a detailed case study on scaling GitOps in regulated environments with both AWS and Azure. Readers will gain insight into strategies and pitfalls for successfully adopting GitOps at scale."
-author: "Ankur Mahida"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments
+author: Ankur Mahida
+canonical_url: https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-14 09:47:50 +00:00
-permalink: "/2025-11-14-Scaling-GitOps-for-Continuous-Delivery-in-Hybrid-and-Multi-Cloud-Environments.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ArgoCD", "Azure", "Blogs", "Business Of DevOps", "CI/CD", "Cloud Governance", "Compliance", "Configuration Management", "Container Image Signing", "Continuous Delivery", "Contributed Content", "DevOps", "DevOps Automation", "Drift Detection", "Flux", "GitOps", "GitOps Architecture", "GitOps At Scale", "GitOps Best Practices", "GitOps Case Study", "GitOps Challenges", "GitOps Governance", "GitOps Observability", "GitOps Security", "Grafana", "HashiCorp Vault", "Hub And Spoke Architecture", "Hybrid Cloud", "Hybrid Cloud GitOps", "Hybrid Cloud Operations", "IaC", "Kubernetes", "Kubernetes Delivery", "Multi Cloud", "Multi Cloud DevOps", "Observability", "Open Policy Agent", "OpenTelemetry", "Policy as Code", "Prometheus", "RBAC", "Repository Design", "Secrets Management", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Vault"]
-tags_normalized: ["argocd", "azure", "blogs", "business of devops", "cislashcd", "cloud governance", "compliance", "configuration management", "container image signing", "continuous delivery", "contributed content", "devops", "devops automation", "drift detection", "flux", "gitops", "gitops architecture", "gitops at scale", "gitops best practices", "gitops case study", "gitops challenges", "gitops governance", "gitops observability", "gitops security", "grafana", "hashicorp vault", "hub and spoke architecture", "hybrid cloud", "hybrid cloud gitops", "hybrid cloud operations", "iac", "kubernetes", "kubernetes delivery", "multi cloud", "multi cloud devops", "observability", "open policy agent", "opentelemetry", "policy as code", "prometheus", "rbac", "repository design", "secrets management", "security", "social facebook", "social linkedin", "social x", "vault"]
+permalink: /azure/blogs/Scaling-GitOps-for-Continuous-Delivery-in-Hybrid-and-Multi-Cloud-Environments
+tags:
+- ArgoCD
+- Azure
+- Blogs
+- Business Of DevOps
+- CI/CD
+- Cloud Governance
+- Compliance
+- Configuration Management
+- Container Image Signing
+- Continuous Delivery
+- Contributed Content
+- DevOps
+- DevOps Automation
+- Drift Detection
+- Flux
+- GitOps
+- GitOps Architecture
+- GitOps At Scale
+- GitOps Best Practices
+- GitOps Case Study
+- GitOps Challenges
+- GitOps Governance
+- GitOps Observability
+- GitOps Security
+- Grafana
+- HashiCorp Vault
+- Hub And Spoke Architecture
+- Hybrid Cloud
+- Hybrid Cloud GitOps
+- Hybrid Cloud Operations
+- IaC
+- Kubernetes
+- Kubernetes Delivery
+- Multi Cloud
+- Multi Cloud DevOps
+- Observability
+- Open Policy Agent
+- OpenTelemetry
+- Policy as Code
+- Prometheus
+- RBAC
+- Repository Design
+- Secrets Management
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Vault
+section_names:
+- azure
+- devops
+- security
 ---
-
 Ankur Mahida delivers an in-depth analysis of GitOps adoption in hybrid cloud environments, highlighting architectural, governance, and security strategies for scaling continuous delivery with Azure, Kubernetes, and modern DevOps tooling.<!--excerpt_end-->
 
 # Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments

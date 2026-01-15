@@ -1,22 +1,27 @@
----
-layout: "post"
-title: "Chat in IDE"
-description: "Ask Copilot questions directly in your IDE for instant help"
-author: "Liuba Gonta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/TorMsn9bjLY"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Chat in IDE
+author: Liuba Gonta
+canonical_url: https://youtu.be/TorMsn9bjLY
 date: 2025-01-02 11:19:40 +00:00
-permalink: "/2025-01-02-Chat-in-IDE.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Chat", "Code", "GitHub Copilot", "IDE", "Videos"]
-tags_normalized: ["ai", "chat", "code", "github copilot", "ide", "videos"]
+permalink: /github-copilot/videos/Chat-in-IDE
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Chat
+- Code
+- GitHub Copilot
+- IDE
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Chat in IDE feature. Communicate with Copilot directly within your IDE for instant assistance. You can have multi turn conversations with Copilot on things in your code, or ask it questions on things surrounding your code, like 'how do I do this in Python', or 'how do I run the unit tests from my terminal'.<!--excerpt_end-->
 
 {% youtube TorMsn9bjLY %}

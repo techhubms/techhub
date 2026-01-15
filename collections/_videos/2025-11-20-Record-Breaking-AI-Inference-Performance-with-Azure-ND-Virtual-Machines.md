@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Record-Breaking AI Inference Performance with Azure ND Virtual Machines"
-description: "This session from Microsoft Ignite 2025 explores how Azure’s ND GB200 and GB300 v6 Virtual Machines achieve unprecedented AI inference speeds, reaching 865K and 1.1M tokens per second. The presentation details deep stack optimizations—GPU kernel improvements, attention mechanisms, and multi-node scaling—leveraging LLAMA benchmarks to illustrate hardware/software codesign. Attendees learn how these advances produce faster time-to-value, reduced token costs, and robust production infrastructure for AI workloads."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hcleQSEfK9g"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Record-Breaking AI Inference Performance with Azure ND Virtual Machines
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=hcleQSEfK9g
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:14:48 +00:00
-permalink: "/2025-11-20-Record-Breaking-AI-Inference-Performance-with-Azure-ND-Virtual-Machines.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Inference", "AI Infrastructure", "Attention Mechanisms", "Azure", "Azure ND Virtual Machines", "Azure Supercomputing", "Deep Learning", "GEMM Optimization", "GPU Kernels", "Hardware Codesign", "LLAMA Benchmarks", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Model Architecture", "MSIgnite", "Multi Node Scaling", "ND GB200", "ND GB300", "Tokens Per Second", "Videos"]
-tags_normalized: ["ai", "ai inference", "ai infrastructure", "attention mechanisms", "azure", "azure nd virtual machines", "azure supercomputing", "deep learning", "gemm optimization", "gpu kernels", "hardware codesign", "llama benchmarks", "microsoft ignite", "migrateandmodernizeyourestate", "model architecture", "msignite", "multi node scaling", "nd gb200", "nd gb300", "tokens per second", "videos"]
+permalink: /ai/videos/Record-Breaking-AI-Inference-Performance-with-Azure-ND-Virtual-Machines
+tags:
+- AI
+- AI Inference
+- AI Infrastructure
+- Attention Mechanisms
+- Azure
+- Azure ND Virtual Machines
+- Azure Supercomputing
+- Deep Learning
+- GEMM Optimization
+- GPU Kernels
+- Hardware Codesign
+- LLAMA Benchmarks
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Model Architecture
+- MSIgnite
+- Multi Node Scaling
+- ND GB200
+- ND GB300
+- Tokens Per Second
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events, with Hugo Affaticati and Nitin Nagarkatte, demonstrate how Azure ND Virtual Machines deliver record-setting AI inference throughput and efficiency through engineering innovations showcased at Ignite 2025.<!--excerpt_end-->
 
 {% youtube hcleQSEfK9g %}

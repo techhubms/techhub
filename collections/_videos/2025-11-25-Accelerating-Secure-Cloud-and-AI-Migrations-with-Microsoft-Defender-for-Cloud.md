@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Accelerating Secure Cloud and AI Migrations with Microsoft Defender for Cloud"
-description: "This session from Microsoft Ignite 2025 explores secure migration strategies for partners, focusing on how Microsoft Defender for Cloud enables unified, intelligent security across multi-cloud and hybrid environments. The presentation highlights best practices for safeguarding cloud, AI platforms, and business-critical apps, integration of tools such as Purview and Azure, and addresses organizational challenges in merging security and infrastructure teams. Real-world partner scenarios, security assessments, and Microsoft GTM resources are examined for optimizing customer engagement and innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ea1Sxfz20d0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating Secure Cloud and AI Migrations with Microsoft Defender for Cloud
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Ea1Sxfz20d0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:58:47 +00:00
-permalink: "/2025-11-25-Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Platforms", "Azure", "Azure Accelerate", "Business Critical Applications", "Cloud", "Cloud Security", "Cloud Security Ambitioning", "Cloud Workloads", "GTM Resources", "Hybrid Security", "MDC", "Microsoft Defender For Cloud", "Microsoft Ignite", "Microsoft Purview", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Multi Cloud", "Orchestration", "Partner Business Models", "Secure Migration", "Security", "Security Assessment", "Security Recommendations", "Tab", "Videos"]
-tags_normalized: ["ai", "ai platforms", "azure", "azure accelerate", "business critical applications", "cloud", "cloud security", "cloud security ambitioning", "cloud workloads", "gtm resources", "hybrid security", "mdc", "microsoft defender for cloud", "microsoft ignite", "microsoft purview", "microsoftaicloudpartnerprogram", "msignite", "multi cloud", "orchestration", "partner business models", "secure migration", "security", "security assessment", "security recommendations", "tab", "videos"]
+permalink: /ai/videos/Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud
+tags:
+- AI
+- AI Platforms
+- Azure
+- Azure Accelerate
+- Business Critical Applications
+- Cloud
+- Cloud Security
+- Cloud Security Ambitioning
+- Cloud Workloads
+- GTM Resources
+- Hybrid Security
+- MDC
+- Microsoft Defender For Cloud
+- Microsoft Ignite
+- Microsoft Purview
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Multi Cloud
+- Orchestration
+- Partner Business Models
+- Secure Migration
+- Security
+- Security Assessment
+- Security Recommendations
+- Tab
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events delivers an intermediate-level Ignite session led by Gabriela Perez Arredondo and Jonathan Stock that demonstrates secure migration strategies and AI innovation for partners using Microsoft Defender for Cloud.<!--excerpt_end-->
 
 {% youtube Ea1Sxfz20d0 %}

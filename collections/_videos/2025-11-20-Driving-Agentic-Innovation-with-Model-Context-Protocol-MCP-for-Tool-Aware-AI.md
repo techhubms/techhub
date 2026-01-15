@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Driving Agentic Innovation with Model Context Protocol (MCP) for Tool-Aware AI"
-description: "This technical session from Microsoft Ignite explores how the Model Context Protocol (MCP) is revolutionizing agent-tool interactions in modern AI workflows. Presenters Maria Naggaga and Don Scott dive into MCP's role in enabling secure, cross-platform tooling across Microsoft Foundry, GitHub, and VS Code, discuss agent integration, governance, and showcase how MCP supports both cloud and on-premises API management. The session introduces innovative features like Foundry Tools' unified catalog and Agent 365 integration for Microsoft 365 apps."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dUSaFR-fL-c"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Driving Agentic Innovation with Model Context Protocol (MCP) for Tool-Aware AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=dUSaFR-fL-c
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:46:14 +00:00
-permalink: "/2025-11-20-Driving-Agentic-Innovation-with-Model-Context-Protocol-MCP-for-Tool-Aware-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agent 365", "AI", "AI Agents", "API Management", "Autonomous Agents", "Azure", "Connectors Catalog", "Cross Cloud Support", "GitHub", "Governance", "InnovatewithAzureAIappsandagents", "MCP", "Microsoft Foundry", "MSIgnite", "ServiceNow Integration", "Tool Orchestration", "Unified Access", "Videos", "VS Code"]
-tags_normalized: ["agent 365", "ai", "ai agents", "api management", "autonomous agents", "azure", "connectors catalog", "cross cloud support", "github", "governance", "innovatewithazureaiappsandagents", "mcp", "microsoft foundry", "msignite", "servicenow integration", "tool orchestration", "unified access", "videos", "vs code"]
+permalink: /ai/videos/Driving-Agentic-Innovation-with-Model-Context-Protocol-MCP-for-Tool-Aware-AI
+tags:
+- Agent 365
+- AI
+- AI Agents
+- API Management
+- Autonomous Agents
+- Azure
+- Connectors Catalog
+- Cross Cloud Support
+- GitHub
+- Governance
+- InnovatewithAzureAIappsandagents
+- MCP
+- Microsoft Foundry
+- MSIgnite
+- ServiceNow Integration
+- Tool Orchestration
+- Unified Access
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events features Maria Naggaga and Don Scott in this Ignite session, unveiling how Model Context Protocol (MCP) is transforming agent-based AI systems and tooling in the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube dUSaFR-fL-c %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation"
-description: "This article introduces BlueCodeAgent, an AI-based blue teaming framework developed by Microsoft Research and academic partners to address security risks in code generation by large language models. The post describes how BlueCodeAgent leverages comprehensive red-teaming, constitution-based defense, and dynamic testing to detect and mitigate vulnerabilities, bias, and malicious behaviors in code-generating AI systems."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-14 16:48:52 +00:00
-permalink: "/2025-11-14-BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Ethics", "AI Governance", "Automated Testing", "Bias Detection", "Blue Teaming", "BlueCodeAgent", "Code Generation", "Code Security", "Company News", "Constitutional AI", "Dynamic Testing", "LLM Security", "Malicious Code", "Microsoft Research", "News", "Red Teaming", "Security", "Vulnerability Detection"]
-tags_normalized: ["ai", "ai ethics", "ai governance", "automated testing", "bias detection", "blue teaming", "bluecodeagent", "code generation", "code security", "company news", "constitutional ai", "dynamic testing", "llm security", "malicious code", "microsoft research", "news", "red teaming", "security", "vulnerability detection"]
+permalink: /ai/news/BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation
+tags:
+- AI
+- AI Ethics
+- AI Governance
+- Automated Testing
+- Bias Detection
+- Blue Teaming
+- BlueCodeAgent
+- Code Generation
+- Code Security
+- Company News
+- Constitutional AI
+- Dynamic Testing
+- LLM Security
+- Malicious Code
+- Microsoft Research
+- News
+- Red Teaming
+- Security
+- Vulnerability Detection
+section_names:
+- ai
+- security
 ---
-
 stclarke explores the design and effectiveness of BlueCodeAgent, an AI defender that applies automated red teaming, actionable constitutions, and dynamic testing to secure code generation by large language models.<!--excerpt_end-->
 
 # BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation

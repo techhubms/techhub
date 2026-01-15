@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Unlocking Flexibility in Fabric: Introducing Multiple Scheduler and CI/CD Support"
-description: "Microsoft Fabric now supports Multiple Scheduler per item—up to 20 per item—empowering users with flexible scheduling and robust CI/CD integration. The update simplifies complex deployment scenarios, enhances monitoring, and paves the way for broader CRUD operations and UI enhancements."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-flexibility-in-fabric-introducing-multiple-scheduler-and-ci-cd-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Unlocking Flexibility in Fabric: Introducing Multiple Scheduler and CI/CD Support'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-flexibility-in-fabric-introducing-multiple-scheduler-and-ci-cd-support/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-05 09:00:00 +00:00
-permalink: "/2025-08-05-Unlocking-Flexibility-in-Fabric-Introducing-Multiple-Scheduler-and-CICD-Support.html"
-categories: ["Azure", "ML", "DevOps"]
-tags: ["Automation", "Azure", "CI/CD", "Data Engineering", "Data Pipelines", "Deployment Pipelines", "DevOps", "Git Integration", "Job Types", "Microsoft Fabric", "ML", "Monitoring", "Multiple Scheduler", "News", "Scheduler API", "Version Control"]
-tags_normalized: ["automation", "azure", "cislashcd", "data engineering", "data pipelines", "deployment pipelines", "devops", "git integration", "job types", "microsoft fabric", "ml", "monitoring", "multiple scheduler", "news", "scheduler api", "version control"]
+permalink: /ml/news/Unlocking-Flexibility-in-Fabric-Introducing-Multiple-Scheduler-and-CICD-Support
+tags:
+- Automation
+- Azure
+- CI/CD
+- Data Engineering
+- Data Pipelines
+- Deployment Pipelines
+- DevOps
+- Git Integration
+- Job Types
+- Microsoft Fabric
+- ML
+- Monitoring
+- Multiple Scheduler
+- News
+- Scheduler API
+- Version Control
+section_names:
+- azure
+- ml
+- devops
 ---
-
 This article by the Microsoft Fabric Blog details the new Multiple Scheduler and CI/CD support in Fabric, highlighting key enhancements for scheduling and deployment workflows.<!--excerpt_end-->
 
 ## Multiple Scheduler: A Game-Changer for Complex Scheduling Needs

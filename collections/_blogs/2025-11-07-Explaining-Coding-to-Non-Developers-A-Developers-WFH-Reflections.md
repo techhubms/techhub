@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Explaining Coding to Non-Developers: A Developer’s WFH Reflections"
-description: "Wouter Vercruysse shares personal and relatable experiences on how he, as a developer working from home, explains the realities of coding to people outside of tech. The post explores challenges in communicating technical work, the day-to-day rituals of development, and humorous anecdotes surrounding Azure DevOps, Bicep deployments, and coding culture."
-author: "Wouter.Vercruysse@zure.com (Wouter Vercruysse)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/what-are-you-doing-how-i-tried-to-explain-coding-to-normal-people"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: 'Explaining Coding to Non-Developers: A Developer’s WFH Reflections'
+author: Wouter.Vercruysse@zure.com (Wouter Vercruysse)
+canonical_url: https://zure.com/blog/what-are-you-doing-how-i-tried-to-explain-coding-to-normal-people
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-11-07 04:45:01 +00:00
-permalink: "/2025-11-07-Explaining-Coding-to-Non-Developers-A-Developers-WFH-Reflections.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure DevOps", "Bicep", "Blogs", "Build Errors", "CI/CD", "Coding", "Collaboration", "Debugging", "Developer Life", "DevOps", "People", "Software Deployment", "Teamwork", "VS Code", "Web Development", "Work From Home", "YAML Pipelines"]
-tags_normalized: ["azure", "azure devops", "bicep", "blogs", "build errors", "cislashcd", "coding", "collaboration", "debugging", "developer life", "devops", "people", "software deployment", "teamwork", "vs code", "web development", "work from home", "yaml pipelines"]
+permalink: /coding/blogs/Explaining-Coding-to-Non-Developers-A-Developers-WFH-Reflections
+tags:
+- Azure
+- Azure DevOps
+- Bicep
+- Blogs
+- Build Errors
+- CI/CD
+- Coding
+- Collaboration
+- Debugging
+- Developer Life
+- DevOps
+- People
+- Software Deployment
+- Teamwork
+- VS Code
+- Web Development
+- Work From Home
+- YAML Pipelines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this insightful post, Wouter Vercruysse offers an honest look at how developers explain their day-to-day coding and DevOps tasks to non-technical audiences, with stories from real work-from-home experiences.<!--excerpt_end-->
 
 # What are you doing? – How I Tried to Explain Coding to Normal People

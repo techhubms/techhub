@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GPT-5.2 is now generally available in GitHub Copilot"
-description: "This announcement details the general availability of the GPT-5.2 model in GitHub Copilot, now accessible to users on various Copilot plans across major IDEs. The article explains how administrators and individuals can enable the new model, supported environments, and where to learn more about GPT-5.2 within Copilot's chat features."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GPT-5.2 is now generally available in GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 18:12:19 +00:00
-permalink: "/2025-12-17-GPT-52-is-now-generally-available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model", "Chat Model", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "GitHub Copilot", "GPT 5.2", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "VS Code"]
-tags_normalized: ["ai", "ai model", "chat model", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "github copilot", "gpt 5dot2", "ide integration", "jetbrains ides", "model picker", "news", "vs code"]
+permalink: /github-copilot/news/GPT-52-is-now-generally-available-in-GitHub-Copilot
+tags:
+- AI
+- AI Model
+- Chat Model
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro
+- GitHub Copilot
+- GPT 5.2
+- IDE Integration
+- JetBrains IDEs
+- Model Picker
+- News
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the general availability of GPT-5.2 in GitHub Copilot, detailing supported IDEs, eligibility for various Copilot plans, and guidance for enabling the new AI model.<!--excerpt_end-->
 
 # GPT-5.2 is Now Generally Available in GitHub Copilot

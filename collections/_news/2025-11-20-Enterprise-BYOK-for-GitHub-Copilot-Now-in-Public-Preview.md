@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enterprise BYOK for GitHub Copilot Now in Public Preview"
-description: "This news update announces the public preview of Bring Your Own Key (BYOK) for GitHub Copilot, allowing enterprise customers to connect API keys from providers like Anthropic, Microsoft Foundry, OpenAI, and xAI. It describes centralized model management, support for various IDEs, billing changes, configuration options for admins, and highlights a current limitation. The update is aimed at enterprise and business customers leveraging GitHub Copilot in development workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enterprise BYOK for GitHub Copilot Now in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 15:46:54 +00:00
-permalink: "/2025-11-20-Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Admin Controls", "AI", "Anthropic", "API Key", "Billing", "BYOK", "Copilot", "Copilot Chat", "DevOps", "Enterprise", "GitHub Copilot", "IDE Integration", "LLM Providers", "Microsoft Foundry", "Model Management", "News", "OpenAI", "Organization Admin", "VS Code", "Xai"]
-tags_normalized: ["admin controls", "ai", "anthropic", "api key", "billing", "byok", "copilot", "copilot chat", "devops", "enterprise", "github copilot", "ide integration", "llm providers", "microsoft foundry", "model management", "news", "openai", "organization admin", "vs code", "xai"]
+permalink: /github-copilot/news/Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview
+tags:
+- Admin Controls
+- AI
+- Anthropic
+- API Key
+- Billing
+- BYOK
+- Copilot
+- Copilot Chat
+- DevOps
+- Enterprise
+- GitHub Copilot
+- IDE Integration
+- LLM Providers
+- Microsoft Foundry
+- Model Management
+- News
+- OpenAI
+- Organization Admin
+- VS Code
+- Xai
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison presents a release announcement detailing the public preview of Bring Your Own Key (BYOK) support for GitHub Copilot, empowering enterprises to use their own LLM provider keys and centrally manage model access within organizations.<!--excerpt_end-->
 
 # Enterprise Bring Your Own Key (BYOK) for GitHub Copilot: Public Preview

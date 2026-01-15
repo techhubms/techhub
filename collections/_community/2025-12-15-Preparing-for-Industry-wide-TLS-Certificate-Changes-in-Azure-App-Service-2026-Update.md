@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Preparing for Industry-wide TLS Certificate Changes in Azure App Service (2026 Update)"
-description: "This community post explains mandatory certificate changes coming to Azure App Service beginning in early 2026. It covers updates to TLS certificate chains, removal of client authentication EKU, shortened certificate validity, and actions Azure administrators and security teams need to take to remain compliant and avoid service disruptions. Both free managed and paid App Service certificates are covered, with clear timelines and links to Microsoft documentation for best practices, guidance, and support resources."
-author: "YutangLin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/industry-wide-certificate-changes-impacting-azure-app-service/ba-p/4477924"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Preparing for Industry-wide TLS Certificate Changes in Azure App Service (2026 Update)
+author: YutangLin
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/industry-wide-certificate-changes-impacting-azure-app-service/ba-p/4477924
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 10:23:57 +00:00
-permalink: "/2025-12-15-Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure App Service", "Azure Security", "Browser Standards", "CA/B Forum", "Certificate Pinning", "Certificates", "Community", "DigiCert", "EKU", "GoDaddy", "Managed Certificates", "Mtls", "Security", "Security Compliance", "SSL", "TLS", "Trusted Root CA", "Validity Period"]
-tags_normalized: ["azure", "azure app service", "azure security", "browser standards", "caslashb forum", "certificate pinning", "certificates", "community", "digicert", "eku", "godaddy", "managed certificates", "mtls", "security", "security compliance", "ssl", "tls", "trusted root ca", "validity period"]
+permalink: /azure/community/Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update
+tags:
+- Azure
+- Azure App Service
+- Azure Security
+- Browser Standards
+- CA/B Forum
+- Certificate Pinning
+- Certificates
+- Community
+- DigiCert
+- EKU
+- GoDaddy
+- Managed Certificates
+- Mtls
+- Security
+- Security Compliance
+- SSL
+- TLS
+- Trusted Root CA
+- Validity Period
+section_names:
+- azure
+- security
 ---
-
 YutangLin explains how upcoming industry-wide requirements will impact TLS certificate issuance and management in Azure App Service, including steps administrators should take to maintain compliance and service reliability.<!--excerpt_end-->
 
 # Preparing for Industry-wide TLS Certificate Changes in Azure App Service (2026 Update)

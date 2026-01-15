@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices"
-description: "This blog post provides a comprehensive overview of Microsoft’s approach to cloud security, exploring how the company safeguards customer data through encryption, identity management, physical infrastructure protections, compliance, threat detection, and the shared responsibility model. Readers gain practical best practices and insight into the key elements of Microsoft’s security strategy for cloud environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices
+author: Dellenny
+canonical_url: https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-10 10:49:25 +00:00
-permalink: "/2025-11-10-How-Microsoft-Keeps-Your-Data-Safe-in-the-Cloud-A-Deep-Dive-into-Cloud-Security-Practices.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Blogs", "Cloud", "Compliance", "Encryption", "GDPR", "Identity", "Identity And Access Management", "ISO 27001", "Key Management", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Microsoft 365 Security", "Microsoft Cloud Security", "Microsoft Defender For Cloud", "Microsoft Entra ID", "Multi Factor Authentication", "Physical Security", "RBAC", "Security", "Shared Responsibility Model", "Threat Detection"]
-tags_normalized: ["azure", "blogs", "cloud", "compliance", "encryption", "gdpr", "identity", "identity and access management", "iso 27001", "key management", "microsoft 365", "microsoft 365 certified fundamentals", "microsoft 365 security", "microsoft cloud security", "microsoft defender for cloud", "microsoft entra id", "multi factor authentication", "physical security", "rbac", "security", "shared responsibility model", "threat detection"]
+permalink: /azure/blogs/How-Microsoft-Keeps-Your-Data-Safe-in-the-Cloud-A-Deep-Dive-into-Cloud-Security-Practices
+tags:
+- Azure
+- Blogs
+- Cloud
+- Compliance
+- Encryption
+- GDPR
+- Identity
+- Identity And Access Management
+- ISO 27001
+- Key Management
+- Microsoft 365
+- 'Microsoft 365 Certified: Fundamentals'
+- Microsoft 365 Security
+- Microsoft Cloud Security
+- Microsoft Defender For Cloud
+- Microsoft Entra ID
+- Multi Factor Authentication
+- Physical Security
+- RBAC
+- Security
+- Shared Responsibility Model
+- Threat Detection
+section_names:
+- azure
+- security
 ---
-
 Dellenny offers an in-depth look at Microsoft’s cloud security architecture, covering topics like encryption, identity, compliance, and customer responsibilities to help secure data in the cloud.<!--excerpt_end-->
 
 # How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices

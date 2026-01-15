@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How Microsoft Engineers Build AI: Insights into Scalable RAG-Enabled Applications"
-description: "This blog post introduces a Microsoft video series exploring how engineers develop AI at scale, focusing on building Retrieval-Augmented Generation (RAG) apps like the Copilot for Azure 'Ask Learn' plugin. It covers technical best practices, key challenges, and practical guidance for AI developers."
-author: "Krezzia Noelle Basilio, Samit Jhaveri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/ai-in-action-how-to-build-scalable-rag-enabled-ai-apps/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+layout: post
+title: 'How Microsoft Engineers Build AI: Insights into Scalable RAG-Enabled Applications'
+author: Krezzia Noelle Basilio, Samit Jhaveri
+canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/ai-in-action-how-to-build-scalable-rag-enabled-ai-apps/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-03-03 17:00:44 +00:00
-permalink: "/2025-03-03-How-Microsoft-Engineers-Build-AI-Insights-into-Scalable-RAG-Enabled-Applications.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Applications", "AI Apps", "AI Development", "Ask Learn Plugin", "Azure", "Copilot For Azure", "Dynamics 365 Business Central", "Engineering@Microsoft", "Intelligent Apps", "Large Language Models", "Machine Learning", "Microsoft Engineering", "Microsoft Security Copilot", "News", "RAG", "Retrieval Augmented Generation", "Scalable", "VS"]
-tags_normalized: ["ai", "ai applications", "ai apps", "ai development", "ask learn plugin", "azure", "copilot for azure", "dynamics 365 business central", "engineeringatmicrosoft", "intelligent apps", "large language models", "machine learning", "microsoft engineering", "microsoft security copilot", "news", "rag", "retrieval augmented generation", "scalable", "vs"]
+permalink: /ai/news/How-Microsoft-Engineers-Build-AI-Insights-into-Scalable-RAG-Enabled-Applications
+tags:
+- AI
+- AI Applications
+- AI Apps
+- AI Development
+- Ask Learn Plugin
+- Azure
+- Copilot For Azure
+- Dynamics 365 Business Central
+- Engineering@Microsoft
+- Intelligent Apps
+- Large Language Models
+- Machine Learning
+- Microsoft Engineering
+- Microsoft Security Copilot
+- News
+- RAG
+- Retrieval Augmented Generation
+- Scalable
+- VS
+section_names:
+- ai
+- azure
 ---
-
 Written by Krezzia Noelle Basilio and Samit Jhaveri, this post explores the Microsoft Engineering Series on scalable Retrieval-Augmented Generation (RAG) AI apps, practical best practices, and challenges in building intelligent Microsoft solutions.<!--excerpt_end-->
 
 ## How Microsoft Engineers Build AI: Learn about scalable RAG-enabled AI Apps

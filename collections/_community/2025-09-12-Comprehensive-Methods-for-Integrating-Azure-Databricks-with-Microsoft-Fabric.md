@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Comprehensive Methods for Integrating Azure Databricks with Microsoft Fabric"
-description: "This article by Rafia_Aqil outlines and compares several integration approaches between Azure Databricks and Microsoft Fabric. It covers direct publishing, catalog mirroring, Delta Sharing, orchestrated pipelines, and various shortcut techniques, offering a practical reference for data engineers and architects implementing unified analytics solutions across Microsoft data platforms."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Comprehensive Methods for Integrating Azure Databricks with Microsoft Fabric
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-12 21:43:27 +00:00
-permalink: "/2025-09-12-Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Databricks", "Community", "Data Engineering", "Data Governance", "Data Integration", "Data Lake", "Data Orchestration", "Data Pipelines", "Data Warehouse", "Delta Sharing", "ETL", "Lakehouse", "Microsoft Fabric", "ML", "OneLake", "Power BI", "Trusted Workspace Access", "Unity Catalog"]
-tags_normalized: ["azure", "azure databricks", "community", "data engineering", "data governance", "data integration", "data lake", "data orchestration", "data pipelines", "data warehouse", "delta sharing", "etl", "lakehouse", "microsoft fabric", "ml", "onelake", "power bi", "trusted workspace access", "unity catalog"]
+permalink: /ml/community/Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric
+tags:
+- Azure
+- Azure Databricks
+- Community
+- Data Engineering
+- Data Governance
+- Data Integration
+- Data Lake
+- Data Orchestration
+- Data Pipelines
+- Data Warehouse
+- Delta Sharing
+- ETL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- OneLake
+- Power BI
+- Trusted Workspace Access
+- Unity Catalog
+section_names:
+- azure
+- ml
 ---
-
 Rafia_Aqil provides an in-depth guide comparing approaches to integrate Azure Databricks with Microsoft Fabric, helping technical teams select the best method for unified data analytics and governance.<!--excerpt_end-->
 
 # Approaches to Integrating Azure Databricks with Microsoft Fabric: The Better Together Story!

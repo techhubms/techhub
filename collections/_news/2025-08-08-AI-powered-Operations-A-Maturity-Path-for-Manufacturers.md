@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "AI-powered Operations: A Maturity Path for Manufacturers"
-description: "This Microsoft news article outlines how manufacturers can leverage AI for enhanced operational maturity, referencing industry partnerships and energy sector innovations. Emphasizing grid modernization, it highlights the evolving role of AI for operational effectiveness and the strategic vision for future energy-management and manufacturing resiliency."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/manufacturing/2025/08/07/embracing-ai-powered-operations-a-maturity-path-for-manufacturers/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'AI-powered Operations: A Maturity Path for Manufacturers'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/manufacturing/2025/08/07/embracing-ai-powered-operations-a-maturity-path-for-manufacturers/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-08 00:34:33 +00:00
-permalink: "/2025-08-08-AI-powered-Operations-A-Maturity-Path-for-Manufacturers.html"
-categories: ["AI"]
-tags: ["AI", "AI Powered Operations", "AI Strategy", "Company News", "Digital Transformation", "Energy Grid", "Industrial Automation", "Manufacturing", "Microsoft AI", "Microsoft Partners", "News", "Operational Maturity", "Smart Manufacturing"]
-tags_normalized: ["ai", "ai powered operations", "ai strategy", "company news", "digital transformation", "energy grid", "industrial automation", "manufacturing", "microsoft ai", "microsoft partners", "news", "operational maturity", "smart manufacturing"]
+permalink: /ai/news/AI-powered-Operations-A-Maturity-Path-for-Manufacturers
+tags:
+- AI
+- AI Powered Operations
+- AI Strategy
+- Company News
+- Digital Transformation
+- Energy Grid
+- Industrial Automation
+- Manufacturing
+- Microsoft AI
+- Microsoft Partners
+- News
+- Operational Maturity
+- Smart Manufacturing
+section_names:
+- ai
 ---
-
 stclarke summarizes Microsoft's perspective on the path toward AI-driven operational excellence in manufacturing, spotlighting advancements in grid energy and strategic partnerships.<!--excerpt_end-->
 
 # AI-powered Operations: A Maturity Path for Manufacturers

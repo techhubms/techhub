@@ -1,20 +1,32 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "GitHub Pull Request 'Files Changed' Public Preview: August 21 Updates"
-description: "This news update details enhancements to the GitHub pull request 'Files changed' page, including user interface improvements, expanded submodule support, a summary of key fixes, and ongoing known issues in the public preview phase. It highlights improved review workflows, usability refinements, and how feedback is shaping the direction of future development."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 19:44:25 +00:00
-permalink: "/2025-08-21-GitHub-Pull-Request-Files-Changed-Public-Preview-August-21-Updates.html"
-categories: ["DevOps"]
-tags: ["Bug Fixes", "Code Review", "Developer Experience", "DevOps", "DevOps Tools", "GitHub", "News", "Public Preview", "Pull Requests", "Review Submission", "Software Development", "Submodule Support", "UI Improvements", "Version Control", "Workflow"]
-tags_normalized: ["bug fixes", "code review", "developer experience", "devops", "devops tools", "github", "news", "public preview", "pull requests", "review submission", "software development", "submodule support", "ui improvements", "version control", "workflow"]
+permalink: /devops/news/GitHub-Pull-Request-Files-Changed-Public-Preview-August-21-Updates
+tags:
+- Bug Fixes
+- Code Review
+- Developer Experience
+- DevOps
+- DevOps Tools
+- GitHub
+- News
+- Public Preview
+- Pull Requests
+- Review Submission
+- Software Development
+- Submodule Support
+- UI Improvements
+- Version Control
+- Workflow
+section_names:
+- devops
 ---
-
 Allison outlines the new features and improvements available in the GitHub pull request 'Files changed' public preview, such as better review panels, submodule support, and several usability fixes, helping developers streamline code review processes.<!--excerpt_end-->
 
 # GitHub Pull Request 'Files Changed' Public Preview: August 21 Updates

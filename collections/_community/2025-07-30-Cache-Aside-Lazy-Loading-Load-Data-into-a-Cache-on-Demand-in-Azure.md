@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Cache-Aside (Lazy Loading): Load Data into a Cache on Demand in Azure"
-description: "JohnNaguib explains the Cache-Aside (Lazy Loading) caching pattern, discussing its benefits for performance and scalability in complex applications. The article details implementing this pattern on Azure using Azure Cache for Redis to reduce database load and improve responsiveness."
-author: "JohnNaguib"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in/m-p/4438103#M775"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Cache-Aside (Lazy Loading): Load Data into a Cache on Demand in Azure'
+author: JohnNaguib
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in/m-p/4438103#M775
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 07:45:07 +00:00
-permalink: "/2025-07-30-Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure.html"
-categories: ["Azure"]
-tags: ["Application Design", "Azure", "Azure Cache For Redis", "Cache Aside", "Caching Patterns", "Cloud Architecture", "Community", "Database Optimization", "Lazy Loading", "Performance", "Scalability"]
-tags_normalized: ["application design", "azure", "azure cache for redis", "cache aside", "caching patterns", "cloud architecture", "community", "database optimization", "lazy loading", "performance", "scalability"]
+permalink: /azure/community/Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure
+tags:
+- Application Design
+- Azure
+- Azure Cache For Redis
+- Cache Aside
+- Caching Patterns
+- Cloud Architecture
+- Community
+- Database Optimization
+- Lazy Loading
+- Performance
+- Scalability
+section_names:
+- azure
 ---
-
 JohnNaguib discusses the effectiveness of the Cache-Aside pattern for optimizing performance in Azure applications, focusing on Azure Cache for Redis.<!--excerpt_end-->
 
 ## Summary

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Simplify Your .NET Data Transfers with the New Azure Storage Data Movement Library"
-description: "This announcement details the release of the modern Azure Storage Data Movement library for .NET, outlining its performance enhancements, modernization, support for Azure Blob Storage and Files, integration with modern Azure Identity, and easy migration from the legacy library. Step-by-step examples and useful links are provided."
-author: "Charles Barnett"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/simplify-your-net-data-transfers-with-the-new-azure-storage-data-movement-library/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Simplify Your .NET Data Transfers with the New Azure Storage Data Movement Library
+author: Charles Barnett
+canonical_url: https://devblogs.microsoft.com/azure-sdk/simplify-your-net-data-transfers-with-the-new-azure-storage-data-movement-library/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-12 17:34:48 +00:00
-permalink: "/2025-02-12-Simplify-Your-NET-Data-Transfers-with-the-New-Azure-Storage-Data-Movement-Library.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Azure", "Azure Files", "Azure Identity", "Azure SDK", "Azure Storage", "Blob Storage", "C#", "Coding", "Data Movement", "Data Transfer", "Library Migration", "Microsoft Entra", "News", "NuGet Packages", "Storage", "TransferManager"]
-tags_normalized: ["dotnet", "azure", "azure files", "azure identity", "azure sdk", "azure storage", "blob storage", "csharp", "coding", "data movement", "data transfer", "library migration", "microsoft entra", "news", "nuget packages", "storage", "transfermanager"]
+permalink: /coding/news/Simplify-Your-NET-Data-Transfers-with-the-New-Azure-Storage-Data-Movement-Library
+tags:
+- .NET
+- Azure
+- Azure Files
+- Azure Identity
+- Azure SDK
+- Azure Storage
+- Blob Storage
+- C#
+- Coding
+- Data Movement
+- Data Transfer
+- Library Migration
+- Microsoft Entra
+- News
+- NuGet Packages
+- Storage
+- TransferManager
+section_names:
+- azure
+- coding
 ---
-
 Charles Barnett introduces the new Azure Storage Data Movement library for .NET, highlighting its advanced features and modernization, and offering practical guidance for developers.<!--excerpt_end-->
 
 # Simplify Your .NET Data Transfers with the New Azure Storage Data Movement Library

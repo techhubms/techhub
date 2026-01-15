@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Termix v0.9.0 – Add Rename, Delete, Write File Ops & Fuzzy Search (Preview)"
-description: "The author announces Termix v0.9.0, a .NET-based terminal file navigator with new features such as keyboard file operations (rename, delete, write), an experimental fuzzy search, and a no-icons fallback. The update includes performance improvements, UX tweaks, and bug fixes. User feedback remains welcome ahead of v1.0."
-author: "amrohann"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mf1szg/termix_v090_add_rename_delete_write_file_ops/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Termix v0.9.0 – Add Rename, Delete, Write File Ops & Fuzzy Search (Preview)
+author: amrohann
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mf1szg/termix_v090_add_rename_delete_write_file_ops/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-01 16:55:30 +00:00
-permalink: "/2025-08-01-Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview.html"
-categories: ["Coding"]
-tags: [".NET", "Coding", "Community", "Delete", "File Navigator", "File Operations", "Fuzzy Search", "Keyboard Shortcuts", "Open Source", "Performance", "Rename", "Terminal", "Termix", "User Experience"]
-tags_normalized: ["dotnet", "coding", "community", "delete", "file navigator", "file operations", "fuzzy search", "keyboard shortcuts", "open source", "performance", "rename", "terminal", "termix", "user experience"]
+permalink: /coding/community/Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview
+tags:
+- .NET
+- Coding
+- Community
+- Delete
+- File Navigator
+- File Operations
+- Fuzzy Search
+- Keyboard Shortcuts
+- Open Source
+- Performance
+- Rename
+- Terminal
+- Termix
+- User Experience
+section_names:
+- coding
 ---
-
 amrohann shares the release of Termix v0.9.0, highlighting new file operation features, fuzzy search, and improvements in this .NET-based terminal file navigator.<!--excerpt_end-->
 
 ### Overview

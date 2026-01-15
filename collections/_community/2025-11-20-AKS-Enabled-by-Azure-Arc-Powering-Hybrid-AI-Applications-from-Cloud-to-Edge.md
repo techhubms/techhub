@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "AKS Enabled by Azure Arc: Powering Hybrid AI Applications from Cloud to Edge"
-description: "This in-depth community post by SchumannGE explores recent advancements in Azure Kubernetes Service (AKS) enabled by Azure Arc, presented at Microsoft Ignite 2025. Key highlights include expansion of AKS Arc for hybrid and disconnected operations, AI Foundry Local for offline AI model development, KAITO for model serving, enhancements in security, observability, GPU support, and edge-native deployment models. The article provides insights into technical architecture, operational improvements, and new capabilities for building and deploying AI applications in diverse environments—from the cloud to datacenters and edge locations."
-author: "SchumannGE"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'AKS Enabled by Azure Arc: Powering Hybrid AI Applications from Cloud to Edge'
+author: SchumannGE
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 00:36:19 +00:00
-permalink: "/2025-11-20-AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Foundry Local", "AI Model Deployment", "AKS", "AKS Container Apps", "Azure", "Azure Arc", "Azure Container Storage", "Azure Monitor Pipeline", "Bare Metal Kubernetes", "Cluster High Availability", "Community", "Data Sovereignty", "DevOps", "Disconnected Operations", "Edge Computing", "GPU Acceleration", "Hybrid Cloud", "KAITO", "Key Vault Extension", "KMS V2", "Kubernetes Security", "ML", "RAG", "Retrieval Augmented Generation", "Security", "Telecom", "Workload Identity Federation"]
-tags_normalized: ["ai", "ai foundry local", "ai model deployment", "aks", "aks container apps", "azure", "azure arc", "azure container storage", "azure monitor pipeline", "bare metal kubernetes", "cluster high availability", "community", "data sovereignty", "devops", "disconnected operations", "edge computing", "gpu acceleration", "hybrid cloud", "kaito", "key vault extension", "kms v2", "kubernetes security", "ml", "rag", "retrieval augmented generation", "security", "telecom", "workload identity federation"]
+permalink: /ai/community/AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge
+tags:
+- AI
+- AI Foundry Local
+- AI Model Deployment
+- AKS
+- AKS Container Apps
+- Azure
+- Azure Arc
+- Azure Container Storage
+- Azure Monitor Pipeline
+- Bare Metal Kubernetes
+- Cluster High Availability
+- Community
+- Data Sovereignty
+- DevOps
+- Disconnected Operations
+- Edge Computing
+- GPU Acceleration
+- Hybrid Cloud
+- KAITO
+- Key Vault Extension
+- KMS V2
+- Kubernetes Security
+- ML
+- RAG
+- Retrieval Augmented Generation
+- Security
+- Telecom
+- Workload Identity Federation
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 SchumannGE details the latest AKS Arc developments from Ignite 2025, focusing on hybrid Kubernetes, AI model deployment, enhanced edge and disconnected support, and new security features for the AI-enabled enterprise.<!--excerpt_end-->
 
 # AKS Enabled by Azure Arc: Powering Hybrid AI Applications from Cloud to Edge

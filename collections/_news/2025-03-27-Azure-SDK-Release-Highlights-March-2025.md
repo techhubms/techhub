@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights – March 2025"
-description: "This post from Hector Norzagaray details the Azure SDK releases for March 2025, featuring the beta launch of the official Azure SDK for Rust, updates on Node.js 18 end of life, new Python (Conda) packages, and initial stable and beta releases for various languages. Release notes and feedback channels are included."
-author: "Hector Norzagaray"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-march-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK Release Highlights – March 2025
+author: Hector Norzagaray
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-march-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-27 17:00:03 +00:00
-permalink: "/2025-03-27-Azure-SDK-Release-Highlights-March-2025.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Azure", "Azure SDK", "C++", "Coding", "Conda", "Cosmos DB", "Database Watcher", "Device Registry", "Event Hubs", "Go", "Identity", "Java", "JavaScript", "Key Vault", "Language Authoring", "Management Library", "News", "Node.js 18", "OpenTelemetry", "Python", "Rust", "SDK", "SDK Release"]
-tags_normalized: ["dotnet", "azure", "azure sdk", "cplusplus", "coding", "conda", "cosmos db", "database watcher", "device registry", "event hubs", "go", "identity", "java", "javascript", "key vault", "language authoring", "management library", "news", "nodedotjs 18", "opentelemetry", "python", "rust", "sdk", "sdk release"]
+permalink: /coding/news/Azure-SDK-Release-Highlights-March-2025
+tags:
+- .NET
+- Azure
+- Azure SDK
+- C++
+- Coding
+- Conda
+- Cosmos DB
+- Database Watcher
+- Device Registry
+- Event Hubs
+- Go
+- Identity
+- Java
+- JavaScript
+- Key Vault
+- Language Authoring
+- Management Library
+- News
+- Node.js 18
+- OpenTelemetry
+- Python
+- Rust
+- SDK
+- SDK Release
+section_names:
+- azure
+- coding
 ---
-
 Authored by Hector Norzagaray, this March 2025 Azure SDK release post highlights a major beta launch for Rust developers, updates across numerous programming languages, guidance regarding Node.js 18, and more.<!--excerpt_end-->
 
 # Azure SDK Release Highlights – March 2025

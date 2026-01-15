@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Troubleshooting SharePoint Search Result Issues"
-description: "This guide details strategies for resolving common problems with SharePoint search accuracy and relevance. It walks through diagnostic steps such as verifying permissions, checking crawl and indexing status, refining the search schema, optimizing relevance, and considering customizations. It also emphasizes user education to improve search effectiveness in SharePoint environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Troubleshooting SharePoint Search Result Issues
+author: Dellenny
+canonical_url: https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-04 13:48:28 +00:00
-permalink: "/2025-09-04-Troubleshooting-SharePoint-Search-Result-Issues.html"
-categories: ["Coding"]
-tags: ["Blogs", "Coding", "Crawling", "Indexing", "Managed Properties", "Metadata", "Microsoft 365", "Microsoft Search", "Office 365", "PnP Modern Search", "Search Customization", "Search Schema", "Search Troubleshooting", "SharePoint", "SharePoint Search", "User Training"]
-tags_normalized: ["blogs", "coding", "crawling", "indexing", "managed properties", "metadata", "microsoft 365", "microsoft search", "office 365", "pnp modern search", "search customization", "search schema", "search troubleshooting", "sharepoint", "sharepoint search", "user training"]
+permalink: /coding/blogs/Troubleshooting-SharePoint-Search-Result-Issues
+tags:
+- Blogs
+- Coding
+- Crawling
+- Indexing
+- Managed Properties
+- Metadata
+- Microsoft 365
+- Microsoft Search
+- Office 365
+- PnP Modern Search
+- Search Customization
+- Search Schema
+- Search Troubleshooting
+- SharePoint
+- SharePoint Search
+- User Training
+section_names:
+- coding
 ---
-
 Dellenny provides a practical guide on how to diagnose and resolve issues with SharePoint search, offering actionable steps and highlighting key features for administrators and power users.<!--excerpt_end-->
 
 # Troubleshooting SharePoint Search Result Issues

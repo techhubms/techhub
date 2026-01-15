@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Reinventing Legacy App Modernization with Crowdbotics’ AI-Native Platform on Azure"
-description: "Crowdbotics introduces an AI-native solution to modernize legacy applications using Microsoft Azure. The platform leverages Azure OpenAI, AKS, App Service, and Azure Functions to analyze and document legacy systems, streamlining requirements generation and enabling efficient modernization processes for enterprises."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/reinventing-legacy-app-modernization-crowdbotics-ai-native-platform-on-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Reinventing Legacy App Modernization with Crowdbotics’ AI-Native Platform on Azure
+author: Govind Kamtamneni
+canonical_url: https://devblogs.microsoft.com/all-things-azure/reinventing-legacy-app-modernization-crowdbotics-ai-native-platform-on-azure/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-06 09:15:41 +00:00
-permalink: "/2025-05-06-Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agents", "AI", "AI Apps", "AI Native Platform", "AKS", "App Development", "Application Development", "Azure", "Azure App Service", "Azure Functions", "Azure OpenAI Service", "COBOL", "Crowdbotics", "Developer Productivity", "Documentation Automation", "Functional Decomposition", "Legacy Modernization", "Mainframe Migration", "News", "Requirements Generation", "Software Architecture"]
-tags_normalized: ["agents", "ai", "ai apps", "ai native platform", "aks", "app development", "application development", "azure", "azure app service", "azure functions", "azure openai service", "cobol", "crowdbotics", "developer productivity", "documentation automation", "functional decomposition", "legacy modernization", "mainframe migration", "news", "requirements generation", "software architecture"]
+permalink: /ai/news/Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure
+tags:
+- Agents
+- AI
+- AI Apps
+- AI Native Platform
+- AKS
+- App Development
+- Application Development
+- Azure
+- Azure App Service
+- Azure Functions
+- Azure OpenAI Service
+- COBOL
+- Crowdbotics
+- Developer Productivity
+- Documentation Automation
+- Functional Decomposition
+- Legacy Modernization
+- Mainframe Migration
+- News
+- Requirements Generation
+- Software Architecture
+section_names:
+- ai
+- azure
 ---
-
 In this article, Charath Ranganathan, CTO of Crowdbotics, presents an AI-native approach to legacy application modernization built on Microsoft Azure, illustrating how AI-driven analysis and automation can transform enterprise modernization projects.<!--excerpt_end-->
 
 # Reinventing Legacy App Modernization: Crowdbotics’ AI-Native Platform on Azure

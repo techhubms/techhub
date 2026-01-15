@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Deploying a Bun + Hono + Vite App to Azure Linux Web App"
-description: "This article, authored by theringe, provides hands-on guidance for deploying a full-stack application built with Bun, Hono, and Vite to Azure App Service (Linux). Readers will learn how to set up a local development environment using Docker, configure build and deployment scripts for Azure, and apply best practices for full-stack JavaScript applications on Azure's platform-as-a-service infrastructure."
-author: "theringe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-a-bun-hono-vite-app-to-azure-app-service/ba-p/4475356"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying a Bun + Hono + Vite App to Azure Linux Web App
+author: theringe
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-a-bun-hono-vite-app-to-azure-app-service/ba-p/4475356
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-05 00:09:20 +00:00
-permalink: "/2025-12-05-Deploying-a-Bun-Hono-Vite-App-to-Azure-Linux-Web-App.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure App Service", "Azure PaaS", "Bun", "CI/CD", "Coding", "Community", "Deployment", "DevOps", "Docker", "Full Stack", "Hono", "JavaScript", "Linux Web App", "Node.js", "Serverless", "TypeScript", "Vite", "VS Code", "Web Development"]
-tags_normalized: ["azure", "azure app service", "azure paas", "bun", "cislashcd", "coding", "community", "deployment", "devops", "docker", "full stack", "hono", "javascript", "linux web app", "nodedotjs", "serverless", "typescript", "vite", "vs code", "web development"]
+permalink: /coding/community/Deploying-a-Bun-Hono-Vite-App-to-Azure-Linux-Web-App
+tags:
+- Azure
+- Azure App Service
+- Azure PaaS
+- Bun
+- CI/CD
+- Coding
+- Community
+- Deployment
+- DevOps
+- Docker
+- Full Stack
+- Hono
+- JavaScript
+- Linux Web App
+- Node.js
+- Serverless
+- TypeScript
+- Vite
+- VS Code
+- Web Development
+section_names:
+- azure
+- coding
+- devops
 ---
-
 theringe guides readers through deploying a Bun, Hono, and Vite application to Azure Linux Web App, outlining local development, Azure configuration, and deployment strategies.<!--excerpt_end-->
 
 # Deploying a Bun + Hono + Vite App to Azure Linux Web App

@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "CodeRabbit Adds CLI and AI-Powered Enhancements to Code Review Platform"
-description: "This post details CodeRabbit's latest updates to its AI-driven code review platform, introducing CLI support, automatic unit test generation, pre-merge checks, and integration with external documentation through a Model Context Protocol (MCP) client. The platform aims to improve developer productivity, code quality, and security within DevOps workflows as AI-generated code becomes increasingly prevalent."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: CodeRabbit Adds CLI and AI-Powered Enhancements to Code Review Platform
+author: Mike Vizard
+canonical_url: https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-16 13:00:03 +00:00
-permalink: "/2025-09-16-CodeRabbit-Adds-CLI-and-AI-Powered-Enhancements-to-Code-Review-Platform.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Code Review", "AI Coding Tools", "AI in DevOps", "AI Trust Layer", "Automated Code Review", "Blogs", "CLI Support", "Code Dependencies", "Code Graph Analysis", "Code Quality", "CodeRabbit", "Coding", "Custom Pre Merge Checks", "Developer Productivity", "DevOps", "DevOps Workflows", "Git Repositories", "LLM", "MCP", "MCP Client", "Open Source", "Open Source Code Review", "Pre Merge Checks", "Secure Code Review", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality", "Unit Test Generation"]
-tags_normalized: ["ai", "ai code review", "ai coding tools", "ai in devops", "ai trust layer", "automated code review", "blogs", "cli support", "code dependencies", "code graph analysis", "code quality", "coderabbit", "coding", "custom pre merge checks", "developer productivity", "devops", "devops workflows", "git repositories", "llm", "mcp", "mcp client", "open source", "open source code review", "pre merge checks", "secure code review", "social facebook", "social linkedin", "social x", "software quality", "unit test generation"]
+permalink: /ai/blogs/CodeRabbit-Adds-CLI-and-AI-Powered-Enhancements-to-Code-Review-Platform
+tags:
+- AI
+- AI Code Review
+- AI Coding Tools
+- AI in DevOps
+- AI Trust Layer
+- Automated Code Review
+- Blogs
+- CLI Support
+- Code Dependencies
+- Code Graph Analysis
+- Code Quality
+- CodeRabbit
+- Coding
+- Custom Pre Merge Checks
+- Developer Productivity
+- DevOps
+- DevOps Workflows
+- Git Repositories
+- LLM
+- MCP
+- MCP Client
+- Open Source
+- Open Source Code Review
+- Pre Merge Checks
+- Secure Code Review
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Quality
+- Unit Test Generation
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Mike Vizard reports on CodeRabbit's expansion of its AI-powered code review platform, highlighting new CLI support, unit test generation, pre-merge checks, and MCP client integration to help developers efficiently manage code quality and security at scale.<!--excerpt_end-->
 
 # CodeRabbit Adds CLI and AI-Powered Enhancements to Code Review Platform

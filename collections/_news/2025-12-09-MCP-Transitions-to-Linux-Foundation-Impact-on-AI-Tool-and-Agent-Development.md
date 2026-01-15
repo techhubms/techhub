@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development"
-description: "This article explores the implications of the Model Context Protocol (MCP) joining the Linux Foundation for developers working with AI tools and agents. It details MCP’s journey, its evolution into a shared open standard, and how this move will enhance agentic workflows, cross-platform integrations, and secure tool development in the growing AI ecosystem—especially for those leveraging GitHub and Microsoft platforms."
-author: "Martin Woodward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development'
+author: Martin Woodward
+canonical_url: https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-09 21:00:13 +00:00
-permalink: "/2025-12-09-MCP-Transitions-to-Linux-Foundation-Impact-on-AI-Tool-and-Agent-Development.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "Agentic AI Foundation", "Agentic Workflows", "AI", "AI Tooling", "Anthropic", "API Design", "CI/CD", "Coding", "Developer Workflows", "DevOps", "Distributed Systems", "GitHub Copilot", "Linux Foundation", "LLM SDK", "Maintainers", "MCP", "News", "OAuth", "Octoverse", "Open Source", "Schema Driven Interfaces", "Secure Integrations"]
-tags_normalized: ["agentic ai", "agentic ai foundation", "agentic workflows", "ai", "ai tooling", "anthropic", "api design", "cislashcd", "coding", "developer workflows", "devops", "distributed systems", "github copilot", "linux foundation", "llm sdk", "maintainers", "mcp", "news", "oauth", "octoverse", "open source", "schema driven interfaces", "secure integrations"]
+permalink: /github-copilot/news/MCP-Transitions-to-Linux-Foundation-Impact-on-AI-Tool-and-Agent-Development
+tags:
+- Agentic AI
+- Agentic AI Foundation
+- Agentic Workflows
+- AI
+- AI Tooling
+- Anthropic
+- API Design
+- CI/CD
+- Coding
+- Developer Workflows
+- DevOps
+- Distributed Systems
+- GitHub Copilot
+- Linux Foundation
+- LLM SDK
+- Maintainers
+- MCP
+- News
+- OAuth
+- Octoverse
+- Open Source
+- Schema Driven Interfaces
+- Secure Integrations
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Martin Woodward discusses the move of the Model Context Protocol (MCP) to the Linux Foundation, examining its significance for AI tool and agent developers and the evolving open source ecosystem.<!--excerpt_end-->
 
 # MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development

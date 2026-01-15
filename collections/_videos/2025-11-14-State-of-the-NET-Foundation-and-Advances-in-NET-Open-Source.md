@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "State of the .NET Foundation and Advances in .NET Open Source"
-description: "This video explores the current status and future direction of the .NET Foundation, highlighting community involvement and new open-source projects. It covers upcoming .NET releases, including .NET 10, Aspire 13, ASP.NET Core 10, .NET MAUI 10, C# 14, F# 10, and Visual Studio 2026, and provides resources for developers to stay engaged with .NET development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sgm3jb8yCbc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: State of the .NET Foundation and Advances in .NET Open Source
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=sgm3jb8yCbc
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:05 +00:00
-permalink: "/2025-11-14-State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET Foundation", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform", "F# 10", "Language Innovation", "Microsoft", "Open Source", "Videos", "VS", "Web Development"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet foundation", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform", "fsharp 10", "language innovation", "microsoft", "open source", "videos", "vs", "web development"]
+permalink: /coding/videos/State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source
+tags:
+- .NET
+- .NET 10
+- .NET Aspire 13
+- .NET Foundation
+- .NET MAUI 10
+- ASP.NET Core 10
+- C# 14
+- Cloud Native
+- Coding
+- Cross Platform
+- F# 10
+- Language Innovation
+- Microsoft
+- Open Source
+- Videos
+- VS
+- Web Development
+section_names:
+- coding
 ---
-
 In this video, dotnet discusses the current and future plans of the .NET Foundation, focusing on new open-source projects and how developers can get involved.<!--excerpt_end-->
 
 {% youtube sgm3jb8yCbc %}

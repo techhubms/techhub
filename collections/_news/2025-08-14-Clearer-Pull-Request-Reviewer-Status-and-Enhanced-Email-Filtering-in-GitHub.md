@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Clearer Pull Request Reviewer Status and Enhanced Email Filtering in GitHub"
-description: "This update details two key improvements to GitHub's pull request and notification systems: enhanced accessibility for reviewer status in pull requests and additional email header metadata for better filtering. These changes make it easier for users to track approval requirements and manage conversations more efficiently."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Clearer Pull Request Reviewer Status and Enhanced Email Filtering in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 20:27:11 +00:00
-permalink: "/2025-08-14-Clearer-Pull-Request-Reviewer-Status-and-Enhanced-Email-Filtering-in-GitHub.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "Collaboration", "DevOps", "Email Filtering", "Email Notifications", "GitHub", "Inclusive Design", "Issue Tracking", "Metadata", "News", "PR Approvals", "Pull Requests", "Reviewer Status", "Workflow Automation"]
-tags_normalized: ["accessibility", "collaboration", "devops", "email filtering", "email notifications", "github", "inclusive design", "issue tracking", "metadata", "news", "pr approvals", "pull requests", "reviewer status", "workflow automation"]
+permalink: /devops/news/Clearer-Pull-Request-Reviewer-Status-and-Enhanced-Email-Filtering-in-GitHub
+tags:
+- Accessibility
+- Collaboration
+- DevOps
+- Email Filtering
+- Email Notifications
+- GitHub
+- Inclusive Design
+- Issue Tracking
+- Metadata
+- News
+- PR Approvals
+- Pull Requests
+- Reviewer Status
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison introduces two improvements to GitHub: clearer distinctions for pull request reviewer status to improve accessibility, and added metadata in email notifications for easier filtering and issue tracking.<!--excerpt_end-->
 
 # Clearer Pull Request Reviewer Status and Enhanced Email Filtering in GitHub

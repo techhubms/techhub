@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing the August Preview Model for PII Redaction in Azure AI Language"
-description: "This update from the Azure AI Language team details the new August preview release of the PII Redaction service. It expands language support, adds new entity types like SortCode and LicensePlateNumber, and introduces AI quality improvements for financial entity detection. The post includes links to documentation, tutorials, and service features, directly addressing technical audiences who rely on sensitive data handling in multilingual and regulatory contexts."
-author: "renaliu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Announcing the August Preview Model for PII Redaction in Azure AI Language
+author: renaliu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 07:34:14 +00:00
-permalink: "/2025-08-15-Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Model Update", "Azure", "Azure AI Foundry", "Azure AI Language", "Azure Cognitive Services", "Community", "Data Privacy", "Entity Recognition", "Financial Data", "Language Support", "LicensePlateNumber", "Machine Learning", "Multilingual AI", "Natural Language Processing", "PII Redaction", "Preview Release", "SortCode"]
-tags_normalized: ["ai", "ai model update", "azure", "azure ai foundry", "azure ai language", "azure cognitive services", "community", "data privacy", "entity recognition", "financial data", "language support", "licenseplatenumber", "machine learning", "multilingual ai", "natural language processing", "pii redaction", "preview release", "sortcode"]
+permalink: /ai/community/Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language
+tags:
+- AI
+- AI Model Update
+- Azure
+- Azure AI Foundry
+- Azure AI Language
+- Azure Cognitive Services
+- Community
+- Data Privacy
+- Entity Recognition
+- Financial Data
+- Language Support
+- LicensePlateNumber
+- Machine Learning
+- Multilingual AI
+- Natural Language Processing
+- PII Redaction
+- Preview Release
+- SortCode
+section_names:
+- ai
+- azure
 ---
-
 renaliu introduces the August preview of the Azure AI Language PII Redaction service, highlighting expanded multilingual and entity coverage, plus improved AI detection for regulatory scenarios.<!--excerpt_end-->
 
 # Announcing the August Preview Model for PII Redaction in Azure AI Language

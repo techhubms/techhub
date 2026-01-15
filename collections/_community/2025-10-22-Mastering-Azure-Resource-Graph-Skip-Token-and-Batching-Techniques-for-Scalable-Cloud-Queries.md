@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Mastering Azure Resource Graph: Skip Token and Batching Techniques for Scalable Cloud Queries"
-description: "This guide provides hands-on strategies for efficiently querying large-scale Azure environments using the Azure Resource Graph (ARG). It covers the practical use of Skip Token for data completeness and Batching for high-performance queries with PowerShell, offering step-by-step PowerShell examples, guidance on pagination, and tips for combining both techniques to maximize API efficiency and accuracy."
-author: "ankitankit"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Mastering Azure Resource Graph: Skip Token and Batching Techniques for Scalable Cloud Queries'
+author: ankitankit
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 08:53:15 +00:00
-permalink: "/2025-10-22-Mastering-Azure-Resource-Graph-Skip-Token-and-Batching-Techniques-for-Scalable-Cloud-Queries.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["API Pagination", "Automation", "Azure", "Azure API", "Azure Resource Graph", "Batching", "Cloud Inventory", "Coding", "Community", "DevOps", "DevOps Best Practices", "KQL", "Kusto Query Language", "Large Scale Query", "PowerShell", "Resource Management", "Search AzGraph", "Skip Token"]
-tags_normalized: ["api pagination", "automation", "azure", "azure api", "azure resource graph", "batching", "cloud inventory", "coding", "community", "devops", "devops best practices", "kql", "kusto query language", "large scale query", "powershell", "resource management", "search azgraph", "skip token"]
+permalink: /coding/community/Mastering-Azure-Resource-Graph-Skip-Token-and-Batching-Techniques-for-Scalable-Cloud-Queries
+tags:
+- API Pagination
+- Automation
+- Azure
+- Azure API
+- Azure Resource Graph
+- Batching
+- Cloud Inventory
+- Coding
+- Community
+- DevOps
+- DevOps Best Practices
+- KQL
+- Kusto Query Language
+- Large Scale Query
+- PowerShell
+- Resource Management
+- Search AzGraph
+- Skip Token
+section_names:
+- azure
+- coding
+- devops
 ---
-
 ankitankit delivers a thorough, actionable walkthrough for cloud engineers on scaling Azure inventory queries with PowerShell, demonstrating efficient use of Skip Token and Batching in Azure Resource Graph.<!--excerpt_end-->
 
 # Mastering Azure Resource Graph: Skip Token and Batching Techniques for Scalable Cloud Queries
@@ -152,14 +169,13 @@ $CurrentBatch = $SubscriptionIDs | ForEach-Object {
   [PSCustomObject]@{ Query = $KQLQuery; Subscriptions = ---
 layout: "post"
 title: "Mastering Azure Resource Graph: Skip Token and Batching Techniques for Scalable Cloud Queries"
-description: "This guide provides hands-on strategies for efficiently querying large-scale Azure environments using the Azure Resource Graph (ARG). It covers the practical use of Skip Token for data completeness and Batching for high-performance queries with PowerShell, offering step-by-step PowerShell examples, guidance on pagination, and tips for combining both techniques to maximize API efficiency and accuracy."
 author: "ankitankit"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
-date: 2025-10-22 08:53:15 +00:00
+date: "2025-10-22 08:53:15 +00:00"
 permalink: "2025-10-22-Mastering-Azure-Resource-Graph-Skip-Token-and-Batching-Techniques-for-Scalable-Cloud-Queries.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["API Pagination", "Automation", "Azure", "Azure API", "Azure Resource Graph", "Batching", "Cloud Inventory", "Coding", "Community", "DevOps", "DevOps Best Practices", "KQL", "Kusto Query Language", "Large Scale Query", "PowerShell", "Resource Management", "Search AzGraph", "Skip Token"]

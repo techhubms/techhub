@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Join the OSS AI Summit: Building with LangChain and Microsoft AI"
-description: "This event-focused content introduces the OSS AI Summit, an educational session hosted by Microsoft and LangChain experts. It highlights the integration of LangChain v1, Microsoft Foundry, Azure OpenAI, MCP, and cloud-scale infrastructure for building modern AI agents. Sessions include deep dives into agent design, multi-agent systems, AI in production, open-source tools, and practical project walk-throughs illustrating Microsoft’s AI stack in action."
-author: "Dan Wahlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Join the OSS AI Summit: Building with LangChain and Microsoft AI'
+author: Dan Wahlin
+canonical_url: https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-01 18:00:07 +00:00
-permalink: "/2025-12-01-Join-the-OSS-AI-Summit-Building-with-LangChain-and-Microsoft-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Orchestration", "AI", "AI Agents", "Azure", "Azure Container Apps", "Azure Functions", "Azure OpenAI", "Azure Static Web Apps", "Cloud Infrastructure", "Cosmos DB", "JavaScript", "Langchain", "LangChain V1", "LangChain.js", "MCP", "Microsoft Foundry", "News", "OpenTelemetry", "Oss", "OSS AI Summit", "Python"]
-tags_normalized: ["agent orchestration", "ai", "ai agents", "azure", "azure container apps", "azure functions", "azure openai", "azure static web apps", "cloud infrastructure", "cosmos db", "javascript", "langchain", "langchain v1", "langchaindotjs", "mcp", "microsoft foundry", "news", "opentelemetry", "oss", "oss ai summit", "python"]
+permalink: /ai/news/Join-the-OSS-AI-Summit-Building-with-LangChain-and-Microsoft-AI
+tags:
+- Agent Orchestration
+- AI
+- AI Agents
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Azure OpenAI
+- Azure Static Web Apps
+- Cloud Infrastructure
+- Cosmos DB
+- JavaScript
+- Langchain
+- LangChain V1
+- LangChain.js
+- MCP
+- Microsoft Foundry
+- News
+- OpenTelemetry
+- Oss
+- OSS AI Summit
+- Python
+section_names:
+- ai
+- azure
 ---
-
 Dan Wahlin announces the OSS AI Summit, exploring modern agent-based AI development using LangChain v1, Microsoft Foundry, and Azure OpenAI. The summit covers practical implementation with real-world projects and a panel of experts.<!--excerpt_end-->
 
 # Join the OSS AI Summit: Building with LangChain Event

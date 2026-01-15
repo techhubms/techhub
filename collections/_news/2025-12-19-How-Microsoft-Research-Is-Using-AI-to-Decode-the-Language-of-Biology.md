@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How Microsoft Research Is Using AI to Decode the Language of Biology"
-description: "This article explores Microsoft Research's efforts to leverage AI for understanding complex biological data, enabling advances in precision medicine, protein design, and the modeling of human cells. Principal researcher Ava Amini presents real-world applications and challenges of integrating AI with biological research to improve medical outcomes."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Microsoft Research Is Using AI to Decode the Language of Biology
+author: stclarke
+canonical_url: https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 16:07:02 +00:00
-permalink: "/2025-12-19-How-Microsoft-Research-Is-Using-AI-to-Decode-the-Language-of-Biology.html"
-categories: ["AI"]
-tags: ["AI", "Ava Amini", "Biological Data", "Broad Institute", "Cancer Research", "Cell Modeling", "Dana Farber Cancer Institute", "Dayhoff Atlas", "Drug Discovery", "EvoDiff", "Generative AI", "Medical AI", "Microsoft Research", "News", "Precision Medicine", "Project Ex Vivo", "Protein Design"]
-tags_normalized: ["ai", "ava amini", "biological data", "broad institute", "cancer research", "cell modeling", "dana farber cancer institute", "dayhoff atlas", "drug discovery", "evodiff", "generative ai", "medical ai", "microsoft research", "news", "precision medicine", "project ex vivo", "protein design"]
+permalink: /ai/news/How-Microsoft-Research-Is-Using-AI-to-Decode-the-Language-of-Biology
+tags:
+- AI
+- Ava Amini
+- Biological Data
+- Broad Institute
+- Cancer Research
+- Cell Modeling
+- Dana Farber Cancer Institute
+- Dayhoff Atlas
+- Drug Discovery
+- EvoDiff
+- Generative AI
+- Medical AI
+- Microsoft Research
+- News
+- Precision Medicine
+- Project Ex Vivo
+- Protein Design
+section_names:
+- ai
 ---
-
 stclarke shares insights from Ava Amini and Microsoft Research on applying AI to interpret biological data, with breakthroughs in protein design and challenges in achieving fully personalized medicine.<!--excerpt_end-->
 
 # How Microsoft Research Is Using AI to Decode the Language of Biology

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Smatterings of F#: Integrating F# in a C#-Focused World"
-description: "This talk by Matthew Watt explores how F# can complement C# development within the .NET ecosystem. Aimed at C# enthusiasts and F# fans alike, it demonstrates pragmatic ways to introduce F# into projects, share open-source contributions, and use F# without a full team migration. Examples include a basic F#-powered commenting system for an Astro blog and strategies for contributing to open source with F#. Attendees will learn how F# ideas can enhance their programming skills, regardless of their team's primary language."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GcEHiY6Vp-8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Smatterings of F#: Integrating F# in a C#-Focused World'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=GcEHiY6Vp-8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 01:40:06 +00:00
-permalink: "/2025-11-14-Smatterings-of-F-Integrating-F-in-a-C-Focused-World.html"
-categories: ["Coding"]
-tags: [".NET", "Astro", "C#", "Coding", "F#", "Frontend Components", "Functional Programming", "Open Source Contributions", "Programming Concepts", "Programming Languages", "Software Development", "Videos"]
-tags_normalized: ["dotnet", "astro", "csharp", "coding", "fsharp", "frontend components", "functional programming", "open source contributions", "programming concepts", "programming languages", "software development", "videos"]
+permalink: /coding/videos/Smatterings-of-F-Integrating-F-in-a-C-Focused-World
+tags:
+- .NET
+- Astro
+- C#
+- Coding
+- F#
+- Frontend Components
+- Functional Programming
+- Open Source Contributions
+- Programming Concepts
+- Programming Languages
+- Software Development
+- Videos
+section_names:
+- coding
 ---
-
 Matthew Watt presents ways C# developers can leverage F# in their .NET projects, from building components to contributing to open source, showcasing inclusive strategies for using F# effectively.<!--excerpt_end-->
 
 {% youtube GcEHiY6Vp-8 %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "\"MCP is the new browser?\" — Kent C. Dodds x Burke Holland, Live"
-description: "A spontaneous live chat where Kent C. Dodds and Burke Holland discuss why the Model Context Protocol (MCP) might represent a transformative moment for AI tooling, comparing it to the significance of the web browser in computing history. They explore current developments, clarify misconceptions (such as the non-existence of 'Jarvis'), and highlight the implications of MCP for developers and AI workflows, particularly in the context of tools like Visual Studio Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zAM18jguoWM"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: '"MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=zAM18jguoWM
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-04 23:12:20 +00:00
-permalink: "/2025-08-04-MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live.html"
-categories: ["AI"]
-tags: ["AI", "AI Tools", "AI Workflows", "Burke Holland", "Demo", "Developer", "Developer Community", "Developer Experience", "Developer Tools", "Kent C. Dodds", "Kentcdodds", "Mcp", "Microsoft", "Pro Tips", "Protips", "Vibecoding", "Videos", "VS Code", "Web Browser Analogy"]
-tags_normalized: ["ai", "ai tools", "ai workflows", "burke holland", "demo", "developer", "developer community", "developer experience", "developer tools", "kent cdot dodds", "kentcdodds", "mcp", "microsoft", "pro tips", "protips", "vibecoding", "videos", "vs code", "web browser analogy"]
+permalink: /ai/videos/MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live
+tags:
+- AI
+- AI Tools
+- AI Workflows
+- Burke Holland
+- Demo
+- Developer
+- Developer Community
+- Developer Experience
+- Developer Tools
+- Kent C. Dodds
+- Kentcdodds
+- Mcp
+- Microsoft
+- Pro Tips
+- Protips
+- Vibecoding
+- Videos
+- VS Code
+- Web Browser Analogy
+section_names:
+- ai
 ---
-
 Visual Studio Code's channel hosts Kent C. Dodds and Burke Holland for a candid conversation about the Model Context Protocol (MCP) and its potential to redefine how developers interact with AI tools.<!--excerpt_end-->
 
 {% youtube zAM18jguoWM %}

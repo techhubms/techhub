@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Checked and Unchecked Arithmetic Operations in .NET"
-description: "Khalid Abuhakmeh explores how arithmetic overflow occurs in .NET with the Fibonacci sequence as an example. He discusses the difference between checked and unchecked arithmetic, how to handle overflows, and outlines best practices for critical applications."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Checked and Unchecked Arithmetic Operations in .NET
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-27 00:00:00 +00:00
-permalink: "/2024-08-27-Checked-and-Unchecked-Arithmetic-Operations-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Arithmetic Overflow", "Best Practices", "Blogs", "C#", "Checked Keyword", "Coding", "Fibonacci", "Integer Types", "INumber", "OverflowException", "Project Settings", "Spectre.Console", "System.Numerics", "Unchecked Keyword"]
-tags_normalized: ["dotnet", "arithmetic overflow", "best practices", "blogs", "csharp", "checked keyword", "coding", "fibonacci", "integer types", "inumber", "overflowexception", "project settings", "spectredotconsole", "systemdotnumerics", "unchecked keyword"]
+permalink: /coding/blogs/Checked-and-Unchecked-Arithmetic-Operations-in-NET
+tags:
+- .NET
+- Arithmetic Overflow
+- Best Practices
+- Blogs
+- C#
+- Checked Keyword
+- Coding
+- Fibonacci
+- Integer Types
+- INumber
+- OverflowException
+- Project Settings
+- Spectre.Console
+- System.Numerics
+- Unchecked Keyword
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh demonstrates how easily integer overflow can occur in .NET when generating the Fibonacci sequence, and provides practical strategies to avoid overflow errors in critical .NET applications.<!--excerpt_end-->
 
 # Checked and Unchecked Arithmetic Operations in .NET

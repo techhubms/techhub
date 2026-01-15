@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "How to integrate ASP.NET Core Identity in Clean Architecture (DDD) without breaking domain independence?"
-description: "The author seeks guidance on integrating ASP.NET Core Identity within a Clean Architecture/DDD setup, aiming to keep the domain layer independent from infrastructure dependencies. The discussion centers on best practices for leveraging Identity features without compromising clean separation between domain and infrastructure layers, inviting advice and examples."
-author: "Successful_Cycle_465"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1meuo7l/how_to_integrate_aspnet_core_identity_in_clean/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: How to integrate ASP.NET Core Identity in Clean Architecture (DDD) without breaking domain independence?
+author: Successful_Cycle_465
+canonical_url: https://www.reddit.com/r/dotnet/comments/1meuo7l/how_to_integrate_aspnet_core_identity_in_clean/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-01 12:05:09 +00:00
-permalink: "/2025-08-01-How-to-integrate-ASPNET-Core-Identity-in-Clean-Architecture-DDD-without-breaking-domain-independence.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "ASP.NET Core", "Authentication", "Best Practices", "Clean Architecture", "Coding", "Community", "Domain Driven Design", "Entity Separation", "Identity", "Infrastructure", "Roles", "Security", "User Management"]
-tags_normalized: ["dotnet", "aspdotnet core", "authentication", "best practices", "clean architecture", "coding", "community", "domain driven design", "entity separation", "identity", "infrastructure", "roles", "security", "user management"]
+permalink: /coding/community/How-to-integrate-ASPNET-Core-Identity-in-Clean-Architecture-DDD-without-breaking-domain-independence
+tags:
+- .NET
+- ASP.NET Core
+- Authentication
+- Best Practices
+- Clean Architecture
+- Coding
+- Community
+- Domain Driven Design
+- Entity Separation
+- Identity
+- Infrastructure
+- Roles
+- Security
+- User Management
+section_names:
+- coding
+- security
 ---
-
 Successful_Cycle_465 asks about integrating ASP.NET Core Identity into a Clean Architecture (DDD) app while keeping the domain layer independent, and requests best practices and examples.<!--excerpt_end-->
 
 ## Article Summary

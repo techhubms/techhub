@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure API Management Premium v2 Tier Now Generally Available"
-description: "This technical announcement covers the architecture, security enhancements, networking options, and new features available in the Azure API Management Premium v2 tier. Readers will learn about inbound private links, improved VNet injection, availability zone support, custom CA certificates, and regional availability. It provides actionable guidance for secure, scalable API management in enterprise scenarios using Azure's latest advancements."
-author: "Sreekanth_Thirthala"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure API Management Premium v2 Tier Now Generally Available
+author: Sreekanth_Thirthala
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 21:10:17 +00:00
-permalink: "/2025-11-19-Azure-API-Management-Premium-v2-Tier-Now-Generally-Available.html"
-categories: ["Azure", "Security"]
-tags: ["API Gateway", "Authorization Credentials", "Availability Zones", "Azure", "Azure API Management", "Backend Integration", "Cloud Infrastructure", "Community", "Custom CA Certificates", "Enterprise API", "Network Security", "Premium V2", "Private Link", "Security", "TLS", "Virtual Networks", "VNet Injection", "VNet Integration", "Zone Redundancy"]
-tags_normalized: ["api gateway", "authorization credentials", "availability zones", "azure", "azure api management", "backend integration", "cloud infrastructure", "community", "custom ca certificates", "enterprise api", "network security", "premium v2", "private link", "security", "tls", "virtual networks", "vnet injection", "vnet integration", "zone redundancy"]
+permalink: /azure/community/Azure-API-Management-Premium-v2-Tier-Now-Generally-Available
+tags:
+- API Gateway
+- Authorization Credentials
+- Availability Zones
+- Azure
+- Azure API Management
+- Backend Integration
+- Cloud Infrastructure
+- Community
+- Custom CA Certificates
+- Enterprise API
+- Network Security
+- Premium V2
+- Private Link
+- Security
+- TLS
+- Virtual Networks
+- VNet Injection
+- VNet Integration
+- Zone Redundancy
+section_names:
+- azure
+- security
 ---
-
 Sreekanth_Thirthala presents the general availability of Azure API Management Premium v2 tier, detailing new enterprise-grade features, networking capabilities, and security improvements for API workloads.<!--excerpt_end-->
 
 # Announcing Azure API Management Premium v2 Tier General Availability

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "CVS Health’s Migration: Transforming Developer Experience with GitHub Actions"
-description: "This session recounts CVS Health’s ambitious migration of 150,000 repositories from fragmented legacy CI/CD tools to a unified platform powered by GitHub and GitHub Actions. Speakers share how consolidating workflows improved collaboration, developer experience, and platform engineering at scale. Practical strategies, real challenges, and actionable lessons are provided for teams considering large-scale CI/CD migrations."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=w2WRT2eXISU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'CVS Health’s Migration: Transforming Developer Experience with GitHub Actions'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=w2WRT2eXISU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-23 15:01:54 +00:00
-permalink: "/2025-11-23-CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions.html"
-categories: ["DevOps"]
-tags: ["CI/CD", "Collaboration", "Continuous Deployment", "Continuous Integration", "Developer Experience", "DevOps", "Engineering Productivity", "Enterprise Modernization", "GitHub", "GitHub Actions", "GitHubUniverse", "Legacy Systems", "Platform Engineering", "Repository Management", "Software Engineering", "Tool Migration", "Videos", "Workflow Automation"]
-tags_normalized: ["cislashcd", "collaboration", "continuous deployment", "continuous integration", "developer experience", "devops", "engineering productivity", "enterprise modernization", "github", "github actions", "githubuniverse", "legacy systems", "platform engineering", "repository management", "software engineering", "tool migration", "videos", "workflow automation"]
+permalink: /devops/videos/CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions
+tags:
+- CI/CD
+- Collaboration
+- Continuous Deployment
+- Continuous Integration
+- Developer Experience
+- DevOps
+- Engineering Productivity
+- Enterprise Modernization
+- GitHub
+- GitHub Actions
+- GitHubUniverse
+- Legacy Systems
+- Platform Engineering
+- Repository Management
+- Software Engineering
+- Tool Migration
+- Videos
+- Workflow Automation
+section_names:
+- devops
 ---
-
 GitHub presents a panel featuring Irene Modeste, Jim Beyers, and Mitch Enderle from CVS Health, discussing their large-scale migration to GitHub Actions and how it impacted developer experience and engineering efficiency.<!--excerpt_end-->
 
 {% youtube w2WRT2eXISU %}

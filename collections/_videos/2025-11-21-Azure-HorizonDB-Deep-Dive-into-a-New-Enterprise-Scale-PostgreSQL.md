@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure HorizonDB: Deep Dive into a New Enterprise-Scale PostgreSQL"
-description: "This session from Microsoft Ignite 2025 presents Azure HorizonDB, Microsoft's fully managed, cloud-native PostgreSQL solution. The discussion focuses on its architecture for enhanced scalability, ultra-fast failovers, read replicas, and its advanced AI-powered features. Speakers explore technical aspects such as WAL storage, a custom Rust runtime for async operations, high availability, elastic scaling to 100TB, and cutting-edge KNN vector indexing for next-generation applications."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BJxrSKAvCis"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Azure HorizonDB: Deep Dive into a New Enterprise-Scale PostgreSQL'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=BJxrSKAvCis
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:11:56 +00:00
-permalink: "/2025-11-21-Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Features", "Azure", "Azure HorizonDB", "Cloud Database", "Cloud Native", "Database Architecture", "Elastic Scaling", "High Availability", "InnovatewithAzureAIappsandagents", "KNN Vector Indexing", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "Performance Optimization", "PostgreSQL", "Read Replicas", "Rust Runtime", "Videos", "Write Ahead Log"]
-tags_normalized: ["ai", "ai features", "azure", "azure horizondb", "cloud database", "cloud native", "database architecture", "elastic scaling", "high availability", "innovatewithazureaiappsandagents", "knn vector indexing", "microsoft azure", "microsoft ignite", "msignite", "performance optimization", "postgresql", "read replicas", "rust runtime", "videos", "write ahead log"]
+permalink: /ai/videos/Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL
+tags:
+- AI
+- AI Features
+- Azure
+- Azure HorizonDB
+- Cloud Database
+- Cloud Native
+- Database Architecture
+- Elastic Scaling
+- High Availability
+- InnovatewithAzureAIappsandagents
+- KNN Vector Indexing
+- Microsoft Azure
+- Microsoft Ignite
+- MSIgnite
+- Performance Optimization
+- PostgreSQL
+- Read Replicas
+- Rust Runtime
+- Videos
+- Write Ahead Log
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts a technical session on Azure HorizonDB, offering a deep dive into its cloud-native PostgreSQL architecture, performance optimizations, high-availability features, and built-in AI innovations.<!--excerpt_end-->
 
 {% youtube BJxrSKAvCis %}

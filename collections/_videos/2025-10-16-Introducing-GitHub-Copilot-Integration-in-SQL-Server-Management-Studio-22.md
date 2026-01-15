@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Introducing GitHub Copilot Integration in SQL Server Management Studio 22"
-description: "This video introduces the new preview of GitHub Copilot in SQL Server Management Studio (SSMS) 22, demonstrating how developers can leverage Copilot directly inside SSMS for T-SQL assistance, database management, troubleshooting, and exploring SQL databases. It covers setup, practical demos, and integration details for users with existing GitHub Copilot licenses."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VvOWQQiSRxw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Introducing GitHub Copilot Integration in SQL Server Management Studio 22
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=VvOWQQiSRxw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-16 15:10:09 +00:00
-permalink: "/2025-10-16-Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Azure SQL", "Cloud Computing", "Code Completion", "Coding", "Data Exposed", "Database Management", "Dev", "Development", "GitHub Copilot", "Microsoft", "SQL", "SQL Development", "SQL Server Management Studio", "SSMS 22", "T SQL", "Tech", "Technology", "Troubleshooting", "Videos", "VS", "VS Code"]
-tags_normalized: ["ai", "azure sql", "cloud computing", "code completion", "coding", "data exposed", "database management", "dev", "development", "github copilot", "microsoft", "sql", "sql development", "sql server management studio", "ssms 22", "t sql", "tech", "technology", "troubleshooting", "videos", "vs", "vs code"]
+permalink: /github-copilot/videos/Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22
+tags:
+- AI
+- Azure SQL
+- Cloud Computing
+- Code Completion
+- Coding
+- Data Exposed
+- Database Management
+- Dev
+- Development
+- GitHub Copilot
+- Microsoft
+- SQL
+- SQL Development
+- SQL Server Management Studio
+- SSMS 22
+- T SQL
+- Tech
+- Technology
+- Troubleshooting
+- Videos
+- VS
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer demonstrates the preview of GitHub Copilot integration in SSMS 22, showing how developers can use Copilot for T-SQL coding and database tasks within SQL Server Management Studio.<!--excerpt_end-->
 
 {% youtube VvOWQQiSRxw %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Ways to Use GitHub Copilot for Documentation & Clarity"
-description: "This post explores practical strategies for leveraging GitHub Copilot to enhance documentation and code clarity. It covers instant doc generation with slash commands, prompts for XML and API documentation, step-by-step code explanations, and methods for producing high-quality docstrings and comments. The focus is on making code more readable and maintainable using Copilot’s features, making it easier for developers to produce well-documented projects."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Ways to Use GitHub Copilot for Documentation & Clarity
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-06 00:00:00 +00:00
-permalink: "/2025-06-06-Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Documentation", "Blogs", "Chain Of Thought Prompting", "Code Clarity", "Code Explanations", "Coding", "Commit Messages", "Copilot Chat", "Developer Productivity", "Docstrings", "Documentation", "GitHub Copilot", "Inline Comments", "Slash Commands", "Technical Writing", "Usage Examples", "XML Documentation"]
-tags_normalized: ["ai", "api documentation", "blogs", "chain of thought prompting", "code clarity", "code explanations", "coding", "commit messages", "copilot chat", "developer productivity", "docstrings", "documentation", "github copilot", "inline comments", "slash commands", "technical writing", "usage examples", "xml documentation"]
+permalink: /github-copilot/blogs/Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity
+tags:
+- AI
+- API Documentation
+- Blogs
+- Chain Of Thought Prompting
+- Code Clarity
+- Code Explanations
+- Coding
+- Commit Messages
+- Copilot Chat
+- Developer Productivity
+- Docstrings
+- Documentation
+- GitHub Copilot
+- Inline Comments
+- Slash Commands
+- Technical Writing
+- Usage Examples
+- XML Documentation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shares actionable ways developers can use GitHub Copilot to automate and improve documentation, clarifying code and enhancing team productivity.<!--excerpt_end-->
 
 # Ways to Use GitHub Copilot for Documentation & Clarity

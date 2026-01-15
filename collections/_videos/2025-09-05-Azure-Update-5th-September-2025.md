@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Update - 5th September 2025"
-description: "A weekly roundup video by John Savill covering the latest Azure news and feature updates. This episode reviews changes and enhancements across Azure services, including Logic Apps improvements, APIM v2 updates, retirement announcements, new capabilities for App Service Premium, Azure OpenAI Service news, and more. The video is structured with chapter breakdowns for each topic."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UhZE9sb-Odg"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 5th September 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=UhZE9sb-Odg
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-05 14:51:22 +00:00
-permalink: "/2025-09-05-Azure-Update-5th-September-2025.html"
-categories: ["Azure"]
-tags: [".NET 8", "API Management V2", "App Service Premium V4", "App Testing", "Autoscaling", "AVNM", "Azure", "Azure CDN", "Azure Cloud", "Azure OpenAI Service", "Azure Ultra Disk", "Cloud", "Cloud News", "GPT 5o", "Hybrid Deployment", "Logic Apps Standard", "Microsoft", "Microsoft Azure", "Microsoft Basic", "MySQL Maintenance", "Videos"]
-tags_normalized: ["dotnet 8", "api management v2", "app service premium v4", "app testing", "autoscaling", "avnm", "azure", "azure cdn", "azure cloud", "azure openai service", "azure ultra disk", "cloud", "cloud news", "gpt 5o", "hybrid deployment", "logic apps standard", "microsoft", "microsoft azure", "microsoft basic", "mysql maintenance", "videos"]
+permalink: /azure/videos/Azure-Update-5th-September-2025
+tags:
+- .NET 8
+- API Management V2
+- App Service Premium V4
+- App Testing
+- Autoscaling
+- AVNM
+- Azure
+- Azure CDN
+- Azure Cloud
+- Azure OpenAI Service
+- Azure Ultra Disk
+- Cloud
+- Cloud News
+- GPT 5o
+- Hybrid Deployment
+- Logic Apps Standard
+- Microsoft
+- Microsoft Azure
+- Microsoft Basic
+- MySQL Maintenance
+- Videos
+section_names:
+- azure
 ---
-
 John Savill delivers a weekly summary of recent Azure changes and announcements, offering technical insight into service updates, new features, and platform retirements.<!--excerpt_end-->
 
 {% youtube UhZE9sb-Odg %}

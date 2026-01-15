@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Confidential Containers Now Available on Azure Red Hat OpenShift (ARO)"
-description: "This article announces the general availability of Confidential Containers on Azure Red Hat OpenShift (ARO), unveiled at Microsoft Ignite 2025. It walks through the technical innovations that extend Azure’s Confidential Computing capabilities to OpenShift environments, enabling hardware-based isolation, workload attestation, and zero-trust security. The guide explores architectural benefits, supported hardware (AMD SEV-SNP, Intel TDX), use cases (compliance, DevOps, confidential analytics), global region availability, and links to deployment resources. Organizations can now run containerized workloads with greater security and trust on Azure."
-author: "MelanieKraintz007"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-confidential-containers-general/ba-p/4469089"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Confidential Containers Now Available on Azure Red Hat OpenShift (ARO)
+author: MelanieKraintz007
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-confidential-containers-general/ba-p/4469089
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 14:06:03 +00:00
-permalink: "/2025-11-20-Confidential-Containers-Now-Available-on-Azure-Red-Hat-OpenShift-ARO.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AMD SEV SNP", "Azure", "Azure Red Hat OpenShift", "Cloud Security", "Cluster Isolation", "Community", "Compliance", "Confidential Computing", "Confidential Containers", "Containerization", "CVMs", "DevOps", "DevOps Environments", "GDPR", "HIPAA", "Hybrid Cloud", "Intel TDX", "Microsoft Ignite", "OpenShift 4.15", "Sandboxes", "Security", "Security Automation", "Trusted Execution Environments", "Workload Attestation", "Zero Trust"]
-tags_normalized: ["amd sev snp", "azure", "azure red hat openshift", "cloud security", "cluster isolation", "community", "compliance", "confidential computing", "confidential containers", "containerization", "cvms", "devops", "devops environments", "gdpr", "hipaa", "hybrid cloud", "intel tdx", "microsoft ignite", "openshift 4dot15", "sandboxes", "security", "security automation", "trusted execution environments", "workload attestation", "zero trust"]
+permalink: /azure/community/Confidential-Containers-Now-Available-on-Azure-Red-Hat-OpenShift-ARO
+tags:
+- AMD SEV SNP
+- Azure
+- Azure Red Hat OpenShift
+- Cloud Security
+- Cluster Isolation
+- Community
+- Compliance
+- Confidential Computing
+- Confidential Containers
+- Containerization
+- CVMs
+- DevOps
+- DevOps Environments
+- GDPR
+- HIPAA
+- Hybrid Cloud
+- Intel TDX
+- Microsoft Ignite
+- OpenShift 4.15
+- Sandboxes
+- Security
+- Security Automation
+- Trusted Execution Environments
+- Workload Attestation
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 MelanieKraintz007 explores Azure Red Hat OpenShift’s new Confidential Containers, detailing how this general availability release advances cloud security and zero-trust for confidential workloads on Azure.<!--excerpt_end-->
 
 # Confidential Containers Now Available on Azure Red Hat OpenShift (ARO)

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How to Assign and Manage Copilot Agent Tasks from Anywhere"
-description: "This video demonstrates how developers can leverage GitHub Copilot coding agents to assign and manage coding tasks from virtually any platform, including within Visual Studio Code, Slack, and a centralized agent page. It also covers managing autonomous agents locally using the Copilot CLI, and how to set up custom agents for specific types of coding work. Viewers will learn about new features that streamline workflow and offer more flexibility in controlling AI-powered development automation."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=__RLpdxThEE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Assign and Manage Copilot Agent Tasks from Anywhere
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=__RLpdxThEE
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-20 15:01:12 +00:00
-permalink: "/2025-11-20-How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Autonomous Agents", "Coding", "Coding Automation", "CodingAgent", "Copilot Agent", "Copilot CLI", "Custom Agents", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming Workflow", "Slack Integration", "Software Development", "Task Management", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "autonomous agents", "coding", "coding automation", "codingagent", "copilot agent", "copilot cli", "custom agents", "developer productivity", "github", "github copilot", "programming workflow", "slack integration", "software development", "task management", "videos", "vs code"]
+permalink: /github-copilot/videos/How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere
+tags:
+- AI
+- AI Tools
+- Autonomous Agents
+- Coding
+- Coding Automation
+- CodingAgent
+- Copilot Agent
+- Copilot CLI
+- Custom Agents
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Programming Workflow
+- Slack Integration
+- Software Development
+- Task Management
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub presents a guide on assigning and managing Copilot agent tasks from anywhere, with insights from the GitHub team on local autonomous agents, custom agent creation, and multi-platform integration.<!--excerpt_end-->
 
 {% youtube __RLpdxThEE %}

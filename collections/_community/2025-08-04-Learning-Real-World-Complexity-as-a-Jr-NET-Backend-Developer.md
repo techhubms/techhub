@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Learning Real-World Complexity as a Jr. .NET Backend Developer"
-description: "The author shares their experience of transitioning from basic CRUD operations to tackling a challenging .NET backend endpoint. They discuss the complexities of validating foreign keys, managing nested DTOs, and maintaining data integrity. The post seeks community advice on handling these challenges and evolving backend development skills."
-author: "Adjer_Nimossia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mh84i5/i_thought_i_am_ready_to_apply_for_a_jr_backend/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Learning Real-World Complexity as a Jr. .NET Backend Developer
+author: Adjer_Nimossia
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mh84i5/i_thought_i_am_ready_to_apply_for_a_jr_backend/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 08:44:34 +00:00
-permalink: "/2025-08-04-Learning-Real-World-Complexity-as-a-Jr-NET-Backend-Developer.html"
-categories: ["Coding", "ML"]
-tags: [".NET", "AutoMapper", "Backend Development", "Coding", "Community", "Complex Endpoints", "CRUD Operations", "Data Validation", "Design Patterns", "DTO", "EF Core", "Fullstack Development", "ML", "SQL Server"]
-tags_normalized: ["dotnet", "automapper", "backend development", "coding", "community", "complex endpoints", "crud operations", "data validation", "design patterns", "dto", "ef core", "fullstack development", "ml", "sql server"]
+permalink: /ml/community/Learning-Real-World-Complexity-as-a-Jr-NET-Backend-Developer
+tags:
+- .NET
+- AutoMapper
+- Backend Development
+- Coding
+- Community
+- Complex Endpoints
+- CRUD Operations
+- Data Validation
+- Design Patterns
+- DTO
+- EF Core
+- Fullstack Development
+- ML
+- SQL Server
+section_names:
+- coding
+- ml
 ---
-
 Author Adjer_Nimossia recounts the sobering realization that comes with tackling complex backend endpoints in .NET. They seek advice from the community on navigating the leap from basic CRUD to more advanced architectural challenges.<!--excerpt_end-->
 
 ## A Humbling Backend Lesson: From CRUD to Complexity

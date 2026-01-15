@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API"
-description: "This update introduces new billing UI features in GitHub Enterprise Cloud, enabling enterprise admins and billing managers to search for, add, and remove individual users in cost centers without using the REST API. The improved workflow streamlines user management, attribution of costs, and organizational tracking for billing managers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-18 15:01:58 +00:00
-permalink: "/2025-08-18-Manage-Cost-Center-Users-in-GitHub-Enterprise-Cloud-via-Billing-UI-and-API.html"
-categories: ["DevOps"]
-tags: ["Access Control", "Admin Tools", "Billing UI", "Cloud Billing", "Cost Attribution", "Cost Centers", "DevOps", "Enterprise Admin", "GitHub Enterprise Cloud", "News", "Organization Admin", "REST API", "SaaS Management", "User Management"]
-tags_normalized: ["access control", "admin tools", "billing ui", "cloud billing", "cost attribution", "cost centers", "devops", "enterprise admin", "github enterprise cloud", "news", "organization admin", "rest api", "saas management", "user management"]
+permalink: /devops/news/Manage-Cost-Center-Users-in-GitHub-Enterprise-Cloud-via-Billing-UI-and-API
+tags:
+- Access Control
+- Admin Tools
+- Billing UI
+- Cloud Billing
+- Cost Attribution
+- Cost Centers
+- DevOps
+- Enterprise Admin
+- GitHub Enterprise Cloud
+- News
+- Organization Admin
+- REST API
+- SaaS Management
+- User Management
+section_names:
+- devops
 ---
-
 Allison details how GitHub Enterprise Cloud now allows enterprise admins and billing managers to manage cost center memberships directly from the billing UI, simplifying user management tasks.<!--excerpt_end-->
 
 # Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API

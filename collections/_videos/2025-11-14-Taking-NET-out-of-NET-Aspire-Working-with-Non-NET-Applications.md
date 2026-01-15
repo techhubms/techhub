@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Taking .NET out of .NET Aspire: Working with Non-.NET Applications"
-description: ".NET Aspire enables developers to build, observe, and deploy distributed applications by defining services, resources, and their relationships in code. This session examines how .NET Aspire can be used beyond pure .NET solutions, showcasing integration strategies for Python, Node.js, and other non-.NET applications. Key features, such as simplified local debugging and the real-time developer dashboard, are demonstrated for heterogeneous tech stacks, making Aspire relevant even in mixed-language environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FcAi-kqo3ps"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Taking .NET out of .NET Aspire: Working with Non-.NET Applications'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=FcAi-kqo3ps
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 03:00:06 +00:00
-permalink: "/2025-11-14-Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications.html"
-categories: ["Coding"]
-tags: [".NET Aspire", "Application Deployment", "Coding", "Cross Platform Development", "Debugging", "Developer Dashboard", "Distributed Applications", "Microservices", "Microsoft", "Node.js Integration", "Observability", "Production Readiness", "Python Integration", "Service Orchestration", "Videos"]
-tags_normalized: ["dotnet aspire", "application deployment", "coding", "cross platform development", "debugging", "developer dashboard", "distributed applications", "microservices", "microsoft", "nodedotjs integration", "observability", "production readiness", "python integration", "service orchestration", "videos"]
+permalink: /coding/videos/Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications
+tags:
+- .NET Aspire
+- Application Deployment
+- Coding
+- Cross Platform Development
+- Debugging
+- Developer Dashboard
+- Distributed Applications
+- Microservices
+- Microsoft
+- Node.js Integration
+- Observability
+- Production Readiness
+- Python Integration
+- Service Orchestration
+- Videos
+section_names:
+- coding
 ---
-
 dotnet presents a session on extending .NET Aspire to support applications built with technologies like Python and Node.js, detailing integration tips and benefits for diverse software stacks.<!--excerpt_end-->
 
 {% youtube FcAi-kqo3ps %}

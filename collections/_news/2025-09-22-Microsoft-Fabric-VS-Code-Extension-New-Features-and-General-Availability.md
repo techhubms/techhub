@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Fabric VS Code Extension: New Features and General Availability"
-description: "This update details the newest features in the Microsoft Fabric VS Code Extension, now generally available. Highlights include programmatic item management, Azure DevOps Git integration, multi-workspace viewing, and direct management of Fabric SQL databases. The post offers insights into how the extension enhances the developer workflow with automation, source control, and data management capabilities."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric VS Code Extension: New Features and General Availability'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 10:30:00 +00:00
-permalink: "/2025-09-22-Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-Availability.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["API", "Automation", "Azure", "Azure DevOps", "Coding", "DevOps", "Fabric Workspaces", "Git Integration", "Item Definitions", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "Source Control", "SQL Database", "VS Code", "VS Code Extension", "Workspace Management"]
-tags_normalized: ["api", "automation", "azure", "azure devops", "coding", "devops", "fabric workspaces", "git integration", "item definitions", "microsoft fabric", "ml", "mssql extension", "news", "source control", "sql database", "vs code", "vs code extension", "workspace management"]
+permalink: /ml/news/Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-Availability
+tags:
+- API
+- Automation
+- Azure
+- Azure DevOps
+- Coding
+- DevOps
+- Fabric Workspaces
+- Git Integration
+- Item Definitions
+- Microsoft Fabric
+- ML
+- MSSQL Extension
+- News
+- Source Control
+- SQL Database
+- VS Code
+- VS Code Extension
+- Workspace Management
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog introduces general availability of the Fabric VS Code Extension, highlighting new automation, workspace, and DevOps features for developers.<!--excerpt_end-->
 
 # Microsoft Fabric VS Code Extension: General Availability and Feature Overview

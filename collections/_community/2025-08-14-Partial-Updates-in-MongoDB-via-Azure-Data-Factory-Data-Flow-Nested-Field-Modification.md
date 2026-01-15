@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Partial Updates in MongoDB via Azure Data Factory Data Flow: Nested Field Modification"
-description: "This community post discusses how to perform precise, partial updates to nested MongoDB fields using Azure Data Factory's Data Flow. The author details a scenario involving updating nested fields and arrays without overwriting the entire document, shares JSON structures, and seeks guidance on correct expressions and MongoDB Sink configuration to preserve existing, unrelated fields."
-author: "leopoldinoex"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Partial Updates in MongoDB via Azure Data Factory Data Flow: Nested Field Modification'
+author: leopoldinoex
+canonical_url: https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 16:29:48 +00:00
-permalink: "/2025-08-14-Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification.html"
-categories: ["Azure"]
-tags: ["Array Manipulation", "Azure", "Azure Data Factory", "Community", "Data Flow", "Derived Column", "ETL", "Id Key", "JSON Processing", "MongoDB", "Nested Fields", "NoSQL", "Partial Update", "Sink Configuration"]
-tags_normalized: ["array manipulation", "azure", "azure data factory", "community", "data flow", "derived column", "etl", "id key", "json processing", "mongodb", "nested fields", "nosql", "partial update", "sink configuration"]
+permalink: /azure/community/Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification
+tags:
+- Array Manipulation
+- Azure
+- Azure Data Factory
+- Community
+- Data Flow
+- Derived Column
+- ETL
+- Id Key
+- JSON Processing
+- MongoDB
+- Nested Fields
+- NoSQL
+- Partial Update
+- Sink Configuration
+section_names:
+- azure
 ---
-
 leopoldinoex seeks detailed advice on performing partial, in-place updates to nested fields in MongoDB using Data Flow in Azure Data Factory—focusing on transformation expressions and preserving document structure.<!--excerpt_end-->
 
 # Partial Updates in MongoDB via Azure Data Factory Data Flow

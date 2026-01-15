@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "What's New with the GitHub Copilot Coding Agent"
-description: "Discover how the new GitHub Copilot Coding Agent enables developers to assign coding tasks from anywhere and receive completed pull requests automatically. This GitHub Checkout episode with Tim and Andrea Griffiths covers key features like the Agents panel, universal overlay for task assignment, mobile tasking capabilities, agent-driven web browsing for validation, and screenshot integration in PRs. The video also touches on use cases such as technical debt resolution, MCP servers extension, pricing, usage, and future roadmap."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=t4ERV6aHCPM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: What's New with the GitHub Copilot Coding Agent
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=t4ERV6aHCPM
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-05 18:01:32 +00:00
-permalink: "/2025-09-05-Whats-New-with-the-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Browser Automation", "Copilot Coding Agent", "CopilotCodingAgent", "Dev Productivity", "GitHub Agents Panel", "GitHub Copilot", "GitHub Features", "MCP Servers", "Mobile Development", "Pull Request Automation", "Software Engineering", "Task Automation", "Technical Debt", "Videos"]
-tags_normalized: ["ai", "browser automation", "copilot coding agent", "copilotcodingagent", "dev productivity", "github agents panel", "github copilot", "github features", "mcp servers", "mobile development", "pull request automation", "software engineering", "task automation", "technical debt", "videos"]
+permalink: /github-copilot/videos/Whats-New-with-the-GitHub-Copilot-Coding-Agent
+tags:
+- AI
+- Browser Automation
+- Copilot Coding Agent
+- CopilotCodingAgent
+- Dev Productivity
+- GitHub Agents Panel
+- GitHub Copilot
+- GitHub Features
+- MCP Servers
+- Mobile Development
+- Pull Request Automation
+- Software Engineering
+- Task Automation
+- Technical Debt
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a showcase with Tim and Andrea Griffiths introducing the Copilot Coding Agent, highlighting new features like mobile tasking, in-browser validation, and screenshot integration for streamlined developer workflows.<!--excerpt_end-->
 
 {% youtube t4ERV6aHCPM %}

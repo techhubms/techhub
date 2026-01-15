@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Strongly-Typed Markdown for ASP.NET Core Content Apps"
-description: "Khalid Abuhakmeh demonstrates how to process Markdown files with YAML frontmatter in ASP.NET Core applications. By leveraging Markdig and YamlDotNet, he shows how to create a strongly-typed C# object for easily parsing content and metadata, and rendering in Razor Pages. Includes complete code samples."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Strongly-Typed Markdown for ASP.NET Core Content Apps
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-25 00:00:00 +00:00
-permalink: "/2025-02-25-Strongly-Typed-Markdown-for-ASPNET-Core-Content-Apps.html"
-categories: ["Coding"]
-tags: ["ASP.NET", "ASP.NET Core", "Blogs", "C#", "Coding", "Content Management", "Markdig", "Markdown", "Metadata", "Razor Pages", "Strongly Typed Objects", "YAML", "YamlDotNet"]
-tags_normalized: ["aspdotnet", "aspdotnet core", "blogs", "csharp", "coding", "content management", "markdig", "markdown", "metadata", "razor pages", "strongly typed objects", "yaml", "yamldotnet"]
+permalink: /coding/blogs/Strongly-Typed-Markdown-for-ASPNET-Core-Content-Apps
+tags:
+- ASP.NET
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Content Management
+- Markdig
+- Markdown
+- Metadata
+- Razor Pages
+- Strongly Typed Objects
+- YAML
+- YamlDotNet
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh guides developers through building strongly-typed content management solutions by parsing Markdown with YAML frontmatter into C# objects for ASP.NET Core apps.<!--excerpt_end-->
 
 # Strongly-Typed Markdown for ASP.NET Core Content Apps

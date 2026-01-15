@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights"
-description: "This news update from the Microsoft Fabric Blog details recent enhancements to the Mirroring feature in Microsoft Fabric. It covers new generally available and preview data sources, zero-ETL data access, integration with Power BI, secure connectivity improvements, chat-driven analytics, and expanded developer extensibility, all aimed at simplifying analytics and AI/BI workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 10:00:00 +00:00
-permalink: "/2025-09-23-Mirroring-in-Microsoft-Fabric-New-Sources-Zero-ETL-Data-Unification-and-AI-Powered-Insights.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Analytics", "Azure", "Azure SQL Managed Instance", "Data Agent", "Data Governance", "Data Integration", "Data Unification", "Delta Lake", "Enterprise Data", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Gateway", "OneLake", "Open Mirroring", "Oracle", "Power BI", "Preview Features", "Semantic Models", "VNet", "Zero ETL"]
-tags_normalized: ["ai", "analytics", "azure", "azure sql managed instance", "data agent", "data governance", "data integration", "data unification", "delta lake", "enterprise data", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "on premises gateway", "onelake", "open mirroring", "oracle", "power bi", "preview features", "semantic models", "vnet", "zero etl"]
+permalink: /ai/news/Mirroring-in-Microsoft-Fabric-New-Sources-Zero-ETL-Data-Unification-and-AI-Powered-Insights
+tags:
+- AI
+- Analytics
+- Azure
+- Azure SQL Managed Instance
+- Data Agent
+- Data Governance
+- Data Integration
+- Data Unification
+- Delta Lake
+- Enterprise Data
+- Google BigQuery
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- On Premises Gateway
+- OneLake
+- Open Mirroring
+- Oracle
+- Power BI
+- Preview Features
+- Semantic Models
+- VNet
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog discusses major updates to Mirroring, enabling seamless zero-ETL data unification for analytics and AI. This update, authored by the Microsoft Fabric Blog team, highlights new source support, secure connectivity, and chat-driven analytics with mirrored data.<!--excerpt_end-->
 
 # Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights

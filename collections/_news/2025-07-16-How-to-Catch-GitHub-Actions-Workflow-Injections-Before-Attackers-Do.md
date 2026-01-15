@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How to Catch GitHub Actions Workflow Injections Before Attackers Do"
-description: "Dylan Birtolo discusses how to safeguard repositories against GitHub Actions workflow injections, a prevalent security risk. The article highlights proactive detection techniques, the importance of vulnerability research, and how tools like CodeQL and code scanning enhance security in continuous integration processes."
-author: "Dylan Birtolo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How to Catch GitHub Actions Workflow Injections Before Attackers Do
+author: Dylan Birtolo
+canonical_url: https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-16 16:00:00 +00:00
-permalink: "/2025-07-16-How-to-Catch-GitHub-Actions-Workflow-Injections-Before-Attackers-Do.html"
-categories: ["DevOps", "Security"]
-tags: ["Attack Prevention", "CI/CD", "Code Scanning", "CodeQL", "DevOps", "GitHub Actions", "News", "Repository Security", "Security", "Vulnerability Research", "Workflow Injection", "Workflow Security"]
-tags_normalized: ["attack prevention", "cislashcd", "code scanning", "codeql", "devops", "github actions", "news", "repository security", "security", "vulnerability research", "workflow injection", "workflow security"]
+permalink: /devops/news/How-to-Catch-GitHub-Actions-Workflow-Injections-Before-Attackers-Do
+tags:
+- Attack Prevention
+- CI/CD
+- Code Scanning
+- CodeQL
+- DevOps
+- GitHub Actions
+- News
+- Repository Security
+- Security
+- Vulnerability Research
+- Workflow Injection
+- Workflow Security
+section_names:
+- devops
+- security
 ---
-
 In this article, Dylan Birtolo addresses strategies for detecting and mitigating GitHub Actions workflow injections, offering practical guidance on boosting repository security.<!--excerpt_end-->
 
 ## Article Summary: GitHub Actions Workflow Injection Prevention by Dylan Birtolo

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation"
-description: "This post details the public preview expansion of the Azure SRE Agent, an automation tool for site reliability engineering within Azure environments. It covers improvements around governance, security, diagnostics, extensibility, new incident management integrations, automation with runbooks, and the capability to bridge DevOps workflows across Azure, GitHub, and Azure DevOps."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation'
+author: Mayunk_Jain
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 02:24:40 +00:00
-permalink: "/2025-10-02-Azure-SRE-Agent-Public-Preview-Expands-New-Features-for-DevOps-and-Automation.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "AZ CLI", "Azure", "Azure App Service", "Azure DevOps", "Azure Functions", "Azure Monitor", "Azure Portal", "Azure SRE Agent", "Community", "DevOps", "DevOps Automation", "Diagnostics", "Enterprise Governance", "GitHub Integration", "Incident Management", "Kubectl", "PagerDuty", "RBAC", "Root Cause Analysis", "Runbooks", "Security", "ServiceNow", "Site Reliability Engineering"]
-tags_normalized: ["aks", "az cli", "azure", "azure app service", "azure devops", "azure functions", "azure monitor", "azure portal", "azure sre agent", "community", "devops", "devops automation", "diagnostics", "enterprise governance", "github integration", "incident management", "kubectl", "pagerduty", "rbac", "root cause analysis", "runbooks", "security", "servicenow", "site reliability engineering"]
+permalink: /azure/community/Azure-SRE-Agent-Public-Preview-Expands-New-Features-for-DevOps-and-Automation
+tags:
+- AKS
+- AZ CLI
+- Azure
+- Azure App Service
+- Azure DevOps
+- Azure Functions
+- Azure Monitor
+- Azure Portal
+- Azure SRE Agent
+- Community
+- DevOps
+- DevOps Automation
+- Diagnostics
+- Enterprise Governance
+- GitHub Integration
+- Incident Management
+- Kubectl
+- PagerDuty
+- RBAC
+- Root Cause Analysis
+- Runbooks
+- Security
+- ServiceNow
+- Site Reliability Engineering
+section_names:
+- azure
+- devops
+- security
 ---
-
 Mayunk_Jain introduces the expanded public preview for Azure SRE Agent, focusing on automation, governance, diagnostics, and incident management for DevOps and SRE teams operating in Azure.<!--excerpt_end-->
 
 # Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation

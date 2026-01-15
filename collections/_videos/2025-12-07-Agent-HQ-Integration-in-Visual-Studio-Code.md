@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Agent HQ Integration in Visual Studio Code"
-description: "This video introduces Agent HQ within Visual Studio Code, providing a unified interface for initiating, monitoring, and reviewing agent sessions, both local and remote. It covers integration with OpenAI Codex, Copilot CLI, and the use of plan and custom agents to streamline workflows. Key features highlighted include session management, planning agents, delegating tasks, and customizing agent handoffs, all leveraging VS Code's extensibility."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Qfnod4Sw0gY"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Agent HQ Integration in Visual Studio Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=Qfnod4Sw0gY
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-07 15:00:56 +00:00
-permalink: "/2025-12-07-Agent-HQ-Integration-in-Visual-Studio-Code.html"
-categories: ["AI", "Coding"]
-tags: ["Agent HQ", "Agent Sessions", "AI", "AI Integration", "Code Agents", "Coding", "Copilot CLI", "Custom Agents", "Developer Productivity", "Development Tools", "Microsoft", "OpenAI Codex", "Plan Agent", "Session Management", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agent hq", "agent sessions", "ai", "ai integration", "code agents", "coding", "copilot cli", "custom agents", "developer productivity", "development tools", "microsoft", "openai codex", "plan agent", "session management", "videos", "vs code", "workflow automation"]
+permalink: /ai/videos/Agent-HQ-Integration-in-Visual-Studio-Code
+tags:
+- Agent HQ
+- Agent Sessions
+- AI
+- AI Integration
+- Code Agents
+- Coding
+- Copilot CLI
+- Custom Agents
+- Developer Productivity
+- Development Tools
+- Microsoft
+- OpenAI Codex
+- Plan Agent
+- Session Management
+- Videos
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Olivia Guzzardo McVicker demonstrates how Agent HQ integrates with Visual Studio Code, enabling developers to manage and customize agent sessions for enhanced workflow efficiency.<!--excerpt_end-->
 
 {% youtube Qfnod4Sw0gY %}

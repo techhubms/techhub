@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enhancing Code Security with GitHub Tools"
-description: "This video explores GitHub's code security features designed to help developers detect and address vulnerabilities early in their development workflow. It details tools like CodeQL for static analysis, Copilot Autofix for automatic code fixes, security campaigns for managing technical debt, and dependency review for open source packages. The content is aimed at developers looking to integrate security practices directly into their coding and DevOps processes."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pZ2Nu8LqJvE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Enhancing Code Security with GitHub Tools
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=pZ2Nu8LqJvE
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-19 14:01:23 +00:00
-permalink: "/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html"
-categories: ["DevOps", "Security"]
-tags: ["Code Vulnerability Detection", "CodeQL", "CodeSecurity", "Copilot Autofix", "Dependency Review", "Developer Security Tools", "DevOps", "DevSecOps", "GitHub", "GitHub Code Security", "Open Source Security", "Secure Development Workflow", "Security", "Security Campaigns", "Static Code Analysis", "Videos", "Vulnerability Management"]
-tags_normalized: ["code vulnerability detection", "codeql", "codesecurity", "copilot autofix", "dependency review", "developer security tools", "devops", "devsecops", "github", "github code security", "open source security", "secure development workflow", "security", "security campaigns", "static code analysis", "videos", "vulnerability management"]
+permalink: /devops/videos/Enhancing-Code-Security-with-GitHub-Tools
+tags:
+- Code Vulnerability Detection
+- CodeQL
+- CodeSecurity
+- Copilot Autofix
+- Dependency Review
+- Developer Security Tools
+- DevOps
+- DevSecOps
+- GitHub
+- GitHub Code Security
+- Open Source Security
+- Secure Development Workflow
+- Security
+- Security Campaigns
+- Static Code Analysis
+- Videos
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 GitHub presents an overview of developer-first code security tools, including CodeQL, Copilot Autofix, security campaigns, and dependency review, to help developers identify and manage vulnerabilities. Authored by the GitHub team.<!--excerpt_end-->
 
 {% youtube pZ2Nu8LqJvE %}

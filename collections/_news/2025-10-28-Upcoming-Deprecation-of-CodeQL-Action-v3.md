@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Upcoming Deprecation of CodeQL Action v3"
-description: "This announcement from Allison provides details about the deprecation timeline of CodeQL Action v3 and the release of CodeQL Action v4, which now runs on Node.js 24. It offers actionable guidance for both default and advanced CodeQL setup users, outlining upgrade paths for various GitHub platforms and emphasizing workflow file updates for GitHub Actions. Dependabot can help automate some upgrades. The announcement also clarifies the implications for users on different GitHub Enterprise Server versions and what to expect as the deprecation date approaches."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Upcoming Deprecation of CodeQL Action v3
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 18:05:01 +00:00
-permalink: "/2025-10-28-Upcoming-Deprecation-of-CodeQL-Action-v3.html"
-categories: ["DevOps", "Security"]
-tags: ["Action Deprecation", "Actions", "Application Security", "Code Scanning", "CodeQL Action", "CodeQL V4", "Dependabot", "DevOps", "GitHub Actions", "GitHub Enterprise Server", "News", "Node.js 24", "Retired", "Security", "Security Automation", "Workflow Update"]
-tags_normalized: ["action deprecation", "actions", "application security", "code scanning", "codeql action", "codeql v4", "dependabot", "devops", "github actions", "github enterprise server", "news", "nodedotjs 24", "retired", "security", "security automation", "workflow update"]
+permalink: /devops/news/Upcoming-Deprecation-of-CodeQL-Action-v3
+tags:
+- Action Deprecation
+- Actions
+- Application Security
+- Code Scanning
+- CodeQL Action
+- CodeQL V4
+- Dependabot
+- DevOps
+- GitHub Actions
+- GitHub Enterprise Server
+- News
+- Node.js 24
+- Retired
+- Security
+- Security Automation
+- Workflow Update
+section_names:
+- devops
+- security
 ---
-
 Allison announces the upcoming deprecation of CodeQL Action v3, detailing the introduction of v4 on Node.js 24 and explaining workflow update requirements for security and DevOps teams using GitHub Actions.<!--excerpt_end-->
 
 # Upcoming Deprecation of CodeQL Action v3

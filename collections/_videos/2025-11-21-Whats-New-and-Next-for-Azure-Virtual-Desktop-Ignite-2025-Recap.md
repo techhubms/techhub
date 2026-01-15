@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "What’s New and Next for Azure Virtual Desktop: Ignite 2025 Recap"
-description: "This session explores the latest updates in Azure Virtual Desktop (AVD) presented at Microsoft Ignite 2025. Topics include App Attach enhancements, improved B2B access with advanced security, new pricing/licensing models, user experience improvements, RDP Multipath, and the new Migration API for seamless cloud transitions—geared toward IT administrators, architects, and consultants."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qhEj-1ZolLs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'What’s New and Next for Azure Virtual Desktop: Ignite 2025 Recap'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=qhEj-1ZolLs
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:29:12 +00:00
-permalink: "/2025-11-21-Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap.html"
-categories: ["Azure", "Security"]
-tags: ["App Attach", "Azure", "Azure Virtual Desktop", "B2B Access", "Cloud Migration", "Dynamic Auto Scale", "Identity Management", "Microsoft Ignite", "MSIgnite", "Multi Factor Authentication", "Pricing", "RDP Multipath", "ScalewithcloudandAIendpoints", "Security", "User Experience", "VDI Migration", "Videos", "Windows 365"]
-tags_normalized: ["app attach", "azure", "azure virtual desktop", "b2b access", "cloud migration", "dynamic auto scale", "identity management", "microsoft ignite", "msignite", "multi factor authentication", "pricing", "rdp multipath", "scalewithcloudandaiendpoints", "security", "user experience", "vdi migration", "videos", "windows 365"]
+permalink: /azure/videos/Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap
+tags:
+- App Attach
+- Azure
+- Azure Virtual Desktop
+- B2B Access
+- Cloud Migration
+- Dynamic Auto Scale
+- Identity Management
+- Microsoft Ignite
+- MSIgnite
+- Multi Factor Authentication
+- Pricing
+- RDP Multipath
+- ScalewithcloudandAIendpoints
+- Security
+- User Experience
+- VDI Migration
+- Videos
+- Windows 365
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events' session features speakers Roop Kiran Chevuri, Mark Douglas, and Eric Orman highlighting the latest capabilities in Azure Virtual Desktop, covering security, B2B access, auto-scaling, licensing innovations, and new migration tools.<!--excerpt_end-->
 
 {% youtube qhEj-1ZolLs %}

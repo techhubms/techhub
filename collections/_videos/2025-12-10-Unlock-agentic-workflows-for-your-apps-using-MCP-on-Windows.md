@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Unlock agentic workflows for your apps using MCP on Windows"
-description: "This session introduces developers to building agentic workflows on Windows by leveraging the Microsoft Copilot Platform (MCP). It discusses integrating MCP with native apps, AI agents, and tools, focusing on server packaging, security, and MCP Registry. Learn how custom and built-in MCP servers automate tasks securely and at scale, enhancing enterprise AI capabilities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PWELkVJbb7Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Unlock agentic workflows for your apps using MCP on Windows
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=PWELkVJbb7Y
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "AI Development", "App Integration", "Automation", "Azure", "Cloud Computing", "Dev", "Developer", "Development", "Enterprise AI", "Extensibility", "MCP", "MCP Registry", "MCP Server", "Microsoft", "Microsoft Copilot Platform", "Scalability", "Tech", "Technology", "Videos", "Windows"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "ai development", "app integration", "automation", "azure", "cloud computing", "dev", "developer", "development", "enterprise ai", "extensibility", "mcp", "mcp registry", "mcp server", "microsoft", "microsoft copilot platform", "scalability", "tech", "technology", "videos", "windows"]
+permalink: /ai/videos/Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- AI Development
+- App Integration
+- Automation
+- Azure
+- Cloud Computing
+- Dev
+- Developer
+- Development
+- Enterprise AI
+- Extensibility
+- MCP
+- MCP Registry
+- MCP Server
+- Microsoft
+- Microsoft Copilot Platform
+- Scalability
+- Tech
+- Technology
+- Videos
+- Windows
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents a deep dive into enabling agentic workflows with MCP on Windows, guiding viewers through MCP server development, registry integration, and secure AI automation for enterprise apps.<!--excerpt_end-->
 
 {% youtube PWELkVJbb7Y %}

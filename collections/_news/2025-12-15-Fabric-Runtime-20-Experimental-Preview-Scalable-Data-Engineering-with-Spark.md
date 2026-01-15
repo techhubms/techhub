@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark"
-description: "This news item introduces the Experimental Public Preview (EPP) of Fabric Runtime 2.0 in Microsoft Fabric. It highlights key upgrades such as Apache Spark 4.0, Delta Lake 4.0, and support for modern languages, outlining how the new runtime enhances large-scale data engineering and data science workloads within the Fabric platform. The preview enables early access to new features and improved performance for Spark-based analytics projects."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-15 09:00:00 +00:00
-permalink: "/2025-12-15-Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark 4.0", "Azure", "Azure Linux 3.0", "Big Data", "Data Engineering", "Data Science", "Delta Lake 4.0", "Experimental Public Preview", "Fabric Runtime 2.0", "Java 21", "Microsoft Fabric", "ML", "News", "Preview Features", "Python 3.12", "Scala 2.13", "Scalable Analytics", "Spark Based Workloads"]
-tags_normalized: ["apache spark 4dot0", "azure", "azure linux 3dot0", "big data", "data engineering", "data science", "delta lake 4dot0", "experimental public preview", "fabric runtime 2dot0", "java 21", "microsoft fabric", "ml", "news", "preview features", "python 3dot12", "scala 2dot13", "scalable analytics", "spark based workloads"]
+permalink: /ml/news/Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark
+tags:
+- Apache Spark 4.0
+- Azure
+- Azure Linux 3.0
+- Big Data
+- Data Engineering
+- Data Science
+- Delta Lake 4.0
+- Experimental Public Preview
+- Fabric Runtime 2.0
+- Java 21
+- Microsoft Fabric
+- ML
+- News
+- Preview Features
+- Python 3.12
+- Scala 2.13
+- Scalable Analytics
+- Spark Based Workloads
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents an overview of Fabric Runtime 2.0 Experimental Public Preview, showcasing new features for data engineering and science with upgraded Spark and Delta Lake support.<!--excerpt_end-->
 
 # Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark

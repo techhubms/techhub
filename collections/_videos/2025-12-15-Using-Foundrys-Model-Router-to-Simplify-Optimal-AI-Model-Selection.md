@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Using Foundry's Model Router to Simplify Optimal AI Model Selection"
-description: "This video by John Savill's Technical Training provides a practical walkthrough of Microsoft Azure Foundry's Model Router, a tool designed to help developers and solution architects select and deploy the most suitable AI models for their applications and agents. The content covers model dimensions, selection strategies, routing methods, deployment procedures, backend model integration, and how these elements fit together to streamline AI solution development using Azure services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xQRjb7V8OCg"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Using Foundry's Model Router to Simplify Optimal AI Model Selection
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=xQRjb7V8OCg
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-15 12:57:07 +00:00
-permalink: "/2025-12-15-Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection.html"
-categories: ["AI", "Azure"]
-tags: ["Agents", "AI", "AI Agents", "AI Application Development", "AI Model Selection", "Azure", "Azure AI", "Azure Cloud", "Azure Foundry", "Backend Models", "Cloud", "Generative AI", "LLM", "Microsoft", "Microsoft Azure", "Model Deployment", "Model Router", "Model Routing", "SLM", "Solution Architecture", "Videos"]
-tags_normalized: ["agents", "ai", "ai agents", "ai application development", "ai model selection", "azure", "azure ai", "azure cloud", "azure foundry", "backend models", "cloud", "generative ai", "llm", "microsoft", "microsoft azure", "model deployment", "model router", "model routing", "slm", "solution architecture", "videos"]
+permalink: /ai/videos/Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection
+tags:
+- Agents
+- AI
+- AI Agents
+- AI Application Development
+- AI Model Selection
+- Azure
+- Azure AI
+- Azure Cloud
+- Azure Foundry
+- Backend Models
+- Cloud
+- Generative AI
+- LLM
+- Microsoft
+- Microsoft Azure
+- Model Deployment
+- Model Router
+- Model Routing
+- SLM
+- Solution Architecture
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 John Savill's Technical Training demonstrates practical usage of Microsoft Azure Foundry's Model Router, guiding developers on choosing and deploying optimal AI models for their applications.<!--excerpt_end-->
 
 {% youtube xQRjb7V8OCg %}

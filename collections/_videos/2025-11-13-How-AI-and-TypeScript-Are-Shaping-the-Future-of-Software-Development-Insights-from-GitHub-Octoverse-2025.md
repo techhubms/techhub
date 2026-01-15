@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025"
-description: "This video features Idan Gazit, Head of GitHub Next, discussing the most significant trends influencing software development highlighted in the Octoverse 2025 report. Key topics include the ascendance of TypeScript, Python’s evolving role in AI, and how artificial intelligence is transforming coding practices, language selection, and industry adoption patterns worldwide."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MQOaBXwRfYo"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=MQOaBXwRfYo
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-13 15:00:42 +00:00
-permalink: "/2025-11-13-How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Trends", "Code Generation", "Coding", "Coding Practices", "Developer Tools", "DevOps", "Emerging Markets", "GitHub", "Octoverse", "Programming Languages", "Python", "Software Development", "TypeScript", "Videos"]
-tags_normalized: ["ai", "ai adoption", "ai trends", "code generation", "coding", "coding practices", "developer tools", "devops", "emerging markets", "github", "octoverse", "programming languages", "python", "software development", "typescript", "videos"]
+permalink: /ai/videos/How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025
+tags:
+- AI
+- AI Adoption
+- AI Trends
+- Code Generation
+- Coding
+- Coding Practices
+- Developer Tools
+- DevOps
+- Emerging Markets
+- GitHub
+- Octoverse
+- Programming Languages
+- Python
+- Software Development
+- TypeScript
+- Videos
+section_names:
+- ai
+- coding
+- devops
 ---
-
 In this GitHub video, Idan Gazit examines the 2025 Octoverse report, offering his professional perspective on rising software development trends, from TypeScript’s surge to AI’s growing influence on how and what we code.<!--excerpt_end-->
 
 {% youtube MQOaBXwRfYo %}

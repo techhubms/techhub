@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "OpenAI’s gpt-oss Models Now Available on Azure AI Foundry and Windows via Foundry Local"
-description: "Satya Nadella announces the integration of OpenAI’s open-source gpt-oss models into Azure AI Foundry and Windows through Foundry Local. This enables hybrid AI strategies with flexible model selection, optimized performance and cost, and support for on-premises data. Community reactions highlight excitement around open innovation in AI within the Microsoft ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_openais-opensource-model-gptoss-on-azure-activity-7358643157602852867-kYFD"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: OpenAI’s gpt-oss Models Now Available on Azure AI Foundry and Windows via Foundry Local
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_openais-opensource-model-gptoss-on-azure-activity-7358643157602852867-kYFD
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 01:04:00 +00:00
-permalink: "/2025-08-06-OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "AI Models", "Azure", "Azure AI Foundry", "Company News", "Foundry Local", "Gpt Oss", "Hybrid AI", "LinkedIn Post", "Microsoft", "News", "Open Source AI", "OpenAI", "Performance Optimization", "Satya Nadella", "Windows AI"]
-tags_normalized: ["ai", "ai integration", "ai models", "azure", "azure ai foundry", "company news", "foundry local", "gpt oss", "hybrid ai", "linkedin post", "microsoft", "news", "open source ai", "openai", "performance optimization", "satya nadella", "windows ai"]
+permalink: /ai/news/OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local
+tags:
+- AI
+- AI Integration
+- AI Models
+- Azure
+- Azure AI Foundry
+- Company News
+- Foundry Local
+- Gpt Oss
+- Hybrid AI
+- LinkedIn Post
+- Microsoft
+- News
+- Open Source AI
+- OpenAI
+- Performance Optimization
+- Satya Nadella
+- Windows AI
+section_names:
+- ai
+- azure
 ---
-
 In this announcement, Satya Nadella shares Microsoft’s move to bring OpenAI’s gpt-oss models to Azure AI Foundry and to Windows via Foundry Local, highlighting hybrid AI capabilities and community engagement.<!--excerpt_end-->
 
 ## OpenAI’s gpt-oss Models Now on Azure AI Foundry and Windows via Foundry Local

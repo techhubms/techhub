@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "My free AI Course on GitHub is now in Video Format"
-description: "Microsoft Solution Architect shares a comprehensive, free Generative AI course on GitHub, reflecting real-world experience and inviting feedback."
-author: "Tailor-Equivalent"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AI_Agents/comments/1m5ucwp/my_free_ai_course_on_github_is_now_in_video_format/"
-categories: ["AI"]
-feed_name: "Reddit AI Agents"
-feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
+﻿---
+layout: post
+title: My free AI Course on GitHub is now in Video Format
+author: Tailor-Equivalent
+canonical_url: https://www.reddit.com/r/AI_Agents/comments/1m5ucwp/my_free_ai_course_on_github_is_now_in_video_format/
+feed_name: Reddit AI Agents
+feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-07-21 20:40:28 +00:00
-permalink: "/2025-07-21-My-free-AI-Course-on-GitHub-is-now-in-Video-Format.html"
-viewing_mode: "external"
-tags: ["AI", "AI Agents", "AI Applications", "Community", "Community Feedback", "Education", "Free Course", "Generative AI", "GitHub", "Microsoft", "Production Level AI", "Solution Architect", "Training"]
-tags_normalized: ["ai", "ai agents", "ai applications", "community", "community feedback", "education", "free course", "generative ai", "github", "microsoft", "production level ai", "solution architect", "training"]
+permalink: /ai/community/My-free-AI-Course-on-GitHub-is-now-in-Video-Format
+viewing_mode: external
+tags:
+- AI
+- AI Agents
+- AI Applications
+- Community
+- Community Feedback
+- Education
+- Free Course
+- Generative AI
+- GitHub
+- Microsoft
+- Production Level AI
+- Solution Architect
+- Training
+section_names:
+- ai
 ---
-
 Tailor-Equivalent, a Solution Architect at Microsoft, announces the release of a free and comprehensive Generative AI course on GitHub. Drawing from extensive experience in building production-grade AI applications, the author aims to share valuable insights and knowledge with the community. Feedback from users and peers is encouraged to continually improve the course, which has already received positive responses.<!--excerpt_end-->
 
 ## Free Generative AI Course Released by Microsoft Expert

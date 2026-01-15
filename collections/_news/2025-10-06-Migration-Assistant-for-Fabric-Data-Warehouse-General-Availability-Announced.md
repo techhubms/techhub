@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Migration Assistant for Fabric Data Warehouse: General Availability Announced"
-description: "This announcement outlines the general availability of the Migration Assistant for Fabric Data Warehouse. The tool enables organizations to migrate analytics workloads from T-SQL databases, such as Azure Synapse Analytics, to Microsoft Fabric Data Warehouse. It features end-to-end migration guidance, compatibility with various SQL constructs, and integration with Fabric’s analytics ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Migration Assistant for Fabric Data Warehouse: General Availability Announced'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 09:00:00 +00:00
-permalink: "/2025-10-06-Migration-Assistant-for-Fabric-Data-Warehouse-General-Availability-Announced.html"
-categories: ["Azure", "ML"]
-tags: ["ACID Compliance", "Analytics Platform", "Azure", "Azure Synapse Analytics", "Cloud Migration", "Data Engineering", "Data Lake", "Data Migration", "Data Warehouse", "Delta Parquet", "Distributed Computing", "Microsoft Fabric", "Migration Assistant", "ML", "News", "Power BI Integration", "SaaS Analytics", "T SQL"]
-tags_normalized: ["acid compliance", "analytics platform", "azure", "azure synapse analytics", "cloud migration", "data engineering", "data lake", "data migration", "data warehouse", "delta parquet", "distributed computing", "microsoft fabric", "migration assistant", "ml", "news", "power bi integration", "saas analytics", "t sql"]
+permalink: /ml/news/Migration-Assistant-for-Fabric-Data-Warehouse-General-Availability-Announced
+tags:
+- ACID Compliance
+- Analytics Platform
+- Azure
+- Azure Synapse Analytics
+- Cloud Migration
+- Data Engineering
+- Data Lake
+- Data Migration
+- Data Warehouse
+- Delta Parquet
+- Distributed Computing
+- Microsoft Fabric
+- Migration Assistant
+- ML
+- News
+- Power BI Integration
+- SaaS Analytics
+- T SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Migration Assistant for Fabric Data Warehouse, detailing features that ease transition from T-SQL analytics databases like Azure Synapse, authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Migration Assistant for Fabric Data Warehouse (General Availability)

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Now Reports Leaked Secrets in Unlisted Gists to Scanning Partners"
-description: "This announcement details a new security measure from GitHub: any secrets leaked in both public and unlisted (secret-labeled) gists are now reported to the appropriate secret scanning partners. The update clarifies that unlisted gists offer no additional privacy, encouraging developers to treat all gist content as publicly accessible and to use private repositories for sensitive code. The post outlines how GitHub works with partners such as AWS, OpenAI, and Stripe to detect and notify on leaked secrets, strengthening confidentiality and incident response for developers using gists."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Now Reports Leaked Secrets in Unlisted Gists to Scanning Partners
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 17:50:17 +00:00
-permalink: "/2025-11-25-GitHub-Now-Reports-Leaked-Secrets-in-Unlisted-Gists-to-Scanning-Partners.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "AWS", "Code Leaks", "Code Sharing", "DevOps", "DevOps Best Practices", "GitHub", "GitHub Gists", "Improvement", "Incident Response", "News", "OpenAI", "Partner Program", "Repository Security", "Secret Scanning", "Secrets Management", "Security", "Security Alert", "Stripe"]
-tags_normalized: ["application security", "aws", "code leaks", "code sharing", "devops", "devops best practices", "github", "github gists", "improvement", "incident response", "news", "openai", "partner program", "repository security", "secret scanning", "secrets management", "security", "security alert", "stripe"]
+permalink: /devops/news/GitHub-Now-Reports-Leaked-Secrets-in-Unlisted-Gists-to-Scanning-Partners
+tags:
+- Application Security
+- AWS
+- Code Leaks
+- Code Sharing
+- DevOps
+- DevOps Best Practices
+- GitHub
+- GitHub Gists
+- Improvement
+- Incident Response
+- News
+- OpenAI
+- Partner Program
+- Repository Security
+- Secret Scanning
+- Secrets Management
+- Security
+- Security Alert
+- Stripe
+section_names:
+- devops
+- security
 ---
-
 Allison explains GitHub’s update to its secret scanning process, highlighting how secrets leaked in any gist, including unlisted ones, are now reported to scanning partners to help prevent exposure.<!--excerpt_end-->
 
 # GitHub Reports Leaked Secrets in Unlisted Gists to Secret Scanning Partners

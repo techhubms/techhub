@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Centering a WPF TreeViewItem in the TreeView ScrollViewer"
-description: "Rick Strahl presents a guide for centering a TreeViewItem within a WPF TreeView's viewport, correcting the limitations of the standard BringIntoView method. He shares practical code samples and reusable helper functions to improve usability when re-focusing or reorganizing TreeViews in .NET WPF applications."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Centering a WPF TreeViewItem in the TreeView ScrollViewer
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-07-16 04:23:03 +00:00
-permalink: "/2025-07-16-Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer.html"
-categories: ["Coding"]
-tags: [".NET", "Application Usability", "Blogs", "BringIntoView", "C#", "Coding", "ContentPresenter", "Helper Methods", "ScrollViewer", "TreeView", "UI Development", "Visual Tree", "WPF"]
-tags_normalized: ["dotnet", "application usability", "blogs", "bringintoview", "csharp", "coding", "contentpresenter", "helper methods", "scrollviewer", "treeview", "ui development", "visual tree", "wpf"]
+permalink: /coding/blogs/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer
+tags:
+- .NET
+- Application Usability
+- Blogs
+- BringIntoView
+- C#
+- Coding
+- ContentPresenter
+- Helper Methods
+- ScrollViewer
+- TreeView
+- UI Development
+- Visual Tree
+- WPF
+section_names:
+- coding
 ---
-
 In this article, Rick Strahl addresses a common usability issue with WPF's TreeView, offering .NET code and helper methods to properly center selected items and improve user experience.<!--excerpt_end-->
 
 # Centering a WPF TreeViewItem in the TreeView ScrollViewer

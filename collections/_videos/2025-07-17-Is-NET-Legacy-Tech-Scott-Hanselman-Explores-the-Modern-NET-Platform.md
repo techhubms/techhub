@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform"
-description: "Scott Hanselman discusses whether .NET is considered a legacy technology. In this #OneDevQuestion, he highlights its evolution from a mature platform like C/C++ to the modern, open-source, cross-platform .NET 9, adaptable for devices from Raspberry Pi to Xbox."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=CIuLieYAGcA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=CIuLieYAGcA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-17 15:53:10 +00:00
-permalink: "/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 9", "C#", "Coding", "Cross Platform", "Legacy Technology", "Modern Development", "OneDevQuestion", "Open Source", "Raspberry Pi", "Scott Hanselman", "Videos", "Xbox"]
-tags_normalized: ["dotnet", "dotnet 9", "csharp", "coding", "cross platform", "legacy technology", "modern development", "onedevquestion", "open source", "raspberry pi", "scott hanselman", "videos", "xbox"]
+permalink: /coding/videos/Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform
+tags:
+- .NET
+- .NET 9
+- C#
+- Coding
+- Cross Platform
+- Legacy Technology
+- Modern Development
+- OneDevQuestion
+- Open Source
+- Raspberry Pi
+- Scott Hanselman
+- Videos
+- Xbox
+section_names:
+- coding
 ---
-
 Scott Hanselman, in a #OneDevQuestion video, shares insights into whether .NET is legacy technology, discussing its maturity and ongoing modernization.<!--excerpt_end-->
 
 {% youtube CIuLieYAGcA %}

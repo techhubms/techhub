@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Secure Delta Sharing Between Databricks Workspaces Using NCC and Private Endpoints"
-description: "This guide details how to securely share Delta tables between two Azure Databricks workspaces using Delta Sharing. It covers the step-by-step process for enabling cross-workspace data exchange, configuring Network Connectivity Configuration (NCC), setting up private endpoint rules, and approving connections to ensure secure and compliant data access within a Serverless Warehouse environment."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-delta-sharing-between-databricks-workspaces-using-ncc-and/ba-p/4462428"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Secure Delta Sharing Between Databricks Workspaces Using NCC and Private Endpoints
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-delta-sharing-between-databricks-workspaces-using-ncc-and/ba-p/4462428
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-18 00:44:26 +00:00
-permalink: "/2025-10-18-Secure-Delta-Sharing-Between-Databricks-Workspaces-Using-NCC-and-Private-Endpoints.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Blob Storage", "Azure Databricks", "Azure DFS", "Azure Storage Account", "Cloud Networking", "Community", "Data Engineering", "Delta Lake", "Delta Sharing", "ML", "Network Connectivity Configuration", "Partitioning Data", "Private Endpoint", "Secure Data Sharing", "Security", "Serverless Warehouse", "SQL", "Unity Catalog", "Workspace Metastore"]
-tags_normalized: ["azure", "azure blob storage", "azure databricks", "azure dfs", "azure storage account", "cloud networking", "community", "data engineering", "delta lake", "delta sharing", "ml", "network connectivity configuration", "partitioning data", "private endpoint", "secure data sharing", "security", "serverless warehouse", "sql", "unity catalog", "workspace metastore"]
+permalink: /ml/community/Secure-Delta-Sharing-Between-Databricks-Workspaces-Using-NCC-and-Private-Endpoints
+tags:
+- Azure
+- Azure Blob Storage
+- Azure Databricks
+- Azure DFS
+- Azure Storage Account
+- Cloud Networking
+- Community
+- Data Engineering
+- Delta Lake
+- Delta Sharing
+- ML
+- Network Connectivity Configuration
+- Partitioning Data
+- Private Endpoint
+- Secure Data Sharing
+- Security
+- Serverless Warehouse
+- SQL
+- Unity Catalog
+- Workspace Metastore
+section_names:
+- azure
+- ml
+- security
 ---
-
 Rafia_Aqil demonstrates secure Delta table sharing between Azure Databricks workspaces, covering NCC setup and private endpoint approval for robust data connectivity and protection.<!--excerpt_end-->
 
 # Secure Delta Sharing Between Databricks Workspaces Using NCC and Private Endpoints

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights – October 2025"
-description: "This update summarizes the latest Azure SDK releases for October 2025, featuring major enhancements in Azure AI Foundry, Azure AI Search for JavaScript and Python, performance improvements in Azure Identity libraries, new client and management libraries, and links to language-specific release notes for developers working with Azure services."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK Release Highlights – October 2025
+author: Ronnie Geraghty
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-27 18:59:41 +00:00
-permalink: "/2025-10-27-Azure-SDK-Release-Highlights-October-2025.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Agents", "AI Model Deployment", "API Improvements", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Identity", "Azure SDK", "Coding", "Document Intelligence", "Go", "Java", "JavaScript", "Microsoft Entra ID", "News", "Python", "Resource Management", "SDK", "SDK Release", "Search Indexes", "Vector Search"]
-tags_normalized: ["dotnet", "ai", "ai agents", "ai model deployment", "api improvements", "azure", "azure ai foundry", "azure ai search", "azure identity", "azure sdk", "coding", "document intelligence", "go", "java", "javascript", "microsoft entra id", "news", "python", "resource management", "sdk", "sdk release", "search indexes", "vector search"]
+permalink: /ai/news/Azure-SDK-Release-Highlights-October-2025
+tags:
+- .NET
+- AI
+- AI Agents
+- AI Model Deployment
+- API Improvements
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Identity
+- Azure SDK
+- Coding
+- Document Intelligence
+- Go
+- Java
+- JavaScript
+- Microsoft Entra ID
+- News
+- Python
+- Resource Management
+- SDK
+- SDK Release
+- Search Indexes
+- Vector Search
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Ronnie Geraghty presents the October 2025 Azure SDK release highlights, detailing new and updated libraries for AI, search, and identity scenarios to help developers build and manage Azure-powered solutions.<!--excerpt_end-->
 
 # Azure SDK Release Highlights – October 2025

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing the Public Preview of Azure StandardV2 NAT Gateway and Public IPs"
-description: "This in-depth article explores the features and benefits of Azure's new StandardV2 NAT Gateway and StandardV2 public IP addresses, now in public preview. It covers the critical enhancements around zone redundancy, performance, IPv6 support, and flow logging, and offers guidance for deploying these network resources for highly available, secure outbound connectivity in modern cloud architectures."
-author: "aimeelittleton"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-the-public-preview-of-standardv2-nat-gateway-and/ba-p/4458292"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing the Public Preview of Azure StandardV2 NAT Gateway and Public IPs
+author: aimeelittleton
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-the-public-preview-of-standardv2-nat-gateway-and/ba-p/4458292
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:30:00 +00:00
-permalink: "/2025-11-18-Announcing-the-Public-Preview-of-Azure-StandardV2-NAT-Gateway-and-Public-IPs.html"
-categories: ["Azure"]
-tags: ["ARM Template", "Azure", "Azure NAT Gateway", "Bicep", "CLI", "Cloud Networking", "Community", "Flow Logs", "High Availability", "IPv6", "Network Security", "Outbound Connectivity", "PowerShell", "Public IP", "Resiliency", "StandardV2", "Virtual Network", "Zone Redundancy"]
-tags_normalized: ["arm template", "azure", "azure nat gateway", "bicep", "cli", "cloud networking", "community", "flow logs", "high availability", "ipv6", "network security", "outbound connectivity", "powershell", "public ip", "resiliency", "standardv2", "virtual network", "zone redundancy"]
+permalink: /azure/community/Announcing-the-Public-Preview-of-Azure-StandardV2-NAT-Gateway-and-Public-IPs
+tags:
+- ARM Template
+- Azure
+- Azure NAT Gateway
+- Bicep
+- CLI
+- Cloud Networking
+- Community
+- Flow Logs
+- High Availability
+- IPv6
+- Network Security
+- Outbound Connectivity
+- PowerShell
+- Public IP
+- Resiliency
+- StandardV2
+- Virtual Network
+- Zone Redundancy
+section_names:
+- azure
 ---
-
 Aimee Littleton introduces the public preview of Azure StandardV2 NAT Gateway and StandardV2 public IPs, detailing new features like zone redundancy, enhanced throughput, and flow logs for increased resiliency and visibility.<!--excerpt_end-->
 
 # Announcing the Public Preview of Azure StandardV2 NAT Gateway and Public IPs

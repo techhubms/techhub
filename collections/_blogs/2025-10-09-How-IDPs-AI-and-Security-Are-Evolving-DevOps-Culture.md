@@ -1,20 +1,62 @@
----
-layout: "post"
-title: "How IDPs, AI, and Security Are Evolving DevOps Culture"
-description: "This article by Olivier de Turckheim examines the evolving landscape of DevOps, highlighting the pivotal roles of internal developer platforms (IDPs), AI-driven operations (AIOps), and integrated security (DevSecOps). It explores practical challenges, organizational changes, and strategic solutions for achieving safer, more scalable, and automated development operations in modern technology teams."
-author: "Olivier de Turckheim"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How IDPs, AI, and Security Are Evolving DevOps Culture
+author: Olivier de Turckheim
+canonical_url: https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-09 10:16:52 +00:00
-permalink: "/2025-10-09-How-IDPs-AI-and-Security-Are-Evolving-DevOps-Culture.html"
-categories: ["AI", "DevOps", "ML", "Security"]
-tags: ["AI", "AI And ML Workloads", "AI Driven Operations", "AI in DevOps", "AI Infrastructure", "AIOps", "Automation", "Automation in DevOps", "Blogs", "Business Of DevOps", "CI/CD", "Cloud Native", "Continuous Delivery", "Contributed Content", "Cycloid Plug Ins", "Developer Culture", "Developer Experience", "DevOps", "DevOps Culture", "DevOps Evolution", "DevOps Scalability", "DevOps Security Integration", "DevOps Transformation", "Devsecops", "Digital Transformation DevOps", "Gitops", "IDP", "Infrastructure Automation", "Intelligent Automation", "Internal Developer Platforms", "ML", "MLOps", "Modern DevOps Strategy", "Operational Resilience", "Platform Engineering", "Platform Governance", "Secure CI/CD", "Security", "Security Integration", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["ai", "ai and ml workloads", "ai driven operations", "ai in devops", "ai infrastructure", "aiops", "automation", "automation in devops", "blogs", "business of devops", "cislashcd", "cloud native", "continuous delivery", "contributed content", "cycloid plug ins", "developer culture", "developer experience", "devops", "devops culture", "devops evolution", "devops scalability", "devops security integration", "devops transformation", "devsecops", "digital transformation devops", "gitops", "idp", "infrastructure automation", "intelligent automation", "internal developer platforms", "ml", "mlops", "modern devops strategy", "operational resilience", "platform engineering", "platform governance", "secure cislashcd", "security", "security integration", "social facebook", "social linkedin", "social x"]
+permalink: /ai/blogs/How-IDPs-AI-and-Security-Are-Evolving-DevOps-Culture
+tags:
+- AI
+- AI And ML Workloads
+- AI Driven Operations
+- AI in DevOps
+- AI Infrastructure
+- AIOps
+- Automation
+- Automation in DevOps
+- Blogs
+- Business Of DevOps
+- CI/CD
+- Cloud Native
+- Continuous Delivery
+- Contributed Content
+- Cycloid Plug Ins
+- Developer Culture
+- Developer Experience
+- DevOps
+- DevOps Culture
+- DevOps Evolution
+- DevOps Scalability
+- DevOps Security Integration
+- DevOps Transformation
+- Devsecops
+- Digital Transformation DevOps
+- Gitops
+- IDP
+- Infrastructure Automation
+- Intelligent Automation
+- Internal Developer Platforms
+- ML
+- MLOps
+- Modern DevOps Strategy
+- Operational Resilience
+- Platform Engineering
+- Platform Governance
+- Secure CI/CD
+- Security
+- Security Integration
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- ai
+- devops
+- ml
+- security
 ---
-
 Olivier de Turckheim explores how internal developer platforms, AI, and security are transforming both culture and practical workflows in DevOps, covering the emergence of AIOps, DevSecOps, and the integration of machine learning and automation in deployment pipelines.<!--excerpt_end-->
 
 # How IDPs, AI, and Security Are Evolving DevOps Culture

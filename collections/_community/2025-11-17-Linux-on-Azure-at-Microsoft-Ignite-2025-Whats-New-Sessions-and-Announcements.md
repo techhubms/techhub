@@ -1,20 +1,39 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Linux on Azure at Microsoft Ignite 2025: What's New, Sessions, and Announcements"
-description: "A comprehensive preview of key Linux-related announcements and technical sessions at Microsoft Ignite 2025, including Azure Linux security innovations, AKS modernizations, and deep dives into compliance, containerization, and migration. This guide highlights major product previews, GA features, and where to engage with the Linux on Azure team both in-person and digitally."
-author: "shreyabaheti"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: shreyabaheti
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 18:55:08 +00:00
-permalink: "/2025-11-17-Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Azure Linux", "Azure Machine Configuration", "Azure Migrate", "Azure Red Hat OpenShift", "CIS Benchmarks", "Cloud Infrastructure", "Community", "Compliance", "DevOps", "FIPS", "Hybrid Cloud", "Immutable OS", "Kata Containers", "Linux Security", "Pod Sandboxing", "PostgreSQL", "Security", "Session Guide"]
-tags_normalized: ["aks", "azure", "azure linux", "azure machine configuration", "azure migrate", "azure red hat openshift", "cis benchmarks", "cloud infrastructure", "community", "compliance", "devops", "fips", "hybrid cloud", "immutable os", "kata containers", "linux security", "pod sandboxing", "postgresql", "security", "session guide"]
+permalink: /azure/community/Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements
+tags:
+- AKS
+- Azure
+- Azure Linux
+- Azure Machine Configuration
+- Azure Migrate
+- Azure Red Hat OpenShift
+- CIS Benchmarks
+- Cloud Infrastructure
+- Community
+- Compliance
+- DevOps
+- FIPS
+- Hybrid Cloud
+- Immutable OS
+- Kata Containers
+- Linux Security
+- Pod Sandboxing
+- PostgreSQL
+- Security
+- Session Guide
+section_names:
+- azure
+- devops
+- security
 ---
-
 Shreyabaheti outlines the core Linux-on-Azure innovations and technical sessions at Microsoft Ignite 2025, showcasing Azure Linux security, AKS modernization, and hands-on migration labs for practitioners and developers.<!--excerpt_end-->
 
 # Linux on Azure at Microsoft Ignite 2025: What's New, Sessions, and Announcements

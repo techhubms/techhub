@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "What is Direct Send and How to Secure It in Exchange Online"
-description: "This article by The Exchange Team explains how Direct Send works in Exchange Online, provides methods to secure it, and shares guidance on monitoring and controlling inbound email using default connectors. It includes best practices, PowerShell commands, mail flow rules, and reporting tools for maintaining secure mail flow."
-author: "The_Exchange_Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: What is Direct Send and How to Secure It in Exchange Online
+author: The_Exchange_Team
+canonical_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-04 16:06:17 +00:00
-permalink: "/2025-08-04-What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online.html"
-categories: ["Azure"]
-tags: ["Advanced Hunting", "Azure", "Community", "Defender For Office 365", "Direct Send", "Email Quarantine", "Exchange Online", "Inbound Connectors", "Mail Flow", "Microsoft 365", "PowerShell", "Threat Explorer", "Transport Rules"]
-tags_normalized: ["advanced hunting", "azure", "community", "defender for office 365", "direct send", "email quarantine", "exchange online", "inbound connectors", "mail flow", "microsoft 365", "powershell", "threat explorer", "transport rules"]
+permalink: /azure/community/What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online
+tags:
+- Advanced Hunting
+- Azure
+- Community
+- Defender For Office 365
+- Direct Send
+- Email Quarantine
+- Exchange Online
+- Inbound Connectors
+- Mail Flow
+- Microsoft 365
+- PowerShell
+- Threat Explorer
+- Transport Rules
+section_names:
+- azure
 ---
-
 Authored by The Exchange Team, this article delves into how Direct Send operates in Exchange Online, and offers practical guidance for organizations aiming to secure mail flow and monitor messages delivered without custom connectors.<!--excerpt_end-->
 
 ## Understanding Direct Send and Securing Mail Flow in Exchange Online

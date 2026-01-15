@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification"
-description: "This video explores the latest account recovery feature in Microsoft Entra ID, allowing users to regain access using government-issued IDs and trusted third-party identity verification providers. It covers the shift from traditional password and SMS recovery to passwordless, phishing-resistant approaches, the setup process, benefits, potential challenges, and security implications within the Microsoft cloud ecosystem."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WYji1oV7GQI"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=WYji1oV7GQI
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-29 16:09:09 +00:00
-permalink: "/2025-12-29-Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification.html"
-categories: ["Azure", "Security"]
-tags: ["Account Recovery", "Au10tix", "Azure", "Azure Cloud", "Cloud", "Cloud Security", "Entra Id", "Government ID", "Identity", "Identity Verification", "Microsoft", "Microsoft Azure", "Microsoft Entra ID", "Passkeys", "Passwordless", "Phishing Resistance", "Security", "Self Service Password Reset", "Third Party Authentication", "Videos"]
-tags_normalized: ["account recovery", "au10tix", "azure", "azure cloud", "cloud", "cloud security", "entra id", "government id", "identity", "identity verification", "microsoft", "microsoft azure", "microsoft entra id", "passkeys", "passwordless", "phishing resistance", "security", "self service password reset", "third party authentication", "videos"]
+permalink: /azure/videos/Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification
+tags:
+- Account Recovery
+- Au10tix
+- Azure
+- Azure Cloud
+- Cloud
+- Cloud Security
+- Entra Id
+- Government ID
+- Identity
+- Identity Verification
+- Microsoft
+- Microsoft Azure
+- Microsoft Entra ID
+- Passkeys
+- Passwordless
+- Phishing Resistance
+- Security
+- Self Service Password Reset
+- Third Party Authentication
+- Videos
+section_names:
+- azure
+- security
 ---
-
 John Savill's Technical Training examines Microsoft's new Entra ID account recovery process using government-issued IDs and third-party verification, providing practical guidance and an architectural overview for Azure security practitioners.<!--excerpt_end-->
 
 {% youtube WYji1oV7GQI %}

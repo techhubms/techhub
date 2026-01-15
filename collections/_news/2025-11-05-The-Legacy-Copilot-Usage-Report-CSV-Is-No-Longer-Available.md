@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "The Legacy Copilot Usage Report CSV Is No Longer Available"
-description: "This update announces the retirement of the legacy GitHub Copilot usage report CSV previously available to organization administrators. It explains the transition to the new activity report, what remains unchanged for administrators, and what actions admins should take for automation or workflow updates. Guidance and relevant documentation links are provided for accessing the new report formats."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: The Legacy Copilot Usage Report CSV Is No Longer Available
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-05 20:25:52 +00:00
-permalink: "/2025-11-05-The-Legacy-Copilot-Usage-Report-CSV-Is-No-Longer-Available.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Activity Report", "Admin Tools", "AI", "Automation", "Copilot", "CSV Retirement", "Data Export", "GitHub", "GitHub Administration", "GitHub Copilot", "Metrics", "News", "Reporting", "Retired", "Usage Report", "Workflow Updates"]
-tags_normalized: ["activity report", "admin tools", "ai", "automation", "copilot", "csv retirement", "data export", "github", "github administration", "github copilot", "metrics", "news", "reporting", "retired", "usage report", "workflow updates"]
+permalink: /github-copilot/news/The-Legacy-Copilot-Usage-Report-CSV-Is-No-Longer-Available
+tags:
+- Activity Report
+- Admin Tools
+- AI
+- Automation
+- Copilot
+- CSV Retirement
+- Data Export
+- GitHub
+- GitHub Administration
+- GitHub Copilot
+- Metrics
+- News
+- Reporting
+- Retired
+- Usage Report
+- Workflow Updates
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison provides an update on the retirement of the legacy GitHub Copilot usage report CSV, guiding organization admins to use the improved activity report for monitoring Copilot activity and metrics.<!--excerpt_end-->
 
 # The Legacy Copilot Usage Report CSV Is No Longer Available

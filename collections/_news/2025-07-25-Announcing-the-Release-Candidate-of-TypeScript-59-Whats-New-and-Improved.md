@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Announcing the Release Candidate of TypeScript 5.9: What's New and Improved"
-description: "Daniel Rosenwasser announces the Release Candidate of TypeScript 5.9, highlighting key changes such as an updated tsc --init, import defer support, Node 20 module mode, performance optimizations, new DOM API documentation, expanded editor hovers, and notable behavioral and type inference changes."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-07-25 16:53:10 +00:00
-permalink: "/2025-07-25-Announcing-the-Release-Candidate-of-TypeScript-59-Whats-New-and-Improved.html"
-categories: ["Coding"]
-tags: ["Coding", "Developer Tools", "DOM APIs", "Expandable Hovers", "Import Defer", "JavaScript", "Module Detection", "News", "Node 20", "npm", "Performance Optimization", "Tsc Init", "Tsconfig.json", "Type Inference", "TypeScript", "TypeScript 5.9"]
-tags_normalized: ["coding", "developer tools", "dom apis", "expandable hovers", "import defer", "javascript", "module detection", "news", "node 20", "npm", "performance optimization", "tsc init", "tsconfigdotjson", "type inference", "typescript", "typescript 5dot9"]
+permalink: /coding/news/Announcing-the-Release-Candidate-of-TypeScript-59-Whats-New-and-Improved
+tags:
+- Coding
+- Developer Tools
+- DOM APIs
+- Expandable Hovers
+- Import Defer
+- JavaScript
+- Module Detection
+- News
+- Node 20
+- npm
+- Performance Optimization
+- Tsc Init
+- Tsconfig.json
+- Type Inference
+- TypeScript
+- TypeScript 5.9
+section_names:
+- coding
 ---
-
 Daniel Rosenwasser details the latest features and improvements in the TypeScript 5.9 Release Candidate. This update introduces new configuration defaults, deferred module imports, enhanced editor integration, and improvements based on community feedback.<!--excerpt_end-->
 
 # Announcing TypeScript 5.9 Release Candidate

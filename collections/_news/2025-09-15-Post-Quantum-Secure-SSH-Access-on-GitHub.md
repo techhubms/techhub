@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Post-Quantum Secure SSH Access on GitHub"
-description: "GitHub is rolling out a new post-quantum secure SSH key exchange algorithm, `sntrup761x25519-sha512`, enhancing the security of Git data accessed over SSH. This update aims to protect users against future quantum decryption threats, with details on the algorithm, rollout schedule, and client compatibility."
-author: "brian m. carlson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+layout: post
+title: Post-Quantum Secure SSH Access on GitHub
+author: brian m. carlson
+canonical_url: https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/
+viewing_mode: external
+feed_name: GitHub Engineering Blog
+feed_url: https://github.blog/engineering/feed/
 date: 2025-09-15 16:00:00 +00:00
-permalink: "/2025-09-15-Post-Quantum-Secure-SSH-Access-on-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["Cryptography", "DevOps", "Encryption", "Engineering", "Enterprise Security", "FIPS Compliance", "Git", "GitHub", "Key Exchange Algorithm", "News", "OpenSSH", "Platform Security", "Post Quantum Cryptography", "Quantum Security", "Security", "Security Best Practices", "Sntrup761x25519 Sha512", "SSH"]
-tags_normalized: ["cryptography", "devops", "encryption", "engineering", "enterprise security", "fips compliance", "git", "github", "key exchange algorithm", "news", "openssh", "platform security", "post quantum cryptography", "quantum security", "security", "security best practices", "sntrup761x25519 sha512", "ssh"]
+permalink: /devops/news/Post-Quantum-Secure-SSH-Access-on-GitHub
+tags:
+- Cryptography
+- DevOps
+- Encryption
+- Engineering
+- Enterprise Security
+- FIPS Compliance
+- Git
+- GitHub
+- Key Exchange Algorithm
+- News
+- OpenSSH
+- Platform Security
+- Post Quantum Cryptography
+- Quantum Security
+- Security
+- Security Best Practices
+- Sntrup761x25519 Sha512
+- SSH
+section_names:
+- devops
+- security
 ---
-
 brian m. carlson details GitHub's implementation of post-quantum secure SSH key exchange, highlighting the updates, impact, and steps for developers to prepare.<!--excerpt_end-->
 
 # Post-Quantum Secure SSH Access on GitHub

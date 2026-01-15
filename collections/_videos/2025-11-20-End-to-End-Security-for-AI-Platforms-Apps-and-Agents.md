@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "End-to-End Security for AI Platforms, Apps, and Agents"
-description: "This session from Microsoft Ignite 2025 covers best practices for adopting and governing AI applications, agents, and platforms using Microsoft's security ecosystem. Presenters discuss visibility, compliance, data protection, and threat defense for AI systems, featuring Microsoft Defender, Purview, and Entra. Includes practical guidance for managing AI risk, monitoring agent behavior, and addressing compliance standards like the EU AI Act."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=R3zFGy8hluE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: End-to-End Security for AI Platforms, Apps, and Agents
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=R3zFGy8hluE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:35:23 +00:00
-permalink: "/2025-11-20-End-to-End-Security-for-AI-Platforms-Apps-and-Agents.html"
-categories: ["AI", "Security"]
-tags: ["Agent Monitoring", "AI", "AI Management", "AI Platform", "AI Security", "Compliance", "Data Governance", "Digital Workers", "EU AI Act", "Microsoft Defender", "Microsoft Entra", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Observability", "ProtectcloudAIplatformandapps", "Risk Management", "Security", "Security Dashboard", "Threat Protection", "Videos"]
-tags_normalized: ["agent monitoring", "ai", "ai management", "ai platform", "ai security", "compliance", "data governance", "digital workers", "eu ai act", "microsoft defender", "microsoft entra", "microsoft ignite", "microsoft purview", "msignite", "observability", "protectcloudaiplatformandapps", "risk management", "security", "security dashboard", "threat protection", "videos"]
+permalink: /ai/videos/End-to-End-Security-for-AI-Platforms-Apps-and-Agents
+tags:
+- Agent Monitoring
+- AI
+- AI Management
+- AI Platform
+- AI Security
+- Compliance
+- Data Governance
+- Digital Workers
+- EU AI Act
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Observability
+- ProtectcloudAIplatformandapps
+- Risk Management
+- Security
+- Security Dashboard
+- Threat Protection
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Presented by Lou Adesida, Neta Haiby, and Herain Oberoi at Microsoft Ignite 2025, this breakout session explores holistic security and compliance for AI ecosystems using Microsoft's tools and platforms.<!--excerpt_end-->
 
 {% youtube R3zFGy8hluE %}

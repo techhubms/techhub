@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Simplifying Data Ingestion with Copy job – Replicate data from Dataverse through Fabric to multiple destinations"
-description: "This guide explains how to use Microsoft Fabric Data Factory's Copy job feature to efficiently move and replicate data from Dataverse to multiple destinations, including across different tenants and regions. The article covers configuration of CDC (Change Data Capture), integration of Dataverse with Fabric Lakehouse, and setup of Copy jobs to support bulk and incremental data movement."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Simplifying Data Ingestion with Copy job – Replicate data from Dataverse through Fabric to multiple destinations
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 09:00:00 +00:00
-permalink: "/2025-12-01-Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL Database", "Bulk Copy", "Change Data Capture", "Copy Job", "Data Factory", "Data Ingestion", "Data Replication", "Data Synchronization", "Dataverse", "Dynamics 365", "Fabric Lakehouse", "Fabric Link", "Incremental Copy", "Microsoft Fabric", "ML", "News", "Power Platform"]
-tags_normalized: ["azure", "azure sql database", "bulk copy", "change data capture", "copy job", "data factory", "data ingestion", "data replication", "data synchronization", "dataverse", "dynamics 365", "fabric lakehouse", "fabric link", "incremental copy", "microsoft fabric", "ml", "news", "power platform"]
+permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations
+tags:
+- Azure
+- Azure SQL Database
+- Bulk Copy
+- Change Data Capture
+- Copy Job
+- Data Factory
+- Data Ingestion
+- Data Replication
+- Data Synchronization
+- Dataverse
+- Dynamics 365
+- Fabric Lakehouse
+- Fabric Link
+- Incremental Copy
+- Microsoft Fabric
+- ML
+- News
+- Power Platform
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how to leverage the Data Factory Copy job to move and replicate data from Dataverse to multiple destinations, including setup for CDC and Fabric Lakehouse integration.<!--excerpt_end-->
 
 # Simplifying Data Ingestion with Copy job – Replicate data from Dataverse through Fabric to multiple destinations

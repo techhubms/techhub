@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path"
-description: "This article explores the process of migrating legacy WPF desktop applications that use the deprecated Bing Maps WPF Control to modern mapping capabilities powered by Azure Maps. Covering implementation details, the solution uses the OnTerra Systems WPF Map Control built on Azure Maps Web SDK and .NET WebView2. Developers learn how to minimize code changes, leverage a wrapper for backward compatibility, and tap into new Azure Maps features for interactive, high-performance geospatial applications on Windows."
-author: "IoTGirl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba-p/4468755"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path'
+author: IoTGirl
+canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba-p/4468755
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 22:33:04 +00:00
-permalink: "/2025-11-10-Modernizing-WPF-Map-Functionality-with-Azure-Maps-A-Practical-Migration-Path.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Azure", "Azure Maps", "Bing Maps", "C#", "Coding", "Community", "Desktop Applications", "Geospatial", "Map Control", "Migration", "MVVM", "NuGet", "OnTerra Systems", "SDK Integration", "WebView2", "Windows Development", "WPF", "XAML"]
-tags_normalized: ["dotnet", "azure", "azure maps", "bing maps", "csharp", "coding", "community", "desktop applications", "geospatial", "map control", "migration", "mvvm", "nuget", "onterra systems", "sdk integration", "webview2", "windows development", "wpf", "xaml"]
+permalink: /coding/community/Modernizing-WPF-Map-Functionality-with-Azure-Maps-A-Practical-Migration-Path
+tags:
+- .NET
+- Azure
+- Azure Maps
+- Bing Maps
+- C#
+- Coding
+- Community
+- Desktop Applications
+- Geospatial
+- Map Control
+- Migration
+- MVVM
+- NuGet
+- OnTerra Systems
+- SDK Integration
+- WebView2
+- Windows Development
+- WPF
+- XAML
+section_names:
+- azure
+- coding
 ---
-
 IoTGirl showcases how organizations can migrate WPF applications from Bing Maps to Azure Maps using the OnTerra Systems WPF Map Control, offering a smooth transition for developers without major code refactoring.<!--excerpt_end-->
 
 # Modernizing WPF Map Functionality with Azure Maps

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Powering Modern Cloud Workloads with Azure Compute"
-description: "This advanced session from Microsoft Ignite 2025 explores the latest compute innovations in Azure Infrastructure as a Service (IaaS). Key topics include recent Azure VM announcements, performance improvements, scalability, reliability, and security enhancements. Special attention is given to next-generation Cobalt 200 processors and AI inference optimization partnerships, helping both enterprise and cloud-native workloads run faster and more efficiently."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pMFnaPg3TTQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Powering Modern Cloud Workloads with Azure Compute
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=pMFnaPg3TTQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:12:27 +00:00
-permalink: "/2025-11-24-Powering-Modern-Cloud-Workloads-with-Azure-Compute.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Inference", "Azure", "Azure Compute", "Azure Virtual Machines", "Cloud Scalability", "Cloud Security", "Cobalt 200", "Confidential Computing", "DADS V6", "DADS V7", "Enterprise Applications", "IaaS", "Microsoft Ignite", "Migrate App Workloads", "Migrateandmodernizeyourestate", "MSIgnite", "Performance Optimization", "Security", "V4L Series", "Videos"]
-tags_normalized: ["ai", "ai inference", "azure", "azure compute", "azure virtual machines", "cloud scalability", "cloud security", "cobalt 200", "confidential computing", "dads v6", "dads v7", "enterprise applications", "iaas", "microsoft ignite", "migrate app workloads", "migrateandmodernizeyourestate", "msignite", "performance optimization", "security", "v4l series", "videos"]
+permalink: /ai/videos/Powering-Modern-Cloud-Workloads-with-Azure-Compute
+tags:
+- AI
+- AI Inference
+- Azure
+- Azure Compute
+- Azure Virtual Machines
+- Cloud Scalability
+- Cloud Security
+- Cobalt 200
+- Confidential Computing
+- DADS V6
+- DADS V7
+- Enterprise Applications
+- IaaS
+- Microsoft Ignite
+- Migrate App Workloads
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Performance Optimization
+- Security
+- V4L Series
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a deep dive into Azure Compute innovations at Ignite 2025, featuring Stefanie Lemon and Max Uritsky, highlighting VM advancements and secure, AI-optimized cloud workloads.<!--excerpt_end-->
 
 {% youtube pMFnaPg3TTQ %}

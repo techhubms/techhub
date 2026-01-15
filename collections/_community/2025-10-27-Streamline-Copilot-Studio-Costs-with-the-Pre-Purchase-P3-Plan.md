@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Streamline Copilot Studio Costs with the Pre-Purchase (P3) Plan"
-description: "This guide by kyleikeda explains the Copilot Credit Pre-Purchase Plan (P3) for Microsoft Copilot Studio and Dynamics 365 custom agent deployments. Learn how to benefit from upfront discounts, cost predictability, and flexible resource management. The article covers plan details, purchasing steps, savings examples, and best practices for using Copilot Credits effectively."
-author: "kyleikeda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Streamline Copilot Studio Costs with the Pre-Purchase (P3) Plan
+author: kyleikeda
+canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 21:53:23 +00:00
-permalink: "/2025-10-27-Streamline-Copilot-Studio-Costs-with-the-Pre-Purchase-P3-Plan.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "Billing", "Capacity Planning", "CCCU", "Community", "Copilot Credit Pre Purchase Plan", "Copilot Studio", "Cost Optimization", "Discounts", "Dynamics 365", "P3", "Power Platform", "Resource Groups", "Subscription Management", "Usage Monitoring"]
-tags_normalized: ["ai", "ai agents", "billing", "capacity planning", "cccu", "community", "copilot credit pre purchase plan", "copilot studio", "cost optimization", "discounts", "dynamics 365", "p3", "power platform", "resource groups", "subscription management", "usage monitoring"]
+permalink: /ai/community/Streamline-Copilot-Studio-Costs-with-the-Pre-Purchase-P3-Plan
+tags:
+- AI
+- AI Agents
+- Billing
+- Capacity Planning
+- CCCU
+- Community
+- Copilot Credit Pre Purchase Plan
+- Copilot Studio
+- Cost Optimization
+- Discounts
+- Dynamics 365
+- P3
+- Power Platform
+- Resource Groups
+- Subscription Management
+- Usage Monitoring
+section_names:
+- ai
 ---
-
 kyleikeda presents a detailed overview of the Copilot Credit Pre-Purchase Plan, showing how teams can leverage upfront payments to achieve predictable costs and savings when using Microsoft Copilot Studio and Dynamics 365 custom AI agents.<!--excerpt_end-->
 
 # Streamline Copilot Studio Costs with the Pre-Purchase (P3) Plan

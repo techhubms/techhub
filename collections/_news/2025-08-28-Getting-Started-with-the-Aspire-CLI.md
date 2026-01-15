@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Getting Started with the Aspire CLI"
-description: "This guide explores the Aspire CLI—a cross-platform tool for streamlining .NET application development and deployment. It covers installation, project creation using built-in templates, adding Azure integrations and packages, running, and publishing distributed microservices applications. The article includes practical examples and details for .NET professionals aiming to modernize their workflows."
-author: "Jeffrey Fritz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Getting Started with the Aspire CLI
+author: Jeffrey Fritz
+canonical_url: https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-28 17:05:00 +00:00
-permalink: "/2025-08-28-Getting-Started-with-the-Aspire-CLI.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET Aspire", "AppHost", "Application Templates", "Aspire", "Aspire CLI", "Automation", "Azure", "Azure Integration", "CLI", "Cloud Native", "Coding", "Continuous Deployment", "Cross Platform Tools", "DevOps", "Distributed Applications", "Integration Tests", "Microservices", "News", "NuGet Packages", "Project Orchestration", "Service Defaults"]
-tags_normalized: ["dotnet", "dotnet aspire", "apphost", "application templates", "aspire", "aspire cli", "automation", "azure", "azure integration", "cli", "cloud native", "coding", "continuous deployment", "cross platform tools", "devops", "distributed applications", "integration tests", "microservices", "news", "nuget packages", "project orchestration", "service defaults"]
+permalink: /coding/news/Getting-Started-with-the-Aspire-CLI
+tags:
+- .NET
+- .NET Aspire
+- AppHost
+- Application Templates
+- Aspire
+- Aspire CLI
+- Automation
+- Azure
+- Azure Integration
+- CLI
+- Cloud Native
+- Coding
+- Continuous Deployment
+- Cross Platform Tools
+- DevOps
+- Distributed Applications
+- Integration Tests
+- Microservices
+- News
+- NuGet Packages
+- Project Orchestration
+- Service Defaults
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Jeffrey Fritz presents an in-depth walkthrough of the Aspire CLI, illustrating its use for .NET application development—from installation to running, integrating Azure services, and publishing distributed systems.<!--excerpt_end-->
 
 # Getting Started with the Aspire CLI

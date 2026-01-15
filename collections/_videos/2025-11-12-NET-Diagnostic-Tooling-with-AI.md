@@ -1,20 +1,37 @@
----
-layout: "post"
-title: ".NET Diagnostic Tooling with AI"
-description: "This session with Jonathan Peppers explores how artificial intelligence is driving innovation in .NET diagnostic tooling. Learn about AI-powered advancements such as automated performance analysis, intelligent error detection, and AI-enhanced debugging workflows. The presentation highlights practical strategies for leveraging AI to optimize .NET applications, detect issues efficiently, and boost developer productivity using the latest .NET and Visual Studio technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HLNYCwgk5fU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Diagnostic Tooling with AI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=HLNYCwgk5fU
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-NET-Diagnostic-Tooling-with-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Diagnostics", "Application Optimization", "ASP.NET Core", "Automated Debugging", "C#", "Cloud Native Apps", "Coding", "Developer Productivity", "Diagnostic Workflows", "Error Detection", "F#", "Intelligent Tooling", "MAUI", "Performance Analysis", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai diagnostics", "application optimization", "aspdotnet core", "automated debugging", "csharp", "cloud native apps", "coding", "developer productivity", "diagnostic workflows", "error detection", "fsharp", "intelligent tooling", "maui", "performance analysis", "videos", "vs"]
+permalink: /ai/videos/NET-Diagnostic-Tooling-with-AI
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Diagnostics
+- Application Optimization
+- ASP.NET Core
+- Automated Debugging
+- C#
+- Cloud Native Apps
+- Coding
+- Developer Productivity
+- Diagnostic Workflows
+- Error Detection
+- F#
+- Intelligent Tooling
+- MAUI
+- Performance Analysis
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 In this session, Jonathan Peppers demonstrates how AI innovations are transforming .NET diagnostic tooling, offering developers smarter performance analysis, automated debugging, and productivity enhancements.<!--excerpt_end-->
 
 {% youtube HLNYCwgk5fU %}

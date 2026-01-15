@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "AspiriFridays: Exploring Azure Data API Builder with Tommaso Stocchi and Jerry Nixon"
-description: "This AspiriFridays episode features hosts Maddy and Damian along with guests Tommaso Stocchi and Jerry Nixon. The discussion focuses on Azure Data API Builder, its capabilities, and related development practices, combining insights from Microsoft experts."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Def3zt5RFpA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'AspiriFridays: Exploring Azure Data API Builder with Tommaso Stocchi and Jerry Nixon'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Def3zt5RFpA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-01 21:43:53 +00:00
-permalink: "/2025-08-01-AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon.html"
-categories: ["Azure", "ML"]
-tags: [".NET", "Application Programming Interfaces", "Aspirify", "Azure", "Azure Data API Builder", "Data API", "Jerry Nixon", "Microsoft", "ML", "Tommaso Stocchi", "Videos"]
-tags_normalized: ["dotnet", "application programming interfaces", "aspirify", "azure", "azure data api builder", "data api", "jerry nixon", "microsoft", "ml", "tommaso stocchi", "videos"]
+permalink: /ml/videos/AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon
+tags:
+- .NET
+- Application Programming Interfaces
+- Aspirify
+- Azure
+- Azure Data API Builder
+- Data API
+- Jerry Nixon
+- Microsoft
+- ML
+- Tommaso Stocchi
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 In this AspiriFridays episode, hosts Maddy and Damian are joined by Tommaso Stocchi and Jerry Nixon to dive into Azure Data API Builder. Learn about its features and best practices straight from Microsoft experts.<!--excerpt_end-->
 
 {% youtube Def3zt5RFpA %}

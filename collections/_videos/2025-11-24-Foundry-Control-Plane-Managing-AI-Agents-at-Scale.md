@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Foundry Control Plane: Managing AI Agents at Scale"
-description: "This Microsoft Ignite session explores how to operationalize responsible AI using the Foundry Control Plane. Key topics include setting up policy guardrails, ensuring compliance, red-teaming operational AI agents, and maintaining safety at scale. The speakers demonstrate how operators and developers can manage AI lifecycles, integrate security, validate PII guardrails, and standardize governance across complex agentic systems using Microsoft Foundry and Azure AI platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XjVj_qRwzVg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Foundry Control Plane: Managing AI Agents at Scale'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=XjVj_qRwzVg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:39:24 +00:00
-permalink: "/2025-11-24-Foundry-Control-Plane-Managing-AI-Agents-at-Scale.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agents", "AI Compliance", "AI Governance", "AI Lifecycle Management", "Azure", "Azure AI", "Control Plane", "Guardrails", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Operational AI", "PII Protection", "Red Teaming", "Responsible AI", "Risk Management", "Security", "Security Integrations", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai compliance", "ai governance", "ai lifecycle management", "azure", "azure ai", "control plane", "guardrails", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "operational ai", "pii protection", "red teaming", "responsible ai", "risk management", "security", "security integrations", "videos"]
+permalink: /ai/videos/Foundry-Control-Plane-Managing-AI-Agents-at-Scale
+tags:
+- AI
+- AI Agents
+- AI Compliance
+- AI Governance
+- AI Lifecycle Management
+- Azure
+- Azure AI
+- Control Plane
+- Guardrails
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Operational AI
+- PII Protection
+- Red Teaming
+- Responsible AI
+- Risk Management
+- Security
+- Security Integrations
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events present an advanced Ignite session featuring Mehrnoosh Sameki, Peter Simones, and Jaspreet Singh on managing AI agents at scale using Foundry Control Plane and Azure AI, with a focus on safety, compliance, and operational governance.<!--excerpt_end-->
 
 {% youtube XjVj_qRwzVg %}

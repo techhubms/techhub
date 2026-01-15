@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Mobile and Desktop Apps with Visual Studio and .NET MAUI"
-description: "This video session explores how developers can use Visual Studio and .NET MAUI to create cross-platform mobile and desktop applications. It highlights live tools for UI development, approaches to structuring solutions to target multiple platforms, and provides insights into new features available in .NET MAUI for .NET 9 with previews of what's coming in .NET 10."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MB0I5Hy6Wc8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Mobile and Desktop Apps with Visual Studio and .NET MAUI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=MB0I5Hy6Wc8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-14 14:22:56 +00:00
-permalink: "/2025-08-14-Building-Mobile-and-Desktop-Apps-with-Visual-Studio-and-NET-MAUI.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 9", "App Size Optimization", "C#", "Coding", "Cross Platform", "Design Tools", "Desktop Apps", "Live Tools", "MAUI", "Mobile Development", "Multi Platform Development", "Performance Optimization", "Project Structure", "UI Development", "Videos", "VS", "XAML"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "app size optimization", "csharp", "coding", "cross platform", "design tools", "desktop apps", "live tools", "maui", "mobile development", "multi platform development", "performance optimization", "project structure", "ui development", "videos", "vs", "xaml"]
+permalink: /coding/videos/Building-Mobile-and-Desktop-Apps-with-Visual-Studio-and-NET-MAUI
+tags:
+- .NET
+- .NET 10
+- .NET 9
+- App Size Optimization
+- C#
+- Coding
+- Cross Platform
+- Design Tools
+- Desktop Apps
+- Live Tools
+- MAUI
+- Mobile Development
+- Multi Platform Development
+- Performance Optimization
+- Project Structure
+- UI Development
+- Videos
+- VS
+- XAML
+section_names:
+- coding
 ---
-
 dotnet discusses how to efficiently build mobile and desktop applications using Visual Studio and .NET MAUI, focusing on solution structure, live UI tools, and upcoming framework updates.<!--excerpt_end-->
 
 {% youtube MB0I5Hy6Wc8 %}

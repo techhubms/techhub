@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "CodeQL 2.23.6 Update: New C# Security Queries and Language Enhancements"
-description: "This news highlights the release of CodeQL 2.23.6, the static analysis engine used in GitHub code scanning. The update introduces support for Swift 6.2.1, promotes new C# security queries, and brings various improvements to analysis for multiple programming languages including C#, Rust, Java/Kotlin, JavaScript/TypeScript, Python, and Ruby. Users of GitHub code scanning and GitHub Enterprise Server (GHES) benefit from more precise security detection and expanded language coverage. The update is automatically deployed for github.com users, with manual upgrade instructions provided for older GHES installations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-04-codeql-2-23-6-adds-swift-6-2-1-and-new-c-security-queries"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'CodeQL 2.23.6 Update: New C# Security Queries and Language Enhancements'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-04-codeql-2-23-6-adds-swift-6-2-1-and-new-c-security-queries
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-04 16:42:39 +00:00
-permalink: "/2025-12-04-CodeQL-2236-Update-New-C-Security-Queries-and-Language-Enhancements.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Application Security", "Automated Security", "C#", "Code Scanning", "CodeQL", "Coding", "DevOps", "GHES", "GitHub", "Improvement", "Java", "JavaScript", "Kotlin", "News", "Precision Improvement", "Python", "Query Pack", "Ruby", "Rust", "Security", "Security Queries", "Software Security", "Static Analysis", "Swift 6.2.1", "TypeScript"]
-tags_normalized: ["application security", "automated security", "csharp", "code scanning", "codeql", "coding", "devops", "ghes", "github", "improvement", "java", "javascript", "kotlin", "news", "precision improvement", "python", "query pack", "ruby", "rust", "security", "security queries", "software security", "static analysis", "swift 6dot2dot1", "typescript"]
+permalink: /coding/news/CodeQL-2236-Update-New-C-Security-Queries-and-Language-Enhancements
+tags:
+- Application Security
+- Automated Security
+- C#
+- Code Scanning
+- CodeQL
+- Coding
+- DevOps
+- GHES
+- GitHub
+- Improvement
+- Java
+- JavaScript
+- Kotlin
+- News
+- Precision Improvement
+- Python
+- Query Pack
+- Ruby
+- Rust
+- Security
+- Security Queries
+- Software Security
+- Static Analysis
+- Swift 6.2.1
+- TypeScript
+section_names:
+- coding
+- devops
+- security
 ---
-
 Allison outlines CodeQL 2.23.6's key improvements, including new C# security queries and expanded language support, enhancing GitHub code scanning's effectiveness.<!--excerpt_end-->
 
 # CodeQL 2.23.6 Update: New C# Security Queries and Language Enhancements

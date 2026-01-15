@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Unit Test Code Coverage Options in VS 2022 Pro for C Projects"
-description: "The discussion explores how to achieve unit test code coverage in Visual Studio 2022 Professional for C projects, considering the lack of built-in coverage in the Pro edition and evaluating third-party tools, alternate build systems, and practical workarounds to integrate code coverage in a Windows-based pipeline."
-author: "jamawg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1md4xq8/how_to_get_unit_test_code_coverage_using_vs_2022/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Unit Test Code Coverage Options in VS 2022 Pro for C Projects
+author: jamawg
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1md4xq8/how_to_get_unit_test_code_coverage_using_vs_2022/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-30 12:12:49 +00:00
-permalink: "/2025-07-30-Unit-Test-Code-Coverage-Options-in-VS-2022-Pro-for-C-Projects.html"
-categories: ["DevOps"]
-tags: ["C Programming", "Clang", "Code Coverage", "Community", "Continuous Integration", "Coverlet", "DevOps", "Eclipse IDE", "Fine Code Coverage", "GCC", "Gcov", "Makefile", "MSBuild", "MSTest", "Static Analysis", "Test Automation", "Unit Testing", "VS"]
-tags_normalized: ["c programming", "clang", "code coverage", "community", "continuous integration", "coverlet", "devops", "eclipse ide", "fine code coverage", "gcc", "gcov", "makefile", "msbuild", "mstest", "static analysis", "test automation", "unit testing", "vs"]
+permalink: /devops/community/Unit-Test-Code-Coverage-Options-in-VS-2022-Pro-for-C-Projects
+tags:
+- C Programming
+- Clang
+- Code Coverage
+- Community
+- Continuous Integration
+- Coverlet
+- DevOps
+- Eclipse IDE
+- Fine Code Coverage
+- GCC
+- Gcov
+- Makefile
+- MSBuild
+- MSTest
+- Static Analysis
+- Test Automation
+- Unit Testing
+- VS
+section_names:
+- devops
 ---
-
 jamawg shares practical strategies for obtaining unit test code coverage in Visual Studio 2022 Professional when working with C code, focusing on viable DevOps approaches.<!--excerpt_end-->
 
 # Unit Test Code Coverage Options in VS 2022 Pro for C Projects

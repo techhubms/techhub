@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Completing Urgent Fixes Remotely Using GitHub Copilot Coding Agent and Mobile"
-description: "This article demonstrates how developers can leverage GitHub Copilot coding agent and GitHub Mobile together to address urgent software issues from virtually anywhere. Scott Lusk explores real-world scenarios, practical instruction file usage, best practices for Copilot delegation, and the integration of GitHub workflows and IssueOps automation to maximize productivity and code quality."
-author: "Scott Lusk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/github/completing-urgent-fixes-anywhere-with-github-copilot-coding-agent-and-mobile/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Completing Urgent Fixes Remotely Using GitHub Copilot Coding Agent and Mobile
+author: Scott Lusk
+canonical_url: https://github.blog/developer-skills/github/completing-urgent-fixes-anywhere-with-github-copilot-coding-agent-and-mobile/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-08 16:00:00 +00:00
-permalink: "/2025-10-08-Completing-Urgent-Fixes-Remotely-Using-GitHub-Copilot-Coding-Agent-and-Mobile.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Bug Fixing", "Code Quality", "Coding", "Coding Agent", "Continuous Deployment", "Copilot Instructions", "Developer Skills", "Developer Tools", "DevOps", "DevOps Automation", "GitHub", "GitHub Actions", "GitHub Copilot", "GitHub Mobile", "GitHub Platform", "IssueOps", "Mobile Code Review", "News", "Pull Requests"]
-tags_normalized: ["ai", "best practices", "bug fixing", "code quality", "coding", "coding agent", "continuous deployment", "copilot instructions", "developer skills", "developer tools", "devops", "devops automation", "github", "github actions", "github copilot", "github mobile", "github platform", "issueops", "mobile code review", "news", "pull requests"]
+permalink: /github-copilot/news/Completing-Urgent-Fixes-Remotely-Using-GitHub-Copilot-Coding-Agent-and-Mobile
+tags:
+- AI
+- Best Practices
+- Bug Fixing
+- Code Quality
+- Coding
+- Coding Agent
+- Continuous Deployment
+- Copilot Instructions
+- Developer Skills
+- Developer Tools
+- DevOps
+- DevOps Automation
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- GitHub Mobile
+- GitHub Platform
+- IssueOps
+- Mobile Code Review
+- News
+- Pull Requests
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Scott Lusk shares how he combined GitHub Copilot coding agent and GitHub Mobile to resolve urgent bugs remotely, providing actionable advice on Copilot instruction files, delegation practices, and integrating DevOps automation.<!--excerpt_end-->
 
 # Completing Urgent Fixes Remotely Using GitHub Copilot Coding Agent and Mobile
@@ -93,7 +114,6 @@ Maximize repeatability and control by integrating automation workflows:
 
 ```yaml
 name: "Bug (Copilot Coding Agent-ready)"
-description: "Report a bug with details so Copilot can propose a fix via PR."
 title: "[Bug]: <short summary>"
 labels: ["bug", "triage", "copilot-coding-agent"]
 body:

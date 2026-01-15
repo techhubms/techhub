@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "SpotifyLikeButton: Global Hotkey Utility to Like/Unlike Songs on Spotify"
-description: "BuildBazaar shares a Windows project enabling global hotkeys to like or unlike Spotify songs without opening the app. Developed in C#, it uses the Spotify API and supports notifications. Linux alternatives using custom scripts and Waybar integration are mentioned. The source code and discussion links are provided."
-author: "BuildBazaar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'SpotifyLikeButton: Global Hotkey Utility to Like/Unlike Songs on Spotify'
+author: BuildBazaar
+canonical_url: https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 19:05:44 +00:00
-permalink: "/2025-08-02-SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify.html"
-categories: ["Coding"]
-tags: ["C#", "Coding", "Community", "Dotfiles", "Global Hotkeys", "Hyprland", "Linux Scripts", "Music", "Open Source", "Spotify API", "Waybar", "Windows"]
-tags_normalized: ["csharp", "coding", "community", "dotfiles", "global hotkeys", "hyprland", "linux scripts", "music", "open source", "spotify api", "waybar", "windows"]
+permalink: /coding/community/SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify
+tags:
+- C#
+- Coding
+- Community
+- Dotfiles
+- Global Hotkeys
+- Hyprland
+- Linux Scripts
+- Music
+- Open Source
+- Spotify API
+- Waybar
+- Windows
+section_names:
+- coding
 ---
-
 BuildBazaar introduces SpotifyLikeButton, a C# tool that lets users like or unlike Spotify songs with global hotkeys. Explore how it works, its technical details, and alternative Linux scripts.<!--excerpt_end-->
 
 ## Overview

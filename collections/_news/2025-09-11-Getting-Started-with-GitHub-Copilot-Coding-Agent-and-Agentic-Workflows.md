@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Getting Started with GitHub Copilot Coding Agent and Agentic Workflows"
-description: "This guide introduces the GitHub Copilot coding agent, detailing its role as an AI-powered assistant that autonomously writes, tests, and manages code within developer workflows on GitHub. Readers will learn how to delegate tasks to the agent, leverage its integration with GitHub Actions, and use the Model Context Protocol (MCP) for enhanced context, leading to streamlined, auditable development processes."
-author: "Alexandra Lietzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Getting Started with GitHub Copilot Coding Agent and Agentic Workflows
+author: Alexandra Lietzke
+canonical_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-11 16:00:00 +00:00
-permalink: "/2025-09-11-Getting-Started-with-GitHub-Copilot-Coding-Agent-and-Agentic-Workflows.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Automation", "Branch Protection", "CI/CD", "Coding", "Coding Agent", "Continuous Integration", "DevOps", "DevOps Workflows", "GitHub Actions", "GitHub Copilot", "MCP", "News", "Pull Request Automation", "Test Automation", "VS Code"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai automation", "branch protection", "cislashcd", "coding", "coding agent", "continuous integration", "devops", "devops workflows", "github actions", "github copilot", "mcp", "news", "pull request automation", "test automation", "vs code"]
+permalink: /github-copilot/news/Getting-Started-with-GitHub-Copilot-Coding-Agent-and-Agentic-Workflows
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Automation
+- Branch Protection
+- CI/CD
+- Coding
+- Coding Agent
+- Continuous Integration
+- DevOps
+- DevOps Workflows
+- GitHub Actions
+- GitHub Copilot
+- MCP
+- News
+- Pull Request Automation
+- Test Automation
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Alexandra Lietzke explains how to use the GitHub Copilot coding agent to delegate and automate software development tasks, from issue assignment to pull request review, enhancing productivity and security for developers.<!--excerpt_end-->
 
 # Getting Started with GitHub Copilot Coding Agent and Agentic Workflows

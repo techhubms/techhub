@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Test and Validate Functions with Develop Mode in Fabric User Data Functions"
-description: "This article details a significant update to Microsoft Fabric User Data Functions, introducing a 'Develop mode' that improves the testing and validation experience for function developers. It covers the new Develop/Test workflow in the Fabric portal, guidance on library updates, and current limitations regarding regional availability."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Test and Validate Functions with Develop Mode in Fabric User Data Functions
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-19 11:00:00 +00:00
-permalink: "/2025-08-19-Test-and-Validate-Functions-with-Develop-Mode-in-Fabric-User-Data-Functions.html"
-categories: ["ML"]
-tags: ["Code Publishing", "Data Engineering", "Develop Mode", "Fabric Portal", "Function Validation", "Library Management", "Microsoft Fabric", "ML", "News", "Preview Features", "Python", "Region Availability", "Testing", "User Data Functions"]
-tags_normalized: ["code publishing", "data engineering", "develop mode", "fabric portal", "function validation", "library management", "microsoft fabric", "ml", "news", "preview features", "python", "region availability", "testing", "user data functions"]
+permalink: /ml/news/Test-and-Validate-Functions-with-Develop-Mode-in-Fabric-User-Data-Functions
+tags:
+- Code Publishing
+- Data Engineering
+- Develop Mode
+- Fabric Portal
+- Function Validation
+- Library Management
+- Microsoft Fabric
+- ML
+- News
+- Preview Features
+- Python
+- Region Availability
+- Testing
+- User Data Functions
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog announces major improvements to User Data Functions, with a new Develop mode for testing and validating functions. This update provides developers with enhanced workflows, as explained and demonstrated by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Test and Validate Functions with Develop Mode in Fabric User Data Functions (Preview)

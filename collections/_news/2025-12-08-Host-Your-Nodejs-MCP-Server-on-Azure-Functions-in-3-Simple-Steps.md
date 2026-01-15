@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps"
-description: "This guide demonstrates how to deploy a Node.js Model Context Protocol (MCP) server using the official Anthropic MCP SDK on Azure Functions. It covers serverless hosting benefits, step-by-step configuration, testing, automated setup with GitHub Copilot, local development tips, Infrastructure as Code deployment with Azure Developer CLI, and key limitations. Learn how to build scalable, reliable AI agent backends by leveraging Azure's serverless compute platform and modern open protocols."
-author: "Yohan Lasorsa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps
+author: Yohan Lasorsa
+canonical_url: https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-08 18:00:54 +00:00
-permalink: "/2025-12-08-Host-Your-Nodejs-MCP-Server-on-Azure-Functions-in-3-Simple-Steps.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Anthropic MCP SDK", "Azure", "Azure Developer CLI", "Azure Functions", "Coding", "Custom Handler", "Express", "HTTP Streaming", "IaC", "LangChain.js", "MCP", "News", "Node.js", "Serverless", "TypeScript"]
-tags_normalized: ["ai", "anthropic mcp sdk", "azure", "azure developer cli", "azure functions", "coding", "custom handler", "express", "http streaming", "iac", "langchaindotjs", "mcp", "news", "nodedotjs", "serverless", "typescript"]
+permalink: /ai/news/Host-Your-Nodejs-MCP-Server-on-Azure-Functions-in-3-Simple-Steps
+tags:
+- AI
+- Anthropic MCP SDK
+- Azure
+- Azure Developer CLI
+- Azure Functions
+- Coding
+- Custom Handler
+- Express
+- HTTP Streaming
+- IaC
+- LangChain.js
+- MCP
+- News
+- Node.js
+- Serverless
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Yohan Lasorsa explains how to deploy a Node.js MCP server to Azure Functions using the official Anthropic MCP SDK, including practical advice for automation, infrastructure setup, and cost management.<!--excerpt_end-->
 
 # Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps

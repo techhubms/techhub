@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Agentic Business Applications and AI Autonomy at Convergence 2025"
-description: "This news article covers the major themes and technical advances highlighted at Convergence 2025, including the rise of agentic business applications, AI agents, and autonomous workflows powered by Microsoft Dynamics 365, Copilot Studio, Microsoft Fabric, and partner solutions. It details protocol advances, next-generation ERP, CRM, and the expanding role of AI agents and Copilot Studio in automating and optimizing business operations. The article addresses composable business processes, integrations with partner-built agents, and Microsoft’s approach to scaling AI and data governance across enterprise scenarios."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Agentic Business Applications and AI Autonomy at Convergence 2025
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 17:51:59 +00:00
-permalink: "/2025-12-09-Agentic-Business-Applications-and-AI-Autonomy-at-Convergence-2025.html"
-categories: ["AI"]
-tags: ["Agentic Business Applications", "AI", "AI Agents", "Automation", "Business Central", "Company News", "Convergence", "Copilot Studio", "CRM", "Data Governance", "Dynamics 365", "ERP", "MCP Protocol", "Microsoft Cloud", "Microsoft Fabric", "News", "Operational Autonomy", "Partner Agents"]
-tags_normalized: ["agentic business applications", "ai", "ai agents", "automation", "business central", "company news", "convergence", "copilot studio", "crm", "data governance", "dynamics 365", "erp", "mcp protocol", "microsoft cloud", "microsoft fabric", "news", "operational autonomy", "partner agents"]
+permalink: /ai/news/Agentic-Business-Applications-and-AI-Autonomy-at-Convergence-2025
+tags:
+- Agentic Business Applications
+- AI
+- AI Agents
+- Automation
+- Business Central
+- Company News
+- Convergence
+- Copilot Studio
+- CRM
+- Data Governance
+- Dynamics 365
+- ERP
+- MCP Protocol
+- Microsoft Cloud
+- Microsoft Fabric
+- News
+- Operational Autonomy
+- Partner Agents
+section_names:
+- ai
 ---
-
 stclarke showcases how Convergence 2025 is driving the evolution of agentic, AI-powered business solutions with Dynamics 365, Copilot Studio, Microsoft Fabric, and autonomous agents.<!--excerpt_end-->
 
 # Agentic Business Applications and AI Autonomy at Convergence 2025

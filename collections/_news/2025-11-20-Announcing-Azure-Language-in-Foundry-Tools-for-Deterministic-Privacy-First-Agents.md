@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Announcing Azure Language in Foundry Tools for Deterministic, Privacy-First Agents"
-description: "This article introduces the rebranded Azure Language capabilities in Microsoft Foundry Tools, providing privacy-first, deterministic Language AI for agent development. Key enhancements include a remote MCP server, advanced PII redaction features, and improved intent routing with Conversational Language Understanding. Developers gain seamless integration, comprehensive AI tooling, and structured workflows for building compliant, intelligent agents on Azure."
-author: "Xiaoying"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Announcing Azure Language in Foundry Tools for Deterministic, Privacy-First Agents
+author: Xiaoying
+canonical_url: https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:12 +00:00
-permalink: "/2025-11-20-Announcing-Azure-Language-in-Foundry-Tools-for-Deterministic-Privacy-First-Agents.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "AI Agents", "AI Development", "AI Tools", "Authentication", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Services", "Azure Language", "CLU", "Conversational Language Understanding", "Determinism", "Entity Extraction", "Foundry Tools", "Healthcare Entity Extraction", "Intent Detection", "Intent Routing", "Key Phrase Extraction", "Language Detection", "MCP", "MCP Server", "Microsoft Entra ID", "Microsoft Foundry", "MSIgnite", "Multi Turn Conversations", "Named Entity Recognition", "News", "Pii Redaction", "Privacy", "Privacy Control", "Sentiment Analysis", "Slot Filling", "Text Summarization"]
-tags_normalized: ["ai", "ai agent", "ai agents", "ai development", "ai tools", "authentication", "azure", "azure ai", "azure ai foundry", "azure ai services", "azure language", "clu", "conversational language understanding", "determinism", "entity extraction", "foundry tools", "healthcare entity extraction", "intent detection", "intent routing", "key phrase extraction", "language detection", "mcp", "mcp server", "microsoft entra id", "microsoft foundry", "msignite", "multi turn conversations", "named entity recognition", "news", "pii redaction", "privacy", "privacy control", "sentiment analysis", "slot filling", "text summarization"]
+permalink: /ai/news/Announcing-Azure-Language-in-Foundry-Tools-for-Deterministic-Privacy-First-Agents
+tags:
+- AI
+- AI Agent
+- AI Agents
+- AI Development
+- AI Tools
+- Authentication
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Azure AI Services
+- Azure Language
+- CLU
+- Conversational Language Understanding
+- Determinism
+- Entity Extraction
+- Foundry Tools
+- Healthcare Entity Extraction
+- Intent Detection
+- Intent Routing
+- Key Phrase Extraction
+- Language Detection
+- MCP
+- MCP Server
+- Microsoft Entra ID
+- Microsoft Foundry
+- MSIgnite
+- Multi Turn Conversations
+- Named Entity Recognition
+- News
+- Pii Redaction
+- Privacy
+- Privacy Control
+- Sentiment Analysis
+- Slot Filling
+- Text Summarization
+section_names:
+- ai
+- azure
 ---
-
 Xiaoying breaks down the new Azure Language features in Foundry Tools, highlighting privacy-first AI agents, advanced PII redaction, and deterministic intent routing for developers building enterprise solutions on Azure.<!--excerpt_end-->
 
 # Announcing Azure Language in Foundry Tools for Deterministic, Privacy-First Agents

@@ -1,21 +1,33 @@
----
-layout: "post"
-title: "Agent feedback is the new User feedback"
-description: "Explores how agent (LLM) feedback differs from user feedback in software development, advocating for agent-driven prototyping and co-design to improve products efficiently."
-author: "lchoquel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/"
-categories: ["AI"]
-feed_name: "Reddit AI Agents"
-feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
+﻿---
+layout: post
+title: Agent feedback is the new User feedback
+author: lchoquel
+canonical_url: https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/
+feed_name: Reddit AI Agents
+feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-07-23 21:11:28 +00:00
-permalink: "/2025-07-23-Agent-feedback-is-the-new-User-feedback.html"
-viewing_mode: "external"
-page: "community"
-tags: ["Agent Feedback", "Agent Native", "AI", "AI Agents", "Build Measure Learn", "Co Design", "Community", "Documentation", "Lean Startup", "LLM", "Minimum Agent Prototype", "MVP", "Prompt Engineering", "Software Development", "User Feedback"]
-tags_normalized: ["agent feedback", "agent native", "ai", "ai agents", "build measure learn", "co design", "community", "documentation", "lean startup", "llm", "minimum agent prototype", "mvp", "prompt engineering", "software development", "user feedback"]
+permalink: /ai/community/Agent-feedback-is-the-new-User-feedback
+viewing_mode: external
+page: community
+tags:
+- Agent Feedback
+- Agent Native
+- AI
+- AI Agents
+- Build Measure Learn
+- Co Design
+- Community
+- Documentation
+- Lean Startup
+- LLM
+- Minimum Agent Prototype
+- MVP
+- Prompt Engineering
+- Software Development
+- User Feedback
+section_names:
+- ai
 ---
-
 In this article, lchoquel examines the crucial differences between agent (LLM) and human user feedback in software development. The author argues that agent feedback, being brutally honest and unemotional, offers a unique perspective that can rapidly identify weaknesses in products and documentation. By integrating agent-driven testing and co-design early in the development cycle, developers can iterate faster and address fundamental issues before engaging with human users. The piece introduces the concept of the Minimum Agent Prototype (MAP), which allows for cheap, rapid prototyping with agents, ultimately aligning products more closely with user needs.<!--excerpt_end-->
 
 ## Agent Feedback: The Cold, Hard Truth Your Software Needs

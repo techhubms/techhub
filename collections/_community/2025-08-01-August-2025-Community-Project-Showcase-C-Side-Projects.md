@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "August 2025 Community Project Showcase: C# Side Projects"
-description: "A roundup of side projects shared by the r/csharp community in August 2025, featuring ASP.NET Core Kanban boards, performance porting from Python to C# with AOT, Windows services for audio fixes, WinForms tray utilities, and productivity-focused open source apps. Includes project links, feature highlights, and development approaches for each highlighted tool."
-author: "AutoModerator"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1memjhl/come_discuss_your_side_projects_august_2025/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'August 2025 Community Project Showcase: C# Side Projects'
+author: AutoModerator
+canonical_url: https://www.reddit.com/r/csharp/comments/1memjhl/come_discuss_your_side_projects_august_2025/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-01 04:00:55 +00:00
-permalink: "/2025-08-01-August-2025-Community-Project-Showcase-C-Side-Projects.html"
-categories: ["Coding"]
-tags: ["AOT", "ASP.NET Core", "Blazor", "C#", "Clean Architecture", "Coding", "Community", "Community Projects", "GitHub", "Nature Sounds App", "Open Source", "Performance Optimization", "React", "SignalR", "Tray Application", "Windows Service", "WinForms"]
-tags_normalized: ["aot", "aspdotnet core", "blazor", "csharp", "clean architecture", "coding", "community", "community projects", "github", "nature sounds app", "open source", "performance optimization", "react", "signalr", "tray application", "windows service", "winforms"]
+permalink: /coding/community/August-2025-Community-Project-Showcase-C-Side-Projects
+tags:
+- AOT
+- ASP.NET Core
+- Blazor
+- C#
+- Clean Architecture
+- Coding
+- Community
+- Community Projects
+- GitHub
+- Nature Sounds App
+- Open Source
+- Performance Optimization
+- React
+- SignalR
+- Tray Application
+- Windows Service
+- WinForms
+section_names:
+- coding
 ---
-
 AutoModerator presents this month's r/csharp side project discussion thread, spotlighting innovative member creations—from ASP.NET Core Kanban solutions to open source productivity and utility apps.<!--excerpt_end-->
 
 # August 2025 C# Community Side Projects

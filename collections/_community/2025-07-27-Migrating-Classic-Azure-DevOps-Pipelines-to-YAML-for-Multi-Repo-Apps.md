@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Migrating Classic Azure DevOps Pipelines to YAML for Multi-Repo Apps"
-description: "A detailed community discussion where DrippinInSuccess and peers explore best practices for moving from classic build and release pipelines to YAML-based Azure DevOps pipelines. The conversation covers managing multi-environment builds, using templates, parameter files, and strategies for coordinating deployments across separate UI and API repositories. This is especially relevant for teams automating modern frontend (Angular) and backend (.NET 8) deployments with Azure App Service."
-author: "DrippinInSuccess"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1malfn3/best_practice_for_yaml_pipelines/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Migrating Classic Azure DevOps Pipelines to YAML for Multi-Repo Apps
+author: DrippinInSuccess
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1malfn3/best_practice_for_yaml_pipelines/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-27 12:47:44 +00:00
-permalink: "/2025-07-27-Migrating-Classic-Azure-DevOps-Pipelines-to-YAML-for-Multi-Repo-Apps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 8", "Angular", "Automation", "Azure", "Azure App Service", "Azure DevOps", "CI/CD", "Classic Pipelines", "Coding", "Community", "Cross Repository Pipelines", "Deployment Strategies", "DevOps", "Multi Environment Deployment", "Parameter Files", "Pipeline Templates", "Playwright Tests", "Release Pipeline", "YAML Pipelines"]
-tags_normalized: ["dotnet 8", "angular", "automation", "azure", "azure app service", "azure devops", "cislashcd", "classic pipelines", "coding", "community", "cross repository pipelines", "deployment strategies", "devops", "multi environment deployment", "parameter files", "pipeline templates", "playwright tests", "release pipeline", "yaml pipelines"]
+permalink: /coding/community/Migrating-Classic-Azure-DevOps-Pipelines-to-YAML-for-Multi-Repo-Apps
+tags:
+- .NET 8
+- Angular
+- Automation
+- Azure
+- Azure App Service
+- Azure DevOps
+- CI/CD
+- Classic Pipelines
+- Coding
+- Community
+- Cross Repository Pipelines
+- Deployment Strategies
+- DevOps
+- Multi Environment Deployment
+- Parameter Files
+- Pipeline Templates
+- Playwright Tests
+- Release Pipeline
+- YAML Pipelines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 DrippinInSuccess discusses with the community about migrating classic Azure DevOps build and release pipelines to YAML pipelines for an Angular and .NET 8 application. Multiple approaches, tips, and strategies are shared by experienced engineers.<!--excerpt_end-->
 
 # Migrating Classic Azure DevOps Pipelines to YAML for Multi-Repo Apps

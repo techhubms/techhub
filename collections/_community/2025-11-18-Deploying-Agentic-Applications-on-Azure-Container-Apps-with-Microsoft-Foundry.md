@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Deploying Agentic Applications on Azure Container Apps with Microsoft Foundry"
-description: "This in-depth guide by Cary_Chai demonstrates how to run agentic applications using Azure Container Apps, the Microsoft Agent Framework (MAF), and Microsoft Foundry. The tutorial covers integration with OpenTelemetry for observability, step-by-step deployment with the Azure Developer CLI, telemetry validation in Application Insights, and advanced monitoring and tracing through Microsoft Foundry. Readers will learn to build, deploy, and monitor robust, scalable, and observable AI-driven agents in a production environment."
-author: "Cary_Chai"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-applications-on-azure-container-apps-with-microsoft/ba-p/4467601"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying Agentic Applications on Azure Container Apps with Microsoft Foundry
+author: Cary_Chai
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-applications-on-azure-container-apps-with-microsoft/ba-p/4467601
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 20:30:56 +00:00
-permalink: "/2025-11-18-Deploying-Agentic-Applications-on-Azure-Container-Apps-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "Application Insights", "Automated Deployment", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure Monitor", "Cloud Native", "Community", "Distributed Tracing", "FastAPI", "GenAI", "MAF", "Microservices", "Microsoft Agent Framework", "Microsoft Foundry", "Observability", "OpenTelemetry", "Serverless", "Telemetry"]
-tags_normalized: ["ai", "ai agent", "application insights", "automated deployment", "azure", "azure container apps", "azure developer cli", "azure monitor", "cloud native", "community", "distributed tracing", "fastapi", "genai", "maf", "microservices", "microsoft agent framework", "microsoft foundry", "observability", "opentelemetry", "serverless", "telemetry"]
+permalink: /ai/community/Deploying-Agentic-Applications-on-Azure-Container-Apps-with-Microsoft-Foundry
+tags:
+- AI
+- AI Agent
+- Application Insights
+- Automated Deployment
+- Azure
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Monitor
+- Cloud Native
+- Community
+- Distributed Tracing
+- FastAPI
+- GenAI
+- MAF
+- Microservices
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Observability
+- OpenTelemetry
+- Serverless
+- Telemetry
+section_names:
+- ai
+- azure
 ---
-
 Cary_Chai details how to deploy and observe agentic applications on Azure Container Apps by integrating the Microsoft Agent Framework and Microsoft Foundry, with full telemetry and monitoring support.<!--excerpt_end-->
 
 # Deploying Agentic Applications on Azure Container Apps with Microsoft Foundry

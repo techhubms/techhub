@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Land O’Lakes and Microsoft Partner to Accelerate AI Innovation in Agriculture"
-description: "This news release details a multiyear strategic alliance between Land O’Lakes and Microsoft aimed at driving AI-powered innovation in agriculture. The partnership has resulted in new AI-driven tools like the Oz digital assistant and a comprehensive agricultural digital transformation powered by Microsoft Azure, Copilot, and Azure AI Foundry. The collaboration reflects both companies’ commitment to empowering farmers and agronomists with advanced technology, custom enterprise copilots, and data-driven decision-making solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/11/12/land-olakes-and-microsoft-partner-to-accelerate-ai-innovation-in-agriculture/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Land O’Lakes and Microsoft Partner to Accelerate AI Innovation in Agriculture
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/11/12/land-olakes-and-microsoft-partner-to-accelerate-ai-innovation-in-agriculture/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 16:01:15 +00:00
-permalink: "/2025-11-12-Land-OLakes-and-Microsoft-Partner-to-Accelerate-AI-Innovation-in-Agriculture.html"
-categories: ["AI", "Azure"]
-tags: ["Agribusiness", "Agricultural Technology", "AI", "AI Innovation", "Azure", "Azure AI Foundry", "Cloud Migration", "Company News", "Copilot", "Data Driven Solutions", "Digital Assistant", "Digital Transformation", "Enterprise Copilot", "Land O’Lakes", "Microsoft", "News", "Oz"]
-tags_normalized: ["agribusiness", "agricultural technology", "ai", "ai innovation", "azure", "azure ai foundry", "cloud migration", "company news", "copilot", "data driven solutions", "digital assistant", "digital transformation", "enterprise copilot", "land olakes", "microsoft", "news", "oz"]
+permalink: /ai/news/Land-OLakes-and-Microsoft-Partner-to-Accelerate-AI-Innovation-in-Agriculture
+tags:
+- Agribusiness
+- Agricultural Technology
+- AI
+- AI Innovation
+- Azure
+- Azure AI Foundry
+- Cloud Migration
+- Company News
+- Copilot
+- Data Driven Solutions
+- Digital Assistant
+- Digital Transformation
+- Enterprise Copilot
+- Land O’Lakes
+- Microsoft
+- News
+- Oz
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on Land O’Lakes and Microsoft forming a strategic partnership to co-develop AI-powered agricultural tools, including the Oz digital assistant, and drive industry transformation through Azure and custom Copilot solutions.<!--excerpt_end-->
 
 # Land O’Lakes and Microsoft Partner to Accelerate AI Innovation in Agriculture

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Mitigating Threats Targeting Microsoft Teams: Attack Chain and Defense Strategies"
-description: "This in-depth analysis from Microsoft Threat Intelligence explores the attack techniques used against Microsoft Teams, detailing how adversaries exploit its collaboration features across the cyber kill chain. The article provides actionable security controls and recommendations for identity, endpoint, application, data, and network-layer defense to help organizations strengthen Teams protection, mitigate attacks, and respond effectively to evolving threats."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/07/disrupting-threats-targeting-microsoft-teams/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Mitigating Threats Targeting Microsoft Teams: Attack Chain and Defense Strategies'
+author: Microsoft Threat Intelligence
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/disrupting-threats-targeting-microsoft-teams/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-07 17:00:00 +00:00
-permalink: "/2025-10-07-Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain-and-Defense-Strategies.html"
-categories: ["Azure", "Security"]
-tags: ["Attack Chain", "Attack Surface Reduction", "Azure", "Azure Security", "Conditional Access", "Defender For Cloud Apps", "Defender For Endpoint", "Defender For Office 365", "Incident Response", "Malware", "MFA Bypass", "Microsoft Entra ID", "Microsoft Purview", "Microsoft Sentinel", "Microsoft Teams", "News", "Phishing", "Ransomware", "Security", "Security Controls", "TeamsPhisher", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["attack chain", "attack surface reduction", "azure", "azure security", "conditional access", "defender for cloud apps", "defender for endpoint", "defender for office 365", "incident response", "malware", "mfa bypass", "microsoft entra id", "microsoft purview", "microsoft sentinel", "microsoft teams", "news", "phishing", "ransomware", "security", "security controls", "teamsphisher", "threat intelligence", "zero trust"]
+permalink: /azure/news/Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain-and-Defense-Strategies
+tags:
+- Attack Chain
+- Attack Surface Reduction
+- Azure
+- Azure Security
+- Conditional Access
+- Defender For Cloud Apps
+- Defender For Endpoint
+- Defender For Office 365
+- Incident Response
+- Malware
+- MFA Bypass
+- Microsoft Entra ID
+- Microsoft Purview
+- Microsoft Sentinel
+- Microsoft Teams
+- News
+- Phishing
+- Ransomware
+- Security
+- Security Controls
+- TeamsPhisher
+- Threat Intelligence
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Microsoft Threat Intelligence offers a comprehensive examination of threats targeting Microsoft Teams, outlining the strategies attackers use and providing practical mitigation steps to improve organizational security.<!--excerpt_end-->
 
 # Mitigating Threats Targeting Microsoft Teams: Attack Chain and Defense Strategies

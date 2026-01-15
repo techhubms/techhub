@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "A Deep Dive into the GitHub MCP Registry for AI Agents"
-description: "This episode of GitHub Checkout provides a practical guide to the newly launched GitHub MCP Registry, showcasing how to discover, inspect, and connect to MCP servers. The walkthrough demonstrates enabling interoperability for AI agents and tools, emphasizing hands-on exploration of the open, community-driven MCP ecosystem on GitHub."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wm1yjcTk50w"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: A Deep Dive into the GitHub MCP Registry for AI Agents
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=wm1yjcTk50w
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-24 20:33:32 +00:00
-permalink: "/2025-09-24-A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "Community Driven", "Connect MCP", "Development Tools", "Discover MCP", "GitHub", "GitHub Checkout", "Interoperability", "MCP", "MCP Registry", "Open Ecosystem", "Registry Tutorial", "Videos"]
-tags_normalized: ["ai", "ai agents", "community driven", "connect mcp", "development tools", "discover mcp", "github", "github checkout", "interoperability", "mcp", "mcp registry", "open ecosystem", "registry tutorial", "videos"]
+permalink: /ai/videos/A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents
+tags:
+- AI
+- AI Agents
+- Community Driven
+- Connect MCP
+- Development Tools
+- Discover MCP
+- GitHub
+- GitHub Checkout
+- Interoperability
+- MCP
+- MCP Registry
+- Open Ecosystem
+- Registry Tutorial
+- Videos
+section_names:
+- ai
 ---
-
 GitHub presents a practical walkthrough of the new MCP Registry, guiding viewers through discovering and using MCP servers to empower AI agents and tools in an open, community-driven environment.<!--excerpt_end-->
 
 {% youtube wm1yjcTk50w %}

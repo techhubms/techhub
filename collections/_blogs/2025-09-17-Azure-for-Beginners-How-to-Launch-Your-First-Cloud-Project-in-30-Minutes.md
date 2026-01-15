@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes"
-description: "This beginner-friendly guide by Dellenny walks new users through launching their first project on Microsoft Azure in under 30 minutes. It covers setting up a free Azure account, exploring the Azure Portal, deploying a virtual machine, connecting to your VM, and ideas for your next steps in cloud computing with Microsoft tools."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:07:13 +00:00
-permalink: "/2025-09-17-Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure App Service", "Azure Blob Storage", "Azure Deployment", "Azure Free Tier", "Azure Portal", "Beginner Guide", "Blogs", "Cloud Computing", "Cloud Project", "Microsoft Azure", "Remote Desktop", "Resource Group", "Ubuntu Server", "Virtual Machine", "Windows VM"]
-tags_normalized: ["azure", "azure app service", "azure blob storage", "azure deployment", "azure free tier", "azure portal", "beginner guide", "blogs", "cloud computing", "cloud project", "microsoft azure", "remote desktop", "resource group", "ubuntu server", "virtual machine", "windows vm"]
+permalink: /azure/blogs/Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes
+tags:
+- Azure
+- Azure App Service
+- Azure Blob Storage
+- Azure Deployment
+- Azure Free Tier
+- Azure Portal
+- Beginner Guide
+- Blogs
+- Cloud Computing
+- Cloud Project
+- Microsoft Azure
+- Remote Desktop
+- Resource Group
+- Ubuntu Server
+- Virtual Machine
+- Windows VM
+section_names:
+- azure
 ---
-
 Dellenny provides a clear, practical introduction to Microsoft Azure, guiding beginners through every step to launch their first cloud-based virtual machine project.<!--excerpt_end-->
 
 # Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes

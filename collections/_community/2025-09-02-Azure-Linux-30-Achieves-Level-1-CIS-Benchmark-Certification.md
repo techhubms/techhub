@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification"
-description: "This announcement details Azure Linux 3.0’s achievement of Level 1 Center for Internet Security (CIS) benchmark certification. It explains what CIS and its benchmarks mean, and emphasizes the positive security and compliance impact for organizations deploying Linux workloads on Azure Kubernetes Service (AKS). The post outlines how Azure Linux 3.0 automatically meets Level 1 CIS requirements for AKS nodes and links to documentation for further learning."
-author: "Sudhanva"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification
+author: Sudhanva
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 16:28:04 +00:00
-permalink: "/2025-09-02-Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Linux 3.0", "Azure Security", "Center For Internet Security", "CIS Benchmarks", "Cloud Compliance", "Community", "HIPAA", "ISO 27001", "Linux Workloads", "NIST CSF", "PCI DSS", "Regulatory Standards", "Security", "Security Best Practices", "Security Compliance"]
-tags_normalized: ["aks", "azure", "azure linux 3dot0", "azure security", "center for internet security", "cis benchmarks", "cloud compliance", "community", "hipaa", "iso 27001", "linux workloads", "nist csf", "pci dss", "regulatory standards", "security", "security best practices", "security compliance"]
+permalink: /azure/community/Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification
+tags:
+- AKS
+- Azure
+- Azure Linux 3.0
+- Azure Security
+- Center For Internet Security
+- CIS Benchmarks
+- Cloud Compliance
+- Community
+- HIPAA
+- ISO 27001
+- Linux Workloads
+- NIST CSF
+- PCI DSS
+- Regulatory Standards
+- Security
+- Security Best Practices
+- Security Compliance
+section_names:
+- azure
+- security
 ---
-
 Sudhanva announces that Azure Linux 3.0 is now Level 1 CIS Benchmark certified, providing AKS users with secure, compliant Linux foundations on Azure.<!--excerpt_end-->
 
 # Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification

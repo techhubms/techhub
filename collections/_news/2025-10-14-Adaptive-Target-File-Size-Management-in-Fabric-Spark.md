@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Adaptive Target File Size Management in Fabric Spark"
-description: "This article from the Microsoft Fabric Blog introduces new capabilities for automatic file size optimization in Fabric Spark, including Adaptive Target File Size and user-defined settings. It explains common data management challenges, the technical trade-offs of file sizing in Spark, and how these new features allow data teams to achieve predictable performance and lower operational overhead without ongoing tuning."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Adaptive Target File Size Management in Fabric Spark
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 08:00:00 +00:00
-permalink: "/2025-10-14-Adaptive-Target-File-Size-Management-in-Fabric-Spark.html"
-categories: ["Azure", "ML"]
-tags: ["Adaptive Target File Size", "Auto Compaction", "Azure", "Cluster Configuration", "Data Engineering", "Delta Lake", "ELT", "Fabric Spark", "File Size Optimization", "Lakehouse", "Microsoft Fabric", "ML", "News", "Optimize Operation", "Parallelism", "Performance Tuning", "Spark SQL", "Table Properties"]
-tags_normalized: ["adaptive target file size", "auto compaction", "azure", "cluster configuration", "data engineering", "delta lake", "elt", "fabric spark", "file size optimization", "lakehouse", "microsoft fabric", "ml", "news", "optimize operation", "parallelism", "performance tuning", "spark sql", "table properties"]
+permalink: /ml/news/Adaptive-Target-File-Size-Management-in-Fabric-Spark
+tags:
+- Adaptive Target File Size
+- Auto Compaction
+- Azure
+- Cluster Configuration
+- Data Engineering
+- Delta Lake
+- ELT
+- Fabric Spark
+- File Size Optimization
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Optimize Operation
+- Parallelism
+- Performance Tuning
+- Spark SQL
+- Table Properties
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents a technical overview of Adaptive Target File Size Management in Fabric Spark. The article, authored by Microsoft, details how these new features help data teams optimize performance and maintenance in Spark lakehouses automatically.<!--excerpt_end-->
 
 # Adaptive Target File Size Management in Fabric Spark

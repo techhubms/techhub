@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "#FabConEurope: Key Announcements and Features from Microsoft's First Fabric Community Conference"
-description: "Samu Niemelä summarizes major updates and new features introduced at Europe's first Microsoft Fabric Community Conference. Highlights include network security enhancements, user experience updates, data warehouse improvements, developments in data engineering and science, Data Factory advancements, and real-time intelligence features."
-author: "Samu Niemelä"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/fabconeurope-onsite-reporting-from-microsoft-fabrics-first-community-conference/"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
+author: Samu Niemelä
+canonical_url: https://zure.com/blog/fabconeurope-onsite-reporting-from-microsoft-fabrics-first-community-conference/
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-12 06:28:18 +00:00
-permalink: "/2024-11-12-FabConEurope-Key-Announcements-and-Features-from-Microsofts-First-Fabric-Community-Conference.html"
-categories: ["Azure", "ML"]
-tags: ["AI", "AI Skills", "Azure", "Blogs", "Conference", "Data & AI", "Data Engineering", "Data Factory", "Data Platform", "Data Warehouse", "Event Streaming", "Fabric Community Conference", "Fabric Runtime", "Microsoft Fabric", "ML", "Network Security", "Real Time Analytics", "T SQL Notebooks"]
-tags_normalized: ["ai", "ai skills", "azure", "blogs", "conference", "data and ai", "data engineering", "data factory", "data platform", "data warehouse", "event streaming", "fabric community conference", "fabric runtime", "microsoft fabric", "ml", "network security", "real time analytics", "t sql notebooks"]
+permalink: /ml/blogs/FabConEurope-Key-Announcements-and-Features-from-Microsofts-First-Fabric-Community-Conference
+tags:
+- AI
+- AI Skills
+- Azure
+- Blogs
+- Conference
+- Data & AI
+- Data Engineering
+- Data Factory
+- Data Platform
+- Data Warehouse
+- Event Streaming
+- Fabric Community Conference
+- Fabric Runtime
+- Microsoft Fabric
+- ML
+- Network Security
+- Real Time Analytics
+- T SQL Notebooks
+section_names:
+- azure
+- ml
 ---
-
 Authored by Samu Niemelä, this overview details the major innovations and updates unveiled at the first Microsoft Fabric Community Conference in Europe, focusing on improvements in data, analytics, and Azure-integrated capabilities.<!--excerpt_end-->
 
 # #FabConEurope – Onsite Reporting from Microsoft Fabric’s First Community Conference

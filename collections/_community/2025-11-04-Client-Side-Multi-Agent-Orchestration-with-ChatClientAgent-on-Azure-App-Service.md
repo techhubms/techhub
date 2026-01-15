@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service"
-description: "This article provides a detailed, practical guide to implementing multi-agent orchestration using the Microsoft Agent Framework's ChatClientAgent client-side approach on Azure App Service. It compares client-side and server-side (Foundry) agent architecture, highlights trade-offs, shares code examples, and offers a decision framework for choosing the right orchestration model, with a focus on flexibility, DevOps, and Azure integration."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 15:35:47 +00:00
-permalink: "/2025-11-04-Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET 9", "AI", "AIFunctionFactory", "Azure", "Azure AI Foundry", "Azure App Service", "Azure OpenAI", "C#", "ChatClientAgent", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "Function Calling", "Microsoft Agent Framework", "Multi Agent Systems", "Service Bus", "WebJob", "Workflow Orchestration"]
-tags_normalized: ["dotnet 9", "ai", "aifunctionfactory", "azure", "azure ai foundry", "azure app service", "azure openai", "csharp", "chatclientagent", "cloud architecture", "coding", "community", "cosmos db", "function calling", "microsoft agent framework", "multi agent systems", "service bus", "webjob", "workflow orchestration"]
+permalink: /ai/community/Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service
+tags:
+- .NET 9
+- AI
+- AIFunctionFactory
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure OpenAI
+- C#
+- ChatClientAgent
+- Cloud Architecture
+- Coding
+- Community
+- Cosmos DB
+- Function Calling
+- Microsoft Agent Framework
+- Multi Agent Systems
+- Service Bus
+- WebJob
+- Workflow Orchestration
+section_names:
+- ai
+- azure
+- coding
 ---
-
 jordanselig explains how developers can build client-side multi-agent systems on Azure App Service using ChatClientAgent and the Microsoft Agent Framework, sharing architecture insights, code samples, and decision factors.<!--excerpt_end-->
 
 # Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How To Use Sensitivity Labels in Microsoft Teams (Step-by-Step Guide)"
-description: "This step-by-step guide by John Edward explains how to implement and manage Sensitivity Labels in Microsoft Teams using Microsoft Purview Information Protection. Learn to set up, enable, and apply labels to teams, meetings, and files, prevent data leaks, meet compliance requirements, and improve collaboration security for your organization."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-use-sensitivity-labels-in-microsoft-teams-step-by-step-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How To Use Sensitivity Labels in Microsoft Teams (Step-by-Step Guide)
+author: John Edward
+canonical_url: https://dellenny.com/how-to-use-sensitivity-labels-in-microsoft-teams-step-by-step-guide/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-12-17 16:11:16 +00:00
-permalink: "/2025-12-17-How-To-Use-Sensitivity-Labels-in-Microsoft-Teams-Step-by-Step-Guide.html"
-categories: ["Security"]
-tags: ["Access Control", "Blogs", "Compliance", "Confidential Data", "Data Security", "DLP", "File Protection", "GDPR", "Information Protection", "Microsoft 365", "Microsoft Purview", "Microsoft Teams", "OneDrive", "Security", "Sensitivity Labels", "SharePoint"]
-tags_normalized: ["access control", "blogs", "compliance", "confidential data", "data security", "dlp", "file protection", "gdpr", "information protection", "microsoft 365", "microsoft purview", "microsoft teams", "onedrive", "security", "sensitivity labels", "sharepoint"]
+permalink: /security/blogs/How-To-Use-Sensitivity-Labels-in-Microsoft-Teams-Step-by-Step-Guide
+tags:
+- Access Control
+- Blogs
+- Compliance
+- Confidential Data
+- Data Security
+- DLP
+- File Protection
+- GDPR
+- Information Protection
+- Microsoft 365
+- Microsoft Purview
+- Microsoft Teams
+- OneDrive
+- Security
+- Sensitivity Labels
+- SharePoint
+section_names:
+- security
 ---
-
 John Edward offers a straightforward walkthrough of using Sensitivity Labels in Microsoft Teams to secure conversations and files, detailing practical steps for administrators and team owners.<!--excerpt_end-->
 
 # How To Use Sensitivity Labels in Microsoft Teams (Step-by-Step Guide)

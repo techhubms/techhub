@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Pantone Collaborates with Microsoft to Launch AI-Powered Palette Generator"
-description: "Pantone has partnered with Microsoft to develop the Pantone Palette Generator, a chat-based tool within Pantone Connect, leveraging Microsoft Azure OpenAI and other Azure AI services. This solution provides designers with AI-powered color palette suggestions and trend insights, improving creative workflows using Microsoft's conversational AI technologies."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Pantone Collaborates with Microsoft to Launch AI-Powered Palette Generator
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 11:00:11 +00:00
-permalink: "/2025-11-05-Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Cosmos DB", "Azure OpenAI", "Color Trend Forecasting", "Company News", "Conversational AI", "Creative Workflow", "Design Automation", "Digital Design", "Microsoft Azure", "News", "Pantone Connect", "Pantone Palette Generator", "Retrieval Augmented Generation", "Trend Forecasting"]
-tags_normalized: ["ai", "ai integration", "azure", "azure ai foundry", "azure ai search", "azure cosmos db", "azure openai", "color trend forecasting", "company news", "conversational ai", "creative workflow", "design automation", "digital design", "microsoft azure", "news", "pantone connect", "pantone palette generator", "retrieval augmented generation", "trend forecasting"]
+permalink: /ai/news/Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Cosmos DB
+- Azure OpenAI
+- Color Trend Forecasting
+- Company News
+- Conversational AI
+- Creative Workflow
+- Design Automation
+- Digital Design
+- Microsoft Azure
+- News
+- Pantone Connect
+- Pantone Palette Generator
+- Retrieval Augmented Generation
+- Trend Forecasting
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on the alliance between Pantone and Microsoft that brings Azure OpenAI technology into Pantone Connect, delivering AI-assisted color palette generation and trend data for designers.<!--excerpt_end-->
 
 # Pantone Collaborates with Microsoft to Launch AI-Powered Palette Generator

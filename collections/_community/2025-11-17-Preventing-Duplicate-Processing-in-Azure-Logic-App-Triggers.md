@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Preventing Duplicate Processing in Azure Logic App Triggers"
-description: "This guide by Mohammed_Barqawi explains a practical approach to detecting and preventing duplicate item processing in Azure Logic Apps. It details using the Logic Apps REST API to check for duplicate workflows triggered, explains how to extract a unique identifier, and reviews permission and implementation requirements. Developers will learn how to use a duplicate detector pattern that can be adapted for Logic App Standard, Consumption, or Power Automate environments."
-author: "Mohammed_Barqawi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Preventing Duplicate Processing in Azure Logic App Triggers
+author: Mohammed_Barqawi
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 08:58:53 +00:00
-permalink: "/2025-11-17-Preventing-Duplicate-Processing-in-Azure-Logic-App-Triggers.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Logic Apps", "Clienttrackingid", "Community", "Dataverse", "DevOps", "Duplicate Detection", "Implementation Guide", "Integration Services", "Logic App Standard", "Microsoft Learn", "Power Automate", "Resource Permissions", "REST API", "SharePoint", "Trigger Management", "Workflow Automation"]
-tags_normalized: ["azure", "azure logic apps", "clienttrackingid", "community", "dataverse", "devops", "duplicate detection", "implementation guide", "integration services", "logic app standard", "microsoft learn", "power automate", "resource permissions", "rest api", "sharepoint", "trigger management", "workflow automation"]
+permalink: /azure/community/Preventing-Duplicate-Processing-in-Azure-Logic-App-Triggers
+tags:
+- Azure
+- Azure Logic Apps
+- Clienttrackingid
+- Community
+- Dataverse
+- DevOps
+- Duplicate Detection
+- Implementation Guide
+- Integration Services
+- Logic App Standard
+- Microsoft Learn
+- Power Automate
+- Resource Permissions
+- REST API
+- SharePoint
+- Trigger Management
+- Workflow Automation
+section_names:
+- azure
+- devops
 ---
-
 Mohammed_Barqawi presents a solution for detecting and handling duplicate trigger executions in Azure Logic Apps by leveraging the Logic Apps REST API and a unique clientTrackingId.<!--excerpt_end-->
 
 # Preventing Duplicate Processing in Azure Logic App Triggers

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Understanding Microsoft's LTS/STS Changes for .NET Support"
-description: "Nick Chapsas discusses Microsoft's recent changes to the .NET LTS (Long-Term Support) and STS (Standard-Term Support) lifecycle policies, explaining how these changes affect .NET developers and why lifecycle support has been a concern in the community. The video provides insights into what’s new about the updated support strategy and what .NET developers should expect moving forward."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3i6YASbyuHw"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Understanding Microsoft's LTS/STS Changes for .NET Support
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=3i6YASbyuHw
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-09-22 11:00:16 +00:00
-permalink: "/2025-09-22-Understanding-Microsofts-LTSSTS-Changes-for-NET-Support.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Support Policy", "C#", "Coding", "Development Best Practices", "Lifecycle Support", "LTS", "Microsoft", "Release Cycle", "Software Maintenance", "STS", "Versioning", "Videos"]
-tags_normalized: ["dotnet", "dotnet support policy", "csharp", "coding", "development best practices", "lifecycle support", "lts", "microsoft", "release cycle", "software maintenance", "sts", "versioning", "videos"]
+permalink: /coding/videos/Understanding-Microsofts-LTSSTS-Changes-for-NET-Support
+tags:
+- .NET
+- .NET Support Policy
+- C#
+- Coding
+- Development Best Practices
+- Lifecycle Support
+- LTS
+- Microsoft
+- Release Cycle
+- Software Maintenance
+- STS
+- Versioning
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas explains recent LTS and STS support changes for .NET from Microsoft, addressing common developer concerns around support cycles and what the new policies mean for the .NET community.<!--excerpt_end-->
 
 {% youtube 3i6YASbyuHw %}

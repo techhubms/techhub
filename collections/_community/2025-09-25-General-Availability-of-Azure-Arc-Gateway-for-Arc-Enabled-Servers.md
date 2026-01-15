@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "General Availability of Azure Arc Gateway for Arc-Enabled Servers"
-description: "This post details the general availability of the Azure Arc Gateway for Arc-enabled servers, focusing on how it streamlines network configuration by reducing required endpoints and improving the onboarding process. Key scenarios, usage guidance, and technical FAQs are covered to help IT professionals efficiently adopt Azure Arc in enterprise environments."
-author: "jalenmcg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Azure Arc Gateway for Arc-Enabled Servers
+author: jalenmcg
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 13:16:23 +00:00
-permalink: "/2025-09-25-General-Availability-of-Azure-Arc-Gateway-for-Arc-Enabled-Servers.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Arc Enabled Servers", "Arc Gateway", "Azure", "Azure Arc", "Azure CLI", "Azure Extensions", "Azure Security", "Community", "DevOps", "Enterprise Proxy", "Firewall", "Hybrid Cloud", "Log Analytics", "Network Configuration", "Onboarding", "PowerShell", "Security", "Server Management", "Windows Admin Center"]
-tags_normalized: ["arc enabled servers", "arc gateway", "azure", "azure arc", "azure cli", "azure extensions", "azure security", "community", "devops", "enterprise proxy", "firewall", "hybrid cloud", "log analytics", "network configuration", "onboarding", "powershell", "security", "server management", "windows admin center"]
+permalink: /azure/community/General-Availability-of-Azure-Arc-Gateway-for-Arc-Enabled-Servers
+tags:
+- Arc Enabled Servers
+- Arc Gateway
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Extensions
+- Azure Security
+- Community
+- DevOps
+- Enterprise Proxy
+- Firewall
+- Hybrid Cloud
+- Log Analytics
+- Network Configuration
+- Onboarding
+- PowerShell
+- Security
+- Server Management
+- Windows Admin Center
+section_names:
+- azure
+- devops
+- security
 ---
-
 jalenmcg introduces the general availability of Azure Arc Gateway, outlining its benefits for Arc-enabled server onboarding, enterprise networking, and security teams.<!--excerpt_end-->
 
 # General Availability of Azure Arc Gateway for Arc-Enabled Servers

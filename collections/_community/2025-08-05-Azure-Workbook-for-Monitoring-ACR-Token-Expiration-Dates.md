@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Workbook for Monitoring ACR Token Expiration Dates"
-description: "Jamesdld23 demonstrates how to monitor Azure Container Registry (ACR) tokens and their expiration dates using Azure REST APIs, Resource Graph queries, and Azure Monitor Workbooks. The article provides practical scripts, workbook configurations, and deployment steps for tracking ACR credentials across subscriptions and registries."
-author: "Jamesdld23"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-workbook-for-acr-tokens-and-their-expiration-dates/ba-p/4438249"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Azure Workbook for Monitoring ACR Token Expiration Dates
+author: Jamesdld23
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-workbook-for-acr-tokens-and-their-expiration-dates/ba-p/4438249
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-05 04:30:00 +00:00
-permalink: "/2025-08-05-Azure-Workbook-for-Monitoring-ACR-Token-Expiration-Dates.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ACR", "Authentication", "Automation", "Azure", "Azure Container Registry", "Azure Monitor Workbook", "Azure REST API", "Bash Scripting", "Community", "DevOps", "PowerShell", "Resource Graph", "Security", "Token Expiration", "Workbook Deployment"]
-tags_normalized: ["acr", "authentication", "automation", "azure", "azure container registry", "azure monitor workbook", "azure rest api", "bash scripting", "community", "devops", "powershell", "resource graph", "security", "token expiration", "workbook deployment"]
+permalink: /azure/community/Azure-Workbook-for-Monitoring-ACR-Token-Expiration-Dates
+tags:
+- ACR
+- Authentication
+- Automation
+- Azure
+- Azure Container Registry
+- Azure Monitor Workbook
+- Azure REST API
+- Bash Scripting
+- Community
+- DevOps
+- PowerShell
+- Resource Graph
+- Security
+- Token Expiration
+- Workbook Deployment
+section_names:
+- azure
+- devops
+- security
 ---
-
 Jamesdld23 explains how to monitor Azure Container Registry token expiration dates through Azure REST API, Azure Workbooks, and automation techniques.<!--excerpt_end-->
 
 ## Introduction

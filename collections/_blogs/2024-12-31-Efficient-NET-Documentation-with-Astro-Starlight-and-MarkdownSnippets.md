@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Efficient .NET Documentation with Astro, Starlight, and MarkdownSnippets"
-description: "Khalid Abuhakmeh details how to streamline .NET documentation by combining Astro's Starlight and the MarkdownSnippets tool. The process ensures code samples stay synchronized with technical documentation, making it easier for developers to write, extract, and update code examples directly from the codebase."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/great-dotnet-documentation-with-astro-starlight-and-markdownsnippets"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Efficient .NET Documentation with Astro, Starlight, and MarkdownSnippets
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/great-dotnet-documentation-with-astro-starlight-and-markdownsnippets
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-12-31 00:00:00 +00:00
-permalink: "/2024-12-31-Efficient-NET-Documentation-with-Astro-Starlight-and-MarkdownSnippets.html"
-categories: ["Coding"]
-tags: [".NET", ".NET CLI", "Astro", "Blogs", "C#", "Code Samples", "Coding", "Documentation Automation", "JavaScript", "MarkdownSnippets", "Starlight", "Technical Documentation", "Tooling"]
-tags_normalized: ["dotnet", "dotnet cli", "astro", "blogs", "csharp", "code samples", "coding", "documentation automation", "javascript", "markdownsnippets", "starlight", "technical documentation", "tooling"]
+permalink: /coding/blogs/Efficient-NET-Documentation-with-Astro-Starlight-and-MarkdownSnippets
+tags:
+- .NET
+- .NET CLI
+- Astro
+- Blogs
+- C#
+- Code Samples
+- Coding
+- Documentation Automation
+- JavaScript
+- MarkdownSnippets
+- Starlight
+- Technical Documentation
+- Tooling
+section_names:
+- coding
 ---
-
 Khalid Abuhakmeh explains how developers can use Astro's Starlight in combination with the MarkdownSnippets tool to maintain accurate and up-to-date .NET documentation with live code samples.<!--excerpt_end-->
 
 # Efficient .NET Documentation with Astro, Starlight, and MarkdownSnippets
@@ -144,7 +154,7 @@ Find the `example.md` (e.g., under `docs/src/content/docs/guides/`), and write d
 ```markdown
 ---
 title: Hello, World!
-description: Creating your first .NET Console Application
+
 ---
 
 ## Getting Started

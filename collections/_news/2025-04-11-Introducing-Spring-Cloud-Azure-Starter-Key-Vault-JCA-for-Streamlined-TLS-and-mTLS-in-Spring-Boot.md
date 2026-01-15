@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Introducing Spring Cloud Azure Starter Key Vault JCA for Streamlined TLS and mTLS in Spring Boot"
-description: "This post by Moary Chen introduces the new Spring Cloud Azure Starter Key Vault JCA, enabling streamlined TLS and mTLS for Spring Boot applications. It explains how to use Azure Key Vault as a secure certificate provider for embedded server, RestTemplate, WebClient, and mutual TLS scenarios using Spring SSL Bundles."
-author: "Moary Chen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/introducing-spring-cloud-azure-starter-key-vault-jca-streamlined-tls-and-mtls-for-spring-boot/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Introducing Spring Cloud Azure Starter Key Vault JCA for Streamlined TLS and mTLS in Spring Boot
+author: Moary Chen
+canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-spring-cloud-azure-starter-key-vault-jca-streamlined-tls-and-mtls-for-spring-boot/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-11 21:11:34 +00:00
-permalink: "/2025-04-11-Introducing-Spring-Cloud-Azure-Starter-Key-Vault-JCA-for-Streamlined-TLS-and-mTLS-in-Spring-Boot.html"
-categories: ["Azure", "Security", "Coding"]
-tags: ["Azure", "Azure Key Vault", "Azure SDK", "Certificate Management", "Coding", "Java", "JCA", "Mtls", "News", "RestTemplate", "Security", "Service Principal", "Spring", "Spring Boot", "Spring Cloud Azure", "SSL Bundles", "TLS", "WebClient"]
-tags_normalized: ["azure", "azure key vault", "azure sdk", "certificate management", "coding", "java", "jca", "mtls", "news", "resttemplate", "security", "service principal", "spring", "spring boot", "spring cloud azure", "ssl bundles", "tls", "webclient"]
+permalink: /coding/news/Introducing-Spring-Cloud-Azure-Starter-Key-Vault-JCA-for-Streamlined-TLS-and-mTLS-in-Spring-Boot
+tags:
+- Azure
+- Azure Key Vault
+- Azure SDK
+- Certificate Management
+- Coding
+- Java
+- JCA
+- Mtls
+- News
+- RestTemplate
+- Security
+- Service Principal
+- Spring
+- Spring Boot
+- Spring Cloud Azure
+- SSL Bundles
+- TLS
+- WebClient
+section_names:
+- azure
+- security
+- coding
 ---
-
 Moary Chen introduces the Spring Cloud Azure Starter Key Vault JCA, showing how to streamline TLS and mTLS for Spring Boot using Azure Key Vault for secure certificate management.<!--excerpt_end-->
 
 # Introducing Spring Cloud Azure Starter Key Vault JCA for Streamlined TLS and mTLS in Spring Boot

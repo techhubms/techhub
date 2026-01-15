@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility"
-description: "This article by Scott Guthrie details Microsoft’s unveiling of the Fairwater AI datacenter in Wisconsin, exploring its groundbreaking infrastructure built to support large-scale artificial intelligence workloads. The piece covers the engineering behind the datacenter, innovations in cooling, storage, and networking, and the broader strategy of a distributed system of AI-centric Azure facilities."
-author: "Scott Guthrie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility'
+author: Scott Guthrie
+canonical_url: https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-18 15:45:10 +00:00
-permalink: "/2025-09-18-Inside-the-Worlds-Most-Powerful-AI-Datacenter-Microsofts-Fairwater-Facility.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI WAN", "Azure", "Azure Blob Storage", "Data Center Architecture", "Distributed Systems", "Exabyte Storage", "Fairwater Datacenter", "Frontier AI", "Green Cooling Technologies", "High Performance Computing", "Hyperscale", "Liquid Cooling", "Microsoft Cloud", "News", "NVIDIA GPUs", "NVLink", "Storage", "Supercomputer"]
-tags_normalized: ["ai", "ai infrastructure", "ai wan", "azure", "azure blob storage", "data center architecture", "distributed systems", "exabyte storage", "fairwater datacenter", "frontier ai", "green cooling technologies", "high performance computing", "hyperscale", "liquid cooling", "microsoft cloud", "news", "nvidia gpus", "nvlink", "storage", "supercomputer"]
+permalink: /ai/news/Inside-the-Worlds-Most-Powerful-AI-Datacenter-Microsofts-Fairwater-Facility
+tags:
+- AI
+- AI Infrastructure
+- AI WAN
+- Azure
+- Azure Blob Storage
+- Data Center Architecture
+- Distributed Systems
+- Exabyte Storage
+- Fairwater Datacenter
+- Frontier AI
+- Green Cooling Technologies
+- High Performance Computing
+- Hyperscale
+- Liquid Cooling
+- Microsoft Cloud
+- News
+- NVIDIA GPUs
+- NVLink
+- Storage
+- Supercomputer
+section_names:
+- ai
+- azure
 ---
-
 Scott Guthrie introduces Microsoft’s new Fairwater AI datacenter, highlighting the scale, engineering innovation, and cloud infrastructure powering next-generation AI workloads across Azure’s global network.<!--excerpt_end-->
 
 # Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility

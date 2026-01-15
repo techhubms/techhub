@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Mistral Document AI Launches on Azure AI Foundry: Seamless Document Intelligence at Scale"
-description: "This article introduces the integration of Mistral Document AI into Azure AI Foundry, highlighting its serverless deployment, enterprise-grade security, structured output capabilities, and responsible AI features. It details document parsing, multilingual and multimodal support, and provides guidance for deploying and connecting the model to Azure workflows for robust document automation, knowledge extraction, and RAG pipelines."
-author: "Naomi Moneypenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Mistral Document AI Launches on Azure AI Foundry: Seamless Document Intelligence at Scale'
+author: Naomi Moneypenny
+canonical_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 18:03:37 +00:00
-permalink: "/2025-08-15-Mistral-Document-AI-Launches-on-Azure-AI-Foundry-Seamless-Document-Intelligence-at-Scale.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Azure Integration", "Azure Security", "Community", "Compliance", "Document Intelligence", "Document Parsing", "Enterprise AI", "Knowledge Extraction", "Mistral Document AI", "Model Deployment", "Model Monitoring", "Multimodal Models", "OCR", "Python Samples", "RAG Pipelines", "Responsible AI", "REST API", "Serverless AI", "Structured Output", "Unstructured Data"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "azure integration", "azure security", "community", "compliance", "document intelligence", "document parsing", "enterprise ai", "knowledge extraction", "mistral document ai", "model deployment", "model monitoring", "multimodal models", "ocr", "python samples", "rag pipelines", "responsible ai", "rest api", "serverless ai", "structured output", "unstructured data"]
+permalink: /ai/community/Mistral-Document-AI-Launches-on-Azure-AI-Foundry-Seamless-Document-Intelligence-at-Scale
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Integration
+- Azure Security
+- Community
+- Compliance
+- Document Intelligence
+- Document Parsing
+- Enterprise AI
+- Knowledge Extraction
+- Mistral Document AI
+- Model Deployment
+- Model Monitoring
+- Multimodal Models
+- OCR
+- Python Samples
+- RAG Pipelines
+- Responsible AI
+- REST API
+- Serverless AI
+- Structured Output
+- Unstructured Data
+section_names:
+- ai
+- azure
 ---
-
 Naomi Moneypenny presents the launch of Mistral Document AI on Azure AI Foundry, enabling organizations to deploy advanced document intelligence models serverlessly, with strong security, structured outputs, and deep Azure integration for enterprise automation.<!--excerpt_end-->
 
 # Mistral Document AI Launches on Azure AI Foundry: Seamless Document Intelligence at Scale

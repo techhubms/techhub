@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions"
-description: "This guide explains the Exclude Prefix option in Azure Storage Actions, demonstrating how it enables users to refine blob management on Azure Blob and Data Lake Storage. It includes practical instructions for use in task creation, exclusion patterns, and monitoring automation outcomes, along with links to official documentation and key workflow details."
-author: "ManjunathS"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions
+author: ManjunathS
+canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 09:26:23 +00:00
-permalink: "/2025-09-30-How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions.html"
-categories: ["Azure"]
-tags: ["Automation", "Azure", "Azure Portal", "Azure Storage Actions", "Blob Deletion", "Blob Filtering", "Blob Management", "Community", "Condition Filtering", "Data Lake Storage", "Exclude Prefix", "Operational Efficiency", "Role Assignment", "Storage Blob Data Owner", "Task Assignment", "Workflow Automation"]
-tags_normalized: ["automation", "azure", "azure portal", "azure storage actions", "blob deletion", "blob filtering", "blob management", "community", "condition filtering", "data lake storage", "exclude prefix", "operational efficiency", "role assignment", "storage blob data owner", "task assignment", "workflow automation"]
+permalink: /azure/community/How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions
+tags:
+- Automation
+- Azure
+- Azure Portal
+- Azure Storage Actions
+- Blob Deletion
+- Blob Filtering
+- Blob Management
+- Community
+- Condition Filtering
+- Data Lake Storage
+- Exclude Prefix
+- Operational Efficiency
+- Role Assignment
+- Storage Blob Data Owner
+- Task Assignment
+- Workflow Automation
+section_names:
+- azure
 ---
-
 ManjunathS details the use of the Exclude Prefix feature in Azure Storage Actions, highlighting how Azure users can automate blob management tasks while protecting critical data through exclusion rules.<!--excerpt_end-->
 
 # How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions

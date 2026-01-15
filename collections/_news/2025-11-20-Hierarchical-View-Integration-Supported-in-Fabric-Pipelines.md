@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Hierarchical View Integration Supported in Fabric Pipelines"
-description: "This article introduces the Hierarchical View for Pipelines in Microsoft Fabric's Monitoring Hub, a new feature that provides structured visibility into complex orchestration workflows. Readers will learn how to enable and use hierarchical columns to trace upstream and downstream job dependencies, facilitating faster troubleshooting and greater operational confidence in pipeline monitoring."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/hierarchical-view-integration-supported-in-pipelines/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Hierarchical View Integration Supported in Fabric Pipelines
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/hierarchical-view-integration-supported-in-pipelines/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 10:00:00 +00:00
-permalink: "/2025-11-20-Hierarchical-View-Integration-Supported-in-Fabric-Pipelines.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics Integration", "Azure", "Data Engineering", "Data Orchestration", "Downstream Jobs", "Hierarchical View", "Job Dependencies", "Microsoft Fabric", "ML", "Monitoring Hub", "News", "Operational Visibility", "Orchestration", "Pipeline Runs", "Pipelines", "Troubleshooting", "Upstream Jobs", "Workflow Management"]
-tags_normalized: ["analytics integration", "azure", "data engineering", "data orchestration", "downstream jobs", "hierarchical view", "job dependencies", "microsoft fabric", "ml", "monitoring hub", "news", "operational visibility", "orchestration", "pipeline runs", "pipelines", "troubleshooting", "upstream jobs", "workflow management"]
+permalink: /ml/news/Hierarchical-View-Integration-Supported-in-Fabric-Pipelines
+tags:
+- Analytics Integration
+- Azure
+- Data Engineering
+- Data Orchestration
+- Downstream Jobs
+- Hierarchical View
+- Job Dependencies
+- Microsoft Fabric
+- ML
+- Monitoring Hub
+- News
+- Operational Visibility
+- Orchestration
+- Pipeline Runs
+- Pipelines
+- Troubleshooting
+- Upstream Jobs
+- Workflow Management
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how Hierarchical View in Monitoring Hub empowers users to monitor and troubleshoot complex pipeline workflows by visualizing upstream and downstream job dependencies.<!--excerpt_end-->
 
 # Hierarchical View Integration Supported in Fabric Pipelines

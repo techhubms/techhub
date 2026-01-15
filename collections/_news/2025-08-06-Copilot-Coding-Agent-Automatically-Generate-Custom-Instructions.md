@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Copilot Coding Agent: Automatically Generate Custom Instructions"
-description: "This news update introduces the GitHub Copilot Coding Agent, which enables developers to automate background tasks using Copilot. By providing custom instructions in a repository, users can guide Copilot to build, test, and validate changes, generating higher-quality pull requests. The agent now offers automatic instruction generation and integrates with various GitHub platforms."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-06-copilot-coding-agent-automatically-generate-custom-instructions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: 'Copilot Coding Agent: Automatically Generate Custom Instructions'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-06-copilot-coding-agent-automatically-generate-custom-instructions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 17:23:25 +00:00
-permalink: "/2025-08-06-Copilot-Coding-Agent-Automatically-Generate-Custom-Instructions.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Custom Instructions", "DevOps", "GitHub CLI", "GitHub Copilot", "IDE Integration", "MCP Server", "News", "Pull Requests", "Repository Configuration", "Software Development", "Task Delegation"]
-tags_normalized: ["ai", "automation", "copilot coding agent", "copilot enterprise", "copilot pro", "custom instructions", "devops", "github cli", "github copilot", "ide integration", "mcp server", "news", "pull requests", "repository configuration", "software development", "task delegation"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Automatically-Generate-Custom-Instructions
+tags:
+- AI
+- Automation
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Pro
+- Custom Instructions
+- DevOps
+- GitHub CLI
+- GitHub Copilot
+- IDE Integration
+- MCP Server
+- News
+- Pull Requests
+- Repository Configuration
+- Software Development
+- Task Delegation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details how GitHub Copilot Coding Agent can automatically generate custom instructions for your repositories, allowing developers to delegate tasks and improve pull request quality using Copilot.<!--excerpt_end-->
 
 # Copilot Coding Agent: Automatically Generate Custom Instructions

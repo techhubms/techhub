@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "InvalidAuthenticationToken in CI-CD Pipeline But Working Fine in Postman"
-description: "The author encounters an 'InvalidAuthenticationToken' error when executing an Azure REST API call within a CI-CD pipeline, while the same request with equivalent tokens and URLs works properly in Postman. The post shares PowerShell code used and highlights differences observed between pipeline and manual requests."
-author: "sayytoabhishekkumar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhac2s/invalidauthenticationtoken_in_cicd_pipeline_but/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: InvalidAuthenticationToken in CI-CD Pipeline But Working Fine in Postman
+author: sayytoabhishekkumar
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mhac2s/invalidauthenticationtoken_in_cicd_pipeline_but/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 11:01:26 +00:00
-permalink: "/2025-08-04-InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Working-Fine-in-Postman.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Token", "Authentication", "Azure", "Azure REST API", "CI/CD", "Community", "DevOps", "Get AzAccessToken", "Invoke RestMethod", "Pipeline", "Postman", "PowerShell", "Security"]
-tags_normalized: ["access token", "authentication", "azure", "azure rest api", "cislashcd", "community", "devops", "get azaccesstoken", "invoke restmethod", "pipeline", "postman", "powershell", "security"]
+permalink: /azure/community/InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Working-Fine-in-Postman
+tags:
+- Access Token
+- Authentication
+- Azure
+- Azure REST API
+- CI/CD
+- Community
+- DevOps
+- Get AzAccessToken
+- Invoke RestMethod
+- Pipeline
+- Postman
+- PowerShell
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 Authored by sayytoabhishekkumar, this post explores an 'InvalidAuthenticationToken' issue encountered during Azure REST API calls from a CI-CD pipeline—even though the equivalent request functions as expected in Postman.<!--excerpt_end-->
 
 ## Problem Overview

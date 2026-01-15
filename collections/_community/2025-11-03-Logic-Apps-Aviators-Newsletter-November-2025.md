@@ -1,20 +1,55 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter - November 2025"
-description: "This November 2025 Logic Apps Aviators Newsletter, curated by WSilveira, covers enterprise integration and automation on Microsoft Azure. It features expert insights from community leaders, product group news (including new Logic Apps connectors and AI agent features), advanced monitoring, security, automation, AI integration, and community-driven resources for Azure Logic Apps, Azure Functions, API Management, and more."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-november-2025/ba-p/4466366"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Logic Apps Aviators Newsletter - November 2025
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-november-2025/ba-p/4466366
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-03 16:00:00 +00:00
-permalink: "/2025-11-03-Logic-Apps-Aviators-Newsletter-November-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure AI Search", "Azure API Center", "Azure Functions", "Bicep", "CI/CD", "Coding", "Community", "Decision Automation", "DevOps", "Enterprise Integration", "Entra ID", "Event Driven Architecture", "Event Grid", "FinOps", "Hybrid Integration", "KQL", "Logic Apps Standard", "MCP", "Monitoring", "Observability", "OpenAI", "Orchestration Patterns", "RabbitMQ", "RAG", "Rules Engine", "Security", "Service Bus", "VS Code", "Webhook Authentication"]
-tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure ai search", "azure api center", "azure functions", "bicep", "cislashcd", "coding", "community", "decision automation", "devops", "enterprise integration", "entra id", "event driven architecture", "event grid", "finops", "hybrid integration", "kql", "logic apps standard", "mcp", "monitoring", "observability", "openai", "orchestration patterns", "rabbitmq", "rag", "rules engine", "security", "service bus", "vs code", "webhook authentication"]
+permalink: /ai/community/Logic-Apps-Aviators-Newsletter-November-2025
+tags:
+- Agent Loop
+- AI
+- API Management
+- Automation
+- Azure
+- Azure AI Search
+- Azure API Center
+- Azure Functions
+- Bicep
+- CI/CD
+- Coding
+- Community
+- Decision Automation
+- DevOps
+- Enterprise Integration
+- Entra ID
+- Event Driven Architecture
+- Event Grid
+- FinOps
+- Hybrid Integration
+- KQL
+- Logic Apps Standard
+- MCP
+- Monitoring
+- Observability
+- OpenAI
+- Orchestration Patterns
+- RabbitMQ
+- RAG
+- Rules Engine
+- Security
+- Service Bus
+- VS Code
+- Webhook Authentication
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 WSilveira curates the November 2025 Logic Apps Aviators Newsletter, spotlighting the latest news, technical breakthroughs, and expert contributions in Microsoft Azure integration, automation, AI, security, and DevOps.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter - November 2025

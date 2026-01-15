@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Transforming Dynamics 365 Customer Data with Azure Maps Integration"
-description: "This community post by IoTGirl explores how integrating Azure Maps with Microsoft Dynamics 365 empowers CRM users with location intelligence. It covers geocoding, mapping, proximity search, and advanced field planning, showing how these capabilities improve operational efficiency for sales, service, and marketing. Key APIs, Maplytics enhancements, industry examples, and practical real-world benefits are discussed to help users unlock actionable insights directly within their CRM workflows."
-author: "IoTGirl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-maps-blog/transforming-dynamics-365-customer-data-with-azure-maps-inogic/ba-p/4441187"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Transforming Dynamics 365 Customer Data with Azure Maps Integration
+author: IoTGirl
+canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/transforming-dynamics-365-customer-data-with-azure-maps-inogic/ba-p/4441187
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 17:20:42 +00:00
-permalink: "/2025-08-07-Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration.html"
-categories: ["Azure"]
-tags: ["API", "Azure", "Azure Maps", "Bing Maps", "Clustering", "Community", "CRM Data Transformation", "CRM Integration", "Data Visualization", "Dataverse", "Field Planning", "Geo Analytics", "Geocoding", "Location Intelligence", "Maplytics", "Microsoft Dynamics 365", "Power Apps", "Proximity Search", "Route Optimization", "Sales Productivity", "Service Management", "Spatial Analytics"]
-tags_normalized: ["api", "azure", "azure maps", "bing maps", "clustering", "community", "crm data transformation", "crm integration", "data visualization", "dataverse", "field planning", "geo analytics", "geocoding", "location intelligence", "maplytics", "microsoft dynamics 365", "power apps", "proximity search", "route optimization", "sales productivity", "service management", "spatial analytics"]
+permalink: /azure/community/Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration
+tags:
+- API
+- Azure
+- Azure Maps
+- Bing Maps
+- Clustering
+- Community
+- CRM Data Transformation
+- CRM Integration
+- Data Visualization
+- Dataverse
+- Field Planning
+- Geo Analytics
+- Geocoding
+- Location Intelligence
+- Maplytics
+- Microsoft Dynamics 365
+- Power Apps
+- Proximity Search
+- Route Optimization
+- Sales Productivity
+- Service Management
+- Spatial Analytics
+section_names:
+- azure
 ---
-
 IoTGirl demonstrates the power of Azure Maps integration with Microsoft Dynamics 365, illustrating how spatial intelligence transforms CRM data for enhanced sales, field service, and marketing operations.<!--excerpt_end-->
 
 # Transforming Dynamics 365 Customer Data with Azure Maps Integration

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Implementing Row and Column Level Security for Spark in OneLake"
-description: "This news post from the Microsoft Fabric Blog details the new public support for Row and Column Level Security (RLS and CLS) within OneLake, particularly focusing on Spark workloads. The article explains the technical approach used to overcome Spark's traditional lack of granular security and describes how the OneLake security framework delivers consistent and automatic data protection, enforcing policies across all data engines without compromising performance or requiring extra user effort. Details cover the security controls, job execution process separation, monitoring options, and requirements for schema-enabled lakehouses."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/how-spark-supports-onelake-security-with-row-and-column-level-security-policies/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Implementing Row and Column Level Security for Spark in OneLake
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-spark-supports-onelake-security-with-row-and-column-level-security-policies/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-21 09:00:00 +00:00
-permalink: "/2025-10-21-Implementing-Row-and-Column-Level-Security-for-Spark-in-OneLake.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Control", "Azure", "Big Data", "Column Level Security", "Data Governance", "Data Security", "Lakehouse", "Microsoft Azure", "Microsoft Fabric", "ML", "News", "OneLake", "Row Level Security", "Schema Enabled Lakehouse", "Secure Cluster", "Security", "Spark", "SQL", "Workspace Security"]
-tags_normalized: ["access control", "azure", "big data", "column level security", "data governance", "data security", "lakehouse", "microsoft azure", "microsoft fabric", "ml", "news", "onelake", "row level security", "schema enabled lakehouse", "secure cluster", "security", "spark", "sql", "workspace security"]
+permalink: /ml/news/Implementing-Row-and-Column-Level-Security-for-Spark-in-OneLake
+tags:
+- Access Control
+- Azure
+- Big Data
+- Column Level Security
+- Data Governance
+- Data Security
+- Lakehouse
+- Microsoft Azure
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Row Level Security
+- Schema Enabled Lakehouse
+- Secure Cluster
+- Security
+- Spark
+- SQL
+- Workspace Security
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog's team introduces new Row and Column Level Security for Spark in OneLake, explaining technical implementation and how these policies protect data access. Authored by the Microsoft Fabric Blog.<!--excerpt_end-->
 
 # Implementing Row and Column Level Security for Spark in OneLake

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub MCP Server Adds GitHub Projects Management and Improves Toolset Efficiency"
-description: "This news article details recent updates to the GitHub MCP Server, which now allows users to manage GitHub Projects and streamlines its toolset. The update covers new automation capabilities, consolidation of pull request tooling, and the addition of a project management interface, all aimed at making project workflows and server resource usage more efficient."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub MCP Server Adds GitHub Projects Management and Improves Toolset Efficiency
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 15:22:40 +00:00
-permalink: "/2025-10-14-GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Improves-Toolset-Efficiency.html"
-categories: ["DevOps"]
-tags: ["Copilot", "Default Toolset", "DevOps", "DevOps Automation", "GitHub MCP Server", "GitHub Projects", "Label Toolset", "News", "Project Management", "Projects & Issues", "Pull Request Tools", "Server Configuration", "Tool Consolidation", "Workflow Automation"]
-tags_normalized: ["copilot", "default toolset", "devops", "devops automation", "github mcp server", "github projects", "label toolset", "news", "project management", "projects and issues", "pull request tools", "server configuration", "tool consolidation", "workflow automation"]
+permalink: /devops/news/GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Improves-Toolset-Efficiency
+tags:
+- Copilot
+- Default Toolset
+- DevOps
+- DevOps Automation
+- GitHub MCP Server
+- GitHub Projects
+- Label Toolset
+- News
+- Project Management
+- Projects & Issues
+- Pull Request Tools
+- Server Configuration
+- Tool Consolidation
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison introduces enhancements to the GitHub MCP Server, including support for GitHub Projects management and a simplified, multifunctional toolset, making DevOps workflows more manageable for development teams.<!--excerpt_end-->
 
 # GitHub MCP Server Adds GitHub Projects Management and Toolset Improvements

@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "A Modern Approach to Multi-Signal Optimization"
-description: "This article by Nikhil Kurup explores advanced strategies for multi-signal optimization in modern cloud operations, focusing on the use of metric classification frameworks for actionable observability. It delves into the challenges of signal overload, introduces structured approaches to classify and correlate telemetry from systems like Kubernetes, and explains how these practices can drive real improvements in incident response, performance, reliability, and cost efficiency."
-author: "Nikhil Kurup"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/a-modern-approach-to-multi-signal-optimization/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: A Modern Approach to Multi-Signal Optimization
+author: Nikhil Kurup
+canonical_url: https://devops.com/a-modern-approach-to-multi-signal-optimization/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-27 11:44:53 +00:00
-permalink: "/2025-10-27-A-Modern-Approach-to-Multi-Signal-Optimization.html"
-categories: ["DevOps"]
-tags: ["Application Performance Monitoring", "ArgoCD", "Blogs", "Business Of DevOps", "CI/CD Observability", "Cloud Cost Optimization", "Cloud Native Operations", "Cloud Operations", "Cloud Waste Reduction", "CloudNativeCon Atlanta", "Contributed Content", "Datadog", "DevOps", "DevOps Automation", "DevOps in The Cloud", "Grafana", "Incident Response", "KubeCon", "KubeCon + CNC NA", "Kubernetes", "Kubernetes Monitoring", "Metric Classification", "MTTR Reduction", "Multi Signal Optimization", "Observability", "P99 Latency", "Pod CPU Metrics", "Predictive Monitoring", "Proactive Monitoring", "Proactive Observability", "Prometheus", "Root Cause Analysis", "Signal Correlation", "Signal Hierarchy", "Social Facebook", "Social LinkedIn", "Social X", "SRE Best Practices", "Telemetry", "Telemetry Correlation"]
-tags_normalized: ["application performance monitoring", "argocd", "blogs", "business of devops", "cislashcd observability", "cloud cost optimization", "cloud native operations", "cloud operations", "cloud waste reduction", "cloudnativecon atlanta", "contributed content", "datadog", "devops", "devops automation", "devops in the cloud", "grafana", "incident response", "kubecon", "kubecon plus cnc na", "kubernetes", "kubernetes monitoring", "metric classification", "mttr reduction", "multi signal optimization", "observability", "p99 latency", "pod cpu metrics", "predictive monitoring", "proactive monitoring", "proactive observability", "prometheus", "root cause analysis", "signal correlation", "signal hierarchy", "social facebook", "social linkedin", "social x", "sre best practices", "telemetry", "telemetry correlation"]
+permalink: /devops/blogs/A-Modern-Approach-to-Multi-Signal-Optimization
+tags:
+- Application Performance Monitoring
+- ArgoCD
+- Blogs
+- Business Of DevOps
+- CI/CD Observability
+- Cloud Cost Optimization
+- Cloud Native Operations
+- Cloud Operations
+- Cloud Waste Reduction
+- CloudNativeCon Atlanta
+- Contributed Content
+- Datadog
+- DevOps
+- DevOps Automation
+- DevOps in The Cloud
+- Grafana
+- Incident Response
+- KubeCon
+- KubeCon + CNC NA
+- Kubernetes
+- Kubernetes Monitoring
+- Metric Classification
+- MTTR Reduction
+- Multi Signal Optimization
+- Observability
+- P99 Latency
+- Pod CPU Metrics
+- Predictive Monitoring
+- Proactive Monitoring
+- Proactive Observability
+- Prometheus
+- Root Cause Analysis
+- Signal Correlation
+- Signal Hierarchy
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE Best Practices
+- Telemetry
+- Telemetry Correlation
+section_names:
+- devops
 ---
-
 Nikhil Kurup examines how multi-signal optimization and metric classification can transform observability in cloud-native DevOps environments, outlining practical steps and real-world impacts for engineering teams.<!--excerpt_end-->
 
 # A Modern Approach to Multi-Signal Optimization

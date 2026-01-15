@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Cook’n with GitHub Copilot: Recap of Context Engineering Prompt Patterns"
-description: "This article by Randy Pagels provides a practical recap of four prompt engineering patterns—Persona, Reflection, Refusal Breaker, and Cognitive Verifier—designed to help developers use GitHub Copilot more effectively. The post explains each pattern, gives concrete examples, and shares when to apply them, equipping readers with actionable strategies for guiding Copilot to clearer and more relevant coding results."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Cook’n with GitHub Copilot: Recap of Context Engineering Prompt Patterns'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-12-19 00:00:00 +00:00
-permalink: "/2025-12-19-Cookn-with-GitHub-Copilot-Recap-of-Context-Engineering-Prompt-Patterns.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistants", "API Security", "Best Practices", "Blogs", "Code Review", "Coding", "Cognitive Verifier", "Context Engineering", "Developer Productivity", "GitHub Copilot", "Persona Pattern", "Prompt Engineering", "Reflection Pattern", "Refusal Breaker"]
-tags_normalized: ["ai", "ai code assistants", "api security", "best practices", "blogs", "code review", "coding", "cognitive verifier", "context engineering", "developer productivity", "github copilot", "persona pattern", "prompt engineering", "reflection pattern", "refusal breaker"]
+permalink: /github-copilot/blogs/Cookn-with-GitHub-Copilot-Recap-of-Context-Engineering-Prompt-Patterns
+tags:
+- AI
+- AI Code Assistants
+- API Security
+- Best Practices
+- Blogs
+- Code Review
+- Coding
+- Cognitive Verifier
+- Context Engineering
+- Developer Productivity
+- GitHub Copilot
+- Persona Pattern
+- Prompt Engineering
+- Reflection Pattern
+- Refusal Breaker
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels recaps four practical prompt patterns for GitHub Copilot—Persona, Reflection, Refusal Breaker, and Cognitive Verifier—offering actionable techniques to help developers steer Copilot towards more relevant, clear, and effective results.<!--excerpt_end-->
 
 # Cook’n with GitHub Copilot: Context Engineering Recipes Recap

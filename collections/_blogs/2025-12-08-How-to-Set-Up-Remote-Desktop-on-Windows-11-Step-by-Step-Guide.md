@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Set Up Remote Desktop on Windows 11: Step-by-Step Guide"
-description: "This hands-on tutorial by John Edward walks beginners through enabling, configuring, and troubleshooting Remote Desktop on Windows 11. It covers requirements, step-by-step setup, connection methods for both PC and mobile, firewall adjustments, user permissions, security tips, internet access considerations, and solutions to common problems. Everything is designed for practical remote work and technical support without jargon or sales pitch."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-set-up-remote-desktop-on-windows-11-a-beginners-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'How to Set Up Remote Desktop on Windows 11: Step-by-Step Guide'
+author: John Edward
+canonical_url: https://dellenny.com/how-to-set-up-remote-desktop-on-windows-11-a-beginners-guide/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-12-08 12:11:18 +00:00
-permalink: "/2025-12-08-How-to-Set-Up-Remote-Desktop-on-Windows-11-Step-by-Step-Guide.html"
-categories: ["Security"]
-tags: ["Blogs", "Desktop Connection", "Firewall", "Microsoft Account", "Mobile Access", "Network Level Authentication", "PC Configuration", "Port Forwarding", "RDP", "Remote Access", "Remote Desktop", "Security", "System Administration", "Technical Support", "User Permissions", "VPN", "Windows 11"]
-tags_normalized: ["blogs", "desktop connection", "firewall", "microsoft account", "mobile access", "network level authentication", "pc configuration", "port forwarding", "rdp", "remote access", "remote desktop", "security", "system administration", "technical support", "user permissions", "vpn", "windows 11"]
+permalink: /security/blogs/How-to-Set-Up-Remote-Desktop-on-Windows-11-Step-by-Step-Guide
+tags:
+- Blogs
+- Desktop Connection
+- Firewall
+- Microsoft Account
+- Mobile Access
+- Network Level Authentication
+- PC Configuration
+- Port Forwarding
+- RDP
+- Remote Access
+- Remote Desktop
+- Security
+- System Administration
+- Technical Support
+- User Permissions
+- VPN
+- Windows 11
+section_names:
+- security
 ---
-
 John Edward outlines a practical guide to setting up and securing Remote Desktop on Windows 11, showing users how to enable connections, troubleshoot issues, add users, and protect access.<!--excerpt_end-->
 
 # How to Set Up Remote Desktop on Windows 11: Step-by-Step Guide

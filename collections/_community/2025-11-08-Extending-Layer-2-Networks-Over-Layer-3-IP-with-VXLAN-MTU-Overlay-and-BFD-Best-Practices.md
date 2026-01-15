@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Extending Layer-2 Networks Over Layer-3 IP with VXLAN: MTU, Overlay, and BFD Best Practices"
-description: "This article by SaravSubramanian explores how Virtual Extensible LAN (VXLAN) enables scalable Layer-2 network overlays across routed Layer-3 IP infrastructures, a crucial capability for modern cloud data centers. It covers the advantages of VXLAN's segmentation and flexibility, practical deployment considerations (MTU sizing, fragmentation avoidance), and the use of Bidirectional Forwarding Detection (BFD) for resilient tunnel monitoring and rapid failure detection. Real-world explanations and configuration advice guide network engineers on architecting robust, vendor-neutral VXLAN overlays—such as those needed in Azure and other large enterprise environments—while highlighting how to avoid common pitfalls. Readers will learn how to preserve VLAN segmentation, optimize reliability, and leverage modern networking protocols for resilient, flexible enterprise architectures."
-author: "SaravSubramanian"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Extending Layer-2 Networks Over Layer-3 IP with VXLAN: MTU, Overlay, and BFD Best Practices'
+author: SaravSubramanian
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 17:44:18 +00:00
-permalink: "/2025-11-08-Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Networking", "Bidirectional Forwarding Detection", "Cloud Networking", "Community", "IP Routing", "Jumbo Frames", "L2 Extension", "Layer 2 Overlay", "Layer 3 IP", "MTU", "Network Virtualization", "Resilience", "UDP Encapsulation", "Virtual Extensible LAN", "VLAN", "VTEP", "VXLAN", "WAN"]
-tags_normalized: ["azure", "azure networking", "bidirectional forwarding detection", "cloud networking", "community", "ip routing", "jumbo frames", "l2 extension", "layer 2 overlay", "layer 3 ip", "mtu", "network virtualization", "resilience", "udp encapsulation", "virtual extensible lan", "vlan", "vtep", "vxlan", "wan"]
+permalink: /azure/community/Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices
+tags:
+- Azure
+- Azure Networking
+- Bidirectional Forwarding Detection
+- Cloud Networking
+- Community
+- IP Routing
+- Jumbo Frames
+- L2 Extension
+- Layer 2 Overlay
+- Layer 3 IP
+- MTU
+- Network Virtualization
+- Resilience
+- UDP Encapsulation
+- Virtual Extensible LAN
+- VLAN
+- VTEP
+- VXLAN
+- WAN
+section_names:
+- azure
 ---
-
 SaravSubramanian presents a vendor-neutral, in-depth exploration of how VXLAN enables scalable Layer-2 overlays on Layer-3 IP networks, focusing on key aspects like MTU sizing, VLAN preservation, and BFD for resilience. This guide provides actionable insights for enterprise and Azure network designs.<!--excerpt_end-->
 
 # Extending Layer-2 Networks Over Layer-3 IP with VXLAN

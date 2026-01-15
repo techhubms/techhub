@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI–Powered Real-Time Intelligence with Anomaly Detection in Microsoft Fabric (Preview)"
-description: "This announcement details the preview launch of anomaly detection in Microsoft Fabric’s Real-Time Intelligence (RTI). The blog explains how this AI-driven feature democratizes streaming data anomaly detection, enabling proactive intelligence and operational efficiency. Learn how users can detect irregularities, set up alerts, and integrate real-time insights using Fabric’s Eventhouse and Real-Time Hub."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-real-time-intelligence-with-anomaly-detection-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: AI–Powered Real-Time Intelligence with Anomaly Detection in Microsoft Fabric (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-real-time-intelligence-with-anomaly-detection-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/2025-09-23-AIPowered-Real-Time-Intelligence-with-Anomaly-Detection-in-Microsoft-Fabric-Preview.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Alerting", "Anomaly Detection", "Azure", "Data Monitoring", "Data Science", "Eventhouse", "Machine Learning Models", "Microsoft Azure", "Microsoft Fabric", "ML", "News", "Operational Intelligence", "Real Time Hub", "Real Time Intelligence", "Streaming Data", "Teams Integration"]
-tags_normalized: ["ai", "alerting", "anomaly detection", "azure", "data monitoring", "data science", "eventhouse", "machine learning models", "microsoft azure", "microsoft fabric", "ml", "news", "operational intelligence", "real time hub", "real time intelligence", "streaming data", "teams integration"]
+permalink: /ai/news/AIPowered-Real-Time-Intelligence-with-Anomaly-Detection-in-Microsoft-Fabric-Preview
+tags:
+- AI
+- Alerting
+- Anomaly Detection
+- Azure
+- Data Monitoring
+- Data Science
+- Eventhouse
+- Machine Learning Models
+- Microsoft Azure
+- Microsoft Fabric
+- ML
+- News
+- Operational Intelligence
+- Real Time Hub
+- Real Time Intelligence
+- Streaming Data
+- Teams Integration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog introduces a preview of anomaly detection in Real-Time Intelligence (RTI). Readers learn from Microsoft Fabric Blog how this AI-powered feature helps organizations uncover data irregularities, enabling proactive monitoring and alerting in real-time business scenarios.<!--excerpt_end-->
 
 # AI–Powered Real-Time Intelligence with Anomaly Detection in Microsoft Fabric (Preview)

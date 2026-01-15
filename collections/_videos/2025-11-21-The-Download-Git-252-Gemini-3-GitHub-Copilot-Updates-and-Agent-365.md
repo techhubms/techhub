@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365"
-description: "This GitHub-hosted video episode recaps technical highlights including the release of Git 2.52 with the new 'jetpack' file history feature, Google's Gemini 3 Pro model integration into GitHub Copilot, Microsoft's Agent 365 announcement for enterprise, and a spotlight on VERT, an open source file converter focused on privacy. The focus is on development tooling, AI integration in developer environments, and open source solutions."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wc2y1HS2a4I"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=wc2y1HS2a4I
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-21 18:18:02 +00:00
-permalink: "/2025-11-21-The-Download-Git-252-Gemini-3-GitHub-Copilot-Updates-and-Agent-365.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Developer Tools", "DevOps", "Enterprise Software", "File Conversion", "Gemini", "Gemini 3 Pro", "Git", "Git 2.52", "GitHub", "GitHub Copilot", "Microsoft Agent 365", "Open Source", "OpenSource", "Software Development", "Version Control", "VERT", "Videos"]
-tags_normalized: ["ai", "ai integration", "developer tools", "devops", "enterprise software", "file conversion", "gemini", "gemini 3 pro", "git", "git 2dot52", "github", "github copilot", "microsoft agent 365", "open source", "opensource", "software development", "version control", "vert", "videos"]
+permalink: /github-copilot/videos/The-Download-Git-252-Gemini-3-GitHub-Copilot-Updates-and-Agent-365
+tags:
+- AI
+- AI Integration
+- Developer Tools
+- DevOps
+- Enterprise Software
+- File Conversion
+- Gemini
+- Gemini 3 Pro
+- Git
+- Git 2.52
+- GitHub
+- GitHub Copilot
+- Microsoft Agent 365
+- Open Source
+- OpenSource
+- Software Development
+- Version Control
+- VERT
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Cassidy from GitHub presents the latest updates for developers, including Git 2.52 features, the Gemini 3 Pro integration with GitHub Copilot, and Microsoft's enterprise Agent 365. Contributors: GitHub.<!--excerpt_end-->
 
 {% youtube wc2y1HS2a4I %}

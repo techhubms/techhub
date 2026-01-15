@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure"
-description: "This article highlights Microsoft's continued leadership in the Gartner Magic Quadrant for Distributed Hybrid Infrastructure, emphasizing the role of Azure Arc and Azure Local in enabling adaptive cloud solutions across hybrid, edge, multicloud, and sovereign environments. Real-world customer success stories illustrate the technological and operational impact of Azure’s adaptive cloud model, focusing on innovation, compliance, governance, and security."
-author: "Dean Paron"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure
+author: Dean Paron
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 16:00:00 +00:00
-permalink: "/2025-10-22-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure.html"
-categories: ["Azure"]
-tags: ["AKS", "Azure", "Azure Arc", "Azure Local", "Azure Policy", "Cloud Governance", "Cloud Migration", "Customer Enablement", "Disaster Recovery", "Distributed Infrastructure", "Edge Computing", "Enterprise IT", "Gartner® Magic Quadrant™", "Hybrid + Multicloud", "Hybrid Cloud", "Management And Governance", "Microsoft Azure", "Microsoft Defender For Cloud", "Multicloud", "News", "Sovereign Cloud"]
-tags_normalized: ["aks", "azure", "azure arc", "azure local", "azure policy", "cloud governance", "cloud migration", "customer enablement", "disaster recovery", "distributed infrastructure", "edge computing", "enterprise it", "gartner magic quadrant", "hybrid plus multicloud", "hybrid cloud", "management and governance", "microsoft azure", "microsoft defender for cloud", "multicloud", "news", "sovereign cloud"]
+permalink: /azure/news/Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure
+tags:
+- AKS
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Policy
+- Cloud Governance
+- Cloud Migration
+- Customer Enablement
+- Disaster Recovery
+- Distributed Infrastructure
+- Edge Computing
+- Enterprise IT
+- Gartner® Magic Quadrant™
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Management And Governance
+- Microsoft Azure
+- Microsoft Defender For Cloud
+- Multicloud
+- News
+- Sovereign Cloud
+section_names:
+- azure
 ---
-
 Dean Paron details Microsoft's recognition as a leader in the 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure, focusing on how Azure Arc and Azure Local empower customers with unified cloud management, governance, and innovation.<!--excerpt_end-->
 
 # Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure

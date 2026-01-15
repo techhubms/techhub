@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration"
-description: "This episode of the VS Code Insiders Podcast highlights new features coming to Visual Studio Code in the August update, including transparency around the open iteration planning process. The team also discusses major upcoming upgrades to the Terminal, focusing on agent mode integration and productivity enhancements. Insights from VS Code engineer Daniel Imms provide a deep technical dive into the improvements developers can expect."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UB6QNYKStVI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=UB6QNYKStVI
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-25 07:00:26 +00:00
-permalink: "/2025-08-25-Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration.html"
-categories: ["Coding", "DevOps"]
-tags: ["Agent Mode", "Automation", "Code Editing", "Coding", "Continuous Integration", "Daniel Imms", "Developer Tools", "Development Productivity", "DevOps", "Iteration Plan", "Microsoft", "Open Source", "Podcast", "Terminal", "Terminal Improvements", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent mode", "automation", "code editing", "coding", "continuous integration", "daniel imms", "developer tools", "development productivity", "devops", "iteration plan", "microsoft", "open source", "podcast", "terminal", "terminal improvements", "videos", "vs code", "vs code extensions"]
+permalink: /coding/videos/Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration
+tags:
+- Agent Mode
+- Automation
+- Code Editing
+- Coding
+- Continuous Integration
+- Daniel Imms
+- Developer Tools
+- Development Productivity
+- DevOps
+- Iteration Plan
+- Microsoft
+- Open Source
+- Podcast
+- Terminal
+- Terminal Improvements
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- coding
+- devops
 ---
-
 Visual Studio Code's team, joined by engineer Daniel Imms, discusses the August iteration plan and in-depth upgrades to VS Code's terminal, aiming to enhance developer productivity.<!--excerpt_end-->
 
 {% youtube UB6QNYKStVI %}

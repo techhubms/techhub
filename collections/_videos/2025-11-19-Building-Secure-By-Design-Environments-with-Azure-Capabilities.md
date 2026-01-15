@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building Secure-By-Design Environments with Azure Capabilities"
-description: "This session from Microsoft Ignite 2025 discusses how organizations can use Azure’s native security controls to establish secure-by-design cloud environments. Covering cross-cloud preventive policies, the session explores translating complex requirements into Azure policies, leveraging tools to streamline security management, and establishing effective security standards and guardrails across cloud providers."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dQz01rHnLW0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Secure-By-Design Environments with Azure Capabilities
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=dQz01rHnLW0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:05:37 +00:00
-permalink: "/2025-11-19-Building-Secure-By-Design-Environments-with-Azure-Capabilities.html"
-categories: ["Azure", "Security"]
-tags: ["AWS Security Hub", "Azure", "Azure Native Security", "Azure Policies", "Azure Security", "Cloud Compliance", "Cloud Governance", "Cloud Providers", "Cloud Security", "Cross Cloud Security", "Customer Insights", "Environment Guardrails", "Microsoft Ignite", "MSIgnite", "Preventive Policies", "ProtectcloudAIplatformandapps", "Security", "Security By Design", "Security Standards", "Videos"]
-tags_normalized: ["aws security hub", "azure", "azure native security", "azure policies", "azure security", "cloud compliance", "cloud governance", "cloud providers", "cloud security", "cross cloud security", "customer insights", "environment guardrails", "microsoft ignite", "msignite", "preventive policies", "protectcloudaiplatformandapps", "security", "security by design", "security standards", "videos"]
+permalink: /azure/videos/Building-Secure-By-Design-Environments-with-Azure-Capabilities
+tags:
+- AWS Security Hub
+- Azure
+- Azure Native Security
+- Azure Policies
+- Azure Security
+- Cloud Compliance
+- Cloud Governance
+- Cloud Providers
+- Cloud Security
+- Cross Cloud Security
+- Customer Insights
+- Environment Guardrails
+- Microsoft Ignite
+- MSIgnite
+- Preventive Policies
+- ProtectcloudAIplatformandapps
+- Security
+- Security By Design
+- Security Standards
+- Videos
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events presents a comprehensive session on harnessing Azure native security features to create secure-by-design cloud environments, including policy management and cross-cloud security standards.<!--excerpt_end-->
 
 {% youtube dQz01rHnLW0 %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure AI Foundry Launches Multimodal AI Models for Developers"
-description: "This news article introduces significant updates to Azure AI Foundry, announcing new OpenAI models—GPT-image-1-mini, GPT-realtime-mini, GPT-audio-mini, and enhanced GPT-5 variants—available to developers for multimodal AI, including text, image, audio, and soon video generation. It also highlights the Microsoft Agent Framework for orchestrating complex agentic solutions and major safety improvements, all focused on developer empowerment, cost efficiency, and innovative workflows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Azure AI Foundry Launches Multimodal AI Models for Developers
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-06 20:20:36 +00:00
-permalink: "/2025-10-06-Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "Audio Generation", "AutoGen", "Azure", "Azure AI Foundry", "Cloud AI", "Company News", "GPT 5", "GPT Audio Mini", "GPT Image 1 Mini", "GPT Realtime Mini", "Microsoft", "Microsoft Agent Framework", "Multimodal AI", "News", "OpenAI", "Responsible AI", "Semantic Kernel", "Text To Image"]
-tags_normalized: ["agentic ai", "ai", "audio generation", "autogen", "azure", "azure ai foundry", "cloud ai", "company news", "gpt 5", "gpt audio mini", "gpt image 1 mini", "gpt realtime mini", "microsoft", "microsoft agent framework", "multimodal ai", "news", "openai", "responsible ai", "semantic kernel", "text to image"]
+permalink: /ai/news/Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers
+tags:
+- Agentic AI
+- AI
+- Audio Generation
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Company News
+- GPT 5
+- GPT Audio Mini
+- GPT Image 1 Mini
+- GPT Realtime Mini
+- Microsoft
+- Microsoft Agent Framework
+- Multimodal AI
+- News
+- OpenAI
+- Responsible AI
+- Semantic Kernel
+- Text To Image
+section_names:
+- ai
+- azure
 ---
-
 stclarke presents a major Azure AI Foundry update, unveiling new multimodal OpenAI models and advanced tooling for developers to build text, image, audio, and upcoming video solutions with improved safety and scalability.<!--excerpt_end-->
 
 # Azure AI Foundry Launches Multimodal AI Models for Developers

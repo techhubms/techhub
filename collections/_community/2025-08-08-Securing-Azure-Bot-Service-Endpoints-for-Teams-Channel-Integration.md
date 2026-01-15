@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Securing Azure Bot Service Endpoints for Teams Channel Integration"
-description: "This in-depth article by daisami explores the security challenges and practical strategies for protecting Azure Bot Service endpoints used with Microsoft Teams. It covers endpoint types, network limitations, application-level controls, token validation, tenant restrictions, and best practices for developers deploying bots in production environments using ASP.NET Core. The discussion includes code walkthroughs and references to relevant Microsoft documentation and community resources."
-author: "daisami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-azure-bot-service-endpoints-with-teams-channel/ba-p/4440495"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securing Azure Bot Service Endpoints for Teams Channel Integration
+author: daisami
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-azure-bot-service-endpoints-with-teams-channel/ba-p/4440495
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-08 01:10:31 +00:00
-permalink: "/2025-08-08-Securing-Azure-Bot-Service-Endpoints-for-Teams-Channel-Integration.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Application Level Security", "ASP.NET Core", "Azure", "Azure App Service", "Azure Bot Service", "Azure Firewall", "Best Practices", "Bot Framework", "C#", "Cloud Security", "Coding", "Community", "Endpoint Security", "Entra ID", "JWT Token Validation", "Microsoft 365 Copilot", "Microsoft Teams", "Multi Tenant Security", "Network Isolation", "Network Security Groups", "Security", "Service Principal", "Token Authentication"]
-tags_normalized: ["application level security", "aspdotnet core", "azure", "azure app service", "azure bot service", "azure firewall", "best practices", "bot framework", "csharp", "cloud security", "coding", "community", "endpoint security", "entra id", "jwt token validation", "microsoft 365 copilot", "microsoft teams", "multi tenant security", "network isolation", "network security groups", "security", "service principal", "token authentication"]
+permalink: /coding/community/Securing-Azure-Bot-Service-Endpoints-for-Teams-Channel-Integration
+tags:
+- Application Level Security
+- ASP.NET Core
+- Azure
+- Azure App Service
+- Azure Bot Service
+- Azure Firewall
+- Best Practices
+- Bot Framework
+- C#
+- Cloud Security
+- Coding
+- Community
+- Endpoint Security
+- Entra ID
+- JWT Token Validation
+- Microsoft 365 Copilot
+- Microsoft Teams
+- Multi Tenant Security
+- Network Isolation
+- Network Security Groups
+- Security
+- Service Principal
+- Token Authentication
+section_names:
+- azure
+- coding
+- security
 ---
-
 daisami guides developers through securing Azure Bot Service endpoints for Microsoft Teams, focusing on application-level protections, token validation, and tenant restrictions to safeguard accessible endpoints in ASP.NET Core bots.<!--excerpt_end-->
 
 # Securing Azure Bot Service Endpoints for Teams Channel Integration

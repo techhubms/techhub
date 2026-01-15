@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "The Future of Web Development with ASP.NET Core & Blazor in .NET 10"
-description: "This session explores upcoming features in ASP.NET Core and Blazor for .NET 10, emphasizing secure, AI-powered web applications. Topics include enhancements in security standards like WebAuthn and Passkey support, diagnostic improvements, developer productivity with .NET Aspire, and future directions for Minimal APIs and OpenAPI. Attendees will learn best practices, new development workflows, and how to experiment with .NET 10 previews."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xZ26KwGHWE0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: The Future of Web Development with ASP.NET Core & Blazor in .NET 10
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=xZ26KwGHWE0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-14 14:31:21 +00:00
-permalink: "/2025-08-14-The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10.html"
-categories: ["AI", "Coding", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "ASP.NET Core", "Blazor", "Coding", "Developer Productivity", "Diagnostics", "Minimal API", "OpenAPI", "Passkey", "Secure Web Apps", "Security", "Telemetry", "Videos", "VS", "Web Development", "WebAuthn"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "aspdotnet core", "blazor", "coding", "developer productivity", "diagnostics", "minimal api", "openapi", "passkey", "secure web apps", "security", "telemetry", "videos", "vs", "web development", "webauthn"]
+permalink: /ai/videos/The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- AI
+- ASP.NET Core
+- Blazor
+- Coding
+- Developer Productivity
+- Diagnostics
+- Minimal API
+- OpenAPI
+- Passkey
+- Secure Web Apps
+- Security
+- Telemetry
+- Videos
+- VS
+- Web Development
+- WebAuthn
+section_names:
+- ai
+- coding
+- security
 ---
-
 In this video, the .NET team showcases new features coming to ASP.NET Core and Blazor in .NET 10. Learn from dotnet about building secure, AI-powered web applications and advancing your web development skills.<!--excerpt_end-->
 
 {% youtube xZ26KwGHWE0 %}

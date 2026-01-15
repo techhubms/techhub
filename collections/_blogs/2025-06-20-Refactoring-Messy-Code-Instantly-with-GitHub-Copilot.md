@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Refactoring Messy Code Instantly with GitHub Copilot"
-description: "This post by Randy Pagels explains how developers can use GitHub Copilot to efficiently refactor messy legacy code. It provides practical steps, a clear example, and highlights the workflow improvements Copilot brings to code refactoring."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Refactoring Messy Code Instantly with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-06-20 00:00:00 +00:00
-permalink: "/2025-06-20-Refactoring-Messy-Code-Instantly-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Automation", "Blogs", "Clean Code", "Code Quality", "Code Refactoring", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Software Engineering", "Workflow Optimization"]
-tags_normalized: ["ai", "ai assisted coding", "automation", "blogs", "clean code", "code quality", "code refactoring", "copilot chat", "developer productivity", "github copilot", "software engineering", "workflow optimization"]
+permalink: /github-copilot/blogs/Refactoring-Messy-Code-Instantly-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Coding
+- Automation
+- Blogs
+- Clean Code
+- Code Quality
+- Code Refactoring
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- Software Engineering
+- Workflow Optimization
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels demonstrates how GitHub Copilot can transform messy legacy code into clean, maintainable solutions in seconds. This guide walks you through using Copilot Chat for quick and efficient code refactoring.<!--excerpt_end-->
 
 # Refactoring Messy Code Instantly with GitHub Copilot

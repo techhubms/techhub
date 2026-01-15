@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Bolster Your Data Security in the AI Era with Microsoft and Netskope"
-description: "This session from Microsoft Ignite 2025 explores how organizations can enhance data security and regulatory compliance using Microsoft Purview and Netskope. The presentation demonstrates end-to-end data discovery, classification, and policy enforcement across endpoints, SaaS, IaaS, and network traffic. It highlights deeply integrated security controls and the administrator/user experiences enabled by Microsoft and Netskope collaborations, focusing on consistent security and compliance outcomes. Attendees will better understand unified cloud security architectures and Microsoft Purview's place in enterprise solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ogDdTHhDZSE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Bolster Your Data Security in the AI Era with Microsoft and Netskope
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ogDdTHhDZSE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:39:18 +00:00
-permalink: "/2025-11-19-Bolster-Your-Data-Security-in-the-AI-Era-with-Microsoft-and-Netskope.html"
-categories: ["Security"]
-tags: ["Cloud Security", "Data Classification", "Data Discovery", "Data Security", "IaaS", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Netskope", "Network Security", "Policy Enforcement", "Regulatory Compliance", "SaaS Security", "Secureyourdata", "Security", "Security Integration", "SSE", "Unified Security", "Videos"]
-tags_normalized: ["cloud security", "data classification", "data discovery", "data security", "iaas", "microsoft ignite", "microsoft purview", "msignite", "netskope", "network security", "policy enforcement", "regulatory compliance", "saas security", "secureyourdata", "security", "security integration", "sse", "unified security", "videos"]
+permalink: /security/videos/Bolster-Your-Data-Security-in-the-AI-Era-with-Microsoft-and-Netskope
+tags:
+- Cloud Security
+- Data Classification
+- Data Discovery
+- Data Security
+- IaaS
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Netskope
+- Network Security
+- Policy Enforcement
+- Regulatory Compliance
+- SaaS Security
+- Secureyourdata
+- Security
+- Security Integration
+- SSE
+- Unified Security
+- Videos
+section_names:
+- security
 ---
-
 Microsoft Events hosts a session led by Ankur Chadda at Ignite 2025, demonstrating how to align enterprise data security and regulatory compliance in the AI era using Microsoft Purview and Netskope integrations.<!--excerpt_end-->
 
 {% youtube ogDdTHhDZSE %}

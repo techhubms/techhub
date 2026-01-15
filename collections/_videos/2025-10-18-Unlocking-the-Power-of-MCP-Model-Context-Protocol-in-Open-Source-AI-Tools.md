@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools"
-description: "This episode of The GitHub Podcast explores the Model Context Protocol (MCP), its role in open source community collaboration, and the ways MCP advances transparency and productivity in AI tool development. The hosts delve into open standards history, MCP architecture, practical benefits for developers, and highlight innovative open source projects leveraging MCP."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=TjnFXtUDKNg"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=TjnFXtUDKNg
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-18 14:00:52 +00:00
-permalink: "/2025-10-18-Unlocking-the-Power-of-MCP-Model-Context-Protocol-in-Open-Source-AI-Tools.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Tools", "Coding", "Collaboration", "Developer Productivity", "GitHub", "Innovation", "MCP", "Open Source", "Open Standards", "Podcast", "Repositories", "Software Architecture", "TheGitHubPodcast", "Transparency", "Videos"]
-tags_normalized: ["ai", "ai tools", "coding", "collaboration", "developer productivity", "github", "innovation", "mcp", "open source", "open standards", "podcast", "repositories", "software architecture", "thegithubpodcast", "transparency", "videos"]
+permalink: /ai/videos/Unlocking-the-Power-of-MCP-Model-Context-Protocol-in-Open-Source-AI-Tools
+tags:
+- AI
+- AI Tools
+- Coding
+- Collaboration
+- Developer Productivity
+- GitHub
+- Innovation
+- MCP
+- Open Source
+- Open Standards
+- Podcast
+- Repositories
+- Software Architecture
+- TheGitHubPodcast
+- Transparency
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this podcast episode, Cassidy, Abby, and Kedasha from GitHub discuss how the Model Context Protocol (MCP) boosts productivity and transparency in open source AI tools, highlighting key collaborations and projects.<!--excerpt_end-->
 
 {% youtube TjnFXtUDKNg %}

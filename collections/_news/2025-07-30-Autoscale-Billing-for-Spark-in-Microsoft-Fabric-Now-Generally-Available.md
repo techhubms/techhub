@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Autoscale Billing for Spark in Microsoft Fabric Now Generally Available"
-description: "Microsoft Fabric introduces Autoscale Billing for Apache Spark, now in general availability. This serverless billing model allows Spark jobs to run independently of Fabric capacity, offering enhanced flexibility, transparency, and cost efficiency for large-scale data workloads. Organizations can better manage and optimize Spark costs."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Autoscale Billing for Spark in Microsoft Fabric Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-30 10:00:00 +00:00
-permalink: "/2025-07-30-Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark", "Autoscale Billing", "Azure", "Billing Model", "Capacity Management", "Cloud Computing", "Cost Efficiency", "Data Workloads", "General Availability", "Microsoft Fabric", "ML", "News", "Serverless"]
-tags_normalized: ["apache spark", "autoscale billing", "azure", "billing model", "capacity management", "cloud computing", "cost efficiency", "data workloads", "general availability", "microsoft fabric", "ml", "news", "serverless"]
+permalink: /ml/news/Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generally-Available
+tags:
+- Apache Spark
+- Autoscale Billing
+- Azure
+- Billing Model
+- Capacity Management
+- Cloud Computing
+- Cost Efficiency
+- Data Workloads
+- General Availability
+- Microsoft Fabric
+- ML
+- News
+- Serverless
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the general availability of Autoscale Billing for Spark, enabling serverless, cost-effective workload management.<!--excerpt_end-->
 
 ## Autoscale Billing for Spark Now Generally Available in Microsoft Fabric

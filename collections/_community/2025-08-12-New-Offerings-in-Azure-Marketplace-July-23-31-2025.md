@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "New Offerings in Azure Marketplace: July 23-31, 2025"
-description: "A round-up of 201 new solutions and services added to Azure Marketplace between July 23-31, 2025. This community post provides Microsoft consultants and developers with an overview of marketplace offerings spanning AI, security, analytics, monitoring, device management, cloud migrations, backup, and business process automation—all built on the Azure platform or tightly integrated with Azure services."
-author: "Luxmi_Nagaraj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'New Offerings in Azure Marketplace: July 23-31, 2025'
+author: Luxmi_Nagaraj
+canonical_url: https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 13:00:00 +00:00
-permalink: "/2025-08-12-New-Offerings-in-Azure-Marketplace-July-23-31-2025.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Solutions", "Archiving", "Automation", "Azure", "Azure Integration", "Azure Marketplace", "Backup Solutions", "Cloud Migration", "Community", "Compliance", "Data Analytics", "Databricks", "Endpoint Management", "Generative AI", "Governance", "Microsoft Azure", "ML", "Partner Solutions", "Power Platform", "Remote Monitoring", "Security", "Security Platforms", "Workflows"]
-tags_normalized: ["ai", "ai solutions", "archiving", "automation", "azure", "azure integration", "azure marketplace", "backup solutions", "cloud migration", "community", "compliance", "data analytics", "databricks", "endpoint management", "generative ai", "governance", "microsoft azure", "ml", "partner solutions", "power platform", "remote monitoring", "security", "security platforms", "workflows"]
+permalink: /ai/community/New-Offerings-in-Azure-Marketplace-July-23-31-2025
+tags:
+- AI
+- AI Solutions
+- Archiving
+- Automation
+- Azure
+- Azure Integration
+- Azure Marketplace
+- Backup Solutions
+- Cloud Migration
+- Community
+- Compliance
+- Data Analytics
+- Databricks
+- Endpoint Management
+- Generative AI
+- Governance
+- Microsoft Azure
+- ML
+- Partner Solutions
+- Power Platform
+- Remote Monitoring
+- Security
+- Security Platforms
+- Workflows
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Luxmi_Nagaraj summarizes 201 new solutions now available in Azure Marketplace, with highlights spanning AI, analytics, security, backup, and cloud operations for Microsoft Azure practitioners.<!--excerpt_end-->
 
 # New Offerings in Azure Marketplace: July 23-31, 2025

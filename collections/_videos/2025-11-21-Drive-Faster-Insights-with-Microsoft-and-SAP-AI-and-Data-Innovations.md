@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Drive Faster Insights with Microsoft and SAP AI and Data Innovations"
-description: "This Microsoft Ignite 2025 session explores how Microsoft and SAP are integrating AI and cloud technologies to unify enterprise data for analytics and automation. Presenters demonstrate evolving data strategies, show how SAP Business AI and Microsoft Copilot simplify workflows, and highlight live demos on aggregating insights and automation by merging SAP and Microsoft 365 environments—all using advanced integrations on Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QfQWsFaY8G8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Drive Faster Insights with Microsoft and SAP AI and Data Innovations
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=QfQWsFaY8G8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:09:54 +00:00
-permalink: "/2025-11-21-Drive-Faster-Insights-with-Microsoft-and-SAP-AI-and-Data-Innovations.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Automation", "Azure", "Business AI", "Cloud Integration", "Data Analytics", "Data Strategy", "Data Unification", "Digital Transformation", "Enterprise Data", "Jewel Connector", "LLM Integration", "MCP", "Microsoft 365", "Microsoft Copilot", "Migrateandmodernizeyourestate", "MSIgnite", "SAP", "Videos"]
-tags_normalized: ["ai", "automation", "azure", "business ai", "cloud integration", "data analytics", "data strategy", "data unification", "digital transformation", "enterprise data", "jewel connector", "llm integration", "mcp", "microsoft 365", "microsoft copilot", "migrateandmodernizeyourestate", "msignite", "sap", "videos"]
+permalink: /ai/videos/Drive-Faster-Insights-with-Microsoft-and-SAP-AI-and-Data-Innovations
+tags:
+- AI
+- Automation
+- Azure
+- Business AI
+- Cloud Integration
+- Data Analytics
+- Data Strategy
+- Data Unification
+- Digital Transformation
+- Enterprise Data
+- Jewel Connector
+- LLM Integration
+- MCP
+- Microsoft 365
+- Microsoft Copilot
+- Migrateandmodernizeyourestate
+- MSIgnite
+- SAP
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents how SAP and Microsoft jointly leverage AI, cloud, and data innovation to power analytics and automation, featuring Robert Hernandez and Nathan Weaver at Ignite 2025.<!--excerpt_end-->
 
 {% youtube QfQWsFaY8G8 %}

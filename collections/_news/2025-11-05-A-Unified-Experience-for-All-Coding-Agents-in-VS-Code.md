@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "A Unified Experience for All Coding Agents in VS Code"
-description: "This article by Burke Holland outlines the evolution of coding agents within Visual Studio Code as of 2025, highlighting the integrations of GitHub Copilot, Copilot coding agent, Copilot CLI, OpenAI Codex, and Anthropic Claude. It introduces 'Agent Sessions,' a new VS Code feature for orchestrating multiple coding agents, details on custom agents such as the Plan agent, and innovations such as subagents and context management tools for developers."
-author: "Burke Holland"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/11/03/unified-agent-experience"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: A Unified Experience for All Coding Agents in VS Code
+author: Burke Holland
+canonical_url: https://code.visualstudio.com/blogs/2025/11/03/unified-agent-experience
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-05 00:00:00 +00:00
-permalink: "/2025-11-05-A-Unified-Experience-for-All-Coding-Agents-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Sessions", "AI", "Anthropic Claude", "Code Orchestration", "Coding", "Coding Agents", "Context Engineering", "Copilot CLI", "Custom Agents", "Developers", "GitHub Copilot", "Model Integration", "News", "OpenAI Codex", "Plan Agent", "Pro+ Subscription", "Prompt Engineering", "Subagents", "VS Code"]
-tags_normalized: ["agent sessions", "ai", "anthropic claude", "code orchestration", "coding", "coding agents", "context engineering", "copilot cli", "custom agents", "developers", "github copilot", "model integration", "news", "openai codex", "plan agent", "proplus subscription", "prompt engineering", "subagents", "vs code"]
+permalink: /github-copilot/news/A-Unified-Experience-for-All-Coding-Agents-in-VS-Code
+tags:
+- Agent Sessions
+- AI
+- Anthropic Claude
+- Code Orchestration
+- Coding
+- Coding Agents
+- Context Engineering
+- Copilot CLI
+- Custom Agents
+- Developers
+- GitHub Copilot
+- Model Integration
+- News
+- OpenAI Codex
+- Plan Agent
+- Pro+ Subscription
+- Prompt Engineering
+- Subagents
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Burke Holland discusses the 2025 surge in coding agents within VS Code, including unified orchestration for GitHub Copilot, OpenAI Codex, and custom agents, offering developers more flexibility and control.<!--excerpt_end-->
 
 # A Unified Experience for All Coding Agents in VS Code

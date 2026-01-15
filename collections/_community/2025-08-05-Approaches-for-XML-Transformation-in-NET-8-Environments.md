@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Approaches for XML Transformation in .NET 8+ Environments"
-description: "The author discusses strategies for handling XML transformations when dealing with evolving XSD schemas in a .NET 8+ context. The article explores XSLT versus code-based transformations, testing concerns, maintainability, and tooling restrictions in an enterprise-like setting requiring support for multiple schema versions."
-author: "technically_a_user"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mi1ek5/dealing_with_xml_and_transformations/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Approaches for XML Transformation in .NET 8+ Environments
+author: technically_a_user
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mi1ek5/dealing_with_xml_and_transformations/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-05 06:07:55 +00:00
-permalink: "/2025-08-05-Approaches-for-XML-Transformation-in-NET-8-Environments.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8", "Code Based Transformation", "Coding", "Community", "Oxygen", "Schema Evolution", "Test Maintainability", "Unit Testing", "VS Code", "XML", "XSD", "XSLT"]
-tags_normalized: ["dotnet", "dotnet 8", "code based transformation", "coding", "community", "oxygen", "schema evolution", "test maintainability", "unit testing", "vs code", "xml", "xsd", "xslt"]
+permalink: /coding/community/Approaches-for-XML-Transformation-in-NET-8-Environments
+tags:
+- .NET
+- .NET 8
+- Code Based Transformation
+- Coding
+- Community
+- Oxygen
+- Schema Evolution
+- Test Maintainability
+- Unit Testing
+- VS Code
+- XML
+- XSD
+- XSLT
+section_names:
+- coding
 ---
-
 Authored by technically_a_user, this article delves into practical methods for transforming XML in .NET 8+ systems, comparing XSLT and code-based approaches.<!--excerpt_end-->
 
 ## Approaches for XML Transformation in .NET 8+ Environments

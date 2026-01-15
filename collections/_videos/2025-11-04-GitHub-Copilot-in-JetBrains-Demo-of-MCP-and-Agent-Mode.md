@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Copilot in JetBrains: Demo of MCP and Agent Mode"
-description: "This video provides a walkthrough of the latest GitHub Copilot features available in JetBrains IDEs, focusing on integration with the Model Context Protocol (MCP). It covers new agent mode functionality for autonomous issue handling, details on MCP sampling and prompts for workflow enhancement, and demonstrates MCP elicitation for structured dialogue. Viewers will learn how these tools can streamline various phases of software development—from planning and requirement gathering to troubleshooting within the coding environment."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2GMKFbldb9c"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'GitHub Copilot in JetBrains: Demo of MCP and Agent Mode'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=2GMKFbldb9c
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-04 22:41:29 +00:00
-permalink: "/2025-11-04-GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Autonomous Issue Management", "Code Planning", "Coding", "Coding Assistant", "Developer Tools", "GitHub", "GitHub Copilot", "IDE Integration", "JetBrains", "MCP", "MCP Elicitation", "Programming Workflow", "Software Development", "Videos", "Workflow Automation"]
-tags_normalized: ["agent mode", "ai", "autonomous issue management", "code planning", "coding", "coding assistant", "developer tools", "github", "github copilot", "ide integration", "jetbrains", "mcp", "mcp elicitation", "programming workflow", "software development", "videos", "workflow automation"]
+permalink: /github-copilot/videos/GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode
+tags:
+- Agent Mode
+- AI
+- Autonomous Issue Management
+- Code Planning
+- Coding
+- Coding Assistant
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- IDE Integration
+- JetBrains
+- MCP
+- MCP Elicitation
+- Programming Workflow
+- Software Development
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub showcases the enhanced GitHub Copilot integration in JetBrains IDEs, highlighting Model Context Protocol features such as agent mode, prompts, and elicitation for developers seeking improved coding workflows.<!--excerpt_end-->
 
 {% youtube 2GMKFbldb9c %}

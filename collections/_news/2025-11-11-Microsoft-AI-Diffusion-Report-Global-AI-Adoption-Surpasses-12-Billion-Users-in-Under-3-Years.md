@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft AI Diffusion Report: Global AI Adoption Surpasses 1.2 Billion Users in Under 3 Years"
-description: "This news summary covers findings from Microsoft's inaugural AI Diffusion Report, which analyzes the rapid global adoption of artificial intelligence—reaching over 1.2 billion users in less than three years. The report introduces new indices to help track AI progress and emphasizes efforts needed to ensure equitable access worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft AI Diffusion Report: Global AI Adoption Surpasses 1.2 Billion Users in Under 3 Years'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-11 18:10:45 +00:00
-permalink: "/2025-11-11-Microsoft-AI-Diffusion-Report-Global-AI-Adoption-Surpasses-12-Billion-Users-in-Under-3-Years.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Diffusion Report", "AI Infrastructure", "AI Policy", "Company News", "Connectivity", "Digital Access", "General Purpose Technology", "Global Technology Trends", "Infrastructure", "Microsoft", "News", "Skills Development", "Technology Adoption"]
-tags_normalized: ["ai", "ai adoption", "ai diffusion report", "ai infrastructure", "ai policy", "company news", "connectivity", "digital access", "general purpose technology", "global technology trends", "infrastructure", "microsoft", "news", "skills development", "technology adoption"]
+permalink: /ai/news/Microsoft-AI-Diffusion-Report-Global-AI-Adoption-Surpasses-12-Billion-Users-in-Under-3-Years
+tags:
+- AI
+- AI Adoption
+- AI Diffusion Report
+- AI Infrastructure
+- AI Policy
+- Company News
+- Connectivity
+- Digital Access
+- General Purpose Technology
+- Global Technology Trends
+- Infrastructure
+- Microsoft
+- News
+- Skills Development
+- Technology Adoption
+section_names:
+- ai
 ---
-
 stclarke summarizes key insights from Microsoft's AI Diffusion Report, which analyzes how artificial intelligence tools have reached more than 1.2 billion users in under three years and outlines the challenges and opportunities of global AI adoption.<!--excerpt_end-->
 
 # Microsoft AI Diffusion Report: Global AI Adoption Surpasses 1.2 Billion Users in Under 3 Years

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Build Multi-Agent AI Systems on Azure App Service"
-description: "This article presents a comprehensive guide to building multi-agent AI systems for fashion e-commerce using Azure App Service. It covers the integration of Azure AI Foundry agents, Model Context Protocol (MCP), OpenAPI tools, .NET Aspire for development and observability, and leverages the Premium v4 App Service tier for performance. Practical implementation strategies, incremental enhancement patterns, and references for getting started are included."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build Multi-Agent AI Systems on Azure App Service
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-05 16:37:30 +00:00
-permalink: "/2025-09-05-Build-Multi-Agent-AI-Systems-on-Azure-App-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET Aspire", "Agent Orchestration", "AI", "App Deployment", "App Monitoring", "Azure", "Azure AI Foundry", "Azure App Service", "Cloud Native", "Coding", "Community", "Connected Agents", "E Commerce", "MCP", "Multi Agent Systems", "Observability", "OpenAPI Tools", "Premium V4", "Python"]
-tags_normalized: ["dotnet aspire", "agent orchestration", "ai", "app deployment", "app monitoring", "azure", "azure ai foundry", "azure app service", "cloud native", "coding", "community", "connected agents", "e commerce", "mcp", "multi agent systems", "observability", "openapi tools", "premium v4", "python"]
+permalink: /ai/community/Build-Multi-Agent-AI-Systems-on-Azure-App-Service
+tags:
+- .NET Aspire
+- Agent Orchestration
+- AI
+- App Deployment
+- App Monitoring
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Cloud Native
+- Coding
+- Community
+- Connected Agents
+- E Commerce
+- MCP
+- Multi Agent Systems
+- Observability
+- OpenAPI Tools
+- Premium V4
+- Python
+section_names:
+- ai
+- azure
+- coding
 ---
-
 jordanselig illustrates how to build sophisticated multi-agent AI applications on Azure App Service, combining Azure AI Foundry, .NET Aspire, and MCP tooling for a cloud-native, scalable, and observable solution.<!--excerpt_end-->
 
 # Build Multi-Agent AI Systems on Azure App Service

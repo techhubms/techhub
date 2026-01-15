@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Update - 6th June 2025"
-description: "John Savill covers recent Azure updates, including storage, database enhancements, AI network RBAC changes, and security mapping with CrowdStrike. Resources for Azure learning are provided."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OhmtV7-djMk"
-categories: ["AI", "Azure", "Security", "ML"]
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 6th June 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=OhmtV7-djMk
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-06 14:35:12 +00:00
-permalink: "/2025-06-06-Azure-Update-6th-June-2025.html"
-viewing_mode: "internal"
-tags: ["AI", "AI Managed Network", "ASR Premium SSD", "Azure", "Azure Files NFS", "Azure Migrate", "Azure Storage Mover", "Cloud", "CrowdStrike", "Fabric Data Factory", "Johnsavillstechnicaltraining", "Microsoft", "ML", "MySQL", "Onboard to Azure", "Pg Cron Extension", "PostgreSQL Flexible Server", "Quota Groups", "RBAC", "Security", "SMB To Blob", "Videos"]
-tags_normalized: ["ai", "ai managed network", "asr premium ssd", "azure", "azure files nfs", "azure migrate", "azure storage mover", "cloud", "crowdstrike", "fabric data factory", "johnsavillstechnicaltraining", "microsoft", "ml", "mysql", "onboard to azure", "pg cron extension", "postgresql flexible server", "quota groups", "rbac", "security", "smb to blob", "videos"]
+permalink: /ai/videos/Azure-Update-6th-June-2025
+viewing_mode: internal
+tags:
+- AI
+- AI Managed Network
+- ASR Premium SSD
+- Azure
+- Azure Files NFS
+- Azure Migrate
+- Azure Storage Mover
+- Cloud
+- CrowdStrike
+- Fabric Data Factory
+- Johnsavillstechnicaltraining
+- Microsoft
+- ML
+- MySQL
+- Onboard to Azure
+- Pg Cron Extension
+- PostgreSQL Flexible Server
+- Quota Groups
+- RBAC
+- Security
+- SMB To Blob
+- Videos
+section_names:
+- ai
+- azure
+- security
+- ml
 ---
-
 In this week's update, John Savill's Technical Training explores the latest Microsoft Azure changes, from Azure Files NFS support and database upgrades to an AI managed network RBAC enhancement and CrowdStrike-mapped threat actor naming. John points viewers to a rich set of Azure learning resources, recommends alternative venues for support, and provides a structured summary of the major technical topics discussed. The article is a helpful reference for cloud practitioners interested in staying current with weekly Azure developments.<!--excerpt_end-->
 
 {% youtube OhmtV7-djMk %}

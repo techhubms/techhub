@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to find the right MCP server in seconds with GitHub MCP registry"
-description: "This video introduces the GitHub MCP Registry, a new resource for discovering and enabling open interoperability between AI agents and a variety of development tools. Viewers will learn how to quickly locate MCP servers using the registry, making it easier to integrate tools like Figma, Postman, and Terraform with their AI workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/A2ERvKTml98"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to find the right MCP server in seconds with GitHub MCP registry
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/A2ERvKTml98
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-29 19:11:52 +00:00
-permalink: "/2025-09-29-How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Automation", "Developer Tools", "DevOps", "Figma", "GitHub", "Interoperability", "MCP", "MCP Registry", "MCPRegistry", "Open Source", "Postman", "Registry", "Terraform", "Tool Integration", "Videos", "Workflows"]
-tags_normalized: ["ai", "ai agents", "automation", "developer tools", "devops", "figma", "github", "interoperability", "mcp", "mcp registry", "mcpregistry", "open source", "postman", "registry", "terraform", "tool integration", "videos", "workflows"]
+permalink: /ai/videos/How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry
+tags:
+- AI
+- AI Agents
+- Automation
+- Developer Tools
+- DevOps
+- Figma
+- GitHub
+- Interoperability
+- MCP
+- MCP Registry
+- MCPRegistry
+- Open Source
+- Postman
+- Registry
+- Terraform
+- Tool Integration
+- Videos
+- Workflows
+section_names:
+- ai
+- devops
 ---
-
 GitHub presents the MCP Registry as a streamlined way for developers to find compatible MCP servers quickly. In this video, GitHub demonstrates how this tool can enhance AI agent interoperability with platforms like Figma and Postman.<!--excerpt_end-->
 
 {% youtube A2ERvKTml98 %}

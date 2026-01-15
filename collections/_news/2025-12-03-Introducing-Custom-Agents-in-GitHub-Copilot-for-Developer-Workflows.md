@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Introducing Custom Agents in GitHub Copilot for Developer Workflows"
-description: "This article presents GitHub Copilot’s new custom agents, which let development teams automate, debug, and secure engineering workflows across terminals, editors, and GitHub.com using partner-built and user-defined agents. It covers agent functionality, integration points, practical examples, and partnering companies. Guidance is provided on using and creating custom agents for observability, infrastructure-as-code, security, and more."
-author: "Griffin Ashe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Introducing Custom Agents in GitHub Copilot for Developer Workflows
+author: Griffin Ashe
+canonical_url: https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-03 17:00:45 +00:00
-permalink: "/2025-12-03-Introducing-Custom-Agents-in-GitHub-Copilot-for-Developer-Workflows.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic AI", "AI", "AI & ML", "API Integration", "Automation", "CI/CD", "Coding", "Custom Agents", "Database Migrations", "DevOps", "DevOps Workflows", "Generative AI", "GitHub Copilot", "IaC", "Incident Response", "JFrog Security", "News", "News & Insights", "Observability", "PagerDuty", "Product", "Security", "Security Automation", "Terraform", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "ai and ml", "api integration", "automation", "cislashcd", "coding", "custom agents", "database migrations", "devops", "devops workflows", "generative ai", "github copilot", "iac", "incident response", "jfrog security", "news", "news and insights", "observability", "pagerduty", "product", "security", "security automation", "terraform", "vs code"]
+permalink: /github-copilot/news/Introducing-Custom-Agents-in-GitHub-Copilot-for-Developer-Workflows
+tags:
+- Agentic AI
+- AI
+- AI & ML
+- API Integration
+- Automation
+- CI/CD
+- Coding
+- Custom Agents
+- Database Migrations
+- DevOps
+- DevOps Workflows
+- Generative AI
+- GitHub Copilot
+- IaC
+- Incident Response
+- JFrog Security
+- News
+- News & Insights
+- Observability
+- PagerDuty
+- Product
+- Security
+- Security Automation
+- Terraform
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Griffin Ashe introduces GitHub Copilot’s partner-built and custom agents, describing how these AI-powered tools help developers automate, secure, and optimize workflows across observability, infrastructure, and security domains.<!--excerpt_end-->
 
 # Introducing Custom Agents in GitHub Copilot for Developer Workflows
@@ -38,7 +64,7 @@ Agents are easy to set up. Simply add a `.md` agent file to your repository or o
 ```markdown
 ---
 name: readme-specialist
-description: Expert at creating and maintaining high-quality README documentation
+
 ---
 You are a documentation specialist focused on README files... [truncated for brevity]
 ```

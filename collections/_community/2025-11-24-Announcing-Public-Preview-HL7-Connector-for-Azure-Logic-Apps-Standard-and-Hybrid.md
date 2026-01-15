@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)"
-description: "This announcement introduces the HL7 connector for Azure Logic Apps (Standard and Hybrid), now in Public Preview. The connector allows healthcare organizations to automate and streamline clinical application integration and data exchange using HL7 protocols, leveraging features like native HL7 parsing, publisher/subscriber patterns, and support for hybrid deployments. Technical highlights include support for HL7 v2.X schemas, schema management via Integration accounts, custom message handling actions (Encode/Decode), and MLLP adapter for hybrid scenarios."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)'
+author: hcamposu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-24 12:13:17 +00:00
-permalink: "/2025-11-24-Announcing-Public-Preview-HL7-Connector-for-Azure-Logic-Apps-Standard-and-Hybrid.html"
-categories: ["Azure"]
-tags: ["Automated Data Exchange", "Azure", "Azure Integration Services", "Azure Logic Apps", "BizTalk Migration", "Clinical Data Exchange", "Community", "Healthcare Integration", "HL7", "HL7 Connector", "Hybrid Deployment", "Integration Account", "Message Orchestration", "MLLP Adapter", "Schema Management", "Standard Workflow"]
-tags_normalized: ["automated data exchange", "azure", "azure integration services", "azure logic apps", "biztalk migration", "clinical data exchange", "community", "healthcare integration", "hl7", "hl7 connector", "hybrid deployment", "integration account", "message orchestration", "mllp adapter", "schema management", "standard workflow"]
+permalink: /azure/community/Announcing-Public-Preview-HL7-Connector-for-Azure-Logic-Apps-Standard-and-Hybrid
+tags:
+- Automated Data Exchange
+- Azure
+- Azure Integration Services
+- Azure Logic Apps
+- BizTalk Migration
+- Clinical Data Exchange
+- Community
+- Healthcare Integration
+- HL7
+- HL7 Connector
+- Hybrid Deployment
+- Integration Account
+- Message Orchestration
+- MLLP Adapter
+- Schema Management
+- Standard Workflow
+section_names:
+- azure
 ---
-
 hcamposu announces the public preview of the HL7 connector for Azure Logic Apps, highlighting seamless clinical application integration and robust data exchange capabilities for healthcare organizations.<!--excerpt_end-->
 
 # Announcing the HL7 Connector for Azure Logic Apps (Standard and Hybrid) – Public Preview

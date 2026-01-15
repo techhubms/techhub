@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "The New Identity of a Developer in the AI Era"
-description: "This article presents insights from research and developer interviews about how the integration of AI tools, agents, and automation is redefining the role of software developers. By examining adoption trends, skills shifts, and tool usage, particularly with GitHub Copilot, the article explores how developers are transitioning from code producers to orchestrators, focusing on delegation, verification, and strategic guidance in modern workflows."
-author: "Eirini Kalliamvakou"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: The New Identity of a Developer in the AI Era
+author: Eirini Kalliamvakou
+canonical_url: https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-08 18:15:17 +00:00
-permalink: "/2025-12-08-The-New-Identity-of-a-Developer-in-the-AI-Era.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflow", "AI", "AI Adoption", "AI Assisted Development", "AI Fluency", "AI Strategy", "Architecture", "Coding", "Delegation", "Developer Experience", "Developer Tools", "Developer Workflow", "GitHub Copilot", "IDE Integration", "News", "News & Insights", "Octoverse", "Quality Control", "Software Engineering", "TypeScript", "Verification"]
-tags_normalized: ["agentic workflow", "ai", "ai adoption", "ai assisted development", "ai fluency", "ai strategy", "architecture", "coding", "delegation", "developer experience", "developer tools", "developer workflow", "github copilot", "ide integration", "news", "news and insights", "octoverse", "quality control", "software engineering", "typescript", "verification"]
+permalink: /github-copilot/news/The-New-Identity-of-a-Developer-in-the-AI-Era
+tags:
+- Agentic Workflow
+- AI
+- AI Adoption
+- AI Assisted Development
+- AI Fluency
+- AI Strategy
+- Architecture
+- Coding
+- Delegation
+- Developer Experience
+- Developer Tools
+- Developer Workflow
+- GitHub Copilot
+- IDE Integration
+- News
+- News & Insights
+- Octoverse
+- Quality Control
+- Software Engineering
+- TypeScript
+- Verification
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Eirini Kalliamvakou investigates how the rise of AI, especially GitHub Copilot, is shifting developers' roles from code producers to creative directors, emphasizing strategic delegation and verification.<!--excerpt_end-->
 
 # The New Identity of a Developer in the AI Era

@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows"
-description: "This episode of Cozy Kitchen dives deep into building intelligent software engineering agents leveraging Azure AI Foundry, GitHub, SpecKit, and reinforcement learning. Chef Govind Kamtamneni and host John Maeda guide developers through customizable AI templates, orchestration of multi-agent workflows, self-hosting, integration with GitHub, fine-tuning models using Hugging Face datasets, and math-driven AI development principles. The content is ideal for those seeking both foundational and advanced guidance on AI-native software engineering practices and workflows with a practical focus on Microsoft AI platforms and DevOps."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vsfbYJF2las"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=vsfbYJF2las
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 18:19:47 +00:00
-permalink: "/2025-11-04-From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
-tags: ["Agent Orchestration", "AI", "AI Engineering", "Azure", "Azure AI Foundry", "Azure Machine Learning", "Cloud Computing", "Coding", "Dev", "Development", "DevOps", "DevOps Workflows", "GitHub", "GitHub Integration", "Hugging Face", "Math For AI", "Microsoft", "ML", "Model Fine Tuning", "Multi Agent Systems", "Preference Optimization", "Reinforcement Learning", "Self Hosting AI", "Software Engineering Agents", "SpecKit", "SWE Agents", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent orchestration", "ai", "ai engineering", "azure", "azure ai foundry", "azure machine learning", "cloud computing", "coding", "dev", "development", "devops", "devops workflows", "github", "github integration", "hugging face", "math for ai", "microsoft", "ml", "model fine tuning", "multi agent systems", "preference optimization", "reinforcement learning", "self hosting ai", "software engineering agents", "speckit", "swe agents", "tech", "technology", "videos"]
+permalink: /ai/videos/From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows
+tags:
+- Agent Orchestration
+- AI
+- AI Engineering
+- Azure
+- Azure AI Foundry
+- Azure Machine Learning
+- Cloud Computing
+- Coding
+- Dev
+- Development
+- DevOps
+- DevOps Workflows
+- GitHub
+- GitHub Integration
+- Hugging Face
+- Math For AI
+- Microsoft
+- ML
+- Model Fine Tuning
+- Multi Agent Systems
+- Preference Optimization
+- Reinforcement Learning
+- Self Hosting AI
+- Software Engineering Agents
+- SpecKit
+- SWE Agents
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
 ---
-
 Microsoft Developer's Cozy Kitchen episode features Chef Govind Kamtamneni explaining how to build, customize, and fine-tune AI-driven software engineering agents using Azure AI Foundry, SpecKit, and practical math-first principles.<!--excerpt_end-->
 
 {% youtube vsfbYJF2las %}

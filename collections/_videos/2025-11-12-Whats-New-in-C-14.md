@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "What's New in C# 14"
-description: "This session features the C# design team unveiling new features introduced in C# 14 and previews of future plans. The discussion covers language enhancements that streamline code, support for advanced programming patterns, and ways to write more productive and expressive C# code. Designers share insights on feature design and real-world application, providing actionable knowledge for developers interested in leveraging the latest capabilities in C#. The session also highlights related .NET technologies and community resources."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xy-HzFp0pbA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: What's New in C# 14
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=xy-HzFp0pbA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:29 +00:00
-permalink: "/2025-11-12-Whats-New-in-C-14.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "ASP.NET Core 10", "C#", "C# 14", "Coding", "Coding Patterns", "Developer Productivity", "F# 10", "Language Design", "Language Features", "Microsoft", "Programming Languages", "Software Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "aspdotnet core 10", "csharp", "csharp 14", "coding", "coding patterns", "developer productivity", "fsharp 10", "language design", "language features", "microsoft", "programming languages", "software development", "videos", "vs"]
+permalink: /coding/videos/Whats-New-in-C-14
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- ASP.NET Core 10
+- C#
+- C# 14
+- Coding
+- Coding Patterns
+- Developer Productivity
+- F# 10
+- Language Design
+- Language Features
+- Microsoft
+- Programming Languages
+- Software Development
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 dotnet showcases the newest features of C# 14, detailing language improvements, productivity enhancements, and design insights directly from the core C# team.<!--excerpt_end-->
 
 {% youtube xy-HzFp0pbA %}

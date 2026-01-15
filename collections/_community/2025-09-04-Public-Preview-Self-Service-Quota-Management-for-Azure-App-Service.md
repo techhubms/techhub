@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Public Preview: Self-Service Quota Management for Azure App Service"
-description: "This post introduces the public preview of a self-service quota management experience for Azure App Service within the Azure portal. The new feature provides a dedicated interface to view, adjust, and manage quota limits for App Service plans, including automation for many requests and guidance for handling exceptions. Developers and IT admins gain more control for optimizing performance and avoiding disruptions."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: Self-Service Quota Management for Azure App Service'
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-04 21:49:24 +00:00
-permalink: "/2025-09-04-Public-Preview-Self-Service-Quota-Management-for-Azure-App-Service.html"
-categories: ["Azure"]
-tags: ["App Service Plans", "Azure", "Azure App Service", "Azure Portal", "Capacity Management", "Cloud Platforms", "Community", "Deployment", "Portal Experience", "Public Preview", "Quota Management", "Resource Management", "Scaling", "Self Service", "Support Tickets", "VM SKUs"]
-tags_normalized: ["app service plans", "azure", "azure app service", "azure portal", "capacity management", "cloud platforms", "community", "deployment", "portal experience", "public preview", "quota management", "resource management", "scaling", "self service", "support tickets", "vm skus"]
+permalink: /azure/community/Public-Preview-Self-Service-Quota-Management-for-Azure-App-Service
+tags:
+- App Service Plans
+- Azure
+- Azure App Service
+- Azure Portal
+- Capacity Management
+- Cloud Platforms
+- Community
+- Deployment
+- Portal Experience
+- Public Preview
+- Quota Management
+- Resource Management
+- Scaling
+- Self Service
+- Support Tickets
+- VM SKUs
+section_names:
+- azure
 ---
-
 jordanselig details the new self-service quota management experience for Azure App Service, helping developers and IT admins proactively manage resource limits via an updated portal interface.<!--excerpt_end-->
 
 # Public Preview: Self-Service Quota Management for Azure App Service

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More"
-description: "This news article highlights the upcoming GitHub Universe 2025 event in San Francisco, detailing opportunities to learn about the latest GitHub developer tools, participate in community-powered spaces, connect with experts, and get hands-on with coding through workshops and innovative sessions, including demos on GitHub Copilot, Actions, Advanced Security, and more."
-author: "Jeimy Ruiz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More'
+author: Jeimy Ruiz
+canonical_url: https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-21 18:02:34 +00:00
-permalink: "/2025-08-21-Explore-GitHub-Universe-2025-Dev-Tools-Community-Spaces-and-More.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Career Coaching", "Cloud Development", "Coding", "Community Event", "Company News", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Advanced Security", "GitHub Copilot", "GitHub Learn", "GitHub Universe", "Hackable Badges", "Live Sessions", "News", "News & Insights", "Open Source", "Programming", "Technical Demos", "Workshops"]
-tags_normalized: ["ai", "career coaching", "cloud development", "coding", "community event", "company news", "developer tools", "devops", "github actions", "github advanced security", "github copilot", "github learn", "github universe", "hackable badges", "live sessions", "news", "news and insights", "open source", "programming", "technical demos", "workshops"]
+permalink: /github-copilot/news/Explore-GitHub-Universe-2025-Dev-Tools-Community-Spaces-and-More
+tags:
+- AI
+- Career Coaching
+- Cloud Development
+- Coding
+- Community Event
+- Company News
+- Developer Tools
+- DevOps
+- GitHub Actions
+- GitHub Advanced Security
+- GitHub Copilot
+- GitHub Learn
+- GitHub Universe
+- Hackable Badges
+- Live Sessions
+- News
+- News & Insights
+- Open Source
+- Programming
+- Technical Demos
+- Workshops
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Jeimy Ruiz reports on GitHub Universe 2025, an in-person developer event offering attendees the chance to discover new GitHub tools, get expert advice, join creative coding activities, and learn more about GitHub Copilot and other innovations.<!--excerpt_end-->
 
 # Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More

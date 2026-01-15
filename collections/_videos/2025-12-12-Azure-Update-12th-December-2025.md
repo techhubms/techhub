@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Update - 12th December 2025"
-description: "This weekly update by John Savill's Technical Training covers new announcements and changes in Microsoft Azure, including service retirements, compliance enhancements, and the latest product releases. Topics range from Azure Batch outbound retirement, App Gateway FIPS compliance, Azure Files Premium LRS zonal improvements, to Azure Databricks Dashboard Teams support, Azure Sphere OS updates, and GPT version details. Links to further learning and certification resources are included."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tYKS34Wgf1w"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 12th December 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=tYKS34Wgf1w
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-12 16:06:57 +00:00
-permalink: "/2025-12-12-Azure-Update-12th-December-2025.html"
-categories: ["Azure"]
-tags: ["App Gateway", "Azure", "Azure Batch", "Azure Cloud", "Azure Databricks", "Azure Files Premium", "Azure Sphere OS", "Certification", "Cloud", "Cloud Updates", "Dashboard Teams", "FIPS Compliance", "GPT 5.2", "Learning Path", "LRS Zonal", "Microsoft", "Microsoft Azure", "PowerShell", "Service Retirement", "Technical Training", "Videos"]
-tags_normalized: ["app gateway", "azure", "azure batch", "azure cloud", "azure databricks", "azure files premium", "azure sphere os", "certification", "cloud", "cloud updates", "dashboard teams", "fips compliance", "gpt 5dot2", "learning path", "lrs zonal", "microsoft", "microsoft azure", "powershell", "service retirement", "technical training", "videos"]
+permalink: /azure/videos/Azure-Update-12th-December-2025
+tags:
+- App Gateway
+- Azure
+- Azure Batch
+- Azure Cloud
+- Azure Databricks
+- Azure Files Premium
+- Azure Sphere OS
+- Certification
+- Cloud
+- Cloud Updates
+- Dashboard Teams
+- FIPS Compliance
+- GPT 5.2
+- Learning Path
+- LRS Zonal
+- Microsoft
+- Microsoft Azure
+- PowerShell
+- Service Retirement
+- Technical Training
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training delivers the Azure Update for December 12, 2025, highlighting recent news, service changes, and new technical developments within Microsoft Azure.<!--excerpt_end-->
 
 {% youtube tYKS34Wgf1w %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "An Introduction to the New GitHub Copilot CLI"
-description: "This video introduces the GitHub Copilot CLI, a command-line companion for developers using Linux, macOS, and Windows (via WSL). It highlights the tool’s ability to enhance productivity directly from the terminal and notes its extensibility with custom MCP servers."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/rx_e9RDL1c8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: An Introduction to the New GitHub Copilot CLI
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/rx_e9RDL1c8
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-09 14:01:23 +00:00
-permalink: "/2025-10-09-An-Introduction-to-the-New-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "CLI Tools", "Command Line", "Copilot CLI", "Developer Tools", "GitHub Copilot", "GithubCopilotCLI", "Linux", "Macos", "MCP Servers", "Terminal", "Videos", "Windows", "WSL"]
-tags_normalized: ["ai", "ai assisted coding", "cli tools", "command line", "copilot cli", "developer tools", "github copilot", "githubcopilotcli", "linux", "macos", "mcp servers", "terminal", "videos", "windows", "wsl"]
+permalink: /github-copilot/videos/An-Introduction-to-the-New-GitHub-Copilot-CLI
+tags:
+- AI
+- AI Assisted Coding
+- CLI Tools
+- Command Line
+- Copilot CLI
+- Developer Tools
+- GitHub Copilot
+- GithubCopilotCLI
+- Linux
+- Macos
+- MCP Servers
+- Terminal
+- Videos
+- Windows
+- WSL
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents the new Copilot CLI, offering developers an AI-powered coding assistant for the command line. Authored by GitHub, this introduction covers platform compatibility and extensibility features.<!--excerpt_end-->
 
 {% youtube rx_e9RDL1c8 %}

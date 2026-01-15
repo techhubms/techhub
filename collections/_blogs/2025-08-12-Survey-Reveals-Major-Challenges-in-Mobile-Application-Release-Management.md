@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Survey Reveals Major Challenges in Mobile Application Release Management"
-description: "A recent survey of 300 mobile engineers highlights persistent inefficiencies in mobile application release management. Engineers report excessive time spent on manual steps, coordination issues, and approval bottlenecks. The findings underscore a pressing need for improved automation, centralized coordination, and streamlined processes—especially as development accelerates in the era of AI and modern DevOps practices."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-multiple-mobile-application-release-management-headaches/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-multiple-mobile-application-release-management-headaches"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals Major Challenges in Mobile Application Release Management
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-multiple-mobile-application-release-management-headaches/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-multiple-mobile-application-release-management-headaches
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-12 16:49:27 +00:00
-permalink: "/2025-08-12-Survey-Reveals-Major-Challenges-in-Mobile-Application-Release-Management.html"
-categories: ["DevOps"]
-tags: ["Asana", "Automation", "Blogs", "CI/CD", "DevOps", "Engineering Productivity", "Incident Management", "Jira", "Mobile Application", "Mobile Application Development", "Process Improvement", "Project Management Tools", "Release Management", "Runway", "SaaS", "Slack", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Survey", "Team Coordination"]
-tags_normalized: ["asana", "automation", "blogs", "cislashcd", "devops", "engineering productivity", "incident management", "jira", "mobile application", "mobile application development", "process improvement", "project management tools", "release management", "runway", "saas", "slack", "social facebook", "social linkedin", "social x", "software delivery", "survey", "team coordination"]
+permalink: /devops/blogs/Survey-Reveals-Major-Challenges-in-Mobile-Application-Release-Management
+tags:
+- Asana
+- Automation
+- Blogs
+- CI/CD
+- DevOps
+- Engineering Productivity
+- Incident Management
+- Jira
+- Mobile Application
+- Mobile Application Development
+- Process Improvement
+- Project Management Tools
+- Release Management
+- Runway
+- SaaS
+- Slack
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+- Survey
+- Team Coordination
+section_names:
+- devops
 ---
-
 Mike Vizard summarizes the results of a survey among mobile engineers, revealing key obstacles in release management processes and emphasizing the urgent need for DevOps-driven improvements.<!--excerpt_end-->
 
 # Survey Reveals Major Challenges in Mobile Application Release Management

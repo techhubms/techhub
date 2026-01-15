@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Databricks and Microsoft Announce Deep Integrations with OneLake, Foundry, and Copilot Studio"
-description: "This session from Microsoft Ignite 2025 features a discussion between Ali Ghodsi (CEO, Databricks) and Scott Guthrie (EVP, Microsoft Cloud and AI). They present new integrations between Azure Databricks and Microsoft OneLake, highlighting unified data access, seamless platform interoperability, and enhanced data governance. Additional topics include enterprise identity/security, the Databricks Unity Catalog, and the integration of SAP Databricks, Copilot Studio, and Foundry for AI-driven innovation within the Microsoft ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5URsKnZOFuM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Databricks and Microsoft Announce Deep Integrations with OneLake, Foundry, and Copilot Studio
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=5URsKnZOFuM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:54:50 +00:00
-permalink: "/2025-11-21-Databricks-and-Microsoft-Announce-Deep-Integrations-with-OneLake-Foundry-and-Copilot-Studio.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agent 365", "AI", "AI Integration", "Azure", "Azure Databricks", "Copilot Studio", "Data Analytics", "Data Governance", "Data Security", "Databricks", "Enterprise Data", "Microsoft 365", "Microsoft Entra ID", "Microsoft Foundry", "Microsoft OneLake", "ML", "MSIgnite", "Other", "SAP On Azure", "Unity Catalog", "Videos"]
-tags_normalized: ["agent 365", "ai", "ai integration", "azure", "azure databricks", "copilot studio", "data analytics", "data governance", "data security", "databricks", "enterprise data", "microsoft 365", "microsoft entra id", "microsoft foundry", "microsoft onelake", "ml", "msignite", "other", "sap on azure", "unity catalog", "videos"]
+permalink: /ai/videos/Databricks-and-Microsoft-Announce-Deep-Integrations-with-OneLake-Foundry-and-Copilot-Studio
+tags:
+- Agent 365
+- AI
+- AI Integration
+- Azure
+- Azure Databricks
+- Copilot Studio
+- Data Analytics
+- Data Governance
+- Data Security
+- Databricks
+- Enterprise Data
+- Microsoft 365
+- Microsoft Entra ID
+- Microsoft Foundry
+- Microsoft OneLake
+- ML
+- MSIgnite
+- Other
+- SAP On Azure
+- Unity Catalog
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents a conversation between Ali Ghodsi and Scott Guthrie at Ignite 2025, showcasing how Azure Databricks, OneLake, Foundry, and Copilot Studio integrations drive unified data, AI innovation, and enterprise-ready security.<!--excerpt_end-->
 
 {% youtube 5URsKnZOFuM %}

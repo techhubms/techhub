@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "VS Code: Background Coding Agents and GitHub Copilot Enhancements"
-description: "This video from the Visual Studio Code team, featuring Brigit Murtaugh, explores recent and upcoming enhancements to working with background coding agents in VS Code. It demonstrates new capabilities and integration details, spotlighting how GitHub Copilot and VS Code empower developers using AI-driven tooling."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5eUbaOGbFpk"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code: Background Coding Agents and GitHub Copilot Enhancements'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=5eUbaOGbFpk
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-30 19:14:54 +00:00
-permalink: "/2025-09-30-VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Background Coding Agents", "Brigit Murtaugh", "Code", "Code Enhancement", "Coding", "Codingagents", "Copilot", "Copilot Coding Agent", "Demo", "Developer", "Developer Community", "Developer Tools", "Extension Development", "GitHub Copilot", "Microsoft", "Productivity", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "background coding agents", "brigit murtaugh", "code", "code enhancement", "coding", "codingagents", "copilot", "copilot coding agent", "demo", "developer", "developer community", "developer tools", "extension development", "github copilot", "microsoft", "productivity", "videos", "vs code"]
+permalink: /github-copilot/videos/VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements
+tags:
+- AI
+- AI Tools
+- Background Coding Agents
+- Brigit Murtaugh
+- Code
+- Code Enhancement
+- Coding
+- Codingagents
+- Copilot
+- Copilot Coding Agent
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Extension Development
+- GitHub Copilot
+- Microsoft
+- Productivity
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Brigit Murtaugh from the Visual Studio Code team discusses the latest background coding agent features and GitHub Copilot enhancements in VS Code, demonstrating practical applications for developers.<!--excerpt_end-->
 
 {% youtube 5eUbaOGbFpk %}

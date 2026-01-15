@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft and Maharashtra Partner on MahaCrimeOS AI to Combat Cybercrime"
-description: "This news post highlights the collaboration between Microsoft and the Maharashtra government, spearheaded by Satya Nadella and Chief Minister Devendra Fadnavis. The core initiative is MahaCrimeOS AI, an Azure- and OpenAI-powered platform aimed at helping victims of cybercrime and financial fraud. Detailed comments emphasize the transformative potential of AI for law enforcement and public safety, industry impact, and operational benefits like improved data standardization and rapid investigation workflows across 1,100 police stations."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft and Maharashtra Partner on MahaCrimeOS AI to Combat Cybercrime
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-12 06:45:00 +00:00
-permalink: "/2025-12-12-Microsoft-and-Maharashtra-Partner-on-MahaCrimeOS-AI-to-Combat-Cybercrime.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Deployment", "AI in Policing", "Azure", "Azure Collaboration", "Company News", "Cybercrime", "Data Standardization", "Devendra Fadnavis", "Digital Governance", "Financial Fraud", "India", "Law Enforcement Technology", "LinkedIn Post", "MahaCrimeOS AI", "Microsoft Azure", "News", "OpenAI", "Public Safety", "Satya Nadella", "Security", "Security Automation"]
-tags_normalized: ["ai", "ai deployment", "ai in policing", "azure", "azure collaboration", "company news", "cybercrime", "data standardization", "devendra fadnavis", "digital governance", "financial fraud", "india", "law enforcement technology", "linkedin post", "mahacrimeos ai", "microsoft azure", "news", "openai", "public safety", "satya nadella", "security", "security automation"]
+permalink: /ai/news/Microsoft-and-Maharashtra-Partner-on-MahaCrimeOS-AI-to-Combat-Cybercrime
+tags:
+- AI
+- AI Deployment
+- AI in Policing
+- Azure
+- Azure Collaboration
+- Company News
+- Cybercrime
+- Data Standardization
+- Devendra Fadnavis
+- Digital Governance
+- Financial Fraud
+- India
+- Law Enforcement Technology
+- LinkedIn Post
+- MahaCrimeOS AI
+- Microsoft Azure
+- News
+- OpenAI
+- Public Safety
+- Satya Nadella
+- Security
+- Security Automation
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke covers how Satya Nadella and Devendra Fadnavis are using Microsoft Azure and OpenAI in the MahaCrimeOS AI platform to aid Maharashtra Police in fighting cybercrime and financial fraud.<!--excerpt_end-->
 
 # Microsoft and Maharashtra Partner on MahaCrimeOS AI to Combat Cybercrime

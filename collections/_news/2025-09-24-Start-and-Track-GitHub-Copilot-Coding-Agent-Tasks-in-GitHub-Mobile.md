@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Start and Track GitHub Copilot Coding Agent Tasks in GitHub Mobile"
-description: "This update details two new features for GitHub Copilot coding agent on GitHub Mobile: initiating new coding tasks directly from your mobile device and easily tracking their progress. Users can now delegate repository tasks to Copilot from anywhere, receive draft pull requests when ready, and monitor active agent tasks in a centralized view. These enhancements aim to improve developer productivity and visibility while working on the go."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Start and Track GitHub Copilot Coding Agent Tasks in GitHub Mobile
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 16:16:48 +00:00
-permalink: "/2025-09-24-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-in-GitHub-Mobile.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Client Apps", "Copilot", "Copilot Coding Agent", "Developer Tools", "GitHub App", "GitHub Copilot", "GitHub Mobile", "Mobile Development", "News", "Pull Requests", "Repository Management", "Software Development", "Task Automation"]
-tags_normalized: ["ai", "client apps", "copilot", "copilot coding agent", "developer tools", "github app", "github copilot", "github mobile", "mobile development", "news", "pull requests", "repository management", "software development", "task automation"]
+permalink: /github-copilot/news/Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-in-GitHub-Mobile
+tags:
+- AI
+- Client Apps
+- Copilot
+- Copilot Coding Agent
+- Developer Tools
+- GitHub App
+- GitHub Copilot
+- GitHub Mobile
+- Mobile Development
+- News
+- Pull Requests
+- Repository Management
+- Software Development
+- Task Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces new capabilities for GitHub Copilot coding agents on GitHub Mobile, allowing developers to start and track background coding tasks directly from their phones.<!--excerpt_end-->
 
 # Start and Track Copilot Coding Agent Tasks in GitHub Mobile

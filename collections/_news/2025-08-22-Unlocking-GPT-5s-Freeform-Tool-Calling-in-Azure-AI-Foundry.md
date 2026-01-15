@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry"
-description: "This article explains how developers can leverage the new GPT-5 models in Azure AI Foundry, focusing on the innovative freeform tool calling feature. It covers use cases, technical setup, and a walkthrough of chaining SQL and Python tool calls, highlighting seamless integration possibilities with Azure OpenAI."
-author: "Ananya Bishnoi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry
+author: Ananya Bishnoi
+canonical_url: https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-08-22 17:29:26 +00:00
-permalink: "/2025-08-22-Unlocking-GPT-5s-Freeform-Tool-Calling-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Key", "Authentication", "Automation", "Azure", "Azure AI Foundry", "Azure OpenAI", "Code Integration", "Coding", "Developer Tools", "Entra ID", "Freeform Tool Calling", "Function Chaining", "GPT 5", "News", "Prompt Engineering", "Python", "SQL", "Tool Calling"]
-tags_normalized: ["ai", "api key", "authentication", "automation", "azure", "azure ai foundry", "azure openai", "code integration", "coding", "developer tools", "entra id", "freeform tool calling", "function chaining", "gpt 5", "news", "prompt engineering", "python", "sql", "tool calling"]
+permalink: /ai/news/Unlocking-GPT-5s-Freeform-Tool-Calling-in-Azure-AI-Foundry
+tags:
+- AI
+- API Key
+- Authentication
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Code Integration
+- Coding
+- Developer Tools
+- Entra ID
+- Freeform Tool Calling
+- Function Chaining
+- GPT 5
+- News
+- Prompt Engineering
+- Python
+- SQL
+- Tool Calling
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Ananya Bishnoi demonstrates how GPT-5’s freeform tool calling in Azure AI Foundry enables developers to chain Python and SQL tools for seamless automation and dynamic workflows.<!--excerpt_end-->
 
 # Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry

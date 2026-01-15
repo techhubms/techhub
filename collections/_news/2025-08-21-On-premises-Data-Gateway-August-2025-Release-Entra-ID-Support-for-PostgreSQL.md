@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL"
-description: "This update covers the August 2025 release of Microsoft's on-premises data gateway (version 3000.282). The major new feature is Microsoft Entra ID authentication support for PostgreSQL connectors, allowing secure connections beyond traditional username and password methods. The release ensures compatibility with Power BI Desktop's August 2025 version and includes updated download links for both standard and personal gateway modes."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 10:00:00 +00:00
-permalink: "/2025-08-21-On-premises-Data-Gateway-August-2025-Release-Entra-ID-Support-for-PostgreSQL.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["August", "Authentication", "Azure", "Connector", "Data Connectivity", "Data Integration", "Data Platform", "Enterprise Data", "Gateway Update", "Identity Management", "Microsoft Entra ID", "ML", "News", "On Premises Data Gateway", "PostgreSQL", "Power BI", "Power BI Desktop", "Security"]
-tags_normalized: ["august", "authentication", "azure", "connector", "data connectivity", "data integration", "data platform", "enterprise data", "gateway update", "identity management", "microsoft entra id", "ml", "news", "on premises data gateway", "postgresql", "power bi", "power bi desktop", "security"]
+permalink: /ml/news/On-premises-Data-Gateway-August-2025-Release-Entra-ID-Support-for-PostgreSQL
+tags:
+- August
+- Authentication
+- Azure
+- Connector
+- Data Connectivity
+- Data Integration
+- Data Platform
+- Enterprise Data
+- Gateway Update
+- Identity Management
+- Microsoft Entra ID
+- ML
+- News
+- On Premises Data Gateway
+- PostgreSQL
+- Power BI
+- Power BI Desktop
+- Security
+section_names:
+- azure
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog shares news about the August 2025 release of the on-premises data gateway. Key highlights include Entra ID authentication support for PostgreSQL and seamless integration with Power BI Desktop's latest version.<!--excerpt_end-->
 
 # On-premises Data Gateway August 2025 Release: New Features and Enhancements

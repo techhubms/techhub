@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding the GitHub Copilot Exam: Blueprint, Skills, and Key Domains"
-description: "This guide by Dellenny breaks down the official GitHub Copilot certification exam blueprint, focusing on the technical and ethical skills measured. It covers all exam domains: responsible AI, Copilot plans and features, data handling, prompt engineering, use cases, testing with Copilot, and privacy fundamentals. It also provides actionable study strategies and tips to help developers prepare for certification and responsibly leverage AI tools in practice."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Understanding the GitHub Copilot Exam: Blueprint, Skills, and Key Domains'
+author: Dellenny
+canonical_url: https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-07 09:41:13 +00:00
-permalink: "/2025-11-07-Understanding-the-GitHub-Copilot-Exam-Blueprint-Skills-and-Key-Domains.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Certification", "Blogs", "Copilot Chat", "Copilot Exam", "Copilot Plans", "Data Handling", "Developer Tools", "GitHub Copilot", "IDE Integration", "Privacy", "Prompt Engineering", "Responsible AI", "Scenario Based Questions", "Software Development", "Testing"]
-tags_normalized: ["ai", "ai certification", "blogs", "copilot chat", "copilot exam", "copilot plans", "data handling", "developer tools", "github copilot", "ide integration", "privacy", "prompt engineering", "responsible ai", "scenario based questions", "software development", "testing"]
+permalink: /github-copilot/blogs/Understanding-the-GitHub-Copilot-Exam-Blueprint-Skills-and-Key-Domains
+tags:
+- AI
+- AI Certification
+- Blogs
+- Copilot Chat
+- Copilot Exam
+- Copilot Plans
+- Data Handling
+- Developer Tools
+- GitHub Copilot
+- IDE Integration
+- Privacy
+- Prompt Engineering
+- Responsible AI
+- Scenario Based Questions
+- Software Development
+- Testing
+section_names:
+- ai
+- github-copilot
 ---
-
 Dellenny offers a detailed overview of the GitHub Copilot certification exam, exploring its blueprint, measured skill domains, and practical study strategies for developers aiming to master AI-powered coding and ethical best practices.<!--excerpt_end-->
 
 # Understanding the GitHub Copilot Exam: Blueprint, Skills, and Key Domains

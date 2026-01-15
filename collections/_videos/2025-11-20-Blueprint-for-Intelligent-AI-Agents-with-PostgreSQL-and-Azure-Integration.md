@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Blueprint for Intelligent AI Agents with PostgreSQL and Azure Integration"
-description: "This session from Microsoft Ignite 2025 explores advanced methods for building intelligent AI agents using Azure Database for PostgreSQL. Learn strategic approaches combining knowledge graphs, vector search, and direct AI integrations within PostgreSQL on Azure. The talk covers the latest features, such as AI model management and Microsoft Foundry integration, providing attendees with practical blueprints and best practices drawn from real Azure customer deployments. Live demos illustrate metrics intelligence and using GitHub Copilot for database performance fixes."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LD0Emp7Gr40"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Blueprint for Intelligent AI Agents with PostgreSQL and Azure Integration
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=LD0Emp7Gr40
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:01:00 +00:00
-permalink: "/2025-11-20-Blueprint-for-Intelligent-AI-Agents-with-PostgreSQL-and-Azure-Integration.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML"]
-tags: ["AI", "AI Agents", "AI Model Management", "AZD Up Command", "Azure", "Azure Database For PostgreSQL", "Database Performance", "GitHub Copilot", "GPT 5", "Intelligent Agents", "Knowledge Graphs", "Live Demo", "Metrics Intelligence", "Microsoft Foundry", "Microsoft Ignite", "ML", "MSIgnite", "Semantic Ranking", "Unifyyourdataplatform", "Vector Search", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai model management", "azd up command", "azure", "azure database for postgresql", "database performance", "github copilot", "gpt 5", "intelligent agents", "knowledge graphs", "live demo", "metrics intelligence", "microsoft foundry", "microsoft ignite", "ml", "msignite", "semantic ranking", "unifyyourdataplatform", "vector search", "videos"]
+permalink: /github-copilot/videos/Blueprint-for-Intelligent-AI-Agents-with-PostgreSQL-and-Azure-Integration
+tags:
+- AI
+- AI Agents
+- AI Model Management
+- AZD Up Command
+- Azure
+- Azure Database For PostgreSQL
+- Database Performance
+- GitHub Copilot
+- GPT 5
+- Intelligent Agents
+- Knowledge Graphs
+- Live Demo
+- Metrics Intelligence
+- Microsoft Foundry
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Semantic Ranking
+- Unifyyourdataplatform
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
 ---
-
 In this Ignite 2025 session, Microsoft Events presents insights on building AI agents powered by PostgreSQL on Azure. Speakers Sharon Chen, Maxim Lukiyanov, and Abe Omorogbe demonstrate advanced AI integrations, knowledge graphs, and live GitHub Copilot database performance fixes.<!--excerpt_end-->
 
 {% youtube LD0Emp7Gr40 %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Introducing the Digital Sovereignty Specialization for the Microsoft AI Cloud Partner Program"
-description: "This article by Thomas Maurer introduces Microsoft’s new Digital Sovereignty Specialization within the AI Cloud Partner Program, outlining what it means for partners and customers aiming to deliver sovereign, compliant, and trusted cloud solutions on the Microsoft Cloud. It explains the alignment with Microsoft Sovereign Cloud, the requirements for partners, and the benefits for regulated industries."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Introducing the Digital Sovereignty Specialization for the Microsoft AI Cloud Partner Program
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-13 14:50:54 +00:00
-permalink: "/2025-11-13-Introducing-the-Digital-Sovereignty-Specialization-for-the-Microsoft-AI-Cloud-Partner-Program.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Audit Requirements", "Azure", "Blogs", "Cloud", "Cloud Compliance", "Cloud Security", "Cloud Trust", "Compliance Best Practices", "Data Residency", "Data Sovereignty", "Digital Sovereignty", "Digital Sovereignty Specialization", "Microsoft", "Microsoft AI Cloud Partner Program", "Microsoft Azure", "Microsoft Cloud", "Microsoft Partner", "Partner Program", "Partner Specialization", "Public Sector", "Regulated Industries", "Security", "Sovereign Cloud"]
-tags_normalized: ["ai", "audit requirements", "azure", "blogs", "cloud", "cloud compliance", "cloud security", "cloud trust", "compliance best practices", "data residency", "data sovereignty", "digital sovereignty", "digital sovereignty specialization", "microsoft", "microsoft ai cloud partner program", "microsoft azure", "microsoft cloud", "microsoft partner", "partner program", "partner specialization", "public sector", "regulated industries", "security", "sovereign cloud"]
+permalink: /ai/blogs/Introducing-the-Digital-Sovereignty-Specialization-for-the-Microsoft-AI-Cloud-Partner-Program
+tags:
+- AI
+- Audit Requirements
+- Azure
+- Blogs
+- Cloud
+- Cloud Compliance
+- Cloud Security
+- Cloud Trust
+- Compliance Best Practices
+- Data Residency
+- Data Sovereignty
+- Digital Sovereignty
+- Digital Sovereignty Specialization
+- Microsoft
+- Microsoft AI Cloud Partner Program
+- Microsoft Azure
+- Microsoft Cloud
+- Microsoft Partner
+- Partner Program
+- Partner Specialization
+- Public Sector
+- Regulated Industries
+- Security
+- Sovereign Cloud
+section_names:
+- ai
+- azure
+- security
 ---
-
 Thomas Maurer discusses Microsoft's new Digital Sovereignty Specialization for the AI Cloud Partner Program, an initiative to help partners and customers navigate sovereign, secure, and compliant deployments on Azure and the Microsoft Cloud.<!--excerpt_end-->
 
 # Introducing the Digital Sovereignty Specialization for the Microsoft AI Cloud Partner Program

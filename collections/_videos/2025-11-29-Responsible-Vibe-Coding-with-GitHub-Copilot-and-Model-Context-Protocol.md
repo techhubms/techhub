@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Responsible Vibe Coding with GitHub Copilot and Model Context Protocol"
-description: "This GitHub Universe 2025 talk by Rizel Scarlett explores responsible AI-powered coding practices using GitHub Copilot and the Model Context Protocol (MCP). The session highlights the importance of context, control, and observability for safer prompt engineering, including practical demonstrations with GitHub’s MCP server and Agent Client Protocol to prevent common pitfalls like overwriting files or leaking secrets."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PvdptUZ3XeU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Responsible Vibe Coding with GitHub Copilot and Model Context Protocol
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=PvdptUZ3XeU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-29 15:00:51 +00:00
-permalink: "/2025-11-29-Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Client Protocol", "AI", "AI Agents", "AI Observability", "Coding", "Demo", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Goose", "LLM", "MCP", "Open Source", "Prompt Engineering", "Responsible Coding", "Team Workload Visualization", "Videos"]
-tags_normalized: ["agent client protocol", "ai", "ai agents", "ai observability", "coding", "demo", "developer tools", "github", "github copilot", "github universe", "githubuniverse", "goose", "llm", "mcp", "open source", "prompt engineering", "responsible coding", "team workload visualization", "videos"]
+permalink: /github-copilot/videos/Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol
+tags:
+- Agent Client Protocol
+- AI
+- AI Agents
+- AI Observability
+- Coding
+- Demo
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Goose
+- LLM
+- MCP
+- Open Source
+- Prompt Engineering
+- Responsible Coding
+- Team Workload Visualization
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rizel Scarlett from GitHub explains practical techniques for responsible AI coding with GitHub Copilot and MCP, focusing on safer prompt engineering and developer empowerment.<!--excerpt_end-->
 
 {% youtube PvdptUZ3XeU %}

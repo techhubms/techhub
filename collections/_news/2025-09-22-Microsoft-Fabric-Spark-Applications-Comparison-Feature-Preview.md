@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Fabric Spark Applications Comparison Feature (Preview)"
-description: "Explore the preview release of the Spark Applications Comparison feature in Microsoft Fabric. This update enables developers and data engineers to visually compare multiple Spark application runs, analyze performance metrics, debug regressions and improvements, and optimize resource usage. The feature integrates with Spark L2 Monitoring, providing a rich toolset for deep analysis and performance troubleshooting within modern data engineering workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Fabric Spark Applications Comparison Feature (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 09:30:00 +00:00
-permalink: "/2025-09-22-Microsoft-Fabric-Spark-Applications-Comparison-Feature-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark", "Application Comparison", "Azure", "Data Engineering", "Debugging", "L2 Monitoring", "Microsoft Fabric", "ML", "Monitoring Tools", "News", "Performance Monitoring", "Regression Analysis", "Resource Optimization", "Run Metrics", "Spark Applications"]
-tags_normalized: ["apache spark", "application comparison", "azure", "data engineering", "debugging", "l2 monitoring", "microsoft fabric", "ml", "monitoring tools", "news", "performance monitoring", "regression analysis", "resource optimization", "run metrics", "spark applications"]
+permalink: /ml/news/Microsoft-Fabric-Spark-Applications-Comparison-Feature-Preview
+tags:
+- Apache Spark
+- Application Comparison
+- Azure
+- Data Engineering
+- Debugging
+- L2 Monitoring
+- Microsoft Fabric
+- ML
+- Monitoring Tools
+- News
+- Performance Monitoring
+- Regression Analysis
+- Resource Optimization
+- Run Metrics
+- Spark Applications
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Spark Applications Comparison feature, allowing developers and data engineers to analyze, debug, and optimize Spark application runs by comparing key performance metrics side by side.<!--excerpt_end-->
 
 # Microsoft Fabric Spark Applications Comparison (Preview)

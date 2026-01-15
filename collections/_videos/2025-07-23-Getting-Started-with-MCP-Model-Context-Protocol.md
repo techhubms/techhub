@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Getting Started with MCP (Model Context Protocol)"
-description: "This introductory video by Dan Clarke, hosted on Nick Chapsas' channel, explains the new Model Context Protocol (MCP) concept. With the rapid growth of AI and large language models (LLMs), MCP provides a unified approach for interfacing with data across different LLMs. The session covers what MCPs are, why they matter, and how developers might use them, especially in Microsoft technology stacks like C# and .NET."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DpyjAKmNwpI"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Getting Started with MCP (Model Context Protocol)
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=DpyjAKmNwpI
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-23 12:30:14 +00:00
-permalink: "/2025-07-23-Getting-Started-with-MCP-Model-Context-Protocol.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Development", "AI Integration", "C#", "Coding", "Dan Clarke", "Data Interface", "Large Language Models", "LLM", "MCP", "Microsoft", "Nick Chapsas", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai development", "ai integration", "csharp", "coding", "dan clarke", "data interface", "large language models", "llm", "mcp", "microsoft", "nick chapsas", "videos"]
+permalink: /ai/videos/Getting-Started-with-MCP-Model-Context-Protocol
+tags:
+- .NET
+- AI
+- AI Development
+- AI Integration
+- C#
+- Coding
+- Dan Clarke
+- Data Interface
+- Large Language Models
+- LLM
+- MCP
+- Microsoft
+- Nick Chapsas
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Nick Chapsas presents a session by Dan Clarke introducing the Model Context Protocol (MCP), focusing on how developers can interface consistently with LLMs using Microsoft technologies such as C# and .NET.<!--excerpt_end-->
 
 {% youtube DpyjAKmNwpI %}

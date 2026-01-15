@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Solving Native Library Loading Issues for .NET Core on Alpine Linux"
-description: "This article by Andrew Lock details a practical debugging journey for resolving a 'native library not found' error when running .NET Core 3.1 and .NET 5 applications on Alpine Linux 3.17. It explores the underlying cause related to .NET runtime ID resolution, documents the discovery steps using diagnostic tools, and presents environmental fixes for legacy .NET runtimes on modern Alpine versions."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Solving Native Library Loading Issues for .NET Core on Alpine Linux
+author: Andrew Lock
+canonical_url: https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-08-26 10:00:00 +00:00
-permalink: "/2025-08-26-Solving-Native-Library-Loading-Issues-for-NET-Core-on-Alpine-Linux.html"
-categories: ["Coding"]
-tags: [".NET 3.1", ".NET 5", ".NET Core", "Alpine Linux", "Blogs", "CI/CD", "Coding", "Containerization", "Cross Platform Development", "Datadog .NET Tracer", "Environment Variables", "LD DEBUG", "LD LIBRARY PATH", "Libe Sqlite3", "Linux Musl X64", "Microsoft.Data.Sqlite", "Native Library Loading", "Runtime ID", "Strace", "System.DllNotFoundException", "Troubleshooting"]
-tags_normalized: ["dotnet 3dot1", "dotnet 5", "dotnet core", "alpine linux", "blogs", "cislashcd", "coding", "containerization", "cross platform development", "datadog dotnet tracer", "environment variables", "ld debug", "ld library path", "libe sqlite3", "linux musl x64", "microsoftdotdatadotsqlite", "native library loading", "runtime id", "strace", "systemdotdllnotfoundexception", "troubleshooting"]
+permalink: /coding/blogs/Solving-Native-Library-Loading-Issues-for-NET-Core-on-Alpine-Linux
+tags:
+- .NET 3.1
+- .NET 5
+- .NET Core
+- Alpine Linux
+- Blogs
+- CI/CD
+- Coding
+- Containerization
+- Cross Platform Development
+- Datadog .NET Tracer
+- Environment Variables
+- LD DEBUG
+- LD LIBRARY PATH
+- Libe Sqlite3
+- Linux Musl X64
+- Microsoft.Data.Sqlite
+- Native Library Loading
+- Runtime ID
+- Strace
+- System.DllNotFoundException
+- Troubleshooting
+section_names:
+- coding
 ---
-
 Andrew Lock walks through the real-world debugging process for a library loading failure on Alpine Linux when running older .NET Core apps, clearly explaining the steps and ultimate resolution.<!--excerpt_end-->
 
 # Solving Native Library Loading Issues for .NET Core on Alpine Linux

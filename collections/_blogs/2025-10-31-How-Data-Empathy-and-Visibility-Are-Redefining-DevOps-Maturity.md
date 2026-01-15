@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How Data, Empathy and Visibility Are Redefining DevOps Maturity"
-description: "This article presents Amy Carrillo Cotten’s insights into the evolving landscape of DevOps maturity, emphasizing the roles of data-driven insights, operational visibility, automation, AI acceleration, and empathy. It analyzes how organizations must balance speed, quality, reskilling, and collaboration to build sustainable, agile DevOps teams in rapidly changing engineering environments."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Data, Empathy and Visibility Are Redefining DevOps Maturity
+author: Alan Shimel
+canonical_url: https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-31 15:08:58 +00:00
-permalink: "/2025-10-31-How-Data-Empathy-and-Visibility-Are-Redefining-DevOps-Maturity.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Acceleration", "Automation", "Blogs", "Continuous Improvement", "Data Driven Insights", "Developer Productivity", "DevOps", "DevOps Culture", "DevOps Maturity", "Engineering Leadership", "Engineering Transformation", "Feedback Loops", "Operational Visibility", "Quality Assurance", "Software Delivery", "Team Collaboration", "Uplevel", "Video Interviews"]
-tags_normalized: ["ai", "ai acceleration", "automation", "blogs", "continuous improvement", "data driven insights", "developer productivity", "devops", "devops culture", "devops maturity", "engineering leadership", "engineering transformation", "feedback loops", "operational visibility", "quality assurance", "software delivery", "team collaboration", "uplevel", "video interviews"]
+permalink: /ai/blogs/How-Data-Empathy-and-Visibility-Are-Redefining-DevOps-Maturity
+tags:
+- AI
+- AI Acceleration
+- Automation
+- Blogs
+- Continuous Improvement
+- Data Driven Insights
+- Developer Productivity
+- DevOps
+- DevOps Culture
+- DevOps Maturity
+- Engineering Leadership
+- Engineering Transformation
+- Feedback Loops
+- Operational Visibility
+- Quality Assurance
+- Software Delivery
+- Team Collaboration
+- Uplevel
+- Video Interviews
+section_names:
+- ai
+- devops
 ---
-
 Alan Shimel summarizes Amy Carrillo Cotten’s perspective on how data, empathy, automation, and AI are shaping the future of DevOps, with a focus on people, processes, and effective collaboration.<!--excerpt_end-->
 
 # How Data, Empathy and Visibility Are Redefining DevOps Maturity

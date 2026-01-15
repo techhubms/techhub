@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Azure OpenAI Service Empowers MCP-Enabled AI Integrations"
-description: "This article explains the Model Context Protocol (MCP)—an open standard for connecting AI models to external systems—and details how Microsoft Azure OpenAI Service delivers enterprise-ready, secure, and scalable MCP adoption. It covers MCP architecture, Azure-specific integrations, security enhancements, and actionable steps for deploying custom and prebuilt MCP servers in the Microsoft cloud ecosystem."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How Azure OpenAI Service Empowers MCP-Enabled AI Integrations
+author: Dellenny
+canonical_url: https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-09 06:58:28 +00:00
-permalink: "/2025-08-09-How-Azure-OpenAI-Service-Empowers-MCP-Enabled-AI-Integrations.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "AI Integration", "AKS", "API Management", "Authentication", "Azure", "Azure AI Studio", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Blogs", "Enterprise Security", "Entra ID", "JSON RPC", "LLM", "MCP", "MCP Server", "Microsoft 365 Integration", "Microsoft Purview", "Role Based Access"]
-tags_normalized: ["ai", "ai agent", "ai integration", "aks", "api management", "authentication", "azure", "azure ai studio", "azure functions", "azure monitor", "azure openai service", "blogs", "enterprise security", "entra id", "json rpc", "llm", "mcp", "mcp server", "microsoft 365 integration", "microsoft purview", "role based access"]
+permalink: /ai/blogs/How-Azure-OpenAI-Service-Empowers-MCP-Enabled-AI-Integrations
+tags:
+- AI
+- AI Agent
+- AI Integration
+- AKS
+- API Management
+- Authentication
+- Azure
+- Azure AI Studio
+- Azure Functions
+- Azure Monitor
+- Azure OpenAI Service
+- Blogs
+- Enterprise Security
+- Entra ID
+- JSON RPC
+- LLM
+- MCP
+- MCP Server
+- Microsoft 365 Integration
+- Microsoft Purview
+- Role Based Access
+section_names:
+- ai
+- azure
 ---
-
 Dellenny explores how the Model Context Protocol (MCP) revolutionizes AI integrations and demonstrates Microsoft Azure’s leading role in secure, scalable MCP adoption for enterprise AI workflows.<!--excerpt_end-->
 
 # How Azure OpenAI Service Empowers MCP-Enabled AI Integrations

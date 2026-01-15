@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension"
-description: "This post announces the public preview of Microsoft's Terraform MSGraph provider and the new Microsoft Terraform Visual Studio Code extension. It details how these tools expand Infrastructure-as-Code capabilities across Microsoft Graph, Azure, and M365 environments, covering provider usage, code examples, extension features, and migration from previous tooling."
-author: "stevenjma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension
+author: stevenjma
+canonical_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 17:56:30 +00:00
-permalink: "/2025-08-14-Announcing-Public-Preview-of-the-Terraform-MSGraph-Provider-and-Microsoft-Terraform-VSCode-Extension.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["AppRoleAssignment", "AzAPI", "Azure", "AzureAD", "AzureRM", "Code Generation", "Coding", "Community", "DevOps", "DevOps Automation", "Entra API", "HashiCorp Configuration Language", "IaC", "Identity Management", "IntelliSense", "M365 Graph API", "Microsoft Entra", "Microsoft Graph", "MSGraph Provider", "Outlook API", "Role Assignment", "Security", "Service Principal", "SharePoint", "Terraform", "VS Code", "VS Code Extension"]
-tags_normalized: ["approleassignment", "azapi", "azure", "azuread", "azurerm", "code generation", "coding", "community", "devops", "devops automation", "entra api", "hashicorp configuration language", "iac", "identity management", "intellisense", "m365 graph api", "microsoft entra", "microsoft graph", "msgraph provider", "outlook api", "role assignment", "security", "service principal", "sharepoint", "terraform", "vs code", "vs code extension"]
+permalink: /coding/community/Announcing-Public-Preview-of-the-Terraform-MSGraph-Provider-and-Microsoft-Terraform-VSCode-Extension
+tags:
+- AppRoleAssignment
+- AzAPI
+- Azure
+- AzureAD
+- AzureRM
+- Code Generation
+- Coding
+- Community
+- DevOps
+- DevOps Automation
+- Entra API
+- HashiCorp Configuration Language
+- IaC
+- Identity Management
+- IntelliSense
+- M365 Graph API
+- Microsoft Entra
+- Microsoft Graph
+- MSGraph Provider
+- Outlook API
+- Role Assignment
+- Security
+- Service Principal
+- SharePoint
+- Terraform
+- VS Code
+- VS Code Extension
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 stevenjma introduces the public preview of the Terraform MSGraph provider and the official Microsoft Terraform VSCode extension, empowering practitioners to automate Microsoft cloud resource management and streamline Infrastructure-as-Code workflows.<!--excerpt_end-->
 
 # Announcing MSGraph Provider Public Preview and the Microsoft Terraform VSCode Extension

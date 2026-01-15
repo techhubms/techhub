@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "From Zero to Kubernetes with AKS Automatic"
-description: "This session from Microsoft Ignite 2025 introduces AKS Automatic, a solution for simplifying Kubernetes management on Azure. Presenters Amanda Wang and Paul Yu explain how AKS Automatic enables fast, secure, and scalable cloud-native deployments by automating infrastructure operations, integrating best practices, and embedding observability tools such as Azure Monitor and OpenTelemetry."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DKEo7LqpVAM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: From Zero to Kubernetes with AKS Automatic
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=DKEo7LqpVAM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:40:19 +00:00
-permalink: "/2025-11-20-From-Zero-to-Kubernetes-with-AKS-Automatic.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "AKS Automatic", "Azure", "Azure Monitor", "Cloud Native", "Cloud Operations", "DevOps", "Infrastructure Automation", "InnovatewithAzureAIappsandagents", "Karpenter", "Kubernetes", "Log Analytics", "Microsoft Ignite", "MSIgnite", "Node Auto Provisioning", "Observability", "OpenTelemetry", "Performance", "Production Ready Kubernetes", "Scalability", "Security", "Security Best Practices", "Videos"]
-tags_normalized: ["aks", "aks automatic", "azure", "azure monitor", "cloud native", "cloud operations", "devops", "infrastructure automation", "innovatewithazureaiappsandagents", "karpenter", "kubernetes", "log analytics", "microsoft ignite", "msignite", "node auto provisioning", "observability", "opentelemetry", "performance", "production ready kubernetes", "scalability", "security", "security best practices", "videos"]
+permalink: /azure/videos/From-Zero-to-Kubernetes-with-AKS-Automatic
+tags:
+- AKS
+- AKS Automatic
+- Azure
+- Azure Monitor
+- Cloud Native
+- Cloud Operations
+- DevOps
+- Infrastructure Automation
+- InnovatewithAzureAIappsandagents
+- Karpenter
+- Kubernetes
+- Log Analytics
+- Microsoft Ignite
+- MSIgnite
+- Node Auto Provisioning
+- Observability
+- OpenTelemetry
+- Performance
+- Production Ready Kubernetes
+- Scalability
+- Security
+- Security Best Practices
+- Videos
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Events, featuring Amanda Wang and Paul Yu, present an Ignite 2025 session on AKS Automatic—a new Azure Kubernetes solution that streamlines deployment and management by automating operations and embedding security, scalability, and observability best practices.<!--excerpt_end-->
 
 {% youtube DKEo7LqpVAM %}

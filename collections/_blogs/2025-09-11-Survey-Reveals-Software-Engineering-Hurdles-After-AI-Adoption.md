@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Survey Reveals Software Engineering Hurdles After AI Adoption"
-description: "This article by Mike Vizard summarizes findings from a survey of 101 senior engineering leaders on the adoption of AI in software engineering. While most organizations feel prepared for AI, challenges like validating AI outputs, technical debt, and unclear strategies remain prominent. The piece also discusses the skills and investments needed for successful AI integration, with attention to DevOps practices and measurable outcomes."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-software-engineering-challenges-following-adoption-of-ai/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-software-engineering-challenges-following-adoption-of-ai"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals Software Engineering Hurdles After AI Adoption
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-software-engineering-challenges-following-adoption-of-ai/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-software-engineering-challenges-following-adoption-of-ai
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-11 20:01:09 +00:00
-permalink: "/2025-09-11-Survey-Reveals-Software-Engineering-Hurdles-After-AI-Adoption.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Strategy", "Application Development", "Automation", "Blogs", "Data Security", "DevOps", "Engineering Metrics", "Performance Monitoring", "Productivity", "Quality Assurance", "Sdlc", "Skill Development", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "System Architecture", "Technical Debt", "Uplevel"]
-tags_normalized: ["ai", "ai adoption", "ai strategy", "application development", "automation", "blogs", "data security", "devops", "engineering metrics", "performance monitoring", "productivity", "quality assurance", "sdlc", "skill development", "social facebook", "social linkedin", "social x", "software engineering", "system architecture", "technical debt", "uplevel"]
+permalink: /ai/blogs/Survey-Reveals-Software-Engineering-Hurdles-After-AI-Adoption
+tags:
+- AI
+- AI Adoption
+- AI Strategy
+- Application Development
+- Automation
+- Blogs
+- Data Security
+- DevOps
+- Engineering Metrics
+- Performance Monitoring
+- Productivity
+- Quality Assurance
+- Sdlc
+- Skill Development
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Engineering
+- System Architecture
+- Technical Debt
+- Uplevel
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard explores survey results from engineering leaders on AI adoption impacts, highlighting the ongoing DevOps and software engineering challenges organizations face.<!--excerpt_end-->
 
 # Survey Reveals Software Engineering Hurdles After AI Adoption

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing Local Identity with Azure Key Vault: AD-Free Cluster Deployment and Management"
-description: "This post introduces the public preview of Local Identity integration with Azure Key Vault, enabling organizations to deploy Azure local clusters without Active Directory dependency. Learn about streamlined key management, compatibility with partner ecosystems, and new private preview features such as the Management Toolkit and Internal DNS, aimed at simplifying cluster administration and internal name resolution for Microsoft environments."
-author: "ShireenIsab"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Announcing Local Identity with Azure Key Vault: AD-Free Cluster Deployment and Management'
+author: ShireenIsab
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-07 23:55:58 +00:00
-permalink: "/2025-11-07-Announcing-Local-Identity-with-Azure-Key-Vault-AD-Free-Cluster-Deployment-and-Management.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Azure", "Azure Key Vault", "Azure Local Portal", "Backup Integration", "Cluster Deployment", "Community", "Commvault", "Dell", "Internal DNS", "Key Management", "Lenovo", "Local Identity", "Management Toolkit", "Partner Ecosystem", "Security", "Veeam"]
-tags_normalized: ["active directory", "azure", "azure key vault", "azure local portal", "backup integration", "cluster deployment", "community", "commvault", "dell", "internal dns", "key management", "lenovo", "local identity", "management toolkit", "partner ecosystem", "security", "veeam"]
+permalink: /azure/community/Announcing-Local-Identity-with-Azure-Key-Vault-AD-Free-Cluster-Deployment-and-Management
+tags:
+- Active Directory
+- Azure
+- Azure Key Vault
+- Azure Local Portal
+- Backup Integration
+- Cluster Deployment
+- Community
+- Commvault
+- Dell
+- Internal DNS
+- Key Management
+- Lenovo
+- Local Identity
+- Management Toolkit
+- Partner Ecosystem
+- Security
+- Veeam
+section_names:
+- azure
+- security
 ---
-
 ShireenIsab introduces Local Identity with Azure Key Vault, detailing how it enables simplified, AD-free cluster deployments and discusses new management and DNS features now in preview.<!--excerpt_end-->
 
 # Announcing Local Identity with Azure Key Vault: AD-Free Cluster Deployment and Management

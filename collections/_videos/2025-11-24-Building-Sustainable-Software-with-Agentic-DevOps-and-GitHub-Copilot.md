@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building Sustainable Software with Agentic DevOps and GitHub Copilot"
-description: "This session provides an in-depth look at how to build sustainable software using Agentic DevOps practices on GitHub, with a special emphasis on leveraging AI-powered tools like GitHub Copilot. Strategies for integrating environmental sustainability into software engineering workflows, optimizing build performance, and adopting environmentally conscious development habits are covered. Featured demos showcase GitHub Next's agentic AI tooling and its practical applications for both developers and organizations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Bg-OfUzwVdo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Sustainable Software with Agentic DevOps and GitHub Copilot
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Bg-OfUzwVdo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:57:55 +00:00
-permalink: "/2025-11-24-Building-Sustainable-Software-with-Agentic-DevOps-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic DevOps", "Agile Development", "AI", "AI Agents", "AI Tooling", "Code Performance", "Coding", "Continuous AI", "DevOps", "DevOps Practices", "Enterprise Build Optimization", "Environmental Impact", "GitHub Copilot", "GitHub Next", "Green Software", "InnovatewithAzureAIappsandagents", "MSIgnite", "Software Engineering", "Sustainable Software", "Usability Analysis", "Videos"]
-tags_normalized: ["agentic devops", "agile development", "ai", "ai agents", "ai tooling", "code performance", "coding", "continuous ai", "devops", "devops practices", "enterprise build optimization", "environmental impact", "github copilot", "github next", "green software", "innovatewithazureaiappsandagents", "msignite", "software engineering", "sustainable software", "usability analysis", "videos"]
+permalink: /github-copilot/videos/Building-Sustainable-Software-with-Agentic-DevOps-and-GitHub-Copilot
+tags:
+- Agentic DevOps
+- Agile Development
+- AI
+- AI Agents
+- AI Tooling
+- Code Performance
+- Coding
+- Continuous AI
+- DevOps
+- DevOps Practices
+- Enterprise Build Optimization
+- Environmental Impact
+- GitHub Copilot
+- GitHub Next
+- Green Software
+- InnovatewithAzureAIappsandagents
+- MSIgnite
+- Software Engineering
+- Sustainable Software
+- Usability Analysis
+- Videos
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Events, featuring Martin Woodward, explores the intersection of Agentic DevOps, GitHub Copilot, and sustainable software development with actionable strategies for environmentally conscious coding.<!--excerpt_end-->
 
 {% youtube Bg-OfUzwVdo %}

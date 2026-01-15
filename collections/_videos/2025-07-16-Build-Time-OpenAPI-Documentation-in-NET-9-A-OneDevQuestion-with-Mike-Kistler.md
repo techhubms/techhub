@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Build-Time OpenAPI Documentation in .NET 9: A OneDevQuestion with Mike Kistler"
-description: "Mike Kistler discusses .NET 9's build-time OpenAPI documentation feature, highlighting its benefits for developers. He explains how generating docs at build-time enhances local linting, code generation, and tool integration, eliminating the need to serve documentation from applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xBTrFRtBj_0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Build-Time OpenAPI Documentation in .NET 9: A OneDevQuestion with Mike Kistler'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=xBTrFRtBj_0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-16 15:20:20 +00:00
-permalink: "/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 9", "API Development", "Build Time Generation", "Code Generation", "Coding", "Documentation", "Linting", "OneDevQuestion", "OpenAPI", "Spectral", "Videos", "Web API"]
-tags_normalized: ["dotnet", "dotnet 9", "api development", "build time generation", "code generation", "coding", "documentation", "linting", "onedevquestion", "openapi", "spectral", "videos", "web api"]
+permalink: /coding/videos/Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler
+tags:
+- .NET
+- .NET 9
+- API Development
+- Build Time Generation
+- Code Generation
+- Coding
+- Documentation
+- Linting
+- OneDevQuestion
+- OpenAPI
+- Spectral
+- Videos
+- Web API
+section_names:
+- coding
 ---
-
 In this video, Mike Kistler shares his top OpenAPI feature in .NET 9—build-time generation—offering insights on how it streamlines API development for .NET professionals.<!--excerpt_end-->
 
 {% youtube xBTrFRtBj_0 %}

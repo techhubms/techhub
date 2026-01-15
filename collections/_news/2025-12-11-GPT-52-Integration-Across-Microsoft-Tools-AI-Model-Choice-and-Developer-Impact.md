@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact"
-description: "This news post covers the rollout and integration of GPT-5.2, OpenAI’s latest language model, across key Microsoft platforms—GitHub Copilot, Copilot Studio, Microsoft Foundry, and Microsoft 365 Copilot. It highlights practical impacts on coding, workflow automation, reasoning, productivity, and enterprise operations, as well as critical questions and mixed practitioner reactions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact'
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 19:11:15 +00:00
-permalink: "/2025-12-11-GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Productivity", "AI Reasoning", "Company News", "Copilot", "Copilot Studio", "Enterprise AI", "GitHub Copilot", "GPT 5.2", "LinkedIn Post", "Long Context AI", "Microsoft 365 Copilot", "Microsoft Fabric", "Microsoft Foundry", "Model Selection", "News", "OpenAI", "Work IQ"]
-tags_normalized: ["ai", "ai integration", "ai productivity", "ai reasoning", "company news", "copilot", "copilot studio", "enterprise ai", "github copilot", "gpt 5dot2", "linkedin post", "long context ai", "microsoft 365 copilot", "microsoft fabric", "microsoft foundry", "model selection", "news", "openai", "work iq"]
+permalink: /github-copilot/news/GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact
+tags:
+- AI
+- AI Integration
+- AI Productivity
+- AI Reasoning
+- Company News
+- Copilot
+- Copilot Studio
+- Enterprise AI
+- GitHub Copilot
+- GPT 5.2
+- LinkedIn Post
+- Long Context AI
+- Microsoft 365 Copilot
+- Microsoft Fabric
+- Microsoft Foundry
+- Model Selection
+- News
+- OpenAI
+- Work IQ
+section_names:
+- ai
+- github-copilot
 ---
-
 Curated by stclarke, this update examines the integration of GPT-5.2 into Microsoft tools such as GitHub Copilot and Copilot Studio, outlining new capabilities for developers, automation, and workflow reasoning. Includes commentary from Satya Nadella and active practitioner debate.<!--excerpt_end-->
 
 # GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact

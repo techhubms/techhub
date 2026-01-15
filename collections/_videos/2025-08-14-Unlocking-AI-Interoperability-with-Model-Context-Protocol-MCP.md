@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unlocking AI Interoperability with Model Context Protocol (MCP)"
-description: "This technical deep dive explores the Model Context Protocol (MCP), an open standard redefining how AI agents, services, and developer tools achieve interoperability. It covers MCP’s architecture, security model, and practical implementation strategies for integrating Large Language Models with various data sources, APIs, and environments using standardized interfaces."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xqsaRaMOpXI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Unlocking AI Interoperability with Model Context Protocol (MCP)
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=xqsaRaMOpXI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-14 14:45:20 +00:00
-permalink: "/2025-08-14-Unlocking-AI-Interoperability-with-Model-Context-Protocol-MCP.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "AI Architecture", "AI Interoperability", "API Integration", "Cloud Computing", "Dev", "Developer Tools", "Development", "Large Language Models", "LLM Integration", "MCP", "MCP Security", "Microsoft", "Server Development", "Tech", "Technology", "Videos", "VS"]
-tags_normalized: ["ai", "ai agents", "ai architecture", "ai interoperability", "api integration", "cloud computing", "dev", "developer tools", "development", "large language models", "llm integration", "mcp", "mcp security", "microsoft", "server development", "tech", "technology", "videos", "vs"]
+permalink: /ai/videos/Unlocking-AI-Interoperability-with-Model-Context-Protocol-MCP
+tags:
+- AI
+- AI Agents
+- AI Architecture
+- AI Interoperability
+- API Integration
+- Cloud Computing
+- Dev
+- Developer Tools
+- Development
+- Large Language Models
+- LLM Integration
+- MCP
+- MCP Security
+- Microsoft
+- Server Development
+- Tech
+- Technology
+- Videos
+- VS
+section_names:
+- ai
 ---
-
 Microsoft Developer delivers an in-depth session on Model Context Protocol (MCP), demonstrating how this open standard enables seamless interoperability between AI models and external systems, with guidance on security, server development, and real-world MCP adoption.<!--excerpt_end-->
 
 {% youtube xqsaRaMOpXI %}

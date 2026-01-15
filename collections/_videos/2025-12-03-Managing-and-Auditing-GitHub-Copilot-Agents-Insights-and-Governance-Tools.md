@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools"
-description: "This video from GitHub highlights new features for administering and auditing GitHub Copilot agents. It covers the recently launched insights dashboard, the control panel for customizing access, MCP review procedures, and enhanced audit logs. Administrators gain more governance power with tools to monitor usage, delegate control, and ensure compliance through detailed activity tracking."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=boviC841YWs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=boviC841YWs
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-03 15:01:14 +00:00
-permalink: "/2025-12-03-Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Access Management", "Activity Monitoring", "Administration", "AI", "Audit Logging", "Control Panel", "Copilot Agents", "Developer Tools", "DevOps", "GitHub Copilot", "Governance", "Insights Dashboard", "MCP", "Security", "Videos"]
-tags_normalized: ["access management", "activity monitoring", "administration", "ai", "audit logging", "control panel", "copilot agents", "developer tools", "devops", "github copilot", "governance", "insights dashboard", "mcp", "security", "videos"]
+permalink: /github-copilot/videos/Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools
+tags:
+- Access Management
+- Activity Monitoring
+- Administration
+- AI
+- Audit Logging
+- Control Panel
+- Copilot Agents
+- Developer Tools
+- DevOps
+- GitHub Copilot
+- Governance
+- Insights Dashboard
+- MCP
+- Security
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 GitHub shares an overview of new administrative tools for managing and auditing Copilot agents. The video, presented by the GitHub team, explains enhanced dashboards, access controls, and audit options for better governance and security.<!--excerpt_end-->
 
 {% youtube boviC841YWs %}

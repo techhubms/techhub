@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Rubber Duck Thursdays: Building with Copilot Custom Agents"
-description: "This informal GitHub live stream revisits the process of building and experimenting with GitHub Copilot custom agents. The hosts provide hands-on demonstrations of how to extend Copilot with tailored expertise and custom instructions, allowing developers to adapt AI assistance to specific tasks and workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=X9jbNK1006E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Rubber Duck Thursdays: Building with Copilot Custom Agents'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=X9jbNK1006E
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-03 09:21:56 +00:00
-permalink: "/2025-12-03-Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Copilot Custom Instructions", "Copilot Customization", "Custom Agents", "Developer Tools", "GitHub Copilot", "Live Coding", "Productivity", "Programming Workflow", "Rubber Duck Thursdays", "Videos"]
-tags_normalized: ["ai", "copilot custom instructions", "copilot customization", "custom agents", "developer tools", "github copilot", "live coding", "productivity", "programming workflow", "rubber duck thursdays", "videos"]
+permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents
+tags:
+- AI
+- Copilot Custom Instructions
+- Copilot Customization
+- Custom Agents
+- Developer Tools
+- GitHub Copilot
+- Live Coding
+- Productivity
+- Programming Workflow
+- Rubber Duck Thursdays
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub's Rubber Duck Thursdays stream features a live coding session on building and customizing GitHub Copilot agents. The hosts show developers how to tailor Copilot's expertise for specific programming tasks.<!--excerpt_end-->
 
 {% youtube X9jbNK1006E %}

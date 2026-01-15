@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing AI Foundry Agent Service Connector v2 (Preview)"
-description: "This article highlights the new features in the AI Foundry Agent Service connector for Azure Logic Apps, enabling advanced AI integration through low-code design. It covers streamlined enterprise connectivity, multi-agent orchestration, specific new operations, and concrete use cases, emphasizing secure and scalable deployment of AI-driven business processes."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing AI Foundry Agent Service Connector v2 (Preview)
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 15:25:08 +00:00
-permalink: "/2025-11-25-Announcing-AI-Foundry-Agent-Service-Connector-v2-Preview.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Loop", "Agent Orchestration", "AI", "AI Foundry Agent Service", "API Connector", "Automation", "Azure", "Azure Logic Apps", "Business Process Automation", "Community", "Enterprise Integration", "Event Driven Integration", "Integration Services", "Low Code Design", "Microsoft Azure", "Multi Agent Systems", "Operations Monitoring", "SharePoint Integration"]
-tags_normalized: ["agent loop", "agent orchestration", "ai", "ai foundry agent service", "api connector", "automation", "azure", "azure logic apps", "business process automation", "community", "enterprise integration", "event driven integration", "integration services", "low code design", "microsoft azure", "multi agent systems", "operations monitoring", "sharepoint integration"]
+permalink: /ai/community/Announcing-AI-Foundry-Agent-Service-Connector-v2-Preview
+tags:
+- Agent Loop
+- Agent Orchestration
+- AI
+- AI Foundry Agent Service
+- API Connector
+- Automation
+- Azure
+- Azure Logic Apps
+- Business Process Automation
+- Community
+- Enterprise Integration
+- Event Driven Integration
+- Integration Services
+- Low Code Design
+- Microsoft Azure
+- Multi Agent Systems
+- Operations Monitoring
+- SharePoint Integration
+section_names:
+- ai
+- azure
 ---
-
 KentWeareMSFT introduces the AI Foundry Agent Service Connector v2 for Azure Logic Apps, detailing new operations, low-code AI integration, and practical scenarios for orchestrating AI agents within enterprise workflows.<!--excerpt_end-->
 
 # Announcing AI Foundry Agent Service Connector v2 (Preview)

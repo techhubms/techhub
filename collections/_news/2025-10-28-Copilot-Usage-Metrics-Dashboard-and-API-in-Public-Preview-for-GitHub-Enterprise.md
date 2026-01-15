@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copilot Usage Metrics Dashboard and API in Public Preview for GitHub Enterprise"
-description: "A detailed look at the new Copilot usage metrics dashboard and API public preview, now available to GitHub Enterprise users. This update provides enterprise administrators and billing managers with granular insights into Copilot adoption, engagement patterns, and usage across organizations—helping teams understand not just if, but how, AI-powered coding is being leveraged. The article covers available metrics, enabling features, and access instructions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Usage Metrics Dashboard and API in Public Preview for GitHub Enterprise
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:23:43 +00:00
-permalink: "/2025-10-28-Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Adoption", "API", "Copilot", "Copilot Agent", "Copilot Analytics", "Dashboard", "Enterprise Metrics", "GitHub Copilot", "IDE Usage", "Model Usage", "News", "Programming Languages", "Public Preview", "Software Development Metrics", "Universe25"]
-tags_normalized: ["ai", "ai adoption", "api", "copilot", "copilot agent", "copilot analytics", "dashboard", "enterprise metrics", "github copilot", "ide usage", "model usage", "news", "programming languages", "public preview", "software development metrics", "universe25"]
+permalink: /github-copilot/news/Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise
+tags:
+- AI
+- AI Adoption
+- API
+- Copilot
+- Copilot Agent
+- Copilot Analytics
+- Dashboard
+- Enterprise Metrics
+- GitHub Copilot
+- IDE Usage
+- Model Usage
+- News
+- Programming Languages
+- Public Preview
+- Software Development Metrics
+- Universe25
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the public preview of GitHub Copilot usage metrics dashboard and API, offering GitHub Enterprise admins deeper insight into adoption and usage patterns of Copilot within their organizations.<!--excerpt_end-->
 
 # Copilot Usage Metrics Dashboard and API in Public Preview

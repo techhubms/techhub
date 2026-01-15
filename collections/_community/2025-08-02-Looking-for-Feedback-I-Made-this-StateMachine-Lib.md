@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "[Looking for Feedback]: I Made this StateMachine Lib!"
-description: "UnityDever introduces a custom state machine library built for C# (Lombda.StateMachine) and requests community feedback on its architecture and overall design. The library is intended for use within a C# Agent Library, LombdaAgentSDK, and is open for suggestions, particularly concerning coding practices and design improvements."
-author: "UnityDever"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: '[Looking for Feedback]: I Made this StateMachine Lib!'
+author: UnityDever
+canonical_url: https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 19:53:28 +00:00
-permalink: "/2025-08-02-Looking-for-Feedback-I-Made-this-StateMachine-Lib.html"
-categories: ["Coding"]
-tags: ["Agent SDK", "Architecture", "C#", "Coding", "Community", "Feedback", "Library", "LombdaAgentSDK", "Open Source", "Software Design", "State Machine"]
-tags_normalized: ["agent sdk", "architecture", "csharp", "coding", "community", "feedback", "library", "lombdaagentsdk", "open source", "software design", "state machine"]
+permalink: /coding/community/Looking-for-Feedback-I-Made-this-StateMachine-Lib
+tags:
+- Agent SDK
+- Architecture
+- C#
+- Coding
+- Community
+- Feedback
+- Library
+- LombdaAgentSDK
+- Open Source
+- Software Design
+- State Machine
+section_names:
+- coding
 ---
-
 UnityDever shares a custom state machine library for C#, seeking feedback on its architecture and design. The article welcomes constructive suggestions from the development community.<!--excerpt_end-->
 
 ## Overview

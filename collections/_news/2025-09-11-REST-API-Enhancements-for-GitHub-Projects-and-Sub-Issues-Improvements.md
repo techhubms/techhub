@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "REST API Enhancements for GitHub Projects and Sub-Issues Improvements"
-description: "This update from GitHub introduces a new REST API for managing GitHub Projects, significant enhancements to sub-issues, and UI improvements such as a sticky sidebar for issue management. Additionally, it highlights the renaming of the GitHub for Microsoft Teams app to GitHub Notifications, aiming to streamline project collaboration and tracking."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: REST API Enhancements for GitHub Projects and Sub-Issues Improvements
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 18:42:31 +00:00
-permalink: "/2025-09-11-REST-API-Enhancements-for-GitHub-Projects-and-Sub-Issues-Improvements.html"
-categories: ["DevOps"]
-tags: ["API Integration", "Automation", "Collaboration", "Collaboration Tools", "Cross Organization Issues", "Development Workflow", "DevOps", "GitHub", "GitHub Notifications", "Issue Management", "Microsoft Teams", "Milestones", "News", "Project Management", "Projects & Issues", "Projects API", "REST API", "Sub Issues"]
-tags_normalized: ["api integration", "automation", "collaboration", "collaboration tools", "cross organization issues", "development workflow", "devops", "github", "github notifications", "issue management", "microsoft teams", "milestones", "news", "project management", "projects and issues", "projects api", "rest api", "sub issues"]
+permalink: /devops/news/REST-API-Enhancements-for-GitHub-Projects-and-Sub-Issues-Improvements
+tags:
+- API Integration
+- Automation
+- Collaboration
+- Collaboration Tools
+- Cross Organization Issues
+- Development Workflow
+- DevOps
+- GitHub
+- GitHub Notifications
+- Issue Management
+- Microsoft Teams
+- Milestones
+- News
+- Project Management
+- Projects & Issues
+- Projects API
+- REST API
+- Sub Issues
+section_names:
+- devops
 ---
-
 Allison details GitHub's latest updates, including a REST API for Projects, improved sub-issue handling, and the renaming of the GitHub for Microsoft Teams app to GitHub Notifications.<!--excerpt_end-->
 
 # REST API Enhancements for GitHub Projects, Sub-Issues Improvements, and More

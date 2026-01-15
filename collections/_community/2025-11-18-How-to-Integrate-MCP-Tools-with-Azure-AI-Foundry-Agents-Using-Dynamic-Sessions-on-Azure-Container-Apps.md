@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How to Integrate MCP Tools with Azure AI Foundry Agents Using Dynamic Sessions on Azure Container Apps"
-description: "This tutorial demonstrates how to set up Azure Container Apps dynamic session pools with Model Context Protocol (MCP) server support and connect these as remote tools to Azure AI Foundry agents. Walk through deploying a shell session pool using ARM templates, retrieving MCP endpoints and credentials, configuring an Azure Foundry project and agent, and linking the MCP server as a tool for remote shell command execution—all enabling powerful, on-demand code execution for AI agents in secure containerized environments."
-author: "jeffmartinez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-add-an-mcp-tool-to-your-azure-foundry-agent-using-dynamic/ba-p/4468844"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Integrate MCP Tools with Azure AI Foundry Agents Using Dynamic Sessions on Azure Container Apps
+author: jeffmartinez
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-add-an-mcp-tool-to-your-azure-foundry-agent-using-dynamic/ba-p/4468844
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 06:14:52 +00:00
-permalink: "/2025-11-18-How-to-Integrate-MCP-Tools-with-Azure-AI-Foundry-Agents-Using-Dynamic-Sessions-on-Azure-Container-Apps.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "API Authentication", "ARM Template", "Azure", "Azure Container Apps", "Azure Foundry", "Azure Portal", "Cloud Automation", "Community", "Dynamic Sessions", "EnvironmentId", "MCP", "Preview Features", "Python Containers", "Remote Execution", "Resource Group", "Session Pool Deployment", "Shell Session Pools"]
-tags_normalized: ["ai", "ai agents", "api authentication", "arm template", "azure", "azure container apps", "azure foundry", "azure portal", "cloud automation", "community", "dynamic sessions", "environmentid", "mcp", "preview features", "python containers", "remote execution", "resource group", "session pool deployment", "shell session pools"]
+permalink: /ai/community/How-to-Integrate-MCP-Tools-with-Azure-AI-Foundry-Agents-Using-Dynamic-Sessions-on-Azure-Container-Apps
+tags:
+- AI
+- AI Agents
+- API Authentication
+- ARM Template
+- Azure
+- Azure Container Apps
+- Azure Foundry
+- Azure Portal
+- Cloud Automation
+- Community
+- Dynamic Sessions
+- EnvironmentId
+- MCP
+- Preview Features
+- Python Containers
+- Remote Execution
+- Resource Group
+- Session Pool Deployment
+- Shell Session Pools
+section_names:
+- ai
+- azure
 ---
-
 jeffmartinez explains step-by-step how to leverage Azure Container Apps dynamic sessions with MCP capabilities, integrating them as remote tools in Azure AI Foundry agents for secure, interactive shell command execution.<!--excerpt_end-->
 
 # How to Integrate MCP Tools with Azure AI Foundry Agents Using Dynamic Sessions on Azure Container Apps

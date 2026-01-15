@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "GitHub Copilot CLI 101: How to use GitHub Copilot from the command line"
-description: "This article introduces developers to GitHub Copilot CLI, a command-line interface that brings AI-powered coding assistance directly to the terminal. It covers installation, interactive and programmatic usage modes, best practices for confirming tool actions, security implications, and a broad set of example prompts for daily developer tasks such as debugging, documentation, environment setup, project prototyping, and integration with Microsoft Learn via MCP servers."
-author: "Alexandra Lietzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot CLI 101: How to use GitHub Copilot from the command line'
+author: Alexandra Lietzke
+canonical_url: https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-06 20:30:00 +00:00
-permalink: "/2025-11-06-GitHub-Copilot-CLI-101-How-to-use-GitHub-Copilot-from-the-command-line.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Powered Development", "Code Generation", "Coding", "Command Line Interface", "Developer Tools", "Generative AI", "GitHub Copilot", "GitHub Copilot CLI", "Issue Management", "LLMs", "MCP Integration", "News", "Node.js", "npm", "Project Setup", "Pull Requests", "Script Refactoring", "Security Best Practices", "Terminal Productivity", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai powered development", "code generation", "coding", "command line interface", "developer tools", "generative ai", "github copilot", "github copilot cli", "issue management", "llms", "mcp integration", "news", "nodedotjs", "npm", "project setup", "pull requests", "script refactoring", "security best practices", "terminal productivity", "workflow automation"]
+permalink: /github-copilot/news/GitHub-Copilot-CLI-101-How-to-use-GitHub-Copilot-from-the-command-line
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Powered Development
+- Code Generation
+- Coding
+- Command Line Interface
+- Developer Tools
+- Generative AI
+- GitHub Copilot
+- GitHub Copilot CLI
+- Issue Management
+- LLMs
+- MCP Integration
+- News
+- Node.js
+- npm
+- Project Setup
+- Pull Requests
+- Script Refactoring
+- Security Best Practices
+- Terminal Productivity
+- Workflow Automation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Alexandra Lietzke provides an in-depth walkthrough of GitHub Copilot CLI, detailing how developers can leverage AI assistance directly in the terminal for common coding tasks, with practical installation steps and usage scenarios.<!--excerpt_end-->
 
 # GitHub Copilot CLI 101: How to use GitHub Copilot from the command line

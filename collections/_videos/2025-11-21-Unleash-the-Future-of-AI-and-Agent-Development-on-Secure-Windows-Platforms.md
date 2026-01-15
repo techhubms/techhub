@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Unleash the Future of AI and Agent Development on Secure Windows Platforms"
-description: "This advanced Microsoft Ignite 2025 session examines how Windows is evolving into a development canvas for large-scale AI and autonomous agents. It covers Model Context Protocol (MCP), Computer Using Agents (CUAs), platform-level security enhancements, agent connectors, and secure workspaces. Learn the technical architecture powering agent deployments on Windows, projected agent growth, new packaging and privacy standards, and upcoming Microsoft Defender integration plans."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VHKivXdqfeQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Unleash the Future of AI and Agent Development on Secure Windows Platforms
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=VHKivXdqfeQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:17:21 +00:00
-permalink: "/2025-11-21-Unleash-the-Future-of-AI-and-Agent-Development-on-Secure-Windows-Platforms.html"
-categories: ["AI", "Coding", "Security"]
-tags: ["Advanced Security", "Agent Connectors", "Agent Hierarchies", "Agent Packaging", "Agent Registry", "AI", "Client Server Model", "Coding", "Computer Using Agents", "Isolated Workspace", "MCP", "MCP Host", "Microsoft Defender", "Microsoft Ignite", "MSIgnite", "Platform Development", "Privacy", "ScalewithcloudandAIendpoints", "Secure Deployment", "Security", "Videos", "Windows AI"]
-tags_normalized: ["advanced security", "agent connectors", "agent hierarchies", "agent packaging", "agent registry", "ai", "client server model", "coding", "computer using agents", "isolated workspace", "mcp", "mcp host", "microsoft defender", "microsoft ignite", "msignite", "platform development", "privacy", "scalewithcloudandaiendpoints", "secure deployment", "security", "videos", "windows ai"]
+permalink: /ai/videos/Unleash-the-Future-of-AI-and-Agent-Development-on-Secure-Windows-Platforms
+tags:
+- Advanced Security
+- Agent Connectors
+- Agent Hierarchies
+- Agent Packaging
+- Agent Registry
+- AI
+- Client Server Model
+- Coding
+- Computer Using Agents
+- Isolated Workspace
+- MCP
+- MCP Host
+- Microsoft Defender
+- Microsoft Ignite
+- MSIgnite
+- Platform Development
+- Privacy
+- ScalewithcloudandAIendpoints
+- Secure Deployment
+- Security
+- Videos
+- Windows AI
+section_names:
+- ai
+- coding
+- security
 ---
-
 Microsoft Events delivers an in-depth exploration of how Windows is enabling large-scale development of secure AI agents, highlighting MCP, agent connectors, and platform-level security upgrades.<!--excerpt_end-->
 
 {% youtube VHKivXdqfeQ %}

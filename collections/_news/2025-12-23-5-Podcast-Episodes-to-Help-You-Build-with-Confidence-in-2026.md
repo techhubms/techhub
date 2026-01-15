@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "5 Podcast Episodes to Help You Build with Confidence in 2026"
-description: "This roundup from Cassidy Williams highlights five insightful episodes of the GitHub Podcast, focusing on practical discussions about AI tooling trends, open source sustainability, DIY software development, privacy-first automation, and the evolving developer landscape based on GitHub’s Octoverse report. Developers, maintainers, and tech enthusiasts are offered concrete takeaways to help navigate the fast-changing world of software and open source in the coming year."
-author: "Cassidy Williams"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 5 Podcast Episodes to Help You Build with Confidence in 2026
+author: Cassidy Williams
+canonical_url: https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-23 00:15:00 +00:00
-permalink: "/2025-12-23-5-Podcast-Episodes-to-Help-You-Build-with-Confidence-in-2026.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "Coding", "Community Contribution", "Developer Trends", "DevOps", "DIY Tools", "GitHub Podcast", "Home Assistant", "Maintainers", "MCP", "News", "Octoverse", "Open Source", "Open Standards", "Privacy", "Software Development", "Software Sustainability", "TypeScript"]
-tags_normalized: ["ai", "coding", "community contribution", "developer trends", "devops", "diy tools", "github podcast", "home assistant", "maintainers", "mcp", "news", "octoverse", "open source", "open standards", "privacy", "software development", "software sustainability", "typescript"]
+permalink: /ai/news/5-Podcast-Episodes-to-Help-You-Build-with-Confidence-in-2026
+tags:
+- AI
+- Coding
+- Community Contribution
+- Developer Trends
+- DevOps
+- DIY Tools
+- GitHub Podcast
+- Home Assistant
+- Maintainers
+- MCP
+- News
+- Octoverse
+- Open Source
+- Open Standards
+- Privacy
+- Software Development
+- Software Sustainability
+- TypeScript
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Cassidy Williams curates five essential GitHub Podcast episodes for 2026, guiding listeners through AI tooling, open source sustainability, DIY development, and privacy-first automation to help developers and maintainers build confidently.<!--excerpt_end-->
 
 # 5 Podcast Episodes to Help You Build with Confidence in 2026

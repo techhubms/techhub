@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhancing IT Operations with Apptio on Azure for Real-Time Insights"
-description: "This session from Microsoft Ignite 2025 explores how Apptio integrated with Azure enables organizations to manage complex multi-cloud environments more efficiently. It focuses on overcoming challenges such as cost, risk, and resource inefficiencies by leveraging AI-powered tools for operational optimization and financial transparency."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nJk-O5DQzkI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Enhancing IT Operations with Apptio on Azure for Real-Time Insights
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=nJk-O5DQzkI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:48:56 +00:00
-permalink: "/2025-11-26-Enhancing-IT-Operations-with-Apptio-on-Azure-for-Real-Time-Insights.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Optimization", "Apptio", "Azure", "Cloud Management", "Cloud Services", "Cost Management", "Enterprise Solutions", "Financial Transparency", "IT Operations", "IT Strategy", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Cloud", "Operational Efficiency", "Real Time Insights", "Resource Optimization", "Videos"]
-tags_normalized: ["ai", "ai optimization", "apptio", "azure", "cloud management", "cloud services", "cost management", "enterprise solutions", "financial transparency", "it operations", "it strategy", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi cloud", "operational efficiency", "real time insights", "resource optimization", "videos"]
+permalink: /ai/videos/Enhancing-IT-Operations-with-Apptio-on-Azure-for-Real-Time-Insights
+tags:
+- AI
+- AI Optimization
+- Apptio
+- Azure
+- Cloud Management
+- Cloud Services
+- Cost Management
+- Enterprise Solutions
+- Financial Transparency
+- IT Operations
+- IT Strategy
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Multi Cloud
+- Operational Efficiency
+- Real Time Insights
+- Resource Optimization
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts a session on leveraging Apptio on Azure, featuring Philip Alfano and Bill Primerano, highlighting strategies for operational efficiency and AI-driven cost optimization in enterprise IT environments.<!--excerpt_end-->
 
 {% youtube nJk-O5DQzkI %}

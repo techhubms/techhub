@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "SQL Database in Microsoft Fabric"
-description: "This video by John Savill delivers a practical walkthrough of the SQL database capabilities in Microsoft Fabric. It covers Fabric's integration with OneLake, connections with Purview and AI, managing transactional SQL workloads, creation and usage of SQL databases, and choosing the appropriate SQL service for different analytics and transactional needs. Key Microsoft resources and decision guides are also referenced, along with hands-on demonstrations and pricing discussions."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ycq7r-ngOBI"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: SQL Database in Microsoft Fabric
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=ycq7r-ngOBI
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-18 15:06:40 +00:00
-permalink: "/2025-08-18-SQL-Database-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["AI", "AI Integration", "Analytics", "Analytics Endpoints", "Azure", "Data Analytics", "Data Integration", "Data Platform", "Database Architecture", "Fabric", "Feature Comparison", "Microsoft Fabric", "ML", "OneLake", "Pricing", "Purview Integration", "Service Selection", "SQL", "SQL Database", "SQL Endpoints", "SQL in Fabric", "SQL Server", "Transactional Databases", "Videos"]
-tags_normalized: ["ai", "ai integration", "analytics", "analytics endpoints", "azure", "data analytics", "data integration", "data platform", "database architecture", "fabric", "feature comparison", "microsoft fabric", "ml", "onelake", "pricing", "purview integration", "service selection", "sql", "sql database", "sql endpoints", "sql in fabric", "sql server", "transactional databases", "videos"]
+permalink: /ml/videos/SQL-Database-in-Microsoft-Fabric
+tags:
+- AI
+- AI Integration
+- Analytics
+- Analytics Endpoints
+- Azure
+- Data Analytics
+- Data Integration
+- Data Platform
+- Database Architecture
+- Fabric
+- Feature Comparison
+- Microsoft Fabric
+- ML
+- OneLake
+- Pricing
+- Purview Integration
+- Service Selection
+- SQL
+- SQL Database
+- SQL Endpoints
+- SQL in Fabric
+- SQL Server
+- Transactional Databases
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 In this video, John Savill explores the SQL database features of Microsoft Fabric, demonstrating setup, usage, and integration points with analytics services and providing guidance on selecting the right SQL database for various scenarios.<!--excerpt_end-->
 
 {% youtube ycq7r-ngOBI %}

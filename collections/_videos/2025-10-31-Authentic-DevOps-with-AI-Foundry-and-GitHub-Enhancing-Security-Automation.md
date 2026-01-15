@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation"
-description: "This Sip and Sync with Azure episode features Krystal Folkes and Katie Novotny from Microsoft discussing how Azure AI Foundry agents can improve DevOps workflows through integration with GitHub and GitHub Copilot. The discussion includes a hands-on demo where they build a security-focused agent using MCP tools, connect to GitHub advanced security advisories, and orchestrate multi-agent workflows, emphasizing secure authentication with Azure Key Vault and managed identity."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rWkLRkN3yvI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=rWkLRkN3yvI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 16:12:32 +00:00
-permalink: "/2025-10-31-Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Development", "AI", "Azure", "Azure AI Foundry", "Azure Key Vault", "Cloud Computing", "Coding", "Dev", "Developer Tools", "Development", "DevOps", "DevOps Automation", "GitHub Copilot", "GitHub Security", "Managed Identity", "MCP Tools", "Microsoft", "Microsoft Cloud", "Multi Agent Workflows", "Orchestration", "Prompt Engineering", "Python", "Security", "Security Agents", "Tech", "Technology", "Token Authentication", "Videos", "VS", "Vulnerability Insights"]
-tags_normalized: ["agent development", "ai", "azure", "azure ai foundry", "azure key vault", "cloud computing", "coding", "dev", "developer tools", "development", "devops", "devops automation", "github copilot", "github security", "managed identity", "mcp tools", "microsoft", "microsoft cloud", "multi agent workflows", "orchestration", "prompt engineering", "python", "security", "security agents", "tech", "technology", "token authentication", "videos", "vs", "vulnerability insights"]
+permalink: /github-copilot/videos/Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation
+tags:
+- Agent Development
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Key Vault
+- Cloud Computing
+- Coding
+- Dev
+- Developer Tools
+- Development
+- DevOps
+- DevOps Automation
+- GitHub Copilot
+- GitHub Security
+- Managed Identity
+- MCP Tools
+- Microsoft
+- Microsoft Cloud
+- Multi Agent Workflows
+- Orchestration
+- Prompt Engineering
+- Python
+- Security
+- Security Agents
+- Tech
+- Technology
+- Token Authentication
+- Videos
+- VS
+- Vulnerability Insights
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 In this episode, Microsoft Developer's Krystal Folkes and Katie Novotny demonstrate building AI-powered security agents using Azure AI Foundry, GitHub, and GitHub Copilot to automate and secure DevOps workflows.<!--excerpt_end-->
 
 {% youtube rWkLRkN3yvI %}

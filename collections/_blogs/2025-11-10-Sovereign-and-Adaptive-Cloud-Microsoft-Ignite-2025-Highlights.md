@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights"
-description: "This article by Thomas Maurer offers a comprehensive overview of the key themes presented at Microsoft Ignite 2025—Sovereign Cloud and Adaptive Cloud. It explores how these paradigms enable organizations to meet governance and compliance needs while supporting innovation with Azure, AI, hybrid, multicloud, and edge computing. The post features session recommendations, implementation highlights, and strategic guidance for cloud architects and decision-makers considering sovereignty and flexibility in their cloud strategy."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-10 14:53:03 +00:00
-permalink: "/2025-11-10-Sovereign-and-Adaptive-Cloud-Microsoft-Ignite-2025-Highlights.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adaptive Cloud", "Agentic Intelligence", "AI", "AI Operations", "Azure", "Azure Arc", "Azure Local", "Azure Management", "Azure Policy", "Blogs", "Cloud", "Cloud Security", "Compliance", "Digital Sovereignty", "Edge Computing", "Governance", "Hybrid Cloud", "Ignite", "Microsoft", "Microsoft Azure", "Microsoft Ignite", "Microsoft Sovereign Cloud", "Multicloud", "Observability", "Resilience", "Security", "Sovereign Cloud"]
-tags_normalized: ["adaptive cloud", "agentic intelligence", "ai", "ai operations", "azure", "azure arc", "azure local", "azure management", "azure policy", "blogs", "cloud", "cloud security", "compliance", "digital sovereignty", "edge computing", "governance", "hybrid cloud", "ignite", "microsoft", "microsoft azure", "microsoft ignite", "microsoft sovereign cloud", "multicloud", "observability", "resilience", "security", "sovereign cloud"]
+permalink: /ai/blogs/Sovereign-and-Adaptive-Cloud-Microsoft-Ignite-2025-Highlights
+tags:
+- Adaptive Cloud
+- Agentic Intelligence
+- AI
+- AI Operations
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Management
+- Azure Policy
+- Blogs
+- Cloud
+- Cloud Security
+- Compliance
+- Digital Sovereignty
+- Edge Computing
+- Governance
+- Hybrid Cloud
+- Ignite
+- Microsoft
+- Microsoft Azure
+- Microsoft Ignite
+- Microsoft Sovereign Cloud
+- Multicloud
+- Observability
+- Resilience
+- Security
+- Sovereign Cloud
+section_names:
+- ai
+- azure
+- security
 ---
-
 Thomas Maurer provides a strategic summary of Sovereign Cloud and Adaptive Cloud themes at Microsoft Ignite 2025, with actionable insights for architects and decision-makers concerned with compliance, flexibility, and cloud innovation.<!--excerpt_end-->
 
 # Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights

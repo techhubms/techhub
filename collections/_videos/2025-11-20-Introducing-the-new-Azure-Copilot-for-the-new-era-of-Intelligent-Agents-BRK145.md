@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Introducing the new Azure Copilot for the new era of Intelligent Agents | BRK145"
-description: "This Microsoft Ignite 2025 session details how Azure Copilot is advancing the integration of agentic AI in cloud operations, enabling IT professionals, DevOps engineers, and developers to manage, secure, and optimize Azure environments through autonomous and collaborative intelligent agents. Key topics include incident response automation, infrastructure provisioning, security posture management, and the introduction of new features such as Context IQ and agent orchestration for streamlined cloud management."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WgFGGS_yKmE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Introducing the new Azure Copilot for the new era of Intelligent Agents | BRK145
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=WgFGGS_yKmE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:16:00 +00:00
-permalink: "/2025-11-20-Introducing-the-new-Azure-Copilot-for-the-new-era-of-Intelligent-Agents-BRK145.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Azure", "Azure Copilot", "Azure Experiences", "Cloud Operations", "Cloud Security", "Context IQ", "DevOps", "DevOps Automation", "Incident Response", "Infrastructure Provisioning", "IT Management", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Agent Orchestration", "Resiliency Agent", "Security", "Security Posture Management", "Videos"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure copilot", "azure experiences", "cloud operations", "cloud security", "context iq", "devops", "devops automation", "incident response", "infrastructure provisioning", "it management", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi agent orchestration", "resiliency agent", "security", "security posture management", "videos"]
+permalink: /ai/videos/Introducing-the-new-Azure-Copilot-for-the-new-era-of-Intelligent-Agents-BRK145
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure Copilot
+- Azure Experiences
+- Cloud Operations
+- Cloud Security
+- Context IQ
+- DevOps
+- DevOps Automation
+- Incident Response
+- Infrastructure Provisioning
+- IT Management
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Multi Agent Orchestration
+- Resiliency Agent
+- Security
+- Security Posture Management
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 In this session from Microsoft Ignite 2025, Microsoft Events—featuring speakers Annie Pearl, Demi Ajayi, and Ruhiyyih Mahalati—explore how Azure Copilot and agentic AI are elevating IT, DevOps, and security management in Azure cloud environments.<!--excerpt_end-->
 
 {% youtube WgFGGS_yKmE %}

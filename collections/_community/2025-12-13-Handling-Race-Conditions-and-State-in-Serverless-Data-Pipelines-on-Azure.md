@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Handling Race Conditions and State in Serverless Data Pipelines on Azure"
-description: "This community post by Chameseddine explores practical approaches to handling race conditions and state management in large-scale serverless data pipelines using Azure Functions, Azure Data Factory (ADF), and Azure Storage. The author shares experience with generating globally unique, sequential IDs for massive data ingestion and transformation workloads, evaluating solutions like sequential ADF processing, external locking, and Durable Entities for reliable and performant ETL workflows."
-author: "Chameseddine"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Handling Race Conditions and State in Serverless Data Pipelines on Azure
+author: Chameseddine
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-13 12:22:51 +00:00
-permalink: "/2025-12-13-Handling-Race-Conditions-and-State-in-Serverless-Data-Pipelines-on-Azure.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Azure", "Azure Data Factory", "Azure Durable Functions", "Azure Functions", "Cloud Architecture", "Coding", "Community", "Data Engineering", "Distributed Systems", "Durable Entities", "ETL", "Fan Out/Fan in Pattern", "ML", "Parquet", "Race Condition", "Sequential ID Generation", "Serverless", "State Management", "Table Storage", "Workflow Design"]
-tags_normalized: ["azure", "azure data factory", "azure durable functions", "azure functions", "cloud architecture", "coding", "community", "data engineering", "distributed systems", "durable entities", "etl", "fan outslashfan in pattern", "ml", "parquet", "race condition", "sequential id generation", "serverless", "state management", "table storage", "workflow design"]
+permalink: /ml/community/Handling-Race-Conditions-and-State-in-Serverless-Data-Pipelines-on-Azure
+tags:
+- Azure
+- Azure Data Factory
+- Azure Durable Functions
+- Azure Functions
+- Cloud Architecture
+- Coding
+- Community
+- Data Engineering
+- Distributed Systems
+- Durable Entities
+- ETL
+- Fan Out/Fan in Pattern
+- ML
+- Parquet
+- Race Condition
+- Sequential ID Generation
+- Serverless
+- State Management
+- Table Storage
+- Workflow Design
+section_names:
+- azure
+- coding
+- ml
 ---
-
 Chameseddine discusses hands-on solutions for managing state and avoiding race conditions in Azure serverless data pipelines, sharing lessons learned and design patterns from a real-world ETL challenge.<!--excerpt_end-->
 
 # Handling Race Conditions and State in Serverless Data Pipelines on Azure

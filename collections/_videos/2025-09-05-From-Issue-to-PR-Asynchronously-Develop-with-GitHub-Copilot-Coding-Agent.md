@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent"
-description: "This video discusses the evolution of GitHub Copilot from a simple code-completion assistant to a powerful autonomous coding agent. It highlights features such as assigning development tasks directly to AI, the management interface at github.com/copilot/agents, built-in web testing, and integration with MCP (Model Context Protocol). Demonstrations include real-world bug fixes, automated documentation, and collaborative AI development practices."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jq7Ls6T0LYM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=jq7Ls6T0LYM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-05 17:29:28 +00:00
-permalink: "/2025-09-05-From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Command Center", "AI", "AI Code Generation", "Automated Testing", "Autonomous Agents", "Azure AI", "Cloud Computing", "Coding", "Coding Agent", "Coding Automation", "Dev", "Developer Productivity", "Development", "DevOps", "GitHub", "GitHub Copilot", "MCP", "Microsoft", "Playwright Integration", "PR Automation", "Software Development", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent command center", "ai", "ai code generation", "automated testing", "autonomous agents", "azure ai", "cloud computing", "coding", "coding agent", "coding automation", "dev", "developer productivity", "development", "devops", "github", "github copilot", "mcp", "microsoft", "playwright integration", "pr automation", "software development", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent
+tags:
+- Agent Command Center
+- AI
+- AI Code Generation
+- Automated Testing
+- Autonomous Agents
+- Azure AI
+- Cloud Computing
+- Coding
+- Coding Agent
+- Coding Automation
+- Dev
+- Developer Productivity
+- Development
+- DevOps
+- GitHub
+- GitHub Copilot
+- MCP
+- Microsoft
+- Playwright Integration
+- PR Automation
+- Software Development
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Developer presents a video where Luke Hoban demonstrates how GitHub Copilot has evolved into an autonomous coding agent, with examples of task automation, backlog management, and integration with tools like MCP, improving both individual and team development workflows.<!--excerpt_end-->
 
 {% youtube jq7Ls6T0LYM %}

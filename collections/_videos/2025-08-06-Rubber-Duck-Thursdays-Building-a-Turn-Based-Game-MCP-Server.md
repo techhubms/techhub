@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Rubber Duck Thursdays - Building a Turn-Based Game MCP Server"
-description: "This video features a live coding session by the GitHub team, focusing on the creation and development of a turn-based-game MCP server. The stream offers an informal, collaborative experience, showcasing practical coding techniques and exploring the integration of GitHub Copilot to improve productivity and code quality while working on server-side game logic."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=T8D1hDaCrKc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Rubber Duck Thursdays - Building a Turn-Based Game MCP Server
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=T8D1hDaCrKc
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-06 09:04:39 +00:00
-permalink: "/2025-08-06-Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Coding", "Code Collaboration", "Coding", "Developer Tools", "GitHub", "GitHub Copilot", "Live Coding", "MCP Server", "Programming", "Server Development", "Software Development", "Turn Based Game", "Videos"]
-tags_normalized: ["ai", "ai powered coding", "code collaboration", "coding", "developer tools", "github", "github copilot", "live coding", "mcp server", "programming", "server development", "software development", "turn based game", "videos"]
+permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server
+tags:
+- AI
+- AI Powered Coding
+- Code Collaboration
+- Coding
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Live Coding
+- MCP Server
+- Programming
+- Server Development
+- Software Development
+- Turn Based Game
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub hosts a relaxed coding livestream where the team continues work on a turn-based-game MCP server, demonstrating collaborative coding practices and GitHub Copilot integration.<!--excerpt_end-->
 
 {% youtube T8D1hDaCrKc %}

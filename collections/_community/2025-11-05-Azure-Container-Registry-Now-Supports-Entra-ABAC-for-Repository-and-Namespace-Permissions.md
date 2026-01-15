@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions"
-description: "This announcement details the general availability of Microsoft Entra attribute-based access control (ABAC) for Azure Container Registry (ACR). It explains how ABAC integrates with Azure RBAC to enable least-privilege access at the repository and namespace level, supporting multi-tenant engineering patterns and enhancing security for CI/CD and runtime scenarios. The post describes permission management, role configuration changes, supported identities, and how enterprises can adopt ABAC for granular access control."
-author: "johshmsft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions
+author: johshmsft
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 00:31:02 +00:00
-permalink: "/2025-11-05-Azure-Container-Registry-Now-Supports-Entra-ABAC-for-Repository-and-Namespace-Permissions.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ABAC", "AKS", "Azure", "Azure Container Apps", "Azure Container Instances", "Azure Container Registry", "Azure RBAC", "CI/CD", "Community", "DevOps", "Kubernetes", "Least Privilege", "Microsoft Entra ID", "Multi Tenant", "Permission Management", "Registry Administration", "Role Assignments", "Security", "Zero Trust"]
-tags_normalized: ["abac", "aks", "azure", "azure container apps", "azure container instances", "azure container registry", "azure rbac", "cislashcd", "community", "devops", "kubernetes", "least privilege", "microsoft entra id", "multi tenant", "permission management", "registry administration", "role assignments", "security", "zero trust"]
+permalink: /azure/community/Azure-Container-Registry-Now-Supports-Entra-ABAC-for-Repository-and-Namespace-Permissions
+tags:
+- ABAC
+- AKS
+- Azure
+- Azure Container Apps
+- Azure Container Instances
+- Azure Container Registry
+- Azure RBAC
+- CI/CD
+- Community
+- DevOps
+- Kubernetes
+- Least Privilege
+- Microsoft Entra ID
+- Multi Tenant
+- Permission Management
+- Registry Administration
+- Role Assignments
+- Security
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 johshmsft outlines the new support for Microsoft Entra ABAC in Azure Container Registry, showing how teams can enforce least-privilege boundaries for repositories and namespaces with fine-grained security controls.<!--excerpt_end-->
 
 # Azure Container Registry Repository Permissions with Attribute-based Access Control (ABAC)

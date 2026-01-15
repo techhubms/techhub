@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Leads Gartner 2025 Email Security Quadrant with Defender for Office 365 and Agentic AI"
-description: "This news release highlights Microsoft's recognition as a Leader in the 2025 Gartner Magic Quadrant for Email Security, focusing on Microsoft Defender for Office 365. It details their innovative use of agentic AI for automated phishing detection, Security Copilot for email triage, protections against emerging threats like email bombing, and their commitment to transparency and benchmarking for effectiveness. Concrete examples show the evolution of email-based cybercrime, how AI is being used in defense, and the impact on end-users and security teams."
-author: "Ramya Chitrakar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/05/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-email-security/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Leads Gartner 2025 Email Security Quadrant with Defender for Office 365 and Agentic AI
+author: Ramya Chitrakar
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/05/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-email-security/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-05 20:00:00 +00:00
-permalink: "/2025-12-05-Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "Benchmarking", "Business Email Compromise", "Cybersecurity", "Email Security", "Gartner Magic Quadrant", "Integrated Cloud Email Security", "Microsoft Defender For Office 365", "Microsoft Teams Security", "News", "Phishing Attacks", "Secure Email Gateway", "Security", "Security Copilot", "Security Operations Center", "Threat Detection", "Transparency Reports", "Triage Automation"]
-tags_normalized: ["agentic ai", "ai", "benchmarking", "business email compromise", "cybersecurity", "email security", "gartner magic quadrant", "integrated cloud email security", "microsoft defender for office 365", "microsoft teams security", "news", "phishing attacks", "secure email gateway", "security", "security copilot", "security operations center", "threat detection", "transparency reports", "triage automation"]
+permalink: /ai/news/Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI
+tags:
+- Agentic AI
+- AI
+- Benchmarking
+- Business Email Compromise
+- Cybersecurity
+- Email Security
+- Gartner Magic Quadrant
+- Integrated Cloud Email Security
+- Microsoft Defender For Office 365
+- Microsoft Teams Security
+- News
+- Phishing Attacks
+- Secure Email Gateway
+- Security
+- Security Copilot
+- Security Operations Center
+- Threat Detection
+- Transparency Reports
+- Triage Automation
+section_names:
+- ai
+- security
 ---
-
 Ramya Chitrakar shares insights into Microsoft's recognition as a leader in Gartner's 2025 Magic Quadrant for Email Security, spotlighting advanced AI-driven capabilities in Defender for Office 365 and innovations transforming enterprise email protection.<!--excerpt_end-->
 
 # Microsoft Leads Gartner 2025 Email Security Quadrant with Defender for Office 365 and Agentic AI

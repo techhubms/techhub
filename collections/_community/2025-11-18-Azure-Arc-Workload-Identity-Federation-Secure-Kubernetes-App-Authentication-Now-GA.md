@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Arc Workload Identity Federation: Secure Kubernetes App Authentication Now GA"
-description: "This announcement details the general availability of Workload Identity support for Azure Arc-enabled Kubernetes clusters, enabling secure identity federation for workloads running outside Azure. Applications can now use OpenID Connect (OIDC) with Microsoft Entra ID to access Azure services without managing secrets, reducing operational overhead and enhancing security. The guide covers setup steps, supported Kubernetes platforms, and compliance benefits."
-author: "Poornima99"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/workload-identity-support-for-azure-arc-enabled-kubernetes/ba-p/4467851"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Arc Workload Identity Federation: Secure Kubernetes App Authentication Now GA'
+author: Poornima99
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/workload-identity-support-for-azure-arc-enabled-kubernetes/ba-p/4467851
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Azure-Arc-Workload-Identity-Federation-Secure-Kubernetes-App-Authentication-Now-GA.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure CLI", "Azure Key Vault", "Azure Storage", "Community", "Edge Computing", "Hybrid Cloud", "Identity Federation", "Kubernetes", "Managed Identity", "Microsoft Entra ID", "OIDC", "Rancher K3s", "Red Hat OpenShift", "Security", "Service Account", "Token Federation", "VMware Tanzu", "Workload Identity"]
-tags_normalized: ["azure", "azure arc", "azure cli", "azure key vault", "azure storage", "community", "edge computing", "hybrid cloud", "identity federation", "kubernetes", "managed identity", "microsoft entra id", "oidc", "rancher k3s", "red hat openshift", "security", "service account", "token federation", "vmware tanzu", "workload identity"]
+permalink: /azure/community/Azure-Arc-Workload-Identity-Federation-Secure-Kubernetes-App-Authentication-Now-GA
+tags:
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Key Vault
+- Azure Storage
+- Community
+- Edge Computing
+- Hybrid Cloud
+- Identity Federation
+- Kubernetes
+- Managed Identity
+- Microsoft Entra ID
+- OIDC
+- Rancher K3s
+- Red Hat OpenShift
+- Security
+- Service Account
+- Token Federation
+- VMware Tanzu
+- Workload Identity
+section_names:
+- azure
+- security
 ---
-
 Poornima99 announces that Workload Identity support for Azure Arc-enabled Kubernetes clusters is now generally available, providing organizations with secure, secretless authentication to Azure resources.<!--excerpt_end-->
 
 # Azure Arc Workload Identity Federation: Secure Kubernetes App Authentication Now Generally Available

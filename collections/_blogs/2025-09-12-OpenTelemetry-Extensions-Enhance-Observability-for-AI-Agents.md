@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "OpenTelemetry Extensions Enhance Observability for AI Agents"
-description: "This article explores how OpenTelemetry is advancing to support observability for AI agents, with the goal of unifying telemetry data collection across applications and intelligent automation. It highlights innovations by Cisco and Splunk, including new extensions, the automation potential for IT operations, and the integration of AI models with telemetry platforms."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: OpenTelemetry Extensions Enhance Observability for AI Agents
+author: Mike Vizard
+canonical_url: https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-12 12:30:57 +00:00
-permalink: "/2025-09-12-OpenTelemetry-Extensions-Enhance-Observability-for-AI-Agents.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Canvas", "AI Driven IT Automation", "AI Observability", "Blogs", "Cisco", "Cloud Monitoring", "Data Fabric", "DevOps", "DevOps Observability", "IT Automation", "LLM Telemetry", "Network Monitoring", "Observability", "OpenTelemetry", "OpenTelemetry Semantic Extensions", "Root Cause Analysis", "Semantic Extensions", "Social Facebook", "Social LinkedIn", "Social X", "Splunk", "Telemetry Collection", "Telemetry Data", "Time Series Analysis", "Time Series Data Analysis"]
-tags_normalized: ["ai", "ai agents", "ai canvas", "ai driven it automation", "ai observability", "blogs", "cisco", "cloud monitoring", "data fabric", "devops", "devops observability", "it automation", "llm telemetry", "network monitoring", "observability", "opentelemetry", "opentelemetry semantic extensions", "root cause analysis", "semantic extensions", "social facebook", "social linkedin", "social x", "splunk", "telemetry collection", "telemetry data", "time series analysis", "time series data analysis"]
+permalink: /ai/blogs/OpenTelemetry-Extensions-Enhance-Observability-for-AI-Agents
+tags:
+- AI
+- AI Agents
+- AI Canvas
+- AI Driven IT Automation
+- AI Observability
+- Blogs
+- Cisco
+- Cloud Monitoring
+- Data Fabric
+- DevOps
+- DevOps Observability
+- IT Automation
+- LLM Telemetry
+- Network Monitoring
+- Observability
+- OpenTelemetry
+- OpenTelemetry Semantic Extensions
+- Root Cause Analysis
+- Semantic Extensions
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Splunk
+- Telemetry Collection
+- Telemetry Data
+- Time Series Analysis
+- Time Series Data Analysis
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard details how OpenTelemetry is expanding to support observability and automation for AI agents, showing how Cisco and Splunk are integrating these capabilities to streamline IT operations.<!--excerpt_end-->
 
 # OpenTelemetry Extensions Enhance Observability for AI Agents

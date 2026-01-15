@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Preparing Enterprise Workflows for AI-Driven Transformation"
-description: "This Microsoft Ignite 2025 session features Citrix and Microsoft experts discussing how AI will rapidly reshape enterprise work. The talk maps a seven-stage progression from current 'shadow AI' use to fully orchestrated AI agents directly interacting with business applications. Practical advice is provided for embracing AI with today’s app interfaces, why this approach is more immediately beneficial than waiting for 'AI-native' apps, and how enterprises can adapt workflows without stifling innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wh8xquMkVOE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Preparing Enterprise Workflows for AI-Driven Transformation
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=wh8xquMkVOE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:52:21 +00:00
-permalink: "/2025-11-21-Preparing-Enterprise-Workflows-for-AI-Driven-Transformation.html"
-categories: ["AI"]
-tags: ["Agent Orchestration", "AI", "AI Agents", "AI Demonstrations", "AI Transformation", "AI Workflow", "App Integration", "Business Applications", "Copilotandagentsatwork", "Enterprise AI", "Enterprise Strategy", "Microsoft Ignite", "MSIgnite", "PowerPoint Automation", "Videos", "Workplace Automation"]
-tags_normalized: ["agent orchestration", "ai", "ai agents", "ai demonstrations", "ai transformation", "ai workflow", "app integration", "business applications", "copilotandagentsatwork", "enterprise ai", "enterprise strategy", "microsoft ignite", "msignite", "powerpoint automation", "videos", "workplace automation"]
+permalink: /ai/videos/Preparing-Enterprise-Workflows-for-AI-Driven-Transformation
+tags:
+- Agent Orchestration
+- AI
+- AI Agents
+- AI Demonstrations
+- AI Transformation
+- AI Workflow
+- App Integration
+- Business Applications
+- Copilotandagentsatwork
+- Enterprise AI
+- Enterprise Strategy
+- Microsoft Ignite
+- MSIgnite
+- PowerPoint Automation
+- Videos
+- Workplace Automation
+section_names:
+- ai
 ---
-
 Microsoft Events brings together Citrix and Microsoft subject matter experts in this Ignite 2025 session to provide guidance for enterprises preparing for transformative shifts with AI-driven agents.<!--excerpt_end-->
 
 {% youtube wh8xquMkVOE %}

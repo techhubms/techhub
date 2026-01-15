@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Marketplace Success for Partners: Building and Monetizing AI Solutions | PBRK424"
-description: "This session from Microsoft Ignite 2025 explains how partners can leverage the Microsoft Marketplace to build, launch, and monetize AI-powered applications and intelligent cloud offerings. Presenters discuss effective strategies for aligning marketplace approaches with sales motions to drive new revenue. The session covers recent marketplace improvements, showcases customer adoption stories, and introduces new tools, including Arrow’s AI platform and the Our Sphere AI 360. Attendees will also hear success stories from various partners, along with resources for further exploration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tdouicsPTAk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Marketplace Success for Partners: Building and Monetizing AI Solutions | PBRK424'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tdouicsPTAk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:01:21 +00:00
-permalink: "/2025-11-21-Marketplace-Success-for-Partners-Building-and-Monetizing-AI-Solutions-PBRK424.html"
-categories: ["AI"]
-tags: ["AI", "AI Powered Solutions", "Arrow AI Platform", "Cloud Offerings", "Enterprise", "Intelligent Applications", "Marketplace Strategy", "Microsoft Ignite", "Microsoft Marketplace", "MicrosoftAICloudPartnerProgram", "Monetization", "MSIgnite", "Our Sphere AI 360", "Our Sphere Assistant", "Partner Ecosystem", "Partner Success Stories", "Revenue Opportunities", "SMB", "Videos"]
-tags_normalized: ["ai", "ai powered solutions", "arrow ai platform", "cloud offerings", "enterprise", "intelligent applications", "marketplace strategy", "microsoft ignite", "microsoft marketplace", "microsoftaicloudpartnerprogram", "monetization", "msignite", "our sphere ai 360", "our sphere assistant", "partner ecosystem", "partner success stories", "revenue opportunities", "smb", "videos"]
+permalink: /ai/videos/Marketplace-Success-for-Partners-Building-and-Monetizing-AI-Solutions-PBRK424
+tags:
+- AI
+- AI Powered Solutions
+- Arrow AI Platform
+- Cloud Offerings
+- Enterprise
+- Intelligent Applications
+- Marketplace Strategy
+- Microsoft Ignite
+- Microsoft Marketplace
+- MicrosoftAICloudPartnerProgram
+- Monetization
+- MSIgnite
+- Our Sphere AI 360
+- Our Sphere Assistant
+- Partner Ecosystem
+- Partner Success Stories
+- Revenue Opportunities
+- SMB
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Microsoft Events, this Ignite 2025 session guides partners through building, shipping, and monetizing AI solutions via Microsoft Marketplace, featuring new tools, adoption insights, and real-world partner stories.<!--excerpt_end-->
 
 {% youtube tdouicsPTAk %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Announces GPT-5 Integration Across Copilot and Azure AI Platforms"
-description: "Microsoft has launched GPT-5, integrating it across Microsoft 365 Copilot, GitHub Copilot, Azure AI Foundry, and other key platforms. The announcement details the model’s enhanced reasoning, code generation, and chat features, highlights its Azure-based training, and celebrates accelerated innovation with OpenAI. This update signifies a substantial leap forward for enterprise AI, developer productivity, and real-world applications within Microsoft’s ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_microsoft-incorporates-openais-gpt-5-into-activity-7359268389866913793-jI2m"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Announces GPT-5 Integration Across Copilot and Azure AI Platforms
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_microsoft-incorporates-openais-gpt-5-into-activity-7359268389866913793-jI2m
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-07 17:50:58 +00:00
-permalink: "/2025-08-07-Microsoft-Announces-GPT-5-Integration-Across-Copilot-and-Azure-AI-Platforms.html"
-categories: ["AI", "Azure", "GitHub Copilot"]
-tags: ["AI", "AI Chat", "AI Coding", "AI Deployment", "AI Integration", "AI Models", "AI On Azure", "AI Reasoning", "Azure", "Azure AI Foundry", "Code Generation", "Company News", "Copilot", "Enterprise AI", "GitHub Copilot", "GPT 5", "Microsoft 365 Copilot", "Natural Language Processing", "News", "OpenAI", "Productivity AI"]
-tags_normalized: ["ai", "ai chat", "ai coding", "ai deployment", "ai integration", "ai models", "ai on azure", "ai reasoning", "azure", "azure ai foundry", "code generation", "company news", "copilot", "enterprise ai", "github copilot", "gpt 5", "microsoft 365 copilot", "natural language processing", "news", "openai", "productivity ai"]
+permalink: /github-copilot/news/Microsoft-Announces-GPT-5-Integration-Across-Copilot-and-Azure-AI-Platforms
+tags:
+- AI
+- AI Chat
+- AI Coding
+- AI Deployment
+- AI Integration
+- AI Models
+- AI On Azure
+- AI Reasoning
+- Azure
+- Azure AI Foundry
+- Code Generation
+- Company News
+- Copilot
+- Enterprise AI
+- GitHub Copilot
+- GPT 5
+- Microsoft 365 Copilot
+- Natural Language Processing
+- News
+- OpenAI
+- Productivity AI
+section_names:
+- ai
+- azure
+- github-copilot
 ---
-
 Satya Nadella, Chairman and CEO at Microsoft, announces the rollout of GPT-5 across Microsoft 365 Copilot, GitHub Copilot, Azure AI Foundry, and more, bringing advanced AI capabilities to millions of developers and enterprises.<!--excerpt_end-->
 
 # Microsoft Announces GPT-5 Integration Across Copilot and Azure AI Platforms

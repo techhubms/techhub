@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Partner: Benefits for Accelerating Software Company Success | PBRK418"
-description: "This Ignite session provides an overview of the resources, benefits, and investments available to software development companies participating in the Microsoft AI Cloud Partner Program (MAICPP). It highlights opportunities across the build, publish, and grow journey—covering AI-specific incentives, technical skilling, Azure and Marketplace investments, and new certification rewards. Guidance from Microsoft leaders and peer success stories illustrate how companies can leverage these programs to accelerate product development and go-to-market strategies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uutyZeRddiQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Partner: Benefits for Accelerating Software Company Success | PBRK418'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=uutyZeRddiQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:03:14 +00:00
-permalink: "/2025-11-21-Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Apps", "API Pilot", "Azure", "Azure Credits", "Azure Sponsorship", "Certified Software Designation", "Customer Propensity Scores", "ISV Success", "MAICPP", "Marketplace Integration", "Marketplace Rewards", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Benefits", "Skilling Opportunities", "Software Development", "Technical Resources", "Videos"]
-tags_normalized: ["ai", "ai apps", "api pilot", "azure", "azure credits", "azure sponsorship", "certified software designation", "customer propensity scores", "isv success", "maicpp", "marketplace integration", "marketplace rewards", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner benefits", "skilling opportunities", "software development", "technical resources", "videos"]
+permalink: /ai/videos/Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418
+tags:
+- AI
+- AI Apps
+- API Pilot
+- Azure
+- Azure Credits
+- Azure Sponsorship
+- Certified Software Designation
+- Customer Propensity Scores
+- ISV Success
+- MAICPP
+- Marketplace Integration
+- Marketplace Rewards
+- Microsoft AI Cloud Partner Program
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Benefits
+- Skilling Opportunities
+- Software Development
+- Technical Resources
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events shares an Ignite session on accelerating software company growth through the Microsoft AI Cloud Partner Program, highlighting AI investments, Azure sponsorships, and technical resources for developers.<!--excerpt_end-->
 
 {% youtube uutyZeRddiQ %}

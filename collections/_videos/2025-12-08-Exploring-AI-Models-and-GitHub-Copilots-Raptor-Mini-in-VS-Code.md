@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code"
-description: "This podcast episode features an in-depth discussion about evaluating AI models within Visual Studio Code, covering fine-tuning concepts, developer workflows, and a behind-the-scenes look at GitHub Copilot's Raptor Mini. The conversation offers practical insights for developers about model selection, benchmarks, and ongoing improvements to coding experiences through AI integration in VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gjKq4KMEYkI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=gjKq4KMEYkI
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-08 08:01:01 +00:00
-permalink: "/2025-12-08-Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Benchmarks", "Coding", "Coding Experience", "Context Complexity", "Developer Workflows", "Evals", "Fine Tuning", "GitHub Copilot", "Model Evaluation", "Model Selection", "Raptor Mini", "Sonnet", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai models", "benchmarks", "coding", "coding experience", "context complexity", "developer workflows", "evals", "fine tuning", "github copilot", "model evaluation", "model selection", "raptor mini", "sonnet", "videos", "vs code"]
+permalink: /github-copilot/videos/Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code
+tags:
+- AI
+- AI Models
+- Benchmarks
+- Coding
+- Coding Experience
+- Context Complexity
+- Developer Workflows
+- Evals
+- Fine Tuning
+- GitHub Copilot
+- Model Evaluation
+- Model Selection
+- Raptor Mini
+- Sonnet
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code hosts Julia Kasper for a rich discussion on AI models inside VS Code, revealing how tools like GitHub Copilot's Raptor Mini are shaping developer workflows and coding best practices.<!--excerpt_end-->
 
 {% youtube gjKq4KMEYkI %}

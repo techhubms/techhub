@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Creating Multi-Agent Workflows in Microsoft Foundry: Adding Agents with Tools"
-description: "This video tutorial, led by April from Microsoft Developer, is the second part of a series on Microsoft Foundry Workflows. It provides a step-by-step guide on how to create agents within Microsoft Foundry that utilize file search tools and incorporate them into sequential workflows. The walkthrough covers agent creation, workflow building, testing, and analysis using Azure AI Foundry's latest capabilities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=u4ksAXEx0R4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Creating Multi-Agent Workflows in Microsoft Foundry: Adding Agents with Tools'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=u4ksAXEx0R4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:06 +00:00
-permalink: "/2025-11-24-Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Creation", "Agent Tools", "AI", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Dev", "Development", "File Search", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Model Mondays", "Multi Agent Workflow", "Sequential Workflow", "Tech", "Technical Tutorial", "Technology", "Videos", "Workflow Automation", "Workflow Tracing"]
-tags_normalized: ["agent creation", "agent tools", "ai", "azure", "azure ai foundry", "cloud ai", "cloud computing", "dev", "development", "file search", "microsoft", "microsoft developer", "microsoft foundry", "model mondays", "multi agent workflow", "sequential workflow", "tech", "technical tutorial", "technology", "videos", "workflow automation", "workflow tracing"]
+permalink: /ai/videos/Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools
+tags:
+- Agent Creation
+- Agent Tools
+- AI
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Cloud Computing
+- Dev
+- Development
+- File Search
+- Microsoft
+- Microsoft Developer
+- Microsoft Foundry
+- Model Mondays
+- Multi Agent Workflow
+- Sequential Workflow
+- Tech
+- Technical Tutorial
+- Technology
+- Videos
+- Workflow Automation
+- Workflow Tracing
+section_names:
+- ai
+- azure
 ---
-
 April from Microsoft Developer presents a hands-on guide to creating agents with file search tools in Microsoft Foundry, expanding on sequential workflow development.<!--excerpt_end-->
 
 {% youtube u4ksAXEx0R4 %}

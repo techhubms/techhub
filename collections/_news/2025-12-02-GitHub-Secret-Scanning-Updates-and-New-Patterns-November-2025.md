@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "GitHub Secret Scanning Updates and New Patterns — November 2025"
-description: "This news post summarizes the latest advancements in GitHub secret scanning as of November 2025, detailing new secret types supported (notably including Azure and Microsoft provider patterns), improvements to private key detection, enhanced metadata checks, and upgrades to validity checking. These updates highlight ongoing work to improve the security ecosystem for developers and organizations using Microsoft and Azure technologies, as well as broader integrations with third-party platforms."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Secret Scanning Updates and New Patterns — November 2025
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-02 16:50:31 +00:00
-permalink: "/2025-12-02-GitHub-Secret-Scanning-Updates-and-New-Patterns-November-2025.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Security", "AWS", "Azure", "Databricks", "DevOps", "Discord", "Elliptic Curve", "GitHub", "Improvement", "Key Management", "Metadata Validation", "Microsoft", "News", "Partner Integrations", "PKCS#8", "PostHog", "Private Key Detection", "Push Protection", "Rainforest Pay", "Secret Scanning", "Security", "Sentry"]
-tags_normalized: ["application security", "aws", "azure", "databricks", "devops", "discord", "elliptic curve", "github", "improvement", "key management", "metadata validation", "microsoft", "news", "partner integrations", "pkcssharp8", "posthog", "private key detection", "push protection", "rainforest pay", "secret scanning", "security", "sentry"]
+permalink: /azure/news/GitHub-Secret-Scanning-Updates-and-New-Patterns-November-2025
+tags:
+- Application Security
+- AWS
+- Azure
+- Databricks
+- DevOps
+- Discord
+- Elliptic Curve
+- GitHub
+- Improvement
+- Key Management
+- Metadata Validation
+- Microsoft
+- News
+- Partner Integrations
+- PKCS#8
+- PostHog
+- Private Key Detection
+- Push Protection
+- Rainforest Pay
+- Secret Scanning
+- Security
+- Sentry
+section_names:
+- azure
+- devops
+- security
 ---
-
 Allison reports on the November 2025 improvements to GitHub secret scanning, including new Azure and Microsoft secret patterns, enhanced private key detection, and upgraded validity checks for security-critical credentials.<!--excerpt_end-->
 
 # GitHub Secret Scanning Updates — November 2025

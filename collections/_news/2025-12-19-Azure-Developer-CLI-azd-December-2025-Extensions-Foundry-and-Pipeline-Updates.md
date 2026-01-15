@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) December 2025: Extensions, Foundry, and Pipeline Updates"
-description: "This news post covers the December 2025 release of the Azure Developer CLI (azd), highlighting major new features such as enhanced extension capabilities, Foundry rebranding updates, improvements to Azure Pipelines, bug fixes, and user experience upgrades. It also provides an overview for new users and details about the evolving azd ecosystem, including resources for installation and extention development."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) December 2025: Extensions, Foundry, and Pipeline Updates'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-12-19 19:57:26 +00:00
-permalink: "/2025-12-19-Azure-Developer-CLI-azd-December-2025-Extensions-Foundry-and-Pipeline-Updates.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "Agent Extensions", "AI", "Azd", "Azure", "Azure Developer CLI", "Azure Pipelines", "Azure SDK", "Bicep CLI", "CI/CD", "Codespaces", "Coding", "Command Line Tools", "Container Apps", "DevOps", "Docker", "Error Handling", "Extensions", "GitHub", "Interactive CLI", "Java", "JavaScript", "Kubernetes", "Microsoft Foundry", "News", "Python", "Static Web Apps", "Template Gallery", "Terraform", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "agent extensions", "ai", "azd", "azure", "azure developer cli", "azure pipelines", "azure sdk", "bicep cli", "cislashcd", "codespaces", "coding", "command line tools", "container apps", "devops", "docker", "error handling", "extensions", "github", "interactive cli", "java", "javascript", "kubernetes", "microsoft foundry", "news", "python", "static web apps", "template gallery", "terraform", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-December-2025-Extensions-Foundry-and-Pipeline-Updates
+tags:
+- .NET
+- Agent Extensions
+- AI
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure Pipelines
+- Azure SDK
+- Bicep CLI
+- CI/CD
+- Codespaces
+- Coding
+- Command Line Tools
+- Container Apps
+- DevOps
+- Docker
+- Error Handling
+- Extensions
+- GitHub
+- Interactive CLI
+- Java
+- JavaScript
+- Kubernetes
+- Microsoft Foundry
+- News
+- Python
+- Static Web Apps
+- Template Gallery
+- Terraform
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Kristen Womack details the December 2025 Azure Developer CLI (azd) release, featuring extension enhancements, Foundry rebranding, Azure Pipeline improvements, bug fixes, and community highlights for developers.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) December 2025 Update

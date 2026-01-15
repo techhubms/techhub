@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Redefining the SDLC with GitHub Copilot and Context-Driven AI"
-description: "This Microsoft Ignite 2025 session explores how Slalom leverages GitHub Copilot’s contextual memory capabilities to transform enterprise software development. It introduces frameworks that embed project standards and design rules into Copilot, enabling AI-assisted code creation deeply aligned with organizational practices. The talk covers integrating enterprise workflows with tools like Jira, Azure DevOps, and Figma, the use of Mermaid diagrams and MCP servers for context management, and presents client outcomes including better code quality and consistency."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=S7NzOIiqU2E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Redefining the SDLC with GitHub Copilot and Context-Driven AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=S7NzOIiqU2E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:51:59 +00:00
-permalink: "/2025-11-19-Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Driven Development", "Angular", "Azure", "Azure DevOps", "Code Quality", "Coding", "Coding Consistency", "Context Framework", "Copilotandagentsatwork", "DevOps", "Enterprise Practices", "Figma", "GitHub Copilot", "Jira Integration", "MCP Server", "Mermaid Diagrams", "MSIgnite", "Project Standards", "React", "SDLC", "Slalom Accelerator", "Videos"]
-tags_normalized: ["ai", "ai driven development", "angular", "azure", "azure devops", "code quality", "coding", "coding consistency", "context framework", "copilotandagentsatwork", "devops", "enterprise practices", "figma", "github copilot", "jira integration", "mcp server", "mermaid diagrams", "msignite", "project standards", "react", "sdlc", "slalom accelerator", "videos"]
+permalink: /github-copilot/videos/Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI
+tags:
+- AI
+- AI Driven Development
+- Angular
+- Azure
+- Azure DevOps
+- Code Quality
+- Coding
+- Coding Consistency
+- Context Framework
+- Copilotandagentsatwork
+- DevOps
+- Enterprise Practices
+- Figma
+- GitHub Copilot
+- Jira Integration
+- MCP Server
+- Mermaid Diagrams
+- MSIgnite
+- Project Standards
+- React
+- SDLC
+- Slalom Accelerator
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents how Jon Perkins and Slalom used GitHub Copilot with enterprise context frameworks at Microsoft Ignite, showcasing improvements in code quality and SDLC alignment.<!--excerpt_end-->
 
 {% youtube S7NzOIiqU2E %}

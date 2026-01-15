@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "General Availability of Azure Backup Vaulted Support for Azure Files Premium (SSD) Shares"
-description: "This announcement details the general availability of vaulted backup support with Azure Backup for Azure Files Premium (SSD) shares. It highlights enhanced data protection, immutability, ransomware resilience, cross-region recovery, and compliance features. IT administrators and developers learn to implement robust backup strategies for mission-critical workloads utilizing Azure's enterprise-grade cloud file sharing solutions."
-author: "Subhash_athreya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/general-availability-of-azure-backup-vaulted-support-for-azure/ba-p/4455307"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Azure Backup Vaulted Support for Azure Files Premium (SSD) Shares
+author: Subhash_athreya
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/general-availability-of-azure-backup-vaulted-support-for-azure/ba-p/4455307
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 06:42:32 +00:00
-permalink: "/2025-09-23-General-Availability-of-Azure-Backup-Vaulted-Support-for-Azure-Files-Premium-SSD-Shares.html"
-categories: ["Azure", "Security"]
-tags: ["3 2 1 Rule", "AKS", "Azure", "Azure Backup", "Azure File Sync", "Azure Files Premium", "Azure Virtual Desktop", "Backup Policy", "Cloud Native Storage", "Community", "Compliance", "Cross Region Recovery", "Disaster Recovery", "Enterprise Data Protection", "Geo Redundant Storage", "Hybrid Cloud", "Immutable Backup", "Ransomware Protection", "Recovery Services Vault", "Security", "SMB File Shares", "SSD", "Windows Workloads"]
-tags_normalized: ["3 2 1 rule", "aks", "azure", "azure backup", "azure file sync", "azure files premium", "azure virtual desktop", "backup policy", "cloud native storage", "community", "compliance", "cross region recovery", "disaster recovery", "enterprise data protection", "geo redundant storage", "hybrid cloud", "immutable backup", "ransomware protection", "recovery services vault", "security", "smb file shares", "ssd", "windows workloads"]
+permalink: /azure/community/General-Availability-of-Azure-Backup-Vaulted-Support-for-Azure-Files-Premium-SSD-Shares
+tags:
+- 3 2 1 Rule
+- AKS
+- Azure
+- Azure Backup
+- Azure File Sync
+- Azure Files Premium
+- Azure Virtual Desktop
+- Backup Policy
+- Cloud Native Storage
+- Community
+- Compliance
+- Cross Region Recovery
+- Disaster Recovery
+- Enterprise Data Protection
+- Geo Redundant Storage
+- Hybrid Cloud
+- Immutable Backup
+- Ransomware Protection
+- Recovery Services Vault
+- Security
+- SMB File Shares
+- SSD
+- Windows Workloads
+section_names:
+- azure
+- security
 ---
-
 Subhash_athreya announces the general availability of Azure Backup's vaulted support for Azure Files Premium (SSD) shares, describing enhanced data protection, ransomware resilience, and actionable guidance for enterprise IT and developers.<!--excerpt_end-->
 
 # General Availability of Azure Backup Vaulted Support for Azure Files Premium (SSD) Shares

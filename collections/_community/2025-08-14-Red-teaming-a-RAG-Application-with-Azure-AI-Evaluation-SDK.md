@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Red-teaming a RAG Application with Azure AI Evaluation SDK"
-description: "This article by Pamela Fox explores how developers can use Microsoft's Azure AI Evaluation SDK to automate red-teaming for Retrieval-Augmented Generation (RAG) apps. It covers the risks of deploying LLM-powered applications, the process of simulating adversarial attacks with Microsoft's tooling, analyzing results across multiple models, and strategies for safeguarding AI-driven apps in production environments."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/red-teaming-a-rag-app-with-the-azure-ai-evaluation-sdk/ba-p/4442682"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Red-teaming a RAG Application with Azure AI Evaluation SDK
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/red-teaming-a-rag-app-with-the-azure-ai-evaluation-sdk/ba-p/4442682
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 07:00:00 +00:00
-permalink: "/2025-08-14-Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adversarial Testing", "AI", "AI Content Safety API", "Automated Red Teaming", "Azure", "Azure AI Evaluation SDK", "Azure AI Foundry", "Azure OpenAI Service", "Community", "Content Safety", "GPT 4o", "Hermes3", "LLM Security", "Microsoft", "Model Evaluation", "Model Hosting", "Ollama", "Prompt Engineering", "Pyrit", "Python", "RAG App", "Red Teaming", "Retrieval Augmented Generation", "RLHF", "Security"]
-tags_normalized: ["adversarial testing", "ai", "ai content safety api", "automated red teaming", "azure", "azure ai evaluation sdk", "azure ai foundry", "azure openai service", "community", "content safety", "gpt 4o", "hermes3", "llm security", "microsoft", "model evaluation", "model hosting", "ollama", "prompt engineering", "pyrit", "python", "rag app", "red teaming", "retrieval augmented generation", "rlhf", "security"]
+permalink: /ai/community/Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK
+tags:
+- Adversarial Testing
+- AI
+- AI Content Safety API
+- Automated Red Teaming
+- Azure
+- Azure AI Evaluation SDK
+- Azure AI Foundry
+- Azure OpenAI Service
+- Community
+- Content Safety
+- GPT 4o
+- Hermes3
+- LLM Security
+- Microsoft
+- Model Evaluation
+- Model Hosting
+- Ollama
+- Prompt Engineering
+- Pyrit
+- Python
+- RAG App
+- Red Teaming
+- Retrieval Augmented Generation
+- RLHF
+- Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 Pamela Fox investigates how the Azure AI Evaluation SDK enables automated red-teaming for LLM-powered RAG apps, examining real attack scenarios and showing practical ways to evaluate and strengthen AI security.<!--excerpt_end-->
 
 # Red-teaming a RAG Application with Azure AI Evaluation SDK

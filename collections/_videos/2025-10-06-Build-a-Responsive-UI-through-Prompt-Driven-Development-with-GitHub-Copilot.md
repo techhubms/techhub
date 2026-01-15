@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Build a Responsive UI through Prompt Driven Development with GitHub Copilot"
-description: "This video demonstrates how to leverage GitHub Copilot within Visual Studio Code to enhance a Notes app by making the interface responsive, implementing real-time search, and using prompt-driven features to generate documentation. Viewers will learn hands-on techniques for using Copilot for modern UI, code generation, and workflow improvements."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jVbBXjOsKzw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Build a Responsive UI through Prompt Driven Development with GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=jVbBXjOsKzw
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-06 14:01:17 +00:00
-permalink: "/2025-10-06-Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Automation", "Coding", "Custom Chat Modes", "Developer Tools", "GitHub Copilot", "Prompt Driven Development", "Prompt Engineering", "README Generation", "Real Time Search", "Responsive UI", "UI Enhancement", "Videos", "VS Code"]
-tags_normalized: ["ai", "code automation", "coding", "custom chat modes", "developer tools", "github copilot", "prompt driven development", "prompt engineering", "readme generation", "real time search", "responsive ui", "ui enhancement", "videos", "vs code"]
+permalink: /github-copilot/videos/Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot
+tags:
+- AI
+- Code Automation
+- Coding
+- Custom Chat Modes
+- Developer Tools
+- GitHub Copilot
+- Prompt Driven Development
+- Prompt Engineering
+- README Generation
+- Real Time Search
+- Responsive UI
+- UI Enhancement
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code’s team, featuring Cynthia Zanoni, showcases how developers can use GitHub Copilot and prompt-driven workflows to improve UI responsiveness, implement real-time search, and generate project documentation.<!--excerpt_end-->
 
 {% youtube jVbBXjOsKzw %}

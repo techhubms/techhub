@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Intelligent Agents with Microsoft Copilot Studio and Semantic Kernel"
-description: "This live session demonstrates how to build intelligent agents using Microsoft Copilot Studio, enable agent-to-agent communication, and connect agents externally through Semantic Kernel for advanced AI orchestration. It provides practical insights and demos for developers working with Microsoft AI technologies to enhance and extend their agent-based solutions."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qXIVJ_ZLiIY"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: Building Intelligent Agents with Microsoft Copilot Studio and Semantic Kernel
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=qXIVJ_ZLiIY
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-22 01:58:09 +00:00
-permalink: "/2025-06-22-Building-Intelligent-Agents-with-Microsoft-Copilot-Studio-and-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Communication", "Agent Development", "Agent Integration", "AI", "AI Hands On", "AI Orchestration", "Coding", "Copilot Studio", "Developer Tools", "Intelligent Agents", "Live Session", "Microsoft AI", "Microsoft Copilot", "Practical Demos", "Semantic Kernel", "Semantic Processing", "Videos", "Workflow Automation"]
-tags_normalized: ["agent communication", "agent development", "agent integration", "ai", "ai hands on", "ai orchestration", "coding", "copilot studio", "developer tools", "intelligent agents", "live session", "microsoft ai", "microsoft copilot", "practical demos", "semantic kernel", "semantic processing", "videos", "workflow automation"]
+permalink: /ai/videos/Building-Intelligent-Agents-with-Microsoft-Copilot-Studio-and-Semantic-Kernel
+tags:
+- Agent Communication
+- Agent Development
+- Agent Integration
+- AI
+- AI Hands On
+- AI Orchestration
+- Coding
+- Copilot Studio
+- Developer Tools
+- Intelligent Agents
+- Live Session
+- Microsoft AI
+- Microsoft Copilot
+- Practical Demos
+- Semantic Kernel
+- Semantic Processing
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Learn Microsoft AI demonstrates how to build and connect intelligent agents using Microsoft Copilot Studio and Semantic Kernel, offering practical demos and hands-on strategies.<!--excerpt_end-->
 
 {% youtube qXIVJ_ZLiIY %}

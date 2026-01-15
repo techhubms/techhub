@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Plan Mode in GitHub Copilot Now Available in Public Preview for JetBrains, Eclipse, and Xcode"
-description: "This announcement introduces plan mode in GitHub Copilot, now in public preview for JetBrains IDEs, Eclipse, and Xcode. Plan mode assists developers by generating detailed execution plans for coding tasks, enabling step-by-step strategies directly within the IDE. The feature aims to increase accuracy and efficiency in implementing new features, refactoring, or fixing bugs. Developers can review Copilot's suggested blueprint before approving execution, supporting more controlled and thoughtful development workflows. Guidance is provided for setting up and using plan mode across the supported IDEs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Plan Mode in GitHub Copilot Now Available in Public Preview for JetBrains, Eclipse, and Xcode
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
-permalink: "/2025-11-18-Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Review", "Copilot", "Copilot Agent", "Development Workflow", "Eclipse", "GitHub Copilot", "IDE Integration", "Implementation Strategy", "Improvement", "JetBrains IDEs", "News", "Plan Mode", "Plugin Update", "Productivity Tools", "Public Preview", "Software Development", "Step By Step Planning", "Xcode"]
-tags_normalized: ["ai", "code review", "copilot", "copilot agent", "development workflow", "eclipse", "github copilot", "ide integration", "implementation strategy", "improvement", "jetbrains ides", "news", "plan mode", "plugin update", "productivity tools", "public preview", "software development", "step by step planning", "xcode"]
+permalink: /github-copilot/news/Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode
+tags:
+- AI
+- Code Review
+- Copilot
+- Copilot Agent
+- Development Workflow
+- Eclipse
+- GitHub Copilot
+- IDE Integration
+- Implementation Strategy
+- Improvement
+- JetBrains IDEs
+- News
+- Plan Mode
+- Plugin Update
+- Productivity Tools
+- Public Preview
+- Software Development
+- Step By Step Planning
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison presents an overview of GitHub Copilot's new plan mode, now available as a public preview for JetBrains, Eclipse, and Xcode users, highlighting how it supports structured development workflows.<!--excerpt_end-->
 
 # Plan Mode in GitHub Copilot Now Available in Public Preview for JetBrains, Eclipse, and Xcode

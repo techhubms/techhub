@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Secure Azure Stream Analytics Jobs with Dedicated Clusters and Managed Private Endpoints"
-description: "This in-depth guide walks IT administrators through the implementation of Azure Stream Analytics jobs in dedicated clusters for secure, private blob storage connectivity. It covers managed identities, role assignments, network isolation, configuration steps, and automation using Terraform, enabling organizations to adhere to zero-trust and compliance requirements in their data pipelines."
-author: "PratibhaShenoy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Secure Azure Stream Analytics Jobs with Dedicated Clusters and Managed Private Endpoints
+author: PratibhaShenoy
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 10:31:44 +00:00
-permalink: "/2025-11-17-Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Automation", "Azure", "Azure Portal", "Azure Stream Analytics", "Blob Storage", "Cloud Security", "Coding", "Community", "Data Pipeline", "Dedicated Cluster", "DevOps", "Event Processing", "IAM", "Input/Output Configuration", "JSON Serialization", "Managed Identity", "Managed Private Endpoint", "Private Link", "Role Assignment", "Security", "Stream Analytics Job", "Terraform", "Zero Trust"]
-tags_normalized: ["automation", "azure", "azure portal", "azure stream analytics", "blob storage", "cloud security", "coding", "community", "data pipeline", "dedicated cluster", "devops", "event processing", "iam", "inputslashoutput configuration", "json serialization", "managed identity", "managed private endpoint", "private link", "role assignment", "security", "stream analytics job", "terraform", "zero trust"]
+permalink: /coding/community/Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints
+tags:
+- Automation
+- Azure
+- Azure Portal
+- Azure Stream Analytics
+- Blob Storage
+- Cloud Security
+- Coding
+- Community
+- Data Pipeline
+- Dedicated Cluster
+- DevOps
+- Event Processing
+- IAM
+- Input/Output Configuration
+- JSON Serialization
+- Managed Identity
+- Managed Private Endpoint
+- Private Link
+- Role Assignment
+- Security
+- Stream Analytics Job
+- Terraform
+- Zero Trust
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 PratibhaShenoy provides practical guidance for securely configuring Azure Stream Analytics jobs in dedicated clusters using managed identities and private endpoints, emphasizing zero-trust, compliance, and automation.<!--excerpt_end-->
 
 # Secure Azure Stream Analytics Jobs in Dedicated Clusters Using Managed PE for Blob Input/Output

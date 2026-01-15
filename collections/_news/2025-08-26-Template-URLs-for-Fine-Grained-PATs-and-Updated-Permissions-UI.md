@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Template URLs for Fine-Grained PATs and Updated Permissions UI"
-description: "This update, authored by Allison, highlights enhancements to GitHub's Personal Access Token (PAT) creation process. It introduces a new permissions picker UI and support for template URLs that prefill PAT details, improving developer workflows and permission management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Template URLs for Fine-Grained PATs and Updated Permissions UI
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:33:06 +00:00
-permalink: "/2025-08-26-Template-URLs-for-Fine-Grained-PATs-and-Updated-Permissions-UI.html"
-categories: ["DevOps"]
-tags: ["API Integration", "Automation", "Developer Experience", "DevOps", "Fine Grained Tokens", "GitHub", "News", "PAT", "Permissions Management", "Personal Access Tokens", "REST API", "Token Management", "UI/UX Design"]
-tags_normalized: ["api integration", "automation", "developer experience", "devops", "fine grained tokens", "github", "news", "pat", "permissions management", "personal access tokens", "rest api", "token management", "uislashux design"]
+permalink: /devops/news/Template-URLs-for-Fine-Grained-PATs-and-Updated-Permissions-UI
+tags:
+- API Integration
+- Automation
+- Developer Experience
+- DevOps
+- Fine Grained Tokens
+- GitHub
+- News
+- PAT
+- Permissions Management
+- Personal Access Tokens
+- REST API
+- Token Management
+- UI/UX Design
+section_names:
+- devops
 ---
-
 Allison summarizes improvements to GitHub's fine-grained PAT creation, including a revamped permissions picker UI and shareable template URLs to streamline token generation for developers.<!--excerpt_end-->
 
 # Template URLs for Fine-Grained PATs and Updated Permissions UI

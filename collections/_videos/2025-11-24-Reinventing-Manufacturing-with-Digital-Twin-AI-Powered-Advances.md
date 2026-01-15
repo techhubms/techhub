@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Reinventing Manufacturing with Digital Twin: AI-Powered Advances"
-description: "This session from Microsoft Ignite 2025 explores how digital twin technology—combined with AI and advanced data insights—is transforming manufacturing and supply chains. Industry leaders discuss trends like generative AI, Omniverse integration for simulation and training, data-driven productivity improvements, and practical strategies for scaling digital twin solutions across global operations. Key challenges such as workforce attrition, skill gaps, and proving digital twin value are addressed alongside the opportunities for accelerating product launches and operational efficiency using Microsoft’s cloud and AI services."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=krjZfLqP4ZI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Reinventing Manufacturing with Digital Twin: AI-Powered Advances'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=krjZfLqP4ZI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:36:39 +00:00
-permalink: "/2025-11-24-Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances.html"
-categories: ["AI", "Azure"]
-tags: ["Advanced Manufacturing", "Agents", "AI", "Azure", "Data Integration", "Digital Twin", "Generative AI", "Manufacturing", "Microsoft Cloud", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "NVIDIA Omniverse", "Omniverse", "Operations Efficiency", "Panel Discussion", "Product Launch", "Reshoring", "Simulation", "Supply Chain", "Training", "Videos", "Workforce Attrition"]
-tags_normalized: ["advanced manufacturing", "agents", "ai", "azure", "data integration", "digital twin", "generative ai", "manufacturing", "microsoft cloud", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "nvidia omniverse", "omniverse", "operations efficiency", "panel discussion", "product launch", "reshoring", "simulation", "supply chain", "training", "videos", "workforce attrition"]
+permalink: /ai/videos/Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances
+tags:
+- Advanced Manufacturing
+- Agents
+- AI
+- Azure
+- Data Integration
+- Digital Twin
+- Generative AI
+- Manufacturing
+- Microsoft Cloud
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- NVIDIA Omniverse
+- Omniverse
+- Operations Efficiency
+- Panel Discussion
+- Product Launch
+- Reshoring
+- Simulation
+- Supply Chain
+- Training
+- Videos
+- Workforce Attrition
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts a panel examining the role of AI and digital twin technology in transforming manufacturing, highlighting insights from industry experts at Ignite 2025.<!--excerpt_end-->
 
 {% youtube krjZfLqP4ZI %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "MCP and Java Apps: Building a Server"
-description: "This episode, hosted by Ayan Gupta with guests Bruno Borges and Sandra Ahlgrimm, guides developers through building an MCP server using Quarkus and GitHub Copilot. The discussion highlights how to leverage Copilot's agent mode and MCP to scaffold a production-ready API server, bridging custom data sources with AI applications."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DGNAvVn6WwY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'MCP and Java Apps: Building a Server'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=DGNAvVn6WwY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 16:00:31 +00:00
-permalink: "/2025-10-30-MCP-and-Java-Apps-Building-a-Server.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Applications", "AIServers", "API Integration", "API Server", "APIIntegration", "Automated Scaffolding", "CloudDevelopment", "Coding", "Developer Tools", "Endpoint Configuration", "GitHub Copilot", "Java", "Java Development", "JavaApps", "JavaDevelopment", "MCP", "MCP Inspector", "Quarkus", "QuarkusJav", "Server Sent Events", "ServerDevelopment", "Videos"]
-tags_normalized: ["agent mode", "ai", "ai applications", "aiservers", "api integration", "api server", "apiintegration", "automated scaffolding", "clouddevelopment", "coding", "developer tools", "endpoint configuration", "github copilot", "java", "java development", "javaapps", "javadevelopment", "mcp", "mcp inspector", "quarkus", "quarkusjav", "server sent events", "serverdevelopment", "videos"]
+permalink: /github-copilot/videos/MCP-and-Java-Apps-Building-a-Server
+tags:
+- Agent Mode
+- AI
+- AI Applications
+- AIServers
+- API Integration
+- API Server
+- APIIntegration
+- Automated Scaffolding
+- CloudDevelopment
+- Coding
+- Developer Tools
+- Endpoint Configuration
+- GitHub Copilot
+- Java
+- Java Development
+- JavaApps
+- JavaDevelopment
+- MCP
+- MCP Inspector
+- Quarkus
+- QuarkusJav
+- Server Sent Events
+- ServerDevelopment
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer, joined by Bruno Borges and Sandra Ahlgrimm, demonstrates how to build an MCP server using Quarkus and GitHub Copilot, streamlining the process of creating intelligent, AI-integrated API servers.<!--excerpt_end-->
 
 {% youtube DGNAvVn6WwY %}

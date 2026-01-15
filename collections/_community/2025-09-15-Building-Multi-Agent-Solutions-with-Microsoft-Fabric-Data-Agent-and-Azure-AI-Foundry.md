@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building Multi-Agent Solutions with Microsoft Fabric Data Agent and Azure AI Foundry"
-description: "This community post by GISV-PSA-MSFT (contributors: Jeet J & Ritaja S) guides readers through developing agentic AI applications using Microsoft Fabric Data Agent, Azure AI Foundry, and Copilot Studio. The guide covers both pro-code and low-code workflows, focusing on industry use cases like insurance and financial services. The post includes detailed prerequisites, step-by-step walkthroughs for setting up agents, integrating Fabric with Azure AI Foundry, publishing solutions to Teams using M365 Agents Toolkit, and pointers to additional Microsoft documentation. It emphasizes responsible engineering practices and explores the evolving integration between pro-code and low-code agent development in the Microsoft ecosystem."
-author: "GISV-PSA-MSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Multi-Agent Solutions with Microsoft Fabric Data Agent and Azure AI Foundry
+author: GISV-PSA-MSFT
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 14:49:18 +00:00
-permalink: "/2025-09-15-Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "Azure", "Azure AI Foundry", "Azure AI Services", "Community", "Copilot Studio", "Data Engineering", "Data Lakehouse", "Fabric Data Agent", "Fabric Notebook", "Financial Services", "Generative AI", "Industry Solutions", "Insurance Analytics", "Low Code Development", "M365 Agents Toolkit", "Microsoft Fabric", "Microsoft Teams Integration", "ML", "Multi Agent Architecture", "Power BI", "Pro Code Development", "Responsible AI"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure ai foundry", "azure ai services", "community", "copilot studio", "data engineering", "data lakehouse", "fabric data agent", "fabric notebook", "financial services", "generative ai", "industry solutions", "insurance analytics", "low code development", "m365 agents toolkit", "microsoft fabric", "microsoft teams integration", "ml", "multi agent architecture", "power bi", "pro code development", "responsible ai"]
+permalink: /ai/community/Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure AI Foundry
+- Azure AI Services
+- Community
+- Copilot Studio
+- Data Engineering
+- Data Lakehouse
+- Fabric Data Agent
+- Fabric Notebook
+- Financial Services
+- Generative AI
+- Industry Solutions
+- Insurance Analytics
+- Low Code Development
+- M365 Agents Toolkit
+- Microsoft Fabric
+- Microsoft Teams Integration
+- ML
+- Multi Agent Architecture
+- Power BI
+- Pro Code Development
+- Responsible AI
+section_names:
+- ai
+- azure
+- ml
 ---
-
 GISV-PSA-MSFT, with contributors Jeet J and Ritaja S, presents a step-by-step guide to implementing agentic AI applications, combining Microsoft Fabric Data Agent, Azure AI Foundry, and Copilot Studio to solve real-world industry problems such as insurance analytics.<!--excerpt_end-->
 
 # Building Multi-Agent Solutions with Microsoft Fabric Data Agent and Azure AI Foundry

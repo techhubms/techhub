@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "MCP C# SDK: What’s New and Upcoming for .NET Developers"
-description: "A developer-focused session exploring the latest updates and upcoming features in the C# MCP SDK. The session covers recent changes, live demos, integrating AI with .NET, and tips for building modern apps using Microsoft’s ecosystem, featuring experts Bruno Capuano, Mike Kistler, and Stephen Halter."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DoezQYWzRBw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'MCP C# SDK: What’s New and Upcoming for .NET Developers'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=DoezQYWzRBw
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-17 06:05:33 +00:00
-permalink: "/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Integration", "Azure App Service", "C#", "Coding", "Development Tips", "DNX", "MCP", "MCP SDK", "MCP Spec", "Microsoft", "SDK Updates", "Versions", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai integration", "azure app service", "csharp", "coding", "development tips", "dnx", "mcp", "mcp sdk", "mcp spec", "microsoft", "sdk updates", "versions", "videos"]
+permalink: /ai/videos/MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers
+tags:
+- .NET
+- AI
+- AI Integration
+- Azure App Service
+- C#
+- Coding
+- Development Tips
+- DNX
+- MCP
+- MCP SDK
+- MCP Spec
+- Microsoft
+- SDK Updates
+- Versions
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this expert-led developer session, featuring Bruno Capuano, Mike Kistler, and Stephen Halter, you'll discover the newest additions to the C# MCP SDK, insights into leveraging AI with .NET, and practical guidance for modern Microsoft-centric app development.<!--excerpt_end-->
 
 {% youtube DoezQYWzRBw %}

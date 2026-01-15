@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices"
-description: "This comprehensive guide by Dellenny covers how organizations can migrate databases to Microsoft Azure effectively. It details the business drivers for migration, various strategies (lift-and-shift, refactor, rearchitect, rebuild), and deeply describes Microsoft's portfolio of migration tools—including Azure Database Migration Service, Data Migration Assistant, SQL Server Migration Assistant, and Azure Migrate. The post also lists best practices around assessing source environments, ensuring security, conducting pilots, optimizing performance, and implementing post-migration procedures, making this a practical resource for IT teams and developers moving databases to the cloud."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices
+author: Dellenny
+canonical_url: https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-28 09:12:20 +00:00
-permalink: "/2025-07-28-A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Database Migration", "Azure Database Migration Service", "Azure Migrate", "Azure Monitor", "Azure SQL Database", "Backup", "Blogs", "Cloud Migration", "Cosmos DB", "Data Migration Assistant", "Database Migration", "Disaster Recovery", "Performance Tuning", "SQL Server", "SQL Server Migration Assistant"]
-tags_normalized: ["azure", "azure advisor", "azure database migration", "azure database migration service", "azure migrate", "azure monitor", "azure sql database", "backup", "blogs", "cloud migration", "cosmos db", "data migration assistant", "database migration", "disaster recovery", "performance tuning", "sql server", "sql server migration assistant"]
+permalink: /azure/blogs/A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices
+tags:
+- Azure
+- Azure Advisor
+- Azure Database Migration
+- Azure Database Migration Service
+- Azure Migrate
+- Azure Monitor
+- Azure SQL Database
+- Backup
+- Blogs
+- Cloud Migration
+- Cosmos DB
+- Data Migration Assistant
+- Database Migration
+- Disaster Recovery
+- Performance Tuning
+- SQL Server
+- SQL Server Migration Assistant
+section_names:
+- azure
 ---
-
 Dellenny provides a detailed, actionable guide for database professionals on Azure database migration strategies, associated Microsoft tools, and operational best practices.<!--excerpt_end-->
 
 # A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices

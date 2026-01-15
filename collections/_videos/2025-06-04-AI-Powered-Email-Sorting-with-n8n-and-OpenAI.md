@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI-Powered Email Sorting with n8n and OpenAI"
-description: "This video tutorial by Alireza Chegini guides viewers through automating email management using n8n and OpenAI. The session covers integrating Gmail, designing AI-based classification prompts, building automated workflows, and customizing label logic with n8n. Learn to use OpenAI’s text classification to categorize incoming messages and update Gmail automatically, enabling efficient inbox organization and improved productivity."
-author: "Alireza Chegini | AI Skills for Your Career"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=21HSDwtkHNk"
-viewing_mode: "internal"
-feed_name: "Alireza Chegini's YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
+﻿---
+layout: post
+title: AI-Powered Email Sorting with n8n and OpenAI
+author: Alireza Chegini | AI Skills for Your Career
+canonical_url: https://www.youtube.com/watch?v=21HSDwtkHNk
+viewing_mode: internal
+feed_name: Alireza Chegini's YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA
 date: 2025-06-04 19:00:03 +00:00
-permalink: "/2025-06-04-AI-Powered-Email-Sorting-with-n8n-and-OpenAI.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "Automation", "Classification Prompt", "Custom Labels", "Email Management", "Gmail Integration", "Inbox Organization", "Label Logic", "N8n", "No Code", "OpenAI", "Productivity", "Text Classification", "Tutorial", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai agent", "automation", "classification prompt", "custom labels", "email management", "gmail integration", "inbox organization", "label logic", "n8n", "no code", "openai", "productivity", "text classification", "tutorial", "videos", "workflow automation"]
+permalink: /ai/videos/AI-Powered-Email-Sorting-with-n8n-and-OpenAI
+tags:
+- AI
+- AI Agent
+- Automation
+- Classification Prompt
+- Custom Labels
+- Email Management
+- Gmail Integration
+- Inbox Organization
+- Label Logic
+- N8n
+- No Code
+- OpenAI
+- Productivity
+- Text Classification
+- Tutorial
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Alireza Chegini shares a practical workflow to automate Gmail sorting using n8n and OpenAI, empowering viewers to boost productivity and manage email chaos efficiently.<!--excerpt_end-->
 
 {% youtube 21HSDwtkHNk %}

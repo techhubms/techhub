@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Spotlight on JSON Everything: Unified JSON Standards Toolkit for .NET Developers"
-description: "Explore JSON Everything, a fast, modular, open-source .NET library supporting JSON Schema, Patch, Path, Pointer, and Logic. This toolkit brings standards compliance and a unified API to modern .NET applications, simplifying JSON workflows and integration for developers."
-author: ".NET Foundation News and Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dotnetfoundation.org/news-events/detail/spotlight-on-json-everything-a-unified-toolkit-for-json-standards-in-.net"
-viewing_mode: "external"
-feed_name: ".NET Foundation's Blog"
-feed_url: "https://dotnetfoundation.org/feeds/blog"
+﻿---
+layout: post
+title: 'Spotlight on JSON Everything: Unified JSON Standards Toolkit for .NET Developers'
+author: .NET Foundation News and Blog
+canonical_url: https://dotnetfoundation.org/news-events/detail/spotlight-on-json-everything-a-unified-toolkit-for-json-standards-in-.net
+viewing_mode: external
+feed_name: .NET Foundation's Blog
+feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-04-23 18:55:14 +00:00
-permalink: "/2025-04-23-Spotlight-on-JSON-Everything-Unified-JSON-Standards-Toolkit-for-NET-Developers.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "Coding", "Data Validation", "Greg Dennis", "JSON", "JSON Logic", "JSON Patch", "JSON Path", "JSON Pointer", "JSON Schema", "Library", "Modular Design", "NuGet", "Open Source", "Web API"]
-tags_normalized: ["dotnet", "blogs", "coding", "data validation", "greg dennis", "json", "json logic", "json patch", "json path", "json pointer", "json schema", "library", "modular design", "nuget", "open source", "web api"]
+permalink: /coding/blogs/Spotlight-on-JSON-Everything-Unified-JSON-Standards-Toolkit-for-NET-Developers
+tags:
+- .NET
+- Blogs
+- Coding
+- Data Validation
+- Greg Dennis
+- JSON
+- JSON Logic
+- JSON Patch
+- JSON Path
+- JSON Pointer
+- JSON Schema
+- Library
+- Modular Design
+- NuGet
+- Open Source
+- Web API
+section_names:
+- coding
 ---
-
 This post, authored by .NET Foundation News and Blog, introduces JSON Everything—a modular, standards-compliant .NET library that unifies various JSON technologies for modern application development.<!--excerpt_end-->
 
 ## Introduction

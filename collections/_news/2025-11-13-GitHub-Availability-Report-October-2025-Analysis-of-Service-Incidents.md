@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "GitHub Availability Report: October 2025 – Analysis of Service Incidents"
-description: "This report outlines four major incidents that occurred on GitHub services in October 2025, examining root causes, impacts on APIs, Codespaces, Actions, and Enterprise features, and the improvement steps GitHub is taking to enhance the reliability of its cloud infrastructure and developer workflows."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-october-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Availability Report: October 2025 – Analysis of Service Incidents'
+author: Jakub Oleksy
+canonical_url: https://github.blog/news-insights/company-news/github-availability-report-october-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-13 17:28:48 +00:00
-permalink: "/2025-11-13-GitHub-Availability-Report-October-2025-Analysis-of-Service-Incidents.html"
-categories: ["DevOps"]
-tags: ["Availability", "CI/CD", "Cloud Infrastructure", "Codespaces", "Company News", "DevOps", "Enterprise Importer", "Error Rates", "GitHub", "GitHub Actions", "GitHub Availability Report", "Incident Report", "Mobile Push Notifications", "Monitoring", "Network Outage", "News", "News & Insights", "Resilience Engineering", "Service Degradation", "Site Reliability", "Third Party Dependencies"]
-tags_normalized: ["availability", "cislashcd", "cloud infrastructure", "codespaces", "company news", "devops", "enterprise importer", "error rates", "github", "github actions", "github availability report", "incident report", "mobile push notifications", "monitoring", "network outage", "news", "news and insights", "resilience engineering", "service degradation", "site reliability", "third party dependencies"]
+permalink: /devops/news/GitHub-Availability-Report-October-2025-Analysis-of-Service-Incidents
+tags:
+- Availability
+- CI/CD
+- Cloud Infrastructure
+- Codespaces
+- Company News
+- DevOps
+- Enterprise Importer
+- Error Rates
+- GitHub
+- GitHub Actions
+- GitHub Availability Report
+- Incident Report
+- Mobile Push Notifications
+- Monitoring
+- Network Outage
+- News
+- News & Insights
+- Resilience Engineering
+- Service Degradation
+- Site Reliability
+- Third Party Dependencies
+section_names:
+- devops
 ---
-
 Jakub Oleksy presents a clear analysis of four major GitHub service incidents in October 2025, detailing their technical root causes and GitHub's ongoing efforts toward greater reliability.<!--excerpt_end-->
 
 # GitHub Availability Report: October 2025

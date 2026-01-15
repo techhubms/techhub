@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Optimize Azure Local Deployments with the Well-Architected Review Assessment"
-description: "This article introduces Azure Local, Microsoft's extension of Azure services to on-premises and edge infrastructure, and explores how teams can leverage the Azure Local Well-Architected Review Assessment. By applying the structured guidance of the Well-Architected Framework, architects and platform administrators can assess, optimize, and ensure reliability, security, and operational excellence in hybrid Azure environments."
-author: "Neil_Bird"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Optimize Azure Local Deployments with the Well-Architected Review Assessment
+author: Neil_Bird
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-23 16:01:35 +00:00
-permalink: "/2025-10-23-Optimize-Azure-Local-Deployments-with-the-Well-Architected-Review-Assessment.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Architecture Assessment", "Azure", "Azure Arc", "Azure Local", "Azure Virtual Desktop", "Cloud Security", "Community", "DevOps", "Edge Computing", "Hybrid Cloud", "Infrastructure Best Practices", "On Premises Solutions", "Operational Excellence", "Platform Optimization", "Reliability", "Security", "Well Architected Framework"]
-tags_normalized: ["aks", "architecture assessment", "azure", "azure arc", "azure local", "azure virtual desktop", "cloud security", "community", "devops", "edge computing", "hybrid cloud", "infrastructure best practices", "on premises solutions", "operational excellence", "platform optimization", "reliability", "security", "well architected framework"]
+permalink: /azure/community/Optimize-Azure-Local-Deployments-with-the-Well-Architected-Review-Assessment
+tags:
+- AKS
+- Architecture Assessment
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Virtual Desktop
+- Cloud Security
+- Community
+- DevOps
+- Edge Computing
+- Hybrid Cloud
+- Infrastructure Best Practices
+- On Premises Solutions
+- Operational Excellence
+- Platform Optimization
+- Reliability
+- Security
+- Well Architected Framework
+section_names:
+- azure
+- devops
+- security
 ---
-
 Neil_Bird explains how to use the Azure Local Well-Architected Review Assessment to evaluate and strengthen the architecture of hybrid Azure deployments, ensuring high standards for reliability, security, and operational excellence.<!--excerpt_end-->
 
 # Optimize Azure Local Deployments with the Well-Architected Review Assessment

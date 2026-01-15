@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support"
-description: "This article details new enhancements to Dataflow Gen2 within Microsoft Fabric, including expanded support for data destinations, improved database schema management, and deeper integration with enterprise platforms like SharePoint, Snowflake, and ADLS Gen2. The update enables data professionals to streamline integration workflows, implement hybrid and collaborative architectures, and support Lakehouse-first data science scenarios."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 11:00:00 +00:00
-permalink: "/2025-09-30-Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support.html"
-categories: ["Azure", "ML"]
-tags: ["ADLS Gen2", "Azure", "Data Engineering", "Data Governance", "Data Integration", "Data Science", "Database Schema", "Dataflow Gen2", "Enterprise Data", "Hybrid Architecture", "Lakehouse", "Microsoft Fabric", "ML", "News", "Power BI", "SharePoint Integration", "Snowflake", "Spark"]
-tags_normalized: ["adls gen2", "azure", "data engineering", "data governance", "data integration", "data science", "database schema", "dataflow gen2", "enterprise data", "hybrid architecture", "lakehouse", "microsoft fabric", "ml", "news", "power bi", "sharepoint integration", "snowflake", "spark"]
+permalink: /ml/news/Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support
+tags:
+- ADLS Gen2
+- Azure
+- Data Engineering
+- Data Governance
+- Data Integration
+- Data Science
+- Database Schema
+- Dataflow Gen2
+- Enterprise Data
+- Hybrid Architecture
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Power BI
+- SharePoint Integration
+- Snowflake
+- Spark
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog outlines significant updates to Dataflow Gen2, led by the Microsoft Fabric team, introducing new data destinations and database schema support to empower data professionals and teams with flexible integration and advanced modeling features.<!--excerpt_end-->
 
 # Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support

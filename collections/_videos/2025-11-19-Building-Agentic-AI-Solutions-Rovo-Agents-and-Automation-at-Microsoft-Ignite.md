@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Agentic AI Solutions: Rovo Agents and Automation at Microsoft Ignite"
-description: "This Microsoft Ignite session, led by Karen Sartor, delves into building intelligent Rovo agents, covering strategies for agentic automation and collaborative workflows. It highlights best practices for use case definition, workflow design, and prompt engineering, with a focus on no-code solutions for real-world team problems. The content emphasizes designing, testing, and improving AI agents for smarter, faster, and more seamless team collaboration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FUJ8xSNvK1Q"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Building Agentic AI Solutions: Rovo Agents and Automation at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=FUJ8xSNvK1Q
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:08:11 +00:00
-permalink: "/2025-11-19-Building-Agentic-AI-Solutions-Rovo-Agents-and-Automation-at-Microsoft-Ignite.html"
-categories: ["AI"]
-tags: ["Action Driven Workflows", "Agent Orchestration", "Agentic Automation", "AI", "AI Agents", "Community Blog Automation", "Copilotandagentsatwork", "Intermediate Session", "Microsoft Ignite", "Mini Agents", "MSIgnite", "No Code Solutions", "Prompt Engineering", "Release Notes Automation", "Rovo Agents", "Team Collaboration", "Videos", "Workflow Design"]
-tags_normalized: ["action driven workflows", "agent orchestration", "agentic automation", "ai", "ai agents", "community blog automation", "copilotandagentsatwork", "intermediate session", "microsoft ignite", "mini agents", "msignite", "no code solutions", "prompt engineering", "release notes automation", "rovo agents", "team collaboration", "videos", "workflow design"]
+permalink: /ai/videos/Building-Agentic-AI-Solutions-Rovo-Agents-and-Automation-at-Microsoft-Ignite
+tags:
+- Action Driven Workflows
+- Agent Orchestration
+- Agentic Automation
+- AI
+- AI Agents
+- Community Blog Automation
+- Copilotandagentsatwork
+- Intermediate Session
+- Microsoft Ignite
+- Mini Agents
+- MSIgnite
+- No Code Solutions
+- Prompt Engineering
+- Release Notes Automation
+- Rovo Agents
+- Team Collaboration
+- Videos
+- Workflow Design
+section_names:
+- ai
 ---
-
 Karen Sartor hosts a Microsoft Ignite session on building Rovo agents with strategies for agentic automation and collaborative workflows, demonstrating no-code team solutions.<!--excerpt_end-->
 
 {% youtube FUJ8xSNvK1Q %}

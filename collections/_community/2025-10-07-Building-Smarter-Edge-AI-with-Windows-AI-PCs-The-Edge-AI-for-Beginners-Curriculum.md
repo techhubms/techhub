@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum"
-description: "This resource introduces engineers and developers to the Edge AI for Beginners curriculum, showcasing how to build and deploy AI models on Windows AI PCs using tools like ONNX Runtime, DirectML, Microsoft Olive, and Azure AI Foundry. The content covers core concepts such as hardware-aware model optimization, real-time inference, privacy-preserving deployments, and production scaling for applications spanning IoT, healthcare, and industrial uses. It details the structure and learning modules of the course and provides actionable guidance for leveraging Microsoft’s AI tools at the edge."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 07:13:47 +00:00
-permalink: "/2025-10-07-Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agent Framework", "Azure", "Azure AI Foundry", "Community", "Cross Platform AI", "DirectML", "Edge AI", "Edge Deployment", "Intel NPU", "IoT", "Jupyter Notebooks", "Local AI", "Microsoft Olive", "ML", "Model Optimization", "Model Quantization", "ONNX Runtime", "Privacy Preserving AI", "Production AI", "Qualcomm NPU", "SLM", "Windows AI PC", "Windows Development"]
-tags_normalized: ["ai", "ai agent framework", "azure", "azure ai foundry", "community", "cross platform ai", "directml", "edge ai", "edge deployment", "intel npu", "iot", "jupyter notebooks", "local ai", "microsoft olive", "ml", "model optimization", "model quantization", "onnx runtime", "privacy preserving ai", "production ai", "qualcomm npu", "slm", "windows ai pc", "windows development"]
+permalink: /ai/community/Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum
+tags:
+- AI
+- AI Agent Framework
+- Azure
+- Azure AI Foundry
+- Community
+- Cross Platform AI
+- DirectML
+- Edge AI
+- Edge Deployment
+- Intel NPU
+- IoT
+- Jupyter Notebooks
+- Local AI
+- Microsoft Olive
+- ML
+- Model Optimization
+- Model Quantization
+- ONNX Runtime
+- Privacy Preserving AI
+- Production AI
+- Qualcomm NPU
+- SLM
+- Windows AI PC
+- Windows Development
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Lee_Stott presents a comprehensive hands-on introduction to Edge AI for Beginners, detailing how developers can deploy, optimize, and scale AI models on Windows AI PCs and devices using Microsoft’s ecosystem of tools.<!--excerpt_end-->
 
 # Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum

@@ -1,21 +1,33 @@
----
-layout: "post"
-title: "Today we're releasing GitHub Spark — a new tool in Copilot that turns your ideas into full-stack apps, entirely in natural language"
-description: "GitHub Spark, a Copilot tool, enables users to build full-stack apps using natural language. The author shares excitement about user creativity."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_today-were-releasing-github-spark-a-new-activity-7353868825320214529-o3C5"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Today we're releasing GitHub Spark — a new tool in Copilot that turns your ideas into full-stack apps, entirely in natural language
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_today-were-releasing-github-spark-a-new-activity-7353868825320214529-o3C5
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-23 21:14:13 +00:00
-permalink: "/2025-07-23-Today-were-releasing-GitHub-Spark-a-new-tool-in-Copilot-that-turns-your-ideas-into-full-stack-apps-entirely-in-natural-language.html"
-viewing_mode: "external"
-page: "news"
-tags: ["AI", "AI Tools", "App Creation", "Automation", "Company News", "Developer Tools", "Full Stack Apps", "GitHub", "GitHub Copilot", "GitHub Spark", "LinkedIn Post", "Natural Language", "News", "Software Development"]
-tags_normalized: ["ai", "ai tools", "app creation", "automation", "company news", "developer tools", "full stack apps", "github", "github copilot", "github spark", "linkedin post", "natural language", "news", "software development"]
+permalink: /github-copilot/news/Today-were-releasing-GitHub-Spark-a-new-tool-in-Copilot-that-turns-your-ideas-into-full-stack-apps-entirely-in-natural-language
+viewing_mode: external
+page: news
+tags:
+- AI
+- AI Tools
+- App Creation
+- Automation
+- Company News
+- Developer Tools
+- Full Stack Apps
+- GitHub
+- GitHub Copilot
+- GitHub Spark
+- LinkedIn Post
+- Natural Language
+- News
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 Authored by stclarke, this article announces the release of GitHub Spark, an innovative addition to Copilot designed to help users build full-stack applications using only natural language. The author reflects on their own experience with the tool and expresses excitement about witnessing the creative projects that users have started building with it.<!--excerpt_end-->
 
 ## Summary of the Announcement

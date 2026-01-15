@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Responsible AI for Java Developers: Building Safe and Trustworthy Applications"
-description: "This session, featuring Ayan Gupta and Rory, offers a deep dive into responsible AI development. It demonstrates why unfiltered AI models pose risks, and how to use Azure AI Content Safety and GitHub Models to implement safeguards. You'll see practical examples of configuring content filters, understand the layers of protection, and learn how to build AI solutions that prioritize safety, fairness, and trust, especially relevant for Java developers exploring AI with Microsoft's ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qXx1Ukw3MGs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Responsible AI for Java Developers: Building Safe and Trustworthy Applications'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=qXx1Ukw3MGs
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 00:01:11 +00:00
-permalink: "/2025-10-30-Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Best Practices", "AI Governance", "AI Security", "AIEthics", "AIFiltering", "AIGovernance", "AISecurity", "Azure", "Azure AI", "Azure AI Content Safety", "Azure Search", "Content Filtering", "Content Moderation", "ContentSafety", "Ethical AI", "EthicalAI", "GitHub Models", "GitHubModels", "Hard Blocks", "Java Development", "JavaDevelopment", "Production Safeguards", "Red Teaming", "Responsible AI", "ResponsibleAI", "Safe AI", "SafeAI", "Security", "Soft Blocks", "Videos"]
-tags_normalized: ["ai", "ai best practices", "ai governance", "ai security", "aiethics", "aifiltering", "aigovernance", "aisecurity", "azure", "azure ai", "azure ai content safety", "azure search", "content filtering", "content moderation", "contentsafety", "ethical ai", "ethicalai", "github models", "githubmodels", "hard blocks", "java development", "javadevelopment", "production safeguards", "red teaming", "responsible ai", "responsibleai", "safe ai", "safeai", "security", "soft blocks", "videos"]
+permalink: /ai/videos/Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications
+tags:
+- AI
+- AI Best Practices
+- AI Governance
+- AI Security
+- AIEthics
+- AIFiltering
+- AIGovernance
+- AISecurity
+- Azure
+- Azure AI
+- Azure AI Content Safety
+- Azure Search
+- Content Filtering
+- Content Moderation
+- ContentSafety
+- Ethical AI
+- EthicalAI
+- GitHub Models
+- GitHubModels
+- Hard Blocks
+- Java Development
+- JavaDevelopment
+- Production Safeguards
+- Red Teaming
+- Responsible AI
+- ResponsibleAI
+- Safe AI
+- SafeAI
+- Security
+- Soft Blocks
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Developer's Ayan Gupta and Rory guide Java developers through the critical topic of responsible AI, demonstrating how to use Azure AI and GitHub Models to ensure content safety and ethical usage.<!--excerpt_end-->
 
 {% youtube qXx1Ukw3MGs %}

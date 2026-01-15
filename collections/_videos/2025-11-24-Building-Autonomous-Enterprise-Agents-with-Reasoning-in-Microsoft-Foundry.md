@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry"
-description: "This session explores how reasoning models empower autonomous agents for enterprise tasks such as lead scoring, content generation, and customer support. Featuring demonstrations of agentic workflows, the presenters show how to build adaptable agents in Microsoft Foundry that align with business objectives. The talk covers model routing, multi-agent collaboration, and practical tool integration for robust, scalable solutions. Attendees gain insight into advanced Azure AI applications, including operational reliability for life-critical scenarios."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sqvxKIPB8W4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=sqvxKIPB8W4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:29:58 +00:00
-permalink: "/2025-11-24-Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Advanced AI", "Agentic Workflows", "AI", "Autonomous Agents", "Azure", "Azure AI", "Content Generation", "Customer Support", "Deep Consult", "Demo", "Enterprise Automation", "GPT 5.1", "InnovatewithAzureAIappsandagents", "Lead Scoring", "Microsoft Foundry", "Microsoft Ignite", "Model Router", "MSIgnite", "Multi Agent Collaboration", "NVIDIA Nematron", "Operational Reliability", "Parallel Execution", "Reasoning Models", "Tool Calling", "Videos"]
-tags_normalized: ["advanced ai", "agentic workflows", "ai", "autonomous agents", "azure", "azure ai", "content generation", "customer support", "deep consult", "demo", "enterprise automation", "gpt 5dot1", "innovatewithazureaiappsandagents", "lead scoring", "microsoft foundry", "microsoft ignite", "model router", "msignite", "multi agent collaboration", "nvidia nematron", "operational reliability", "parallel execution", "reasoning models", "tool calling", "videos"]
+permalink: /ai/videos/Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry
+tags:
+- Advanced AI
+- Agentic Workflows
+- AI
+- Autonomous Agents
+- Azure
+- Azure AI
+- Content Generation
+- Customer Support
+- Deep Consult
+- Demo
+- Enterprise Automation
+- GPT 5.1
+- InnovatewithAzureAIappsandagents
+- Lead Scoring
+- Microsoft Foundry
+- Microsoft Ignite
+- Model Router
+- MSIgnite
+- Multi Agent Collaboration
+- NVIDIA Nematron
+- Operational Reliability
+- Parallel Execution
+- Reasoning Models
+- Tool Calling
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts a session at Ignite 2025, featuring Ashish Agrawal, Alexander Hughes, Jennifer Marsman, Naomi Moneypenny, and Zachary Ziegler on building autonomous agents with advanced reasoning models in Microsoft Foundry.<!--excerpt_end-->
 
 {% youtube sqvxKIPB8W4 %}

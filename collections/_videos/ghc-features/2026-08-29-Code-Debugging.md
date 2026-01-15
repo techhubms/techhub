@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Code Debugging"
-description: "Debug with AI using call stack and variable insights"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Code Debugging
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:31 +00:00
-permalink: "/2026-08-29-Code-Debugging.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Code-Debugging
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Code Debugging feature. Debug with AI using call stack and variable insights<!--excerpt_end-->
 
 ## Overview

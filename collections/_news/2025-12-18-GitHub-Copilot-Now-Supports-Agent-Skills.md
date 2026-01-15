@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Now Supports Agent Skills"
-description: "This announcement highlights the new Agent Skills feature in GitHub Copilot, enabling users to create reusable skills—folders of scripts, instructions, and resources that Copilot can automatically load to perform specialized tasks. The update covers usage across Copilot CLI, coding agent, and Visual Studio Code Insiders, with broader support coming soon. The post details how to create, share, and use Agent Skills to enhance automation and productivity in the developer workflow."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Now Supports Agent Skills
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 17:26:18 +00:00
-permalink: "/2025-12-18-GitHub-Copilot-Now-Supports-Agent-Skills.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "Automation", "Coding", "Coding Agents", "Copilot", "Copilot CLI", "Developer Tools", "GitHub Community", "GitHub Copilot", "Instruction Scripting", "News", "SXkills Directory", "VS Code", "VS Code Insiders"]
-tags_normalized: ["agent skills", "ai", "automation", "coding", "coding agents", "copilot", "copilot cli", "developer tools", "github community", "github copilot", "instruction scripting", "news", "sxkills directory", "vs code", "vs code insiders"]
+permalink: /github-copilot/news/GitHub-Copilot-Now-Supports-Agent-Skills
+tags:
+- Agent Skills
+- AI
+- Automation
+- Coding
+- Coding Agents
+- Copilot
+- Copilot CLI
+- Developer Tools
+- GitHub Community
+- GitHub Copilot
+- Instruction Scripting
+- News
+- SXkills Directory
+- VS Code
+- VS Code Insiders
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison introduces the Agent Skills feature in GitHub Copilot, which empowers developers to automate specialized coding tasks by leveraging reusable, shareable instruction sets.<!--excerpt_end-->
 
 # GitHub Copilot Now Supports Agent Skills

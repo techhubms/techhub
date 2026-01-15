@@ -1,22 +1,27 @@
----
-layout: "post"
-title: "Bring Your Own LLM"
-description: "Use your own AI model in VS Code chat conversations"
-author: "Matt Olson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/hFM9gtIzBMI"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Bring Your Own LLM
+author: Matt Olson
+canonical_url: https://youtu.be/hFM9gtIzBMI
 date: 2025-05-02 14:08:17 +00:00
-permalink: "/2025-05-02-Bring-Your-Own-LLM.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "BYOLLM", "Chat", "Code", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "byollm", "chat", "code", "github copilot", "videos"]
+permalink: /github-copilot/videos/Bring-Your-Own-LLM
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- BYOLLM
+- Chat
+- Code
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Bring Your Own LLM feature. A powerfull feature in the current insiders version of VS Code is to bring your own model to the chat conversation. You can use a local running model or connect with a remote model using your own API key.<!--excerpt_end-->
 
 {% youtube hFM9gtIzBMI %}

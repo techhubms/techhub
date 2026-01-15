@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization"
-description: "This guide provides an in-depth overview of the latest logging enhancements in Azure Application Gateway, including the adoption of resource-specific tables, data collection rule (DCR) transformations, and the introduction of a cost-effective basic log plan. It explains how these features improve visibility, query performance, cost optimization, and compliance in managing application gateway logs. Practical examples and implementation tips are provided for security, operations, and development teams managing web application infrastructures in Azure."
-author: "vnamani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization'
+author: vnamani
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 21:12:08 +00:00
-permalink: "/2025-09-25-Enhanced-Logging-for-Azure-Application-Gateway-Resource-Specific-Tables-DCR-and-Cost-Optimization.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Application Gateway", "Azure Monitor", "Basic Log Plan", "Cloud Observability", "Community", "Cost Optimization", "Data Explorer", "DCR Transformations", "DevOps", "Diagnostics", "GDPR Compliance", "KQL", "Log Analytics", "Log Management", "Logging Strategy", "RBAC", "Resource Specific Tables", "Security", "Web Application Firewall"]
-tags_normalized: ["azure", "azure application gateway", "azure monitor", "basic log plan", "cloud observability", "community", "cost optimization", "data explorer", "dcr transformations", "devops", "diagnostics", "gdpr compliance", "kql", "log analytics", "log management", "logging strategy", "rbac", "resource specific tables", "security", "web application firewall"]
+permalink: /azure/community/Enhanced-Logging-for-Azure-Application-Gateway-Resource-Specific-Tables-DCR-and-Cost-Optimization
+tags:
+- Azure
+- Azure Application Gateway
+- Azure Monitor
+- Basic Log Plan
+- Cloud Observability
+- Community
+- Cost Optimization
+- Data Explorer
+- DCR Transformations
+- DevOps
+- Diagnostics
+- GDPR Compliance
+- KQL
+- Log Analytics
+- Log Management
+- Logging Strategy
+- RBAC
+- Resource Specific Tables
+- Security
+- Web Application Firewall
+section_names:
+- azure
+- devops
+- security
 ---
-
 vnamani details key enhancements in Azure Application Gateway logging, including resource-specific tables, DCR transformations, and the basic log plan, helping teams optimize observability, efficiency, and compliance.<!--excerpt_end-->
 
 # Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization

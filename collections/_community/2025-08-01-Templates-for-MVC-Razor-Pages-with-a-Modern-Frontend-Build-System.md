@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Templates for MVC / Razor Pages with a Modern Frontend Build System"
-description: "baunegaard presents a minimal template repository for ASP.NET MVC and Razor Pages that integrates a custom Webpack-based frontend architecture. The template offers a straightforward setup for modernizing existing projects without enforcing strict structures, making it easy to adapt and extend for individual needs."
-author: "baunegaard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mf10vc/templates_for_mvc_razor_pages_with_a_modern/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Templates for MVC / Razor Pages with a Modern Frontend Build System
+author: baunegaard
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mf10vc/templates_for_mvc_razor_pages_with_a_modern/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-01 16:25:32 +00:00
-permalink: "/2025-08-01-Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET", "Coding", "Community", "Custom Build System", "Frontend Architecture", "JavaScript", "MVC", "Razor Pages", "Template Repository", "Web Development", "Webpack"]
-tags_normalized: ["dotnet", "aspdotnet", "coding", "community", "custom build system", "frontend architecture", "javascript", "mvc", "razor pages", "template repository", "web development", "webpack"]
+permalink: /coding/community/Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System
+tags:
+- .NET
+- ASP.NET
+- Coding
+- Community
+- Custom Build System
+- Frontend Architecture
+- JavaScript
+- MVC
+- Razor Pages
+- Template Repository
+- Web Development
+- Webpack
+section_names:
+- coding
 ---
-
 In this article, baunegaard introduces a minimal template repository for ASP.NET MVC and Razor Pages, featuring a modern Webpack-driven frontend approach.<!--excerpt_end-->
 
 ## Overview

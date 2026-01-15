@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Manage All GitHub Copilot Agents with Mission Control"
-description: "This episode of GitHub Checkout features Ellie Bennett, Senior Product Manager, introducing the new Mission Control view for GitHub Copilot. The video explains how developers can centrally manage, steer, and monitor all their Copilot coding agents, demonstrates real-time task steering, session logs, custom agents, workflow transitions between web and VS Code, and outlines upcoming features and productivity enhancements."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lQrr1M7AeiY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Manage All GitHub Copilot Agents with Mission Control
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=lQrr1M7AeiY
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-16 20:49:53 +00:00
-permalink: "/2025-12-16-Manage-All-GitHub-Copilot-Agents-with-Mission-Control.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Management", "AI", "Coding Automation", "Copilot Agents", "Custom Agents", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "MissionControl", "Productivity", "Real Time Steering", "Session Logs", "Videos", "VS Code Integration"]
-tags_normalized: ["agent management", "ai", "coding automation", "copilot agents", "custom agents", "developer tools", "github", "github copilot", "mission control", "missioncontrol", "productivity", "real time steering", "session logs", "videos", "vs code integration"]
+permalink: /github-copilot/videos/Manage-All-GitHub-Copilot-Agents-with-Mission-Control
+tags:
+- Agent Management
+- AI
+- Coding Automation
+- Copilot Agents
+- Custom Agents
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Mission Control
+- MissionControl
+- Productivity
+- Real Time Steering
+- Session Logs
+- Videos
+- VS Code Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 In this GitHub Checkout episode, Andrea Griffiths interviews Ellie Bennett on the new GitHub Copilot Mission Control feature, highlighting centralized management and real-time steering of coding agents.<!--excerpt_end-->
 
 {% youtube lQrr1M7AeiY %}

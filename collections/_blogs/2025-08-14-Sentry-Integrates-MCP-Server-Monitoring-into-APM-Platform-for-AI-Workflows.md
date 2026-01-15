@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Sentry Integrates MCP Server Monitoring into APM Platform for AI Workflows"
-description: "This article by Mike Vizard explains Sentry's addition of MCP (Model Context Protocol) server monitoring to their application performance monitoring platform. It details the significance for DevOps teams working with AI applications, describes technical aspects of MCP, and highlights the implications for observability, debugging, and security within AI-powered software development workflows."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform/?utm_source=rss&utm_medium=rss&utm_campaign=sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Sentry Integrates MCP Server Monitoring into APM Platform for AI Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform/?utm_source=rss&utm_medium=rss&utm_campaign=sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-14 13:00:36 +00:00
-permalink: "/2025-08-14-Sentry-Integrates-MCP-Server-Monitoring-into-APM-Platform-for-AI-Workflows.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Applications", "API Monitoring", "APM", "Application Layer Protocol", "Application Performance Monitoring", "Autonomous AI Agents", "Blogs", "Business Of DevOps", "Cybersecurity", "Debugging", "DevOps", "DevSecOps", "JavaScript SDK", "MCP", "MCP Server Monitoring", "Observability", "Security", "Sentry", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Automation"]
-tags_normalized: ["ai", "ai applications", "api monitoring", "apm", "application layer protocol", "application performance monitoring", "autonomous ai agents", "blogs", "business of devops", "cybersecurity", "debugging", "devops", "devsecops", "javascript sdk", "mcp", "mcp server monitoring", "observability", "security", "sentry", "social facebook", "social linkedin", "social x", "workflow automation"]
+permalink: /ai/blogs/Sentry-Integrates-MCP-Server-Monitoring-into-APM-Platform-for-AI-Workflows
+tags:
+- AI
+- AI Applications
+- API Monitoring
+- APM
+- Application Layer Protocol
+- Application Performance Monitoring
+- Autonomous AI Agents
+- Blogs
+- Business Of DevOps
+- Cybersecurity
+- Debugging
+- DevOps
+- DevSecOps
+- JavaScript SDK
+- MCP
+- MCP Server Monitoring
+- Observability
+- Security
+- Sentry
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Workflow Automation
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard outlines the technical and operational impact of Sentry's new MCP server monitoring tool, emphasizing its importance for DevOps and AI engineering teams tasked with building, debugging, and securing modern AI applications.<!--excerpt_end-->
 
 # Sentry Adds Tool for Monitoring MCP Servers to APM Platform

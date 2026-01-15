@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "End-to-End Migration of Applications to Azure IaaS and PaaS with AI Agents"
-description: "This session from Microsoft Ignite 2025 explores Azure’s new AI-powered migration agents, guiding viewers through the entire lifecycle of migrating applications, databases, and dependencies from on-premises VMware to Azure IaaS and PaaS solutions. It includes demos on Copilot AI migration agents, workload discovery, migration planning, execution, modernization steps, and platform readiness. Speakers cover business case building, risk mitigation, environment requirements, and customization features, with practical scenarios and links to further resources."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YXE880TLsfk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: End-to-End Migration of Applications to Azure IaaS and PaaS with AI Agents
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=YXE880TLsfk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:14:34 +00:00
-permalink: "/2025-11-21-End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "Application Discovery", "Azure", "Azure Accelerate Program", "Azure Arc", "Azure Migration", "Business Case", "Cloud Migration", "Copilot Agent", "Customization Features", "Environment Readiness", "IaaS", "Linux VMs", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Tools", "MSIgnite", "PaaS", "Platform Landing Zone", "ROI Analysis", "Videos", "VMware To Azure", "Windows Server", "Workload Modernization"]
-tags_normalized: ["ai", "ai agent", "application discovery", "azure", "azure accelerate program", "azure arc", "azure migration", "business case", "cloud migration", "copilot agent", "customization features", "environment readiness", "iaas", "linux vms", "microsoft ignite", "migrateandmodernizeyourestate", "migration tools", "msignite", "paas", "platform landing zone", "roi analysis", "videos", "vmware to azure", "windows server", "workload modernization"]
+permalink: /ai/videos/End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents
+tags:
+- AI
+- AI Agent
+- Application Discovery
+- Azure
+- Azure Accelerate Program
+- Azure Arc
+- Azure Migration
+- Business Case
+- Cloud Migration
+- Copilot Agent
+- Customization Features
+- Environment Readiness
+- IaaS
+- Linux VMs
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration Tools
+- MSIgnite
+- PaaS
+- Platform Landing Zone
+- ROI Analysis
+- Videos
+- VMware To Azure
+- Windows Server
+- Workload Modernization
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a hands-on session showing how Azure’s AI-powered migration agents support seamless migration of applications and workloads to Azure IaaS and PaaS. The talk by Ashish Babbar features practical demos, modernization guidance, and step-by-step strategies.<!--excerpt_end-->
 
 {% youtube YXE880TLsfk %}

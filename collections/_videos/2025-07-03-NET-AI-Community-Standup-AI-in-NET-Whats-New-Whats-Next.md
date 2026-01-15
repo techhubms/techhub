@@ -1,20 +1,30 @@
----
-layout: "post"
-title: ".NET AI Community Standup - AI in .NET - What’s New, What’s Next"
-description: ".NET ecosystem advances with AI/ML support, including tensor features in .NET 9 and upcoming changes in .NET 10, discussed by Bruno Capuano and Tanner Gooding."
-author: "Dotnet's Youtube channel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pt4CJKm-2ZI"
-categories: ["AI", "Coding"]
-feed_name: "dotnet"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET AI Community Standup - AI in .NET - What’s New, What’s Next
+author: Dotnet's Youtube channel
+canonical_url: https://www.youtube.com/watch?v=pt4CJKm-2ZI
+feed_name: dotnet
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-03 06:07:04 +00:00
-permalink: "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html"
-viewing_mode: "internal"
-tags: [".NET", ".NET 10", ".NET 9", "AI", "Bruno Capuano", "C#", "Coding", "Machine Learning", "Microsoft", "Tanner Gooding", "Tensor Support", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "bruno capuano", "csharp", "coding", "machine learning", "microsoft", "tanner gooding", "tensor support", "videos"]
+permalink: /ai/videos/NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next
+viewing_mode: internal
+tags:
+- .NET
+- .NET 10
+- .NET 9
+- AI
+- Bruno Capuano
+- C#
+- Coding
+- Machine Learning
+- Microsoft
+- Tanner Gooding
+- Tensor Support
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this article, dotnet introduces an online session that delves into how the .NET ecosystem is amplifying its AI and Machine Learning capabilities. The session, featuring Bruno Capuano and Tanner Gooding, discusses enhancements like tensor support in .NET 9 and previews new features expected in .NET 10. This is an insightful resource for developers eager to leverage intelligent technologies within .NET applications.<!--excerpt_end-->
 
 {% youtube pt4CJKm-2ZI %}

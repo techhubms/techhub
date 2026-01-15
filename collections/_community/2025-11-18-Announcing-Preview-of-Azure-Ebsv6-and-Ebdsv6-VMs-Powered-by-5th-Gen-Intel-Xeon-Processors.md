@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Announcing Preview of Azure Ebsv6 and Ebdsv6 VMs Powered by 5th Gen Intel Xeon Processors"
-description: "This announcement details the public preview of Azure Ebsv6 and Ebdsv6 Virtual Machines, which leverage the latest 5th Generation Intel Xeon Platinum 8573C processors. The VMs offer significant improvements in storage performance, memory, and networking, designed for demanding workloads such as data warehousing and analytics. The article outlines technical specs, feature enhancements over previous generations, and guidance for getting started with these new VM series in the Azure ecosystem."
-author: "misha-bansal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-preview-of-the-new-azure-ebsv6-vms-based-on-the/ba-p/4470139"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Preview of Azure Ebsv6 and Ebdsv6 VMs Powered by 5th Gen Intel Xeon Processors
+author: misha-bansal
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-preview-of-the-new-azure-ebsv6-vms-based-on-the/ba-p/4470139
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:35:49 +00:00
-permalink: "/2025-11-18-Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Virtual Machines", "Cloud Infrastructure", "Community", "Data Warehousing", "Ebdsv6", "Ebsv6", "Emerald Rapids", "High Performance Computing", "Intel Xeon", "Memory Intensive Workloads", "NVMe", "OLAP", "OLTP", "Performance Optimization", "Premium SSD V2", "Public Preview", "Ultra Disk", "Virtualization"]
-tags_normalized: ["azure", "azure boost", "azure virtual machines", "cloud infrastructure", "community", "data warehousing", "ebdsv6", "ebsv6", "emerald rapids", "high performance computing", "intel xeon", "memory intensive workloads", "nvme", "olap", "oltp", "performance optimization", "premium ssd v2", "public preview", "ultra disk", "virtualization"]
+permalink: /azure/community/Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors
+tags:
+- Azure
+- Azure Boost
+- Azure Virtual Machines
+- Cloud Infrastructure
+- Community
+- Data Warehousing
+- Ebdsv6
+- Ebsv6
+- Emerald Rapids
+- High Performance Computing
+- Intel Xeon
+- Memory Intensive Workloads
+- NVMe
+- OLAP
+- OLTP
+- Performance Optimization
+- Premium SSD V2
+- Public Preview
+- Ultra Disk
+- Virtualization
+section_names:
+- azure
 ---
-
 Misha Bansal introduces Azure Ebsv6 and Ebdsv6 VMs, now in public preview, highlighting their enhanced storage, processing, and security features for intensive enterprise workloads.<!--excerpt_end-->
 
 # Announcing Preview of Azure Ebsv6 and Ebdsv6 VMs Powered by 5th Gen Intel Xeon Processors

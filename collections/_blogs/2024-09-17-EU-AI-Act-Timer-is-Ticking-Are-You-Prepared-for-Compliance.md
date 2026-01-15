@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "EU AI Act Timer is Ticking: Are You Prepared for Compliance?"
-description: "Matias Näveri explores the EU AI Act's regulations, risk levels, timelines, and impacts on companies developing or deploying AI solutions. This thorough overview addresses requirements, innovation, data governance, responsibilities, compliance penalties, and steps for adapting to this transformative legislation in the European AI landscape."
-author: "Matias Näveri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/eu-ai-act-timer-is-ticking-are-you-prepared/"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
+﻿---
+layout: post
+title: 'EU AI Act Timer is Ticking: Are You Prepared for Compliance?'
+author: Matias Näveri
+canonical_url: https://zure.com/blog/eu-ai-act-timer-is-ticking-are-you-prepared/
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-09-17 06:07:56 +00:00
-permalink: "/2024-09-17-EU-AI-Act-Timer-is-Ticking-Are-You-Prepared-for-Compliance.html"
-categories: ["AI"]
-tags: ["AI", "AI Deployment", "AI Innovation", "AI Office", "AI Penalties", "AI Regulation", "AI Roles", "Blogs", "Compliance", "Conformity Assessment", "Data & AI", "Data Governance", "Data Privacy", "Development", "Digital Service Design", "Ethical AI", "EU AI Act", "GPAI", "Learning", "Risk Management", "Transparency", "Zure"]
-tags_normalized: ["ai", "ai deployment", "ai innovation", "ai office", "ai penalties", "ai regulation", "ai roles", "blogs", "compliance", "conformity assessment", "data and ai", "data governance", "data privacy", "development", "digital service design", "ethical ai", "eu ai act", "gpai", "learning", "risk management", "transparency", "zure"]
+permalink: /ai/blogs/EU-AI-Act-Timer-is-Ticking-Are-You-Prepared-for-Compliance
+tags:
+- AI
+- AI Deployment
+- AI Innovation
+- AI Office
+- AI Penalties
+- AI Regulation
+- AI Roles
+- Blogs
+- Compliance
+- Conformity Assessment
+- Data & AI
+- Data Governance
+- Data Privacy
+- Development
+- Digital Service Design
+- Ethical AI
+- EU AI Act
+- GPAI
+- Learning
+- Risk Management
+- Transparency
+- Zure
+section_names:
+- ai
 ---
-
 Matias Näveri reviews the EU AI Act, detailing its timeline, requirements, and implications for AI-powered companies. The post provides actionable insights for organizations facing impending regulatory change.<!--excerpt_end-->
 
 # EU AI Act Timer is Ticking: Are You Prepared?

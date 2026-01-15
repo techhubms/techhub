@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI"
-description: "This news piece details Microsoft’s recent contributions to open-source infrastructure for large-scale AI workloads, focusing on new standards in power, cooling, security, sustainability, networking, and operational resiliency. The article highlights collaborative efforts with industry leaders at the OCP Global Summit to build scalable, sustainable, and secure data center technologies that underpin modern AI and cloud computing."
-author: "Rani Borkar and Saurabh Dighe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI
+author: Rani Borkar and Saurabh Dighe
+canonical_url: https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 00:35:00 +00:00
-permalink: "/2025-10-14-Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Azure", "Caliptra", "Cloud Computing", "Data Centers", "Datacenter", "Embodied Carbon", "Fleet Management", "Liquid Cooling", "Microsoft Azure", "Networking", "News", "OCP Global Summit", "Open Compute Project", "Power Stabilization", "Quantum Resilient Cryptography", "Resiliency", "Security", "Silicon Root Of Trust", "Sustainability"]
-tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "azure", "caliptra", "cloud computing", "data centers", "datacenter", "embodied carbon", "fleet management", "liquid cooling", "microsoft azure", "networking", "news", "ocp global summit", "open compute project", "power stabilization", "quantum resilient cryptography", "resiliency", "security", "silicon root of trust", "sustainability"]
+permalink: /ai/news/Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI
+tags:
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- Azure
+- Caliptra
+- Cloud Computing
+- Data Centers
+- Datacenter
+- Embodied Carbon
+- Fleet Management
+- Liquid Cooling
+- Microsoft Azure
+- Networking
+- News
+- OCP Global Summit
+- Open Compute Project
+- Power Stabilization
+- Quantum Resilient Cryptography
+- Resiliency
+- Security
+- Silicon Root Of Trust
+- Sustainability
+section_names:
+- ai
+- azure
+- security
 ---
-
 Rani Borkar and Saurabh Dighe report on Microsoft’s work driving open-source standards for AI infrastructure, covering power, cooling, security, sustainability, and large-scale operations in partnership with the Open Compute Project community.<!--excerpt_end-->
 
 # Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building Scalable AI Apps with Azure SQL Database Hyperscale"
-description: "This advanced Microsoft Ignite session explores how to build secure and scalable AI applications using Azure SQL Database Hyperscale. Topics include native vector indexes for semantic search, read scale-out for low latency retrieval-augmented generation (RAG), secure model invocation via Microsoft Foundry with T-SQL, and best practices from industry experts. Customer guests from Hexagon and BlackRock share real-world experiences, complemented by technical deep dives, architecture details, and demos."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AoB4xR0Is9Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Scalable AI Apps with Azure SQL Database Hyperscale
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=AoB4xR0Is9Y
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:38:24 +00:00
-permalink: "/2025-11-20-Building-Scalable-AI-Apps-with-Azure-SQL-Database-Hyperscale.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Advanced Session", "AI", "AI Automation", "Azure", "Azure Architecture", "Azure SQL Database Hyperscale", "Cloud Native SQL", "Continuous Priming", "Cost Management", "Elastic Pools", "Embeddings", "InnovatewithAzureAIappsandagents", "Knowledge Graphs", "Microservices", "Microsoft Foundry", "Microsoft Ignite", "ML", "MSIgnite", "RAG", "Read Scale Out", "Scalability", "Semantic Search", "Serverless", "T SQL", "Vector Indexes", "Videos"]
-tags_normalized: ["advanced session", "ai", "ai automation", "azure", "azure architecture", "azure sql database hyperscale", "cloud native sql", "continuous priming", "cost management", "elastic pools", "embeddings", "innovatewithazureaiappsandagents", "knowledge graphs", "microservices", "microsoft foundry", "microsoft ignite", "ml", "msignite", "rag", "read scale out", "scalability", "semantic search", "serverless", "t sql", "vector indexes", "videos"]
+permalink: /ai/videos/Building-Scalable-AI-Apps-with-Azure-SQL-Database-Hyperscale
+tags:
+- Advanced Session
+- AI
+- AI Automation
+- Azure
+- Azure Architecture
+- Azure SQL Database Hyperscale
+- Cloud Native SQL
+- Continuous Priming
+- Cost Management
+- Elastic Pools
+- Embeddings
+- InnovatewithAzureAIappsandagents
+- Knowledge Graphs
+- Microservices
+- Microsoft Foundry
+- Microsoft Ignite
+- ML
+- MSIgnite
+- RAG
+- Read Scale Out
+- Scalability
+- Semantic Search
+- Serverless
+- T SQL
+- Vector Indexes
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events hosts an expert-led Ignite session featuring speakers like Aditya Badramraju and Anna Hoffman, guiding attendees on best practices for scalable, secure AI app development using Azure SQL Database Hyperscale.<!--excerpt_end-->
 
 {% youtube AoB4xR0Is9Y %}

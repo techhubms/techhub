@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Understanding Operations Agent Capacity Usage and Billing in Microsoft Fabric"
-description: "This article provides a detailed overview of how operations agents in Microsoft Fabric consume capacity, how their usage is metered and billed, and what technical professionals need to know about monitoring, autonomous reasoning, and associated costs. It covers the roles of Copilot in Fabric, event and query monitoring, as well as the use of the Capacity Metrics App for tracking and reporting. The breakdown includes Compute, Storage, and AI-powered autonomous reasoning costs, as well as integration with Power Automate for approved agent actions."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/understanding-operations-agent-capacity-consumption-usage-reporting-and-billing/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Understanding Operations Agent Capacity Usage and Billing in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-operations-agent-capacity-consumption-usage-reporting-and-billing/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-15 11:59:00 +00:00
-permalink: "/2025-12-15-Understanding-Operations-Agent-Capacity-Usage-and-Billing-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Autonomous Agents", "Autonomous Reasoning", "Azure", "Azure Metrics", "Background Usage", "Billing", "Capacity Metrics App", "Capacity Units", "Compute Meter", "Consumption Rates", "Copilot in Fabric", "Data Monitoring", "Eventhouse", "Fabric Preview", "Microsoft Fabric", "ML", "News", "OneLake Storage", "Operations Agent", "Power Automate", "Real Time Intelligence", "Usage Reporting"]
-tags_normalized: ["ai", "autonomous agents", "autonomous reasoning", "azure", "azure metrics", "background usage", "billing", "capacity metrics app", "capacity units", "compute meter", "consumption rates", "copilot in fabric", "data monitoring", "eventhouse", "fabric preview", "microsoft fabric", "ml", "news", "onelake storage", "operations agent", "power automate", "real time intelligence", "usage reporting"]
+permalink: /ai/news/Understanding-Operations-Agent-Capacity-Usage-and-Billing-in-Microsoft-Fabric
+tags:
+- AI
+- Autonomous Agents
+- Autonomous Reasoning
+- Azure
+- Azure Metrics
+- Background Usage
+- Billing
+- Capacity Metrics App
+- Capacity Units
+- Compute Meter
+- Consumption Rates
+- Copilot in Fabric
+- Data Monitoring
+- Eventhouse
+- Fabric Preview
+- Microsoft Fabric
+- ML
+- News
+- OneLake Storage
+- Operations Agent
+- Power Automate
+- Real Time Intelligence
+- Usage Reporting
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how operations agents leverage Copilot and autonomous AI reasoning to monitor and act on data, with guidance on usage metering, billing, and technical metrics for architects, engineers, and admins.<!--excerpt_end-->
 
 # Understanding Operations Agent Capacity Usage and Billing in Microsoft Fabric

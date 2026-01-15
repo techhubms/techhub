@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Fabric Eventstream SQL Operator: Real-Time Data Processing in Microsoft Fabric"
-description: "This article from the Microsoft Fabric Blog introduces the new SQL operator feature in Fabric Eventstream, enabling users to perform real-time, SQL-based transformation, aggregation, and anomaly detection directly on streaming data. It demonstrates practical scenarios for data engineers and analysts, showcasing how to implement, test, and validate streaming data logic within Fabric Real-Time Intelligence using SQL. The post also highlights integration with Azure Stream Analytics runtime and thorough community support for event-driven processing pipelines."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Eventstream SQL Operator: Real-Time Data Processing in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 09:59:11 +00:00
-permalink: "/2025-12-18-Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Aggregation", "Anomaly Detection", "Azure", "Azure Stream Analytics", "Data Engineering", "Data Pipeline", "Data Transformation", "Event Driven Architecture", "Eventstream", "Low Code", "Microsoft Fabric", "ML", "News", "Power BI", "Real Time Intelligence", "SQL Operator", "SQL Query", "Streaming Data"]
-tags_normalized: ["aggregation", "anomaly detection", "azure", "azure stream analytics", "data engineering", "data pipeline", "data transformation", "event driven architecture", "eventstream", "low code", "microsoft fabric", "ml", "news", "power bi", "real time intelligence", "sql operator", "sql query", "streaming data"]
+permalink: /ml/news/Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in-Microsoft-Fabric
+tags:
+- Aggregation
+- Anomaly Detection
+- Azure
+- Azure Stream Analytics
+- Data Engineering
+- Data Pipeline
+- Data Transformation
+- Event Driven Architecture
+- Eventstream
+- Low Code
+- Microsoft Fabric
+- ML
+- News
+- Power BI
+- Real Time Intelligence
+- SQL Operator
+- SQL Query
+- Streaming Data
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog details how the new SQL operator in Fabric Eventstream empowers data engineers and analysts to build powerful real-time data processing and anomaly detection solutions using familiar SQL syntax within the Fabric Real-Time Intelligence suite.<!--excerpt_end-->
 
 # Fabric Eventstream SQL Operator: Your Tool Kit to Real-Time Data Processing in Fabric Real-Time Intelligence

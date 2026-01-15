@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Using Vogen for Value Objects in C# and .NET"
-description: "This blog post by Khalid Abuhakmeh explores how to improve code correctness and clarity in .NET using value objects, focusing on the Vogen library to generate and constrain value types. Examples demonstrate Vogen's use in reducing errors and boilerplate when modeling domain concepts."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Using Vogen for Value Objects in C# and .NET
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-04 00:00:00 +00:00
-permalink: "/2025-02-04-Using-Vogen-for-Value-Objects-in-C-and-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Domain Modeling", "NuGet", "Pac Man", "Source Generators", "Type Safety", "Validation", "Value Objects", "Vogen"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "domain modeling", "nuget", "pac man", "source generators", "type safety", "validation", "value objects", "vogen"]
+permalink: /coding/blogs/Using-Vogen-for-Value-Objects-in-C-and-NET
+tags:
+- .NET
+- Blogs
+- C#
+- Coding
+- Domain Modeling
+- NuGet
+- Pac Man
+- Source Generators
+- Type Safety
+- Validation
+- Value Objects
+- Vogen
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh demonstrates how value objects and the Vogen library can enhance code correctness and readability in C# and .NET. The article is packed with practical code examples and advice for applying value object patterns.<!--excerpt_end-->
 
 # Vogen and Value Objects with C# and .NET

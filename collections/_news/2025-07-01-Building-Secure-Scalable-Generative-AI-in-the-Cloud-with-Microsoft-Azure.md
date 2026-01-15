@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Building Secure, Scalable Generative AI in the Cloud with Microsoft Azure"
-description: "This article, by Maria Bledsoe, summarizes findings from Forrester Research on how Microsoft Azure empowers enterprises to scale generative AI securely. It highlights Azure’s cloud infrastructure, security tools, and unified data management as enablers for safe, enterprise-wide AI deployments that drive real business value."
-author: "Maria Bledsoe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Building Secure, Scalable Generative AI in the Cloud with Microsoft Azure
+author: Maria Bledsoe
+canonical_url: https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-01 15:00:00 +00:00
-permalink: "/2025-07-01-Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Security", "Analytics", "Azure", "Azure Databricks", "Azure Key Vault", "Azure Synapse Analytics", "Cloud Infrastructure", "Compliance", "Compute", "Containers", "Data Governance", "Enterprise AI", "Generative AI", "Hybrid + Multicloud", "Hybrid Cloud", "Machine Learning", "Management And Governance", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Fabric", "Microsoft Sentinel", "ML", "News", "Security"]
-tags_normalized: ["ai", "ai plus machine learning", "ai security", "analytics", "azure", "azure databricks", "azure key vault", "azure synapse analytics", "cloud infrastructure", "compliance", "compute", "containers", "data governance", "enterprise ai", "generative ai", "hybrid plus multicloud", "hybrid cloud", "machine learning", "management and governance", "microsoft azure", "microsoft defender for cloud", "microsoft fabric", "microsoft sentinel", "ml", "news", "security"]
+permalink: /ai/news/Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure
+tags:
+- AI
+- AI + Machine Learning
+- AI Security
+- Analytics
+- Azure
+- Azure Databricks
+- Azure Key Vault
+- Azure Synapse Analytics
+- Cloud Infrastructure
+- Compliance
+- Compute
+- Containers
+- Data Governance
+- Enterprise AI
+- Generative AI
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Machine Learning
+- Management And Governance
+- Microsoft Azure
+- Microsoft Defender For Cloud
+- Microsoft Fabric
+- Microsoft Sentinel
+- ML
+- News
+- Security
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Maria Bledsoe discusses Forrester Research findings on how Microsoft Azure enables enterprises to securely and efficiently scale generative AI, highlighting the platform’s security, compliance, and data management capabilities.<!--excerpt_end-->
 
 # Building Secure, Scalable AI in the Cloud with Microsoft Azure

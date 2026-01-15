@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Growing a DevOps Mindset"
-description: "Rene van Osnabrugge reflects on lessons from the LEAD podcast, exploring the human and cultural aspects of building a successful DevOps mindset. The article dives into growth versus fixed mindsets, common fears that inhibit change, and frameworks for fostering trust and continuous improvement in engineering teams."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Growing a DevOps Mindset
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-06-27 07:05:44 +00:00
-permalink: "/2025-06-27-Growing-a-DevOps-Mindset.html"
-categories: ["DevOps"]
-tags: ["ADKAR", "Blogs", "Collaboration", "Continuous Improvement", "DevOps", "Engineering Culture", "Fixed Mindset", "Growth Mindset", "Lead Podcast", "Mindset", "Organizational Change", "Personal Development", "Podcast", "Self Improvement", "Success", "Team Dynamics", "Trust", "Uncategorized"]
-tags_normalized: ["adkar", "blogs", "collaboration", "continuous improvement", "devops", "engineering culture", "fixed mindset", "growth mindset", "lead podcast", "mindset", "organizational change", "personal development", "podcast", "self improvement", "success", "team dynamics", "trust", "uncategorized"]
+permalink: /devops/blogs/Growing-a-DevOps-Mindset
+tags:
+- ADKAR
+- Blogs
+- Collaboration
+- Continuous Improvement
+- DevOps
+- Engineering Culture
+- Fixed Mindset
+- Growth Mindset
+- Lead Podcast
+- Mindset
+- Organizational Change
+- Personal Development
+- Podcast
+- Self Improvement
+- Success
+- Team Dynamics
+- Trust
+- Uncategorized
+section_names:
+- devops
 ---
-
 In this post, Rene van Osnabrugge draws on LEAD podcast insights to examine the cultural and psychological shifts necessary for nurturing a true DevOps mindset in engineering organizations.<!--excerpt_end-->
 
 # Growing a DevOps Mindset

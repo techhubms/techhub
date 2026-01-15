@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Innovating with MongoDB-Compatible Azure DocumentDB: AI, Multicloud, and Cost Efficiency"
-description: "This advanced session from Microsoft Ignite explores how Azure DocumentDB—now open-source and MongoDB-compatible—enables enterprise innovation with turnkey scalability, JSON-native data modeling, and enterprise-grade security. It demonstrates AI-powered index advising, seamless migration workflows, hybrid and multicloud deployment, and advanced query techniques. Learn how organizations leverage DocumentDB for rapid application development, data portability, and cost savings, featuring real-world demos and technical deep dives."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=W2qusd0gtTE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Innovating with MongoDB-Compatible Azure DocumentDB: AI, Multicloud, and Cost Efficiency'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=W2qusd0gtTE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:12:14 +00:00
-permalink: "/2025-11-20-Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Query Optimization", "Azure", "Azure Cosmos DB", "Azure DocumentDB", "Cosmos AI Graph", "Cost Optimization", "Data Migration", "Enterprise Security", "Hybrid Cloud", "JSON", "KNN", "Linux Foundation", "LLM Index Advisor", "Microsoft Ignite", "ML", "MongoDB Compatibility", "MSIgnite", "Multicloud", "Open Source", "Portability", "Semantic Search", "Turnkey Scaling", "Unifyyourdataplatform", "Videos", "VS Code Extension"]
-tags_normalized: ["ai", "ai query optimization", "azure", "azure cosmos db", "azure documentdb", "cosmos ai graph", "cost optimization", "data migration", "enterprise security", "hybrid cloud", "json", "knn", "linux foundation", "llm index advisor", "microsoft ignite", "ml", "mongodb compatibility", "msignite", "multicloud", "open source", "portability", "semantic search", "turnkey scaling", "unifyyourdataplatform", "videos", "vs code extension"]
+permalink: /ai/videos/Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency
+tags:
+- AI
+- AI Query Optimization
+- Azure
+- Azure Cosmos DB
+- Azure DocumentDB
+- Cosmos AI Graph
+- Cost Optimization
+- Data Migration
+- Enterprise Security
+- Hybrid Cloud
+- JSON
+- KNN
+- Linux Foundation
+- LLM Index Advisor
+- Microsoft Ignite
+- ML
+- MongoDB Compatibility
+- MSIgnite
+- Multicloud
+- Open Source
+- Portability
+- Semantic Search
+- Turnkey Scaling
+- Unifyyourdataplatform
+- Videos
+- VS Code Extension
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents an advanced Ignite breakout session featuring Patty Chow, Khelan Modi, and Gurvinder Singh. The talk explores Azure DocumentDB's new open-source direction, AI-powered query optimization, and cutting-edge multicloud capabilities for technical audiences.<!--excerpt_end-->
 
 {% youtube W2qusd0gtTE %}

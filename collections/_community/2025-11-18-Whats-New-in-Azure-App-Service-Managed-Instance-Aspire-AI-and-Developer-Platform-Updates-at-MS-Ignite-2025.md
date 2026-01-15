@@ -1,20 +1,56 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Azure App Service: Managed Instance, Aspire, AI, and Developer Platform Updates at MS Ignite 2025"
-description: "This comprehensive update from Stefan Schackow covers the latest features and improvements in Azure App Service announced at Microsoft Ignite 2025. Key topics include Managed Instance for seamless ASP.NET and .NET app modernization, enhanced Aspire support for .NET developers, new AI agent integration capabilities, expanded language and runtime options, and platform-wide improvements in scaling, networking, and developer experience. Practical migration insights, session references, and linked resources are included to help developers take advantage of the newest Azure App Service capabilities."
-author: "Stefan_Schackow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-app-service-at-msignite-2025/ba-p/4468207"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: Stefan_Schackow
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-app-service-at-msignite-2025/ba-p/4468207
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:27:30 +00:00
-permalink: "/2025-11-18-Whats-New-in-Azure-App-Service-Managed-Instance-Aspire-AI-and-Developer-Platform-Updates-at-MS-Ignite-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Integration", "App Service Environment V3", "ASP.NET", "Aspire", "Azure", "Azure App Service", "Azure Monitor", "Azure Pipelines", "CI/CD", "Coding", "Community", "Custom Error Pages", "DevOps", "Elastic APM", "Foundry Agent Service", "GitHub Actions", "Hyper V", "Linux", "Log Stream", "Managed Instance", "Microsoft Agent Framework", "Microsoft Ignite", "Network Segmentation", "Node.js", "Open Telemetry", "PHP", "Premium V4 SKU", "Private Endpoints", "Python", "Root Certificate", "Scaling", "SCM Advanced Tools", "Small Language Models", "Ubuntu"]
-tags_normalized: ["dotnet", "ai", "ai integration", "app service environment v3", "aspdotnet", "aspire", "azure", "azure app service", "azure monitor", "azure pipelines", "cislashcd", "coding", "community", "custom error pages", "devops", "elastic apm", "foundry agent service", "github actions", "hyper v", "linux", "log stream", "managed instance", "microsoft agent framework", "microsoft ignite", "network segmentation", "nodedotjs", "open telemetry", "php", "premium v4 sku", "private endpoints", "python", "root certificate", "scaling", "scm advanced tools", "small language models", "ubuntu"]
+permalink: /ai/community/Whats-New-in-Azure-App-Service-Managed-Instance-Aspire-AI-and-Developer-Platform-Updates-at-MS-Ignite-2025
+tags:
+- .NET
+- AI
+- AI Integration
+- App Service Environment V3
+- ASP.NET
+- Aspire
+- Azure
+- Azure App Service
+- Azure Monitor
+- Azure Pipelines
+- CI/CD
+- Coding
+- Community
+- Custom Error Pages
+- DevOps
+- Elastic APM
+- Foundry Agent Service
+- GitHub Actions
+- Hyper V
+- Linux
+- Log Stream
+- Managed Instance
+- Microsoft Agent Framework
+- Microsoft Ignite
+- Network Segmentation
+- Node.js
+- Open Telemetry
+- PHP
+- Premium V4 SKU
+- Private Endpoints
+- Python
+- Root Certificate
+- Scaling
+- SCM Advanced Tools
+- Small Language Models
+- Ubuntu
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Stefan Schackow delivers a deep dive into the latest innovations in Azure App Service from Microsoft Ignite 2025, highlighting modernization with Managed Instance, Aspire enhancements, AI agent integration, and developer-centric platform updates.<!--excerpt_end-->
 
 # What's New in Azure App Service at MS Ignite 2025

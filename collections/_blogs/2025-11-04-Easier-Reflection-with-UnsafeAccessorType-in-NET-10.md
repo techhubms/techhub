@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Easier Reflection with [UnsafeAccessorType] in .NET 10"
-description: "This technical article by Andrew Lock explores how .NET 10 introduces the [UnsafeAccessorType] attribute for easier access to private fields and members, even when type references are unavailable. The post details practical usage scenarios, code examples, compatibility notes, and current limitations compared to traditional reflection."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Easier Reflection with [UnsafeAccessorType] in .NET 10
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-11-04 10:00:00 +00:00
-permalink: "/2025-11-04-Easier-Reflection-with-UnsafeAccessorType-in-NET-10.html"
-categories: ["Coding"]
-tags: [".NET 10", ".NET 8", ".NET 9", "Access Modifiers", "APIs", "Blogs", "C#", "Coding", "Field Access", "Generics", "Internal Classes", "Method Access", "Performance", "Private Members", "Reflection", "System.Reflection", "UnsafeAccessor", "UnsafeAccessorType"]
-tags_normalized: ["dotnet 10", "dotnet 8", "dotnet 9", "access modifiers", "apis", "blogs", "csharp", "coding", "field access", "generics", "internal classes", "method access", "performance", "private members", "reflection", "systemdotreflection", "unsafeaccessor", "unsafeaccessortype"]
+permalink: /coding/blogs/Easier-Reflection-with-UnsafeAccessorType-in-NET-10
+tags:
+- .NET 10
+- .NET 8
+- .NET 9
+- Access Modifiers
+- APIs
+- Blogs
+- C#
+- Coding
+- Field Access
+- Generics
+- Internal Classes
+- Method Access
+- Performance
+- Private Members
+- Reflection
+- System.Reflection
+- UnsafeAccessor
+- UnsafeAccessorType
+section_names:
+- coding
 ---
-
 Andrew Lock demonstrates improvements to the [UnsafeAccessor] mechanism in .NET 10, focusing on how [UnsafeAccessorType] enables accessing private fields and methods for types without direct references.<!--excerpt_end-->
 
 # Easier Reflection with `[UnsafeAccessorType]` in .NET 10

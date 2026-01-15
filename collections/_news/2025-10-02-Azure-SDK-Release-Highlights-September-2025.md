@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights – September 2025"
-description: "This post summarizes the September 2025 Azure SDK releases, covering new stable and beta client and management libraries, major updates like Azure Batch and Azure Identity for Java, the stable rollout of Azure Playwright for multiple languages, as well as AI and orchestration SDK previews. Includes links to detailed release notes for .NET, Java, Python, JavaScript, Go, and Rust developers."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK Release Highlights – September 2025
+author: Ronnie Geraghty
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-02 15:00:17 +00:00
-permalink: "/2025-10-02-Azure-SDK-Release-Highlights-September-2025.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "API Changes", "Azure", "Azure Batch", "Azure Developer Tools", "Azure Identity", "Azure Playwright", "Azure SDK", "Beta Release", "Client Libraries", "Coding", "Go", "Java", "JavaScript", "Long Running Operations", "Management Libraries", "News", "Python", "Resource Management", "Rust", "SDK", "SDK Release", "Stable Release"]
-tags_normalized: ["dotnet", "api changes", "azure", "azure batch", "azure developer tools", "azure identity", "azure playwright", "azure sdk", "beta release", "client libraries", "coding", "go", "java", "javascript", "long running operations", "management libraries", "news", "python", "resource management", "rust", "sdk", "sdk release", "stable release"]
+permalink: /coding/news/Azure-SDK-Release-Highlights-September-2025
+tags:
+- .NET
+- API Changes
+- Azure
+- Azure Batch
+- Azure Developer Tools
+- Azure Identity
+- Azure Playwright
+- Azure SDK
+- Beta Release
+- Client Libraries
+- Coding
+- Go
+- Java
+- JavaScript
+- Long Running Operations
+- Management Libraries
+- News
+- Python
+- Resource Management
+- Rust
+- SDK
+- SDK Release
+- Stable Release
+section_names:
+- azure
+- coding
 ---
-
 Ronnie Geraghty provides an overview of the September 2025 Azure SDK releases, highlighting key updates, new libraries, and where to find detailed release notes for developers across multiple languages.<!--excerpt_end-->
 
 # Azure SDK Release Highlights – September 2025

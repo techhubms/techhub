@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "PagerDuty Introduces Suite of AI Agents to Enhance IT Management and DevOps Workflows"
-description: "This article by Mike Vizard covers PagerDuty's launch of new AI agents tailored to automate IT operations, support incident management, and streamline DevOps practices. Features include AI-driven runbooks, automated scheduling, and integration improvements, aiming to reduce manual workload and burnout for IT and DevOps teams."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: PagerDuty Introduces Suite of AI Agents to Enhance IT Management and DevOps Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-08 13:00:42 +00:00
-permalink: "/2025-10-08-PagerDuty-Introduces-Suite-of-AI-Agents-to-Enhance-IT-Management-and-DevOps-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Automation in IT Operations", "AI Driven Reliability Engineering", "AI Driven Runbooks", "AI For DevOps Teams", "AI in DevOps", "AI Powered Runbooks", "AI Site Reliability Engineer", "AI Workflow Automation", "AIOps", "AIOps Platforms", "Automation", "Backstage", "Blogs", "DevOps", "DevOps Automation", "DevOps Productivity", "Incident Response", "Integration", "IT Incident Management", "IT Operations", "IT Operations Automation", "MCP", "Model Context Protocol MCP", "PagerDuty", "Reducing IT Burnout", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "Workforce Productivity"]
-tags_normalized: ["ai", "ai agents", "ai automation in it operations", "ai driven reliability engineering", "ai driven runbooks", "ai for devops teams", "ai in devops", "ai powered runbooks", "ai site reliability engineer", "ai workflow automation", "aiops", "aiops platforms", "automation", "backstage", "blogs", "devops", "devops automation", "devops productivity", "incident response", "integration", "it incident management", "it operations", "it operations automation", "mcp", "model context protocol mcp", "pagerduty", "reducing it burnout", "social facebook", "social linkedin", "social x", "sre", "workforce productivity"]
+permalink: /ai/blogs/PagerDuty-Introduces-Suite-of-AI-Agents-to-Enhance-IT-Management-and-DevOps-Workflows
+tags:
+- AI
+- AI Agents
+- AI Automation in IT Operations
+- AI Driven Reliability Engineering
+- AI Driven Runbooks
+- AI For DevOps Teams
+- AI in DevOps
+- AI Powered Runbooks
+- AI Site Reliability Engineer
+- AI Workflow Automation
+- AIOps
+- AIOps Platforms
+- Automation
+- Backstage
+- Blogs
+- DevOps
+- DevOps Automation
+- DevOps Productivity
+- Incident Response
+- Integration
+- IT Incident Management
+- IT Operations
+- IT Operations Automation
+- MCP
+- Model Context Protocol MCP
+- PagerDuty
+- Reducing IT Burnout
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE
+- Workforce Productivity
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard details PagerDuty’s Fall '25 platform update, highlighted by the introduction of multiple AI agents designed to transform DevOps workflows and IT operations through automation and analysis.<!--excerpt_end-->
 
 # PagerDuty Introduces Suite of AI Agents to Enhance IT Management and DevOps Workflows

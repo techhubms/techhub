@@ -1,24 +1,35 @@
----
-layout: "post"
-title: "Visual Studio Code and GitHub Copilot - What's new in 1.102"
-description: "Fokko Veegens covers VS Code 1.102 features including the open-sourcing of GitHub Copilot Chat extension, custom chat modes, custom instruction generation, and terminal auto approval."
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bLjFNi9_RUk"
-viewing_mode: "internal"
-youtube_id: "bLjFNi9_RUk"
+﻿---
+layout: post
+title: Visual Studio Code and GitHub Copilot - What's new in 1.102
+author: Fokko Veegens
+canonical_url: https://www.youtube.com/watch?v=bLjFNi9_RUk
+viewing_mode: internal
+youtube_id: bLjFNi9_RUk
 date: 2025-07-17 00:00:00 +00:00
-permalink: "/2025-07-17-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1102.html"
-categories: ["AI", "GitHub Copilot"]
-section: "github-copilot"
-alt-collection: "vscode-updates"
-tags: ["AI", "Coding Agent", "Custom Chat Modes", "Custom Instructions", "Developer Tools", "GitHub Copilot", "MCP Servers", "Open Source", "Productivity", "Terminal Auto Approval", "Videos", "VS Code", "VS Code 1.102"]
-tags_normalized: ["ai", "coding agent", "custom chat modes", "custom instructions", "developer tools", "github copilot", "mcp servers", "open source", "productivity", "terminal auto approval", "videos", "vs code", "vs code 1dot102"]
+permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1102
+section: github-copilot
+alt-collection: vscode-updates
+tags:
+- AI
+- Coding Agent
+- Custom Chat Modes
+- Custom Instructions
+- Developer Tools
+- GitHub Copilot
+- MCP Servers
+- Open Source
+- Productivity
+- Terminal Auto Approval
+- Videos
+- VS Code
+- VS Code 1.102
+section_names:
+- ai
+- github-copilot
 ---
+Fokko Veegens covers VS Code 1.102 features including the open-sourcing of GitHub Copilot Chat extension, custom chat modes, custom instruction generation, and terminal auto approval.<!--excerpt_end-->
 
-{{ page.description }}<!--excerpt_end-->
-
-{% youtube page.youtube_id %}
+{% youtube vcKTx7CQ1_c %}
 
 ## Key Features in VS Code 1.102
 
@@ -54,4 +65,4 @@ The release includes several other valuable enhancements:
 
 Fokko provides detailed walkthroughs of each feature, with extensive coverage of custom chat modes and practical examples of how to leverage these new capabilities. The video includes helpful timestamps for quick navigation.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v={{ page.youtube_id }})
+[Watch the video on YouTube](https://www.youtube.com/watch?v=bLjFNi9_RUk)

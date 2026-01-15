@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Storage: Fundamentals, Services, and Community Best Practices"
-description: "This overview details Azure Storage, Microsoft's cloud storage platform, and highlights community-driven best practices contributed by frankfalvey. It covers essential storage services, cost management strategies, and practical use cases relevant for developers and architects utilizing Azure for scalable, secure, and durable data workloads."
-author: "frankfalvey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Storage: Fundamentals, Services, and Community Best Practices'
+author: frankfalvey
+canonical_url: https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-23 18:37:03 +00:00
-permalink: "/2025-08-23-Azure-Storage-Fundamentals-Services-and-Community-Best-Practices.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure CLI", "Azure Disks", "Azure Storage", "Blob Storage", "Cloud Cost Management", "Cloud Security", "Community", "Data Lake Storage", "Disaster Recovery", "Elastic SAN", "File Storage", "Geo Redundancy", "Queue Storage", "Resource Optimization", "REST API", "Table Storage"]
-tags_normalized: ["azure", "azure cli", "azure disks", "azure storage", "blob storage", "cloud cost management", "cloud security", "community", "data lake storage", "disaster recovery", "elastic san", "file storage", "geo redundancy", "queue storage", "resource optimization", "rest api", "table storage"]
+permalink: /azure/community/Azure-Storage-Fundamentals-Services-and-Community-Best-Practices
+tags:
+- Azure
+- Azure CLI
+- Azure Disks
+- Azure Storage
+- Blob Storage
+- Cloud Cost Management
+- Cloud Security
+- Community
+- Data Lake Storage
+- Disaster Recovery
+- Elastic SAN
+- File Storage
+- Geo Redundancy
+- Queue Storage
+- Resource Optimization
+- REST API
+- Table Storage
+section_names:
+- azure
 ---
-
 frankfalvey presents a practical guide to Azure Storage, outlining key storage types, cost optimization strategies, and real-world use cases for building reliable cloud applications.<!--excerpt_end-->
 
 # Azure Storage: Fundamentals, Services, and Community Best Practices

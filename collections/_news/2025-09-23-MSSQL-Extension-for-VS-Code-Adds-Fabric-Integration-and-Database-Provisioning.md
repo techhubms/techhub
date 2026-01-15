@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "MSSQL Extension for VS Code Adds Fabric Integration and Database Provisioning"
-description: "This announcement details new features in version 1.36 of the MSSQL extension for Visual Studio Code, including Fabric Connectivity and SQL Database in Fabric Provisioning, now in Public Preview. Developers can connect to Microsoft Fabric workspaces and create SQL databases directly within VS Code using Microsoft Entra ID authentication, streamlining modern SQL development workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: MSSQL Extension for VS Code Adds Fabric Integration and Database Provisioning
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 11:00:00 +00:00
-permalink: "/2025-09-23-MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure SQL", "Coding", "Context Switching", "Database Provisioning", "Developer Tools", "Fabric Connectivity", "Microsoft Entra ID", "Microsoft Fabric", "Modern App Development", "MSSQL Extension", "News", "Public Preview", "SQL Database", "SQL Development", "VS Code", "VS Code Extension", "Workspace Authentication"]
-tags_normalized: ["azure", "azure sql", "coding", "context switching", "database provisioning", "developer tools", "fabric connectivity", "microsoft entra id", "microsoft fabric", "modern app development", "mssql extension", "news", "public preview", "sql database", "sql development", "vs code", "vs code extension", "workspace authentication"]
+permalink: /coding/news/MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning
+tags:
+- Azure
+- Azure SQL
+- Coding
+- Context Switching
+- Database Provisioning
+- Developer Tools
+- Fabric Connectivity
+- Microsoft Entra ID
+- Microsoft Fabric
+- Modern App Development
+- MSSQL Extension
+- News
+- Public Preview
+- SQL Database
+- SQL Development
+- VS Code
+- VS Code Extension
+- Workspace Authentication
+section_names:
+- azure
+- coding
 ---
-
 Microsoft Fabric Blog showcases new features by introducing Fabric Connectivity and SQL Database provisioning within the MSSQL extension for VS Code, empowering developers with seamless integration and modern SQL development tools.<!--excerpt_end-->
 
 # MSSQL Extension for VS Code: Fabric Integration (Preview)

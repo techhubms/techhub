@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Why Automation Fails Without the Right QA Mindset"
-description: "This article by Imtiaz Shaik explores why automation alone is insufficient for delivering high-quality software in a DevOps context. It emphasizes the critical role of a QA mindset—one focused on risk management, early involvement, and adaptability—in ensuring automated pipelines deliver real business value. Key principles for fostering effective QA practices are discussed."
-author: "Imtiaz Shaik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/why-automation-fails-without-the-right-qa-mindset/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Why Automation Fails Without the Right QA Mindset
+author: Imtiaz Shaik
+canonical_url: https://devops.com/why-automation-fails-without-the-right-qa-mindset/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-16 13:47:10 +00:00
-permalink: "/2025-09-16-Why-Automation-Fails-Without-the-Right-QA-Mindset.html"
-categories: ["DevOps"]
-tags: ["Automated Testing", "Automation", "Blogs", "CI/CD", "Collaboration", "Continuous Delivery", "Contributed Content", "DevOps", "DevOps Culture", "Manual Testing", "Pipeline Automation", "QA", "QA Mindset", "Quality Assurance", "Regression Testing", "Risk Based Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Test Automation", "Testing Strategy", "UI", "User Experience", "UX"]
-tags_normalized: ["automated testing", "automation", "blogs", "cislashcd", "collaboration", "continuous delivery", "contributed content", "devops", "devops culture", "manual testing", "pipeline automation", "qa", "qa mindset", "quality assurance", "regression testing", "risk based testing", "social facebook", "social linkedin", "social x", "software delivery", "test automation", "testing strategy", "ui", "user experience", "ux"]
+permalink: /devops/blogs/Why-Automation-Fails-Without-the-Right-QA-Mindset
+tags:
+- Automated Testing
+- Automation
+- Blogs
+- CI/CD
+- Collaboration
+- Continuous Delivery
+- Contributed Content
+- DevOps
+- DevOps Culture
+- Manual Testing
+- Pipeline Automation
+- QA
+- QA Mindset
+- Quality Assurance
+- Regression Testing
+- Risk Based Testing
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+- Test Automation
+- Testing Strategy
+- UI
+- User Experience
+- UX
+section_names:
+- devops
 ---
-
 Imtiaz Shaik discusses the pitfalls of software automation without the right QA mindset, highlighting the importance of early QA involvement and risk-driven testing in the DevOps process.<!--excerpt_end-->
 
 # Why Automation Fails Without the Right QA Mindset

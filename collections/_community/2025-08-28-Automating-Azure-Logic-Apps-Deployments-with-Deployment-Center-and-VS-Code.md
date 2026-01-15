@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Automating Azure Logic Apps Deployments with Deployment Center and VS Code"
-description: "This guide by WSilveira introduces the Deployment Center feature in Azure Logic Apps Standard, focusing on how it streamlines code deployments directly from your source control repository with built-in support in VS Code. The article covers setup steps, integration with DevOps and CI/CD workflows, the generation and use of deployment scripts, rollback capabilities, and key implementation considerations for teams automating Logic Apps delivery."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-setup-cd-in-azure-logic-apps-standard-with-deployment/ba-p/4449013"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automating Azure Logic Apps Deployments with Deployment Center and VS Code
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-setup-cd-in-azure-logic-apps-standard-with-deployment/ba-p/4449013
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-28 08:18:30 +00:00
-permalink: "/2025-08-28-Automating-Azure-Logic-Apps-Deployments-with-Deployment-Center-and-VS-Code.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Azure DevOps", "Azure Logic Apps", "Azure Repos", "CI/CD", "Community", "Continuous Deployment", "Deployment Center", "DevOps", "GitHub", "Infrastructure Automation", "Integration Services", "SCM Authentication", "Source Control", "VS Code", "Workflow Automation"]
-tags_normalized: ["automation", "azure", "azure devops", "azure logic apps", "azure repos", "cislashcd", "community", "continuous deployment", "deployment center", "devops", "github", "infrastructure automation", "integration services", "scm authentication", "source control", "vs code", "workflow automation"]
+permalink: /azure/community/Automating-Azure-Logic-Apps-Deployments-with-Deployment-Center-and-VS-Code
+tags:
+- Automation
+- Azure
+- Azure DevOps
+- Azure Logic Apps
+- Azure Repos
+- CI/CD
+- Community
+- Continuous Deployment
+- Deployment Center
+- DevOps
+- GitHub
+- Infrastructure Automation
+- Integration Services
+- SCM Authentication
+- Source Control
+- VS Code
+- Workflow Automation
+section_names:
+- azure
+- devops
 ---
-
 WSilveira explains how the Deployment Center in Azure Logic Apps Standard streamlines code deployments from VS Code and source control, integrating easily with DevOps workflows.<!--excerpt_end-->
 
 # Automating Azure Logic Apps Deployments with Deployment Center and VS Code

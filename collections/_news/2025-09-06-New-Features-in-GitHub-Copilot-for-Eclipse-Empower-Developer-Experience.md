@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "New Features in GitHub Copilot for Eclipse Empower Developer Experience"
-description: "This news post covers the latest enhancements to GitHub Copilot within the Eclipse IDE. Improvements include custom instructions, image support in chat for code generation, rich folder context, refined user workflows, API for plugin integration, and performance optimizations. The article explains how these updates help developers personalize and streamline coding workflows in Eclipse using Copilot."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: New Features in GitHub Copilot for Eclipse Empower Developer Experience
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-06 02:56:23 +00:00
-permalink: "/2025-09-06-New-Features-in-GitHub-Copilot-for-Eclipse-Empower-Developer-Experience.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "API Integration", "Code Generation", "Coding", "Copilot Chat", "Custom Instructions", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Integration", "Java Development", "News", "Plugin Development", "Programming Productivity", "Spring Tools", "User Experience", "Workflow Enhancement"]
-tags_normalized: ["agent mode", "ai", "api integration", "code generation", "coding", "copilot chat", "custom instructions", "developer tools", "eclipse", "github copilot", "ide integration", "java development", "news", "plugin development", "programming productivity", "spring tools", "user experience", "workflow enhancement"]
+permalink: /github-copilot/news/New-Features-in-GitHub-Copilot-for-Eclipse-Empower-Developer-Experience
+tags:
+- Agent Mode
+- AI
+- API Integration
+- Code Generation
+- Coding
+- Copilot Chat
+- Custom Instructions
+- Developer Tools
+- Eclipse
+- GitHub Copilot
+- IDE Integration
+- Java Development
+- News
+- Plugin Development
+- Programming Productivity
+- Spring Tools
+- User Experience
+- Workflow Enhancement
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison highlights the latest GitHub Copilot improvements for Eclipse, detailing features like custom instructions, image-based chat context, richer workflow integration, and a new plugin API to help developers code smarter.<!--excerpt_end-->
 
 # New Features in GitHub Copilot for Eclipse

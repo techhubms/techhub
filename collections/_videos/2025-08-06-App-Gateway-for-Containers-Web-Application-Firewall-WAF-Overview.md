@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "App Gateway for Containers: Web Application Firewall (WAF) Overview"
-description: "This video by John Savill’s Technical Training walks through the newly available Web Application Firewall (WAF) feature for Azure’s App Gateway for Containers. The walkthrough covers setup, configuration, policy scopes, key limitations, firewall logs, deployment, and pricing. The presentation targets cloud architects, security professionals, and Kubernetes administrators looking to secure container workloads using native Azure tools."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=CSD1qQN2R2k"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'App Gateway for Containers: Web Application Firewall (WAF) Overview'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=CSD1qQN2R2k
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-06 13:27:43 +00:00
-permalink: "/2025-08-06-App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "App Gateway For Containers", "Application Gateway", "Azure", "Azure Cloud", "Azure Networking", "Azure Service Operator", "Cloud", "Cloud Security", "Container Security", "Firewall", "Firewall Policies", "Kubernetes", "Load Balancing", "Logging", "Microsoft", "Microsoft Azure", "Pricing", "Security", "Security Configuration", "Videos", "WAF", "Web Application Firewall"]
-tags_normalized: ["aks", "app gateway for containers", "application gateway", "azure", "azure cloud", "azure networking", "azure service operator", "cloud", "cloud security", "container security", "firewall", "firewall policies", "kubernetes", "load balancing", "logging", "microsoft", "microsoft azure", "pricing", "security", "security configuration", "videos", "waf", "web application firewall"]
+permalink: /azure/videos/App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview
+tags:
+- AKS
+- App Gateway For Containers
+- Application Gateway
+- Azure
+- Azure Cloud
+- Azure Networking
+- Azure Service Operator
+- Cloud
+- Cloud Security
+- Container Security
+- Firewall
+- Firewall Policies
+- Kubernetes
+- Load Balancing
+- Logging
+- Microsoft
+- Microsoft Azure
+- Pricing
+- Security
+- Security Configuration
+- Videos
+- WAF
+- Web Application Firewall
+section_names:
+- azure
+- security
 ---
-
 John Savill's Technical Training explains the new Web Application Firewall (WAF) capability for Azure App Gateway for Containers, guiding viewers through configuration, policy application, and key limitations.<!--excerpt_end-->
 
 {% youtube CSD1qQN2R2k %}

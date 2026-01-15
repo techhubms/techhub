@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Introducing F# 10: Language Features, Performance, and Tooling in .NET 10"
-description: "This article highlights the major updates in F# 10, released together with .NET 10 and Visual Studio 2026. It covers new language features such as scoped warning suppression, improved property accessors, ValueOption support, computation expression enhancements, and tooling improvements like type subsumption caching, parallel compilation, better trimming, and stable typecheck-only scripting. It also acknowledges substantial community contributions to the F# ecosystem."
-author: "Adam Boniecki"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Introducing F# 10: Language Features, Performance, and Tooling in .NET 10'
+author: Adam Boniecki
+canonical_url: https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-17 18:05:00 +00:00
-permalink: "/2025-11-17-Introducing-F-10-Language-Features-Performance-and-Tooling-in-NET-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "Auto Properties", "Coding", "Compiler", "Computation Expressions", "F#", "F# 10", "Language Features", "News", "Parallel Compilation", "Performance", "Scoped Warning Suppression", "Scripting", "Tooling", "Type Subsumption Cache", "ValueOption", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "auto properties", "coding", "compiler", "computation expressions", "fsharp", "fsharp 10", "language features", "news", "parallel compilation", "performance", "scoped warning suppression", "scripting", "tooling", "type subsumption cache", "valueoption", "vs"]
+permalink: /coding/news/Introducing-F-10-Language-Features-Performance-and-Tooling-in-NET-10
+tags:
+- .NET
+- .NET 10
+- Auto Properties
+- Coding
+- Compiler
+- Computation Expressions
+- F#
+- F# 10
+- Language Features
+- News
+- Parallel Compilation
+- Performance
+- Scoped Warning Suppression
+- Scripting
+- Tooling
+- Type Subsumption Cache
+- ValueOption
+- VS
+section_names:
+- coding
 ---
-
 Adam Boniecki reviews what's new in F# 10, including significant language improvements, performance upgrades, and tooling innovations released alongside .NET 10 and Visual Studio 2026.<!--excerpt_end-->
 
 # Introducing F# 10: Language Features, Performance, and Tooling in .NET 10

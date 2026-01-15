@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Optimizing Cloud and AI ROI with Microsoft Marketplace Strategies"
-description: "This session from Microsoft Ignite 2025 explores actionable strategies for organizations aiming to maximize return on investment in the cloud and AI by leveraging Microsoft Marketplace. It covers marketplace-driven solution deployment, cost control, governance, compliance, and real-world practices for building resilient infrastructures that support AI-first innovation. The session also highlights new partner tools, procurement services, and cross-functional collaboration frameworks. Intended for professionals seeking to align cloud adoption with governance and efficiency using Azure and related Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pqc2g13vG0w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Optimizing Cloud and AI ROI with Microsoft Marketplace Strategies
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=pqc2g13vG0w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:28:05 +00:00
-permalink: "/2025-11-24-Optimizing-Cloud-and-AI-ROI-with-Microsoft-Marketplace-Strategies.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Strategy", "Azure", "Cloud Adoption", "Cloud Governance", "Compliance", "Cost Optimization", "Cross Functional Teams", "Digital Transformation", "InnovatewithAzureAIappsandagents", "Innovation", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Partner Tools", "PO Management Service", "Procurement", "Solution Deployment", "Videos"]
-tags_normalized: ["ai", "ai strategy", "azure", "cloud adoption", "cloud governance", "compliance", "cost optimization", "cross functional teams", "digital transformation", "innovatewithazureaiappsandagents", "innovation", "microsoft ignite", "microsoft marketplace", "msignite", "partner tools", "po management service", "procurement", "solution deployment", "videos"]
+permalink: /ai/videos/Optimizing-Cloud-and-AI-ROI-with-Microsoft-Marketplace-Strategies
+tags:
+- AI
+- AI Strategy
+- Azure
+- Cloud Adoption
+- Cloud Governance
+- Compliance
+- Cost Optimization
+- Cross Functional Teams
+- Digital Transformation
+- InnovatewithAzureAIappsandagents
+- Innovation
+- Microsoft Ignite
+- Microsoft Marketplace
+- MSIgnite
+- Partner Tools
+- PO Management Service
+- Procurement
+- Solution Deployment
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Matt Hillegass and Rajesh Ramankutty from Microsoft share practical approaches for maximizing cloud and AI return on investment through Microsoft Marketplace, focusing on governance, cost management, and rapid solution deployment.<!--excerpt_end-->
 
 {% youtube pqc2g13vG0w %}

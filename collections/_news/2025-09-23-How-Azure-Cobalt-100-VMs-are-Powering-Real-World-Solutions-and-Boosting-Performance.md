@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How Azure Cobalt 100 VMs are Powering Real-World Solutions and Boosting Performance"
-description: "This article explores Microsoft’s Azure Cobalt 100 VMs, focusing on their custom Arm-based CPU architecture, performance, energy efficiency, and real-world adoption. Highlighted use cases include analytics, AI-powered banking, security services, and cloud-native applications. Practical insights from industry leaders demonstrate how Cobalt 100 VMs drive significant improvements across diverse workloads."
-author: "Omar Khan, Rani Borkar and Arun Kishan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/how-azure-cobalt-100-vms-are-powering-real-world-solutions-delivering-performance-and-efficiency-results/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How Azure Cobalt 100 VMs are Powering Real-World Solutions and Boosting Performance
+author: Omar Khan, Rani Borkar and Arun Kishan
+canonical_url: https://azure.microsoft.com/en-us/blog/how-azure-cobalt-100-vms-are-powering-real-world-solutions-delivering-performance-and-efficiency-results/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/2025-09-23-How-Azure-Cobalt-100-VMs-are-Powering-Real-World-Solutions-and-Boosting-Performance.html"
-categories: ["Azure"]
-tags: ["AKS", "ARM Architecture", "Azure", "Azure Cobalt 100", "Cloud Infrastructure", "Cloud Native", "Compute", "Compute Workloads", "Data Platforms", "Databricks", "Energy Efficiency", "Microsoft Azure", "Microsoft Defender", "Microsoft Teams", "News", "Performance Optimization", "Snowflake", "Temenos", "Virtual Machines"]
-tags_normalized: ["aks", "arm architecture", "azure", "azure cobalt 100", "cloud infrastructure", "cloud native", "compute", "compute workloads", "data platforms", "databricks", "energy efficiency", "microsoft azure", "microsoft defender", "microsoft teams", "news", "performance optimization", "snowflake", "temenos", "virtual machines"]
+permalink: /azure/news/How-Azure-Cobalt-100-VMs-are-Powering-Real-World-Solutions-and-Boosting-Performance
+tags:
+- AKS
+- ARM Architecture
+- Azure
+- Azure Cobalt 100
+- Cloud Infrastructure
+- Cloud Native
+- Compute
+- Compute Workloads
+- Data Platforms
+- Databricks
+- Energy Efficiency
+- Microsoft Azure
+- Microsoft Defender
+- Microsoft Teams
+- News
+- Performance Optimization
+- Snowflake
+- Temenos
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Omar Khan, Rani Borkar, and Arun Kishan detail how Azure Cobalt 100 VMs deliver higher performance and energy efficiency for modern workloads, backed by industry case studies and Microsoft's own usage.<!--excerpt_end-->
 
 # How Azure Cobalt 100 VMs are Powering Real-World Solutions

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Integrating Genspark Agents with Microsoft Agent 365 for Secure Enterprise AI Workflows"
-description: "This news article explores how Mainfunc’s Genspark Super Agent platform is partnering with Microsoft Agent 365 to bring intuitive AI agents to enterprise users. It details Genspark’s technology for automating business tasks via AI agents, highlights the Microsoft ecosystem integration for secure management and governance using Entra, Defender, and Purview, and explains how enterprises can leverage these agents within Microsoft 365 workflows while maintaining necessary security controls."
-author: "trith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/with-microsoft-agent-365-one-startup-furthers-goal-of-making-ai-agents-more-intuitive/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Integrating Genspark Agents with Microsoft Agent 365 for Secure Enterprise AI Workflows
+author: trith
+canonical_url: https://news.microsoft.com/source/asia/features/with-microsoft-agent-365-one-startup-furthers-goal-of-making-ai-agents-more-intuitive/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:13:42 +00:00
-permalink: "/2025-11-18-Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agents", "Automation", "Customers", "Defender", "Digital Agents", "Enterprise AI", "Entra ID", "Genspark", "Governance", "Identity Management", "Mainfunc", "Microsoft 365", "Microsoft Agent 365", "News", "PowerPoint Integration", "Purview", "Security", "Security Controls"]
-tags_normalized: ["ai", "ai agents", "automation", "customers", "defender", "digital agents", "enterprise ai", "entra id", "genspark", "governance", "identity management", "mainfunc", "microsoft 365", "microsoft agent 365", "news", "powerpoint integration", "purview", "security", "security controls"]
+permalink: /ai/news/Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows
+tags:
+- AI
+- AI Agents
+- Automation
+- Customers
+- Defender
+- Digital Agents
+- Enterprise AI
+- Entra ID
+- Genspark
+- Governance
+- Identity Management
+- Mainfunc
+- Microsoft 365
+- Microsoft Agent 365
+- News
+- PowerPoint Integration
+- Purview
+- Security
+- Security Controls
+section_names:
+- ai
+- security
 ---
-
 trith reports on Mainfunc’s Genspark platform integrating with Microsoft Agent 365 to enable secure, scalable AI agent workflows for enterprise users—highlighting both technical management and practical use of agents.<!--excerpt_end-->
 
 # Integrating Genspark Agents with Microsoft Agent 365 for Secure Enterprise AI Workflows

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Securing Data Across Microsoft Environments with Microsoft Purview"
-description: "This advanced Ignite session explores how Microsoft Purview integrates data security across Microsoft 365, Azure, Windows, and Microsoft Fabric. Topics include Data Security Posture Management (DSPM), agent-driven security, advanced DLP protections, built-in reporting, and integration with services like OneLake Catalog. The presenters discuss tools and techniques for identifying and addressing hidden data risks, automating remediation, and preparing for features like M365 Copilot, with practical demonstrations on DLP and Prompt DLP."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QhnYj80YdrE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Securing Data Across Microsoft Environments with Microsoft Purview
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=QhnYj80YdrE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 05:11:39 +00:00
-permalink: "/2025-11-24-Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview.html"
-categories: ["Azure", "Security"]
-tags: ["Agent Driven Security", "Auto Labeling", "Azure", "Compliance", "Data Protection", "Data Security", "Data Security Posture Management", "DLP", "DSPM", "Information Protection", "Microsoft 365", "Microsoft Fabric", "Microsoft Purview", "MSIgnite", "OneLake Catalog", "Prompt DLP", "Secureyourdata", "Security", "Security Insights", "Videos"]
-tags_normalized: ["agent driven security", "auto labeling", "azure", "compliance", "data protection", "data security", "data security posture management", "dlp", "dspm", "information protection", "microsoft 365", "microsoft fabric", "microsoft purview", "msignite", "onelake catalog", "prompt dlp", "secureyourdata", "security", "security insights", "videos"]
+permalink: /azure/videos/Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview
+tags:
+- Agent Driven Security
+- Auto Labeling
+- Azure
+- Compliance
+- Data Protection
+- Data Security
+- Data Security Posture Management
+- DLP
+- DSPM
+- Information Protection
+- Microsoft 365
+- Microsoft Fabric
+- Microsoft Purview
+- MSIgnite
+- OneLake Catalog
+- Prompt DLP
+- Secureyourdata
+- Security
+- Security Insights
+- Videos
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events presents an advanced session on Microsoft Purview, featuring Nathalia Borges, Maithili Dandige, Aashish Ramdas, and Sushma Rao. They detail securing data and enforcing protection policies across Microsoft’s cloud and data platforms.<!--excerpt_end-->
 
 {% youtube QhnYj80YdrE %}

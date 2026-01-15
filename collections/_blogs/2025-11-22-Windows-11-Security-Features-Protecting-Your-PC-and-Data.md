@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Windows 11 Security Features: Protecting Your PC and Data"
-description: "This article, written by John Edward, provides an in-depth exploration of Windows 11’s built-in security features. The post covers everything from hardware requirements like TPM 2.0, Secure Boot, and the role of Virtualization-Based Security, to advanced identity protection methods. It also details key layers of everyday security—BitLocker, Defender Firewall, Smart App Control, and ransomware protection—giving readers practical knowledge about Windows 11's security architecture and its practical impact."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/understanding-windows-11-security-features-a-shield-for-your-digital-life/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Windows 11 Security Features: Protecting Your PC and Data'
+author: John Edward
+canonical_url: https://dellenny.com/understanding-windows-11-security-features-a-shield-for-your-digital-life/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-22 08:14:41 +00:00
-permalink: "/2025-11-22-Windows-11-Security-Features-Protecting-Your-PC-and-Data.html"
-categories: ["Security"]
-tags: ["BitLocker", "Blogs", "Controlled Folder Access", "Core Isolation", "Defender Antivirus", "Dynamic Lock", "Encryption", "Enhanced Phishing Protection", "Memory Integrity", "Microsoft Defender", "Passkeys", "PC Security", "Ransomware Protection", "Secure Boot", "Security", "Smart App Control", "TPM 2.0", "UEFI", "VBS", "Virtualization Based Security", "Windows 11", "Windows Defender Firewall", "Windows Hello"]
-tags_normalized: ["bitlocker", "blogs", "controlled folder access", "core isolation", "defender antivirus", "dynamic lock", "encryption", "enhanced phishing protection", "memory integrity", "microsoft defender", "passkeys", "pc security", "ransomware protection", "secure boot", "security", "smart app control", "tpm 2dot0", "uefi", "vbs", "virtualization based security", "windows 11", "windows defender firewall", "windows hello"]
+permalink: /security/blogs/Windows-11-Security-Features-Protecting-Your-PC-and-Data
+tags:
+- BitLocker
+- Blogs
+- Controlled Folder Access
+- Core Isolation
+- Defender Antivirus
+- Dynamic Lock
+- Encryption
+- Enhanced Phishing Protection
+- Memory Integrity
+- Microsoft Defender
+- Passkeys
+- PC Security
+- Ransomware Protection
+- Secure Boot
+- Security
+- Smart App Control
+- TPM 2.0
+- UEFI
+- VBS
+- Virtualization Based Security
+- Windows 11
+- Windows Defender Firewall
+- Windows Hello
+section_names:
+- security
 ---
-
 John Edward investigates Windows 11’s robust security features, highlighting hardware requirements, identity protection, and real-time defense tools for safeguarding users’ PCs and personal data.<!--excerpt_end-->
 
 # Windows 11 Security Features: Protecting Your PC and Data

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Foundry Local Meets More Silicon: Expanded AI Runtime and NPU Support"
-description: "This news update explores the latest release of Foundry Local—a high-performance, local AI runtime stack built by Azure AI Foundry. Foundry Local now supports more hardware, including Intel and AMD NPUs on Windows 11, as well as continued improvements for NVIDIA and Qualcomm platforms. The article examines the evolution of on-device AI acceleration from CPUs to NPUs, highlights new installation options for Windows and MacOS, and presents practical, step-by-step setup instructions. Developers and engineers can learn how Microsoft's latest advancements bring accessible, accelerated AI to both desktops and mobile devices without heavy reliance on cloud resources."
-author: "Meng Tang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/foundry-local-meets-more-silicon/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Foundry Local Meets More Silicon: Expanded AI Runtime and NPU Support'
+author: Meng Tang
+canonical_url: https://devblogs.microsoft.com/foundry/foundry-local-meets-more-silicon/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-23 19:01:15 +00:00
-permalink: "/2025-09-23-Foundry-Local-Meets-More-Silicon-Expanded-AI-Runtime-and-NPU-Support.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Development", "AI Models", "AI Runtime", "AMD", "Azure", "Azure AI Foundry", "Brew", "Coding", "Cross Platform Development", "Developer Tools", "Edge AI", "Foundry Local", "FoundryLocal", "Installation Guide", "Intel", "News", "NPU", "NVIDIA", "On Device AI", "Performance Acceleration", "Qualcomm", "Windows 11", "Windows ML", "Winget"]
-tags_normalized: ["ai", "ai development", "ai models", "ai runtime", "amd", "azure", "azure ai foundry", "brew", "coding", "cross platform development", "developer tools", "edge ai", "foundry local", "foundrylocal", "installation guide", "intel", "news", "npu", "nvidia", "on device ai", "performance acceleration", "qualcomm", "windows 11", "windows ml", "winget"]
+permalink: /ai/news/Foundry-Local-Meets-More-Silicon-Expanded-AI-Runtime-and-NPU-Support
+tags:
+- AI
+- AI Development
+- AI Models
+- AI Runtime
+- AMD
+- Azure
+- Azure AI Foundry
+- Brew
+- Coding
+- Cross Platform Development
+- Developer Tools
+- Edge AI
+- Foundry Local
+- FoundryLocal
+- Installation Guide
+- Intel
+- News
+- NPU
+- NVIDIA
+- On Device AI
+- Performance Acceleration
+- Qualcomm
+- Windows 11
+- Windows ML
+- Winget
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Meng Tang details the new features in Foundry Local, Azure AI Foundry’s powerful local AI runtime. Learn about expanded hardware acceleration support and how to quickly install and deploy AI models on Windows and MacOS.<!--excerpt_end-->
 
 # Foundry Local Meets More Silicon: Expanded AI Runtime and NPU Support

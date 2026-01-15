@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "What does professional code look like?"
-description: "The author seeks advice on how to write professional, maintainable code after struggling with a disorganized backend implementation. They specifically inquire about methodologies and best practices, mentioning recent experience with dependency injection, and ask what practices are commonly used in the industry."
-author: "RipeTide18"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: What does professional code look like?
+author: RipeTide18
+canonical_url: https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 15:09:10 +00:00
-permalink: "/2025-08-02-What-does-professional-code-look-like.html"
-categories: ["Coding"]
-tags: ["Backend Development", "Best Practices", "C#", "Clean Code", "Coding", "Community", "Dependency Injection", "Industry Standards", "Maintainability", "Professional Code", "Refactoring", "Software Methodology"]
-tags_normalized: ["backend development", "best practices", "csharp", "clean code", "coding", "community", "dependency injection", "industry standards", "maintainability", "professional code", "refactoring", "software methodology"]
+permalink: /coding/community/What-does-professional-code-look-like
+tags:
+- Backend Development
+- Best Practices
+- C#
+- Clean Code
+- Coding
+- Community
+- Dependency Injection
+- Industry Standards
+- Maintainability
+- Professional Code
+- Refactoring
+- Software Methodology
+section_names:
+- coding
 ---
-
 RipeTide18 discusses challenges faced in backend development and asks how to write professional code, referencing dependency injection and industry methodologies.<!--excerpt_end-->
 
 ## Summary

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Comparison of Rebus, NServiceBus, and MassTransit in .NET"
-description: "This article by Michal Kaminski compares three popular .NET messaging libraries—Rebus, NServiceBus, and MassTransit. It covers setup, features, transports, saga implementations, error handling, security, monitoring, community support, code samples, and licensing to help developers choose the right solution for distributed .NET applications."
-author: "Michal Kaminski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+layout: post
+title: Comparison of Rebus, NServiceBus, and MassTransit in .NET
+author: Michal Kaminski
+canonical_url: https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/
+viewing_mode: external
+feed_name: Code Maze Blog
+feed_url: https://code-maze.com/feed/
 date: 2024-12-16 04:28:02 +00:00
-permalink: "/2024-12-16-Comparison-of-Rebus-NServiceBus-and-MassTransit-in-NET.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "ASP.NET Core", "Blogs", "C#", "Coding", "Community Support", "Distributed Systems", "Encryption", "Error Handling", "Licensing", "MassTransit", "Message Bus", "Messaging", "Microservices", "Monitoring", "NServiceBus", "Open Source", "Rebus", "Saga Patterns", "Security", "Service Bus"]
-tags_normalized: ["dotnet", "aspdotnet core", "blogs", "csharp", "coding", "community support", "distributed systems", "encryption", "error handling", "licensing", "masstransit", "message bus", "messaging", "microservices", "monitoring", "nservicebus", "open source", "rebus", "saga patterns", "security", "service bus"]
+permalink: /coding/blogs/Comparison-of-Rebus-NServiceBus-and-MassTransit-in-NET
+tags:
+- .NET
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Community Support
+- Distributed Systems
+- Encryption
+- Error Handling
+- Licensing
+- MassTransit
+- Message Bus
+- Messaging
+- Microservices
+- Monitoring
+- NServiceBus
+- Open Source
+- Rebus
+- Saga Patterns
+- Security
+- Service Bus
+section_names:
+- coding
+- security
 ---
-
 Authored by Michal Kaminski, this comprehensive comparison explores Rebus, NServiceBus, and MassTransit, guiding .NET developers through their features, implementation, and use cases.<!--excerpt_end-->
 
 # Comparison of Rebus, NServiceBus, and MassTransit in .NET

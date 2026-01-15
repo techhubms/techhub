@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Deployment versioning challenges across customers and components"
-description: "The author discusses the difficulty of tracking multiple Helm chart versions, app versions, and infrastructure components across different customers. They ask for solutions to manage and visualize these version discrepancies and consider building a custom web app for better tracking. Recommendations for existing tools are also requested."
-author: "wesleyada"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Deployment versioning challenges across customers and components
+author: wesleyada
+canonical_url: https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 18:48:29 +00:00
-permalink: "/2025-08-02-Deployment-versioning-challenges-across-customers-and-components.html"
-categories: ["DevOps"]
-tags: ["Appversions", "Community", "Component Tracking", "Deployment", "DevOps", "Helm Charts", "Infrastructure", "Multi Customer Deployments", "Project Management Tools", "Release Management", "Versioning", "Visualization"]
-tags_normalized: ["appversions", "community", "component tracking", "deployment", "devops", "helm charts", "infrastructure", "multi customer deployments", "project management tools", "release management", "versioning", "visualization"]
+permalink: /devops/community/Deployment-versioning-challenges-across-customers-and-components
+tags:
+- Appversions
+- Community
+- Component Tracking
+- Deployment
+- DevOps
+- Helm Charts
+- Infrastructure
+- Multi Customer Deployments
+- Project Management Tools
+- Release Management
+- Versioning
+- Visualization
+section_names:
+- devops
 ---
-
 Wesleyada highlights the common struggle of managing disparate component versions during deployments and seeks advice on tracking solutions for complex release schedules.<!--excerpt_end-->
 
 ## Overview

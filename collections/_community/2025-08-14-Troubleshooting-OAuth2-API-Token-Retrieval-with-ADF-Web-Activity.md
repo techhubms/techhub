@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Troubleshooting OAuth2 API Token Retrieval with ADF Web Activity"
-description: "A detailed troubleshooting guide for obtaining an OAuth2 access token from the iLevel API using Azure Data Factory (ADF) Web activity. Covers configuration of client_id, client_secret, and required headers—including the correct formatting of request body and headers—to successfully authenticate and automate token retrieval for downstream data workflows."
-author: "AzureNewbie1"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Troubleshooting OAuth2 API Token Retrieval with ADF Web Activity
+author: AzureNewbie1
+canonical_url: https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 15:42:48 +00:00
-permalink: "/2025-08-14-Troubleshooting-OAuth2-API-Token-Retrieval-with-ADF-Web-Activity.html"
-categories: ["Azure", "Security"]
-tags: ["Access Token", "API Authentication", "Authorization Header", "Azure", "Azure Data Factory", "Client Id", "Client Secret", "Community", "Ilevel API", "OAuth2", "Pipeline Automation", "REST API", "Security", "Token Acquisition", "Web Activity"]
-tags_normalized: ["access token", "api authentication", "authorization header", "azure", "azure data factory", "client id", "client secret", "community", "ilevel api", "oauth2", "pipeline automation", "rest api", "security", "token acquisition", "web activity"]
+permalink: /azure/community/Troubleshooting-OAuth2-API-Token-Retrieval-with-ADF-Web-Activity
+tags:
+- Access Token
+- API Authentication
+- Authorization Header
+- Azure
+- Azure Data Factory
+- Client Id
+- Client Secret
+- Community
+- Ilevel API
+- OAuth2
+- Pipeline Automation
+- REST API
+- Security
+- Token Acquisition
+- Web Activity
+section_names:
+- azure
+- security
 ---
-
 AzureNewbie1 explains their attempts to obtain an OAuth2 access token for the iLevel API using Azure Data Factory, highlighting issues with client_id/client_secret usage and missing Authorization headers.<!--excerpt_end-->
 
 # Troubleshooting OAuth2 API Token Retrieval with Azure Data Factory

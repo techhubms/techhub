@@ -1,20 +1,36 @@
----
-layout: "post"
-title: ".NET Foundation License Compatibility Guide"
-description: "This guide provides a detailed overview of which open source licenses are compatible with the .NET Foundation. It clarifies the Foundation's policy on permissible licenses (favoring permissive OSI-approved ones), explains reasons for incompatibility with copyleft licenses, and addresses common misconceptions. It also outlines business models supported by the .NET Foundation, including dual licensing and commercial services."
-author: ".NET Foundation News and Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dotnetfoundation.org/news-events/detail/license-compatibility-guide"
-viewing_mode: "external"
-feed_name: ".NET Foundation's Blog"
-feed_url: "https://dotnetfoundation.org/feeds/blog"
+﻿---
+layout: post
+title: .NET Foundation License Compatibility Guide
+author: .NET Foundation News and Blog
+canonical_url: https://dotnetfoundation.org/news-events/detail/license-compatibility-guide
+viewing_mode: external
+feed_name: .NET Foundation's Blog
+feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-10-12 02:22:03 +00:00
-permalink: "/2025-10-12-NET-Foundation-License-Compatibility-Guide.html"
-categories: ["Coding"]
-tags: [".NET Foundation", "Apache License 2.0", "AutoMapper", "Blogs", "BSD License", "Coding", "Commercial Services", "Contributor License Agreement", "Copyleft License", "Dual Licensing", "GitHub Sponsors", "GPL", "Licensing Policy", "MIT License", "Open Source", "Permissive License", "Project Maintainers", "RPL", "Software Business Models"]
-tags_normalized: ["dotnet foundation", "apache license 2dot0", "automapper", "blogs", "bsd license", "coding", "commercial services", "contributor license agreement", "copyleft license", "dual licensing", "github sponsors", "gpl", "licensing policy", "mit license", "open source", "permissive license", "project maintainers", "rpl", "software business models"]
+permalink: /coding/blogs/NET-Foundation-License-Compatibility-Guide
+tags:
+- .NET Foundation
+- Apache License 2.0
+- AutoMapper
+- Blogs
+- BSD License
+- Coding
+- Commercial Services
+- Contributor License Agreement
+- Copyleft License
+- Dual Licensing
+- GitHub Sponsors
+- GPL
+- Licensing Policy
+- MIT License
+- Open Source
+- Permissive License
+- Project Maintainers
+- RPL
+- Software Business Models
+section_names:
+- coding
 ---
-
 This .NET Foundation guide, authored by .NET Foundation News and Blog, explains which licenses are compatible, clarifies common licensing myths, and outlines supported commercial strategies for project maintainers.<!--excerpt_end-->
 
 # .NET Foundation License Compatibility Guide

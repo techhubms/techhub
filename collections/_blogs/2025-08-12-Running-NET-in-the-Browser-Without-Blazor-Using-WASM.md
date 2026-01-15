@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Running .NET in the Browser Without Blazor Using WASM"
-description: "This post by Andrew Lock demonstrates how to run .NET applications directly in the browser using WebAssembly (WASM), bypassing the Blazor framework. It covers installing experimental WASM templates, building and publishing a sample browser app, JavaScript interop using JSImport and JSExport, project configuration for client-side fingerprinting in .NET 10, and techniques for reducing published output size. The post provides step-by-step instructions, code samples, and discusses relevant trade-offs such as performance versus file size."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Running .NET in the Browser Without Blazor Using WASM
+author: Andrew Lock
+canonical_url: https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-08-12 10:00:00 +00:00
-permalink: "/2025-08-12-Running-NET-in-the-Browser-Without-Blazor-Using-WASM.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 9", "ASP.NET Core", "Blazor", "Blogs", "Browser Apps", "C#", "Client Side Development", "Coding", "Fingerprinting", "Front End", "Globalization", "JavaScript Interop", "JSExport", "JSImport", "Performance Optimization", "Release Process", "Template", "WASM", "WebAssembly"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "aspdotnet core", "blazor", "blogs", "browser apps", "csharp", "client side development", "coding", "fingerprinting", "front end", "globalization", "javascript interop", "jsexport", "jsimport", "performance optimization", "release process", "template", "wasm", "webassembly"]
+permalink: /coding/blogs/Running-NET-in-the-Browser-Without-Blazor-Using-WASM
+tags:
+- .NET
+- .NET 10
+- .NET 9
+- ASP.NET Core
+- Blazor
+- Blogs
+- Browser Apps
+- C#
+- Client Side Development
+- Coding
+- Fingerprinting
+- Front End
+- Globalization
+- JavaScript Interop
+- JSExport
+- JSImport
+- Performance Optimization
+- Release Process
+- Template
+- WASM
+- WebAssembly
+section_names:
+- coding
 ---
-
 Andrew Lock explains how to run .NET code in the browser without using Blazor, focusing on browser-side WebAssembly and JavaScript interop techniques, with details relevant to .NET 9 and .NET 10.<!--excerpt_end-->
 
 # Running .NET in the Browser Without Blazor Using WASM

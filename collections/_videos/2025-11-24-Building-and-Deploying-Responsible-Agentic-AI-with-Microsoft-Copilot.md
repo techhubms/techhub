@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building and Deploying Responsible Agentic AI with Microsoft Copilot"
-description: "This session from Microsoft Ignite 2025, presented by Cognizant in partnership with Microsoft RAI experts, explores the principles and practices of responsible Agentic AI governance. Focused on Copilot AI implementations, the session presents a framework for building and deploying responsible AI agents, discusses governance challenges, and shares insights on domain-specific use cases across industries."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eLCQ9qlOzWo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building and Deploying Responsible Agentic AI with Microsoft Copilot
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=eLCQ9qlOzWo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:17:13 +00:00
-permalink: "/2025-11-24-Building-and-Deploying-Responsible-Agentic-AI-with-Microsoft-Copilot.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Framework", "AI Governance", "AI Maturity", "Best Practices", "Cognizant", "Copilot Agents", "Copilotandagentsatwork", "Industry Use Cases", "Leadership in AI", "Low Code Solutions", "Microsoft Copilot", "Microsoft Ignite", "MSIgnite", "Multi Agent Management", "Responsible AI", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai framework", "ai governance", "ai maturity", "best practices", "cognizant", "copilot agents", "copilotandagentsatwork", "industry use cases", "leadership in ai", "low code solutions", "microsoft copilot", "microsoft ignite", "msignite", "multi agent management", "responsible ai", "videos"]
+permalink: /ai/videos/Building-and-Deploying-Responsible-Agentic-AI-with-Microsoft-Copilot
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI Framework
+- AI Governance
+- AI Maturity
+- Best Practices
+- Cognizant
+- Copilot Agents
+- Copilotandagentsatwork
+- Industry Use Cases
+- Leadership in AI
+- Low Code Solutions
+- Microsoft Copilot
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Management
+- Responsible AI
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Manpreet Singh and Reed Wiedower at Microsoft Ignite 2025, this session explores strategies for building and deploying responsible agentic AI with Microsoft Copilot, emphasizing governance and best practices.<!--excerpt_end-->
 
 {% youtube eLCQ9qlOzWo %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure Keynote: Cloud Innovation with .NET"
-description: "Explore how Azure is driving modern cloud-native development for .NET developers in this keynote featuring Scott Hunter and Paul Yuknewicz. The session highlights new features in Azure services such as Azure Container Apps, AKS, Azure Functions, and AI integrations, alongside advances in .NET 10, C# 14, F# 10, and Visual Studio 2026. Learn practical strategies for building, deploying, and scaling intelligent cloud-native applications with observability, security, and scalability built-in."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3EV4rUHScZI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Azure Keynote: Cloud Innovation with .NET'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=3EV4rUHScZI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Azure-Keynote-Cloud-Innovation-with-NET.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "AI", "AI Services", "AKS", "Application Deployment", "ASP.NET Core 10", "Azure", "Azure Container Apps", "Azure Functions", "C# 14", "Cloud Native", "Coding", "DevOps", "F# 10", "Observability", "Scalability", "Security", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "ai", "ai services", "aks", "application deployment", "aspdotnet core 10", "azure", "azure container apps", "azure functions", "csharp 14", "cloud native", "coding", "devops", "fsharp 10", "observability", "scalability", "security", "videos", "vs"]
+permalink: /ai/videos/Azure-Keynote-Cloud-Innovation-with-NET
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- AI
+- AI Services
+- AKS
+- Application Deployment
+- ASP.NET Core 10
+- Azure
+- Azure Container Apps
+- Azure Functions
+- C# 14
+- Cloud Native
+- Coding
+- DevOps
+- F# 10
+- Observability
+- Scalability
+- Security
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 In this keynote, dotnet (Scott Hunter and Paul Yuknewicz) showcase how Azure empowers .NET developers to build, deploy, and scale intelligent cloud-native applications, highlighting the latest innovations in platform services and development tools.<!--excerpt_end-->
 
 {% youtube 3EV4rUHScZI %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Modernizing Legacy COBOL to Cloud with GitHub Copilot"
-description: "This session features Julia Kordick from Microsoft, who demonstrates the use of GitHub Copilot and autonomous agents for large-scale COBOL modernization projects. The presentation covers live demos of migrating legacy COBOL applications, including processes such as reverse engineering, automated documentation, test generation, and code transformation, using Microsoft's cloud and AI development tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jNl3CQPZ-QA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Modernizing Legacy COBOL to Cloud with GitHub Copilot
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=jNl3CQPZ-QA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-06 07:57:10 +00:00
-permalink: "/2025-09-06-Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Automated Documentation", "Autonomous Agents", "Azure", "Cloud Migration", "COBOL Modernization", "Code Transformation", "Coding", "GitHub Copilot", "Legacy Code Migration", "Microsoft", "Reverse Engineering", "Test Generation", "Videos"]
-tags_normalized: ["ai", "ai assisted development", "automated documentation", "autonomous agents", "azure", "cloud migration", "cobol modernization", "code transformation", "coding", "github copilot", "legacy code migration", "microsoft", "reverse engineering", "test generation", "videos"]
+permalink: /github-copilot/videos/Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Development
+- Automated Documentation
+- Autonomous Agents
+- Azure
+- Cloud Migration
+- COBOL Modernization
+- Code Transformation
+- Coding
+- GitHub Copilot
+- Legacy Code Migration
+- Microsoft
+- Reverse Engineering
+- Test Generation
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Julia Kordick from Microsoft demonstrates how GitHub Copilot and AI-powered agents streamline COBOL modernization and legacy code migration to the cloud in this presentation.<!--excerpt_end-->
 
 {% youtube jNl3CQPZ-QA %}

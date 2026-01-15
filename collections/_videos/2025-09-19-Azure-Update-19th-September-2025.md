@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Azure Update - 19th September 2025"
-description: "This update video from John Savill's Technical Training provides a roundup of Azure platform changes and enhancements announced in September 2025. Covered topics include service retirements, new platform capabilities, feature rollouts across Azure Kubernetes Service, Azure Functions, virtual machines, database services, observability tooling, and more—all aimed at administrators, architects, and Azure solution developers."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Umvbk3sBXn8"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 19th September 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=Umvbk3sBXn8
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-19 14:42:14 +00:00
-permalink: "/2025-09-19-Azure-Update-19th-September-2025.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 10", "AKS", "App Gateway V2", "App Service JBoss EAP", "Azure", "Azure Cloud", "Azure Container Storage", "Azure Data Box", "Azure Databricks", "Azure Functions", "Azure Linux", "Azure PostgreSQL", "Azure Update", "Azure VMware", "Cloud", "Cloud Infrastructure", "Coding", "DCa/ECa V6", "DevOps", "Distributed Tracing", "Fleet Manager", "Grafana", "HBv5 VM", "Managed Prometheus", "Microsoft", "Microsoft Azure", "Network Security Hub", "Observability", "Service Retirement", "SQL Hub", "Videos", "Virtual Machines"]
-tags_normalized: ["dotnet 10", "aks", "app gateway v2", "app service jboss eap", "azure", "azure cloud", "azure container storage", "azure data box", "azure databricks", "azure functions", "azure linux", "azure postgresql", "azure update", "azure vmware", "cloud", "cloud infrastructure", "coding", "dcaslasheca v6", "devops", "distributed tracing", "fleet manager", "grafana", "hbv5 vm", "managed prometheus", "microsoft", "microsoft azure", "network security hub", "observability", "service retirement", "sql hub", "videos", "virtual machines"]
+permalink: /coding/videos/Azure-Update-19th-September-2025
+tags:
+- .NET 10
+- AKS
+- App Gateway V2
+- App Service JBoss EAP
+- Azure
+- Azure Cloud
+- Azure Container Storage
+- Azure Data Box
+- Azure Databricks
+- Azure Functions
+- Azure Linux
+- Azure PostgreSQL
+- Azure Update
+- Azure VMware
+- Cloud
+- Cloud Infrastructure
+- Coding
+- DCa/ECa V6
+- DevOps
+- Distributed Tracing
+- Fleet Manager
+- Grafana
+- HBv5 VM
+- Managed Prometheus
+- Microsoft
+- Microsoft Azure
+- Network Security Hub
+- Observability
+- Service Retirement
+- SQL Hub
+- Videos
+- Virtual Machines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 John Savill's Technical Training brings an in-depth September 2025 Azure Update, summarizing recent changes and new features for developers and administrators working within Microsoft's cloud ecosystem.<!--excerpt_end-->
 
 {% youtube Umvbk3sBXn8 %}

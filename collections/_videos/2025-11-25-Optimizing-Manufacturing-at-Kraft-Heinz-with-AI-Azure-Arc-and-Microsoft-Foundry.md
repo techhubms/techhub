@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry"
-description: "This session from Microsoft Ignite explores how Kraft Heinz leverages Microsoft AI technologies, such as Azure Arc and Microsoft Foundry, to modernize and automate manufacturing. Learn how digital twins and real-time AI recommendations enhance plant operations, support autonomous workflows, and enable digital transformation across enterprise manufacturing environments. The case study outlines methods for scaling AI, integrating Copilot, and establishing a self-driven supply chain using Microsoft’s cloud and AI platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=S_GhJn8O-4E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=S_GhJn8O-4E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:16:40 +00:00
-permalink: "/2025-11-25-Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Autonomous Systems", "Azure", "Azure Arc", "Cloud Integration", "Connected Worker", "Copilot Studio", "Digital Transformation", "Digital Twin", "Enterprise AI", "Industrial Automation", "Kraft Heinz", "Manufacturing AI", "Microsoft Foundry", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Real Time Recommendations", "Supply Chain Automation", "Videos"]
-tags_normalized: ["ai", "autonomous systems", "azure", "azure arc", "cloud integration", "connected worker", "copilot studio", "digital transformation", "digital twin", "enterprise ai", "industrial automation", "kraft heinz", "manufacturing ai", "microsoft foundry", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "real time recommendations", "supply chain automation", "videos"]
+permalink: /ai/videos/Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry
+tags:
+- AI
+- Autonomous Systems
+- Azure
+- Azure Arc
+- Cloud Integration
+- Connected Worker
+- Copilot Studio
+- Digital Transformation
+- Digital Twin
+- Enterprise AI
+- Industrial Automation
+- Kraft Heinz
+- Manufacturing AI
+- Microsoft Foundry
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Real Time Recommendations
+- Supply Chain Automation
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events delivers actionable insights on Kraft Heinz’s manufacturing optimization, showcasing how Oliver Genscher, Alkesh Ladva, and Patrick Nestor harness AI and Azure technologies for scalable, autonomous digital transformation.<!--excerpt_end-->
 
 {% youtube S_GhJn8O-4E %}

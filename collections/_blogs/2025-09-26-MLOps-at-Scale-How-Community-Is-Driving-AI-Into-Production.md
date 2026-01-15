@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "MLOps at Scale: How Community Is Driving AI Into Production"
-description: "This content explores the work of the MLOps Community, led by Demetrios Brinkmann, focusing on bridging the gap between AI research and production deployment. It highlights community initiatives, operational challenges in scaling AI workloads, and best practices for moving from experimentation to reliable AI systems. Real-world issues such as observability, CI/CD for ML models, governance, and the impact of generative AI are discussed, providing practical insight for practitioners seeking to operationalize AI at scale."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'MLOps at Scale: How Community Is Driving AI Into Production'
+author: Alan Shimel
+canonical_url: https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-26 16:20:05 +00:00
-permalink: "/2025-09-26-MLOps-at-Scale-How-Community-Is-Driving-AI-Into-Production.html"
-categories: ["AI", "DevOps", "ML"]
-tags: ["AI", "AI Operations", "Best Practices", "Blogs", "CI/CD", "Community Of Practice", "DevOps", "Generative AI", "Governance", "JFrog Swampup", "Machine Learning", "ML", "MLOps", "Model Deployment", "Model Monitoring", "Observability", "Production Workloads", "Scaling AI", "Technical Debt", "Video Interviews"]
-tags_normalized: ["ai", "ai operations", "best practices", "blogs", "cislashcd", "community of practice", "devops", "generative ai", "governance", "jfrog swampup", "machine learning", "ml", "mlops", "model deployment", "model monitoring", "observability", "production workloads", "scaling ai", "technical debt", "video interviews"]
+permalink: /ai/blogs/MLOps-at-Scale-How-Community-Is-Driving-AI-Into-Production
+tags:
+- AI
+- AI Operations
+- Best Practices
+- Blogs
+- CI/CD
+- Community Of Practice
+- DevOps
+- Generative AI
+- Governance
+- JFrog Swampup
+- Machine Learning
+- ML
+- MLOps
+- Model Deployment
+- Model Monitoring
+- Observability
+- Production Workloads
+- Scaling AI
+- Technical Debt
+- Video Interviews
+section_names:
+- ai
+- devops
+- ml
 ---
-
 Alan Shimel interviews Demetrios Brinkmann, founder of the MLOps Community, about the challenges and solutions for bringing AI from research into production, focusing on community-driven best practices and the operational complexities of modern AI systems.<!--excerpt_end-->
 
 # MLOps at Scale: How Community Is Driving AI Into Production

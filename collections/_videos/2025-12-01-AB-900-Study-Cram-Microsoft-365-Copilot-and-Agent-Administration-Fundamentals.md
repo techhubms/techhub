@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals"
-description: "This comprehensive study guide by John Savill's Technical Training helps candidates prepare for the AB-900 certification, Microsoft 365 Certified: Copilot and Agent Administration Fundamentals. Covering topics such as zero trust, Microsoft Entra ID (Azure AD), Defender XDR, Copilot Studio agent creation, responsible AI, Purview content protection, and data readiness for AI, it provides an organized walkthrough for both exam and practitioner readiness, focusing on technical implementation and Microsoft cloud services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DUydgD7SkEo"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=DUydgD7SkEo
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-01 15:29:31 +00:00
-permalink: "/2025-12-01-AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AB 900", "AI", "AI Agents", "Azure", "Azure Cloud", "Cloud", "Cloud Security", "Copilot", "Copilot Studio", "Data Protection", "Defender", "Defender XDR", "LLM", "Microsoft", "Microsoft 365", "Microsoft 365 Certified", "Microsoft Azure", "Microsoft Entra ID", "Microsoft Graph", "Permissions", "Purview", "Responsible AI", "Security", "Self Service Password Reset", "Semantics Index", "SSO", "Videos", "Zero Trust"]
-tags_normalized: ["ab 900", "ai", "ai agents", "azure", "azure cloud", "cloud", "cloud security", "copilot", "copilot studio", "data protection", "defender", "defender xdr", "llm", "microsoft", "microsoft 365", "microsoft 365 certified", "microsoft azure", "microsoft entra id", "microsoft graph", "permissions", "purview", "responsible ai", "security", "self service password reset", "semantics index", "sso", "videos", "zero trust"]
+permalink: /ai/videos/AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals
+tags:
+- AB 900
+- AI
+- AI Agents
+- Azure
+- Azure Cloud
+- Cloud
+- Cloud Security
+- Copilot
+- Copilot Studio
+- Data Protection
+- Defender
+- Defender XDR
+- LLM
+- Microsoft
+- Microsoft 365
+- Microsoft 365 Certified
+- Microsoft Azure
+- Microsoft Entra ID
+- Microsoft Graph
+- Permissions
+- Purview
+- Responsible AI
+- Security
+- Self Service Password Reset
+- Semantics Index
+- SSO
+- Videos
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 John Savill's Technical Training delivers an in-depth AB-900 study cram, outlining Microsoft 365 Copilot, agent administration, Entra ID, Defender XDR, Purview, and responsible AI fundamentals for certification and technical mastery.<!--excerpt_end-->
 
 {% youtube DUydgD7SkEo %}

@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Hugging Face Opens GitHub Copilot Chat to Open-Source Models"
-description: "This article explores how Hugging Face's new VS Code extension expands GitHub Copilot Chat, enabling developers to connect and test open-source LLMs directly within their editor. It details the setup, technical foundation, pricing model, and workflow benefits, such as increased flexibility and accessibility for coding AI tools in Visual Studio Code."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Hugging Face Opens GitHub Copilot Chat to Open-Source Models
+author: Tom Smith
+canonical_url: https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-22 08:45:37 +00:00
-permalink: "/2025-09-22-Hugging-Face-Opens-GitHub-Copilot-Chat-to-Open-Source-Models.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "AI Coding Assistants", "AI Coding Tools", "AI Model Switching in VS Code", "Blogs", "Business Of DevOps", "Coding Assistant", "DeepSeek V3.1", "Developer Productivity", "Developer Workflows Automation", "GitHub Copilot", "GitHub Copilot Chat", "GLM 4.5", "Hugging Face", "Hugging Face VS Code Extension", "in Editor AI", "Inference Providers", "Kimi K2", "Language Models", "Model Switching", "Open Source Coding AI", "Open Source LLM", "Social Facebook", "Social LinkedIn", "Social X", "VS Code", "VS Code AI Tools", "VS Code Copilot Alternatives", "VS Code Extension"]
-tags_normalized: ["ai", "ai assisted development", "ai coding assistants", "ai coding tools", "ai model switching in vs code", "blogs", "business of devops", "coding assistant", "deepseek v3dot1", "developer productivity", "developer workflows automation", "github copilot", "github copilot chat", "glm 4dot5", "hugging face", "hugging face vs code extension", "in editor ai", "inference providers", "kimi k2", "language models", "model switching", "open source coding ai", "open source llm", "social facebook", "social linkedin", "social x", "vs code", "vs code ai tools", "vs code copilot alternatives", "vs code extension"]
+permalink: /github-copilot/blogs/Hugging-Face-Opens-GitHub-Copilot-Chat-to-Open-Source-Models
+tags:
+- AI
+- AI Assisted Development
+- AI Coding Assistants
+- AI Coding Tools
+- AI Model Switching in VS Code
+- Blogs
+- Business Of DevOps
+- Coding Assistant
+- DeepSeek V3.1
+- Developer Productivity
+- Developer Workflows Automation
+- GitHub Copilot
+- GitHub Copilot Chat
+- GLM 4.5
+- Hugging Face
+- Hugging Face VS Code Extension
+- in Editor AI
+- Inference Providers
+- Kimi K2
+- Language Models
+- Model Switching
+- Open Source Coding AI
+- Open Source LLM
+- Social Facebook
+- Social LinkedIn
+- Social X
+- VS Code
+- VS Code AI Tools
+- VS Code Copilot Alternatives
+- VS Code Extension
+section_names:
+- ai
+- github-copilot
 ---
-
 Tom Smith discusses how Hugging Face’s new extension enables GitHub Copilot Chat users to access and test open-source language models in VS Code, broadening developers’ options for AI-assisted coding.<!--excerpt_end-->
 
 # Hugging Face Opens GitHub Copilot Chat to Open-Source Models

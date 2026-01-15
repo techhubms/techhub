@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Update - 5th December 2025: New Features, Metrics, and Services"
-description: "This Azure Update from John Savill’s Technical Training covers new features and service updates for Microsoft Azure, including ALB metrics, Blob SFTP resumable uploads, PostgreSQL Flex enhancements, Databricks serverless workspaces, regional expansion, Azure ML SDK retirement, confidential ledger support, and AI service improvements. Developers and cloud engineers will gain insights into the latest changes, upcoming retirements, and practical feature implementations relevant to Azure workloads."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Fe0M4Xxi1O8"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update - 5th December 2025: New Features, Metrics, and Services'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=Fe0M4Xxi1O8
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-05 16:03:01 +00:00
-permalink: "/2025-12-05-Azure-Update-5th-December-2025-New-Features-Metrics-and-Services.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Service", "ALB Metrics", "Azure", "Azure Cloud", "Azure Databricks", "Azure ML SDK", "Azure Update", "Blob SFTP", "Cloud", "Cloud Development", "Cloud Services", "Confidential Ledger", "Databricks Serverless", "Foundry", "Microsoft", "Microsoft Azure", "Mistral AI", "ML", "PostgreSQL Flex", "Regional Expansion", "SDK Retirement", "Videos"]
-tags_normalized: ["ai", "ai service", "alb metrics", "azure", "azure cloud", "azure databricks", "azure ml sdk", "azure update", "blob sftp", "cloud", "cloud development", "cloud services", "confidential ledger", "databricks serverless", "foundry", "microsoft", "microsoft azure", "mistral ai", "ml", "postgresql flex", "regional expansion", "sdk retirement", "videos"]
+permalink: /ai/videos/Azure-Update-5th-December-2025-New-Features-Metrics-and-Services
+tags:
+- AI
+- AI Service
+- ALB Metrics
+- Azure
+- Azure Cloud
+- Azure Databricks
+- Azure ML SDK
+- Azure Update
+- Blob SFTP
+- Cloud
+- Cloud Development
+- Cloud Services
+- Confidential Ledger
+- Databricks Serverless
+- Foundry
+- Microsoft
+- Microsoft Azure
+- Mistral AI
+- ML
+- PostgreSQL Flex
+- Regional Expansion
+- SDK Retirement
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 John Savill's Technical Training provides a concise breakdown of the latest Microsoft Azure updates, including Databricks, PostgreSQL enhancements, ML and AI service news, and key feature retirements.<!--excerpt_end-->
 
 {% youtube Fe0M4Xxi1O8 %}

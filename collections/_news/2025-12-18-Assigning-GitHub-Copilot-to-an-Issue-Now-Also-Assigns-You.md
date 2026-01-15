@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Assigning GitHub Copilot to an Issue Now Also Assigns You"
-description: "This news update details a change in GitHub Copilot's issue management: when assigning Copilot to an issue, the current user is now also automatically added as an assignee. This update streamlines work tracking and clarifies issue responsibilities within GitHub's project management workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Assigning GitHub Copilot to an Issue Now Also Assigns You
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 17:46:17 +00:00
-permalink: "/2025-12-18-Assigning-GitHub-Copilot-to-an-Issue-Now-Also-Assigns-You.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Assignee", "Automation", "Collaboration", "Copilot", "DevOps", "DevOps Workflow", "GitHub", "GitHub Copilot", "GitHub Issues", "Improvement", "Issue Assignment", "News", "Project Management", "Projects & Issues", "Task Tracking", "Workflow Improvement"]
-tags_normalized: ["ai", "ai assistant", "assignee", "automation", "collaboration", "copilot", "devops", "devops workflow", "github", "github copilot", "github issues", "improvement", "issue assignment", "news", "project management", "projects and issues", "task tracking", "workflow improvement"]
+permalink: /github-copilot/news/Assigning-GitHub-Copilot-to-an-Issue-Now-Also-Assigns-You
+tags:
+- AI
+- AI Assistant
+- Assignee
+- Automation
+- Collaboration
+- Copilot
+- DevOps
+- DevOps Workflow
+- GitHub
+- GitHub Copilot
+- GitHub Issues
+- Improvement
+- Issue Assignment
+- News
+- Project Management
+- Projects & Issues
+- Task Tracking
+- Workflow Improvement
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison announces an improvement to GitHub Copilot: assigning an issue to Copilot now also assigns you automatically, enhancing issue tracking and visibility in collaborative development projects.<!--excerpt_end-->
 
 # Assigning GitHub Copilot to an Issue Now Also Assigns You

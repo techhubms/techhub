@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Front Door Resiliency Deep Dive and Architecting for Mission Critical Applications"
-description: "This video provides an in-depth exploration of Azure Front Door's resiliency features and examines how to architect mission-critical applications for high availability using Azure Front Door, Azure Traffic Manager, Traffic Shield, and related services. The presenter discusses configuration layers, change deployment, system and customer configuration, and strategies for minimizing cross-tenant impact, offering practical advice for robust cloud network architecture."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ufxFlmjS9dU"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Front Door Resiliency Deep Dive and Architecting for Mission Critical Applications
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=ufxFlmjS9dU
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-17 10:53:28 +00:00
-permalink: "/2025-11-17-Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications.html"
-categories: ["Azure"]
-tags: ["Application Acceleration", "Azure", "Azure Cloud", "Azure Front Door", "Azure Traffic Manager", "CDN", "Cloud", "Cloud Architecture", "Cloud Network", "Cross Tenant Impact", "DNS", "High Availability", "Microsoft", "Microsoft Azure", "Mission Critical", "Mission Criticl", "Networking", "Resiliency", "System Configuration", "Traffic Shield", "Videos"]
-tags_normalized: ["application acceleration", "azure", "azure cloud", "azure front door", "azure traffic manager", "cdn", "cloud", "cloud architecture", "cloud network", "cross tenant impact", "dns", "high availability", "microsoft", "microsoft azure", "mission critical", "mission criticl", "networking", "resiliency", "system configuration", "traffic shield", "videos"]
+permalink: /azure/videos/Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications
+tags:
+- Application Acceleration
+- Azure
+- Azure Cloud
+- Azure Front Door
+- Azure Traffic Manager
+- CDN
+- Cloud
+- Cloud Architecture
+- Cloud Network
+- Cross Tenant Impact
+- DNS
+- High Availability
+- Microsoft
+- Microsoft Azure
+- Mission Critical
+- Mission Criticl
+- Networking
+- Resiliency
+- System Configuration
+- Traffic Shield
+- Videos
+section_names:
+- azure
 ---
-
 John Savill provides a comprehensive deep dive into Azure Front Door resiliency, architecture options for mission-critical cloud applications, and practical strategies for ensuring high availability on Microsoft Azure.<!--excerpt_end-->
 
 {% youtube ufxFlmjS9dU %}

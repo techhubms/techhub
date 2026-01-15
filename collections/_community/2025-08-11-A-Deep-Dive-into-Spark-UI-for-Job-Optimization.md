@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "A Deep Dive into Spark UI for Job Optimization"
-description: "This in-depth guide by anishekkamal explores how to leverage the Apache Spark UI to monitor, analyze, and optimize big data workflows. It walks through navigating key Spark UI tabs, identifying performance bottlenecks such as data skew and excessive shuffles, and implementing evidence-based optimization strategies for efficient Spark job execution."
-author: "anishekkamal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: A Deep Dive into Spark UI for Job Optimization
+author: anishekkamal
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 18:59:33 +00:00
-permalink: "/2025-08-11-A-Deep-Dive-into-Spark-UI-for-Job-Optimization.html"
-categories: ["ML"]
-tags: ["Adaptive Query Execution", "Apache Spark", "Big Data", "Broadcast Join", "Community", "Data Skew", "Executors", "Job Optimization", "Kryo Serialization", "Memory Management", "ML", "Performance Tuning", "PySpark", "Resource Allocation", "Shuffle Operations", "Spark UI", "SQL Optimization"]
-tags_normalized: ["adaptive query execution", "apache spark", "big data", "broadcast join", "community", "data skew", "executors", "job optimization", "kryo serialization", "memory management", "ml", "performance tuning", "pyspark", "resource allocation", "shuffle operations", "spark ui", "sql optimization"]
+permalink: /ml/community/A-Deep-Dive-into-Spark-UI-for-Job-Optimization
+tags:
+- Adaptive Query Execution
+- Apache Spark
+- Big Data
+- Broadcast Join
+- Community
+- Data Skew
+- Executors
+- Job Optimization
+- Kryo Serialization
+- Memory Management
+- ML
+- Performance Tuning
+- PySpark
+- Resource Allocation
+- Shuffle Operations
+- Spark UI
+- SQL Optimization
+section_names:
+- ml
 ---
-
 anishekkamal provides an actionable deep dive into troubleshooting and optimizing Spark jobs using the Spark UI. Discover techniques to analyze key metrics, pinpoint job bottlenecks, and apply proven fixes for more efficient big data processing.<!--excerpt_end-->
 
 # A Deep Dive into Spark UI for Job Optimization

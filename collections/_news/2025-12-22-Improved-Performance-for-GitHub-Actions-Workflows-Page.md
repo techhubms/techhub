@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Improved Performance for GitHub Actions Workflows Page"
-description: "This update details enhancements to GitHub Actions workflow pages, including lazy loading for workflows with over 300 jobs and job status filtering. These features improve usability for teams managing extensive job matrices or large repositories, streamlining the workflow review and monitoring experience on GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Performance for GitHub Actions Workflows Page
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-22 21:40:47 +00:00
-permalink: "/2025-12-22-Improved-Performance-for-GitHub-Actions-Workflows-Page.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "CI/CD", "Continuous Integration", "Developer Experience", "DevOps", "GitHub Actions", "GitHub Improvements", "Improvement", "Job Filtering", "Lazy Loading", "Monorepo Management", "News", "Workflow Optimization"]
-tags_normalized: ["actions", "automation", "cislashcd", "continuous integration", "developer experience", "devops", "github actions", "github improvements", "improvement", "job filtering", "lazy loading", "monorepo management", "news", "workflow optimization"]
+permalink: /devops/news/Improved-Performance-for-GitHub-Actions-Workflows-Page
+tags:
+- Actions
+- Automation
+- CI/CD
+- Continuous Integration
+- Developer Experience
+- DevOps
+- GitHub Actions
+- GitHub Improvements
+- Improvement
+- Job Filtering
+- Lazy Loading
+- Monorepo Management
+- News
+- Workflow Optimization
+section_names:
+- devops
 ---
-
 Allison outlines significant improvements to the GitHub Actions workflow pages, enabling support for large workflows and introducing job status filtering to help teams manage complex automation more effectively.<!--excerpt_end-->
 
 # Improved Performance for GitHub Actions Workflows Page

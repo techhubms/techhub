@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Real-Time Analytics and AI Applications with Cosmos DB in Microsoft Fabric"
-description: "This advanced Microsoft Ignite session demonstrates how Cosmos DB, integrated with Microsoft Fabric, enables scalable, real-time, AI-driven applications. Learn how to process customer data using Real-Time Intelligence, train recommendation engines with Apache Spark, leverage vector search, and implement collaborative filtering algorithms within a unified data platform. The session highlights zero-ETL architecture, seamless Spark integration, and practical techniques using Notebooks and functions to build real-time, personalized experiences and analytics."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UKJE1eJYtkA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Real-Time Analytics and AI Applications with Cosmos DB in Microsoft Fabric
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=UKJE1eJYtkA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:45:53 +00:00
-permalink: "/2025-11-21-Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Driven Applications", "Apache Spark", "Azure", "Blue Green Deployment", "Collaborative Filtering", "Cosmos DB", "Medallion Architecture", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Notebooks", "Personalization", "Real Time Intelligence", "Recommendation Engines", "Unifyyourdataplatform", "User Data Functions", "Vector Search", "Videos", "Zero ETL"]
-tags_normalized: ["ai", "ai driven applications", "apache spark", "azure", "blue green deployment", "collaborative filtering", "cosmos db", "medallion architecture", "microsoft fabric", "microsoft ignite", "ml", "msignite", "notebooks", "personalization", "real time intelligence", "recommendation engines", "unifyyourdataplatform", "user data functions", "vector search", "videos", "zero etl"]
+permalink: /ai/videos/Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric
+tags:
+- AI
+- AI Driven Applications
+- Apache Spark
+- Azure
+- Blue Green Deployment
+- Collaborative Filtering
+- Cosmos DB
+- Medallion Architecture
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Notebooks
+- Personalization
+- Real Time Intelligence
+- Recommendation Engines
+- Unifyyourdataplatform
+- User Data Functions
+- Vector Search
+- Videos
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events hosts an advanced Ignite session featuring Mark Brown and Jai Maldonado, demonstrating how to use Cosmos DB within Microsoft Fabric to build AI-enabled, real-time applications at scale.<!--excerpt_end-->
 
 {% youtube UKJE1eJYtkA %}

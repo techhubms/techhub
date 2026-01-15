@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Minimizing Downtime When Migrating Azure Storage Account Replication"
-description: "This discussion examines strategies and challenges in migrating an Azure Storage Account from LRS to GZRS, focusing on potential downtime, migration methods (manual vs. Infrastructure as Code), and regional redundancy best practices. It highlights the need for maintaining application transparency and minimizing operational impact during replication upgrades."
-author: "LouisT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Minimizing Downtime When Migrating Azure Storage Account Replication
+author: LouisT
+canonical_url: https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-20 13:03:51 +00:00
-permalink: "/2025-12-20-Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication.html"
-categories: ["Azure"]
-tags: ["Availability Zones", "Azure", "Azure Storage", "Bicep", "Community", "Downtime", "Geo Redundant Storage", "GZRS", "High Availability", "IaC", "LRS", "Migration", "RA GZRS", "Redundancy", "Replication", "Storage Account", "Terraform", "UK South", "UK West"]
-tags_normalized: ["availability zones", "azure", "azure storage", "bicep", "community", "downtime", "geo redundant storage", "gzrs", "high availability", "iac", "lrs", "migration", "ra gzrs", "redundancy", "replication", "storage account", "terraform", "uk south", "uk west"]
+permalink: /azure/community/Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication
+tags:
+- Availability Zones
+- Azure
+- Azure Storage
+- Bicep
+- Community
+- Downtime
+- Geo Redundant Storage
+- GZRS
+- High Availability
+- IaC
+- LRS
+- Migration
+- RA GZRS
+- Redundancy
+- Replication
+- Storage Account
+- Terraform
+- UK South
+- UK West
+section_names:
+- azure
 ---
-
 LouisT engages the community on how to migrate an Azure Storage Account from LRS to GZRS while minimizing downtime and ensuring seamless failover, raising important questions on migration impact and infrastructure options.<!--excerpt_end-->
 
 # Understanding Storage Account Replication Downtime

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA"
-description: "This video session from Microsoft Ignite 2025 demonstrates how Lenovo ThinkAgile MX with Open Cloud Automation (LOCA) streamlines Azure Local deployments at the edge. The presentation includes a live walkthrough of automated cluster setup, template management, and reliable update processes, illustrating the partnership between Microsoft and Lenovo to simplify and reinforce edge Azure environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fMP9WV6_YLs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fMP9WV6_YLs
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:28:09 +00:00
-permalink: "/2025-11-24-Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA.html"
-categories: ["Azure"]
-tags: ["Automation", "Azure", "Azure Deployment", "Azure Local", "Cluster Deployment", "Cluster Update", "Edge Computing", "Factory Default", "Infrastructure Automation", "IT Operations", "Lenovo ThinkAgile MX", "LOCA", "Microsoft Ignite", "MSIgnite", "Network Configuration", "Open Cloud Automation", "Reliability", "Subscription Management", "Videos"]
-tags_normalized: ["automation", "azure", "azure deployment", "azure local", "cluster deployment", "cluster update", "edge computing", "factory default", "infrastructure automation", "it operations", "lenovo thinkagile mx", "loca", "microsoft ignite", "msignite", "network configuration", "open cloud automation", "reliability", "subscription management", "videos"]
+permalink: /azure/videos/Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA
+tags:
+- Automation
+- Azure
+- Azure Deployment
+- Azure Local
+- Cluster Deployment
+- Cluster Update
+- Edge Computing
+- Factory Default
+- Infrastructure Automation
+- IT Operations
+- Lenovo ThinkAgile MX
+- LOCA
+- Microsoft Ignite
+- MSIgnite
+- Network Configuration
+- Open Cloud Automation
+- Reliability
+- Subscription Management
+- Videos
+section_names:
+- azure
 ---
-
 Presented by Microsoft Events at Ignite 2025, this session showcases Adam Mandelbloom walking through Lenovo ThinkAgile MX and LOCA to greatly simplify Azure Local deployments at the edge.<!--excerpt_end-->
 
 {% youtube fMP9WV6_YLs %}

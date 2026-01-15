@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Spring Cloud Azure: Latest Updates and Troubleshooting Tips for Java on AKS"
-description: "This article by Moary Chen highlights new features and fixes in Spring Cloud Azure versions 5.16.0 to 5.19.0, provides troubleshooting guidance for Java on Azure Kubernetes Service (AKS), details enhancements for authentication, diagnostics, passwordless connections, and discusses known issues and solutions."
-author: "Moary Chen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/spring-cloud-azure-updates-and-troubleshooting-tips-for-java-on-aks/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Spring Cloud Azure: Latest Updates and Troubleshooting Tips for Java on AKS'
+author: Moary Chen
+canonical_url: https://devblogs.microsoft.com/azure-sdk/spring-cloud-azure-updates-and-troubleshooting-tips-for-java-on-aks/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-17 17:05:08 +00:00
-permalink: "/2025-02-17-Spring-Cloud-Azure-Latest-Updates-and-Troubleshooting-Tips-for-Java-on-AKS.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["AKS", "Authentication", "Azure", "Azure Identity Extensions", "Azure SDK", "Coding", "Database", "DevOps", "Diagnostics", "Java", "JCA", "Key Vault", "Monitoring", "News", "Passwordless Connections", "Service Bus", "Spring", "Spring Boot", "Spring Cloud Azure", "TokenCredential"]
-tags_normalized: ["aks", "authentication", "azure", "azure identity extensions", "azure sdk", "coding", "database", "devops", "diagnostics", "java", "jca", "key vault", "monitoring", "news", "passwordless connections", "service bus", "spring", "spring boot", "spring cloud azure", "tokencredential"]
+permalink: /coding/news/Spring-Cloud-Azure-Latest-Updates-and-Troubleshooting-Tips-for-Java-on-AKS
+tags:
+- AKS
+- Authentication
+- Azure
+- Azure Identity Extensions
+- Azure SDK
+- Coding
+- Database
+- DevOps
+- Diagnostics
+- Java
+- JCA
+- Key Vault
+- Monitoring
+- News
+- Passwordless Connections
+- Service Bus
+- Spring
+- Spring Boot
+- Spring Cloud Azure
+- TokenCredential
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Moary Chen explores the latest advancements in Spring Cloud Azure with a special focus on Java applications deployed in Azure Kubernetes Service (AKS), offering comprehensive updates and troubleshooting tips.<!--excerpt_end-->
 
 # Spring Cloud Azure: Latest Updates and Troubleshooting Tips for Java on AKS

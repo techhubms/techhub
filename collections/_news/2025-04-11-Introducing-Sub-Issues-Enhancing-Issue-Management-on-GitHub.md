@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Introducing Sub-Issues: Enhancing Issue Management on GitHub"
-description: "Shaun Wong explores the development and impact of GitHub's new sub-issues feature. The post outlines how sub-issues were built, their technical design, the role of internal feedback, and the benefits for collaborative project management and progress tracking."
-author: "Shaun Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/architecture-optimization/introducing-sub-issues-enhancing-issue-management-on-github/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+layout: post
+title: 'Introducing Sub-Issues: Enhancing Issue Management on GitHub'
+author: Shaun Wong
+canonical_url: https://github.blog/engineering/architecture-optimization/introducing-sub-issues-enhancing-issue-management-on-github/
+viewing_mode: external
+feed_name: GitHub Engineering Blog
+feed_url: https://github.blog/engineering/feed/
 date: 2025-04-11 22:33:30 +00:00
-permalink: "/2025-04-11-Introducing-Sub-Issues-Enhancing-Issue-Management-on-GitHub.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "Architecture", "Architecture & Optimization", "Beta Feedback", "Development Process", "DevOps", "Dogfooding", "Engineering", "GitHub Issues", "GraphQL", "Hierarchical Tasks", "How GitHub Builds GitHub", "Issue Tracking", "MySQL", "News", "Project Management", "React", "Software Engineering", "Sub Issues", "Workflow Optimization"]
-tags_normalized: ["accessibility", "architecture", "architecture and optimization", "beta feedback", "development process", "devops", "dogfooding", "engineering", "github issues", "graphql", "hierarchical tasks", "how github builds github", "issue tracking", "mysql", "news", "project management", "react", "software engineering", "sub issues", "workflow optimization"]
+permalink: /devops/news/Introducing-Sub-Issues-Enhancing-Issue-Management-on-GitHub
+tags:
+- Accessibility
+- Architecture
+- Architecture & Optimization
+- Beta Feedback
+- Development Process
+- DevOps
+- Dogfooding
+- Engineering
+- GitHub Issues
+- GraphQL
+- Hierarchical Tasks
+- How GitHub Builds GitHub
+- Issue Tracking
+- MySQL
+- News
+- Project Management
+- React
+- Software Engineering
+- Sub Issues
+- Workflow Optimization
+section_names:
+- devops
 ---
-
 Written by Shaun Wong, this post details the development of GitHub's sub-issues feature, from technical implementation to organizational benefits, offering insight into enhanced project and issue management practices.<!--excerpt_end-->
 
 # Introducing Sub-Issues: Enhancing Issue Management on GitHub

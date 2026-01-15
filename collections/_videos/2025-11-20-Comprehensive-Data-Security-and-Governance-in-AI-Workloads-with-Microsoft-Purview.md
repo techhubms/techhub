@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft Purview enables organizations to secure, govern, and manage data in the evolving era of AI. Topics include Purview integrations with Azure AI Foundry, Copilot Studio, Microsoft Fabric, Power BI, and the new Security Dashboard for AI. The session emphasizes strategies for protecting sensitive data, unified security governance, compliance management, and operationalizing data protection across multiple Microsoft platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7FpeYx0f1ck"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=7FpeYx0f1ck
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:41:43 +00:00
-permalink: "/2025-11-20-Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Risk Management", "Audit Logs", "Azure", "Azure AI Foundry", "Compliance Manager", "Copilot Studio", "Data Governance", "Data Security", "Microsoft Fabric", "Microsoft Purview", "Microsoft Security", "MSIgnite", "Power BI", "Regulatory Compliance", "Secureyourdata", "Security", "Security Dashboard", "Sensitive Data Protection", "Unified Security Ecosystem", "Videos"]
-tags_normalized: ["ai", "ai risk management", "audit logs", "azure", "azure ai foundry", "compliance manager", "copilot studio", "data governance", "data security", "microsoft fabric", "microsoft purview", "microsoft security", "msignite", "power bi", "regulatory compliance", "secureyourdata", "security", "security dashboard", "sensitive data protection", "unified security ecosystem", "videos"]
+permalink: /ai/videos/Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview
+tags:
+- AI
+- AI Risk Management
+- Audit Logs
+- Azure
+- Azure AI Foundry
+- Compliance Manager
+- Copilot Studio
+- Data Governance
+- Data Security
+- Microsoft Fabric
+- Microsoft Purview
+- Microsoft Security
+- MSIgnite
+- Power BI
+- Regulatory Compliance
+- Secureyourdata
+- Security
+- Security Dashboard
+- Sensitive Data Protection
+- Unified Security Ecosystem
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events presenters demonstrate how Microsoft Purview secures and governs data across AI-powered workloads, including integrations with Azure AI Foundry and Fabric.<!--excerpt_end-->
 
 {% youtube 7FpeYx0f1ck %}

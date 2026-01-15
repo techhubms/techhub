@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Queensland Government Enhances Cybersecurity for Vulnerable Communities with Microsoft 365 E5"
-description: "This article explores how the Queensland Department of Families, Seniors, Disability Services and Child Safety overhauled its cybersecurity by adopting Microsoft 365 E5 and Defender products. The department unified its security systems, improved visibility, and streamlined operations using Microsoft Sentinel and Purview, prioritizing effective protection of sensitive information in support of vulnerable populations."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Queensland Government Enhances Cybersecurity for Vulnerable Communities with Microsoft 365 E5
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 14:15:40 +00:00
-permalink: "/2025-08-14-Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Security", "Company News", "Compliance", "Cybersecurity", "Data Loss Prevention", "Defender For Cloud", "Defender For Identity", "Defender For Office 365", "Essential Eight", "Incident Response", "Microsoft 365 E5", "Microsoft Defender", "Microsoft Defender For Endpoint", "Microsoft Defender XDR", "Microsoft Purview", "Microsoft Secure Score", "Microsoft Sentinel", "News", "Security", "Security Operations", "Zero Trust"]
-tags_normalized: ["azure", "azure security", "company news", "compliance", "cybersecurity", "data loss prevention", "defender for cloud", "defender for identity", "defender for office 365", "essential eight", "incident response", "microsoft 365 e5", "microsoft defender", "microsoft defender for endpoint", "microsoft defender xdr", "microsoft purview", "microsoft secure score", "microsoft sentinel", "news", "security", "security operations", "zero trust"]
+permalink: /azure/news/Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5
+tags:
+- Azure
+- Azure Security
+- Company News
+- Compliance
+- Cybersecurity
+- Data Loss Prevention
+- Defender For Cloud
+- Defender For Identity
+- Defender For Office 365
+- Essential Eight
+- Incident Response
+- Microsoft 365 E5
+- Microsoft Defender
+- Microsoft Defender For Endpoint
+- Microsoft Defender XDR
+- Microsoft Purview
+- Microsoft Secure Score
+- Microsoft Sentinel
+- News
+- Security
+- Security Operations
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 stclarke outlines the Queensland Government's journey in transforming its cybersecurity posture by consolidating tools under Microsoft 365 E5, deploying Defender and Sentinel, and aligning with modern security practices for greater data protection.<!--excerpt_end-->
 
 # Queensland Government Enhances Cybersecurity for Vulnerable Communities

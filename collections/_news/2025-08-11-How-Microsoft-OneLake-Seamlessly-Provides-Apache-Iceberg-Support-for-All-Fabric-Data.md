@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How Microsoft OneLake Seamlessly Provides Apache Iceberg Support for All Fabric Data"
-description: "This article, co-authored by Microsoft engineers, details how Microsoft OneLake enables automatic and transparent interoperability between Delta Lake and Apache Iceberg table formats in Microsoft Fabric. It explains the architecture, benefits, and technical implementation of table format virtualization, empowering organizations to unify diverse analytics workloads and use multiple engines (e.g. Spark, Snowflake, Trino) without manual data migration or duplicate storage."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/how-to-access-your-microsoft-fabric-tables-in-apache-iceberg-format/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How Microsoft OneLake Seamlessly Provides Apache Iceberg Support for All Fabric Data
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-access-your-microsoft-fabric-tables-in-apache-iceberg-format/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 09:00:00 +00:00
-permalink: "/2025-08-11-How-Microsoft-OneLake-Seamlessly-Provides-Apache-Iceberg-Support-for-All-Fabric-Data.html"
-categories: ["ML"]
-tags: ["Apache Iceberg", "Apache XTable", "Cloud Data Platforms", "Data Engineering", "Data Governance", "Data Lake", "Delta Lake", "Dremio", "ETL", "Fabric Lakehouse", "Interoperability", "Lakehouse", "Metadata Conversion", "Microsoft Fabric", "ML", "News", "OneLake", "Open Table Formats", "Snowflake", "Table Format Virtualization", "Table Formats", "Trino", "Virtualization"]
-tags_normalized: ["apache iceberg", "apache xtable", "cloud data platforms", "data engineering", "data governance", "data lake", "delta lake", "dremio", "etl", "fabric lakehouse", "interoperability", "lakehouse", "metadata conversion", "microsoft fabric", "ml", "news", "onelake", "open table formats", "snowflake", "table format virtualization", "table formats", "trino", "virtualization"]
+permalink: /ml/news/How-Microsoft-OneLake-Seamlessly-Provides-Apache-Iceberg-Support-for-All-Fabric-Data
+tags:
+- Apache Iceberg
+- Apache XTable
+- Cloud Data Platforms
+- Data Engineering
+- Data Governance
+- Data Lake
+- Delta Lake
+- Dremio
+- ETL
+- Fabric Lakehouse
+- Interoperability
+- Lakehouse
+- Metadata Conversion
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Open Table Formats
+- Snowflake
+- Table Format Virtualization
+- Table Formats
+- Trino
+- Virtualization
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog, with Kevin Liu, presents how Microsoft OneLake now seamlessly virtualizes Delta Lake tables as Apache Iceberg tables, enabling true multi-engine analytics without data duplication.<!--excerpt_end-->
 
 # How Microsoft OneLake Seamlessly Provides Apache Iceberg Support for All Fabric Data

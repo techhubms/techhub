@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)"
-description: "This announcement introduces the public preview of Azure Container Apps Azure Monitor Dashboards with Grafana, allowing developers and teams to seamlessly view, customize, and share Grafana dashboards within the Azure portal. It details new pre-built dashboards, native integration with Azure, and guidance on getting started, aiming to simplify observability and performance monitoring for containerized applications."
-author: "carolinauribe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba-p/4450958"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)
+author: carolinauribe
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba-p/4450958
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-24 17:52:49 +00:00
-permalink: "/2025-09-24-Announcing-Azure-Container-Apps-Azure-Monitor-Dashboards-with-Grafana-Public-Preview.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Container Apps", "Azure Monitor", "Cloud Operations", "Community", "Containers", "Dashboards", "DevOps", "Grafana", "Metrics", "Microsoft Azure", "Monitoring", "Observability", "Performance Monitoring", "Public Preview", "RBAC", "Serverless", "Visualization"]
-tags_normalized: ["azure", "azure container apps", "azure monitor", "cloud operations", "community", "containers", "dashboards", "devops", "grafana", "metrics", "microsoft azure", "monitoring", "observability", "performance monitoring", "public preview", "rbac", "serverless", "visualization"]
+permalink: /azure/community/Announcing-Azure-Container-Apps-Azure-Monitor-Dashboards-with-Grafana-Public-Preview
+tags:
+- Azure
+- Azure Container Apps
+- Azure Monitor
+- Cloud Operations
+- Community
+- Containers
+- Dashboards
+- DevOps
+- Grafana
+- Metrics
+- Microsoft Azure
+- Monitoring
+- Observability
+- Performance Monitoring
+- Public Preview
+- RBAC
+- Serverless
+- Visualization
+section_names:
+- azure
+- devops
 ---
-
 carolinauribe details the new public preview of Azure Container Apps Azure Monitor Dashboards with Grafana, explaining how teams can now easily monitor and analyze app performance using built-in, customizable dashboards in the Azure portal.<!--excerpt_end-->
 
 # Announcing the Public Preview of Azure Container Apps Azure Monitor Dashboards with Grafana

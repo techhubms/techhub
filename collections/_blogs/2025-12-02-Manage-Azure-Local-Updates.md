@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Manage Azure Local Updates"
-description: "This guide walks IT professionals and hybrid cloud architects through the process of managing and updating Azure Local instances using the Azure Portal. Covering update workflows, monitoring, extension management, and best practices, it provides actionable techniques for keeping Azure Local and hybrid environments secure, current, and resilient against evolving requirements."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Manage Azure Local Updates
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-02 12:34:53 +00:00
-permalink: "/2025-12-02-Manage-Azure-Local-Updates.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Azure Local", "Azure Portal", "Azure Update Manager", "Best Practices", "Blogs", "Cloud", "Cloud Infrastructure", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Monitoring", "Patch Management", "Solution Builder Extension", "Sovereign Cloud", "Update Management", "Version Control", "Virtualization"]
-tags_normalized: ["azure", "azure arc", "azure local", "azure portal", "azure update manager", "best practices", "blogs", "cloud", "cloud infrastructure", "hybrid cloud", "microsoft", "microsoft azure", "monitoring", "patch management", "solution builder extension", "sovereign cloud", "update management", "version control", "virtualization"]
+permalink: /azure/blogs/Manage-Azure-Local-Updates
+tags:
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Portal
+- Azure Update Manager
+- Best Practices
+- Blogs
+- Cloud
+- Cloud Infrastructure
+- Hybrid Cloud
+- Microsoft
+- Microsoft Azure
+- Monitoring
+- Patch Management
+- Solution Builder Extension
+- Sovereign Cloud
+- Update Management
+- Version Control
+- Virtualization
+section_names:
+- azure
 ---
-
 Thomas Maurer shares practical steps for managing and updating Azure Local instances via the Azure Portal, focusing on workflows, monitoring, and hybrid cloud best practices.<!--excerpt_end-->
 
 # Manage Azure Local Updates

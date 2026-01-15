@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Update HTML Elements Dynamically with Htmx Triggers and ASP.NET Core"
-description: "Khalid Abuhakmeh demonstrates how to leverage Htmx's HX-Trigger facility with ASP.NET Core Razor Pages to enable dynamic UI updates, such as refreshing an avatar image after profile changes. The post includes detailed implementation, code samples, and practical tips for integrating Htmx and ASP.NET Core."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Update HTML Elements Dynamically with Htmx Triggers and ASP.NET Core
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-10-22 00:00:00 +00:00
-permalink: "/2024-10-22-Update-HTML-Elements-Dynamically-with-Htmx-Triggers-and-ASPNET-Core.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET", "ASP.NET Core", "Avatar Update", "Blogs", "C#", "Coding", "Dynamic UI", "Htmx", "HX Trigger", "Partial Views", "Razor Pages", "User Profile", "Web Development"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "avatar update", "blogs", "csharp", "coding", "dynamic ui", "htmx", "hx trigger", "partial views", "razor pages", "user profile", "web development"]
+permalink: /coding/blogs/Update-HTML-Elements-Dynamically-with-Htmx-Triggers-and-ASPNET-Core
+tags:
+- .NET
+- ASP.NET
+- ASP.NET Core
+- Avatar Update
+- Blogs
+- C#
+- Coding
+- Dynamic UI
+- Htmx
+- HX Trigger
+- Partial Views
+- Razor Pages
+- User Profile
+- Web Development
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh walks through using Htmx's HX-Trigger headers with ASP.NET Core Razor Pages to seamlessly update UI elements like avatars upon profile changes, backed by practical code examples and integration tips.<!--excerpt_end-->
 
 # Update HTML Elements Dynamically with Htmx Triggers and ASP.NET Core

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Bridging the Gap Between ClickOps and Infrastructure-as-Code in DevOps"
-description: "This article by Marcin Wyszynski explores the challenges in balancing rapid, informal infrastructure changes (ClickOps) with the rigor and governance of Infrastructure-as-Code (IaC) and GitOps methodologies. It proposes intent-driven, policy-aware tooling—often powered by AI and LLMs—as a solution for filling the gap between speed and safety, outlining how guardrails and automation can prevent shadow IT while maintaining developer velocity."
-author: "Marcin Wyszynski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/clickops-iac-and-the-excluded-avocado-middle/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Bridging the Gap Between ClickOps and Infrastructure-as-Code in DevOps
+author: Marcin Wyszynski
+canonical_url: https://devops.com/clickops-iac-and-the-excluded-avocado-middle/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-13 14:53:34 +00:00
-permalink: "/2025-11-13-Bridging-the-Gap-Between-ClickOps-and-Infrastructure-as-Code-in-DevOps.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "Approval Workflows", "Audit Trails", "Automation", "Blogs", "ClickOps", "Cloud Operations", "DevOps", "Drift Detection", "Experimentation", "GitOps", "Governance", "IaC", "Intent Driven Infrastructure", "LLMs", "MCP", "OpenTofu", "Policy as Code", "Pulumi", "Session Locking", "Shadow IT", "Social Facebook", "Social LinkedIn", "Social X", "Techstrong Council", "Terraform"]
-tags_normalized: ["ai", "approval workflows", "audit trails", "automation", "blogs", "clickops", "cloud operations", "devops", "drift detection", "experimentation", "gitops", "governance", "iac", "intent driven infrastructure", "llms", "mcp", "opentofu", "policy as code", "pulumi", "session locking", "shadow it", "social facebook", "social linkedin", "social x", "techstrong council", "terraform"]
+permalink: /ai/blogs/Bridging-the-Gap-Between-ClickOps-and-Infrastructure-as-Code-in-DevOps
+tags:
+- AI
+- Approval Workflows
+- Audit Trails
+- Automation
+- Blogs
+- ClickOps
+- Cloud Operations
+- DevOps
+- Drift Detection
+- Experimentation
+- GitOps
+- Governance
+- IaC
+- Intent Driven Infrastructure
+- LLMs
+- MCP
+- OpenTofu
+- Policy as Code
+- Pulumi
+- Session Locking
+- Shadow IT
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Techstrong Council
+- Terraform
+section_names:
+- ai
+- devops
 ---
-
 Marcin Wyszynski discusses the gap between ClickOps and Infrastructure-as-Code, highlighting how intent-driven, AI-powered approaches can balance developer speed with operational safety in modern DevOps practices.<!--excerpt_end-->
 
 # Bridging the Gap Between ClickOps and Infrastructure-as-Code in DevOps

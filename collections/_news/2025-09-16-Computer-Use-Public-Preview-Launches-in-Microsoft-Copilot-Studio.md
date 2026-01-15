@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Computer Use Public Preview Launches in Microsoft Copilot Studio"
-description: "Microsoft Copilot Studio now offers a public preview of the computer use feature in U.S.-based environments. This enhancement empowers Copilot Studio agents to directly interact with desktop applications and websites, automating complex tasks without relying on APIs. Key enhancements include hosted browser support, credential management, allow-list controls, and templates to jumpstart common automation scenarios. The computer use tool extends scenarios for agents, enabling market research, automated data entry, UI automations, and more, while integrating closely with Microsoft Power Automate for desktop flows."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Computer Use Public Preview Launches in Microsoft Copilot Studio
+author: sbaynes
+canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 17:34:39 +00:00
-permalink: "/2025-09-16-Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "Allow List", "Automation", "Business Automation", "Company News", "Computer Use", "Copilot Studio", "Credentials Management", "Desktop Automation", "Microsoft Copilot", "News", "No Code", "Power Automate", "Public Preview", "RPA", "Templates", "UI Automation", "Web Automation", "Windows 365"]
-tags_normalized: ["ai", "allow list", "automation", "business automation", "company news", "computer use", "copilot studio", "credentials management", "desktop automation", "microsoft copilot", "news", "no code", "power automate", "public preview", "rpa", "templates", "ui automation", "web automation", "windows 365"]
+permalink: /ai/news/Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio
+tags:
+- AI
+- Allow List
+- Automation
+- Business Automation
+- Company News
+- Computer Use
+- Copilot Studio
+- Credentials Management
+- Desktop Automation
+- Microsoft Copilot
+- News
+- No Code
+- Power Automate
+- Public Preview
+- RPA
+- Templates
+- UI Automation
+- Web Automation
+- Windows 365
+section_names:
+- ai
 ---
-
 sbaynes introduces the public preview of computer use in Microsoft Copilot Studio, highlighting new automation capabilities for agents to work directly with applications and websites.<!--excerpt_end-->
 
 # Computer Use Public Preview Launches in Microsoft Copilot Studio

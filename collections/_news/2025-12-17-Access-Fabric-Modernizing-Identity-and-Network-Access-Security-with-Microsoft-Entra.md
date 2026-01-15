@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Access Fabric: Modernizing Identity and Network Access Security with Microsoft Entra"
-description: "This article explores the concept of Access Fabric—a unified, adaptive approach to identity and network access security. It highlights how integrating Microsoft Entra's identity and network solutions, guided by Zero Trust principles, protects organizations against threats, particularly those enabled by advances in AI. Readers will learn about contextual, connected, and continuous access controls that adapt to changing risk conditions."
-author: "Igor Sakhnov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Access Fabric: Modernizing Identity and Network Access Security with Microsoft Entra'
+author: Igor Sakhnov
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-17 17:00:00 +00:00
-permalink: "/2025-12-17-Access-Fabric-Modernizing-Identity-and-Network-Access-Security-with-Microsoft-Entra.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Access Fabric", "Adaptive Security", "AI", "AI Security", "Azure", "Cloud Security", "Continuous Authentication", "Hybrid Work", "Identity Management", "Microsoft Entra", "Network Access", "News", "Phishing Prevention", "Risk Based Access", "Security", "Security Strategy", "Session Management", "Threat Mitigation", "Zero Trust"]
-tags_normalized: ["access fabric", "adaptive security", "ai", "ai security", "azure", "cloud security", "continuous authentication", "hybrid work", "identity management", "microsoft entra", "network access", "news", "phishing prevention", "risk based access", "security", "security strategy", "session management", "threat mitigation", "zero trust"]
+permalink: /ai/news/Access-Fabric-Modernizing-Identity-and-Network-Access-Security-with-Microsoft-Entra
+tags:
+- Access Fabric
+- Adaptive Security
+- AI
+- AI Security
+- Azure
+- Cloud Security
+- Continuous Authentication
+- Hybrid Work
+- Identity Management
+- Microsoft Entra
+- Network Access
+- News
+- Phishing Prevention
+- Risk Based Access
+- Security
+- Security Strategy
+- Session Management
+- Threat Mitigation
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Igor Sakhnov details how Access Fabric, built on Microsoft Entra, unifies identity and network access security. The article explains adaptive, real-time protection for organizations facing AI-empowered threats.<!--excerpt_end-->
 
 # Access Fabric: Modernizing Identity and Network Access Security with Microsoft Entra

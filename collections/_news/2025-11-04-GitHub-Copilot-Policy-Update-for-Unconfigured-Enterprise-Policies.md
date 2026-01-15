@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Policy Update for Unconfigured Enterprise Policies"
-description: "This update outlines recent changes to GitHub Copilot’s policy management behavior when enterprise-level policies are set to 'Unconfigured'. The content details how Copilot policy delegation now defaults organizational settings to 'Disabled' unless explicitly allowed by an enterprise admin, preventing unauthorized enablement and providing clarity for GitHub enterprise administrators."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Policy Update for Unconfigured Enterprise Policies
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-04 17:59:50 +00:00
-permalink: "/2025-11-04-GitHub-Copilot-Policy-Update-for-Unconfigured-Enterprise-Policies.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Access Control", "Admin Tools", "AI", "Configuration", "Copilot", "Developer Tools", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Policy", "Feature Update", "GitHub Copilot", "Improvement", "News", "Organization Policy", "Policy Management"]
-tags_normalized: ["access control", "admin tools", "ai", "configuration", "copilot", "developer tools", "enterprise administration", "enterprise management tools", "enterprise policy", "feature update", "github copilot", "improvement", "news", "organization policy", "policy management"]
+permalink: /github-copilot/news/GitHub-Copilot-Policy-Update-for-Unconfigured-Enterprise-Policies
+tags:
+- Access Control
+- Admin Tools
+- AI
+- Configuration
+- Copilot
+- Developer Tools
+- Enterprise Administration
+- Enterprise Management Tools
+- Enterprise Policy
+- Feature Update
+- GitHub Copilot
+- Improvement
+- News
+- Organization Policy
+- Policy Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains recent GitHub Copilot policy changes that refine how unconfigured enterprise policies cascade to organizations, giving enterprise admins more explicit control.<!--excerpt_end-->
 
 # GitHub Copilot Policy Update for Unconfigured Enterprise Policies

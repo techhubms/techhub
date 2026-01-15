@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Integrating OneDrive and SharePoint Documents into OneLake Analytics with Shortcuts"
-description: "This article from the Microsoft Fabric Blog explains how organizations can seamlessly integrate everyday files like Word documents, Excel spreadsheets, PowerPoint presentations, and PDFs stored in OneDrive and SharePoint into Microsoft OneLake for unified analytics. By using shortcuts, businesses can avoid data duplication and silos and apply governance, AI-powered transforms, and analytics workflows directly on business-critical documents without moving or copying files. The workflow enables advanced analytics, BI, and AI scenarios within Fabric, leveraging both structured and unstructured data."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/turning-everyday-documents-from-sharepoint-and-onedrive-into-analytics-ready-data-with-onelake-shortcuts/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Integrating OneDrive and SharePoint Documents into OneLake Analytics with Shortcuts
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/turning-everyday-documents-from-sharepoint-and-onedrive-into-analytics-ready-data-with-onelake-shortcuts/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 12:00:00 +00:00
-permalink: "/2025-12-03-Integrating-OneDrive-and-SharePoint-Documents-into-OneLake-Analytics-with-Shortcuts.html"
-categories: ["Azure", "ML"]
-tags: ["AI", "AI Transforms", "Analytics", "Azure", "BI Integration", "Data Governance", "Data Virtualization", "Document Indexing", "Excel", "Fabric", "Lakehouse", "Microsoft OneLake", "ML", "News", "OneDrive", "Power BI", "SharePoint", "Shortcut Workflow", "Structured Data", "Unstructured Data"]
-tags_normalized: ["ai", "ai transforms", "analytics", "azure", "bi integration", "data governance", "data virtualization", "document indexing", "excel", "fabric", "lakehouse", "microsoft onelake", "ml", "news", "onedrive", "power bi", "sharepoint", "shortcut workflow", "structured data", "unstructured data"]
+permalink: /ml/news/Integrating-OneDrive-and-SharePoint-Documents-into-OneLake-Analytics-with-Shortcuts
+tags:
+- AI
+- AI Transforms
+- Analytics
+- Azure
+- BI Integration
+- Data Governance
+- Data Virtualization
+- Document Indexing
+- Excel
+- Fabric
+- Lakehouse
+- Microsoft OneLake
+- ML
+- News
+- OneDrive
+- Power BI
+- SharePoint
+- Shortcut Workflow
+- Structured Data
+- Unstructured Data
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how organizations can use OneDrive and SharePoint shortcuts in OneLake to integrate everyday files into analytics workflows, with AI-powered transforms and unified governance.<!--excerpt_end-->
 
 # Integrating OneDrive and SharePoint Documents into OneLake Analytics with Shortcuts

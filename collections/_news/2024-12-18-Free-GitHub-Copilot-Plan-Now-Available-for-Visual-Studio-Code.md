@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Free GitHub Copilot Plan Now Available for Visual Studio Code"
-description: "Burke Holland announces a major update for developers: GitHub Copilot now offers a free plan integrated with Visual Studio Code. The article details the features available to users, such as code completions, chat requests, model options, project awareness, custom instructions, voice interaction, and upcoming enhancements. Developers can leverage advanced AI-powered capabilities to boost productivity directly within their editor, with easy onboarding and no payment required. The post explores new and existing Copilot functionalities, integration points, and tips for making the most of this AI tool in coding workflows."
-author: "Burke Holland"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Free GitHub Copilot Plan Now Available for Visual Studio Code
+author: Burke Holland
+canonical_url: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-12-18 00:00:00 +00:00
-permalink: "/2024-12-18-Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Completion", "AI Models", "Claude 3.5 Sonnet", "Code Generation", "Coding", "Coding Workflows", "Commit Message Automation", "Copilot Edits", "Custom Instructions", "Free Developer Tools", "GitHub Copilot", "GPT 4o", "News", "Productivity", "Project Awareness", "Terminal Chat", "Voice Chat", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai code completion", "ai models", "claude 3dot5 sonnet", "code generation", "coding", "coding workflows", "commit message automation", "copilot edits", "custom instructions", "free developer tools", "github copilot", "gpt 4o", "news", "productivity", "project awareness", "terminal chat", "voice chat", "vs code", "vs code extensions"]
+permalink: /github-copilot/news/Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code
+tags:
+- AI
+- AI Code Completion
+- AI Models
+- Claude 3.5 Sonnet
+- Code Generation
+- Coding
+- Coding Workflows
+- Commit Message Automation
+- Copilot Edits
+- Custom Instructions
+- Free Developer Tools
+- GitHub Copilot
+- GPT 4o
+- News
+- Productivity
+- Project Awareness
+- Terminal Chat
+- Voice Chat
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Burke Holland shares the launch of a free GitHub Copilot plan for VS Code users, unlocking AI-powered code completions, chat, and more to help developers enhance their productivity and coding experience.<!--excerpt_end-->
 
 # Free GitHub Copilot Plan Now Available for Visual Studio Code

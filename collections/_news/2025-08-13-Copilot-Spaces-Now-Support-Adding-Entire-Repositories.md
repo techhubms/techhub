@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Copilot Spaces Now Support Adding Entire Repositories"
-description: "This news update covers the addition of a new feature in GitHub Copilot Spaces that enables users to add entire repositories for improved workflow efficiency. The article details key benefits such as rapid exploration of codebases, one-click setup, management improvements, and navigation enhancements within Copilot Spaces. Pro tips for effectively leveraging the feature and guidance on managing repository context for Copilot interactions are also included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-13-add-repositories-to-spaces"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Spaces Now Support Adding Entire Repositories
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-13-add-repositories-to-spaces
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 17:26:04 +00:00
-permalink: "/2025-08-13-Copilot-Spaces-Now-Support-Adding-Entire-Repositories.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Integration", "Codebase Exploration", "Copilot Spaces", "Developer Productivity", "Developer Tools", "Feature Update", "GitHub", "GitHub Copilot", "Navigation Improvements", "News", "Repository Management"]
-tags_normalized: ["ai", "ai coding assistant", "ai integration", "codebase exploration", "copilot spaces", "developer productivity", "developer tools", "feature update", "github", "github copilot", "navigation improvements", "news", "repository management"]
+permalink: /github-copilot/news/Copilot-Spaces-Now-Support-Adding-Entire-Repositories
+tags:
+- AI
+- AI Coding Assistant
+- AI Integration
+- Codebase Exploration
+- Copilot Spaces
+- Developer Productivity
+- Developer Tools
+- Feature Update
+- GitHub
+- GitHub Copilot
+- Navigation Improvements
+- News
+- Repository Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces a powerful update to GitHub Copilot Spaces, allowing developers to add entire repositories for enhanced exploration and context management within their AI-powered workspace.<!--excerpt_end-->
 
 # Copilot Spaces Now Support Adding Entire Repositories

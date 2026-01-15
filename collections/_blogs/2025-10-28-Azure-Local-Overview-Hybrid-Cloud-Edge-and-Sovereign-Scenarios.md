@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios"
-description: "This comprehensive video by Thomas Maurer introduces Azure Local, Microsoft's offering for running local workloads with cloud management. Covering architecture, core use cases, and management best practices, it explains how Azure Local fits in hybrid cloud strategies, supporting edge computing, digital sovereignty, disconnected operations, and secure workload deployment."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-28 13:57:29 +00:00
-permalink: "/2025-10-28-Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Defender", "Azure Local", "Azure Monitor", "Azure Portal", "Azure Virtual Desktop", "Blogs", "Cloud Architecture", "Cloud Management", "Digital Sovereignty", "Disaster Recovery", "Disconnected Operations", "Edge Computing", "High Availability", "Hybrid Cloud", "Lifecycle Management", "Security", "Uncategorized", "Virtual Machines", "Workload Management"]
-tags_normalized: ["aks", "azure", "azure defender", "azure local", "azure monitor", "azure portal", "azure virtual desktop", "blogs", "cloud architecture", "cloud management", "digital sovereignty", "disaster recovery", "disconnected operations", "edge computing", "high availability", "hybrid cloud", "lifecycle management", "security", "uncategorized", "virtual machines", "workload management"]
+permalink: /azure/blogs/Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios
+tags:
+- AKS
+- Azure
+- Azure Defender
+- Azure Local
+- Azure Monitor
+- Azure Portal
+- Azure Virtual Desktop
+- Blogs
+- Cloud Architecture
+- Cloud Management
+- Digital Sovereignty
+- Disaster Recovery
+- Disconnected Operations
+- Edge Computing
+- High Availability
+- Hybrid Cloud
+- Lifecycle Management
+- Security
+- Uncategorized
+- Virtual Machines
+- Workload Management
+section_names:
+- azure
+- security
 ---
-
 Thomas Maurer provides a practical, architect-focused walkthrough of Azure Local, covering hybrid cloud architecture, edge scenarios, digital sovereignty, security features, and workload management, with actionable demos and management techniques.<!--excerpt_end-->
 
 # Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios

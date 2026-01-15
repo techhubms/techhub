@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Safe and Scalable DevOps with GitHub Copilot AI Agents"
-description: "This session from Microsoft Ignite 2025 explores how AI agents such as GitHub Copilot are transforming DevOps practices. Learn to configure and manage agent adoption at enterprise scale, integrate Copilot with developer workflows, leverage governance and security capabilities, and enable scalable custom Copilot agents across GitHub, CLI, and Visual Studio Code. The talk features expert demos and practical strategies for automating development tasks while maintaining oversight and compliance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=16_x7e0d_SY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Safe and Scalable DevOps with GitHub Copilot AI Agents
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=16_x7e0d_SY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:45:29 +00:00
-permalink: "/2025-11-26-Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Tasks", "AI", "AI Agents", "Automation", "Chris Patterson", "CLI", "Cloud Environments", "Coding", "Custom Copilot Agents", "Demo", "Developer Workflows", "DevOps", "Enterprise Adoption", "GitHub", "GitHub Copilot", "Governance", "InnovatewithAzureAIappsandagents", "Luke Hoban", "Microsoft Ignite", "MSIgnite", "Scalable Agent Deployment", "Videos", "VS Code"]
-tags_normalized: ["agentic tasks", "ai", "ai agents", "automation", "chris patterson", "cli", "cloud environments", "coding", "custom copilot agents", "demo", "developer workflows", "devops", "enterprise adoption", "github", "github copilot", "governance", "innovatewithazureaiappsandagents", "luke hoban", "microsoft ignite", "msignite", "scalable agent deployment", "videos", "vs code"]
+permalink: /github-copilot/videos/Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents
+tags:
+- Agentic Tasks
+- AI
+- AI Agents
+- Automation
+- Chris Patterson
+- CLI
+- Cloud Environments
+- Coding
+- Custom Copilot Agents
+- Demo
+- Developer Workflows
+- DevOps
+- Enterprise Adoption
+- GitHub
+- GitHub Copilot
+- Governance
+- InnovatewithAzureAIappsandagents
+- Luke Hoban
+- Microsoft Ignite
+- MSIgnite
+- Scalable Agent Deployment
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents a Microsoft Ignite session featuring Luke Hoban and Chris Patterson on deploying GitHub Copilot AI agents safely and at scale. Explore demos and governance strategies for DevOps teams.<!--excerpt_end-->
 
 {% youtube 16_x7e0d_SY %}

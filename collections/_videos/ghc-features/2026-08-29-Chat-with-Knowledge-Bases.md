@@ -1,22 +1,25 @@
----
-layout: "post"
-title: "Chat with Knowledge Bases"
-description: "Leverage organizational knowledge in your AI conversations"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Chat with Knowledge Bases
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: "/2026-08-29-Chat-with-Knowledge-Bases.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Pro+", "Enterprise"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Chat-with-Knowledge-Bases
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Pro+
+- Enterprise
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Chat with Knowledge Bases feature. Leverage organizational knowledge in your AI conversations<!--excerpt_end-->
 
 **⚠️ DEPRECATED**: Knowledge Bases were retired on November 1, 2025 and fully replaced by **Copilot Spaces**. This feature is no longer available.

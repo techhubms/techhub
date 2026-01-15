@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Visual Studio C++ Code Cleanup: Solution-Wide Inconsistencies"
-description: "This community discussion explores an issue with Visual Studio's Code Cleanup feature for C++ projects, highlighting that the function does not operate as expected when run on an entire solution. The post discusses workarounds, references relevant documentation and ticketing, and questions Microsoft's approach to documenting and supporting this behavior."
-author: "kohuept"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1mjk2n7/analyze_code_cleanup_broken_cc/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: 'Visual Studio C++ Code Cleanup: Solution-Wide Inconsistencies'
+author: kohuept
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1mjk2n7/analyze_code_cleanup_broken_cc/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-08-06 23:21:36 +00:00
-permalink: "/2025-08-06-Visual-Studio-C-Code-Cleanup-Solution-Wide-Inconsistencies.html"
-categories: ["Coding"]
-tags: ["Analyze Menu", "Bug Report", "C++", "Code Cleanup", "Code Quality", "Coding", "Community", "Developer Experience", "Documentation", "Feature Request", "IDE", "Microsoft", "Solution Explorer", "VS"]
-tags_normalized: ["analyze menu", "bug report", "cplusplus", "code cleanup", "code quality", "coding", "community", "developer experience", "documentation", "feature request", "ide", "microsoft", "solution explorer", "vs"]
+permalink: /coding/community/Visual-Studio-C-Code-Cleanup-Solution-Wide-Inconsistencies
+tags:
+- Analyze Menu
+- Bug Report
+- C++
+- Code Cleanup
+- Code Quality
+- Coding
+- Community
+- Developer Experience
+- Documentation
+- Feature Request
+- IDE
+- Microsoft
+- Solution Explorer
+- VS
+section_names:
+- coding
 ---
-
 kohuept describes persistent problems with running Code Cleanup for C++ solutions in Visual Studio, questioning the inconsistent behavior and Microsoft's support response.<!--excerpt_end-->
 
 # Visual Studio C++ Code Cleanup: Solution-Wide Inconsistencies

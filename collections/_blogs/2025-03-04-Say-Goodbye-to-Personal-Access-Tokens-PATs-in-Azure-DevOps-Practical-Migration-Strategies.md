@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Say Goodbye to Personal Access Tokens (PATs) in Azure DevOps: Practical Migration Strategies"
-description: "Michael Thomsen shares a step-by-step guide on migrating away from PATs in Azure DevOps, covering multiple automation scenarios. The article details practical strategies for using service principals, workload identity federation, and modern authentication approaches for pipelines, apps, and local development."
-author: "Michael Thomsen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/azure-devops-say-goodbye-to-personal-access-tokens-pats/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+layout: post
+title: 'Say Goodbye to Personal Access Tokens (PATs) in Azure DevOps: Practical Migration Strategies'
+author: Michael Thomsen
+canonical_url: https://jessehouwing.net/azure-devops-say-goodbye-to-personal-access-tokens-pats/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-03-04 12:30:04 +00:00
-permalink: "/2025-03-04-Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevOps-Practical-Migration-Strategies.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["App Registration", "Authentication", "Azure", "Azure DevOps", "Azure Functions", "Azure Resource Manager", "Blogs", "DevOps", "Integration Testing", "Jest", "Managed Identity", "NodeJS", "PATs", "Personal Access Tokens", "Pipeline Automation", "Renovate", "Security", "Security Best Practices", "Service Principal", "Workload Identity Federation"]
-tags_normalized: ["app registration", "authentication", "azure", "azure devops", "azure functions", "azure resource manager", "blogs", "devops", "integration testing", "jest", "managed identity", "nodejs", "pats", "personal access tokens", "pipeline automation", "renovate", "security", "security best practices", "service principal", "workload identity federation"]
+permalink: /azure/blogs/Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevOps-Practical-Migration-Strategies
+tags:
+- App Registration
+- Authentication
+- Azure
+- Azure DevOps
+- Azure Functions
+- Azure Resource Manager
+- Blogs
+- DevOps
+- Integration Testing
+- Jest
+- Managed Identity
+- NodeJS
+- PATs
+- Personal Access Tokens
+- Pipeline Automation
+- Renovate
+- Security
+- Security Best Practices
+- Service Principal
+- Workload Identity Federation
+section_names:
+- azure
+- devops
+- security
 ---
-
 In this post, Michael Thomsen discusses how his team eliminated all Azure DevOps Personal Access Tokens (PATs). He details practical migration steps, leveraging service principals and workload identity federation, making it a must-read for DevOps professionals focused on secure automation.<!--excerpt_end-->
 
 # Say Goodbye to Your Personal Access Tokens

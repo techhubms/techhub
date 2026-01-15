@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Sitecore Built a Scalable Isolated SaaS Platform on Azure"
-description: "This session details Sitecore's journey in building a scalable, reliable multi-tenant SaaS platform on Azure. The presentation features real-world architectural decisions for data isolation, cost management, and reliability. Attendees will learn about different Cosmos DB tenancy strategies, deployment stamps, design patterns for compliance, cost optimization methods, and operational practices for managing large Cosmos DB fleets."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ra8_emjhRD0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: How Sitecore Built a Scalable Isolated SaaS Platform on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Ra8_emjhRD0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:44:34 +00:00
-permalink: "/2025-11-20-How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-on-Azure.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["API Management", "Autoscale Analysis", "Azure", "Circuit Breakers", "Coding", "Compliance", "Cosmos DB", "Cost Management", "Data Isolation", "DB Per Tenant", "Deployment Stamps", "DevOps", "Event Overflow", "Fleet Monitoring", "MSIgnite", "Multi Tenant SaaS", "Partition Key", "SaaS Design Patterns", "Sitecore", "TCO Optimization", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["api management", "autoscale analysis", "azure", "circuit breakers", "coding", "compliance", "cosmos db", "cost management", "data isolation", "db per tenant", "deployment stamps", "devops", "event overflow", "fleet monitoring", "msignite", "multi tenant saas", "partition key", "saas design patterns", "sitecore", "tco optimization", "unifyyourdataplatform", "videos"]
+permalink: /coding/videos/How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-on-Azure
+tags:
+- API Management
+- Autoscale Analysis
+- Azure
+- Circuit Breakers
+- Coding
+- Compliance
+- Cosmos DB
+- Cost Management
+- Data Isolation
+- DB Per Tenant
+- Deployment Stamps
+- DevOps
+- Event Overflow
+- Fleet Monitoring
+- MSIgnite
+- Multi Tenant SaaS
+- Partition Key
+- SaaS Design Patterns
+- Sitecore
+- TCO Optimization
+- Unifyyourdataplatform
+- Videos
+section_names:
+- azure
+- coding
+- devops
 ---
-
 This Microsoft Ignite session, delivered by Deborah Chen, Jeffrey Ilse, and Andrew Liu, showcases Sitecore's approach to building a scalable, secure, and cost-effective SaaS platform on Azure, with a focus on Cosmos DB architectural patterns.<!--excerpt_end-->
 
 {% youtube Ra8_emjhRD0 %}

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow"
-description: "This article by Kristen Womack provides a comprehensive exploration of Azure Developer CLI (azd) extensions, discussing their features, practical use cases, installation steps, and guidance on building and contributing your own extensions to enhance Azure development workflows."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-30 18:00:02 +00:00
-permalink: "/2025-06-30-Exploring-Azure-Developer-CLI-azd-Extensions-Customizing-Your-Azure-Development-Workflow.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Azd Extensions", "Azure", "Azure Developer CLI", "Azure SDK", "CI/CD", "CLI", "Codespaces", "Coding", "Custom Commands", "Developer Tooling", "DevOps", "Docker", "Extension Framework", "Extension Registry", "Java", "JavaScript", "Kubernetes", "Modular Plugins", "News", "Open Source", "Python", "Typescript", "VS Code", "Workflow Automation"]
-tags_normalized: ["dotnet", "azd extensions", "azure", "azure developer cli", "azure sdk", "cislashcd", "cli", "codespaces", "coding", "custom commands", "developer tooling", "devops", "docker", "extension framework", "extension registry", "java", "javascript", "kubernetes", "modular plugins", "news", "open source", "python", "typescript", "vs code", "workflow automation"]
+permalink: /coding/news/Exploring-Azure-Developer-CLI-azd-Extensions-Customizing-Your-Azure-Development-Workflow
+tags:
+- .NET
+- Azd Extensions
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- CI/CD
+- CLI
+- Codespaces
+- Coding
+- Custom Commands
+- Developer Tooling
+- DevOps
+- Docker
+- Extension Framework
+- Extension Registry
+- Java
+- JavaScript
+- Kubernetes
+- Modular Plugins
+- News
+- Open Source
+- Python
+- Typescript
+- VS Code
+- Workflow Automation
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Kristen Womack delves into Azure Developer CLI (azd) extensions, outlining their features, use cases, installation process, and ways developers can build and contribute extensions to optimize Azure workflow customization.<!--excerpt_end-->
 
 # Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow

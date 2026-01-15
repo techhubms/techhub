@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Microsoft Expands Azure Cloud and AI Infrastructure Across Asia"
-description: "This news article outlines how Microsoft is heavily investing in cloud and AI-ready infrastructure throughout Asia, including new data center regions in Malaysia, Indonesia, India, and Taiwan. It covers the launch of hyperscale datacenters with Azure, integration of AI services, customer case studies including GitHub Copilot and Azure Machine Learning, strategies for resilient cloud architecture, cost optimization, and Microsoft's commitment to supporting organizations’ digital and AI transformation in the region."
-author: "Omar Khan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-asia/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Expands Azure Cloud and AI Infrastructure Across Asia
+author: Omar Khan
+canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-asia/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 15:00:00 +00:00
-permalink: "/2025-10-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-Asia.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Asia Datacenter Regions", "Azure", "Azure Availability Zones", "Azure Machine Learning", "Azure OpenAI Service", "Cloud Adoption Framework", "Cloud Infrastructure", "Cost Optimization", "Datacenter", "DevOps", "Digital Transformation", "India", "Indonesia", "Internet Of Things", "Low Latency Connectivity", "Malaysia", "Microsoft Azure", "Microsoft Cloud Adoption Framework", "Multi Region Architecture", "Network Infrastructure", "News", "Scalability", "Taiwan", "Well Architected Framework"]
-tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "asia datacenter regions", "azure", "azure availability zones", "azure machine learning", "azure openai service", "cloud adoption framework", "cloud infrastructure", "cost optimization", "datacenter", "devops", "digital transformation", "india", "indonesia", "internet of things", "low latency connectivity", "malaysia", "microsoft azure", "microsoft cloud adoption framework", "multi region architecture", "network infrastructure", "news", "scalability", "taiwan", "well architected framework"]
+permalink: /ai/news/Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-Asia
+tags:
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- Asia Datacenter Regions
+- Azure
+- Azure Availability Zones
+- Azure Machine Learning
+- Azure OpenAI Service
+- Cloud Adoption Framework
+- Cloud Infrastructure
+- Cost Optimization
+- Datacenter
+- DevOps
+- Digital Transformation
+- India
+- Indonesia
+- Internet Of Things
+- Low Latency Connectivity
+- Malaysia
+- Microsoft Azure
+- Microsoft Cloud Adoption Framework
+- Multi Region Architecture
+- Network Infrastructure
+- News
+- Scalability
+- Taiwan
+- Well Architected Framework
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Omar Khan reports on Microsoft's significant investments in cloud and AI-ready infrastructure across Asia, highlighting new Azure datacenter regions and enterprise strategies for digital transformation.<!--excerpt_end-->
 
 # Microsoft Expands Azure Cloud and AI Infrastructure Across Asia

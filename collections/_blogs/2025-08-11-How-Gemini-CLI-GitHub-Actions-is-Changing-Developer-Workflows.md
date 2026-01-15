@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "How Gemini CLI GitHub Actions is Changing Developer Workflows"
-description: "This article by Tom Smith explores how Google's Gemini CLI GitHub Actions leverages AI to automate repository management, focusing on issue triage, code review acceleration, and collaboration within GitHub workflows. It discusses the technical features, security controls, and adoption process, emphasizing the tool's potential to streamline and transform developer and DevOps workflows."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-gemini-cli-github-actions-is-changing-developer-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-gemini-cli-github-actions-is-changing-developer-workflows"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Gemini CLI GitHub Actions is Changing Developer Workflows
+author: Tom Smith
+canonical_url: https://devops.com/how-gemini-cli-github-actions-is-changing-developer-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-gemini-cli-github-actions-is-changing-developer-workflows
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-11 12:09:24 +00:00
-permalink: "/2025-08-11-How-Gemini-CLI-GitHub-Actions-is-Changing-Developer-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic DevOps", "AI", "AI Assisted Development", "AI Automation", "AI Powered Tools", "Blogs", "Business Of DevOps", "Code Review Automation", "Collaborative Coding", "Command Allowlisting", "Continuous Integration", "Developer Productivity", "DevOps", "Gemini CLI", "GitHub Actions", "GitHub Workflows", "Google Cloud Workload Identity Federation", "Issue Triage", "OpenTelemetry", "Pull Request Automation", "Repository Management", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Workflow"]
-tags_normalized: ["agentic devops", "ai", "ai assisted development", "ai automation", "ai powered tools", "blogs", "business of devops", "code review automation", "collaborative coding", "command allowlisting", "continuous integration", "developer productivity", "devops", "gemini cli", "github actions", "github workflows", "google cloud workload identity federation", "issue triage", "opentelemetry", "pull request automation", "repository management", "security automation", "social facebook", "social linkedin", "social x", "software development workflow"]
+permalink: /ai/blogs/How-Gemini-CLI-GitHub-Actions-is-Changing-Developer-Workflows
+tags:
+- Agentic DevOps
+- AI
+- AI Assisted Development
+- AI Automation
+- AI Powered Tools
+- Blogs
+- Business Of DevOps
+- Code Review Automation
+- Collaborative Coding
+- Command Allowlisting
+- Continuous Integration
+- Developer Productivity
+- DevOps
+- Gemini CLI
+- GitHub Actions
+- GitHub Workflows
+- Google Cloud Workload Identity Federation
+- Issue Triage
+- OpenTelemetry
+- Pull Request Automation
+- Repository Management
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development Workflow
+section_names:
+- ai
+- devops
 ---
-
 Tom Smith examines how Gemini CLI GitHub Actions, an AI-powered automation tool, is transforming developer and DevOps workflows by streamlining issue management, code reviews, and collaboration on GitHub.<!--excerpt_end-->
 
 # How Gemini CLI GitHub Actions is Changing Developer Workflows

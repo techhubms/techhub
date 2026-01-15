@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Intro to Java and AI for Beginners"
-description: "This video is the first in a series designed to introduce beginners to Java programming and artificial intelligence, with a modern focus on integrating AI into Java development using Microsoft’s technologies. Hosted by Ayan Gupta, the episode outlines a hands-on, practical approach, covering topics from Java and AI fundamentals to generative AI, context engineering, and deploying intelligent apps in the cloud."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=I0yhGsozx8o"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Intro to Java and AI for Beginners
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=I0yhGsozx8o
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-28 16:00:28 +00:00
-permalink: "/2025-10-28-Intro-to-Java-and-AI-for-Beginners.html"
-categories: ["AI"]
-tags: ["AI", "AI Fundamentals", "AI Integration", "AIForBeginners", "Cloud Computing", "CloudDevelopment", "Context Engineering", "Developer Education", "DeveloperEducation", "Generative AI", "GenerativeAI", "Java", "Java Development", "JavaProgramming", "JavaTutorial", "Machine Learning", "MachineLearning", "MCP", "Microsoft", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai fundamentals", "ai integration", "aiforbeginners", "cloud computing", "clouddevelopment", "context engineering", "developer education", "developereducation", "generative ai", "generativeai", "java", "java development", "javaprogramming", "javatutorial", "machine learning", "machinelearning", "mcp", "microsoft", "software development", "videos"]
+permalink: /ai/videos/Intro-to-Java-and-AI-for-Beginners
+tags:
+- AI
+- AI Fundamentals
+- AI Integration
+- AIForBeginners
+- Cloud Computing
+- CloudDevelopment
+- Context Engineering
+- Developer Education
+- DeveloperEducation
+- Generative AI
+- GenerativeAI
+- Java
+- Java Development
+- JavaProgramming
+- JavaTutorial
+- Machine Learning
+- MachineLearning
+- MCP
+- Microsoft
+- Software Development
+- Videos
+section_names:
+- ai
 ---
-
 In this introductory session, Ayan Gupta and the Microsoft Developer team kick off a beginners’ series merging Java with artificial intelligence. The video promises a hands-on roadmap, expert guests, and a practical focus for aspiring AI-powered Java developers.<!--excerpt_end-->
 
 {% youtube I0yhGsozx8o %}

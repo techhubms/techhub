@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft and LangChain: Advancing AI Security for Open Source on Azure"
-description: "This article explores the collaborative security efforts between Microsoft and LangChain, highlighting the integration of open-source AI tools with Azure and improved security practices for enterprises deploying LLM-based applications."
-author: "Marlene Mhangami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/microsoft-and-langchain-leading-the-way-in-ai-security-for-open-source-on-azure"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Microsoft and LangChain: Advancing AI Security for Open Source on Azure'
+author: Marlene Mhangami
+canonical_url: https://devblogs.microsoft.com/blog/microsoft-and-langchain-leading-the-way-in-ai-security-for-open-source-on-azure
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-06-05 17:05:24 +00:00
-permalink: "/2025-06-05-Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Security", "Autogen", "Azure", "Azure AI Foundry", "Continuous Integration", "Information Leakage", "Langchain", "LangChain4J", "LangGraph", "Large Language Models", "News", "Open Source", "Privilege Escalation", "Python", "Security", "Semantic Kernel", "Trust"]
-tags_normalized: ["ai", "ai security", "autogen", "azure", "azure ai foundry", "continuous integration", "information leakage", "langchain", "langchain4j", "langgraph", "large language models", "news", "open source", "privilege escalation", "python", "security", "semantic kernel", "trust"]
+permalink: /ai/news/Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure
+tags:
+- AI
+- AI Security
+- Autogen
+- Azure
+- Azure AI Foundry
+- Continuous Integration
+- Information Leakage
+- Langchain
+- LangChain4J
+- LangGraph
+- Large Language Models
+- News
+- Open Source
+- Privilege Escalation
+- Python
+- Security
+- Semantic Kernel
+- Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Authored by Marlene Mhangami, this article examines Microsoft's partnership with LangChain to bolster AI security for open-source developers on Azure. The collaboration addresses integration risks while ensuring enterprises can safely accelerate innovation in the AI landscape.<!--excerpt_end-->
 
 ## Microsoft and LangChain: Advancing AI Security for Open Source on Azure

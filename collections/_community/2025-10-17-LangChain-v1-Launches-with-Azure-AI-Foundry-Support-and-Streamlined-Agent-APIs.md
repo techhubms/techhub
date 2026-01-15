@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "LangChain v1 Launches with Azure AI Foundry Support and Streamlined Agent APIs"
-description: "This post announces the general availability of LangChain v1, highlighting major changes in agent abstractions, richer multimodal support, and new developer APIs. It specifically covers integration with Azure AI Foundry and Azure OpenAI, providing migration tips, middleware extensibility, and practical guidance for developers leveraging Microsoft cloud AI services with Python and JavaScript."
-author: "mmhangami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/langchain-v1-is-now-generally-available/ba-p/4462159"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: LangChain v1 Launches with Azure AI Foundry Support and Streamlined Agent APIs
+author: mmhangami
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/langchain-v1-is-now-generally-available/ba-p/4462159
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 07:25:12 +00:00
-permalink: "/2025-10-17-LangChain-v1-Launches-with-Azure-AI-Foundry-Support-and-Streamlined-Agent-APIs.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Abstractions", "AI", "AI Agents", "API Migration", "Azure", "Azure AI Foundry", "Azure OpenAI", "Community", "Content Blocks", "Developer API", "JavaScript", "LangChain V1", "LangGraph", "LLMs", "Microsoft Azure", "Microsoft Developer Advocates", "Middleware", "Multimodal AI", "Python"]
-tags_normalized: ["agent abstractions", "ai", "ai agents", "api migration", "azure", "azure ai foundry", "azure openai", "community", "content blocks", "developer api", "javascript", "langchain v1", "langgraph", "llms", "microsoft azure", "microsoft developer advocates", "middleware", "multimodal ai", "python"]
+permalink: /ai/community/LangChain-v1-Launches-with-Azure-AI-Foundry-Support-and-Streamlined-Agent-APIs
+tags:
+- Agent Abstractions
+- AI
+- AI Agents
+- API Migration
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Community
+- Content Blocks
+- Developer API
+- JavaScript
+- LangChain V1
+- LangGraph
+- LLMs
+- Microsoft Azure
+- Microsoft Developer Advocates
+- Middleware
+- Multimodal AI
+- Python
+section_names:
+- ai
+- azure
 ---
-
 Community author mmhangami explores the new features of LangChain v1, focusing on Azure AI Foundry support, streamlined agent APIs, and key developer updates relevant to integrating Microsoft cloud AI services.<!--excerpt_end-->
 
 # LangChain v1 Launches with Azure AI Foundry Support and Streamlined Agent APIs
@@ -52,7 +69,7 @@ Middleware can be injected everywhere: before/after model or tool calls, for err
 
 ### 5. Simplified Migration and Namespace
 
-Many older modules have moved to `langchain-classic` to minimize clutter. There is a [dedicated migration guide](http://LangChain%20Docs) to help users upgrade from v0 to v1.
+Many older modules have moved to `langchain-classic` to minimize clutter. There is a dedicated migration guide to help users upgrade from v0 to v1.
 
 ---
 
@@ -88,7 +105,7 @@ Many older modules have moved to `langchain-classic` to minimize clutter. There 
 
 ## Migration & Resources
 
-- Review the [migration guide](http://LangChain%20Docs) for a step-by-step process.
+- Review the migration guide for a step-by-step process.
 - Leverage extensive documentation on using LangChain with Azure services for both Python and JavaScript developers.
 
 For feedback, issues, and ongoing updates, engage with the LangChain GitHub and Microsoft developer communities.

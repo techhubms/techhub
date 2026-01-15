@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "What's New in C# 14 and .NET 10"
-description: "In this video, Nick Chapsas explores the latest enhancements and features in C# 14 and .NET 10. The discussion centers on new language capabilities and framework updates that are important for developers working with Microsoft's development platforms, offering insights into the release's most impactful changes."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=M5BOO35688A"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: What's New in C# 14 and .NET 10
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=M5BOO35688A
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-11-18 12:01:01 +00:00
-permalink: "/2025-11-18-Whats-New-in-C-14-and-NET-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "C#", "C# 14", "C# Features", "Coding", "Development", "Framework Updates", "Language Features", "Microsoft", "Programming Languages", "Release Highlights", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "csharp", "csharp 14", "csharp features", "coding", "development", "framework updates", "language features", "microsoft", "programming languages", "release highlights", "videos"]
+permalink: /coding/videos/Whats-New-in-C-14-and-NET-10
+tags:
+- .NET
+- .NET 10
+- C#
+- C# 14
+- C# Features
+- Coding
+- Development
+- Framework Updates
+- Language Features
+- Microsoft
+- Programming Languages
+- Release Highlights
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas presents a video overview of C# 14 and .NET 10, breaking down notable updates and improvements for .NET and C# developers.<!--excerpt_end-->
 
 {% youtube M5BOO35688A %}

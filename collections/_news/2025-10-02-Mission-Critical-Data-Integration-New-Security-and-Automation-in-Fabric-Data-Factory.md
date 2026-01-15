@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Mission-Critical Data Integration: New Security and Automation in Fabric Data Factory"
-description: "This article details the latest updates in Microsoft Fabric Data Factory, highlighting mission-critical features for data integration. Readers will learn about enhanced security, authentication, automation options, and compliance tools. Coverage includes workspace identity authentication, Azure Key Vault integration, VNet gateways, and new APIs, aiming to support enterprise-grade data orchestration and protection across hybrid and cloud environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Mission-Critical Data Integration: New Security and Automation in Fabric Data Factory'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 17:00:00 +00:00
-permalink: "/2025-10-02-Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Key Vault", "Compliance", "Data Factory", "Data Integration", "Data Orchestration", "Data Security", "Enterprise Data", "Hybrid Cloud", "Microsoft Fabric", "ML", "Network Isolation", "News", "PowerShell Automation", "Private Link", "REST API", "Security", "VNet Gateway", "Workspace Identity Authentication"]
-tags_normalized: ["azure", "azure key vault", "compliance", "data factory", "data integration", "data orchestration", "data security", "enterprise data", "hybrid cloud", "microsoft fabric", "ml", "network isolation", "news", "powershell automation", "private link", "rest api", "security", "vnet gateway", "workspace identity authentication"]
+permalink: /ml/news/Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory
+tags:
+- Azure
+- Azure Key Vault
+- Compliance
+- Data Factory
+- Data Integration
+- Data Orchestration
+- Data Security
+- Enterprise Data
+- Hybrid Cloud
+- Microsoft Fabric
+- ML
+- Network Isolation
+- News
+- PowerShell Automation
+- Private Link
+- REST API
+- Security
+- VNet Gateway
+- Workspace Identity Authentication
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog outlines recent mission-critical enhancements to Fabric Data Factory, focusing on security, compliance, and automation for enterprise data integration, with details curated by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Mission-Critical Data Integration: What’s New in Fabric Data Factory

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automating .NET Development with GitHub Copilot Coding Agent"
-description: "This article demonstrates how the GitHub Copilot Coding Agent streamlines common .NET development tasks. Focusing on real-world scenarios, it walks through automating unit test creation and feature implementation from a Product Requirements Document (PRD) using Copilot in the cloud. Readers will learn how to leverage Copilot Coding Agent to analyze repositories, plan tasks, create issues and pull requests, and ultimately automate repetitive or boilerplate development work. The content highlights best practices for integrating Copilot with GitHub workflows, discusses customizability through AGENTS.md, and emphasizes the importance of human oversight to maintain code quality. Relevant for .NET developers looking to increase productivity using AI-powered tools within their existing workflows."
-author: "Bruno Capuano"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Automating .NET Development with GitHub Copilot Coding Agent
+author: Bruno Capuano
+canonical_url: https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-03 17:05:00 +00:00
-permalink: "/2025-09-03-Automating-NET-Development-with-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI in Development", "Automation", "C#", "Coding", "Continuous Integration", "DevOps", "Eshoplite", "GitHub", "GitHub Copilot", "GitHub Copilot Coding Agent", "MCP Server", "News", "Product Requirements Document", "Pull Requests", "Test Coverage", "Unit Testing", "Workflow Automation"]
-tags_normalized: ["dotnet", "ai", "ai in development", "automation", "csharp", "coding", "continuous integration", "devops", "eshoplite", "github", "github copilot", "github copilot coding agent", "mcp server", "news", "product requirements document", "pull requests", "test coverage", "unit testing", "workflow automation"]
+permalink: /github-copilot/news/Automating-NET-Development-with-GitHub-Copilot-Coding-Agent
+tags:
+- .NET
+- AI
+- AI in Development
+- Automation
+- C#
+- Coding
+- Continuous Integration
+- DevOps
+- Eshoplite
+- GitHub
+- GitHub Copilot
+- GitHub Copilot Coding Agent
+- MCP Server
+- News
+- Product Requirements Document
+- Pull Requests
+- Test Coverage
+- Unit Testing
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Bruno Capuano showcases how the GitHub Copilot Coding Agent automates unit tests and feature implementation in .NET projects, demonstrating AI-powered development enhancements for practitioners.<!--excerpt_end-->
 
 # Automating .NET Development with GitHub Copilot Coding Agent

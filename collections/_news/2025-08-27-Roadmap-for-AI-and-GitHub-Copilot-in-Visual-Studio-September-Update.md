@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Roadmap for AI and GitHub Copilot in Visual Studio: September Update"
-description: "This roadmap news details upcoming AI-powered agentic experiences in Visual Studio, including Copilot Chat, profiler and debugger agents, integration with Azure DevOps and GitHub Actions, and support for customizable workflows through Model Context Protocol (MCP). It highlights improvements in Copilot-powered code completions, agent-mode enhancements, and new DevOps integrations for .NET and Azure developers."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Roadmap for AI and GitHub Copilot in Visual Studio: September Update'
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-27 18:02:11 +00:00
-permalink: "/2025-08-27-Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-September-Update.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agent", "Agentic Workflows", "AI", "AI Tools", "Azure", "Azure DevOps", "Azure MCP", "Chat", "CI/CD", "Coding", "Copilot", "Copilot Chat", "Debugger Agent", "Developer Experience", "DevOps", "Editor Improvements", "GitHub Actions", "GitHub Copilot", "MCP", "Models", "News", "Profiler Agent", "Roadmap", "VS"]
-tags_normalized: ["dotnet", "agent", "agentic workflows", "ai", "ai tools", "azure", "azure devops", "azure mcp", "chat", "cislashcd", "coding", "copilot", "copilot chat", "debugger agent", "developer experience", "devops", "editor improvements", "github actions", "github copilot", "mcp", "models", "news", "profiler agent", "roadmap", "vs"]
+permalink: /github-copilot/news/Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-September-Update
+tags:
+- .NET
+- Agent
+- Agentic Workflows
+- AI
+- AI Tools
+- Azure
+- Azure DevOps
+- Azure MCP
+- Chat
+- CI/CD
+- Coding
+- Copilot
+- Copilot Chat
+- Debugger Agent
+- Developer Experience
+- DevOps
+- Editor Improvements
+- GitHub Actions
+- GitHub Copilot
+- MCP
+- Models
+- News
+- Profiler Agent
+- Roadmap
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Rhea Patel presents the September roadmap for integrating AI, agentic tools, and GitHub Copilot within Visual Studio, outlining major enhancements for developers, including new agents, customizable modes, and improved DevOps integrations.<!--excerpt_end-->
 
 # Roadmap for AI and GitHub Copilot in Visual Studio: September Update

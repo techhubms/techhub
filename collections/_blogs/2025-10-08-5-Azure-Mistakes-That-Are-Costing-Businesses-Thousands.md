@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "5 Azure Mistakes That Are Costing Businesses Thousands"
-description: "This article outlines the five most common mistakes organizations make when managing Microsoft Azure, including overprovisioning resources, neglecting reserved instance savings, poor tagging and cost governance, underestimating data egress and storage fees, and failing to continuously monitor costs. It offers practical, actionable fixes for each mistake with a focus on cost optimization and governance best practices."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 5 Azure Mistakes That Are Costing Businesses Thousands
+author: Dellenny
+canonical_url: https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-08 07:25:16 +00:00
-permalink: "/2025-10-08-5-Azure-Mistakes-That-Are-Costing-Businesses-Thousands.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Budgets", "Billing", "Blogs", "Cloud Monitoring", "Cost Governance", "Cost Management", "Cost Optimization", "Data Egress", "DevOps", "FinOps", "Reserved Instances", "Resource Management", "Savings Plans", "Tagging Policy"]
-tags_normalized: ["azure", "azure advisor", "azure automation", "azure budgets", "billing", "blogs", "cloud monitoring", "cost governance", "cost management", "cost optimization", "data egress", "devops", "finops", "reserved instances", "resource management", "savings plans", "tagging policy"]
+permalink: /azure/blogs/5-Azure-Mistakes-That-Are-Costing-Businesses-Thousands
+tags:
+- Azure
+- Azure Advisor
+- Azure Automation
+- Azure Budgets
+- Billing
+- Blogs
+- Cloud Monitoring
+- Cost Governance
+- Cost Management
+- Cost Optimization
+- Data Egress
+- DevOps
+- FinOps
+- Reserved Instances
+- Resource Management
+- Savings Plans
+- Tagging Policy
+section_names:
+- azure
+- devops
 ---
-
 Dellenny provides actionable guidance on avoiding common Microsoft Azure cost pitfalls, detailing fixes for each and empowering technical teams to optimize their cloud spending.<!--excerpt_end-->
 
 # 5 Azure Mistakes That Are Costing Businesses Thousands

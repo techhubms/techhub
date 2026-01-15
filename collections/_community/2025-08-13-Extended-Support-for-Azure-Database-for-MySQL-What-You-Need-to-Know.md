@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Extended Support for Azure Database for MySQL: What You Need to Know"
-description: "Microsoft has announced Extended Support for Azure Database for MySQL, a paid offering that allows customers to continue running workloads on older MySQL versions, such as 5.7 and 8.0, after their community end-of-life dates. This guide details the features, support timelines, pricing structure, and best practices for customers who wish to maintain operational continuity while planning their upgrade journey."
-author: "Elendil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Extended Support for Azure Database for MySQL: What You Need to Know'
+author: Elendil
+canonical_url: https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 15:15:15 +00:00
-permalink: "/2025-08-13-Extended-Support-for-Azure-Database-for-MySQL-What-You-Need-to-Know.html"
-categories: ["Azure"]
-tags: ["ARM Templates", "Azure", "Azure CLI", "Azure Database For MySQL", "Azure Flexible Server", "Cloud Database", "Community", "Community End Of Life", "Database Migration", "Enterprise SLA", "Extended Support", "Microsoft Learn", "MySQL 5.7", "MySQL 8.0", "Pay as You Go Pricing", "Security Updates", "Upgrade Best Practices"]
-tags_normalized: ["arm templates", "azure", "azure cli", "azure database for mysql", "azure flexible server", "cloud database", "community", "community end of life", "database migration", "enterprise sla", "extended support", "microsoft learn", "mysql 5dot7", "mysql 8dot0", "pay as you go pricing", "security updates", "upgrade best practices"]
+permalink: /azure/community/Extended-Support-for-Azure-Database-for-MySQL-What-You-Need-to-Know
+tags:
+- ARM Templates
+- Azure
+- Azure CLI
+- Azure Database For MySQL
+- Azure Flexible Server
+- Cloud Database
+- Community
+- Community End Of Life
+- Database Migration
+- Enterprise SLA
+- Extended Support
+- Microsoft Learn
+- MySQL 5.7
+- MySQL 8.0
+- Pay as You Go Pricing
+- Security Updates
+- Upgrade Best Practices
+section_names:
+- azure
 ---
-
 Elendil explains the new Extended Support program for Azure Database for MySQL, highlighting support timelines, automatic enrollment, and upgrade strategies for customers using older MySQL versions.<!--excerpt_end-->
 
 # Extended Support for Azure Database for MySQL: What You Need to Know

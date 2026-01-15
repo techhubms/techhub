@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights"
-description: "This update from John Savill's Technical Training covers the latest Azure news as of September 2025, including key service retirements (such as NVv3, ADE, App Service on Arc), new Azure capabilities (AKS Fleet Manager, App GW server-sent events, AFD signed request), the rise of AI Tours, important backup and migration updates, GitHub Copilot in app modernization, and Microsoft Marketplace changes. The video is structured into chapters for easy navigation and is designed for Azure practitioners looking to stay up-to-date on technical changes, product lifecycles, and hands-on developer tooling."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dMPMqFmnJ4A"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=dMPMqFmnJ4A
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-26 15:14:46 +00:00
-permalink: "/2025-09-26-Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AFD Signed Request", "AI", "AKS Insights", "App Gateway", "App Modernization", "App Service On Arc", "Azure", "Azure Backups", "Azure Cloud", "Azure Data Encryption (ade)", "Azure Files Premium", "Azure Fleet Manager", "Azure Migrate", "Azure Update", "Cloud", "Cloud Infrastructure", "Container Insights", "DevOps", "GitHub Copilot", "John Savill", "Microsoft", "Microsoft Azure", "Microsoft Marketplace", "MySQL Flexible Server", "NVv3 Retirement", "PostgreSQL", "Service Retirement", "Videos"]
-tags_normalized: ["afd signed request", "ai", "aks insights", "app gateway", "app modernization", "app service on arc", "azure", "azure backups", "azure cloud", "azure data encryption ade", "azure files premium", "azure fleet manager", "azure migrate", "azure update", "cloud", "cloud infrastructure", "container insights", "devops", "github copilot", "john savill", "microsoft", "microsoft azure", "microsoft marketplace", "mysql flexible server", "nvv3 retirement", "postgresql", "service retirement", "videos"]
+permalink: /github-copilot/videos/Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights
+tags:
+- AFD Signed Request
+- AI
+- AKS Insights
+- App Gateway
+- App Modernization
+- App Service On Arc
+- Azure
+- Azure Backups
+- Azure Cloud
+- Azure Data Encryption (ade)
+- Azure Files Premium
+- Azure Fleet Manager
+- Azure Migrate
+- Azure Update
+- Cloud
+- Cloud Infrastructure
+- Container Insights
+- DevOps
+- GitHub Copilot
+- John Savill
+- Microsoft
+- Microsoft Azure
+- Microsoft Marketplace
+- MySQL Flexible Server
+- NVv3 Retirement
+- PostgreSQL
+- Service Retirement
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 John Savill's Technical Training brings an in-depth Azure update for September 26th, 2025, highlighting vital service retirements, new Azure capabilities, GitHub Copilot usage, and actionable news for cloud practitioners.<!--excerpt_end-->
 
 {% youtube dMPMqFmnJ4A %}

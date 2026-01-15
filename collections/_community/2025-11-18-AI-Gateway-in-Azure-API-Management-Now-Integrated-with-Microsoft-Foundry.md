@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AI Gateway in Azure API Management Now Integrated with Microsoft Foundry"
-description: "This article explains how Microsoft has integrated AI Gateway, built on Azure API Management, directly into Microsoft Foundry. The integration extends proven API governance, security, and observability frameworks to AI workloads and provides unified, enterprise-grade control for models, agents, and tools. Learn about new governance features, operational capabilities, and ways organizations can streamline secure AI adoption, with practical setup instructions and links to further learning at Ignite."
-author: "vladvino"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/ai-gateway-in-azure-api-management-is-now-available-in-microsoft/ba-p/4470676"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI Gateway in Azure API Management Now Integrated with Microsoft Foundry
+author: vladvino
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/ai-gateway-in-azure-api-management-is-now-available-in-microsoft/ba-p/4470676
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:00:00 +00:00
-permalink: "/2025-11-18-AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Management", "AI", "AI Gateway", "API Governance", "Application Insights", "Azure", "Azure API Management", "Centralized Control", "Community", "Compliance", "Content Safety", "Enterprise AI", "Governance Policies", "MCP", "Microsoft Foundry", "Microsoft Ignite", "Observability", "Security", "Telemetry", "Token Quotas"]
-tags_normalized: ["agent management", "ai", "ai gateway", "api governance", "application insights", "azure", "azure api management", "centralized control", "community", "compliance", "content safety", "enterprise ai", "governance policies", "mcp", "microsoft foundry", "microsoft ignite", "observability", "security", "telemetry", "token quotas"]
+permalink: /ai/community/AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry
+tags:
+- Agent Management
+- AI
+- AI Gateway
+- API Governance
+- Application Insights
+- Azure
+- Azure API Management
+- Centralized Control
+- Community
+- Compliance
+- Content Safety
+- Enterprise AI
+- Governance Policies
+- MCP
+- Microsoft Foundry
+- Microsoft Ignite
+- Observability
+- Security
+- Telemetry
+- Token Quotas
+section_names:
+- ai
+- azure
+- security
 ---
-
 vladvino details the integration of AI Gateway into Microsoft Foundry, highlighting new unified governance and security features for enterprise-scale AI workloads with Azure API Management.<!--excerpt_end-->
 
 # AI Gateway in Azure API Management Now Integrated with Microsoft Foundry

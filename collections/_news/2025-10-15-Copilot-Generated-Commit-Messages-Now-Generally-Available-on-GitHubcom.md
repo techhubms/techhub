@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Copilot-Generated Commit Messages Now Generally Available on GitHub.com"
-description: "This update from Allison on the GitHub team announces that contextual commit message suggestions powered by GitHub Copilot are now generally available for all users on github.com. The feature streamlines the documentation process by automatically providing concise summaries of your file changes during commits, helping developers maintain better commit hygiene. The release details opt-in and opt-out controls for individuals and enterprises, and highlights continuing default behaviors for certain file operations. Links to community discussions and prior previews are also included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot-Generated Commit Messages Now Generally Available on GitHub.com
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-15 16:47:01 +00:00
-permalink: "/2025-10-15-Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automation", "Commit Messages", "Commit Metadata", "Copilot", "Developer Workflow", "DevOps", "Documentation", "Feature Release", "GitHub Copilot", "GitHub Enterprise Cloud", "GitHub.com", "News"]
-tags_normalized: ["ai", "ai assistant", "automation", "commit messages", "commit metadata", "copilot", "developer workflow", "devops", "documentation", "feature release", "github copilot", "github enterprise cloud", "githubdotcom", "news"]
+permalink: /github-copilot/news/Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom
+tags:
+- AI
+- AI Assistant
+- Automation
+- Commit Messages
+- Commit Metadata
+- Copilot
+- Developer Workflow
+- DevOps
+- Documentation
+- Feature Release
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- GitHub.com
+- News
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison announces that GitHub Copilot’s contextual commit message suggestions are now generally available on github.com, offering developers automated, concise commit documentation powered by AI.<!--excerpt_end-->
 
 # Copilot-Generated Commit Messages Now Generally Available on GitHub.com

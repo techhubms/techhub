@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Blazor Internship Demo Fest: New Components and Enhanced Navigation"
-description: "This Blazor community video showcases demos from Blazor interns, specifically highlighting Roland Vizner’s work on new media handling components and improved state persistence for navigation in Blazor apps. Presenters include Daniel Roth and Javier Calvarro Nelson. Viewers will see practical, developer-focused insights and community resources."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xRTgusuYm8k"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Blazor Internship Demo Fest: New Components and Enhanced Navigation'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=xRTgusuYm8k
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-04 18:35:48 +00:00
-permalink: "/2025-09-04-Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Blazor", "Coding", "Community Demo", "Components", "Daniel Roth", "Developer Showcase", "Internship", "Javier Calvarro Nelson", "Media Handling", "Navigation", "Roland Vizner", "State Persistence", "Videos"]
-tags_normalized: ["dotnet", "aspdotnet core", "blazor", "coding", "community demo", "components", "daniel roth", "developer showcase", "internship", "javier calvarro nelson", "media handling", "navigation", "roland vizner", "state persistence", "videos"]
+permalink: /coding/videos/Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation
+tags:
+- .NET
+- ASP.NET Core
+- Blazor
+- Coding
+- Community Demo
+- Components
+- Daniel Roth
+- Developer Showcase
+- Internship
+- Javier Calvarro Nelson
+- Media Handling
+- Navigation
+- Roland Vizner
+- State Persistence
+- Videos
+section_names:
+- coding
 ---
-
 dotnet hosts a Blazor community standup, featuring Roland Vizner's internship demos of new Blazor features and enhancements, with insights from Daniel Roth and Javier Calvarro Nelson.<!--excerpt_end-->
 
 {% youtube xRTgusuYm8k %}

@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "FinOps as Code – Unlocking Cloud Cost Optimization"
-description: "This article by Joydip Kanjilal explores how organizations can leverage FinOps and FinOps as Code principles to optimize cloud spending. It covers cloud cost optimization strategies, FinOps fundamentals, the integration of finance and engineering, technical steps for implementation, and the challenges that businesses face in adopting automated, policy-driven cloud cost management practices using code."
-author: "Joydip Kanjilal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: FinOps as Code – Unlocking Cloud Cost Optimization
+author: Joydip Kanjilal
+canonical_url: https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-19 10:15:37 +00:00
-permalink: "/2025-08-19-FinOps-as-Code-Unlocking-Cloud-Cost-Optimization.html"
-categories: ["DevOps"]
-tags: ["Automation", "Blogs", "Business Of DevOps", "CI/CD Cloud Cost Control", "CI/CD Pipelines", "Cloud Budgeting", "Cloud Cost Optimization", "Cloud Financial Management", "Cloud Governance", "Cloud Native Practices", "Cloud Resource Allocation", "Cloud Spend Forecasting", "Cloud Spending Control", "Collaboration", "Contributed Content", "Cost Aware Culture", "Cost Management Policy", "Cost Visibility", "DevOps", "DevOps in The Cloud", "Financial Operations Automation", "FinOps", "FinOps as Code", "FinOps Best Practices", "FinOps Culture", "FinOps Pillars", "IaC", "Policy Driven Deployment", "Rightsizing Resources", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["automation", "blogs", "business of devops", "cislashcd cloud cost control", "cislashcd pipelines", "cloud budgeting", "cloud cost optimization", "cloud financial management", "cloud governance", "cloud native practices", "cloud resource allocation", "cloud spend forecasting", "cloud spending control", "collaboration", "contributed content", "cost aware culture", "cost management policy", "cost visibility", "devops", "devops in the cloud", "financial operations automation", "finops", "finops as code", "finops best practices", "finops culture", "finops pillars", "iac", "policy driven deployment", "rightsizing resources", "social facebook", "social linkedin", "social x"]
+permalink: /devops/blogs/FinOps-as-Code-Unlocking-Cloud-Cost-Optimization
+tags:
+- Automation
+- Blogs
+- Business Of DevOps
+- CI/CD Cloud Cost Control
+- CI/CD Pipelines
+- Cloud Budgeting
+- Cloud Cost Optimization
+- Cloud Financial Management
+- Cloud Governance
+- Cloud Native Practices
+- Cloud Resource Allocation
+- Cloud Spend Forecasting
+- Cloud Spending Control
+- Collaboration
+- Contributed Content
+- Cost Aware Culture
+- Cost Management Policy
+- Cost Visibility
+- DevOps
+- DevOps in The Cloud
+- Financial Operations Automation
+- FinOps
+- FinOps as Code
+- FinOps Best Practices
+- FinOps Culture
+- FinOps Pillars
+- IaC
+- Policy Driven Deployment
+- Rightsizing Resources
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- devops
 ---
-
 Joydip Kanjilal discusses the application of FinOps and FinOps as Code for organizations seeking to automate and optimize cloud spending, offering actionable strategies for technical and DevOps teams.<!--excerpt_end-->
 
 # FinOps as Code – Unlocking Cloud Cost Optimization

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Passed the Microsoft AI-900 Exam for Azure AI Fundamentals Certification"
-description: "Thomas Maurer shares his experience passing the Microsoft AI-900 certification exam, which validates foundational understanding of AI concepts and their implementation with Microsoft Azure. The post outlines the exam's key topics, the benefits of pursuing the certification, and recommendations for those interested in learning about Azure AI services."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Passed the Microsoft AI-900 Exam for Azure AI Fundamentals Certification
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-28 14:48:56 +00:00
-permalink: "/2025-08-28-Passed-the-Microsoft-AI-900-Exam-for-Azure-AI-Fundamentals-Certification.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI 900", "AI Workloads", "Azure", "Azure AI Fundamentals", "Azure Cognitive Services", "Azure Machine Learning", "Azure OpenAI Service", "Blogs", "Certification", "Cloud", "Cloud Computing", "Computer Vision", "Conversational AI", "Exam Preparation", "Machine Learning", "Microsoft", "Microsoft Azure", "Microsoft Certified", "Natural Language Processing"]
-tags_normalized: ["ai", "ai 900", "ai workloads", "azure", "azure ai fundamentals", "azure cognitive services", "azure machine learning", "azure openai service", "blogs", "certification", "cloud", "cloud computing", "computer vision", "conversational ai", "exam preparation", "machine learning", "microsoft", "microsoft azure", "microsoft certified", "natural language processing"]
+permalink: /ai/blogs/Passed-the-Microsoft-AI-900-Exam-for-Azure-AI-Fundamentals-Certification
+tags:
+- AI
+- AI 900
+- AI Workloads
+- Azure
+- Azure AI Fundamentals
+- Azure Cognitive Services
+- Azure Machine Learning
+- Azure OpenAI Service
+- Blogs
+- Certification
+- Cloud
+- Cloud Computing
+- Computer Vision
+- Conversational AI
+- Exam Preparation
+- Machine Learning
+- Microsoft
+- Microsoft Azure
+- Microsoft Certified
+- Natural Language Processing
+section_names:
+- ai
+- azure
 ---
-
 Thomas Maurer discusses his achievement in earning the Microsoft Certified: Azure AI Fundamentals (AI-900) certification, summarizing the exam focus areas and Azure's AI services.<!--excerpt_end-->
 
 # Passed the Microsoft AI-900 Exam for Azure AI Fundamentals Certification

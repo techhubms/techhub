@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Actions Adds YAML Anchors and Workflow Templates from Non-Public Repositories"
-description: "This update highlights three new features for GitHub Actions users: support for YAML anchors for easier configuration reuse, ability to use workflow templates from non-public `.github` repositories, and a new `check_run_id` for identifying running jobs within workflows. These improvements streamline workflow management and make automation setups in GitHub Actions more flexible and maintainable."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Actions Adds YAML Anchors and Workflow Templates from Non-Public Repositories
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 18:37:50 +00:00
-permalink: "/2025-09-18-GitHub-Actions-Adds-YAML-Anchors-and-Workflow-Templates-from-Non-Public-Repositories.html"
-categories: ["DevOps"]
-tags: [".github Repositories", "Actions", "Automation", "Check Run Id", "CI/CD", "Continuous Deployment", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Improvement", "Job Context", "News", "Workflow Configuration", "Workflow Templates", "YAML Anchors"]
-tags_normalized: ["dotgithub repositories", "actions", "automation", "check run id", "cislashcd", "continuous deployment", "continuous integration", "devops", "github", "github actions", "improvement", "job context", "news", "workflow configuration", "workflow templates", "yaml anchors"]
+permalink: /devops/news/GitHub-Actions-Adds-YAML-Anchors-and-Workflow-Templates-from-Non-Public-Repositories
+tags:
+- .github Repositories
+- Actions
+- Automation
+- Check Run Id
+- CI/CD
+- Continuous Deployment
+- Continuous Integration
+- DevOps
+- GitHub
+- GitHub Actions
+- Improvement
+- Job Context
+- News
+- Workflow Configuration
+- Workflow Templates
+- YAML Anchors
+section_names:
+- devops
 ---
-
 Allison details new updates to GitHub Actions, including YAML anchor support, workflow templates from non-public repositories, and a new job check run ID feature for streamlined DevOps automation.<!--excerpt_end-->
 
 # GitHub Actions Adds YAML Anchors and Workflow Templates from Non-Public Repositories

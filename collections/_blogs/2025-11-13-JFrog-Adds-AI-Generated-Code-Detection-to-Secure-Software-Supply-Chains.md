@@ -1,20 +1,58 @@
----
-layout: "post"
-title: "JFrog Adds AI-Generated Code Detection to Secure Software Supply Chains"
-description: "This article by Mike Vizard explores JFrog's newly introduced tools—AI-Generated Code Detection and Shadow AI Detection—which deliver governance and risk mitigation for DevSecOps teams. The tools focus on automated identification of code written by AI-powered tools, monitoring and tracking model/API usage in software supply chains, and enhancing application security practices. The post analyzes challenges associated with large language models (LLMs) and explains why application security is increasingly dependent on properly managing AI code and software composition."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/jfrog-adds-ability-to-track-usage-of-ai-coding-tools/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: JFrog Adds AI-Generated Code Detection to Secure Software Supply Chains
+author: Mike Vizard
+canonical_url: https://devops.com/jfrog-adds-ability-to-track-usage-of-ai-coding-tools/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-13 08:00:29 +00:00
-permalink: "/2025-11-13-JFrog-Adds-AI-Generated-Code-Detection-to-Secure-Software-Supply-Chains.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI API Management", "AI Code Auditing", "AI Code Detection", "AI Coding Tools", "AI Compliance Tracking", "AI Generated Code", "AI Governance", "AI in DevOps", "AI Model Inventory", "AI Risk Mitigation", "Application Security", "Blogs", "Code Auditing", "Code Risk Detection", "Compliance Tracking", "DevOps", "Devsecops", "JFrog", "Large Language Models", "LLM Security", "MLOps", "Risk Mitigation", "SCA", "SCA Tools", "Secure Coding", "Secure Coding Practices", "Security", "Shadow AI", "Shadow AI Detection", "Social Facebook", "Social LinkedIn", "Social X", "Software Composition Analysis", "Software Provenance", "Software Supply Chain", "Software Supply Chain Security", "Software Vulnerabilities", "Source Code Scanning"]
-tags_normalized: ["ai", "ai api management", "ai code auditing", "ai code detection", "ai coding tools", "ai compliance tracking", "ai generated code", "ai governance", "ai in devops", "ai model inventory", "ai risk mitigation", "application security", "blogs", "code auditing", "code risk detection", "compliance tracking", "devops", "devsecops", "jfrog", "large language models", "llm security", "mlops", "risk mitigation", "sca", "sca tools", "secure coding", "secure coding practices", "security", "shadow ai", "shadow ai detection", "social facebook", "social linkedin", "social x", "software composition analysis", "software provenance", "software supply chain", "software supply chain security", "software vulnerabilities", "source code scanning"]
+permalink: /ai/blogs/JFrog-Adds-AI-Generated-Code-Detection-to-Secure-Software-Supply-Chains
+tags:
+- AI
+- AI API Management
+- AI Code Auditing
+- AI Code Detection
+- AI Coding Tools
+- AI Compliance Tracking
+- AI Generated Code
+- AI Governance
+- AI in DevOps
+- AI Model Inventory
+- AI Risk Mitigation
+- Application Security
+- Blogs
+- Code Auditing
+- Code Risk Detection
+- Compliance Tracking
+- DevOps
+- Devsecops
+- JFrog
+- Large Language Models
+- LLM Security
+- MLOps
+- Risk Mitigation
+- SCA
+- SCA Tools
+- Secure Coding
+- Secure Coding Practices
+- Security
+- Shadow AI
+- Shadow AI Detection
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Composition Analysis
+- Software Provenance
+- Software Supply Chain
+- Software Supply Chain Security
+- Software Vulnerabilities
+- Source Code Scanning
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard examines how JFrog's new AI code detection and governance features empower DevSecOps teams to enhance software supply chain security and manage risks from AI-generated code.<!--excerpt_end-->
 
 # JFrog Adds AI-Generated Code Detection to Secure Software Supply Chains

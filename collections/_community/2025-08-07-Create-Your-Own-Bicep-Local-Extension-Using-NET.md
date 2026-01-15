@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Create Your Own Bicep Local Extension Using .NET"
-description: "This practical guide demonstrates how to develop a custom Bicep Local Extension with .NET, enabling fully local resource management with Bicep syntax outside of Azure ARM. Step-by-step instructions cover project scaffolding, implementing resource handlers, packaging, and executing your extension, assuming familiarity with .NET and Bicep CLI."
-author: "Sydney Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/create-your-own-bicep-local-extension-using-net/ba-p/4439967"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Create Your Own Bicep Local Extension Using .NET
+author: Sydney Smith
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/create-your-own-bicep-local-extension-using-net/ba-p/4439967
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 14:50:37 +00:00
-permalink: "/2025-08-07-Create-Your-Own-Bicep-Local-Extension-Using-NET.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 9", "ARM", "Azure", "Azure Bicep", "Bicep Extension", "Bicep Local", "C#", "CLI", "Coding", "Community", "Custom Extension", "DevOps", "IaC", "Local Deployment", "Main.bicep", "Program.cs", "Project Scaffolding", "Resource Handler", "VS Code"]
-tags_normalized: ["dotnet 9", "arm", "azure", "azure bicep", "bicep extension", "bicep local", "csharp", "cli", "coding", "community", "custom extension", "devops", "iac", "local deployment", "maindotbicep", "programdotcs", "project scaffolding", "resource handler", "vs code"]
+permalink: /coding/community/Create-Your-Own-Bicep-Local-Extension-Using-NET
+tags:
+- .NET 9
+- ARM
+- Azure
+- Azure Bicep
+- Bicep Extension
+- Bicep Local
+- C#
+- CLI
+- Coding
+- Community
+- Custom Extension
+- DevOps
+- IaC
+- Local Deployment
+- Main.bicep
+- Program.cs
+- Project Scaffolding
+- Resource Handler
+- VS Code
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Sydney Smith provides a comprehensive walkthrough for creating Bicep Local Extensions with .NET, enabling local infrastructure as code workflows without Azure connectivity.<!--excerpt_end-->
 
 # Create Your Own Bicep Local Extension Using .NET

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Practical Insights on Using Azure Developer CLI (azd) for Migration Projects"
-description: "Frank Boucher shares hands-on tips and lessons learned using the Azure Developer CLI (azd) to migrate the AzUrlShortener tool. The post covers infrastructure provisioning with Bicep, managing custom domains, integrating CI/CD, and leveraging azd's capabilities for efficient Azure deployments."
-author: "Frank Boucher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-in-a-real-life-scenario/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Practical Insights on Using Azure Developer CLI (azd) for Migration Projects
+author: Frank Boucher
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-in-a-real-life-scenario/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-24 17:20:06 +00:00
-permalink: "/2025-04-24-Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Bicep", "Coding", "DevOps", "IaC", "News"]
-tags_normalized: ["dotnet", "azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "coding", "devops", "iac", "news"]
+permalink: /coding/news/Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects
+tags:
+- .NET
+- Azd
+- Azure
+- Azure Container Apps
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- Coding
+- DevOps
+- IaC
+- News
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this post, Frank Boucher details firsthand lessons from migrating AzUrlShortener to Azure using the Azure Developer CLI (azd). Gain insights into automating IaC with Bicep, managing deployment pipelines, and overcoming real-life migration challenges.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) in a Real-Life Scenario

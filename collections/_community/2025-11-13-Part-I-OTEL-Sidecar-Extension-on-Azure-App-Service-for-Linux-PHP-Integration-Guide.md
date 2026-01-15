@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide"
-description: "This guide provides a step-by-step walkthrough on adding observability to PHP Linux web apps using the OpenTelemetry – Azure Monitor sidecar extension on Azure App Service. It covers Application Insights setup, environment variables, PHP dependencies, deployment, and using Application Insights for telemetry. The tutorial helps developers instrument traces, metrics, and logs in their apps without modifying core code."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide'
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 06:28:27 +00:00
-permalink: "/2025-11-13-Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Application Insights", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "Composer", "Containerization", "Deployment", "DevOps", "Environment Variables", "Linux", "Monitoring", "Observability", "OpenTelemetry", "PHP", "Portal Configuration", "Sidecar Extension", "Startup Script", "Telemetry"]
-tags_normalized: ["application insights", "azure", "azure app service", "azure monitor", "coding", "community", "composer", "containerization", "deployment", "devops", "environment variables", "linux", "monitoring", "observability", "opentelemetry", "php", "portal configuration", "sidecar extension", "startup script", "telemetry"]
+permalink: /coding/community/Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide
+tags:
+- Application Insights
+- Azure
+- Azure App Service
+- Azure Monitor
+- Coding
+- Community
+- Composer
+- Containerization
+- Deployment
+- DevOps
+- Environment Variables
+- Linux
+- Monitoring
+- Observability
+- OpenTelemetry
+- PHP
+- Portal Configuration
+- Sidecar Extension
+- Startup Script
+- Telemetry
+section_names:
+- azure
+- coding
+- devops
 ---
-
 TulikaC explains how developers can add observability to PHP Linux web apps using Azure App Service sidecar extensions and OpenTelemetry – Azure Monitor. This detailed guide covers setup, deployment, and verification in Application Insights.<!--excerpt_end-->
 
 # Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide

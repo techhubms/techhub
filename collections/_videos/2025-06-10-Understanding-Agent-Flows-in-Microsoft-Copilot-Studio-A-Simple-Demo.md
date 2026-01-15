@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Agent Flows in Microsoft Copilot Studio: A Simple Demo"
-description: "This video, presented by Learn Microsoft AI, provides an overview of Agent Flows within Microsoft Copilot Studio. The session covers how Agent Flows enable task automation, app integration, and action triggering using Microsoft Power Platform technologies. The video also includes a hands-on demo showcasing practical use cases for automating business processes via Copilot Studio."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Az4GawqnXHA"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: 'Understanding Agent Flows in Microsoft Copilot Studio: A Simple Demo'
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=Az4GawqnXHA
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-10 06:11:02 +00:00
-permalink: "/2025-06-10-Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Simple-Demo.html"
-categories: ["AI"]
-tags: ["Agent Flows", "AgentFlows", "AI", "API Integration", "App Integration", "Automation", "Business Process Automation", "Copilot Demo", "Copilot Studio", "CopilotStudio", "Microsoft AI", "Microsoft Copilot", "MicrosoftAI", "Power Platform", "Task Automation", "Videos", "Workflow Automation"]
-tags_normalized: ["agent flows", "agentflows", "ai", "api integration", "app integration", "automation", "business process automation", "copilot demo", "copilot studio", "copilotstudio", "microsoft ai", "microsoft copilot", "microsoftai", "power platform", "task automation", "videos", "workflow automation"]
+permalink: /ai/videos/Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Simple-Demo
+tags:
+- Agent Flows
+- AgentFlows
+- AI
+- API Integration
+- App Integration
+- Automation
+- Business Process Automation
+- Copilot Demo
+- Copilot Studio
+- CopilotStudio
+- Microsoft AI
+- Microsoft Copilot
+- MicrosoftAI
+- Power Platform
+- Task Automation
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Learn Microsoft AI presents an introduction to Agent Flows in Microsoft Copilot Studio, demonstrating how to automate tasks and integrate applications using Power Platform tools.<!--excerpt_end-->
 
 {% youtube Az4GawqnXHA %}

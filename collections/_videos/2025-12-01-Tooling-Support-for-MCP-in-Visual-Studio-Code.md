@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Tooling Support for MCP in Visual Studio Code"
-description: "This video provides a walkthrough of how Visual Studio Code supports developers utilizing MCP, focusing on installing from registry, adding a server via command palette, enabling logging for troubleshooting, and interacting with tools. It emphasizes practical demonstration and hands-on techniques for improving the MCP developer experience using VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/TGICP4NS5tc"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Tooling Support for MCP in Visual Studio Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/shorts/TGICP4NS5tc
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-01 18:00:38 +00:00
-permalink: "/2025-12-01-Tooling-Support-for-MCP-in-Visual-Studio-Code.html"
-categories: ["Coding"]
-tags: ["Coding", "Command Palette", "Development Tools", "Installation", "Logging", "MCP", "Python", "Registry", "Tooling", "Troubleshooting", "Videos", "VS Code"]
-tags_normalized: ["coding", "command palette", "development tools", "installation", "logging", "mcp", "python", "registry", "tooling", "troubleshooting", "videos", "vs code"]
+permalink: /coding/videos/Tooling-Support-for-MCP-in-Visual-Studio-Code
+tags:
+- Coding
+- Command Palette
+- Development Tools
+- Installation
+- Logging
+- MCP
+- Python
+- Registry
+- Tooling
+- Troubleshooting
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 Visual Studio Code presents practical ways for developers to work effectively with MCP, as explained in this video by Visual Studio Code.<!--excerpt_end-->
 
 {% youtube TGICP4NS5tc %}

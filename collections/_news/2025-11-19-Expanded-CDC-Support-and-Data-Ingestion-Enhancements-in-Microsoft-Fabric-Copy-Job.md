@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Expanded CDC Support and Data Ingestion Enhancements in Microsoft Fabric Copy Job"
-description: "This article details the latest updates to Microsoft Fabric Data Factory's Copy job, focusing on expanded Change Data Capture (CDC) support for new data sources and destinations. It highlights new features like enhanced monitoring, broader source compatibility (including SAP, Snowflake, and BigQuery), Fabric Lakehouse as a CDC destination, and improved observability with detailed job analytics. Readers will discover how these improvements streamline cross-cloud and hybrid data movement within Microsoft Fabric, enabling more efficient data engineering workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Expanded CDC Support and Data Ingestion Enhancements in Microsoft Fabric Copy Job
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 12:30:00 +00:00
-permalink: "/2025-11-19-Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Bulk Copy", "Change Data Capture", "Cloud Data Integration", "Copy Job", "Data Engineering", "Data Factory", "Data Ingestion", "Data Movement", "Data Pipeline", "Google BigQuery", "Hybrid Cloud", "Incremental Copy", "Lakehouse", "Microsoft Fabric", "ML", "Monitoring", "News", "Observability", "Oracle", "SAP", "Snowflake"]
-tags_normalized: ["azure", "bulk copy", "change data capture", "cloud data integration", "copy job", "data engineering", "data factory", "data ingestion", "data movement", "data pipeline", "google bigquery", "hybrid cloud", "incremental copy", "lakehouse", "microsoft fabric", "ml", "monitoring", "news", "observability", "oracle", "sap", "snowflake"]
+permalink: /ml/news/Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job
+tags:
+- Azure
+- Bulk Copy
+- Change Data Capture
+- Cloud Data Integration
+- Copy Job
+- Data Engineering
+- Data Factory
+- Data Ingestion
+- Data Movement
+- Data Pipeline
+- Google BigQuery
+- Hybrid Cloud
+- Incremental Copy
+- Lakehouse
+- Microsoft Fabric
+- ML
+- Monitoring
+- News
+- Observability
+- Oracle
+- SAP
+- Snowflake
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces enhancements to Data Factory's Copy job—now supporting more CDC sources including SAP, Snowflake, and BigQuery—with improved monitoring, expanded destinations like Fabric Lakehouse, and detailed job analytics for data engineers.<!--excerpt_end-->
 
 # Expanded CDC Support and Data Ingestion Enhancements in Microsoft Fabric Copy Job

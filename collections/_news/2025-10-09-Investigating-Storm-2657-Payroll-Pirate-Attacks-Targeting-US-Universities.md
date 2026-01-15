@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Investigating Storm-2657 'Payroll Pirate' Attacks Targeting US Universities"
-description: "This Microsoft Threat Intelligence analysis examines a financially driven attack campaign by Storm-2657, which targets university employees to divert payroll payments. The post provides technical details on attack techniques, defense strategies involving Microsoft Defender for Cloud Apps, Exchange Online, Entra ID, and Sentinel, and offers practical hunting queries and mitigation guidance to help organizations protect sensitive payroll and identity data in SaaS environments."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/09/investigating-targeted-payroll-pirate-attacks-affecting-us-universities/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Investigating Storm-2657 'Payroll Pirate' Attacks Targeting US Universities
+author: Microsoft Threat Intelligence
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/investigating-targeted-payroll-pirate-attacks-affecting-us-universities/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-09 15:00:00 +00:00
-permalink: "/2025-10-09-Investigating-Storm-2657-Payroll-Pirate-Attacks-Targeting-US-Universities.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Logs", "Azure", "CloudAppEvents", "Defender XDR", "Duo MFA", "Entra ID", "Exchange Online", "Identity Protection", "Inbox Rules", "Incident Response", "MFA", "Microsoft Defender For Cloud Apps", "Microsoft Sentinel", "Microsoft Threat Intelligence", "News", "Passwordless Authentication", "Payroll Pirate", "Phishing", "SaaS Security", "Security", "Security Copilot", "Storm 2657", "Threat Hunting", "University Security", "Workday"]
-tags_normalized: ["audit logs", "azure", "cloudappevents", "defender xdr", "duo mfa", "entra id", "exchange online", "identity protection", "inbox rules", "incident response", "mfa", "microsoft defender for cloud apps", "microsoft sentinel", "microsoft threat intelligence", "news", "passwordless authentication", "payroll pirate", "phishing", "saas security", "security", "security copilot", "storm 2657", "threat hunting", "university security", "workday"]
+permalink: /azure/news/Investigating-Storm-2657-Payroll-Pirate-Attacks-Targeting-US-Universities
+tags:
+- Audit Logs
+- Azure
+- CloudAppEvents
+- Defender XDR
+- Duo MFA
+- Entra ID
+- Exchange Online
+- Identity Protection
+- Inbox Rules
+- Incident Response
+- MFA
+- Microsoft Defender For Cloud Apps
+- Microsoft Sentinel
+- Microsoft Threat Intelligence
+- News
+- Passwordless Authentication
+- Payroll Pirate
+- Phishing
+- SaaS Security
+- Security
+- Security Copilot
+- Storm 2657
+- Threat Hunting
+- University Security
+- Workday
+section_names:
+- azure
+- security
 ---
-
 Microsoft Threat Intelligence details how Storm-2657 targets university employees to hijack payroll accounts, using phishing and SaaS compromise techniques. The report by Microsoft exposes tactics and offers actionable security guidance.<!--excerpt_end-->
 
 # Investigating Storm-2657 'Payroll Pirate' Attacks Targeting US Universities

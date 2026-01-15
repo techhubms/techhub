@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Developing a Web Browser and Console Log Extension for Visual Studio"
-description: "The author discusses the inconvenience of switching between a browser and Visual Studio while working with React. They propose developing a Visual Studio extension featuring a dockable browser window and a separate console log, drawing inspiration from previous projects but aiming to add missing features."
-author: "ggobrien"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Developing a Web Browser and Console Log Extension for Visual Studio
+author: ggobrien
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-21 17:55:22 +00:00
-permalink: "/2025-07-21-Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio.html"
-categories: ["Coding"]
-tags: ["Browser Panel", "Coding", "Community", "Console Log", "Developer Productivity", "Extension Development", "IDE Tools", "Olivier Dalet", "Proof Of Concept", "React", "User Interface", "VS", "WebView2"]
-tags_normalized: ["browser panel", "coding", "community", "console log", "developer productivity", "extension development", "ide tools", "olivier dalet", "proof of concept", "react", "user interface", "vs", "webview2"]
+permalink: /coding/community/Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio
+tags:
+- Browser Panel
+- Coding
+- Community
+- Console Log
+- Developer Productivity
+- Extension Development
+- IDE Tools
+- Olivier Dalet
+- Proof Of Concept
+- React
+- User Interface
+- VS
+- WebView2
+section_names:
+- coding
 ---
-
 ggobrien explores the idea of creating a Visual Studio extension that embeds a web browser and separate console log panel, enhancing the workflow for web developers.<!--excerpt_end-->
 
 ## Background

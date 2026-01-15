@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "General Availability of the Responses API in Azure AI Foundry"
-description: "This announcement details the general availability of the Responses API in Azure AI Foundry, enabling developers to build stateful, multi-turn, tool-using agents via a single API call. The update highlights ease of integration, a library of built-in tools, support for OpenAI models like GPT-5, and production-ready enterprise capabilities. Real-world adoption scenarios and integration with the Azure agent development stack are discussed."
-author: "BalaPV"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: General Availability of the Responses API in Azure AI Foundry
+author: BalaPV
+canonical_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-27 19:00:00 +00:00
-permalink: "/2025-08-27-General-Availability-of-the-Responses-API-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Development", "AgentOps", "AI", "API Orchestration", "AutoGen", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "Code Interpreter", "Community", "Enterprise Automation", "Function Calling", "GPT 5", "Microsoft Azure", "Multi Turn Conversations", "OpenAI", "Production Ready API", "Responses API", "Semantic Kernel", "Stateful Agents", "Tool Integration"]
-tags_normalized: ["agent development", "agentops", "ai", "api orchestration", "autogen", "azure", "azure ai foundry", "azure openai service", "code interpreter", "community", "enterprise automation", "function calling", "gpt 5", "microsoft azure", "multi turn conversations", "openai", "production ready api", "responses api", "semantic kernel", "stateful agents", "tool integration"]
+permalink: /ai/community/General-Availability-of-the-Responses-API-in-Azure-AI-Foundry
+tags:
+- Agent Development
+- AgentOps
+- AI
+- API Orchestration
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Azure OpenAI Service
+- Code Interpreter
+- Community
+- Enterprise Automation
+- Function Calling
+- GPT 5
+- Microsoft Azure
+- Multi Turn Conversations
+- OpenAI
+- Production Ready API
+- Responses API
+- Semantic Kernel
+- Stateful Agents
+- Tool Integration
+section_names:
+- ai
+- azure
 ---
-
 BalaPV announces the general availability of the Responses API in Azure AI Foundry, empowering developers to easily build intelligent, multi-turn agents with built-in tool support and robust integration features.<!--excerpt_end-->
 
 # General Availability of the Responses API in Azure AI Foundry

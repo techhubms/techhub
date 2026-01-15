@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Search any GitHub repo from agent"
-description: "Discover how to use VS Code agent's GitHub repo search and embeddings for instant code and prompt discovery, plus tips for optimizing copilot-instructions.md."
-author: "digitarald"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1lvx08d/search_any_github_repo_from_agent/"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Search any GitHub repo from agent
+author: digitarald
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lvx08d/search_any_github_repo_from_agent/
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-09 22:57:13 +00:00
-permalink: "/2025-07-09-Search-any-GitHub-repo-from-agent.html"
-viewing_mode: "external"
-tags: ["AI", "API References", "Chat View", "Community", "Copilot Instructions.md", "Development Tools", "Embeddings", "GitHub Copilot", "GitHub Repositories", "Githubrepo", "Prompt Discovery", "Repo Search", "VS Code Agent"]
-tags_normalized: ["ai", "api references", "chat view", "community", "copilot instructionsdotmd", "development tools", "embeddings", "github copilot", "github repositories", "githubrepo", "prompt discovery", "repo search", "vs code agent"]
+permalink: /github-copilot/community/Search-any-GitHub-repo-from-agent
+viewing_mode: external
+tags:
+- AI
+- API References
+- Chat View
+- Community
+- Copilot Instructions.md
+- Development Tools
+- Embeddings
+- GitHub Copilot
+- GitHub Repositories
+- Githubrepo
+- Prompt Discovery
+- Repo Search
+- VS Code Agent
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, digitarald highlights a powerful yet often overlooked feature of the VS Code agent: searching within GitHub repositories using embeddings for efficient code and prompt discovery. The author demonstrates this capability using the 'awesome-copilot' repository and shares an additional tip for enhancing copilot-instructions.md files to improve reference searching. The article provides insights that can streamline your development workflow and make Copilot even more effective.<!--excerpt_end-->
 
 ### Unlocking GitHub Repo Search in VS Code Agent

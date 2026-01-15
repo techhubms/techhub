@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Implementing Security Headers in Azure App Service and Azure Container Apps"
-description: "This guide by AmritpalSinghNaroo explains why security headers are critical for web applications hosted on Azure App Service and Azure Container Apps. It details common security headers, demonstrates how to configure them using web.config, middleware, reverse proxies, or edge services, and provides concrete code snippets for .NET, Node.js, and Nginx. The article also links to official documentation for additional implementation scenarios."
-author: "AmritpalSinghNaroo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-security-headers-in-azure-app-service-and-azure/ba-p/4464250"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Implementing Security Headers in Azure App Service and Azure Container Apps
+author: AmritpalSinghNaroo
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-security-headers-in-azure-app-service-and-azure/ba-p/4464250
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 07:52:59 +00:00
-permalink: "/2025-10-27-Implementing-Security-Headers-in-Azure-App-Service-and-Azure-Container-Apps.html"
-categories: ["Azure", "Security"]
-tags: [".NET", "App Security", "Application Gateway", "Azure", "Azure App Service", "Azure Container Apps", "Azure Front Door", "Community", "Configuration", "Content Security Policy", "Express", "HTTP Headers", "Middleware", "Nginx", "Node.js", "Permissions Policy", "Referrer Policy", "Security", "Security Headers", "Strict Transport Security", "Web.config", "X Content Type Options", "X Frame Options"]
-tags_normalized: ["dotnet", "app security", "application gateway", "azure", "azure app service", "azure container apps", "azure front door", "community", "configuration", "content security policy", "express", "http headers", "middleware", "nginx", "nodedotjs", "permissions policy", "referrer policy", "security", "security headers", "strict transport security", "webdotconfig", "x content type options", "x frame options"]
+permalink: /azure/community/Implementing-Security-Headers-in-Azure-App-Service-and-Azure-Container-Apps
+tags:
+- .NET
+- App Security
+- Application Gateway
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Azure Front Door
+- Community
+- Configuration
+- Content Security Policy
+- Express
+- HTTP Headers
+- Middleware
+- Nginx
+- Node.js
+- Permissions Policy
+- Referrer Policy
+- Security
+- Security Headers
+- Strict Transport Security
+- Web.config
+- X Content Type Options
+- X Frame Options
+section_names:
+- azure
+- security
 ---
-
 AmritpalSinghNaroo presents a hands-on guide to implementing vital security headers in Azure App Service and Azure Container Apps, including code examples and best practices for securing web applications.<!--excerpt_end-->
 
 # Implementing Security Headers in Azure App Service and Azure Container Apps

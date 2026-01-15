@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Cybersecurity Strategies to Prioritize Now"
-description: "This article by Damon Becknel, Vice President and Deputy CISO for Regulated Industries at Microsoft, provides a practical breakdown of core cybersecurity practices every organization should prioritize. It covers actionable steps for cyber hygiene, modernizing security standards, advanced fingerprinting techniques, and stresses the importance of collaboration and knowledge sharing in the face of evolving threats. Microsoft technologies such as Entra ID, Intune, Defender, and Azure Front Door are featured as part of recommended solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Cybersecurity Strategies to Prioritize Now
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 19:01:12 +00:00
-permalink: "/2025-12-04-Cybersecurity-Strategies-to-Prioritize-Now.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Front Door", "Company News", "Cyber Hygiene", "Cybersecurity", "Data Loss Prevention", "DMARC", "DNS Security", "Endpoint Detection And Response", "Fingerprinting", "Identity Management", "Incident Response", "Logging And Monitoring", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Intune", "Microsoft Security", "Multifactor Authentication", "Network Segmentation", "News", "Phishing Resistant MFA", "Security", "Security Collaboration", "Security Standards", "VPN"]
-tags_normalized: ["azure", "azure front door", "company news", "cyber hygiene", "cybersecurity", "data loss prevention", "dmarc", "dns security", "endpoint detection and response", "fingerprinting", "identity management", "incident response", "logging and monitoring", "microsoft defender", "microsoft entra id", "microsoft intune", "microsoft security", "multifactor authentication", "network segmentation", "news", "phishing resistant mfa", "security", "security collaboration", "security standards", "vpn"]
+permalink: /azure/news/Cybersecurity-Strategies-to-Prioritize-Now
+tags:
+- Azure
+- Azure Front Door
+- Company News
+- Cyber Hygiene
+- Cybersecurity
+- Data Loss Prevention
+- DMARC
+- DNS Security
+- Endpoint Detection And Response
+- Fingerprinting
+- Identity Management
+- Incident Response
+- Logging And Monitoring
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Intune
+- Microsoft Security
+- Multifactor Authentication
+- Network Segmentation
+- News
+- Phishing Resistant MFA
+- Security
+- Security Collaboration
+- Security Standards
+- VPN
+section_names:
+- azure
+- security
 ---
-
 Damon Becknel from Microsoft shares practical cybersecurity strategies, emphasizing essential defenses, identity management, modern protocols, and collaboration for stronger organizational security.<!--excerpt_end-->
 
 # Cybersecurity Strategies to Prioritize Now

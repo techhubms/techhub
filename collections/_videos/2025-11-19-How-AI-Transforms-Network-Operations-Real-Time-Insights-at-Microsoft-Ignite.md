@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "How AI Transforms Network Operations: Real-Time Insights at Microsoft Ignite"
-description: "This session from Microsoft Ignite 2025 demonstrates how AI is revolutionizing network operations (NetOps) by moving beyond traditional scripting toward intelligent workflows. Key topics include incident triage, knowledge retrieval, traffic analysis, prediction, and monitoring. The presentation explores how machine learning (ML), natural language processing (NLP), large language models (LLMs), retrieval-augmented generation (RAG), and agent workflows — including text-to-SQL and real-time analytics — are enabling modern NetOps. The discussion covers the design of data pipelines, MLOps strategies, API integration, human-in-the-loop guardrails, accuracy, reliability, cost, compliance, and the build-versus-buy decision for AI infrastructure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kpY9N1bWI-M"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'How AI Transforms Network Operations: Real-Time Insights at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=kpY9N1bWI-M
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:03:09 +00:00
-permalink: "/2025-11-19-How-AI-Transforms-Network-Operations-Real-Time-Insights-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["Agenticbusinessapplications", "AI", "AI in Network Operations", "API Integration", "Azure", "Build VS Buy", "Compliance", "Data Pipelines", "DevOps", "Human in The Loop", "Hybrid Data", "Incident Triage", "Knowledge Retrieval", "Large Language Models", "Machine Learning", "Microsoft Azure", "ML", "MLOps", "MSIgnite", "Natural Language Processing", "Network Observability", "RAG", "Real Time Insights", "Security", "Text To SQL", "Traffic Analysis", "Videos"]
-tags_normalized: ["agenticbusinessapplications", "ai", "ai in network operations", "api integration", "azure", "build vs buy", "compliance", "data pipelines", "devops", "human in the loop", "hybrid data", "incident triage", "knowledge retrieval", "large language models", "machine learning", "microsoft azure", "ml", "mlops", "msignite", "natural language processing", "network observability", "rag", "real time insights", "security", "text to sql", "traffic analysis", "videos"]
+permalink: /ai/videos/How-AI-Transforms-Network-Operations-Real-Time-Insights-at-Microsoft-Ignite
+tags:
+- Agenticbusinessapplications
+- AI
+- AI in Network Operations
+- API Integration
+- Azure
+- Build VS Buy
+- Compliance
+- Data Pipelines
+- DevOps
+- Human in The Loop
+- Hybrid Data
+- Incident Triage
+- Knowledge Retrieval
+- Large Language Models
+- Machine Learning
+- Microsoft Azure
+- ML
+- MLOps
+- MSIgnite
+- Natural Language Processing
+- Network Observability
+- RAG
+- Real Time Insights
+- Security
+- Text To SQL
+- Traffic Analysis
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Phillip Gervasi presents at Microsoft Ignite 2025 on how AI innovations, including ML, NLP, and LLMs, are transforming network operations through intelligent, data-driven workflows on Azure.<!--excerpt_end-->
 
 {% youtube kpY9N1bWI-M %}

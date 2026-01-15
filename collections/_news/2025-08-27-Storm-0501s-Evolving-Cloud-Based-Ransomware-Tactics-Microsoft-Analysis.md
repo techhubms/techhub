@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis"
-description: "This article explores the sophisticated techniques used by the Storm-0501 threat actor to escalate from on-premises to cloud-based ransomware attacks. The analysis covers initial compromise, cloud privilege escalation, Azure resource destruction, identity manipulation via Entra ID, and recommended security defenses using Microsoft technologies. Security professionals will learn how Storm-0501 exploits hybrid environments, leverages Azure and Entra ID configuration flaws, and moves laterally to maximize impact, offering actionable steps to strengthen organizational defenses against such advanced threats."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-27 17:43:23 +00:00
-permalink: "/2025-08-27-Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Microsoft-Analysis.html"
-categories: ["Azure", "Security"]
-tags: ["AADInternals", "Active Directory", "Azure", "Azure Defender", "Azure Storage", "Cloud Based Ransomware", "Company News", "Conditional Access", "Data Exfiltration", "Entra Connect Sync", "Global Administrator", "Hybrid Cloud Security", "MFA", "Microsoft Defender For Endpoint", "Microsoft Entra ID", "News", "Privilege Escalation", "Ransomware", "Security", "Security Best Practices", "Storm 0501"]
-tags_normalized: ["aadinternals", "active directory", "azure", "azure defender", "azure storage", "cloud based ransomware", "company news", "conditional access", "data exfiltration", "entra connect sync", "global administrator", "hybrid cloud security", "mfa", "microsoft defender for endpoint", "microsoft entra id", "news", "privilege escalation", "ransomware", "security", "security best practices", "storm 0501"]
+permalink: /azure/news/Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Microsoft-Analysis
+tags:
+- AADInternals
+- Active Directory
+- Azure
+- Azure Defender
+- Azure Storage
+- Cloud Based Ransomware
+- Company News
+- Conditional Access
+- Data Exfiltration
+- Entra Connect Sync
+- Global Administrator
+- Hybrid Cloud Security
+- MFA
+- Microsoft Defender For Endpoint
+- Microsoft Entra ID
+- News
+- Privilege Escalation
+- Ransomware
+- Security
+- Security Best Practices
+- Storm 0501
+section_names:
+- azure
+- security
 ---
-
 stclarke provides an in-depth analysis of recent Storm-0501 attacks leveraging cloud-based ransomware techniques to compromise hybrid Microsoft environments, with actionable recommendations for security professionals.<!--excerpt_end-->
 
 # Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis

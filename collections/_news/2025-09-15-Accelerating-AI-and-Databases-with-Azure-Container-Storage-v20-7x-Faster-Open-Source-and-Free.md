@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free"
-description: "This announcement covers the release of Azure Container Storage v2.0.0, highlighting major performance improvements for stateful Kubernetes workloads including databases and AI. New features include local NVMe support, open-source availability, flexible scaling, and removal of management fees. Detailed benchmarks and application use cases are provided."
-author: "Aung Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free'
+author: Aung Oo
+canonical_url: https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 15:00:00 +00:00
-permalink: "/2025-09-15-Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AKS", "Azure", "Azure Container Storage", "Cloud Storage", "Compute", "Containers", "CSI", "Databases", "IOPS", "KAITO", "Kubernetes", "Latency", "Model Deployment", "News", "NVMe", "Open Source", "Performance Optimization", "Persistent Volumes", "PostgreSQL", "Stateful Workloads", "Storage Orchestration"]
-tags_normalized: ["ai", "aks", "azure", "azure container storage", "cloud storage", "compute", "containers", "csi", "databases", "iops", "kaito", "kubernetes", "latency", "model deployment", "news", "nvme", "open source", "performance optimization", "persistent volumes", "postgresql", "stateful workloads", "storage orchestration"]
+permalink: /ai/news/Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free
+tags:
+- AI
+- AKS
+- Azure
+- Azure Container Storage
+- Cloud Storage
+- Compute
+- Containers
+- CSI
+- Databases
+- IOPS
+- KAITO
+- Kubernetes
+- Latency
+- Model Deployment
+- News
+- NVMe
+- Open Source
+- Performance Optimization
+- Persistent Volumes
+- PostgreSQL
+- Stateful Workloads
+- Storage Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Aung Oo shares significant updates to Azure Container Storage, detailing version 2.0's 7x IOPS gains, open-source release, and enhanced AI and database workload support for developers on Azure.<!--excerpt_end-->
 
 # Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free

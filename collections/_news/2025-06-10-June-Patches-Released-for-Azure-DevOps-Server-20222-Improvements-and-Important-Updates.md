@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "June Patches Released for Azure DevOps Server 2022.2: Improvements & Important Updates"
-description: "This news update covers the release of Patch 6 for Azure DevOps Server 2022.2, including Test Plans enhancements and installation guidance. It also addresses an ongoing issue with the patch, with updates from Microsoft's team and recommendations for users to ensure security and up-to-date installations."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'June Patches Released for Azure DevOps Server 2022.2: Improvements & Important Updates'
+author: Gloridel Morales
+canonical_url: https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-10 19:13:51 +00:00
-permalink: "/2025-06-10-June-Patches-Released-for-Azure-DevOps-Server-20222-Improvements-and-Important-Updates.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps Server", "Custom Columns", "DevOps", "Installation", "News", "Patches", "Plan Id", "Release Notes", "Security", "Server Upgrade", "Suite Id", "Suite Import", "Test Plans", "XLSX Export"]
-tags_normalized: ["azure", "azure devops server", "custom columns", "devops", "installation", "news", "patches", "plan id", "release notes", "security", "server upgrade", "suite id", "suite import", "test plans", "xlsx export"]
+permalink: /azure/news/June-Patches-Released-for-Azure-DevOps-Server-20222-Improvements-and-Important-Updates
+tags:
+- Azure
+- Azure DevOps Server
+- Custom Columns
+- DevOps
+- Installation
+- News
+- Patches
+- Plan Id
+- Release Notes
+- Security
+- Server Upgrade
+- Suite Id
+- Suite Import
+- Test Plans
+- XLSX Export
+section_names:
+- azure
+- devops
+- security
 ---
-
 Gloridel Morales announces the June patches for Azure DevOps Server 2022.2, highlighting Test Plans enhancements and addressing an ongoing issue with Patch 6, along with installation recommendations and verification steps.<!--excerpt_end-->
 
 ## June Patches for Azure DevOps Server 2022.2

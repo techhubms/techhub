@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Secure Medallion Architecture Pattern on Azure Databricks (Part I)"
-description: "This article by mscagliola dives into designing and deploying a secure Medallion Architecture using Azure Databricks. Key topics include layered security with managed identities, implementing least-privilege access with Microsoft Entra ID, separating compute and storage by data layer, configuring Unity Catalog for governance, secrets management with Azure Key Vault, isolating Lakeflow jobs for reliability, and best practices for monitoring and cost governance. The focus is on hands-on implementation, security, and operational excellence using the latest Azure and Databricks features for scalable and compliant analytics workloads."
-author: "mscagliola"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Secure Medallion Architecture Pattern on Azure Databricks (Part I)
+author: mscagliola
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 06:25:50 +00:00
-permalink: "/2025-10-07-Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["ADLS Gen2", "Azure", "Azure Databricks", "Azure Key Vault", "Cluster Policies", "Community", "Data Governance", "Delta Lake", "Lakeflow", "Lakehouse", "Least Privilege", "Managed Identities", "Medallion Architecture", "Microsoft Entra ID", "ML", "Operational Security", "Security", "System Tables", "Unity Catalog"]
-tags_normalized: ["adls gen2", "azure", "azure databricks", "azure key vault", "cluster policies", "community", "data governance", "delta lake", "lakeflow", "lakehouse", "least privilege", "managed identities", "medallion architecture", "microsoft entra id", "ml", "operational security", "security", "system tables", "unity catalog"]
+permalink: /ml/community/Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I
+tags:
+- ADLS Gen2
+- Azure
+- Azure Databricks
+- Azure Key Vault
+- Cluster Policies
+- Community
+- Data Governance
+- Delta Lake
+- Lakeflow
+- Lakehouse
+- Least Privilege
+- Managed Identities
+- Medallion Architecture
+- Microsoft Entra ID
+- ML
+- Operational Security
+- Security
+- System Tables
+- Unity Catalog
+section_names:
+- azure
+- ml
+- security
 ---
-
 mscagliola presents a practical guide for deploying a secure Medallion Architecture on Azure Databricks, detailing how to implement least-privilege access, strong data governance, and robust pipeline isolation using Microsoft technologies.<!--excerpt_end-->
 
 # Secure Medallion Architecture Pattern on Azure Databricks (Part I)

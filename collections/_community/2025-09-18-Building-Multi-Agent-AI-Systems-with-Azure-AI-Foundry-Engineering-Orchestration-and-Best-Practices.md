@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Multi-Agent AI Systems with Azure AI Foundry: Engineering, Orchestration, and Best Practices"
-description: "This in-depth guide by Lee Stott describes the challenges, architecture patterns, and engineering lessons behind building enterprise-grade multi-agent AI systems using Azure AI Foundry. The article covers orchestration via lead agents, the Model Context Protocol (MCP) for tool integration, observability, cost management, and production-grade safety and governance in Microsoft’s agent platform, with hands-on examples and actionable best practices."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-multi-agent-ai-systems-with-microsoft/ba-p/4454510"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building Multi-Agent AI Systems with Azure AI Foundry: Engineering, Orchestration, and Best Practices'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-multi-agent-ai-systems-with-microsoft/ba-p/4454510
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 07:00:00 +00:00
-permalink: "/2025-09-18-Building-Multi-Agent-AI-Systems-with-Azure-AI-Foundry-Engineering-Orchestration-and-Best-Practices.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Development", "Agent Workflows", "AI", "AI Agent Tools", "AI Orchestration", "AI Platform", "AI Safety", "AutoGen", "Azure", "Azure AI Foundry", "Azure Application Insights", "Community", "Connected Agents", "Enterprise AI", "LLM Agents", "MCP", "Microsoft Entra ID", "Multi Agent Systems", "Observability", "Prompt Engineering", "Vision AI", "Workflow Orchestration"]
-tags_normalized: ["agent development", "agent workflows", "ai", "ai agent tools", "ai orchestration", "ai platform", "ai safety", "autogen", "azure", "azure ai foundry", "azure application insights", "community", "connected agents", "enterprise ai", "llm agents", "mcp", "microsoft entra id", "multi agent systems", "observability", "prompt engineering", "vision ai", "workflow orchestration"]
+permalink: /ai/community/Building-Multi-Agent-AI-Systems-with-Azure-AI-Foundry-Engineering-Orchestration-and-Best-Practices
+tags:
+- Agent Development
+- Agent Workflows
+- AI
+- AI Agent Tools
+- AI Orchestration
+- AI Platform
+- AI Safety
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Azure Application Insights
+- Community
+- Connected Agents
+- Enterprise AI
+- LLM Agents
+- MCP
+- Microsoft Entra ID
+- Multi Agent Systems
+- Observability
+- Prompt Engineering
+- Vision AI
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Lee Stott shares deep insights into engineering multi-agent AI systems using Azure AI Foundry, detailing orchestration techniques, real-world architecture, and practical lessons learned to help developers build robust, scalable agent-based applications.<!--excerpt_end-->
 
 # Building Multi-Agent AI Systems with Azure AI Foundry: Engineering, Orchestration, and Best Practices

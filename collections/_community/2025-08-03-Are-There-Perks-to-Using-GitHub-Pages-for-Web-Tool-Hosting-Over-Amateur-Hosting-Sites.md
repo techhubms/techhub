@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Are There Perks to Using GitHub Pages for Web Tool Hosting Over Amateur Hosting Sites?"
-description: "The author explores whether hosting simple web-based utilities with GitHub Pages offers notable advantages over platforms like Neocities or Nekoweb. The discussion centers around considerations for deploying HTML+JS projects, referencing personal examples hosted on GitHub Pages, and seeking input on comparative benefits."
-author: "Qwert-4"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mgjz65/are_there_perks_to_using_github_pages_for_web/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: Are There Perks to Using GitHub Pages for Web Tool Hosting Over Amateur Hosting Sites?
+author: Qwert-4
+canonical_url: https://www.reddit.com/r/github/comments/1mgjz65/are_there_perks_to_using_github_pages_for_web/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 14:00:17 +00:00
-permalink: "/2025-08-03-Are-There-Perks-to-Using-GitHub-Pages-for-Web-Tool-Hosting-Over-Amateur-Hosting-Sites.html"
-categories: ["DevOps"]
-tags: ["Community", "Deployment", "DevOps", "GitHub", "GitHub Pages", "HTML", "JavaScript", "Nekoweb", "Neocities", "Open Source", "Static Sites", "Utilities", "Web Hosting"]
-tags_normalized: ["community", "deployment", "devops", "github", "github pages", "html", "javascript", "nekoweb", "neocities", "open source", "static sites", "utilities", "web hosting"]
+permalink: /devops/community/Are-There-Perks-to-Using-GitHub-Pages-for-Web-Tool-Hosting-Over-Amateur-Hosting-Sites
+tags:
+- Community
+- Deployment
+- DevOps
+- GitHub
+- GitHub Pages
+- HTML
+- JavaScript
+- Nekoweb
+- Neocities
+- Open Source
+- Static Sites
+- Utilities
+- Web Hosting
+section_names:
+- devops
 ---
-
 Qwert-4 asks about the advantages of using GitHub Pages versus other amateur hosting options for hosting simple web-based utilities, inviting a discussion on deployment choices.<!--excerpt_end-->
 
 ## Exploring GitHub Pages vs. Amateur Hosting Sites for Web Tools

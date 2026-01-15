@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Nestlé's AI-Powered Digital Twins Transform Content Creation with Microsoft Azure"
-description: "Nestlé is leveraging Microsoft Azure and AI-powered digital twins, built on NVIDIA Omniverse, to scale high-quality product content creation for eCommerce and digital media. This video features Nestlé's CMO discussing how Microsoft cloud solutions are reshaping marketing workflows in the consumer goods sector."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FO9fcsti9Vs"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: Nestlé's AI-Powered Digital Twins Transform Content Creation with Microsoft Azure
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=FO9fcsti9Vs
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-27 14:00:32 +00:00
-permalink: "/2025-06-27-Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Powered Digital Twins", "Azure", "Consumer Goods", "Digital Content Creation", "Digital Media", "Digital Twins", "Ecommerce", "Enterprise AI", "Gen AI", "Generative AI", "Marketing Technology", "Microsoft Azure", "Microsoft Cloud", "Nestle", "Nestlé", "NVIDIA Omniverse", "Product Visualization", "Videos"]
-tags_normalized: ["ai", "ai powered digital twins", "azure", "consumer goods", "digital content creation", "digital media", "digital twins", "ecommerce", "enterprise ai", "gen ai", "generative ai", "marketing technology", "microsoft azure", "microsoft cloud", "nestle", "nestl", "nvidia omniverse", "product visualization", "videos"]
+permalink: /ai/videos/Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure
+tags:
+- AI
+- AI Powered Digital Twins
+- Azure
+- Consumer Goods
+- Digital Content Creation
+- Digital Media
+- Digital Twins
+- Ecommerce
+- Enterprise AI
+- Gen AI
+- Generative AI
+- Marketing Technology
+- Microsoft Azure
+- Microsoft Cloud
+- Nestle
+- Nestlé
+- NVIDIA Omniverse
+- Product Visualization
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Cloud shares how Aude Gandon, CMO of Nestlé, explains using Microsoft Azure and AI-driven digital twins for high-impact content creation.<!--excerpt_end-->
 
 {% youtube FO9fcsti9Vs %}

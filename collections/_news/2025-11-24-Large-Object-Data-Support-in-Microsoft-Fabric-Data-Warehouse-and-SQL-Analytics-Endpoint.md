@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint"
-description: "This news post from the Microsoft Fabric Blog highlights the newly released support for large string and binary data types (VARCHAR(MAX) and VARBINARY(MAX)) in Fabric Data Warehouse and SQL analytics endpoints for mirrored items. Developers and data engineers can now efficiently ingest, store, and process large-scale descriptive, JSON, or binary data—including logs and spatial objects—without hitting prior size limitations or risking truncation. The update details ingestion via COPY INTO and OPENROWSET, outlines updated size limits for various file formats and mirrored sources, and clarifies migration and automatic type mapping processes for Azure SQL and Cosmos DB databases. Performance impacts and references to official documentation are included."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 09:00:00 +00:00
-permalink: "/2025-11-24-Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL Database", "Binary Data", "Cosmos DB", "Data Engineering", "Data Ingestion", "Data Warehousing", "Fabric Data Warehouse", "JSON", "Large Objects", "Microsoft Fabric", "ML", "News", "Performance", "Schema Mapping", "SQL Analytics Endpoint", "VARBINARY(MAX)", "VARCHAR(MAX)"]
-tags_normalized: ["azure", "azure sql database", "binary data", "cosmos db", "data engineering", "data ingestion", "data warehousing", "fabric data warehouse", "json", "large objects", "microsoft fabric", "ml", "news", "performance", "schema mapping", "sql analytics endpoint", "varbinarymax", "varcharmax"]
+permalink: /ml/news/Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint
+tags:
+- Azure
+- Azure SQL Database
+- Binary Data
+- Cosmos DB
+- Data Engineering
+- Data Ingestion
+- Data Warehousing
+- Fabric Data Warehouse
+- JSON
+- Large Objects
+- Microsoft Fabric
+- ML
+- News
+- Performance
+- Schema Mapping
+- SQL Analytics Endpoint
+- VARBINARY(MAX)
+- VARCHAR(MAX)
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how new support for VARCHAR(MAX) and VARBINARY(MAX) in Fabric Data Warehouse and SQL analytics endpoints enables developers and data teams to handle large text and binary data efficiently.<!--excerpt_end-->
 
 # Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint

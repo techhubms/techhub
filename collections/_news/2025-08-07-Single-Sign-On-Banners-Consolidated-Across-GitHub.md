@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Single Sign-On Banners Consolidated Across GitHub"
-description: "This update from GitHub introduces a unified single sign-on (SSO) banner, replacing multiple previously inconsistent banners for users in organizations that require SSO authentication. The new approach simplifies the user experience, reduces notification clutter, and centralizes SSO information within the account settings for easier management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-07-single-sign-on-banners-consolidated-across-github"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Single Sign-On Banners Consolidated Across GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-07-single-sign-on-banners-consolidated-across-github
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-07 19:08:07 +00:00
-permalink: "/2025-08-07-Single-Sign-On-Banners-Consolidated-Across-GitHub.html"
-categories: ["DevOps"]
-tags: ["Authentication", "Cloud Platforms", "Developer Tools", "DevOps", "GitHub", "Identity Management", "News", "Organization Management", "Single Sign On", "SSO", "User Experience"]
-tags_normalized: ["authentication", "cloud platforms", "developer tools", "devops", "github", "identity management", "news", "organization management", "single sign on", "sso", "user experience"]
+permalink: /devops/news/Single-Sign-On-Banners-Consolidated-Across-GitHub
+tags:
+- Authentication
+- Cloud Platforms
+- Developer Tools
+- DevOps
+- GitHub
+- Identity Management
+- News
+- Organization Management
+- Single Sign On
+- SSO
+- User Experience
+section_names:
+- devops
 ---
-
 Allison details GitHub's new consolidated single sign-on banner experience, highlighting how it streamlines SSO notifications for organization members and improves account management.<!--excerpt_end-->
 
 # Single Sign-On Banners Consolidated Across GitHub

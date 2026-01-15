@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Automate Code Reviews and Testing with GitHub Copilot"
-description: "This video demonstrates how GitHub Copilot streamlines code reviews and testing within development workflows. Viewers are shown features such as Autofix, security flaw detection, and the ability to interact with Copilot's suggestions during pull requests. The content highlights how traditional DevOps practices remain relevant even with AI integration, emphasizing collaborative review and validation processes."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HDEGFNAUkX8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Automate Code Reviews and Testing with GitHub Copilot
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=HDEGFNAUkX8
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-27 14:00:27 +00:00
-permalink: "/2025-08-27-How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Autofix", "Automated Testing", "Code Review", "CodeReview", "Continuous Integration", "DevOps", "GitHub", "GitHub Copilot", "Pull Requests", "Repository Management", "Security Scanning", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai assisted development", "autofix", "automated testing", "code review", "codereview", "continuous integration", "devops", "github", "github copilot", "pull requests", "repository management", "security scanning", "software development", "videos"]
+permalink: /github-copilot/videos/How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Development
+- Autofix
+- Automated Testing
+- Code Review
+- CodeReview
+- Continuous Integration
+- DevOps
+- GitHub
+- GitHub Copilot
+- Pull Requests
+- Repository Management
+- Security Scanning
+- Software Development
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub presents an overview of using GitHub Copilot for automated code reviews and testing, showing how developers can leverage AI features like Autofix and security scanning within their development process.<!--excerpt_end-->
 
 {% youtube HDEGFNAUkX8 %}

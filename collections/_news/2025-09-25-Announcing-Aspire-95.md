@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Announcing Aspire 9.5"
-description: "This official announcement details the release of Aspire 9.5—a significant update for the .NET Aspire ecosystem. It introduces the preview 'aspire update' command, streamlined single-file AppHost, improved CLI and dashboard UX, built-in AI and DevTunnel integrations, enhanced YARP support for static files, and wider tooling compatibility. Developers will find actionable examples for upgrading, integrating resources, taking advantage of dashboard insights, and leveraging cloud and distributed app features."
-author: "Jeffrey Fritz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Announcing Aspire 9.5
+author: Jeffrey Fritz
+canonical_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-25 17:25:00 +00:00
-permalink: "/2025-09-25-Announcing-Aspire-95.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Integrations", "AppHost", "Aspire", "Aspire CLI", "Azure AI Foundry", "CLI", "Cloud Native", "Coding", "Containers", "Dashboards", "DevOps", "DevTunnels", "Distributed Applications", "GitHub Models", "News", "OpenAI", "VS", "YARP"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai integrations", "apphost", "aspire", "aspire cli", "azure ai foundry", "cli", "cloud native", "coding", "containers", "dashboards", "devops", "devtunnels", "distributed applications", "github models", "news", "openai", "vs", "yarp"]
+permalink: /ai/news/Announcing-Aspire-95
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- AI
+- AI Integrations
+- AppHost
+- Aspire
+- Aspire CLI
+- Azure AI Foundry
+- CLI
+- Cloud Native
+- Coding
+- Containers
+- Dashboards
+- DevOps
+- DevTunnels
+- Distributed Applications
+- GitHub Models
+- News
+- OpenAI
+- VS
+- YARP
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Jeffrey Fritz announces Aspire 9.5, highlighting rich new features for .NET distributed application developers, including enhanced AI integrations, streamlined DevOps workflows, and powerful CLI and dashboard improvements.<!--excerpt_end-->
 
 # Announcing Aspire 9.5

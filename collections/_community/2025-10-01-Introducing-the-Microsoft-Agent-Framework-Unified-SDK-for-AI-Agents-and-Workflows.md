@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows"
-description: "This article introduces the Microsoft Agent Framework, an open-source SDK for building advanced agentic AI applications using .NET or Python. It unifies features from Semantic Kernel and AutoGen, adds new orchestration and workflow tools, and supports multi-agent patterns, with backward compatibility and extensive integration with other Microsoft AI and cloud services."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 14:14:57 +00:00
-permalink: "/2025-10-01-Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "A2A SDK", "Agent Orchestration", "Agentic AI", "AI", "AutoGen", "Azure", "Azure OpenAI", "Coding", "Community", "Context Providers", "Foundry SDK", "Graph Based Workflows", "Human in The Loop", "LLM Integration", "M365 Copilot Agents", "MCP SDK", "Microsoft Agent Framework", "Middleware", "Migration Guides", "Multi Agent Systems", "Python", "Semantic Kernel", "State Management", "Workflow Automation"]
-tags_normalized: ["dotnet", "a2a sdk", "agent orchestration", "agentic ai", "ai", "autogen", "azure", "azure openai", "coding", "community", "context providers", "foundry sdk", "graph based workflows", "human in the loop", "llm integration", "m365 copilot agents", "mcp sdk", "microsoft agent framework", "middleware", "migration guides", "multi agent systems", "python", "semantic kernel", "state management", "workflow automation"]
+permalink: /ai/community/Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows
+tags:
+- .NET
+- A2A SDK
+- Agent Orchestration
+- Agentic AI
+- AI
+- AutoGen
+- Azure
+- Azure OpenAI
+- Coding
+- Community
+- Context Providers
+- Foundry SDK
+- Graph Based Workflows
+- Human in The Loop
+- LLM Integration
+- M365 Copilot Agents
+- MCP SDK
+- Microsoft Agent Framework
+- Middleware
+- Migration Guides
+- Multi Agent Systems
+- Python
+- Semantic Kernel
+- State Management
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Lee Stott presents the Microsoft Agent Framework, guiding developers through its unified, open-source SDK for agentic AI apps with .NET and Python support, multi-agent orchestration, and advanced workflow capabilities.<!--excerpt_end-->
 
 # Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows

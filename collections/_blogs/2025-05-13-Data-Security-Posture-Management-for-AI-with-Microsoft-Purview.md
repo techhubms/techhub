@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Data Security Posture Management for AI with Microsoft Purview"
-description: "This article by Petrus Vasenius explores Microsoft Purview Data Security Posture Management (DSPM) for AI, now generally available, focusing on how organizations can monitor, manage, and secure data associated with AI usage. It details dashboards, recommendations, policy management, reports, activity monitoring, and risk assessments, illustrating the solution’s compliance and governance capabilities."
-author: "petrus.vasenius@zure.com (Petrus Vasenius)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/data-security-posture-management-for-ai"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: Data Security Posture Management for AI with Microsoft Purview
+author: petrus.vasenius@zure.com (Petrus Vasenius)
+canonical_url: https://zure.com/blog/data-security-posture-management-for-ai
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-05-13 06:35:58 +00:00
-permalink: "/2025-05-13-Data-Security-Posture-Management-for-AI-with-Microsoft-Purview.html"
-categories: ["AI", "Security"]
-tags: ["Activity Monitoring", "AI", "AI Governance", "Azure Security", "Blog", "Blogs", "Compliance", "Copilot", "Data Protection", "Data Risk", "Data Security Posture Management", "DSPM", "Enterprise AI", "Microsoft Purview", "Policy Management", "Risk Assessment", "Security", "Security Analytics", "SharePoint"]
-tags_normalized: ["activity monitoring", "ai", "ai governance", "azure security", "blog", "blogs", "compliance", "copilot", "data protection", "data risk", "data security posture management", "dspm", "enterprise ai", "microsoft purview", "policy management", "risk assessment", "security", "security analytics", "sharepoint"]
+permalink: /ai/blogs/Data-Security-Posture-Management-for-AI-with-Microsoft-Purview
+tags:
+- Activity Monitoring
+- AI
+- AI Governance
+- Azure Security
+- Blog
+- Blogs
+- Compliance
+- Copilot
+- Data Protection
+- Data Risk
+- Data Security Posture Management
+- DSPM
+- Enterprise AI
+- Microsoft Purview
+- Policy Management
+- Risk Assessment
+- Security
+- Security Analytics
+- SharePoint
+section_names:
+- ai
+- security
 ---
-
 Petrus Vasenius introduces Microsoft Purview's Data Security Posture Management for AI, offering technical details on managing, monitoring, and securing organizational AI usage with dashboards, recommendations, policies, and risk assessment tools.<!--excerpt_end-->
 
 # Data Security Posture Management for AI

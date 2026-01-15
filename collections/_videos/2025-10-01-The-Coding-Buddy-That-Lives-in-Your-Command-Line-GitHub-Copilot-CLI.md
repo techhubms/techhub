@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI"
-description: "This video introduces the GitHub Copilot CLI, an extension of GitHub Copilot that integrates AI-powered code assistance directly into the terminal. The content covers the main features and benefits of using GitHub Copilot CLI, emphasizing how developers can leverage AI capabilities quickly from the command line without leaving their workflow. The video targets developers seeking to enhance productivity by incorporating Copilot's agentic AI directly in local development environments."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/ZnZBxZC8WSA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI'
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/ZnZBxZC8WSA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-01 14:01:04 +00:00
-permalink: "/2025-10-01-The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI in Development", "AI Programming Assistant", "Code Completion", "Command Line Interface", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "GithubCopilotCLI", "Local Development", "Productivity", "Terminal", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai in development", "ai programming assistant", "code completion", "command line interface", "developer tools", "github copilot", "github copilot cli", "githubcopilotcli", "local development", "productivity", "terminal", "videos"]
+permalink: /github-copilot/videos/The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI
+tags:
+- Agentic AI
+- AI
+- AI in Development
+- AI Programming Assistant
+- Code Completion
+- Command Line Interface
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot CLI
+- GithubCopilotCLI
+- Local Development
+- Productivity
+- Terminal
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents an overview of the GitHub Copilot CLI, showing how this AI-powered assistant extends Copilot’s capabilities directly into the terminal, enhancing code and workflow efficiency for developers.<!--excerpt_end-->
 
 {% youtube ZnZBxZC8WSA %}

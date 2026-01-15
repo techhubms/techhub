@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Service Discovery in Azure: Dynamically Finding Service Instances"
-description: "This article explores how service discovery is implemented within Microsoft Azure environments, focusing on various Azure platforms such as Azure Kubernetes Service (AKS), Azure App Service, Azure Container Apps, and Azure Service Fabric. It provides an in-depth look at the architectural patterns, mechanisms, and best practices that enable microservices to dynamically locate and communicate with each other despite scaling and shifting environments. The post covers DNS-based and API gateway-based approaches, practical examples, and security considerations, equipping architects and developers with actionable guidance to build scalable and resilient cloud-native applications in Azure."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Service Discovery in Azure: Dynamically Finding Service Instances'
+author: Dellenny
+canonical_url: https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-02 07:45:25 +00:00
-permalink: "/2025-09-02-Service-Discovery-in-Azure-Dynamically-Finding-Service-Instances.html"
-categories: ["Azure", "Coding"]
-tags: ["AKS", "API Gateway", "API Management", "App Service Environment", "Architecture", "Azure", "Azure App Service", "Azure Container Apps", "Blogs", "Cloud Architecture", "Coding", "Dapr", "DNS", "Kubernetes", "Microservices", "Platform as A Service", "Service Discovery", "Service Fabric", "Service Mesh", "Solution Architecture"]
-tags_normalized: ["aks", "api gateway", "api management", "app service environment", "architecture", "azure", "azure app service", "azure container apps", "blogs", "cloud architecture", "coding", "dapr", "dns", "kubernetes", "microservices", "platform as a service", "service discovery", "service fabric", "service mesh", "solution architecture"]
+permalink: /coding/blogs/Service-Discovery-in-Azure-Dynamically-Finding-Service-Instances
+tags:
+- AKS
+- API Gateway
+- API Management
+- App Service Environment
+- Architecture
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Blogs
+- Cloud Architecture
+- Coding
+- Dapr
+- DNS
+- Kubernetes
+- Microservices
+- Platform as A Service
+- Service Discovery
+- Service Fabric
+- Service Mesh
+- Solution Architecture
+section_names:
+- azure
+- coding
 ---
-
 Dellenny provides a detailed guide to service discovery patterns in Microsoft Azure, helping developers and architects ensure reliable microservice communication in cloud-native applications.<!--excerpt_end-->
 
 # Service Discovery in Azure: Dynamically Finding Service Instances

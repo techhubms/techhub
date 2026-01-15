@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Data Mapper Test Executor in Logic Apps Standard Test Framework"
-description: "This article introduces the Data Mapper Test Executor, a new feature for the Logic Apps Standard Automated Test Framework. It enables developers to efficiently validate complex data transformations, such as XSLT and Liquid templates, directly within their test suites, improving development workflows and reliability. Key capabilities include native support for testing Logic Apps maps, integrated setup with the test framework SDK (v1.0.1+), and detailed sample code for map unit testing. The content also outlines current limitations and recommends SDK updates for optimal results."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Data Mapper Test Executor in Logic Apps Standard Test Framework
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 16:00:00 +00:00
-permalink: "/2025-12-08-Data-Mapper-Test-Executor-in-Logic-Apps-Standard-Test-Framework.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automated Test Framework", "Azure", "Azure Integration Services", "Coding", "Community", "Data Mapper Test Executor", "DevOps", "Integration Testing", "Liquid Templates", "Logic Apps Standard", "Map Definitions", "NuGet", "Schema Validation", "SDK", "Transformation Testing", "Unit Testing", "XML", "XSLT"]
-tags_normalized: ["automated test framework", "azure", "azure integration services", "coding", "community", "data mapper test executor", "devops", "integration testing", "liquid templates", "logic apps standard", "map definitions", "nuget", "schema validation", "sdk", "transformation testing", "unit testing", "xml", "xslt"]
+permalink: /coding/community/Data-Mapper-Test-Executor-in-Logic-Apps-Standard-Test-Framework
+tags:
+- Automated Test Framework
+- Azure
+- Azure Integration Services
+- Coding
+- Community
+- Data Mapper Test Executor
+- DevOps
+- Integration Testing
+- Liquid Templates
+- Logic Apps Standard
+- Map Definitions
+- NuGet
+- Schema Validation
+- SDK
+- Transformation Testing
+- Unit Testing
+- XML
+- XSLT
+section_names:
+- azure
+- coding
+- devops
 ---
-
 WSilveira details how developers can leverage the Data Mapper Test Executor for Logic Apps Standard, offering native capabilities to test data transformations efficiently within automated workflows.<!--excerpt_end-->
 
 # Data Mapper Test Executor: A New Addition to Logic Apps Standard Test Framework

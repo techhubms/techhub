@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "5 Things You Need to Know About Model Context Protocol (MCP)"
-description: "This video introduces the Model Context Protocol (MCP), a new standard designed to help Agents in Visual Studio Code and similar tools discover and share features like tools, resources, and prompts. It serves as a beginner-friendly overview for developers interested in leveraging MCP within their coding environments."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/une3Ba19EQM"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 5 Things You Need to Know About Model Context Protocol (MCP)
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/shorts/une3Ba19EQM
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-15 15:01:46 +00:00
-permalink: "/2025-11-15-5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Features", "AI", "Coding", "Developer Tools", "MCP", "Programming Standards", "Prompts", "Resource Sharing", "Tool Discovery", "Videos", "VS Code"]
-tags_normalized: ["agent features", "ai", "coding", "developer tools", "mcp", "programming standards", "prompts", "resource sharing", "tool discovery", "videos", "vs code"]
+permalink: /ai/videos/5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP
+tags:
+- Agent Features
+- AI
+- Coding
+- Developer Tools
+- MCP
+- Programming Standards
+- Prompts
+- Resource Sharing
+- Tool Discovery
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 Visual Studio Code presents a beginner-focused video where Chris Noring explains the essentials of the Model Context Protocol (MCP) and its impact on developer workflows.<!--excerpt_end-->
 
 {% youtube une3Ba19EQM %}

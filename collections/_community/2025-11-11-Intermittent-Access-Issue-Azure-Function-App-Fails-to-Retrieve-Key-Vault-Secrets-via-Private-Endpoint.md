@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Intermittent Access Issue: Azure Function App Fails to Retrieve Key Vault Secrets via Private Endpoint"
-description: "A technical inquiry into intermittent connectivity and authentication failures when an Azure Function App, running on a Premium plan with VNet integration, attempts to access Azure Key Vault using a private endpoint. The author describes the environment, error encountered, and solicits solutions from the community for resolving AccessToKeyVaultDenied issues that temporarily prevent secret retrieval via managed identity."
-author: "Manan_Choksi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Intermittent Access Issue: Azure Function App Fails to Retrieve Key Vault Secrets via Private Endpoint'
+author: Manan_Choksi
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 14:08:54 +00:00
-permalink: "/2025-11-11-Intermittent-Access-Issue-Azure-Function-App-Fails-to-Retrieve-Key-Vault-Secrets-via-Private-Endpoint.html"
-categories: ["Azure", "Security"]
-tags: ["AccessToKeyVaultDenied", "Authentication Errors", "Azure", "Azure Function App", "Azure Key Vault", "Community", "Connectivity Issues", "Key Vault References", "Managed Identity", "Network Security", "Premium Plan", "Private Endpoint", "Secret Management", "Security", "Troubleshooting", "VNet Integration"]
-tags_normalized: ["accesstokeyvaultdenied", "authentication errors", "azure", "azure function app", "azure key vault", "community", "connectivity issues", "key vault references", "managed identity", "network security", "premium plan", "private endpoint", "secret management", "security", "troubleshooting", "vnet integration"]
+permalink: /azure/community/Intermittent-Access-Issue-Azure-Function-App-Fails-to-Retrieve-Key-Vault-Secrets-via-Private-Endpoint
+tags:
+- AccessToKeyVaultDenied
+- Authentication Errors
+- Azure
+- Azure Function App
+- Azure Key Vault
+- Community
+- Connectivity Issues
+- Key Vault References
+- Managed Identity
+- Network Security
+- Premium Plan
+- Private Endpoint
+- Secret Management
+- Security
+- Troubleshooting
+- VNet Integration
+section_names:
+- azure
+- security
 ---
-
 Manan_Choksi raises a technical question regarding intermittent failures for an Azure Function App to access Azure Key Vault secrets over a private endpoint, seeking community solutions for these managed identity authentication and connectivity issues.<!--excerpt_end-->
 
 # Intermittent Access Issue Between Azure Function App and Key Vault (Private Endpoint Enabled)

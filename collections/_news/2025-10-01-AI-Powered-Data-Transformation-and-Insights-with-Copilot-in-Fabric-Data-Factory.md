@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Data Transformation and Insights with Copilot in Fabric Data Factory"
-description: "This official Microsoft Fabric Blog post introduces the latest Copilot features in Fabric Data Factory. It showcases how natural language-driven capabilities empower users to ingest, transform, and understand data efficiently, leveraging AI-powered assistants for dataflows, pipelines, and documentation. The blog walks through enhancements like Modern Get Data, natural language-to-custom column, Dataflow and Pipeline explainers, and offers extensive resources for learning more."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: AI-Powered Data Transformation and Insights with Copilot in Fabric Data Factory
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 08:00:00 +00:00
-permalink: "/2025-10-01-AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Assistant", "Automation", "Azure", "Azure Data", "Cloud Data Integration", "Copilot", "Data Ingestion", "Data Transformation", "Dataflow Gen2", "Fabric Data Factory", "Mashup", "Microsoft Fabric", "Natural Language", "News", "Pipeline Orchestration", "Power Query", "Productivity Tools"]
-tags_normalized: ["ai", "ai assistant", "automation", "azure", "azure data", "cloud data integration", "copilot", "data ingestion", "data transformation", "dataflow gen2", "fabric data factory", "mashup", "microsoft fabric", "natural language", "news", "pipeline orchestration", "power query", "productivity tools"]
+permalink: /ai/news/AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory
+tags:
+- AI
+- AI Assistant
+- Automation
+- Azure
+- Azure Data
+- Cloud Data Integration
+- Copilot
+- Data Ingestion
+- Data Transformation
+- Dataflow Gen2
+- Fabric Data Factory
+- Mashup
+- Microsoft Fabric
+- Natural Language
+- News
+- Pipeline Orchestration
+- Power Query
+- Productivity Tools
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Fabric Blog presents an in-depth look at new Copilot-powered features in Fabric Data Factory, showing how AI enhances data ingestion, transformation, and understanding. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # AI-Powered Development with Fabric Data Factory – Ingest, Transform, and Understand Your Data with Copilot

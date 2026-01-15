@@ -1,17 +1,38 @@
----
-layout: "post"
-title: "XPRT Magazine 15"
-description: "A diverse edition featuring AI-driven creativity, sustainable software engineering, DevOps, cloud security, value stream mapping, and more. Includes hands-on guides, real-world stories, and technical deep-dives from Xpirit's international teams."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 15
 date: 2023-10-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2023-10-01-XPRT-Magazine-15.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Azure", "Azure Policy", "CKAD", "Cloud Security", "Coding", "Community", "DevOps", "Escape Room", "Fuzzing", "GreenOps", "InnerSource", "Kubernetes", "Magazines", "Meditation", "Platform Engineering", "Playwright", "Security", "Sustainable Software Engineering", "Value Stream Mapping"]
-tags_normalized: ["ai", "azure", "azure policy", "ckad", "cloud security", "coding", "community", "devops", "escape room", "fuzzing", "greenops", "innersource", "kubernetes", "magazines", "meditation", "platform engineering", "playwright", "security", "sustainable software engineering", "value stream mapping"]
+author: Xebia
+viewing_mode: external
+permalink: /ai/community/XPRT-Magazine-15
+tags:
+- AI
+- Azure
+- Azure Policy
+- CKAD
+- Cloud Security
+- Coding
+- Community
+- DevOps
+- Escape Room
+- Fuzzing
+- GreenOps
+- InnerSource
+- Kubernetes
+- Magazines
+- Meditation
+- Platform Engineering
+- Playwright
+- Security
+- Sustainable Software Engineering
+- Value Stream Mapping
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 Xpirit Magazine 15 brings together international voices to share knowledge on AI-driven content creation, sustainable software engineering, DevOps journeys, cloud security, value stream mapping, and more. This issue features hands-on guides, real-world stories, and technical deep-dives for modern software professionals.
 <!--excerpt_end-->
 

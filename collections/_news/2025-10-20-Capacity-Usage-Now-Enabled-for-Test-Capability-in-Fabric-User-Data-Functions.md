@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions"
-description: "This news post from the Microsoft Fabric Blog details the update to User Data Functions (UDFs) in Microsoft Fabric: as of October 27th, running tests on your UDFs in Develop mode will start consuming Fabric capacity. The article explains how the test capability works, its session model, and what changes with general availability."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 12:00:00 +00:00
-permalink: "/2025-10-20-Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Capacity Metrics", "Data Architecture", "Data Engineering", "Develop Mode", "Fabric Integration", "Fabric User Data Functions", "General Availability", "Microsoft Fabric", "ML", "News", "Power BI Integration", "Python Functions", "Service Limits", "Testing"]
-tags_normalized: ["azure", "capacity metrics", "data architecture", "data engineering", "develop mode", "fabric integration", "fabric user data functions", "general availability", "microsoft fabric", "ml", "news", "power bi integration", "python functions", "service limits", "testing"]
+permalink: /ml/news/Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions
+tags:
+- Azure
+- Capacity Metrics
+- Data Architecture
+- Data Engineering
+- Develop Mode
+- Fabric Integration
+- Fabric User Data Functions
+- General Availability
+- Microsoft Fabric
+- ML
+- News
+- Power BI Integration
+- Python Functions
+- Service Limits
+- Testing
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces that, effective October 27th, testing User Data Functions in Develop mode will count towards Fabric capacity. The post by the Microsoft Fabric Blog team covers session mechanics, usage metrics, and general availability changes.<!--excerpt_end-->
 
 # Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions

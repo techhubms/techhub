@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Azure Accelerates Hollow Core Fiber (HCF) Production with Corning and Heraeus"
-description: "A deep dive into how Microsoft Azure is scaling hollow core fiber (HCF) production to advance its cloud and AI network infrastructure. The article covers Microsoft's collaborations with Corning and Heraeus, breakthroughs in fiber optic technology, deployment milestones, and implications for latency, bandwidth, and the future of global connectivity. Real-world implementation details and research highlights from academic partners are included for IT and cloud practitioners."
-author: "frrey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through/ba-p/4455953"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Microsoft Azure Accelerates Hollow Core Fiber (HCF) Production with Corning and Heraeus
+author: frrey
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through/ba-p/4455953
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 15:00:12 +00:00
-permalink: "/2025-09-23-Microsoft-Azure-Accelerates-Hollow-Core-Fiber-HCF-Production-with-Corning-and-Heraeus.html"
-categories: ["Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Azure Networking", "Cloud Networking", "Community", "Corning", "Data Center Infrastructure", "DNANF", "Fiber Manufacturing", "Fiber Optics", "HCF", "Heraeus Covantics", "Hollow Core Fiber", "Latency Reduction", "Microsoft Azure", "Network Performance", "Optical Networking", "Quantum Safe Links"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "azure networking", "cloud networking", "community", "corning", "data center infrastructure", "dnanf", "fiber manufacturing", "fiber optics", "hcf", "heraeus covantics", "hollow core fiber", "latency reduction", "microsoft azure", "network performance", "optical networking", "quantum safe links"]
+permalink: /azure/community/Microsoft-Azure-Accelerates-Hollow-Core-Fiber-HCF-Production-with-Corning-and-Heraeus
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Azure Networking
+- Cloud Networking
+- Community
+- Corning
+- Data Center Infrastructure
+- DNANF
+- Fiber Manufacturing
+- Fiber Optics
+- HCF
+- Heraeus Covantics
+- Hollow Core Fiber
+- Latency Reduction
+- Microsoft Azure
+- Network Performance
+- Optical Networking
+- Quantum Safe Links
+section_names:
+- azure
 ---
-
 frrey explains how Microsoft Azure, in collaboration with Corning and Heraeus, is scaling up hollow core fiber (HCF) production to enhance global performance and reliability for cloud and AI workloads.<!--excerpt_end-->
 
 # Microsoft Azure Accelerates Hollow Core Fiber (HCF) Production with Corning and Heraeus

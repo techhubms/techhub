@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Elevate Washington: Bringing AI Access and Skills to Every Community in the State"
-description: "This article details Microsoft's new Elevate Washington initiative, which aims to close the digital and AI usage gap across Washington state. Through free AI tools, training, funding, and partnerships, the program seeks to equip students, educators, and community colleges with generative AI skills and technology, fostering equitable opportunities and digital literacy statewide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Elevate Washington: Bringing AI Access and Skills to Every Community in the State'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-10 17:50:49 +00:00
-permalink: "/2025-10-10-Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State.html"
-categories: ["AI"]
-tags: ["AI", "AI For Good Lab", "AI Training", "Community Colleges", "Company News", "Copilot Chat", "Copilot Studio", "Digital Skills", "Generative AI", "K 12 Education", "Learning Accelerators", "Microsoft 365", "Microsoft Elevate Washington", "News", "Professional Development", "Public Education", "Teams For Education", "Washington State"]
-tags_normalized: ["ai", "ai for good lab", "ai training", "community colleges", "company news", "copilot chat", "copilot studio", "digital skills", "generative ai", "k 12 education", "learning accelerators", "microsoft 365", "microsoft elevate washington", "news", "professional development", "public education", "teams for education", "washington state"]
+permalink: /ai/news/Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State
+tags:
+- AI
+- AI For Good Lab
+- AI Training
+- Community Colleges
+- Company News
+- Copilot Chat
+- Copilot Studio
+- Digital Skills
+- Generative AI
+- K 12 Education
+- Learning Accelerators
+- Microsoft 365
+- Microsoft Elevate Washington
+- News
+- Professional Development
+- Public Education
+- Teams For Education
+- Washington State
+section_names:
+- ai
 ---
-
 stclarke reports on Microsoft's Elevate Washington initiative, offering free AI tools and training to schools and colleges across the state. The program supports students, educators, and community organizations in building digital literacy and readiness for an AI-driven future.<!--excerpt_end-->
 
 # Microsoft Elevate Washington: Bringing AI Access and Skills Statewide

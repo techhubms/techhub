@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Infinite Scale: The Architecture Behind the Azure AI Superfactory"
-description: "This post unveils the technical innovations underpinning Microsoft's Fairwater AI datacenters in Atlanta, Georgia, detailing how the Azure AI superfactory pushes the boundaries of global scale, compute density, cooling efficiency, cutting-edge networking, and sustainable power solutions. It covers the architecture's support for training frontier models, dynamic workload allocation, and integration into a planet-scale Azure AI infrastructure, making it fit for diverse, large-scale artificial intelligence workloads."
-author: "Vanessa Ho"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Infinite Scale: The Architecture Behind the Azure AI Superfactory'
+author: Vanessa Ho
+canonical_url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-19 21:19:14 +00:00
-permalink: "/2025-11-19-Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Workload Management", "Azure", "Azure AI", "Blackwell Accelerators", "Cluster Networking", "Compute Density", "Dynamic Allocation", "Ethernet Backend", "Fairwater Datacenter", "Flat Network Architecture", "Frontier Model Training", "High Availability Power", "Hyperscale Infrastructure", "Liquid Cooling", "News", "NVIDIA GPU", "OPTICAL WAN Network", "Packet Trimming", "SONiC", "Supercomputer", "Sustainable Datacenter"]
-tags_normalized: ["ai", "ai workload management", "azure", "azure ai", "blackwell accelerators", "cluster networking", "compute density", "dynamic allocation", "ethernet backend", "fairwater datacenter", "flat network architecture", "frontier model training", "high availability power", "hyperscale infrastructure", "liquid cooling", "news", "nvidia gpu", "optical wan network", "packet trimming", "sonic", "supercomputer", "sustainable datacenter"]
+permalink: /ai/news/Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory
+tags:
+- AI
+- AI Workload Management
+- Azure
+- Azure AI
+- Blackwell Accelerators
+- Cluster Networking
+- Compute Density
+- Dynamic Allocation
+- Ethernet Backend
+- Fairwater Datacenter
+- Flat Network Architecture
+- Frontier Model Training
+- High Availability Power
+- Hyperscale Infrastructure
+- Liquid Cooling
+- News
+- NVIDIA GPU
+- OPTICAL WAN Network
+- Packet Trimming
+- SONiC
+- Supercomputer
+- Sustainable Datacenter
+section_names:
+- ai
+- azure
 ---
-
 Vanessa Ho introduces Microsoft's Fairwater AI datacenter in Atlanta, diving into its revolutionary architecture and the broader Azure AI superfactory powering next-generation artificial intelligence solutions.<!--excerpt_end-->
 
 # Infinite Scale: The Architecture Behind the Azure AI Superfactory

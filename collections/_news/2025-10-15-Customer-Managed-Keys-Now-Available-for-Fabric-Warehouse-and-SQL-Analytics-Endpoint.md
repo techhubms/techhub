@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Customer-Managed Keys Now Available for Fabric Warehouse and SQL Analytics Endpoint"
-description: "This update introduces Customer-Managed Keys (CMK) for Fabric Warehouse and SQL Analytics Endpoint, enabling organizations to control and manage encryption keys themselves. By leveraging Azure Key Vault integration, enterprises gain enhanced data security, compliance alignment, and governance over critical metadata and operational artifacts within Fabric workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/bringing-customer-managed-keys-to-fabric-warehouse-and-sql-analytics-endpoint/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Customer-Managed Keys Now Available for Fabric Warehouse and SQL Analytics Endpoint
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/bringing-customer-managed-keys-to-fabric-warehouse-and-sql-analytics-endpoint/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 09:00:00 +00:00
-permalink: "/2025-10-15-Customer-Managed-Keys-Now-Available-for-Fabric-Warehouse-and-SQL-Analytics-Endpoint.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Key Vault", "BYOK", "Compliance", "Customer Managed Keys", "Data Protection", "Database Security", "Governance", "Microsoft Fabric", "News", "Security", "SPN", "SQL Analytics Endpoint", "Warehouse Encryption"]
-tags_normalized: ["azure", "azure key vault", "byok", "compliance", "customer managed keys", "data protection", "database security", "governance", "microsoft fabric", "news", "security", "spn", "sql analytics endpoint", "warehouse encryption"]
+permalink: /azure/news/Customer-Managed-Keys-Now-Available-for-Fabric-Warehouse-and-SQL-Analytics-Endpoint
+tags:
+- Azure
+- Azure Key Vault
+- BYOK
+- Compliance
+- Customer Managed Keys
+- Data Protection
+- Database Security
+- Governance
+- Microsoft Fabric
+- News
+- Security
+- SPN
+- SQL Analytics Endpoint
+- Warehouse Encryption
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog details the introduction of Customer-Managed Keys for Fabric Warehouse and SQL Analytics Endpoint, empowering organizations to enhance security and compliance through Azure Key Vault integration.<!--excerpt_end-->
 
 # Bringing Customer-Managed Keys to Fabric Warehouse and SQL Analytics Endpoint

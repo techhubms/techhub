@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Your New Rubber Duck is an AI"
-description: "Rene van Osnabrugge reflects on insights from the LEAD podcast, sharing discussions about generative AI, its impact on developers and engineering culture, and the role of tools like GitHub Copilot. The post argues that AI augments—rather than replaces—developers, emphasizing the need to adapt, experiment, and learn new skills."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/07/11/your-new-rubber-duck-is-an-ai/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Your New Rubber Duck is an AI
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/07/11/your-new-rubber-duck-is-an-ai/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-07-11 07:29:51 +00:00
-permalink: "/2025-07-11-Your-New-Rubber-Duck-is-an-AI.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Blogs", "Chatgpt", "Cloud", "Code Review", "Collaboration", "Copilot", "Developer Experience", "Developer Productivity", "DevOps", "Engineering Culture", "Genai", "GitHub Copilot", "Lead Podcast", "Pair Programming", "Prompting", "Team Adoption", "Technology"]
-tags_normalized: ["ai", "automation", "blogs", "chatgpt", "cloud", "code review", "collaboration", "copilot", "developer experience", "developer productivity", "devops", "engineering culture", "genai", "github copilot", "lead podcast", "pair programming", "prompting", "team adoption", "technology"]
+permalink: /github-copilot/blogs/Your-New-Rubber-Duck-is-an-AI
+tags:
+- AI
+- Automation
+- Blogs
+- Chatgpt
+- Cloud
+- Code Review
+- Collaboration
+- Copilot
+- Developer Experience
+- Developer Productivity
+- DevOps
+- Engineering Culture
+- Genai
+- GitHub Copilot
+- Lead Podcast
+- Pair Programming
+- Prompting
+- Team Adoption
+- Technology
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Rene van Osnabrugge, co-creator of the LEAD podcast, discusses the evolution of developer roles in the age of AI, sharing insights from conversations about GitHub Copilot and engineering culture.<!--excerpt_end-->
 
 # Your New Rubber Duck is an AI

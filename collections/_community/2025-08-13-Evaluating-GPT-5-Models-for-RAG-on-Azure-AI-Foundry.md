@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Evaluating GPT-5 Models for RAG on Azure AI Foundry"
-description: "Pamela Fox provides a deep dive into evaluating the new GPT-5 model family—now available via Azure AI Foundry—for Retrieval-Augmented Generation (RAG) workflows. The analysis compares GPT-5 variants against previous generations, explores groundedness and relevance metrics using azure-ai-evaluation SDK, and shares practical lessons for developers integrating AI into their Azure data solutions."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-will-it-rag/ba-p/4442676"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Evaluating GPT-5 Models for RAG on Azure AI Foundry
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-will-it-rag/ba-p/4442676
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 07:54:51 +00:00
-permalink: "/2025-08-13-Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Evaluation", "Azure AI Foundry", "Clarifying Questions", "Community", "Evaluation SDK", "GPT 5", "Groundedness", "Hybrid Search", "Latency Metrics", "LLM Evaluation", "OpenAI", "Prompt Engineering", "RAG", "Relevance Metrics", "Retrieval Augmented Generation", "Synonyms Search"]
-tags_normalized: ["ai", "azure", "azure ai evaluation", "azure ai foundry", "clarifying questions", "community", "evaluation sdk", "gpt 5", "groundedness", "hybrid search", "latency metrics", "llm evaluation", "openai", "prompt engineering", "rag", "relevance metrics", "retrieval augmented generation", "synonyms search"]
+permalink: /ai/community/Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry
+tags:
+- AI
+- Azure
+- Azure AI Evaluation
+- Azure AI Foundry
+- Clarifying Questions
+- Community
+- Evaluation SDK
+- GPT 5
+- Groundedness
+- Hybrid Search
+- Latency Metrics
+- LLM Evaluation
+- OpenAI
+- Prompt Engineering
+- RAG
+- Relevance Metrics
+- Retrieval Augmented Generation
+- Synonyms Search
+section_names:
+- ai
+- azure
 ---
-
 Pamela Fox evaluates the performance of GPT-5 models in Retrieval-Augmented Generation use cases on Azure AI Foundry, providing practical insights on accuracy, relevance, and developer experience for AI practitioners.<!--excerpt_end-->
 
 # Evaluating GPT-5 Models for Retrieval-Augmented Generation (RAG) on Azure AI Foundry

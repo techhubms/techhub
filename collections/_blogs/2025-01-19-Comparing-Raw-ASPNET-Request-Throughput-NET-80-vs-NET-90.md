@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Comparing Raw ASP.NET Request Throughput: .NET 8.0 vs .NET 9.0"
-description: "Rick Strahl benchmarks and analyzes ASP.NET request throughput and resource usage differences between .NET 8.0 and .NET 9.0, focusing on real-world developer scenarios, performance trade-offs, and impacts of garbage collection configuration. Real test data, anecdotes, and code samples provide actionable insights."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Jan/19/Comparing-Raw-ASPNET-Request-Throughput-across-Versions-80-to-90-Edition"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: 'Comparing Raw ASP.NET Request Throughput: .NET 8.0 vs .NET 9.0'
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Jan/19/Comparing-Raw-ASPNET-Request-Throughput-across-Versions-80-to-90-Edition
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-01-19 22:51:02 +00:00
-permalink: "/2025-01-19-Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET ASP.NET", "ASP.NET", "Blogs", "Coding", "Controllers", "Garbage Collection", "Kestrel", "Load Testing", "Memory Footprint", "Minimal APIs", "Performance", "Resource Usage", "Startup Speed", "WebSurge"]
-tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet aspdotnet", "aspdotnet", "blogs", "coding", "controllers", "garbage collection", "kestrel", "load testing", "memory footprint", "minimal apis", "performance", "resource usage", "startup speed", "websurge"]
+permalink: /coding/blogs/Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90
+tags:
+- .NET
+- .NET 8.0
+- .NET 9.0
+- .NET ASP.NET
+- ASP.NET
+- Blogs
+- Coding
+- Controllers
+- Garbage Collection
+- Kestrel
+- Load Testing
+- Memory Footprint
+- Minimal APIs
+- Performance
+- Resource Usage
+- Startup Speed
+- WebSurge
+section_names:
+- coding
 ---
-
 In this detailed article, Rick Strahl compares the raw throughput and resource usage of ASP.NET applications running on .NET 8.0 and .NET 9.0. He shares benchmarks, test setup details, anecdotes from production, and practical performance findings.<!--excerpt_end-->
 
 # Comparing Raw ASP.NET Request Throughput: .NET 8.0 vs .NET 9.0
@@ -130,14 +144,13 @@ You can check process memory via PowerShell:
 get-process -Name "HighPerformanceAspNet" | Select-Object Name, Id, @{Name="WorkingSet (MB)";Expression={---
 layout: "post"
 title: "Comparing Raw ASP.NET Request Throughput: .NET 8.0 vs .NET 9.0"
-description: "Rick Strahl benchmarks and analyzes ASP.NET request throughput and resource usage differences between .NET 8.0 and .NET 9.0, focusing on real-world developer scenarios, performance trade-offs, and impacts of garbage collection configuration. Real test data, anecdotes, and code samples provide actionable insights."
 author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://weblog.west-wind.com/posts/2025/Jan/19/Comparing-Raw-ASPNET-Request-Throughput-across-Versions-80-to-90-Edition"
 viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: https://feeds.feedburner.com/rickstrahl
-date: 2025-01-19 22:51:02 +00:00
+date: "2025-01-19 22:51:02 +00:00"
 permalink: "2025-01-19-Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET ASP.NET", "ASP.NET", "Coding", "Controllers", "Garbage Collection", "Kestrel", "Load Testing", "Memory Footprint", "Minimal APIs", "Performance", "Blogs", "Resource Usage", "Startup Speed", "WebSurge"]
@@ -152,14 +165,13 @@ This post appeared first on "Rick Strahl's Blog". [Read the entire article here]
 .WorkingSet / 1MB}}, @{Name="VirtualMemorySize (MB)";Expression={---
 layout: "post"
 title: "Comparing Raw ASP.NET Request Throughput: .NET 8.0 vs .NET 9.0"
-description: "Rick Strahl benchmarks and analyzes ASP.NET request throughput and resource usage differences between .NET 8.0 and .NET 9.0, focusing on real-world developer scenarios, performance trade-offs, and impacts of garbage collection configuration. Real test data, anecdotes, and code samples provide actionable insights."
 author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://weblog.west-wind.com/posts/2025/Jan/19/Comparing-Raw-ASPNET-Request-Throughput-across-Versions-80-to-90-Edition"
 viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: https://feeds.feedburner.com/rickstrahl
-date: 2025-01-19 22:51:02 +00:00
+date: "2025-01-19 22:51:02 +00:00"
 permalink: "2025-01-19-Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET ASP.NET", "ASP.NET", "Coding", "Controllers", "Garbage Collection", "Kestrel", "Load Testing", "Memory Footprint", "Minimal APIs", "Performance", "Blogs", "Resource Usage", "Startup Speed", "WebSurge"]

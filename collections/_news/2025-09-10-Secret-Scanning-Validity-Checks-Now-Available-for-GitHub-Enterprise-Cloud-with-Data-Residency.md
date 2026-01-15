@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Secret Scanning Validity Checks Now Available for GitHub Enterprise Cloud with Data Residency"
-description: "This announcement covers the introduction of validity checks for GitHub Secret Protection and GitHub Advanced Security customers using GitHub Enterprise Cloud with data residency. Validity checks automatically verify supported token types when secret scanning is enabled for repositories. The update also mentions support for new token validators, including SSLMate and Typeform, and highlights impending availability for GitHub Enterprise Server."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-10-secret-scanning-validity-checks-available-for-data-residency"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Secret Scanning Validity Checks Now Available for GitHub Enterprise Cloud with Data Residency
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-10-secret-scanning-validity-checks-available-for-data-residency
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 20:59:55 +00:00
-permalink: "/2025-09-10-Secret-Scanning-Validity-Checks-Now-Available-for-GitHub-Enterprise-Cloud-with-Data-Residency.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Data Residency", "DevOps", "Enterprise Server", "GitHub", "GitHub Advanced Security", "GitHub Enterprise Cloud", "News", "Secret Protection", "Secret Scanning", "Security", "Security Automation", "SSLmate", "Token Validation", "Typeform"]
-tags_normalized: ["application security", "data residency", "devops", "enterprise server", "github", "github advanced security", "github enterprise cloud", "news", "secret protection", "secret scanning", "security", "security automation", "sslmate", "token validation", "typeform"]
+permalink: /devops/news/Secret-Scanning-Validity-Checks-Now-Available-for-GitHub-Enterprise-Cloud-with-Data-Residency
+tags:
+- Application Security
+- Data Residency
+- DevOps
+- Enterprise Server
+- GitHub
+- GitHub Advanced Security
+- GitHub Enterprise Cloud
+- News
+- Secret Protection
+- Secret Scanning
+- Security
+- Security Automation
+- SSLmate
+- Token Validation
+- Typeform
+section_names:
+- devops
+- security
 ---
-
 Allison details GitHub's rollout of validity checks for secret scanning on Enterprise Cloud with data residency, providing a significant security upgrade for DevOps teams and security practitioners.<!--excerpt_end-->
 
 # Secret Scanning Validity Checks Now Available for GitHub Enterprise Cloud with Data Residency

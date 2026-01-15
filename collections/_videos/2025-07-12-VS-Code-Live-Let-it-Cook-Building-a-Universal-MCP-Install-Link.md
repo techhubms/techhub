@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "VS Code Live - Let it Cook: Building a Universal MCP Install Link"
-description: "This episode explores creating a universal install link for Microsoft Certified Projects (MCPs), streamlining installation instructions and deep linking for developers. Sean Roberts, Burke Holland, and Pierce Boggan discuss implementation ideas and benefits for repository badges, directions, and more, aiming to simplify the setup experience across environments."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JybSsLEJ-hg"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live - Let it Cook: Building a Universal MCP Install Link'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=JybSsLEJ-hg
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-12 04:27:01 +00:00
-permalink: "/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html"
-categories: ["DevOps", "Coding"]
-tags: ["Burke Holland", "Centralized Installation", "Coding", "Deep Linking", "Developer Tools", "DevOps", "Install Link", "Installation Directions", "Microsoft Certified Projects", "Netlify", "Pierce Boggan", "Repository Badges", "Sean Roberts", "Vibecoding", "Videos", "VS Code"]
-tags_normalized: ["burke holland", "centralized installation", "coding", "deep linking", "developer tools", "devops", "install link", "installation directions", "microsoft certified projects", "netlify", "pierce boggan", "repository badges", "sean roberts", "vibecoding", "videos", "vs code"]
+permalink: /coding/videos/VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link
+tags:
+- Burke Holland
+- Centralized Installation
+- Coding
+- Deep Linking
+- Developer Tools
+- DevOps
+- Install Link
+- Installation Directions
+- Microsoft Certified Projects
+- Netlify
+- Pierce Boggan
+- Repository Badges
+- Sean Roberts
+- Vibecoding
+- Videos
+- VS Code
+section_names:
+- devops
+- coding
 ---
-
 In this episode, Sean Roberts, Burke Holland, and Pierce Boggan from Visual Studio Code discuss strategies to build a universal install link for MCPs to streamline developer installation workflows.<!--excerpt_end-->
 
 {% youtube JybSsLEJ-hg %}

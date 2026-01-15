@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub"
-description: "This post details new integrations between GitHub and Microsoft Defender for Cloud, enabling unified tracking, traceability, and remediation of security risks across the software supply chain. Teams gain full artifact provenance, runtime risk insights, and production-aware security campaigns, streamlining collaboration between development, AppSec, and security teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:32 +00:00
-permalink: "/2025-11-18-Unified-Code-to-Cloud-Artifact-Risk-Visibility-with-Microsoft-Defender-for-Cloud-in-GitHub.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Security", "AppSec", "Artifact Metadata API", "Azure", "Azure Container Registry", "CI/CD", "Code Scanning", "Dependabot", "DevOps", "DevSecOps", "GitHub Advanced Security", "Linked Artifacts", "Microsoft Defender For Cloud", "News", "Production Context", "Runtime Risk", "Security", "Security Campaigns", "Supply Chain Security"]
-tags_normalized: ["application security", "appsec", "artifact metadata api", "azure", "azure container registry", "cislashcd", "code scanning", "dependabot", "devops", "devsecops", "github advanced security", "linked artifacts", "microsoft defender for cloud", "news", "production context", "runtime risk", "security", "security campaigns", "supply chain security"]
+permalink: /azure/news/Unified-Code-to-Cloud-Artifact-Risk-Visibility-with-Microsoft-Defender-for-Cloud-in-GitHub
+tags:
+- Application Security
+- AppSec
+- Artifact Metadata API
+- Azure
+- Azure Container Registry
+- CI/CD
+- Code Scanning
+- Dependabot
+- DevOps
+- DevSecOps
+- GitHub Advanced Security
+- Linked Artifacts
+- Microsoft Defender For Cloud
+- News
+- Production Context
+- Runtime Risk
+- Security
+- Security Campaigns
+- Supply Chain Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 Allison shares how new GitHub features, integrated with Microsoft Defender for Cloud, deliver end-to-end artifact provenance, runtime risk awareness, and targeted security remediation for code-to-cloud workflows.<!--excerpt_end-->
 
 # Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub

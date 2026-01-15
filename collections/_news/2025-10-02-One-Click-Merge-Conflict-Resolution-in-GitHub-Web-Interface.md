@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "One-Click Merge Conflict Resolution in GitHub Web Interface"
-description: "GitHub now offers one-click merge conflict resolution directly in its web interface, allowing developers to handle conflicts on pull requests without leaving their browsers. This update introduces familiar options such as 'Accept current changes,' 'Accept incoming changes,' and 'Accept both changes,' streamlining collaboration and enhancing productivity."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: One-Click Merge Conflict Resolution in GitHub Web Interface
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-02 18:07:10 +00:00
-permalink: "/2025-10-02-One-Click-Merge-Conflict-Resolution-in-GitHub-Web-Interface.html"
-categories: ["DevOps"]
-tags: ["Code Collaboration", "Collaboration Tools", "DevOps", "DevOps Tools", "GitHub", "Improvement", "Merge Conflicts", "News", "Productivity", "Pull Requests", "Source Control", "VS Code", "Web Interface", "Workflow Automation"]
-tags_normalized: ["code collaboration", "collaboration tools", "devops", "devops tools", "github", "improvement", "merge conflicts", "news", "productivity", "pull requests", "source control", "vs code", "web interface", "workflow automation"]
+permalink: /devops/news/One-Click-Merge-Conflict-Resolution-in-GitHub-Web-Interface
+tags:
+- Code Collaboration
+- Collaboration Tools
+- DevOps
+- DevOps Tools
+- GitHub
+- Improvement
+- Merge Conflicts
+- News
+- Productivity
+- Pull Requests
+- Source Control
+- VS Code
+- Web Interface
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison presents the new GitHub feature that enables developers to resolve merge conflicts with a single click in the web interface, mirroring the experience of desktop code editors.<!--excerpt_end-->
 
 # One-Click Merge Conflict Resolution in GitHub Web Interface

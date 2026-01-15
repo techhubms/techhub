@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android"
-description: "This update covers the new feature in GitHub Mobile for Android that enables users to share text from external Android applications directly into Copilot agent sessions. By leveraging the Android sharesheet custom action, developers can instantly transform ideas drafted in other apps—such as notes or project plans—into actionable Copilot agent tasks, streamlining brainstorming and feature planning workflows within the GitHub ecosystem."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 18:10:22 +00:00
-permalink: "/2025-11-25-Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Tasks", "AI", "Android", "Client Apps", "Copilot", "Copilot Agent Sessions", "Developer Productivity", "External App Sharing", "Feature Planning", "GitHub Copilot", "GitHub Mobile", "Idea Management", "Improvement", "Integration", "Mobile Development", "News", "Sharesheet", "Workflow Automation"]
-tags_normalized: ["agent tasks", "ai", "android", "client apps", "copilot", "copilot agent sessions", "developer productivity", "external app sharing", "feature planning", "github copilot", "github mobile", "idea management", "improvement", "integration", "mobile development", "news", "sharesheet", "workflow automation"]
+permalink: /github-copilot/news/Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android
+tags:
+- Agent Tasks
+- AI
+- Android
+- Client Apps
+- Copilot
+- Copilot Agent Sessions
+- Developer Productivity
+- External App Sharing
+- Feature Planning
+- GitHub Copilot
+- GitHub Mobile
+- Idea Management
+- Improvement
+- Integration
+- Mobile Development
+- News
+- Sharesheet
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces a new workflow in GitHub Mobile for Android, allowing users to initiate Copilot agent sessions by sharing text from external apps, thus improving project planning and development efficiency.<!--excerpt_end-->
 
 # Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android

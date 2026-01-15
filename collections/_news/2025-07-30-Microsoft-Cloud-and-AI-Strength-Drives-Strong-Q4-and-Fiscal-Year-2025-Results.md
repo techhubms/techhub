@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft Cloud and AI Strength Drives Strong Q4 and Fiscal Year 2025 Results"
-description: "Microsoft's Q4 and FY25 earnings report highlights significant growth fueled by cloud and AI services. The company posted increased revenues, operating income, and net income. Notable growth in Azure, Microsoft 365, and Dynamics 365, as well as substantial investments in innovation and product releases, reflect Microsoft's continued market momentum."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Cloud and AI Strength Drives Strong Q4 and Fiscal Year 2025 Results
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:09:51 +00:00
-permalink: "/2025-07-30-Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Amy Hood", "Azure", "Cloud Computing", "Company News", "Dynamics 365", "Enterprise Software", "Financial Results", "Intelligent Cloud", "Microsoft", "Microsoft 365", "News", "Productivity And Business Processes", "Satya Nadella"]
-tags_normalized: ["ai", "amy hood", "azure", "cloud computing", "company news", "dynamics 365", "enterprise software", "financial results", "intelligent cloud", "microsoft", "microsoft 365", "news", "productivity and business processes", "satya nadella"]
+permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results
+tags:
+- AI
+- Amy Hood
+- Azure
+- Cloud Computing
+- Company News
+- Dynamics 365
+- Enterprise Software
+- Financial Results
+- Intelligent Cloud
+- Microsoft
+- Microsoft 365
+- News
+- Productivity And Business Processes
+- Satya Nadella
+section_names:
+- ai
+- azure
 ---
-
 Authored by stclarke, this article reviews Microsoft's Q4 and fiscal year 2025 financials, spotlighting the key role of cloud and AI services in delivering strong company performance.<!--excerpt_end-->
 
 ## Summary

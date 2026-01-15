@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Modernizing Azure Synapse Analytics with Microsoft Fabric: Migration and Integration Pathways"
-description: "This update from the Microsoft Fabric team explores the evolution of analytics modernization for Azure Synapse users. It details how organizations can migrate to Microsoft Fabric, leveraging unified analytics, AI-native features, data integration advancements, and improved cost efficiency. Includes step-by-step migration guidance, architecture patterns, and real-world transformation case studies."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/two-years-on-how-fabric-redefines-the-modernization-path-for-synapse-users/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Modernizing Azure Synapse Analytics with Microsoft Fabric: Migration and Integration Pathways'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/two-years-on-how-fabric-redefines-the-modernization-path-for-synapse-users/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Modernizing-Azure-Synapse-Analytics-with-Microsoft-Fabric-Migration-and-Integration-Pathways.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Native Analytics", "Architecture Patterns", "Azure", "Azure Data Factory", "Azure Synapse", "Compliance", "Copilot", "Cost Optimization", "Data Governance", "Data Integration", "Data Warehouse", "Enterprise Analytics", "Fabric Data Factory", "Microsoft Fabric", "Migration", "ML", "News", "Notebook Migration", "OneLake", "Power BI", "Spark", "T SQL"]
-tags_normalized: ["ai", "ai native analytics", "architecture patterns", "azure", "azure data factory", "azure synapse", "compliance", "copilot", "cost optimization", "data governance", "data integration", "data warehouse", "enterprise analytics", "fabric data factory", "microsoft fabric", "migration", "ml", "news", "notebook migration", "onelake", "power bi", "spark", "t sql"]
+permalink: /ai/news/Modernizing-Azure-Synapse-Analytics-with-Microsoft-Fabric-Migration-and-Integration-Pathways
+tags:
+- AI
+- AI Native Analytics
+- Architecture Patterns
+- Azure
+- Azure Data Factory
+- Azure Synapse
+- Compliance
+- Copilot
+- Cost Optimization
+- Data Governance
+- Data Integration
+- Data Warehouse
+- Enterprise Analytics
+- Fabric Data Factory
+- Microsoft Fabric
+- Migration
+- ML
+- News
+- Notebook Migration
+- OneLake
+- Power BI
+- Spark
+- T SQL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how Synapse users can seamlessly migrate to Microsoft Fabric, highlighting real-world examples and detailing the AI-powered features and cost savings enabled by Fabric’s unified analytics architecture.<!--excerpt_end-->
 
 # Modernizing Azure Synapse Analytics with Microsoft Fabric

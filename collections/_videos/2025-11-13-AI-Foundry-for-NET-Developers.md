@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI Foundry for .NET Developers"
-description: "This session introduces .NET developers to Azure AI Foundry, showcasing how it streamlines AI model development, evaluation, and deployment within .NET workflows. Learn how AI Foundry integrates with .NET 10, .NET Aspire, and modern frameworks, enabling systematic and reliable AI application building from prototype to production."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eJfToDv8KH4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: AI Foundry for .NET Developers
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=eJfToDv8KH4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:50 +00:00
-permalink: "/2025-11-13-AI-Foundry-for-NET-Developers.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Development", "AI Orchestration", "ASP.NET Core 10", "Azure", "Azure AI Foundry", "C# 14", "Cloud Native Apps", "Coding", "Developer Tools", "F# 10", "Intelligent Applications", "Microsoft", "Model Evaluation", "Production Deployment", "Prompt Engineering", "Testing", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai development", "ai orchestration", "aspdotnet core 10", "azure", "azure ai foundry", "csharp 14", "cloud native apps", "coding", "developer tools", "fsharp 10", "intelligent applications", "microsoft", "model evaluation", "production deployment", "prompt engineering", "testing", "videos", "vs"]
+permalink: /ai/videos/AI-Foundry-for-NET-Developers
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- AI
+- AI Development
+- AI Orchestration
+- ASP.NET Core 10
+- Azure
+- Azure AI Foundry
+- C# 14
+- Cloud Native Apps
+- Coding
+- Developer Tools
+- F# 10
+- Intelligent Applications
+- Microsoft
+- Model Evaluation
+- Production Deployment
+- Prompt Engineering
+- Testing
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet delivers an insightful overview of leveraging Azure AI Foundry in .NET development, highlighting tools and best practices for building, evaluating, and deploying production-ready AI applications.<!--excerpt_end-->
 
 {% youtube eJfToDv8KH4 %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Entity Diagram in Eventhouse KQL Database (Preview)"
-description: "This post introduces the Entity Diagram feature for Eventhouse KQL Database in Microsoft Fabric, offering a visual map of your database. It explains how the diagram displays connections between tables, functions, materialized views, update policies, and event streams, and highlights practical benefits like spotting schema violations and understanding ingestion flows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Entity Diagram in Eventhouse KQL Database (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 09:00:00 +00:00
-permalink: "/2025-11-03-Entity-Diagram-in-Eventhouse-KQL-Database-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cross Database Relationships", "Data Engineering", "Data Flow", "Database Development", "Entity Diagram", "Eventhouse", "Eventstreams", "Ingestion Monitoring", "KQL Database", "Materialized Views", "Microsoft Fabric", "ML", "News", "Real Time Analytics", "Schema Validation", "Update Policies", "Visualization Tools"]
-tags_normalized: ["azure", "cross database relationships", "data engineering", "data flow", "database development", "entity diagram", "eventhouse", "eventstreams", "ingestion monitoring", "kql database", "materialized views", "microsoft fabric", "ml", "news", "real time analytics", "schema validation", "update policies", "visualization tools"]
+permalink: /ml/news/Entity-Diagram-in-Eventhouse-KQL-Database-Preview
+tags:
+- Azure
+- Cross Database Relationships
+- Data Engineering
+- Data Flow
+- Database Development
+- Entity Diagram
+- Eventhouse
+- Eventstreams
+- Ingestion Monitoring
+- KQL Database
+- Materialized Views
+- Microsoft Fabric
+- ML
+- News
+- Real Time Analytics
+- Schema Validation
+- Update Policies
+- Visualization Tools
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Entity Diagram for Eventhouse KQL Database, providing developers and data engineers with a visual way to explore data flows, entity connections, and schema integrity within their KQL databases.<!--excerpt_end-->
 
 # Entity Diagram in Eventhouse KQL Database (Preview)

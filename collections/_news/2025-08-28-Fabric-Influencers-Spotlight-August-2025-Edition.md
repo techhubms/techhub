@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Fabric Influencers Spotlight: August 2025 Edition"
-description: "This curated spotlight showcases outstanding content from Microsoft MVPs and Fabric Super Users, covering all aspects of Microsoft Fabric. Topics include data warehousing, Power BI development techniques, data engineering, governance, data science workflows, community achievements, and exam success strategies, highlighting technical tutorials, solutions, and best practices for the Microsoft Fabric platform."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-august-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Influencers Spotlight: August 2025 Edition'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-august-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-28 09:00:00 +00:00
-permalink: "/2025-08-28-Fabric-Influencers-Spotlight-August-2025-Edition.html"
-categories: ["ML"]
-tags: ["Administration", "Analytics", "Calculation Groups", "Certification", "Data Engineering", "Data Science", "Data Transformation", "Data Warehousing", "DP 600", "Fabric Community", "Fabric Lakehouse", "Governance", "Materialized Lake Views", "Microsoft Fabric", "ML", "News", "Pandas", "Power BI", "Translytical Task Flows"]
-tags_normalized: ["administration", "analytics", "calculation groups", "certification", "data engineering", "data science", "data transformation", "data warehousing", "dp 600", "fabric community", "fabric lakehouse", "governance", "materialized lake views", "microsoft fabric", "ml", "news", "pandas", "power bi", "translytical task flows"]
+permalink: /ml/news/Fabric-Influencers-Spotlight-August-2025-Edition
+tags:
+- Administration
+- Analytics
+- Calculation Groups
+- Certification
+- Data Engineering
+- Data Science
+- Data Transformation
+- Data Warehousing
+- DP 600
+- Fabric Community
+- Fabric Lakehouse
+- Governance
+- Materialized Lake Views
+- Microsoft Fabric
+- ML
+- News
+- Pandas
+- Power BI
+- Translytical Task Flows
+section_names:
+- ml
 ---
-
 The Microsoft Fabric Blog team highlights technical contributions from MVPs and Super Users across key areas of Fabric, featuring data science tutorials, engineering tips, certification guidance, and governance best practices.<!--excerpt_end-->
 
 # Fabric Influencers Spotlight: August 2025 Edition

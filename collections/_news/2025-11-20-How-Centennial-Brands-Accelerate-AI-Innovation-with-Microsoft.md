@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "How Centennial Brands Accelerate AI Innovation with Microsoft"
-description: "This article explores how century-old companies like Kraft Heinz, Levi Strauss & Co., Wells Fargo, and Land O’Lakes are leveraging Microsoft AI technologies—including Azure OpenAI, AI agents, and enterprise digital assistants—to reinvent operations and drive innovation. It highlights detailed use cases across supply chain, manufacturing, retail, financial services, and agriculture, demonstrating the integration of generative and agentic AI, cloud migration, and enterprise data analytics to enable scalable change and competitive advantage."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Centennial Brands Accelerate AI Innovation with Microsoft
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 16:56:02 +00:00
-permalink: "/2025-11-20-How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agribusiness Technology", "AI", "AI Agent", "Azure", "Azure OpenAI", "Cloud Migration", "Company News", "Data Analytics", "Digital Assistant", "Digital Transformation", "Enterprise AI", "Financial Services Technology", "Generative AI", "Institutional Knowledge", "Kraft Heinz", "Land O’Lakes", "Levi Strauss & Co.", "Machine Learning", "Microsoft AI", "ML", "News", "Production Optimization", "Retail Innovation", "Supply Chain", "Wells Fargo"]
-tags_normalized: ["agribusiness technology", "ai", "ai agent", "azure", "azure openai", "cloud migration", "company news", "data analytics", "digital assistant", "digital transformation", "enterprise ai", "financial services technology", "generative ai", "institutional knowledge", "kraft heinz", "land olakes", "levi strauss and codot", "machine learning", "microsoft ai", "ml", "news", "production optimization", "retail innovation", "supply chain", "wells fargo"]
+permalink: /ai/news/How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft
+tags:
+- Agribusiness Technology
+- AI
+- AI Agent
+- Azure
+- Azure OpenAI
+- Cloud Migration
+- Company News
+- Data Analytics
+- Digital Assistant
+- Digital Transformation
+- Enterprise AI
+- Financial Services Technology
+- Generative AI
+- Institutional Knowledge
+- Kraft Heinz
+- Land O’Lakes
+- Levi Strauss & Co.
+- Machine Learning
+- Microsoft AI
+- ML
+- News
+- Production Optimization
+- Retail Innovation
+- Supply Chain
+- Wells Fargo
+section_names:
+- ai
+- azure
+- ml
 ---
-
 stclarke presents an in-depth look at how 100-year-old brands leverage Microsoft AI and Azure to transform business processes, showcasing cases from Kraft Heinz, Levi Strauss & Co., Wells Fargo, and Land O’Lakes.<!--excerpt_end-->
 
 # How Centennial Brands Accelerate AI Innovation with Microsoft

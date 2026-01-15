@@ -1,22 +1,25 @@
----
-layout: "post"
-title: "Path-specific Custom Instructions"
-description: "Define custom instructions for specific file paths or directories"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Path-specific Custom Instructions
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: "/2026-08-29-Path-specific-Custom-Instructions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Pro", "Business"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Path-specific-Custom-Instructions
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Pro
+- Business
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Path-specific Custom Instructions feature. Define custom instructions for specific file paths or directories<!--excerpt_end-->
 
 ## Overview

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "BrainKey Leverages Microsoft Azure and AI to Advance Brain Health Research"
-description: "This article explores how BrainKey, a healthcare startup, utilizes advanced AI models and Microsoft Azure's cloud platform to analyze MRI scans, empower patients and clinicians with earlier brain health insights, and ensure HIPAA-compliant, scalable infrastructure for medical imaging workloads. The partnership also highlights Microsoft’s programs that foster healthcare innovation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/from-personal-crisis-to-global-impact-how-brainkey-reimagines-brain-health-with-ai-and-microsoft-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: BrainKey Leverages Microsoft Azure and AI to Advance Brain Health Research
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/from-personal-crisis-to-global-impact-how-brainkey-reimagines-brain-health-with-ai-and-microsoft-azure/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-27 17:48:20 +00:00
-permalink: "/2025-08-27-BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI in Healthcare", "AKS", "Azure", "Azure Blob Storage", "Azure Marketplace", "BrainKey", "Cloud Infrastructure", "Company News", "Data Security", "Digital Health", "Healthcare Technology", "HIPAA Compliance", "Medical Imaging", "Microsoft Azure", "Microsoft For Startups", "MRI Analysis", "News", "Nuance PowerShare", "Terraform"]
-tags_normalized: ["ai", "ai in healthcare", "aks", "azure", "azure blob storage", "azure marketplace", "brainkey", "cloud infrastructure", "company news", "data security", "digital health", "healthcare technology", "hipaa compliance", "medical imaging", "microsoft azure", "microsoft for startups", "mri analysis", "news", "nuance powershare", "terraform"]
+permalink: /ai/news/BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research
+tags:
+- AI
+- AI in Healthcare
+- AKS
+- Azure
+- Azure Blob Storage
+- Azure Marketplace
+- BrainKey
+- Cloud Infrastructure
+- Company News
+- Data Security
+- Digital Health
+- Healthcare Technology
+- HIPAA Compliance
+- Medical Imaging
+- Microsoft Azure
+- Microsoft For Startups
+- MRI Analysis
+- News
+- Nuance PowerShare
+- Terraform
+section_names:
+- ai
+- azure
 ---
-
 In this news feature by stclarke, learn how BrainKey harnesses Microsoft Azure and advanced AI for scalable, secure brain health research, leveraging both medical imaging analytics and cloud innovation.<!--excerpt_end-->
 
 # BrainKey and Microsoft Azure: Advancing Brain Health Research with Responsible AI

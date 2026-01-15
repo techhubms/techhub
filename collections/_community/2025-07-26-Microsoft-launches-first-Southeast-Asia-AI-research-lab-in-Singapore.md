@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft launches first Southeast Asia AI research lab in Singapore"
-description: "Microsoft has launched its first AI research lab in Southeast Asia, located in Singapore. This move aims to drive AI innovation, research, and talent development within the region. The lab's presence is expected to enhance collaboration with local institutions and foster the growth of AI expertise."
-author: "108CA"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/microsoft/comments/1m9q6o4/microsoft_launches_first_southeast_asia_ai/"
-viewing_mode: "external"
-feed_name: "Reddit Microsoft"
-feed_url: "https://www.reddit.com/r/microsoft/.rss"
+﻿---
+layout: post
+title: Microsoft launches first Southeast Asia AI research lab in Singapore
+author: 108CA
+canonical_url: https://www.reddit.com/r/microsoft/comments/1m9q6o4/microsoft_launches_first_southeast_asia_ai/
+viewing_mode: external
+feed_name: Reddit Microsoft
+feed_url: https://www.reddit.com/r/microsoft/.rss
 date: 2025-07-26 10:39:54 +00:00
-permalink: "/2025-07-26-Microsoft-launches-first-Southeast-Asia-AI-research-lab-in-Singapore.html"
-categories: ["AI"]
-tags: ["AI", "AI Lab", "AI Research", "Community", "Innovation", "Microsoft", "Regional Collaboration", "Research Lab", "Singapore", "Southeast Asia", "Talent Development", "Technology"]
-tags_normalized: ["ai", "ai lab", "ai research", "community", "innovation", "microsoft", "regional collaboration", "research lab", "singapore", "southeast asia", "talent development", "technology"]
+permalink: /ai/community/Microsoft-launches-first-Southeast-Asia-AI-research-lab-in-Singapore
+tags:
+- AI
+- AI Lab
+- AI Research
+- Community
+- Innovation
+- Microsoft
+- Regional Collaboration
+- Research Lab
+- Singapore
+- Southeast Asia
+- Talent Development
+- Technology
+section_names:
+- ai
 ---
-
 Author 108CA reports on Microsoft's opening of its inaugural Southeast Asia AI research lab in Singapore, signaling an investment in regional AI advancement.<!--excerpt_end-->
 
 # Microsoft Launches First Southeast Asia AI Research Lab in Singapore

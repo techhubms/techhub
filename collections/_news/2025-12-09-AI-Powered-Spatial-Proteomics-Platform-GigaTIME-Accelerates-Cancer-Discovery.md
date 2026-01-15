@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI-Powered Spatial Proteomics Platform GigaTIME Accelerates Cancer Discovery"
-description: "This news highlights new Microsoft-led research, published in Cell, which details the development of GigaTIME—a platform that leverages AI to simulate spatial proteomics from routine pathology slides. GigaTIME enables large-scale analysis of tumor microenvironments across a broad spectrum of cancer types and subtypes. The approach, developed with Providence and the University of Washington, aims to accelerate insights into tumor biology, benefiting scientists and clinical outcomes by making complex, population-scale analysis accessible using machine learning and AI technologies."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_ai-generated-population-scale-is-changing-activity-7404189540757831680-VtoO"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: AI-Powered Spatial Proteomics Platform GigaTIME Accelerates Cancer Discovery
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_ai-generated-population-scale-is-changing-activity-7404189540757831680-VtoO
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 18:16:44 +00:00
-permalink: "/2025-12-09-AI-Powered-Spatial-Proteomics-Platform-GigaTIME-Accelerates-Cancer-Discovery.html"
-categories: ["AI"]
-tags: ["AI", "AI For Healthcare", "Biomedical AI", "Cancer Discovery", "Cell Journal", "Company News", "GigaTIME", "LinkedIn Post", "Machine Learning", "Medical Innovation", "Microsoft Research", "News", "Pathology Slides", "Population Scale Analysis", "Precision Oncology", "Spatial Proteomics", "Tumor Microenvironment"]
-tags_normalized: ["ai", "ai for healthcare", "biomedical ai", "cancer discovery", "cell journal", "company news", "gigatime", "linkedin post", "machine learning", "medical innovation", "microsoft research", "news", "pathology slides", "population scale analysis", "precision oncology", "spatial proteomics", "tumor microenvironment"]
+permalink: /ai/news/AI-Powered-Spatial-Proteomics-Platform-GigaTIME-Accelerates-Cancer-Discovery
+tags:
+- AI
+- AI For Healthcare
+- Biomedical AI
+- Cancer Discovery
+- Cell Journal
+- Company News
+- GigaTIME
+- LinkedIn Post
+- Machine Learning
+- Medical Innovation
+- Microsoft Research
+- News
+- Pathology Slides
+- Population Scale Analysis
+- Precision Oncology
+- Spatial Proteomics
+- Tumor Microenvironment
+section_names:
+- ai
 ---
-
 stclarke summarizes how Satya Nadella and team introduced GigaTIME, an AI-driven tool developed by Microsoft, Providence, and the University of Washington, that enables population-scale spatial proteomics from routine pathology slides, significantly advancing cancer research.<!--excerpt_end-->
 
 # AI-Powered Spatial Proteomics Platform GigaTIME Accelerates Cancer Discovery

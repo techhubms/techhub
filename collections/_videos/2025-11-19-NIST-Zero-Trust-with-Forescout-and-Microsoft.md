@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "NIST Zero Trust with Forescout and Microsoft"
-description: "This session from Microsoft Ignite 2025 explains how to achieve NIST 1800-35 Zero Trust architecture using Forescout and Microsoft technologies. It demonstrates endpoint security strategies, device insight collection, compliance assessment, and building a protected environment with Microsoft Defender and Intune. The talk covers technical implementation using the NIST Zero Trust framework, focusing on policy decision points and managing both corporate and unmanaged devices."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eKVJ-Rw8R0I"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: NIST Zero Trust with Forescout and Microsoft
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=eKVJ-Rw8R0I
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:08:33 +00:00
-permalink: "/2025-11-19-NIST-Zero-Trust-with-Forescout-and-Microsoft.html"
-categories: ["Security"]
-tags: ["Attack Surface", "Device Compliance", "Endpoint Security", "Forescout", "Managed Devices", "Microsoft Defender", "Microsoft Ignite", "Microsoft Intune", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "NIST 1800 35", "Policy Decision Point", "Security", "Security Architecture", "Security Operations", "Unmanaged Devices", "Videos", "Zero Trust"]
-tags_normalized: ["attack surface", "device compliance", "endpoint security", "forescout", "managed devices", "microsoft defender", "microsoft ignite", "microsoft intune", "modernizesecopswithaunifiedplatform", "msignite", "nist 1800 35", "policy decision point", "security", "security architecture", "security operations", "unmanaged devices", "videos", "zero trust"]
+permalink: /security/videos/NIST-Zero-Trust-with-Forescout-and-Microsoft
+tags:
+- Attack Surface
+- Device Compliance
+- Endpoint Security
+- Forescout
+- Managed Devices
+- Microsoft Defender
+- Microsoft Ignite
+- Microsoft Intune
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- NIST 1800 35
+- Policy Decision Point
+- Security
+- Security Architecture
+- Security Operations
+- Unmanaged Devices
+- Videos
+- Zero Trust
+section_names:
+- security
 ---
-
 Presented by Bryan Davis at Microsoft Ignite, this session outlines achieving Zero Trust security in line with NIST 1800-35 using Forescout and Microsoft technologies such as Defender and Intune.<!--excerpt_end-->
 
 {% youtube eKVJ-Rw8R0I %}

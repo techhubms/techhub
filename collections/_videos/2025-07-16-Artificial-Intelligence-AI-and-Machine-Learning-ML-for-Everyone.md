@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!"
-description: "This video by John Savill's Technical Training introduces viewers to the fundamentals of artificial intelligence (AI) and machine learning (ML). Targeted at beginners, it covers foundational concepts like supervised and unsupervised learning, neural networks, generative AI, and large language models (LLMs). While the focus is broad, resource links are provided for Azure AI learning and certifications, making the content relevant to those interested in Microsoft’s AI ecosystem."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=C7Iu2lcoAQ4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=C7Iu2lcoAQ4
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-16 11:30:50 +00:00
-permalink: "/2025-07-16-Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone.html"
-categories: ["AI"]
-tags: ["Agent", "AI", "AI Agents", "AI Assistant", "AI Fundamentals", "AI Learning Path", "Assistant", "Azure Certification", "Generative AI", "John Savill", "Large Language Models", "LLM", "Machine Learning", "Machine Learning Basics", "Microsoft Azure AI", "Neural Networks", "Reinforcement Learning", "Supervised Learning", "Unsupervised Learning", "Videos"]
-tags_normalized: ["agent", "ai", "ai agents", "ai assistant", "ai fundamentals", "ai learning path", "assistant", "azure certification", "generative ai", "john savill", "large language models", "llm", "machine learning", "machine learning basics", "microsoft azure ai", "neural networks", "reinforcement learning", "supervised learning", "unsupervised learning", "videos"]
+permalink: /ai/videos/Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone
+tags:
+- Agent
+- AI
+- AI Agents
+- AI Assistant
+- AI Fundamentals
+- AI Learning Path
+- Assistant
+- Azure Certification
+- Generative AI
+- John Savill
+- Large Language Models
+- LLM
+- Machine Learning
+- Machine Learning Basics
+- Microsoft Azure AI
+- Neural Networks
+- Reinforcement Learning
+- Supervised Learning
+- Unsupervised Learning
+- Videos
+section_names:
+- ai
 ---
-
 John Savill's Technical Training presents an introductory video on AI and ML concepts, guiding beginners through key terms and technologies in artificial intelligence and machine learning.<!--excerpt_end-->
 
 {% youtube C7Iu2lcoAQ4 %}

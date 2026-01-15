@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Monitor Private Link Scope (AMPLS) Scale Limits Increased by 10x: General Availability Overview"
-description: "This article announces the general availability of a major scalability enhancement for Azure Monitor Private Link Scope (AMPLS), increasing scale limits by a factor of 10. The update allows connection of up to 3,000 Log Analytics workspaces and 10,000 Application Insights components per AMPLS, supporting robust security, compliance, and Zero Trust principles for large-scale Azure environments. Real-world case studies from banking and telecom sectors highlight how organizations can now securely centralize monitoring and efficiently manage telemetry flows using private endpoints and a redesigned user interface."
-author: "Mahesh_Sundaram"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-azure-monitor-private-link-scope-ampls-scale/ba-p/4471482"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Monitor Private Link Scope (AMPLS) Scale Limits Increased by 10x: General Availability Overview'
+author: Mahesh_Sundaram
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-azure-monitor-private-link-scope-ampls-scale/ba-p/4471482
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 17:22:02 +00:00
-permalink: "/2025-11-20-Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-Increased-by-10x-General-Availability-Overview.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AMPLS", "Application Insights", "Azure", "Azure Monitor", "Azure Private Link", "Azure Telemetry", "Community", "Compliance", "Data Exfiltration", "DevOps", "DevOps Teams", "Log Analytics Workspace", "Microsoft Backbone Network", "Monitoring Architecture", "Network Isolation", "Operational Efficiency", "Pagination", "Private Endpoint", "Resource Management", "Scalability", "Security", "Sovereign Cloud", "Zero Trust"]
-tags_normalized: ["ampls", "application insights", "azure", "azure monitor", "azure private link", "azure telemetry", "community", "compliance", "data exfiltration", "devops", "devops teams", "log analytics workspace", "microsoft backbone network", "monitoring architecture", "network isolation", "operational efficiency", "pagination", "private endpoint", "resource management", "scalability", "security", "sovereign cloud", "zero trust"]
+permalink: /azure/community/Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-Increased-by-10x-General-Availability-Overview
+tags:
+- AMPLS
+- Application Insights
+- Azure
+- Azure Monitor
+- Azure Private Link
+- Azure Telemetry
+- Community
+- Compliance
+- Data Exfiltration
+- DevOps
+- DevOps Teams
+- Log Analytics Workspace
+- Microsoft Backbone Network
+- Monitoring Architecture
+- Network Isolation
+- Operational Efficiency
+- Pagination
+- Private Endpoint
+- Resource Management
+- Scalability
+- Security
+- Sovereign Cloud
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 Mahesh_Sundaram details how the Azure Monitor Private Link Scope (AMPLS) scale limits have been increased by 10x, enabling organizations to scale secure monitoring and resource management across large environments.<!--excerpt_end-->
 
 # Azure Monitor Private Link Scope (AMPLS) Scale Limits Increased by 10x: GA Announcement

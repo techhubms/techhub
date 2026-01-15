@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Secure Access with Managed Identities for Azure Files SMB"
-description: "This article introduces the public preview of Managed Identities support for Azure Files SMB, highlighting how organizations can enhance security and compliance by replacing credentials-based storage access with identity-driven authentication integrated with Microsoft Entra ID. It covers real-world scenarios for DevOps CI/CD workloads, AKS persistent storage, and provides practical guidance for adopting Managed Identities on cloud-native services using OAuth tokens and Kerberos. Key benefits include Zero Trust alignment, Role Based Access Control, multi-client support, and compliance with standards like FIPS."
-author: "Priyanka-Gangal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Secure Access with Managed Identities for Azure Files SMB
+author: Priyanka-Gangal
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 17:46:43 +00:00
-permalink: "/2025-12-15-Secure-Access-with-Managed-Identities-for-Azure-Files-SMB.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Azure DevOps", "Azure Files", "CI/CD", "Cloud Native", "Community", "DevOps", "FIPS Compliance", "Kerberos", "Linux Clients", "Managed Identities", "Microsoft Entra ID", "OAuth Tokens", "Persistent Storage", "RBAC", "Role Based Access Control", "Security", "SMB Shares", "Windows Clients", "Zero Trust"]
-tags_normalized: ["aks", "azure", "azure devops", "azure files", "cislashcd", "cloud native", "community", "devops", "fips compliance", "kerberos", "linux clients", "managed identities", "microsoft entra id", "oauth tokens", "persistent storage", "rbac", "role based access control", "security", "smb shares", "windows clients", "zero trust"]
+permalink: /azure/community/Secure-Access-with-Managed-Identities-for-Azure-Files-SMB
+tags:
+- AKS
+- Azure
+- Azure DevOps
+- Azure Files
+- CI/CD
+- Cloud Native
+- Community
+- DevOps
+- FIPS Compliance
+- Kerberos
+- Linux Clients
+- Managed Identities
+- Microsoft Entra ID
+- OAuth Tokens
+- Persistent Storage
+- RBAC
+- Role Based Access Control
+- Security
+- SMB Shares
+- Windows Clients
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 Priyanka-Gangal explains how Managed Identities empower secure, credential-free access to Azure Files SMB for applications and DevOps scenarios, detailing benefits and practical implementation advice.<!--excerpt_end-->
 
 # Secure, Seamless Access using Managed Identities with Azure Files SMB

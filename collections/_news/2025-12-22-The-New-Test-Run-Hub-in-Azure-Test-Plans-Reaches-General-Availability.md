@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "The New Test Run Hub in Azure Test Plans Reaches General Availability"
-description: "This announcement details the general availability of the new Test Run Hub within Azure Test Plans, part of Azure DevOps Services. It highlights improvements in test execution, analytics, and collaboration, including real-time visibility, advanced filtering, programmatic access via REST API, and enhanced user experience. The update is based on user feedback and brings a modern approach to managing both manual and automated test runs."
-author: "Panagiotis Liaros"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: The New Test Run Hub in Azure Test Plans Reaches General Availability
+author: Panagiotis Liaros
+canonical_url: https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-22 13:06:01 +00:00
-permalink: "/2025-12-22-The-New-Test-Run-Hub-in-Azure-Test-Plans-Reaches-General-Availability.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agile", "Azure", "Azure DevOps", "Azure Test Plans", "Collaboration", "Continuous Integration", "Dashboards", "Development Tools", "DevOps", "Manual Testing", "News", "Pipeline Integration", "Release Management", "REST API", "Software Quality", "Test", "Test Analytics", "Test Automation", "Test Management", "Test Points", "Test Run Hub", "Test Runs"]
-tags_normalized: ["agile", "azure", "azure devops", "azure test plans", "collaboration", "continuous integration", "dashboards", "development tools", "devops", "manual testing", "news", "pipeline integration", "release management", "rest api", "software quality", "test", "test analytics", "test automation", "test management", "test points", "test run hub", "test runs"]
+permalink: /azure/news/The-New-Test-Run-Hub-in-Azure-Test-Plans-Reaches-General-Availability
+tags:
+- Agile
+- Azure
+- Azure DevOps
+- Azure Test Plans
+- Collaboration
+- Continuous Integration
+- Dashboards
+- Development Tools
+- DevOps
+- Manual Testing
+- News
+- Pipeline Integration
+- Release Management
+- REST API
+- Software Quality
+- Test
+- Test Analytics
+- Test Automation
+- Test Management
+- Test Points
+- Test Run Hub
+- Test Runs
+section_names:
+- azure
+- devops
 ---
-
 Panagiotis Liaros announces the general availability of the new Test Run Hub in Azure Test Plans, highlighting major improvements for test execution, analytics, and collaborative development within Azure DevOps Services.<!--excerpt_end-->
 
 # The New Test Run Hub in Azure Test Plans Reaches General Availability

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025"
-description: "This session from Microsoft Ignite 2025 introduces the Oasis platform, which delivers centralized governance for non-human identities—such as service principals, managed identities, and tokens—used by AI agents. It explains the risks of uncontrolled accounts, showcases agent discovery across Microsoft Entra, Azure, M365, and GitHub, and demonstrates how Oasis automates lifecycle management with role right-sizing, short-lived secrets, and audit evidence."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FsD1p_LPZWE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=FsD1p_LPZWE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:31:45 +00:00
-permalink: "/2025-11-19-Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Access Control", "AI", "AI Agents", "Audit Evidence", "Automation", "Azure", "Cloud Security", "GitHub", "Identity Governance", "Lifecycle Management", "Managed Identities", "Microsoft Entra", "Microsoft Ignite", "MSIgnite", "Non Human Identities", "Oasis", "Privilege Management", "ProtectcloudAIplatformandapps", "Role Management", "Secrets Rotation", "Security", "Service Principals", "Tokens", "Videos"]
-tags_normalized: ["access control", "ai", "ai agents", "audit evidence", "automation", "azure", "cloud security", "github", "identity governance", "lifecycle management", "managed identities", "microsoft entra", "microsoft ignite", "msignite", "non human identities", "oasis", "privilege management", "protectcloudaiplatformandapps", "role management", "secrets rotation", "security", "service principals", "tokens", "videos"]
+permalink: /ai/videos/Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025
+tags:
+- Access Control
+- AI
+- AI Agents
+- Audit Evidence
+- Automation
+- Azure
+- Cloud Security
+- GitHub
+- Identity Governance
+- Lifecycle Management
+- Managed Identities
+- Microsoft Entra
+- Microsoft Ignite
+- MSIgnite
+- Non Human Identities
+- Oasis
+- Privilege Management
+- ProtectcloudAIplatformandapps
+- Role Management
+- Secrets Rotation
+- Security
+- Service Principals
+- Tokens
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a session led by Yonit Glozshtein on the Oasis platform for discovering and governing AI agents' non-human identities across Microsoft cloud services, emphasizing secure automation and lifecycle controls.<!--excerpt_end-->
 
 {% youtube FsD1p_LPZWE %}

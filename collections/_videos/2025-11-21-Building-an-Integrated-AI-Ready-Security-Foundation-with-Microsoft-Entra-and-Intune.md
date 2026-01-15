@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building an Integrated, AI-Ready Security Foundation with Microsoft Entra and Intune"
-description: "This intermediate-level Microsoft Ignite session, presented by Eric Sachs and Maayan Bar-Niv, explores how organizations can leverage Microsoft Entra and Intune to establish a secure, identity-based foundation for Zero Trust. The talk covers real-world scenarios, phased conditional access rollout, AI-specific security strategies, and demos, with a focus on compliance and readiness in the age of AI."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tHnILyOs_8I"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building an Integrated, AI-Ready Security Foundation with Microsoft Entra and Intune
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tHnILyOs_8I
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:04:28 +00:00
-permalink: "/2025-11-21-Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Authentication", "Compliance", "Conditional Access", "Copilot Security", "Edge For Business", "EPM Dashboard", "Identity Management", "Microsoft 365", "Microsoft Entra", "Microsoft Intune", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Protection", "Organizational Insights", "Phased Rollout", "Security", "Security Governance", "Videos", "Zero Trust"]
-tags_normalized: ["ai", "ai security", "authentication", "compliance", "conditional access", "copilot security", "edge for business", "epm dashboard", "identity management", "microsoft 365", "microsoft entra", "microsoft intune", "modernizesecopswithaunifiedplatform", "msignite", "network protection", "organizational insights", "phased rollout", "security", "security governance", "videos", "zero trust"]
+permalink: /ai/videos/Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune
+tags:
+- AI
+- AI Security
+- Authentication
+- Compliance
+- Conditional Access
+- Copilot Security
+- Edge For Business
+- EPM Dashboard
+- Identity Management
+- Microsoft 365
+- Microsoft Entra
+- Microsoft Intune
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Network Protection
+- Organizational Insights
+- Phased Rollout
+- Security
+- Security Governance
+- Videos
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Presented by Eric Sachs and Maayan Bar-Niv at Microsoft Ignite, this session demonstrates how Microsoft Entra and Intune underpin a secure, AI-ready identity foundation, with actionable security strategies and real-world demos.<!--excerpt_end-->
 
 {% youtube tHnILyOs_8I %}

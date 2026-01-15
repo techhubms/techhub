@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "MCP Security Best Practices"
-description: "This video explores critical security risks in Microsoft’s Multi-Agent Collaboration Platform (MCP) for AI applications. It provides an overview of threats like prompt injection and tool poisoning, and offers practical strategies, recommended tools, and resources to secure MCP-powered AI systems for enterprise readiness."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=88No8pw706o"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: MCP Security Best Practices
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=88No8pw706o
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:13 +00:00
-permalink: "/2025-07-28-MCP-Security-Best-Practices.html"
-categories: ["AI"]
-tags: ["AI", "AI App Security", "AI System Resilience", "Enterprise AI", "MCP", "Microsoft AI", "Prompt Injection", "Security Best Practices", "Session Hijacking", "Token Passthrough", "Tool Poisoning", "Videos"]
-tags_normalized: ["ai", "ai app security", "ai system resilience", "enterprise ai", "mcp", "microsoft ai", "prompt injection", "security best practices", "session hijacking", "token passthrough", "tool poisoning", "videos"]
+permalink: /ai/videos/MCP-Security-Best-Practices
+tags:
+- AI
+- AI App Security
+- AI System Resilience
+- Enterprise AI
+- MCP
+- Microsoft AI
+- Prompt Injection
+- Security Best Practices
+- Session Hijacking
+- Token Passthrough
+- Tool Poisoning
+- Videos
+section_names:
+- ai
 ---
-
 Authored by Microsoft Developer, this video details security best practices and mitigation strategies for Microsoft’s MCP platform in enterprise AI applications.<!--excerpt_end-->
 
 {% youtube 88No8pw706o %}

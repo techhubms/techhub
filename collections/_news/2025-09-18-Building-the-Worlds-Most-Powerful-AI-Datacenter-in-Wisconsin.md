@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building the World's Most Powerful AI Datacenter in Wisconsin"
-description: "This news post details Microsoft's investment in creating the world's most powerful AI datacenter in Mount Pleasant, Wisconsin. It outlines the technical capabilities—such as extensive GPU clusters for training frontier AI models—sustainability features like closed-loop cooling and solar energy, economic benefits for the local community, educational partnerships, and broader impacts on AI innovation and regional development."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Building the World's Most Powerful AI Datacenter in Wisconsin
+author: sbaynes
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-18 16:31:52 +00:00
-permalink: "/2025-09-18-Building-the-Worlds-Most-Powerful-AI-Datacenter-in-Wisconsin.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Datacenter", "AI Training", "Azure", "Broadband Access", "Closed Loop Cooling", "Company News", "Data Center Infrastructure", "Datacenter Academy", "Economic Development", "Frontier AI", "Green Technology", "Innovation", "Microsoft", "News", "NVIDIA GPUs", "Partnerships", "Solar Energy", "Supercomputing", "Sustainability", "Technical Workforce", "Wisconsin"]
-tags_normalized: ["ai", "ai datacenter", "ai training", "azure", "broadband access", "closed loop cooling", "company news", "data center infrastructure", "datacenter academy", "economic development", "frontier ai", "green technology", "innovation", "microsoft", "news", "nvidia gpus", "partnerships", "solar energy", "supercomputing", "sustainability", "technical workforce", "wisconsin"]
+permalink: /ai/news/Building-the-Worlds-Most-Powerful-AI-Datacenter-in-Wisconsin
+tags:
+- AI
+- AI Datacenter
+- AI Training
+- Azure
+- Broadband Access
+- Closed Loop Cooling
+- Company News
+- Data Center Infrastructure
+- Datacenter Academy
+- Economic Development
+- Frontier AI
+- Green Technology
+- Innovation
+- Microsoft
+- News
+- NVIDIA GPUs
+- Partnerships
+- Solar Energy
+- Supercomputing
+- Sustainability
+- Technical Workforce
+- Wisconsin
+section_names:
+- ai
+- azure
 ---
-
 Authored by sbaynes, this post uncovers Microsoft's ambitious project to build the world's most powerful AI datacenter in Wisconsin, focusing on technical excellence, sustainability, and community impact.<!--excerpt_end-->
 
 # Building the World's Most Powerful AI Datacenter in Wisconsin

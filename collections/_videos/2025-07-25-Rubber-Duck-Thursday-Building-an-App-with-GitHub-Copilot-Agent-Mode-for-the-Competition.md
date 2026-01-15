@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition"
-description: "GitHub presents a demonstration on building an app using GitHub Copilot in Agent Mode. The session shows how developers can leverage Copilot’s features to participate in the 'For the Love of Code' competition, covering best practices for collaboration, agent-driven development, and coding efficiency."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=W4Zik7qcnz0"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=W4Zik7qcnz0
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 07:09:39 +00:00
-permalink: "/2025-07-25-Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Powered Development", "App Development", "Automation", "Coding", "Coding Competition", "Collaborative Coding", "Developer Tools", "For The Love Of Code", "GitHub", "GitHub Copilot", "Videos"]
-tags_normalized: ["agent mode", "ai", "ai powered development", "app development", "automation", "coding", "coding competition", "collaborative coding", "developer tools", "for the love of code", "github", "github copilot", "videos"]
+permalink: /github-copilot/videos/Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition
+tags:
+- Agent Mode
+- AI
+- AI Powered Development
+- App Development
+- Automation
+- Coding
+- Coding Competition
+- Collaborative Coding
+- Developer Tools
+- For The Love Of Code
+- GitHub
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub demonstrates how to build an application using Copilot Agent Mode for the 'For the Love of Code' competition. Join this session to learn from GitHub's practical workflow and Copilot integration.<!--excerpt_end-->
 
 {% youtube W4Zik7qcnz0 %}

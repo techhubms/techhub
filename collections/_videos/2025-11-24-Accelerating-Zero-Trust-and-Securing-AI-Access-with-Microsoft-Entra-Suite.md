@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Accelerating Zero Trust and Securing AI Access with Microsoft Entra Suite"
-description: "This session from Microsoft Ignite 2025 explores how the Microsoft Entra Suite enables organizations to adopt Zero Trust principles and secure access to AI resources. It covers identity-driven controls, adaptive policies, AI Gateway, dynamic session security, agent identities, and practical strategies for managing both human and non-human access in AI-driven environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ze0v1HkIk-o"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating Zero Trust and Securing AI Access with Microsoft Entra Suite
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Ze0v1HkIk-o
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:03:52 +00:00
-permalink: "/2025-11-24-Accelerating-Zero-Trust-and-Securing-AI-Access-with-Microsoft-Entra-Suite.html"
-categories: ["AI", "Security"]
-tags: ["Access Reviews", "Adaptive Policies", "Agent Identities", "AI", "AI Gateway", "AI Security", "Continuous Access Evaluation", "Enterprise Security", "Identity Management", "M365 Secure Internet Access", "Microsoft Entra Suite", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Security", "Security Leadership", "Videos", "Zero Trust"]
-tags_normalized: ["access reviews", "adaptive policies", "agent identities", "ai", "ai gateway", "ai security", "continuous access evaluation", "enterprise security", "identity management", "m365 secure internet access", "microsoft entra suite", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "security", "security leadership", "videos", "zero trust"]
+permalink: /ai/videos/Accelerating-Zero-Trust-and-Securing-AI-Access-with-Microsoft-Entra-Suite
+tags:
+- Access Reviews
+- Adaptive Policies
+- Agent Identities
+- AI
+- AI Gateway
+- AI Security
+- Continuous Access Evaluation
+- Enterprise Security
+- Identity Management
+- M365 Secure Internet Access
+- Microsoft Entra Suite
+- Microsoft Ignite
+- MSIgnite
+- ProtectcloudAIplatformandapps
+- Security
+- Security Leadership
+- Videos
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an in-depth look at how Entra Suite empowers Zero Trust adoption and secures AI access for organizations, emphasizing identity-driven controls and adaptive security policies.<!--excerpt_end-->
 
 {% youtube Ze0v1HkIk-o %}

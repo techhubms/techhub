@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Translation Customization: A Developer’s Guide to Adaptive Custom Translation with Microsoft Foundry"
-description: "This guide introduces developers to Adaptive Custom Translation (AdaptCT) in Microsoft Foundry Tools. It explains how AdaptCT enables real-time, domain-specific translation customization using minimal datasets and large language models like GPT-4o, contrasting traditional, resource-heavy translator workflows. The article walks through setup, data formats, best practices, use cases, and practical implementation tips for integrating AdaptCT into enterprise and developer workflows, with examples, API instructions, and recommendations."
-author: "Mohamed Elghazali"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Translation Customization: A Developer’s Guide to Adaptive Custom Translation with Microsoft Foundry'
+author: Mohamed Elghazali
+canonical_url: https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:37 +00:00
-permalink: "/2025-11-25-Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Adaptive Custom Translation", "AI", "AI Development", "AI Tools", "API Integration", "Azure", "Azure AI Translator", "Coding", "Custom Translator", "Developer Guide", "Domain Specific Translation", "Few Shot Learning", "Generative AI", "GPT 4o", "Indexing", "Language Services", "LLM", "Microsoft Foundry", "Model Customization", "MSIgnite", "News", "Text Translation", "TMX", "Translation API", "Translation Workflow"]
-tags_normalized: ["adaptive custom translation", "ai", "ai development", "ai tools", "api integration", "azure", "azure ai translator", "coding", "custom translator", "developer guide", "domain specific translation", "few shot learning", "generative ai", "gpt 4o", "indexing", "language services", "llm", "microsoft foundry", "model customization", "msignite", "news", "text translation", "tmx", "translation api", "translation workflow"]
+permalink: /ai/news/Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry
+tags:
+- Adaptive Custom Translation
+- AI
+- AI Development
+- AI Tools
+- API Integration
+- Azure
+- Azure AI Translator
+- Coding
+- Custom Translator
+- Developer Guide
+- Domain Specific Translation
+- Few Shot Learning
+- Generative AI
+- GPT 4o
+- Indexing
+- Language Services
+- LLM
+- Microsoft Foundry
+- Model Customization
+- MSIgnite
+- News
+- Text Translation
+- TMX
+- Translation API
+- Translation Workflow
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Mohamed Elghazali presents an in-depth developer guide to Adaptive Custom Translation (AdaptCT) in Microsoft Foundry Tools, highlighting streamlined translation customization with Azure-based AI, hand-on API usage, and practical workflow tips.<!--excerpt_end-->
 
 # Translation Customization: A Developer’s Guide to Adaptive Custom Translation

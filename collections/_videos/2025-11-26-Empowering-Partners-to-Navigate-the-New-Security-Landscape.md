@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Empowering Partners to Navigate the New Security Landscape"
-description: "This Ignite 2025 session provides partners—whether focused on Copilot, Azure, or new to Microsoft security—with practical guidance for selling and implementing Microsoft’s security portfolio. The discussion covers major security challenges, Microsoft’s unified security products, collaboration across teams, and strategies to integrate security into AI offerings for customers. Speakers offer actionable tips for leveraging go-to-market approaches and maximizing value from Microsoft programs."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=l2_Dnh1a2IY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Empowering Partners to Navigate the New Security Landscape
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=l2_Dnh1a2IY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 10:13:41 +00:00
-permalink: "/2025-11-26-Empowering-Partners-to-Navigate-the-New-Security-Landscape.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Sprawl", "AI", "AI Security", "Azure", "Data Leaks", "Empowering Partners To Navigate The New Security Landscape | PBRK273", "Enterprise Security", "F5n1", "Ignite", "Microsoft", "Microsoft AI Cloud Partner Program", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Ignite", "Microsoft Intune", "Microsoft Purview", "Microsoft Security", "Microsoft Sentinel", "Modernize SecOps With A Unified Platform", "Ms Ignite", "Msft Ignite", "Partner Program", "PBRK273", "Regulatory Compliance", "Secure Your Data", "Security", "Security Challenges", "Security Teams", "Threat Intelligence", "Videos"]
-tags_normalized: ["agent sprawl", "ai", "ai security", "azure", "data leaks", "empowering partners to navigate the new security landscape pipe pbrk273", "enterprise security", "f5n1", "ignite", "microsoft", "microsoft ai cloud partner program", "microsoft defender", "microsoft entra id", "microsoft ignite", "microsoft intune", "microsoft purview", "microsoft security", "microsoft sentinel", "modernize secops with a unified platform", "ms ignite", "msft ignite", "partner program", "pbrk273", "regulatory compliance", "secure your data", "security", "security challenges", "security teams", "threat intelligence", "videos"]
+permalink: /ai/videos/Empowering-Partners-to-Navigate-the-New-Security-Landscape
+tags:
+- Agent Sprawl
+- AI
+- AI Security
+- Azure
+- Data Leaks
+- Empowering Partners To Navigate The New Security Landscape | PBRK273
+- Enterprise Security
+- F5n1
+- Ignite
+- Microsoft
+- Microsoft AI Cloud Partner Program
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Ignite
+- Microsoft Intune
+- Microsoft Purview
+- Microsoft Security
+- Microsoft Sentinel
+- Modernize SecOps With A Unified Platform
+- Ms Ignite
+- Msft Ignite
+- Partner Program
+- PBRK273
+- Regulatory Compliance
+- Secure Your Data
+- Security
+- Security Challenges
+- Security Teams
+- Threat Intelligence
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events brings together security and AI partners at Ignite 2025 to explore Microsoft’s comprehensive security solutions, practical sales strategies, and collaboration for navigating evolving enterprise threats.<!--excerpt_end-->
 
 {% youtube l2_Dnh1a2IY %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Automate Large-Scale VM Power Management with Azure Scheduled Actions"
-description: "This guide explains how Azure Scheduled Actions enables managing the power state (start, stop, hibernate) of thousands of virtual machines at scale. Learn how this resource provider automates scheduling, handles throttling, manages retries for transient errors, and supports both immediate and future actions with operational transparency."
-author: "TravisCragg_MSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automate Large-Scale VM Power Management with Azure Scheduled Actions
+author: TravisCragg_MSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 21:36:26 +00:00
-permalink: "/2025-11-17-Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions.html"
-categories: ["Azure"]
-tags: ["API Automation", "Azure", "Batch Operations", "Cloud Infrastructure", "Community", "Compute.schedule", "Error Handling", "High Scale", "Microsoft Azure", "Power Management", "Resource Provider", "Scheduled Actions", "Throttling", "Virtual Machines", "VM Operations"]
-tags_normalized: ["api automation", "azure", "batch operations", "cloud infrastructure", "community", "computedotschedule", "error handling", "high scale", "microsoft azure", "power management", "resource provider", "scheduled actions", "throttling", "virtual machines", "vm operations"]
+permalink: /azure/community/Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions
+tags:
+- API Automation
+- Azure
+- Batch Operations
+- Cloud Infrastructure
+- Community
+- Compute.schedule
+- Error Handling
+- High Scale
+- Microsoft Azure
+- Power Management
+- Resource Provider
+- Scheduled Actions
+- Throttling
+- Virtual Machines
+- VM Operations
+section_names:
+- azure
 ---
-
 TravisCragg_MSFT introduces Azure Scheduled Actions, a tool for automating periodic power state operations across thousands of Azure VMs, highlighting automatic error handling and large-scale batch management.<!--excerpt_end-->
 
 # Automate Large-Scale VM Power Management with Azure Scheduled Actions

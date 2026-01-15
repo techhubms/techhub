@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Faster .NET Upgrades Powered by GitHub Copilot"
-description: "This article introduces the public preview of GitHub Copilot app modernization – Upgrade for .NET, an AI-powered tool integrated in Visual Studio to accelerate and simplify upgrading .NET applications. It explains setup, key features, upgrade workflows, and how Copilot's Agent Mode reduces manual effort for developers."
-author: "McKenna Barlow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: Faster .NET Upgrades Powered by GitHub Copilot
+author: McKenna Barlow
+canonical_url: https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-05-19 16:00:43 +00:00
-permalink: "/2025-05-19-Faster-NET-Upgrades-Powered-by-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Upgrade", "AI", "AI Powered Upgrades", "App Modernization", "Code Transformation", "Coding", "Copilot Agent Mode", "Development Tools", "Git Integration", "GitHub Copilot", "Manual Change Learning", "Modernization", "News", "Unit Test Validation", "Upgrade", "Upgrade Workflows", "VS", "Workflow Automation"]
-tags_normalized: ["dotnet", "dotnet upgrade", "ai", "ai powered upgrades", "app modernization", "code transformation", "coding", "copilot agent mode", "development tools", "git integration", "github copilot", "manual change learning", "modernization", "news", "unit test validation", "upgrade", "upgrade workflows", "vs", "workflow automation"]
+permalink: /github-copilot/news/Faster-NET-Upgrades-Powered-by-GitHub-Copilot
+tags:
+- .NET
+- .NET Upgrade
+- AI
+- AI Powered Upgrades
+- App Modernization
+- Code Transformation
+- Coding
+- Copilot Agent Mode
+- Development Tools
+- Git Integration
+- GitHub Copilot
+- Manual Change Learning
+- Modernization
+- News
+- Unit Test Validation
+- Upgrade
+- Upgrade Workflows
+- VS
+- Workflow Automation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this article, McKenna Barlow introduces the public preview of GitHub Copilot app modernization – Upgrade for .NET, detailing how developers can upgrade applications with AI-assisted tools in Visual Studio.<!--excerpt_end-->
 
 # Faster .NET Upgrades Powered by GitHub Copilot

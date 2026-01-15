@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unlocking Developer Productivity with Copilot Chat’s New URL Context"
-description: "This article introduces the new URL context feature in GitHub Copilot Chat, enabling developers to reference external web resources for more precise and up-to-date coding assistance. It explains how the feature works, its core use cases, and its limitations, helping Visual Studio users get more tailored answers from Copilot Chat."
-author: "Jessie Houghton"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Unlocking Developer Productivity with Copilot Chat’s New URL Context
+author: Jessie Houghton
+canonical_url: https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-04 13:00:24 +00:00
-permalink: "/2025-12-04-Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Code Assistance", "Copilot Chat", "Developer Productivity", "Feature Limitations", "GitHub Copilot", "GitHub Copilot Chat", "Model Training", "News", "Real Time Information", "Reference URLs", "Technical Documentation", "Up To Date Answers", "URL Context", "VS", "Web Frameworks", "Web Integration"]
-tags_normalized: ["ai", "ai assistant", "code assistance", "copilot chat", "developer productivity", "feature limitations", "github copilot", "github copilot chat", "model training", "news", "real time information", "reference urls", "technical documentation", "up to date answers", "url context", "vs", "web frameworks", "web integration"]
+permalink: /github-copilot/news/Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context
+tags:
+- AI
+- AI Assistant
+- Code Assistance
+- Copilot Chat
+- Developer Productivity
+- Feature Limitations
+- GitHub Copilot
+- GitHub Copilot Chat
+- Model Training
+- News
+- Real Time Information
+- Reference URLs
+- Technical Documentation
+- Up To Date Answers
+- URL Context
+- VS
+- Web Frameworks
+- Web Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 Jessie Houghton explores the new URL context feature in GitHub Copilot Chat, showing how Visual Studio developers can leverage real-time web information for better coding support.<!--excerpt_end-->
 
 # Unlocking Developer Productivity with Copilot Chat’s New URL Context

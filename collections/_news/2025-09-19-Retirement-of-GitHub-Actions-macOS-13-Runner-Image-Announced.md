@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Retirement of GitHub Actions macOS 13 Runner Image Announced"
-description: "This announcement informs users that the macOS 13 runner image for GitHub Actions will be officially retired by December 4th, 2025. It details key brownout periods intended to alert users, specifies the deprecated runner labels, and offers guidance on migration to supported ARM64 and Intel runner options, as well as future plans for discontinuing Intel-based runners on macOS platforms."
-author: "Larissa Fortuna"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Retirement of GitHub Actions macOS 13 Runner Image Announced
+author: Larissa Fortuna
+canonical_url: https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 16:21:39 +00:00
-permalink: "/2025-09-19-Retirement-of-GitHub-Actions-macOS-13-Runner-Image-Announced.html"
-categories: ["DevOps"]
-tags: ["Actions", "Apple Silicon", "Arm64", "CI/CD", "Deprecation", "DevOps", "GitHub Actions", "Intel Architecture", "Macos 13", "Macos 15", "News", "Retired", "Runner Image", "Workflow Migration", "X86 64"]
-tags_normalized: ["actions", "apple silicon", "arm64", "cislashcd", "deprecation", "devops", "github actions", "intel architecture", "macos 13", "macos 15", "news", "retired", "runner image", "workflow migration", "x86 64"]
+permalink: /devops/news/Retirement-of-GitHub-Actions-macOS-13-Runner-Image-Announced
+tags:
+- Actions
+- Apple Silicon
+- Arm64
+- CI/CD
+- Deprecation
+- DevOps
+- GitHub Actions
+- Intel Architecture
+- Macos 13
+- Macos 15
+- News
+- Retired
+- Runner Image
+- Workflow Migration
+- X86 64
+section_names:
+- devops
 ---
-
 Larissa Fortuna outlines the deprecation timeline for the GitHub Actions macOS 13 runner image, including migration steps and upcoming support changes for Intel and Apple Silicon architectures.<!--excerpt_end-->
 
 # Retirement of GitHub Actions macOS 13 Runner Image

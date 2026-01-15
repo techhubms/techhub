@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Using Copilot Studio with Dataverse: A Developer’s Guide"
-description: "This guide by Dellenny explores how developers and makers can integrate Microsoft Copilot Studio with Dataverse to build intelligent, data-driven copilots. It covers connecting Dataverse as a knowledge source, best practices for data modeling, glossary enhancements, permission management, and advanced capabilities like action connectors, MCP, and automation for enterprise apps."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Using Copilot Studio with Dataverse: A Developer’s Guide'
+author: Dellenny
+canonical_url: https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-02 08:31:03 +00:00
-permalink: "/2025-11-02-Using-Copilot-Studio-with-Dataverse-A-Developers-Guide.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "Authentication", "Best Practices", "Blogs", "Copilot", "Copilot Studio", "Data Integration", "Developer Guide", "Enterprise Apps", "Glossary", "Knowledge Source", "Low Code Development", "MCP", "Microsoft Dataverse", "Permissions", "Power Automate", "Power Platform"]
-tags_normalized: ["ai", "ai agent", "authentication", "best practices", "blogs", "copilot", "copilot studio", "data integration", "developer guide", "enterprise apps", "glossary", "knowledge source", "low code development", "mcp", "microsoft dataverse", "permissions", "power automate", "power platform"]
+permalink: /ai/blogs/Using-Copilot-Studio-with-Dataverse-A-Developers-Guide
+tags:
+- AI
+- AI Agent
+- Authentication
+- Best Practices
+- Blogs
+- Copilot
+- Copilot Studio
+- Data Integration
+- Developer Guide
+- Enterprise Apps
+- Glossary
+- Knowledge Source
+- Low Code Development
+- MCP
+- Microsoft Dataverse
+- Permissions
+- Power Automate
+- Power Platform
+section_names:
+- ai
 ---
-
 Dellenny presents a practical developer guide on integrating Copilot Studio with Dataverse, outlining setup, design principles, best practices, and advanced features for building AI-driven agents on enterprise data.<!--excerpt_end-->
 
 # Using Copilot Studio with Dataverse: A Developer’s Guide

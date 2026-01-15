@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Azure SQL DB & OpenAI: Building Powerful RAG Applications"
-description: "This video demonstrates how to implement Retrieval Augmented Generation (RAG) within Azure SQL Database using OpenAI’s GPT models and your own data. Indira Bandari presents a practical demo of enhancing applications with AI capabilities, providing step-by-step guidance, requirements, and resources for developers interested in integrating AI with Microsoft’s Azure SQL."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JXH_i5Eo_CA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Azure SQL DB & OpenAI: Building Powerful RAG Applications'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=JXH_i5Eo_CA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-29 16:00:36 +00:00
-permalink: "/2025-09-29-Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Integration", "Application Development", "Azure", "Azure Samples", "Azure SQL Database", "Cloud Computing", "Cloud Data", "Coding", "Data Engineering", "Database AI", "Dev", "Developer Demo", "Development", "GPT Models", "Microsoft", "Microsoft Azure", "OpenAI", "RAG", "Retrieval Augmented Generation", "SQL Server", "Step By Step Guide", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai integration", "application development", "azure", "azure samples", "azure sql database", "cloud computing", "cloud data", "coding", "data engineering", "database ai", "dev", "developer demo", "development", "gpt models", "microsoft", "microsoft azure", "openai", "rag", "retrieval augmented generation", "sql server", "step by step guide", "tech", "technology", "videos"]
+permalink: /ai/videos/Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications
+tags:
+- AI
+- AI Integration
+- Application Development
+- Azure
+- Azure Samples
+- Azure SQL Database
+- Cloud Computing
+- Cloud Data
+- Coding
+- Data Engineering
+- Database AI
+- Dev
+- Developer Demo
+- Development
+- GPT Models
+- Microsoft
+- Microsoft Azure
+- OpenAI
+- RAG
+- Retrieval Augmented Generation
+- SQL Server
+- Step By Step Guide
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer presents a session led by Indira Bandari exploring how to build Retrieval Augmented Generation (RAG) apps by integrating OpenAI’s GPT models with Azure SQL Database.<!--excerpt_end-->
 
 {% youtube JXH_i5Eo_CA %}

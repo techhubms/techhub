@@ -1,20 +1,45 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution"
-description: "This episode of Sip and Sync with Azure features Damian Hasak, leader of the AI Apps GBB team at Microsoft, as he explains how GitHub Copilot empowered him—despite not being a full-time coder—to build an AI-powered system that detects and discourages dog barking during meetings. The episode delves into leveraging Copilot for creative problem-solving, training AI models with custom data, using Azure AI services, and the community benefits of open-sourcing practical solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UUcdEfk2G7o"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=UUcdEfk2G7o
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-15 15:01:52 +00:00
-permalink: "/2025-10-15-How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML"]
-tags: ["AI", "AI Apps", "AI Solutions", "Azure", "Azure AI", "Azure Machine Learning", "Cloud Computing", "Creativity", "Custom Model Training", "Damian Hasak", "Dev", "Development", "Dog Bark Detection", "GitHub Copilot", "GPU Training", "Machine Learning", "Microsoft", "Microsoft Developer", "ML", "Non Coder Development", "Open Source Project", "Tech", "Technology", "Ultrasonic Signals", "Videos"]
-tags_normalized: ["ai", "ai apps", "ai solutions", "azure", "azure ai", "azure machine learning", "cloud computing", "creativity", "custom model training", "damian hasak", "dev", "development", "dog bark detection", "github copilot", "gpu training", "machine learning", "microsoft", "microsoft developer", "ml", "non coder development", "open source project", "tech", "technology", "ultrasonic signals", "videos"]
+permalink: /github-copilot/videos/How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution
+tags:
+- AI
+- AI Apps
+- AI Solutions
+- Azure
+- Azure AI
+- Azure Machine Learning
+- Cloud Computing
+- Creativity
+- Custom Model Training
+- Damian Hasak
+- Dev
+- Development
+- Dog Bark Detection
+- GitHub Copilot
+- GPU Training
+- Machine Learning
+- Microsoft
+- Microsoft Developer
+- ML
+- Non Coder Development
+- Open Source Project
+- Tech
+- Technology
+- Ultrasonic Signals
+- Videos
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
 ---
-
 In this episode, Microsoft’s Damian Hasak shares with host Govind Kamtamneni how GitHub Copilot and Azure AI Apps enabled a creative, real-world AI solution for reducing dog barking during meetings.<!--excerpt_end-->
 
 {% youtube UUcdEfk2G7o %}

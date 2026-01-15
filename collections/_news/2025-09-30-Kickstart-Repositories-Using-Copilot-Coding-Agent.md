@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Kickstart Repositories Using Copilot Coding Agent"
-description: "This announcement details how developers can jumpstart new GitHub repositories using the Copilot coding agent. By entering prompts directly on the New repository page, Copilot will automatically generate code, create a draft pull request, and request a review. The feature is available for Copilot Pro, Pro+, Business, and Enterprise subscribers, with administrators managing access for business tiers. Links to documentation are provided for further guidance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Kickstart Repositories Using Copilot Coding Agent
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 22:58:07 +00:00
-permalink: "/2025-09-30-Kickstart-Repositories-Using-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Policies", "AI", "AI Development Tools", "Code Generation", "Code Review", "Coding", "Collaboration Tools", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Developer Productivity", "Documentation", "GitHub", "GitHub Copilot", "GitHub Enterprise", "Improvement", "News", "Prompt Engineering", "Pull Requests", "Repository Automation", "Repository Initialization"]
-tags_normalized: ["agent policies", "ai", "ai development tools", "code generation", "code review", "coding", "collaboration tools", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "copilot pro", "developer productivity", "documentation", "github", "github copilot", "github enterprise", "improvement", "news", "prompt engineering", "pull requests", "repository automation", "repository initialization"]
+permalink: /github-copilot/news/Kickstart-Repositories-Using-Copilot-Coding-Agent
+tags:
+- Agent Policies
+- AI
+- AI Development Tools
+- Code Generation
+- Code Review
+- Coding
+- Collaboration Tools
+- Copilot
+- Copilot Business
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Pro
+- Developer Productivity
+- Documentation
+- GitHub
+- GitHub Copilot
+- GitHub Enterprise
+- Improvement
+- News
+- Prompt Engineering
+- Pull Requests
+- Repository Automation
+- Repository Initialization
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison introduces the Copilot coding agent for GitHub repositories, empowering developers to start projects faster by generating code and creating draft pull requests using AI-powered prompts.<!--excerpt_end-->
 
 # Kickstart Repositories Using Copilot Coding Agent

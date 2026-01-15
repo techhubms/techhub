@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Microsoft’s AI Agents Target Technical Debt Crisis"
-description: "This article explores how Microsoft is addressing enterprise technical debt with the introduction of new GitHub Copilot AI agents for modernizing legacy Java and .NET applications. It also covers updates to Azure Migrate and the launch of Azure Accelerate, detailing how these tools automate code refactoring and migration, reduce modernization time, and impact software development teams looking to leverage AI. The article discusses the benefits, practical limitations, and competitive landscape of this approach to application modernization and cloud transformation."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Microsoft’s AI Agents Target Technical Debt Crisis
+author: Tom Smith
+canonical_url: https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-26 13:32:42 +00:00
-permalink: "/2025-09-26-Microsofts-AI-Agents-Target-Technical-Debt-Crisis.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Core", ".NET Framework", ".NET Framework To .NET Core Migration", "AI", "AI Agents", "AI For Code Refactoring", "AI Powered Legacy System Upgrades", "Application Migration", "Application Migration Tools", "Azure", "Azure Accelerate", "Azure Migrate", "Blogs", "Cloud Native Modernization", "Code Refactoring", "Coding", "Developer Tools", "DevOps", "Enterprise Cloud Modernization", "Enterprise Modernization", "GitHub Copilot", "Java Migration", "Legacy Java Modernization", "Legacy Modernization", "Modern Cloud Infrastructure", "Social Facebook", "Social LinkedIn", "Social X", "Technical Debt", "Technical Debt Modernization"]
-tags_normalized: ["dotnet core", "dotnet framework", "dotnet framework to dotnet core migration", "ai", "ai agents", "ai for code refactoring", "ai powered legacy system upgrades", "application migration", "application migration tools", "azure", "azure accelerate", "azure migrate", "blogs", "cloud native modernization", "code refactoring", "coding", "developer tools", "devops", "enterprise cloud modernization", "enterprise modernization", "github copilot", "java migration", "legacy java modernization", "legacy modernization", "modern cloud infrastructure", "social facebook", "social linkedin", "social x", "technical debt", "technical debt modernization"]
+permalink: /github-copilot/blogs/Microsofts-AI-Agents-Target-Technical-Debt-Crisis
+tags:
+- .NET Core
+- .NET Framework
+- .NET Framework To .NET Core Migration
+- AI
+- AI Agents
+- AI For Code Refactoring
+- AI Powered Legacy System Upgrades
+- Application Migration
+- Application Migration Tools
+- Azure
+- Azure Accelerate
+- Azure Migrate
+- Blogs
+- Cloud Native Modernization
+- Code Refactoring
+- Coding
+- Developer Tools
+- DevOps
+- Enterprise Cloud Modernization
+- Enterprise Modernization
+- GitHub Copilot
+- Java Migration
+- Legacy Java Modernization
+- Legacy Modernization
+- Modern Cloud Infrastructure
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Technical Debt
+- Technical Debt Modernization
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Tom Smith analyzes Microsoft's strategy for tackling technical debt using GitHub Copilot AI agents, Azure Migrate, and Azure Accelerate, offering practical insights for enterprise development teams.<!--excerpt_end-->
 
 # Microsoft’s AI Agents Target Technical Debt Crisis

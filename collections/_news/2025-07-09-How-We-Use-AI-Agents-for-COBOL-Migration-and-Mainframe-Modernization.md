@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How We Use AI Agents for COBOL Migration and Mainframe Modernization"
-description: "This detailed post by jkordick and gkaleta explores using Microsoft AI agent technologies, including Semantic Kernel, to modernize COBOL and mainframe applications. The authors describe a structured migration approach, leveraging AI-powered modular agents to analyze, transform, and convert legacy COBOL systems to modern Java or .NET platforms, with bank industry case studies."
-author: "jkordick, gkaleta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: How We Use AI Agents for COBOL Migration and Mainframe Modernization
+author: jkordick, gkaleta
+canonical_url: https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-09 17:10:30 +00:00
-permalink: "/2025-07-09-How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Modernization.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Orchestration", "Agents", "AI", "AI Agents", "All Things Azure", "App Development", "AutoGen", "Azure", "Bankdata", "Cloud Native", "COBOL Modernization", "Code Analysis", "Code Transformation", "Dependency Mapping", "Developer Productivity", "Java Quarkus", "Legacy Systems", "Mainframe Migration", "Microsoft Azure", "News", "OpenAI", "Semantic Kernel"]
-tags_normalized: ["agent orchestration", "agents", "ai", "ai agents", "all things azure", "app development", "autogen", "azure", "bankdata", "cloud native", "cobol modernization", "code analysis", "code transformation", "dependency mapping", "developer productivity", "java quarkus", "legacy systems", "mainframe migration", "microsoft azure", "news", "openai", "semantic kernel"]
+permalink: /ai/news/How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Modernization
+tags:
+- Agent Orchestration
+- Agents
+- AI
+- AI Agents
+- All Things Azure
+- App Development
+- AutoGen
+- Azure
+- Bankdata
+- Cloud Native
+- COBOL Modernization
+- Code Analysis
+- Code Transformation
+- Dependency Mapping
+- Developer Productivity
+- Java Quarkus
+- Legacy Systems
+- Mainframe Migration
+- Microsoft Azure
+- News
+- OpenAI
+- Semantic Kernel
+section_names:
+- ai
+- azure
 ---
-
 In this comprehensive post, authors jkordick and gkaleta delve into how Microsoft’s AI agentic technologies, notably Semantic Kernel, support migrating legacy COBOL mainframe applications to modern cloud architectures. The article features technical deep dives and insights from real-world modernization projects.<!--excerpt_end-->
 
 # How We Use AI Agents for COBOL Migration and Mainframe Modernization

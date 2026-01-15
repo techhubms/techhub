@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Availability Report: November 2025"
-description: "This post reviews three significant incidents affecting GitHub services in November 2025, including disruptions to Dependabot, Git operations, and Copilot. The article details the causes, mitigation steps, and ongoing improvements to prevent future outages, focusing on reliability and incident response."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-november-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Availability Report: November 2025'
+author: Jakub Oleksy
+canonical_url: https://github.blog/news-insights/company-news/github-availability-report-november-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-11 16:03:53 +00:00
-permalink: "/2025-12-11-GitHub-Availability-Report-November-2025.html"
-categories: ["DevOps"]
-tags: ["Automation", "Availability", "Claude Sonnet 4.5", "Company News", "Copilot", "Dependabot", "DevOps", "GHCR", "Git Operations", "GitHub", "GitHub Availability Report", "Incident Mitigation", "Incident Response", "Monitoring", "News", "News & Insights", "Service Outage", "TLS Certificate"]
-tags_normalized: ["automation", "availability", "claude sonnet 4dot5", "company news", "copilot", "dependabot", "devops", "ghcr", "git operations", "github", "github availability report", "incident mitigation", "incident response", "monitoring", "news", "news and insights", "service outage", "tls certificate"]
+permalink: /devops/news/GitHub-Availability-Report-November-2025
+tags:
+- Automation
+- Availability
+- Claude Sonnet 4.5
+- Company News
+- Copilot
+- Dependabot
+- DevOps
+- GHCR
+- Git Operations
+- GitHub
+- GitHub Availability Report
+- Incident Mitigation
+- Incident Response
+- Monitoring
+- News
+- News & Insights
+- Service Outage
+- TLS Certificate
+section_names:
+- devops
 ---
-
 Jakub Oleksy summarizes November 2025's incidents affecting GitHub's key services, detailing the root causes, mitigations, and ongoing reliability improvements crucial for developers and DevOps professionals.<!--excerpt_end-->
 
 # GitHub Availability Report: November 2025

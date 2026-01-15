@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks"
-description: "The 2025 Microsoft Digital Defense Report reveals that extortion and ransomware are responsible for over half of all cyberattacks, with financial motivation outpacing espionage. The report highlights how attackers increasingly use AI and automation, target critical services, and leverage stolen credentials—illustrating the growing need for modern, AI-powered defenses and cross-sector collaboration to combat evolving threats."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:48:34 +00:00
-permalink: "/2025-10-16-Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Automation", "Company News", "Credential Theft", "Critical Infrastructure", "Cybersecurity", "Extortion", "Identity Protection", "Incident Response", "Infostealer Malware", "MFA", "Microsoft Digital Defense Report", "Microsoft Security", "Nation State Threats", "News", "On The Issues", "Phishing", "Ransomware", "Security"]
-tags_normalized: ["ai", "ai security", "automation", "company news", "credential theft", "critical infrastructure", "cybersecurity", "extortion", "identity protection", "incident response", "infostealer malware", "mfa", "microsoft digital defense report", "microsoft security", "nation state threats", "news", "on the issues", "phishing", "ransomware", "security"]
+permalink: /ai/news/Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks
+tags:
+- AI
+- AI Security
+- Automation
+- Company News
+- Credential Theft
+- Critical Infrastructure
+- Cybersecurity
+- Extortion
+- Identity Protection
+- Incident Response
+- Infostealer Malware
+- MFA
+- Microsoft Digital Defense Report
+- Microsoft Security
+- Nation State Threats
+- News
+- On The Issues
+- Phishing
+- Ransomware
+- Security
+section_names:
+- ai
+- security
 ---
-
 stclarke summarizes findings from the latest Microsoft Digital Defense Report, spotlighting how extortion, ransomware, and AI advancements are shaping today’s security landscape and driving the need for new defensive strategies.<!--excerpt_end-->
 
 # Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks

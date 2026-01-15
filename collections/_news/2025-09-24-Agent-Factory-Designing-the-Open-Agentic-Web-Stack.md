@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Agent Factory: Designing the Open Agentic Web Stack"
-description: "This comprehensive wrap-up explores best practices, design patterns, and essential services behind building an open, secure, and interoperable ecosystem for AI agents in the enterprise. It details the architectural blueprint for enterprise-grade agentic systems, highlighting Azure AI Foundry and open standards like MCP and A2A for seamless multi-agent collaboration, governance, and scalability."
-author: "Yina Arenas and Ulrich Homann"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Agent Factory: Designing the Open Agentic Web Stack'
+author: Yina Arenas and Ulrich Homann
+canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 15:00:00 +00:00
-permalink: "/2025-09-24-Agent-Factory-Designing-the-Open-Agentic-Web-Stack.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["A2A Protocol", "Agent Factory", "Agent Orchestration", "Agentic Web Stack", "AI", "AI + Machine Learning", "AI Agents", "Azure", "Azure AI Foundry", "Developer Tools", "Enterprise Automation", "Governance", "Identity Management", "MCP", "Microsoft Entra ID", "Multi Agent Systems", "News", "Observability", "Open Standards", "OpenTelemetry", "Security", "Zero Trust Security"]
-tags_normalized: ["a2a protocol", "agent factory", "agent orchestration", "agentic web stack", "ai", "ai plus machine learning", "ai agents", "azure", "azure ai foundry", "developer tools", "enterprise automation", "governance", "identity management", "mcp", "microsoft entra id", "multi agent systems", "news", "observability", "open standards", "opentelemetry", "security", "zero trust security"]
+permalink: /ai/news/Agent-Factory-Designing-the-Open-Agentic-Web-Stack
+tags:
+- A2A Protocol
+- Agent Factory
+- Agent Orchestration
+- Agentic Web Stack
+- AI
+- AI + Machine Learning
+- AI Agents
+- Azure
+- Azure AI Foundry
+- Developer Tools
+- Enterprise Automation
+- Governance
+- Identity Management
+- MCP
+- Microsoft Entra ID
+- Multi Agent Systems
+- News
+- Observability
+- Open Standards
+- OpenTelemetry
+- Security
+- Zero Trust Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 Yina Arenas and Ulrich Homann conclude their Agent Factory series with a deep dive into the open agentic web stack, describing how Azure AI Foundry and open standards enable secure, scalable, and interoperable AI agent ecosystems for the enterprise.<!--excerpt_end-->
 
 # Agent Factory: Designing the Open Agentic Web Stack

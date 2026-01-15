@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "From Awareness to Action: Building a Security-First Culture for the Agentic AI Era"
-description: "This article by Mark Miller analyzes key takeaways from Cybersecurity Awareness Month through to Microsoft Ignite 2025, focusing on the importance of creating a security-first culture in organizations as AI adoption accelerates. It explores risks introduced by AI and intelligent agents and offers actionable strategies for businesses to improve security awareness, training, and governance. The guide links to Microsoft security resources and highlights practical steps for leaders to strengthen technical skills and build resilience for the agentic AI era."
-author: "Mark Miller"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/12/10/from-awareness-to-action-building-a-security-first-culture-for-the-agentic-ai-era/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'From Awareness to Action: Building a Security-First Culture for the Agentic AI Era'
+author: Mark Miller
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/12/10/from-awareness-to-action-building-a-security-first-culture-for-the-agentic-ai-era/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-10 18:00:00 +00:00
-permalink: "/2025-12-10-From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Agents", "AI Risks", "AI Security", "Cloud Modernization", "Cybersecurity Awareness Month", "Data Governance", "Identity Management", "Microsoft Ignite", "Microsoft Security", "News", "Responsible AI", "Security", "Security First Culture", "Security Training", "Skilling Initiatives"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai agents", "ai risks", "ai security", "cloud modernization", "cybersecurity awareness month", "data governance", "identity management", "microsoft ignite", "microsoft security", "news", "responsible ai", "security", "security first culture", "security training", "skilling initiatives"]
+permalink: /ai/news/From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI Agents
+- AI Risks
+- AI Security
+- Cloud Modernization
+- Cybersecurity Awareness Month
+- Data Governance
+- Identity Management
+- Microsoft Ignite
+- Microsoft Security
+- News
+- Responsible AI
+- Security
+- Security First Culture
+- Security Training
+- Skilling Initiatives
+section_names:
+- ai
+- security
 ---
-
 Mark Miller presents strategies and resources for building a security-first culture in organizations as AI agents become more central, drawing on lessons from Microsoft security initiatives.<!--excerpt_end-->
 
 # From Awareness to Action: Building a Security-First Culture for the Agentic AI Era

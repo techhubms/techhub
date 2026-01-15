@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform"
-description: "This session from Microsoft Ignite 2025 explores how partners can modernize and strengthen their security operations (SecOps) using Microsoft Sentinel's unified platform, new data lake, and graph features. The talk shares insights into predictive SOC technology, attack disruption techniques, and real-world customer success stories. Partners are guided on leveraging incentives and GTM resources to deepen customer relationships and drive practice growth."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DjUkc7jWsQ0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=DjUkc7jWsQ0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:48:44 +00:00
-permalink: "/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Attack Disruption", "Azure", "Business Premium", "Cloud Security", "Customer Success", "Defender", "Enterprise Security", "GTMs", "Microsoft Ignite", "Microsoft Sentinel", "MicrosoftAICloudPartnerProgram", "Modern SecOps", "MSIgnite", "Partner Resources", "Predictive SOC", "Role Based AI Agent", "Secure Future Initiative", "Security", "Security Analytics", "Security Copilot", "Security Incentives", "Security Operations", "Sentinel Data Lake", "Sentinel Graph", "Tab", "Threat Detection", "Videos"]
-tags_normalized: ["ai", "attack disruption", "azure", "business premium", "cloud security", "customer success", "defender", "enterprise security", "gtms", "microsoft ignite", "microsoft sentinel", "microsoftaicloudpartnerprogram", "modern secops", "msignite", "partner resources", "predictive soc", "role based ai agent", "secure future initiative", "security", "security analytics", "security copilot", "security incentives", "security operations", "sentinel data lake", "sentinel graph", "tab", "threat detection", "videos"]
+permalink: /ai/videos/Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform
+tags:
+- AI
+- Attack Disruption
+- Azure
+- Business Premium
+- Cloud Security
+- Customer Success
+- Defender
+- Enterprise Security
+- GTMs
+- Microsoft Ignite
+- Microsoft Sentinel
+- MicrosoftAICloudPartnerProgram
+- Modern SecOps
+- MSIgnite
+- Partner Resources
+- Predictive SOC
+- Role Based AI Agent
+- Secure Future Initiative
+- Security
+- Security Analytics
+- Security Copilot
+- Security Incentives
+- Security Operations
+- Sentinel Data Lake
+- Sentinel Graph
+- Tab
+- Threat Detection
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Presented by Max McWilliams, Anne Stobaugh, and Scott Woodgate at Microsoft Ignite 2025, this session guides partners on strengthening SecOps using the new Microsoft Sentinel features and unified security platforms.<!--excerpt_end-->
 
 {% youtube DjUkc7jWsQ0 %}

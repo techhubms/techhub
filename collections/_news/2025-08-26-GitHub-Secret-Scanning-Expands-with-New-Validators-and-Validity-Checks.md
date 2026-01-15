@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Secret Scanning Expands with New Validators and Validity Checks"
-description: "GitHub's secret scanning feature now supports validity checks for over 10 new secret types, including tokens from providers like Square, Wakatime, and Yandex. This update helps developers better identify which credentials are still exploitable, enhancing repository security and enabling teams to respond to leaked credentials more efficiently."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Secret Scanning Expands with New Validators and Validity Checks
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 17:49:15 +00:00
-permalink: "/2025-08-26-GitHub-Secret-Scanning-Expands-with-New-Validators-and-Validity-Checks.html"
-categories: ["DevOps", "Security"]
-tags: ["Bitrise", "Credential Management", "DevOps", "GitHub", "Groq", "News", "Secret Scanning", "Security", "Siemens", "Square", "Token Validation", "Uniwise", "Validity Checks", "Wakatime", "WorkOS", "Yandex"]
-tags_normalized: ["bitrise", "credential management", "devops", "github", "groq", "news", "secret scanning", "security", "siemens", "square", "token validation", "uniwise", "validity checks", "wakatime", "workos", "yandex"]
+permalink: /devops/news/GitHub-Secret-Scanning-Expands-with-New-Validators-and-Validity-Checks
+tags:
+- Bitrise
+- Credential Management
+- DevOps
+- GitHub
+- Groq
+- News
+- Secret Scanning
+- Security
+- Siemens
+- Square
+- Token Validation
+- Uniwise
+- Validity Checks
+- Wakatime
+- WorkOS
+- Yandex
+section_names:
+- devops
+- security
 ---
-
 Allison outlines GitHub's addition of over 10 new validators for secret scanning, including providers like Square and Yandex, to improve credential security for developers.<!--excerpt_end-->
 
 # GitHub Secret Scanning Expands with New Validators and Validity Checks

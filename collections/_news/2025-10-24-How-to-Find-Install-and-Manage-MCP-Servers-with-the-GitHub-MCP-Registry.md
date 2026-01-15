@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry"
-description: "This guide covers using the GitHub Model Context Protocol (MCP) Registry to find, install, and govern MCP servers for AI-driven developer workflows. Readers learn how to install servers like Playwright and GitHub MCP, publish their own, and implement enterprise-scale governance. Tips for power users and upcoming registry features are also included."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-24 16:00:00 +00:00
-permalink: "/2025-10-24-How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Tools", "Authentication", "Automation", "Coding", "Developer Productivity", "DevOps", "Generative AI", "GitHub", "GitHub Actions", "Governance", "MCP", "MCP Registry", "News", "OAuth", "Playwright", "Registry Allow Lists", "Server Publishing", "VS Code"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai tools", "authentication", "automation", "coding", "developer productivity", "devops", "generative ai", "github", "github actions", "governance", "mcp", "mcp registry", "news", "oauth", "playwright", "registry allow lists", "server publishing", "vs code"]
+permalink: /ai/news/How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Tools
+- Authentication
+- Automation
+- Coding
+- Developer Productivity
+- DevOps
+- Generative AI
+- GitHub
+- GitHub Actions
+- Governance
+- MCP
+- MCP Registry
+- News
+- OAuth
+- Playwright
+- Registry Allow Lists
+- Server Publishing
+- VS Code
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Andrea Griffiths explains how developers and teams can discover, install, and manage Model Context Protocol (MCP) servers using the GitHub MCP Registry, including publishing your own server and setting up governance for enterprise environments.<!--excerpt_end-->
 
 # How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry

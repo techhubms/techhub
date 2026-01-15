@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio"
-description: "This announcement introduces Anthropic's Claude Sonnet 4 and Claude Opus 4.1 models alongside OpenAI models in Microsoft Copilot Studio. The update details how admins can manage model access, how makers select models for different agent scenarios, and provides a practical walkthrough for building an onboarding agent with model choice capabilities."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:48:15 +00:00
-permalink: "/2025-09-24-Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["Admin Controls", "Agent Deployment", "AI", "AI Tools", "Anthropic", "Claude Opus 4.1", "Claude Sonnet 4", "Company News", "GPT 4o", "HR Onboarding Agent", "Microsoft Copilot Studio", "Model Orchestration", "Multi Agent Orchestration", "News", "OpenAI", "Power Platform Admin Center", "Prompt Engineering", "Workflow Automation"]
-tags_normalized: ["admin controls", "agent deployment", "ai", "ai tools", "anthropic", "claude opus 4dot1", "claude sonnet 4", "company news", "gpt 4o", "hr onboarding agent", "microsoft copilot studio", "model orchestration", "multi agent orchestration", "news", "openai", "power platform admin center", "prompt engineering", "workflow automation"]
+permalink: /ai/news/Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot-Studio
+tags:
+- Admin Controls
+- Agent Deployment
+- AI
+- AI Tools
+- Anthropic
+- Claude Opus 4.1
+- Claude Sonnet 4
+- Company News
+- GPT 4o
+- HR Onboarding Agent
+- Microsoft Copilot Studio
+- Model Orchestration
+- Multi Agent Orchestration
+- News
+- OpenAI
+- Power Platform Admin Center
+- Prompt Engineering
+- Workflow Automation
+section_names:
+- ai
 ---
-
 stclarke shares how Microsoft Copilot Studio now supports Anthropic models alongside OpenAI models, allowing users and admins to choose and orchestrate AI models for agent development and automation.<!--excerpt_end-->
 
 # Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio

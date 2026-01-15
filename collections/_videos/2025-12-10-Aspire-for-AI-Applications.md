@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Aspire for AI Applications"
-description: "This video showcases the newest features of Aspire, a tool that enables developers to orchestrate front ends, APIs, containers, and databases for AI applications without requiring major rewrites. David and Damian demonstrate how Aspire simplifies AI app development, including app flow visualization and token usage insights, and how it extends to a variety of project types."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7nQCRRYp44k"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Aspire for AI Applications
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=7nQCRRYp44k
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Aspire-for-AI-Applications.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Application Development", "API Management", "App Orchestration", "Application Flow", "Application Insights", "Aspire", "Azure", "Azure Free Trial", "Cloud Computing", "Containers", "Database Integration", "Dev", "Developer", "Developer Tools", "Development", "MCP Lab", "Microsoft", "Tech", "Technology", "Token Usage Analysis", "Videos"]
-tags_normalized: ["ai", "ai application development", "api management", "app orchestration", "application flow", "application insights", "aspire", "azure", "azure free trial", "cloud computing", "containers", "database integration", "dev", "developer", "developer tools", "development", "mcp lab", "microsoft", "tech", "technology", "token usage analysis", "videos"]
+permalink: /ai/videos/Aspire-for-AI-Applications
+tags:
+- AI
+- AI Application Development
+- API Management
+- App Orchestration
+- Application Flow
+- Application Insights
+- Aspire
+- Azure
+- Azure Free Trial
+- Cloud Computing
+- Containers
+- Database Integration
+- Dev
+- Developer
+- Developer Tools
+- Development
+- MCP Lab
+- Microsoft
+- Tech
+- Technology
+- Token Usage Analysis
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer, featuring David and Damian, explores how Aspire empowers developers to build and manage AI applications on Azure, highlighting its orchestration capabilities and the latest features for streamlined development.<!--excerpt_end-->
 
 {% youtube 7nQCRRYp44k %}

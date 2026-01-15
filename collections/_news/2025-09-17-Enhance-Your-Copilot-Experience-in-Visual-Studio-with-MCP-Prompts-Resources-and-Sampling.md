@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Enhance Your Copilot Experience in Visual Studio with MCP Prompts, Resources, and Sampling"
-description: "This news article introduces new MCP (Model Context Protocol) capabilities in Visual Studio, including prompts, resource integration, and sampling to create a more intelligent and context-aware Copilot workflow. Developers can reference external data sources, use tailored prompts, and enable agentic behaviors to boost productivity with deeper integrations to tools like Azure DevOps, GitHub, Figma, Playwright, DuckDB, and others. The article details practical examples and guidance for leveraging these features and improving daily development tasks."
-author: "Allie Barry, Praveen Sethuraman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Enhance Your Copilot Experience in Visual Studio with MCP Prompts, Resources, and Sampling
+author: Allie Barry, Praveen Sethuraman
+canonical_url: https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-17 17:30:37 +00:00
-permalink: "/2025-09-17-Enhance-Your-Copilot-Experience-in-Visual-Studio-with-MCP-Prompts-Resources-and-Sampling.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Behaviors", "AI", "Azure", "Azure DevOps", "Chat", "Coding", "Copilot", "Developer", "Developer Productivity", "DevOps", "DuckDB", "Extensions", "Figma", "GitHub", "GitHub Copilot", "Hugging Face", "IDE Integration", "LLM", "MCP", "MCP Prompts", "MCP Resources", "MCP Sampling", "MongoDB", "News", "Playwright", "Prompt Engineering", "Prompts", "Resource Templates", "Resources", "Sampling", "Server", "VS"]
-tags_normalized: ["agentic behaviors", "ai", "azure", "azure devops", "chat", "coding", "copilot", "developer", "developer productivity", "devops", "duckdb", "extensions", "figma", "github", "github copilot", "hugging face", "ide integration", "llm", "mcp", "mcp prompts", "mcp resources", "mcp sampling", "mongodb", "news", "playwright", "prompt engineering", "prompts", "resource templates", "resources", "sampling", "server", "vs"]
+permalink: /github-copilot/news/Enhance-Your-Copilot-Experience-in-Visual-Studio-with-MCP-Prompts-Resources-and-Sampling
+tags:
+- Agentic Behaviors
+- AI
+- Azure
+- Azure DevOps
+- Chat
+- Coding
+- Copilot
+- Developer
+- Developer Productivity
+- DevOps
+- DuckDB
+- Extensions
+- Figma
+- GitHub
+- GitHub Copilot
+- Hugging Face
+- IDE Integration
+- LLM
+- MCP
+- MCP Prompts
+- MCP Resources
+- MCP Sampling
+- MongoDB
+- News
+- Playwright
+- Prompt Engineering
+- Prompts
+- Resource Templates
+- Resources
+- Sampling
+- Server
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Allie Barry and Praveen Sethuraman introduce powerful new MCP features in Visual Studio, including prompts, resources, and sampling, to supercharge Copilot with deeper context and developer integrations.<!--excerpt_end-->
 
 # Enhance Your Copilot Experience in Visual Studio: MCP Prompts, Resources, and Sampling

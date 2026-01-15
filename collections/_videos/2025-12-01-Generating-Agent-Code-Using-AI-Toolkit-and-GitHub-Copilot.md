@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Generating Agent Code Using AI Toolkit and GitHub Copilot"
-description: "This video, part of the AI Toolkit + GitHub Copilot Pet Planner workshop, guides developers through the process of generating agent code with AI Toolkit's Agent Builder and GitHub Copilot. Viewers will learn how to generate, review, and set up their local environment to run agent code, with insights on further agent logic refinement using developer tools."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bKFp2w2O6fM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Generating Agent Code Using AI Toolkit and GitHub Copilot
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=bKFp2w2O6fM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:26 +00:00
-permalink: "/2025-12-01-Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Builder", "Agent Code Generation", "AI", "AI Toolkit", "Cloud Computing", "Code Refinement", "Coding", "Copilot Integration", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Local Environment Setup", "Microsoft", "Microsoft Foundry", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent builder", "agent code generation", "ai", "ai toolkit", "cloud computing", "code refinement", "coding", "copilot integration", "dev", "developer tools", "development", "github copilot", "local environment setup", "microsoft", "microsoft foundry", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot
+tags:
+- Agent Builder
+- Agent Code Generation
+- AI
+- AI Toolkit
+- Cloud Computing
+- Code Refinement
+- Coding
+- Copilot Integration
+- Dev
+- Developer Tools
+- Development
+- GitHub Copilot
+- Local Environment Setup
+- Microsoft
+- Microsoft Foundry
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer, featuring April, demonstrates how to generate and run agent code using AI Toolkit and GitHub Copilot, providing actionable steps and environment setup guidance for developers.<!--excerpt_end-->
 
 {% youtube bKFp2w2O6fM %}

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Celebrating Innovation and Real-World Impact: Serverless Compute on Azure Recognized by Forrester"
-description: "Microsoft has been named a leader in Forrester’s Wave for Serverless Development Platforms Q2 2025, highlighting Azure Functions and Azure Container Apps. The article discusses innovation, AI integration, customer success stories, developer experiences, and Microsoft’s vision for seamless, scalable, and intelligent serverless compute."
-author: "Scott Hunter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Celebrating Innovation and Real-World Impact: Serverless Compute on Azure Recognized by Forrester'
+author: Scott Hunter
+canonical_url: https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-23 15:00:00 +00:00
-permalink: "/2025-06-23-Celebrating-Innovation-and-Real-World-Impact-Serverless-Compute-on-Azure-Recognized-by-Forrester.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure Container Apps", "Azure Functions", "Azure OpenAI", "Compute", "Containers", "Customer Stories", "Developer Experience", "DevOps", "Enterprise Security", "Event Driven Architecture", "Forrester", "Forrester Wave", "GPU Serverless", "Internet Of Things", "News", "Real World Impact", "Scalability", "Serverless"]
-tags_normalized: ["ai", "ai integration", "azure", "azure ai foundry", "azure container apps", "azure functions", "azure openai", "compute", "containers", "customer stories", "developer experience", "devops", "enterprise security", "event driven architecture", "forrester", "forrester wave", "gpu serverless", "internet of things", "news", "real world impact", "scalability", "serverless"]
+permalink: /ai/news/Celebrating-Innovation-and-Real-World-Impact-Serverless-Compute-on-Azure-Recognized-by-Forrester
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure AI Foundry
+- Azure Container Apps
+- Azure Functions
+- Azure OpenAI
+- Compute
+- Containers
+- Customer Stories
+- Developer Experience
+- DevOps
+- Enterprise Security
+- Event Driven Architecture
+- Forrester
+- Forrester Wave
+- GPU Serverless
+- Internet Of Things
+- News
+- Real World Impact
+- Scalability
+- Serverless
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Scott Hunter highlights Microsoft’s recognition as a leader in serverless compute by Forrester. The article explores Azure’s serverless innovations, AI-driven solutions, customer use cases, and Microsoft’s approach to empowering developers at scale.<!--excerpt_end-->
 
 ## Overview

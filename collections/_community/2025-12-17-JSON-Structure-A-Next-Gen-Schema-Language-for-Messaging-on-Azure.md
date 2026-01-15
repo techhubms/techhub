@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "JSON Structure: A Next-Gen Schema Language for Messaging on Azure"
-description: "This in-depth guide introduces JSON Structure, a new data definition language aiming to improve structured data exchange in cloud messaging scenarios. The article dives into the shortcomings of JSON Schema and existing schema tooling, then explores how JSON Structure's type system—built for code generation and data interchange—addresses these challenges within platforms like Microsoft Fabric, Azure Event Hubs, and Service Bus."
-author: "clemensv"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'JSON Structure: A Next-Gen Schema Language for Messaging on Azure'
+author: clemensv
+canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 08:03:09 +00:00
-permalink: "/2025-12-17-JSON-Structure-A-Next-Gen-Schema-Language-for-Messaging-on-Azure.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Avro", "Azure", "Azure Event Grid", "Azure Event Hubs", "Azure Service Bus", "Code Generation", "Coding", "Community", "Data Definition", "Data Modeling", "JSON Schema", "JSON Structure", "Messaging", "Microsoft Fabric", "Protobuf", "Python", "Schema Language", "SQL Server", "Structurize", "TypeScript", "VS Code Extension"]
-tags_normalized: ["dotnet", "avro", "azure", "azure event grid", "azure event hubs", "azure service bus", "code generation", "coding", "community", "data definition", "data modeling", "json schema", "json structure", "messaging", "microsoft fabric", "protobuf", "python", "schema language", "sql server", "structurize", "typescript", "vs code extension"]
+permalink: /coding/community/JSON-Structure-A-Next-Gen-Schema-Language-for-Messaging-on-Azure
+tags:
+- .NET
+- Avro
+- Azure
+- Azure Event Grid
+- Azure Event Hubs
+- Azure Service Bus
+- Code Generation
+- Coding
+- Community
+- Data Definition
+- Data Modeling
+- JSON Schema
+- JSON Structure
+- Messaging
+- Microsoft Fabric
+- Protobuf
+- Python
+- Schema Language
+- SQL Server
+- Structurize
+- TypeScript
+- VS Code Extension
+section_names:
+- azure
+- coding
 ---
-
 clemensv presents JSON Structure, a modern schema language designed for robust data definitions in distributed messaging systems on Azure. This article reviews its features, type system, and integrations, spotlighting practical advantages for developers.<!--excerpt_end-->
 
 # JSON Structure: A Next-Gen Schema Language for Messaging on Azure

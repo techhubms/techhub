@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Simplifying Microservice Reliability with Dapr"
-description: "This guide explores how Dapr, Microsoft's open-source runtime, simplifies building resilient, event-driven microservices. It walks through core Dapr features—bindings, configuration management, pub/sub, secret stores, and state handling—showing how each abstracts complexity in Azure Container Apps and .NET environments. Step-by-step Azure Portal instructions are provided for enabling each capability."
-author: "riturajjana"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Simplifying Microservice Reliability with Dapr
+author: riturajjana
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 14:39:53 +00:00
-permalink: "/2025-11-08-Simplifying-Microservice-Reliability-with-Dapr.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET Core", "Azure", "Azure Container Apps", "Azure Key Vault", "Azure Service Bus", "Coding", "Community", "Configuration Management", "Cosmos DB", "Dapr", "Developer Tools", "DevOps", "Event Driven Architecture", "Microservices", "Pub/Sub", "Resilient Applications", "Secret Stores", "Service Bindings", "Sidecar Pattern", "State Management"]
-tags_normalized: ["dotnet core", "azure", "azure container apps", "azure key vault", "azure service bus", "coding", "community", "configuration management", "cosmos db", "dapr", "developer tools", "devops", "event driven architecture", "microservices", "pubslashsub", "resilient applications", "secret stores", "service bindings", "sidecar pattern", "state management"]
+permalink: /coding/community/Simplifying-Microservice-Reliability-with-Dapr
+tags:
+- .NET Core
+- Azure
+- Azure Container Apps
+- Azure Key Vault
+- Azure Service Bus
+- Coding
+- Community
+- Configuration Management
+- Cosmos DB
+- Dapr
+- Developer Tools
+- DevOps
+- Event Driven Architecture
+- Microservices
+- Pub/Sub
+- Resilient Applications
+- Secret Stores
+- Service Bindings
+- Sidecar Pattern
+- State Management
+section_names:
+- azure
+- coding
+- devops
 ---
-
 riturajjana presents a detailed guide on using Dapr to build reliable microservices with Azure Container Apps and .NET, providing actionable examples and portal-based setup walkthroughs.<!--excerpt_end-->
 
 # Simplifying Microservice Reliability with Dapr

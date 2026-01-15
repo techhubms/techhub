@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Avoiding Closures in .NET ConcurrentDictionary: The Efficient GetOrAdd Overload"
-description: "Khalid Abuhakmeh explores what closures are in C# and illustrates a common tooling suggestion to eliminate closure creation in ConcurrentDictionary. He demonstrates refactoring code to leverage an overload of GetOrAdd that avoids unnecessary allocations, improving performance and preventing subtle bugs."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: 'Avoiding Closures in .NET ConcurrentDictionary: The Efficient GetOrAdd Overload'
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-18 00:00:00 +00:00
-permalink: "/2025-02-18-Avoiding-Closures-in-NET-ConcurrentDictionary-The-Efficient-GetOrAdd-Overload.html"
-categories: ["Coding"]
-tags: [".NET", "Allocations", "Blogs", "C#", "Closures", "Coding", "ConcurrentDictionary", "Delegates", "Lambda", "LINQ", "Memory Leaks", "Performance"]
-tags_normalized: ["dotnet", "allocations", "blogs", "csharp", "closures", "coding", "concurrentdictionary", "delegates", "lambda", "linq", "memory leaks", "performance"]
+permalink: /coding/blogs/Avoiding-Closures-in-NET-ConcurrentDictionary-The-Efficient-GetOrAdd-Overload
+tags:
+- .NET
+- Allocations
+- Blogs
+- C#
+- Closures
+- Coding
+- ConcurrentDictionary
+- Delegates
+- Lambda
+- LINQ
+- Memory Leaks
+- Performance
+section_names:
+- coding
 ---
-
 In this article, Khalid Abuhakmeh delves into the nuances of closures in C#, focusing specifically on their impact in ConcurrentDictionary. He demonstrates code refactoring to avoid closures and highlights the advantages of using the more efficient overload of GetOrAdd.<!--excerpt_end-->
 
 # The Curious Case of .NET ConcurrentDictionary and Closures

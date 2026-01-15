@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Connect Microsoft Fabric to Azure DevOps Using Service Principal"
-description: "This guide explains how to connect Microsoft Fabric workspaces to Azure DevOps repositories using service principals, leveraging new cross-tenant support for improved automation and streamlined authentication. It details credential options, integration workflow improvements, and provides practical guidance for implementing CI/CD pipelines with Fabric Git Integration and Azure DevOps."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How to Connect Microsoft Fabric to Azure DevOps Using Service Principal
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 10:30:00 +00:00
-permalink: "/2025-12-18-How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["Azure", "Azure DevOps", "CI/CD", "Cloud Development", "Configured Credential", "Continuous Deployment", "Cross Tenant Authentication", "DevOps", "Enterprise Security", "Git Integration", "GitHub Integration", "Microsoft Fabric", "ML", "News", "OAuth 2.0", "Service Principal", "Workspace Automation"]
-tags_normalized: ["azure", "azure devops", "cislashcd", "cloud development", "configured credential", "continuous deployment", "cross tenant authentication", "devops", "enterprise security", "git integration", "github integration", "microsoft fabric", "ml", "news", "oauth 2dot0", "service principal", "workspace automation"]
+permalink: /ml/news/How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal
+tags:
+- Azure
+- Azure DevOps
+- CI/CD
+- Cloud Development
+- Configured Credential
+- Continuous Deployment
+- Cross Tenant Authentication
+- DevOps
+- Enterprise Security
+- Git Integration
+- GitHub Integration
+- Microsoft Fabric
+- ML
+- News
+- OAuth 2.0
+- Service Principal
+- Workspace Automation
+section_names:
+- azure
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog presents a detailed guide on connecting Fabric workspaces to Azure DevOps using service principals, covering authentication methods, integration workflow, and practical steps for setting up automated CI/CD pipelines.<!--excerpt_end-->
 
 # How to Connect Microsoft Fabric to Azure DevOps Using Service Principal

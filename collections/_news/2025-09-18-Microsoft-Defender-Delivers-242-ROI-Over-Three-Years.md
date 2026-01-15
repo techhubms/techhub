@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Defender Delivers 242% ROI Over Three Years"
-description: "This article analyzes the Forrester Total Economic Impact™ (TEI) study that evaluates the financial and operational benefits of Microsoft Defender for security teams. It explains how Defender and Microsoft Sentinel help organizations reduce costs, accelerate threat remediation, enable tool consolidation, and use AI-powered automation for modern security operations across hybrid and multicloud environments."
-author: "Scott Woodgate"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Defender Delivers 242% ROI Over Three Years
+author: Scott Woodgate
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-18 17:00:00 +00:00
-permalink: "/2025-09-18-Microsoft-Defender-Delivers-242-ROI-Over-Three-Years.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Automation", "Azure", "Cybersecurity", "Forrester TEI", "Hybrid Cloud Security", "Incident Response", "Kusto Query Language", "Microsoft Defender", "Microsoft Sentinel", "News", "Operational Efficiency", "ROI", "SecOps", "Security", "Security Operations", "SIEM", "Threat Detection", "Tool Consolidation"]
-tags_normalized: ["ai", "ai automation", "azure", "cybersecurity", "forrester tei", "hybrid cloud security", "incident response", "kusto query language", "microsoft defender", "microsoft sentinel", "news", "operational efficiency", "roi", "secops", "security", "security operations", "siem", "threat detection", "tool consolidation"]
+permalink: /ai/news/Microsoft-Defender-Delivers-242-ROI-Over-Three-Years
+tags:
+- AI
+- AI Automation
+- Azure
+- Cybersecurity
+- Forrester TEI
+- Hybrid Cloud Security
+- Incident Response
+- Kusto Query Language
+- Microsoft Defender
+- Microsoft Sentinel
+- News
+- Operational Efficiency
+- ROI
+- SecOps
+- Security
+- Security Operations
+- SIEM
+- Threat Detection
+- Tool Consolidation
+section_names:
+- ai
+- azure
+- security
 ---
-
 Scott Woodgate reviews Forrester’s TEI study, highlighting how Microsoft Defender provides 242% ROI through AI-powered automation, rapid threat response, tool consolidation, and integration with Microsoft Sentinel, benefitting SecOps teams and security leaders.<!--excerpt_end-->
 
 # Microsoft Defender Delivers 242% ROI Over Three Years

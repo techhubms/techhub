@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "codex-mini: Fast, Scalable Code Generation for the CLI Era"
-description: "Microsoft announces the general availability of codex-mini, a fine-tuned Azure OpenAI model optimized for rapid code generation and CLI workflows. codex-mini delivers speed, precision, and scalability, with features tailored for developers needing fast, instruction-following AI in terminal environments using Azure AI Foundry Models."
-author: "Ananya Bishnoi, Anthony Mocny, Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'codex-mini: Fast, Scalable Code Generation for the CLI Era'
+author: Ananya Bishnoi, Anthony Mocny, Govind Kamtamneni
+canonical_url: https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-20 16:23:00 +00:00
-permalink: "/2025-06-20-codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Access", "Azure", "Azure AI Foundry", "Azure OpenAI", "CLI Workflows", "Code Generation", "Codex CLI", "Codex Mini", "Coding", "Command Line Automation", "Cost Efficiency", "Developer Productivity", "Function Calling", "GitHub Actions Integration", "Instruction Following AI", "News", "O4 Mini Model", "Streaming Outputs", "Terminal Tools", "Token Context"]
-tags_normalized: ["ai", "api access", "azure", "azure ai foundry", "azure openai", "cli workflows", "code generation", "codex cli", "codex mini", "coding", "command line automation", "cost efficiency", "developer productivity", "function calling", "github actions integration", "instruction following ai", "news", "o4 mini model", "streaming outputs", "terminal tools", "token context"]
+permalink: /ai/news/codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era
+tags:
+- AI
+- API Access
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- CLI Workflows
+- Code Generation
+- Codex CLI
+- Codex Mini
+- Coding
+- Command Line Automation
+- Cost Efficiency
+- Developer Productivity
+- Function Calling
+- GitHub Actions Integration
+- Instruction Following AI
+- News
+- O4 Mini Model
+- Streaming Outputs
+- Terminal Tools
+- Token Context
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Written by Ananya Bishnoi, Anthony Mocny, and Govind Kamtamneni, this post introduces codex-mini—a new, fast, and scalable Azure OpenAI model for code generation in CLI environments.<!--excerpt_end-->
 
 # codex-mini: Fast, Scalable Code Generation for the CLI Era

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Inherited a Large Azure Environment: Seeking Guidance as a New Cloud Architect"
-description: "A cloud architect shares their experience of inheriting a large and disorganized Azure environment with 50 subscriptions. The author seeks advice on how to take ownership, understand, and manage the complex setup, transitioning from smaller-scale solutions to enterprise-scale cloud management."
-author: "Cybertron2600"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mc0vkl/inherited_a_large_azure_environment/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Inherited a Large Azure Environment: Seeking Guidance as a New Cloud Architect'
+author: Cybertron2600
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mc0vkl/inherited_a_large_azure_environment/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 03:25:27 +00:00
-permalink: "/2025-07-29-Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Subscriptions", "Cloud Adoption", "Cloud Architecture", "Cloud Governance", "Community", "Enterprise IT", "IT Operations", "Organizational Change", "Resource Management", "Security", "Subscription Management"]
-tags_normalized: ["azure", "azure subscriptions", "cloud adoption", "cloud architecture", "cloud governance", "community", "enterprise it", "it operations", "organizational change", "resource management", "security", "subscription management"]
+permalink: /azure/community/Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect
+tags:
+- Azure
+- Azure Subscriptions
+- Cloud Adoption
+- Cloud Architecture
+- Cloud Governance
+- Community
+- Enterprise IT
+- IT Operations
+- Organizational Change
+- Resource Management
+- Security
+- Subscription Management
+section_names:
+- azure
+- security
 ---
-
 Cybertron2600 discusses inheriting a sprawling Azure environment as a cloud architect and asks for advice on managing and understanding it.<!--excerpt_end-->
 
 ## Inheriting a Large Azure Environment: Navigating the Challenges

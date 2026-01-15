@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask"
-description: "This community post by TulikaC demonstrates how to build and deploy a Python Flask web application that leverages the open-weight GPT-OSS-20B language model as a sidecar container within Azure App Service. The guide covers containerization with Ollama, code integration, Bicep-based deployment automation, and tips for enterprise-scale reliability, real-time streaming, and efficient scaling using Microsoft Azure’s managed services."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-lightweight-ai-apps-on-azure-app-service-with-gpt-oss-20b/ba-p/4442885"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-lightweight-ai-apps-on-azure-app-service-with-gpt-oss-20b/ba-p/4442885
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-13 13:06:16 +00:00
-permalink: "/2025-08-13-Deploying-Lightweight-AI-Apps-on-Azure-App-Service-Using-GPT-OSS-20B-and-Flask.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Azure", "Azure App Service", "Azure Container Registry", "Azure Deployment", "Bicep", "CI/CD Integration", "Coding", "Community", "Container Sidecar", "Enterprise Security", "Flask", "GPT OSS 20B", "Model Containerization", "Ollama", "OpenAI", "Premium V4 Plan", "Python", "Real Time Streaming"]
-tags_normalized: ["ai", "azure", "azure app service", "azure container registry", "azure deployment", "bicep", "cislashcd integration", "coding", "community", "container sidecar", "enterprise security", "flask", "gpt oss 20b", "model containerization", "ollama", "openai", "premium v4 plan", "python", "real time streaming"]
+permalink: /ai/community/Deploying-Lightweight-AI-Apps-on-Azure-App-Service-Using-GPT-OSS-20B-and-Flask
+tags:
+- AI
+- Azure
+- Azure App Service
+- Azure Container Registry
+- Azure Deployment
+- Bicep
+- CI/CD Integration
+- Coding
+- Community
+- Container Sidecar
+- Enterprise Security
+- Flask
+- GPT OSS 20B
+- Model Containerization
+- Ollama
+- OpenAI
+- Premium V4 Plan
+- Python
+- Real Time Streaming
+section_names:
+- ai
+- azure
+- coding
 ---
-
 TulikaC outlines how to combine GPT-OSS-20B and a Flask web app as containers within Azure App Service, giving developers a robust pattern for running open-weight language models with cloud scalability and minimal infrastructure overhead.<!--excerpt_end-->
 
 # Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask

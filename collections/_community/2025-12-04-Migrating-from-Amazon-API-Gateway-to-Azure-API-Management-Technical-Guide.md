@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Migrating from Amazon API Gateway to Azure API Management: Technical Guide"
-description: "This comprehensive migration guide assists teams in transitioning from Amazon API Gateway to Azure API Management, featuring detailed mapping of AWS components to Azure equivalents, architecture analysis, and best practices for planning, implementation, and validation of enterprise API migrations. The guide provides hands-on resources for mapping, preparation, phased migration, real-world architecture scenarios, and references to further Azure migration resources."
-author: "dan_lepow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Migrating from Amazon API Gateway to Azure API Management: Technical Guide'
+author: dan_lepow
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-04 21:23:07 +00:00
-permalink: "/2025-12-04-Migrating-from-Amazon-API-Gateway-to-Azure-API-Management-Technical-Guide.html"
-categories: ["Azure"]
-tags: ["AKS", "Amazon API Gateway", "API Configuration", "API Gateway Migration", "Authentication", "AWS To Azure", "Azure", "Azure API Management", "Azure Application Gateway", "Azure Functions", "Azure Monitor", "Cloud Architecture", "Cloud Migration", "Community", "DNS Cutover", "Infrastructure Mapping", "Microsoft Entra ID", "Migration Best Practices", "Network Isolation", "OpenAPI Specification", "Performance Baseline", "WAF Integration"]
-tags_normalized: ["aks", "amazon api gateway", "api configuration", "api gateway migration", "authentication", "aws to azure", "azure", "azure api management", "azure application gateway", "azure functions", "azure monitor", "cloud architecture", "cloud migration", "community", "dns cutover", "infrastructure mapping", "microsoft entra id", "migration best practices", "network isolation", "openapi specification", "performance baseline", "waf integration"]
+permalink: /azure/community/Migrating-from-Amazon-API-Gateway-to-Azure-API-Management-Technical-Guide
+tags:
+- AKS
+- Amazon API Gateway
+- API Configuration
+- API Gateway Migration
+- Authentication
+- AWS To Azure
+- Azure
+- Azure API Management
+- Azure Application Gateway
+- Azure Functions
+- Azure Monitor
+- Cloud Architecture
+- Cloud Migration
+- Community
+- DNS Cutover
+- Infrastructure Mapping
+- Microsoft Entra ID
+- Migration Best Practices
+- Network Isolation
+- OpenAPI Specification
+- Performance Baseline
+- WAF Integration
+section_names:
+- azure
 ---
-
 Dan Lepow provides a detailed migration guide for teams moving from Amazon API Gateway to Azure API Management, offering technical mapping and step-by-step planning for architects and engineers.<!--excerpt_end-->
 
 # Migrating from Amazon API Gateway to Azure API Management

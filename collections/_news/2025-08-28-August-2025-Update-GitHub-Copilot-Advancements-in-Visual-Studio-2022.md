@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "August 2025 Update: GitHub Copilot Advancements in Visual Studio 2022"
-description: "This update highlights new features for GitHub Copilot in Visual Studio 2022 v17.14, including GPT-5 support, smarter Copilot Chat, MCP general availability, and expanded model integration options. Developers now get more control over code suggestions, enhanced sign-in options, and a preview of upcoming debugging, profiling, and search capabilities."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'August 2025 Update: GitHub Copilot Advancements in Visual Studio 2022'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:18:55 +00:00
-permalink: "/2025-08-28-August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "API Keys", "Code Suggestions", "Coding", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "GPT 5", "IDE Integrations", "MCP", "Model Integration", "News", "Software Updates", "VS"]
-tags_normalized: ["ai", "ai powered development", "api keys", "code suggestions", "coding", "copilot chat", "developer productivity", "github copilot", "gpt 5", "ide integrations", "mcp", "model integration", "news", "software updates", "vs"]
+permalink: /github-copilot/news/August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022
+tags:
+- AI
+- AI Powered Development
+- API Keys
+- Code Suggestions
+- Coding
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- GPT 5
+- IDE Integrations
+- MCP
+- Model Integration
+- News
+- Software Updates
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison details the August 2025 update for GitHub Copilot in Visual Studio, introducing GPT-5 model support, smarter Copilot Chat, and wider MCP integration for developers.<!--excerpt_end-->
 
 # GitHub Copilot in Visual Studio — August 2025 Update

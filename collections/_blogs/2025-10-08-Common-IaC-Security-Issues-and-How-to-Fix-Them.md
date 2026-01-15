@@ -1,20 +1,58 @@
----
-layout: "post"
-title: "Common IaC Security Issues and How to Fix Them"
-description: "This article by Durojaye Olusegun provides a technical overview of the top security vulnerabilities in Infrastructure as Code (IaC) processes and presents practical remediation strategies. It covers configuration drift, missing policy enforcement, lack of audit trails, insufficient access control, and hardcoded secrets, offering actionable fixes such as automated drift detection, policy as code, least-privilege access, secrets management, and comprehensive monitoring. The content is relevant for teams working with cloud infrastructure using IaC tools, especially those integrating Microsoft Azure and Azure Policy for governance and security."
-author: "Durojaye Olusegun"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/common-iac-security-issues-and-how-to-fix-them/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Common IaC Security Issues and How to Fix Them
+author: Durojaye Olusegun
+canonical_url: https://devops.com/common-iac-security-issues-and-how-to-fix-them/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-08 08:55:21 +00:00
-permalink: "/2025-10-08-Common-IaC-Security-Issues-and-How-to-Fix-Them.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Audit Logging", "Automated Compliance", "Automation", "AWS Config", "Azure", "Azure Key Vault", "Azure Policy", "Blogs", "Business Of DevOps", "CI/CD Pipeline", "CI/CD Pipeline Security", "Cloud Infrastructure", "Cloud Misconfiguration", "Cloud Security Incidents", "CloudFormation", "Compliance", "Configuration Drift", "Contributed Content", "DevOps", "Devsecops", "Drift Detection", "Hardcoded Secrets", "IaC", "IaC Automation", "IaC Best Practices", "IaC Governance", "IaC Security", "IaC Vulnerabilities", "Least Privilege Access", "OPA", "Policy as Code", "RBAC", "Secrets Management", "Security", "SOC 2", "Social Facebook", "Social LinkedIn", "Social X", "Terraform"]
-tags_normalized: ["audit logging", "automated compliance", "automation", "aws config", "azure", "azure key vault", "azure policy", "blogs", "business of devops", "cislashcd pipeline", "cislashcd pipeline security", "cloud infrastructure", "cloud misconfiguration", "cloud security incidents", "cloudformation", "compliance", "configuration drift", "contributed content", "devops", "devsecops", "drift detection", "hardcoded secrets", "iac", "iac automation", "iac best practices", "iac governance", "iac security", "iac vulnerabilities", "least privilege access", "opa", "policy as code", "rbac", "secrets management", "security", "soc 2", "social facebook", "social linkedin", "social x", "terraform"]
+permalink: /azure/blogs/Common-IaC-Security-Issues-and-How-to-Fix-Them
+tags:
+- Audit Logging
+- Automated Compliance
+- Automation
+- AWS Config
+- Azure
+- Azure Key Vault
+- Azure Policy
+- Blogs
+- Business Of DevOps
+- CI/CD Pipeline
+- CI/CD Pipeline Security
+- Cloud Infrastructure
+- Cloud Misconfiguration
+- Cloud Security Incidents
+- CloudFormation
+- Compliance
+- Configuration Drift
+- Contributed Content
+- DevOps
+- Devsecops
+- Drift Detection
+- Hardcoded Secrets
+- IaC
+- IaC Automation
+- IaC Best Practices
+- IaC Governance
+- IaC Security
+- IaC Vulnerabilities
+- Least Privilege Access
+- OPA
+- Policy as Code
+- RBAC
+- Secrets Management
+- Security
+- SOC 2
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Terraform
+section_names:
+- azure
+- devops
+- security
 ---
-
 Durojaye Olusegun explains the five most critical security risks in Infrastructure as Code (IaC), demonstrating practical fixes and preventative best practices to enhance DevOps security and compliance.<!--excerpt_end-->
 
 # Common IaC Security Issues and How to Fix Them

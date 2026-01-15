@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios"
-description: "This post provides technical guidance on integrating Azure DevOps with Jira Service Management (JSM) for improved ticket handling between development and support teams. It covers automation strategies, common use cases, feature considerations, sync methods, security, and platform-specific implementation options, aiming to help teams streamline workflows across Microsoft development and IT service environments."
-author: "tejabhutada"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios'
+author: tejabhutada
+canonical_url: https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 08:22:54 +00:00
-permalink: "/2025-11-20-Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios.html"
-categories: ["Azure", "DevOps"]
-tags: ["Audit Logging", "Azure", "Azure DevOps", "Azure Functions", "Bidirectional Sync", "Community", "Conditional Routing", "Conflict Resolution", "DevOps", "DevOps Integration", "Feature Request Automation", "Field Mapping", "Incident Management", "Jira Service Management", "Logic Apps", "Middleware", "MSP Integration", "REST API", "Scalability", "Security Compliance", "Service Hooks", "Third Party Connectors"]
-tags_normalized: ["audit logging", "azure", "azure devops", "azure functions", "bidirectional sync", "community", "conditional routing", "conflict resolution", "devops", "devops integration", "feature request automation", "field mapping", "incident management", "jira service management", "logic apps", "middleware", "msp integration", "rest api", "scalability", "security compliance", "service hooks", "third party connectors"]
+permalink: /azure/community/Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios
+tags:
+- Audit Logging
+- Azure
+- Azure DevOps
+- Azure Functions
+- Bidirectional Sync
+- Community
+- Conditional Routing
+- Conflict Resolution
+- DevOps
+- DevOps Integration
+- Feature Request Automation
+- Field Mapping
+- Incident Management
+- Jira Service Management
+- Logic Apps
+- Middleware
+- MSP Integration
+- REST API
+- Scalability
+- Security Compliance
+- Service Hooks
+- Third Party Connectors
+section_names:
+- azure
+- devops
 ---
-
 tejabhutada explains how development and support teams can automate ticket flow and data sync between Azure DevOps and JSM, discussing use cases, technical features, and integration approaches.<!--excerpt_end-->
 
 # Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios

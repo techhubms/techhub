@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Demo: ice Contact Center Integrating Chatbots and Live Agents at Microsoft Ignite"
-description: "This Microsoft Ignite session demonstrates how ice Contact Center facilitates seamless customer interactions through both chatbot automation and live agent support. The presentation covers generative AI FAQs, live chat capabilities, knowledge base integration, and the transition from bot to human agent, with support for additional channels like voice and SMS. The demo includes a real-time exchange highlighting post-conversation analytics with translation and AI services, providing technical insight into building modern, agent-assisted customer communication solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lfEjSOsWvoY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Demo: ice Contact Center Integrating Chatbots and Live Agents at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=lfEjSOsWvoY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:06:19 +00:00
-permalink: "/2025-11-19-Demo-ice-Contact-Center-Integrating-Chatbots-and-Live-Agents-at-Microsoft-Ignite.html"
-categories: ["AI"]
-tags: ["Agent Handoff", "Agenticbusinessapplications", "AI", "AI Services", "Chatbot", "Customer Communication", "FAQ Bot", "Generative AI", "Ice Contact Center", "Icebot", "Knowledge Base", "Live Chat", "Microsoft Ignite", "MSIgnite", "Post Conversation Analytics", "SMS Channel", "Translation", "Videos", "Voice Channel"]
-tags_normalized: ["agent handoff", "agenticbusinessapplications", "ai", "ai services", "chatbot", "customer communication", "faq bot", "generative ai", "ice contact center", "icebot", "knowledge base", "live chat", "microsoft ignite", "msignite", "post conversation analytics", "sms channel", "translation", "videos", "voice channel"]
+permalink: /ai/videos/Demo-ice-Contact-Center-Integrating-Chatbots-and-Live-Agents-at-Microsoft-Ignite
+tags:
+- Agent Handoff
+- Agenticbusinessapplications
+- AI
+- AI Services
+- Chatbot
+- Customer Communication
+- FAQ Bot
+- Generative AI
+- Ice Contact Center
+- Icebot
+- Knowledge Base
+- Live Chat
+- Microsoft Ignite
+- MSIgnite
+- Post Conversation Analytics
+- SMS Channel
+- Translation
+- Videos
+- Voice Channel
+section_names:
+- ai
 ---
-
 Microsoft Events presents a session featuring Mike Kraybill, showcasing how ice Contact Center uses AI-powered chatbots and live agents to deliver efficient customer support and analytics.<!--excerpt_end-->
 
 {% youtube lfEjSOsWvoY %}

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Scaling Azure Compute for Performance: Innovations from Ignite 2025"
-description: "This comprehensive retrospective from Ignite 2025 explores Azure’s latest advancements in high-performance, adaptive infrastructure for demanding workloads. It covers new capabilities—Direct Virtualization, large container sizes, VM Applications, Scheduled Actions, Azure Compute Gallery upgrades, VMSS Instance Mix, and best practices for scaling, automation, and resiliency. Technical professionals will gain insights into building and operating AI, analytics, and globally distributed applications on Azure’s modern compute platform."
-author: "DanaCozmei"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Scaling Azure Compute for Performance: Innovations from Ignite 2025'
+author: DanaCozmei
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-02 21:20:46 +00:00
-permalink: "/2025-12-02-Scaling-Azure-Compute-for-Performance-Innovations-from-Ignite-2025.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Inference", "Automation", "Azure", "Azure Compute", "Capacity Optimization", "Cloud Resiliency", "Community", "Compute Gallery", "Data Analytics", "DevOps", "Direct Virtualization", "Global Deployment", "GPU", "Large Containers", "NVMe", "Performance Tuning", "Scale Sets", "Scheduled Actions", "Security", "Soft Delete", "VM Applications", "VMSS Instance Mix", "Zonal Redundant Storage"]
-tags_normalized: ["ai", "ai inference", "automation", "azure", "azure compute", "capacity optimization", "cloud resiliency", "community", "compute gallery", "data analytics", "devops", "direct virtualization", "global deployment", "gpu", "large containers", "nvme", "performance tuning", "scale sets", "scheduled actions", "security", "soft delete", "vm applications", "vmss instance mix", "zonal redundant storage"]
+permalink: /ai/community/Scaling-Azure-Compute-for-Performance-Innovations-from-Ignite-2025
+tags:
+- AI
+- AI Inference
+- Automation
+- Azure
+- Azure Compute
+- Capacity Optimization
+- Cloud Resiliency
+- Community
+- Compute Gallery
+- Data Analytics
+- DevOps
+- Direct Virtualization
+- Global Deployment
+- GPU
+- Large Containers
+- NVMe
+- Performance Tuning
+- Scale Sets
+- Scheduled Actions
+- Security
+- Soft Delete
+- VM Applications
+- VMSS Instance Mix
+- Zonal Redundant Storage
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 DanaCozmei summarizes Ignite 2025’s key Azure Compute breakthroughs, focusing on practical infrastructure features for scaling AI, analytics, and distributed workloads with resiliency, automation, and performance.<!--excerpt_end-->
 
 # Scaling Azure Compute for Performance: Innovations from Ignite 2025

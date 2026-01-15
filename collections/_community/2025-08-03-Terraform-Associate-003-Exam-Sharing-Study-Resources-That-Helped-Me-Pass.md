@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Terraform Associate (003) Exam – Sharing Study Resources That Helped Me Pass"
-description: "AndroCentauri shares practical resources and tips for preparing for the HashiCorp Certified: Terraform Associate (003) exam. The post covers recommended free video tutorials, effective practice exams, the official study guide, as well as advice for hands-on practice and cost-saving tips for Udemy courses."
-author: "AndroCentauri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mgm77r/terraform_associate_003_exam_sharing_study/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Terraform Associate (003) Exam – Sharing Study Resources That Helped Me Pass
+author: AndroCentauri
+canonical_url: https://www.reddit.com/r/devops/comments/1mgm77r/terraform_associate_003_exam_sharing_study/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-03 15:32:35 +00:00
-permalink: "/2025-08-03-Terraform-Associate-003-Exam-Sharing-Study-Resources-That-Helped-Me-Pass.html"
-categories: ["DevOps"]
-tags: ["AWS", "Certification", "Cloud Computing", "Community", "DevOps", "HashiCorp", "IaC", "Modules", "Practice Exams", "Remote Backends", "State Management", "Study Resources", "Terraform", "Terraform Associate", "Udemy"]
-tags_normalized: ["aws", "certification", "cloud computing", "community", "devops", "hashicorp", "iac", "modules", "practice exams", "remote backends", "state management", "study resources", "terraform", "terraform associate", "udemy"]
+permalink: /devops/community/Terraform-Associate-003-Exam-Sharing-Study-Resources-That-Helped-Me-Pass
+tags:
+- AWS
+- Certification
+- Cloud Computing
+- Community
+- DevOps
+- HashiCorp
+- IaC
+- Modules
+- Practice Exams
+- Remote Backends
+- State Management
+- Study Resources
+- Terraform
+- Terraform Associate
+- Udemy
+section_names:
+- devops
 ---
-
 In this community post, AndroCentauri shares essential study tips and resources for passing the Terraform Associate (003) certification exam, offering guidance to those pursuing DevOps certifications.<!--excerpt_end-->
 
 ## Terraform Associate (003) Exam – Sharing Study Resources That Helped Me Pass

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Survey Shows AI Drives Massive Economic Gains in Software Development"
-description: "A Harris Poll global survey of 2,786 executives reveals significant economic gains from AI investments in software development, including $28,249 saved per developer annually and a 48% increase in productivity. The study highlights ongoing challenges, the importance of human-AI collaboration, and the rise of agentic AI."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Shows AI Drives Massive Economic Gains in Software Development
+author: Mike Vizard
+canonical_url: https://devops.com/survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-05 19:37:15 +00:00
-permalink: "/2025-08-05-Survey-Shows-AI-Drives-Massive-Economic-Gains-in-Software-Development.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Governance", "Application Development", "Blogs", "Business Growth", "C Level Executives", "Cybersecurity", "Developer Productivity", "DevOps", "DevOps Pipelines", "Gitlab", "Human AI Partnership", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Innovation"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai governance", "application development", "blogs", "business growth", "c level executives", "cybersecurity", "developer productivity", "devops", "devops pipelines", "gitlab", "human ai partnership", "social facebook", "social linkedin", "social x", "software development", "software innovation"]
+permalink: /ai/blogs/Survey-Shows-AI-Drives-Massive-Economic-Gains-in-Software-Development
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI Governance
+- Application Development
+- Blogs
+- Business Growth
+- C Level Executives
+- Cybersecurity
+- Developer Productivity
+- DevOps
+- DevOps Pipelines
+- Gitlab
+- Human AI Partnership
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+- Software Innovation
+section_names:
+- ai
+- devops
 ---
-
 Written by Mike Vizard, this article explores a Harris Poll survey revealing how AI adoption is transforming software development, boosting productivity, creating economic value, and presenting new challenges for organizations.<!--excerpt_end-->
 
 # Survey Attributes Massive Economic Gains to Rise of AI in Software Development

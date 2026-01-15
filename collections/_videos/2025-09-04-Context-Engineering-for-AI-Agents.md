@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Context Engineering for AI Agents"
-description: "This lesson from Microsoft Developer explores context engineering, a crucial discipline for developing effective AI agents. It covers how to identify, gather, and deliver the right information and tools to AI agents, ensuring reliable performance. The lesson includes explanations of context types, best practices, common challenges, and practical code examples, focusing on the role of context in building robust AI solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=F5zqRV7gEag"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Context Engineering for AI Agents
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=F5zqRV7gEag
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-04 16:00:23 +00:00
-permalink: "/2025-09-04-Context-Engineering-for-AI-Agents.html"
-categories: ["AI"]
-tags: ["Agent Design", "AI", "AI Agents", "AI Development", "AI Engineering", "Best Practices", "Cloud Computing", "Code Samples", "Context Engineering", "Context Management", "Dev", "Development", "Microsoft", "Tech", "Technical Tutorial", "Technology", "Videos"]
-tags_normalized: ["agent design", "ai", "ai agents", "ai development", "ai engineering", "best practices", "cloud computing", "code samples", "context engineering", "context management", "dev", "development", "microsoft", "tech", "technical tutorial", "technology", "videos"]
+permalink: /ai/videos/Context-Engineering-for-AI-Agents
+tags:
+- Agent Design
+- AI
+- AI Agents
+- AI Development
+- AI Engineering
+- Best Practices
+- Cloud Computing
+- Code Samples
+- Context Engineering
+- Context Management
+- Dev
+- Development
+- Microsoft
+- Tech
+- Technical Tutorial
+- Technology
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer introduces context engineering for AI agents, showing how to equip agents with the right context and tools. The lesson covers core principles, best practices, code examples, and practical approaches.<!--excerpt_end-->
 
 {% youtube F5zqRV7gEag %}

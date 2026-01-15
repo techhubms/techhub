@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door"
-description: "This post guides developers through enabling dynamic, centralized client-side configuration using Azure App Configuration integrated with Azure Front Door. Learn how CDN-scale config delivery improves client application flexibility, security, and performance, including for modern AI-powered and agent-driven frontend experiences. Includes architectural guidance, sample code, and real-world cloud scenarios."
-author: "mukta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door
+author: mukta
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 23:02:36 +00:00
-permalink: "/2025-11-18-Delivering-Scalable-Client-Side-Configuration-with-Azure-App-Configuration-and-Azure-Front-Door.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["A/B Testing", "Agentic Applications", "AI", "AI Driven UI", "AppConfig Provider", "Azure", "Azure App Configuration", "Azure Front Door", "CDN", "Client Side Configuration", "Cloud Architecture", "Coding", "Community", "Configuration Management", "DevOps", "Dynamic Configuration", "Edge Caching", "Feature Flags", "JavaScript", "Managed Identity", "MAUI"]
-tags_normalized: ["aslashb testing", "agentic applications", "ai", "ai driven ui", "appconfig provider", "azure", "azure app configuration", "azure front door", "cdn", "client side configuration", "cloud architecture", "coding", "community", "configuration management", "devops", "dynamic configuration", "edge caching", "feature flags", "javascript", "managed identity", "maui"]
+permalink: /ai/community/Delivering-Scalable-Client-Side-Configuration-with-Azure-App-Configuration-and-Azure-Front-Door
+tags:
+- A/B Testing
+- Agentic Applications
+- AI
+- AI Driven UI
+- AppConfig Provider
+- Azure
+- Azure App Configuration
+- Azure Front Door
+- CDN
+- Client Side Configuration
+- Cloud Architecture
+- Coding
+- Community
+- Configuration Management
+- DevOps
+- Dynamic Configuration
+- Edge Caching
+- Feature Flags
+- JavaScript
+- Managed Identity
+- MAUI
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Mukta explains how Azure App Configuration combined with Azure Front Door enables developers to deliver dynamic client-side configuration at CDN scale, providing secure and flexible options for AI-powered and modern client applications.<!--excerpt_end-->
 
 # Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door

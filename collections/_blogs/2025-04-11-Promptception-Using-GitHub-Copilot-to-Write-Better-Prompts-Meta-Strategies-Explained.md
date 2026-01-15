@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Promptception: Using GitHub Copilot to Write Better Prompts (Meta Strategies Explained)"
-description: "Randy Pagels explores 'Promptception'—the practice of using GitHub Copilot to generate, refine, and optimize prompts for use across Copilot Chat, Edit, and Agent Mode. He offers concrete examples and workflows to empower developers to get better results from Copilot by crafting smarter prompts."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Promptception: Using GitHub Copilot to Write Better Prompts (Meta Strategies Explained)'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-04-11 00:00:00 +00:00
-permalink: "/2025-04-11-Promptception-Using-GitHub-Copilot-to-Write-Better-Prompts-Meta-Strategies-Explained.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Blogs", "Code Review", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Productivity", "GitHub Copilot", "Playwright", "Prompt Engineering", "Prompt Optimization", "README Generation"]
-tags_normalized: ["ai", "blogs", "code review", "copilot agent mode", "copilot chat", "copilot edit", "developer productivity", "github copilot", "playwright", "prompt engineering", "prompt optimization", "readme generation"]
+permalink: /github-copilot/blogs/Promptception-Using-GitHub-Copilot-to-Write-Better-Prompts-Meta-Strategies-Explained
+tags:
+- AI
+- Blogs
+- Code Review
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Edit
+- Developer Productivity
+- GitHub Copilot
+- Playwright
+- Prompt Engineering
+- Prompt Optimization
+- README Generation
+section_names:
+- ai
+- github-copilot
 ---
-
 In this post, Randy Pagels introduces 'Promptception'—the process of leveraging GitHub Copilot to craft better prompts for Copilot itself. Learn strategies to enhance prompt effectiveness using Chat, Edit, and Agent Modes.<!--excerpt_end-->
 
 # Promptception – Improve Prompts with Copilot

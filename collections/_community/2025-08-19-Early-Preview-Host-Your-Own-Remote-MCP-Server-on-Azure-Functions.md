@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Early Preview: Host Your Own Remote MCP Server on Azure Functions"
-description: "This announcement introduces new samples and guidance for deploying Model Context Protocol (MCP) servers—originally built with MCP SDKs for Python, Node.js, and .NET—on Azure Functions using a serverless approach. Readers will learn how to migrate existing MCP servers to Azure’s hyperscale Flex Consumption plan with minimal code changes, leverage secure endpoints, and benefit from event-driven scalability. The post highlights differences between BYO and Functions-specific MCP extensions, supported SDKs, deployment tools, and provides links to sample repositories for quick starts."
-author: "lily-ma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Early Preview: Host Your Own Remote MCP Server on Azure Functions'
+author: lily-ma
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-19 02:35:21 +00:00
-permalink: "/2025-08-19-Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "API Management", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "BYO MCP Server", "CI/CD", "Coding", "Community", "Flex Consumption Plan", "Func Start", "MCP", "MCP SDK", "Node.js", "Python", "Remote Server Hosting", "Serverless", "Serverless Deployment", "Stateless Servers", "Streamable HTTP", "VS Code"]
-tags_normalized: ["dotnet", "api management", "authentication", "azure", "azure developer cli", "azure functions", "byo mcp server", "cislashcd", "coding", "community", "flex consumption plan", "func start", "mcp", "mcp sdk", "nodedotjs", "python", "remote server hosting", "serverless", "serverless deployment", "stateless servers", "streamable http", "vs code"]
+permalink: /coding/community/Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions
+tags:
+- .NET
+- API Management
+- Authentication
+- Azure
+- Azure Developer CLI
+- Azure Functions
+- BYO MCP Server
+- CI/CD
+- Coding
+- Community
+- Flex Consumption Plan
+- Func Start
+- MCP
+- MCP SDK
+- Node.js
+- Python
+- Remote Server Hosting
+- Serverless
+- Serverless Deployment
+- Stateless Servers
+- Streamable HTTP
+- VS Code
+section_names:
+- azure
+- coding
 ---
-
 lily-ma presents the early preview of hosting bring-your-own Remote MCP servers on Azure Functions, making it easier for developers to deploy existing MCP SDK-based servers to a highly scalable serverless environment.<!--excerpt_end-->
 
 # Early Preview: Host Your Own Remote MCP Server on Azure Functions

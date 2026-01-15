@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Agent mode for JetBrains, Eclipse, and Xcode is now generally available"
-description: "GitHub Copilot agent mode is now generally available for JetBrains, Eclipse, and Xcode, enabling autonomous coding with any GitHub account."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-16-agent-mode-for-jetbrains-eclipse-and-xcode-is-now-generally-available"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Agent mode for JetBrains, Eclipse, and Xcode is now generally available
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-16-agent-mode-for-jetbrains-eclipse-and-xcode-is-now-generally-available
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-17 02:06:36 +00:00
-permalink: "/2025-07-17-Agent-mode-for-JetBrains-Eclipse-and-Xcode-is-now-generally-available.html"
-viewing_mode: "external"
-tags: ["Agent Mode", "AI", "Autonomous Coding", "Code Suggestions", "Developer Tools", "Eclipse", "General Availability", "GitHub Account", "GitHub Copilot", "IDE Integration", "JetBrains", "News", "Xcode"]
-tags_normalized: ["agent mode", "ai", "autonomous coding", "code suggestions", "developer tools", "eclipse", "general availability", "github account", "github copilot", "ide integration", "jetbrains", "news", "xcode"]
+permalink: /github-copilot/news/Agent-mode-for-JetBrains-Eclipse-and-Xcode-is-now-generally-available
+viewing_mode: external
+tags:
+- Agent Mode
+- AI
+- Autonomous Coding
+- Code Suggestions
+- Developer Tools
+- Eclipse
+- General Availability
+- GitHub Account
+- GitHub Copilot
+- IDE Integration
+- JetBrains
+- News
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 In this brief update, Allison announces the general availability of GitHub Copilot's agent mode for popular IDEs including JetBrains, Eclipse, and Xcode. Developers can now enable GitHub Copilot using any GitHub account for an autonomous coding experience, expanding the tool's accessibility and utility.<!--excerpt_end-->
 
 ## GitHub Copilot Agent Mode Now Available Across Popular IDEs

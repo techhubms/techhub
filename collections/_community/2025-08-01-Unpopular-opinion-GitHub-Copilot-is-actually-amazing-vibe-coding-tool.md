@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool"
-description: "The author shares their personal experience comparing AI-powered coding tools, explaining why GitHub Copilot stands out for modular backend development, agent workflows, and seamless IDE integration. They detail a multi-LLM workflow involving Copilot, Claude, and GPT-4.1 for planning, execution, and deployment in real-world applications."
-author: "EasyProtectedHelp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool
+author: EasyProtectedHelp
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 18:28:38 +00:00
-permalink: "/2025-08-01-Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Workflows", "AI", "AI Code Generation", "CI/CD Integration", "Claude Opus", "Claude Sonnet", "Community", "Copilot Workspace", "Cursor", "GitHub Copilot", "GPT 4.1", "JetBrains IDE", "Microservices", "Software Development", "VS Code"]
-tags_normalized: ["agent workflows", "ai", "ai code generation", "cislashcd integration", "claude opus", "claude sonnet", "community", "copilot workspace", "cursor", "github copilot", "gpt 4dot1", "jetbrains ide", "microservices", "software development", "vs code"]
+permalink: /github-copilot/community/Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool
+tags:
+- Agent Workflows
+- AI
+- AI Code Generation
+- CI/CD Integration
+- Claude Opus
+- Claude Sonnet
+- Community
+- Copilot Workspace
+- Cursor
+- GitHub Copilot
+- GPT 4.1
+- JetBrains IDE
+- Microservices
+- Software Development
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 EasyProtectedHelp explores a range of AI code generation tools, focusing on why GitHub Copilot excels in their developer workflow. The article outlines practical, step-by-step experiences with Copilot, Claude, and GPT-4.1 for planning, coding, and deploying real-world applications.<!--excerpt_end-->
 
 # Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool

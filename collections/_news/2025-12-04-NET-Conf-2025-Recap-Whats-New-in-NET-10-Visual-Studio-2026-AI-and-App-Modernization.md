@@ -1,20 +1,58 @@
----
-layout: "post"
+﻿---
+layout: post
 title: ".NET Conf 2025 Recap: What's New in .NET 10, Visual Studio 2026, AI, and App Modernization"
-description: "This comprehensive recap covers the highlights and key announcements from .NET Conf 2025, including the official launches of .NET 10 and Visual Studio 2026, major improvements for developers, expanded AI capabilities, GitHub Copilot integrations, Aspire 13, security enhancements, and deep dives into cloud-native and community-driven innovation with Microsoft tools."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+author: .NET Team
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-04 18:05:00 +00:00
-permalink: "/2025-12-04-NET-Conf-2025-Recap-Whats-New-in-NET-10-Visual-Studio-2026-AI-and-App-Modernization.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
-tags: [".NET", ".NET 10", "Agentic UI", "AI", "AI Development", "App Modernization", "ASP.NET Core", "Aspire 13", "Azure", "Azure Functions", "Blazor", "C#", "C# 14", "CI/CD", "Cloud Native", "Coding", "Conference", "Cryptography", "DevOps", "F# 10", "Featured", "GitHub Copilot", "MAUI", "MCP C# SDK", "Microsoft Agent Framework", "ML", "Modernization", "News", "NuGet", "OpenTelemetry", "Passkeys", "Performance", "Security", "Testing", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "agentic ui", "ai", "ai development", "app modernization", "aspdotnet core", "aspire 13", "azure", "azure functions", "blazor", "csharp", "csharp 14", "cislashcd", "cloud native", "coding", "conference", "cryptography", "devops", "fsharp 10", "featured", "github copilot", "maui", "mcp csharp sdk", "microsoft agent framework", "ml", "modernization", "news", "nuget", "opentelemetry", "passkeys", "performance", "security", "testing", "vs"]
+permalink: /github-copilot/news/NET-Conf-2025-Recap-Whats-New-in-NET-10-Visual-Studio-2026-AI-and-App-Modernization
+tags:
+- .NET
+- .NET 10
+- Agentic UI
+- AI
+- AI Development
+- App Modernization
+- ASP.NET Core
+- Aspire 13
+- Azure
+- Azure Functions
+- Blazor
+- C#
+- C# 14
+- CI/CD
+- Cloud Native
+- Coding
+- Conference
+- Cryptography
+- DevOps
+- F# 10
+- Featured
+- GitHub Copilot
+- MAUI
+- MCP C# SDK
+- Microsoft Agent Framework
+- ML
+- Modernization
+- News
+- NuGet
+- OpenTelemetry
+- Passkeys
+- Performance
+- Security
+- Testing
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- ml
+- security
 ---
-
 .NET Team recaps .NET Conf 2025, detailing .NET 10, Visual Studio 2026, AI innovation, GitHub Copilot-powered modernization, security, and major ecosystem updates for developers.<!--excerpt_end-->
 
 # .NET Conf 2025 Recap

@@ -1,20 +1,56 @@
----
-layout: "post"
-title: "SQL Database in Microsoft Fabric Now Generally Available"
-description: "This news article announces the general availability of SQL Database within Microsoft Fabric, highlighting its unified experience across cloud, on-premises, and SaaS. It covers technical pillars like simplified management, autonomous security, built-in AI optimization, and real-time analytics integration. The release builds on the trusted SQL Server and Azure SQL database engine, offers familiar workflows, robust security, native AI support, CI/CD tooling, and direct integration with leading AI platforms and tools for data engineers and developers."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: SQL Database in Microsoft Fabric Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-SQL-Database-in-Microsoft-Fabric-Now-Generally-Available.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Ready Database", "Azure", "Azure DevOps", "Azure Key Vault", "Azure OpenAI", "Azure SQL Database", "CI/CD", "Copilot Editor", "Customer Managed Keys", "Data Analytics", "Data Driven AI", "Data Estate", "Disaster Recovery", "General Availability", "GitHub", "LangChain", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Purview", "ML", "News", "OneLake", "Operational Data Store", "Power BI", "RAG", "SaaS", "Security", "Semantic Kernel", "Semantic Search", "SQL Auditing", "SQL Database", "SQL Server", "Streaming Data", "T SQL", "Vector Data"]
-tags_normalized: ["ai", "ai ready database", "azure", "azure devops", "azure key vault", "azure openai", "azure sql database", "cislashcd", "copilot editor", "customer managed keys", "data analytics", "data driven ai", "data estate", "disaster recovery", "general availability", "github", "langchain", "microsoft fabric", "microsoft foundry", "microsoft purview", "ml", "news", "onelake", "operational data store", "power bi", "rag", "saas", "security", "semantic kernel", "semantic search", "sql auditing", "sql database", "sql server", "streaming data", "t sql", "vector data"]
+permalink: /ai/news/SQL-Database-in-Microsoft-Fabric-Now-Generally-Available
+tags:
+- AI
+- AI Ready Database
+- Azure
+- Azure DevOps
+- Azure Key Vault
+- Azure OpenAI
+- Azure SQL Database
+- CI/CD
+- Copilot Editor
+- Customer Managed Keys
+- Data Analytics
+- Data Driven AI
+- Data Estate
+- Disaster Recovery
+- General Availability
+- GitHub
+- LangChain
+- Microsoft Fabric
+- Microsoft Foundry
+- Microsoft Purview
+- ML
+- News
+- OneLake
+- Operational Data Store
+- Power BI
+- RAG
+- SaaS
+- Security
+- Semantic Kernel
+- Semantic Search
+- SQL Auditing
+- SQL Database
+- SQL Server
+- Streaming Data
+- T SQL
+- Vector Data
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog, co-authored by Idris Motiwala, announces the general availability of SQL Database in Fabric. The article outlines key technical features and integration points for developers, data engineers, and security professionals.<!--excerpt_end-->
 
 # Announcing SQL Database in Fabric (Generally Available)

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Introducing MAI-Image-1: Microsoft’s In-House Image Generation Model in Bing Image Creator and Copilot Audio Expressions"
-description: "This article introduces MAI-Image-1, Microsoft’s in-house image generation AI model, now integrated into Bing Image Creator and Copilot Audio Expressions. It highlights MAI-Image-1’s photorealistic capabilities, flexible outputs, and its debut as a top-ranked text-to-image model. Developers and creators can access and experiment with this model in supported Microsoft products."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Introducing MAI-Image-1: Microsoft’s In-House Image Generation Model in Bing Image Creator and Copilot Audio Expressions'
+author: stclarke
+canonical_url: https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-04 19:08:50 +00:00
-permalink: "/2025-11-04-Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions.html"
-categories: ["AI"]
-tags: ["AI", "AI Model Evaluation", "AI Product Integration", "Bing Image Creator", "Company News", "Copilot Audio Expressions", "Creative AI", "DALL E 3", "GPT 4o", "Image Generation", "in House AI Model", "LMArena", "MAI Image 1", "Microsoft AI", "News", "Text To Image"]
-tags_normalized: ["ai", "ai model evaluation", "ai product integration", "bing image creator", "company news", "copilot audio expressions", "creative ai", "dall e 3", "gpt 4o", "image generation", "in house ai model", "lmarena", "mai image 1", "microsoft ai", "news", "text to image"]
+permalink: /ai/news/Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions
+tags:
+- AI
+- AI Model Evaluation
+- AI Product Integration
+- Bing Image Creator
+- Company News
+- Copilot Audio Expressions
+- Creative AI
+- DALL E 3
+- GPT 4o
+- Image Generation
+- in House AI Model
+- LMArena
+- MAI Image 1
+- Microsoft AI
+- News
+- Text To Image
+section_names:
+- ai
 ---
-
 stclarke introduces MAI-Image-1, a Microsoft-developed AI model for image generation, now available in Bing Image Creator and Copilot Audio Expressions, and discusses its capabilities and integration into Microsoft products.<!--excerpt_end-->
 
 # Introducing MAI-Image-1: Microsoft’s In-House Image Generation Model

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "SAP Business Data Cloud Connect for Azure Databricks: General Availability Announcement"
-description: "This announcement details the general availability of SAP Business Data Cloud (SAP BDC) Connect for Azure Databricks. It explains how the integration enables live, bi-directional data sharing between SAP BDC and Azure Databricks with support for governance, compliance, data analytics, AI, ML, and unified data warehousing without needing to copy data across systems. The update includes connection details, security features, and regional support for enterprise-scale analytics on Azure."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/sap-business-data-cloud-connect-with-azure-databricks-is-now/ba-p/4459490"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'SAP Business Data Cloud Connect for Azure Databricks: General Availability Announcement'
+author: AnaviNahar
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/sap-business-data-cloud-connect-with-azure-databricks-is-now/ba-p/4459490
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 16:00:00 +00:00
-permalink: "/2025-10-15-SAP-Business-Data-Cloud-Connect-for-Azure-Databricks-General-Availability-Announcement.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Analytics", "Azure", "Azure Databricks", "Bi Directional Data", "Community", "Data Governance", "Data Integration", "Data Security", "Data Warehousing", "Delta Sharing", "Enterprise Data", "Machine Learning", "Microsoft", "ML", "SAP Business Data Cloud", "Unified Data Estate"]
-tags_normalized: ["ai", "analytics", "azure", "azure databricks", "bi directional data", "community", "data governance", "data integration", "data security", "data warehousing", "delta sharing", "enterprise data", "machine learning", "microsoft", "ml", "sap business data cloud", "unified data estate"]
+permalink: /ai/community/SAP-Business-Data-Cloud-Connect-for-Azure-Databricks-General-Availability-Announcement
+tags:
+- AI
+- Analytics
+- Azure
+- Azure Databricks
+- Bi Directional Data
+- Community
+- Data Governance
+- Data Integration
+- Data Security
+- Data Warehousing
+- Delta Sharing
+- Enterprise Data
+- Machine Learning
+- Microsoft
+- ML
+- SAP Business Data Cloud
+- Unified Data Estate
+section_names:
+- ai
+- azure
+- ml
 ---
-
 AnaviNahar announces the general availability of SAP Business Data Cloud Connect for Azure Databricks, enabling unified, secure, and compliant live data sharing and analytics integration on Azure.<!--excerpt_end-->
 
 # SAP Business Data Cloud Connect for Azure Databricks Now Available

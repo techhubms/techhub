@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI"
-description: "This session explores how developers can upgrade their existing ASP.NET Core Web API endpoints by integrating Model Creation Protocol (MCP), enabling AI capabilities for LLMs and agents. The video demonstrates the use of the MCP C# SDK, highlights comparisons to no-code solutions with Azure API Management, and outlines practical strategies to evolve classic APIs into intelligent, task-focused tools using modern .NET technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=K-ntHsFriuI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=K-ntHsFriuI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:26 +00:00
-permalink: "/2025-11-14-Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Integration", "AI Services", "API Design", "API Development", "ASP.NET Core", "Azure API Management", "C#", "Coding", "LLM", "MCP", "MCP SDK", "Model Creation Protocol", "REST API", "Videos", "Web API"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "ai services", "api design", "api development", "aspdotnet core", "azure api management", "csharp", "coding", "llm", "mcp", "mcp sdk", "model creation protocol", "rest api", "videos", "web api"]
+permalink: /ai/videos/Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Integration
+- AI Services
+- API Design
+- API Development
+- ASP.NET Core
+- Azure API Management
+- C#
+- Coding
+- LLM
+- MCP
+- MCP SDK
+- Model Creation Protocol
+- REST API
+- Videos
+- Web API
+section_names:
+- ai
+- coding
 ---
-
 dotnet presents a session on how to integrate Model Creation Protocol (MCP) into existing ASP.NET Core REST APIs, empowering them with AI and making them LLM-friendly.<!--excerpt_end-->
 
 {% youtube K-ntHsFriuI %}

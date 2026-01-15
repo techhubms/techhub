@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot"
-description: "This comprehensive guide by GabiPacheco explores how organizations can accelerate migration and modernization initiatives using Azure Essentials, Azure Migrate, and GitHub Copilot. It covers secure and resilient migration strategies, outlines phased methodologies, and emphasizes integrating AI capabilities for agentic applications. Key best practices for governance, cost optimization, and ongoing cloud architecture improvement are presented, supported by Microsoft's expert-led and investment-backed Azure Accelerate program."
-author: "GabiPacheco"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot
+author: GabiPacheco
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 17:45:09 +00:00
-permalink: "/2025-09-17-AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Applications", "AI", "AI Assisted Migration", "Azure", "Azure Advisor", "Azure Essentials", "Azure Migrate", "Azure Monitor", "Azure Policy", "Azure Security Benchmark", "Azure Security Center", "Cloud Adoption Framework", "Cloud Security", "Community", "DevOps", "Disaster Recovery", "FinOps", "GitHub Copilot", "Governance", "Microsoft Defender For Cloud", "Migration", "Modernization", "RBAC", "Resiliency", "Security"]
-tags_normalized: ["agentic applications", "ai", "ai assisted migration", "azure", "azure advisor", "azure essentials", "azure migrate", "azure monitor", "azure policy", "azure security benchmark", "azure security center", "cloud adoption framework", "cloud security", "community", "devops", "disaster recovery", "finops", "github copilot", "governance", "microsoft defender for cloud", "migration", "modernization", "rbac", "resiliency", "security"]
+permalink: /github-copilot/community/AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot
+tags:
+- Agentic Applications
+- AI
+- AI Assisted Migration
+- Azure
+- Azure Advisor
+- Azure Essentials
+- Azure Migrate
+- Azure Monitor
+- Azure Policy
+- Azure Security Benchmark
+- Azure Security Center
+- Cloud Adoption Framework
+- Cloud Security
+- Community
+- DevOps
+- Disaster Recovery
+- FinOps
+- GitHub Copilot
+- Governance
+- Microsoft Defender For Cloud
+- Migration
+- Modernization
+- RBAC
+- Resiliency
+- Security
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 GabiPacheco details how businesses can leverage Azure Essentials, Azure Migrate, and GitHub Copilot to securely and resiliently modernize their IT infrastructure, providing actionable strategies for migration and AI integration.<!--excerpt_end-->
 
 # AI-Powered Migration and Modernization—Secure, Resilient, and Ready for Innovation

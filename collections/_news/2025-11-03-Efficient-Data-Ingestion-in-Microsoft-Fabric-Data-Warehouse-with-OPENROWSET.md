@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Efficient Data Ingestion in Microsoft Fabric Data Warehouse with OPENROWSET"
-description: "This article explains how to use the OPENROWSET function within Microsoft Fabric Data Warehouse for flexible and schema-inferred data ingestion from files in Fabric OneLake or Azure Storage. It details using OPENROWSET alongside INSERT statements, compares it with the COPY INTO command, and provides practical guidance for extracting, transforming, and loading Parquet, CSV, TSV, or JSONL files into warehouse tables. Key features such as schema inference, partitioned reading, metadata extraction, and lightweight transformations for ETL pipelines are highlighted."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/ingest-files-into-your-fabric-data-warehouse-using-the-openrowset-function/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Efficient Data Ingestion in Microsoft Fabric Data Warehouse with OPENROWSET
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ingest-files-into-your-fabric-data-warehouse-using-the-openrowset-function/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 10:00:00 +00:00
-permalink: "/2025-11-03-Efficient-Data-Ingestion-in-Microsoft-Fabric-Data-Warehouse-with-OPENROWSET.html"
-categories: ["Azure", "ML"]
-tags: ["Auditing", "Azure", "Azure Storage", "COPY INTO", "CSV", "Data Ingestion", "Data Warehouse", "ELT", "ETL", "INSERT Statement", "JSONL", "Metadata Extraction", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Partitioned Data", "Schema Inference", "T SQL", "Table Creation", "Transformation", "TSV"]
-tags_normalized: ["auditing", "azure", "azure storage", "copy into", "csv", "data ingestion", "data warehouse", "elt", "etl", "insert statement", "jsonl", "metadata extraction", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "partitioned data", "schema inference", "t sql", "table creation", "transformation", "tsv"]
+permalink: /ml/news/Efficient-Data-Ingestion-in-Microsoft-Fabric-Data-Warehouse-with-OPENROWSET
+tags:
+- Auditing
+- Azure
+- Azure Storage
+- COPY INTO
+- CSV
+- Data Ingestion
+- Data Warehouse
+- ELT
+- ETL
+- INSERT Statement
+- JSONL
+- Metadata Extraction
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- OPENROWSET
+- Parquet
+- Partitioned Data
+- Schema Inference
+- T SQL
+- Table Creation
+- Transformation
+- TSV
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains the use of OPENROWSET in Microsoft Fabric Data Warehouse for ingesting files with schema inference and transformation, offering guidance on building efficient ETL workflows.<!--excerpt_end-->
 
 # Efficient Data Ingestion in Microsoft Fabric Data Warehouse with OPENROWSET

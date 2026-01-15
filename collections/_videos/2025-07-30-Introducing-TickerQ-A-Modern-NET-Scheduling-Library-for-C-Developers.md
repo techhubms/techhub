@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Introducing TickerQ: A Modern .NET Scheduling Library for C# Developers"
-description: "This video by Nick Chapsas introduces TickerQ, a newly designed scheduling library for the .NET ecosystem. The content highlights limitations in existing libraries such as Quartz and Hangfire, and explains how TickerQ resolves these issues, catering to C# developers seeking efficient and reliable job scheduling tools."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=x0dfj95Cj0U"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: 'Introducing TickerQ: A Modern .NET Scheduling Library for C# Developers'
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=x0dfj95Cj0U
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-30 11:15:06 +00:00
-permalink: "/2025-07-30-Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "C# Development", "Coding", "GitHub", "Hangfire", "Job Scheduling", "Open Source", "Quartz", "Scheduling Library", "TickerQ", "Videos"]
-tags_normalized: ["dotnet", "csharp", "csharp development", "coding", "github", "hangfire", "job scheduling", "open source", "quartz", "scheduling library", "tickerq", "videos"]
+permalink: /coding/videos/Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers
+tags:
+- .NET
+- C#
+- C# Development
+- Coding
+- GitHub
+- Hangfire
+- Job Scheduling
+- Open Source
+- Quartz
+- Scheduling Library
+- TickerQ
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas introduces TickerQ, a new and improved scheduling library tailored for .NET and C# developers, highlighting its advantages over Quartz and Hangfire.<!--excerpt_end-->
 
 {% youtube x0dfj95Cj0U %}

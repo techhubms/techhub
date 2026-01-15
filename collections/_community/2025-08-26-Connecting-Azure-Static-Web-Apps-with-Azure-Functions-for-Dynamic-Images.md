@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Connecting Azure Static Web Apps with Azure Functions for Dynamic Images"
-description: "A practical guide addressing how to enable a static web app to serve dynamically generated images from an Azure Functions backend. This walkthrough demonstrates an example using SkiaSharp to generate images and explains how to wire up the static site with the API, resolving issues with local development routing, CORS, and the staticwebapp.config.json configuration."
-author: "fcc_archivist"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Connecting Azure Static Web Apps with Azure Functions for Dynamic Images
+author: fcc_archivist
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 21:18:41 +00:00
-permalink: "/2025-08-26-Connecting-Azure-Static-Web-Apps-with-Azure-Functions-for-Dynamic-Images.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "API Integration", "Azure", "Azure Functions", "Azure Static Web Apps", "Backend Integration", "C#", "Coding", "Community", "CORS", "Function Apps", "HTTP Triggers", "Image Generation", "Local Development", "SkiaSharp", "Staticwebapp.config.json"]
-tags_normalized: ["dotnet", "api integration", "azure", "azure functions", "azure static web apps", "backend integration", "csharp", "coding", "community", "cors", "function apps", "http triggers", "image generation", "local development", "skiasharp", "staticwebappdotconfigdotjson"]
+permalink: /coding/community/Connecting-Azure-Static-Web-Apps-with-Azure-Functions-for-Dynamic-Images
+tags:
+- .NET
+- API Integration
+- Azure
+- Azure Functions
+- Azure Static Web Apps
+- Backend Integration
+- C#
+- Coding
+- Community
+- CORS
+- Function Apps
+- HTTP Triggers
+- Image Generation
+- Local Development
+- SkiaSharp
+- Staticwebapp.config.json
+section_names:
+- azure
+- coding
 ---
-
 fcc_archivist describes the challenge of connecting an Azure Static Web App with an Azure Functions API that generates images dynamically in C#. The guide covers typical pitfalls and configuration requirements.<!--excerpt_end-->
 
 # Connecting Azure Static Web Apps with Azure Functions for Dynamic Images

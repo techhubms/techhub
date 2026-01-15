@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Accelerating AI Agent Development with Microsoft Foundry at Ignite 2025"
-description: "This Microsoft Ignite 2025 session delves into Microsoft Foundry, an enterprise-ready Agent Factory enabling rapid development, testing, and deployment of AI agents. It covers agent orchestration, integration with Microsoft 365, compliance using Defender and Purview, advanced workflows, and industry partnerships. The discussion highlights new model providers, workflow features, and enterprise use cases, providing developers and architects best practices for building scalable AI solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hBpbKMEOVEw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating AI Agent Development with Microsoft Foundry at Ignite 2025
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=hBpbKMEOVEw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:49:27 +00:00
-permalink: "/2025-11-20-Accelerating-AI-Agent-Development-with-Microsoft-Foundry-at-Ignite-2025.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Factory", "Agentic Workflows", "AI", "AI Agents", "AI Studio", "Azure", "Azure AI", "Capgemini", "Citrix", "Compliance", "Defender", "Developer Tools", "Enterprise Security", "Industry Collaboration", "InnovatewithAzureAIappsandagents", "Microsoft 365 Integration", "Microsoft Foundry", "Microsoft Ignite", "Model Catalog", "MSIgnite", "Purview", "Security", "Threat Protection", "Videos", "Workflow Orchestration"]
-tags_normalized: ["agent factory", "agentic workflows", "ai", "ai agents", "ai studio", "azure", "azure ai", "capgemini", "citrix", "compliance", "defender", "developer tools", "enterprise security", "industry collaboration", "innovatewithazureaiappsandagents", "microsoft 365 integration", "microsoft foundry", "microsoft ignite", "model catalog", "msignite", "purview", "security", "threat protection", "videos", "workflow orchestration"]
+permalink: /ai/videos/Accelerating-AI-Agent-Development-with-Microsoft-Foundry-at-Ignite-2025
+tags:
+- Agent Factory
+- Agentic Workflows
+- AI
+- AI Agents
+- AI Studio
+- Azure
+- Azure AI
+- Capgemini
+- Citrix
+- Compliance
+- Defender
+- Developer Tools
+- Enterprise Security
+- Industry Collaboration
+- InnovatewithAzureAIappsandagents
+- Microsoft 365 Integration
+- Microsoft Foundry
+- Microsoft Ignite
+- Model Catalog
+- MSIgnite
+- Purview
+- Security
+- Threat Protection
+- Videos
+- Workflow Orchestration
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events hosts an advanced session on building and scaling AI agents with Microsoft Foundry, featuring insights on security, integration, and agentic workflows from Ignite 2025.<!--excerpt_end-->
 
 {% youtube hBpbKMEOVEw %}

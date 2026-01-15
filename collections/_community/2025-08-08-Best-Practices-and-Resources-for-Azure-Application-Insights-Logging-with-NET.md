@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Best Practices and Resources for Azure Application Insights Logging with .NET"
-description: "This community post presents practical advice, recommended practices, and resource links for effectively using Azure Application Insights with ILogger in .NET projects. Topics include sample rate configuration, custom metrics, and the integration of OpenTelemetry and Azure Monitor SDKs. The discussion also highlights strategies for data retention, cost considerations, and links to comprehensive tutorials and documentation."
-author: "BiteDowntown3294"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mkk5rp/best_resources_to_learn_azure_application/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Best Practices and Resources for Azure Application Insights Logging with .NET
+author: BiteDowntown3294
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mkk5rp/best_resources_to_learn_azure_application/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-08 03:06:44 +00:00
-permalink: "/2025-08-08-Best-Practices-and-Resources-for-Azure-Application-Insights-Logging-with-NET.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Aspire Dashboard", "Azure", "Azure Application Insights", "Azure Monitor SDK", "Coding", "Community", "Cost Optimization", "Custom Metrics", "Data Retention", "DevOps", "Distributed Tracing", "ILogger", "Instrumentation", "Logging Best Practices", "OpenTelemetry", "Sampling", "Telemetry"]
-tags_normalized: ["dotnet", "aspire dashboard", "azure", "azure application insights", "azure monitor sdk", "coding", "community", "cost optimization", "custom metrics", "data retention", "devops", "distributed tracing", "ilogger", "instrumentation", "logging best practices", "opentelemetry", "sampling", "telemetry"]
+permalink: /coding/community/Best-Practices-and-Resources-for-Azure-Application-Insights-Logging-with-NET
+tags:
+- .NET
+- Aspire Dashboard
+- Azure
+- Azure Application Insights
+- Azure Monitor SDK
+- Coding
+- Community
+- Cost Optimization
+- Custom Metrics
+- Data Retention
+- DevOps
+- Distributed Tracing
+- ILogger
+- Instrumentation
+- Logging Best Practices
+- OpenTelemetry
+- Sampling
+- Telemetry
+section_names:
+- azure
+- coding
+- devops
 ---
-
 BiteDowntown3294 shares actionable tips for effective Azure Application Insights logging in .NET, discussing practical configurations, resource links, and the benefits of OpenTelemetry and data sampling.<!--excerpt_end-->
 
 # Best Practices and Resources for Azure Application Insights Logging with .NET

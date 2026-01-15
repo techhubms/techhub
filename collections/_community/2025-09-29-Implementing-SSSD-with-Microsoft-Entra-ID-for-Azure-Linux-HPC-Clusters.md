@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Implementing SSSD with Microsoft Entra ID for Azure Linux HPC Clusters"
-description: "This guide walks through the practical integration of System Security Services Daemon (SSSD) using its new 'idp' provider with Microsoft Entra ID on Azure Linux 3.0 HPC clusters. The article covers building, deploying, and configuring SSSD, setting up Entra-based user identities, and running jobs as Entra users in a secure, scalable HPC environment."
-author: "trcooper"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba-p/4457932"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Implementing SSSD with Microsoft Entra ID for Azure Linux HPC Clusters
+author: trcooper
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba-p/4457932
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-29 17:50:46 +00:00
-permalink: "/2025-09-29-Implementing-SSSD-with-Microsoft-Entra-ID-for-Azure-Linux-HPC-Clusters.html"
-categories: ["Azure", "Security"]
-tags: ["Ansible", "App Registration", "Azure", "Azure Linux", "Cluster Configuration", "Community", "Graph API", "HPC", "Identity Management", "Linux Authentication", "Microsoft Entra ID", "MPI", "NSSwitch", "OAuth2", "OpenID Connect", "RPM", "Security", "Slurm", "SSSD", "User Provisioning"]
-tags_normalized: ["ansible", "app registration", "azure", "azure linux", "cluster configuration", "community", "graph api", "hpc", "identity management", "linux authentication", "microsoft entra id", "mpi", "nsswitch", "oauth2", "openid connect", "rpm", "security", "slurm", "sssd", "user provisioning"]
+permalink: /azure/community/Implementing-SSSD-with-Microsoft-Entra-ID-for-Azure-Linux-HPC-Clusters
+tags:
+- Ansible
+- App Registration
+- Azure
+- Azure Linux
+- Cluster Configuration
+- Community
+- Graph API
+- HPC
+- Identity Management
+- Linux Authentication
+- Microsoft Entra ID
+- MPI
+- NSSwitch
+- OAuth2
+- OpenID Connect
+- RPM
+- Security
+- Slurm
+- SSSD
+- User Provisioning
+section_names:
+- azure
+- security
 ---
-
 trcooper explains step-by-step how to integrate Microsoft Entra ID with SSSD on Azure Linux 3.0 HPC clusters, providing secure, unified user identities and covering deployment, configuration, and real-world usage details.<!--excerpt_end-->
 
 # Implementing SSSD with Microsoft Entra ID for Azure Linux HPC Clusters

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Securing Cloud Shell Access to Azure Kubernetes Service (AKS)"
-description: "This article by samcogan outlines multiple strategies for securely connecting Azure Cloud Shell to Azure Kubernetes Service (AKS) clusters. It covers security concerns when connecting from Cloud Shell to AKS, hands-on scripts for IP allow listing, the Command Invoke feature, Cloud Shell vNet integration, and how to leverage Azure Bastion for secure access. Each method's trade-offs, pitfalls, and best practices are discussed from both security and operational perspectives."
-author: "samcogan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securing Cloud Shell Access to Azure Kubernetes Service (AKS)
+author: samcogan
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 15:13:03 +00:00
-permalink: "/2025-09-02-Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Service-AKS.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Control", "AKS", "Azure", "Azure Bastion", "Azure CLI", "Azure Cloud Shell", "Azure Firewall", "Cloud Security", "Command Invoke", "Community", "DevOps", "IP Allow List", "Kubernetes", "NAT Gateway", "Network Security", "Private Endpoints", "Security", "Vnet Integration"]
-tags_normalized: ["access control", "aks", "azure", "azure bastion", "azure cli", "azure cloud shell", "azure firewall", "cloud security", "command invoke", "community", "devops", "ip allow list", "kubernetes", "nat gateway", "network security", "private endpoints", "security", "vnet integration"]
+permalink: /azure/community/Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Service-AKS
+tags:
+- Access Control
+- AKS
+- Azure
+- Azure Bastion
+- Azure CLI
+- Azure Cloud Shell
+- Azure Firewall
+- Cloud Security
+- Command Invoke
+- Community
+- DevOps
+- IP Allow List
+- Kubernetes
+- NAT Gateway
+- Network Security
+- Private Endpoints
+- Security
+- Vnet Integration
+section_names:
+- azure
+- devops
+- security
 ---
-
 Sam Cogan presents a comprehensive review of secure methods for accessing AKS from Azure Cloud Shell, highlighting configuration scripts, networking solutions, and practical security tips for Azure administrators.<!--excerpt_end-->
 
 # Securing Cloud Shell Access to Azure Kubernetes Service (AKS)

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enterprise Teams Public Preview: Centralized Role and Security Management in GitHub Enterprise Cloud"
-description: "This update details the public preview of GitHub Enterprise teams for managing roles, permissions, and security at scale. New features empower enterprise owners with improved governance, streamlined user and team management, and introduce the Enterprise Security Manager role for centralized security administration using GitHub’s APIs and UI."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-23-managing-roles-and-governance-via-enterprise-teams-is-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Enterprise Teams Public Preview: Centralized Role and Security Management in GitHub Enterprise Cloud'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-23-managing-roles-and-governance-via-enterprise-teams-is-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-23 17:00:00 +00:00
-permalink: "/2025-10-23-Enterprise-Teams-Public-Preview-Centralized-Role-and-Security-Management-in-GitHub-Enterprise-Cloud.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security", "Application Security", "Code Security", "DevOps", "Enterprise Management Tools", "Enterprise Teams", "GitHub API", "GitHub Enterprise Cloud", "Governance", "Granular Access Control", "News", "Organization Management", "Permissions", "Platform Governance", "Policy Management", "Push Protection", "Repository Rulesets", "Role Management", "Secret Scanning", "Security", "Security Manager"]
-tags_normalized: ["advanced security", "application security", "code security", "devops", "enterprise management tools", "enterprise teams", "github api", "github enterprise cloud", "governance", "granular access control", "news", "organization management", "permissions", "platform governance", "policy management", "push protection", "repository rulesets", "role management", "secret scanning", "security", "security manager"]
+permalink: /devops/news/Enterprise-Teams-Public-Preview-Centralized-Role-and-Security-Management-in-GitHub-Enterprise-Cloud
+tags:
+- Advanced Security
+- Application Security
+- Code Security
+- DevOps
+- Enterprise Management Tools
+- Enterprise Teams
+- GitHub API
+- GitHub Enterprise Cloud
+- Governance
+- Granular Access Control
+- News
+- Organization Management
+- Permissions
+- Platform Governance
+- Policy Management
+- Push Protection
+- Repository Rulesets
+- Role Management
+- Secret Scanning
+- Security
+- Security Manager
+section_names:
+- devops
+- security
 ---
-
 Allison explains new enterprise team features in GitHub Enterprise Cloud, highlighting improved role management, centralized enterprise security, and advanced governance for organizations and repositories.<!--excerpt_end-->
 
 # Managing Roles and Governance via Enterprise Teams in GitHub Enterprise Cloud

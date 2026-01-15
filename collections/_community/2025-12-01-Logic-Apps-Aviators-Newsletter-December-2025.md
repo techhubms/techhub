@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter - December 2025"
-description: "This issue of the Logic Apps Aviators Newsletter covers technical integration patterns, product group updates, and community highlights in Microsoft Azure Integration Services. Content includes expert insights on Logic Apps, AI-powered workflows, XML handling, BizTalk migration/modernization, MCP tool integrations, security/auth solutions, and multi-agent orchestration. Readers gain practical advice, examples, and links to learning resources for developers and architects."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Logic Apps Aviators Newsletter - December 2025
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-01 16:00:00 +00:00
-permalink: "/2025-12-01-Logic-Apps-Aviators-Newsletter-December-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure Functions", "Azure Integration Services", "Azure Logic Apps", "BizTalk Server", "Coding", "Community", "Community Day", "Debugging", "DevOps", "Entra ID", "Foundry", "HL7 Connector", "Integration Patterns", "LangChain", "MCP Tools", "Multi Agent Workflows", "OAuth", "RabbitMQ", "Security", "Semantic Kernel", "Service Bus", "XML"]
-tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure functions", "azure integration services", "azure logic apps", "biztalk server", "coding", "community", "community day", "debugging", "devops", "entra id", "foundry", "hl7 connector", "integration patterns", "langchain", "mcp tools", "multi agent workflows", "oauth", "rabbitmq", "security", "semantic kernel", "service bus", "xml"]
+permalink: /ai/community/Logic-Apps-Aviators-Newsletter-December-2025
+tags:
+- Agent Loop
+- AI
+- API Management
+- Automation
+- Azure
+- Azure Functions
+- Azure Integration Services
+- Azure Logic Apps
+- BizTalk Server
+- Coding
+- Community
+- Community Day
+- Debugging
+- DevOps
+- Entra ID
+- Foundry
+- HL7 Connector
+- Integration Patterns
+- LangChain
+- MCP Tools
+- Multi Agent Workflows
+- OAuth
+- RabbitMQ
+- Security
+- Semantic Kernel
+- Service Bus
+- XML
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 WSilveira assembles technical updates and community insights in the December 2025 Logic Apps Aviators Newsletter, with real-world guidance from architects and integration experts.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter - December 2025

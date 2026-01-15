@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Why Developer Discipline Matters More Than Ever in the AI Era"
-description: "This article explores the security risks arising from the rapid adoption of generative AI coding tools, as highlighted by Snyk CTO Danny Allan. It emphasizes the importance of embedding security directly into developer workflows to counter potential vulnerabilities introduced by AI-generated code, and discusses the evolving role of DevSecOps practices in maintaining robust software security in an AI-driven landscape."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Why Developer Discipline Matters More Than Ever in the AI Era
+author: Mike Vizard
+canonical_url: https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-31 14:53:20 +00:00
-permalink: "/2025-10-31-Why-Developer-Discipline-Matters-More-Than-Ever-in-the-AI-Era.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Assistants", "Automated Testing", "Blogs", "Dependency Scanning", "Developer Workflows", "DevOps", "Devsecops", "Generative AI", "LLMs", "Real Time Monitoring", "Security", "Security Automation", "Snyk", "Software Security", "Supply Chain Risk", "Vibecoding", "Video Interviews", "Vulnerability Detection"]
-tags_normalized: ["ai", "ai assistants", "automated testing", "blogs", "dependency scanning", "developer workflows", "devops", "devsecops", "generative ai", "llms", "real time monitoring", "security", "security automation", "snyk", "software security", "supply chain risk", "vibecoding", "video interviews", "vulnerability detection"]
+permalink: /ai/blogs/Why-Developer-Discipline-Matters-More-Than-Ever-in-the-AI-Era
+tags:
+- AI
+- AI Assistants
+- Automated Testing
+- Blogs
+- Dependency Scanning
+- Developer Workflows
+- DevOps
+- Devsecops
+- Generative AI
+- LLMs
+- Real Time Monitoring
+- Security
+- Security Automation
+- Snyk
+- Software Security
+- Supply Chain Risk
+- Vibecoding
+- Video Interviews
+- Vulnerability Detection
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard reports on Snyk CTO Danny Allan's warning regarding software security challenges posed by AI-powered coding, explaining why developer discipline and security integration are critical.<!--excerpt_end-->
 
 # Why Developer Discipline Matters More Than Ever in the AI Era

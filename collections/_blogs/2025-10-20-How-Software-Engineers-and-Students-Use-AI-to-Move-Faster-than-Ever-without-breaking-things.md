@@ -1,20 +1,65 @@
----
-layout: "post"
-title: "How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)"
-description: "This article by Vivek Vaidya explores the transformative role of AI, particularly agentic coding tools like GitHub Copilot and Cursor, in reshaping the workflows of developers and students. It discusses how AI empowers engineers to automate mundane tasks, enhance productivity, and focus on creative problem-solving. The piece also examines the challenges and opportunities AI brings to education, urging institutions to integrate AI skills into curricula. Perspectives on workforce adaptation and ongoing AI tool evolution are provided, emphasizing the need for both technical and human skills in the age of augmented intelligence."
-author: "Vivek Vaidya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)
+author: Vivek Vaidya
+canonical_url: https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-20 11:40:15 +00:00
-permalink: "/2025-10-20-How-Software-Engineers-and-Students-Use-AI-to-Move-Faster-than-Ever-without-breaking-things.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI And Students", "AI Coding Tools", "AI Collaboration", "AI Engineers", "AI Evolution", "AI in Education", "AI in Software Development", "AI in Universities", "AI Innovation", "AI Native Companies", "AI Native Design", "AI Native Education", "AI Native Learning", "AI Powered Development", "AI Revolution", "AI Skills", "AI Skills Gap", "AI Startups", "AI Tools For Developers", "AI Transformation", "AI Workforce Adaptation", "AI/ML", "Augmented Development", "Augmented Intelligence", "Blogs", "Business Of DevOps", "Contributed Content", "Cursor", "Developer Productivity", "DevOps", "Digital Transformation", "Enterprise AI", "Future Of Work", "GitHub Copilot", "Human AI Collaboration", "LLMs", "Machine Learning", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Super{set}", "VC Investment in AI"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai and students", "ai coding tools", "ai collaboration", "ai engineers", "ai evolution", "ai in education", "ai in software development", "ai in universities", "ai innovation", "ai native companies", "ai native design", "ai native education", "ai native learning", "ai powered development", "ai revolution", "ai skills", "ai skills gap", "ai startups", "ai tools for developers", "ai transformation", "ai workforce adaptation", "aislashml", "augmented development", "augmented intelligence", "blogs", "business of devops", "contributed content", "cursor", "developer productivity", "devops", "digital transformation", "enterprise ai", "future of work", "github copilot", "human ai collaboration", "llms", "machine learning", "social facebook", "social linkedin", "social x", "software engineering", "superset", "vc investment in ai"]
+permalink: /github-copilot/blogs/How-Software-Engineers-and-Students-Use-AI-to-Move-Faster-than-Ever-without-breaking-things
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI And Students
+- AI Coding Tools
+- AI Collaboration
+- AI Engineers
+- AI Evolution
+- AI in Education
+- AI in Software Development
+- AI in Universities
+- AI Innovation
+- AI Native Companies
+- AI Native Design
+- AI Native Education
+- AI Native Learning
+- AI Powered Development
+- AI Revolution
+- AI Skills
+- AI Skills Gap
+- AI Startups
+- AI Tools For Developers
+- AI Transformation
+- AI Workforce Adaptation
+- AI/ML
+- Augmented Development
+- Augmented Intelligence
+- Blogs
+- Business Of DevOps
+- Contributed Content
+- Cursor
+- Developer Productivity
+- DevOps
+- Digital Transformation
+- Enterprise AI
+- Future Of Work
+- GitHub Copilot
+- Human AI Collaboration
+- LLMs
+- Machine Learning
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Engineering
+- Super{set}
+- VC Investment in AI
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Vivek Vaidya examines how engineers and students use AI tools, such as GitHub Copilot, to accelerate software development and learning. The article details the impact of agentic AI and the need for both technical and adaptive skills in the evolving landscape.<!--excerpt_end-->
 
 # How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive"
-description: "This video session from Microsoft Ignite 2025 showcases how Microsoft and Lenovo are enabling hybrid cloud transformation through Azure Local, highlighting practical AI scenarios like real-time video analytics, predictive maintenance, and low-latency inferencing. It features customer insights on migrating from legacy IT to Azure Local, details on using Lenovo ThinkAgile MX hardware, support for custom AI models via Azure AI Foundry, and technical considerations including data sovereignty, AKS load balancing, and scalable workload architectures."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BbOsfkQRrik"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=BbOsfkQRrik
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:34:29 +00:00
-permalink: "/2025-11-24-Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AKS", "Azure", "Azure AI Foundry", "Azure Local", "Clustered Workloads", "Custom AI Models", "Data Sovereignty", "Edge AI", "Hybrid Cloud", "Legacy Migration", "Lenovo ThinkAgile MX", "Medical Diagnostics", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NVIDIA Models", "Predictive Maintenance", "Real Time Analytics", "Scalable Infrastructure", "Videos"]
-tags_normalized: ["ai", "aks", "azure", "azure ai foundry", "azure local", "clustered workloads", "custom ai models", "data sovereignty", "edge ai", "hybrid cloud", "legacy migration", "lenovo thinkagile mx", "medical diagnostics", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nvidia models", "predictive maintenance", "real time analytics", "scalable infrastructure", "videos"]
+permalink: /ai/videos/Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive
+tags:
+- AI
+- AKS
+- Azure
+- Azure AI Foundry
+- Azure Local
+- Clustered Workloads
+- Custom AI Models
+- Data Sovereignty
+- Edge AI
+- Hybrid Cloud
+- Legacy Migration
+- Lenovo ThinkAgile MX
+- Medical Diagnostics
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- NVIDIA Models
+- Predictive Maintenance
+- Real Time Analytics
+- Scalable Infrastructure
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a Microsoft Ignite 2025 breakout discussing how Azure Local, powered by Lenovo hardware, is reshaping hybrid cloud with advanced AI applications, including a customer migration case study.<!--excerpt_end-->
 
 {% youtube BbOsfkQRrik %}

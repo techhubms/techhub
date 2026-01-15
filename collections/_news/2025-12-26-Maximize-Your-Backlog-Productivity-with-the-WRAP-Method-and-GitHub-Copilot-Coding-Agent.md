@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Maximize Your Backlog Productivity with the WRAP Method and GitHub Copilot Coding Agent"
-description: "This article introduces the WRAP method—Write effective issues, Refine your instructions, Atomic tasks, and Pair with the coding agent—to help developers and teams fully leverage GitHub Copilot coding agent. Discover actionable tips to improve issue creation, task breakdown, custom instructions, and collaboration for better automation of development backlogs."
-author: "Brittany Ellich"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Maximize Your Backlog Productivity with the WRAP Method and GitHub Copilot Coding Agent
+author: Brittany Ellich
+canonical_url: https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-26 17:56:38 +00:00
-permalink: "/2025-12-26-Maximize-Your-Backlog-Productivity-with-the-WRAP-Method-and-GitHub-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentic AI", "AI", "AI & ML", "AI Agent", "Atomic Tasks", "Coding", "Coding Automation", "Copilot Agent", "Custom Instructions", "Developer Productivity", "Developer Workflow", "DevOps", "GitHub Copilot", "Issue Management", "News", "Pair Programming", "Pull Requests", "Repository Automation", "Software Backlog", "Task Breakdown", "WRAP Method"]
-tags_normalized: ["agent mode", "agentic ai", "ai", "ai and ml", "ai agent", "atomic tasks", "coding", "coding automation", "copilot agent", "custom instructions", "developer productivity", "developer workflow", "devops", "github copilot", "issue management", "news", "pair programming", "pull requests", "repository automation", "software backlog", "task breakdown", "wrap method"]
+permalink: /github-copilot/news/Maximize-Your-Backlog-Productivity-with-the-WRAP-Method-and-GitHub-Copilot-Coding-Agent
+tags:
+- Agent Mode
+- Agentic AI
+- AI
+- AI & ML
+- AI Agent
+- Atomic Tasks
+- Coding
+- Coding Automation
+- Copilot Agent
+- Custom Instructions
+- Developer Productivity
+- Developer Workflow
+- DevOps
+- GitHub Copilot
+- Issue Management
+- News
+- Pair Programming
+- Pull Requests
+- Repository Automation
+- Software Backlog
+- Task Breakdown
+- WRAP Method
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Brittany Ellich presents actionable strategies using the WRAP method to help developers manage and automate backlogs with GitHub Copilot coding agent, offering practical advice for issue writing and collaborative workflows.<!--excerpt_end-->
 
 # Maximize Your Backlog Productivity with the WRAP Method and GitHub Copilot Coding Agent

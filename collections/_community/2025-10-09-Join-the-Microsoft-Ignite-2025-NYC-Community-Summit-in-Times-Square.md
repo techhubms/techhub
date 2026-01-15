@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Join the Microsoft Ignite 2025 NYC Community Summit in Times Square"
-description: "This announcement invites the New York tech community to attend the Microsoft Ignite 2025 NYC Community Summit in Times Square. Over two days, participants will experience live keynotes, community discussions, panels, and technical sessions covering the latest in Microsoft AI, Azure, web development, open-source, and more."
-author: "MariselaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Join the Microsoft Ignite 2025 NYC Community Summit in Times Square
+author: MariselaC
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-09 20:38:13 +00:00
-permalink: "/2025-10-09-Join-the-Microsoft-Ignite-2025-NYC-Community-Summit-in-Times-Square.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic AI", "AI", "Automation", "Azure", "Azure AI", "Azure Load Balancer", "Cloud Computing", "Coding", "Community", "Copilot Studio", "Microsoft Ignite", "NAT Gateway", "NYC Community", "Open Source", "Power Apps", "Power BI", "Web Application Development"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "automation", "azure", "azure ai", "azure load balancer", "cloud computing", "coding", "community", "copilot studio", "microsoft ignite", "nat gateway", "nyc community", "open source", "power apps", "power bi", "web application development"]
+permalink: /ai/community/Join-the-Microsoft-Ignite-2025-NYC-Community-Summit-in-Times-Square
+tags:
+- .NET
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Azure AI
+- Azure Load Balancer
+- Cloud Computing
+- Coding
+- Community
+- Copilot Studio
+- Microsoft Ignite
+- NAT Gateway
+- NYC Community
+- Open Source
+- Power Apps
+- Power BI
+- Web Application Development
+section_names:
+- ai
+- azure
+- coding
 ---
-
 MariselaC announces the Microsoft Ignite 2025 NYC Community Summit, outlining key sessions and topics in AI, Azure, and development. The event brings together local tech leaders, MVPs, and enthusiasts.<!--excerpt_end-->
 
 # Microsoft Ignite 2025 NYC Community Summit: Times Square

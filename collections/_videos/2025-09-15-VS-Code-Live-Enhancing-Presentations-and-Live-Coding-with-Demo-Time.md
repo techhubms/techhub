@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "VS Code Live: Enhancing Presentations and Live Coding with Demo Time"
-description: "This video explores the development of the VS Code extension Demo Time, focusing on how it streamlines live coding and developer presentations within Visual Studio Code. Hosts Liam Hampton and Elio Struyf discuss key features, technical implementation, and best practices for using Demo Time to create impactful demonstrations. The session also covers related integrations, including GitHub Copilot, highlighting how these tools can enhance developer productivity and code quality in real-time scenarios."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6_shqDBaOE0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live: Enhancing Presentations and Live Coding with Demo Time'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=6_shqDBaOE0
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-15 22:30:14 +00:00
-permalink: "/2025-09-15-VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Demos", "Coding", "Demo Time", "Developer Presentations", "Development Workflow", "GitHub Copilot", "Live Coding", "Presentation Tools", "Productivity Tools", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "code demos", "coding", "demo time", "developer presentations", "development workflow", "github copilot", "live coding", "presentation tools", "productivity tools", "videos", "vs code", "vs code extensions"]
+permalink: /github-copilot/videos/VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time
+tags:
+- AI
+- Code Demos
+- Coding
+- Demo Time
+- Developer Presentations
+- Development Workflow
+- GitHub Copilot
+- Live Coding
+- Presentation Tools
+- Productivity Tools
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this session, Visual Studio Code and guests Liam Hampton and Elio Struyf present Demo Time, an extension designed to improve live coding and presentations in VS Code. The talk emphasizes integration with GitHub Copilot and other modern developer tools.<!--excerpt_end-->
 
 {% youtube 6_shqDBaOE0 %}

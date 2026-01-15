@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Egui.NET: unofficial C# bindings for the easy-to-use Rust UI library"
-description: "The-Douglas introduces Egui.NET, C# bindings for the Rust egui immediate-mode GUI library. Targeted at game engine development, the article explains motivation, technical challenges, interoperability choices, and shows sample code. Egui.NET offers a memory-safe, flexible, and framework-agnostic UI solution for C# developers, especially game engine creators."
-author: "The-Douglas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mgwnvs/eguinet_unofficial_c_bindings_for_the_easytouse/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'Egui.NET: unofficial C# bindings for the easy-to-use Rust UI library'
+author: The-Douglas
+canonical_url: https://www.reddit.com/r/csharp/comments/1mgwnvs/eguinet_unofficial_c_bindings_for_the_easytouse/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-03 22:33:19 +00:00
-permalink: "/2025-08-03-EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library.html"
-categories: ["Coding"]
-tags: ["Bindings", "C#", "Coding", "Community", "Egui", "Game Engines", "Immediate Mode GUI", "Memory Safety", "OpenGL", "Rust", "UI Library", "Vulkan"]
-tags_normalized: ["bindings", "csharp", "coding", "community", "egui", "game engines", "immediate mode gui", "memory safety", "opengl", "rust", "ui library", "vulkan"]
+permalink: /coding/community/EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library
+tags:
+- Bindings
+- C#
+- Coding
+- Community
+- Egui
+- Game Engines
+- Immediate Mode GUI
+- Memory Safety
+- OpenGL
+- Rust
+- UI Library
+- Vulkan
+section_names:
+- coding
 ---
-
 In this article, The-Douglas shares the story behind Egui.NET—a C# wrapper for the egui Rust UI library—highlighting its technical foundations, design motivations, and sample usage for game engine UIs.<!--excerpt_end-->
 
 # Egui.NET: Unofficial C# Bindings for the easy-to-use Rust UI Library

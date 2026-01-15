@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Behind the Scenes of dotnet run app.cs: Deep Dive into .NET 10 Single-File Run Experience"
-description: "Andrew Lock provides a detailed exploration of how the new single-file run feature in .NET 10 works under the hood. He investigates the implementation in the .NET SDK, focusing on virtual project file construction, build caching, directive handling, and the overall execution model for running C# files without a .csproj."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-2-behind-the-scenes-of-dotnet-run-app.cs/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Behind the Scenes of dotnet run app.cs: Deep Dive into .NET 10 Single-File Run Experience'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-2-behind-the-scenes-of-dotnet-run-app.cs/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-08 10:00:00 +00:00
-permalink: "/2025-07-08-Behind-the-Scenes-of-dotnet-run-appcs-Deep-Dive-into-NET-10-Single-File-Run-Experience.html"
-categories: ["Coding"]
-tags: [".NET 10", ".NET Run", "Blogs", "Build Caching", "C#", "Coding", "MSBuild", "Roslyn", "SDK Directives", "Single File Application", "Source Code Dive", "Top Level Statements", "Virtual Project File"]
-tags_normalized: ["dotnet 10", "dotnet run", "blogs", "build caching", "csharp", "coding", "msbuild", "roslyn", "sdk directives", "single file application", "source code dive", "top level statements", "virtual project file"]
+permalink: /coding/blogs/Behind-the-Scenes-of-dotnet-run-appcs-Deep-Dive-into-NET-10-Single-File-Run-Experience
+tags:
+- .NET 10
+- .NET Run
+- Blogs
+- Build Caching
+- C#
+- Coding
+- MSBuild
+- Roslyn
+- SDK Directives
+- Single File Application
+- Source Code Dive
+- Top Level Statements
+- Virtual Project File
+section_names:
+- coding
 ---
-
 In this article, Andrew Lock uncovers the internal workings of the upcoming .NET 10 feature that allows developers to run single C# files without a separate project file, detailing how the SDK constructs virtual projects and streamlines the build process.<!--excerpt_end-->
 
 # Behind the Scenes of dotnet run app.cs: Exploring the .NET 10 Preview - Part 2

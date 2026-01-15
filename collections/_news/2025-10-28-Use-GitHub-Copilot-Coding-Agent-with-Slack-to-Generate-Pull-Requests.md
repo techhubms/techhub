@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Use GitHub Copilot Coding Agent with Slack to Generate Pull Requests"
-description: "Discover how the latest update to the GitHub app for Slack integrates the GitHub Copilot coding agent. Developers can now generate pull requests directly from Slack conversations by mentioning @GitHub with a coding prompt. The update simplifies collaboration and automates common tasks like bug fixes, feature additions, test coverage, and refactoring by leveraging Copilot's autonomous capabilities. Setup requires Copilot plan activation and Slack app installation or upgrade, and is available for both Business and Enterprise users. The new permission model ensures that users can choose whether to adopt these advanced features."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-work-with-copilot-coding-agent-in-slack"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Use GitHub Copilot Coding Agent with Slack to Generate Pull Requests
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-work-with-copilot-coding-agent-in-slack
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:26:45 +00:00
-permalink: "/2025-10-28-Use-GitHub-Copilot-Coding-Agent-with-Slack-to-Generate-Pull-Requests.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Bug Fixing", "Coding", "Collaboration", "Copilot", "Copilot Coding Agent", "Developer Tools", "DevOps", "DevOps Automation", "Feature Development", "GitHub App", "GitHub Copilot", "Microsoft Teams Integration", "News", "Pull Requests", "Refactoring", "Slack Integration", "Test Coverage", "Universe25"]
-tags_normalized: ["ai", "automation", "bug fixing", "coding", "collaboration", "copilot", "copilot coding agent", "developer tools", "devops", "devops automation", "feature development", "github app", "github copilot", "microsoft teams integration", "news", "pull requests", "refactoring", "slack integration", "test coverage", "universe25"]
+permalink: /github-copilot/news/Use-GitHub-Copilot-Coding-Agent-with-Slack-to-Generate-Pull-Requests
+tags:
+- AI
+- Automation
+- Bug Fixing
+- Coding
+- Collaboration
+- Copilot
+- Copilot Coding Agent
+- Developer Tools
+- DevOps
+- DevOps Automation
+- Feature Development
+- GitHub App
+- GitHub Copilot
+- Microsoft Teams Integration
+- News
+- Pull Requests
+- Refactoring
+- Slack Integration
+- Test Coverage
+- Universe25
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Allison explains the new integration between the GitHub Copilot coding agent and Slack, allowing developers to automate pull request generation and streamline common coding tasks from within Slack.<!--excerpt_end-->
 
 # Work with Copilot Coding Agent in Slack

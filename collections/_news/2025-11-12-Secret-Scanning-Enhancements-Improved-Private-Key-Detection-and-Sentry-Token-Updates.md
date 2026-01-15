@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Secret Scanning Enhancements: Improved Private Key Detection and Sentry Token Updates"
-description: "This update highlights significant improvements to GitHub's secret scanning capabilities, specifically expanding detection to additional private key formats and updating Sentry token naming conventions. It explains how these enhancements help developers and teams better protect cryptographic credentials in repositories by catching more secret types and aligning with external token naming standards."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Secret Scanning Enhancements: Improved Private Key Detection and Sentry Token Updates'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-12 18:15:01 +00:00
-permalink: "/2025-11-12-Secret-Scanning-Enhancements-Improved-Private-Key-Detection-and-Sentry-Token-Updates.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Code Security", "Credential Protection", "DevOps", "Elliptic Curve", "GitHub", "Improvement", "News", "Pattern Detection", "PKCS#8", "Private Keys", "Repository Security", "RSA", "Secret Scanning", "Security", "Sentry", "Token Renaming"]
-tags_normalized: ["application security", "code security", "credential protection", "devops", "elliptic curve", "github", "improvement", "news", "pattern detection", "pkcssharp8", "private keys", "repository security", "rsa", "secret scanning", "security", "sentry", "token renaming"]
+permalink: /devops/news/Secret-Scanning-Enhancements-Improved-Private-Key-Detection-and-Sentry-Token-Updates
+tags:
+- Application Security
+- Code Security
+- Credential Protection
+- DevOps
+- Elliptic Curve
+- GitHub
+- Improvement
+- News
+- Pattern Detection
+- PKCS#8
+- Private Keys
+- Repository Security
+- RSA
+- Secret Scanning
+- Security
+- Sentry
+- Token Renaming
+section_names:
+- devops
+- security
 ---
-
 Allison explains the latest advancements in GitHub's secret scanning, including improved private key detection capabilities and updated Sentry token patterns, aimed at strengthening security for developers and organizations.<!--excerpt_end-->
 
 # Secret Scanning Enhancements: Improved Private Key Detection and Sentry Token Updates

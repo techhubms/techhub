@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Securing Custom Script Extensions in Azure Session Host Configurations"
-description: "This discussion examines security concerns when using Custom Script Extensions (CSEs) in Azure Session Host Configuration, specifically authentication mechanisms for fetching scripts. The author questions using anonymous blob access or embedding tokens in plain-text URLs, suggests alternatives like Azure Key Vault or Managed Identity, and requests guidance on best practices for secure deployment of CSEs in Azure virtual environments."
-author: "kristokruuser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securing Custom Script Extensions in Azure Session Host Configurations
+author: kristokruuser
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 13:01:13 +00:00
-permalink: "/2025-12-09-Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Azure Key Vault", "Azure Portal", "Azure Virtual Desktop", "Blob Storage Authentication", "Community", "Credential Management", "Custom Script Extension", "Domain Join", "Golden Image", "Local Administrator", "Managed Identity", "SAS Token", "Secure Deployment", "Security", "Security Best Practices", "Session Host Configuration"]
-tags_normalized: ["automation", "azure", "azure key vault", "azure portal", "azure virtual desktop", "blob storage authentication", "community", "credential management", "custom script extension", "domain join", "golden image", "local administrator", "managed identity", "sas token", "secure deployment", "security", "security best practices", "session host configuration"]
+permalink: /azure/community/Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations
+tags:
+- Automation
+- Azure
+- Azure Key Vault
+- Azure Portal
+- Azure Virtual Desktop
+- Blob Storage Authentication
+- Community
+- Credential Management
+- Custom Script Extension
+- Domain Join
+- Golden Image
+- Local Administrator
+- Managed Identity
+- SAS Token
+- Secure Deployment
+- Security
+- Security Best Practices
+- Session Host Configuration
+section_names:
+- azure
+- security
 ---
-
 kristokruuser details practical security challenges in managing authentication for Custom Script Extensions via Azure Session Host Configuration, raising concerns over anonymous blob access and plain-text tokens, and explores secure alternatives.<!--excerpt_end-->
 
 # Securing Custom Script Extensions in Azure Session Host Configurations

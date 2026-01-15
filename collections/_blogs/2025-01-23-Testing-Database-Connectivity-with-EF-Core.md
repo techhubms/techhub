@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Testing Database Connectivity with EF Core"
-description: "Georgi Georgiev discusses practical approaches for testing database connectivity using Entity Framework Core. The article covers both application-level checks with CanConnectAsync() and infrastructure-level monitoring using ASP.NET Core's health check framework, including approaches suitable for containerized environments managed by Kubernetes."
-author: "Georgi Georgiev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/efcore-testing-database-connectivity/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+layout: post
+title: Testing Database Connectivity with EF Core
+author: Georgi Georgiev
+canonical_url: https://code-maze.com/efcore-testing-database-connectivity/
+viewing_mode: external
+feed_name: Code Maze Blog
+feed_url: https://code-maze.com/feed/
 date: 2025-01-23 11:08:23 +00:00
-permalink: "/2025-01-23-Testing-Database-Connectivity-with-EF-Core.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "ASP.NET Core", "Blogs", "C#", "Coding", "Connectivity", "Container Orchestration", "Database", "Database Connectivity", "DbContext", "DevOps", "EF Core", "Health Checks", "Kubernetes", "SQL Server", "Testcontainers"]
-tags_normalized: ["dotnet", "aspdotnet core", "blogs", "csharp", "coding", "connectivity", "container orchestration", "database", "database connectivity", "dbcontext", "devops", "ef core", "health checks", "kubernetes", "sql server", "testcontainers"]
+permalink: /coding/blogs/Testing-Database-Connectivity-with-EF-Core
+tags:
+- .NET
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Connectivity
+- Container Orchestration
+- Database
+- Database Connectivity
+- DbContext
+- DevOps
+- EF Core
+- Health Checks
+- Kubernetes
+- SQL Server
+- Testcontainers
+section_names:
+- coding
+- devops
 ---
-
 In this article, Georgi Georgiev explores essential techniques for validating database connectivity with EF Core, covering both application and infrastructure-level health checks for resilient .NET services.<!--excerpt_end-->
 
 # Testing Database Connectivity with EF Core

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry"
-description: "This post announces the public preview of integrating Azure Logic Apps connectors as Model Context Protocol (MCP) tools inside Microsoft Foundry. It details how developers can leverage over 400 enterprise connectors—including SAP, Dynamics, and SQL—directly in Foundry agent workflows, eliminating boilerplate code. The guide covers step-by-step how to select, configure, and register Logic Apps connectors as tools, and explains new possibilities for enterprise integration, secure connectivity, and future roadmap enhancements."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 21:19:33 +00:00
-permalink: "/2025-11-25-Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic Apps", "AI", "API Integration", "Azure", "Azure Logic Apps", "Azure Portal", "Coding", "Community", "Connectors", "Dynamics 365", "Enterprise Integration", "MCP Servers", "Microsoft Foundry", "OAuth Connectors", "SAP Integration", "Secure Connectivity", "ServiceNow", "Workflow Automation", "Workflow Development"]
-tags_normalized: ["agentic apps", "ai", "api integration", "azure", "azure logic apps", "azure portal", "coding", "community", "connectors", "dynamics 365", "enterprise integration", "mcp servers", "microsoft foundry", "oauth connectors", "sap integration", "secure connectivity", "servicenow", "workflow automation", "workflow development"]
+permalink: /ai/community/Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry
+tags:
+- Agentic Apps
+- AI
+- API Integration
+- Azure
+- Azure Logic Apps
+- Azure Portal
+- Coding
+- Community
+- Connectors
+- Dynamics 365
+- Enterprise Integration
+- MCP Servers
+- Microsoft Foundry
+- OAuth Connectors
+- SAP Integration
+- Secure Connectivity
+- ServiceNow
+- Workflow Automation
+- Workflow Development
+section_names:
+- ai
+- azure
+- coding
 ---
-
 DivSwa introduces the new capability to use Azure Logic Apps connectors as MCP tools within Microsoft Foundry, providing developers with secure, code-free ways to integrate enterprise systems in agentic apps.<!--excerpt_end-->
 
 # Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry

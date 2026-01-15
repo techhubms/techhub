@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure AI Blogs Consolidate into New Azure AI Foundry Blog"
-description: "This announcement details the unification of multiple Azure AI technical blogs—AI Platform Blog, Azure AI Services Blog, and Azure Machine Learning Blog—into the new Azure AI Foundry Blog. Readers are notified about the preservation of old content, updates on subscription processes, and provided resources for staying connected with ongoing Azure AI developments and the broader Microsoft AI community."
-author: "GalimahB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: Azure AI Blogs Consolidate into New Azure AI Foundry Blog
+author: GalimahB
+canonical_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-13 19:05:27 +00:00
-permalink: "/2025-08-13-Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI News", "AI Platform Blog", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Services", "Azure Community", "Azure Machine Learning", "Blog Migration", "Community", "Machine Learning Blog", "Microsoft AI", "RSS Subscription", "Tech Community", "Technical Blogging"]
-tags_normalized: ["ai", "ai news", "ai platform blog", "azure", "azure ai", "azure ai foundry", "azure ai services", "azure community", "azure machine learning", "blog migration", "community", "machine learning blog", "microsoft ai", "rss subscription", "tech community", "technical blogging"]
+permalink: /ai/community/Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog
+tags:
+- AI
+- AI News
+- AI Platform Blog
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Azure AI Services
+- Azure Community
+- Azure Machine Learning
+- Blog Migration
+- Community
+- Machine Learning Blog
+- Microsoft AI
+- RSS Subscription
+- Tech Community
+- Technical Blogging
+section_names:
+- ai
+- azure
 ---
-
 GalimahB shares important news for the Azure AI community: multiple technical blogs have merged to form the Azure AI Foundry Blog, streamlining access to Azure AI news and resources.<!--excerpt_end-->
 
 # Azure AI Blogs Consolidate into New Azure AI Foundry Blog

@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Announcing Next-Gen Microsoft Databases and Fabric: Unified, AI-Ready Data Estate"
-description: "This in-depth announcement introduces SQL Server 2025, Azure DocumentDB, Azure HorizonDB, and Fabric Databases—unified under Microsoft Fabric to modernize data estates for AI, analytics, and rapid app development. It covers new integration, interoperability, semantic modeling with Fabric IQ, and advanced agentic AI capabilities, empowering developers and data teams to efficiently build AI-powered applications using a secure, scalable, and open platform."
-author: "Arun Ulagaratchagan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Announcing Next-Gen Microsoft Databases and Fabric: Unified, AI-Ready Data Estate'
+author: Arun Ulagaratchagan
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure DocumentDB", "Azure HorizonDB", "Coding", "Copilot", "Copilot Studio", "Cosmos DB", "Data Agents", "Database Security", "Databases", "Fabric IQ", "Hybrid + Multicloud", "Hybrid Cloud", "Identity", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Ignite", "Mirroring", "ML", "News", "OneLake", "PostgreSQL", "Power BI", "Semantic Modeling", "SQL Server", "Vector Search", "Zero ETL"]
-tags_normalized: ["ai", "ai integration", "azure", "azure documentdb", "azure horizondb", "coding", "copilot", "copilot studio", "cosmos db", "data agents", "database security", "databases", "fabric iq", "hybrid plus multicloud", "hybrid cloud", "identity", "microsoft fabric", "microsoft foundry", "microsoft ignite", "mirroring", "ml", "news", "onelake", "postgresql", "power bi", "semantic modeling", "sql server", "vector search", "zero etl"]
+permalink: /ai/news/Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure DocumentDB
+- Azure HorizonDB
+- Coding
+- Copilot
+- Copilot Studio
+- Cosmos DB
+- Data Agents
+- Database Security
+- Databases
+- Fabric IQ
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Identity
+- Microsoft Fabric
+- Microsoft Foundry
+- Microsoft Ignite
+- Mirroring
+- ML
+- News
+- OneLake
+- PostgreSQL
+- Power BI
+- Semantic Modeling
+- SQL Server
+- Vector Search
+- Zero ETL
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Arun Ulagaratchagan introduces Microsoft’s unified, AI-powered data estate: SQL Server 2025, Azure DocumentDB, Azure HorizonDB, and Fabric Databases. This comprehensive update enables developers to build, secure, and modernize data-driven applications at scale using Microsoft Fabric.<!--excerpt_end-->
 
 # Microsoft Databases and Microsoft Fabric: Your Unified and AI-Powered Data Estate

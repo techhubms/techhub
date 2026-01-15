@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Resilient by Design: New Windows Recovery Tools and Security Integrations"
-description: "This session from Microsoft Ignite 2025 explores the evolution of Windows resiliency, focusing on advancements in recovery tools and efforts to enhance enterprise security. It covers collaboration with major security partners, innovations in recovery features beyond the Windows kernel, and practical strategies for restoring devices after incidents."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U0P_Js91VjQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Resilient by Design: New Windows Recovery Tools and Security Integrations'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=U0P_Js91VjQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:26:07 +00:00
-permalink: "/2025-11-21-Resilient-by-Design-New-Windows-Recovery-Tools-and-Security-Integrations.html"
-categories: ["Security"]
-tags: ["Device Rollback", "Driver Ecosystem", "Driver Resiliency", "Enterprise Security", "Incident Response", "Intune", "Microsoft Ignite", "MSIgnite", "Prevention Planning", "ScalewithcloudandAIendpoints", "Secure Remote Recovery", "Security", "Security Partners", "Trend Micro", "Videos", "Windows Kernel", "Windows Recovery Tools", "Windows Resiliency", "WinRE"]
-tags_normalized: ["device rollback", "driver ecosystem", "driver resiliency", "enterprise security", "incident response", "intune", "microsoft ignite", "msignite", "prevention planning", "scalewithcloudandaiendpoints", "secure remote recovery", "security", "security partners", "trend micro", "videos", "windows kernel", "windows recovery tools", "windows resiliency", "winre"]
+permalink: /security/videos/Resilient-by-Design-New-Windows-Recovery-Tools-and-Security-Integrations
+tags:
+- Device Rollback
+- Driver Ecosystem
+- Driver Resiliency
+- Enterprise Security
+- Incident Response
+- Intune
+- Microsoft Ignite
+- MSIgnite
+- Prevention Planning
+- ScalewithcloudandAIendpoints
+- Secure Remote Recovery
+- Security
+- Security Partners
+- Trend Micro
+- Videos
+- Windows Kernel
+- Windows Recovery Tools
+- Windows Resiliency
+- WinRE
+section_names:
+- security
 ---
-
 Microsoft Events hosts an Ignite 2025 breakout session featuring Kristian Andaker, Tom Bouathong, and Aaron Farmer to discuss the evolution of Windows resilience, new security partnerships, and the latest Windows recovery tools.<!--excerpt_end-->
 
 {% youtube U0P_Js91VjQ %}

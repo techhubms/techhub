@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects"
-description: "This guide from the Azure Tech Community assists solution architects in planning their Microsoft Ignite 2025 experience. It highlights top recommended Ignite sessions covering Azure design, agentic AI, data architecture, modernization, security, and compliance. The article details how to personalize your session agenda and remain engaged with the cloud architecture community before, during, and after the event."
-author: "GalimahB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects'
+author: GalimahB
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 00:19:08 +00:00
-permalink: "/2025-11-11-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agentic AI", "AI", "AI Governance", "Azure", "Azure Databricks", "Cloud Migration", "Community", "Compliance", "Data Architecture", "Infrastructure", "Microsoft Fabric", "Microsoft Ignite", "Microsoft Purview", "ML", "SAP", "Security", "Solution Architecture", "SQL Server", "Windows Server"]
-tags_normalized: ["agentic ai", "ai", "ai governance", "azure", "azure databricks", "cloud migration", "community", "compliance", "data architecture", "infrastructure", "microsoft fabric", "microsoft ignite", "microsoft purview", "ml", "sap", "security", "solution architecture", "sql server", "windows server"]
+permalink: /ai/community/Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects
+tags:
+- Agentic AI
+- AI
+- AI Governance
+- Azure
+- Azure Databricks
+- Cloud Migration
+- Community
+- Compliance
+- Data Architecture
+- Infrastructure
+- Microsoft Fabric
+- Microsoft Ignite
+- Microsoft Purview
+- ML
+- SAP
+- Security
+- Solution Architecture
+- SQL Server
+- Windows Server
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 GalimahB provides a session-planning guide for solution architects attending Microsoft Ignite 2025, featuring Azure, AI, security, and data-driven topics to maximize your learning and networking.<!--excerpt_end-->
 
 # Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects

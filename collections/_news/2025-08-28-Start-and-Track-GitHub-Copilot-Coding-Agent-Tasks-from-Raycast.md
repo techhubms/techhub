@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Start and Track GitHub Copilot Coding Agent Tasks from Raycast"
-description: "This article introduces the GitHub Copilot extension for Raycast, enabling developers on macOS to start and manage Copilot coding agent tasks directly from their desktop. It covers how to use Raycast commands to interact with GitHub Copilot agents, create tasks linked to repositories, and track their progress, improving developer workflow integration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-28-start-and-track-copilot-coding-agent-tasks-from-raycast"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Start and Track GitHub Copilot Coding Agent Tasks from Raycast
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-28-start-and-track-copilot-coding-agent-tasks-from-raycast
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:55:41 +00:00
-permalink: "/2025-08-28-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-from-Raycast.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Coding Agent", "Copilot Agents", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "Desktop Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Macos", "News", "Public Preview", "Pull Request Automation", "Raycast", "Task Management", "Workflow Integration"]
-tags_normalized: ["ai", "coding agent", "copilot agents", "copilot business", "copilot enterprise", "copilot pro", "desktop productivity", "developer tools", "github", "github copilot", "macos", "news", "public preview", "pull request automation", "raycast", "task management", "workflow integration"]
+permalink: /github-copilot/news/Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-from-Raycast
+tags:
+- AI
+- Coding Agent
+- Copilot Agents
+- Copilot Business
+- Copilot Enterprise
+- Copilot Pro
+- Desktop Productivity
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Macos
+- News
+- Public Preview
+- Pull Request Automation
+- Raycast
+- Task Management
+- Workflow Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how developers can leverage the Raycast extension on macOS to start and monitor GitHub Copilot coding agent tasks, streamlining interaction with Copilot directly from the desktop.<!--excerpt_end-->
 
 # Start and Track GitHub Copilot Coding Agent Tasks from Raycast

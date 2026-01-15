@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Copilot: Modern AI Coding Workflows, Mission Control, and Best Practices"
-description: "A comprehensive guide to GitHub Copilot’s evolution from autocomplete to a full AI-powered coding assistant. This walkthrough explores mission control, agent mode, Copilot CLI, and code review functionality, demonstrating how developers can build, test, refactor, review, and ship code faster across the entire workflow. It includes actionable tips, best practices, real code examples, and prompt patterns to get more out of Copilot inside VS Code, terminal, and GitHub itself."
-author: "Aaron Winston"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot: Modern AI Coding Workflows, Mission Control, and Best Practices'
+author: Aaron Winston
+canonical_url: https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-05 17:00:00 +00:00
-permalink: "/2025-11-05-GitHub-Copilot-Modern-AI-Coding-Workflows-Mission-Control-and-Best-Practices.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Assistant", "Automated Testing", "Code Refactoring", "Coding", "Continuous Integration", "Copilot Agent Mode", "Copilot CLI", "Developer Productivity", "DevOps", "GitHub Copilot", "Mission Control", "News", "Prompt Engineering", "Pull Request Review", "Python", "TypeScript", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai and ml", "ai coding assistant", "automated testing", "code refactoring", "coding", "continuous integration", "copilot agent mode", "copilot cli", "developer productivity", "devops", "github copilot", "mission control", "news", "prompt engineering", "pull request review", "python", "typescript", "vs code", "workflow automation"]
+permalink: /github-copilot/news/GitHub-Copilot-Modern-AI-Coding-Workflows-Mission-Control-and-Best-Practices
+tags:
+- AI
+- AI & ML
+- AI Coding Assistant
+- Automated Testing
+- Code Refactoring
+- Coding
+- Continuous Integration
+- Copilot Agent Mode
+- Copilot CLI
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- Mission Control
+- News
+- Prompt Engineering
+- Pull Request Review
+- Python
+- TypeScript
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Aaron Winston details how developers can use GitHub Copilot’s latest features—including mission control, agent mode, CLI, and automated reviews—to streamline every phase of the software workflow.<!--excerpt_end-->
 
 # GitHub Copilot: Modern AI Coding Workflows, Mission Control, and Best Practices

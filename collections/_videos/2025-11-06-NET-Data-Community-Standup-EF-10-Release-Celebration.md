@@ -1,20 +1,35 @@
----
-layout: "post"
-title: ".NET Data Community Standup: EF 10 Release Celebration"
-description: "This video features the Entity Framework (EF) team discussing the EF 10 release. The session includes Q&A, insights from the core development team, and an exploration of new features and improvements in EF 10. It's targeted at .NET developers interested in data access, Entity Framework Core, and best practices in modern .NET application development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3Aqd_arD6Vo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET Data Community Standup: EF 10 Release Celebration'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=3Aqd_arD6Vo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-06 19:41:56 +00:00
-permalink: "/2025-11-06-NET-Data-Community-Standup-EF-10-Release-Celebration.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Developer", "Coding", "Data", "Data Access", "Database", "Demo", "Developer", "Development", "Dotnetdeveloper", "EF", "EF Core", "EF10", "Microsoft", "Modern .NET", "ORM", "Q&A", "Videos"]
-tags_normalized: ["dotnet", "dotnet developer", "coding", "data", "data access", "database", "demo", "developer", "development", "dotnetdeveloper", "ef", "ef core", "ef10", "microsoft", "modern dotnet", "orm", "qanda", "videos"]
+permalink: /coding/videos/NET-Data-Community-Standup-EF-10-Release-Celebration
+tags:
+- .NET
+- .NET Developer
+- Coding
+- Data
+- Data Access
+- Database
+- Demo
+- Developer
+- Development
+- Dotnetdeveloper
+- EF
+- EF Core
+- EF10
+- Microsoft
+- Modern .NET
+- ORM
+- Q&A
+- Videos
+section_names:
+- coding
 ---
-
 Dotnet and the EF team host a community standup celebrating the EF 10 release, featuring Jiri Cincura. The event provides .NET developers with valuable insights, Q&A opportunities, and a look at what’s new in Entity Framework 10.<!--excerpt_end-->
 
 {% youtube 3Aqd_arD6Vo %}

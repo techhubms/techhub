@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure Update - 11th July 2025"
-description: "This video by John Savill delivers a concise update on the latest developments and features in Microsoft Azure as of July 11th, 2025. Key topics include updates to Azure VMSS trusted launch, Azure Firewall maintenance, AWS S3 to Azure Blob migration, granular RBAC in Azure Files, new Azure Automation runtimes, and recent developments in AI model offerings. The update also points viewers to resources for Azure learning, certification, and community support."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YggS0Ha-0rU"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 11th July 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=YggS0Ha-0rU
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-11 13:43:48 +00:00
-permalink: "/2025-07-11-Azure-Update-11th-July-2025.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AFS", "AI", "AVNM", "AWS S3 Migration", "Azure", "Azure Automation", "Azure Blob Storage", "Azure Cloud", "Azure Firewall", "Azure Learning", "Cloud", "Cloud Migration", "Cloud Updates", "Codex Mini", "Customer Controlled Maintenance", "DevOps", "Granular RBAC", "High Scale PE", "Microsoft", "Microsoft Azure", "O3 Pro", "Phi 4 Mini Flash Reasoning", "PowerShell 7.4", "Python 3.10", "Trusted Launch", "Videos", "VMSS"]
-tags_normalized: ["afs", "ai", "avnm", "aws s3 migration", "azure", "azure automation", "azure blob storage", "azure cloud", "azure firewall", "azure learning", "cloud", "cloud migration", "cloud updates", "codex mini", "customer controlled maintenance", "devops", "granular rbac", "high scale pe", "microsoft", "microsoft azure", "o3 pro", "phi 4 mini flash reasoning", "powershell 7dot4", "python 3dot10", "trusted launch", "videos", "vmss"]
+permalink: /ai/videos/Azure-Update-11th-July-2025
+tags:
+- AFS
+- AI
+- AVNM
+- AWS S3 Migration
+- Azure
+- Azure Automation
+- Azure Blob Storage
+- Azure Cloud
+- Azure Firewall
+- Azure Learning
+- Cloud
+- Cloud Migration
+- Cloud Updates
+- Codex Mini
+- Customer Controlled Maintenance
+- DevOps
+- Granular RBAC
+- High Scale PE
+- Microsoft
+- Microsoft Azure
+- O3 Pro
+- Phi 4 Mini Flash Reasoning
+- PowerShell 7.4
+- Python 3.10
+- Trusted Launch
+- Videos
+- VMSS
+section_names:
+- ai
+- azure
+- devops
 ---
-
 John Savill's Technical Training provides a weekly Azure Update covering new platform features such as trusted launch enhancements for VMSS, Azure Firewall changes, and recent Azure Automation and AI model updates.<!--excerpt_end-->
 
 {% youtube YggS0Ha-0rU %}

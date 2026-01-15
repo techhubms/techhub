@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Integrating Azure Monitor Virtual Machine Telemetry with Fabric Eventhouse (Preview)"
-description: "This article provides a practical overview of how organizations can aggregate telemetry from Azure and non-Azure Virtual Machines into Fabric Eventhouse for scalable analytics. It explains the setup of Azure Monitor Agent, Data Collection Rules, and the use of Fabric Eventhouse for real-time querying, analytics, and visualization. Developers and data engineers will learn how to enable integrated operational and business analytics across cloud, hybrid, and on-prem environments using Microsoft Fabric, Azure Monitor, and related tooling."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/azure-monitor-to-fabric-eventhouse-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Integrating Azure Monitor Virtual Machine Telemetry with Fabric Eventhouse (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/azure-monitor-to-fabric-eventhouse-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 12:00:00 +00:00
-permalink: "/2025-11-20-Integrating-Azure-Monitor-Virtual-Machine-Telemetry-with-Fabric-Eventhouse-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["AD Hoc Query", "Azure", "Azure Data Explorer", "Azure Monitor", "Azure Monitor Agent", "Data Collection Rules", "Data Visualization", "Event Logs", "Fabric Eventhouse", "Grafana", "Infrastructure Monitoring", "ML", "News", "OneLake", "Operational Insights", "Power BI Integration", "Prometheus", "Python Analytics", "Real Time Analytics", "Schema Management", "Tableau", "Telemetry Aggregation", "Virtual Machine Telemetry"]
-tags_normalized: ["ad hoc query", "azure", "azure data explorer", "azure monitor", "azure monitor agent", "data collection rules", "data visualization", "event logs", "fabric eventhouse", "grafana", "infrastructure monitoring", "ml", "news", "onelake", "operational insights", "power bi integration", "prometheus", "python analytics", "real time analytics", "schema management", "tableau", "telemetry aggregation", "virtual machine telemetry"]
+permalink: /ml/news/Integrating-Azure-Monitor-Virtual-Machine-Telemetry-with-Fabric-Eventhouse-Preview
+tags:
+- AD Hoc Query
+- Azure
+- Azure Data Explorer
+- Azure Monitor
+- Azure Monitor Agent
+- Data Collection Rules
+- Data Visualization
+- Event Logs
+- Fabric Eventhouse
+- Grafana
+- Infrastructure Monitoring
+- ML
+- News
+- OneLake
+- Operational Insights
+- Power BI Integration
+- Prometheus
+- Python Analytics
+- Real Time Analytics
+- Schema Management
+- Tableau
+- Telemetry Aggregation
+- Virtual Machine Telemetry
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how to combine VM telemetry from Azure Monitor with Fabric Eventhouse for integrated operational analytics and business insight.<!--excerpt_end-->
 
 # Integrating Azure Monitor Virtual Machine Telemetry with Fabric Eventhouse (Preview)

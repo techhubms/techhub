@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration"
-description: "This guide from the Microsoft Fabric Blog provides an in-depth roadmap for organizations planning and executing migration to Microsoft Fabric Data Warehouse. It covers planning, tools such as the Migration Assistant, migration strategy from Azure Synapse Dedicated SQL Pools, architecture patterns, administration, security, and performance. Key conference sessions and future roadmap improvements are also highlighted for ongoing learning and enhanced migration outcomes."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 10:00:00 +00:00
-permalink: "/2025-09-10-Microsoft-Fabric-Migration-Guide-Best-Practices-for-Data-Warehouse-Migration.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Synapse", "Data Engineering", "Data Governance", "Data Migration", "Data Security", "Deployment Patterns", "Fabric Data Warehouse", "Microsoft Fabric", "Migration Assistant", "Migration Guide", "ML", "News", "Performance Optimization", "SQL Pools", "Warehouse Architecture"]
-tags_normalized: ["azure", "azure synapse", "data engineering", "data governance", "data migration", "data security", "deployment patterns", "fabric data warehouse", "microsoft fabric", "migration assistant", "migration guide", "ml", "news", "performance optimization", "sql pools", "warehouse architecture"]
+permalink: /ml/news/Microsoft-Fabric-Migration-Guide-Best-Practices-for-Data-Warehouse-Migration
+tags:
+- Azure
+- Azure Synapse
+- Data Engineering
+- Data Governance
+- Data Migration
+- Data Security
+- Deployment Patterns
+- Fabric Data Warehouse
+- Microsoft Fabric
+- Migration Assistant
+- Migration Guide
+- ML
+- News
+- Performance Optimization
+- SQL Pools
+- Warehouse Architecture
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog shares a comprehensive migration guide authored by the Microsoft team, delivering practical steps and proven practices for moving data warehouses to Microsoft Fabric. Learn from tooling guidance and upcoming features.<!--excerpt_end-->
 
 # Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Optimizing Azure Cloud Spend with Holistic FinOps Approaches"
-description: "This session from Microsoft Ignite 2025 demonstrates Finout’s strategies for managing and optimizing cloud expenses across Microsoft Azure and related services such as Kubernetes, Datadog, and OpenAI. It introduces unified cost insights, dynamic cost allocation with Virtual Tags, and tools for anomaly detection and alerting, all designed to empower teams to improve cost efficiency in Azure environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fJ1qVlwfp1I"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Optimizing Azure Cloud Spend with Holistic FinOps Approaches
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fJ1qVlwfp1I
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:21:41 +00:00
-permalink: "/2025-11-19-Optimizing-Azure-Cloud-Spend-with-Holistic-FinOps-Approaches.html"
-categories: ["Azure", "DevOps"]
-tags: ["Anomaly Detection", "Azure", "Cloud Cost Optimization", "Cost Allocation", "Dashboards", "Datadog", "DevOps", "FinOps", "Kubernetes", "MegaBill", "Microsoft Cloud", "MSIgnite", "OpenAI", "Telemetry", "Unifyyourdataplatform", "Unit Economics", "Videos", "Virtual Tags"]
-tags_normalized: ["anomaly detection", "azure", "cloud cost optimization", "cost allocation", "dashboards", "datadog", "devops", "finops", "kubernetes", "megabill", "microsoft cloud", "msignite", "openai", "telemetry", "unifyyourdataplatform", "unit economics", "videos", "virtual tags"]
+permalink: /azure/videos/Optimizing-Azure-Cloud-Spend-with-Holistic-FinOps-Approaches
+tags:
+- Anomaly Detection
+- Azure
+- Cloud Cost Optimization
+- Cost Allocation
+- Dashboards
+- Datadog
+- DevOps
+- FinOps
+- Kubernetes
+- MegaBill
+- Microsoft Cloud
+- MSIgnite
+- OpenAI
+- Telemetry
+- Unifyyourdataplatform
+- Unit Economics
+- Videos
+- Virtual Tags
+section_names:
+- azure
+- devops
 ---
-
 Alexander Gahrmann presents a Microsoft Ignite session illustrating Finout’s unified management of cloud cost for Azure environments, including cost allocation, anomaly detection, and best practices for team efficiency.<!--excerpt_end-->
 
 {% youtube fJ1qVlwfp1I %}

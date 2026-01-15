@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging"
-description: "This video explores the resurgence of command-line interfaces (CLIs) in the modern development landscape, emphasizing their relevance in cloud, DevOps, and automation workflows. It delves into why .NET is a strong choice for building cross-platform CLI tools, covering essential libraries, design patterns, and packaging strategies. The session also highlights the latest .NET platform advancements, including .NET 10, ASP.NET Core 10, .NET MAUI 10, C# 14, and F# 10, demonstrating how these technologies empower the creation of powerful, elegant, and portable CLI applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Z6e5ZP9y3_8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Z6e5ZP9y3_8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:02 +00:00
-permalink: "/2025-11-14-Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "CLI", "Cloud Native", "Coding", "Command Line Interface", "Cross Platform", "Design Patterns", "F# 10", "Libraries", "Modern Development", "Software Packaging", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "cli", "cloud native", "coding", "command line interface", "cross platform", "design patterns", "fsharp 10", "libraries", "modern development", "software packaging", "videos", "vs"]
+permalink: /coding/videos/Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging
+tags:
+- .NET
+- .NET 10
+- .NET MAUI 10
+- ASP.NET Core 10
+- C# 14
+- CLI
+- Cloud Native
+- Coding
+- Command Line Interface
+- Cross Platform
+- Design Patterns
+- F# 10
+- Libraries
+- Modern Development
+- Software Packaging
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 This session by the dotnet team discusses why command-line interfaces remain crucial and how .NET's latest features enable developers to build modern, cross-platform CLI apps using smart libraries and robust design patterns.<!--excerpt_end-->
 
 {% youtube Z6e5ZP9y3_8 %}

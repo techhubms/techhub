@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "General Availability of Premium v4 for Azure App Service"
-description: "This announcement covers the general availability of Premium v4 for Azure App Service, highlighting new performance benchmarks, cost savings, updated hardware (AMD Dadsv6/Eadsv6), and detailed load test results. It explains platform scalability, reliability, and provides links for documentation and regional availability to support modernization projects."
-author: "Stefan_Schackow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Premium v4 for Azure App Service
+author: Stefan_Schackow
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-01 15:44:34 +00:00
-permalink: "/2025-09-01-General-Availability-of-Premium-v4-for-Azure-App-Service.html"
-categories: ["Azure"]
-tags: ["App Modernization", "ASP.NET", "Availability Zones", "Azure", "Azure App Service", "Cloud Scalability", "Community", "Cost Optimization", "Linux", "Load Testing", "PaaS", "Performance Improvement", "Premium V4", "VM Sizing", "Web Hosting", "Windows"]
-tags_normalized: ["app modernization", "aspdotnet", "availability zones", "azure", "azure app service", "cloud scalability", "community", "cost optimization", "linux", "load testing", "paas", "performance improvement", "premium v4", "vm sizing", "web hosting", "windows"]
+permalink: /azure/community/General-Availability-of-Premium-v4-for-Azure-App-Service
+tags:
+- App Modernization
+- ASP.NET
+- Availability Zones
+- Azure
+- Azure App Service
+- Cloud Scalability
+- Community
+- Cost Optimization
+- Linux
+- Load Testing
+- PaaS
+- Performance Improvement
+- Premium V4
+- VM Sizing
+- Web Hosting
+- Windows
+section_names:
+- azure
 ---
-
 Stefan Schackow shares an overview of Azure App Service Premium v4 GA, outlining its improved performance, lower costs, hardware enhancements, and updated service tiers for both Windows and Linux users.<!--excerpt_end-->
 
 # General Availability of Premium v4 for Azure App Service

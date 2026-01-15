@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent"
-description: "This guide presents a technical deep dive into using Azure SRE Agent for autonomous performance issue detection and remediation on production infrastructure. It covers agent architecture, deployment steps, real-world demo, and full setup using Azure services, .NET 9 Web APIs, and GitHub/Teams integration, enabling developers and SREs to implement proactive incident response."
-author: "saziz_msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent'
+author: saziz_msft
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-22 23:54:37 +00:00
-permalink: "/2025-12-22-Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "Application Insights", "ASP.NET Core 9.0", "Autonomous Remediation", "Azure", "Azure App Service", "Azure Bicep", "Azure Monitor", "Azure SRE Agent", "Coding", "Community", "Deployment Health", "DevOps", "DevOps Automation", "GitHub Integration", "Incident Detection", "Knowledge Store", "Microsoft Teams", "MTTD", "MTTR", "Performance Monitoring", "PowerShell", "Slot Swap"]
-tags_normalized: ["ai", "application insights", "aspdotnet core 9dot0", "autonomous remediation", "azure", "azure app service", "azure bicep", "azure monitor", "azure sre agent", "coding", "community", "deployment health", "devops", "devops automation", "github integration", "incident detection", "knowledge store", "microsoft teams", "mttd", "mttr", "performance monitoring", "powershell", "slot swap"]
+permalink: /ai/community/Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent
+tags:
+- AI
+- Application Insights
+- ASP.NET Core 9.0
+- Autonomous Remediation
+- Azure
+- Azure App Service
+- Azure Bicep
+- Azure Monitor
+- Azure SRE Agent
+- Coding
+- Community
+- Deployment Health
+- DevOps
+- DevOps Automation
+- GitHub Integration
+- Incident Detection
+- Knowledge Store
+- Microsoft Teams
+- MTTD
+- MTTR
+- Performance Monitoring
+- PowerShell
+- Slot Swap
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 saziz_msft introduces a hands-on guide to building self-healing production infrastructure with Azure SRE Agent, focusing on autonomous detection, remediation, and reporting of performance issues.<!--excerpt_end-->
 
 # Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Visual Studio 2026 Insiders Launch: Integrated AI, Performance, and Developer-Centric Upgrades"
-description: "This announcement details the release of Visual Studio 2026 Insiders, introducing a new channel for early features, deep AI integration into daily developer workflows, significant enterprise-scale performance improvements, and a refreshed, streamlined design. Highlights include AI-driven coding assistance, speed enhancements, modern themes, and seamless extension management, positioning Visual Studio 2026 as a forward-looking IDE for professional developers."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio 2026 Insiders Launch: Integrated AI, Performance, and Developer-Centric Upgrades'
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-09 16:52:29 +00:00
-permalink: "/2025-09-09-Visual-Studio-2026-Insiders-Launch-Integrated-AI-Performance-and-Developer-Centric-Upgrades.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Integration", "Arm64 Support", "Code Review", "Coding", "Developer Productivity", "Developer Tools", "Enterprise Development", "Fluent UI", "IDE", "Insiders", "News", "Performance Improvements", "Profiler Agent", "Visual Studio Insiders", "VS"]
-tags_normalized: ["ai", "ai integration", "arm64 support", "code review", "coding", "developer productivity", "developer tools", "enterprise development", "fluent ui", "ide", "insiders", "news", "performance improvements", "profiler agent", "visual studio insiders", "vs"]
+permalink: /ai/news/Visual-Studio-2026-Insiders-Launch-Integrated-AI-Performance-and-Developer-Centric-Upgrades
+tags:
+- AI
+- AI Integration
+- Arm64 Support
+- Code Review
+- Coding
+- Developer Productivity
+- Developer Tools
+- Enterprise Development
+- Fluent UI
+- IDE
+- Insiders
+- News
+- Performance Improvements
+- Profiler Agent
+- Visual Studio Insiders
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Mads Kristensen introduces Visual Studio 2026 Insiders, highlighting major advances in AI-powered development, improved performance, and a reimagined user experience for professional developers.<!--excerpt_end-->
 
 # Visual Studio 2026 Insiders is here!

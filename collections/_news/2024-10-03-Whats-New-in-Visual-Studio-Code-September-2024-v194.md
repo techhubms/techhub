@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "What's New in Visual Studio Code September 2024 (v1.94)"
-description: "This update from the Visual Studio Code Team details the September 2024 (v1.94) release, featuring improvements across Copilot chat, code completion, Python testing coverage, TypeScript 5.6, account management, accessibility, debugging, and core engineering. The release notes highlight new GitHub Copilot capabilities, including model selection, enhanced chat and code referencing, better file context, and experimental features for testing and debugging. Additional improvements cover extension management, source control interface, notebook editing, and updates to TypeScript language support. The report also acknowledges community contributions."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_94"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: What's New in Visual Studio Code September 2024 (v1.94)
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_94
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-10-03 17:00:00 +00:00
-permalink: "/2024-10-03-Whats-New-in-Visual-Studio-Code-September-2024-v194.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Account Management", "AI", "Code Completion", "Coding", "Copilot Chat", "Debugging", "DevOps", "Experimental Features", "Extension Management", "GitHub Copilot", "GPT 4o", "News", "Notebook Editor", "OpenAI Integration", "Python", "Release Notes", "Semantic Search", "Source Control", "Testing Coverage", "TypeScript 5.6", "V1.94", "VS Code"]
-tags_normalized: ["accessibility", "account management", "ai", "code completion", "coding", "copilot chat", "debugging", "devops", "experimental features", "extension management", "github copilot", "gpt 4o", "news", "notebook editor", "openai integration", "python", "release notes", "semantic search", "source control", "testing coverage", "typescript 5dot6", "v1dot94", "vs code"]
+permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-September-2024-v194
+tags:
+- Accessibility
+- Account Management
+- AI
+- Code Completion
+- Coding
+- Copilot Chat
+- Debugging
+- DevOps
+- Experimental Features
+- Extension Management
+- GitHub Copilot
+- GPT 4o
+- News
+- Notebook Editor
+- OpenAI Integration
+- Python
+- Release Notes
+- Semantic Search
+- Source Control
+- Testing Coverage
+- TypeScript 5.6
+- V1.94
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team presents the September 2024 release (v1.94), packed with significant updates for developers including new features and improvements in GitHub Copilot, coding assistance, DevOps tools, and more. Authored by the Visual Studio Code Team.<!--excerpt_end-->
 
 # What's New in Visual Studio Code September 2024 (v1.94)

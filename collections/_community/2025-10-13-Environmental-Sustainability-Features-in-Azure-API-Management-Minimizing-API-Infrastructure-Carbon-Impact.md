@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Environmental Sustainability Features in Azure API Management: Minimizing API Infrastructure Carbon Impact"
-description: "This article explores new public preview features in Azure API Management focused on reducing the environmental impact of API infrastructure. It details capabilities such as carbon-aware load balancing, policy customization using carbon intensity metrics, and their integration with AI workloads—all designed to support organizational sustainability goals and compliance with standards like CSRD."
-author: "tomkerkhovemicrosoft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Environmental Sustainability Features in Azure API Management: Minimizing API Infrastructure Carbon Impact'
+author: tomkerkhovemicrosoft
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-13 10:00:00 +00:00
-permalink: "/2025-10-13-Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "API Infrastructure", "API Policy", "Azure", "Azure API Management", "Azure Carbon Intensity", "Carbon Optimization", "Community", "Compliance", "Environmental Sustainability", "GenAI", "Green IT", "Load Balancing", "Microsoft Azure", "Scope 2 Emissions", "Sustainability Reporting", "Sustainable Workloads"]
-tags_normalized: ["ai", "ai infrastructure", "api infrastructure", "api policy", "azure", "azure api management", "azure carbon intensity", "carbon optimization", "community", "compliance", "environmental sustainability", "genai", "green it", "load balancing", "microsoft azure", "scope 2 emissions", "sustainability reporting", "sustainable workloads"]
+permalink: /ai/community/Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact
+tags:
+- AI
+- AI Infrastructure
+- API Infrastructure
+- API Policy
+- Azure
+- Azure API Management
+- Azure Carbon Intensity
+- Carbon Optimization
+- Community
+- Compliance
+- Environmental Sustainability
+- GenAI
+- Green IT
+- Load Balancing
+- Microsoft Azure
+- Scope 2 Emissions
+- Sustainability Reporting
+- Sustainable Workloads
+section_names:
+- ai
+- azure
 ---
-
 Tom Kerkhove introduces public preview features in Azure API Management aimed at reducing the carbon footprint of API and AI workloads. The article guides readers through configuring carbon-aware traffic shifting, building sustainability-aligned policies, and leveraging new tools for compliance and sustainable cloud practices.<!--excerpt_end-->
 
 # Environmental Sustainability Features in Azure API Management

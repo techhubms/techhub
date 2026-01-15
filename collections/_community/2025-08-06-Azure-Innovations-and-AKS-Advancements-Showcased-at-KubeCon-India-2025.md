@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure Innovations and AKS Advancements Showcased at KubeCon India 2025"
-description: "A comprehensive update from Microsoft’s presence at KubeCon + CloudNativeCon India 2025, detailing the latest improvements in Azure Kubernetes Service (AKS), advancements in AI integration, networking upgrades, enhanced security features, operational scalability, and cluster observability. The post highlights new public previews, deployment best practices, upcoming Azure capabilities, and key breakout sessions led by Microsoft engineers, all tailored for the cloud-native and Kubernetes communities."
-author: "coryskimming"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Innovations and AKS Advancements Showcased at KubeCon India 2025
+author: coryskimming
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-06 02:30:00 +00:00
-permalink: "/2025-08-06-Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Model Context Protocol", "AKS", "AKS Security Dashboard", "Azure", "Azure Bastion", "Azure Monitor", "Cloud Native", "Community", "Confidential VMs", "Deployment Safeguards", "DevOps", "Encryption", "KubeCon", "Kubernetes", "Layer 7 Network Policy", "Microsoft Azure", "Node Auto Provisioning", "Observability", "Prometheus", "Security", "Web Application Firewall", "Zero Trust"]
-tags_normalized: ["ai", "ai model context protocol", "aks", "aks security dashboard", "azure", "azure bastion", "azure monitor", "cloud native", "community", "confidential vms", "deployment safeguards", "devops", "encryption", "kubecon", "kubernetes", "layer 7 network policy", "microsoft azure", "node auto provisioning", "observability", "prometheus", "security", "web application firewall", "zero trust"]
+permalink: /ai/community/Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025
+tags:
+- AI
+- AI Model Context Protocol
+- AKS
+- AKS Security Dashboard
+- Azure
+- Azure Bastion
+- Azure Monitor
+- Cloud Native
+- Community
+- Confidential VMs
+- Deployment Safeguards
+- DevOps
+- Encryption
+- KubeCon
+- Kubernetes
+- Layer 7 Network Policy
+- Microsoft Azure
+- Node Auto Provisioning
+- Observability
+- Prometheus
+- Security
+- Web Application Firewall
+- Zero Trust
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Coryskimming delivers an in-depth look at Microsoft’s announcements from KubeCon India 2025, highlighting significant AKS improvements, AI integration, security advancements, and operational best practices for the Azure Kubernetes Service community.<!--excerpt_end-->
 
 # Azure at KubeCon India 2025: Innovations in AKS and Cloud-Native Operations

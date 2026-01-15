@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI-Driven Operations with Microsoft Fabric Real-Time Intelligence"
-description: "This article from the Microsoft Fabric Blog explores how organizations can leverage Microsoft Fabric Real-Time Intelligence to transform operations with AI, moving from reactive to proactive decision-making. It covers key new features such as Maps, Graph, and Anomaly Detector, modern event-driven architectures, practical use cases, and recent platform enhancements enabling real-time data-driven business outcomes."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/the-foundation-for-powering-ai-driven-operations-fabric-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: AI-Driven Operations with Microsoft Fabric Real-Time Intelligence
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-foundation-for-powering-ai-driven-operations-fabric-real-time-intelligence/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:45:00 +00:00
-permalink: "/2025-09-16-AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "Anomaly Detection", "Azure", "Business Intelligence", "Copilot", "Digital Twin", "Eventhouse", "Eventstream", "Geospatial Analysis", "Graph Analytics", "Industrial AI", "Kusto Query Language", "Microsoft Fabric", "ML", "News", "No Code Tools", "Operational Analytics", "Proactive Operations", "Real Time Intelligence", "Streaming Data"]
-tags_normalized: ["agentic ai", "ai", "anomaly detection", "azure", "business intelligence", "copilot", "digital twin", "eventhouse", "eventstream", "geospatial analysis", "graph analytics", "industrial ai", "kusto query language", "microsoft fabric", "ml", "news", "no code tools", "operational analytics", "proactive operations", "real time intelligence", "streaming data"]
+permalink: /ai/news/AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence
+tags:
+- Agentic AI
+- AI
+- Anomaly Detection
+- Azure
+- Business Intelligence
+- Copilot
+- Digital Twin
+- Eventhouse
+- Eventstream
+- Geospatial Analysis
+- Graph Analytics
+- Industrial AI
+- Kusto Query Language
+- Microsoft Fabric
+- ML
+- News
+- No Code Tools
+- Operational Analytics
+- Proactive Operations
+- Real Time Intelligence
+- Streaming Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team details how AI-powered Real-Time Intelligence in Microsoft Fabric enables organizations to move from reactive to proactive operations, highlighting foundational features, new innovations, and real-world industry examples.<!--excerpt_end-->
 
 # AI-Driven Operations with Microsoft Fabric Real-Time Intelligence

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub"
-description: "This news update introduces the Copilot coding agent and the new Agents panel on GitHub.com, allowing developers to delegate coding tasks directly to Copilot and monitor their progress. The Agents panel streamlines workflows by letting users describe tasks in natural language, track task status, and review draft pull requests created autonomously by Copilot. Available for Copilot Pro, Pro+, Business, and Enterprise users, this feature is designed for efficient, AI-powered development management and team collaboration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-19 17:52:31 +00:00
-permalink: "/2025-08-19-Agents-Panel-Easily-Delegate-Tasks-to-Copilot-Coding-Agent-Across-GitHub.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agents Panel", "AI", "AI Development Tools", "Autonomous Developer Agent", "Code Review", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Developer Collaboration", "DevOps", "Draft Pull Request", "GitHub", "GitHub Copilot", "Natural Language Tasks", "News", "Pro+", "Task Delegation", "Workflow Automation"]
-tags_normalized: ["agents panel", "ai", "ai development tools", "autonomous developer agent", "code review", "copilot business", "copilot coding agent", "copilot enterprise", "developer collaboration", "devops", "draft pull request", "github", "github copilot", "natural language tasks", "news", "proplus", "task delegation", "workflow automation"]
+permalink: /github-copilot/news/Agents-Panel-Easily-Delegate-Tasks-to-Copilot-Coding-Agent-Across-GitHub
+tags:
+- Agents Panel
+- AI
+- AI Development Tools
+- Autonomous Developer Agent
+- Code Review
+- Copilot Business
+- Copilot Coding Agent
+- Copilot Enterprise
+- Developer Collaboration
+- DevOps
+- Draft Pull Request
+- GitHub
+- GitHub Copilot
+- Natural Language Tasks
+- News
+- Pro+
+- Task Delegation
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces GitHub's Copilot coding agent and Agents panel, empowering developers to delegate tasks to Copilot and efficiently manage workflows directly within GitHub.<!--excerpt_end-->
 
 # Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub

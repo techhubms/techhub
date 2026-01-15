@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Finding the Right Amount of Context for GitHub Copilot"
-description: "This article by Randy Pagels guides developers on how to optimize the effectiveness of GitHub Copilot by providing the right amount of context for different tasks. It details when to use minimal versus broader code snippets, depending on the Copilot feature and the complexity of the task being performed, with actionable examples for each mode."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Finding the Right Amount of Context for GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-10 00:00:00 +00:00
-permalink: "/2025-10-10-Finding-the-Right-Amount-of-Context-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Best Practices", "Blogs", "Code Assistance", "Code Context", "Code Refactoring", "Copilot Agent Mode", "Copilot Chat", "Copilot Edits", "Copilot Sidebar", "Developer Productivity", "GitHub Copilot", "VS Code"]
-tags_normalized: ["ai", "ai tools", "best practices", "blogs", "code assistance", "code context", "code refactoring", "copilot agent mode", "copilot chat", "copilot edits", "copilot sidebar", "developer productivity", "github copilot", "vs code"]
+permalink: /github-copilot/blogs/Finding-the-Right-Amount-of-Context-for-GitHub-Copilot
+tags:
+- AI
+- AI Tools
+- Best Practices
+- Blogs
+- Code Assistance
+- Code Context
+- Code Refactoring
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Edits
+- Copilot Sidebar
+- Developer Productivity
+- GitHub Copilot
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels explains how to provide optimal code context to GitHub Copilot for effective assistance, offering practical tips for each Copilot feature.<!--excerpt_end-->
 
 # How Much Context Should You Give?

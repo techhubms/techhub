@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints"
-description: "This article details how Microsoft Fabric's new support for Managed Private Endpoints enables secure, compliant connectivity between Fabric Spark compute and on-premises or network-isolated data sources. The post covers setup using Fabric's Public REST APIs, best practices for connecting enterprise data, security features, governance, and practical configuration examples for SQL Server integration."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 10:00:42 +00:00
-permalink: "/2025-10-22-Securely-Accessing-On-Premises-Data-with-Microsoft-Fabric-Managed-Private-Endpoints.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Data Compliance", "Data Connectivity", "Data Engineering", "Enterprise Governance", "FQDN Allowlist", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Security", "News", "On Premises Data", "Private Link", "Private Link Service", "REST API", "Security", "Spark Compute", "SQL Server", "VNet Integration"]
-tags_normalized: ["azure", "data compliance", "data connectivity", "data engineering", "enterprise governance", "fqdn allowlist", "managed private endpoints", "microsoft fabric", "ml", "network security", "news", "on premises data", "private link", "private link service", "rest api", "security", "spark compute", "sql server", "vnet integration"]
+permalink: /ml/news/Securely-Accessing-On-Premises-Data-with-Microsoft-Fabric-Managed-Private-Endpoints
+tags:
+- Azure
+- Data Compliance
+- Data Connectivity
+- Data Engineering
+- Enterprise Governance
+- FQDN Allowlist
+- Managed Private Endpoints
+- Microsoft Fabric
+- ML
+- Network Security
+- News
+- On Premises Data
+- Private Link
+- Private Link Service
+- REST API
+- Security
+- Spark Compute
+- SQL Server
+- VNet Integration
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog explains how organizations can securely connect Fabric Spark compute to on-premises and network-isolated data sources using Managed Private Endpoints. Learn about governance, setup via REST APIs, and practical security benefits.<!--excerpt_end-->
 
 # Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints

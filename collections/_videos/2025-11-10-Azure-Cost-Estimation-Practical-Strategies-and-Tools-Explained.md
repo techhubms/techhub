@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Cost Estimation: Practical Strategies and Tools Explained"
-description: "This episode of the Azure Essentials Show features Thomas and Britt from Microsoft Azure as they demystify Azure cloud cost estimation. Viewers learn how to use key tools like the Azure Pricing Calculator, Advisor, and Cost Management to accurately forecast and optimize cloud expenses. The show introduces a straightforward three-layer framework—architecture, configuration, and usage—to help both new and seasoned Azure users understand, estimate, and manage costs with confidence. Practical tips and real-world analogies make cloud pricing more approachable."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=36bbMNatZHI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Azure Cost Estimation: Practical Strategies and Tools Explained'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=36bbMNatZHI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-10 18:23:11 +00:00
-permalink: "/2025-11-10-Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Architecture", "Azure Cost Management", "Azure Essentials", "Azure Migrate", "Azure Monitor", "Azure Pricing Calculator", "Cloud Cost Estimation", "Cloud Optimization", "Cloud Usage Estimation", "Cost Management Tools", "Microsoft Copilot", "Resource Configuration", "Videos"]
-tags_normalized: ["azure", "azure advisor", "azure architecture", "azure cost management", "azure essentials", "azure migrate", "azure monitor", "azure pricing calculator", "cloud cost estimation", "cloud optimization", "cloud usage estimation", "cost management tools", "microsoft copilot", "resource configuration", "videos"]
+permalink: /azure/videos/Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained
+tags:
+- Azure
+- Azure Advisor
+- Azure Architecture
+- Azure Cost Management
+- Azure Essentials
+- Azure Migrate
+- Azure Monitor
+- Azure Pricing Calculator
+- Cloud Cost Estimation
+- Cloud Optimization
+- Cloud Usage Estimation
+- Cost Management Tools
+- Microsoft Copilot
+- Resource Configuration
+- Videos
+section_names:
+- azure
 ---
-
 In this Azure Essentials Show episode, Thomas and Britt from Microsoft Azure provide practical guidance for estimating and managing Azure cloud costs, focusing on essential Microsoft tools and strategies.<!--excerpt_end-->
 
 {% youtube 36bbMNatZHI %}

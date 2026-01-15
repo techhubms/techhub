@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Workaround for Azure ARM 800 Resource Limit When Deploying Data Factory"
-description: "The author describes encountering the Azure ARM template deployment resource limit (800 resources) during Azure Data Factory deployments via Azure DevOps CI/CD pipelines. They generate ARM templates with ADF utilities and seek solutions for breaking up or handling resource limits, such as deploying multiple, smaller ARM templates."
-author: "jessred99"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Workaround for Azure ARM 800 Resource Limit When Deploying Data Factory
+author: jessred99
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-18 11:55:43 +00:00
-permalink: "/2025-07-18-Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploying-Data-Factory.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["ARM Deployment", "ARM Template", "Azure", "Azure Data Factory", "Azure DevOps", "Ci/cd", "Community", "Continuous Delivery", "Data Factory Pipeline", "Deployment", "DevOps", "IaC", "ML", "Resource Limits"]
-tags_normalized: ["arm deployment", "arm template", "azure", "azure data factory", "azure devops", "cislashcd", "community", "continuous delivery", "data factory pipeline", "deployment", "devops", "iac", "ml", "resource limits"]
+permalink: /ml/community/Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploying-Data-Factory
+tags:
+- ARM Deployment
+- ARM Template
+- Azure
+- Azure Data Factory
+- Azure DevOps
+- Ci/cd
+- Community
+- Continuous Delivery
+- Data Factory Pipeline
+- Deployment
+- DevOps
+- IaC
+- ML
+- Resource Limits
+section_names:
+- azure
+- devops
+- ml
 ---
-
 jessred99 raises a challenge in deploying Azure Data Factory via Azure DevOps CI/CD pipelines, encountering the ARM 800 resource limit.<!--excerpt_end-->
 
 ### Summary

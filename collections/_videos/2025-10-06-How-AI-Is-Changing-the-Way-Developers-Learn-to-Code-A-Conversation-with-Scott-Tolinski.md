@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski"
-description: "In this episode, James interviews Scott Tolinski, co-host of the Syntax podcast, about the evolving landscape of developer education. They explore how artificial intelligence, including tools like GitHub Copilot, is changing the process of learning to code and solving problems. The discussion covers the impact of AI-powered coding assistants, adjustments in teaching strategies, and predictions for the future of programming education."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=q7YLP6e0kXA"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=q7YLP6e0kXA
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-06 07:00:50 +00:00
-permalink: "/2025-10-06-How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI in Education", "AI Powered Development", "Code Tutorials", "Coding", "Coding Assistants", "Developer Education", "GitHub Copilot", "Learning To Code", "Programming Tools", "Scott Tolinski", "Syntax Podcast", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai in education", "ai powered development", "code tutorials", "coding", "coding assistants", "developer education", "github copilot", "learning to code", "programming tools", "scott tolinski", "syntax podcast", "videos", "vs code"]
+permalink: /github-copilot/videos/How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski
+tags:
+- AI
+- AI in Education
+- AI Powered Development
+- Code Tutorials
+- Coding
+- Coding Assistants
+- Developer Education
+- GitHub Copilot
+- Learning To Code
+- Programming Tools
+- Scott Tolinski
+- Syntax Podcast
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's podcast features Scott Tolinski discussing with James how artificial intelligence and tools like GitHub Copilot are transforming how developers learn coding and approach problem solving.<!--excerpt_end-->
 
 {% youtube q7YLP6e0kXA %}

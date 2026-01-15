@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Semantic Kernel Group Orchestration: How to Coordinate Multiple AI Agents"
-description: "This video explores advanced AI collaboration through multi-agent orchestration in Microsoft’s Semantic Kernel. Viewers will learn how to coordinate AI agents, implement group chat management, and apply these concepts to real-world scenarios using Visual Studio demos. The content is ideal for developers and AI enthusiasts interested in next-generation copilots and intelligent automation."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JLGj9CMXDsk"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: 'Semantic Kernel Group Orchestration: How to Coordinate Multiple AI Agents'
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=JLGj9CMXDsk
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-05-29 13:30:25 +00:00
-permalink: "/2025-05-29-Semantic-Kernel-Group-Orchestration-How-to-Coordinate-Multiple-AI-Agents.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Collaboration", "AI Demo", "Coding", "Collaboration Automation", "Copilot Development", "Developer Tools", "Group Chat Orchestration", "Interactive Callback", "Microsoft AI", "Multi Agent Orchestration", "Round Robin Manager", "Semantic Kernel", "Team Based Problem Solving", "Videos", "VS"]
-tags_normalized: ["ai", "ai agents", "ai collaboration", "ai demo", "coding", "collaboration automation", "copilot development", "developer tools", "group chat orchestration", "interactive callback", "microsoft ai", "multi agent orchestration", "round robin manager", "semantic kernel", "team based problem solving", "videos", "vs"]
+permalink: /ai/videos/Semantic-Kernel-Group-Orchestration-How-to-Coordinate-Multiple-AI-Agents
+tags:
+- AI
+- AI Agents
+- AI Collaboration
+- AI Demo
+- Coding
+- Collaboration Automation
+- Copilot Development
+- Developer Tools
+- Group Chat Orchestration
+- Interactive Callback
+- Microsoft AI
+- Multi Agent Orchestration
+- Round Robin Manager
+- Semantic Kernel
+- Team Based Problem Solving
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Learn Microsoft AI demonstrates group orchestration in Semantic Kernel, revealing how to coordinate multiple AI agents for complex problem-solving using Visual Studio and real-world examples.<!--excerpt_end-->
 
 {% youtube JLGj9CMXDsk %}

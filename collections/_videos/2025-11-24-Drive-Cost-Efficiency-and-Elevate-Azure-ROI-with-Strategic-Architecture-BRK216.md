@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216"
-description: "This advanced Microsoft Ignite session delves into maximizing ROI with Azure by using efficient architectures, modernizing with Copilot, implementing cost controls, and incorporating strategic analysis. Key topics include foundational design areas, optimizing environment policy for cost management, leveraging Azure Hybrid Benefit, and deploying modern cloud-native apps. The session includes demos of Copilot-assisted cost savings, cloud cost estimations, and automated optimization strategies tailored for technical decision-makers seeking sustainable business value from Azure investments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NrWUl8EYWmw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=NrWUl8EYWmw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:15:56 +00:00
-permalink: "/2025-11-24-Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AKS", "Architecture Optimization", "Automation", "Azure", "Azure Hybrid Benefit", "Business Value", "Cloud Native Apps", "Cloud Optimization", "Copilot", "Cost Efficiency", "InnovatewithAzureAIappsandagents", "Landing Zone", "Microsoft Ignite", "MSIgnite", "Policy Inheritance", "ROI", "Strategic Investments", "Videos"]
-tags_normalized: ["ai", "aks", "architecture optimization", "automation", "azure", "azure hybrid benefit", "business value", "cloud native apps", "cloud optimization", "copilot", "cost efficiency", "innovatewithazureaiappsandagents", "landing zone", "microsoft ignite", "msignite", "policy inheritance", "roi", "strategic investments", "videos"]
+permalink: /ai/videos/Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216
+tags:
+- AI
+- AKS
+- Architecture Optimization
+- Automation
+- Azure
+- Azure Hybrid Benefit
+- Business Value
+- Cloud Native Apps
+- Cloud Optimization
+- Copilot
+- Cost Efficiency
+- InnovatewithAzureAIappsandagents
+- Landing Zone
+- Microsoft Ignite
+- MSIgnite
+- Policy Inheritance
+- ROI
+- Strategic Investments
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an advanced session at Ignite 2025 where Rob Kuehfus and Mrunal Patwa demonstrate strategies for maximizing Azure ROI, including architecture best practices and Copilot-powered cost savings.<!--excerpt_end-->
 
 {% youtube NrWUl8EYWmw %}

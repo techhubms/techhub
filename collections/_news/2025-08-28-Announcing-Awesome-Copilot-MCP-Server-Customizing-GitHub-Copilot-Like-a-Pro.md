@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro"
-description: "This news article introduces the Awesome Copilot MCP Server, highlighting how developers can easily discover, search, and save custom GitHub Copilot chat modes, instructions, and prompts directly from Copilot Chat. The guide covers installing the server using Docker, integrating with Visual Studio Code, and adopting workflow enhancements for personalized AI-based code assistance."
-author: "Justin Yoo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro'
+author: Justin Yoo
+canonical_url: https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-28 17:00:18 +00:00
-permalink: "/2025-08-28-Announcing-Awesome-Copilot-MCP-Server-Customizing-GitHub-Copilot-Like-a-Pro.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Customization", "Awesome Copilot", "Chat Modes", "Code Review", "Coding", "Copilot Chat", "Custom Instructions", "Developer Tools", "Docker", "GitHub Copilot", "MCP", "MCP Server", "News", "Prompts", "Repository Management", "VS", "VS Code"]
-tags_normalized: ["ai", "ai customization", "awesome copilot", "chat modes", "code review", "coding", "copilot chat", "custom instructions", "developer tools", "docker", "github copilot", "mcp", "mcp server", "news", "prompts", "repository management", "vs", "vs code"]
+permalink: /github-copilot/news/Announcing-Awesome-Copilot-MCP-Server-Customizing-GitHub-Copilot-Like-a-Pro
+tags:
+- AI
+- AI Customization
+- Awesome Copilot
+- Chat Modes
+- Code Review
+- Coding
+- Copilot Chat
+- Custom Instructions
+- Developer Tools
+- Docker
+- GitHub Copilot
+- MCP
+- MCP Server
+- News
+- Prompts
+- Repository Management
+- VS
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Justin Yoo demonstrates how developers can search, preview, and save custom GitHub Copilot chat modes, instructions, and prompts using the new Awesome Copilot MCP Server, streamlining Copilot customization workflows.<!--excerpt_end-->
 
 # Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro

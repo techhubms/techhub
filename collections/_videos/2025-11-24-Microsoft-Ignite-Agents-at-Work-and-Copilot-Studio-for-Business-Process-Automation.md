@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation"
-description: "This Microsoft Ignite session explores the transformational impact of AI agents on business operations, showcasing real-world demos using Agent Builder and Copilot Studio. It details how organizations can leverage agent orchestration, secure deployment, and custom workflow automation, with practical examples in sales, financial approvals, and reporting. The session highlights critical security, compliance, and scalability features for enterprise-grade AI adoption, and includes insights from leading speakers plus an industry interview."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_rfg-YKhDVE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_rfg-YKhDVE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:54:49 +00:00
-permalink: "/2025-11-24-Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation.html"
-categories: ["AI"]
-tags: ["Agent Builder", "Agentic Architecture", "Aghogho Biakolo", "AI", "AI Agents", "Approval Workflow", "Billing Insights", "Bryan Goode", "Business Process Automation", "Copilot Studio", "Copilotandagentsatwork", "Custom AI Agent", "Dan Lewis", "Enterprise AI", "Greg Ulrich", "Kendra Springer", "Lead Qualification", "MasterCard", "Microsoft Ignite", "MSIgnite", "Reporting", "Sales Development Agent", "Security Integration", "Videos"]
-tags_normalized: ["agent builder", "agentic architecture", "aghogho biakolo", "ai", "ai agents", "approval workflow", "billing insights", "bryan goode", "business process automation", "copilot studio", "copilotandagentsatwork", "custom ai agent", "dan lewis", "enterprise ai", "greg ulrich", "kendra springer", "lead qualification", "mastercard", "microsoft ignite", "msignite", "reporting", "sales development agent", "security integration", "videos"]
+permalink: /ai/videos/Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation
+tags:
+- Agent Builder
+- Agentic Architecture
+- Aghogho Biakolo
+- AI
+- AI Agents
+- Approval Workflow
+- Billing Insights
+- Bryan Goode
+- Business Process Automation
+- Copilot Studio
+- Copilotandagentsatwork
+- Custom AI Agent
+- Dan Lewis
+- Enterprise AI
+- Greg Ulrich
+- Kendra Springer
+- Lead Qualification
+- MasterCard
+- Microsoft Ignite
+- MSIgnite
+- Reporting
+- Sales Development Agent
+- Security Integration
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events present an in-depth Ignite session with Bryan Goode, Dan Lewis, Aghogho Biakolo, and Kendra Springer showcasing Agent Builder and Copilot Studio for AI-driven business automation.<!--excerpt_end-->
 
 {% youtube _rfg-YKhDVE %}

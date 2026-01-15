@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "General Availability of Larger Container Sizes on Azure Container Instances"
-description: "This announcement introduces larger container sizes for Azure Container Instances (ACI), now generally available, supporting higher vCPU and memory allocations. It explores how these upgrades improve performance and scalability for applications such as data inferencing, analytics, big data processing, and high-performance computing. The post provides step-by-step guidance and tutorials for getting started with the new container options using Azure Portal, CLI, PowerShell, ARM, and Bicep. The improvements simplify deploying and managing large workloads in the Azure serverless ecosystem."
-author: "tysonfreeman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Larger Container Sizes on Azure Container Instances
+author: tysonfreeman
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 15:17:40 +00:00
-permalink: "/2025-11-05-General-Availability-of-Larger-Container-Sizes-on-Azure-Container-Instances.html"
-categories: ["Azure"]
-tags: ["AKS", "ARM Templates", "Azure", "Azure CLI", "Azure Container Instances", "Azure Portal", "Bicep", "Cloud Computing", "Community", "Confidential Containers", "Container SKUs", "Data Inferencing", "High Performance Computing", "Memory Allocation", "PowerShell", "Scalability", "Serverless Containers", "Vcpu Scaling", "Virtual Networks"]
-tags_normalized: ["aks", "arm templates", "azure", "azure cli", "azure container instances", "azure portal", "bicep", "cloud computing", "community", "confidential containers", "container skus", "data inferencing", "high performance computing", "memory allocation", "powershell", "scalability", "serverless containers", "vcpu scaling", "virtual networks"]
+permalink: /azure/community/General-Availability-of-Larger-Container-Sizes-on-Azure-Container-Instances
+tags:
+- AKS
+- ARM Templates
+- Azure
+- Azure CLI
+- Azure Container Instances
+- Azure Portal
+- Bicep
+- Cloud Computing
+- Community
+- Confidential Containers
+- Container SKUs
+- Data Inferencing
+- High Performance Computing
+- Memory Allocation
+- PowerShell
+- Scalability
+- Serverless Containers
+- Vcpu Scaling
+- Virtual Networks
+section_names:
+- azure
 ---
-
 tysonfreeman details the launch of larger container sizes on Azure Container Instances, explaining benefits like enhanced scalability, advanced workloads support, and how to deploy bigger containers using various Azure tools.<!--excerpt_end-->
 
 # General Availability of Larger Container Sizes on Azure Container Instances

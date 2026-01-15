@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Product-specific Billing APIs for GitHub Actions and Packages Are Closing Down"
-description: "GitHub is retiring its product-specific billing APIs for Actions, Packages, and shared storage. Users and organizations are being moved to a single, unified usage reporting endpoint that consolidates billing data across all metered products. This update impacts developers automating billing and usage reporting workflows, requiring migration to the new API endpoints."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-25-product-specific-billing-apis-are-closing-down"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Product-specific Billing APIs for GitHub Actions and Packages Are Closing Down
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-25-product-specific-billing-apis-are-closing-down
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-26 12:10:33 +00:00
-permalink: "/2025-09-26-Product-specific-Billing-APIs-for-GitHub-Actions-and-Packages-Are-Closing-Down.html"
-categories: ["DevOps"]
-tags: ["Account Management", "API Deprecation", "API Migration", "Billing API", "Change Management", "CI/CD", "Developer Workflows", "DevOps", "GitHub", "GitHub Actions", "News", "Package Management", "Retired", "Usage Reporting"]
-tags_normalized: ["account management", "api deprecation", "api migration", "billing api", "change management", "cislashcd", "developer workflows", "devops", "github", "github actions", "news", "package management", "retired", "usage reporting"]
+permalink: /devops/news/Product-specific-Billing-APIs-for-GitHub-Actions-and-Packages-Are-Closing-Down
+tags:
+- Account Management
+- API Deprecation
+- API Migration
+- Billing API
+- Change Management
+- CI/CD
+- Developer Workflows
+- DevOps
+- GitHub
+- GitHub Actions
+- News
+- Package Management
+- Retired
+- Usage Reporting
+section_names:
+- devops
 ---
-
 Allison summarizes the closure of GitHub’s product-specific billing APIs for Actions, Packages, and shared storage, guiding users to the new consolidated usage endpoint.<!--excerpt_end-->
 
 # Product-specific Billing APIs for GitHub Actions and Packages Are Closing Down

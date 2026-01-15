@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Announcing Azure Copilot Agents and AI Infrastructure Innovations"
-description: "This Microsoft Ignite 2025 announcement by Jeremy Winter introduces new Azure Copilot agent capabilities, major AI infrastructure advancements, and enhanced operational, resiliency, and security features. The article covers how Azure’s AI-powered agents automate migration, modernization, and operations, details on next-generation data centers and GPU-accelerated computing, and new tools for cloud-native applications and databases. It also highlights Azure’s evolving security stack and strategies to support enterprise modernization in a rapidly changing cloud landscape."
-author: "Jeremy Winter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Announcing Azure Copilot Agents and AI Infrastructure Innovations
+author: Jeremy Winter
+canonical_url: https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Agents", "AKS", "AKS Automatic", "App Modernization", "Azure", "Azure Boost", "Azure Copilot", "Azure Governance", "Cloud Infrastructure", "Cloud Security", "Compute", "Confidential Computing", "Containers", "DevOps", "Fairwater Datacenter", "GPU Computing", "Management And Governance", "Microsoft Azure", "Microsoft Ignite", "Migration Tools", "Network Security Perimeter", "News", "Operational Excellence", "PostgreSQL", "Security", "SQL Managed Instance"]
-tags_normalized: ["ai", "ai plus machine learning", "ai agents", "aks", "aks automatic", "app modernization", "azure", "azure boost", "azure copilot", "azure governance", "cloud infrastructure", "cloud security", "compute", "confidential computing", "containers", "devops", "fairwater datacenter", "gpu computing", "management and governance", "microsoft azure", "microsoft ignite", "migration tools", "network security perimeter", "news", "operational excellence", "postgresql", "security", "sql managed instance"]
+permalink: /ai/news/Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations
+tags:
+- AI
+- AI + Machine Learning
+- AI Agents
+- AKS
+- AKS Automatic
+- App Modernization
+- Azure
+- Azure Boost
+- Azure Copilot
+- Azure Governance
+- Cloud Infrastructure
+- Cloud Security
+- Compute
+- Confidential Computing
+- Containers
+- DevOps
+- Fairwater Datacenter
+- GPU Computing
+- Management And Governance
+- Microsoft Azure
+- Microsoft Ignite
+- Migration Tools
+- Network Security Perimeter
+- News
+- Operational Excellence
+- PostgreSQL
+- Security
+- SQL Managed Instance
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Jeremy Winter introduces the latest Azure Copilot agents and groundbreaking AI infrastructure at Microsoft Ignite 2025, focusing on modernization, resilience, security, and streamlined operations across cloud environments.<!--excerpt_end-->
 
 # Announcing Azure Copilot Agents and AI Infrastructure Innovations

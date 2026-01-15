@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Prototyping Game Environments in Godot C# with CSG Nodes"
-description: "This episode of the Godot C# training series demonstrates how to rapidly prototype 3D game environments using Constructive Solid Geometry (CSG) nodes within the Godot engine. The content details blocking out scenes, applying collision settings, and leveraging CSG operations to build and modify your environment efficiently using C#. Best practices, performance tips, and scene management techniques with the CSG Combiner are included, with hands-on exercises for expanding and iterating your game layouts."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=53B49XIcZk4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Prototyping Game Environments in Godot C# with CSG Nodes
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=53B49XIcZk4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:04 +00:00
-permalink: "/2025-10-22-Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Collision Detection", "CSG Nodes", "CSG Operations", "Environment Design", "Game Development", "Godot", "Indie Game Dev", "Level Design", "Microsoft Developer", "Prototyping", "Rapid Prototyping", "Scene Management", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "csharp", "coding", "collision detection", "csg nodes", "csg operations", "environment design", "game development", "godot", "indie game dev", "level design", "microsoft developer", "prototyping", "rapid prototyping", "scene management", "videos", "vs code"]
+permalink: /coding/videos/Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes
+tags:
+- .NET
+- C#
+- Coding
+- Collision Detection
+- CSG Nodes
+- CSG Operations
+- Environment Design
+- Game Development
+- Godot
+- Indie Game Dev
+- Level Design
+- Microsoft Developer
+- Prototyping
+- Rapid Prototyping
+- Scene Management
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 dotnet presents a hands-on guide to prototyping 3D game environments with CSG nodes in Godot using C#. Learn about collision, snapping tools, and best practices for quickly iterating environment layouts.<!--excerpt_end-->
 
 {% youtube 53B49XIcZk4 %}

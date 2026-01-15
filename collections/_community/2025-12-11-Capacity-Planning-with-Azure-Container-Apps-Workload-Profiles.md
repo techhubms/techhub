@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Capacity Planning with Azure Container Apps Workload Profiles"
-description: "This guide by nesubram explains how to plan capacity for Azure Container Apps (ACA). It covers workload profile types (Consumption, Dedicated, Flex), how ACA schedules replicas on nodes, how node autoscaling works, and offers practical sizing strategies. Debunking common misconceptions, the article helps developers understand resource modeling, per-node packing, and configuring autoscaling for high availability and cost control."
-author: "nesubram"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Capacity Planning with Azure Container Apps Workload Profiles
+author: nesubram
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 05:23:42 +00:00
-permalink: "/2025-12-11-Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles.html"
-categories: ["Azure"]
-tags: ["Autoscaling", "Azure", "Azure Container Apps", "Capacity Planning", "Cloud Infrastructure", "Community", "High Availability", "Kubernetes", "Microsoft Azure", "Node Resources", "Replica Placement", "Resource Modeling", "Scaling Strategy", "VM SKU", "Workload Profiles"]
-tags_normalized: ["autoscaling", "azure", "azure container apps", "capacity planning", "cloud infrastructure", "community", "high availability", "kubernetes", "microsoft azure", "node resources", "replica placement", "resource modeling", "scaling strategy", "vm sku", "workload profiles"]
+permalink: /azure/community/Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles
+tags:
+- Autoscaling
+- Azure
+- Azure Container Apps
+- Capacity Planning
+- Cloud Infrastructure
+- Community
+- High Availability
+- Kubernetes
+- Microsoft Azure
+- Node Resources
+- Replica Placement
+- Resource Modeling
+- Scaling Strategy
+- VM SKU
+- Workload Profiles
+section_names:
+- azure
 ---
-
 nesubram guides you through best practices for capacity planning in Azure Container Apps, clarifying key concepts like node resources, replica scheduling, and practical autoscaling strategies.<!--excerpt_end-->
 
 # Capacity Planning with Azure Container Apps Workload Profiles

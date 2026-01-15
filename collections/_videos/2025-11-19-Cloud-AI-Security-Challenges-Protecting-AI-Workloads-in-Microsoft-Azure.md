@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Cloud AI Security Challenges: Protecting AI Workloads in Microsoft Azure"
-description: "This session from Microsoft Ignite 2025 explores the evolving security risks introduced by cloud-based AI workloads, including lateral attacker movement, encrypted traffic, and compliance threats. Speakers present the challenges facing security teams and demonstrate how solutions like Check Point CloudGuard are integrated within Microsoft Azure, offering network protections and advanced security architectures tailored for AI environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=P2XxiXNwXF8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Cloud AI Security Challenges: Protecting AI Workloads in Microsoft Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=P2XxiXNwXF8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:09:27 +00:00
-permalink: "/2025-11-19-Cloud-AI-Security-Challenges-Protecting-AI-Workloads-in-Microsoft-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Workloads", "Application Level Access Control", "Azure", "Check Point CloudGuard", "Cloud AI Security", "Cloud Security", "CNAPP Integration", "Compliance", "East West Traffic", "Encrypted Communication", "Firewall Protection", "Gen AI APIs", "LLM Security", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Network Security", "SD WAN", "Security", "Security Architecture", "Videos", "Virtual WAN", "VPN", "WAF"]
-tags_normalized: ["ai", "ai workloads", "application level access control", "azure", "check point cloudguard", "cloud ai security", "cloud security", "cnapp integration", "compliance", "east west traffic", "encrypted communication", "firewall protection", "gen ai apis", "llm security", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "network security", "sd wan", "security", "security architecture", "videos", "virtual wan", "vpn", "waf"]
+permalink: /ai/videos/Cloud-AI-Security-Challenges-Protecting-AI-Workloads-in-Microsoft-Azure
+tags:
+- AI
+- AI Workloads
+- Application Level Access Control
+- Azure
+- Check Point CloudGuard
+- Cloud AI Security
+- Cloud Security
+- CNAPP Integration
+- Compliance
+- East West Traffic
+- Encrypted Communication
+- Firewall Protection
+- Gen AI APIs
+- LLM Security
+- Microsoft Azure
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Network Security
+- SD WAN
+- Security
+- Security Architecture
+- Videos
+- Virtual WAN
+- VPN
+- WAF
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a session on cloud AI security from Ignite 2025, with Jonathan Kaye Solomon highlighting challenges and solutions for protecting AI workloads in Microsoft Azure using Check Point CloudGuard.<!--excerpt_end-->
 
 {% youtube P2XxiXNwXF8 %}

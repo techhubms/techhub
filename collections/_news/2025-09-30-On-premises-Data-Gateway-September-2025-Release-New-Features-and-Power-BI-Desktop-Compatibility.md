@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility"
-description: "This article announces the September 2025 release of the on-premises data gateway (version 3000.286) for Microsoft Fabric. Highlights include Mirroring support for Google BigQuery via the gateway and compatibility updates with Power BI Desktop. The update benefits organizations integrating external data sources securely into Microsoft Fabric analytics workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 13:30:00 +00:00
-permalink: "/2025-09-30-On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "BigQuery", "Data Connectivity", "Data Engineering", "Data Integration", "Enterprise Data Gateways", "ETL", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Version 3000.286"]
-tags_normalized: ["analytics", "azure", "bigquery", "data connectivity", "data engineering", "data integration", "enterprise data gateways", "etl", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "version 3000dot286"]
+permalink: /ml/news/On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility
+tags:
+- Analytics
+- Azure
+- BigQuery
+- Data Connectivity
+- Data Engineering
+- Data Integration
+- Enterprise Data Gateways
+- ETL
+- Google BigQuery
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- On Premises Data Gateway
+- Power BI
+- Power BI Desktop
+- Version 3000.286
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the September 2025 release of the on-premises data gateway, including support for Mirroring Google BigQuery and compatibility with Power BI Desktop.<!--excerpt_end-->
 
 # On-premises Data Gateway September 2025 Release

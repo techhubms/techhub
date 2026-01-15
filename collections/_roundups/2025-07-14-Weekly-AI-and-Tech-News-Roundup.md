@@ -1,17 +1,41 @@
----
-layout: "post"
-title: "From Copilot Agents to AI-Driven Security: Key Platform and Productivity Advances"
-description: "This week saw GitHub Copilot deepen its role in developer workflows with agentic integrations, streamlined billing, and robust customization, while the broader AI landscape achieved leaps in scalable reasoning models, mainframe modernization, and education. Azure unified its cloud transformation offerings, and DevOps and Security witnessed improvements in documentation, platform extensibility, and comprehensive Zero Trust frameworks—driving future-proof productivity and governance for teams building at scale."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: 'From Copilot Agents to AI-Driven Security: Key Platform and Productivity Advances'
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-07-14 09:00:00 +00:00
-permalink: "/2025-07-14-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "AI Agents", "AI Ethics", "Automation", "Azure", "CI/CD", "Cloud Migration", "Coding", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft", "ML", "Model Context Protocol (mcp)", "Prompt Engineering", "Roundups", "Security", "Semantic Kernel", "TypeScript", "Zero Trust"]
-tags_normalized: ["dotnet", "ai", "ai agents", "ai ethics", "automation", "azure", "cislashcd", "cloud migration", "coding", "devops", "github copilot", "machine learning", "microsoft", "ml", "model context protocol mcp", "prompt engineering", "roundups", "security", "semantic kernel", "typescript", "zero trust"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- .NET
+- AI
+- AI Agents
+- AI Ethics
+- Automation
+- Azure
+- CI/CD
+- Cloud Migration
+- Coding
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Microsoft
+- ML
+- Model Context Protocol (mcp)
+- Prompt Engineering
+- Roundups
+- Security
+- Semantic Kernel
+- TypeScript
+- Zero Trust
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week's technology roundup, where we explore the dynamic intersection of automation, AI-powered platforms, and developer productivity. As GitHub Copilot cements its status as an agent-based platform, organizations are embracing new workflow patterns—embedding Copilot into CI/CD, leveraging prompts for secure automation, and experimenting with mobile, multi-agent, and background task features. These upgrades not only accelerate everyday coding but also spark fresh debates about the practical limits and best practices for AI in software development.
 
 Meanwhile, the larger AI ecosystem pushed forward on multiple fronts: Microsoft introduced models like Phi-4-mini-flash-reasoning for lightning-fast, low-latency reasoning at the edge, AI agent pipelines began modernizing legacy mainframes, and high-profile initiatives are bringing AI literacy and responsible frameworks to broader audiences. Azure consolidated transformation support with Azure Accelerate and advanced programmable agent services, while security leaders rolled out comprehensive Zero Trust resources and identity patterns for complex multi-agent systems. This edition captures a week where automation, governance, and human-centric AI quietly redefined what digital transformation can look like across organizations large and small.<!--excerpt_end-->
@@ -67,7 +91,7 @@ Open-sourcing the Chat extension and fully supporting MCP signal Copilot’s mov
 - [New Copilot Chat features now generally available on GitHub](https://github.blog/changelog/2025-07-09-new-copilot-chat-features-now-generally-available-on-github)
 - [Automating My Git Workflow in VS Code with Copilot Chat, Custom Prompts, and Terminal Auto-Approval](https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html)
 - [VS Code June 2025 (version 1.102)](https://www.reddit.com/r/GithubCopilot/comments/1lwk6ba/vs_code_june_2025_version_1102/)
-- [MCP Support Now Generally Available in Visual Studio Code]({{ "/videos/2025-07-10-MCP-Support-Now-Generally-Available-in-Visual-Studio-Code.html" | relative_url }})
+- [MCP Support Now Generally Available in Visual Studio Code](/videos/2025-07-10-MCP-Support-Now-Generally-Available-in-Visual-Studio-Code.html)
 
 ### Mobile Review, Agentic Tasks, and Cost Predictability
 
@@ -161,8 +185,8 @@ AI’s reach in healthcare is expanding—startups innovate in clinical automati
 
 Choice of AI plumbing matters: MCP (Model Context Protocol) stands out for Azure workflow integration; A2A supports modular, agent-centric tasks. Workshops and technical guides are demystifying adoption, from C# training to executive playbooks—supporting smarter, lower-risk project deployment. The maturing MCP ecosystem, highlighted last week, is quickly broadening developer access.
 
-- [Choosing Between MCP and A2A for AI Applications]({{ "/videos/2025-07-08-Choosing-Between-MCP-and-A2A-for-AI-Applications.html" | relative_url }})
-- [Let's Learn MCP: C#]({{ "/videos/2025-07-09-Lets-Learn-MCP-CSharp.html" | relative_url }})
+- [Choosing Between MCP and A2A for AI Applications](/videos/2025-07-08-Choosing-Between-MCP-and-A2A-for-AI-Applications.html)
+- [Let's Learn MCP: C#](/videos/2025-07-09-Lets-Learn-MCP-CSharp.html)
 - [Choosing the right AI path for your business - A practical guide for leaders](https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/09/choosing-the-right-ai-path-for-your-business-a-practical-guide-for-business-leaders/)
 
 ## Azure
@@ -190,8 +214,8 @@ Azure Update features improved security: Trusted Launch for VM Scale Sets, firew
 
 Stories of data modernization and SDK upgrades from last week are extended here, with more focus on incremental, user-centric improvements.
 
-- [Azure Update - 11th July 2025]({{ "/videos/2025-07-11-Azure-Update-11th-July-2025.html" | relative_url }})
-- [Multi-Cloud Storage Migration with Azure Storage Mover]({{ "/videos/2025-07-07-Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover.html" | relative_url }})
+- [Azure Update - 11th July 2025](/videos/2025-07-11-Azure-Update-11th-July-2025.html)
+- [Multi-Cloud Storage Migration with Azure Storage Mover](/videos/2025-07-07-Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover.html)
 
 ## Coding
 
@@ -231,7 +255,7 @@ Critical July patches for Azure DevOps Server resolve multi-repo trigger bugs in
 Momentum on extensibility and easier onboarding—highlighted last week—remains, with CLI and MCP tools driving productivity and security.
 
 - [July Patches for Azure DevOps Server Now Available](https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/)
-- [VS Code Live - Let it Cook: Building a Universal MCP Install Link]({{ "/videos/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html" | relative_url }})
+- [VS Code Live - Let it Cook: Building a Universal MCP Install Link](/videos/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html)
 
 ## Security
 

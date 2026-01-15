@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory"
-description: "This news article covers recent enhancements to the Copy job in Microsoft Fabric Data Factory, focusing on expanded file format support and improved CSV configuration options. It details how Copy job now supports ORC, Excel, Avro, and XML formats, in addition to more granular control over CSV data ingestion through new Quote, Escape, and Encoding settings. Readers will learn how these features streamline data movement, improve compatibility across sources, and ensure data fidelity for complex ingestion workflows in data engineering and analytics."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-29 11:00:00 +00:00
-permalink: "/2025-10-29-Simplifying-Data-Ingestion-with-Copy-Job-Enhanced-File-Format-Support-in-Microsoft-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Avro", "Azure", "Bulk Copy", "Cloud Data", "Copy Job", "CSV", "Data Engineering", "Data Factory", "Data Ingestion", "Data Movement", "Encoding", "Excel", "File Formats", "Incremental Copy", "Integration", "Microsoft Fabric", "ML", "News", "ORC", "XML"]
-tags_normalized: ["avro", "azure", "bulk copy", "cloud data", "copy job", "csv", "data engineering", "data factory", "data ingestion", "data movement", "encoding", "excel", "file formats", "incremental copy", "integration", "microsoft fabric", "ml", "news", "orc", "xml"]
+permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-Job-Enhanced-File-Format-Support-in-Microsoft-Fabric-Data-Factory
+tags:
+- Avro
+- Azure
+- Bulk Copy
+- Cloud Data
+- Copy Job
+- CSV
+- Data Engineering
+- Data Factory
+- Data Ingestion
+- Data Movement
+- Encoding
+- Excel
+- File Formats
+- Incremental Copy
+- Integration
+- Microsoft Fabric
+- ML
+- News
+- ORC
+- XML
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team explains new enhancements to Copy job in Microsoft Fabric Data Factory, including expanded support for file formats and improved CSV handling options, enabling more flexible and robust data ingestion.<!--excerpt_end-->
 
 # Simplifying Data Ingestion with Copy Job: More File Formats and Enhancements

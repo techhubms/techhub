@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Edge Adds Passkey Support and Syncing with Password Manager"
-description: "This official Microsoft Edge blog post explains the new feature allowing users to save and securely sync passkeys via Microsoft Password Manager on Windows devices. The post covers how passkeys work, the benefits of passwordless authentication, technical implementation details, prerequisites, and how passkeys are stored and managed, including security protections like Azure confidential ledger."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/msedgedev/2025/11/03/microsoft-edge-introduces-passkey-saving-and-syncing-with-microsoft-password-manager/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Edge Adds Passkey Support and Syncing with Password Manager
+author: stclarke
+canonical_url: https://blogs.windows.com/msedgedev/2025/11/03/microsoft-edge-introduces-passkey-saving-and-syncing-with-microsoft-password-manager/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-03 21:32:08 +00:00
-permalink: "/2025-11-03-Microsoft-Edge-Adds-Passkey-Support-and-Syncing-with-Password-Manager.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Confidential Ledger", "Biometric Security", "Cloud Security", "Company News", "Cryptography", "Device Authentication", "FIDO2", "Microsoft Account", "Microsoft Edge", "Microsoft Password Manager", "News", "Passkey", "Passwordless Authentication", "PIN Authentication", "Security", "Windows 10", "Windows 11"]
-tags_normalized: ["azure", "azure confidential ledger", "biometric security", "cloud security", "company news", "cryptography", "device authentication", "fido2", "microsoft account", "microsoft edge", "microsoft password manager", "news", "passkey", "passwordless authentication", "pin authentication", "security", "windows 10", "windows 11"]
+permalink: /azure/news/Microsoft-Edge-Adds-Passkey-Support-and-Syncing-with-Password-Manager
+tags:
+- Azure
+- Azure Confidential Ledger
+- Biometric Security
+- Cloud Security
+- Company News
+- Cryptography
+- Device Authentication
+- FIDO2
+- Microsoft Account
+- Microsoft Edge
+- Microsoft Password Manager
+- News
+- Passkey
+- Passwordless Authentication
+- PIN Authentication
+- Security
+- Windows 10
+- Windows 11
+section_names:
+- azure
+- security
 ---
-
 stclarke details how Microsoft Edge introduces passkey saving and syncing with Microsoft Password Manager, providing improved passwordless security backed by Azure confidential ledger.<!--excerpt_end-->
 
 # Microsoft Edge Adds Passkey Support and Syncing with Password Manager

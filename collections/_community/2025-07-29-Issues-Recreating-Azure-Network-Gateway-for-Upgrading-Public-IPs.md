@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Issues Recreating Azure Network Gateway for Upgrading Public IPs"
-description: "Dave_PW describes challenges faced while recreating an Azure network gateway to upgrade a public IP used in an IPsec tunnel. The post covers attempts to migrate resources, connectivity failures after deploying a new gateway in a separate virtual network, and considerations about downtime and fallback options."
-author: "Dave_PW"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mcaooo/azure_network_gateway_issue_recreating/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Issues Recreating Azure Network Gateway for Upgrading Public IPs
+author: Dave_PW
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mcaooo/azure_network_gateway_issue_recreating/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 12:55:30 +00:00
-permalink: "/2025-07-29-Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Network Gateway", "Azure Networking", "Community", "Connectivity Issues", "Downtime", "Firewall Rule", "FortiGate", "IPsec Tunnel", "NSG", "Public IP Upgrade", "Virtual Network"]
-tags_normalized: ["azure", "azure network gateway", "azure networking", "community", "connectivity issues", "downtime", "firewall rule", "fortigate", "ipsec tunnel", "nsg", "public ip upgrade", "virtual network"]
+permalink: /azure/community/Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs
+tags:
+- Azure
+- Azure Network Gateway
+- Azure Networking
+- Community
+- Connectivity Issues
+- Downtime
+- Firewall Rule
+- FortiGate
+- IPsec Tunnel
+- NSG
+- Public IP Upgrade
+- Virtual Network
+section_names:
+- azure
 ---
-
 Authored by Dave_PW, this post discusses the challenges with recreating an Azure network gateway for a public IP upgrade, analyzing connectivity and maintenance implications.<!--excerpt_end-->
 
 ## Recreating Azure Network Gateway: Upgrade and Connectivity Challenges

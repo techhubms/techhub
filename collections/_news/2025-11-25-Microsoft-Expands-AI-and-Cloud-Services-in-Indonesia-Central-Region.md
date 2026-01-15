@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Microsoft Expands AI and Cloud Services in Indonesia Central Region"
-description: "This news update covers Microsoft’s launch of new cloud and AI services in Indonesia Central, focusing on enabling local organizations to innovate using Azure, Azure OpenAI Service, and Microsoft Fabric. It highlights major announcements from the Cloud & AI Innovation Summit Jakarta, showcases customer case studies including tiket.com’s Azure-powered AI travel assistant, and introduces the second year of Microsoft Elevate for AI skilling. The piece also discusses the availability of IA infrastructure VMs and GitHub Copilot, and Microsoft’s long-term commitment to ecosystem and talent development in Indonesia."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Expands AI and Cloud Services in Indonesia Central Region
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 16:03:02 +00:00
-permalink: "/2025-11-25-Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML"]
-tags: ["Agentic AI", "AI", "AI Infrastructure", "AI Powered Solutions", "AI Skilling", "Azure", "Azure App Services", "Azure Central Region", "Azure Databases", "Azure OpenAI Service", "Business Intelligence", "Cloud Innovation", "Company News", "Data Management", "Data Science", "Developer Enablement", "Frontier Firms", "GitHub Copilot", "Indonesia", "Microsoft Azure", "Microsoft Elevate", "Microsoft Fabric", "ML", "NCads H100 V5", "News", "NVadsA10 V5"]
-tags_normalized: ["agentic ai", "ai", "ai infrastructure", "ai powered solutions", "ai skilling", "azure", "azure app services", "azure central region", "azure databases", "azure openai service", "business intelligence", "cloud innovation", "company news", "data management", "data science", "developer enablement", "frontier firms", "github copilot", "indonesia", "microsoft azure", "microsoft elevate", "microsoft fabric", "ml", "ncads h100 v5", "news", "nvadsa10 v5"]
+permalink: /github-copilot/news/Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region
+tags:
+- Agentic AI
+- AI
+- AI Infrastructure
+- AI Powered Solutions
+- AI Skilling
+- Azure
+- Azure App Services
+- Azure Central Region
+- Azure Databases
+- Azure OpenAI Service
+- Business Intelligence
+- Cloud Innovation
+- Company News
+- Data Management
+- Data Science
+- Developer Enablement
+- Frontier Firms
+- GitHub Copilot
+- Indonesia
+- Microsoft Azure
+- Microsoft Elevate
+- Microsoft Fabric
+- ML
+- NCads H100 V5
+- News
+- NVadsA10 V5
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
 ---
-
 stclarke reports on Microsoft’s latest AI and cloud expansion in Indonesia, detailing new Azure-powered services, customer success stories, and ongoing developer skilling with GitHub Copilot and Fabric.<!--excerpt_end-->
 
 # Microsoft Expands AI and Cloud Services in Indonesia Central Region

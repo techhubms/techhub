@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025"
-description: "This session from Microsoft Ignite 2025 explores securing AI agents in modern organizations using Microsoft Defender. Through live demonstrations, the presenters showcase recent Defender capabilities, attack simulation scenarios, and the integration of Copilot Studio for responsible AI security. Attendees gain actionable best practices for governing and protecting AI-driven workflows at scale."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tcufxS5p1RM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tcufxS5p1RM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:59:32 +00:00
-permalink: "/2025-11-21-Secure-Your-AI-Agents-with-Microsoft-Defender-Best-Practices-from-Ignite-2025.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Security", "Attack Simulation", "Cloud Security", "Control Plane", "Copilot Studio", "Defender Capabilities", "Graph Database", "Microsoft Defender", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Responsible AI", "Security", "Security Best Practices", "Security Governance", "Threat Detection", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai security", "attack simulation", "cloud security", "control plane", "copilot studio", "defender capabilities", "graph database", "microsoft defender", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "responsible ai", "security", "security best practices", "security governance", "threat detection", "videos"]
+permalink: /ai/videos/Secure-Your-AI-Agents-with-Microsoft-Defender-Best-Practices-from-Ignite-2025
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Security
+- Attack Simulation
+- Cloud Security
+- Control Plane
+- Copilot Studio
+- Defender Capabilities
+- Graph Database
+- Microsoft Defender
+- Microsoft Ignite
+- MSIgnite
+- ProtectcloudAIplatformandapps
+- Responsible AI
+- Security
+- Security Best Practices
+- Security Governance
+- Threat Detection
+- Videos
+section_names:
+- ai
+- security
 ---
-
 In this Microsoft Ignite 2025 session, Ramya Chitrakar, Moran Gutman, and Asaf Nakash demonstrate how to secure AI agents using Microsoft Defender, offering live demos and essential security strategies.<!--excerpt_end-->
 
 {% youtube tcufxS5p1RM %}

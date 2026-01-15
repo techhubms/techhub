@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Post as Admin Feature in GitHub Discussions"
-description: "This update introduces the ability for repository administrators to post and comment in GitHub Discussions using an “Admin” badge, providing clear differentiation between official repository guidance and personal contributions. The feature helps community members identify authoritative answers, improves security, and streamlines participation for maintainers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Post as Admin Feature in GitHub Discussions
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-11 16:45:28 +00:00
-permalink: "/2025-12-11-Post-as-Admin-Feature-in-GitHub-Discussions.html"
-categories: ["DevOps"]
-tags: ["Access Management", "Admin Badge", "Collaboration", "Community Engagement", "Community Management", "DevOps", "GitHub", "GitHub Discussions", "News", "Official Responses", "Open Source", "Repository Administration"]
-tags_normalized: ["access management", "admin badge", "collaboration", "community engagement", "community management", "devops", "github", "github discussions", "news", "official responses", "open source", "repository administration"]
+permalink: /devops/news/Post-as-Admin-Feature-in-GitHub-Discussions
+tags:
+- Access Management
+- Admin Badge
+- Collaboration
+- Community Engagement
+- Community Management
+- DevOps
+- GitHub
+- GitHub Discussions
+- News
+- Official Responses
+- Open Source
+- Repository Administration
+section_names:
+- devops
 ---
-
 Allison explains how GitHub now allows repository administrators to post in Discussions with an 'Admin' badge, helping clarify official guidance for the community.<!--excerpt_end-->
 
 # Post as Admin Feature in GitHub Discussions

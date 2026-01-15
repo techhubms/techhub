@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Detect Human Faces and Compare Similar Ones with Azure Face API"
-description: "This guide walks through using Microsoft's Azure Face API to detect and compare human faces within images. It covers setup, authentication, face detection, attribute extraction, and face similarity comparison, including code samples with Python. Practical use cases, best practices for accuracy and privacy, and actionable steps for getting started are discussed."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Detect Human Faces and Compare Similar Ones with Azure Face API
+author: Dellenny
+canonical_url: https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-17 10:07:04 +00:00
-permalink: "/2025-08-17-Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Integration", "Authentication", "Azure", "Azure Cognitive Services", "Azure Face API", "Blogs", "C#", "Cloud AI", "Computer Vision", "Detection Model", "Emotion Detection", "Face Attribute Extraction", "Face Client", "Face Comparison", "Face Detection", "Facial Recognition", "GDPR Compliance", "Identity Management", "Python"]
-tags_normalized: ["ai", "api integration", "authentication", "azure", "azure cognitive services", "azure face api", "blogs", "csharp", "cloud ai", "computer vision", "detection model", "emotion detection", "face attribute extraction", "face client", "face comparison", "face detection", "facial recognition", "gdpr compliance", "identity management", "python"]
+permalink: /ai/blogs/Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API
+tags:
+- AI
+- API Integration
+- Authentication
+- Azure
+- Azure Cognitive Services
+- Azure Face API
+- Blogs
+- C#
+- Cloud AI
+- Computer Vision
+- Detection Model
+- Emotion Detection
+- Face Attribute Extraction
+- Face Client
+- Face Comparison
+- Face Detection
+- Facial Recognition
+- GDPR Compliance
+- Identity Management
+- Python
+section_names:
+- ai
+- azure
 ---
-
 Dellenny demonstrates how to use the Azure Face API for facial recognition—showing developers step-by-step how to detect, analyze, and compare faces using Python and cloud-hosted AI services.<!--excerpt_end-->
 
 # Detect Human Faces and Compare Similar Ones with Azure Face API

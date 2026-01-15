@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Your Guide to Azure Compute at Microsoft Ignite 2025"
-description: "This comprehensive guide, authored by melissahollingshed, provides an overview of Azure Compute-focused sessions and hands-on labs at Microsoft Ignite 2025. It highlights the latest advancements in Azure IaaS, security, resiliency, and cost optimization, offering attendees curated opportunities to deepen their Azure cloud expertise and practical skills through technical sessions and live demonstrations."
-author: "melissahollingshed"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Your Guide to Azure Compute at Microsoft Ignite 2025
+author: melissahollingshed
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 20:41:35 +00:00
-permalink: "/2025-11-10-Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Backup", "Azure Boost", "Azure Compute", "Azure IaaS", "Azure Monitor", "Azure Networking", "Cloud Architecture", "Cloud Security", "Community", "Cost Optimization", "Disaster Recovery", "Hybrid Cloud", "Infrastructure as A Service", "Microsoft Ignite", "Observability", "Performance Tuning", "Resiliency", "Security", "Virtual Machines"]
-tags_normalized: ["azure", "azure backup", "azure boost", "azure compute", "azure iaas", "azure monitor", "azure networking", "cloud architecture", "cloud security", "community", "cost optimization", "disaster recovery", "hybrid cloud", "infrastructure as a service", "microsoft ignite", "observability", "performance tuning", "resiliency", "security", "virtual machines"]
+permalink: /azure/community/Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025
+tags:
+- Azure
+- Azure Backup
+- Azure Boost
+- Azure Compute
+- Azure IaaS
+- Azure Monitor
+- Azure Networking
+- Cloud Architecture
+- Cloud Security
+- Community
+- Cost Optimization
+- Disaster Recovery
+- Hybrid Cloud
+- Infrastructure as A Service
+- Microsoft Ignite
+- Observability
+- Performance Tuning
+- Resiliency
+- Security
+- Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 melissahollingshed presents an in-depth guide to Azure Compute at Microsoft Ignite 2025, covering must-see technical sessions, hands-on labs, and innovations in cloud infrastructure, security, and resiliency.<!--excerpt_end-->
 
 # Your Guide to Azure Compute at Microsoft Ignite 2025

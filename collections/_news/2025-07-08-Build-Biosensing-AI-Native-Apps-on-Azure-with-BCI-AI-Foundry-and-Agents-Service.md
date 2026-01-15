@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service"
-description: "Explore how to develop biosensing AI-native applications on Azure using BCI devices, Azure AI Foundry, Agents Service, and advanced orchestration. The post covers cognitive state monitoring, real-world applications in sports, high-stakes industries, and practical architecture for adaptive digital assistants leveraging Microsoft cloud technologies."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service
+author: Govind Kamtamneni
+canonical_url: https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-08 05:57:41 +00:00
-permalink: "/2025-07-08-Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Adaptive Systems", "AI", "AI Agents Service", "All Things Azure", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Container Apps", "Azure Event Grid", "Azure Event Hubs", "Biosensing", "Brain Computer Interface", "Coding", "Cognitive State Monitoring", "Cosmos DB", "Developer Tools", "Fnirs", "Health Technology", "News", "Real Time Applications", "TypeAgent"]
-tags_normalized: ["adaptive systems", "ai", "ai agents service", "all things azure", "azure", "azure ai foundry", "azure ai search", "azure container apps", "azure event grid", "azure event hubs", "biosensing", "brain computer interface", "coding", "cognitive state monitoring", "cosmos db", "developer tools", "fnirs", "health technology", "news", "real time applications", "typeagent"]
+permalink: /ai/news/Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service
+tags:
+- Adaptive Systems
+- AI
+- AI Agents Service
+- All Things Azure
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Container Apps
+- Azure Event Grid
+- Azure Event Hubs
+- Biosensing
+- Brain Computer Interface
+- Coding
+- Cognitive State Monitoring
+- Cosmos DB
+- Developer Tools
+- Fnirs
+- Health Technology
+- News
+- Real Time Applications
+- TypeAgent
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Written by Govind Kamtamneni with JD Chibuk, this post guides readers through building cognitive biosensing AI apps on Azure using BCI, AI Foundry, and Agent Services. It showcases real-world scenarios, advanced architecture, and opportunities for developers.<!--excerpt_end-->
 
 # Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service

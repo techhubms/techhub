@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "What’s New in FinOps Toolkit 12 – July 2025"
-description: "This update from Michael Flanakin reviews FinOps Toolkit 12, an open-source resource suite for optimizing cloud costs on Microsoft Azure. The release covers support for FOCUS 1.2, new schema versions, Power BI and PowerShell enhancements, improved network compatibility, Data Explorer cost controls, security permission changes, and executive-friendly reporting for better cost analysis and management."
-author: "Michael_Flanakin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: What’s New in FinOps Toolkit 12 – July 2025
+author: Michael_Flanakin
+canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 17:00:00 +00:00
-permalink: "/2025-08-07-Whats-New-in-FinOps-Toolkit-12-July-2025.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Data Explorer", "Azure Optimization Engine", "CIDR Support", "Community", "Cost Export", "Cost Management", "Data Ingestion", "Data Pipelines", "DevOps", "DevOps Automation", "Executive Reporting", "FinOps Toolkit", "FOCUS 1.2", "KQL", "Microsoft Azure", "Network Configuration", "Power BI", "PowerShell", "Private Endpoints", "Resource Management", "Role Based Access Control", "Schema Versioning", "Security", "Security Permissions"]
-tags_normalized: ["azure", "azure data explorer", "azure optimization engine", "cidr support", "community", "cost export", "cost management", "data ingestion", "data pipelines", "devops", "devops automation", "executive reporting", "finops toolkit", "focus 1dot2", "kql", "microsoft azure", "network configuration", "power bi", "powershell", "private endpoints", "resource management", "role based access control", "schema versioning", "security", "security permissions"]
+permalink: /azure/community/Whats-New-in-FinOps-Toolkit-12-July-2025
+tags:
+- Azure
+- Azure Data Explorer
+- Azure Optimization Engine
+- CIDR Support
+- Community
+- Cost Export
+- Cost Management
+- Data Ingestion
+- Data Pipelines
+- DevOps
+- DevOps Automation
+- Executive Reporting
+- FinOps Toolkit
+- FOCUS 1.2
+- KQL
+- Microsoft Azure
+- Network Configuration
+- Power BI
+- PowerShell
+- Private Endpoints
+- Resource Management
+- Role Based Access Control
+- Schema Versioning
+- Security
+- Security Permissions
+section_names:
+- azure
+- devops
+- security
 ---
-
 Michael Flanakin explores the major updates in FinOps Toolkit 12 for Azure, focusing on cost management, new data schemas, Power BI reporting, network and security improvements, and automation tools to streamline financial operations in the cloud.<!--excerpt_end-->
 
 # What’s New in FinOps Toolkit 12 – July 2025

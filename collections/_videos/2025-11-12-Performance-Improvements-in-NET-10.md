@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Performance Improvements in .NET 10"
-description: "This session led by Stephen Toub examines the latest performance enhancements in .NET 10, covering JIT compiler upgrades, garbage collection optimizations, and improved library methods. The content highlights how these optimizations translate to real-world gains for a wide range of applications, including cloud, desktop, and mobile scenarios. Developers will also discover related advancements in ASP.NET Core 10, .NET MAUI 10, C# 14, F# 10, and Visual Studio 2026, emphasizing .NET 10's unified and adaptive ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=snnULnTWcNM"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Performance Improvements in .NET 10
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=snnULnTWcNM
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/2025-11-12-Performance-Improvements-in-NET-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI 10", ".NET Runtime", "ASP.NET Core 10", "Benchmarking", "C#", "Cloud Development", "Code Efficiency", "Coding", "Desktop Apps", "F#", "Full Stack Web Development", "Garbage Collection", "JIT Compiler", "Library Improvements", "Mobile Development", "Performance Optimization", "Stephen Toub", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "dotnet runtime", "aspdotnet core 10", "benchmarking", "csharp", "cloud development", "code efficiency", "coding", "desktop apps", "fsharp", "full stack web development", "garbage collection", "jit compiler", "library improvements", "mobile development", "performance optimization", "stephen toub", "videos", "vs"]
+permalink: /coding/videos/Performance-Improvements-in-NET-10
+tags:
+- .NET
+- .NET 10
+- .NET MAUI 10
+- .NET Runtime
+- ASP.NET Core 10
+- Benchmarking
+- C#
+- Cloud Development
+- Code Efficiency
+- Coding
+- Desktop Apps
+- F#
+- Full Stack Web Development
+- Garbage Collection
+- JIT Compiler
+- Library Improvements
+- Mobile Development
+- Performance Optimization
+- Stephen Toub
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 dotnet presents a deep dive into .NET 10's performance improvements, led by Stephen Toub, focusing on key optimizations in runtime, compilers, and libraries that benefit developers across application domains.<!--excerpt_end-->
 
 {% youtube snnULnTWcNM %}

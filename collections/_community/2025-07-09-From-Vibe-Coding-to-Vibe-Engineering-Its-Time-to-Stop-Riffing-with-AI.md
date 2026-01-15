@@ -1,20 +1,30 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI"
-description: "The shift from unstructured AI-assisted development to systematic engineering practices that embed AI within proper constraints and architectural standards."
-author: "Tammuz Dubnov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/"
-viewing_mode: "external"
-categories: ["AI", "Security"]
-feed_name: "The New Stack"
-feed_url: "https://thenewstack.io/feed/"
+author: Tammuz Dubnov
+canonical_url: https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/
+viewing_mode: external
+feed_name: The New Stack
+feed_url: https://thenewstack.io/feed/
 date: 2025-07-09 10:00:00 +00:00
-permalink: "/2025-07-09-From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI.html"
-tags: ["AI", "AI Assisted Development", "Architecture", "Code Quality", "Community", "Development Practices", "Engineering Standards", "Security", "Software Engineering", "TDD", "Technical Debt", "Testing"]
-tags_normalized: ["ai", "ai assisted development", "architecture", "code quality", "community", "development practices", "engineering standards", "security", "software engineering", "tdd", "technical debt", "testing"]
+permalink: /ai/community/From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI
+tags:
+- AI
+- AI Assisted Development
+- Architecture
+- Code Quality
+- Community
+- Development Practices
+- Engineering Standards
+- Security
+- Software Engineering
+- TDD
+- Technical Debt
+- Testing
+section_names:
+- ai
+- security
 ---
-
 Tammuz Dubnov, Founder and CTO of AutonomyAI, explores the evolution from unstructured "vibe coding" with AI to systematic "vibe engineering" practices that embed AI within proper constraints and architectural standards. <!--excerpt_end-->
 
 ## The Problem with Vibe Coding

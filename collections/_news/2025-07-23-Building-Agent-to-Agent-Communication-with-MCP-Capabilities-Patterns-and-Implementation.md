@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Building Agent-to-Agent Communication with MCP: Capabilities, Patterns, and Implementation"
-description: "This article examines recent enhancements to Microsoft's Model Context Protocol (MCP), highlighting its advanced support for building agent-to-agent communication systems. It covers key features like streaming, resumability, durability, and multi-turn interactions with practical, code-driven examples for enabling complex, long-running, and autonomous agent workflows."
-author: "Victor Dibia, Mike Kistler, Maria Naggaga"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/can-you-build-agent2agent-communication-on-mcp-yes"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Building Agent-to-Agent Communication with MCP: Capabilities, Patterns, and Implementation'
+author: Victor Dibia, Mike Kistler, Maria Naggaga
+canonical_url: https://devblogs.microsoft.com/blog/can-you-build-agent2agent-communication-on-mcp-yes
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-23 17:00:19 +00:00
-permalink: "/2025-07-23-Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation.html"
-categories: ["AI"]
-tags: ["Agent Communication", "AI", "AI Agent", "Elicitation", "MCP", "Microsoft AI", "Multi Turn Interaction", "News", "Progress Updates", "Resumable Streams", "Sampling", "Session Resumption"]
-tags_normalized: ["agent communication", "ai", "ai agent", "elicitation", "mcp", "microsoft ai", "multi turn interaction", "news", "progress updates", "resumable streams", "sampling", "session resumption"]
+permalink: /ai/news/Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation
+tags:
+- Agent Communication
+- AI
+- AI Agent
+- Elicitation
+- MCP
+- Microsoft AI
+- Multi Turn Interaction
+- News
+- Progress Updates
+- Resumable Streams
+- Sampling
+- Session Resumption
+section_names:
+- ai
 ---
-
 Authored by Victor Dibia, Mike Kistler, and Maria Naggaga, this article explores advanced features in Microsoft's Model Context Protocol (MCP), focusing on building robust agent-to-agent communication systems and showcasing practical implementation strategies.<!--excerpt_end-->
 
 # Building Agent-to-Agent Communication with MCP

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Transitioning from .NET Framework 4.8 to Modern .NET (Core/9): Advice & Resources"
-description: "A discussion for developers moving from legacy .NET Framework 4.8 to modern .NET Core and .NET 9. This community post gathers recommendations for learning resources, highlights major architectural shifts, and details language and ecosystem improvements. Topics covered include dependency injection, modularity, Entity Framework, project structure changes, and suggestions for structured and practical learning."
-author: "RemoveFun747"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mk1z6x/studying_net_coming_from_net_framework/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Transitioning from .NET Framework 4.8 to Modern .NET (Core/9): Advice & Resources'
+author: RemoveFun747
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mk1z6x/studying_net_coming_from_net_framework/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 14:44:05 +00:00
-permalink: "/2025-08-07-Transitioning-from-NET-Framework-48-to-Modern-NET-Core9-Advice-and-Resources.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 9", ".NET Core", ".NET Framework", "ASP.NET Core", "C#", "Clean Architecture", "Coding", "Community", "CQRS", "Dependency Injection", "Docker", "EF", "Learning Resources", "LINQ", "Microservices", "Modularity", "Monolith", "NuGet", "Software Architecture", "Tim Corey", "Udemy", "VS Code"]
-tags_normalized: ["dotnet", "dotnet 9", "dotnet core", "dotnet framework", "aspdotnet core", "csharp", "clean architecture", "coding", "community", "cqrs", "dependency injection", "docker", "ef", "learning resources", "linq", "microservices", "modularity", "monolith", "nuget", "software architecture", "tim corey", "udemy", "vs code"]
+permalink: /coding/community/Transitioning-from-NET-Framework-48-to-Modern-NET-Core9-Advice-and-Resources
+tags:
+- .NET
+- .NET 9
+- .NET Core
+- .NET Framework
+- ASP.NET Core
+- C#
+- Clean Architecture
+- Coding
+- Community
+- CQRS
+- Dependency Injection
+- Docker
+- EF
+- Learning Resources
+- LINQ
+- Microservices
+- Modularity
+- Monolith
+- NuGet
+- Software Architecture
+- Tim Corey
+- Udemy
+- VS Code
+section_names:
+- coding
 ---
-
 RemoveFun747 shares insights and community-driven advice for developers transitioning from legacy .NET Framework 4.8 to modern .NET 9, including learning resources and practical architectural considerations.<!--excerpt_end-->
 
 # Transitioning from .NET Framework 4.8 to Modern .NET (Core/9): Advice & Resources

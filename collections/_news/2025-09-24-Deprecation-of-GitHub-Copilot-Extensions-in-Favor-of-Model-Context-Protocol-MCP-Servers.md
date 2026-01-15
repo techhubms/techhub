@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Deprecation of GitHub Copilot Extensions in Favor of Model Context Protocol (MCP) Servers"
-description: "GitHub is deprecating Copilot Extensions built as GitHub Apps effective November 10, 2025, shifting to the Model Context Protocol (MCP) to create a universal, open standard for AI agent integration. This move aims to simplify developer workflows, encourage reusable MCP server architecture, and ensure compatibility across multiple AI host platforms. Developers are advised to plan for this transition, as Copilot Extensions will cease functioning after the sunset date, and new extension creation will be blocked starting September 24, 2025. VS Code Copilot Extensions and regular GitHub Apps are unaffected."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Deprecation of GitHub Copilot Extensions in Favor of Model Context Protocol (MCP) Servers
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 15:00:18 +00:00
-permalink: "/2025-09-24-Deprecation-of-GitHub-Copilot-Extensions-in-Favor-of-Model-Context-Protocol-MCP-Servers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agent Integration", "Copilot", "Copilot Marketplace", "Cross Platform Compatibility", "Developer Workflow", "DevOps", "GitHub Apps", "GitHub Copilot", "GitHub Copilot Extensions", "IDE Integration", "MCP", "News", "Open Standard", "Plugin Architecture", "Retired", "Server Side Extensions", "Sunset Notice", "Tool Invocation", "VS Code"]
-tags_normalized: ["ai", "ai agent integration", "copilot", "copilot marketplace", "cross platform compatibility", "developer workflow", "devops", "github apps", "github copilot", "github copilot extensions", "ide integration", "mcp", "news", "open standard", "plugin architecture", "retired", "server side extensions", "sunset notice", "tool invocation", "vs code"]
+permalink: /github-copilot/news/Deprecation-of-GitHub-Copilot-Extensions-in-Favor-of-Model-Context-Protocol-MCP-Servers
+tags:
+- AI
+- AI Agent Integration
+- Copilot
+- Copilot Marketplace
+- Cross Platform Compatibility
+- Developer Workflow
+- DevOps
+- GitHub Apps
+- GitHub Copilot
+- GitHub Copilot Extensions
+- IDE Integration
+- MCP
+- News
+- Open Standard
+- Plugin Architecture
+- Retired
+- Server Side Extensions
+- Sunset Notice
+- Tool Invocation
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison outlines the upcoming deprecation of GitHub Copilot Extensions as GitHub moves toward the Model Context Protocol (MCP), offering guidance for developers on transitioning to this universal standard.<!--excerpt_end-->
 
 # Deprecation of GitHub Copilot Extensions: Moving to MCP Servers

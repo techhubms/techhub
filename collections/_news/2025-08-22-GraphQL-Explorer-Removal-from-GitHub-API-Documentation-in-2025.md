@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GraphQL Explorer Removal from GitHub API Documentation in 2025"
-description: "GitHub will retire the GraphQL Explorer tool on November 1, 2025, removing the interactive iframe previously used to experiment with the GitHub GraphQL API. Developers are encouraged to switch to dedicated development tools for interacting with the GitHub GraphQL API, with updated documentation and setup guides provided."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-21-graphql-explorer-removal-from-api-documentation-on-november-1-2025"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GraphQL Explorer Removal from GitHub API Documentation in 2025
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-21-graphql-explorer-removal-from-api-documentation-on-november-1-2025
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-22 13:00:00 +00:00
-permalink: "/2025-08-22-GraphQL-Explorer-Removal-from-GitHub-API-Documentation-in-2025.html"
-categories: ["DevOps"]
-tags: ["API Development", "API Documentation", "API Lifecycle", "Developer Tools", "DevOps", "GitHub", "GraphQL API", "GraphQL Clients", "GraphQL Explorer", "News", "Platform Update", "Schema Introspection"]
-tags_normalized: ["api development", "api documentation", "api lifecycle", "developer tools", "devops", "github", "graphql api", "graphql clients", "graphql explorer", "news", "platform update", "schema introspection"]
+permalink: /devops/news/GraphQL-Explorer-Removal-from-GitHub-API-Documentation-in-2025
+tags:
+- API Development
+- API Documentation
+- API Lifecycle
+- Developer Tools
+- DevOps
+- GitHub
+- GraphQL API
+- GraphQL Clients
+- GraphQL Explorer
+- News
+- Platform Update
+- Schema Introspection
+section_names:
+- devops
 ---
-
 Allison announces GitHub's retirement of the GraphQL Explorer on November 1, 2025, and recommends developers transition to local tools for working with the GitHub GraphQL API.<!--excerpt_end-->
 
 # GraphQL Explorer Removal from GitHub API Documentation in 2025

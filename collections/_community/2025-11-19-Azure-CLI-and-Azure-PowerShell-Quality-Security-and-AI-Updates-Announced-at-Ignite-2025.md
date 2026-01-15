@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Azure CLI and Azure PowerShell: Quality, Security, and AI Updates Announced at Ignite 2025"
-description: "This update covers the latest advancements for Azure CLI and Azure PowerShell announced at Microsoft Ignite 2025. Key investment areas include continued improvements in quality, security (with MFA enforcement), user experience, core upgrade compatibility with Python 3.13, and the introduction of AI-enhanced features such as 'What-If' and 'Export Bicep' parameters. The announcement provides guidance on handling breaking changes, MFA, advanced ARM API integration, new modules and extensions, and best practices for secure cloud automation."
-author: "Alex-wdy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure CLI and Azure PowerShell: Quality, Security, and AI Updates Announced at Ignite 2025'
+author: Alex-wdy
+canonical_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 19:13:15 +00:00
-permalink: "/2025-11-19-Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "ArizeAI Extension", "ARM API", "Automation", "Azure", "Azure CLI", "Azure PowerShell", "Azure Services", "Bicep Templates", "Claims Challenge", "Cloud Endpoint Discovery", "Coding", "Community", "DevOps", "Fabric Module", "IaC", "Identity Management", "Invoke AzRestMethod", "MFA Enforcement", "Microsoft Ignite", "Paginate Parameter", "Python 3.13", "Release Notes", "Security", "Security Vulnerabilities", "What If Analysis"]
-tags_normalized: ["ai", "arizeai extension", "arm api", "automation", "azure", "azure cli", "azure powershell", "azure services", "bicep templates", "claims challenge", "cloud endpoint discovery", "coding", "community", "devops", "fabric module", "iac", "identity management", "invoke azrestmethod", "mfa enforcement", "microsoft ignite", "paginate parameter", "python 3dot13", "release notes", "security", "security vulnerabilities", "what if analysis"]
+permalink: /ai/community/Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025
+tags:
+- AI
+- ArizeAI Extension
+- ARM API
+- Automation
+- Azure
+- Azure CLI
+- Azure PowerShell
+- Azure Services
+- Bicep Templates
+- Claims Challenge
+- Cloud Endpoint Discovery
+- Coding
+- Community
+- DevOps
+- Fabric Module
+- IaC
+- Identity Management
+- Invoke AzRestMethod
+- MFA Enforcement
+- Microsoft Ignite
+- Paginate Parameter
+- Python 3.13
+- Release Notes
+- Security
+- Security Vulnerabilities
+- What If Analysis
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 Alex-wdy shares comprehensive updates from Microsoft Ignite 2025, focusing on Azure CLI, Azure PowerShell, and new AI-driven features, including security and quality improvements.<!--excerpt_end-->
 
 # Azure CLI and Azure PowerShell: Ignite 2025 Update

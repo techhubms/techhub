@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Dev Box Ready-To-Code: Microsoft’s 1ES Image Templates Streamline Team Development Environments"
-description: "This article by Dmitry Goncharenko details how Microsoft's One Engineering System (1ES) team created ‘Ready-To-Code’ Dev Box image templates. It explores team customizations, template features, sample resources, and the integration with Azure DevOps, Bicep, and Azure Image Builder to reliably standardize development environments across teams."
-author: "Dmitry Goncharenko"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/dev-box-ready-to-code-dev-box-images-template/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+layout: post
+title: 'Dev Box Ready-To-Code: Microsoft’s 1ES Image Templates Streamline Team Development Environments'
+author: Dmitry Goncharenko
+canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/dev-box-ready-to-code-dev-box-images-template/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2024-12-11 17:00:17 +00:00
-permalink: "/2024-12-11-Dev-Box-Ready-To-Code-Microsofts-1ES-Image-Templates-Streamline-Team-Development-Environments.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["1ES", "Azure", "Azure Bicep", "Azure DevOps", "Azure Image Builder", "CI/CD", "Coding", "Dev Box", "DevCenter", "Developer Productivity", "DevOps", "Engineering@Microsoft", "Environment Automation", "Image Templates", "Microsoft Dev Box", "News", "One Engineering System", "Ready To Code", "Team Customizations", "Template Artifacts"]
-tags_normalized: ["1es", "azure", "azure bicep", "azure devops", "azure image builder", "cislashcd", "coding", "dev box", "devcenter", "developer productivity", "devops", "engineeringatmicrosoft", "environment automation", "image templates", "microsoft dev box", "news", "one engineering system", "ready to code", "team customizations", "template artifacts"]
+permalink: /coding/news/Dev-Box-Ready-To-Code-Microsofts-1ES-Image-Templates-Streamline-Team-Development-Environments
+tags:
+- 1ES
+- Azure
+- Azure Bicep
+- Azure DevOps
+- Azure Image Builder
+- CI/CD
+- Coding
+- Dev Box
+- DevCenter
+- Developer Productivity
+- DevOps
+- Engineering@Microsoft
+- Environment Automation
+- Image Templates
+- Microsoft Dev Box
+- News
+- One Engineering System
+- Ready To Code
+- Team Customizations
+- Template Artifacts
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this comprehensive post, Dmitry Goncharenko from Microsoft's 1ES team shares how Ready-To-Code Dev Box image templates are used to standardize and automate development environments, demonstrating practical benefits and sharing sample resources.<!--excerpt_end-->
 
 # Dev Box Ready-To-Code: Microsoft’s 1ES Image Templates Streamline Team Development Environments

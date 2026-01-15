@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "VS Code Unifies Copilot AI Features in Open Source Extension"
-description: "This news update from the VS Code Team details the second milestone in making Visual Studio Code an open source AI editor. The GitHub Copilot Chat extension now provides all inline and chat AI code suggestions in a single, open source extension. The transition consolidates features, improves performance, and enhances the developer experience while offering ways for the community to contribute. The update illustrates how the extension works, with technical insights on caching, model inference, and suggestion post-processing. The GitHub Copilot extension will be deprecated in favor of this unified, open approach."
-author: "The VS Code team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: VS Code Unifies Copilot AI Features in Open Source Extension
+author: The VS Code team
+canonical_url: https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-06 00:00:00 +00:00
-permalink: "/2025-11-06-VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Suggestions", "Coding", "Copilot Chat", "Developer Tools", "Extension Development", "Ghost Text", "GitHub Copilot", "Inline Suggestions", "LLM Integration", "News", "Open Source", "OpenAI", "Performance Optimization", "Prompt Engineering", "TypeScript", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai code suggestions", "coding", "copilot chat", "developer tools", "extension development", "ghost text", "github copilot", "inline suggestions", "llm integration", "news", "open source", "openai", "performance optimization", "prompt engineering", "typescript", "vs code", "vs code extensions"]
+permalink: /github-copilot/news/VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension
+tags:
+- AI
+- AI Code Suggestions
+- Coding
+- Copilot Chat
+- Developer Tools
+- Extension Development
+- Ghost Text
+- GitHub Copilot
+- Inline Suggestions
+- LLM Integration
+- News
+- Open Source
+- OpenAI
+- Performance Optimization
+- Prompt Engineering
+- TypeScript
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 The VS Code Team shares how the GitHub Copilot Chat extension now unifies all Copilot AI code suggestions in a single open source extension, with technical details and contribution opportunities.<!--excerpt_end-->
 
 # Open Source AI Editor: Second Milestone

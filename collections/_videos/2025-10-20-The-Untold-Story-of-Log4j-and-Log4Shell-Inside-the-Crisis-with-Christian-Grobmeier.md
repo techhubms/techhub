@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier"
-description: "This video offers a firsthand account of the Log4Shell security incident from Log4j maintainer Christian Grobmeier, exploring the intense pressure the open-source team faced, the technical details of the vulnerability, and the industry-wide race to deploy patches. The session covers developer challenges, lessons learned for the open-source ecosystem, the role of GitHub and the Secure Open Source Fund, and how AI is shaping security responses moving forward."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=t74ClffSUW0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=t74ClffSUW0
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-20 15:45:07 +00:00
-permalink: "/2025-10-20-The-Untold-Story-of-Log4j-and-Log4Shell-Inside-the-Crisis-with-Christian-Grobmeier.html"
-categories: ["Security"]
-tags: ["AI", "AI And Security", "CVSS", "Developer Experience", "GitHub", "Incident Response", "Log4j", "Log4Shell", "Open Source Funding", "Open Source Security", "Patch Management", "SBOM", "Secure Development", "Security", "Software Supply Chain", "Software Vulnerabilities", "Videos", "Vulnerability Response"]
-tags_normalized: ["ai", "ai and security", "cvss", "developer experience", "github", "incident response", "log4j", "log4shell", "open source funding", "open source security", "patch management", "sbom", "secure development", "security", "software supply chain", "software vulnerabilities", "videos", "vulnerability response"]
+permalink: /security/videos/The-Untold-Story-of-Log4j-and-Log4Shell-Inside-the-Crisis-with-Christian-Grobmeier
+tags:
+- AI
+- AI And Security
+- CVSS
+- Developer Experience
+- GitHub
+- Incident Response
+- Log4j
+- Log4Shell
+- Open Source Funding
+- Open Source Security
+- Patch Management
+- SBOM
+- Secure Development
+- Security
+- Software Supply Chain
+- Software Vulnerabilities
+- Videos
+- Vulnerability Response
+section_names:
+- security
 ---
-
 GitHub presents a behind-the-scenes look into the Log4Shell incident, with Christian Grobmeier sharing insights on the technical and human challenges faced by the Log4j maintainer team. The video highlights valuable lessons for developers and the open source community.<!--excerpt_end-->
 
 {% youtube t74ClffSUW0 %}

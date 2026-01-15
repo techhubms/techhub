@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms"
-description: "This news article reports on Microsoft being named a Leader in the 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms, emphasizing the role of Azure, Azure IoT, Microsoft Fabric, Copilot in Azure, and Microsoft Defender for IoT in delivering secure, scalable, and AI-integrated industrial solutions. It explores Microsoft's adaptive cloud approach, robust security features, and integration of AI-powered tools to improve operations and real-time decision-making in industrial environments."
-author: "Michael MacKenzie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-global-industrial-iot-platforms/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms
+author: Michael MacKenzie
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-global-industrial-iot-platforms/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-18 15:00:00 +00:00
-permalink: "/2025-09-18-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Global-Industrial-IoT-Platforms.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adaptive Cloud", "AI", "AI Integration", "Azure", "Azure Arc", "Azure Digital Twins", "Azure IoT", "Cloud To Edge", "Copilot in Azure", "Digital Twins", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "Hybrid + Multicloud", "Industrial Data Management", "Industrial IoT", "Internet Of Things", "IoT Hub", "Microsoft Defender For IoT", "Microsoft Entra", "Microsoft Fabric", "Microsoft Sentinel", "News", "Operational Technology", "Real Time Intelligence", "Security"]
-tags_normalized: ["adaptive cloud", "ai", "ai integration", "azure", "azure arc", "azure digital twins", "azure iot", "cloud to edge", "copilot in azure", "digital twins", "gartner magic quadrant", "gartner magic quadrant", "hybrid plus multicloud", "industrial data management", "industrial iot", "internet of things", "iot hub", "microsoft defender for iot", "microsoft entra", "microsoft fabric", "microsoft sentinel", "news", "operational technology", "real time intelligence", "security"]
+permalink: /ai/news/Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Global-Industrial-IoT-Platforms
+tags:
+- Adaptive Cloud
+- AI
+- AI Integration
+- Azure
+- Azure Arc
+- Azure Digital Twins
+- Azure IoT
+- Cloud To Edge
+- Copilot in Azure
+- Digital Twins
+- Gartner Magic Quadrant
+- Gartner® Magic Quadrant™
+- Hybrid + Multicloud
+- Industrial Data Management
+- Industrial IoT
+- Internet Of Things
+- IoT Hub
+- Microsoft Defender For IoT
+- Microsoft Entra
+- Microsoft Fabric
+- Microsoft Sentinel
+- News
+- Operational Technology
+- Real Time Intelligence
+- Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 Michael MacKenzie shares how Microsoft has been named a Leader in the 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms, spotlighting Azure IoT, Microsoft Fabric, and integrated AI and security solutions.<!--excerpt_end-->
 
 # Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms

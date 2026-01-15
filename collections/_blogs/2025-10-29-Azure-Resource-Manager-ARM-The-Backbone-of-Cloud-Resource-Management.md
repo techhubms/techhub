@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Resource Manager (ARM): The Backbone of Cloud Resource Management"
-description: "This article introduces Azure Resource Manager (ARM), the central management layer for Microsoft Azure resources. It discusses core features such as declarative ARM templates, resource grouping, policy enforcement, RBAC, and consistent management using multiple Azure tools. Readers will learn best practices for infrastructure as code, security, and governance to help organize and automate cloud environments with ARM."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure Resource Manager (ARM): The Backbone of Cloud Resource Management'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:59:57 +00:00
-permalink: "/2025-10-29-Azure-Resource-Manager-ARM-The-Backbone-of-Cloud-Resource-Management.html"
-categories: ["Azure", "DevOps"]
-tags: ["ARM", "ARM Templates", "Azure", "Azure CLI", "Azure Governance", "Azure Monitor", "Azure Policy", "Azure Resource Manager", "Blogs", "Cloud Automation", "Cloud Management", "Cost Management", "DevOps", "IaC", "PowerShell", "RBAC", "Resource Groups", "Resource Tagging", "Role Based Access Control"]
-tags_normalized: ["arm", "arm templates", "azure", "azure cli", "azure governance", "azure monitor", "azure policy", "azure resource manager", "blogs", "cloud automation", "cloud management", "cost management", "devops", "iac", "powershell", "rbac", "resource groups", "resource tagging", "role based access control"]
+permalink: /azure/blogs/Azure-Resource-Manager-ARM-The-Backbone-of-Cloud-Resource-Management
+tags:
+- ARM
+- ARM Templates
+- Azure
+- Azure CLI
+- Azure Governance
+- Azure Monitor
+- Azure Policy
+- Azure Resource Manager
+- Blogs
+- Cloud Automation
+- Cloud Management
+- Cost Management
+- DevOps
+- IaC
+- PowerShell
+- RBAC
+- Resource Groups
+- Resource Tagging
+- Role Based Access Control
+section_names:
+- azure
+- devops
 ---
-
 Dellenny provides an in-depth overview of Azure Resource Manager (ARM), exploring its core features and best practices for cloud resource management on Microsoft Azure.<!--excerpt_end-->
 
 # Azure Resource Manager (ARM): The Backbone of Cloud Resource Management

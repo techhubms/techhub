@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhanced Monitoring for Spark High Concurrency Workloads in Microsoft Fabric"
-description: "This announcement details new improvements to the monitoring tools for Notebooks operating in high concurrency mode within Microsoft Fabric. Key enhancements include deeper visibility into Spark jobs, notebook-aware logging, and a hierarchical notebook snapshot view to streamline debugging and performance optimization across distributed Spark workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/enhanced-monitoring-for-spark-high-concurrency-workloads-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enhanced Monitoring for Spark High Concurrency Workloads in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/enhanced-monitoring-for-spark-high-concurrency-workloads-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 12:04:04 +00:00
-permalink: "/2025-08-26-Enhanced-Monitoring-for-Spark-High-Concurrency-Workloads-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Big Data", "Data Engineering", "Debugging", "Developer Productivity", "Distributed Computing", "Execution Model", "High Concurrency", "Job Monitoring", "Logs", "Microsoft Fabric", "ML", "News", "Notebook Monitoring", "Notebook Snapshots", "Observability", "Performance Tuning", "Pipeline Integration", "Spark"]
-tags_normalized: ["azure", "big data", "data engineering", "debugging", "developer productivity", "distributed computing", "execution model", "high concurrency", "job monitoring", "logs", "microsoft fabric", "ml", "news", "notebook monitoring", "notebook snapshots", "observability", "performance tuning", "pipeline integration", "spark"]
+permalink: /ml/news/Enhanced-Monitoring-for-Spark-High-Concurrency-Workloads-in-Microsoft-Fabric
+tags:
+- Azure
+- Big Data
+- Data Engineering
+- Debugging
+- Developer Productivity
+- Distributed Computing
+- Execution Model
+- High Concurrency
+- Job Monitoring
+- Logs
+- Microsoft Fabric
+- ML
+- News
+- Notebook Monitoring
+- Notebook Snapshots
+- Observability
+- Performance Tuning
+- Pipeline Integration
+- Spark
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces enhanced monitoring for Spark workloads running in high concurrency mode. Discover new features for job insights, notebook-aware logging, and hierarchical views to boost developer productivity.<!--excerpt_end-->
 
 # Enhanced Monitoring for Spark High Concurrency Workloads in Microsoft Fabric

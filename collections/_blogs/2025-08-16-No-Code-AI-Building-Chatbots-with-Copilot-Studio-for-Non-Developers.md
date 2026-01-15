@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "No-Code AI: Building Chatbots with Copilot Studio for Non-Developers"
-description: "This article from Dellenny introduces Copilot Studio, a no-code AI platform that allows non-developers to create, deploy, and manage intelligent chatbots. The guide walks through the platform’s visual design interface, AI features, integration capabilities, and outlines the core benefits for businesses seeking faster and more accessible AI solutions."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'No-Code AI: Building Chatbots with Copilot Studio for Non-Developers'
+author: Dellenny
+canonical_url: https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-16 08:46:54 +00:00
-permalink: "/2025-08-16-No-Code-AI-Building-Chatbots-with-Copilot-Studio-for-Non-Developers.html"
-categories: ["AI"]
-tags: ["AI", "Blogs", "Bot Development", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Customer Service", "Digital Transformation", "Integration", "Microsoft AI", "Natural Language Understanding", "No Code Tools", "Non Developers", "Visual Flow Design"]
-tags_normalized: ["ai", "blogs", "bot development", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "customer service", "digital transformation", "integration", "microsoft ai", "natural language understanding", "no code tools", "non developers", "visual flow design"]
+permalink: /ai/blogs/No-Code-AI-Building-Chatbots-with-Copilot-Studio-for-Non-Developers
+tags:
+- AI
+- Blogs
+- Bot Development
+- Business Automation
+- Chatbots
+- Conversational AI
+- Copilot
+- Copilot Studio
+- Customer Service
+- Digital Transformation
+- Integration
+- Microsoft AI
+- Natural Language Understanding
+- No Code Tools
+- Non Developers
+- Visual Flow Design
+section_names:
+- ai
 ---
-
 Dellenny explains how Copilot Studio empowers non-developers to build AI-powered chatbots using a no-code interface, making advanced bot development accessible without programming expertise.<!--excerpt_end-->
 
 # No-Code AI: Building Chatbots with Copilot Studio for Non-Developers

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Confidence Score Decline in Document Intelligence Custom Extraction Models with New Layouts"
-description: "A detailed community inquiry into the confidence score deterioration observed in Azure Document Intelligence custom extraction models when documents of significantly different formats and layouts are introduced into training. The author shares practical experimentation and results, seeking insights from experienced users about the underlying causes and mitigation strategies."
-author: "aristotelisc"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: Confidence Score Decline in Document Intelligence Custom Extraction Models with New Layouts
+author: aristotelisc
+canonical_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-07-23 15:35:47 +00:00
-permalink: "/2025-07-23-Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI", "Azure Document Intelligence", "Community", "Confidence Score", "Custom Extraction", "Data Annotation", "Document Layout", "Field Extraction", "Format Variability", "Holdout Set", "Machine Learning Training", "Microsoft Cognitive Services", "ML", "Model Evaluation", "Model Generalization"]
-tags_normalized: ["ai", "azure", "azure ai", "azure document intelligence", "community", "confidence score", "custom extraction", "data annotation", "document layout", "field extraction", "format variability", "holdout set", "machine learning training", "microsoft cognitive services", "ml", "model evaluation", "model generalization"]
+permalink: /ai/community/Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts
+tags:
+- AI
+- Azure
+- Azure AI
+- Azure Document Intelligence
+- Community
+- Confidence Score
+- Custom Extraction
+- Data Annotation
+- Document Layout
+- Field Extraction
+- Format Variability
+- Holdout Set
+- Machine Learning Training
+- Microsoft Cognitive Services
+- ML
+- Model Evaluation
+- Model Generalization
+section_names:
+- ai
+- azure
+- ml
 ---
-
 aristotelisc describes an experiment using Azure Document Intelligence to train custom extraction models, highlighting how introducing new document layouts led to persistent confidence score drops. The author seeks community insights on this behavior.<!--excerpt_end-->
 
 # Doc Intelligence: Custom Extraction Model | Confidence Score Deterioration with New Formats/Layouts

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing Public Preview of the Phishing Triage Agent in Microsoft Defender"
-description: "This announcement introduces the public preview of the Phishing Triage Agent in Microsoft Defender. The agent leverages AI and large language models to automate the triage of user-reported phishing emails, improve SOC efficiency, and enhance security operations with autonomous analysis and continuous learning. It provides transparent decision-making, integrates with Automated Investigation and Response in Defender for Office 365, and adheres to Responsible AI and Zero Trust principles. The solution significantly reduces manual burden, accelerates incident response, and lets analysts focus on real threats."
-author: "Cristina Da Gama Henriquez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/announcing-public-preview-phishing-triage-agent-in-microsoft-defender/4438301"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Announcing Public Preview of the Phishing Triage Agent in Microsoft Defender
+author: Cristina Da Gama Henriquez
+canonical_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/announcing-public-preview-phishing-triage-agent-in-microsoft-defender/4438301
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-07 16:00:00 +00:00
-permalink: "/2025-08-07-Announcing-Public-Preview-of-the-Phishing-Triage-Agent-in-Microsoft-Defender.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Automated Investigation And Response", "Autonomous Security", "Defender For Office 365", "Incident Response", "Large Language Models", "Microsoft Defender", "News", "Phishing Detection", "Phishing Triage Agent", "Responsible AI", "Security", "Security Copilot", "Security Operations Center", "SOC Automation", "Threat Intelligence", "Zero Trust Security"]
-tags_normalized: ["ai", "ai security", "automated investigation and response", "autonomous security", "defender for office 365", "incident response", "large language models", "microsoft defender", "news", "phishing detection", "phishing triage agent", "responsible ai", "security", "security copilot", "security operations center", "soc automation", "threat intelligence", "zero trust security"]
+permalink: /ai/news/Announcing-Public-Preview-of-the-Phishing-Triage-Agent-in-Microsoft-Defender
+tags:
+- AI
+- AI Security
+- Automated Investigation And Response
+- Autonomous Security
+- Defender For Office 365
+- Incident Response
+- Large Language Models
+- Microsoft Defender
+- News
+- Phishing Detection
+- Phishing Triage Agent
+- Responsible AI
+- Security
+- Security Copilot
+- Security Operations Center
+- SOC Automation
+- Threat Intelligence
+- Zero Trust Security
+section_names:
+- ai
+- security
 ---
-
 Cristina Da Gama Henriquez announces the public preview of the Phishing Triage Agent in Microsoft Defender, highlighting its AI-powered, autonomous phishing detection capabilities for SOC teams.<!--excerpt_end-->
 
 # Announcing Public Preview: Phishing Triage Agent in Microsoft Defender

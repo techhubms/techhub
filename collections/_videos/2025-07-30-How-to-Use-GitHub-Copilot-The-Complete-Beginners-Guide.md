@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "How to Use GitHub Copilot: The Complete Beginner's Guide"
-description: "This beginner-friendly video compilation delivers a comprehensive, hands-on introduction to GitHub Copilot, covering core features, security best practices, and practical applications. Viewers will learn how to set up Copilot, perform prompt engineering to optimize results, implement secure coding practices, and use Copilot in realistic projects such as building a REST API and a React application directly within Visual Studio Code. The video also explores test-driven development and code review workflows, making it a practical resource for developers new to AI-powered assistance in software development."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SJqGYwRq0uc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=SJqGYwRq0uc
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-30 17:00:40 +00:00
-permalink: "/2025-07-30-How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Beginner Tutorial", "Code Refactoring", "Code Review", "Coding", "Development Workflow", "GitHub", "GitHub Copilot", "Integration", "LLMs", "Prompt Engineering", "React", "REST API", "Security Best Practices", "Test Driven Development", "Tutorial", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai pair programming", "beginner tutorial", "code refactoring", "code review", "coding", "development workflow", "github", "github copilot", "integration", "llms", "prompt engineering", "react", "rest api", "security best practices", "test driven development", "tutorial", "videos", "vs code"]
+permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide
+tags:
+- AI
+- AI Pair Programming
+- Beginner Tutorial
+- Code Refactoring
+- Code Review
+- Coding
+- Development Workflow
+- GitHub
+- GitHub Copilot
+- Integration
+- LLMs
+- Prompt Engineering
+- React
+- REST API
+- Security Best Practices
+- Test Driven Development
+- Tutorial
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub presents a detailed video guide by their own team on mastering GitHub Copilot, showing developers how to leverage Copilot’s features in Visual Studio Code for building secure, production-quality software.<!--excerpt_end-->
 
 {% youtube SJqGYwRq0uc %}

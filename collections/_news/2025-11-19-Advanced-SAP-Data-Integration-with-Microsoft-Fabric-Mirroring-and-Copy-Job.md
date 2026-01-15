@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Advanced SAP Data Integration with Microsoft Fabric: Mirroring and Copy Job"
-description: "This article presents a comprehensive overview of new SAP data integration capabilities within Microsoft Fabric, focusing on Mirroring and Copy Job enhancements. It outlines how Microsoft Fabric enables zero-ETL, real-time replication and petabyte-scale data movement for SAP sources, supporting unified analytics and AI-ready data integration via OneLake, Data Factory, and Data Agents. The piece is aimed at technical practitioners and architects seeking to maximize SAP and non-SAP data value using Fabric’s suite of connectors, multi-cloud support, and engineering features."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Advanced SAP Data Integration with Microsoft Fabric: Mirroring and Copy Job'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 08:30:00 +00:00
-permalink: "/2025-11-19-Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Ready Data", "Azure", "BW OpenHub", "Copy Job", "Data Agents", "Data Engineering", "Data Factory", "Data Integration", "Microsoft Fabric", "Mirroring", "ML", "Multi Cloud", "News", "OData", "ODBC", "OneLake", "Petabyte Scale", "Real Time Analytics", "SAP Business Data Cloud Connect", "SAP Connectors", "SAP Datasphere", "Zero ETL"]
-tags_normalized: ["ai", "ai ready data", "azure", "bw openhub", "copy job", "data agents", "data engineering", "data factory", "data integration", "microsoft fabric", "mirroring", "ml", "multi cloud", "news", "odata", "odbc", "onelake", "petabyte scale", "real time analytics", "sap business data cloud connect", "sap connectors", "sap datasphere", "zero etl"]
+permalink: /ai/news/Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job
+tags:
+- AI
+- AI Ready Data
+- Azure
+- BW OpenHub
+- Copy Job
+- Data Agents
+- Data Engineering
+- Data Factory
+- Data Integration
+- Microsoft Fabric
+- Mirroring
+- ML
+- Multi Cloud
+- News
+- OData
+- ODBC
+- OneLake
+- Petabyte Scale
+- Real Time Analytics
+- SAP Business Data Cloud Connect
+- SAP Connectors
+- SAP Datasphere
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Ulrich Christ, Wilson Lee, Linda Wang, and Ye Xu introduce new SAP data connectivity features in Microsoft Fabric, detailing Mirroring and Copy Job for zero-ETL and scalable data integration for unified analytics and AI scenarios.<!--excerpt_end-->
 
 # Advanced SAP Data Integration with Microsoft Fabric: Mirroring and Copy Job

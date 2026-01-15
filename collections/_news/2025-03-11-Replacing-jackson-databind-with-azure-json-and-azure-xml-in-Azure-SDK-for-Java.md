@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Replacing jackson-databind with azure-json and azure-xml in Azure SDK for Java"
-description: "This blog post by Alan Zimmer details the Azure SDK for Java team's migration from jackson-databind to their own azure-json and azure-xml libraries, improving dependency management, reducing reflection, and enhancing compatibility with the Java module system. It covers usage, integration with Jackson and Gson, and ongoing plans."
-author: "Alan Zimmer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/replacing-jackson-databind-with-azure-json-and-azure-xml/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Replacing jackson-databind with azure-json and azure-xml in Azure SDK for Java
+author: Alan Zimmer
+canonical_url: https://devblogs.microsoft.com/azure-sdk/replacing-jackson-databind-with-azure-json-and-azure-xml/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-11 20:38:45 +00:00
-permalink: "/2025-03-11-Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure Core", "Azure JSON", "Azure SDK", "Azure XML", "Coding", "Core", "Dependency Management", "Gson", "Jackson Databind", "Java", "JsonSerializable", "Module System", "News", "Reflection", "Serialization", "XmlSerializable"]
-tags_normalized: ["azure", "azure core", "azure json", "azure sdk", "azure xml", "coding", "core", "dependency management", "gson", "jackson databind", "java", "jsonserializable", "module system", "news", "reflection", "serialization", "xmlserializable"]
+permalink: /coding/news/Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java
+tags:
+- Azure
+- Azure Core
+- Azure JSON
+- Azure SDK
+- Azure XML
+- Coding
+- Core
+- Dependency Management
+- Gson
+- Jackson Databind
+- Java
+- JsonSerializable
+- Module System
+- News
+- Reflection
+- Serialization
+- XmlSerializable
+section_names:
+- azure
+- coding
 ---
-
 In this post, Alan Zimmer explains how the Azure SDK for Java transitioned from jackson-databind to in-house azure-json and azure-xml libraries, exploring the technical motivations, migration details, and integration points with common serialization frameworks.<!--excerpt_end-->
 
 ## Overview

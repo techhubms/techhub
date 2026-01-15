@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Arc Jumpstart Drops: Enhancing Community Collaboration for Hybrid Cloud Automation"
-description: "Thomas Maurer introduces Arc Jumpstart Drops, a community-driven repository for scripts, tools, and tutorials that streamline automation and collaboration across hybrid, multicloud, and edge environments using Microsoft Azure Arc. The article details its purpose, benefits, and how professionals can contribute and earn recognition."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/02/arc-jumpstart-drops-empowering-innovation-and-collaboration/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Arc Jumpstart Drops: Enhancing Community Collaboration for Hybrid Cloud Automation'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/02/arc-jumpstart-drops-empowering-innovation-and-collaboration/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-02-11 13:40:43 +00:00
-permalink: "/2025-02-11-Arc-Jumpstart-Drops-Enhancing-Community-Collaboration-for-Hybrid-Cloud-Automation.html"
-categories: ["Azure", "DevOps"]
-tags: ["Arc Jumpstart", "Automation", "Azure", "Azure Arc", "Blogs", "Cloud", "Cloud Native", "Community Collaboration", "DevOps", "Edge Computing", "Hybrid Cloud", "IT Operations", "Jumpstart Badges", "Knowledge Sharing", "Microsoft", "Microsoft Azure", "Multicloud", "Open Source", "Scripts", "Tools"]
-tags_normalized: ["arc jumpstart", "automation", "azure", "azure arc", "blogs", "cloud", "cloud native", "community collaboration", "devops", "edge computing", "hybrid cloud", "it operations", "jumpstart badges", "knowledge sharing", "microsoft", "microsoft azure", "multicloud", "open source", "scripts", "tools"]
+permalink: /azure/blogs/Arc-Jumpstart-Drops-Enhancing-Community-Collaboration-for-Hybrid-Cloud-Automation
+tags:
+- Arc Jumpstart
+- Automation
+- Azure
+- Azure Arc
+- Blogs
+- Cloud
+- Cloud Native
+- Community Collaboration
+- DevOps
+- Edge Computing
+- Hybrid Cloud
+- IT Operations
+- Jumpstart Badges
+- Knowledge Sharing
+- Microsoft
+- Microsoft Azure
+- Multicloud
+- Open Source
+- Scripts
+- Tools
+section_names:
+- azure
+- devops
 ---
-
 Authored by Thomas Maurer, this article presents Arc Jumpstart Drops, a Microsoft Azure Arc initiative that empowers community members to share scripts and tools for hybrid, multicloud, and edge deployments.<!--excerpt_end-->
 
 # Arc Jumpstart Drops: Enhancing Community Collaboration for Hybrid Cloud Automation

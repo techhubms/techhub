@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It"
-description: "Creative-Paper1007 highlights the lack of native git worktree support in Visual Studio and describes building a custom extension to fill this gap. The extension allows users to create, manage, and switch git worktrees directly in Visual Studio 2022, streamlining branch management without third-party tools or command-line work."
-author: "Creative-Paper1007"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1m1l1lc/visual_studio_has_most_git_features_i_need_except/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It
+author: Creative-Paper1007
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1m1l1lc/visual_studio_has_most_git_features_i_need_except/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-16 18:50:36 +00:00
-permalink: "/2025-07-16-Visual-Studio-Has-Most-Git-Features-I-NeedExcept-Worktree-So-I-Built-an-Extension-for-It.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Branch Management", "C#", "Coding", "Community", "DevOps", "Extension", "Git Integration", "Git Worktree", "Productivity", "Version Control", "VS", "VS Extensibility SDK"]
-tags_normalized: ["dotnet", "branch management", "csharp", "coding", "community", "devops", "extension", "git integration", "git worktree", "productivity", "version control", "vs", "vs extensibility sdk"]
+permalink: /coding/community/Visual-Studio-Has-Most-Git-Features-I-NeedExcept-Worktree-So-I-Built-an-Extension-for-It
+tags:
+- .NET
+- Branch Management
+- C#
+- Coding
+- Community
+- DevOps
+- Extension
+- Git Integration
+- Git Worktree
+- Productivity
+- Version Control
+- VS
+- VS Extensibility SDK
+section_names:
+- coding
+- devops
 ---
-
 Creative-Paper1007 discusses building a Visual Studio extension to add native-like git worktree support, making it easier for developers to manage multiple branches without leaving their IDE.<!--excerpt_end-->
 
 ## Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It

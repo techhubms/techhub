@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Database for PostgreSQL: Flexible Server Deep Dive"
-description: "This in-depth video by John Savill explores Azure Database for PostgreSQL, covering the fundamentals of PostgreSQL, Azure's managed PostgreSQL offerings, configuration, networking, security, high availability, backups, replication, and cost management. The session provides practical guidance on utilizing Azure's Flexible Server to host and manage PostgreSQL workloads reliably and efficiently with various Azure-specific features."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aP-kn76-emI"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Database for PostgreSQL: Flexible Server Deep Dive'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=aP-kn76-emI
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-22 13:17:22 +00:00
-permalink: "/2025-09-22-Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive.html"
-categories: ["Azure"]
-tags: ["Authentication", "Azure", "Azure Backup", "Azure Cloud", "Azure Database For PostgreSQL", "Cloud", "Cloud Database", "Connection Pooling", "Database", "Database Management", "Disk Configuration", "Encryption", "Flexible Server", "High Availability", "Managed Database", "Microsoft", "Microsoft Azure", "Microsoft Cloud", "Postgresql", "Postgress", "Replication", "Videos", "Virtual Endpoints"]
-tags_normalized: ["authentication", "azure", "azure backup", "azure cloud", "azure database for postgresql", "cloud", "cloud database", "connection pooling", "database", "database management", "disk configuration", "encryption", "flexible server", "high availability", "managed database", "microsoft", "microsoft azure", "microsoft cloud", "postgresql", "postgress", "replication", "videos", "virtual endpoints"]
+permalink: /azure/videos/Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive
+tags:
+- Authentication
+- Azure
+- Azure Backup
+- Azure Cloud
+- Azure Database For PostgreSQL
+- Cloud
+- Cloud Database
+- Connection Pooling
+- Database
+- Database Management
+- Disk Configuration
+- Encryption
+- Flexible Server
+- High Availability
+- Managed Database
+- Microsoft
+- Microsoft Azure
+- Microsoft Cloud
+- Postgresql
+- Postgress
+- Replication
+- Videos
+- Virtual Endpoints
+section_names:
+- azure
 ---
-
 John Savill's Technical Training delivers a comprehensive breakdown of Azure Database for PostgreSQL, guiding viewers through the management, configuration, and operational best practices for running PostgreSQL on Azure.<!--excerpt_end-->
 
 {% youtube aP-kn76-emI %}

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Understanding Nullable Reference Types in .NET"
-description: "This session explores the concept of Nullable Reference Types introduced in .NET, focusing on their importance, default status in new projects, and how they simplify C# code. Developers will learn why nullability matters, how to write safer, less error-prone code, and best practices for adopting these features in modern .NET development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7Sz4heIk_lM"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Understanding Nullable Reference Types in .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=7Sz4heIk_lM
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 08:30:06 +00:00
-permalink: "/2025-11-14-Understanding-Nullable-Reference-Types-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Conf", "C#", "C# 8.0", "Code Safety", "Coding", "Default Project Settings", "Modern C# Features", "Non Nullable References", "Nullability", "Nullable Reference Types", "Programming Best Practices", "Type System", "Videos"]
-tags_normalized: ["dotnet", "dotnet conf", "csharp", "csharp 8dot0", "code safety", "coding", "default project settings", "modern csharp features", "non nullable references", "nullability", "nullable reference types", "programming best practices", "type system", "videos"]
+permalink: /coding/videos/Understanding-Nullable-Reference-Types-in-NET
+tags:
+- .NET
+- .NET Conf
+- C#
+- C# 8.0
+- Code Safety
+- Coding
+- Default Project Settings
+- Modern C# Features
+- Non Nullable References
+- Nullability
+- Nullable Reference Types
+- Programming Best Practices
+- Type System
+- Videos
+section_names:
+- coding
 ---
-
 dotnet presents a session on the practical reasons for using Nullable Reference Types in .NET, showing how this feature enhances code safety and readability.<!--excerpt_end-->
 
 {% youtube 7Sz4heIk_lM %}

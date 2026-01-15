@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Enabling API Key Authentication for Azure Logic Apps MCP Servers"
-description: "This guide, authored by KentWeareMSFT, explains how to enable API Key authentication when calling Azure Logic Apps Model Context Protocol (MCP) Servers. It walks through configuration in host.json, API and CLI commands for retrieving and regenerating keys, and practical usage scenarios such as agent integration. Readers will learn to secure Logic Apps MCP endpoints using OAuth2 and API Key, understand default behaviors, and discover advanced customizations for key expiry and management."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enabling API Key Authentication for Azure Logic Apps MCP Servers
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:35:39 +00:00
-permalink: "/2025-11-18-Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MCP-Servers.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Access Token", "Agent Loop", "AI", "API Key Authentication", "API Management", "Az CLI", "Azure", "Azure AI Foundry", "Azure API Center", "Azure Logic Apps", "Community", "Conversational Agents", "Host.json", "Key Expiry", "Logic Apps MCP Server", "Microsoft Azure", "OAuth2", "Primary/Secondary Key", "Regenerate API Key", "REST API", "Security", "Security Configuration", "X API Key"]
-tags_normalized: ["access token", "agent loop", "ai", "api key authentication", "api management", "az cli", "azure", "azure ai foundry", "azure api center", "azure logic apps", "community", "conversational agents", "hostdotjson", "key expiry", "logic apps mcp server", "microsoft azure", "oauth2", "primaryslashsecondary key", "regenerate api key", "rest api", "security", "security configuration", "x api key"]
+permalink: /ai/community/Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MCP-Servers
+tags:
+- Access Token
+- Agent Loop
+- AI
+- API Key Authentication
+- API Management
+- Az CLI
+- Azure
+- Azure AI Foundry
+- Azure API Center
+- Azure Logic Apps
+- Community
+- Conversational Agents
+- Host.json
+- Key Expiry
+- Logic Apps MCP Server
+- Microsoft Azure
+- OAuth2
+- Primary/Secondary Key
+- Regenerate API Key
+- REST API
+- Security
+- Security Configuration
+- X API Key
+section_names:
+- ai
+- azure
+- security
 ---
-
 KentWeareMSFT shares a detailed tutorial on configuring and managing API Key authentication for Azure Logic Apps MCP Servers, including setup, key management, and agent usage.<!--excerpt_end-->
 
 # Enabling API Key Authentication for Azure Logic Apps MCP Servers

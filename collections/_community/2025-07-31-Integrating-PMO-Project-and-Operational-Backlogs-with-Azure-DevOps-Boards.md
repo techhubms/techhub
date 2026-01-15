@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating PMO Project and Operational Backlogs with Azure DevOps Boards"
-description: "This community discussion explores how teams can use Azure DevOps Boards to manage both project and operational tasks in a central location. The post addresses scenarios where a Project Management Office (PMO) creates project-focused tasks while technical teams also handle ongoing operational work, aiming for unified visibility and management, including hierarchical team views and API feed integration from ITSM systems."
-author: "Acrobatic-Lychee3314"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mdxkd8/devops_for_teams_managing_tasks_across_operations/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Integrating PMO Project and Operational Backlogs with Azure DevOps Boards
+author: Acrobatic-Lychee3314
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1mdxkd8/devops_for_teams_managing_tasks_across_operations/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-31 10:06:16 +00:00
-permalink: "/2025-07-31-Integrating-PMO-Project-and-Operational-Backlogs-with-Azure-DevOps-Boards.html"
-categories: ["Azure", "DevOps"]
-tags: ["API Task Feed", "Azure", "Azure Boards", "Azure DevOps", "Community", "Cross Team Collaboration", "DevOps", "DevOps Best Practices", "Hierarchical Teams", "ITSM Integration", "Operational Backlog", "PMO Integration", "Project Management", "Project View", "Task Assignment", "Team Boards", "Work Item Visibility"]
-tags_normalized: ["api task feed", "azure", "azure boards", "azure devops", "community", "cross team collaboration", "devops", "devops best practices", "hierarchical teams", "itsm integration", "operational backlog", "pmo integration", "project management", "project view", "task assignment", "team boards", "work item visibility"]
+permalink: /azure/community/Integrating-PMO-Project-and-Operational-Backlogs-with-Azure-DevOps-Boards
+tags:
+- API Task Feed
+- Azure
+- Azure Boards
+- Azure DevOps
+- Community
+- Cross Team Collaboration
+- DevOps
+- DevOps Best Practices
+- Hierarchical Teams
+- ITSM Integration
+- Operational Backlog
+- PMO Integration
+- Project Management
+- Project View
+- Task Assignment
+- Team Boards
+- Work Item Visibility
+section_names:
+- azure
+- devops
 ---
-
 Acrobatic-Lychee3314 discusses strategies for consolidating project and operational tasks for technical teams using Azure DevOps Boards, emphasizing unified management for both PMO-driven and ad-hoc work.<!--excerpt_end-->
 
 # Integrating PMO Project and Operational Backlogs with Azure DevOps Boards

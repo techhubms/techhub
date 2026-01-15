@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Zero-Trust Agents: Adding Identity and Access to Multi-Agent Workflows"
-description: "The article explores implementing zero-trust principles in AI agent workflows by integrating identity and access management. Using a hotel booking use case, it demonstrates combining WSO2 Asgardeo, Microsoft Azure OpenAI, and AutoGen for secure, auditable AI agents carrying digital identities, aligning with future Microsoft Entra Agent ID strategies."
-author: "Thia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent/ba-p/4427790"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: 'Zero-Trust Agents: Adding Identity and Access to Multi-Agent Workflows'
+author: Thia
+canonical_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent/ba-p/4427790
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-07-08 02:00:00 +00:00
-permalink: "/2025-07-08-Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-Agent-Workflows.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Access Management", "Agent Orchestration", "AI", "Auditability", "AutoGen", "Azure", "Azure AI Foundry", "Azure OpenAI", "Community", "Enterprise Security", "Entra Agent ID", "Identity Management", "JWT", "OAuth2", "Security", "Security Best Practices", "WSO2 Asgardeo", "Zero Trust"]
-tags_normalized: ["access management", "agent orchestration", "ai", "auditability", "autogen", "azure", "azure ai foundry", "azure openai", "community", "enterprise security", "entra agent id", "identity management", "jwt", "oauth2", "security", "security best practices", "wso2 asgardeo", "zero trust"]
+permalink: /ai/community/Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-Agent-Workflows
+tags:
+- Access Management
+- Agent Orchestration
+- AI
+- Auditability
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Community
+- Enterprise Security
+- Entra Agent ID
+- Identity Management
+- JWT
+- OAuth2
+- Security
+- Security Best Practices
+- WSO2 Asgardeo
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Thia details how zero-trust security and identity management can empower secure, autonomous AI agents by utilizing Azure OpenAI, AutoGen, and WSO2 Asgardeo.<!--excerpt_end-->
 
 ## Overview

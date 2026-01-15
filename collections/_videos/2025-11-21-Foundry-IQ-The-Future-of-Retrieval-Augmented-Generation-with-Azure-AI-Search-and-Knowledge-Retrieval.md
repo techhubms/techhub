@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Foundry IQ: The Future of Retrieval-Augmented Generation with Azure AI Search and Knowledge Retrieval"
-description: "This session highlights Foundry IQ as a knowledge layer for AI agents, detailing new features in Azure AI Search and Microsoft Foundry. It covers multi-source RAG orchestration, retrieval steering, dynamic security controls, and agentic architectures, illustrating the integration of enterprise data and enhanced context for AI applications."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=slDdNIQCJBQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Foundry IQ: The Future of Retrieval-Augmented Generation with Azure AI Search and Knowledge Retrieval'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=slDdNIQCJBQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:32:34 +00:00
-permalink: "/2025-11-21-Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic RAG", "AI", "AI Agents", "Azure", "Azure AI Search", "Cloud Indexing", "Contextual AI", "Data Retrieval", "Dynamic Security Controls", "Enterprise Data", "Foundry IQ", "GitHub Documentation", "InnovatewithAzureAIappsandagents", "Knowledge Retrieval", "Microsoft Foundry", "MSIgnite", "RAG Orchestration", "Retrieval Augmented Generation", "Steering Instructions", "Videos"]
-tags_normalized: ["agentic rag", "ai", "ai agents", "azure", "azure ai search", "cloud indexing", "contextual ai", "data retrieval", "dynamic security controls", "enterprise data", "foundry iq", "github documentation", "innovatewithazureaiappsandagents", "knowledge retrieval", "microsoft foundry", "msignite", "rag orchestration", "retrieval augmented generation", "steering instructions", "videos"]
+permalink: /ai/videos/Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval
+tags:
+- Agentic RAG
+- AI
+- AI Agents
+- Azure
+- Azure AI Search
+- Cloud Indexing
+- Contextual AI
+- Data Retrieval
+- Dynamic Security Controls
+- Enterprise Data
+- Foundry IQ
+- GitHub Documentation
+- InnovatewithAzureAIappsandagents
+- Knowledge Retrieval
+- Microsoft Foundry
+- MSIgnite
+- RAG Orchestration
+- Retrieval Augmented Generation
+- Steering Instructions
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events present an in-depth session on Foundry IQ and the evolving landscape of retrieval-augmented generation (RAG), focusing on integrating enterprise data for AI agents using Azure AI Search.<!--excerpt_end-->
 
 {% youtube slDdNIQCJBQ %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Implementing a Center of Excellence for Generative AI"
-description: "This episode of the Azure Essentials Show, hosted by Thomas Maurer with guest Ben Brauer, offers a deep dive into building and scaling a Generative AI Center of Excellence (CoE). The discussion covers organizational roles, governance, ethical AI deployment, and practical guidance using Microsoft’s recommended frameworks, especially with Azure services."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Implementing a Center of Excellence for Generative AI
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-12 17:03:42 +00:00
-permalink: "/2025-08-12-Implementing-a-Center-of-Excellence-for-Generative-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Best Practices", "AI Deployment", "AI Governance", "AI Operations", "Azure", "Azure Cloud Adoption Framework", "Azure Essentials Show", "Azure Machine Learning", "Azure OpenAI", "Blogs", "Center Of Excellence", "Center Of Exellence", "Cloud", "CoE", "CoE Strategy", "Enterprise AI", "Ethical AI", "Gen AI", "Generative AI", "Microsoft", "Microsoft Azure", "Responsible AI", "Skill Enablement", "Video"]
-tags_normalized: ["ai", "ai best practices", "ai deployment", "ai governance", "ai operations", "azure", "azure cloud adoption framework", "azure essentials show", "azure machine learning", "azure openai", "blogs", "center of excellence", "center of exellence", "cloud", "coe", "coe strategy", "enterprise ai", "ethical ai", "gen ai", "generative ai", "microsoft", "microsoft azure", "responsible ai", "skill enablement", "video"]
+permalink: /ai/blogs/Implementing-a-Center-of-Excellence-for-Generative-AI
+tags:
+- AI
+- AI Best Practices
+- AI Deployment
+- AI Governance
+- AI Operations
+- Azure
+- Azure Cloud Adoption Framework
+- Azure Essentials Show
+- Azure Machine Learning
+- Azure OpenAI
+- Blogs
+- Center Of Excellence
+- Center Of Exellence
+- Cloud
+- CoE
+- CoE Strategy
+- Enterprise AI
+- Ethical AI
+- Gen AI
+- Generative AI
+- Microsoft
+- Microsoft Azure
+- Responsible AI
+- Skill Enablement
+- Video
+section_names:
+- ai
+- azure
 ---
-
 Thomas Maurer explores with Ben Brauer the strategies for implementing a Generative AI Center of Excellence, focusing on Azure frameworks and best practices for enterprise AI, in this valuable Azure Essentials Show episode.<!--excerpt_end-->
 
 # Implementing a Center of Excellence for Generative AI

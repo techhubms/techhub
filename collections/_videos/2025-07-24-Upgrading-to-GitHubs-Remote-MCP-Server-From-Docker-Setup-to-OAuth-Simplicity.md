@@ -1,20 +1,28 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity"
-description: "This video explores the upgrade of the Model Context Protocol (MCP) server from local to remote, focusing on enhanced user experience, security differences, dynamic toolsets, and new features. The GitHub team demonstrates installation, dives into control improvements, and outlines reasons to adopt the remote server and its future direction."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ruxjC9rDYqI"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=ruxjC9rDYqI
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-24 16:37:37 +00:00
-permalink: "/2025-07-24-Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity.html"
-categories: ["DevOps"]
-tags: ["DevOps", "DevOps Workflow", "Dynamic Toolsets", "GitHub", "Installation", "MCP", "OAuth", "Open Source", "Remote Server", "Server Upgrade", "Videos"]
-tags_normalized: ["devops", "devops workflow", "dynamic toolsets", "github", "installation", "mcp", "oauth", "open source", "remote server", "server upgrade", "videos"]
+permalink: /devops/videos/Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity
+tags:
+- DevOps
+- DevOps Workflow
+- Dynamic Toolsets
+- GitHub
+- Installation
+- MCP
+- OAuth
+- Open Source
+- Remote Server
+- Server Upgrade
+- Videos
+section_names:
+- devops
 ---
-
 In this GitHub-hosted video, the team explains the major upgrade from the local to remote MCP server, examining features, setup, security, and future plans.<!--excerpt_end-->
 
 {% youtube ruxjC9rDYqI %}

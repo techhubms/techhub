@@ -1,17 +1,44 @@
----
-layout: "post"
-title: "XPRT Magazine 13"
-description: "A knowledge-driven edition featuring engineering culture, accessibility, observability, cloud adoption, security, and modern .NET development. Includes practical guides, case studies, and innovation stories from Xpirit’s experts."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 13
 date: 2022-10-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2022-10-01-XPRT-Magazine-13.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["Accessibility", "AI", "Automation", "Azure", "Azure Managed Grafana", "Azure Virtual Desktop", "Bitrot", "Blazor", "Cloud Adoption", "Coding", "Community", "Compliance", "DevOps", "Digital Twins", "Engineering Culture", "GitHub Actions", "Knowledge Sharing", "Magazines", "Mocking", "Nullable Reference Types", "Observability", "Platform Engineering", "Security", "Team Learning", "WireMock", "Xpirit USA"]
-tags_normalized: ["accessibility", "ai", "automation", "azure", "azure managed grafana", "azure virtual desktop", "bitrot", "blazor", "cloud adoption", "coding", "community", "compliance", "devops", "digital twins", "engineering culture", "github actions", "knowledge sharing", "magazines", "mocking", "nullable reference types", "observability", "platform engineering", "security", "team learning", "wiremock", "xpirit usa"]
+author: Xebia
+viewing_mode: external
+permalink: /ai/community/XPRT-Magazine-13
+tags:
+- Accessibility
+- AI
+- Automation
+- Azure
+- Azure Managed Grafana
+- Azure Virtual Desktop
+- Bitrot
+- Blazor
+- Cloud Adoption
+- Coding
+- Community
+- Compliance
+- DevOps
+- Digital Twins
+- Engineering Culture
+- GitHub Actions
+- Knowledge Sharing
+- Magazines
+- Mocking
+- Nullable Reference Types
+- Observability
+- Platform Engineering
+- Security
+- Team Learning
+- WireMock
+- Xpirit USA
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 This edition of XPRT Magazine is packed with knowledge sharing on engineering culture, accessibility, observability, cloud adoption, security, and modern .NET development. Explore practical guides, case studies, and innovation stories from Xpirit’s experts, with a focus on building inclusive, secure, and high-performing software.
 <!--excerpt_end-->
 

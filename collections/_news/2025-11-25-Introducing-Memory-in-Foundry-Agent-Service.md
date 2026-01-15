@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Introducing Memory in Foundry Agent Service"
-description: "This article introduces the public preview of the Memory feature in Microsoft Foundry Agent Service, enabling developers to add long-term memory and personalization to AI agents. It covers how to use memory for context retention, technical implementation with APIs and SDKs, architecture, and guidance on getting started, targeting practitioners building applications and multi-agent systems on Microsoft platforms."
-author: "Lewis Liu, Paul Hsu, Takuto Higuchi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Introducing Memory in Foundry Agent Service
+author: Lewis Liu, Paul Hsu, Takuto Higuchi
+canonical_url: https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:48 +00:00
-permalink: "/2025-11-25-Introducing-Memory-in-Foundry-Agent-Service.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Development", "Agent Factory", "Agent Memory", "Agent Service", "AI", "AI Agent", "AI Agents", "API Integration", "Azure", "Contextual AI", "Conversational AI", "Gpt 4.1", "Hybrid Retrieval", "Long Term Memory", "Machine Learning", "MCP", "Memory", "Memory Store", "Microsoft Foundry", "MSIgnite", "Natural Language Processing", "News", "Personalization", "Python SDK", "Stateful Agents", "Text Embedding 3 Small", "User Profile Extraction"]
-tags_normalized: ["agent development", "agent factory", "agent memory", "agent service", "ai", "ai agent", "ai agents", "api integration", "azure", "contextual ai", "conversational ai", "gpt 4dot1", "hybrid retrieval", "long term memory", "machine learning", "mcp", "memory", "memory store", "microsoft foundry", "msignite", "natural language processing", "news", "personalization", "python sdk", "stateful agents", "text embedding 3 small", "user profile extraction"]
+permalink: /ai/news/Introducing-Memory-in-Foundry-Agent-Service
+tags:
+- Agent Development
+- Agent Factory
+- Agent Memory
+- Agent Service
+- AI
+- AI Agent
+- AI Agents
+- API Integration
+- Azure
+- Contextual AI
+- Conversational AI
+- Gpt 4.1
+- Hybrid Retrieval
+- Long Term Memory
+- Machine Learning
+- MCP
+- Memory
+- Memory Store
+- Microsoft Foundry
+- MSIgnite
+- Natural Language Processing
+- News
+- Personalization
+- Python SDK
+- Stateful Agents
+- Text Embedding 3 Small
+- User Profile Extraction
+section_names:
+- ai
+- azure
 ---
-
 Lewis Liu, Paul Hsu, and Takuto Higuchi explain how Microsoft Foundry Agent Service’s new Memory feature helps developers build context-aware, personalized AI agents using long-term memory—all with easy integration and enterprise scalability.<!--excerpt_end-->
 
 # Introducing Memory in Foundry Agent Service

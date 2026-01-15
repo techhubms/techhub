@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – March 2025 Release: New Features, Bug Fixes, and Updated Templates"
-description: "The March 2025 release of Azure Developer CLI (azd) introduces major new features like expanded Azure resource support, new templates for AI integration, and critical bug fixes. This update enhances developer productivity with improved pipeline configuration, template contributions, and updated documentation resources."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) – March 2025 Release: New Features, Bug Fixes, and Updated Templates'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-07 19:14:23 +00:00
-permalink: "/2025-03-07-Azure-Developer-CLI-azd-March-2025-Release-New-Features-Bug-Fixes-and-Updated-Templates.html"
-categories: ["AI", "Azure", "DevOps", "Security", "Coding"]
-tags: [".NET", "AI", "Azd", "Azure", "Azure Cosmos DB", "Azure Developer CLI", "Azure Event Hubs", "Azure Functions", "Azure Key Vault", "Azure Logic Apps", "Azure OpenAI", "Azure SDK", "Azure Service Bus", "Azure Storage", "Bicep", "Codespaces", "Coding", "DevOps", "Docker", "Java", "JavaScript", "Kubernetes", "LangChain4j", "News", "Pipelines", "PowerShell", "Python", "Quarkus", "Security", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "azd", "azure", "azure cosmos db", "azure developer cli", "azure event hubs", "azure functions", "azure key vault", "azure logic apps", "azure openai", "azure sdk", "azure service bus", "azure storage", "bicep", "codespaces", "coding", "devops", "docker", "java", "javascript", "kubernetes", "langchain4j", "news", "pipelines", "powershell", "python", "quarkus", "security", "templates", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-March-2025-Release-New-Features-Bug-Fixes-and-Updated-Templates
+tags:
+- .NET
+- AI
+- Azd
+- Azure
+- Azure Cosmos DB
+- Azure Developer CLI
+- Azure Event Hubs
+- Azure Functions
+- Azure Key Vault
+- Azure Logic Apps
+- Azure OpenAI
+- Azure SDK
+- Azure Service Bus
+- Azure Storage
+- Bicep
+- Codespaces
+- Coding
+- DevOps
+- Docker
+- Java
+- JavaScript
+- Kubernetes
+- LangChain4j
+- News
+- Pipelines
+- PowerShell
+- Python
+- Quarkus
+- Security
+- Templates
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- security
+- coding
 ---
-
 Authored by Kristen Womack, this news post details the March 2025 Azure Developer CLI (azd) release, covering notable new features, bug fixes, contributions on templates, and enhanced support for AI and Azure services.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – March 2025 Release

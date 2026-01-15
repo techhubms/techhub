@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Reduce Metrics Noise and Costs with Container Network Metrics Filtering in ACNS for AKS"
-description: "This article introduces the Container Network Metrics Filtering feature in Azure Container Networking Services (ACNS) for Azure Kubernetes Service (AKS), now in Public Preview. Learn how to filter metrics at the source to optimize costs, declutter dashboards, and gain more precise control over network observability using Kubernetes-native filtering and Cilium agents. The guide covers the reason for metrics bloat, key benefits of fine-grained filtering, technical how-to, real-world YAML CRD example, and links for deeper learning."
-author: "KhushbuP"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Reduce Metrics Noise and Costs with Container Network Metrics Filtering in ACNS for AKS
+author: KhushbuP
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 04:16:56 +00:00
-permalink: "/2025-11-08-Reduce-Metrics-Noise-and-Costs-with-Container-Network-Metrics-Filtering-in-ACNS-for-AKS.html"
-categories: ["Azure", "DevOps"]
-tags: ["ACNS", "AKS", "Azure", "Azure Container Networking Services", "Cilium", "Community", "ContainerNetworking", "Cost Optimization", "CRD", "Custom Resource Definitions", "DevOps", "Ebpf", "Grafana", "Kubernetes", "Metrics Filtering", "Network Observability", "Prometheus"]
-tags_normalized: ["acns", "aks", "azure", "azure container networking services", "cilium", "community", "containernetworking", "cost optimization", "crd", "custom resource definitions", "devops", "ebpf", "grafana", "kubernetes", "metrics filtering", "network observability", "prometheus"]
+permalink: /azure/community/Reduce-Metrics-Noise-and-Costs-with-Container-Network-Metrics-Filtering-in-ACNS-for-AKS
+tags:
+- ACNS
+- AKS
+- Azure
+- Azure Container Networking Services
+- Cilium
+- Community
+- ContainerNetworking
+- Cost Optimization
+- CRD
+- Custom Resource Definitions
+- DevOps
+- Ebpf
+- Grafana
+- Kubernetes
+- Metrics Filtering
+- Network Observability
+- Prometheus
+section_names:
+- azure
+- devops
 ---
-
 KhushbuP presents an in-depth look at Container Network Metrics Filtering in ACNS for AKS, empowering teams to control Kubernetes network metrics and reduce cost and noise from unnecessary data.<!--excerpt_end-->
 
 # Cut the Noise & Cost with Container Network Metrics Filtering in ACNS for AKS

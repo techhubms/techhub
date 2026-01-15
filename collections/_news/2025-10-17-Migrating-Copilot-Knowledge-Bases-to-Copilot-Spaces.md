@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Migrating Copilot Knowledge Bases to Copilot Spaces"
-description: "This announcement details the migration process from Copilot knowledge bases to the new Copilot Spaces feature on GitHub. It explains security considerations, the benefits for team collaboration and knowledge sharing, and provides steps to convert existing knowledge bases before the sunset date. Practical use cases such as onboarding, sharing project standards, and centralized documentation are included alongside links to relevant resources."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Migrating Copilot Knowledge Bases to Copilot Spaces
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 20:49:48 +00:00
-permalink: "/2025-10-17-Migrating-Copilot-Knowledge-Bases-to-Copilot-Spaces.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "API Standards", "Copilot", "Copilot Spaces", "Documentation", "GitHub", "GitHub Admin", "GitHub Copilot", "KB Sunset", "Knowledge Base Migration", "News", "Onboarding", "PRD", "Release Notes", "Team Collaboration"]
-tags_normalized: ["ai", "api standards", "copilot", "copilot spaces", "documentation", "github", "github admin", "github copilot", "kb sunset", "knowledge base migration", "news", "onboarding", "prd", "release notes", "team collaboration"]
+permalink: /github-copilot/news/Migrating-Copilot-Knowledge-Bases-to-Copilot-Spaces
+tags:
+- AI
+- API Standards
+- Copilot
+- Copilot Spaces
+- Documentation
+- GitHub
+- GitHub Admin
+- GitHub Copilot
+- KB Sunset
+- Knowledge Base Migration
+- News
+- Onboarding
+- PRD
+- Release Notes
+- Team Collaboration
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the new Copilot Spaces feature on GitHub, offering a streamlined migration path for existing Copilot knowledge bases, with improved security, organizational management, and support for collaborative development workflows.<!--excerpt_end-->
 
 # Migrating Copilot Knowledge Bases to Copilot Spaces

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Real-time Intelligence with Microsoft Fabric at Swiggy"
-description: "This article discusses how Swiggy, a leading food delivery platform in India, leverages Microsoft Fabric to deliver real-time intelligence at scale. While the available excerpt is brief, it indicates a focus on Microsoft Fabric and the integration of AI-driven solutions for operational efficiency and enhanced customer service. The piece shows the application of fabric-based architecture in large-scale data scenarios, highlighting its use for real-time decision-making and intelligence."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Real-time Intelligence with Microsoft Fabric at Swiggy
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 14:03:29 +00:00
-permalink: "/2025-12-11-Real-time-Intelligence-with-Microsoft-Fabric-at-Swiggy.html"
-categories: ["AI", "ML"]
-tags: ["AI", "Cloud Data Platform", "Data Analytics", "Data Engineering", "Food Delivery Platform", "Machine Learning", "Microsoft Fabric", "ML", "News", "Operational Intelligence", "Real Time Intelligence", "Swiggy"]
-tags_normalized: ["ai", "cloud data platform", "data analytics", "data engineering", "food delivery platform", "machine learning", "microsoft fabric", "ml", "news", "operational intelligence", "real time intelligence", "swiggy"]
+permalink: /ai/news/Real-time-Intelligence-with-Microsoft-Fabric-at-Swiggy
+tags:
+- AI
+- Cloud Data Platform
+- Data Analytics
+- Data Engineering
+- Food Delivery Platform
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- Operational Intelligence
+- Real Time Intelligence
+- Swiggy
+section_names:
+- ai
+- ml
 ---
-
 Chen May Yee explores Swiggy’s use of Microsoft Fabric for delivering real-time intelligence, emphasizing the adoption of AI and data engineering to serve millions of users.<!--excerpt_end-->
 
 # Real-time Intelligence: How India’s Swiggy Serves Millions with Microsoft Fabric

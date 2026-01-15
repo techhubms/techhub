@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Extending Outbound Access Protection to Fabric Warehouse and SQL Analytics Endpoint"
-description: "This article details how Outbound Access Protection (OAP) is now extended to Microsoft Fabric Warehouse (Preview) and SQL Analytics Endpoint (General Availability). By enforcing strict controls on outbound connections for all workloads in a Fabric workspace, organizations can ensure stronger governance and security, preventing unauthorized data movement and ensuring data loads and queries are restricted to explicitly trusted destinations. OAP builds on the existing security foundation of Fabric, automating outbound boundary enforcement and integrating with key analytics operations like COPY INTO and OPENROWSET. This update reflects Fabric’s commitment to secure analytics at scale."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/extending-outbound-access-protection-to-fabric-warehouse-and-sql-analytics-endpoint/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Extending Outbound Access Protection to Fabric Warehouse and SQL Analytics Endpoint
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/extending-outbound-access-protection-to-fabric-warehouse-and-sql-analytics-endpoint/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 09:00:00 +00:00
-permalink: "/2025-10-13-Extending-Outbound-Access-Protection-to-Fabric-Warehouse-and-SQL-Analytics-Endpoint.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Analytics Security", "Azure", "Cloud Analytics", "COPY INTO", "Data Exfiltration Prevention", "Data Governance", "Data Security", "Fabric Warehouse", "Governance", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Outbound Access Protection", "Role Based Access Control", "Security", "SQL Analytics Endpoint", "Workspace Protection"]
-tags_normalized: ["analytics security", "azure", "cloud analytics", "copy into", "data exfiltration prevention", "data governance", "data security", "fabric warehouse", "governance", "microsoft fabric", "ml", "news", "openrowset", "outbound access protection", "role based access control", "security", "sql analytics endpoint", "workspace protection"]
+permalink: /ml/news/Extending-Outbound-Access-Protection-to-Fabric-Warehouse-and-SQL-Analytics-Endpoint
+tags:
+- Analytics Security
+- Azure
+- Cloud Analytics
+- COPY INTO
+- Data Exfiltration Prevention
+- Data Governance
+- Data Security
+- Fabric Warehouse
+- Governance
+- Microsoft Fabric
+- ML
+- News
+- OPENROWSET
+- Outbound Access Protection
+- Role Based Access Control
+- Security
+- SQL Analytics Endpoint
+- Workspace Protection
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog explains how Outbound Access Protection is now available for Fabric Warehouse and SQL Analytics Endpoint, enabling organizations to secure analytics workloads by restricting outbound connections to only trusted destinations.<!--excerpt_end-->
 
 # Extending Outbound Access Protection to Fabric Warehouse and SQL Analytics Endpoint

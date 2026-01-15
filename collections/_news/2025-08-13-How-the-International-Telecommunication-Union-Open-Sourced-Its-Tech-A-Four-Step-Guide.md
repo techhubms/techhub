@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide"
-description: "This article details the journey of the International Telecommunication Union (ITU), a UN organization, as it transitioned from a private Azure DevOps environment to becoming an open source project on GitHub. It outlines a four-step process: researching best practices, adopting an open mindset, addressing licensing considerations, and engaging the open source community. The story provides actionable advice for organizations seeking to open source their own technologies, with practical guidance on repository setup, contribution management, and fostering global collaboration."
-author: "Joshua Ku"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide'
+author: Joshua Ku
+canonical_url: https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-13 16:00:00 +00:00
-permalink: "/2025-08-13-How-the-International-Telecommunication-Union-Open-Sourced-Its-Tech-A-Four-Step-Guide.html"
-categories: ["DevOps"]
-tags: ["Azure DevOps", "BSD 2 License", "Community Engagement", "Continuous Integration", "Contribution Guidelines", "DevOps", "Documentation", "Getting Started Guide", "GitHub", "News", "Open Source", "Open Source Licensing", "Repository Management", "Social Impact", "UN ITU"]
-tags_normalized: ["azure devops", "bsd 2 license", "community engagement", "continuous integration", "contribution guidelines", "devops", "documentation", "getting started guide", "github", "news", "open source", "open source licensing", "repository management", "social impact", "un itu"]
+permalink: /devops/news/How-the-International-Telecommunication-Union-Open-Sourced-Its-Tech-A-Four-Step-Guide
+tags:
+- Azure DevOps
+- BSD 2 License
+- Community Engagement
+- Continuous Integration
+- Contribution Guidelines
+- DevOps
+- Documentation
+- Getting Started Guide
+- GitHub
+- News
+- Open Source
+- Open Source Licensing
+- Repository Management
+- Social Impact
+- UN ITU
+section_names:
+- devops
 ---
-
 Joshua Ku shares actionable insights on how the International Telecommunication Union transitioned its closed technology stack to open source, offering a structured, four-step process for organizations considering a similar move.<!--excerpt_end-->
 
 # How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide

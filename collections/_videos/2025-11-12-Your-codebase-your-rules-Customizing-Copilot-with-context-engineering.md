@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Your codebase, your rules: Customizing Copilot with context engineering"
-description: "This session, led by Harald Kirschner (Principal Product Manager, Microsoft), explores maximizing GitHub Copilot's capabilities in Visual Studio Code by leveraging context engineering. Viewers will learn to combine custom instructions, advanced prompt engineering, context-aware workflows, and enterprise scaling using Copilot Enterprise. The session provides practical frameworks and ready-to-use templates for optimizing Copilot within large codebases."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0jEzUhU8bLc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Your codebase, your rules: Customizing Copilot with context engineering'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=0jEzUhU8bLc
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-12 15:00:02 +00:00
-permalink: "/2025-11-12-Your-codebase-your-rules-Customizing-Copilot-with-context-engineering.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Codebase Integration", "Coding", "Context Engineering", "Custom Instructions", "Developer Workflow", "Enterprise Scale", "GitHub", "GitHub Copilot", "GitHub Copilot Enterprise", "GitHubUniverse", "Plan Mode", "Project Templates", "Prompt Engineering", "Software Architecture", "Test Driven Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "codebase integration", "coding", "context engineering", "custom instructions", "developer workflow", "enterprise scale", "github", "github copilot", "github copilot enterprise", "githubuniverse", "plan mode", "project templates", "prompt engineering", "software architecture", "test driven development", "videos", "vs code"]
+permalink: /github-copilot/videos/Your-codebase-your-rules-Customizing-Copilot-with-context-engineering
+tags:
+- AI
+- Codebase Integration
+- Coding
+- Context Engineering
+- Custom Instructions
+- Developer Workflow
+- Enterprise Scale
+- GitHub
+- GitHub Copilot
+- GitHub Copilot Enterprise
+- GitHubUniverse
+- Plan Mode
+- Project Templates
+- Prompt Engineering
+- Software Architecture
+- Test Driven Development
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Harald Kirschner from Microsoft demonstrates advanced context engineering techniques in VS Code, showing developers how to unlock the full capabilities of GitHub Copilot for deeply context-aware AI code generation.<!--excerpt_end-->
 
 {% youtube 0jEzUhU8bLc %}

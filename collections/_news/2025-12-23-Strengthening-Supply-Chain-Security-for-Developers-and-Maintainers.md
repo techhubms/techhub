@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Strengthening Supply Chain Security for Developers and Maintainers"
-description: "This article provides actionable recommendations for developers and maintainers on defending against organized supply chain malware such as the Shai-Hulud campaigns. It covers credential management, publication pipeline hardening, CI/CD security, and outlines enhancements to npm’s security roadmap. Guidance is focused on technical controls in GitHub and npm ecosystems, including advice to leverage Microsoft’s trusted publishing and security best practices."
-author: "Madison Oliver"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Strengthening Supply Chain Security for Developers and Maintainers
+author: Madison Oliver
+canonical_url: https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-23 23:52:08 +00:00
-permalink: "/2025-12-23-Strengthening-Supply-Chain-Security-for-Developers-and-Maintainers.html"
-categories: ["DevOps", "Security"]
-tags: ["Artifact Validation", "Branch Protection", "CI/CD", "Code Scanning", "Credentials", "Dependency Review", "DevOps", "GitHub", "GitHub Security Lab", "Malware", "Microsoft", "Multi Factor Authentication", "News", "npm", "OIDC", "Security", "Supply Chain", "Supply Chain Security", "Token Management", "Trusted Publishing"]
-tags_normalized: ["artifact validation", "branch protection", "cislashcd", "code scanning", "credentials", "dependency review", "devops", "github", "github security lab", "malware", "microsoft", "multi factor authentication", "news", "npm", "oidc", "security", "supply chain", "supply chain security", "token management", "trusted publishing"]
+permalink: /devops/news/Strengthening-Supply-Chain-Security-for-Developers-and-Maintainers
+tags:
+- Artifact Validation
+- Branch Protection
+- CI/CD
+- Code Scanning
+- Credentials
+- Dependency Review
+- DevOps
+- GitHub
+- GitHub Security Lab
+- Malware
+- Microsoft
+- Multi Factor Authentication
+- News
+- npm
+- OIDC
+- Security
+- Supply Chain
+- Supply Chain Security
+- Token Management
+- Trusted Publishing
+section_names:
+- devops
+- security
 ---
-
 Madison Oliver shares practical security strategies for developers and maintainers to defend against supply chain attacks, with a focus on securing GitHub and npm workflows.<!--excerpt_end-->
 
 # Strengthening Supply Chain Security for Developers and Maintainers

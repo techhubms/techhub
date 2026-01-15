@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann"
-description: "This episode of Sharp & Unfiltered features hosts Mads Torgersen and Klaus Loffelmann in a candid discussion about ADHD, public speaking, and the influence of developer AI tools like GitHub Copilot on neurodiverse workflows. The conversation covers the intersection of technology, creativity, and mental health for developers, emphasizing practical strategies and authentic experiences."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eeTOToKnpCg"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=eeTOToKnpCg
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-08 16:01:18 +00:00
-permalink: "/2025-10-08-ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["ADHD", "AI", "AI Tools", "Cloud Computing", "Creativity", "Dev", "Developer Productivity", "Development", "Flow State", "GitHub Copilot", "Mental Health", "Microsoft", "Microsoft Developer", "Neurodiversity", "Personal Growth", "Public Speaking", "Software Development", "Stage Performance", "Tech", "Technology", "Videos", "Workplace Strategies"]
-tags_normalized: ["adhd", "ai", "ai tools", "cloud computing", "creativity", "dev", "developer productivity", "development", "flow state", "github copilot", "mental health", "microsoft", "microsoft developer", "neurodiversity", "personal growth", "public speaking", "software development", "stage performance", "tech", "technology", "videos", "workplace strategies"]
+permalink: /github-copilot/videos/ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann
+tags:
+- ADHD
+- AI
+- AI Tools
+- Cloud Computing
+- Creativity
+- Dev
+- Developer Productivity
+- Development
+- Flow State
+- GitHub Copilot
+- Mental Health
+- Microsoft
+- Microsoft Developer
+- Neurodiversity
+- Personal Growth
+- Public Speaking
+- Software Development
+- Stage Performance
+- Tech
+- Technology
+- Videos
+- Workplace Strategies
+section_names:
+- ai
+- github-copilot
 ---
-
 Microsoft Developer hosts Mads Torgersen and Klaus Loffelmann explore how ADHD and AI tools like GitHub Copilot are reshaping the developer experience, highlighting practical strategies and authentic stories from the neurodiverse community.<!--excerpt_end-->
 
 {% youtube eeTOToKnpCg %}

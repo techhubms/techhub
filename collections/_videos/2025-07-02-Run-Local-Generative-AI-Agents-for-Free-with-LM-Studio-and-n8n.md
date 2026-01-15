@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Run Local Generative AI Agents for Free with LM Studio and n8n"
-description: "This tutorial by Alireza Chegini guides you through installing and running generative AI models (such as LLaMA and Mistral) locally using LM Studio and n8n. The video provides a practical, step-by-step walkthrough for setting up the tools on Windows, Mac, or Linux, building chat agents in n8n, connecting LM Studio via API, and adding conversational memory, all without the need for paid APIs or subscriptions. Aimed at developers and AI experimenters, the video focuses on hands-on use of open-source AI, Docker-based workflow automation, and self-hosting strategies to maximize learning and prototyping efficiency."
-author: "Alireza Chegini | AI Skills for Your Career"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hsPMSAzxdtU"
-viewing_mode: "internal"
-feed_name: "Alireza Chegini's YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
+﻿---
+layout: post
+title: Run Local Generative AI Agents for Free with LM Studio and n8n
+author: Alireza Chegini | AI Skills for Your Career
+canonical_url: https://www.youtube.com/watch?v=hsPMSAzxdtU
+viewing_mode: internal
+feed_name: Alireza Chegini's YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA
 date: 2025-07-02 16:01:27 +00:00
-permalink: "/2025-07-02-Run-Local-Generative-AI-Agents-for-Free-with-LM-Studio-and-n8n.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Automation", "AIautomation", "API Integration", "Chatbots", "Coding", "DeepSeek", "Docker", "DockerNetworking", "Linux", "Llama", "LM Studio", "LMStudio", "Local LLM", "LocalLLM", "MacOS", "Memory in Agents", "Mistral", "N8n", "N8ntutorial", "No Code AI", "NoCodeAI", "Open Source AI", "OpenAIalternative", "OpenSourceAI", "RunLLMLocally", "Self Hosted AI", "SelfHostedAI", "Videos", "Windows", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "ai automation", "aiautomation", "api integration", "chatbots", "coding", "deepseek", "docker", "dockernetworking", "linux", "llama", "lm studio", "lmstudio", "local llm", "localllm", "macos", "memory in agents", "mistral", "n8n", "n8ntutorial", "no code ai", "nocodeai", "open source ai", "openaialternative", "opensourceai", "runllmlocally", "self hosted ai", "selfhostedai", "videos", "windows", "workflow automation"]
+permalink: /ai/videos/Run-Local-Generative-AI-Agents-for-Free-with-LM-Studio-and-n8n
+tags:
+- AI
+- AI Agents
+- AI Automation
+- AIautomation
+- API Integration
+- Chatbots
+- Coding
+- DeepSeek
+- Docker
+- DockerNetworking
+- Linux
+- Llama
+- LM Studio
+- LMStudio
+- Local LLM
+- LocalLLM
+- MacOS
+- Memory in Agents
+- Mistral
+- N8n
+- N8ntutorial
+- No Code AI
+- NoCodeAI
+- Open Source AI
+- OpenAIalternative
+- OpenSourceAI
+- RunLLMLocally
+- Self Hosted AI
+- SelfHostedAI
+- Videos
+- Windows
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Alireza Chegini presents a comprehensive tutorial for developers on how to set up and run generative AI agents locally with LM Studio and n8n, highlighting installation, workflow creation, and free experimentation.<!--excerpt_end-->
 
 {% youtube hsPMSAzxdtU %}

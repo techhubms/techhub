@@ -1,20 +1,45 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Microsoft's Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025"
-description: "Lachlan Evenson discusses Microsoft's evolving approach to open-source, highlighting strategies and technical initiatives for contributing back to the community. The article details how Microsoft uses and supports open-source, leverages Azure and GitHub for cloud-native solutions, AI-powered tools, Kubernetes, and application modernization, all showcased at All Things Open 2025."
-author: "LachlanEvenson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: LachlanEvenson
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 17:45:28 +00:00
-permalink: "/2025-10-02-Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Agents", "AKS Automatic", "App Modernization", "Application Modernization", "Automation", "Azure", "Azure Arc", "Cloud Computing", "Cloud Native", "Coding", "Community", "DevOps", "GitHub", "GitHub Copilot", "Infrastructure", "Kubernetes", "Linux On Azure", "Microsoft", "Open Source", "OpenShift", "Security", "VS Code"]
-tags_normalized: ["ai", "ai agents", "aks automatic", "app modernization", "application modernization", "automation", "azure", "azure arc", "cloud computing", "cloud native", "coding", "community", "devops", "github", "github copilot", "infrastructure", "kubernetes", "linux on azure", "microsoft", "open source", "openshift", "security", "vs code"]
+permalink: /github-copilot/community/Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025
+tags:
+- AI
+- AI Agents
+- AKS Automatic
+- App Modernization
+- Application Modernization
+- Automation
+- Azure
+- Azure Arc
+- Cloud Computing
+- Cloud Native
+- Coding
+- Community
+- DevOps
+- GitHub
+- GitHub Copilot
+- Infrastructure
+- Kubernetes
+- Linux On Azure
+- Microsoft
+- Open Source
+- OpenShift
+- Security
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Lachlan Evenson outlines Microsoft's recent strategies, tools, and community efforts in open-source at All Things Open 2025, focusing on contributions, sustainability, and cloud/AI-powered developer tools.<!--excerpt_end-->
 
 # Microsoft's Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025

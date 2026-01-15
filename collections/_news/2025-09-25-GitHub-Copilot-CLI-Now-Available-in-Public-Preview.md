@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Copilot CLI Now Available in Public Preview"
-description: "This announcement introduces the public preview of GitHub Copilot CLI, an AI-powered terminal tool that allows developers to interact with GitHub Copilot directly from the command line. Features include agentic code assistance, deep GitHub integration for repository management, and extensibility via MCP servers. Developers can install the CLI via npm and use it with existing Copilot subscriptions, gaining an AI collaborator for local development, code exploration, feature implementation, and debugging in a terminal-native workflow."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot CLI Now Available in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 19:22:27 +00:00
-permalink: "/2025-09-25-GitHub-Copilot-CLI-Now-Available-in-Public-Preview.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Agent", "Automation", "CLI Tools", "Client Apps", "Code Assistance", "Coding", "Command Line Interface", "Copilot", "Debugging", "Developer Productivity", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Integration", "MCP Server", "News", "npm", "Pro Plan", "Refactoring", "Terminal Development"]
-tags_normalized: ["ai", "ai coding agent", "automation", "cli tools", "client apps", "code assistance", "coding", "command line interface", "copilot", "debugging", "developer productivity", "github", "github copilot", "github copilot cli", "github integration", "mcp server", "news", "npm", "pro plan", "refactoring", "terminal development"]
+permalink: /github-copilot/news/GitHub-Copilot-CLI-Now-Available-in-Public-Preview
+tags:
+- AI
+- AI Coding Agent
+- Automation
+- CLI Tools
+- Client Apps
+- Code Assistance
+- Coding
+- Command Line Interface
+- Copilot
+- Debugging
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHub Integration
+- MCP Server
+- News
+- npm
+- Pro Plan
+- Refactoring
+- Terminal Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison announces the public preview of GitHub Copilot CLI, a command line tool that delivers AI-powered coding assistance, GitHub repository integration, and extensibility for developers working directly in their terminal.<!--excerpt_end-->
 
 # GitHub Copilot CLI Now in Public Preview

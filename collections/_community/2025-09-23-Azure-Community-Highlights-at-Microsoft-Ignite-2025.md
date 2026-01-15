@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Community Highlights at Microsoft Ignite 2025"
-description: "This guide offers an overview of community-focused sessions and activities at Microsoft Ignite 2025 in San Francisco, with a focus on Azure infrastructure, AI advances, data platform discussions, and the Microsoft MVP program. Attendees can expect curated sessions, hands-on opportunities, and year-round communities to engage with experts and peers."
-author: "GalimahB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Community Highlights at Microsoft Ignite 2025
+author: GalimahB
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 19:59:06 +00:00
-permalink: "/2025-09-23-Azure-Community-Highlights-at-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Community", "AKS", "Azure", "Azure AI", "Azure AI Foundry", "Azure Data", "Azure Infrastructure", "Cloud Migration", "Community", "Community Sessions", "Data Analytics", "Data Platform", "Event", "IaC", "Microsoft Ignite", "ML", "MVP Program", "SQL Server Management Studio", "SSMS Copilot"]
-tags_normalized: ["ai", "ai community", "aks", "azure", "azure ai", "azure ai foundry", "azure data", "azure infrastructure", "cloud migration", "community", "community sessions", "data analytics", "data platform", "event", "iac", "microsoft ignite", "ml", "mvp program", "sql server management studio", "ssms copilot"]
+permalink: /ai/community/Azure-Community-Highlights-at-Microsoft-Ignite-2025
+tags:
+- AI
+- AI Community
+- AKS
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Azure Data
+- Azure Infrastructure
+- Cloud Migration
+- Community
+- Community Sessions
+- Data Analytics
+- Data Platform
+- Event
+- IaC
+- Microsoft Ignite
+- ML
+- MVP Program
+- SQL Server Management Studio
+- SSMS Copilot
+section_names:
+- ai
+- azure
+- ml
 ---
-
 GalimahB presents a detailed introduction to Azure-focused community activations at Microsoft Ignite 2025, highlighting sessions and opportunities for learning in infrastructure, AI, and data.<!--excerpt_end-->
 
 # Azure Community Highlights at Microsoft Ignite 2025

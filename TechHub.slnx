@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/TechHub.Api/TechHub.Api.csproj" />
     <Project Path="src/TechHub.AppHost/TechHub.AppHost.csproj" />
+    <Project Path="src/TechHub.ContentFixer/TechHub.ContentFixer.csproj" />
     <Project Path="src/TechHub.Core/TechHub.Core.csproj" />
     <Project Path="src/TechHub.Infrastructure/TechHub.Infrastructure.csproj" />
     <Project Path="src/TechHub.Web/TechHub.Web.csproj" />

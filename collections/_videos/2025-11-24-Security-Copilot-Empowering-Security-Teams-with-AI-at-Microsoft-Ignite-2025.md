@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025"
-description: "This intermediate-level session from Microsoft Ignite 2025 explores the latest advancements in Security Copilot and its role in transforming security and IT work. Microsoft product leaders demonstrate how generative AI and Security Copilot build resilience, address complexity, and automate critical workflows for security teams. The session also connects unified data platforms, automation, and integrations with tools like Microsoft Fabric and partner technologies to showcase practical security and data engineering solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9G0B6xdn_4k"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=9G0B6xdn_4k
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:11:12 +00:00
-permalink: "/2025-11-24-Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025.html"
-categories: ["AI", "Security"]
-tags: ["AI", "ArcGIS Analytics", "BRK244", "Data Automation", "Data Engineering", "Esri", "Generative AI", "IT Transformation", "Microsoft Fabric", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "OneLake", "Partner Solutions", "SecOps", "Security", "Security Automation", "Security Copilot", "SharePoint Integration", "Snowflake Integration", "Unified Data Platform", "Videos"]
-tags_normalized: ["ai", "arcgis analytics", "brk244", "data automation", "data engineering", "esri", "generative ai", "it transformation", "microsoft fabric", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "onelake", "partner solutions", "secops", "security", "security automation", "security copilot", "sharepoint integration", "snowflake integration", "unified data platform", "videos"]
+permalink: /ai/videos/Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025
+tags:
+- AI
+- ArcGIS Analytics
+- BRK244
+- Data Automation
+- Data Engineering
+- Esri
+- Generative AI
+- IT Transformation
+- Microsoft Fabric
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- OneLake
+- Partner Solutions
+- SecOps
+- Security
+- Security Automation
+- Security Copilot
+- SharePoint Integration
+- Snowflake Integration
+- Unified Data Platform
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an in-depth Ignite 2025 breakout session with Dorothy Li, Fabrizio Dell'Oglio, and Dilip Radhakrishnan, showcasing how Security Copilot leverages generative AI to streamline security and IT operations.<!--excerpt_end-->
 
 {% youtube 9G0B6xdn_4k %}

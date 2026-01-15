@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modernizing Cloud Desktop and Endpoint Management with Nerdio Manager"
-description: "This session from Microsoft Ignite 2025 introduces Nerdio Manager for Enterprise, a platform for simplifying and optimizing Azure Virtual Desktop, Windows 365, and Intune environments. The demo highlights integration with AI-powered tools, dynamic scaling, endpoint reporting, migration processes, and remote support features for enterprise IT teams."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=J8esrUr6iDQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing Cloud Desktop and Endpoint Management with Nerdio Manager
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=J8esrUr6iDQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:27:24 +00:00
-permalink: "/2025-11-19-Modernizing-Cloud-Desktop-and-Endpoint-Management-with-Nerdio-Manager.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure Virtual Desktop", "Cloud Management", "Comprehensive Reporting", "Console Connect", "Dynamic Scaling", "Endpoint Management", "Enterprise IT", "Intune", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Nerdio Copilot Assistant", "Nerdio Manager", "Remote Support", "Videos", "Virtual Desktop Infrastructure", "Windows 365"]
-tags_normalized: ["ai", "azure", "azure virtual desktop", "cloud management", "comprehensive reporting", "console connect", "dynamic scaling", "endpoint management", "enterprise it", "intune", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "nerdio copilot assistant", "nerdio manager", "remote support", "videos", "virtual desktop infrastructure", "windows 365"]
+permalink: /ai/videos/Modernizing-Cloud-Desktop-and-Endpoint-Management-with-Nerdio-Manager
+tags:
+- AI
+- Azure
+- Azure Virtual Desktop
+- Cloud Management
+- Comprehensive Reporting
+- Console Connect
+- Dynamic Scaling
+- Endpoint Management
+- Enterprise IT
+- Intune
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration
+- MSIgnite
+- Nerdio Copilot Assistant
+- Nerdio Manager
+- Remote Support
+- Videos
+- Virtual Desktop Infrastructure
+- Windows 365
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events showcases how Ashley Battle demonstrates Nerdio Manager's features for enterprise cloud desktop and endpoint management during a Microsoft Ignite 2025 session.<!--excerpt_end-->
 
 {% youtube J8esrUr6iDQ %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Using GitHub Copilot Coding Agent with Microsoft Teams for Automated PRs"
-description: "This guide explains how to leverage the GitHub Copilot coding agent within Microsoft Teams to automate pull request creation and streamline your development workflow. It covers enabling the coding agent, integrating GitHub with Teams, and initiating tasks via conversational prompts. Key steps and setup requirements for developers and teams are detailed."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Using GitHub Copilot Coding Agent with Microsoft Teams for Automated PRs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 14:07:53 +00:00
-permalink: "/2025-09-19-Using-GitHub-Copilot-Coding-Agent-with-Microsoft-Teams-for-Automated-PRs.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async Development", "Automation", "Coding", "Copilot", "Copilot Coding Agent", "Developer Workflow", "GitHub App", "GitHub Business", "GitHub Copilot", "GitHub Enterprise", "Microsoft Teams", "News", "Productivity Tools", "Pull Requests", "Repository Management", "Team Collaboration", "VS Code"]
-tags_normalized: ["ai", "async development", "automation", "coding", "copilot", "copilot coding agent", "developer workflow", "github app", "github business", "github copilot", "github enterprise", "microsoft teams", "news", "productivity tools", "pull requests", "repository management", "team collaboration", "vs code"]
+permalink: /github-copilot/news/Using-GitHub-Copilot-Coding-Agent-with-Microsoft-Teams-for-Automated-PRs
+tags:
+- AI
+- Async Development
+- Automation
+- Coding
+- Copilot
+- Copilot Coding Agent
+- Developer Workflow
+- GitHub App
+- GitHub Business
+- GitHub Copilot
+- GitHub Enterprise
+- Microsoft Teams
+- News
+- Productivity Tools
+- Pull Requests
+- Repository Management
+- Team Collaboration
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison outlines how developers can use the GitHub Copilot coding agent within Microsoft Teams to automate code tasks such as pull request generation, enhancing collaborative workflows.<!--excerpt_end-->
 
 # Using GitHub Copilot Coding Agent with Microsoft Teams for Automated Pull Requests

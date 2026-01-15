@@ -1,8 +1,8 @@
 {
     "title": "GenAI Basics",
     "description": "Foundational concepts for understanding Generative AI",
-    "categories": [
-        "AI"
+    "sectionNames": [
+        "ai"
     ],
     "tags": [
         "AI",

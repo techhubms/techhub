@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Code Review Preview Features Now Available in Enterprise Cloud with Data Residency"
-description: "This news update introduces the availability of Copilot code review preview features in GitHub Enterprise Cloud with data residency. The article highlights new agentic capabilities for code review, such as agentic tool calling, integration with tools like CodeQL and ESLint, and improved hand-offs to Copilot coding agents. It covers how these features enhance pull request reviews, offer better project context, and provide greater visibility through mission control. Links to official documentation and community discussions are included for further exploration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-copilot-code-review-preview-features-now-supported-in-github-enterprise-cloud-with-data-residency"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Code Review Preview Features Now Available in Enterprise Cloud with Data Residency
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-copilot-code-review-preview-features-now-supported-in-github-enterprise-cloud-with-data-residency
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 14:51:52 +00:00
-permalink: "/2025-12-18-GitHub-Copilot-Code-Review-Preview-Features-Now-Available-in-Enterprise-Cloud-with-Data-Residency.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Code Review", "AI", "AI Powered Code Review", "Code Review Automation", "CodeQL", "Copilot", "Copilot Code Review", "Data Residency", "Developer Tools", "ESLint", "GitHub Copilot", "GitHub Enterprise Cloud", "Improvement", "News", "Pull Requests"]
-tags_normalized: ["agentic code review", "ai", "ai powered code review", "code review automation", "codeql", "copilot", "copilot code review", "data residency", "developer tools", "eslint", "github copilot", "github enterprise cloud", "improvement", "news", "pull requests"]
+permalink: /github-copilot/news/GitHub-Copilot-Code-Review-Preview-Features-Now-Available-in-Enterprise-Cloud-with-Data-Residency
+tags:
+- Agentic Code Review
+- AI
+- AI Powered Code Review
+- Code Review Automation
+- CodeQL
+- Copilot
+- Copilot Code Review
+- Data Residency
+- Developer Tools
+- ESLint
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- Improvement
+- News
+- Pull Requests
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on GitHub Copilot code review preview features now supported in GitHub Enterprise Cloud with data residency, outlining enhanced agentic capabilities for pull request reviews.<!--excerpt_end-->
 
 # GitHub Copilot Code Review Preview Features Now Available in Enterprise Cloud with Data Residency

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Levi Strauss & Co. Partners with Microsoft to Develop Next-Gen Superagent"
-description: "This news release details the partnership between Levi Strauss & Co. and Microsoft, highlighting the integration of AI, cloud, and developer tools such as Copilot Studio, GitHub Copilot, and Azure AI Foundry. It covers how these technologies underpin Levi's transformation to a direct-to-consumer model, including agentic AI orchestration, automation with Semantic Kernel, and secure cloud operations on Azure."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/11/17/levi-strauss-co-partners-with-microsoft-to-develop-next-gen-superagent/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Levi Strauss & Co. Partners with Microsoft to Develop Next-Gen Superagent
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/11/17/levi-strauss-co-partners-with-microsoft-to-develop-next-gen-superagent/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-17 14:01:36 +00:00
-permalink: "/2025-11-17-Levi-Strauss-and-Co-Partners-with-Microsoft-to-Develop-Next-Gen-Superagent.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: ["Agentic AI", "AI", "Automation", "Azure", "Azure AI Foundry", "Cloud Migration", "Coding", "Company News", "Copilot Studio", "GitHub Copilot", "Levi Strauss & Co.", "Microsoft", "Microsoft Intune", "Microsoft Teams", "News", "Observability", "Release Management", "Security", "Semantic Kernel", "Superagent", "Surface Copilot+ PCs", "Windows 11", "Zero Trust Security"]
-tags_normalized: ["agentic ai", "ai", "automation", "azure", "azure ai foundry", "cloud migration", "coding", "company news", "copilot studio", "github copilot", "levi strauss and codot", "microsoft", "microsoft intune", "microsoft teams", "news", "observability", "release management", "security", "semantic kernel", "superagent", "surface copilotplus pcs", "windows 11", "zero trust security"]
+permalink: /github-copilot/news/Levi-Strauss-and-Co-Partners-with-Microsoft-to-Develop-Next-Gen-Superagent
+tags:
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Azure AI Foundry
+- Cloud Migration
+- Coding
+- Company News
+- Copilot Studio
+- GitHub Copilot
+- Levi Strauss & Co.
+- Microsoft
+- Microsoft Intune
+- Microsoft Teams
+- News
+- Observability
+- Release Management
+- Security
+- Semantic Kernel
+- Superagent
+- Surface Copilot+ PCs
+- Windows 11
+- Zero Trust Security
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 stclarke reports on the strategic partnership between Levi Strauss & Co. and Microsoft, focusing on the deployment of advanced AI platforms and development tools to modernize retail operations and empower employees.<!--excerpt_end-->
 
 # Levi Strauss & Co. Partners with Microsoft to Develop Next-Gen Superagent

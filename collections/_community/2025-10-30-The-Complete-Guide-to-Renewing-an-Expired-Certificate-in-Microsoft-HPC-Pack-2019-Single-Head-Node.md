@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)"
-description: "This in-depth guide, authored by vinilv, provides step-by-step instructions for administrators to renew expired certificates in Microsoft HPC Pack 2019 clusters with a single head node. It covers checking expiry, creating a new self-signed certificate, updating cluster nodes and databases, and restoring cluster functionality without reinstallation."
-author: "vinilv"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)
+author: vinilv
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 06:27:43 +00:00
-permalink: "/2025-10-30-The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Certificate Renewal", "Cluster Security", "Community", "Compute Node", "Data Protection", "Head Node", "HPC Cluster Manager", "Microsoft HPC Pack", "PowerShell", "Private Key", "Root Certificate", "Security", "Self Signed Certificate", "SQL Server Management Studio", "SSLThumbprint", "Windows Server"]
-tags_normalized: ["azure", "certificate renewal", "cluster security", "community", "compute node", "data protection", "head node", "hpc cluster manager", "microsoft hpc pack", "powershell", "private key", "root certificate", "security", "self signed certificate", "sql server management studio", "sslthumbprint", "windows server"]
+permalink: /azure/community/The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node
+tags:
+- Azure
+- Certificate Renewal
+- Cluster Security
+- Community
+- Compute Node
+- Data Protection
+- Head Node
+- HPC Cluster Manager
+- Microsoft HPC Pack
+- PowerShell
+- Private Key
+- Root Certificate
+- Security
+- Self Signed Certificate
+- SQL Server Management Studio
+- SSLThumbprint
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 vinilv details how to renew expired certificates in Microsoft HPC Pack 2019 clusters, guiding administrators through PowerShell commands, certificate creation, installation, and restoring secure node communication.<!--excerpt_end-->
 
 # The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)
@@ -29,14 +44,13 @@ Managing certificates is essential for the security and proper functioning of Mi
   Get-ChildItem -Path Cert:\LocalMachine\root | Where-Object { ---
 layout: "post"
 title: "The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)"
-description: "This in-depth guide, authored by vinilv, provides step-by-step instructions for administrators to renew expired certificates in Microsoft HPC Pack 2019 clusters with a single head node. It covers checking expiry, creating a new self-signed certificate, updating cluster nodes and databases, and restoring cluster functionality without reinstallation."
 author: "vinilv"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
-date: 2025-10-30 06:27:43 +00:00
+date: "2025-10-30 06:27:43 +00:00"
 permalink: "2025-10-30-The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Certificate Renewal", "Cluster Security", "Community", "Compute Node", "Data Protection", "Head Node", "HPC Cluster Manager", "Microsoft HPC Pack", "PowerShell", "Private Key", "Root Certificate", "Security", "Self Signed Certificate", "SQL Server Management Studio", "SSLThumbprint", "Windows Server"]
@@ -53,14 +67,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
   $cert = Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object { ---
 layout: "post"
 title: "The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)"
-description: "This in-depth guide, authored by vinilv, provides step-by-step instructions for administrators to renew expired certificates in Microsoft HPC Pack 2019 clusters with a single head node. It covers checking expiry, creating a new self-signed certificate, updating cluster nodes and databases, and restoring cluster functionality without reinstallation."
 author: "vinilv"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
-date: 2025-10-30 06:27:43 +00:00
+date: "2025-10-30 06:27:43 +00:00"
 permalink: "2025-10-30-The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Certificate Renewal", "Cluster Security", "Community", "Compute Node", "Data Protection", "Head Node", "HPC Cluster Manager", "Microsoft HPC Pack", "PowerShell", "Private Key", "Root Certificate", "Security", "Self Signed Certificate", "SQL Server Management Studio", "SSLThumbprint", "Windows Server"]

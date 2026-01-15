@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Boards Integration with GitHub Copilot: Private Preview Announced"
-description: "This announcement details the new integration between Azure Boards and GitHub Copilot's coding agent, now in private preview. It enables Azure DevOps users to assign work items directly to Copilot, letting the agent generate code changes, create pull requests, and update statuses automatically. The article covers how the feature works, requirements, and how organizations can sign up for the preview, along with current limitations and next steps."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure Boards Integration with GitHub Copilot: Private Preview Announced'
+author: Dan Hellem
+canonical_url: https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-09-16 11:45:27 +00:00
-permalink: "/2025-09-16-Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agile", "AI", "Azure", "Azure Boards", "Azure Boards App", "Azure DevOps", "Code Review", "Copilot Coding Agent", "DevOps", "DevOps Workflow", "Feature Preview", "GitHub Copilot", "GitHub Integration", "Integration", "News", "Private Preview", "Pull Request Automation", "Requirements Management", "Task Automation", "Work Item Automation"]
-tags_normalized: ["agile", "ai", "azure", "azure boards", "azure boards app", "azure devops", "code review", "copilot coding agent", "devops", "devops workflow", "feature preview", "github copilot", "github integration", "integration", "news", "private preview", "pull request automation", "requirements management", "task automation", "work item automation"]
+permalink: /github-copilot/news/Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced
+tags:
+- Agile
+- AI
+- Azure
+- Azure Boards
+- Azure Boards App
+- Azure DevOps
+- Code Review
+- Copilot Coding Agent
+- DevOps
+- DevOps Workflow
+- Feature Preview
+- GitHub Copilot
+- GitHub Integration
+- Integration
+- News
+- Private Preview
+- Pull Request Automation
+- Requirements Management
+- Task Automation
+- Work Item Automation
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Dan Hellem shares an update on the new integration allowing Azure Boards work items to be handled by GitHub Copilot's coding agent, automating code changes and pull requests for Azure DevOps users.<!--excerpt_end-->
 
 # Azure Boards Integration with GitHub Copilot (Private Preview)

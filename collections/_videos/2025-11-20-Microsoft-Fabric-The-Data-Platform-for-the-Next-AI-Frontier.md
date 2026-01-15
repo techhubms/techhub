@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Microsoft Fabric: The Data Platform for the Next AI Frontier"
-description: "This session from Microsoft Ignite 2025, presented by Amir Netz, CTO of Microsoft Fabric, explores the latest announcements and demos in data and analytics for Microsoft Fabric. The content covers new SQL and NoSQL SaaS databases, integration with Cosmos DB, advanced modeling features, migration scenarios between Synapse and Fabric, and security enhancements with Fabric Graph and Microsoft Sentinel. The session also highlights operational improvements like workspace surge protection, OneLake open access, and Fabric IQ's semantic modeling solutions for enterprise AI readiness."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YC33gA2TzxE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Fabric: The Data Platform for the Next AI Frontier'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=YC33gA2TzxE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:39:30 +00:00
-permalink: "/2025-11-20-Microsoft-Fabric-The-Data-Platform-for-the-Next-AI-Frontier.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Platform", "Analytics", "Azure", "Capacity Management", "Cosmos DB", "Data Migration", "Data Warehousing", "Enterprise Data", "Fabric Graph", "Fabric IQ", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MSIgnite", "NoSQL Database", "OneLake", "Ontology", "Open APIs", "Security", "Semantic Modeling", "SQL Database", "Synapse Analytics", "Threat Detection", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "ai platform", "analytics", "azure", "capacity management", "cosmos db", "data migration", "data warehousing", "enterprise data", "fabric graph", "fabric iq", "microsoft fabric", "microsoft sentinel", "ml", "msignite", "nosql database", "onelake", "ontology", "open apis", "security", "semantic modeling", "sql database", "synapse analytics", "threat detection", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Microsoft-Fabric-The-Data-Platform-for-the-Next-AI-Frontier
+tags:
+- AI
+- AI Platform
+- Analytics
+- Azure
+- Capacity Management
+- Cosmos DB
+- Data Migration
+- Data Warehousing
+- Enterprise Data
+- Fabric Graph
+- Fabric IQ
+- Microsoft Fabric
+- Microsoft Sentinel
+- ML
+- MSIgnite
+- NoSQL Database
+- OneLake
+- Ontology
+- Open APIs
+- Security
+- Semantic Modeling
+- SQL Database
+- Synapse Analytics
+- Threat Detection
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Amir Netz presents key updates for Microsoft Fabric at Ignite 2025. The session showcases new enterprise data platform features for AI, analytics, security, and operational management.<!--excerpt_end-->
 
 {% youtube YC33gA2TzxE %}

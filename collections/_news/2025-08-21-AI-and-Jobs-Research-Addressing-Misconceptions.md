@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI and Jobs Research: Addressing Misconceptions"
-description: "This article summarizes a recent Microsoft research paper on the potential occupational impacts of generative AI chatbots. It clarifies common misconceptions, details the study's methodology—including its focus on user interactions with Bing Copilot—and clearly outlines key limitations, such as the difference between task replacement and job displacement. Readers will gain insight into how AI might assist specific knowledge work tasks and the importance of nuanced interpretation of research findings in this domain."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'AI and Jobs Research: Addressing Misconceptions'
+author: sbaynes
+canonical_url: https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-21 22:06:16 +00:00
-permalink: "/2025-08-21-AI-and-Jobs-Research-Addressing-Misconceptions.html"
-categories: ["AI"]
-tags: ["AI", "AI Chatbot", "AI Limitations", "AI Use Cases", "Bing Copilot", "Company News", "Generative AI", "Job Displacement", "Knowledge Work", "Methodology", "Microsoft Research", "News", "O*NET", "Occupational Impact", "Research Clarification", "Societal Impact", "Work Trend Index"]
-tags_normalized: ["ai", "ai chatbot", "ai limitations", "ai use cases", "bing copilot", "company news", "generative ai", "job displacement", "knowledge work", "methodology", "microsoft research", "news", "ostarnet", "occupational impact", "research clarification", "societal impact", "work trend index"]
+permalink: /ai/news/AI-and-Jobs-Research-Addressing-Misconceptions
+tags:
+- AI
+- AI Chatbot
+- AI Limitations
+- AI Use Cases
+- Bing Copilot
+- Company News
+- Generative AI
+- Job Displacement
+- Knowledge Work
+- Methodology
+- Microsoft Research
+- News
+- O*NET
+- Occupational Impact
+- Research Clarification
+- Societal Impact
+- Work Trend Index
+section_names:
+- ai
 ---
-
 sbaynes provides a detailed clarification of Microsoft's recent research on generative AI's role in workplaces, focusing on how AI tools like Bing Copilot support knowledge work and addressing public misconceptions.<!--excerpt_end-->
 
 # AI and Jobs Research: Addressing Misconceptions

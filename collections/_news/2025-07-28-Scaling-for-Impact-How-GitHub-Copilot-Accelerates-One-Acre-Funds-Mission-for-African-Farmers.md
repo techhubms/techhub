@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Scaling for Impact: How GitHub Copilot Accelerates One Acre Fund’s Mission for African Farmers"
-description: "This article explores how One Acre Fund uses GitHub Copilot and open source technology to support 5 million smallholder farming families across Africa. It highlights the organization's digital transformation, faster development cycles, and the impact of AI on their ambitious goal of empowering 10 million families by 2030."
-author: "Paull Young"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/social-impact/scaling-for-impact-how-github-copilot-supercharges-smallholder-farmers/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Scaling for Impact: How GitHub Copilot Accelerates One Acre Fund’s Mission for African Farmers'
+author: Paull Young
+canonical_url: https://github.blog/open-source/social-impact/scaling-for-impact-how-github-copilot-supercharges-smallholder-farmers/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-28 19:53:32 +00:00
-permalink: "/2025-07-28-Scaling-for-Impact-How-GitHub-Copilot-Accelerates-One-Acre-Funds-Mission-for-African-Farmers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Africa", "Agricultural Empowerment", "AI", "AI Assisted Development", "Community Impact", "DevOps", "Digital Transformation", "GitHub Copilot", "News", "Nonprofit Technology", "One Acre Fund", "Open Source", "Smallholder Farmers", "Social Impact", "Software Development", "Technology Adoption"]
-tags_normalized: ["africa", "agricultural empowerment", "ai", "ai assisted development", "community impact", "devops", "digital transformation", "github copilot", "news", "nonprofit technology", "one acre fund", "open source", "smallholder farmers", "social impact", "software development", "technology adoption"]
+permalink: /github-copilot/news/Scaling-for-Impact-How-GitHub-Copilot-Accelerates-One-Acre-Funds-Mission-for-African-Farmers
+tags:
+- Africa
+- Agricultural Empowerment
+- AI
+- AI Assisted Development
+- Community Impact
+- DevOps
+- Digital Transformation
+- GitHub Copilot
+- News
+- Nonprofit Technology
+- One Acre Fund
+- Open Source
+- Smallholder Farmers
+- Social Impact
+- Software Development
+- Technology Adoption
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Written by Paull Young, this article details how One Acre Fund leverages GitHub Copilot and open source solutions to scale its mission of empowering millions of smallholder farmers across Africa, driving accelerated digital innovation and direct socioeconomic impact.<!--excerpt_end-->
 
 # Scaling for Impact: How GitHub Copilot Accelerates One Acre Fund’s Mission for African Farmers

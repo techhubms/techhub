@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "AI-based Data Discovery and Threat Detection with Veeam on Azure"
-description: "This session from Microsoft Ignite 2025 showcases how Veeam Data Cloud for Microsoft 365 utilizes Azure and Azure AI for enhanced data intelligence, far surpassing traditional backup solutions. Key features include high-throughput data discovery, advanced malware/ransomware threat detection, natural language querying, and AI-driven management via MCP server. The presentation includes live demos on actionable data recovery, threat triage, and integration with Microsoft Teams for incident response, targeting IT admins, SOC leads, and CISOs."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=L8a_bbrVnqQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-based Data Discovery and Threat Detection with Veeam on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=L8a_bbrVnqQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:44:52 +00:00
-permalink: "/2025-11-19-AI-based-Data-Discovery-and-Threat-Detection-with-Veeam-on-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Driven Security", "Azure", "Azure AI", "Blast Radius Analysis", "Data Discovery", "Incident Response", "InnovatewithAzureAIappsandagents", "Malware Detection", "MCP", "MCP Server", "Microsoft 365", "Microsoft Teams", "MSIgnite", "Natural Language Query", "Ransomware Detection", "Security", "Security Operations", "Signal Analysis", "SOC", "Threat Evaluation", "Veeam Data Cloud", "Videos"]
-tags_normalized: ["ai", "ai driven security", "azure", "azure ai", "blast radius analysis", "data discovery", "incident response", "innovatewithazureaiappsandagents", "malware detection", "mcp", "mcp server", "microsoft 365", "microsoft teams", "msignite", "natural language query", "ransomware detection", "security", "security operations", "signal analysis", "soc", "threat evaluation", "veeam data cloud", "videos"]
+permalink: /ai/videos/AI-based-Data-Discovery-and-Threat-Detection-with-Veeam-on-Azure
+tags:
+- AI
+- AI Driven Security
+- Azure
+- Azure AI
+- Blast Radius Analysis
+- Data Discovery
+- Incident Response
+- InnovatewithAzureAIappsandagents
+- Malware Detection
+- MCP
+- MCP Server
+- Microsoft 365
+- Microsoft Teams
+- MSIgnite
+- Natural Language Query
+- Ransomware Detection
+- Security
+- Security Operations
+- Signal Analysis
+- SOC
+- Threat Evaluation
+- Veeam Data Cloud
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events demonstrates how Veeam Data Cloud for Microsoft 365 leverages Azure and Azure AI for advanced threat detection and data intelligence, featuring live demos and practical scenarios for security teams.<!--excerpt_end-->
 
 {% youtube L8a_bbrVnqQ %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks"
-description: "This community article explains how SRE teams can shift to proactive monitoring using Azure SRE Agent's scheduled tasks. It covers how natural language prompts and built-in automation allow incident detection, compliance checks, and health monitoring without code, as well as integrating with tools like Azure CLI and Log Analytics for notifications and escalations."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks
+author: dchelupati
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-05 06:00:35 +00:00
-permalink: "/2025-12-05-Automated-Proactive-Monitoring-with-Azure-SRE-Agent-Scheduled-Tasks.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Insights", "Azure", "Azure CLI", "Azure SRE Agent", "Best Practices", "Cloud Operations", "Community", "Compliance", "DevOps", "DevOps Automation", "ICM", "Incident Response", "Kubernetes", "Log Analytics", "MCP Integration", "Microsoft Azure", "Proactive Monitoring", "Scheduled Tasks", "Security", "Security Posture"]
-tags_normalized: ["application insights", "azure", "azure cli", "azure sre agent", "best practices", "cloud operations", "community", "compliance", "devops", "devops automation", "icm", "incident response", "kubernetes", "log analytics", "mcp integration", "microsoft azure", "proactive monitoring", "scheduled tasks", "security", "security posture"]
+permalink: /azure/community/Automated-Proactive-Monitoring-with-Azure-SRE-Agent-Scheduled-Tasks
+tags:
+- Application Insights
+- Azure
+- Azure CLI
+- Azure SRE Agent
+- Best Practices
+- Cloud Operations
+- Community
+- Compliance
+- DevOps
+- DevOps Automation
+- ICM
+- Incident Response
+- Kubernetes
+- Log Analytics
+- MCP Integration
+- Microsoft Azure
+- Proactive Monitoring
+- Scheduled Tasks
+- Security
+- Security Posture
+section_names:
+- azure
+- devops
+- security
 ---
-
 dchelupati details how Azure SRE Agent's scheduled tasks enable SRE teams to automate proactive monitoring, incident response, and compliance checks using natural language prompts and Azure's automation ecosystem.<!--excerpt_end-->
 
 # Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks

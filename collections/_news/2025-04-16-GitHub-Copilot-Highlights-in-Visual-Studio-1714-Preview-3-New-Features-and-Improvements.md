@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Copilot Highlights in Visual Studio 17.14 Preview 3: New Features and Improvements"
-description: "This article by Katie Savage details the latest GitHub Copilot enhancements in Visual Studio 17.14 Preview 3, including a guided walkthrough, improved model selection, upgraded code mapping, next edit suggestions, and adaptive paste, with links to resources and feedback channels."
-author: "Katie Savage"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot Highlights in Visual Studio 17.14 Preview 3: New Features and Improvements'
+author: Katie Savage
+canonical_url: https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-04-16 18:24:10 +00:00
-permalink: "/2025-04-16-GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Adaptive Paste", "AI", "AI Assisted Development", "Code Completion", "Code Mapping", "Coding", "Copilot", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Guided Walkthrough", "Model Selection", "Multi File Editing", "News", "Next Edit Suggestions", "Preview Release", "VS"]
-tags_normalized: ["adaptive paste", "ai", "ai assisted development", "code completion", "code mapping", "coding", "copilot", "copilot chat", "developer tools", "github copilot", "guided walkthrough", "model selection", "multi file editing", "news", "next edit suggestions", "preview release", "vs"]
+permalink: /github-copilot/news/GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements
+tags:
+- Adaptive Paste
+- AI
+- AI Assisted Development
+- Code Completion
+- Code Mapping
+- Coding
+- Copilot
+- Copilot Chat
+- Developer Tools
+- GitHub Copilot
+- Guided Walkthrough
+- Model Selection
+- Multi File Editing
+- News
+- Next Edit Suggestions
+- Preview Release
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Katie Savage outlines the new GitHub Copilot features in Visual Studio 17.14 Preview 3, providing developers with a detailed look at recent advancements in AI integration and coding assistance.<!--excerpt_end-->
 
 ## GitHub Copilot Highlights in Visual Studio 17.14 Preview 3

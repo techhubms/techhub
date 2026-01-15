@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Debugging and Optimizing RAG Agents in Microsoft Foundry"
-description: "This tutorial presents hands-on, developer-focused best practices for evaluating and optimizing Retrieval-Augmented Generation (RAG) agents using Microsoft Foundry Observability. It covers how to use built-in evaluators for Groundedness and Relevance, tune Knowledge Agent pipeline parameters, and leverage advanced metrics like NDCG and XDCG for document retrieval in Azure AI Search. Practical code samples and workflow insights help developers improve agent quality and traceability before deployment."
-author: "Chang Liu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Debugging and Optimizing RAG Agents in Microsoft Foundry
+author: Chang Liu
+canonical_url: https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:28 +00:00
-permalink: "/2025-11-20-Debugging-and-Optimizing-RAG-Agents-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["A/B Testing", "Agent Workflow", "Agentic Retrieval", "AI", "Azure", "Azure AI Foundry", "Azure AI Search", "AzureOpenAIModelConfiguration", "Coding", "Document Retrieval Evaluator", "Enterprise Data", "Evaluation Metrics", "Foundry Observability", "Groundedness Evaluator", "Information Retrieval", "Knowledge Agent", "ML", "NDCG", "News", "Parameter Tuning", "Pass/Fail Analysis", "Python", "RAG", "Relevance Evaluator", "Retrieval Augmented Generation", "XDCG"]
-tags_normalized: ["aslashb testing", "agent workflow", "agentic retrieval", "ai", "azure", "azure ai foundry", "azure ai search", "azureopenaimodelconfiguration", "coding", "document retrieval evaluator", "enterprise data", "evaluation metrics", "foundry observability", "groundedness evaluator", "information retrieval", "knowledge agent", "ml", "ndcg", "news", "parameter tuning", "passslashfail analysis", "python", "rag", "relevance evaluator", "retrieval augmented generation", "xdcg"]
+permalink: /ai/news/Debugging-and-Optimizing-RAG-Agents-in-Microsoft-Foundry
+tags:
+- A/B Testing
+- Agent Workflow
+- Agentic Retrieval
+- AI
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- AzureOpenAIModelConfiguration
+- Coding
+- Document Retrieval Evaluator
+- Enterprise Data
+- Evaluation Metrics
+- Foundry Observability
+- Groundedness Evaluator
+- Information Retrieval
+- Knowledge Agent
+- ML
+- NDCG
+- News
+- Parameter Tuning
+- Pass/Fail Analysis
+- Python
+- RAG
+- Relevance Evaluator
+- Retrieval Augmented Generation
+- XDCG
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Chang Liu details how to debug and optimize Retrieval-Augmented Generation (RAG) agents within Microsoft Foundry, sharing code samples, metrics, and evaluation strategies tailored for developers.<!--excerpt_end-->
 
 # How to Debug and Optimize RAG Agents in Microsoft Foundry

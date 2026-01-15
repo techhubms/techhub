@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Windows Forms: Modern Enhancements and AI Integration"
-description: "This session explores the latest advancements in Windows Forms development with .NET 10, highlighting new UI features, integration of Windows 11 design language, improved async/await support for LOB apps, and the transformative impact of the WinForms Expert Agent for GitHub Copilot. Developers will gain an understanding of how AI-driven tools and modern APIs can boost productivity while maintaining flexibility for legacy and new applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f0971pImtlw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=f0971pImtlw
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/2025-11-12-Whats-New-in-Windows-Forms-Modern-Enhancements-and-AI-Integration.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET 10", "AI", "AI Integration", "Async Await", "C#", "Coding", "Desktop Development", "GitHub Copilot", "Line Of Business Apps", "Microsoft AI Extensions", "Modernization", "Semantic Kernel", "Videos", "VS", "Windows 11 UI", "Windows Forms", "Windows Projection APIs", "WinForms"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "async await", "csharp", "coding", "desktop development", "github copilot", "line of business apps", "microsoft ai extensions", "modernization", "semantic kernel", "videos", "vs", "windows 11 ui", "windows forms", "windows projection apis", "winforms"]
+permalink: /github-copilot/videos/Whats-New-in-Windows-Forms-Modern-Enhancements-and-AI-Integration
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Integration
+- Async Await
+- C#
+- Coding
+- Desktop Development
+- GitHub Copilot
+- Line Of Business Apps
+- Microsoft AI Extensions
+- Modernization
+- Semantic Kernel
+- Videos
+- VS
+- Windows 11 UI
+- Windows Forms
+- Windows Projection APIs
+- WinForms
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 dotnet presents an in-depth look into Windows Forms modernization in .NET 10, with live demos featuring the new WinForms Expert Agent for GitHub Copilot and insights on leveraging AI and modern APIs in desktop development.<!--excerpt_end-->
 
 {% youtube f0971pImtlw %}

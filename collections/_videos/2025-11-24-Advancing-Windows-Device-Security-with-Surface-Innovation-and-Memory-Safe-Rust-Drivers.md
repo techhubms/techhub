@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers"
-description: "This advanced session from Microsoft Ignite 2025 explores how Microsoft Surface and Windows are leveraging modern innovations to enhance device security. Topics include the application of memory-safe Rust in firmware and drivers, reducing vulnerabilities, and improving reliability. The talk discusses the open-source windows-drivers-rs project, Secure Core PCs, Device Firmware Configuration Interface (DFCI), and collaborative hardware/software security initiatives, emphasizing opportunities for IT and engineering teams to build safer devices through open partnership."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U43XsJhKMhQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=U43XsJhKMhQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 04:58:05 +00:00
-permalink: "/2025-11-24-Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers.html"
-categories: ["Coding", "Security"]
-tags: ["Cargo WDK", "Coding", "Device Drivers", "Device Firmware Configuration Interface", "DFCI", "Embedded Controller", "Firmware Security", "Hardware Security", "IT Security", "Microsoft Ignite", "Microsoft Surface", "MSIgnite", "Open Device Partnership", "Open Source", "Rust", "ScalewithcloudandAIendpoints", "Secure Core PC", "Security", "Videos", "Windows Drivers Rs", "Windows Security"]
-tags_normalized: ["cargo wdk", "coding", "device drivers", "device firmware configuration interface", "dfci", "embedded controller", "firmware security", "hardware security", "it security", "microsoft ignite", "microsoft surface", "msignite", "open device partnership", "open source", "rust", "scalewithcloudandaiendpoints", "secure core pc", "security", "videos", "windows drivers rs", "windows security"]
+permalink: /coding/videos/Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers
+tags:
+- Cargo WDK
+- Coding
+- Device Drivers
+- Device Firmware Configuration Interface
+- DFCI
+- Embedded Controller
+- Firmware Security
+- Hardware Security
+- IT Security
+- Microsoft Ignite
+- Microsoft Surface
+- MSIgnite
+- Open Device Partnership
+- Open Source
+- Rust
+- ScalewithcloudandAIendpoints
+- Secure Core PC
+- Security
+- Videos
+- Windows Drivers Rs
+- Windows Security
+section_names:
+- coding
+- security
 ---
-
 Microsoft Events presents an in-depth Ignite session featuring David Abzarian and Karan Dhillon, highlighting Surface innovation in Windows device security through memory-safe Rust firmware, open source drivers, and collaborative technology initiatives.<!--excerpt_end-->
 
 {% youtube U43XsJhKMhQ %}

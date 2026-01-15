@@ -1,20 +1,45 @@
----
-layout: "post"
-title: ".NET AI Community Standup: Microsoft Agent Framework Workflows & Migration"
-description: "This community standup features Bruno Capuano and Jose Luis Latorre presenting the latest on the Microsoft Agent Framework. The session covers workflow development, strategies for migrating from Semantic Kernel, and building intelligent, autonomous applications using C# and Azure. Developers will see live demonstrations and get practical insights into leveraging Agent Framework to implement real-world AI-powered agent scenarios on Microsoft technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2F8qDdqzClg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET AI Community Standup: Microsoft Agent Framework Workflows & Migration'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=2F8qDdqzClg
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-20 15:47:52 +00:00
-permalink: "/2025-10-20-NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agent Based Workflows", "Agents", "AI", "AI Integration", "Autonomous Agents", "Azure", "Azure AI", "C#", "Coding", "Community Standup", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Intelligent Applications", "Live Demo", "Microsoft", "Microsoft Agent Framework", "Migration", "Semantic Kernel", "Software Developer", "Videos", "Workflow Automation", "Workflows"]
-tags_normalized: ["dotnet", "agent based workflows", "agents", "ai", "ai integration", "autonomous agents", "azure", "azure ai", "csharp", "coding", "community standup", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "intelligent applications", "live demo", "microsoft", "microsoft agent framework", "migration", "semantic kernel", "software developer", "videos", "workflow automation", "workflows"]
+permalink: /ai/videos/NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration
+tags:
+- .NET
+- Agent Based Workflows
+- Agents
+- AI
+- AI Integration
+- Autonomous Agents
+- Azure
+- Azure AI
+- C#
+- Coding
+- Community Standup
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- Intelligent Applications
+- Live Demo
+- Microsoft
+- Microsoft Agent Framework
+- Migration
+- Semantic Kernel
+- Software Developer
+- Videos
+- Workflow Automation
+- Workflows
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Bruno Capuano and Jose Luis Latorre present an in-depth overview of the Microsoft Agent Framework for .NET developers, focusing on workflows, migration from Semantic Kernel, and building intelligent, autonomous solutions with C# and Azure.<!--excerpt_end-->
 
 {% youtube 2F8qDdqzClg %}

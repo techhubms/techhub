@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Announcing Computer Use Tool (Preview) in Azure AI Foundry Agent Service"
-description: "This announcement introduces the Computer Use tool (preview) for Azure AI Foundry Agent Service, enabling developers to build agents that interact with computer interfaces using natural language. The new feature offers robust automation scenarios, including web and desktop automation, legacy integration, and operational copilots, while emphasizing security and responsible usage."
-author: "Linda Li"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Announcing Computer Use Tool (Preview) in Azure AI Foundry Agent Service
+author: Linda Li
+canonical_url: https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-16 15:00:45 +00:00
-permalink: "/2025-09-16-Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Service", "AI", "Automation", "Azure", "Azure AI Foundry", "Browser Automation", "Computer Use Tool", "Desktop Automation", "Enterprise Security", "Human in The Loop", "Legacy Integration", "Microsoft", "Natural Language AI", "News", "Operational Copilots", "Pixel Based Reasoning", "Prompt Injection", "REST API", "SDK"]
-tags_normalized: ["agent service", "ai", "automation", "azure", "azure ai foundry", "browser automation", "computer use tool", "desktop automation", "enterprise security", "human in the loop", "legacy integration", "microsoft", "natural language ai", "news", "operational copilots", "pixel based reasoning", "prompt injection", "rest api", "sdk"]
+permalink: /ai/news/Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service
+tags:
+- Agent Service
+- AI
+- Automation
+- Azure
+- Azure AI Foundry
+- Browser Automation
+- Computer Use Tool
+- Desktop Automation
+- Enterprise Security
+- Human in The Loop
+- Legacy Integration
+- Microsoft
+- Natural Language AI
+- News
+- Operational Copilots
+- Pixel Based Reasoning
+- Prompt Injection
+- REST API
+- SDK
+section_names:
+- ai
+- azure
 ---
-
 Linda Li announces the preview availability of the Computer Use tool in Azure AI Foundry Agent Service, offering developers new automation and agent capabilities integrated with advanced security features.<!--excerpt_end-->
 
 # Announcing Computer Use Tool (Preview) in Azure AI Foundry Agent Service

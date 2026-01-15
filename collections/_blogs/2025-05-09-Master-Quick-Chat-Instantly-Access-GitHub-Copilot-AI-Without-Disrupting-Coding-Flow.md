@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Master Quick Chat: Instantly Access GitHub Copilot AI Without Disrupting Coding Flow"
-description: "Learn how to use GitHub Copilot Quick Chat for on-the-spot AI-powered coding assistance. This guide by Randy Pagels covers launching Quick Chat, example use cases, and how it enhances developer productivity without breaking coding flow."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Master Quick Chat: Instantly Access GitHub Copilot AI Without Disrupting Coding Flow'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-05-09 00:00:00 +00:00
-permalink: "/2025-05-09-Master-Quick-Chat-Instantly-Access-GitHub-Copilot-AI-Without-Disrupting-Coding-Flow.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Blogs", "Code Optimization", "Code Suggestions", "Coding", "Coding Workflow", "Developer Productivity", "Error Explanation", "GitHub Copilot", "Inline Chat", "Quick Chat", "Unit Testing"]
-tags_normalized: ["ai", "ai assistant", "blogs", "code optimization", "code suggestions", "coding", "coding workflow", "developer productivity", "error explanation", "github copilot", "inline chat", "quick chat", "unit testing"]
+permalink: /github-copilot/blogs/Master-Quick-Chat-Instantly-Access-GitHub-Copilot-AI-Without-Disrupting-Coding-Flow
+tags:
+- AI
+- AI Assistant
+- Blogs
+- Code Optimization
+- Code Suggestions
+- Coding
+- Coding Workflow
+- Developer Productivity
+- Error Explanation
+- GitHub Copilot
+- Inline Chat
+- Quick Chat
+- Unit Testing
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this post, Randy Pagels introduces GitHub Copilot Quick Chat—a feature designed to deliver AI-powered coding support instantly and inline, ensuring developers get help without losing focus.<!--excerpt_end-->
 
 ## Quick Chat: Your Instant AI Sidekick

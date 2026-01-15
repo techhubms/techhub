@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – April 2025 Release: New Features, Templates, and Enhancements"
-description: "The April 2025 release of Azure Developer CLI (azd) introduces new features, improved AI integration, updated templates, and several bug fixes. The update offers enhanced environment setup, AI Search support, Key Vault integration, and new templates for AI and web development in the Azure ecosystem."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) – April 2025 Release: New Features, Templates, and Enhancements'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-03 18:38:43 +00:00
-permalink: "/2025-04-03-Azure-Developer-CLI-azd-April-2025-Release-New-Features-Templates-and-Enhancements.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: [".NET", ".NET Aspire", "AI", "Azd", "Azure", "Azure AI Search", "Azure Container Apps", "Azure Developer CLI", "Azure OpenAI", "Azure SDK", "Bicep", "Codespaces", "DevOps", "Docker", "GitHub Codespaces", "Java", "JavaScript", "Key Vault", "Kubernetes", "News", "Python", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "dotnet aspire", "ai", "azd", "azure", "azure ai search", "azure container apps", "azure developer cli", "azure openai", "azure sdk", "bicep", "codespaces", "devops", "docker", "github codespaces", "java", "javascript", "key vault", "kubernetes", "news", "python", "templates", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-April-2025-Release-New-Features-Templates-and-Enhancements
+tags:
+- .NET
+- .NET Aspire
+- AI
+- Azd
+- Azure
+- Azure AI Search
+- Azure Container Apps
+- Azure Developer CLI
+- Azure OpenAI
+- Azure SDK
+- Bicep
+- Codespaces
+- DevOps
+- Docker
+- GitHub Codespaces
+- Java
+- JavaScript
+- Key Vault
+- Kubernetes
+- News
+- Python
+- Templates
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Authored by Kristen Womack, this release note summarizes the April 2025 updates to the Azure Developer CLI (azd). Explore new features, improved Azure AI integrations, new templates, and vital enhancements for cloud development workflows.<!--excerpt_end-->
 
 ## Azure Developer CLI (azd) – April 2025 Release Overview

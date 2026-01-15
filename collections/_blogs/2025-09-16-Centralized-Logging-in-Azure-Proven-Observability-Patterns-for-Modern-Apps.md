@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Centralized Logging in Azure: Proven Observability Patterns for Modern Apps"
-description: "This blog post by Dellenny examines essential centralized logging patterns and observability strategies in Microsoft Azure. It details the importance of unified log management across distributed cloud-native applications, explores tools like Azure Monitor, Log Analytics Workspace, Application Insights, Event Hubs, and Azure Arc, and shares best practices for designing scalable, secure, and reliable centralized logging architectures in Azure environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Centralized Logging in Azure: Proven Observability Patterns for Modern Apps'
+author: Dellenny
+canonical_url: https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-16 08:49:07 +00:00
-permalink: "/2025-09-16-Centralized-Logging-in-Azure-Proven-Observability-Patterns-for-Modern-Apps.html"
-categories: ["Azure"]
-tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure App Service", "Azure Arc", "Azure Event Hubs", "Azure Functions", "Azure Monitor", "Blogs", "Centralized Logging", "Distributed Systems", "Fluent Bit", "Hybrid Cloud", "Infrastructure Monitoring", "KQL", "Kusto Query Language", "Log Analytics Workspace", "Observability", "Solution Architecture", "Stream Analytics"]
-tags_normalized: ["aks", "application insights", "architecture", "azure", "azure app service", "azure arc", "azure event hubs", "azure functions", "azure monitor", "blogs", "centralized logging", "distributed systems", "fluent bit", "hybrid cloud", "infrastructure monitoring", "kql", "kusto query language", "log analytics workspace", "observability", "solution architecture", "stream analytics"]
+permalink: /azure/blogs/Centralized-Logging-in-Azure-Proven-Observability-Patterns-for-Modern-Apps
+tags:
+- AKS
+- Application Insights
+- Architecture
+- Azure
+- Azure App Service
+- Azure Arc
+- Azure Event Hubs
+- Azure Functions
+- Azure Monitor
+- Blogs
+- Centralized Logging
+- Distributed Systems
+- Fluent Bit
+- Hybrid Cloud
+- Infrastructure Monitoring
+- KQL
+- Kusto Query Language
+- Log Analytics Workspace
+- Observability
+- Solution Architecture
+- Stream Analytics
+section_names:
+- azure
 ---
-
 Dellenny explores centralized logging strategies in Microsoft Azure, guiding readers through core architectures, key Azure observability services, and actionable best practices for achieving unified monitoring in distributed application environments.<!--excerpt_end-->
 
 # Centralized Logging in Azure: Proven Observability Patterns for Modern Apps

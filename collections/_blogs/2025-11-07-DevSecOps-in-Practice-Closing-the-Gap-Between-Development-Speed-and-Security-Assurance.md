@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "DevSecOps in Practice: Closing the Gap Between Development Speed and Security Assurance"
-description: "This article by Usman Peter provides actionable guidance on implementing DevSecOps approaches in modern software delivery pipelines, focusing on balancing development velocity with robust security practices. It discusses shifting security left, automation, risk-based assessments, fostering a security-first culture, and building effective feedback loops to achieve secure software delivery at scale."
-author: "Usman Peter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/devsecops-in-practice-closing-the-gap-between-development-speed-and-security-assurance/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'DevSecOps in Practice: Closing the Gap Between Development Speed and Security Assurance'
+author: Usman Peter
+canonical_url: https://devops.com/devsecops-in-practice-closing-the-gap-between-development-speed-and-security-assurance/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-07 10:22:30 +00:00
-permalink: "/2025-11-07-DevSecOps-in-Practice-Closing-the-Gap-Between-Development-Speed-and-Security-Assurance.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Application Security Automation", "Automated Vulnerability Scanning", "Blogs", "Business Of DevOps", "CI/CD Pipeline", "CI/CD Pipeline Security", "Cloud And Container Security", "Cloud Security", "Container Security", "Continuous Feedback", "Continuous Feedback Loops", "Continuous Security Integration", "Contributed Content", "Dependency Management", "Developer Security Mindset", "Development Speed And Security Balance", "DevOps", "DevSecOps", "DevSecOps Best Practices", "Risk Based Security", "SaferNet VPN", "Secure DevOps", "Secure Software Development", "Security", "Security as Code", "Security Automation", "Security Automation Tools", "Security Champions", "Security Culture", "Shift Left Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security"]
-tags_normalized: ["application security", "application security automation", "automated vulnerability scanning", "blogs", "business of devops", "cislashcd pipeline", "cislashcd pipeline security", "cloud and container security", "cloud security", "container security", "continuous feedback", "continuous feedback loops", "continuous security integration", "contributed content", "dependency management", "developer security mindset", "development speed and security balance", "devops", "devsecops", "devsecops best practices", "risk based security", "safernet vpn", "secure devops", "secure software development", "security", "security as code", "security automation", "security automation tools", "security champions", "security culture", "shift left security", "social facebook", "social linkedin", "social x", "software supply chain security"]
+permalink: /devops/blogs/DevSecOps-in-Practice-Closing-the-Gap-Between-Development-Speed-and-Security-Assurance
+tags:
+- Application Security
+- Application Security Automation
+- Automated Vulnerability Scanning
+- Blogs
+- Business Of DevOps
+- CI/CD Pipeline
+- CI/CD Pipeline Security
+- Cloud And Container Security
+- Cloud Security
+- Container Security
+- Continuous Feedback
+- Continuous Feedback Loops
+- Continuous Security Integration
+- Contributed Content
+- Dependency Management
+- Developer Security Mindset
+- Development Speed And Security Balance
+- DevOps
+- DevSecOps
+- DevSecOps Best Practices
+- Risk Based Security
+- SaferNet VPN
+- Secure DevOps
+- Secure Software Development
+- Security
+- Security as Code
+- Security Automation
+- Security Automation Tools
+- Security Champions
+- Security Culture
+- Shift Left Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Usman Peter explores practical DevSecOps strategies for integrating security and speed in modern software teams. Learn how to foster a security-focused culture, use automation, and balance risk management with rapid delivery.<!--excerpt_end-->
 
 # DevSecOps in Practice: Closing the Gap Between Development Speed and Security Assurance

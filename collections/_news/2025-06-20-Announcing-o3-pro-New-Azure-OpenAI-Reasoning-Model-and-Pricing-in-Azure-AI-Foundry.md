@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing o3-pro: New Azure OpenAI Reasoning Model and Pricing in Azure AI Foundry"
-description: "This post details the launch of o3-pro, the latest Azure OpenAI reasoning model available in Azure AI Foundry. It highlights improved reasoning performance, multimodal input, structured outputs, and integration capabilities, along with updated pricing and instructions for accessing and building with o3-pro using the new API."
-author: "Sanjeev Jagtap, Anthony Mocny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/azure-openai-o3-pro-ai-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Announcing o3-pro: New Azure OpenAI Reasoning Model and Pricing in Azure AI Foundry'
+author: Sanjeev Jagtap, Anthony Mocny
+canonical_url: https://devblogs.microsoft.com/foundry/azure-openai-o3-pro-ai-foundry/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-20 16:06:00 +00:00
-permalink: "/2025-06-20-Announcing-o3-pro-New-Azure-OpenAI-Reasoning-Model-and-Pricing-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Versioning", "Azure", "Azure AI Foundry", "Azure OpenAI", "Enterprise AI", "File Search", "Foundry", "Model Pricing", "Multimodal Input", "News", "O3 Pro", "OpenAI Library", "Reasoning Model", "Responses API", "Responsible AI", "Structured Output"]
-tags_normalized: ["ai", "api versioning", "azure", "azure ai foundry", "azure openai", "enterprise ai", "file search", "foundry", "model pricing", "multimodal input", "news", "o3 pro", "openai library", "reasoning model", "responses api", "responsible ai", "structured output"]
+permalink: /ai/news/Announcing-o3-pro-New-Azure-OpenAI-Reasoning-Model-and-Pricing-in-Azure-AI-Foundry
+tags:
+- AI
+- API Versioning
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Enterprise AI
+- File Search
+- Foundry
+- Model Pricing
+- Multimodal Input
+- News
+- O3 Pro
+- OpenAI Library
+- Reasoning Model
+- Responses API
+- Responsible AI
+- Structured Output
+section_names:
+- ai
+- azure
 ---
-
 Authored by Sanjeev Jagtap and Anthony Mocny, this detailed overview introduces o3-pro, Azure AI Foundry's new reasoning model, outlining its features, access process, and pricing.<!--excerpt_end-->
 
 # o-series Updates: New o3 pricing and o3-pro in Azure AI Foundry

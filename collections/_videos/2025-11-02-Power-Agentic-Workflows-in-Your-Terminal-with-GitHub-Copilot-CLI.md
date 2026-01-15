@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Power Agentic Workflows in Your Terminal with GitHub Copilot CLI"
-description: "This session from GitHub Universe 2025 demonstrates how GitHub Copilot CLI brings AI-powered coding assistance directly into the terminal. Ryan Hecht showcases real-world examples of building, debugging, and understanding code through natural language, highlighting features such as custom agents, automation, and headless operations—all integrated into terminal-first development workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=82jciNezDMY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Power Agentic Workflows in Your Terminal with GitHub Copilot CLI
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=82jciNezDMY
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-02 14:00:11 +00:00
-permalink: "/2025-11-02-Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Accessibility Review", "AI", "AI Assistant", "Automation", "Coding", "Command Line", "Debugging", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "GitHubUniverse", "Headless Operation", "Natural Language Coding", "Software Development", "Terminal Workflows", "Videos"]
-tags_normalized: ["accessibility review", "ai", "ai assistant", "automation", "coding", "command line", "debugging", "developer tools", "github", "github copilot", "github copilot cli", "githubuniverse", "headless operation", "natural language coding", "software development", "terminal workflows", "videos"]
+permalink: /github-copilot/videos/Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI
+tags:
+- Accessibility Review
+- AI
+- AI Assistant
+- Automation
+- Coding
+- Command Line
+- Debugging
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHubUniverse
+- Headless Operation
+- Natural Language Coding
+- Software Development
+- Terminal Workflows
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub's Ryan Hecht explores how AI-driven development comes to the terminal with GitHub Copilot CLI. This session reveals how terminal workflows benefit from agentic coding, automation, and natural language interactions—all powered by GitHub Copilot.<!--excerpt_end-->
 
 {% youtube 82jciNezDMY %}

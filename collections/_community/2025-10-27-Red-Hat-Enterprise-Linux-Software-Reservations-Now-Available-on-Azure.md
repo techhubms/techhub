@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Red Hat Enterprise Linux Software Reservations Now Available on Azure"
-description: "This announcement introduces the general availability of Red Hat Enterprise Linux (RHEL) software reservations for purchase on Azure. It highlights updated billing meters, enhancements to reservation pricing, cost-saving opportunities, and seamless management within the Azure platform. Customers can now optimize Linux workload costs and benefit from predictable, transparent pricing by leveraging these Azure-integrated RHEL software reservations."
-author: "abbottkarl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Red Hat Enterprise Linux Software Reservations Now Available on Azure
+author: abbottkarl
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 16:00:00 +00:00
-permalink: "/2025-10-27-Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Reservations", "Billing", "Cloud Cost Management", "Community", "Linux", "Microsoft Azure", "Open Source", "Pricing", "Red Hat Enterprise Linux", "RHEL", "Software Licensing", "Software Reservations", "Virtual Machines", "Workload Optimization"]
-tags_normalized: ["azure", "azure reservations", "billing", "cloud cost management", "community", "linux", "microsoft azure", "open source", "pricing", "red hat enterprise linux", "rhel", "software licensing", "software reservations", "virtual machines", "workload optimization"]
+permalink: /azure/community/Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure
+tags:
+- Azure
+- Azure Reservations
+- Billing
+- Cloud Cost Management
+- Community
+- Linux
+- Microsoft Azure
+- Open Source
+- Pricing
+- Red Hat Enterprise Linux
+- RHEL
+- Software Licensing
+- Software Reservations
+- Virtual Machines
+- Workload Optimization
+section_names:
+- azure
 ---
-
 abbottkarl announces the general availability of Red Hat Enterprise Linux software reservations on Azure, detailing new cost-saving options, updated billing, and how customers can better manage RHEL workloads in the cloud.<!--excerpt_end-->
 
 # Red Hat Enterprise Linux Software Reservations Now Available on Azure

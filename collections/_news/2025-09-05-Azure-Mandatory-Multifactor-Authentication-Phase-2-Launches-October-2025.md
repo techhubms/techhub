@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025"
-description: "This news post from Joy Shah and Neha Kulkarni details Microsoft's enforcement of Phase 2 multifactor authentication (MFA) at the Azure Resource Manager layer starting October 1, 2025. It covers the scope, phases, customer impact, preparation steps, Azure Policy integration, and necessary updates to Azure CLI and PowerShell clients."
-author: "Joy Shah and Neha Kulkarni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025'
+author: Joy Shah and Neha Kulkarni
+canonical_url: https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-05 15:00:00 +00:00
-permalink: "/2025-09-05-Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure CLI", "Azure Policy", "Azure Portal", "Azure PowerShell", "Azure Resource Manager", "Cloud Security", "Identity Management", "MFA", "Microsoft Entra ID", "Multifactor Authentication", "News", "Resource Management", "Safe Deployment", "Security"]
-tags_normalized: ["azure", "azure cli", "azure policy", "azure portal", "azure powershell", "azure resource manager", "cloud security", "identity management", "mfa", "microsoft entra id", "multifactor authentication", "news", "resource management", "safe deployment", "security"]
+permalink: /azure/news/Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025
+tags:
+- Azure
+- Azure CLI
+- Azure Policy
+- Azure Portal
+- Azure PowerShell
+- Azure Resource Manager
+- Cloud Security
+- Identity Management
+- MFA
+- Microsoft Entra ID
+- Multifactor Authentication
+- News
+- Resource Management
+- Safe Deployment
+- Security
+section_names:
+- azure
+- security
 ---
-
 Joy Shah and Neha Kulkarni explain Microsoft's rollout of Phase 2 mandatory multifactor authentication enforcement on Azure Resource Manager operations, with critical details on its October 2025 launch, technical scope, and customer action points.<!--excerpt_end-->
 
 # Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025

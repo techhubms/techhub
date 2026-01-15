@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Unlocking the Hidden Value of Your Visual Studio Subscription"
-description: "This article, written by Jim Harrer for the Visual Studio Blog, explores how many developers are missing out on substantial development resources and Azure credits included with their Visual Studio subscriptions. The author shares real-world examples and highlights the benefits and savings available through the my.visualstudio.com portal."
-author: "Jim Harrer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Unlocking the Hidden Value of Your Visual Studio Subscription
+author: Jim Harrer
+canonical_url: https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-01 16:27:11 +00:00
-permalink: "/2025-10-01-Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Credits", "Cloud Academy", "Coding", "Dev/Test Environment", "Developer Tools", "Development Environment", "DevOps", "DevOps Cost Savings", "Enterprise Subscription", "Microsoft Benefits", "MSDN", "My.visualstudio.com", "News", "Pluralsight", "Software Downloads", "SQL Server Developer Edition", "Visual Studio Live", "Visual Studio Subscription", "Visual Studio Subscriptions", "VS"]
-tags_normalized: ["azure", "azure credits", "cloud academy", "coding", "devslashtest environment", "developer tools", "development environment", "devops", "devops cost savings", "enterprise subscription", "microsoft benefits", "msdn", "mydotvisualstudiodotcom", "news", "pluralsight", "software downloads", "sql server developer edition", "visual studio live", "visual studio subscription", "visual studio subscriptions", "vs"]
+permalink: /coding/news/Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription
+tags:
+- Azure
+- Azure Credits
+- Cloud Academy
+- Coding
+- Dev/Test Environment
+- Developer Tools
+- Development Environment
+- DevOps
+- DevOps Cost Savings
+- Enterprise Subscription
+- Microsoft Benefits
+- MSDN
+- My.visualstudio.com
+- News
+- Pluralsight
+- Software Downloads
+- SQL Server Developer Edition
+- Visual Studio Live
+- Visual Studio Subscription
+- Visual Studio Subscriptions
+- VS
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Jim Harrer uncovers how Visual Studio subscribers can unlock significant value through included benefits, such as Azure credits, Dev/Test software, and learning resources—all accessed via my.visualstudio.com.<!--excerpt_end-->
 
 # Unlocking the Hidden Value of Your Visual Studio Subscription

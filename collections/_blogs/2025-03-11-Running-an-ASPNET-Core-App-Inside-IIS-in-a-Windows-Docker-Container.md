@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Running an ASP.NET Core App Inside IIS in a Windows Docker Container"
-description: "Andrew Lock explores running ASP.NET Core applications within IIS inside Windows containers. The post details differences between Linux and Windows containers, preparing Dockerfiles, configuring IIS, managing app pools with PowerShell, entrypoint strategies, and troubleshooting environment variable conflicts."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Running an ASP.NET Core App Inside IIS in a Windows Docker Container
+author: Andrew Lock
+canonical_url: https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-03-11 09:00:00 +00:00
-permalink: "/2025-03-11-Running-an-ASPNET-Core-App-Inside-IIS-in-a-Windows-Docker-Container.html"
-categories: ["Coding", "DevOps"]
-tags: ["App Pools", "APPCMD", "ASP.NET Core", "Blogs", "Coding", "Configuration", "Containerization", "DevOps", "Docker", "Environment Variables", "Front End", "Hosting Bundle", "IIS", "PowerShell", "ServiceMonitor.exe", "Troubleshooting", "Windows Containers"]
-tags_normalized: ["app pools", "appcmd", "aspdotnet core", "blogs", "coding", "configuration", "containerization", "devops", "docker", "environment variables", "front end", "hosting bundle", "iis", "powershell", "servicemonitordotexe", "troubleshooting", "windows containers"]
+permalink: /coding/blogs/Running-an-ASPNET-Core-App-Inside-IIS-in-a-Windows-Docker-Container
+tags:
+- App Pools
+- APPCMD
+- ASP.NET Core
+- Blogs
+- Coding
+- Configuration
+- Containerization
+- DevOps
+- Docker
+- Environment Variables
+- Front End
+- Hosting Bundle
+- IIS
+- PowerShell
+- ServiceMonitor.exe
+- Troubleshooting
+- Windows Containers
+section_names:
+- coding
+- devops
 ---
-
 Andrew Lock explains the process of hosting an ASP.NET Core application in IIS on a Windows Docker container. Learn about Dockerfile creation, configuring IIS, and resolving common issues.<!--excerpt_end-->
 
 # Running an ASP.NET Core App Inside IIS in a Windows Docker Container

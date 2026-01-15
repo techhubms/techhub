@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem"
-description: "This beginner-friendly guide by Dellenny introduces Microsoft Azure, detailing its key services—from compute and storage to networking and AI. The article explains the core areas of the Azure ecosystem, highlights its value to businesses and developers, and offers resources for those starting out on the Azure platform."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem
+author: Dellenny
+canonical_url: https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:46:39 +00:00
-permalink: "/2025-10-29-What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["AI", "AKS", "Azure", "Azure Arc", "Azure Blob Storage", "Azure Cognitive Services", "Azure DevOps", "Azure Ecosystem", "Azure Free Account", "Azure Functions", "Azure Machine Learning", "Azure OpenAI Service", "Azure SQL Database", "Azure Stack", "Azure Virtual Machines", "Blogs", "Cloud Computing", "Coding", "Cosmos DB", "DevOps", "GitHub", "Hybrid Cloud", "Microsoft Azure", "ML", "Security", "VS"]
-tags_normalized: ["ai", "aks", "azure", "azure arc", "azure blob storage", "azure cognitive services", "azure devops", "azure ecosystem", "azure free account", "azure functions", "azure machine learning", "azure openai service", "azure sql database", "azure stack", "azure virtual machines", "blogs", "cloud computing", "coding", "cosmos db", "devops", "github", "hybrid cloud", "microsoft azure", "ml", "security", "vs"]
+permalink: /ai/blogs/What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem
+tags:
+- AI
+- AKS
+- Azure
+- Azure Arc
+- Azure Blob Storage
+- Azure Cognitive Services
+- Azure DevOps
+- Azure Ecosystem
+- Azure Free Account
+- Azure Functions
+- Azure Machine Learning
+- Azure OpenAI Service
+- Azure SQL Database
+- Azure Stack
+- Azure Virtual Machines
+- Blogs
+- Cloud Computing
+- Coding
+- Cosmos DB
+- DevOps
+- GitHub
+- Hybrid Cloud
+- Microsoft Azure
+- ML
+- Security
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
+- security
 ---
-
 Dellenny presents a comprehensive beginner’s overview of Microsoft Azure, covering its main services, advantages, and essential tools for IT professionals and developers entering the Azure ecosystem.<!--excerpt_end-->
 
 # What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem

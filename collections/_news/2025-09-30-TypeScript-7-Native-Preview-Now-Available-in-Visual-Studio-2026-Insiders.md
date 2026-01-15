@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders"
-description: "This news post from Sayed Ibrahim Hashimi details the integration of TypeScript 7 native preview with Visual Studio 2026 Insiders. It explains what TypeScript 7 native preview is, highlights dramatic improvements in compile time and memory usage, provides step-by-step guidance on setting up the native preview in Visual Studio, calls out known issues and ecosystem considerations, and explains how to report feedback and issues."
-author: "Sayed Ibrahim Hashimi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders
+author: Sayed Ibrahim Hashimi
+canonical_url: https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-30 16:04:20 +00:00
-permalink: "/2025-09-30-TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders.html"
-categories: ["Coding"]
-tags: ["Coding", "Compile Time", "Developer Experience", "IntelliSense", "JavaScript", "Native Compiler", "News", "npm", "Package Management", "Performance Optimization", "TypeScript 7", "TypeScript Native Preview", "Visual Studio Insiders", "VS"]
-tags_normalized: ["coding", "compile time", "developer experience", "intellisense", "javascript", "native compiler", "news", "npm", "package management", "performance optimization", "typescript 7", "typescript native preview", "visual studio insiders", "vs"]
+permalink: /coding/news/TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders
+tags:
+- Coding
+- Compile Time
+- Developer Experience
+- IntelliSense
+- JavaScript
+- Native Compiler
+- News
+- npm
+- Package Management
+- Performance Optimization
+- TypeScript 7
+- TypeScript Native Preview
+- Visual Studio Insiders
+- VS
+section_names:
+- coding
 ---
-
 Sayed Ibrahim Hashimi introduces developers to the TypeScript 7 native preview in Visual Studio 2026 Insiders, outlining the setup process, performance benchmarks, known limitations, and feedback channels.<!--excerpt_end-->
 
 # TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders

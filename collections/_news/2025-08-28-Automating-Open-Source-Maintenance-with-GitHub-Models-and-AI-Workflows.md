@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Automating Open Source Maintenance with GitHub Models and AI Workflows"
-description: "This in-depth guide explains how GitHub Models, in combination with GitHub Actions, empowers open source maintainers to automate repetitive tasks such as issue triage, duplicate detection, spam filtering, and contributor onboarding using AI-driven workflows. It provides practical, copy-paste-ready YAML examples and covers best practices for implementing 'Continuous AI' automation to free up maintainers' time for more impactful work."
-author: "Ashley Wolf"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/how-github-models-can-help-open-source-maintainers-focus-on-what-matters/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Automating Open Source Maintenance with GitHub Models and AI Workflows
+author: Ashley Wolf
+canonical_url: https://github.blog/open-source/maintainers/how-github-models-can-help-open-source-maintainers-focus-on-what-matters/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-28 19:02:44 +00:00
-permalink: "/2025-08-28-Automating-Open-Source-Maintenance-with-GitHub-Models-and-AI-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["Action Scripts", "AI", "AI Integration", "AI Workflows", "Continuous AI", "Contributor Onboarding", "DevOps", "Duplicate Detection", "GitHub Actions", "GitHub Models", "Issue Triage", "Maintainer Tools", "Maintainers", "News", "Open Source", "Open Source Automation", "Pull Request Management", "Spam Filtering", "Workflow Automation", "YAML"]
-tags_normalized: ["action scripts", "ai", "ai integration", "ai workflows", "continuous ai", "contributor onboarding", "devops", "duplicate detection", "github actions", "github models", "issue triage", "maintainer tools", "maintainers", "news", "open source", "open source automation", "pull request management", "spam filtering", "workflow automation", "yaml"]
+permalink: /ai/news/Automating-Open-Source-Maintenance-with-GitHub-Models-and-AI-Workflows
+tags:
+- Action Scripts
+- AI
+- AI Integration
+- AI Workflows
+- Continuous AI
+- Contributor Onboarding
+- DevOps
+- Duplicate Detection
+- GitHub Actions
+- GitHub Models
+- Issue Triage
+- Maintainer Tools
+- Maintainers
+- News
+- Open Source
+- Open Source Automation
+- Pull Request Management
+- Spam Filtering
+- Workflow Automation
+- YAML
+section_names:
+- ai
+- devops
 ---
-
 Ashley Wolf demonstrates how maintainers can use GitHub Models and AI-powered workflows to automate essential but repetitive open source project tasks, streamlining project management and contributor interactions.<!--excerpt_end-->
 
 # Automating Open Source Maintenance with GitHub Models and AI Workflows
@@ -56,12 +74,12 @@ permissions:
   issues: write
 jobs:
   continuous-triage-dedup:
-    if: {% raw %}${{ github.event.issue.user.type != 'Bot' }}{% endraw %}
+    if: ${{ github.event.issue.user.type != 'Bot' }}
     runs-on: ubuntu-latest
     steps:
       - uses: pelikhan/action-genai-issue-dedup@v0
         with:
-          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       # Optional tuning: labels, count, since
 ```
 
@@ -89,8 +107,8 @@ jobs:
         with:
           prompt: |
             Analyze this GitHub issue for completeness. If missing reproduction steps, version, or expected/actual behavior, respond with a friendly request. If complete, say so.
-            Title: {% raw %}${{ github.event.issue.title }}{% endraw %}
-            Body: {% raw %}${{ github.event.issue.body }}{% endraw %}
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
             system-prompt: You are a helpful assistant that helps analyze GitHub issues for completeness.
             model: openai/gpt-4o-mini
             temperature: 0.2
@@ -102,8 +120,8 @@ jobs:
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: {% raw %}${{ github.event.issue.number }}{% endraw %},
-              body: `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`
+              issue_number: ${{ github.event.issue.number }},
+              body: `${{ steps.ai.outputs.response }}`
             })
 ```
 
@@ -131,9 +149,9 @@ jobs:
         id: ai
         with:
           prompt: |
-            Is this GitHub {% raw %}${{ github.event_name == 'issues' && 'issue' || 'pull request' }}{% endraw %} spam, AI-generated slop, or low quality?
-            Title: {% raw %}${{ github.event.issue.title || github.event.pull_request.title }}{% endraw %}
-            Body: {% raw %}${{ github.event.issue.body || github.event.pull_request.body }}{% endraw %}
+            Is this GitHub ${{ github.event_name == 'issues' && 'issue' || 'pull request' }} spam, AI-generated slop, or low quality?
+            Title: ${{ github.event.issue.title || github.event.pull_request.title }}
+            Body: ${{ github.event.issue.body || github.event.pull_request.body }}
             Respond: spam, ai-generated, needs-review, or ok
             system-prompt: You detect spam and low-quality contributions. Be conservative.
             model: openai/gpt-4o-mini
@@ -143,8 +161,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const label = `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`;
-            const number = {% raw %}${{ github.event.issue.number || github.event.pull_request.number }}{% endraw %};
+            const label = `${{ steps.ai.outputs.response }}`;
+            const number = ${{ github.event.issue.number || github.event.pull_request.number }};
             if (label && label !== 'ok') {
               await github.rest.issues.addLabels({ owner: context.repo.owner, repo: context.repo.repo, issue_number: number, labels: [label] });
             }
@@ -170,7 +188,7 @@ jobs:
       - name: Run resolver
         uses: ashleywolf/continuous-ai-resolver@main
         with:
-          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ### 5. New Contributor Onboarding
@@ -205,8 +223,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const message = `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`;
-            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: {% raw %}${{ github.event.pull_request.number }}{% endraw %}, body: message });
+            const message = `${{ steps.ai.outputs.response }}`;
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: ${{ github.event.pull_request.number }}, body: message });
 ```
 
 ## Best Practices

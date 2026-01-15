@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide"
-description: "This guide by Andrea Griffiths walks through the process of using GitHub Copilot Agent Mode, in combination with relevant Visual Studio Code extensions, to modernize legacy Java projects. It covers generating upgrade plans, applying automated changes, migrating authentication to Microsoft Entra ID, integrating with Azure cloud services, and ensuring security with automated CVE scans."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide'
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/2025-09-23-Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Mode", "AI", "AI & ML", "AI Assisted Development", "AKS", "App Modernization", "Application Insights", "Automated Migration", "Azure", "Cloud Deployment", "Continuous Integration", "CVE Scanning", "Dependency Upgrades", "DevOps", "GitHub Copilot", "Gradle", "Java", "Log Analytics", "Managed Identity", "Maven", "Microsoft Entra ID", "News", "OpenRewrite", "Security", "Spring Security", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai and ml", "ai assisted development", "aks", "app modernization", "application insights", "automated migration", "azure", "cloud deployment", "continuous integration", "cve scanning", "dependency upgrades", "devops", "github copilot", "gradle", "java", "log analytics", "managed identity", "maven", "microsoft entra id", "news", "openrewrite", "security", "spring security", "vs code"]
+permalink: /github-copilot/news/Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide
+tags:
+- Agent Mode
+- AI
+- AI & ML
+- AI Assisted Development
+- AKS
+- App Modernization
+- Application Insights
+- Automated Migration
+- Azure
+- Cloud Deployment
+- Continuous Integration
+- CVE Scanning
+- Dependency Upgrades
+- DevOps
+- GitHub Copilot
+- Gradle
+- Java
+- Log Analytics
+- Managed Identity
+- Maven
+- Microsoft Entra ID
+- News
+- OpenRewrite
+- Security
+- Spring Security
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 Andrea Griffiths details how to modernize legacy Java projects by leveraging GitHub Copilot Agent Mode, automated upgrades, secure migrations, and direct Azure cloud deployments.<!--excerpt_end-->
 
 # Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide

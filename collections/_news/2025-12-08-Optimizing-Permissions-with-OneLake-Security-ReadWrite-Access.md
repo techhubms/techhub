@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Optimizing Permissions with OneLake Security ReadWrite Access"
-description: "This article explains how Microsoft Fabric's OneLake introduces ReadWrite permissions to help data teams securely manage collaboration across sensitive and non-sensitive data domains. It details a consolidated access model using role-based security groups (Reader, Contributor, Restricted), offers an architecture example, and demonstrates how schema-level access simplifies governance without sacrificing agility."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/31267/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Optimizing Permissions with OneLake Security ReadWrite Access
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/31267/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-08 11:00:00 +00:00
-permalink: "/2025-12-08-Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Collaboration", "Data Architecture", "Data Governance", "Data Security", "Enterprise Data", "Granular Permissions", "Lakehouse", "Microsoft Fabric", "News", "OneLake", "ReadWrite Permissions", "Role Based Security", "Schema Level Access", "Security", "Storage Solutions"]
-tags_normalized: ["access control", "azure", "collaboration", "data architecture", "data governance", "data security", "enterprise data", "granular permissions", "lakehouse", "microsoft fabric", "news", "onelake", "readwrite permissions", "role based security", "schema level access", "security", "storage solutions"]
+permalink: /azure/news/Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access
+tags:
+- Access Control
+- Azure
+- Collaboration
+- Data Architecture
+- Data Governance
+- Data Security
+- Enterprise Data
+- Granular Permissions
+- Lakehouse
+- Microsoft Fabric
+- News
+- OneLake
+- ReadWrite Permissions
+- Role Based Security
+- Schema Level Access
+- Security
+- Storage Solutions
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog outlines how role-based ReadWrite permissions in OneLake enable secure, collaborative data governance for organizations with varied access needs.<!--excerpt_end-->
 
 # Optimizing Permissions with OneLake Security ReadWrite Access

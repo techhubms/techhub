@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Ephemeral OS Disk Support Now in Public Preview on Azure Virtual Desktop"
-description: "This announcement explores the public preview of Ephemeral OS disk support within Azure Virtual Desktop. It provides details on the benefits, configuration steps, integration with Dynamic Autoscaling plans, and the core scenarios where ephemeral disks deliver faster provisioning, improved performance, and support for stateless workloads."
-author: "Ron_Coleman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-ephemeral-os-disk-support-on-azure-virtual/ba-p/4460172"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Ephemeral OS Disk Support Now in Public Preview on Azure Virtual Desktop
+author: Ron_Coleman
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-ephemeral-os-disk-support-on-azure-virtual/ba-p/4460172
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 19:00:00 +00:00
-permalink: "/2025-10-15-Ephemeral-OS-Disk-Support-Now-in-Public-Preview-on-Azure-Virtual-Desktop.html"
-categories: ["Azure"]
-tags: ["ARM Templates", "Azure", "Azure Infrastructure", "Azure Portal", "Azure Virtual Desktop", "CLI", "Cloud Deployment", "Community", "Dynamic Autoscaling", "Ephemeral OS Disk", "Performance Optimization", "Pooled Host Pools", "PowerShell", "Session Hosts", "Stateless Workloads", "Virtual Machines"]
-tags_normalized: ["arm templates", "azure", "azure infrastructure", "azure portal", "azure virtual desktop", "cli", "cloud deployment", "community", "dynamic autoscaling", "ephemeral os disk", "performance optimization", "pooled host pools", "powershell", "session hosts", "stateless workloads", "virtual machines"]
+permalink: /azure/community/Ephemeral-OS-Disk-Support-Now-in-Public-Preview-on-Azure-Virtual-Desktop
+tags:
+- ARM Templates
+- Azure
+- Azure Infrastructure
+- Azure Portal
+- Azure Virtual Desktop
+- CLI
+- Cloud Deployment
+- Community
+- Dynamic Autoscaling
+- Ephemeral OS Disk
+- Performance Optimization
+- Pooled Host Pools
+- PowerShell
+- Session Hosts
+- Stateless Workloads
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Ron Coleman announces the public preview of Ephemeral OS disk support for Azure Virtual Desktop, outlining setup guidance, performance benefits, and deployment strategies for stateless workloads.<!--excerpt_end-->
 
 # Ephemeral OS Disk Support Now in Public Preview on Azure Virtual Desktop

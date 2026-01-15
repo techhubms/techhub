@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "CodeQL 2.23.3 Adds Rust Security Query, Rust Support, and Easier C/C++ Scanning"
-description: "This news update covers the release of CodeQL 2.23.3, the static analysis engine behind GitHub code scanning. The update introduces general availability for Rust analysis, a new Rust security query, and improved support for C/C++ scanning with the 'build mode none' option. The release also refines query coverage for Go and Java/Kotlin, aiming to reduce false positives and increase security findings’ accuracy and depth across common programming languages. GitHub users will automatically receive the new and improved CodeQL features, while GitHub Enterprise Server users may need to manually update."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL 2.23.3 Adds Rust Security Query, Rust Support, and Easier C/C++ Scanning
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-23 18:47:31 +00:00
-permalink: "/2025-10-23-CodeQL-2233-Adds-Rust-Security-Query-Rust-Support-and-Easier-CC-Scanning.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Build Automation", "C++", "CodeQL", "Data Flow Analysis", "DevOps", "GitHub", "Go", "Improvement", "Java", "Kotlin", "News", "Query Coverage", "Rust", "Secure Coding", "Security", "Security Scanning", "Static Analysis", "Taint Analysis"]
-tags_normalized: ["application security", "build automation", "cplusplus", "codeql", "data flow analysis", "devops", "github", "go", "improvement", "java", "kotlin", "news", "query coverage", "rust", "secure coding", "security", "security scanning", "static analysis", "taint analysis"]
+permalink: /devops/news/CodeQL-2233-Adds-Rust-Security-Query-Rust-Support-and-Easier-CC-Scanning
+tags:
+- Application Security
+- Build Automation
+- C++
+- CodeQL
+- Data Flow Analysis
+- DevOps
+- GitHub
+- Go
+- Improvement
+- Java
+- Kotlin
+- News
+- Query Coverage
+- Rust
+- Secure Coding
+- Security
+- Security Scanning
+- Static Analysis
+- Taint Analysis
+section_names:
+- devops
+- security
 ---
-
 Allison announces the release of CodeQL 2.23.3, highlighting advancements in language support, security query coverage, and ease of scanning for multiple languages in GitHub code scanning workflows.<!--excerpt_end-->
 
 # CodeQL 2.23.3 Adds Rust Security Query, Rust Support, and Easier C/C++ Scanning

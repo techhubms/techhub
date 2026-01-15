@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights and Updates for July 2025"
-description: "This post by Ronnie Geraghty shares the highlights and detailed release notes for the Azure SDK updates in July 2025. It covers updates to Azure AI Agents, Azure Storage, Key Vault, initial stable and beta releases across major languages, and provides links to comprehensive release notes."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-july-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK Release Highlights and Updates for July 2025
+author: Ronnie Geraghty
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-july-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-07-30 22:41:00 +00:00
-permalink: "/2025-07-30-Azure-SDK-Release-Highlights-and-Updates-for-July-2025.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: [".NET", "AI", "AI Agents", "Azure", "Azure SDK", "Azure Storage", "Certificate Management", "Cloud Health", "Coding", "Event Grid", "Go", "Java", "JavaScript", "Key Vault", "Lambda Test", "Management Libraries", "MongoDB Atlas", "News", "Playwright", "Python", "Release Notes", "Resource Management", "SDK", "Security", "System Events"]
-tags_normalized: ["dotnet", "ai", "ai agents", "azure", "azure sdk", "azure storage", "certificate management", "cloud health", "coding", "event grid", "go", "java", "javascript", "key vault", "lambda test", "management libraries", "mongodb atlas", "news", "playwright", "python", "release notes", "resource management", "sdk", "security", "system events"]
+permalink: /ai/news/Azure-SDK-Release-Highlights-and-Updates-for-July-2025
+tags:
+- .NET
+- AI
+- AI Agents
+- Azure
+- Azure SDK
+- Azure Storage
+- Certificate Management
+- Cloud Health
+- Coding
+- Event Grid
+- Go
+- Java
+- JavaScript
+- Key Vault
+- Lambda Test
+- Management Libraries
+- MongoDB Atlas
+- News
+- Playwright
+- Python
+- Release Notes
+- Resource Management
+- SDK
+- Security
+- System Events
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 Ronnie Geraghty summarizes the key updates in the July 2025 Azure SDK release, detailing new features, bug fixes, stable and beta releases for languages like Python, .NET, and more.<!--excerpt_end-->
 
 # Azure SDK Release (July 2025)

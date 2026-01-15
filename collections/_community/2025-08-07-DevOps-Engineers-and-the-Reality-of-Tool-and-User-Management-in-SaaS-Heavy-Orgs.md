@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "DevOps Engineers and the Reality of Tool and User Management in SaaS-Heavy Orgs"
-description: "This community discussion, led by Coffeebrain695, examines the blurred boundaries between DevOps, office IT, and user administration in organizations rapidly adopting multiple SaaS platforms. Contributors reflect on how tasks like SSO setup, Google Workspace group management, and user provisioning creep into DevOps roles, propose strategies for better boundaries, and share tips for automation to refocus on core platform engineering."
-author: "Coffeebrain695"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mk0s1l/how_much_of_your_job_involves_administering_tools/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: DevOps Engineers and the Reality of Tool and User Management in SaaS-Heavy Orgs
+author: Coffeebrain695
+canonical_url: https://www.reddit.com/r/devops/comments/1mk0s1l/how_much_of_your_job_involves_administering_tools/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-07 13:56:26 +00:00
-permalink: "/2025-08-07-DevOps-Engineers-and-the-Reality-of-Tool-and-User-Management-in-SaaS-Heavy-Orgs.html"
-categories: ["DevOps"]
-tags: ["Automation", "CI/CD", "Community", "DevOps", "Google Workspace", "IAM", "IT Operations", "Platform Engineering", "RBAC", "Role Management", "SaaS Administration", "Scope Creep", "SSO", "Terraform", "User Provisioning", "Workload Management"]
-tags_normalized: ["automation", "cislashcd", "community", "devops", "google workspace", "iam", "it operations", "platform engineering", "rbac", "role management", "saas administration", "scope creep", "sso", "terraform", "user provisioning", "workload management"]
+permalink: /devops/community/DevOps-Engineers-and-the-Reality-of-Tool-and-User-Management-in-SaaS-Heavy-Orgs
+tags:
+- Automation
+- CI/CD
+- Community
+- DevOps
+- Google Workspace
+- IAM
+- IT Operations
+- Platform Engineering
+- RBAC
+- Role Management
+- SaaS Administration
+- Scope Creep
+- SSO
+- Terraform
+- User Provisioning
+- Workload Management
+section_names:
+- devops
 ---
-
 Coffeebrain695 and other community members share real-world experiences of DevOps engineers handling SaaS user management and tool administration due to shifting team roles.<!--excerpt_end-->
 
 # DevOps Engineers and SaaS User Administration – Where's the Line?

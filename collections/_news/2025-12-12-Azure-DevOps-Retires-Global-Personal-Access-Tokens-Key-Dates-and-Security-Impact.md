@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure DevOps Retires Global Personal Access Tokens: Key Dates and Security Impact"
-description: "Microsoft is retiring the Global Personal Access Token (PAT) type in Azure DevOps to improve credential security and reduce risk. This change emphasizes organizational boundaries, recommends migration to Entra-backed authentication, and sets specific decommissioning dates. Developers and DevOps engineers should update workflows and transition to modern, short-lived authentication methods before the retirements take effect."
-author: "Angel Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure DevOps Retires Global Personal Access Tokens: Key Dates and Security Impact'
+author: Angel Wong
+canonical_url: https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-12 14:15:06 +00:00
-permalink: "/2025-12-12-Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Authentication", "Azure", "Azure DevOps", "Credential Migration", "DevOps", "DevOps Workflows", "Identity Management", "Microsoft Entra", "News", "Organizational Policies", "PAT Retirement", "PATs", "Personal Access Tokens", "Release Management", "Security", "Token Decommission", "Token Governance"]
-tags_normalized: ["authentication", "azure", "azure devops", "credential migration", "devops", "devops workflows", "identity management", "microsoft entra", "news", "organizational policies", "pat retirement", "pats", "personal access tokens", "release management", "security", "token decommission", "token governance"]
+permalink: /azure/news/Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact
+tags:
+- Authentication
+- Azure
+- Azure DevOps
+- Credential Migration
+- DevOps
+- DevOps Workflows
+- Identity Management
+- Microsoft Entra
+- News
+- Organizational Policies
+- PAT Retirement
+- PATs
+- Personal Access Tokens
+- Release Management
+- Security
+- Token Decommission
+- Token Governance
+section_names:
+- azure
+- devops
+- security
 ---
-
 Angel Wong details Microsoft's retirement plan for Global Personal Access Tokens in Azure DevOps, outlining key security implications and migration steps for practitioners.<!--excerpt_end-->
 
 # Azure DevOps Retires Global Personal Access Tokens: What You Need to Know

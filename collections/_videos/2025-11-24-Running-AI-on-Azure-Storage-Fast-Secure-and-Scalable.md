@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Running AI on Azure Storage: Fast, Secure, and Scalable"
-description: "This session from Microsoft Ignite 2025 dives deep into optimizing Azure Blob Storage for advanced AI workloads. It explores scaling OpenAI models, keeping GPUs productive with Azure Container Storage and Blobfuse2, and simplifies AI integrations using frameworks like Ray, KAITO, and LangChain on Azure Kubernetes Service (AKS). Learn security best practices, data preparation steps such as Retrieval Augmented Generation (RAG), and methods for building AI-ready enterprise data pipelines using Azure’s unified storage management features."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6-UKEiqm53c"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Running AI on Azure Storage: Fast, Secure, and Scalable'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=6-UKEiqm53c
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:26:37 +00:00
-permalink: "/2025-11-24-Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Fine Tuning", "AI Training", "AKS", "Azure", "Azure AI Services", "Azure Blob Storage", "Azure Container Storage", "Blobfuse2", "Data Security", "Developer Velocity", "Enterprise Data", "GPU Optimization", "KAITO", "LangChain", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "OpenAI", "Ray", "Retrieval Augmented Generation", "Unified Storage Management", "Videos"]
-tags_normalized: ["ai", "ai fine tuning", "ai training", "aks", "azure", "azure ai services", "azure blob storage", "azure container storage", "blobfuse2", "data security", "developer velocity", "enterprise data", "gpu optimization", "kaito", "langchain", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "openai", "ray", "retrieval augmented generation", "unified storage management", "videos"]
+permalink: /ai/videos/Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable
+tags:
+- AI
+- AI Fine Tuning
+- AI Training
+- AKS
+- Azure
+- Azure AI Services
+- Azure Blob Storage
+- Azure Container Storage
+- Blobfuse2
+- Data Security
+- Developer Velocity
+- Enterprise Data
+- GPU Optimization
+- KAITO
+- LangChain
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- OpenAI
+- Ray
+- Retrieval Augmented Generation
+- Unified Storage Management
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a hands-on Ignite 2025 session on optimizing Azure Storage for secure, scalable AI workloads. Speakers Vamshi Kommineni, Natalie Mao, and Saurabh Sensharma guide viewers through advanced techniques and integrations.<!--excerpt_end-->
 
 {% youtube 6-UKEiqm53c %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Get Started with Microsoft Desired State Configuration v3.0.0"
-description: "This news post introduces Microsoft Desired State Configuration (DSC) v3.0.0, a cross-platform configuration management framework. It provides a step-by-step guide on how to install DSC across Windows, Linux, and macOS, details key commands for managing configurations, shows how to use and list DSC resources, and demonstrates the process of managing configuration documents, all with practical PowerShell code examples."
-author: "Jason Helmick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/get-started-with-dsc-v3/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: Get Started with Microsoft Desired State Configuration v3.0.0
+author: Jason Helmick
+canonical_url: https://devblogs.microsoft.com/powershell/get-started-with-dsc-v3/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-03-12 17:59:51 +00:00
-permalink: "/2025-03-12-Get-Started-with-Microsoft-Desired-State-Configuration-v300.html"
-categories: ["Coding", "DevOps"]
-tags: ["Automation", "CLI", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "Dsc Command", "IaC", "IIS", "News", "PowerShell", "PowerShell DSC", "PSDSC", "Resource Adapters", "System Configuration", "V3.0.0", "Windows Server", "YAML"]
-tags_normalized: ["automation", "cli", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "dsc command", "iac", "iis", "news", "powershell", "powershell dsc", "psdsc", "resource adapters", "system configuration", "v3dot0dot0", "windows server", "yaml"]
+permalink: /coding/news/Get-Started-with-Microsoft-Desired-State-Configuration-v300
+tags:
+- Automation
+- CLI
+- Coding
+- Configuration Management
+- Cross Platform
+- Desired State Configuration
+- DevOps
+- DSC
+- Dsc Command
+- IaC
+- IIS
+- News
+- PowerShell
+- PowerShell DSC
+- PSDSC
+- Resource Adapters
+- System Configuration
+- V3.0.0
+- Windows Server
+- YAML
+section_names:
+- coding
+- devops
 ---
-
 Jason Helmick walks through the installation and basics of Microsoft Desired State Configuration v3.0.0, helping IT professionals and developers automate infrastructure management using PowerShell.<!--excerpt_end-->
 
 # Get Started with Microsoft Desired State Configuration v3.0.0

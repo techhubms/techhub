@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Building AI Apps and Agents for the New Frontier"
-description: "This post by Mike Hulme explores Microsoft’s latest AI-driven platforms and agentic application frameworks announced at Microsoft Ignite. It covers how agentic DevOps, Azure services, and GitHub Copilot are transforming software engineering, app modernization, security, and cloud operations for developers and organizations seeking to create and operate next-generation AI applications and agents at scale."
-author: "Mike_Hulme"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-ai-apps-and-agents-for-the-new-frontier/ba-p/4470165"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building AI Apps and Agents for the New Frontier
+author: Mike_Hulme
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-ai-apps-and-agents-for-the-new-frontier/ba-p/4470165
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:30:51 +00:00
-permalink: "/2025-11-18-Building-AI-Apps-and-Agents-for-the-New-Frontier.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic DevOps", "AI", "AI Agents", "App Platform", "Application Modernization", "Azure", "Azure App Service", "Azure Container Apps", "Azure Functions", "Azure Logic Apps", "Cloud Reliability", "Coding", "Community", "Defender For Cloud", "DevOps", "DevOps Automation", "GitHub Advanced Security", "GitHub Copilot", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Agent Orchestration", "Production AI", "Security", "Security Integration", "Teams Integration", "VS Code"]
-tags_normalized: ["agentic devops", "ai", "ai agents", "app platform", "application modernization", "azure", "azure app service", "azure container apps", "azure functions", "azure logic apps", "cloud reliability", "coding", "community", "defender for cloud", "devops", "devops automation", "github advanced security", "github copilot", "mcp", "microsoft agent framework", "microsoft foundry", "multi agent orchestration", "production ai", "security", "security integration", "teams integration", "vs code"]
+permalink: /github-copilot/community/Building-AI-Apps-and-Agents-for-the-New-Frontier
+tags:
+- Agentic DevOps
+- AI
+- AI Agents
+- App Platform
+- Application Modernization
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Azure Functions
+- Azure Logic Apps
+- Cloud Reliability
+- Coding
+- Community
+- Defender For Cloud
+- DevOps
+- DevOps Automation
+- GitHub Advanced Security
+- GitHub Copilot
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Multi Agent Orchestration
+- Production AI
+- Security
+- Security Integration
+- Teams Integration
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Mike Hulme discusses the impact of Microsoft’s agentic AI and developer tools, including GitHub Copilot, Foundry, and Azure services, on building and managing next-generation applications securely and efficiently.<!--excerpt_end-->
 
 # Building AI Apps and Agents for the New Frontier

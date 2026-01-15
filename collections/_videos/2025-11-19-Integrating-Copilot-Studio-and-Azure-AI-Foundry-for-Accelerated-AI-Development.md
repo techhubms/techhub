@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Integrating Copilot Studio and Azure AI Foundry for Accelerated AI Development"
-description: "This session from Microsoft Ignite 2025 features a deep dive into how Copilot Studio and Azure AI Foundry complement each other for faster, more scalable AI solution development. Real-world use cases, integration strategies, live demos, and advanced orchestration concepts are covered to help developers and teams build intelligent applications with robust governance and efficient collaboration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Yujyvez1fVA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Integrating Copilot Studio and Azure AI Foundry for Accelerated AI Development
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Yujyvez1fVA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:12:00 +00:00
-permalink: "/2025-11-19-Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accelerated-AI-Development.html"
-categories: ["AI", "Azure"]
-tags: ["Activity Explorer", "Agent Orchestration", "AI", "AI Development", "AI Governance", "AI Integration", "Azure", "Azure AI Foundry", "Copilot Studio", "Deterministic AI", "Fine Tuning Models", "InnovatewithAzureAIappsandagents", "Intelligent Applications", "Low Code Agent Builder", "Microsoft Ignite", "MSIgnite", "Prompt Engineering", "Scalable Solutions", "Videos"]
-tags_normalized: ["activity explorer", "agent orchestration", "ai", "ai development", "ai governance", "ai integration", "azure", "azure ai foundry", "copilot studio", "deterministic ai", "fine tuning models", "innovatewithazureaiappsandagents", "intelligent applications", "low code agent builder", "microsoft ignite", "msignite", "prompt engineering", "scalable solutions", "videos"]
+permalink: /ai/videos/Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accelerated-AI-Development
+tags:
+- Activity Explorer
+- Agent Orchestration
+- AI
+- AI Development
+- AI Governance
+- AI Integration
+- Azure
+- Azure AI Foundry
+- Copilot Studio
+- Deterministic AI
+- Fine Tuning Models
+- InnovatewithAzureAIappsandagents
+- Intelligent Applications
+- Low Code Agent Builder
+- Microsoft Ignite
+- MSIgnite
+- Prompt Engineering
+- Scalable Solutions
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Presented by Matt DiLiberto, this Microsoft Ignite session explores integrating Copilot Studio and Azure AI Foundry to empower teams in building smarter, scalable AI solutions.<!--excerpt_end-->
 
 {% youtube Yujyvez1fVA %}

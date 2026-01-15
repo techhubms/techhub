@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions"
-description: "This video from Microsoft Build 2025 features interviews with attendees and guests about developer security, focusing on practices related to AI models from online repositories. It introduces Microsoft's Secure Future Initiative, highlighting the importance of security considerations when incorporating external AI models into development projects."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/Kff78AQ7m9s"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/Kff78AQ7m9s
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 16:09:52 +00:00
-permalink: "/2025-07-30-Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Models", "Application Security", "Cloud Computing", "Cloud Security", "Dev", "Developer Security", "Development", "Microsoft", "Microsoft Build", "Microsoft Developer", "Online Repositories", "Secure Development", "Secure Future Initiative", "Security", "Security Practices", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai models", "application security", "cloud computing", "cloud security", "dev", "developer security", "development", "microsoft", "microsoft build", "microsoft developer", "online repositories", "secure development", "secure future initiative", "security", "security practices", "tech", "technology", "videos"]
+permalink: /ai/videos/Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions
+tags:
+- AI
+- AI Models
+- Application Security
+- Cloud Computing
+- Cloud Security
+- Dev
+- Developer Security
+- Development
+- Microsoft
+- Microsoft Build
+- Microsoft Developer
+- Online Repositories
+- Secure Development
+- Secure Future Initiative
+- Security
+- Security Practices
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- security
 ---
-
 In this video, Microsoft Developer interviews Build 2025 attendees about security practices when sourcing AI models from online repositories, sharing insights into developer security.<!--excerpt_end-->
 
 {% youtube Kff78AQ7m9s %}

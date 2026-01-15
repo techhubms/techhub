@@ -1,20 +1,31 @@
----
-layout: "post"
-title: ".NET Unboxed - .NET 10 Release Candidate 1"
-description: "This content highlights new features in .NET 10, as demonstrated by the .NET team. The presentation likely covers enhancements, tools, and capabilities in .NET 10 RC1, with mentions of Visual Studio 2026. The focus is on what developers can expect from this release and practical improvements for coding, productivity, and development in the Microsoft ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YuuWHkQAsFY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Unboxed - .NET 10 Release Candidate 1
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=YuuWHkQAsFY
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-09 17:26:23 +00:00
-permalink: "/2025-09-09-NET-Unboxed-NET-10-Release-Candidate-1.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET RC1", "C#", "Coding", "Development Tools", "Dotnet10", "Microsoft", "Programming", "Release Candidate", "Software Release", "Videos", "Visualstudio2026", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet rc1", "csharp", "coding", "development tools", "dotnet10", "microsoft", "programming", "release candidate", "software release", "videos", "visualstudio2026", "vs"]
+permalink: /coding/videos/NET-Unboxed-NET-10-Release-Candidate-1
+tags:
+- .NET
+- .NET 10
+- .NET RC1
+- C#
+- Coding
+- Development Tools
+- Dotnet10
+- Microsoft
+- Programming
+- Release Candidate
+- Software Release
+- Videos
+- Visualstudio2026
+- VS
+section_names:
+- coding
 ---
-
 The .NET team, led by dotnet, showcases their top features in .NET 10 Release Candidate 1, providing insights into the latest improvements for developers.<!--excerpt_end-->
 
 {% youtube YuuWHkQAsFY %}

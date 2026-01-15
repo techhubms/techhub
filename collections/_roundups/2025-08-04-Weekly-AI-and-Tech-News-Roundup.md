@@ -1,17 +1,40 @@
----
-layout: "post"
-title: "Agentic AI and Developer Workflows Leap Forward"
-description: "Major breakthroughs defined this week in AI-powered software development, with GitHub Copilot surpassing ChatGPT in developer preference due to its evolving memory, integrated repo management, and practical agent automation. Microsoft’s MCP and A2A protocols, coupled with rapid advancements across Azure, .NET Aspire, and DevOps, continue to solidify secure, scalable infrastructure for intelligent application delivery—while security news highlights the ongoing need for robust governance amid sophisticated threats."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: Agentic AI and Developer Workflows Leap Forward
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-08-04 09:00:00 +00:00
-permalink: "/2025-08-04-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET Aspire", "A2A", "Agent Orchestration", "AI", "AI Agents", "Azure", "C#", "Cloud Security", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Identity Management", "MCP", "ML", "Prompt Engineering", "Roundups", "Security", "TypeScript", "VS Code"]
-tags_normalized: ["dotnet aspire", "a2a", "agent orchestration", "ai", "ai agents", "azure", "csharp", "cloud security", "coding", "developer productivity", "devops", "github copilot", "identity management", "mcp", "ml", "prompt engineering", "roundups", "security", "typescript", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- .NET Aspire
+- A2A
+- Agent Orchestration
+- AI
+- AI Agents
+- Azure
+- C#
+- Cloud Security
+- Coding
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- Identity Management
+- MCP
+- ML
+- Prompt Engineering
+- Roundups
+- Security
+- TypeScript
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s tech roundup, where AI-driven developer tools and cloud innovation take center stage. GitHub Copilot has not only solidified its role as the premier AI companion for developers but has overtaken ChatGPT as the most relied-upon assistant in modern coding workflows. With new persistent memory features, expanded in-chat capabilities, and deep community engagement, Copilot is rapidly accelerating productivity, code quality, and automation for individuals and teams alike. Real-world stories—from social impact nonprofits to enterprise billing rollouts—highlight just how transformative these advancements are becoming.
 
 Meanwhile, significant momentum is building around agent-enabled infrastructure. Microsoft’s MCP and A2A protocols now underpin more secure and scalable AI agent deployments, making real-world, interoperable agent orchestration a reality for organizations across every sector. Integration with .NET, Azure, and Visual Studio Code is enabling agile prototyping and deployment of advanced, privacy-first AI workflows, while Azure’s platform upgrades and landmark events further reinforce its standing as the backbone for next-gen cloud and data architectures. Security remains paramount, as new identity threats and critical vulnerabilities demand smarter defense at every layer. Dive in for the week’s most impactful stories, insights, and practical guidance shaping the future of technology and collaboration.<!--excerpt_end-->
@@ -94,13 +117,13 @@ Copilot’s new 'memory' feature marks a notable leap: it now persists details l
 
 GitHub Copilot’s overtaking of ChatGPT as developers’ top AI tool reflects the shift toward deep, workflow-native AI integration. Copilot now powers seamless code suggestions, automated refactoring, and richer IDE automation. This growth is further visible through initiatives like the ‘For the love of code’ hackathon and GitHub’s new developer-focused podcast—signaling the momentum of a fast-growing Copilot ecosystem.
 
-- [The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool]({{ "/videos/2025-08-01-The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool.html" | relative_url }})
+- [The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool](/videos/2025-08-01-The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool.html)
 
 ### Enhanced AI-Powered Workflows in Visual Studio Code
 
 Building on last week’s GitHub Spark debut, its integration with Copilot in VS Code advanced: developers now saw seamless, in-session natural language-to-app generation, accelerated code automation, and improved extension/workflow management. Community feedback continued to refine these features, cementing Copilot and Spark as drivers for rapid prototyping and modernization.
 
-- [VS Code Live – Exploring GitHub Spark and Copilot in Visual Studio Code]({{ "/videos/2025-08-02-VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code.html" | relative_url }})
+- [VS Code Live – Exploring GitHub Spark and Copilot in Visual Studio Code](/videos/2025-08-02-VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code.html)
 
 ### Repository Management Directly Through Copilot Chat
 
@@ -116,7 +139,7 @@ Agent-based automation continued to evolve, with Copilot Coding Agent now automa
 - [Copilot Coding Agent: Enhanced Reliability and Debugging for Custom Setup Steps](https://github.blog/changelog/2025-07-30-copilot-coding-agent-custom-setup-steps-are-more-reliable-and-easier-to-debug)
 - [GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions](https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date)
 - [A Practical Guide to Using the GitHub MCP Server for Automated AI Workflows](https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server/)
-- [When to Use GitHub Copilot Coding Agent Versus Agent Mode]({{ "/videos/2025-07-29-When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode.html" | relative_url }})
+- [When to Use GitHub Copilot Coding Agent Versus Agent Mode](/videos/2025-07-29-When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode.html)
 
 ### Workflow Strategies: Prompt Engineering and Customization
 
@@ -126,30 +149,30 @@ Community strategies continued to optimize prompt engineering, including ‘Exte
 - [How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering](https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/)
 - [Anyone using JSON Prompting with LLMs?](https://www.reddit.com/r/GithubCopilot/comments/1mb7lpn/anyone_using_json_prompting_with_llms/)
 - [Forcing Chain-of-Thought to Non-Thinking Models in AI IDEs like VS Code & Copilot](https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/)
-- [Never lose your GitHub Copilot session history again]({{ "/videos/2025-07-30-Never-lose-your-GitHub-Copilot-session-history-again.html" | relative_url }})
+- [Never lose your GitHub Copilot session history again](/videos/2025-07-30-Never-lose-your-GitHub-Copilot-session-history-again.html)
 
 ### Real-World Impact: Productivity Gains in Teams and Nonprofits
 
 Real-world adoption stories, such as at One Acre Fund, showed Copilot can triple software delivery speed, echoing earlier themes around rapid MVPs and modernization. Best practices—agent onboarding, prompt-driven docs, using Copilot for both infra/app layers—are being widely adopted from startups to nonprofits.
 
 - [Scaling for Impact: How GitHub Copilot Accelerates One Acre Fund’s Mission for African Farmers](https://github.blog/open-source/social-impact/scaling-for-impact-how-github-copilot-supercharges-smallholder-farmers/)
-- [GitHub Copilot Helps One Acre Fund Scale Farming Impact]({{ "/videos/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html" | relative_url }})
+- [GitHub Copilot Helps One Acre Fund Scale Farming Impact](/videos/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html)
 - [Complete functional MVP using Copilot.](https://www.reddit.com/r/GithubCopilot/comments/1mfw2yf/complete_functional_mvp_using_copilot/)
 
 ### Productivity Modes, Extensions, and Collaboration in VS Code
 
 Copilot’s three core modes—Agent, Edit, and Ask—now fully span the software lifecycle. SQL developers benefit from agent task delegation, local-containerized DBs, and AI-powered code review, with custom chat modes and competitions expanding AI use beyond just code generation.
 
-- [Are You Using All 3 GitHub Copilot Modes?]({{ "/videos/2025-08-03-Are-You-Using-All-3-GitHub-Copilot-Modes.html" | relative_url }})
-- [Boost Your SQL Development in VS Code: GitHub Copilot, Containers, and More]({{ "/videos/2025-07-30-Boost-Your-SQL-Development-in-VS-Code-GitHub-Copilot-Containers-and-More.html" | relative_url }})
-- [Creating a Custom Chat Mode in VS Code for Smarter AI Assistance]({{ "/videos/2025-08-02-Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance.html" | relative_url }})
+- [Are You Using All 3 GitHub Copilot Modes?](/videos/2025-08-03-Are-You-Using-All-3-GitHub-Copilot-Modes.html)
+- [Boost Your SQL Development in VS Code: GitHub Copilot, Containers, and More](/videos/2025-07-30-Boost-Your-SQL-Development-in-VS-Code-GitHub-Copilot-Containers-and-More.html)
+- [Creating a Custom Chat Mode in VS Code for Smarter AI Assistance](/videos/2025-08-02-Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance.html)
 - [1st GitHub Copilot Custom Chat Competition](https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/)
 
 ### Enhanced Debugging and Code Review
 
 Ongoing improvements now allow Copilot Chat to leverage more contextual input for debugging, while Copilot Coding Agent automates PR title/description sync. These changes further last week’s push toward actionable, automated reviews and richer documentation for teams.
 
-- [Debugging Faster with GitHub Copilot Chat: Tips from GitHub]({{ "/videos/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html" | relative_url }})
+- [Debugging Faster with GitHub Copilot Chat: Tips from GitHub](/videos/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html)
 - [GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions](https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date)
 - [Write Cleaner Code Comments with GitHub Copilot](https://cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html)
 
@@ -158,9 +181,9 @@ Ongoing improvements now allow Copilot Chat to leverage more contextual input fo
 Onboarding guides have expanded—offering step-by-step help for VS Code, Docker, privacy management, and troubleshooting. The sustained growth of structured documentation reflects a user-driven drive to reduce friction and boost Copilot reliability.
 
 - [A Comprehensive Guide to Getting Started with GitHub Copilot](https://dellenny.com/a-comprehensive-guide-to-getting-started-with-github-copilot-for-end-users/)
-- [How to Use GitHub Copilot: The Complete Beginner's Guide]({{ "/videos/2025-07-30-How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide.html" | relative_url }})
+- [How to Use GitHub Copilot: The Complete Beginner's Guide](/videos/2025-07-30-How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide.html)
 - [Seeking Guidance: Effectively Using GitHub Copilot with VS Code and Docker](https://www.reddit.com/r/GithubCopilot/comments/1mg6uu8/am_i_using_it_wrong/)
-- [Vibe Code Your First MCP Server with GitHub Copilot]({{ "/videos/2025-07-30-Vibe-Code-Your-First-MCP-Server-with-GitHub-Copilot.html" | relative_url }})
+- [Vibe Code Your First MCP Server with GitHub Copilot](/videos/2025-07-30-Vibe-Code-Your-First-MCP-Server-with-GitHub-Copilot.html)
 
 ### AI Support for Agile Teams and Technical Writing
 
@@ -205,19 +228,19 @@ AI development this week was defined by major advancements from Microsoft and pa
 
 Microsoft’s enterprise-ready MCP blueprint equips developers to deploy multimodal agent systems on Azure, with best-in-class security and scaling (OAuth2/Entra ID integration, container-based deployment, real code patterns, latency optimization). This closes the gap between prototype and real-world production for advanced AI features.
 
-- [Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents]({{ "/videos/2025-07-28-Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents.html" | relative_url }})
+- [Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents](/videos/2025-07-28-Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents.html)
 
 ### MCP and A2A: Foundations for Agentic Collaboration
 
 Expanding on last week’s focus, open standards like MCP (with new OAuth 2.1 flows) and A2A SDK previews are now central for agent-to-agent communication and productivity. Workshops, bootcamps, and multi-language resources are boosting adoption and teaching schema-driven, robust orchestration from concept through production. Business and technical sessions highlight MCP’s compliance impact, and A2A’s message-based negotiation and capability discovery.
 
-- [MCP Gets OAuth: Understanding the New Authorization Specification]({{ "/videos/2025-07-29-MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification.html" | relative_url }})
-- [Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration]({{ "/videos/2025-07-30-Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration.html" | relative_url }})
+- [MCP Gets OAuth: Understanding the New Authorization Specification](/videos/2025-07-29-MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification.html)
+- [Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration](/videos/2025-07-30-Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration.html)
 - [Building Collaborative AI Agents with the A2A .NET SDK](https://devblogs.microsoft.com/foundry/building-ai-agents-a2a-dotnet-sdk/)
-- [Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit]({{ "/videos/2025-07-28-Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit.html" | relative_url }})
-- [MCP Dev Days Day 2: From Concept to Code]({{ "/videos/2025-07-30-MCP-Dev-Days-Day-2-From-Concept-to-Code.html" | relative_url }})
-- [Ctrl Shift - MCP & A2A: Why Business Leaders Should Care]({{ "/videos/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html" | relative_url }})
-- [Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer]({{ "/videos/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html" | relative_url }})
+- [Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit](/videos/2025-07-28-Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit.html)
+- [MCP Dev Days Day 2: From Concept to Code](/videos/2025-07-30-MCP-Dev-Days-Day-2-From-Concept-to-Code.html)
+- [Ctrl Shift - MCP & A2A: Why Business Leaders Should Care](/videos/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html)
+- [Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer](/videos/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html)
 - [Let’s Learn MCP Series Recap: 8 Languages, 4 Code Bases, Full Resources](https://devblogs.microsoft.com/blog/lets-learn-mcp-series-recap-8-languages-4-code-bases-full-resources)
 - [MCP Bootcamp: APAC, LATAM, and Brazil – Learn Model Context Protocol Integration, LLMs, Azure, and Copilot](https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-bootcamp-apac-latam-and-brazil/ba-p/4435966)
 
@@ -225,27 +248,27 @@ Expanding on last week’s focus, open standards like MCP (with new OAuth 2.1 fl
 
 The .NET MCP SDK and Azure AI Foundry integrations make agent orchestration and rapid prototyping much more accessible. Developers now have privacy-first, offline local agent server options and ASP.NET Core + SignalR templates for real-time, scalable AI chat—demonstrating the practical boost in productivity, security, and debugging for local and cloud workflow development.
 
-- [MCP C# SDK Deep Dive]({{ "/videos/2025-07-30-MCP-C-SDK-Deep-Dive.html" | relative_url }})
+- [MCP C# SDK Deep Dive](/videos/2025-07-30-MCP-C-SDK-Deep-Dive.html)
 - [Build Smarter LLMs with Local MCP Servers in .NET](https://www.reddit.com/r/dotnet/comments/1mgbojy/build_smarter_llms_with_local_mcp_servers_in_net/)
-- [Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon]({{ "/videos/2025-07-29-Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon.html" | relative_url }})
+- [Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon](/videos/2025-07-29-Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon.html)
 
 ### Streamlining Agent-Based Automation and Enterprise Integration
 
 Fresh case studies across health, finance, and data-centric enterprises, plus guides for modular code, remote MCP servers, and Azure-based scaling, reinforce MCP’s practicality for automating complex, compliant AI workflows across stacks.
 
-- [MCP in Action: Real-World Case Studies]({{ "/videos/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html" | relative_url }})
-- [Lessons from MCP Early Adopters]({{ "/videos/2025-07-28-Lessons-from-MCP-Early-Adopters.html" | relative_url }})
-- [MCP Development Best Practices]({{ "/videos/2025-07-28-MCP-Development-Best-Practices.html" | relative_url }})
-- [MCP Dev Days: Day 2 - Builders]({{ "/videos/2025-07-30-MCP-Dev-Days-Day-2-Builders.html" | relative_url }})
-- [Practical Introduction to Building Remote MCP Servers]({{ "/videos/2025-07-30-Practical-Introduction-to-Building-Remote-MCP-Servers.html" | relative_url }})
-- [Build your first MCP server]({{ "/videos/2025-07-28-Build-your-first-MCP-server.html" | relative_url }})
-- [MCP Core Concepts: Understanding the Architecture and Message Flow]({{ "/videos/2025-07-28-MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow.html" | relative_url }})
+- [MCP in Action: Real-World Case Studies](/videos/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html)
+- [Lessons from MCP Early Adopters](/videos/2025-07-28-Lessons-from-MCP-Early-Adopters.html)
+- [MCP Development Best Practices](/videos/2025-07-28-MCP-Development-Best-Practices.html)
+- [MCP Dev Days: Day 2 - Builders](/videos/2025-07-30-MCP-Dev-Days-Day-2-Builders.html)
+- [Practical Introduction to Building Remote MCP Servers](/videos/2025-07-30-Practical-Introduction-to-Building-Remote-MCP-Servers.html)
+- [Build your first MCP server](/videos/2025-07-28-Build-your-first-MCP-server.html)
+- [MCP Core Concepts: Understanding the Architecture and Message Flow](/videos/2025-07-28-MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow.html)
 
 ### Orchestrating AI Workflows and Prompt Engineering
 
 Semantic Kernel-led orchestration patterns and a roundup of top prompt engineering tools point to practical strategies for chaining agents, modular workflow development, and boosting LLM-powered application efficiency.
 
-- [Building AI Agent Workflows with Semantic Kernel]({{ "/videos/2025-07-29-Building-AI-Agent-Workflows-with-Semantic-Kernel.html" | relative_url }})
+- [Building AI Agent Workflows with Semantic Kernel](/videos/2025-07-29-Building-AI-Agent-Workflows-with-Semantic-Kernel.html)
 - [Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents](https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/)
 
 ### Scaling AI: Microsoft’s Milestones, Industry Transformation, and Advanced Reasoning
@@ -276,7 +299,7 @@ Microsoft Fabric’s July update delivered tighter Copilot Studio integration (A
 
 - [Fabric July 2025 Feature Summary](https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/)
 - [Autoscale Billing for Spark in Microsoft Fabric Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/)
-- [Get Data into Fabric Eventhouse with No-Code Ingestion Wizard]({{ "/videos/2025-07-31-Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard.html" | relative_url }})
+- [Get Data into Fabric Eventhouse with No-Code Ingestion Wizard](/videos/2025-07-31-Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard.html)
 - [JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)](https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/)
 - [Data Integration with Microsoft Fabric: Unifying Your Data Universe](https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/)
 - [A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices](https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/)
@@ -287,8 +310,8 @@ Microsoft Fabric’s July update delivered tighter Copilot Studio integration (A
 Azure AI Foundry Agent Service and private MCP registries simplify agent workflow orchestration, compliance, and internal governance—operationalizing last week’s emerging multi-agent patterns. Best practices for building agent-ready APIs and registering agents within Azure’s ecosystem now support robust, production-scale AI app delivery.
 
 - [Unlocking Innovation with Azure AI Foundry Agent Service](https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030)
-- [Building Agent-Ready Tools with API Center and API Management]({{ "/videos/2025-07-30-Building-Agent-Ready-Tools-with-API-Center-and-API-Management.html" | relative_url }})
-- [Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry]({{ "/videos/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html" | relative_url }})
+- [Building Agent-Ready Tools with API Center and API Management](/videos/2025-07-30-Building-Agent-Ready-Tools-with-API-Center-and-API-Management.html)
+- [Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry](/videos/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html)
 - [Build. Secure. Launch Your Private MCP Registry with Azure API Center.](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016)
 
 ### Developer Tooling: CLI, SDKs, and Automation Modernize Workflows
@@ -315,7 +338,7 @@ Hands-on content addressed architectural decisions (Functions vs. Logic Apps vs.
 - [10 Creative Use Cases for Azure Communication Services](https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775)
 - [Implementing the Cache-Aside (Lazy Loading) Pattern in Azure](https://dellenny.com/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in-azure/)
 - [Boosting Performance with the Materialized View Pattern in Azure](https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/)
-- [Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed]({{ "/videos/2025-07-31-Multiple-geo-replicas-for-Azure-SQL-Hyperscale-Data-Exposed.html" | relative_url }})
+- [Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed](/videos/2025-07-31-Multiple-geo-replicas-for-Azure-SQL-Hyperscale-Data-Exposed.html)
 - [Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology](https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/)
 - [Azure Tag Best Practice: Staging Tags Before Server Onboarding](https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/)
 
@@ -332,7 +355,7 @@ Technical guides for app/data backups, Bicep for Entra ID, and blob conversions 
 
 August 2025’s platform update brought maintenance options, improved disk scaling, authentication upgrades for Power BI/Postgres, new feature retirements, and proactive recommendations—supporting smoother resource management and long-term modernization.
 
-- [Azure Updates: August 2025 Highlights]({{ "/videos/2025-08-01-Azure-Updates-August-2025-Highlights.html" | relative_url }})
+- [Azure Updates: August 2025 Highlights](/videos/2025-08-01-Azure-Updates-August-2025-Highlights.html)
 
 ## Coding
 
@@ -343,8 +366,8 @@ This week brought strong advances to .NET Aspire, TypeScript, and C# tooling, de
 Aspire 9.4 introduced a GA CLI with fast scaffolding, dashboard notifications, and AI model hosting support—simplifying distributed service orchestration and boosting workflow speed. New APIs make adding and monitoring external services easier, while the dashboard and hosting enhancements align Aspire with broader MCP-driven architectures.
 
 - [Aspire 9.4: CLI, Interactive Dashboard, AI Integrations, and New Features](https://devblogs.microsoft.com/dotnet/announcing-aspire-9-4/)
-- [.NET Aspire 9.4 New Features: ExternalService Resource, Interaction Service, Aspire CLI, and GitHub Model Integration]({{ "/videos/2025-07-31-NET-Aspire-94-New-Features-ExternalService-Resource-Interaction-Service-Aspire-CLI-and-GitHub-Model-Integration.html" | relative_url }})
-- [.NET Aspire – Adding Custom Commands to the Dashboard]({{ "/videos/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html" | relative_url }})
+- [.NET Aspire 9.4 New Features: ExternalService Resource, Interaction Service, Aspire CLI, and GitHub Model Integration](/videos/2025-07-31-NET-Aspire-94-New-Features-ExternalService-Resource-Interaction-Service-Aspire-CLI-and-GitHub-Model-Integration.html)
+- [.NET Aspire – Adding Custom Commands to the Dashboard](/videos/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html)
 
 ### Full-Stack Development: Modern Patterns and Open Source
 
@@ -402,8 +425,8 @@ New C# bindings for Rust’s egui UI, WinUI’s OSS transition, and a wave of co
 Live events and community standups—on Blazor diagnostics, source generators, and SQL—fuel peer-driven learning and rapid open knowledge exchange across the stack.
 
 - [Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5](https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/)
-- [ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor]({{ "/videos/2025-08-01-ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor.html" | relative_url }})
-- [.NET Data Community Standup: Exploring jOOQ with Lukas Eder and Inspiration for EF]({{ "/videos/2025-07-28-NET-Data-Community-Standup-Exploring-jOOQ-with-Lukas-Eder-and-Inspiration-for-EF.html" | relative_url }})
+- [ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor](/videos/2025-08-01-ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor.html)
+- [.NET Data Community Standup: Exploring jOOQ with Lukas Eder and Inspiration for EF](/videos/2025-07-28-NET-Data-Community-Standup-Exploring-jOOQ-with-Lukas-Eder-and-Inspiration-for-EF.html)
 
 ### Workflow, IDE Troubleshooting, and Productivity
 
@@ -418,8 +441,8 @@ Threads on VS/Windows update pain, IDE choice, effective MVC UX, and code profes
 
 New contributors can directly impact multi-language protocols like MCP, with clear onboarding and open-source guidelines fostering inclusive, scalable progress.
 
-- [How to Build, Test & Deploy MCP Apps with Real Tools and Workflows]({{ "/videos/2025-07-28-How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows.html" | relative_url }})
-- [How to Contribute to MCP: Tools, Documentation, Code & More]({{ "/videos/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html" | relative_url }})
+- [How to Build, Test & Deploy MCP Apps with Real Tools and Workflows](/videos/2025-07-28-How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows.html)
+- [How to Contribute to MCP: Tools, Documentation, Code & More](/videos/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html)
 
 ## DevOps
 
@@ -541,15 +564,15 @@ Microsoft’s new Identity Threat Detection and Response platform merges identit
 AI adoption demands robust governance and compliance—practical guidance now covers full-team, policy-driven approaches for AI agents in tightly regulated environments, including data loss prevention, monitoring, and secure API surfacing. Microsoft, partners, and the community provide actionable MCP server hardening tips (OAuth 2.1, prompt injection defense) and VS Code-integration for secure agent development.
 
 - [Mastering Agent Governance in Microsoft 365](https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/mastering-agent-governance-in-microsoft-365/ba-p/4416627)
-- [MCP In Production: Building Secure and Agent-Ready Model Context Protocol Servers]({{ "/videos/2025-07-30-MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers.html" | relative_url }})
-- [MCP Security Best Practices]({{ "/videos/2025-07-28-MCP-Security-Best-Practices.html" | relative_url }})
+- [MCP In Production: Building Secure and Agent-Ready Model Context Protocol Servers](/videos/2025-07-30-MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers.html)
+- [MCP Security Best Practices](/videos/2025-07-28-MCP-Security-Best-Practices.html)
 
 ### Developer Security Hygiene and Tooling
 
 Security checks for AI model code are increasingly critical; practical sessions at Build 2025 emphasize using trusted model registries, automated scanning, and Microsoft’s Secure Future Initiative for best pipeline hygiene. Suricata and ELK showcase modern threat detection, and the new AspNetCore.SecurityKey package simplifies extensible API key authentication for ASP.NET Core.
 
-- [Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions]({{ "/videos/2025-07-30-Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions.html" | relative_url }})
-- [Open Source Friday with Suricata - Real-Time Threat Detection]({{ "/videos/2025-08-01-Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection.html" | relative_url }})
+- [Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions](/videos/2025-07-30-Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions.html)
+- [Open Source Friday with Suricata - Real-Time Threat Detection](/videos/2025-08-01-Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection.html)
 - [AspNetCore.SecurityKey: API Key Authentication for ASP.NET Core Applications](https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/)
 
 ### Streamlined Audit Logging and Compliance

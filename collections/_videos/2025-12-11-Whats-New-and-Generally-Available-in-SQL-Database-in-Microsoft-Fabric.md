@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "What's New and Generally Available in SQL Database in Microsoft Fabric"
-description: "This video explores the latest milestones for SQL database in Microsoft Fabric, detailing its general availability, newly released features, top use cases, and roadmap. The presentation includes sample architectures and code demonstrations, highlighting end-to-end scenarios using Fabric SQL, Foundry, and Azure integrations. Viewers gain hands-on guidance for getting started and resources for further learning."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Lt63g-NeqBM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: What's New and Generally Available in SQL Database in Microsoft Fabric
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Lt63g-NeqBM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 18:26:07 +00:00
-permalink: "/2025-12-11-Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL", "Cloud Computing", "Cloud Data Platform", "Data Analytics", "Data Engineering", "Database Development", "Dev", "Development", "Fabric Roadmap", "Foundry", "General Availability", "Integration", "Microsoft", "Microsoft Fabric", "ML", "Sample Architecture", "SQL Database", "SQL Demo", "Tech", "Tech Release", "Technology", "Videos"]
-tags_normalized: ["azure", "azure sql", "cloud computing", "cloud data platform", "data analytics", "data engineering", "database development", "dev", "development", "fabric roadmap", "foundry", "general availability", "integration", "microsoft", "microsoft fabric", "ml", "sample architecture", "sql database", "sql demo", "tech", "tech release", "technology", "videos"]
+permalink: /ml/videos/Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric
+tags:
+- Azure
+- Azure SQL
+- Cloud Computing
+- Cloud Data Platform
+- Data Analytics
+- Data Engineering
+- Database Development
+- Dev
+- Development
+- Fabric Roadmap
+- Foundry
+- General Availability
+- Integration
+- Microsoft
+- Microsoft Fabric
+- ML
+- Sample Architecture
+- SQL Database
+- SQL Demo
+- Tech
+- Tech Release
+- Technology
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Developer showcases the new features and use cases of SQL database in Microsoft Fabric, including a live code demo and architecture walkthrough to illustrate integration with Azure and Foundry.<!--excerpt_end-->
 
 {% youtube Lt63g-NeqBM %}

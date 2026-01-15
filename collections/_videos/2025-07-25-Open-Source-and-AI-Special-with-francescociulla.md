@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Open Source and AI Special with @francescociulla"
-description: "Francesco Ciulla leads a session on practical AI for developers, focusing on real-world applications using AI, open source, and GitHub tools. The session targets developer efficiency and staying competitive, with actionable insights rather than hype."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=I8acOcHuE_I"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Open Source and AI Special with @francescociulla
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=I8acOcHuE_I
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 04:06:27 +00:00
-permalink: "/2025-07-25-Open-Source-and-AI-Special-with-francescociulla.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Implementation", "AI Tools", "Developer Efficiency", "Developer Workflow", "DevOps", "Francesco Ciulla", "GitHub", "Open Source", "Practical AI", "Relevant Skills", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai implementation", "ai tools", "developer efficiency", "developer workflow", "devops", "francesco ciulla", "github", "open source", "practical ai", "relevant skills", "software development", "videos"]
+permalink: /ai/videos/Open-Source-and-AI-Special-with-francescociulla
+tags:
+- AI
+- AI Implementation
+- AI Tools
+- Developer Efficiency
+- Developer Workflow
+- DevOps
+- Francesco Ciulla
+- GitHub
+- Open Source
+- Practical AI
+- Relevant Skills
+- Software Development
+- Videos
+section_names:
+- ai
+- devops
 ---
-
 In this video session, GitHub features Francesco Ciulla as he demonstrates practical AI approaches for developers, pinpointing actionable strategies with open source and GitHub tools.<!--excerpt_end-->
 
 {% youtube I8acOcHuE_I %}

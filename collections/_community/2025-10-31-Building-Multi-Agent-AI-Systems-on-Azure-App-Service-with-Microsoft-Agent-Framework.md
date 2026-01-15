@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Multi-Agent AI Systems on Azure App Service with Microsoft Agent Framework"
-description: "This community post by jordanselig details how to construct production-ready, long-running multi-agent AI workflows using Microsoft Agent Framework on Azure App Service. It explains the architectural patterns, phases of workflow execution, external API integrations, and practical deployment steps for creating specialized, collaborating AI agents in the cloud."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-2-build-long-running-ai-agents-on-azure-app-service-with/ba-p/4465825"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Multi-Agent AI Systems on Azure App Service with Microsoft Agent Framework
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-2-build-long-running-ai-agents-on-azure-app-service-with/ba-p/4465825
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-31 15:44:05 +00:00
-permalink: "/2025-10-31-Building-Multi-Agent-AI-Systems-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure"]
-tags: [".NET 9", "AI", "AI Agents", "Async Request Reply", "Azure", "Azure AI Foundry", "Azure App Service", "Bicep", "Cloud Architecture", "Community", "Cosmos DB", "External API Integration", "Microsoft Agent Framework", "Multi Agent Systems", "Production Patterns", "Service Bus", "WebJobs", "Workflow Orchestration"]
-tags_normalized: ["dotnet 9", "ai", "ai agents", "async request reply", "azure", "azure ai foundry", "azure app service", "bicep", "cloud architecture", "community", "cosmos db", "external api integration", "microsoft agent framework", "multi agent systems", "production patterns", "service bus", "webjobs", "workflow orchestration"]
+permalink: /ai/community/Building-Multi-Agent-AI-Systems-on-Azure-App-Service-with-Microsoft-Agent-Framework
+tags:
+- .NET 9
+- AI
+- AI Agents
+- Async Request Reply
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Bicep
+- Cloud Architecture
+- Community
+- Cosmos DB
+- External API Integration
+- Microsoft Agent Framework
+- Multi Agent Systems
+- Production Patterns
+- Service Bus
+- WebJobs
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 jordanselig demonstrates how to build sophisticated multi-agent AI solutions on Azure App Service using Microsoft Agent Framework, providing real-world workflow orchestration and deployment guidance for developers.<!--excerpt_end-->
 
 # Building Multi-Agent AI Systems on Azure App Service with Microsoft Agent Framework

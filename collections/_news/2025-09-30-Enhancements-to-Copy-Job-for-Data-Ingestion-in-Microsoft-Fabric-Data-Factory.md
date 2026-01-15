@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory"
-description: "This announcement details new features introduced to Copy job in Microsoft Fabric Data Factory, including connection parameterization with Variables Library, expanded change data capture support, new source and target connectors, and improvements to the Copy Assistant for simplified, automated data movement. The update enables flexible, secure, and scalable data ingestion workflows supporting complex integration and migration scenarios. Users can optimize CI/CD deployment pipelines, benefit from native CDC with Fabric Lakehouse tables and Snowflake, and connect to a broader set of data stores in hybrid and multi-cloud environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 17:00:00 +00:00
-permalink: "/2025-09-30-Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Amazon RDS", "Amazon S3", "Azure", "Azure SQL Database", "Change Data Capture", "CI/CD Automation", "Connection Parameterization", "Copy Job", "Data Factory", "Data Ingestion", "Data Replication", "Delta Change Data Feed", "Fabric Lakehouse Table", "Greenplum", "Incremental Copy", "Lakehouse", "MariaDB", "Microsoft Fabric", "ML", "New Connectors", "News", "Oracle Cloud Storage", "Pipeline Automation", "SAP", "SFTP", "Snowflake Integration", "SQL Server", "Storage Integration", "Variables Library"]
-tags_normalized: ["amazon rds", "amazon s3", "azure", "azure sql database", "change data capture", "cislashcd automation", "connection parameterization", "copy job", "data factory", "data ingestion", "data replication", "delta change data feed", "fabric lakehouse table", "greenplum", "incremental copy", "lakehouse", "mariadb", "microsoft fabric", "ml", "new connectors", "news", "oracle cloud storage", "pipeline automation", "sap", "sftp", "snowflake integration", "sql server", "storage integration", "variables library"]
+permalink: /ml/news/Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fabric-Data-Factory
+tags:
+- Amazon RDS
+- Amazon S3
+- Azure
+- Azure SQL Database
+- Change Data Capture
+- CI/CD Automation
+- Connection Parameterization
+- Copy Job
+- Data Factory
+- Data Ingestion
+- Data Replication
+- Delta Change Data Feed
+- Fabric Lakehouse Table
+- Greenplum
+- Incremental Copy
+- Lakehouse
+- MariaDB
+- Microsoft Fabric
+- ML
+- New Connectors
+- News
+- Oracle Cloud Storage
+- Pipeline Automation
+- SAP
+- SFTP
+- Snowflake Integration
+- SQL Server
+- Storage Integration
+- Variables Library
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces major updates to Copy job in Data Factory, enabling connection parameterization, expanded CDC support, and enhanced connector options for flexible data integration workflows.<!--excerpt_end-->
 
 # Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "New Capabilities in Microsoft Fabric Data Warehouse Announced at Ignite"
-description: "This news article details major new features in Microsoft Fabric Data Warehouse, including data clustering for performance, IDENTITY columns for surrogate key generation, support for large VARCHAR(MAX) data types, and Warehouse Snapshots for query consistency. These capabilities help address enterprise analytics, data engineering, and data management needs within the Microsoft Fabric platform."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: New Capabilities in Microsoft Fabric Data Warehouse Announced at Ignite
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 11:00:00 +00:00
-permalink: "/2025-11-19-New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "BI", "Cloud Data Platform", "Cosmos DB", "Data Clustering", "Data Engineering", "Data Warehouse", "ETL", "IDENTITY Columns", "Microsoft Fabric", "ML", "News", "Schema Management", "Snapshot Consistency", "SQL Analytics", "VARBINARY(MAX)", "VARCHAR(MAX)", "Warehouse Snapshots"]
-tags_normalized: ["analytics", "azure", "bi", "cloud data platform", "cosmos db", "data clustering", "data engineering", "data warehouse", "etl", "identity columns", "microsoft fabric", "ml", "news", "schema management", "snapshot consistency", "sql analytics", "varbinarymax", "varcharmax", "warehouse snapshots"]
+permalink: /ml/news/New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite
+tags:
+- Analytics
+- Azure
+- BI
+- Cloud Data Platform
+- Cosmos DB
+- Data Clustering
+- Data Engineering
+- Data Warehouse
+- ETL
+- IDENTITY Columns
+- Microsoft Fabric
+- ML
+- News
+- Schema Management
+- Snapshot Consistency
+- SQL Analytics
+- VARBINARY(MAX)
+- VARCHAR(MAX)
+- Warehouse Snapshots
+section_names:
+- azure
+- ml
 ---
-
 Authored by Microsoft Fabric Blog, with contributions from Peri Rocha, Ancy Philip, Jovan Popovic, and Twinkle Cyril, this article unveils the latest enhancements to Fabric Data Warehouse supporting advanced analytics and modern data warehousing.<!--excerpt_end-->
 
 # Microsoft Fabric Data Warehouse: Enterprise-Ready Features Announced at Ignite

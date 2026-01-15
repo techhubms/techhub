@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Auto Model Selection Now Available in VS Code for GitHub Copilot Business and Enterprise"
-description: "This announcement details the public preview of auto model selection in Visual Studio Code for GitHub Copilot Business and Enterprise plans. The feature automatically selects among supported AI models, enhances transparency for developers, and provides administrators with control over policy and access while optimizing for model availability and billing efficiency."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-auto-model-selection-is-now-in-vs-code-for-copilot-business-and-enterprise"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Auto Model Selection Now Available in VS Code for GitHub Copilot Business and Enterprise
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-auto-model-selection-is-now-in-vs-code-for-copilot-business-and-enterprise
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-01 12:59:10 +00:00
-permalink: "/2025-10-01-Auto-Model-Selection-Now-Available-in-VS-Code-for-GitHub-Copilot-Business-and-Enterprise.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Auto Model Selection", "Business Plans", "Copilot", "Enterprise Plans", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Policies", "News", "Premium Requests", "Sonnet 3.5", "Sonnet 4", "VS Code", "VS Code Extension"]
-tags_normalized: ["ai", "ai models", "auto model selection", "business plans", "copilot", "enterprise plans", "github copilot", "gpt 4dot1", "gpt 5", "model policies", "news", "premium requests", "sonnet 3dot5", "sonnet 4", "vs code", "vs code extension"]
+permalink: /github-copilot/news/Auto-Model-Selection-Now-Available-in-VS-Code-for-GitHub-Copilot-Business-and-Enterprise
+tags:
+- AI
+- AI Models
+- Auto Model Selection
+- Business Plans
+- Copilot
+- Enterprise Plans
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Model Policies
+- News
+- Premium Requests
+- Sonnet 3.5
+- Sonnet 4
+- VS Code
+- VS Code Extension
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the new auto model selection feature in Visual Studio Code for GitHub Copilot Business and Enterprise, explaining how it improves model selection transparency and policy management for developers and administrators.<!--excerpt_end-->
 
 # Auto Model Selection Now in VS Code for Copilot Business and Enterprise

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Fabric Data Warehouse Migration Assistant: Better, Faster, More Reliable"
-description: "Microsoft announces improvements to the Fabric Data Warehouse Migration Assistant, enhancing the migration experience with increased speed, reliability, and ease of use for moving data into Fabric warehouses."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-migration-assistant-better-faster-more-reliable/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Data Warehouse Migration Assistant: Better, Faster, More Reliable'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-migration-assistant-better-faster-more-reliable/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-22 11:00:00 +00:00
-permalink: "/2025-07-22-Fabric-Data-Warehouse-Migration-Assistant-Better-Faster-More-Reliable.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cloud Data", "Data Migration", "Fabric Data Warehouse", "Microsoft", "Migration Assistant", "Migration Tools", "ML", "News", "Performance", "Public Preview", "Reliability", "Warehouse Migration"]
-tags_normalized: ["azure", "cloud data", "data migration", "fabric data warehouse", "microsoft", "migration assistant", "migration tools", "ml", "news", "performance", "public preview", "reliability", "warehouse migration"]
+permalink: /ml/news/Fabric-Data-Warehouse-Migration-Assistant-Better-Faster-More-Reliable
+tags:
+- Azure
+- Cloud Data
+- Data Migration
+- Fabric Data Warehouse
+- Microsoft
+- Migration Assistant
+- Migration Tools
+- ML
+- News
+- Performance
+- Public Preview
+- Reliability
+- Warehouse Migration
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines updates to the Fabric Data Warehouse Migration Assistant, focusing on better reliability and speed for data migrations.<!--excerpt_end-->
 
 ## Summary

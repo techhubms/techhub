@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Persist Values With AsyncLocal in C# Async Flow"
-description: "This article by Bozo Spoljaric explores the AsyncLocal class in C#, detailing how it enables value persistence across asynchronous flows. Practical examples demonstrate usage patterns, inner workings, and appropriate scenarios for AsyncLocal, emphasizing its role in reducing parameter passing and improving code clarity in .NET async applications."
-author: "Bozo Spoljaric"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/csharp-persist-values-with-asynclocal-in-async-flow/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+layout: post
+title: Persist Values With AsyncLocal in C# Async Flow
+author: Bozo Spoljaric
+canonical_url: https://code-maze.com/csharp-persist-values-with-asynclocal-in-async-flow/
+viewing_mode: external
+feed_name: Code Maze Blog
+feed_url: https://code-maze.com/feed/
 date: 2025-01-06 05:55:32 +00:00
-permalink: "/2025-01-06-Persist-Values-With-AsyncLocal-in-C-Async-Flow.html"
-categories: ["Coding"]
-tags: [".NET", "Async Programming", "Asynchronous Programming", "AsyncLocal", "Blogs", "C#", "Coding", "Context Propagation", "Correlation ID", "ExecutionContext", "Structured Logging", "Task Based Programming", "Thread Context"]
-tags_normalized: ["dotnet", "async programming", "asynchronous programming", "asynclocal", "blogs", "csharp", "coding", "context propagation", "correlation id", "executioncontext", "structured logging", "task based programming", "thread context"]
+permalink: /coding/blogs/Persist-Values-With-AsyncLocal-in-C-Async-Flow
+tags:
+- .NET
+- Async Programming
+- Asynchronous Programming
+- AsyncLocal
+- Blogs
+- C#
+- Coding
+- Context Propagation
+- Correlation ID
+- ExecutionContext
+- Structured Logging
+- Task Based Programming
+- Thread Context
+section_names:
+- coding
 ---
-
 Bozo Spoljaric introduces the AsyncLocal class, revealing how it enables value persistence throughout asynchronous flows in C#. The article offers step-by-step examples and guidance on when and how to effectively use AsyncLocal for more maintainable .NET code.<!--excerpt_end-->
 
 # Persist Values With AsyncLocal in C# Async Flow

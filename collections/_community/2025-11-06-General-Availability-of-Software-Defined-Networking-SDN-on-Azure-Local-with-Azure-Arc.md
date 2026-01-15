@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "General Availability of Software Defined Networking (SDN) on Azure Local with Azure Arc"
-description: "This announcement presents the general availability of Software Defined Networking (SDN) on Azure Local, enabled by Azure Arc. The release introduces centralized control of logical networks and Network Security Groups (NSGs), cloud-native management through familiar Azure tools, fine-grained network policy controls, hybrid consistency, and disaster recovery support. It provides a unified approach to delivering Azure-style networking on-premises, outlines key capabilities, and clarifies the distinction between Azure Arc-managed and on-premises SDN management tools."
-author: "varunlakshmanan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Software Defined Networking (SDN) on Azure Local with Azure Arc
+author: varunlakshmanan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 16:24:37 +00:00
-permalink: "/2025-11-06-General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure CLI", "Azure Local", "Azure Portal", "Azure Resource Manager", "Community", "Disaster Recovery", "Failover Cluster", "Hybrid Cloud", "Network Controller", "Network Policy", "Network Security Groups", "NSG", "SDN", "Security", "Software Defined Networking", "Virtual Networks", "VLAN"]
-tags_normalized: ["azure", "azure arc", "azure cli", "azure local", "azure portal", "azure resource manager", "community", "disaster recovery", "failover cluster", "hybrid cloud", "network controller", "network policy", "network security groups", "nsg", "sdn", "security", "software defined networking", "virtual networks", "vlan"]
+permalink: /azure/community/General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc
+tags:
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Local
+- Azure Portal
+- Azure Resource Manager
+- Community
+- Disaster Recovery
+- Failover Cluster
+- Hybrid Cloud
+- Network Controller
+- Network Policy
+- Network Security Groups
+- NSG
+- SDN
+- Security
+- Software Defined Networking
+- Virtual Networks
+- VLAN
+section_names:
+- azure
+- security
 ---
-
 varunlakshmanan announces the general availability of Software Defined Networking (SDN) on Azure Local, enabled by Azure Arc, detailing the new network management, security, and operational features for hybrid environments.<!--excerpt_end-->
 
 # General Availability of Software Defined Networking (SDN) on Azure Local with Azure Arc

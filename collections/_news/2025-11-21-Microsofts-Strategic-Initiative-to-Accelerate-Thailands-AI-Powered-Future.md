@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft's Strategic Initiative to Accelerate Thailand’s AI-Powered Future"
-description: "Microsoft has announced a landmark commitment to foster AI-driven digital transformation and innovation in Thailand. Through the 'Building Thailand’s AI-Powered Future' initiative, the company aims to develop local cloud and AI infrastructure, enhance digital and AI skills, empower enterprises, and support government efforts with advanced AI solutions. The collaboration includes establishing the Microsoft National AI Innovation Center, driving AI capacity in both the public and private sectors, and advancing compliance-focused cloud services for Thai organizations."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/11/18/microsoft-announces-landmark-strategic-commitment-to-accelerate-thailands-ai-powered-growth-and-inclusive-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft's Strategic Initiative to Accelerate Thailand’s AI-Powered Future
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/2025/11/18/microsoft-announces-landmark-strategic-commitment-to-accelerate-thailands-ai-powered-growth-and-inclusive-innovation/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-21 13:57:14 +00:00
-permalink: "/2025-11-21-Microsofts-Strategic-Initiative-to-Accelerate-Thailands-AI-Powered-Future.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Skills Development", "Azure", "Azure OpenAI", "Cloud Region", "Company News", "Compliance", "Data Residency", "Digital Transformation", "EGAT", "Enterprise AI", "Government Partnerships", "KASIKORNBANK", "Microsoft Azure", "National AI Innovation Center", "News", "OECD", "SCBX", "Thailand"]
-tags_normalized: ["ai", "ai infrastructure", "ai skills development", "azure", "azure openai", "cloud region", "company news", "compliance", "data residency", "digital transformation", "egat", "enterprise ai", "government partnerships", "kasikornbank", "microsoft azure", "national ai innovation center", "news", "oecd", "scbx", "thailand"]
+permalink: /ai/news/Microsofts-Strategic-Initiative-to-Accelerate-Thailands-AI-Powered-Future
+tags:
+- AI
+- AI Infrastructure
+- AI Skills Development
+- Azure
+- Azure OpenAI
+- Cloud Region
+- Company News
+- Compliance
+- Data Residency
+- Digital Transformation
+- EGAT
+- Enterprise AI
+- Government Partnerships
+- KASIKORNBANK
+- Microsoft Azure
+- National AI Innovation Center
+- News
+- OECD
+- SCBX
+- Thailand
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on Microsoft's major new initiative to accelerate Thailand's AI-powered growth, focusing on infrastructure, national innovation, and AI upskilling across sectors.<!--excerpt_end-->
 
 # Microsoft Commits to Accelerating Thailand’s AI-Powered Growth and Inclusive Innovation

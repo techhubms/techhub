@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL"
-description: "This episode of Data Exposed demonstrates how Microsoft Fabric Real-Time Intelligence (RTI) enables developers to use familiar SQL constructs for ingesting, transforming, and analyzing live streaming event data. The session covers key concepts such as windowing functions for time-based analytics, event-driven application development, rich data connectors, alerting for real-time actions, and integrating Copilot for dashboard generation and KQL queries. The walk-through includes an end-to-end demo and practical guidance on leveraging RTI’s operational agents and Data Agent capabilities for powerful real-time solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tyiDMlKXLwU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=tyiDMlKXLwU
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 16:01:35 +00:00
-permalink: "/2025-10-30-Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Copilot", "Dashboarding", "Data Agent", "Data Engineering", "Dev", "Development", "Event Driven Architecture", "Event Streams", "Fabric Real Time Intelligence", "KQL", "Microsoft", "Microsoft Fabric", "ML", "Real Time Analytics", "SQL", "Streaming Data", "Tech", "Technology", "Videos", "Windowing Functions"]
-tags_normalized: ["ai", "azure", "azure sql", "cloud computing", "coding", "copilot", "dashboarding", "data agent", "data engineering", "dev", "development", "event driven architecture", "event streams", "fabric real time intelligence", "kql", "microsoft", "microsoft fabric", "ml", "real time analytics", "sql", "streaming data", "tech", "technology", "videos", "windowing functions"]
+permalink: /ai/videos/Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL
+tags:
+- AI
+- Azure
+- Azure SQL
+- Cloud Computing
+- Coding
+- Copilot
+- Dashboarding
+- Data Agent
+- Data Engineering
+- Dev
+- Development
+- Event Driven Architecture
+- Event Streams
+- Fabric Real Time Intelligence
+- KQL
+- Microsoft
+- Microsoft Fabric
+- ML
+- Real Time Analytics
+- SQL
+- Streaming Data
+- Tech
+- Technology
+- Videos
+- Windowing Functions
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Developer presents a practical guide to building event-driven applications using Microsoft Fabric Real-Time Intelligence and SQL, featuring live demos and insights from Anna Hoffman.<!--excerpt_end-->
 
 {% youtube tyiDMlKXLwU %}

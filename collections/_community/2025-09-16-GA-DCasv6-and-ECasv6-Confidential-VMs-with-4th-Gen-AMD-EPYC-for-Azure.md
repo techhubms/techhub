@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure"
-description: "This article announces the general availability of Azure's DCasv6 and ECasv6 confidential VM series, powered by 4th Generation AMD EPYC processors. It covers their security features such as Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP), AES-256 memory encryption, integration with Azure Kubernetes Service (AKS), support for Azure Linux 3.0 and Ubuntu 24.04, as well as improved performance, scalability, and use cases for regulated industries and confidential workloads."
-author: "Rakeshginjupalli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure'
+author: Rakeshginjupalli
+canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 23:00:00 +00:00
-permalink: "/2025-09-16-GA-DCasv6-and-ECasv6-Confidential-VMs-with-4th-Gen-AMD-EPYC-for-Azure.html"
-categories: ["Azure", "Security"]
-tags: ["AES 256", "AKS", "AMD EPYC", "Azure", "Azure Confidential Computing", "Cloud Security", "Community", "Confidential VMs", "Confidential Workloads", "DCasv6", "ECasv6", "Enterprise Performance", "Key Rotation", "Linux Kernel", "Memory Encryption", "Multi Tenant Security", "Secure Cloud", "Security", "SEV SNP", "Virtualization Based Security", "Windows VBS"]
-tags_normalized: ["aes 256", "aks", "amd epyc", "azure", "azure confidential computing", "cloud security", "community", "confidential vms", "confidential workloads", "dcasv6", "ecasv6", "enterprise performance", "key rotation", "linux kernel", "memory encryption", "multi tenant security", "secure cloud", "security", "sev snp", "virtualization based security", "windows vbs"]
+permalink: /azure/community/GA-DCasv6-and-ECasv6-Confidential-VMs-with-4th-Gen-AMD-EPYC-for-Azure
+tags:
+- AES 256
+- AKS
+- AMD EPYC
+- Azure
+- Azure Confidential Computing
+- Cloud Security
+- Community
+- Confidential VMs
+- Confidential Workloads
+- DCasv6
+- ECasv6
+- Enterprise Performance
+- Key Rotation
+- Linux Kernel
+- Memory Encryption
+- Multi Tenant Security
+- Secure Cloud
+- Security
+- SEV SNP
+- Virtualization Based Security
+- Windows VBS
+section_names:
+- azure
+- security
 ---
-
 Rakeshginjupalli details Azure's launch of the DCasv6 and ECasv6 confidential VM series with 4th Gen AMD EPYC processors, focusing on advanced security, AES-256 memory encryption, and AKS support for regulated and confidential workloads.<!--excerpt_end-->
 
 # GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure

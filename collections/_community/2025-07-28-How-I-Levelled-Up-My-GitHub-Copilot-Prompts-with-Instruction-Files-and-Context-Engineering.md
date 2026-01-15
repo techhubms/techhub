@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering"
-description: "The article by Neat-Huckleberry-407 shares insights on enhancing GitHub Copilot prompts through the use of instruction files and context engineering. The author discusses practical strategies for improving the accuracy and usefulness of Copilot responses, offering concrete examples and guidance based on their personal experience."
-author: "Neat-Huckleberry-407"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering
+author: Neat-Huckleberry-407
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 12:03:27 +00:00
-permalink: "/2025-07-28-How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Code Generation", "Coding Best Practices", "Community", "Context Engineering", "Copilot Tips", "Developer Productivity", "GitHub Copilot", "Instruction Files", "Prompt Engineering", "Software Development"]
-tags_normalized: ["ai", "ai assisted coding", "code generation", "coding best practices", "community", "context engineering", "copilot tips", "developer productivity", "github copilot", "instruction files", "prompt engineering", "software development"]
+permalink: /github-copilot/community/How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering
+tags:
+- AI
+- AI Assisted Coding
+- Code Generation
+- Coding Best Practices
+- Community
+- Context Engineering
+- Copilot Tips
+- Developer Productivity
+- GitHub Copilot
+- Instruction Files
+- Prompt Engineering
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, Neat-Huckleberry-407 explains how they improved their GitHub Copilot prompt effectiveness using instruction files and context engineering.<!--excerpt_end-->
 
 ## Summary

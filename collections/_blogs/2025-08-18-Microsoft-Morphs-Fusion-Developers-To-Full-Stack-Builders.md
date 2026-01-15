@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Microsoft Morphs Fusion Developers To Full Stack Builders"
-description: "This article by Adrian Bridgwater explores Microsoft's evolving strategy for bridging the gap between business experts and software engineers. It focuses on fusion development teams, democratizing app creation via Power Platform, agentic AI integration, and the transition from low-code tools to natural language-driven programming, with an emphasis on organizational safeguards and engineering practices."
-author: "Adrian Bridgwater"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Microsoft Morphs Fusion Developers To Full Stack Builders
+author: Adrian Bridgwater
+canonical_url: https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-18 11:47:55 +00:00
-permalink: "/2025-08-18-Microsoft-Morphs-Fusion-Developers-To-Full-Stack-Builders.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic AI", "Agentic AI in Development", "AI", "AI Assisted Coding", "AI Workflow", "Amanda Silver", "Application Scaffolding", "Blogs", "Business Domain Experts", "Business Domain Experts in Software", "Business Of DevOps", "Citizen Developers", "Coding", "Continuous Deployment", "Continuous Integration", "Cross Functional Collaboration", "Development Guardrails", "DevOps", "Full Stack Development", "Full Stack Development Democratization", "Fusion Development Teams", "Fusion Software Development", "Low Code No Code Platforms", "Low Code Platforms", "Microsoft Power Platform", "Natural Language Programming", "Power Apps", "Ryan Cunningham", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering"]
-tags_normalized: ["agentic ai", "agentic ai in development", "ai", "ai assisted coding", "ai workflow", "amanda silver", "application scaffolding", "blogs", "business domain experts", "business domain experts in software", "business of devops", "citizen developers", "coding", "continuous deployment", "continuous integration", "cross functional collaboration", "development guardrails", "devops", "full stack development", "full stack development democratization", "fusion development teams", "fusion software development", "low code no code platforms", "low code platforms", "microsoft power platform", "natural language programming", "power apps", "ryan cunningham", "social facebook", "social linkedin", "social x", "software engineering"]
+permalink: /ai/blogs/Microsoft-Morphs-Fusion-Developers-To-Full-Stack-Builders
+tags:
+- Agentic AI
+- Agentic AI in Development
+- AI
+- AI Assisted Coding
+- AI Workflow
+- Amanda Silver
+- Application Scaffolding
+- Blogs
+- Business Domain Experts
+- Business Domain Experts in Software
+- Business Of DevOps
+- Citizen Developers
+- Coding
+- Continuous Deployment
+- Continuous Integration
+- Cross Functional Collaboration
+- Development Guardrails
+- DevOps
+- Full Stack Development
+- Full Stack Development Democratization
+- Fusion Development Teams
+- Fusion Software Development
+- Low Code No Code Platforms
+- Low Code Platforms
+- Microsoft Power Platform
+- Natural Language Programming
+- Power Apps
+- Ryan Cunningham
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Engineering
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Adrian Bridgwater examines Microsoft's push to turn fusion developers and business experts into full stack builders, highlighting Power Platform and AI's pivotal roles in driving next-gen software collaboration.<!--excerpt_end-->
 
 # Microsoft Morphs Fusion Developers To Full Stack Builders

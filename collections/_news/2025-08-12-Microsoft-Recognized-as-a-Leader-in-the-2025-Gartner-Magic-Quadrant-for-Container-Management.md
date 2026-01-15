@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management"
-description: "This news post announces Microsoft's leadership position in the 2025 Gartner Magic Quadrant for Container Management. It details Microsoft’s offering across Azure Kubernetes Service, Azure Container Apps, Azure Arc, and associated tools, emphasizing innovations in cloud-native, hybrid, AI, and operational capabilities that support developer efficiency, security, and large-scale enterprise use cases."
-author: "Sean McKenna"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management
+author: Sean McKenna
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 15:00:00 +00:00
-permalink: "/2025-08-12-Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Workloads", "AKS", "AKS Automatic", "Azure", "Azure Arc", "Azure Container Apps", "Azure Developer CLI", "Azure Kubernetes Fleet Manager", "Azure Machine Learning", "Cloud Native", "Coding", "Compute", "Container Management", "Containers", "DevOps", "DevSecOps", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "GitHub Actions", "Hybrid + Multicloud", "Hybrid Cloud", "Kubernetes", "Microsoft Defender For Containers", "News", "Operational Simplicity", "Security", "VS Code"]
-tags_normalized: ["ai", "ai workloads", "aks", "aks automatic", "azure", "azure arc", "azure container apps", "azure developer cli", "azure kubernetes fleet manager", "azure machine learning", "cloud native", "coding", "compute", "container management", "containers", "devops", "devsecops", "gartner magic quadrant", "gartner magic quadrant", "github actions", "hybrid plus multicloud", "hybrid cloud", "kubernetes", "microsoft defender for containers", "news", "operational simplicity", "security", "vs code"]
+permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management
+tags:
+- AI
+- AI Workloads
+- AKS
+- AKS Automatic
+- Azure
+- Azure Arc
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Kubernetes Fleet Manager
+- Azure Machine Learning
+- Cloud Native
+- Coding
+- Compute
+- Container Management
+- Containers
+- DevOps
+- DevSecOps
+- Gartner Magic Quadrant
+- Gartner® Magic Quadrant™
+- GitHub Actions
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Kubernetes
+- Microsoft Defender For Containers
+- News
+- Operational Simplicity
+- Security
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 Sean McKenna reports on Microsoft’s continued leadership in the 2025 Gartner Magic Quadrant for Container Management. The post highlights innovations in Azure’s container portfolio, developer and operational tooling, AI workloads, and security practices.<!--excerpt_end-->
 
 # Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation"
-description: "This article reviews a decade of collaboration between Microsoft and Red Hat, focusing on enterprise cloud modernization, open source innovations, and accelerated adoption of AI and machine learning solutions. Highlighted are key milestones, joint product offerings such as Azure Red Hat OpenShift, achievements in confidential computing and virtualization, and successes in customer digital transformation and hybrid cloud deployments."
-author: "Brendan Burns"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation'
+author: Brendan Burns
+canonical_url: https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-02 16:00:00 +00:00
-permalink: "/2025-12-02-Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Platform", "Ansible Automation Platform", "Automation", "Azure", "Azure Marketplace", "Azure OpenAI Service", "Azure Red Hat OpenShift", "Cloud Modernization", "Confidential Containers", "Containers", "DevOps", "Enterprise Cloud", "Governance", "Hybrid Cloud", "Kubernetes", "Machine Learning", "Microsoft Foundry", "ML", "News", "Open Source", "Red Hat", "Security", "Virtualization"]
-tags_normalized: ["ai", "ai plus machine learning", "ai platform", "ansible automation platform", "automation", "azure", "azure marketplace", "azure openai service", "azure red hat openshift", "cloud modernization", "confidential containers", "containers", "devops", "enterprise cloud", "governance", "hybrid cloud", "kubernetes", "machine learning", "microsoft foundry", "ml", "news", "open source", "red hat", "security", "virtualization"]
+permalink: /ai/news/Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation
+tags:
+- AI
+- AI + Machine Learning
+- AI Platform
+- Ansible Automation Platform
+- Automation
+- Azure
+- Azure Marketplace
+- Azure OpenAI Service
+- Azure Red Hat OpenShift
+- Cloud Modernization
+- Confidential Containers
+- Containers
+- DevOps
+- Enterprise Cloud
+- Governance
+- Hybrid Cloud
+- Kubernetes
+- Machine Learning
+- Microsoft Foundry
+- ML
+- News
+- Open Source
+- Red Hat
+- Security
+- Virtualization
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Brendan Burns details the transformative impact of the Microsoft and Red Hat partnership in hybrid cloud, open innovation, and enterprise modernization over the past decade.<!--excerpt_end-->
 
 # Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Removing Azure Resource Manager Reliance on Azure DevOps Sign-ins"
-description: "Azure DevOps will no longer require Azure Resource Manager (ARM) resources for Microsoft Entra sign-ins and token refreshes. Organizations should update their Conditional Access policies to specifically target Azure DevOps. These changes, impacting user authentication and access, take effect from July 28, 2025, and September 2, 2025."
-author: "Angel Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/removing-azure-resource-manager-reliance-on-azure-devops-sign-ins/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Removing Azure Resource Manager Reliance on Azure DevOps Sign-ins
+author: Angel Wong
+canonical_url: https://devblogs.microsoft.com/devops/removing-azure-resource-manager-reliance-on-azure-devops-sign-ins/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-25 18:24:26 +00:00
-permalink: "/2025-06-25-Removing-Azure-Resource-Manager-Reliance-on-Azure-DevOps-Sign-ins.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Control", "ARM", "Authentication", "Azure", "Azure & Cloud", "Azure DevOps", "Azure Resource Manager", "Cloud Security", "Conditional Access", "DevOps", "Identity Management", "Microsoft Entra", "Microsoft Visual Studio Team Services", "News", "Policy Management", "Security", "Token Management", "User Sign in"]
-tags_normalized: ["access control", "arm", "authentication", "azure", "azure and cloud", "azure devops", "azure resource manager", "cloud security", "conditional access", "devops", "identity management", "microsoft entra", "microsoft visual studio team services", "news", "policy management", "security", "token management", "user sign in"]
+permalink: /azure/news/Removing-Azure-Resource-Manager-Reliance-on-Azure-DevOps-Sign-ins
+tags:
+- Access Control
+- ARM
+- Authentication
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- Azure Resource Manager
+- Cloud Security
+- Conditional Access
+- DevOps
+- Identity Management
+- Microsoft Entra
+- Microsoft Visual Studio Team Services
+- News
+- Policy Management
+- Security
+- Token Management
+- User Sign in
+section_names:
+- azure
+- devops
+- security
 ---
-
 Angel Wong announces important authentication updates for Azure DevOps, moving away from Azure Resource Manager dependence for Entra sign-ins. This guide helps administrators prepare for the coming changes in Conditional Access requirements.<!--excerpt_end-->
 
 ## Removing Azure Resource Manager Reliance on Azure DevOps Sign-ins

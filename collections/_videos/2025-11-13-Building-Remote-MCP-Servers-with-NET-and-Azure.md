@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building Remote MCP Servers with .NET and Azure"
-description: "This session explores how to develop remote Model Context Protocol (MCP) servers using .NET and Azure. It covers the benefits of remote MCP servers for automation, collaboration, and tool integration, with practical guidance for local experimentation and cloud deployment. Key updates in .NET 10, Aspire 13, C# 14, F# 10, and Visual Studio 2026 are linked for further learning."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b9cwTqr1cKo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Remote MCP Servers with .NET and Azure
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=b9cwTqr1cKo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Building-Remote-MCP-Servers-with-NET-and-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "AI", "ASP.NET Core 10", "Automation", "Azure", "C# 14", "Cloud Hosting", "Coding", "Cross Platform Development", "F# 10", "Full Stack Development", "MCP", "Microsoft", "Orchestration", "Remote Servers", "Scalability", "Tool Integration", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "ai", "aspdotnet core 10", "automation", "azure", "csharp 14", "cloud hosting", "coding", "cross platform development", "fsharp 10", "full stack development", "mcp", "microsoft", "orchestration", "remote servers", "scalability", "tool integration", "videos", "vs"]
+permalink: /ai/videos/Building-Remote-MCP-Servers-with-NET-and-Azure
+tags:
+- .NET
+- .NET 10
+- .NET Aspire 13
+- .NET MAUI 10
+- AI
+- ASP.NET Core 10
+- Automation
+- Azure
+- C# 14
+- Cloud Hosting
+- Coding
+- Cross Platform Development
+- F# 10
+- Full Stack Development
+- MCP
+- Microsoft
+- Orchestration
+- Remote Servers
+- Scalability
+- Tool Integration
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet introduces how to build remote Model Context Protocol (MCP) servers using .NET and Azure, highlighting new features and unlocking collaboration, automation, and scalable hosting options for developers.<!--excerpt_end-->
 
 {% youtube b9cwTqr1cKo %}

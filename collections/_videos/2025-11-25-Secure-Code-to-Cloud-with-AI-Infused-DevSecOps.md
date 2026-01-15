@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Secure Code to Cloud with AI-Infused DevSecOps"
-description: "This session from Microsoft Ignite 2025 explores how GitHub Advanced Security and Microsoft Defender for Cloud work together to streamline DevSecOps. It highlights how AI-powered agentic workflows help security teams prioritize exploitable production risks, reduce alert fatigue, and accelerate remediation by seamlessly integrating developer and security admin tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AiFB7jlmZ3E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Secure Code to Cloud with AI-Infused DevSecOps
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=AiFB7jlmZ3E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:36:04 +00:00
-permalink: "/2025-11-25-Secure-Code-to-Cloud-with-AI-Infused-DevSecOps.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic Workflows", "AI", "AI Powered Remediation", "Alert Fatigue", "Azure AI", "Cloud Security", "Code To Cloud", "Developer Tools", "DevOps", "DevSecOps", "GitHub Advanced Security", "InnovatewithAzureAIappsandagents", "Microsoft Defender For Cloud", "MSIgnite", "Security", "Security Automation", "Session BRK112", "Videos", "Vulnerability Management"]
-tags_normalized: ["agentic workflows", "ai", "ai powered remediation", "alert fatigue", "azure ai", "cloud security", "code to cloud", "developer tools", "devops", "devsecops", "github advanced security", "innovatewithazureaiappsandagents", "microsoft defender for cloud", "msignite", "security", "security automation", "session brk112", "videos", "vulnerability management"]
+permalink: /ai/videos/Secure-Code-to-Cloud-with-AI-Infused-DevSecOps
+tags:
+- Agentic Workflows
+- AI
+- AI Powered Remediation
+- Alert Fatigue
+- Azure AI
+- Cloud Security
+- Code To Cloud
+- Developer Tools
+- DevOps
+- DevSecOps
+- GitHub Advanced Security
+- InnovatewithAzureAIappsandagents
+- Microsoft Defender For Cloud
+- MSIgnite
+- Security
+- Security Automation
+- Session BRK112
+- Videos
+- Vulnerability Management
+section_names:
+- ai
+- devops
+- security
 ---
-
 Microsoft Events presents a session featuring Oz Wilder, Charlie Doubek, Marcelo Oliveira, and Manuel Sanchez Rodriguez on streamlining DevSecOps with GitHub Advanced Security, Microsoft Defender for Cloud, and AI-driven agentic workflows.<!--excerpt_end-->
 
 {% youtube AiFB7jlmZ3E %}

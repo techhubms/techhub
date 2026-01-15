@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)"
-description: "This session from Microsoft Ignite 2025 highlights the latest updates in Copilot Studio, emphasizing hands-on agent development, new features for testing, debugging, generative orchestration, and platform governance. Discover how Copilot Studio empowers low-code creators and developers to build enterprise-grade agents, learn about ongoing and upcoming enhancements, and see practical use cases that deliver real automation and business results."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=j1xslVn_dMU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=j1xslVn_dMU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 21:58:57 +00:00
-permalink: "/2025-11-26-Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313.html"
-categories: ["AI"]
-tags: ["Agent Development", "Agent Identity", "AI", "Automation", "BRK313", "Business Impact", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Debugging Tools", "Enterprise Agents", "F5n1", "Future Features", "Generative Orchestration", "Governance", "Ignite", "Innovate With Low Code AI And Agents", "Integration", "Low Code AI", "Microsoft", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Platform Management", "Testing Tools", "Videos", "What’s New in Copilot Studio And Roadmap | BRK313"]
-tags_normalized: ["agent development", "agent identity", "ai", "automation", "brk313", "business impact", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "debugging tools", "enterprise agents", "f5n1", "future features", "generative orchestration", "governance", "ignite", "innovate with low code ai and agents", "integration", "low code ai", "microsoft", "microsoft ignite", "ms ignite", "msft ignite", "platform management", "testing tools", "videos", "whats new in copilot studio and roadmap pipe brk313"]
+permalink: /ai/videos/Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313
+tags:
+- Agent Development
+- Agent Identity
+- AI
+- Automation
+- BRK313
+- Business Impact
+- Copilot And Agents At Work:copilot Agents
+- Copilot And Agents At Work:copilot Studio
+- Copilot Studio
+- Debugging Tools
+- Enterprise Agents
+- F5n1
+- Future Features
+- Generative Orchestration
+- Governance
+- Ignite
+- Innovate With Low Code AI And Agents
+- Integration
+- Low Code AI
+- Microsoft
+- Microsoft Ignite
+- Ms Ignite
+- Msft Ignite
+- Platform Management
+- Testing Tools
+- Videos
+- What’s New in Copilot Studio And Roadmap | BRK313
+section_names:
+- ai
 ---
-
 Microsoft Events hosts an in-depth Ignite 2025 session featuring Omar Aftab, Erez Altus, and Zac Cadi on Copilot Studio's latest features, agent development tools, and roadmap for enterprise-grade low-code AI solutions.<!--excerpt_end-->
 
 {% youtube j1xslVn_dMU %}

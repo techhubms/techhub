@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Search Less, Build More: Inner Sourcing with GitHub Copilot and Azure DevOps MCP Server"
-description: "This article by owaino explores how to bridge organizational knowledge gaps in development teams by integrating GitHub Copilot with Azure DevOps MCP Server and the code_search extension. It details how this combination turns the IDE into a knowledge discovery engine, helping developers find standards, examples, and reusable modules originating from organizational repositories and documentation. The post covers setup, usage of Copilot instructions, practical implementation steps, and production considerations."
-author: "owaino"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/search-less-build-more-inner-sourcing-with-github-copilot-and/ba-p/4454560"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Search Less, Build More: Inner Sourcing with GitHub Copilot and Azure DevOps MCP Server'
+author: owaino
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/search-less-build-more-inner-sourcing-with-github-copilot-and/ba-p/4454560
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 16:39:16 +00:00
-permalink: "/2025-09-16-Search-Less-Build-More-Inner-Sourcing-with-GitHub-Copilot-and-Azure-DevOps-MCP-Server.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["ADO", "AI", "Automation", "Azure", "Azure DevOps", "Code Discoverability", "Code Search Extension", "Community", "Copilot Instructions", "Developer Productivity", "DevOps", "GitHub Copilot", "IDE Integration", "Inner Sourcing", "Knowledge Management", "MCP Server", "Organization Standards", "Platform Engineering", "Repository Search"]
-tags_normalized: ["ado", "ai", "automation", "azure", "azure devops", "code discoverability", "code search extension", "community", "copilot instructions", "developer productivity", "devops", "github copilot", "ide integration", "inner sourcing", "knowledge management", "mcp server", "organization standards", "platform engineering", "repository search"]
+permalink: /github-copilot/community/Search-Less-Build-More-Inner-Sourcing-with-GitHub-Copilot-and-Azure-DevOps-MCP-Server
+tags:
+- ADO
+- AI
+- Automation
+- Azure
+- Azure DevOps
+- Code Discoverability
+- Code Search Extension
+- Community
+- Copilot Instructions
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- IDE Integration
+- Inner Sourcing
+- Knowledge Management
+- MCP Server
+- Organization Standards
+- Platform Engineering
+- Repository Search
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 owaino discusses integrating GitHub Copilot with Azure DevOps MCP Server and code_search extension, showcasing how this setup enables developers to easily find organizational standards and examples directly in their IDE.<!--excerpt_end-->
 
 # Search Less, Build More: Inner Sourcing with GitHub Copilot and Azure DevOps MCP Server

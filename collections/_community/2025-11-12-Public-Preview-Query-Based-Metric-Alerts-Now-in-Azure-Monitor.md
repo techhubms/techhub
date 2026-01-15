@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Public Preview: Query-Based Metric Alerts Now in Azure Monitor"
-description: "This announcement details the public preview of query-based metric alerts now available in Azure Monitor. These alerts allow users to define sophisticated, PromQL-powered alerting logic across all Azure metrics—including Prometheus and custom metrics—enabling advanced monitoring for Kubernetes clusters, VMs, and custom workloads at scale. It covers the key benefits, supported scenarios, comparison with Prometheus rule groups, and integration options with Azure resources and identity management."
-author: "yairgil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: Query-Based Metric Alerts Now in Azure Monitor'
+author: yairgil
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 17:43:31 +00:00
-permalink: "/2025-11-12-Public-Preview-Query-Based-Metric-Alerts-Now-in-Azure-Monitor.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Alerting", "ARM Templates", "Azure", "Azure Managed Identity", "Azure Managed Service For Prometheus", "Azure Monitor", "Azure Portal", "Azure REST API", "Community", "Custom Metrics", "DevOps", "Kubernetes", "Metric Alerts", "Monitoring", "OpenTelemetry", "Prometheus", "PromQL", "RBAC", "Resource Management"]
-tags_normalized: ["aks", "alerting", "arm templates", "azure", "azure managed identity", "azure managed service for prometheus", "azure monitor", "azure portal", "azure rest api", "community", "custom metrics", "devops", "kubernetes", "metric alerts", "monitoring", "opentelemetry", "prometheus", "promql", "rbac", "resource management"]
+permalink: /azure/community/Public-Preview-Query-Based-Metric-Alerts-Now-in-Azure-Monitor
+tags:
+- AKS
+- Alerting
+- ARM Templates
+- Azure
+- Azure Managed Identity
+- Azure Managed Service For Prometheus
+- Azure Monitor
+- Azure Portal
+- Azure REST API
+- Community
+- Custom Metrics
+- DevOps
+- Kubernetes
+- Metric Alerts
+- Monitoring
+- OpenTelemetry
+- Prometheus
+- PromQL
+- RBAC
+- Resource Management
+section_names:
+- azure
+- devops
 ---
-
 Yair Gil introduces new query-based metric alerts in Azure Monitor, enabling advanced, PromQL-driven monitoring and alerting across all Azure metrics for scalable cloud environments.<!--excerpt_end-->
 
 # Public Preview: Query-Based Metric Alerts Now in Azure Monitor

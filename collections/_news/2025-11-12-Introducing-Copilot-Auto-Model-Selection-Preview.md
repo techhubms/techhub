@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing Copilot Auto Model Selection (Preview)"
-description: "This post introduces the new auto model selection feature in GitHub Copilot Chat, designed to improve response times and reduce rate limits by automatically picking the best available language model for each request. It explains how auto model selection works, details supported models, the benefit for paid users, and previews future enhancements to the selection logic."
-author: "Rhea Patel, Nhu Do"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Introducing Copilot Auto Model Selection (Preview)
+author: Rhea Patel, Nhu Do
+canonical_url: https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-12 17:38:43 +00:00
-permalink: "/2025-11-12-Introducing-Copilot-Auto-Model-Selection-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Integration", "AI Models", "Auto", "Auto Model Selection", "Claude Sonnet 4.5", "Copilot", "Copilot Chat", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Multiplier", "Models", "News", "Premium Requests", "Software Engineering", "VS"]
-tags_normalized: ["ai", "ai development", "ai integration", "ai models", "auto", "auto model selection", "claude sonnet 4dot5", "copilot", "copilot chat", "github copilot", "gpt 4dot1", "gpt 5", "model multiplier", "models", "news", "premium requests", "software engineering", "vs"]
+permalink: /github-copilot/news/Introducing-Copilot-Auto-Model-Selection-Preview
+tags:
+- AI
+- AI Development
+- AI Integration
+- AI Models
+- Auto
+- Auto Model Selection
+- Claude Sonnet 4.5
+- Copilot
+- Copilot Chat
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Model Multiplier
+- Models
+- News
+- Premium Requests
+- Software Engineering
+- VS
+section_names:
+- ai
+- github-copilot
 ---
-
 Rhea Patel and Nhu Do showcase GitHub Copilot's new auto model selection feature, detailing how it improves Copilot Chat performance and flexibility for developers.<!--excerpt_end-->
 
 # Introducing Copilot Auto Model Selection (Preview)

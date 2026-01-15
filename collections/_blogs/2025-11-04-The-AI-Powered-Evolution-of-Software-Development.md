@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "The AI-Powered Evolution of Software Development"
-description: "This article by Vishwanath Krishnamurthy explores how artificial intelligence is fundamentally reshaping software development and DevOps. By highlighting the use of AI-powered tools such as GitHub Copilot, intelligent automation, and AI-driven analytics, it details how organizations are accelerating coding, improving software quality, automating repetitive tasks, and enabling autonomous operations. The article also covers use cases across diverse industries and discusses the impact of agentic AI in development workflows."
-author: "Vishwanath Krishnamurthy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-ai-powered-evolution-of-software-development/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: The AI-Powered Evolution of Software Development
+author: Vishwanath Krishnamurthy
+canonical_url: https://devops.com/the-ai-powered-evolution-of-software-development/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-04 10:44:45 +00:00
-permalink: "/2025-11-04-The-AI-Powered-Evolution-of-Software-Development.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Analytics", "AI Driven Coding", "AI For Developers", "AI in DevOps", "AI in Software Development", "AI Native Applications", "AI Powered Development", "AI Productivity Tools", "AI Testing Tools", "AI. Analytics", "Autonomous Software Operations", "Blogs", "Business Of DevOps", "Code Optimization", "Contributed Content", "Developer Experience", "Development Workflow", "Devex", "DevOps", "DevOps And Open Technologies", "DevOps Culture", "Future Of Software Engineering", "GitHub Copilot", "Intelligent Automation", "Machine Learning", "OpenAI Codex", "Predictive Maintenance", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality"]
-tags_normalized: ["agentic ai", "ai", "ai analytics", "ai driven coding", "ai for developers", "ai in devops", "ai in software development", "ai native applications", "ai powered development", "ai productivity tools", "ai testing tools", "aidot analytics", "autonomous software operations", "blogs", "business of devops", "code optimization", "contributed content", "developer experience", "development workflow", "devex", "devops", "devops and open technologies", "devops culture", "future of software engineering", "github copilot", "intelligent automation", "machine learning", "openai codex", "predictive maintenance", "social facebook", "social linkedin", "social x", "software quality"]
+permalink: /github-copilot/blogs/The-AI-Powered-Evolution-of-Software-Development
+tags:
+- Agentic AI
+- AI
+- AI Analytics
+- AI Driven Coding
+- AI For Developers
+- AI in DevOps
+- AI in Software Development
+- AI Native Applications
+- AI Powered Development
+- AI Productivity Tools
+- AI Testing Tools
+- AI. Analytics
+- Autonomous Software Operations
+- Blogs
+- Business Of DevOps
+- Code Optimization
+- Contributed Content
+- Developer Experience
+- Development Workflow
+- Devex
+- DevOps
+- DevOps And Open Technologies
+- DevOps Culture
+- Future Of Software Engineering
+- GitHub Copilot
+- Intelligent Automation
+- Machine Learning
+- OpenAI Codex
+- Predictive Maintenance
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Quality
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Vishwanath Krishnamurthy examines how artificial intelligence, tools like GitHub Copilot, and agentic AI are transforming software development and DevOps, enhancing developer productivity and software quality.<!--excerpt_end-->
 
 # The AI-Powered Evolution of Software Development

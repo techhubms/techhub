@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Query and Ingest JSONL Files in Fabric Data Warehouse and SQL Endpoint"
-description: "This news update covers the general availability of JSONL file support in Microsoft Fabric Data Warehouse and SQL Endpoint for Lakehouse. The piece explains how the OPENROWSET T-SQL function enables straightforward querying and ingestion of JSONL files, making it easier to work with semi-structured data like logs, social media feeds, and machine learning datasets. The article also describes schema mapping with the WITH clause, integration with Fabric Query Editor and T-SQL Notebooks, and data loading workflows using CTAS and INSERT SELECT statements."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/query-and-ingest-jsonl-files-in-data-warehouse-and-sql-endpoint-for-lakehouse-general-availability/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Query and Ingest JSONL Files in Fabric Data Warehouse and SQL Endpoint
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/query-and-ingest-jsonl-files-in-data-warehouse-and-sql-endpoint-for-lakehouse-general-availability/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-07 11:00:00 +00:00
-permalink: "/2025-10-07-Query-and-Ingest-JSONL-Files-in-Fabric-Data-Warehouse-and-SQL-Endpoint.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "CREATE TABLE as SELECT", "CTAS", "Data Engineering", "Data Ingestion", "Data Warehouse", "JSONL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Schema Mapping", "Semi Structured Data", "SQL Endpoint", "T SQL"]
-tags_normalized: ["azure", "create table as select", "ctas", "data engineering", "data ingestion", "data warehouse", "jsonl", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "schema mapping", "semi structured data", "sql endpoint", "t sql"]
+permalink: /ml/news/Query-and-Ingest-JSONL-Files-in-Fabric-Data-Warehouse-and-SQL-Endpoint
+tags:
+- Azure
+- CREATE TABLE as SELECT
+- CTAS
+- Data Engineering
+- Data Ingestion
+- Data Warehouse
+- JSONL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OPENROWSET
+- Schema Mapping
+- Semi Structured Data
+- SQL Endpoint
+- T SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how OPENROWSET in Fabric Data Warehouse and SQL Endpoint allows querying and ingesting JSONL files, streamlining data analysis and loading workflows.<!--excerpt_end-->
 
 # Query and Ingest JSONL Files in Fabric Data Warehouse and SQL Endpoint

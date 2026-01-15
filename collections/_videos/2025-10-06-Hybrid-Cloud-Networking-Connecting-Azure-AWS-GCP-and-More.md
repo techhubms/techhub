@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More"
-description: "This video by John Savill's Technical Training explores how to connect services across multiple public cloud providers, including Azure, AWS, GCP, and Oracle. It covers core networking concepts such as virtual networks, private and public connectivity, S2S VPNs, ExpressRoute, FastConnect, and Oracle Interconnect, offering practical insights for hybrid and multi-cloud architectures."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VKaribNs6MA"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=VKaribNs6MA
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-06 14:11:52 +00:00
-permalink: "/2025-10-06-Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More.html"
-categories: ["Azure"]
-tags: ["AWS", "Azure", "Azure Cloud", "Cloud", "Cloud Architecture", "Cloud Exchange", "Direct Connect", "ExpressRoute", "FastConnect", "GCP", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Networking", "OCI", "Oracle", "Oracle Interconnect", "POP", "Private Connectivity", "S2S VPN", "Videos", "Virtual Networks", "VNet"]
-tags_normalized: ["aws", "azure", "azure cloud", "cloud", "cloud architecture", "cloud exchange", "direct connect", "expressroute", "fastconnect", "gcp", "hybrid cloud", "microsoft", "microsoft azure", "networking", "oci", "oracle", "oracle interconnect", "pop", "private connectivity", "s2s vpn", "videos", "virtual networks", "vnet"]
+permalink: /azure/videos/Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More
+tags:
+- AWS
+- Azure
+- Azure Cloud
+- Cloud
+- Cloud Architecture
+- Cloud Exchange
+- Direct Connect
+- ExpressRoute
+- FastConnect
+- GCP
+- Hybrid Cloud
+- Microsoft
+- Microsoft Azure
+- Networking
+- OCI
+- Oracle
+- Oracle Interconnect
+- POP
+- Private Connectivity
+- S2S VPN
+- Videos
+- Virtual Networks
+- VNet
+section_names:
+- azure
 ---
-
 John Savill's Technical Training provides a detailed walkthrough of connecting Azure with AWS, GCP, and Oracle, outlining key strategies for establishing robust hybrid cloud networking architectures.<!--excerpt_end-->
 
 {% youtube VKaribNs6MA %}

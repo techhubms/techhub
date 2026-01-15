@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Sentinel Alert to Autonomous Action: Controlled AI Response Framework"
-description: "This session from Microsoft Ignite shows how to automate Microsoft Sentinel security responses using AI-driven Blink micro agents and custom workflows. Topics include integrating AI agents, using KQL for investigations, and designing safe frameworks for automated incident response in enterprise settings. With Builder Copilot, Analyst Copilot, and workflow editor demonstrations, viewers learn practical ways to bridge detection and response in Microsoft Sentinel."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9VT9X9qy7BY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Sentinel Alert to Autonomous Action: Controlled AI Response Framework'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=9VT9X9qy7BY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:09:40 +00:00
-permalink: "/2025-11-19-Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agents", "Analyst Copilot", "Automation", "Azure", "Blink Micro Agents", "Builder Copilot", "Incident Response", "KQL", "Large Language Models", "LLM Agents", "Microsoft Azure", "Microsoft Sentinel", "Microsoft Teams Alerts", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Security", "Security Automation", "Videos", "Workflow Editor"]
-tags_normalized: ["ai", "ai agents", "analyst copilot", "automation", "azure", "blink micro agents", "builder copilot", "incident response", "kql", "large language models", "llm agents", "microsoft azure", "microsoft sentinel", "microsoft teams alerts", "microsoftaicloudpartnerprogram", "msignite", "security", "security automation", "videos", "workflow editor"]
+permalink: /ai/videos/Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework
+tags:
+- AI
+- AI Agents
+- Analyst Copilot
+- Automation
+- Azure
+- Blink Micro Agents
+- Builder Copilot
+- Incident Response
+- KQL
+- Large Language Models
+- LLM Agents
+- Microsoft Azure
+- Microsoft Sentinel
+- Microsoft Teams Alerts
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Security
+- Security Automation
+- Videos
+- Workflow Editor
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a practical guide to AI-driven, controlled responses in Microsoft Sentinel, featuring Blink micro agents and workflow automation tools for security teams.<!--excerpt_end-->
 
 {% youtube 9VT9X9qy7BY %}

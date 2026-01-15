@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Black Duck Software Brings AI-Powered Security to IDEs"
-description: "This post covers Black Duck Software's announcement at Black Hat USA 2025 regarding the integration of their AI assistant, Black Duck Assist, directly into IDE plugins. The update offers real-time code vulnerability detection, natural language queries, and supports modern IDEs, helping developers secure code as they write. The article discusses the growing reliance on AI coding tools, the need for independent validation of generated code, and highlights how such integrated security approaches address new challenges in DevSecOps workflows."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/black-duck-software-extends-ai-reach-to-ide-to-better-secure-code/?utm_source=rss&utm_medium=rss&utm_campaign=black-duck-software-extends-ai-reach-to-ide-to-better-secure-code"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Black Duck Software Brings AI-Powered Security to IDEs
+author: Mike Vizard
+canonical_url: https://devops.com/black-duck-software-extends-ai-reach-to-ide-to-better-secure-code/?utm_source=rss&utm_medium=rss&utm_campaign=black-duck-software-extends-ai-reach-to-ide-to-better-secure-code
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-07 13:56:07 +00:00
-permalink: "/2025-08-07-Black-Duck-Software-Brings-AI-Powered-Security-to-IDEs.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "AI Security", "AI Tools", "Black Duck Assist", "Black Hat USA", "BlackHatUSA2025", "Blogs", "Business Of DevOps", "Citizen Developers", "Code Generation", "Code Sight", "Code Vulnerability", "Coding", "DevOps", "DevSecOps", "Eclipse", "IDE Integration", "IntelliJ", "Large Language Model", "Polaris", "Prompt Engineering", "Real Time Code Analysis", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Security", "Spotlight", "VS"]
-tags_normalized: ["ai", "ai coding tools", "ai security", "ai tools", "black duck assist", "black hat usa", "blackhatusa2025", "blogs", "business of devops", "citizen developers", "code generation", "code sight", "code vulnerability", "coding", "devops", "devsecops", "eclipse", "ide integration", "intellij", "large language model", "polaris", "prompt engineering", "real time code analysis", "security", "social facebook", "social linkedin", "social x", "software security", "spotlight", "vs"]
+permalink: /ai/blogs/Black-Duck-Software-Brings-AI-Powered-Security-to-IDEs
+tags:
+- AI
+- AI Coding Tools
+- AI Security
+- AI Tools
+- Black Duck Assist
+- Black Hat USA
+- BlackHatUSA2025
+- Blogs
+- Business Of DevOps
+- Citizen Developers
+- Code Generation
+- Code Sight
+- Code Vulnerability
+- Coding
+- DevOps
+- DevSecOps
+- Eclipse
+- IDE Integration
+- IntelliJ
+- Large Language Model
+- Polaris
+- Prompt Engineering
+- Real Time Code Analysis
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Security
+- Spotlight
+- VS
+section_names:
+- ai
+- coding
+- devops
+- security
 ---
-
 Mike Vizard reports on Black Duck Software's new integration of their AI security assistant into IDE plugins, enabling real-time vulnerability detection and support for natural language security queries as developers write code.<!--excerpt_end-->
 
 # Black Duck Software Brings AI-Powered Security to IDEs

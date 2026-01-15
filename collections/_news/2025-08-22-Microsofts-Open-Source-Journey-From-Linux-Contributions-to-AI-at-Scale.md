@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale"
-description: "This article chronicles Microsoft’s transformation from an open source skeptic to a leading contributor, highlighting key milestones such as Linux kernel code contributions, launch of Visual Studio Code, the GitHub acquisition, and the evolving role of Azure in powering AI workloads and enterprise services at global scale."
-author: "Ryan Waite"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale'
+author: Ryan Waite
+canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-22 15:00:00 +00:00
-permalink: "/2025-08-22-Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AKS", "AutoGen", "Azure", "Azure Open Source", "ChatGPT", "Coding", "Compute", "Containers", "COSMIC", "Cosmos DB", "Dapr", "Databases", "GitHub", "Grafana", "Internet Of Things", "KAITO", "Kubernetes", "Microsoft Open Source", "News", "OpenAI", "Phi 4 Mini", "PostgreSQL", "PROMETHEUS", "Radius", "SBOM", "Semantic Kernel", "Storage", "VS Code"]
-tags_normalized: ["ai", "aks", "autogen", "azure", "azure open source", "chatgpt", "coding", "compute", "containers", "cosmic", "cosmos db", "dapr", "databases", "github", "grafana", "internet of things", "kaito", "kubernetes", "microsoft open source", "news", "openai", "phi 4 mini", "postgresql", "prometheus", "radius", "sbom", "semantic kernel", "storage", "vs code"]
+permalink: /ai/news/Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale
+tags:
+- AI
+- AKS
+- AutoGen
+- Azure
+- Azure Open Source
+- ChatGPT
+- Coding
+- Compute
+- Containers
+- COSMIC
+- Cosmos DB
+- Dapr
+- Databases
+- GitHub
+- Grafana
+- Internet Of Things
+- KAITO
+- Kubernetes
+- Microsoft Open Source
+- News
+- OpenAI
+- Phi 4 Mini
+- PostgreSQL
+- PROMETHEUS
+- Radius
+- SBOM
+- Semantic Kernel
+- Storage
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Ryan Waite presents a detailed history of Microsoft’s evolution in the open source landscape, emphasizing its role in AI, cloud, and developer tooling–from Linux kernel contributions to the launch of VS Code, GitHub, and global-scale AI platforms.<!--excerpt_end-->
 
 # Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale

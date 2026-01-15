@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI Builder’s Guide to Agent Development with Foundry Agent Service"
-description: "This Microsoft Ignite session covers how to build, operate, and scale AI agents using Foundry Agent Service. Developers will learn agent authoring, connecting tools and data, integrating OpenAI-based projects, and deploying in a secure runtime. Topics include governance, observability, interoperability via Model Context Protocol, agent memory, personalization, evaluation methods, multi-agent workflows, and workflow troubleshooting—all illustrated through demos and real-world examples for advanced practitioners."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7faSLQS501E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI Builder’s Guide to Agent Development with Foundry Agent Service
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=7faSLQS501E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:13:07 +00:00
-permalink: "/2025-11-20-AI-Builders-Guide-to-Agent-Development-with-Foundry-Agent-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Development", "Agent Memory", "Agent Workflows", "AI", "Azure", "Azure AI", "Coding", "Demo", "Enterprise AI", "Foundry Agent Service", "Governance", "InnovatewithAzureAIappsandagents", "LangGraph", "MCP", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "OAuth Integration", "Observability", "OpenAI API", "Personalization", "Videos"]
-tags_normalized: ["agent development", "agent memory", "agent workflows", "ai", "azure", "azure ai", "coding", "demo", "enterprise ai", "foundry agent service", "governance", "innovatewithazureaiappsandagents", "langgraph", "mcp", "microsoft ignite", "msignite", "multi agent systems", "oauth integration", "observability", "openai api", "personalization", "videos"]
+permalink: /ai/videos/AI-Builders-Guide-to-Agent-Development-with-Foundry-Agent-Service
+tags:
+- Agent Development
+- Agent Memory
+- Agent Workflows
+- AI
+- Azure
+- Azure AI
+- Coding
+- Demo
+- Enterprise AI
+- Foundry Agent Service
+- Governance
+- InnovatewithAzureAIappsandagents
+- LangGraph
+- MCP
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- OAuth Integration
+- Observability
+- OpenAI API
+- Personalization
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Events presents a deep-dive guide for developers on building AI agents with Foundry Agent Service, featuring speakers Salman Quazi, Dan Taylor, and Travis Wilson.<!--excerpt_end-->
 
 {% youtube 7faSLQS501E %}

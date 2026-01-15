@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Using AI to Assist in Rare Disease Diagnosis: Insights from Microsoft Research"
-description: "This article from Microsoft Research explores the design, development, and evaluation of a generative AI assistant aimed at supporting genetic professionals in diagnosing rare diseases. The study, conducted in collaboration with Drexel University and the Broad Institute, identifies key challenges in whole genome sequencing analysis and proposes AI-driven solutions to improve diagnostic workflows. Prototypes, including work on Azure AI Foundry, focus on sensemaking, data synthesis, and collaborative decision-making. The research advocates for multidisciplinary collaboration to create domain-specific, trustworthy AI tools that enhance both initial and ongoing genetic analysis."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/using-ai-to-assist-in-rare-disease-diagnosis/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Using AI to Assist in Rare Disease Diagnosis: Insights from Microsoft Research'
+author: sbaynes
+canonical_url: https://www.microsoft.com/en-us/research/blog/using-ai-to-assist-in-rare-disease-diagnosis/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-22 17:38:17 +00:00
-permalink: "/2025-09-22-Using-AI-to-Assist-in-Rare-Disease-Diagnosis-Insights-from-Microsoft-Research.html"
-categories: ["AI"]
-tags: ["ACM Transactions On Interactive Intelligent Systems", "AI", "Azure AI Foundry", "Biomedical Data", "Company News", "Data Synthesis", "Diagnosis", "Expert AI Collaboration", "Generative AI", "Genetic Analysis", "HCI", "Health", "Health AI", "Microsoft Research", "News", "Rare Diseases", "Sensemaking", "Whole Genome Sequencing"]
-tags_normalized: ["acm transactions on interactive intelligent systems", "ai", "azure ai foundry", "biomedical data", "company news", "data synthesis", "diagnosis", "expert ai collaboration", "generative ai", "genetic analysis", "hci", "health", "health ai", "microsoft research", "news", "rare diseases", "sensemaking", "whole genome sequencing"]
+permalink: /ai/news/Using-AI-to-Assist-in-Rare-Disease-Diagnosis-Insights-from-Microsoft-Research
+tags:
+- ACM Transactions On Interactive Intelligent Systems
+- AI
+- Azure AI Foundry
+- Biomedical Data
+- Company News
+- Data Synthesis
+- Diagnosis
+- Expert AI Collaboration
+- Generative AI
+- Genetic Analysis
+- HCI
+- Health
+- Health AI
+- Microsoft Research
+- News
+- Rare Diseases
+- Sensemaking
+- Whole Genome Sequencing
+section_names:
+- ai
 ---
-
 sbaynes presents research from Microsoft, Drexel, and the Broad Institute on leveraging generative AI—such as Azure AI Foundry—to support genetic professionals in diagnosing rare diseases and addressing challenges in whole genome sequencing analysis.<!--excerpt_end-->
 
 # Using AI to Assist in Rare Disease Diagnosis: Insights from Microsoft Research

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Optimize Azure Costs with Reserved VM Instances"
-description: "This episode of the Azure Essentials Show features Thomas Maurer and Priyanshi Mittal discussing how to optimize cloud spending in Azure using Reserved Virtual Machine Instances. The conversation explores how reserved instances work, using Azure Advisor and usage data to make informed choices, and practical strategies for maximizing savings, including best practices and common pitfalls to avoid."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PRGo-RH-sL4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Optimize Azure Costs with Reserved VM Instances
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=PRGo-RH-sL4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-28 07:00:24 +00:00
-permalink: "/2025-10-28-Optimize-Azure-Costs-with-Reserved-VM-Instances.html"
-categories: ["Azure"]
-tags: ["Auto Renewal", "Azure", "Azure Advisor", "Azure Pricing", "Azure Reserved Instances", "Azure Virtual Machines", "AzureEssentialsShow", "Best Practices", "Cloud Billing", "Cloud Cost Optimization", "Cloud Scalability", "Cost Management", "Microsoft Azure", "Priyanshi Mittal", "Reserved VM Utilization", "Thomas Maurer", "Videos", "VM Reservations"]
-tags_normalized: ["auto renewal", "azure", "azure advisor", "azure pricing", "azure reserved instances", "azure virtual machines", "azureessentialsshow", "best practices", "cloud billing", "cloud cost optimization", "cloud scalability", "cost management", "microsoft azure", "priyanshi mittal", "reserved vm utilization", "thomas maurer", "videos", "vm reservations"]
+permalink: /azure/videos/Optimize-Azure-Costs-with-Reserved-VM-Instances
+tags:
+- Auto Renewal
+- Azure
+- Azure Advisor
+- Azure Pricing
+- Azure Reserved Instances
+- Azure Virtual Machines
+- AzureEssentialsShow
+- Best Practices
+- Cloud Billing
+- Cloud Cost Optimization
+- Cloud Scalability
+- Cost Management
+- Microsoft Azure
+- Priyanshi Mittal
+- Reserved VM Utilization
+- Thomas Maurer
+- Videos
+- VM Reservations
+section_names:
+- azure
 ---
-
 In this Azure Essentials Show episode, Thomas Maurer and Priyanshi Mittal discuss optimizing Azure cloud costs using Reserved Virtual Machine Instances, sharing strategies and best practices.<!--excerpt_end-->
 
 {% youtube PRGo-RH-sL4 %}

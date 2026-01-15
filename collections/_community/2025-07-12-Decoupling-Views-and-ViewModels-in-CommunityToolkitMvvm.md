@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Decoupling Views and ViewModels in CommunityToolkit.Mvvm"
-description: "A detailed exploration of strategies to decouple views from view models in WPF applications using CommunityToolkit.Mvvm, including comparisons with ViewModelLocator patterns and discussion of dependency injection approaches for reusable, maintainable XAML views."
-author: "CSharpDev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/app-development/how-to-decouple-views-from-view-models-using-communitytoolkit/m-p/4432591#M1261"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+﻿---
+layout: post
+title: Decoupling Views and ViewModels in CommunityToolkit.Mvvm
+author: CSharpDev
+canonical_url: https://techcommunity.microsoft.com/t5/app-development/how-to-decouple-views-from-view-models-using-communitytoolkit/m-p/4432591#M1261
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-07-12 17:03:00 +00:00
-permalink: "/2025-07-12-Decoupling-Views-and-ViewModels-in-CommunityToolkitMvvm.html"
-categories: ["Coding"]
-tags: ["Coding", "Community", "CommunityToolkit.Mvvm", "DataContext", "Dependency Injection", "Design Patterns", "DI", "Microsoft .NET", "MVVM", "ServiceProvider", "View Reuse", "ViewModel Decoupling", "ViewModelLocator", "WPF", "XAML", "XAML Binding"]
-tags_normalized: ["coding", "community", "communitytoolkitdotmvvm", "datacontext", "dependency injection", "design patterns", "di", "microsoft dotnet", "mvvm", "serviceprovider", "view reuse", "viewmodel decoupling", "viewmodellocator", "wpf", "xaml", "xaml binding"]
+permalink: /coding/community/Decoupling-Views-and-ViewModels-in-CommunityToolkitMvvm
+tags:
+- Coding
+- Community
+- CommunityToolkit.Mvvm
+- DataContext
+- Dependency Injection
+- Design Patterns
+- DI
+- Microsoft .NET
+- MVVM
+- ServiceProvider
+- View Reuse
+- ViewModel Decoupling
+- ViewModelLocator
+- WPF
+- XAML
+- XAML Binding
+section_names:
+- coding
 ---
-
 CSharpDev delves into practical approaches for decoupling WPF views from view models using CommunityToolkit.Mvvm, weighing classic ViewModelLocator and modern DI solutions.<!--excerpt_end-->
 
 # Decoupling Views from View Models with CommunityToolkit.Mvvm

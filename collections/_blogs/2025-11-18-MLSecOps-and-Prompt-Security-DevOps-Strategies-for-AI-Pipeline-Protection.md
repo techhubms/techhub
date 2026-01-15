@@ -1,20 +1,59 @@
----
-layout: "post"
-title: "MLSecOps and Prompt Security: DevOps Strategies for AI Pipeline Protection"
-description: "This article explores the risks introduced by AI-driven software delivery, with a strong focus on prompt security and the intersection of DevOps and MLSecOps practices. It delves into prompt injection attacks targeting large language models (LLMs) within CI/CD workflows, outlines various attack techniques, and presents practical strategies for securing prompts, models, and DevOps pipelines. Key topics include PromptOps, MLSecOps, and integration of security controls into AI-powered workflows."
-author: "Alex Vakulov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'MLSecOps and Prompt Security: DevOps Strategies for AI Pipeline Protection'
+author: Alex Vakulov
+canonical_url: https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-18 10:22:55 +00:00
-permalink: "/2025-11-18-MLSecOps-and-Prompt-Security-DevOps-Strategies-for-AI-Pipeline-Protection.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Agent Security", "AI Attack Surface", "AI Chaos Testing", "AI Governance", "AI Supply Chain Risk", "Autonomous Agent Security.", "Blogs", "Business Of DevOps", "CI/CD Pipeline Security", "CI/CD Pipelines", "CodeShield", "Contributed Content", "DevOps", "DevOps AI", "DevSecOps", "IaC", "ISO 42001", "Large Language Models", "LlamaFirewall", "LLM Security", "MLSecOps", "Model Drift", "NIST AI RMF", "Prompt Injection", "Prompt Security", "Prompt Validation", "PromptGuard", "PromptOps", "RBAC", "RBAC For AI", "Red Team AI", "Red Team Testing", "Runtime Monitoring", "Secure AI Pipelines", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Token Smuggling"]
-tags_normalized: ["ai", "ai agent security", "ai attack surface", "ai chaos testing", "ai governance", "ai supply chain risk", "autonomous agent securitydot", "blogs", "business of devops", "cislashcd pipeline security", "cislashcd pipelines", "codeshield", "contributed content", "devops", "devops ai", "devsecops", "iac", "iso 42001", "large language models", "llamafirewall", "llm security", "mlsecops", "model drift", "nist ai rmf", "prompt injection", "prompt security", "prompt validation", "promptguard", "promptops", "rbac", "rbac for ai", "red team ai", "red team testing", "runtime monitoring", "secure ai pipelines", "security", "social facebook", "social linkedin", "social x", "token smuggling"]
+permalink: /ai/blogs/MLSecOps-and-Prompt-Security-DevOps-Strategies-for-AI-Pipeline-Protection
+tags:
+- AI
+- AI Agent Security
+- AI Attack Surface
+- AI Chaos Testing
+- AI Governance
+- AI Supply Chain Risk
+- Autonomous Agent Security.
+- Blogs
+- Business Of DevOps
+- CI/CD Pipeline Security
+- CI/CD Pipelines
+- CodeShield
+- Contributed Content
+- DevOps
+- DevOps AI
+- DevSecOps
+- IaC
+- ISO 42001
+- Large Language Models
+- LlamaFirewall
+- LLM Security
+- MLSecOps
+- Model Drift
+- NIST AI RMF
+- Prompt Injection
+- Prompt Security
+- Prompt Validation
+- PromptGuard
+- PromptOps
+- RBAC
+- RBAC For AI
+- Red Team AI
+- Red Team Testing
+- Runtime Monitoring
+- Secure AI Pipelines
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Token Smuggling
+section_names:
+- ai
+- devops
+- security
 ---
-
 Alex Vakulov provides an in-depth look at the challenges and solutions for prompt security within AI-enabled DevOps workflows, highlighting the emergence of PromptOps and MLSecOps practices.<!--excerpt_end-->
 
 # MLSecOps and Prompt Security: DevOps Strategies for AI Pipeline Protection

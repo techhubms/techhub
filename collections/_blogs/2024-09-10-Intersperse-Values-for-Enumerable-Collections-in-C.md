@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Intersperse Values for Enumerable Collections in C#"
-description: "Khalid Abuhakmeh demonstrates how to implement an 'intersperse' extension method for IEnumerable in C#, inspired by a JavaScript method. The post covers usage examples, implementation details, and discusses efficient use of yield for minimal iteration overhead."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/intersperse-values-for-enumerable-collections"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Intersperse Values for Enumerable Collections in C#
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/intersperse-values-for-enumerable-collections
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-09-10 00:00:00 +00:00
-permalink: "/2024-09-10-Intersperse-Values-for-Enumerable-Collections-in-C.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Collections", "Extension Methods", "Functional Programming", "IEnumerable", "Intersperse", "Separator", "Standard Library", "Yield"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "collections", "extension methods", "functional programming", "ienumerable", "intersperse", "separator", "standard library", "yield"]
+permalink: /coding/blogs/Intersperse-Values-for-Enumerable-Collections-in-C
+tags:
+- .NET
+- Blogs
+- C#
+- Coding
+- Collections
+- Extension Methods
+- Functional Programming
+- IEnumerable
+- Intersperse
+- Separator
+- Standard Library
+- Yield
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh explores how to create an 'intersperse' extension method for IEnumerable in C#, inspired by a JavaScript utility. The article includes code samples, expected outputs, and a detailed explanation of the implementation.<!--excerpt_end-->
 
 # Intersperse Values for Enumerable Collections in C#

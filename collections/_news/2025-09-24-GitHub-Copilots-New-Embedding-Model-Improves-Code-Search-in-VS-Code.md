@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "GitHub Copilot’s New Embedding Model Improves Code Search in VS Code"
-description: "This article presents an in-depth look at GitHub Copilot’s latest embedding model for faster, more accurate code search in Visual Studio Code. Highlighting a 37.6% lift in retrieval quality, the update leverages advanced AI techniques like contrastive learning and hard negative mining to optimize context retrieval for various developer scenarios. The model significantly reduces memory usage and latency, increasing reliability for day-to-day coding assistance, especially when searching, debugging, or finding relevant code snippets."
-author: "Shengyu Fu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot’s New Embedding Model Improves Code Search in VS Code
+author: Shengyu Fu
+canonical_url: https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-24 20:24:18 +00:00
-permalink: "/2025-09-24-GitHub-Copilots-New-Embedding-Model-Improves-Code-Search-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentic Search", "AI", "AI Coding Assistant", "AI Models", "Code Retrieval", "Code Search", "Coding", "Contrastive Learning", "Copilot Chat", "Developer Productivity", "Embedding", "Embedding Model", "Generative AI", "GitHub Copilot", "Hard Negative Mining", "Machine Learning", "News", "News & Insights", "Product", "Programming Languages", "RAG", "Semantic Search", "VS Code"]
-tags_normalized: ["agent mode", "agentic search", "ai", "ai coding assistant", "ai models", "code retrieval", "code search", "coding", "contrastive learning", "copilot chat", "developer productivity", "embedding", "embedding model", "generative ai", "github copilot", "hard negative mining", "machine learning", "news", "news and insights", "product", "programming languages", "rag", "semantic search", "vs code"]
+permalink: /github-copilot/news/GitHub-Copilots-New-Embedding-Model-Improves-Code-Search-in-VS-Code
+tags:
+- Agent Mode
+- Agentic Search
+- AI
+- AI Coding Assistant
+- AI Models
+- Code Retrieval
+- Code Search
+- Coding
+- Contrastive Learning
+- Copilot Chat
+- Developer Productivity
+- Embedding
+- Embedding Model
+- Generative AI
+- GitHub Copilot
+- Hard Negative Mining
+- Machine Learning
+- News
+- News & Insights
+- Product
+- Programming Languages
+- RAG
+- Semantic Search
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Shengyu Fu details how the new GitHub Copilot embedding model enhances code search in VS Code by boosting retrieval quality, improving efficiency, and leveraging advanced AI training techniques.<!--excerpt_end-->
 
 # GitHub Copilot’s New Embedding Model: Smarter Code Search in VS Code

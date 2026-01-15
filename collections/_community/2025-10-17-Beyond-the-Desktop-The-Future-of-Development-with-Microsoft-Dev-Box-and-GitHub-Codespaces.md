@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces"
-description: "This article explores how combining Microsoft Dev Box and GitHub Codespaces creates a hybrid developer platform that brings together enterprise-grade environments and agile, cloud-native development. It covers practical workflow examples, key benefits, technical trade-offs, and actionable insights for teams aiming to improve developer experience, onboarding, and productivity with Microsoft technologies."
-author: "owaino"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces'
+author: owaino
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 17:58:05 +00:00
-permalink: "/2025-10-17-Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Best Practices", "CI/CD", "Cloud Workstations", "Coding", "Community", "Devcontainer", "Developer Platform", "DevOps", "Docker", "Environment Automation", "FastAPI", "GitHub Codespaces", "Hybrid Development", "Infrastructure", "Linux Development", "Microservices", "Microsoft Dev Box", "Onboarding", "Productivity", "React", "VS Code", "Windows Development"]
-tags_normalized: ["azure", "best practices", "cislashcd", "cloud workstations", "coding", "community", "devcontainer", "developer platform", "devops", "docker", "environment automation", "fastapi", "github codespaces", "hybrid development", "infrastructure", "linux development", "microservices", "microsoft dev box", "onboarding", "productivity", "react", "vs code", "windows development"]
+permalink: /coding/community/Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces
+tags:
+- Azure
+- Best Practices
+- CI/CD
+- Cloud Workstations
+- Coding
+- Community
+- Devcontainer
+- Developer Platform
+- DevOps
+- Docker
+- Environment Automation
+- FastAPI
+- GitHub Codespaces
+- Hybrid Development
+- Infrastructure
+- Linux Development
+- Microservices
+- Microsoft Dev Box
+- Onboarding
+- Productivity
+- React
+- VS Code
+- Windows Development
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Owain O. discusses how pairing Microsoft Dev Box with GitHub Codespaces enables a more flexible and productive developer experience, and shares practical cloud-first workflows for modern engineering teams.<!--excerpt_end-->
 
 # Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces

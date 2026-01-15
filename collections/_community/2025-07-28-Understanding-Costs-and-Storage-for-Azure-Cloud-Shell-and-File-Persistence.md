@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Understanding Costs and Storage for Azure Cloud Shell and File Persistence"
-description: "The article addresses user questions about the costs and availability of cloud storage for files in Azure Cloud Shell, specifically for az & PowerShell usage in admin.microsoft.com. It explores license implications, storage costs for the Cloud Shell home directory, and whether E5 licenses include additional space or typically result in extra charges."
-author: "smydsmith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mbuxp4/what_is_cost_and_how_do_have_cloud_space_for/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Understanding Costs and Storage for Azure Cloud Shell and File Persistence
+author: smydsmith
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mbuxp4/what_is_cost_and_how_do_have_cloud_space_for/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 22:48:41 +00:00
-permalink: "/2025-07-28-Understanding-Costs-and-Storage-for-Azure-Cloud-Shell-and-File-Persistence.html"
-categories: ["Azure"]
-tags: ["Admin.microsoft.com", "Azure", "Azure Cloud Shell", "Azure Storage", "Cloud Costs", "Cloud Storage Pricing", "Community", "E5 License", "Ephemeral Storage", "File Persistence", "PowerShell", "Storage Accounts"]
-tags_normalized: ["admindotmicrosoftdotcom", "azure", "azure cloud shell", "azure storage", "cloud costs", "cloud storage pricing", "community", "e5 license", "ephemeral storage", "file persistence", "powershell", "storage accounts"]
+permalink: /azure/community/Understanding-Costs-and-Storage-for-Azure-Cloud-Shell-and-File-Persistence
+tags:
+- Admin.microsoft.com
+- Azure
+- Azure Cloud Shell
+- Azure Storage
+- Cloud Costs
+- Cloud Storage Pricing
+- Community
+- E5 License
+- Ephemeral Storage
+- File Persistence
+- PowerShell
+- Storage Accounts
+section_names:
+- azure
 ---
-
 Authored by smydsmith, this article discusses the costs and details of using Azure Cloud Shell's file storage, specifically addressing questions about licensing, pricing, and storage persistence within Azure environments.<!--excerpt_end-->
 
 ## Introduction

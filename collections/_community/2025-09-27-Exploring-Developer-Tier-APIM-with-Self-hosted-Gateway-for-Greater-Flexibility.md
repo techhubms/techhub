@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility"
-description: "This post examines the strengths and trade-offs of using the Developer tier of Azure API Management (APIM) in conjunction with a self-hosted gateway. It compares APIM tiers, discusses premium features available in the Developer tier, and explains how organizations can increase flexibility and control by managing their own gateway infrastructure via Azure VMs. Readers will learn the practical considerations and typical use cases for this architecture."
-author: "reve"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility
+author: reve
+canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-27 16:45:43 +00:00
-permalink: "/2025-09-27-Exploring-Developer-Tier-APIM-with-Self-hosted-Gateway-for-Greater-Flexibility.html"
-categories: ["Azure"]
-tags: ["API Analytics", "API Gateway", "APIM", "Azure", "Azure API Management", "Azure Monitor", "Azure VM", "Cloud Architecture", "Community", "Developer Tier", "Entra Integration", "Feature Comparison", "Self Hosted Gateway", "Service Availability", "Virtual Network"]
-tags_normalized: ["api analytics", "api gateway", "apim", "azure", "azure api management", "azure monitor", "azure vm", "cloud architecture", "community", "developer tier", "entra integration", "feature comparison", "self hosted gateway", "service availability", "virtual network"]
+permalink: /azure/community/Exploring-Developer-Tier-APIM-with-Self-hosted-Gateway-for-Greater-Flexibility
+tags:
+- API Analytics
+- API Gateway
+- APIM
+- Azure
+- Azure API Management
+- Azure Monitor
+- Azure VM
+- Cloud Architecture
+- Community
+- Developer Tier
+- Entra Integration
+- Feature Comparison
+- Self Hosted Gateway
+- Service Availability
+- Virtual Network
+section_names:
+- azure
 ---
-
 reve outlines the use of Azure API Management's Developer tier alongside a self-hosted gateway, highlighting its premium features, limitations, and scenarios where this setup can improve control and minimize service interruptions.<!--excerpt_end-->
 
 # Developer Tier APIM + Self-hosted Gateway: Architecture and Considerations

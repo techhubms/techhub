@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Empowering the SOC: Security Copilot and the Rise of Agentic Defense"
-description: "This session from Microsoft Ignite 2025 explores how Security Copilot, integrated within Microsoft Defender and Sentinel, transforms Security Operations Centers (SOC) through agentic, AI-driven automation. Learn about the evolution from assistive AI to autonomous agents, practical SOC lifecycle demos, feature launches like Phishing Triage Agent, investigation workflow memory, and new SCU pricing models. The talk aims to equip SOC teams and security professionals with actionable insight into leveraging Microsoft’s security platform for threat intelligence and operational excellence."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SiF5YDHaw6Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Empowering the SOC: Security Copilot and the Rise of Agentic Defense'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=SiF5YDHaw6Y
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:50:45 +00:00
-permalink: "/2025-11-24-Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Automation", "Azure Security", "Copilot Investigation", "Intermediate Security", "Microsoft Defender", "Microsoft Ignite", "Microsoft Sentinel", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Phishing Triage Agent", "SCU Pricing", "Security", "Security Copilot", "Security Operations", "SOC", "SOC Lifecycle", "Threat Intelligence", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai automation", "azure security", "copilot investigation", "intermediate security", "microsoft defender", "microsoft ignite", "microsoft sentinel", "modernizesecopswithaunifiedplatform", "msignite", "phishing triage agent", "scu pricing", "security", "security copilot", "security operations", "soc", "soc lifecycle", "threat intelligence", "videos"]
+permalink: /ai/videos/Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense
+tags:
+- Agentic AI
+- AI
+- AI Automation
+- Azure Security
+- Copilot Investigation
+- Intermediate Security
+- Microsoft Defender
+- Microsoft Ignite
+- Microsoft Sentinel
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Phishing Triage Agent
+- SCU Pricing
+- Security
+- Security Copilot
+- Security Operations
+- SOC
+- SOC Lifecycle
+- Threat Intelligence
+- Videos
+section_names:
+- ai
+- security
 ---
-
 This Microsoft Ignite session, featuring Cristina Da Gama and Corina Feuerstein, highlights how Security Copilot and agentic AI are transforming the Security Operations Center, offering concrete demos and platform updates for security professionals.<!--excerpt_end-->
 
 {% youtube SiF5YDHaw6Y %}

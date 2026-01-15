@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enterprise AI Innovations: Agentic AI and Small Language Models at Microsoft Ignite 2025"
-description: "This session from Microsoft Ignite 2025 features Infosys EVP Balakrishna D.R. and analyst Ray Wang exploring enterprise AI transformations. It delves into the rise of Small Language Models (SLMs), Agentic AI, and orchestration agents, highlighting their impact on scalable and secure business solutions. The presentation discusses real-world case studies, cross-system interoperability, continuous learning, and Infosys’ Responsible AI framework for ethical governance and trust in industry applications."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=K9lFKmpeitI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Enterprise AI Innovations: Agentic AI and Small Language Models at Microsoft Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=K9lFKmpeitI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:42:19 +00:00
-permalink: "/2025-11-19-Enterprise-AI-Innovations-Agentic-AI-and-Small-Language-Models-at-Microsoft-Ignite-2025.html"
-categories: ["AI"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Ethics", "AI Governance", "AI Orchestration", "AI Platform Services", "AI Security", "Automated Audit", "Continuous Learning", "Cross System Interoperability", "Enterprise AI", "Human Agent Collaboration", "Infosys", "Microsoft Ignite", "MSIgnite", "Responsible AI", "SLM", "Small Language Models", "Videos"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai ethics", "ai governance", "ai orchestration", "ai platform services", "ai security", "automated audit", "continuous learning", "cross system interoperability", "enterprise ai", "human agent collaboration", "infosys", "microsoft ignite", "msignite", "responsible ai", "slm", "small language models", "videos"]
+permalink: /ai/videos/Enterprise-AI-Innovations-Agentic-AI-and-Small-Language-Models-at-Microsoft-Ignite-2025
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI
+- AI Ethics
+- AI Governance
+- AI Orchestration
+- AI Platform Services
+- AI Security
+- Automated Audit
+- Continuous Learning
+- Cross System Interoperability
+- Enterprise AI
+- Human Agent Collaboration
+- Infosys
+- Microsoft Ignite
+- MSIgnite
+- Responsible AI
+- SLM
+- Small Language Models
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Microsoft Events, Infosys EVP Balakrishna D.R. and Ray Wang examine Agentic AI and Small Language Models at Ignite 2025, focusing on enterprise transformation and ethical AI governance.<!--excerpt_end-->
 
 {% youtube K9lFKmpeitI %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Purview Achieves 30% Reduction in Data Breach Likelihood, According to Forrester Study"
-description: "This article summarizes the findings of a Forrester TEI study on Microsoft Purview, highlighting how unifying data security, governance, and compliance with a single platform can drive measurable business outcomes. Key benefits include significant reductions in data breach risks, improved investigation speed, compliance automation, and cost avoidance, all while fostering a security-oriented culture within organizations."
-author: "Herain Oberoi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Purview Achieves 30% Reduction in Data Breach Likelihood, According to Forrester Study
+author: Herain Oberoi
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-23 16:00:00 +00:00
-permalink: "/2025-09-23-Microsoft-Purview-Achieves-30-Reduction-in-Data-Breach-Likelihood-According-to-Forrester-Study.html"
-categories: ["Security"]
-tags: ["Audit Readiness", "Cloud Security", "Compliance", "Data Breach Prevention", "Data Governance", "Data Protection", "Data Security", "DLP", "Forrester TEI", "Information Governance", "Microsoft Purview", "News", "Regulatory Compliance", "Risk Management", "Security", "Unified Security Platform"]
-tags_normalized: ["audit readiness", "cloud security", "compliance", "data breach prevention", "data governance", "data protection", "data security", "dlp", "forrester tei", "information governance", "microsoft purview", "news", "regulatory compliance", "risk management", "security", "unified security platform"]
+permalink: /security/news/Microsoft-Purview-Achieves-30-Reduction-in-Data-Breach-Likelihood-According-to-Forrester-Study
+tags:
+- Audit Readiness
+- Cloud Security
+- Compliance
+- Data Breach Prevention
+- Data Governance
+- Data Protection
+- Data Security
+- DLP
+- Forrester TEI
+- Information Governance
+- Microsoft Purview
+- News
+- Regulatory Compliance
+- Risk Management
+- Security
+- Unified Security Platform
+section_names:
+- security
 ---
-
 Herain Oberoi presents findings from a Forrester Consulting study on Microsoft Purview, showing how unified data security and governance can reduce breach likelihood and automate compliance processes.<!--excerpt_end-->
 
 # Microsoft Purview Achieves 30% Reduction in Data Breach Likelihood

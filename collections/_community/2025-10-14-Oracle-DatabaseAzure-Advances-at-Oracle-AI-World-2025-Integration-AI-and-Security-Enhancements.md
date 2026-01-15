@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements"
-description: "This article by KalyanKaki details the latest innovations delivered through the Microsoft and Oracle partnership at Oracle AI World 2025. Key topics include the global expansion and feature enhancements of Oracle Database@Azure, direct integration with Azure AI services and Copilot Studio, advanced AI-ready data pipelines, enhanced security and compliance with Microsoft Defender, Sentinel, and Entra ID, as well as streamlined operations using Azure Arc, Terraform, and automation tools. The post also covers partner programs, MVP inclusion, and real-world customer impacts."
-author: "KalyanKaki"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements'
+author: KalyanKaki
+canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 18:00:00 +00:00
-permalink: "/2025-10-14-Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "Autonomous Database", "Azure", "Azure AI Foundry", "Azure Arc", "Cloud Migration", "Community", "Copilot Studio", "Data Integration", "DevOps", "Entra ID", "GoldenGate", "Hybrid Cloud", "Microsoft Defender For Cloud", "Microsoft Fabric", "Microsoft Purview", "Microsoft Sentinel", "ML", "OneLake", "Operational Automation", "Oracle Database@Azure", "Power BI", "Security", "Terraform"]
-tags_normalized: ["ai", "autonomous database", "azure", "azure ai foundry", "azure arc", "cloud migration", "community", "copilot studio", "data integration", "devops", "entra id", "goldengate", "hybrid cloud", "microsoft defender for cloud", "microsoft fabric", "microsoft purview", "microsoft sentinel", "ml", "onelake", "operational automation", "oracle databaseatazure", "power bi", "security", "terraform"]
+permalink: /ai/community/Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements
+tags:
+- AI
+- Autonomous Database
+- Azure
+- Azure AI Foundry
+- Azure Arc
+- Cloud Migration
+- Community
+- Copilot Studio
+- Data Integration
+- DevOps
+- Entra ID
+- GoldenGate
+- Hybrid Cloud
+- Microsoft Defender For Cloud
+- Microsoft Fabric
+- Microsoft Purview
+- Microsoft Sentinel
+- ML
+- OneLake
+- Operational Automation
+- Oracle Database@Azure
+- Power BI
+- Security
+- Terraform
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 KalyanKaki explores significant enhancements to Oracle Database@Azure announced at Oracle AI World 2025, focusing on AI-driven data integration, new security capabilities, automation tools, and expanded global availability.<!--excerpt_end-->
 
 # Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements

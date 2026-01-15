@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory"
-description: "This post offers a deep-dive, step-by-step account of using Azure Data Factory (ADF) to synchronize SQL Server data from a private VM into Azure AI Search, focusing on network security, architecture, operational complexities, and honest trade-offs of the BYOPI (Build Your Own Private Indexer) pattern. It covers detailed setup instructions, PowerShell scripts, pipeline configuration, challenges, limitations (notably ADF’s lack of native delete support), cost considerations, and practical recommendations for teams requiring a fully private, compliant search indexing solution on Azure."
-author: "ani_ms_emea"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory'
+author: ani_ms_emea
+canonical_url: https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-25 15:57:45 +00:00
-permalink: "/2025-10-25-BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["ADF Pipeline", "AI", "Azure", "Azure AI Search", "Azure Data Factory", "BYOPI", "Community", "Compliance", "CRUD", "Data Integration", "Data Synchronization", "Indexing", "Key Vault", "Network Security", "No Code", "Pipeline Monitoring", "PowerShell", "Private Endpoint", "REST API", "Security", "Self Hosted Integration Runtime", "SQL Server", "VNet"]
-tags_normalized: ["adf pipeline", "ai", "azure", "azure ai search", "azure data factory", "byopi", "community", "compliance", "crud", "data integration", "data synchronization", "indexing", "key vault", "network security", "no code", "pipeline monitoring", "powershell", "private endpoint", "rest api", "security", "self hosted integration runtime", "sql server", "vnet"]
+permalink: /ai/community/BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory
+tags:
+- ADF Pipeline
+- AI
+- Azure
+- Azure AI Search
+- Azure Data Factory
+- BYOPI
+- Community
+- Compliance
+- CRUD
+- Data Integration
+- Data Synchronization
+- Indexing
+- Key Vault
+- Network Security
+- No Code
+- Pipeline Monitoring
+- PowerShell
+- Private Endpoint
+- REST API
+- Security
+- Self Hosted Integration Runtime
+- SQL Server
+- VNet
+section_names:
+- ai
+- azure
+- security
 ---
-
 ani_ms_emea explains how to implement a secure, end-to-end private indexing solution for Azure AI Search using Azure Data Factory and SQL Server on a private VM, highlighting both practical steps and architectural challenges.<!--excerpt_end-->
 
 # BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory

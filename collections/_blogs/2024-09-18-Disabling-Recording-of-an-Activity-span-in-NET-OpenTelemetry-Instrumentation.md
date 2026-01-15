@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Disabling Recording of an Activity (span) in .NET OpenTelemetry Instrumentation"
-description: "Steve Gordon explores how to programmatically disable the recording and export of Activities (spans) in .NET when instrumenting code with OpenTelemetry. He details the reasoning, mechanics, and implementation behind selectively avoiding trace recording for unneeded or invalid requests, including sample code and design considerations."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/disabling-recording-of-an-activity-span-in-dotnet-opentelemetry-instrumentation"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+layout: post
+title: Disabling Recording of an Activity (span) in .NET OpenTelemetry Instrumentation
+author: Steve Gordon
+canonical_url: https://www.stevejgordon.co.uk/disabling-recording-of-an-activity-span-in-dotnet-opentelemetry-instrumentation
+viewing_mode: external
+feed_name: Steve Gordon's Blog
+feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-09-18 11:30:07 +00:00
-permalink: "/2024-09-18-Disabling-Recording-of-an-Activity-span-in-NET-OpenTelemetry-Instrumentation.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Activity", "ActivityTraceFlags", "ASP.NET Core", "Blogs", "Coding", "DevOps", "Instrumentation", "IsAllDataRequested", "Middleware", "Observability", "OpenTelemetry", "System.Diagnostics"]
-tags_normalized: ["dotnet", "activity", "activitytraceflags", "aspdotnet core", "blogs", "coding", "devops", "instrumentation", "isalldatarequested", "middleware", "observability", "opentelemetry", "systemdotdiagnostics"]
+permalink: /coding/blogs/Disabling-Recording-of-an-Activity-span-in-NET-OpenTelemetry-Instrumentation
+tags:
+- .NET
+- Activity
+- ActivityTraceFlags
+- ASP.NET Core
+- Blogs
+- Coding
+- DevOps
+- Instrumentation
+- IsAllDataRequested
+- Middleware
+- Observability
+- OpenTelemetry
+- System.Diagnostics
+section_names:
+- coding
+- devops
 ---
-
 In this technical post, Steve Gordon shares practical guidance on disabling the recording of Activities (spans) in .NET OpenTelemetry instrumentation, highlighting both the motivation and code implementation.<!--excerpt_end-->
 
 ## Disabling Recording of an Activity (span) in .NET OpenTelemetry Instrumentation

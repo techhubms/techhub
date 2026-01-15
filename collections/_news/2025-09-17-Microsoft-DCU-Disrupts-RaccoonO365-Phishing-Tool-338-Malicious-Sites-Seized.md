@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft DCU Disrupts RaccoonO365 Phishing Tool: 338 Malicious Sites Seized"
-description: "Microsoft’s Digital Crimes Unit (DCU) has taken down 338 websites used by RaccoonO365, a fast-growing phishing platform targeting Microsoft 365 users worldwide. The operation highlights the evolution of cybercrime-as-a-service, the risks to critical sectors like healthcare, and the necessity for legal, technical, and cross-sectoral cooperation to combat credential theft and related cyber threats."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft DCU Disrupts RaccoonO365 Phishing Tool: 338 Malicious Sites Seized'
+author: sbaynes
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 16:52:54 +00:00
-permalink: "/2025-09-17-Microsoft-DCU-Disrupts-RaccoonO365-Phishing-Tool-338-Malicious-Sites-Seized.html"
-categories: ["Security"]
-tags: ["Blockchain Analysis", "Chainalysis Reactor", "Cloudflare", "Company News", "Credential Theft", "Cybercrime", "Cybersecurity", "DCU", "Healthcare Security", "Law Enforcement", "Malware", "Microsoft 365", "Microsoft Digital Crimes Unit", "Multi Factor Authentication", "News", "On The Issues", "Phishing", "RaccoonO365", "Ransomware", "Security", "Threat Intelligence"]
-tags_normalized: ["blockchain analysis", "chainalysis reactor", "cloudflare", "company news", "credential theft", "cybercrime", "cybersecurity", "dcu", "healthcare security", "law enforcement", "malware", "microsoft 365", "microsoft digital crimes unit", "multi factor authentication", "news", "on the issues", "phishing", "raccoono365", "ransomware", "security", "threat intelligence"]
+permalink: /security/news/Microsoft-DCU-Disrupts-RaccoonO365-Phishing-Tool-338-Malicious-Sites-Seized
+tags:
+- Blockchain Analysis
+- Chainalysis Reactor
+- Cloudflare
+- Company News
+- Credential Theft
+- Cybercrime
+- Cybersecurity
+- DCU
+- Healthcare Security
+- Law Enforcement
+- Malware
+- Microsoft 365
+- Microsoft Digital Crimes Unit
+- Multi Factor Authentication
+- News
+- On The Issues
+- Phishing
+- RaccoonO365
+- Ransomware
+- Security
+- Threat Intelligence
+section_names:
+- security
 ---
-
 sbaynes details how Microsoft’s Digital Crimes Unit dismantled RaccoonO365, a subscription-based phishing service exploiting Microsoft 365 users, by seizing 338 associated websites through court action and cross-industry collaboration.<!--excerpt_end-->
 
 # Microsoft DCU Disrupts RaccoonO365 Phishing Tool: 338 Malicious Sites Seized

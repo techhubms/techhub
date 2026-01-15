@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CodeQL 2.23.7 and 2.23.8 Released: Enhanced Security Queries for Go and Rust"
-description: "This update covers the release of CodeQL versions 2.23.7 and 2.23.8, the static analysis engine behind GitHub’s Code Scanning and Code Quality tools. The new releases introduce advanced security queries for Go and Rust, improve analysis accuracy, and update support for several languages and frameworks. There are also notable improvements for Java, Kotlin, JavaScript, TypeScript, C#, and Python. The update explains deployment details and provides resources for further reading."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-codeql-2-23-7-and-2-23-8-add-security-queries-for-go-and-rust"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'CodeQL 2.23.7 and 2.23.8 Released: Enhanced Security Queries for Go and Rust'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-codeql-2-23-7-and-2-23-8-add-security-queries-for-go-and-rust
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 23:03:15 +00:00
-permalink: "/2025-12-18-CodeQL-2237-and-2238-Released-Enhanced-Security-Queries-for-Go-and-Rust.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Buildless Analysis", "C#", "CI/CD", "Code Quality", "CodeQL", "DevOps", "GitHub Code Scanning", "Go", "Improvement", "Java", "JavaScript", "Kotlin", "News", "Open Source", "Python", "Rust", "Security", "Security Queries", "Static Analysis", "TypeScript"]
-tags_normalized: ["application security", "buildless analysis", "csharp", "cislashcd", "code quality", "codeql", "devops", "github code scanning", "go", "improvement", "java", "javascript", "kotlin", "news", "open source", "python", "rust", "security", "security queries", "static analysis", "typescript"]
+permalink: /devops/news/CodeQL-2237-and-2238-Released-Enhanced-Security-Queries-for-Go-and-Rust
+tags:
+- Application Security
+- Buildless Analysis
+- C#
+- CI/CD
+- Code Quality
+- CodeQL
+- DevOps
+- GitHub Code Scanning
+- Go
+- Improvement
+- Java
+- JavaScript
+- Kotlin
+- News
+- Open Source
+- Python
+- Rust
+- Security
+- Security Queries
+- Static Analysis
+- TypeScript
+section_names:
+- devops
+- security
 ---
-
 Allison details the latest CodeQL 2.23.7 and 2.23.8 releases, adding new security queries for Go and Rust, and highlighting broader improvements across languages for users of GitHub Code Scanning and Code Quality.<!--excerpt_end-->
 
 # CodeQL 2.23.7 and 2.23.8: Enhanced Security Queries for Go and Rust

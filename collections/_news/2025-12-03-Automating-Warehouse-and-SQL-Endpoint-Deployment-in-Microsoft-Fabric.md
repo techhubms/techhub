@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric"
-description: "This article provides a technical overview of automation tools and approaches for deploying warehouses and SQL analytics endpoints within Microsoft Fabric. It covers key deployment scenarios, addresses common challenges like dependency order and metadata hydration, explains current capabilities and limitations, and offers guidance on using a bridge automation solution until native deployment features mature."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 09:00:00 +00:00
-permalink: "/2025-12-03-Automating-Warehouse-and-SQL-Endpoint-Deployment-in-Microsoft-Fabric.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["Azure", "Continuous Integration", "DacFx", "Data Lake", "Data Platform", "Database Project", "Dependency Resolution", "Deployment Automation", "Deployment Pipelines", "DevOps", "Fabric Warehouse", "Git Integration", "Lakehouse", "Metadata Hydration", "Microsoft Fabric", "ML", "News", "SQL Analytics Endpoint", "SQLCMD Variables"]
-tags_normalized: ["azure", "continuous integration", "dacfx", "data lake", "data platform", "database project", "dependency resolution", "deployment automation", "deployment pipelines", "devops", "fabric warehouse", "git integration", "lakehouse", "metadata hydration", "microsoft fabric", "ml", "news", "sql analytics endpoint", "sqlcmd variables"]
+permalink: /ml/news/Automating-Warehouse-and-SQL-Endpoint-Deployment-in-Microsoft-Fabric
+tags:
+- Azure
+- Continuous Integration
+- DacFx
+- Data Lake
+- Data Platform
+- Database Project
+- Dependency Resolution
+- Deployment Automation
+- Deployment Pipelines
+- DevOps
+- Fabric Warehouse
+- Git Integration
+- Lakehouse
+- Metadata Hydration
+- Microsoft Fabric
+- ML
+- News
+- SQL Analytics Endpoint
+- SQLCMD Variables
+section_names:
+- azure
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog details automation strategies by the Microsoft Fabric team for deploying complex data warehouse and SQL analytics endpoint architectures, focusing on dependency handling, limitations, and bridge solutions currently available.<!--excerpt_end-->
 
 # Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric

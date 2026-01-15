@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Accelerate Coding with Azure AI Foundry Playgrounds and Visual Studio Code Integration"
-description: "Explore how the 'Open in VS Code' workflow, part of the Azure AI Foundry extension, allows rapid prototyping and deployment of AI agents and models by seamlessly importing them into Visual Studio Code for Web. This guide details the integration, workflow, and practical steps for streamlined AI development."
-author: "Thasmika Gokal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/open-in-vscode/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Accelerate Coding with Azure AI Foundry Playgrounds and Visual Studio Code Integration
+author: Thasmika Gokal
+canonical_url: https://devblogs.microsoft.com/foundry/open-in-vscode/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-28 19:01:04 +00:00
-permalink: "/2025-05-28-Accelerate-Coding-with-Azure-AI-Foundry-Playgrounds-and-Visual-Studio-Code-Integration.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Workflow", "AI", "AI Development", "AI Playground", "API Endpoint", "Azd Commands", "Azure", "Azure AI Foundry", "C#", "Code Samples", "Coding", "Entra ID Authentication", "GitHub Integration", "Model Deployment", "News", "Open in VS Code", "Prototyping", "Python", "VS Code", "VS Code Extension"]
-tags_normalized: ["agent workflow", "ai", "ai development", "ai playground", "api endpoint", "azd commands", "azure", "azure ai foundry", "csharp", "code samples", "coding", "entra id authentication", "github integration", "model deployment", "news", "open in vs code", "prototyping", "python", "vs code", "vs code extension"]
+permalink: /ai/news/Accelerate-Coding-with-Azure-AI-Foundry-Playgrounds-and-Visual-Studio-Code-Integration
+tags:
+- Agent Workflow
+- AI
+- AI Development
+- AI Playground
+- API Endpoint
+- Azd Commands
+- Azure
+- Azure AI Foundry
+- C#
+- Code Samples
+- Coding
+- Entra ID Authentication
+- GitHub Integration
+- Model Deployment
+- News
+- Open in VS Code
+- Prototyping
+- Python
+- VS Code
+- VS Code Extension
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Authored by Thasmika Gokal, this article delves into the enhanced AI developer experience provided by Azure AI Foundry playgrounds and the 'Open in VS Code' workflow, detailing integration strategies for seamless prototyping and deployment in Visual Studio Code.<!--excerpt_end-->
 
 # Accelerate Coding with Azure AI Foundry Playgrounds and Visual Studio Code Integration

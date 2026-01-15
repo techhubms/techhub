@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Assess Agentic Risks with the AI Red Teaming Agent in Microsoft Foundry"
-description: "This article details the latest enhancements in Microsoft Foundry, focusing on public preview features for automated AI red teaming across models and agentic systems. It introduces the AI Red Teaming Agent, integration with PyRIT, and comprehensive strategies for evaluating and mitigating agentic risks such as sensitive data leakage, prohibited actions, task adherence, and prompt injection attacks. The guide outlines Foundry's no-code and SDK-based workflows, providing organizations with tools for systematic AI safety, security, and compliance throughout the development lifecycle."
-author: "Laurel Geisbush, Jenn Cockrell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/assess-agentic-risks-with-the-ai-red-teaming-agent-in-microsoft-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Assess Agentic Risks with the AI Red Teaming Agent in Microsoft Foundry
+author: Laurel Geisbush, Jenn Cockrell
+canonical_url: https://devblogs.microsoft.com/foundry/assess-agentic-risks-with-the-ai-red-teaming-agent-in-microsoft-foundry/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:05 +00:00
-permalink: "/2025-11-20-Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adversarial Testing", "Agentic Pipelines", "AI", "AI Development", "AI Red Teaming Agent", "AI Security", "AI Tools", "Azure", "Azure AI Foundry", "CI/CD", "Compliance", "Generative AI", "Microsoft Foundry", "News", "Prompt Injection", "PyRIT", "Red Teaming", "SDK Integration", "Security", "Sensitive Data Leakage", "Trustworthy AI"]
-tags_normalized: ["adversarial testing", "agentic pipelines", "ai", "ai development", "ai red teaming agent", "ai security", "ai tools", "azure", "azure ai foundry", "cislashcd", "compliance", "generative ai", "microsoft foundry", "news", "prompt injection", "pyrit", "red teaming", "sdk integration", "security", "sensitive data leakage", "trustworthy ai"]
+permalink: /ai/news/Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Microsoft-Foundry
+tags:
+- Adversarial Testing
+- Agentic Pipelines
+- AI
+- AI Development
+- AI Red Teaming Agent
+- AI Security
+- AI Tools
+- Azure
+- Azure AI Foundry
+- CI/CD
+- Compliance
+- Generative AI
+- Microsoft Foundry
+- News
+- Prompt Injection
+- PyRIT
+- Red Teaming
+- SDK Integration
+- Security
+- Sensitive Data Leakage
+- Trustworthy AI
+section_names:
+- ai
+- azure
+- security
 ---
-
 Laurel Geisbush and Jenn Cockrell introduce significant updates to Microsoft Foundry, highlighting the AI Red Teaming Agent and its role in automated, scalable risk assessment for AI models and agentic pipelines.<!--excerpt_end-->
 
 # Assess Agentic Risks with the AI Red Teaming Agent in Microsoft Foundry

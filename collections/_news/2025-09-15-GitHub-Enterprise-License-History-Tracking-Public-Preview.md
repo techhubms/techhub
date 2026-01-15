@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Enterprise License History Tracking Public Preview"
-description: "This update introduces a daily license history tracking feature for GitHub Enterprise Cloud admins. It provides clear visibility into license additions, removals, and billing impact. The new dashboard enables administrators and billing managers to monitor license usage trends, understand who made changes, and see effective bill dates, streamlining account management for enterprise customers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Enterprise License History Tracking Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-15 15:29:58 +00:00
-permalink: "/2025-09-15-GitHub-Enterprise-License-History-Tracking-Public-Preview.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Admin Tools", "Billing", "Cloud Platform", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub Enterprise", "License History", "License Management", "News", "Release Preview", "Usage Tracking"]
-tags_normalized: ["account management", "admin tools", "billing", "cloud platform", "devops", "enterprise management", "enterprise management tools", "github enterprise", "license history", "license management", "news", "release preview", "usage tracking"]
+permalink: /devops/news/GitHub-Enterprise-License-History-Tracking-Public-Preview
+tags:
+- Account Management
+- Admin Tools
+- Billing
+- Cloud Platform
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Enterprise
+- License History
+- License Management
+- News
+- Release Preview
+- Usage Tracking
+section_names:
+- devops
 ---
-
 Allison summarizes a new GitHub Enterprise feature that offers admins a daily view of license additions and removals, giving crucial insights for billing and management.<!--excerpt_end-->
 
 # GitHub Enterprise License History Tracking Now in Public Preview

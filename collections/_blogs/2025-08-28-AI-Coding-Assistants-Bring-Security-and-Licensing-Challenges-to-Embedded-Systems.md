@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "AI Coding Assistants Bring Security and Licensing Challenges to Embedded Systems"
-description: "A recent survey of 785 development and security professionals, conducted by Censuswide for Black Duck Software, highlights widespread adoption of AI coding assistants and open source AI models in embedded systems development. Despite increased productivity, concerns persist around security vulnerabilities, open source license risks, and governance gaps. Python has surpassed C++ as the most popular embedded programming language, and the use of SCA tools and SBOMs is on the rise as organizations work to keep pace with regulatory and customer demands."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: AI Coding Assistants Bring Security and Licensing Challenges to Embedded Systems
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-28 06:11:13 +00:00
-permalink: "/2025-08-28-AI-Coding-Assistants-Bring-Security-and-Licensing-Challenges-to-Embedded-Systems.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Coding Assistants", "AI Generated Code Vulnerabilities", "AI Security Risks", "Black Duck Software", "Black Duck Software Survey", "Blogs", "C++", "C++ Embedded Programming", "Censuswide Research", "Censuswide Survey", "Coding", "Cybersecurity", "Cybersecurity For Embedded Systems", "Developer VS Management Perspectives.", "DevOps", "Devsecops", "Embedded Systems", "Embedded Systems Security", "Governance", "License Risk", "Open Source AI Models", "Open Source Compliance", "Open Source License Compliance", "Python", "Python in Embedded Systems", "SBOM", "SBOM Adoption", "SCA Tools", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials (sbom)", "Software Composition Analysis", "Software Composition Analysis (sca)", "Software Security"]
-tags_normalized: ["ai", "ai coding assistants", "ai generated code vulnerabilities", "ai security risks", "black duck software", "black duck software survey", "blogs", "cplusplus", "cplusplus embedded programming", "censuswide research", "censuswide survey", "coding", "cybersecurity", "cybersecurity for embedded systems", "developer vs management perspectivesdot", "devops", "devsecops", "embedded systems", "embedded systems security", "governance", "license risk", "open source ai models", "open source compliance", "open source license compliance", "python", "python in embedded systems", "sbom", "sbom adoption", "sca tools", "security", "social facebook", "social linkedin", "social x", "software bill of materials sbom", "software composition analysis", "software composition analysis sca", "software security"]
+permalink: /ai/blogs/AI-Coding-Assistants-Bring-Security-and-Licensing-Challenges-to-Embedded-Systems
+tags:
+- AI
+- AI Coding Assistants
+- AI Generated Code Vulnerabilities
+- AI Security Risks
+- Black Duck Software
+- Black Duck Software Survey
+- Blogs
+- C++
+- C++ Embedded Programming
+- Censuswide Research
+- Censuswide Survey
+- Coding
+- Cybersecurity
+- Cybersecurity For Embedded Systems
+- Developer VS Management Perspectives.
+- DevOps
+- Devsecops
+- Embedded Systems
+- Embedded Systems Security
+- Governance
+- License Risk
+- Open Source AI Models
+- Open Source Compliance
+- Open Source License Compliance
+- Python
+- Python in Embedded Systems
+- SBOM
+- SBOM Adoption
+- SCA Tools
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials (sbom)
+- Software Composition Analysis
+- Software Composition Analysis (sca)
+- Software Security
+section_names:
+- ai
+- coding
+- devops
+- security
 ---
-
 Mike Vizard examines the results of a Black Duck Software survey revealing the rapid integration of AI coding tools into embedded systems development. He discusses the resulting security, license compliance, and governance challenges now facing organizations.<!--excerpt_end-->
 
 # Survey Surfaces Raft of AI Coding Issues Involving Embedded Systems

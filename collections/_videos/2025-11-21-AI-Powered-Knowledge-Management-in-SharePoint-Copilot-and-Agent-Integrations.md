@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Knowledge Management in SharePoint: Copilot and Agent Integrations"
-description: "This video session from Microsoft Ignite 2025 demonstrates how SharePoint is evolving with AI innovations such as the Knowledge Agent. It details how SharePoint automates content curation and organization, powers no-code agents for specialized tasks, and acts as a foundational knowledge platform integrating with Copilot—delivering smarter, faster, and more relevant responses in the Microsoft 365 ecosystem. The session covers practical demonstrations on using metadata with Copilot, identifying and filling content gaps, and the integration of SharePoint agents for workflow automation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uRit_4gcvDM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI-Powered Knowledge Management in SharePoint: Copilot and Agent Integrations'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=uRit_4gcvDM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:34:13 +00:00
-permalink: "/2025-11-21-AI-Powered-Knowledge-Management-in-SharePoint-Copilot-and-Agent-Integrations.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Content Automation", "Content Enrichment", "Content Organization", "Copilot", "Copilot Integration", "Copilotandagentsatwork", "Intelligent Curation", "Knowledge Agent", "Metadata", "Microsoft 365", "Microsoft Ignite", "MSIgnite", "No Code Agents", "PowerPoint", "SharePoint", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai integration", "content automation", "content enrichment", "content organization", "copilot", "copilot integration", "copilotandagentsatwork", "intelligent curation", "knowledge agent", "metadata", "microsoft 365", "microsoft ignite", "msignite", "no code agents", "powerpoint", "sharepoint", "videos", "workflow automation"]
+permalink: /ai/videos/AI-Powered-Knowledge-Management-in-SharePoint-Copilot-and-Agent-Integrations
+tags:
+- AI
+- AI Integration
+- Content Automation
+- Content Enrichment
+- Content Organization
+- Copilot
+- Copilot Integration
+- Copilotandagentsatwork
+- Intelligent Curation
+- Knowledge Agent
+- Metadata
+- Microsoft 365
+- Microsoft Ignite
+- MSIgnite
+- No Code Agents
+- PowerPoint
+- SharePoint
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Microsoft Events presents a session on how AI innovations in SharePoint, such as the Knowledge Agent and Copilot integrations, enable smarter knowledge management and automation for Microsoft 365 users.<!--excerpt_end-->
 
 {% youtube uRit_4gcvDM %}

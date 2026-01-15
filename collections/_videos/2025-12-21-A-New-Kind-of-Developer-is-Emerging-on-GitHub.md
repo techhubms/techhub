@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "A New Kind of Developer is Emerging on GitHub"
-description: "This video discusses the rapid adoption of GitHub Copilot by new developers on the GitHub platform, featuring insights from Eirini Kalliamvakou. The emphasis is on the rise of AI-driven development, the concept of \"AI fluency,\" and the evolving skills required for developers to effectively leverage AI tools while understanding their limitations."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/EZBU4zCCaoM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: A New Kind of Developer is Emerging on GitHub
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/EZBU4zCCaoM
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-21 15:00:26 +00:00
-permalink: "/2025-12-21-A-New-Kind-of-Developer-is-Emerging-on-GitHub.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Adoption", "AI Fluency", "AI Integration", "AI Judgement", "Copilot Usage", "Developer", "Developer Skills", "Developer Tools", "Eirini Kalliamvakou", "GitHub", "GitHub Copilot", "Programming", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai adoption", "ai fluency", "ai integration", "ai judgement", "copilot usage", "developer", "developer skills", "developer tools", "eirini kalliamvakou", "github", "github copilot", "programming", "software development", "videos"]
+permalink: /github-copilot/videos/A-New-Kind-of-Developer-is-Emerging-on-GitHub
+tags:
+- AI
+- AI Adoption
+- AI Fluency
+- AI Integration
+- AI Judgement
+- Copilot Usage
+- Developer
+- Developer Skills
+- Developer Tools
+- Eirini Kalliamvakou
+- GitHub
+- GitHub Copilot
+- Programming
+- Software Development
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video from GitHub, Eirini Kalliamvakou explains how new developers are increasingly adopting GitHub Copilot, highlighting the growing need for AI fluency and keen judgment when working with AI-powered coding tools.<!--excerpt_end-->
 
 {% youtube EZBU4zCCaoM %}

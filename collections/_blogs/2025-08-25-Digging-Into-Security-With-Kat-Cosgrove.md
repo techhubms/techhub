@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Digging Into Security With Kat Cosgrove"
-description: "A podcast episode featuring Kat Cosgrove and Matt Stratton delving into the ongoing challenges of security in the DevOps landscape. They discuss container vulnerabilities, Kubernetes security, patching chaos, and the workplace realities of maintaining secure software. Expect practical tips, honest discussion, and plenty of DevOps sarcasm on modern security practices."
-author: "Arrested DevOps"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.arresteddevops.com/digging-into-security/"
-viewing_mode: "external"
-feed_name: "Arrested DevOps"
-feed_url: "https://www.arresteddevops.com/episode/index.xml"
+﻿---
+layout: post
+title: Digging Into Security With Kat Cosgrove
+author: Arrested DevOps
+canonical_url: https://www.arresteddevops.com/digging-into-security/
+viewing_mode: external
+feed_name: Arrested DevOps
+feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-08-25 17:22:54 +00:00
-permalink: "/2025-08-25-Digging-Into-Security-With-Kat-Cosgrove.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Cloud Native", "Compliance", "Container Security", "DevOps", "Incident Response", "Kubernetes", "Open Source", "Patch Management", "Security", "Security Culture", "Security Tools", "Vulnerabilities"]
-tags_normalized: ["blogs", "cloud native", "compliance", "container security", "devops", "incident response", "kubernetes", "open source", "patch management", "security", "security culture", "security tools", "vulnerabilities"]
+permalink: /devops/blogs/Digging-Into-Security-With-Kat-Cosgrove
+tags:
+- Blogs
+- Cloud Native
+- Compliance
+- Container Security
+- DevOps
+- Incident Response
+- Kubernetes
+- Open Source
+- Patch Management
+- Security
+- Security Culture
+- Security Tools
+- Vulnerabilities
+section_names:
+- devops
+- security
 ---
-
 Arrested DevOps hosts Kat Cosgrove and Matt Stratton examine the persistent challenges of security in DevOps, blending candid advice and humor on topics from container vulnerabilities to effective patching.<!--excerpt_end-->
 
 # Digging Into Security With Kat Cosgrove

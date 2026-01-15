@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Be Careful When Using GitHub PAT with Repo Scope"
-description: "This post examines a security pitfall in using GitHub personal access tokens (PATs) with the `repo` scope. Despite appearances, such tokens may grant organization-level permissions, like team creation, even without explicit admin scopes. The author shares real-world findings, supported by GitHub documentation, and recommends more restrictive scopes."
-author: "Home on"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "http://spindev.net/post/be-careful-with-repo-scope/"
-viewing_mode: "external"
-feed_name: "Spindev's Blog"
-feed_url: "https://spindev.net/index.xml"
+﻿---
+layout: post
+title: Be Careful When Using GitHub PAT with Repo Scope
+author: Home on
+canonical_url: http://spindev.net/post/be-careful-with-repo-scope/
+viewing_mode: external
+feed_name: Spindev's Blog
+feed_url: https://spindev.net/index.xml
 date: 2025-06-27 07:38:30 +00:00
-permalink: "/2025-06-27-Be-Careful-When-Using-GitHub-PAT-with-Repo-Scope.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Authentication", "Blogs", "DevOps", "Enterprise Migration", "GEI", "GitHub", "GitHub API", "Organization Admin", "PAT", "Personal Access Token", "Privilege Escalation", "Repo Scope", "Scope Management", "Security", "Token Permissions"]
-tags_normalized: ["access control", "authentication", "blogs", "devops", "enterprise migration", "gei", "github", "github api", "organization admin", "pat", "personal access token", "privilege escalation", "repo scope", "scope management", "security", "token permissions"]
+permalink: /devops/blogs/Be-Careful-When-Using-GitHub-PAT-with-Repo-Scope
+tags:
+- Access Control
+- Authentication
+- Blogs
+- DevOps
+- Enterprise Migration
+- GEI
+- GitHub
+- GitHub API
+- Organization Admin
+- PAT
+- Personal Access Token
+- Privilege Escalation
+- Repo Scope
+- Scope Management
+- Security
+- Token Permissions
+section_names:
+- devops
+- security
 ---
-
 Home on explores the hidden dangers of GitHub PATs with the `repo` scope, revealing how these tokens may inadvertently grant organization-level permissions and highlighting best practices for secure usage.<!--excerpt_end-->
 
 # Be Careful Using GitHub PAT With Repo Scope

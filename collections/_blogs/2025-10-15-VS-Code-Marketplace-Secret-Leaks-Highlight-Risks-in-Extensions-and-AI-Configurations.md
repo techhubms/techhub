@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "VS Code Marketplace Secret Leaks Highlight Risks in Extensions and AI Configurations"
-description: "This deep dive examines the security vulnerabilities uncovered by Wiz researchers in the Visual Studio Code and OpenVSX marketplaces. Over 500 extensions were found to contain leaked secrets, including access tokens for Microsoft Azure DevOps and AI providers. The article details the investigation process, the implications for the developer supply chain, and the collaborative response from Microsoft and security experts, as well as recommendations for extension publishers and users on minimizing risk."
-author: "Jeff Burt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/massive-vs-code-secrets-leak-puts-focus-on-extensions-ai-wiz/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: VS Code Marketplace Secret Leaks Highlight Risks in Extensions and AI Configurations
+author: Jeff Burt
+canonical_url: https://devops.com/massive-vs-code-secrets-leak-puts-focus-on-extensions-ai-wiz/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-15 18:35:27 +00:00
-permalink: "/2025-10-15-VS-Code-Marketplace-Secret-Leaks-Highlight-Risks-in-Extensions-and-AI-Configurations.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Access Tokens", "AI", "AI Development", "Azure", "Azure DevOps", "Blogs", "Code Editor", "Developer Tools", "DevOps", "DevOps And Open Technologies", "Exposed Secrets", "Extension Security", "Extensions Leak", "Identity Access Management", "Identity And Access Management", "Microsoft Marketplace", "Microsoft Visual Studio", "OpenVSX", "Plugin Vulnerabilities", "Secrets Management", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Supply Chain Security", "VS Code", "Wiz"]
-tags_normalized: ["access tokens", "ai", "ai development", "azure", "azure devops", "blogs", "code editor", "developer tools", "devops", "devops and open technologies", "exposed secrets", "extension security", "extensions leak", "identity access management", "identity and access management", "microsoft marketplace", "microsoft visual studio", "openvsx", "plugin vulnerabilities", "secrets management", "security", "social facebook", "social linkedin", "social x", "supply chain security", "vs code", "wiz"]
+permalink: /ai/blogs/VS-Code-Marketplace-Secret-Leaks-Highlight-Risks-in-Extensions-and-AI-Configurations
+tags:
+- Access Tokens
+- AI
+- AI Development
+- Azure
+- Azure DevOps
+- Blogs
+- Code Editor
+- Developer Tools
+- DevOps
+- DevOps And Open Technologies
+- Exposed Secrets
+- Extension Security
+- Extensions Leak
+- Identity Access Management
+- Identity And Access Management
+- Microsoft Marketplace
+- Microsoft Visual Studio
+- OpenVSX
+- Plugin Vulnerabilities
+- Secrets Management
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Supply Chain Security
+- VS Code
+- Wiz
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Jeff Burt provides an in-depth report on Wiz’s investigation into a major secrets leak in VS Code extension marketplaces, exposing critical risks for Microsoft developers and AI tool users.<!--excerpt_end-->
 
 # VS Code Marketplace Secret Leaks Highlight Risks in Extensions and AI Configurations

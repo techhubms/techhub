@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code"
-description: "This announcement introduces the public preview of the AI Toolkit for Visual Studio Code, focused on enabling prompt-first agent development with GitHub Copilot. The update highlights key capabilities such as selecting models, orchestrating agents via the Microsoft Agent Framework, agent behavior tracing, and evaluation within CI/CD workflows — all designed to streamline AI agent building for developers working in VS Code."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-29 17:48:03 +00:00
-permalink: "/2025-10-29-Public-Preview-AI-Toolkit-for-GitHub-Copilot-Brings-Prompt-First-Agent-Development-to-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Development", "Agent Evaluation", "Agent Orchestration", "Agent Tracing", "AI", "AI Agents", "AI Toolkit", "CI/CD", "Coding", "Community", "Developer Tools", "GitHub Copilot", "Microsoft Agent Framework", "Model Selection", "Multi Agent Workflow", "Prompt Engineering", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent development", "agent evaluation", "agent orchestration", "agent tracing", "ai", "ai agents", "ai toolkit", "cislashcd", "coding", "community", "developer tools", "github copilot", "microsoft agent framework", "model selection", "multi agent workflow", "prompt engineering", "vs code", "vs code extensions"]
+permalink: /github-copilot/community/Public-Preview-AI-Toolkit-for-GitHub-Copilot-Brings-Prompt-First-Agent-Development-to-VS-Code
+tags:
+- Agent Development
+- Agent Evaluation
+- Agent Orchestration
+- Agent Tracing
+- AI
+- AI Agents
+- AI Toolkit
+- CI/CD
+- Coding
+- Community
+- Developer Tools
+- GitHub Copilot
+- Microsoft Agent Framework
+- Model Selection
+- Multi Agent Workflow
+- Prompt Engineering
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Lee_Stott presents the public preview of the AI Toolkit for Visual Studio Code, unveiling prompt-first agent development powered by GitHub Copilot and Microsoft Agent Framework, designed for fast and seamless AI agent creation in VS Code.<!--excerpt_end-->
 
 # Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code

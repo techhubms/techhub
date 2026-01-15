@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Top 3 AI Use Cases Shaping Customer Experience"
-description: "This session from Microsoft Ignite 2025 covers three leading AI use cases that are driving results in customer experience, including automated ticket resolution, real-time workflow automation, and strategic partnerships for scalable impact. Backed by insights from over 100 brand implementations, it highlights practical strategies for boosting customer satisfaction, lowering costs, and delivering measurable ROI using Microsoft AI technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4ynkbF7oImM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Top 3 AI Use Cases Shaping Customer Experience
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=4ynkbF7oImM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:49:05 +00:00
-permalink: "/2025-11-19-Top-3-AI-Use-Cases-Shaping-Customer-Experience.html"
-categories: ["AI"]
-tags: ["Agenticbusinessapplications", "AI", "AI Automation", "AI Use Cases", "Automated Workflows", "Business Applications", "CSAT", "Customer Experience", "Generative AI", "GPT", "Industry Support", "Measurable ROI", "Microsoft Ignite", "MSIgnite", "Partnerships", "Resolution Engine", "Videos"]
-tags_normalized: ["agenticbusinessapplications", "ai", "ai automation", "ai use cases", "automated workflows", "business applications", "csat", "customer experience", "generative ai", "gpt", "industry support", "measurable roi", "microsoft ignite", "msignite", "partnerships", "resolution engine", "videos"]
+permalink: /ai/videos/Top-3-AI-Use-Cases-Shaping-Customer-Experience
+tags:
+- Agenticbusinessapplications
+- AI
+- AI Automation
+- AI Use Cases
+- Automated Workflows
+- Business Applications
+- CSAT
+- Customer Experience
+- Generative AI
+- GPT
+- Industry Support
+- Measurable ROI
+- Microsoft Ignite
+- MSIgnite
+- Partnerships
+- Resolution Engine
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events and Jake Showalter present actionable insights from Microsoft Ignite 2025, revealing how AI transforms customer support by automating resolutions and driving business outcomes.<!--excerpt_end-->
 
 {% youtube 4ynkbF7oImM %}

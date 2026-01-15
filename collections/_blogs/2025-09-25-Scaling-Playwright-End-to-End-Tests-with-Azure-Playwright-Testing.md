@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Scaling Playwright End-to-End Tests with Azure Playwright Testing"
-description: "This walkthrough, authored by Dellenny, demonstrates how to extend your Playwright end-to-end test suites using Azure Playwright Testing. Learn about moving browser automation tests to the Azure cloud for increased parallelism, automated reporting, artifact storage, CI/CD integration, and rich debugging features—all with managed cloud infrastructure."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Scaling Playwright End-to-End Tests with Azure Playwright Testing
+author: Dellenny
+canonical_url: https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-25 08:36:33 +00:00
-permalink: "/2025-09-25-Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azure", "Azure CLI", "Azure Entra ID", "Azure Playwright Testing", "Blogs", "Browser Automation", "CI/CD Integration", "Cloud Testing", "Coding", "Debugging", "DevOps", "End To End Testing", "Node.js", "Parallel Testing", "Playwright", "Test Automation", "Testing", "Testing Artifacts"]
-tags_normalized: ["automation", "azure", "azure cli", "azure entra id", "azure playwright testing", "blogs", "browser automation", "cislashcd integration", "cloud testing", "coding", "debugging", "devops", "end to end testing", "nodedotjs", "parallel testing", "playwright", "test automation", "testing", "testing artifacts"]
+permalink: /coding/blogs/Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing
+tags:
+- Automation
+- Azure
+- Azure CLI
+- Azure Entra ID
+- Azure Playwright Testing
+- Blogs
+- Browser Automation
+- CI/CD Integration
+- Cloud Testing
+- Coding
+- Debugging
+- DevOps
+- End To End Testing
+- Node.js
+- Parallel Testing
+- Playwright
+- Test Automation
+- Testing
+- Testing Artifacts
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Dellenny guides readers through running Playwright end-to-end tests at scale with Azure Playwright Testing, covering setup, configuration, artifact storage, CI/CD pipeline integration, and cloud-scale debugging.<!--excerpt_end-->
 
 # Scaling Playwright End-to-End Tests with Azure Playwright Testing

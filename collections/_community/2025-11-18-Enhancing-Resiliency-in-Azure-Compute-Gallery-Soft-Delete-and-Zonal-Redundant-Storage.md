@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage"
-description: "This post details how new features in Azure Compute Gallery—Soft Delete and default Zonal Redundant Storage (ZRS)—are increasing the resiliency and recoverability of virtual machine (VM) images. Learn how these updates mitigate data loss risks, improve business continuity, and streamline VM image management for Azure users with hands-on guidance and practical scenarios."
-author: "Sandeep-Raichura"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage'
+author: Sandeep-Raichura
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:24:09 +00:00
-permalink: "/2025-11-18-Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage.html"
-categories: ["Azure"]
-tags: ["Access Control", "Azure", "Azure Compute Gallery", "Azure Portal", "Business Continuity", "Cloud Resiliency", "Cloud Storage", "Community", "Disaster Recovery", "Image Management", "Image Recovery", "REST API", "Soft Delete", "Virtual Machines", "VM Images", "Zonal Redundant Storage", "ZRS"]
-tags_normalized: ["access control", "azure", "azure compute gallery", "azure portal", "business continuity", "cloud resiliency", "cloud storage", "community", "disaster recovery", "image management", "image recovery", "rest api", "soft delete", "virtual machines", "vm images", "zonal redundant storage", "zrs"]
+permalink: /azure/community/Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage
+tags:
+- Access Control
+- Azure
+- Azure Compute Gallery
+- Azure Portal
+- Business Continuity
+- Cloud Resiliency
+- Cloud Storage
+- Community
+- Disaster Recovery
+- Image Management
+- Image Recovery
+- REST API
+- Soft Delete
+- Virtual Machines
+- VM Images
+- Zonal Redundant Storage
+- ZRS
+section_names:
+- azure
 ---
-
 Sandeep-Raichura reviews Azure Compute Gallery's latest features—Soft Delete and default Zonal Redundant Storage—demonstrating how they protect VM images and enhance operational resiliency for Azure users.<!--excerpt_end-->
 
 # Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage

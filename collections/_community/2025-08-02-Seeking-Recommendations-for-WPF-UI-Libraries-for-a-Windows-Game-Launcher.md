@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Seeking Recommendations for WPF UI Libraries for a Windows Game Launcher"
-description: "The author seeks advice on choosing a WPF UI library for building a Windows-only game launcher. They share their background, intentions to eventually customize components, and explain reasons for choosing WPF over Blazor Hybrid or MAUI."
-author: "kkassius_"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mft8nb/what_wpf_ui_library_can_i_use/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: Seeking Recommendations for WPF UI Libraries for a Windows Game Launcher
+author: kkassius_
+canonical_url: https://www.reddit.com/r/csharp/comments/1mft8nb/what_wpf_ui_library_can_i_use/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 15:24:41 +00:00
-permalink: "/2025-08-02-Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher.html"
-categories: ["Coding"]
-tags: ["Blazor Hybrid", "C#", "Coding", "Community", "Component Customization", "Frontend", "Game Launcher", "MAUI", "Themes", "UI Library", "Window Management", "Windows", "WPF", "XAML"]
-tags_normalized: ["blazor hybrid", "csharp", "coding", "community", "component customization", "frontend", "game launcher", "maui", "themes", "ui library", "window management", "windows", "wpf", "xaml"]
+permalink: /coding/community/Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher
+tags:
+- Blazor Hybrid
+- C#
+- Coding
+- Community
+- Component Customization
+- Frontend
+- Game Launcher
+- MAUI
+- Themes
+- UI Library
+- Window Management
+- Windows
+- WPF
+- XAML
+section_names:
+- coding
 ---
-
 Author kkassius_ seeks community advice on selecting a WPF UI library to use in their Windows game launcher project, sharing initial goals, challenges, and future customization plans.<!--excerpt_end-->
 
 ## Summary

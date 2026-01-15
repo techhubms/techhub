@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Releases Introduce Immutability for Enhanced Supply Chain Security"
-description: "This news update announces GitHub's new public preview feature enabling immutable releases. The feature improves supply chain security by locking assets and tags after publication, introducing cryptographic release attestations, and supporting Sigstore for verification, ultimately protecting software distributions from tampering and supply chain attacks."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Releases Introduce Immutability for Enhanced Supply Chain Security
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 20:33:53 +00:00
-permalink: "/2025-08-26-GitHub-Releases-Introduce-Immutability-for-Enhanced-Supply-Chain-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["Artifact Verification", "CI/CD", "DevOps", "DevOps Security", "GitHub", "Immutable Releases", "News", "Release Attestation", "Release Automation", "Repository Management", "Security", "Sigstore", "Software Distribution", "Supply Chain Security", "Tag Protection"]
-tags_normalized: ["artifact verification", "cislashcd", "devops", "devops security", "github", "immutable releases", "news", "release attestation", "release automation", "repository management", "security", "sigstore", "software distribution", "supply chain security", "tag protection"]
+permalink: /devops/news/GitHub-Releases-Introduce-Immutability-for-Enhanced-Supply-Chain-Security
+tags:
+- Artifact Verification
+- CI/CD
+- DevOps
+- DevOps Security
+- GitHub
+- Immutable Releases
+- News
+- Release Attestation
+- Release Automation
+- Repository Management
+- Security
+- Sigstore
+- Software Distribution
+- Supply Chain Security
+- Tag Protection
+section_names:
+- devops
+- security
 ---
-
 Allison reports on GitHub's rollout of immutable releases in public preview, highlighting new supply chain security measures, tag and asset protection, and cryptographic attestations for artifact verification.<!--excerpt_end-->
 
 # GitHub Releases Introduce Immutability for Enhanced Supply Chain Security

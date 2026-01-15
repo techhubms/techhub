@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unified Application Security with Microsoft Defender for Cloud"
-description: "This intermediate session from Microsoft Ignite 2025 explores how Microsoft Defender for Cloud enhances security and visibility for cloud-native and AI-driven workloads. It delves into proactive posture management, built-in guardrails, and integration with GitHub Advanced Security across the application lifecycle. The presentation includes a demonstration of DevOps security practices, highlights modern security challenges, and showcases using Defender for Cloud CLI during container image builds to prevent risky deployments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SxZdqBZTqks"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Unified Application Security with Microsoft Defender for Cloud
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=SxZdqBZTqks
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:20:44 +00:00
-permalink: "/2025-11-21-Unified-Application-Security-with-Microsoft-Defender-for-Cloud.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Workloads", "Application Security", "Azure", "Azure Security", "Cloud Native", "Cloud Security", "Container Security", "DevOps", "DevOps Security", "GitHub Advanced Security", "Incident Response", "Microsoft Defender For Cloud", "MSIgnite", "Multi Cloud", "ProtectcloudAIplatformandapps", "Security", "Security CLI", "Security Guardrails", "Security Posture Management", "Threat Mitigation", "Videos"]
-tags_normalized: ["ai", "ai workloads", "application security", "azure", "azure security", "cloud native", "cloud security", "container security", "devops", "devops security", "github advanced security", "incident response", "microsoft defender for cloud", "msignite", "multi cloud", "protectcloudaiplatformandapps", "security", "security cli", "security guardrails", "security posture management", "threat mitigation", "videos"]
+permalink: /ai/videos/Unified-Application-Security-with-Microsoft-Defender-for-Cloud
+tags:
+- AI
+- AI Workloads
+- Application Security
+- Azure
+- Azure Security
+- Cloud Native
+- Cloud Security
+- Container Security
+- DevOps
+- DevOps Security
+- GitHub Advanced Security
+- Incident Response
+- Microsoft Defender For Cloud
+- MSIgnite
+- Multi Cloud
+- ProtectcloudAIplatformandapps
+- Security
+- Security CLI
+- Security Guardrails
+- Security Posture Management
+- Threat Mitigation
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 This session by Giulio Astori and James P Brotsos at Microsoft Ignite 2025 demonstrates how Microsoft Defender for Cloud secures applications and cloud environments through proactive posture management and DevOps security integration.<!--excerpt_end-->
 
 {% youtube SxZdqBZTqks %}

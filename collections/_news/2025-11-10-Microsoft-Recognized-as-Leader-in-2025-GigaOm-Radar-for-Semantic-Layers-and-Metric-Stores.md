@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Recognized as Leader in 2025 GigaOm Radar for Semantic Layers and Metric Stores"
-description: "This article details Microsoft's recognition as a Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores. It explains the evolution of Microsoft's semantic model offerings from Analysis Services to Power BI and Microsoft Fabric, underscores the strategic importance of semantic models for trustworthy analytics and AI, and highlights Power BI's strengths in modeling, governance, and GenAI integration. The article also points to recent feature enhancements and upcoming events for deeper engagement."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as Leader in 2025 GigaOm Radar for Semantic Layers and Metric Stores
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-10 08:00:00 +00:00
-permalink: "/2025-11-10-Microsoft-Recognized-as-Leader-in-2025-GigaOm-Radar-for-Semantic-Layers-and-Metric-Stores.html"
-categories: ["AI", "ML"]
-tags: ["AI", "AI Integration", "Analytics", "Business Intelligence", "Data Governance", "Data Science", "Data Strategy", "Enterprise Analytics", "GenAI", "GigaOm Radar", "Metric Stores", "Microsoft Fabric", "Microsoft Ignite", "ML", "News", "Power BI", "Semantic Models"]
-tags_normalized: ["ai", "ai integration", "analytics", "business intelligence", "data governance", "data science", "data strategy", "enterprise analytics", "genai", "gigaom radar", "metric stores", "microsoft fabric", "microsoft ignite", "ml", "news", "power bi", "semantic models"]
+permalink: /ai/news/Microsoft-Recognized-as-Leader-in-2025-GigaOm-Radar-for-Semantic-Layers-and-Metric-Stores
+tags:
+- AI
+- AI Integration
+- Analytics
+- Business Intelligence
+- Data Governance
+- Data Science
+- Data Strategy
+- Enterprise Analytics
+- GenAI
+- GigaOm Radar
+- Metric Stores
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- News
+- Power BI
+- Semantic Models
+section_names:
+- ai
+- ml
 ---
-
 The Microsoft Fabric Blog highlights Microsoft's recognition as a Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores, discussing the pivotal role of semantic models in analytics and AI.<!--excerpt_end-->
 
 # Microsoft Recognized as Leader in 2025 GigaOm Radar for Semantic Layers & Metric Stores

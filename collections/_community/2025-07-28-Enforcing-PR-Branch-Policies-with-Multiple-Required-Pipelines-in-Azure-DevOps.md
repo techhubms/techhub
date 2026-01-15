@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enforcing PR Branch Policies with Multiple Required Pipelines in Azure DevOps"
-description: "This community discussion explores how to configure Azure DevOps to ensure that pull requests (PRs) can only be merged if specific multiple YAML pipelines (such as X and Y) run successfully. It covers setting branch policies, build validations, and nuances between classic and YAML pipelines. The thread includes user experiences, clarifications about build definitions, and step-by-step advice on achieving strict pipeline requirements for PR approvals."
-author: "panzerbjrn"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mbguxq/how_to_only_allow_prs_if_pipelines_x_y_both_run/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Enforcing PR Branch Policies with Multiple Required Pipelines in Azure DevOps
+author: panzerbjrn
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1mbguxq/how_to_only_allow_prs_if_pipelines_x_y_both_run/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-28 13:56:17 +00:00
-permalink: "/2025-07-28-Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Branch Policies", "Build Definitions", "Build Validation", "CI/CD", "Community", "DevOps", "Inner Source", "Pipeline Configuration", "Pipeline Requirements", "PR Approval", "PR Automation", "Pull Requests", "Terraform", "YAML Pipelines"]
-tags_normalized: ["azure", "azure devops", "azure pipelines", "azure repos", "branch policies", "build definitions", "build validation", "cislashcd", "community", "devops", "inner source", "pipeline configuration", "pipeline requirements", "pr approval", "pr automation", "pull requests", "terraform", "yaml pipelines"]
+permalink: /azure/community/Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps
+tags:
+- Azure
+- Azure DevOps
+- Azure Pipelines
+- Azure Repos
+- Branch Policies
+- Build Definitions
+- Build Validation
+- CI/CD
+- Community
+- DevOps
+- Inner Source
+- Pipeline Configuration
+- Pipeline Requirements
+- PR Approval
+- PR Automation
+- Pull Requests
+- Terraform
+- YAML Pipelines
+section_names:
+- azure
+- devops
 ---
-
 Panzerbjrn and other community members discuss how to enforce that PRs in Azure DevOps are only merged if specific pipelines (X & Y) both succeed. The thread includes setup guidance and clarifies differences between classic and YAML pipelines.<!--excerpt_end-->
 
 # Enforcing Multiple Pipeline Requirements for PRs in Azure DevOps

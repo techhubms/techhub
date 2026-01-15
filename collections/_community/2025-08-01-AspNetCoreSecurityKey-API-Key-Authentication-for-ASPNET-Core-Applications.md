@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "AspNetCore.SecurityKey: API Key Authentication for ASP.NET Core Applications"
-description: "AspNetCore.SecurityKey is a lightweight library offering flexible API key authentication for ASP.NET Core. It supports various input sources, integration patterns, and OpenAPI docs, and allows extensive custom validation. This article explores its features, installation, usage patterns, and advanced customization capabilities."
-author: "pwelter34"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'AspNetCore.SecurityKey: API Key Authentication for ASP.NET Core Applications'
+author: pwelter34
+canonical_url: https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-01 13:50:31 +00:00
-permalink: "/2025-08-01-AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications.html"
-categories: ["Coding", "Security"]
-tags: ["API Key Authentication", "ASP.NET Core", "Attribute Based Security", "C#", "Coding", "Community", "Custom Validation", "ISecurityKeyValidator", "Middleware", "Minimal APIs", "NuGet Package", "OpenAPI", "Security", "Swagger"]
-tags_normalized: ["api key authentication", "aspdotnet core", "attribute based security", "csharp", "coding", "community", "custom validation", "isecuritykeyvalidator", "middleware", "minimal apis", "nuget package", "openapi", "security", "swagger"]
+permalink: /coding/community/AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications
+tags:
+- API Key Authentication
+- ASP.NET Core
+- Attribute Based Security
+- C#
+- Coding
+- Community
+- Custom Validation
+- ISecurityKeyValidator
+- Middleware
+- Minimal APIs
+- NuGet Package
+- OpenAPI
+- Security
+- Swagger
+section_names:
+- coding
+- security
 ---
-
 Authored by pwelter34, this article introduces AspNetCore.SecurityKey, a robust API key authentication library for ASP.NET Core. It examines installation steps, configuration options, and advanced customization for securing .NET applications.<!--excerpt_end-->
 
 ## Overview

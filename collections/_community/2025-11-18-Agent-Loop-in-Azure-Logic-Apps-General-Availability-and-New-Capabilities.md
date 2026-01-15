@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Agent Loop in Azure Logic Apps: General Availability and New Capabilities"
-description: "This community announcement details the general availability of Agent Loop in Azure Logic Apps Standard. It covers how Agent Loop enables intelligent, multi-agent AI automation, highlights real-world customer scenarios, explains new features, security and identity controls, and describes deployment, integration, and extensibility across the Azure ecosystem. Readers will learn how businesses use Agent Loop to streamline IT operations, developer tasks, and compliance, and how to get started with workshops and demos."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Agent Loop in Azure Logic Apps: General Availability and New Capabilities'
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:40:38 +00:00
-permalink: "/2025-11-18-Agent-Loop-in-Azure-Logic-Apps-General-Availability-and-New-Capabilities.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Access Control Lists (acl)", "Agent Loop", "AI", "AI Automation", "AI Gateway", "Azure", "Azure AI Search", "Azure Logic Apps", "Community", "Conversational Agents", "Data Residency", "DevOps", "DevOps Automation", "Enterprise Security", "Incident Management", "M365 Integration", "MCP", "Microsoft Entra ID", "Multi Agent Workflows", "OAuth 2.0", "On Behalf Of Authentication", "Public Preview Features", "Python Integration", "Security", "Teams Integration", "VNET Integration", "Workflow Orchestration"]
-tags_normalized: ["access control lists acl", "agent loop", "ai", "ai automation", "ai gateway", "azure", "azure ai search", "azure logic apps", "community", "conversational agents", "data residency", "devops", "devops automation", "enterprise security", "incident management", "m365 integration", "mcp", "microsoft entra id", "multi agent workflows", "oauth 2dot0", "on behalf of authentication", "public preview features", "python integration", "security", "teams integration", "vnet integration", "workflow orchestration"]
+permalink: /ai/community/Agent-Loop-in-Azure-Logic-Apps-General-Availability-and-New-Capabilities
+tags:
+- Access Control Lists (acl)
+- Agent Loop
+- AI
+- AI Automation
+- AI Gateway
+- Azure
+- Azure AI Search
+- Azure Logic Apps
+- Community
+- Conversational Agents
+- Data Residency
+- DevOps
+- DevOps Automation
+- Enterprise Security
+- Incident Management
+- M365 Integration
+- MCP
+- Microsoft Entra ID
+- Multi Agent Workflows
+- OAuth 2.0
+- On Behalf Of Authentication
+- Public Preview Features
+- Python Integration
+- Security
+- Teams Integration
+- VNET Integration
+- Workflow Orchestration
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 DivSwa announces the general availability of Agent Loop in Azure Logic Apps, providing a comprehensive overview of its AI automation features, enterprise security, and extensibility for developers and IT teams.<!--excerpt_end-->
 
 # Agent Loop in Azure Logic Apps: General Availability and New Capabilities

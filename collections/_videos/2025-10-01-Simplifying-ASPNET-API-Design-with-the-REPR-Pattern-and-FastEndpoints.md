@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints"
-description: "This session explores the REPR (Request, Endpoint, Response) pattern as a modern alternative to traditional controller-based API design in ASP.NET. Marcel Medina demonstrates how FastEndpoints enables clean separation of concerns, improves maintainability, and streamlines testing. Developers will learn practical strategies for focused endpoint creation, request validation, and clean response structures, making complex .NET APIs easier to manage at scale."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EXu8QLEvulM"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=EXu8QLEvulM
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-01 18:37:47 +00:00
-permalink: "/2025-10-01-Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints.html"
-categories: ["Coding"]
-tags: [".NET", "API", "API Design", "ASP.NET", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Endpoint Development", "Endpoints", "FastEndpoints", "Maintainability", "Microsoft", "REPR", "REPR Pattern", "Request Endpoint Response", "Request Validation", "Response Structuring", "Software Architecture", "Videos"]
-tags_normalized: ["dotnet", "api", "api design", "aspdotnet", "coding", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "endpoint development", "endpoints", "fastendpoints", "maintainability", "microsoft", "repr", "repr pattern", "request endpoint response", "request validation", "response structuring", "software architecture", "videos"]
+permalink: /coding/videos/Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints
+tags:
+- .NET
+- API
+- API Design
+- ASP.NET
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- Endpoint Development
+- Endpoints
+- FastEndpoints
+- Maintainability
+- Microsoft
+- REPR
+- REPR Pattern
+- Request Endpoint Response
+- Request Validation
+- Response Structuring
+- Software Architecture
+- Videos
+section_names:
+- coding
 ---
-
 Marcel Medina shares practical API design techniques for .NET developers using the REPR pattern and FastEndpoints, streamlining endpoint development and improving code quality.<!--excerpt_end-->
 
 {% youtube EXu8QLEvulM %}

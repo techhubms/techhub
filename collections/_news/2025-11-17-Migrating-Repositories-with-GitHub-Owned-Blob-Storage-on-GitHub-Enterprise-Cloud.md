@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Migrating Repositories with GitHub-Owned Blob Storage on GitHub Enterprise Cloud"
-description: "This news update covers the general availability of GitHub-owned blob storage for repository migrations to GitHub Enterprise Cloud using GitHub Enterprise Importer. Developers and administrators can now simplify migration workflows by leveraging GitHub-hosted storage rather than managing external access keys, and perform migrations using command line tools and documented processes for GitHub and Bitbucket repositories."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-17-migrating-repositories-with-github-owned-blob-storage-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Migrating Repositories with GitHub-Owned Blob Storage on GitHub Enterprise Cloud
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-17-migrating-repositories-with-github-owned-blob-storage-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-17 20:36:15 +00:00
-permalink: "/2025-11-17-Migrating-Repositories-with-GitHub-Owned-Blob-Storage-on-GitHub-Enterprise-Cloud.html"
-categories: ["DevOps"]
-tags: ["Bitbucket Server", "Blob Storage", "Cloud Migration", "Command Line Tools", "DevOps", "DevOps Automation", "Enterprise Management", "Enterprise Management Tools", "Expert Services", "GEI", "Gh Bbs2gh", "Gh Gei", "GitHub Enterprise Cloud", "GitHub Enterprise Importer", "GitHub Owned Storage", "GitLab", "Improvement", "News", "Repository Migration"]
-tags_normalized: ["bitbucket server", "blob storage", "cloud migration", "command line tools", "devops", "devops automation", "enterprise management", "enterprise management tools", "expert services", "gei", "gh bbs2gh", "gh gei", "github enterprise cloud", "github enterprise importer", "github owned storage", "gitlab", "improvement", "news", "repository migration"]
+permalink: /devops/news/Migrating-Repositories-with-GitHub-Owned-Blob-Storage-on-GitHub-Enterprise-Cloud
+tags:
+- Bitbucket Server
+- Blob Storage
+- Cloud Migration
+- Command Line Tools
+- DevOps
+- DevOps Automation
+- Enterprise Management
+- Enterprise Management Tools
+- Expert Services
+- GEI
+- Gh Bbs2gh
+- Gh Gei
+- GitHub Enterprise Cloud
+- GitHub Enterprise Importer
+- GitHub Owned Storage
+- GitLab
+- Improvement
+- News
+- Repository Migration
+section_names:
+- devops
 ---
-
 Allison announces that GitHub-owned blob storage is now generally available for repository migrations to GitHub Enterprise Cloud, streamlining the process for enterprise administrators and DevOps engineers.<!--excerpt_end-->
 
 # Migrating Repositories with GitHub-Owned Blob Storage on GitHub Enterprise Cloud

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Dynamic Azure DevOps MCP Server for Seamless Context Switching in Claude Code"
-description: "This post by OkAdministration2514 introduces a custom MCP server designed to enhance Claude Code workflows with Azure DevOps. The tool automates context switching for multiple Azure DevOps projects by detecting the active directory and updating authentication credentials on the fly. Features include local config management, robust security practices, and a comprehensive set of DevOps utilities, enabling developers and consultants to streamline multi-client solutions with improved efficiency, workflow, and project isolation."
-author: "OkAdministration2514"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m91urt/i_built_a_dynamic_azure_devops_mcp_server_for/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Dynamic Azure DevOps MCP Server for Seamless Context Switching in Claude Code
+author: OkAdministration2514
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1m91urt/i_built_a_dynamic_azure_devops_mcp_server_for/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-25 15:14:49 +00:00
-permalink: "/2025-07-25-Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Context-Switching-in-Claude-Code.html"
-categories: ["Azure", "DevOps", "Coding", "Security"]
-tags: [".azure Devops.json", "Authentication Context Switching", "Azure", "Azure DevOps", "Build Management", "Claude Code", "Coding", "Community", "Consulting Workflows", "Credential Isolation", "DevOps", "DevOps Automation", "Directory Detection", "GitHub Secret Scanning", "MCP SDK", "MCP Server", "Multi Project Workflow", "Node.js", "PAT Tokens", "Pipeline Automation", "Repository Management", "Security", "Security Best Practices", "TypeScript", "Workflow Optimization"]
-tags_normalized: ["dotazure devopsdotjson", "authentication context switching", "azure", "azure devops", "build management", "claude code", "coding", "community", "consulting workflows", "credential isolation", "devops", "devops automation", "directory detection", "github secret scanning", "mcp sdk", "mcp server", "multi project workflow", "nodedotjs", "pat tokens", "pipeline automation", "repository management", "security", "security best practices", "typescript", "workflow optimization"]
+permalink: /coding/community/Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Context-Switching-in-Claude-Code
+tags:
+- .azure Devops.json
+- Authentication Context Switching
+- Azure
+- Azure DevOps
+- Build Management
+- Claude Code
+- Coding
+- Community
+- Consulting Workflows
+- Credential Isolation
+- DevOps
+- DevOps Automation
+- Directory Detection
+- GitHub Secret Scanning
+- MCP SDK
+- MCP Server
+- Multi Project Workflow
+- Node.js
+- PAT Tokens
+- Pipeline Automation
+- Repository Management
+- Security
+- Security Best Practices
+- TypeScript
+- Workflow Optimization
+section_names:
+- azure
+- devops
+- coding
+- security
 ---
-
 OkAdministration2514 details how they built a dynamic MCP server that empowers Claude Code users to seamlessly switch Azure DevOps contexts by project directory, offering robust DevOps automation for multi-client work.<!--excerpt_end-->
 
 # Dynamic Azure DevOps MCP Server for Seamless Context Switching in Claude Code

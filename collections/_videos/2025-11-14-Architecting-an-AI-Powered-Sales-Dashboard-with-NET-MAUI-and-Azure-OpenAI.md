@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Architecting an AI-Powered Sales Dashboard with .NET MAUI and Azure OpenAI"
-description: "This session explores how to build an AI-driven sales dashboard using .NET MAUI and Azure OpenAI’s GPT-5, combining cross-platform development with advanced business analytics. Learn techniques for real-time data visualization, predictive analytics with GPT-5, natural language intelligence, and MVVM architecture using Syncfusion controls. See best practices for scalable, intelligent business apps for Windows, Android, iOS, and macOS."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vFSHgAlr9oE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Architecting an AI-Powered Sales Dashboard with .NET MAUI and Azure OpenAI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=vFSHgAlr9oE
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 07:00:07 +00:00
-permalink: "/2025-11-14-Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET 9", "AI", "Android", "Azure", "Azure OpenAI", "Business Analytics", "Coding", "Cross Platform Development", "GPT 5", "Intelligent Apps", "Interactive Charts", "Ios", "Macos", "MAUI", "MVVM Architecture", "Natural Language Processing", "Predictive Analytics", "Real Time Forecasting", "Revenue Visualization", "Sales Dashboard", "Syncfusion", "UI Performance", "Videos", "Windows"]
-tags_normalized: ["dotnet 9", "ai", "android", "azure", "azure openai", "business analytics", "coding", "cross platform development", "gpt 5", "intelligent apps", "interactive charts", "ios", "macos", "maui", "mvvm architecture", "natural language processing", "predictive analytics", "real time forecasting", "revenue visualization", "sales dashboard", "syncfusion", "ui performance", "videos", "windows"]
+permalink: /ai/videos/Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI
+tags:
+- .NET 9
+- AI
+- Android
+- Azure
+- Azure OpenAI
+- Business Analytics
+- Coding
+- Cross Platform Development
+- GPT 5
+- Intelligent Apps
+- Interactive Charts
+- Ios
+- Macos
+- MAUI
+- MVVM Architecture
+- Natural Language Processing
+- Predictive Analytics
+- Real Time Forecasting
+- Revenue Visualization
+- Sales Dashboard
+- Syncfusion
+- UI Performance
+- Videos
+- Windows
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet presents a walkthrough of building an AI-powered sales dashboard with .NET MAUI and Azure OpenAI, sharing practical insights for developers on predictive analytics and responsive UIs.<!--excerpt_end-->
 
 {% youtube vFSHgAlr9oE %}

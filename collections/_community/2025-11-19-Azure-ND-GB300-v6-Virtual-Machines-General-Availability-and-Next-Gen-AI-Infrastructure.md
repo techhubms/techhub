@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure ND GB300 v6 Virtual Machines: General Availability and Next-Gen AI Infrastructure"
-description: "This announcement details the general availability of Azure ND GB300 v6 virtual machines, which leverage NVIDIA GB300 NVL72 GPUs and next-generation networking to deliver exceptional performance for large-scale AI and machine learning workloads. The blog provides benchmark results, architecture specifics, and guidance on utilizing Azure services like CycleCloud, Batch, and Kubernetes for high-performance AI training and inference at scale."
-author: "Nitin_Nagarkatte"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-nd-gb300-v6-now-generally-available-hyper-optimized-for/ba-p/4469475"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure ND GB300 v6 Virtual Machines: General Availability and Next-Gen AI Infrastructure'
+author: Nitin_Nagarkatte
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-nd-gb300-v6-now-generally-available-hyper-optimized-for/ba-p/4469475
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 01:13:53 +00:00
-permalink: "/2025-11-19-Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Infrastructure", "AKS", "Azure", "Azure Batch", "Azure CycleCloud", "Azure ND GB300 V6", "Benchmarking", "Cloud AI", "Community", "FP4 Tensor Core", "GPU Virtual Machines", "High Bandwidth", "HPC", "InfiniBand", "Large Model Training", "Llama 2", "ML", "Multimodal AI", "NVIDIA GB300 NVL72", "NVLINK", "Slurm"]
-tags_normalized: ["agentic ai", "ai", "ai infrastructure", "aks", "azure", "azure batch", "azure cyclecloud", "azure nd gb300 v6", "benchmarking", "cloud ai", "community", "fp4 tensor core", "gpu virtual machines", "high bandwidth", "hpc", "infiniband", "large model training", "llama 2", "ml", "multimodal ai", "nvidia gb300 nvl72", "nvlink", "slurm"]
+permalink: /ai/community/Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure
+tags:
+- Agentic AI
+- AI
+- AI Infrastructure
+- AKS
+- Azure
+- Azure Batch
+- Azure CycleCloud
+- Azure ND GB300 V6
+- Benchmarking
+- Cloud AI
+- Community
+- FP4 Tensor Core
+- GPU Virtual Machines
+- High Bandwidth
+- HPC
+- InfiniBand
+- Large Model Training
+- Llama 2
+- ML
+- Multimodal AI
+- NVIDIA GB300 NVL72
+- NVLINK
+- Slurm
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Nitin_Nagarkatte announces the general availability of Azure ND GB300 v6 virtual machines, highlighting their next-generation AI infrastructure powered by NVIDIA GPUs for advanced model training and large-scale inference.<!--excerpt_end-->
 
 # Azure ND GB300 v6 Virtual Machines: General Availability and Next-Gen AI Infrastructure

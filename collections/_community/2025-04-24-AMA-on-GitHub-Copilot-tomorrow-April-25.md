@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "AMA on GitHub Copilot tomorrow (April 25)"
-description: "GitHub announces its first Reddit AMA on GitHub Copilot, covering AI Agents, agent mode in VS Code, AI models, company vision, and future plans."
-author: "github"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1k70gul/ama_on_github_copilot_tomorrow_april_25/"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: AMA on GitHub Copilot tomorrow (April 25)
+author: github
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1k70gul/ama_on_github_copilot_tomorrow_april_25/
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-04-24 19:04:44 +00:00
-permalink: "/2025-04-24-AMA-on-GitHub-Copilot-tomorrow-April-25.html"
-viewing_mode: "external"
-tags: ["Agent Mode", "AI", "AI Agents", "AI Models", "Community", "Community Engagement", "Company Vision", "GitHub", "GitHub Copilot", "Reddit AMA", "Software Development", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai agents", "ai models", "community", "community engagement", "company vision", "github", "github copilot", "reddit ama", "software development", "vs code"]
+permalink: /github-copilot/community/AMA-on-GitHub-Copilot-tomorrow-April-25
+viewing_mode: external
+tags:
+- Agent Mode
+- AI
+- AI Agents
+- AI Models
+- Community
+- Community Engagement
+- Company Vision
+- GitHub
+- GitHub Copilot
+- Reddit AMA
+- Software Development
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 The GitHub team, including CPO Mario Rodriguez, VP of DevRel Martin Woodward, and Pierce Boggan from VS Code, hosted their first official Reddit AMA focused on GitHub Copilot. The session invited users to ask questions about Copilot’s AI agents, agent mode integration in VS Code, AI model developments, GitHub’s company vision, and future plans. This interactive event provided insights straight from the GitHub leaders to the developer community.<!--excerpt_end-->
 
 ## GitHub's First Reddit AMA on GitHub Copilot: What You Need to Know

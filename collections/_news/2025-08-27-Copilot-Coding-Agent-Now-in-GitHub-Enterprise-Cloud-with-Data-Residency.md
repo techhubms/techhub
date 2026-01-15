@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Copilot Coding Agent Now in GitHub Enterprise Cloud with Data Residency"
-description: "This announcement details the public preview of the GitHub Copilot coding agent, an autonomous developer assistant now available in GitHub Enterprise Cloud with data residency support. The Copilot coding agent allows users to delegate coding tasks via issues or the new agents panel, automates pull requests, and integrates into enterprise workflows. Setup requires an appropriate Copilot subscription and administrator enablement."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Coding Agent Now in GitHub Enterprise Cloud with Data Residency
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 14:55:10 +00:00
-permalink: "/2025-08-27-Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Automation", "AI", "Autonomous Coding", "Copilot Coding Agent", "Data Residency", "Developer Tools", "Enterprise Workflows", "GitHub Copilot", "GitHub Enterprise Cloud", "Issue Assignment", "News", "Pull Requests"]
-tags_normalized: ["agent automation", "ai", "autonomous coding", "copilot coding agent", "data residency", "developer tools", "enterprise workflows", "github copilot", "github enterprise cloud", "issue assignment", "news", "pull requests"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency
+tags:
+- Agent Automation
+- AI
+- Autonomous Coding
+- Copilot Coding Agent
+- Data Residency
+- Developer Tools
+- Enterprise Workflows
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- Issue Assignment
+- News
+- Pull Requests
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the GitHub Copilot coding agent, now in public preview for GitHub Enterprise Cloud users with data residency, highlighting its autonomous capabilities and workflow integration.<!--excerpt_end-->
 
 # Copilot Coding Agent Now Available in GitHub Enterprise Cloud with Data Residency

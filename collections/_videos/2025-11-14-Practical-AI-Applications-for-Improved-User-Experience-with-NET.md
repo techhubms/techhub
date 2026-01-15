@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Practical AI Applications for Improved User Experience with .NET"
-description: "This session focuses on utilizing Multi-modal Language Models (MLLMs) and natural language processing (NLP) to enhance application user experience. The presentation explores practical AI integrations beyond basic chatbots and demonstrates how advances in .NET (including .NET 10, Aspire, MAUI, C# 14, F# 10, and Visual Studio 2026) empower developers to build more intuitive, intelligent apps."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=liYDDda6bac"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Practical AI Applications for Improved User Experience with .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=liYDDda6bac
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:39 +00:00
-permalink: "/2025-11-14-Practical-AI-Applications-for-Improved-User-Experience-with-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Development", "ASP.NET Core 10", "C# 14", "Cloud Native Apps", "Coding", "F# 10", "MAUI", "Microsoft", "MLLM", "Multi Modal Language Models", "Natural Language Processing", "UI Simplification", "User Experience", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai development", "aspdotnet core 10", "csharp 14", "cloud native apps", "coding", "fsharp 10", "maui", "microsoft", "mllm", "multi modal language models", "natural language processing", "ui simplification", "user experience", "videos", "vs"]
+permalink: /ai/videos/Practical-AI-Applications-for-Improved-User-Experience-with-NET
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- AI
+- AI Development
+- ASP.NET Core 10
+- C# 14
+- Cloud Native Apps
+- Coding
+- F# 10
+- MAUI
+- Microsoft
+- MLLM
+- Multi Modal Language Models
+- Natural Language Processing
+- UI Simplification
+- User Experience
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 In this session, the .NET team presents practical approaches for leveraging AI and Multi-modal Language Models to deliver a better user experience, highlighting the latest in .NET and developer tooling.<!--excerpt_end-->
 
 {% youtube liYDDda6bac %}

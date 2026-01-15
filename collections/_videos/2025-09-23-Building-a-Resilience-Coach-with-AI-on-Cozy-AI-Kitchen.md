@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Building a Resilience Coach with AI on Cozy AI Kitchen"
-description: "This episode, hosted by John Maeda on Cozy AI Kitchen, demonstrates how to engineer, deploy, and customize an AI-driven resilience coach. The walkthrough fuses psychological models like the Kubler-Ross curve, Grit theory, and positive psychology with practical AI development steps, including context engineering techniques, code-based deployment using VS Code, and Python. The episode provides the core logic and technical details for crafting your own AI agent focused on supporting personal resilience in times of change."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Rvp_oQXia_8"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building a Resilience Coach with AI on Cozy AI Kitchen
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Rvp_oQXia_8
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-23 18:25:56 +00:00
-permalink: "/2025-09-23-Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Development", "AI", "AI Coaching", "AI Engineering", "Azure OpenAI", "Cloud Computing", "Coding", "Context Engineering", "Cozy AI Kitchen", "Dev", "Development", "Emotional Adaptation", "Grit", "Kubler Ross Curve", "Microsoft", "Microsoft Developer", "Positive Psychology", "Python", "Resilience", "Tech", "Technology", "Tutorial", "Videos", "VS Code"]
-tags_normalized: ["agent development", "ai", "ai coaching", "ai engineering", "azure openai", "cloud computing", "coding", "context engineering", "cozy ai kitchen", "dev", "development", "emotional adaptation", "grit", "kubler ross curve", "microsoft", "microsoft developer", "positive psychology", "python", "resilience", "tech", "technology", "tutorial", "videos", "vs code"]
+permalink: /ai/videos/Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen
+tags:
+- Agent Development
+- AI
+- AI Coaching
+- AI Engineering
+- Azure OpenAI
+- Cloud Computing
+- Coding
+- Context Engineering
+- Cozy AI Kitchen
+- Dev
+- Development
+- Emotional Adaptation
+- Grit
+- Kubler Ross Curve
+- Microsoft
+- Microsoft Developer
+- Positive Psychology
+- Python
+- Resilience
+- Tech
+- Technology
+- Tutorial
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 In this episode, John Maeda from Microsoft Developer demonstrates how to design and deploy an AI-powered resilience coach using practical psychology and coding techniques on Cozy AI Kitchen.<!--excerpt_end-->
 
 {% youtube Rvp_oQXia_8 %}

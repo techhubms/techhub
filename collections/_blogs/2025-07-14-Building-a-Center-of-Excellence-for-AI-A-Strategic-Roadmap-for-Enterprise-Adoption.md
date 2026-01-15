@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption"
-description: "This comprehensive guide by Hidde de Smet explores implementing a Center of Excellence (CCoE) for AI, covering governance, organizational structures, operating models, talent strategies, technical best practices, measurement KPIs, and industry lessons to help organizations scale AI successfully and mitigate the common risks of fragmented initiatives."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/creating-ccoe-for-ai"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/creating-ccoe-for-ai
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-07-14 09:00:00 +00:00
-permalink: "/2025-07-14-Building-a-Center-of-Excellence-for-AI-A-Strategic-Roadmap-for-Enterprise-Adoption.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Best Practices", "AI Center Of Excellence", "AI Governance", "AI KPIs", "AI Literacy", "AI Platform", "AI Risk Management", "AI Strategy", "AI Talent", "Blogs", "Ccoe", "Cross Functional Teams", "Data Governance", "Enterprise AI", "Governance", "MLOps", "Organizational Change"]
-tags_normalized: ["ai", "ai adoption", "ai best practices", "ai center of excellence", "ai governance", "ai kpis", "ai literacy", "ai platform", "ai risk management", "ai strategy", "ai talent", "blogs", "ccoe", "cross functional teams", "data governance", "enterprise ai", "governance", "mlops", "organizational change"]
+permalink: /ai/blogs/Building-a-Center-of-Excellence-for-AI-A-Strategic-Roadmap-for-Enterprise-Adoption
+tags:
+- AI
+- AI Adoption
+- AI Best Practices
+- AI Center Of Excellence
+- AI Governance
+- AI KPIs
+- AI Literacy
+- AI Platform
+- AI Risk Management
+- AI Strategy
+- AI Talent
+- Blogs
+- Ccoe
+- Cross Functional Teams
+- Data Governance
+- Enterprise AI
+- Governance
+- MLOps
+- Organizational Change
+section_names:
+- ai
 ---
-
 Authored by Hidde de Smet, this guide provides a deep dive into the creation and operation of an AI Center of Excellence (CCoE), offering practical frameworks and strategies for coordinated, effective enterprise-wide artificial intelligence adoption.<!--excerpt_end-->
 
 # Building a Center of Excellence for AI: A Strategic Approach to Enterprise AI Adoption

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Retires GraphQL Explorer from API Documentation"
-description: "This official GitHub news post announces the retirement of the GraphQL Explorer tool from API documentation as of November 7, 2025. The removal impacts a small group of developers who used the Explorer for quick testing and prototyping with the GitHub GraphQL API. The announcement explains the rationale, alternatives, and next steps for affected users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Retires GraphQL Explorer from API Documentation
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-07 08:00:06 +00:00
-permalink: "/2025-11-07-GitHub-Retires-GraphQL-Explorer-from-API-Documentation.html"
-categories: ["DevOps"]
-tags: ["API", "API Client", "API Documentation", "Developer Tools", "DevOps", "Ecosystem", "Ecosystem & Accessibility", "GitHub", "GraphQL", "GraphQL Explorer", "News", "Platform Update", "Retired", "Tool Retirement"]
-tags_normalized: ["api", "api client", "api documentation", "developer tools", "devops", "ecosystem", "ecosystem and accessibility", "github", "graphql", "graphql explorer", "news", "platform update", "retired", "tool retirement"]
+permalink: /devops/news/GitHub-Retires-GraphQL-Explorer-from-API-Documentation
+tags:
+- API
+- API Client
+- API Documentation
+- Developer Tools
+- DevOps
+- Ecosystem
+- Ecosystem & Accessibility
+- GitHub
+- GraphQL
+- GraphQL Explorer
+- News
+- Platform Update
+- Retired
+- Tool Retirement
+section_names:
+- devops
 ---
-
 Allison announces GitHub’s retirement of the GraphQL Explorer, advising developers to use local GraphQL tools and providing guidance for transitioning.<!--excerpt_end-->
 
 # GitHub Retires GraphQL Explorer from API Documentation

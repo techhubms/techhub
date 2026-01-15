@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Write Better Commit Messages with GitHub Copilot"
-description: "This guide explains how developers can leverage GitHub Copilot to craft clear and professional commit messages efficiently. It covers practical Copilot prompts both in chat and directly within coding environments, offers actionable tips, and highlights ways to improve teamwork and project history with better commits."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Write Better Commit Messages with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-16 00:00:00 +00:00
-permalink: "/2025-05-16-Write-Better-Commit-Messages-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Best Practices", "Blogs", "Code Change Summaries", "Coding", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Workflow", "GitHub Copilot", "PR Descriptions", "Tab Completion", "VS Code"]
-tags_normalized: ["ai", "ai tools", "best practices", "blogs", "code change summaries", "coding", "commit messages", "conventional commits", "copilot chat", "developer workflow", "github copilot", "pr descriptions", "tab completion", "vs code"]
+permalink: /github-copilot/blogs/Write-Better-Commit-Messages-with-GitHub-Copilot
+tags:
+- AI
+- AI Tools
+- Best Practices
+- Blogs
+- Code Change Summaries
+- Coding
+- Commit Messages
+- Conventional Commits
+- Copilot Chat
+- Developer Workflow
+- GitHub Copilot
+- PR Descriptions
+- Tab Completion
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels outlines practical strategies for using GitHub Copilot to write effective commit messages, focusing on tips developers can immediately apply to improve code documentation and collaboration.<!--excerpt_end-->
 
 # Write Better Commit Messages with GitHub Copilot

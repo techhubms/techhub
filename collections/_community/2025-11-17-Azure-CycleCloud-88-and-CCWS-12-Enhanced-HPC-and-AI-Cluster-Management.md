@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure CycleCloud 8.8 and CCWS 1.2: Enhanced HPC and AI Cluster Management"
-description: "This in-depth update from anhoward covers the major advancements in Azure CycleCloud 8.8 and CycleCloud Workspace for Slurm 1.2 (CCWS), highlighting new ARM64 HPC support, smarter health monitoring, expanded GPU compatibility, and architectural improvements for orchestrating high-performance computing (HPC) and AI workloads in the Azure cloud ecosystem."
-author: "anhoward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure CycleCloud 8.8 and CCWS 1.2: Enhanced HPC and AI Cluster Management'
+author: anhoward
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 18:14:09 +00:00
-permalink: "/2025-11-17-Azure-CycleCloud-88-and-CCWS-12-Enhanced-HPC-and-AI-Cluster-Management.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Workloads", "ARM64", "Azure", "Azure CycleCloud", "CCWS", "Cluster Management", "Community", "CycleCloud 8.8", "Event Driven Monitoring", "GB200 VMs", "Grafana", "HealthAgent", "High Performance Computing", "HPC", "Hub And Spoke Architecture", "Linux 9", "Nvidia GPUs", "Scientific Computing", "Slurm", "Ubuntu 20.24"]
-tags_normalized: ["ai", "ai workloads", "arm64", "azure", "azure cyclecloud", "ccws", "cluster management", "community", "cyclecloud 8dot8", "event driven monitoring", "gb200 vms", "grafana", "healthagent", "high performance computing", "hpc", "hub and spoke architecture", "linux 9", "nvidia gpus", "scientific computing", "slurm", "ubuntu 20dot24"]
+permalink: /ai/community/Azure-CycleCloud-88-and-CCWS-12-Enhanced-HPC-and-AI-Cluster-Management
+tags:
+- AI
+- AI Workloads
+- ARM64
+- Azure
+- Azure CycleCloud
+- CCWS
+- Cluster Management
+- Community
+- CycleCloud 8.8
+- Event Driven Monitoring
+- GB200 VMs
+- Grafana
+- HealthAgent
+- High Performance Computing
+- HPC
+- Hub And Spoke Architecture
+- Linux 9
+- Nvidia GPUs
+- Scientific Computing
+- Slurm
+- Ubuntu 20.24
+section_names:
+- ai
+- azure
 ---
-
 anhoward details the latest features in Azure CycleCloud 8.8 and CycleCloud Workspace for Slurm 1.2, focusing on improved HPC and AI workload orchestration, cluster health monitoring, and deployment flexibility in the Microsoft Azure ecosystem.<!--excerpt_end-->
 
 # Azure CycleCloud 8.8 and CCWS 1.2: Enhanced HPC and AI Cluster Management

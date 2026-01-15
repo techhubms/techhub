@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Driving ROI with Azure AI Foundry and UiPath: Intelligent Agents in Healthcare Workflows"
-description: "This article explores how Azure AI Foundry and UiPath are combined to automate healthcare workflows, enhancing efficiency and reducing costs by embedding AI into business-critical patient care processes. It details the operationalization of AI insights in healthcare, the technical workflow for managing incidental findings, and the tangible outcomes for organizations."
-author: "Marco Casalaina"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Driving ROI with Azure AI Foundry and UiPath: Intelligent Agents in Healthcare Workflows'
+author: Marco Casalaina
+canonical_url: https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 18:00:00 +00:00
-permalink: "/2025-11-05-Driving-ROI-with-Azure-AI-Foundry-and-UiPath-Intelligent-Agents-in-Healthcare-Workflows.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Automation", "AI", "AI + Machine Learning", "Automation", "Azure", "Azure AI Foundry", "Business Process Automation", "DICOMweb API", "EMR Data", "FHIR", "Healthcare AI", "Medical Imaging", "Microsoft Azure", "News", "Operational AI", "Process Orchestration", "Radiology Workflow", "UiPath", "UiPath Maestro"]
-tags_normalized: ["agentic automation", "ai", "ai plus machine learning", "automation", "azure", "azure ai foundry", "business process automation", "dicomweb api", "emr data", "fhir", "healthcare ai", "medical imaging", "microsoft azure", "news", "operational ai", "process orchestration", "radiology workflow", "uipath", "uipath maestro"]
+permalink: /ai/news/Driving-ROI-with-Azure-AI-Foundry-and-UiPath-Intelligent-Agents-in-Healthcare-Workflows
+tags:
+- Agentic Automation
+- AI
+- AI + Machine Learning
+- Automation
+- Azure
+- Azure AI Foundry
+- Business Process Automation
+- DICOMweb API
+- EMR Data
+- FHIR
+- Healthcare AI
+- Medical Imaging
+- Microsoft Azure
+- News
+- Operational AI
+- Process Orchestration
+- Radiology Workflow
+- UiPath
+- UiPath Maestro
+section_names:
+- ai
+- azure
 ---
-
 Marco Casalaina highlights how Azure AI Foundry and UiPath transform healthcare by automating critical workflows, streamlining incidental findings management, and demonstrating clear ROI for organizations.<!--excerpt_end-->
 
 # Driving ROI with Azure AI Foundry and UiPath: Intelligent Agents in Healthcare Workflows

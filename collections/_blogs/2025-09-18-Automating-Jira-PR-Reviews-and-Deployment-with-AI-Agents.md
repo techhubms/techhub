@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Automating Jira, PR Reviews, and Deployment with AI Agents"
-description: "This blog post, authored by Dellenny, explores how to leverage AI agents to streamline software development workflows by automating Jira updates, pull request reviews, and code deployment. It provides a step-by-step guide using tools like LangChain, OpenAI models, Atlassian Python API, and PyGithub. The content demonstrates integrating AI with CI/CD pipelines to reduce manual effort, minimize context switching, and enhance developer productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/supercharging-your-workflow-using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code-deployment/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Automating Jira, PR Reviews, and Deployment with AI Agents
+author: Dellenny
+canonical_url: https://dellenny.com/supercharging-your-workflow-using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code-deployment/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-18 08:30:25 +00:00
-permalink: "/2025-09-18-Automating-Jira-PR-Reviews-and-Deployment-with-AI-Agents.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Agent", "Atlassian Python API", "Automation", "Blogs", "CI/CD", "Coding", "DevOps", "DevOps Pipeline", "GitHub", "GitHub Actions", "Jira API", "LangChain", "OpenAI", "Pull Request Review", "PyGithub", "Software Engineering", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai agent", "atlassian python api", "automation", "blogs", "cislashcd", "coding", "devops", "devops pipeline", "github", "github actions", "jira api", "langchain", "openai", "pull request review", "pygithub", "software engineering", "workflow orchestration"]
+permalink: /ai/blogs/Automating-Jira-PR-Reviews-and-Deployment-with-AI-Agents
+tags:
+- AI
+- AI Agent
+- Atlassian Python API
+- Automation
+- Blogs
+- CI/CD
+- Coding
+- DevOps
+- DevOps Pipeline
+- GitHub
+- GitHub Actions
+- Jira API
+- LangChain
+- OpenAI
+- Pull Request Review
+- PyGithub
+- Software Engineering
+- Workflow Orchestration
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Dellenny explains how teams can use AI agents to automate Jira updates, pull request reviews, and code deployments, offering step-by-step examples for integrating modern tools into the development workflow.<!--excerpt_end-->
 
 # Automating Jira, PR Reviews, and Deployment with AI Agents

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Enterprise Server 3.18 Release Overview"
-description: "This article summarizes the major new features in GitHub Enterprise Server (GHES) 3.18. Topics include improved deployment efficiency, advanced monitoring options with OpenTelemetry, enhanced code security through better scanning and alert tracking, expanded policy management, updates to issue tracking and project management, and new enterprise-level administration features. The content is tailored for technical readers, such as enterprise DevOps engineers and administrators using or considering GitHub Enterprise Server to manage software development at scale."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Enterprise Server 3.18 Release Overview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 17:28:22 +00:00
-permalink: "/2025-10-14-GitHub-Enterprise-Server-318-Release-Overview.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security", "Code Security", "Collaboration Tools", "Custom Properties", "Dependabot", "Deployment", "DevOps", "GHES 3.18", "GitHub Enterprise Server", "Issue Tracking", "Monitoring", "News", "OpenTelemetry", "Policy Management", "Project Management", "Prometheus", "Pull Request Rules", "Security"]
-tags_normalized: ["advanced security", "code security", "collaboration tools", "custom properties", "dependabot", "deployment", "devops", "ghes 3dot18", "github enterprise server", "issue tracking", "monitoring", "news", "opentelemetry", "policy management", "project management", "prometheus", "pull request rules", "security"]
+permalink: /devops/news/GitHub-Enterprise-Server-318-Release-Overview
+tags:
+- Advanced Security
+- Code Security
+- Collaboration Tools
+- Custom Properties
+- Dependabot
+- Deployment
+- DevOps
+- GHES 3.18
+- GitHub Enterprise Server
+- Issue Tracking
+- Monitoring
+- News
+- OpenTelemetry
+- Policy Management
+- Project Management
+- Prometheus
+- Pull Request Rules
+- Security
+section_names:
+- devops
+- security
 ---
-
 Allison reviews the key updates in GitHub Enterprise Server 3.18, highlighting new tools for deployment, monitoring, security, and project management for enterprise teams.<!--excerpt_end-->
 
 # GitHub Enterprise Server 3.18 Release Overview

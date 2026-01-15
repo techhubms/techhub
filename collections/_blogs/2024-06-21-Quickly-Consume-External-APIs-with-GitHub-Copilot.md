@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Quickly Consume External APIs with GitHub Copilot"
-description: "Jesse Swart demonstrates using GitHub Copilot to quickly consume undocumented APIs, like the OpenWeather API, without an SDK or OpenAPI spec."
-author: "Jesse Swart Coding Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://sswart.github.io/post/consume-api-copilot/"
-viewing_mode: "external"
-categories: ["AI", "GitHub Copilot", "Coding"]
-feed_name: "Jesse Swart's Blog"
-feed_url: "https://blog.jesseswart.nl/index.xml"
+﻿---
+layout: post
+title: Quickly Consume External APIs with GitHub Copilot
+author: Jesse Swart Coding Blog
+canonical_url: https://sswart.github.io/post/consume-api-copilot/
+viewing_mode: external
+feed_name: Jesse Swart's Blog
+feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-21 07:51:32 +00:00
-permalink: "/2024-06-21-Quickly-Consume-External-APIs-with-GitHub-Copilot.html"
-tags: ["AI", "API Documentation", "API Integration", "Blogs", "Coding", "Developer Tools", "GitHub Copilot", "OpenWeather"]
-tags_normalized: ["ai", "api documentation", "api integration", "blogs", "coding", "developer tools", "github copilot", "openweather"]
+permalink: /github-copilot/blogs/Quickly-Consume-External-APIs-with-GitHub-Copilot
+tags:
+- AI
+- API Documentation
+- API Integration
+- Blogs
+- Coding
+- Developer Tools
+- GitHub Copilot
+- OpenWeather
+section_names:
+- ai
+- github-copilot
+- coding
 ---
-
 In this article, Jesse Swart's Blog explores how developers can leverage GitHub Copilot to work with external APIs, especially when SDKs or OpenAPI specifications are missing. <!--excerpt_end--> Handling APIs with only documentation (and no formal SDKs or specs) can be a challenge, but tools like GitHub Copilot can greatly simplify the process.
 
 The article centers around a practical example: integrating the OpenWeather API to retrieve current weather information for a specific location. The OpenWeather API provides documentation, but does not come with an official SDK or OpenAPI specification, which means developers must implement the integration manually.

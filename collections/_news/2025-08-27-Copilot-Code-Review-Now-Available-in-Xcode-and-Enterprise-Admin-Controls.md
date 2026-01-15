@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Copilot Code Review: Now Available in Xcode and Enterprise Admin Controls"
-description: "This news update covers the general availability of Copilot code review in Xcode, along with enhanced enterprise and organization settings for managing Copilot code review. The post explains how developers can use Copilot code review in Xcode and details new admin controls that help enterprises and organizations manage Copilot code review access across platforms such as GitHub.com and Visual Studio Code."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-27-copilot-code-review-generally-available-in-xcode-and-new-admin-control"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Copilot Code Review: Now Available in Xcode and Enterprise Admin Controls'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-27-copilot-code-review-generally-available-in-xcode-and-new-admin-control
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 18:03:54 +00:00
-permalink: "/2025-08-27-Copilot-Code-Review-Now-Available-in-Xcode-and-Enterprise-Admin-Controls.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Control", "AI", "CCR", "Code Review Automation", "Copilot Code Review", "Developer Tools", "Eclipse", "Enterprise Administration", "Enterprise Policy", "GitHub Copilot", "JetBrains", "News", "Organization Settings", "Pull Requests", "Security Review", "VS Code", "Xcode"]
-tags_normalized: ["admin control", "ai", "ccr", "code review automation", "copilot code review", "developer tools", "eclipse", "enterprise administration", "enterprise policy", "github copilot", "jetbrains", "news", "organization settings", "pull requests", "security review", "vs code", "xcode"]
+permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-in-Xcode-and-Enterprise-Admin-Controls
+tags:
+- Admin Control
+- AI
+- CCR
+- Code Review Automation
+- Copilot Code Review
+- Developer Tools
+- Eclipse
+- Enterprise Administration
+- Enterprise Policy
+- GitHub Copilot
+- JetBrains
+- News
+- Organization Settings
+- Pull Requests
+- Security Review
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the general release of Copilot code review in Xcode and the introduction of new enterprise and organization-level controls, giving admins more direct management of the Copilot review experience.<!--excerpt_end-->
 
 # Copilot Code Review: General Availability in Xcode and Enterprise Controls

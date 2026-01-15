@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Interactive Write-back from Power BI to Azure Databricks with Power Platform Connector"
-description: "This collaborative post by Anavi Nahar and Microsoft/Databricks announces the general availability of the Azure Databricks connector for Power Platform. It details how organizations can now build interactive solutions allowing Power BI users to write data back into Azure Databricks in real time through Power Apps, enabling actionable analytics and streamlined workflows without custom connectors or data duplication."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/closing-the-loop-interactive-write-back-from-power-bi-to-azure/ba-p/4442999"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Interactive Write-back from Power BI to Azure Databricks with Power Platform Connector
+author: AnaviNahar
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/closing-the-loop-interactive-write-back-from-power-bi-to-azure/ba-p/4442999
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-15 00:12:37 +00:00
-permalink: "/2025-08-15-Interactive-Write-back-from-Power-BI-to-Azure-Databricks-with-Power-Platform-Connector.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Azure Databricks", "Community", "Connector Integration", "Copilot Studio", "Data Governance", "Data Warehousing", "Data Write Back", "Delta Lake", "Embedded Power Apps", "Microsoft", "ML", "Operational Analytics", "Power Apps", "Power Automate", "Power BI", "Power Platform", "Real Time Data", "Spark", "Workflows"]
-tags_normalized: ["analytics", "azure", "azure databricks", "community", "connector integration", "copilot studio", "data governance", "data warehousing", "data write back", "delta lake", "embedded power apps", "microsoft", "ml", "operational analytics", "power apps", "power automate", "power bi", "power platform", "real time data", "spark", "workflows"]
+permalink: /ml/community/Interactive-Write-back-from-Power-BI-to-Azure-Databricks-with-Power-Platform-Connector
+tags:
+- Analytics
+- Azure
+- Azure Databricks
+- Community
+- Connector Integration
+- Copilot Studio
+- Data Governance
+- Data Warehousing
+- Data Write Back
+- Delta Lake
+- Embedded Power Apps
+- Microsoft
+- ML
+- Operational Analytics
+- Power Apps
+- Power Automate
+- Power BI
+- Power Platform
+- Real Time Data
+- Spark
+- Workflows
+section_names:
+- azure
+- ml
 ---
-
 Anavi Nahar shares a detailed walkthrough of how the new Azure Databricks connector for Power Platform allows Power BI users to write data back to Azure Databricks in real time, creating actionable analytics workflows.<!--excerpt_end-->
 
 # Interactive Write-back from Power BI to Azure Databricks with Power Platform Connector

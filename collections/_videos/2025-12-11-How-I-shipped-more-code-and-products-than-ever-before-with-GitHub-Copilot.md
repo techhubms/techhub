@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How I shipped more code and products than ever before with GitHub Copilot"
-description: "This session explores practical lessons learned by a Microsoft developer using GitHub Copilot throughout the development lifecycle. From streamlining prototyping, production, and advanced migrations, to leveraging Copilot in GitHub, VS Code, and Visual Studio, the video showcases how AI-powered tools improve developer workflows and productivity."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=g658oC4nuMQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: How I shipped more code and products than ever before with GitHub Copilot
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=g658oC4nuMQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 23:09:57 +00:00
-permalink: "/2025-12-11-How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "App Development", "Automation", "Cloud Computing", "Code Migration", "Code Prototyping", "Coding", "Dev", "Developer", "Developer Productivity", "Development", "GitHub", "GitHub Copilot", "Microsoft", "Production Deployment", "Programming Tools", "Tech", "Technology", "Videos", "VS", "VS Code", "Workflow Optimization"]
-tags_normalized: ["ai", "ai coding assistant", "app development", "automation", "cloud computing", "code migration", "code prototyping", "coding", "dev", "developer", "developer productivity", "development", "github", "github copilot", "microsoft", "production deployment", "programming tools", "tech", "technology", "videos", "vs", "vs code", "workflow optimization"]
+permalink: /github-copilot/videos/How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot
+tags:
+- AI
+- AI Coding Assistant
+- App Development
+- Automation
+- Cloud Computing
+- Code Migration
+- Code Prototyping
+- Coding
+- Dev
+- Developer
+- Developer Productivity
+- Development
+- GitHub
+- GitHub Copilot
+- Microsoft
+- Production Deployment
+- Programming Tools
+- Tech
+- Technology
+- Videos
+- VS
+- VS Code
+- Workflow Optimization
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer shares their experience using GitHub Copilot to accelerate code and product delivery, highlighting key lessons and workflow enhancements enabled by AI tools.<!--excerpt_end-->
 
 {% youtube g658oC4nuMQ %}

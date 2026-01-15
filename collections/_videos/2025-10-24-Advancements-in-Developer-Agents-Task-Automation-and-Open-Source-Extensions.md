@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Advancements in Developer Agents: Task Automation and Open Source Extensions"
-description: "This video presentation by Govind Kamtamneni spotlights the latest improvements in developer-focused agents from Microsoft. Beyond basic code suggestions, these agents now offer advanced capabilities like automated task handling, issue resolution, and support for a growing ecosystem of open source extensions, exemplified by the SRE Agent."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/F8CFwNnr10s"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Advancements in Developer Agents: Task Automation and Open Source Extensions'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/F8CFwNnr10s
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-24 17:49:02 +00:00
-permalink: "/2025-10-24-Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Architecture", "AI", "AI Agents", "Coding", "Developer Agents", "Developer Tools", "Issue Resolution", "Microsoft", "Open Source Extensions", "Software Engineering", "SRE Agent", "Task Automation", "Videos"]
-tags_normalized: ["agent architecture", "ai", "ai agents", "coding", "developer agents", "developer tools", "issue resolution", "microsoft", "open source extensions", "software engineering", "sre agent", "task automation", "videos"]
+permalink: /ai/videos/Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions
+tags:
+- Agent Architecture
+- AI
+- AI Agents
+- Coding
+- Developer Agents
+- Developer Tools
+- Issue Resolution
+- Microsoft
+- Open Source Extensions
+- Software Engineering
+- SRE Agent
+- Task Automation
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Microsoft Developer’s Govind Kamtamneni explains how the new generation of developer agents helps automate tasks, fix issues, and extend capabilities through open source, with a focus on the SRE Agent.<!--excerpt_end-->
 
 {% youtube F8CFwNnr10s %}

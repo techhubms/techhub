@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "VS Code June 2025 (version 1.102)"
-description: "Highlights new GitHub Copilot Chat features in VS Code, including open-source contributions, custom instructions, MCP support, and enhanced editor tools."
-author: "isidor_n"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1lwk6ba/vs_code_june_2025_version_1102/"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: VS Code June 2025 (version 1.102)
+author: isidor_n
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lwk6ba/vs_code_june_2025_version_1102/
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-10 18:25:27 +00:00
-permalink: "/2025-07-10-VS-Code-June-2025-version-1102.html"
-viewing_mode: "external"
-tags: ["AI", "Chat", "Community", "Copilot Coding Agent", "Custom Instructions", "Custom Modes", "Edit", "Editor Features", "Generate", "GitHub Copilot", "GitHub Copilot Chat", "Mcp", "MCP Support", "Open Source", "Scroll", "Settings Sync", "Start", "Terminal", "Terminal Commands", "VS Code"]
-tags_normalized: ["ai", "chat", "community", "copilot coding agent", "custom instructions", "custom modes", "edit", "editor features", "generate", "github copilot", "github copilot chat", "mcp", "mcp support", "open source", "scroll", "settings sync", "start", "terminal", "terminal commands", "vs code"]
+permalink: /github-copilot/community/VS-Code-June-2025-version-1102
+viewing_mode: external
+tags:
+- AI
+- Chat
+- Community
+- Copilot Coding Agent
+- Custom Instructions
+- Custom Modes
+- Edit
+- Editor Features
+- Generate
+- GitHub Copilot
+- GitHub Copilot Chat
+- Mcp
+- MCP Support
+- Open Source
+- Scroll
+- Settings Sync
+- Start
+- Terminal
+- Terminal Commands
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, isidor_n discusses the latest updates to the GitHub Copilot Chat extension for Visual Studio Code. Readers will learn about new open-source contributions, support for custom project instructions, custom chat modes for specific tasks, and the general availability of MCP support. The article also highlights improved editor experiences for developers and invites questions about these enhancements.<!--excerpt_end-->
 
 ## GitHub Copilot Chat: New Features in VS Code

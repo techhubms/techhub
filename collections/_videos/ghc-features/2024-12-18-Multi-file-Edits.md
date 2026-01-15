@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "Multi-file Edits"
-description: "Make changes across multiple files simultaneously"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/lI_5yc7zrDo"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Multi-file Edits
+author: Randy Pagels
+canonical_url: https://youtu.be/lI_5yc7zrDo
 date: 2024-12-18 23:00:38 +00:00
-permalink: "/2024-12-18-Multi-file-Edits.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Editing", "GitHub Copilot", "Multi Feature", "Videos"]
-tags_normalized: ["ai", "editing", "github copilot", "multi feature", "videos"]
+permalink: /github-copilot/videos/Multi-file-Edits
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Editing
+- GitHub Copilot
+- Multi Feature
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Multi-file Edits feature. Make changes across multiple files simultaneously with Copilot.<!--excerpt_end-->
 
 {% youtube lI_5yc7zrDo %}

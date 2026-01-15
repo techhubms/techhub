@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Transitioning from Backend Developer to DevOps"
-description: "This community post by DemiladeDee discusses the experience and considerations involved in moving from a backend development role to a DevOps position, highlighting the skills, challenges, and learning paths relevant to making this career transition."
-author: "DemiladeDee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mgx0a4/transitioning_from_backend_developer_to_devops/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Transitioning from Backend Developer to DevOps
+author: DemiladeDee
+canonical_url: https://www.reddit.com/r/devops/comments/1mgx0a4/transitioning_from_backend_developer_to_devops/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-03 22:48:15 +00:00
-permalink: "/2025-08-03-Transitioning-from-Backend-Developer-to-DevOps.html"
-categories: ["DevOps"]
-tags: ["Automation", "Backend Development", "Career Transition", "CI/CD", "Cloud", "Community", "Developer Skills", "DevOps", "Engineering Practices", "Infrastructure", "Software Engineering"]
-tags_normalized: ["automation", "backend development", "career transition", "cislashcd", "cloud", "community", "developer skills", "devops", "engineering practices", "infrastructure", "software engineering"]
+permalink: /devops/community/Transitioning-from-Backend-Developer-to-DevOps
+tags:
+- Automation
+- Backend Development
+- Career Transition
+- CI/CD
+- Cloud
+- Community
+- Developer Skills
+- DevOps
+- Engineering Practices
+- Infrastructure
+- Software Engineering
+section_names:
+- devops
 ---
-
 DemiladeDee shares insights into moving from backend development to a DevOps role, outlining necessary skills and possible challenges.<!--excerpt_end-->
 
 ## Transitioning from Backend Developer to DevOps

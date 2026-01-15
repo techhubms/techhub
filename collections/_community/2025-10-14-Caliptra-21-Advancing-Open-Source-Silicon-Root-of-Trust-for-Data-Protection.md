@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Caliptra 2.1: Advancing Open-Source Silicon Root of Trust for Data Protection"
-description: "An in-depth look at Caliptra 2.1, Microsoft’s open-source silicon Root of Trust (RoT) subsystem, developed in collaboration with leading industry partners. This article covers its quantum-resilient cryptography, integration with Azure's hardware security architecture, and layered key management—highlighting Caliptra's foundational role in defense-in-depth protection, open-source validation, and secure device adoption."
-author: "Bryankel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/caliptra-2-1-an-open-source-silicon-root-of-trust-with-enhanced/ba-p/4460758"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Caliptra 2.1: Advancing Open-Source Silicon Root of Trust for Data Protection'
+author: Bryankel
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/caliptra-2-1-an-open-source-silicon-root-of-trust-with-enhanced/ba-p/4460758
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/2025-10-14-Caliptra-21-Advancing-Open-Source-Silicon-Root-of-Trust-for-Data-Protection.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Caliptra 2.1", "Community", "Confidential Computing", "Cryptographic Hardware", "FPV Verification", "Hardware Security", "Key Management", "Microsoft Security", "OCP LOCK", "Open Compute Project", "Quantum Cryptography", "Root Of Trust", "Security", "Silicon Security", "Trusted Execution Environments", "Zero Trust"]
-tags_normalized: ["azure", "caliptra 2dot1", "community", "confidential computing", "cryptographic hardware", "fpv verification", "hardware security", "key management", "microsoft security", "ocp lock", "open compute project", "quantum cryptography", "root of trust", "security", "silicon security", "trusted execution environments", "zero trust"]
+permalink: /azure/community/Caliptra-21-Advancing-Open-Source-Silicon-Root-of-Trust-for-Data-Protection
+tags:
+- Azure
+- Caliptra 2.1
+- Community
+- Confidential Computing
+- Cryptographic Hardware
+- FPV Verification
+- Hardware Security
+- Key Management
+- Microsoft Security
+- OCP LOCK
+- Open Compute Project
+- Quantum Cryptography
+- Root Of Trust
+- Security
+- Silicon Security
+- Trusted Execution Environments
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Bryankel presents Caliptra 2.1, Microsoft’s open-source silicon Root of Trust subsystem, detailing its quantum-resilient cryptography and integration with Azure’s security architecture, aiming to advance industry-wide device security.<!--excerpt_end-->
 
 # Caliptra 2.1: Advancing Open-Source Silicon Root of Trust for Data Protection

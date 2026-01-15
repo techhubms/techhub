@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Tutorial Videos: Setting up GitHub Copilot for Your Company"
-description: "This concise guide presents a collection of tutorial videos that walk organizations through the end-to-end setup of GitHub and GitHub Copilot for engineering teams. The series covers licenses, single sign-on (SSO) with Microsoft Entra ID, adding an Azure subscription, and assigning Copilot licenses, catering to companies new to GitHub Copilot. Key configuration steps, links to official resources, and tips for streamlined onboarding are provided, making this an essential reference for technical leads and administrators."
-author: "Eldrick Wega"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: 'Tutorial Videos: Setting up GitHub Copilot for Your Company'
+author: Eldrick Wega
+canonical_url: https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-14 11:40:23 +00:00
-permalink: "/2025-11-14-Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Platform", "AI", "All Things Azure", "Azure", "Azure Subscription", "Code Review", "Configuration", "Developer Productivity", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "GitHub Enterprise", "GitHub Licences", "IDE Integration", "Licensing", "Microsoft Entra ID", "News", "Operations", "Organization Onboarding", "Permissions", "Security", "Setup Guide", "Single Sign On", "SSO", "Trial Account"]
-tags_normalized: ["agentic platform", "ai", "all things azure", "azure", "azure subscription", "code review", "configuration", "developer productivity", "developer tools", "devops", "github", "github copilot", "github enterprise", "github licences", "ide integration", "licensing", "microsoft entra id", "news", "operations", "organization onboarding", "permissions", "security", "setup guide", "single sign on", "sso", "trial account"]
+permalink: /github-copilot/news/Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company
+tags:
+- Agentic Platform
+- AI
+- All Things Azure
+- Azure
+- Azure Subscription
+- Code Review
+- Configuration
+- Developer Productivity
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Enterprise
+- GitHub Licences
+- IDE Integration
+- Licensing
+- Microsoft Entra ID
+- News
+- Operations
+- Organization Onboarding
+- Permissions
+- Security
+- Setup Guide
+- Single Sign On
+- SSO
+- Trial Account
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 Eldrick Wega shares a succinct video series on configuring GitHub and GitHub Copilot for enterprises, highlighting licensing, SSO, Azure connectivity, and agentic platform setup.<!--excerpt_end-->
 
 # Tutorial Videos: Setting up GitHub Copilot for Your Company

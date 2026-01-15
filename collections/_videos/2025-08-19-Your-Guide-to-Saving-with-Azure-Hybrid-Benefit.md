@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Your Guide to Saving with Azure Hybrid Benefit"
-description: "This episode of the Azure Essentials Show, presented by Aaron Stark and Maria Jose Fernandez, delves into how Azure Hybrid Benefit can help organizations cut cloud costs, maintain hybrid capabilities, and make migrations to Azure more efficient. Topics include leveraging existing licenses, workload migration flexibility, combining benefits with reservations, and accessing learning resources."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1LgV-kfnUAA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Your Guide to Saving with Azure Hybrid Benefit
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=1LgV-kfnUAA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-19 07:00:05 +00:00
-permalink: "/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Hybrid Benefit", "Azure Reservations", "AzureEssentialsShow", "AzureHybridBenefit", "Cloud Cost Optimization", "Cloud Migration", "Cloud Savings", "Dual Use Rights", "License Management", "Linux Workloads", "Microsoft Azure", "SQL Server On Azure", "Videos", "Windows Server Migration", "Workload Migration"]
-tags_normalized: ["azure", "azure hybrid benefit", "azure reservations", "azureessentialsshow", "azurehybridbenefit", "cloud cost optimization", "cloud migration", "cloud savings", "dual use rights", "license management", "linux workloads", "microsoft azure", "sql server on azure", "videos", "windows server migration", "workload migration"]
+permalink: /azure/videos/Your-Guide-to-Saving-with-Azure-Hybrid-Benefit
+tags:
+- Azure
+- Azure Hybrid Benefit
+- Azure Reservations
+- AzureEssentialsShow
+- AzureHybridBenefit
+- Cloud Cost Optimization
+- Cloud Migration
+- Cloud Savings
+- Dual Use Rights
+- License Management
+- Linux Workloads
+- Microsoft Azure
+- SQL Server On Azure
+- Videos
+- Windows Server Migration
+- Workload Migration
+section_names:
+- azure
 ---
-
 In this Azure Essentials Show episode, Microsoft Developer hosts Aaron Stark and Maria Jose Fernandez break down how organizations can use Azure Hybrid Benefit to maximize savings and simplify migration to Azure.<!--excerpt_end-->
 
 {% youtube 1LgV-kfnUAA %}

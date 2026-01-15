@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Mirroring for SQL Server in Microsoft Fabric (Generally Available)"
-description: "This article introduces and details the new Mirroring capabilities for SQL Server within Microsoft Fabric, covering all in-market SQL Server versions (2016-2025). It explains how Mirroring enables near real-time data ingestion from SQL Server to Fabric's OneLake, easing analytics, AI, and data science processes. The post highlights architectural diagrams, differences between SQL Server versions, and practical setup guidance for leveraging the feature with advanced analytics tools like Power BI, Lakehouse, and KQL Database."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-sql-server-in-microsoft-fabric-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Mirroring for SQL Server in Microsoft Fabric (Generally Available)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-sql-server-in-microsoft-fabric-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 14:00:00 +00:00
-permalink: "/2025-11-19-Mirroring-for-SQL-Server-in-Microsoft-Fabric-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Arc Agent", "Azure", "Azure SQL", "Change Data Capture", "Change Feed", "Data Engineering", "Data Warehouse", "Delta Format", "Direct Lake Mode", "KQL Database", "Lakehouse", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Data Gateway", "OneLake", "Power BI", "SQL Server", "VNet Data Gateway"]
-tags_normalized: ["analytics", "arc agent", "azure", "azure sql", "change data capture", "change feed", "data engineering", "data warehouse", "delta format", "direct lake mode", "kql database", "lakehouse", "microsoft fabric", "mirroring", "ml", "news", "on premises data gateway", "onelake", "power bi", "sql server", "vnet data gateway"]
+permalink: /ml/news/Mirroring-for-SQL-Server-in-Microsoft-Fabric-Generally-Available
+tags:
+- Analytics
+- Arc Agent
+- Azure
+- Azure SQL
+- Change Data Capture
+- Change Feed
+- Data Engineering
+- Data Warehouse
+- Delta Format
+- Direct Lake Mode
+- KQL Database
+- Lakehouse
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- On Premises Data Gateway
+- OneLake
+- Power BI
+- SQL Server
+- VNet Data Gateway
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog provides a technical overview of Mirroring for SQL Server in Microsoft Fabric, describing how near real-time data ingestion enables seamless analytics and business intelligence for enterprise workloads.<!--excerpt_end-->
 
 # Mirroring for SQL Server in Microsoft Fabric (Generally Available)

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "What's New in Containers for .NET 10"
-description: "This session provides a technical overview of the container-specific enhancements in .NET 10. Topics include improved image sizes, faster startup, debugging advancements, container-aware features, and new SDK workflows. It covers optimizations for both Linux and Windows containers, best practices for Kubernetes, Azure Container Apps, and cross-platform deployment. Developers will also learn about .NET Aspire 13, ASP.NET Core 10, and updates for C# 14, F# 10, and Visual Studio 2026, supporting modern containerized application workflows."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IfhxdKKd4GU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: What's New in Containers for .NET 10
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=IfhxdKKd4GU
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Whats-New-in-Containers-for-NET-10.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire 13", "ASP.NET Core 10", "Azure", "Azure Container Apps", "C# 14", "Cloud Native", "Coding", "Container Orchestrators", "Containerization", "Debugging", "Deployment", "DevOps", "F# 10", "Kubernetes", "Linux Containers", "Performance Optimization", "SDK Features", "Videos", "VS", "Windows Containers"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "aspdotnet core 10", "azure", "azure container apps", "csharp 14", "cloud native", "coding", "container orchestrators", "containerization", "debugging", "deployment", "devops", "fsharp 10", "kubernetes", "linux containers", "performance optimization", "sdk features", "videos", "vs", "windows containers"]
+permalink: /coding/videos/Whats-New-in-Containers-for-NET-10
+tags:
+- .NET
+- .NET 10
+- .NET Aspire 13
+- ASP.NET Core 10
+- Azure
+- Azure Container Apps
+- C# 14
+- Cloud Native
+- Coding
+- Container Orchestrators
+- Containerization
+- Debugging
+- Deployment
+- DevOps
+- F# 10
+- Kubernetes
+- Linux Containers
+- Performance Optimization
+- SDK Features
+- Videos
+- VS
+- Windows Containers
+section_names:
+- azure
+- coding
+- devops
 ---
-
 dotnet presents a deep dive into .NET 10's new container features, sharing key improvements for developers building, deploying, and managing containerized applications across cloud and on-premises platforms.<!--excerpt_end-->
 
 {% youtube IfhxdKKd4GU %}

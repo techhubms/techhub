@@ -1,20 +1,49 @@
----
-layout: "post"
-title: ".NET Day: Modernize Apps with Azure, AI, and Agentic Tooling"
-description: "A preview of the upcoming .NET Day on Agentic Modernization event, offering developers actionable strategies to modernize .NET applications using Azure Cloud, AI agents, GitHub Copilot, and modern agent frameworks. The sessions will showcase live demonstrations from Microsoft experts, reveal new ways to integrate AI tooling, enhance performance, and architect secure, cloud-native solutions with practical guidance and technical depth."
-author: "Matt Soucoup"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: '.NET Day: Modernize Apps with Azure, AI, and Agentic Tooling'
+author: Matt Soucoup
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-26 21:00:00 +00:00
-permalink: "/2025-11-26-NET-Day-Modernize-Apps-with-Azure-AI-and-Agentic-Tooling.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET", "Agent Framework", "Agentic Modernization", "AI", "AI Agents", "App Service", "Application Modernization", "Azure", "Azure Redis", "Azure SQL", "Azure SRE Agent", "Cloud Native", "Coding", "Developer Tools", "DevOps", "Durable Task Extension", "GitHub Actions", "GitHub Copilot", "IaC", "Lifecycle", "MCP", "Modernization", "News", "Performance Monitoring", "Security", "SQL Server", "VS"]
-tags_normalized: ["dotnet", "agent framework", "agentic modernization", "ai", "ai agents", "app service", "application modernization", "azure", "azure redis", "azure sql", "azure sre agent", "cloud native", "coding", "developer tools", "devops", "durable task extension", "github actions", "github copilot", "iac", "lifecycle", "mcp", "modernization", "news", "performance monitoring", "security", "sql server", "vs"]
+permalink: /github-copilot/news/NET-Day-Modernize-Apps-with-Azure-AI-and-Agentic-Tooling
+tags:
+- .NET
+- Agent Framework
+- Agentic Modernization
+- AI
+- AI Agents
+- App Service
+- Application Modernization
+- Azure
+- Azure Redis
+- Azure SQL
+- Azure SRE Agent
+- Cloud Native
+- Coding
+- Developer Tools
+- DevOps
+- Durable Task Extension
+- GitHub Actions
+- GitHub Copilot
+- IaC
+- Lifecycle
+- MCP
+- Modernization
+- News
+- Performance Monitoring
+- Security
+- SQL Server
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Matt Soucoup introduces a virtual event focused on practical ways to modernize .NET apps with Azure, AI, agentic frameworks, and developer-centric tools, featuring expert-led live demos and cutting-edge technical guidance.<!--excerpt_end-->
 
 # .NET Day on Agentic Modernization: What to Expect

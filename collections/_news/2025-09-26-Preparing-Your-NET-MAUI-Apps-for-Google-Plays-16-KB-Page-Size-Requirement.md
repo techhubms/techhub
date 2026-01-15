@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Preparing Your .NET MAUI Apps for Google Play’s 16 KB Page Size Requirement"
-description: "This guide covers Google's upcoming requirement for Android apps to support 16 KB memory page sizes starting November 1, 2025. It explains what the 16 KB requirement is, why it matters, how .NET MAUI 9 supports it, and what .NET developers need to do. Steps include upgrading to .NET 9, auditing dependencies for compliance, and testing on 16 KB environments to ensure app compatibility and continued publishing on Google Play."
-author: "Gerald Versluis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Preparing Your .NET MAUI Apps for Google Play’s 16 KB Page Size Requirement
+author: Gerald Versluis
+canonical_url: https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-26 17:05:00 +00:00
-permalink: "/2025-09-26-Preparing-Your-NET-MAUI-Apps-for-Google-Plays-16-KB-Page-Size-Requirement.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 9", ".NET For Android", "16 KB Page Size", "Android 15", "Android Development", "App Compatibility", "Coding", "Dependencies", "Developer Guidance", "Emulator Testing", "Google Play", "MAUI", "Memory Management", "Mobile Apps", "News", "NuGet", "Page Size Requirement"]
-tags_normalized: ["dotnet", "dotnet 9", "dotnet for android", "16 kb page size", "android 15", "android development", "app compatibility", "coding", "dependencies", "developer guidance", "emulator testing", "google play", "maui", "memory management", "mobile apps", "news", "nuget", "page size requirement"]
+permalink: /coding/news/Preparing-Your-NET-MAUI-Apps-for-Google-Plays-16-KB-Page-Size-Requirement
+tags:
+- .NET
+- .NET 9
+- .NET For Android
+- 16 KB Page Size
+- Android 15
+- Android Development
+- App Compatibility
+- Coding
+- Dependencies
+- Developer Guidance
+- Emulator Testing
+- Google Play
+- MAUI
+- Memory Management
+- Mobile Apps
+- News
+- NuGet
+- Page Size Requirement
+section_names:
+- coding
 ---
-
 Gerald Versluis explains the upcoming Google Play 16 KB page size mandate for Android apps and how .NET MAUI developers can prepare by upgrading to .NET 9 and ensuring all dependencies are compliant.<!--excerpt_end-->
 
 # Preparing Your .NET MAUI Apps for Google Play’s 16 KB Page Size Requirement

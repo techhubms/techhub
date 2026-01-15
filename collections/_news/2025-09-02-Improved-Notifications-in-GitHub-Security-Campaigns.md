@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Improved Notifications in GitHub Security Campaigns"
-description: "This news update highlights recent changes to GitHub security campaigns, where developers with write access to repositories now receive automatic email notifications about campaign activity without manual subscription. The update aims to improve developer awareness and streamline security remediation processes. Additional context is provided about security campaigns, including their integration with GitHub Copilot Autofix and GitHub Code Security features on Enterprise Cloud."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Notifications in GitHub Security Campaigns
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-02 09:29:30 +00:00
-permalink: "/2025-09-02-Improved-Notifications-in-GitHub-Security-Campaigns.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "Application Security", "Code Security", "Developer Collaboration", "DevOps", "GitHub Copilot", "GitHub Copilot Autofix", "GitHub Enterprise Cloud", "GitHub Security Campaigns", "News", "Notification System", "Security", "Security Alerts", "Security Automation"]
-tags_normalized: ["ai", "application security", "code security", "developer collaboration", "devops", "github copilot", "github copilot autofix", "github enterprise cloud", "github security campaigns", "news", "notification system", "security", "security alerts", "security automation"]
+permalink: /github-copilot/news/Improved-Notifications-in-GitHub-Security-Campaigns
+tags:
+- AI
+- Application Security
+- Code Security
+- Developer Collaboration
+- DevOps
+- GitHub Copilot
+- GitHub Copilot Autofix
+- GitHub Enterprise Cloud
+- GitHub Security Campaigns
+- News
+- Notification System
+- Security
+- Security Alerts
+- Security Automation
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 Allison provides an update on GitHub's security campaigns, introducing enhanced notifications for developers and highlighting integration with GitHub Copilot Autofix as part of the platform's security and collaboration improvements.<!--excerpt_end-->
 
 # Improved Notifications in GitHub Security Campaigns

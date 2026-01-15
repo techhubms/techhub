@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "How to Build Reliable AI Workflows with Agentic Primitives and Context Engineering"
-description: "This guide details a three-part framework for turning ad-hoc AI experimentation into systematic, reliable engineering practice within developer workflows. It explains the foundations of agentic primitives, context engineering, and markdown-based prompt engineering, emphasizing their integration with GitHub Copilot, Copilot CLI, and VS Code for building repeatable AI-powered software development processes."
-author: "Daniel Meppiel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How to Build Reliable AI Workflows with Agentic Primitives and Context Engineering
+author: Daniel Meppiel
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-13 16:00:00 +00:00
-permalink: "/2025-10-13-How-to-Build-Reliable-AI-Workflows-with-Agentic-Primitives-and-Context-Engineering.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".instructions.md", ".prompt.md", "Agent CLI", "Agentic AI", "Agentic Primitives", "AI", "AI & ML", "APM", "CI/CD", "Coding", "Context Engineering", "DevOps", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "Markdown Prompt Engineering", "MCP Tools", "Natural Language Programming", "News", "Prompt Engineering", "Specification Templates", "VS Code", "Workflow Automation"]
-tags_normalized: ["dotinstructionsdotmd", "dotpromptdotmd", "agent cli", "agentic ai", "agentic primitives", "ai", "ai and ml", "apm", "cislashcd", "coding", "context engineering", "devops", "github cli", "github copilot", "github copilot cli", "markdown prompt engineering", "mcp tools", "natural language programming", "news", "prompt engineering", "specification templates", "vs code", "workflow automation"]
+permalink: /github-copilot/news/How-to-Build-Reliable-AI-Workflows-with-Agentic-Primitives-and-Context-Engineering
+tags:
+- .instructions.md
+- .prompt.md
+- Agent CLI
+- Agentic AI
+- Agentic Primitives
+- AI
+- AI & ML
+- APM
+- CI/CD
+- Coding
+- Context Engineering
+- DevOps
+- GitHub CLI
+- GitHub Copilot
+- GitHub Copilot CLI
+- Markdown Prompt Engineering
+- MCP Tools
+- Natural Language Programming
+- News
+- Prompt Engineering
+- Specification Templates
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Daniel Meppiel presents an in-depth framework for building reliable, repeatable AI workflows using agentic primitives, context engineering, and structured prompt techniques, highlighting integration with GitHub Copilot and modern developer tools.<!--excerpt_end-->
 
 # How to Build Reliable AI Workflows with Agentic Primitives and Context Engineering

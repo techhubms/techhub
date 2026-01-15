@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building Agents on Azure Container Apps with Goose AI Agent, Ollama, and gpt-oss"
-description: "This article demonstrates how Azure Container Apps (ACA) streamlines the hosting and deployment of intelligent AI agents like Goose, combining serverless scale, GPU-on-demand, and security. It covers challenges in running agentic frameworks, why ACA is an ideal platform for open-source AI workloads, and how to quickly deploy and customize Goose agents using ACA’s developer-friendly approach."
-author: "simonjj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Agents on Azure Container Apps with Goose AI Agent, Ollama, and gpt-oss
+author: simonjj
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 18:16:13 +00:00
-permalink: "/2025-10-14-Building-Agents-on-Azure-Container-Apps-with-Goose-AI-Agent-Ollama-and-gpt-oss.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Frameworks", "AI", "AI Agents", "Automation", "Azure", "Azure Container Apps", "Cloud Security", "Community", "Containerization", "Custom Models", "Data Governance", "Goose AI Agent", "Gpt Oss", "Microservices", "Model Inference", "Ollama", "Open Source", "RBAC", "Self Hosted AI", "Serverless GPU"]
-tags_normalized: ["agentic frameworks", "ai", "ai agents", "automation", "azure", "azure container apps", "cloud security", "community", "containerization", "custom models", "data governance", "goose ai agent", "gpt oss", "microservices", "model inference", "ollama", "open source", "rbac", "self hosted ai", "serverless gpu"]
+permalink: /ai/community/Building-Agents-on-Azure-Container-Apps-with-Goose-AI-Agent-Ollama-and-gpt-oss
+tags:
+- Agentic Frameworks
+- AI
+- AI Agents
+- Automation
+- Azure
+- Azure Container Apps
+- Cloud Security
+- Community
+- Containerization
+- Custom Models
+- Data Governance
+- Goose AI Agent
+- Gpt Oss
+- Microservices
+- Model Inference
+- Ollama
+- Open Source
+- RBAC
+- Self Hosted AI
+- Serverless GPU
+section_names:
+- ai
+- azure
 ---
-
 simonjj explores how developers can deploy and manage AI agents like Goose on Azure Container Apps, taking advantage of serverless GPU resources and secure, scalable infrastructure for rapid innovation.<!--excerpt_end-->
 
 # Building Agents on Azure Container Apps with Goose AI Agent, Ollama, and gpt-oss

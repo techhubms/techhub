@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Enterprise-Grade JDBC Driver for Microsoft Fabric Data Engineering Preview"
-description: "This article introduces the Microsoft JDBC Driver for Fabric Data Engineering, enabling secure and robust connectivity to Spark SQL for Java applications and BI tools. Key features include JDBC 4.2 compliance, integration with popular development and analytics platforms, strong Azure Entra ID authentication options, native Spark SQL support, advanced connection pooling, performance enhancements, and comprehensive logging. The driver is designed to accelerate Spark-powered data engineering in Microsoft Fabric, supporting critical enterprise needs for integration, reliability, and security."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enterprise-Grade JDBC Driver for Microsoft Fabric Data Engineering Preview
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-25 11:00:00 +00:00
-permalink: "/2025-11-25-Enterprise-Grade-JDBC-Driver-for-Microsoft-Fabric-Data-Engineering-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Authentication", "Azure", "Azure Entra ID", "BI Tools", "Certificate Authentication", "Circuit Breaker", "Connection Pooling", "Data Engineering", "DBeaver", "DbVisualizer", "HikariCP", "Java", "JDBC Driver", "Lakehouse", "Logging", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Preview Release", "Proxy Support", "Spark SQL", "Tableau"]
-tags_normalized: ["authentication", "azure", "azure entra id", "bi tools", "certificate authentication", "circuit breaker", "connection pooling", "data engineering", "dbeaver", "dbvisualizer", "hikaricp", "java", "jdbc driver", "lakehouse", "logging", "microsoft fabric", "ml", "news", "onelake", "power bi", "preview release", "proxy support", "spark sql", "tableau"]
+permalink: /ml/news/Enterprise-Grade-JDBC-Driver-for-Microsoft-Fabric-Data-Engineering-Preview
+tags:
+- Authentication
+- Azure
+- Azure Entra ID
+- BI Tools
+- Certificate Authentication
+- Circuit Breaker
+- Connection Pooling
+- Data Engineering
+- DBeaver
+- DbVisualizer
+- HikariCP
+- Java
+- JDBC Driver
+- Lakehouse
+- Logging
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Power BI
+- Preview Release
+- Proxy Support
+- Spark SQL
+- Tableau
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the new JDBC Driver for Fabric Data Engineering, empowering developers and data engineers with secure, high-performance Spark SQL connectivity.<!--excerpt_end-->
 
 # Microsoft JDBC Driver for Microsoft Fabric Data Engineering (Preview)

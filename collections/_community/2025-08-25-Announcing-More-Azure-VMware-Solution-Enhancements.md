@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing More Azure VMware Solution Enhancements"
-description: "This announcement from Christophe Herrbach highlights the latest updates to Azure VMware Solution (AVS) presented at VMware Explore. The post details geographic expansion to 35+ regions, technical enhancements like VCF private clouds, DISA IL5 Gov Cloud approval, and new storage options including Azure NetApp Files and Azure Elastic SAN. Key learning and migration resources are also shared."
-author: "christopheherrbach"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing More Azure VMware Solution Enhancements
+author: christopheherrbach
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-25 16:50:52 +00:00
-permalink: "/2025-08-25-Announcing-More-Azure-VMware-Solution-Enhancements.html"
-categories: ["Azure"]
-tags: ["AVS", "Azure", "Azure Elastic SAN", "Azure Government", "Azure NetApp Files", "Azure Region Expansion", "Azure VMware Solution", "Cloud Migration", "Community", "Data Center Modernization", "DISA Provisional Authorization", "Infrastructure", "Managed Service", "Microsoft Azure", "Private Cloud", "Storage Optimization", "VMware Cloud Foundation"]
-tags_normalized: ["avs", "azure", "azure elastic san", "azure government", "azure netapp files", "azure region expansion", "azure vmware solution", "cloud migration", "community", "data center modernization", "disa provisional authorization", "infrastructure", "managed service", "microsoft azure", "private cloud", "storage optimization", "vmware cloud foundation"]
+permalink: /azure/community/Announcing-More-Azure-VMware-Solution-Enhancements
+tags:
+- AVS
+- Azure
+- Azure Elastic SAN
+- Azure Government
+- Azure NetApp Files
+- Azure Region Expansion
+- Azure VMware Solution
+- Cloud Migration
+- Community
+- Data Center Modernization
+- DISA Provisional Authorization
+- Infrastructure
+- Managed Service
+- Microsoft Azure
+- Private Cloud
+- Storage Optimization
+- VMware Cloud Foundation
+section_names:
+- azure
 ---
-
 Christophe Herrbach introduces new enhancements for Azure VMware Solution, highlighting expanded regional availability, technical upgrades, and resources for Azure migration at VMware Explore.<!--excerpt_end-->
 
 # Announcing More Azure VMware Solution Enhancements

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Copilot Adds Advanced Kubernetes Troubleshooting Agents for AKS"
-description: "This announcement details the preview release of Kubernetes troubleshooting agents in Azure Copilot, enabling automated detection, diagnosis, and resolution of issues in Azure Kubernetes Service (AKS) clusters. The agentic AI-driven experience leverages kubectl commands, provides actionable solutions, and integrates with support workflows, streamlining cluster operations for cloud engineers. Users can enable agent mode, access guided troubleshooting, and participate in feedback initiatives to help shape future agentic cloud operations."
-author: "Samantha_Fernandez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Copilot Adds Advanced Kubernetes Troubleshooting Agents for AKS
+author: Samantha_Fernandez
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 19:20:27 +00:00
-permalink: "/2025-11-18-Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-Agents-for-AKS.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Mode", "Agentic Cloud Operations", "AI", "AKS", "Automated Mitigation", "Azure", "Azure Copilot", "Cloud Diagnostics", "Cluster Management", "Community", "DevOps", "Kubectl", "Kubernetes", "Kubernetes Troubleshooting", "Microsoft Azure", "Preview Feature", "Root Cause Analysis", "Support Automation"]
-tags_normalized: ["agent mode", "agentic cloud operations", "ai", "aks", "automated mitigation", "azure", "azure copilot", "cloud diagnostics", "cluster management", "community", "devops", "kubectl", "kubernetes", "kubernetes troubleshooting", "microsoft azure", "preview feature", "root cause analysis", "support automation"]
+permalink: /ai/community/Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-Agents-for-AKS
+tags:
+- Agent Mode
+- Agentic Cloud Operations
+- AI
+- AKS
+- Automated Mitigation
+- Azure
+- Azure Copilot
+- Cloud Diagnostics
+- Cluster Management
+- Community
+- DevOps
+- Kubectl
+- Kubernetes
+- Kubernetes Troubleshooting
+- Microsoft Azure
+- Preview Feature
+- Root Cause Analysis
+- Support Automation
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Samantha_Fernandez introduces the preview of AI-powered Kubernetes troubleshooting agents in Azure Copilot, offering automated root cause analysis, actionable solutions, and integrated support for AKS clusters.<!--excerpt_end-->
 
 # Azure Copilot Adds Advanced Kubernetes Troubleshooting Agents for AKS

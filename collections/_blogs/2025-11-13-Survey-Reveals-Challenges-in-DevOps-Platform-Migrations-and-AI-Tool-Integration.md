@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Survey Reveals Challenges in DevOps Platform Migrations and AI Tool Integration"
-description: "A recent survey of 300 enterprise IT and technology leaders highlights the difficulties organizations face with DevOps platform migrations. Despite significant investments, many report unmet expectations in value, performance, and security, with growing concerns about tool sprawl, developer burnout, and the unchecked introduction of AI tools into pipelines."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals Challenges in DevOps Platform Migrations and AI Tool Integration
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-13 02:44:52 +00:00
-permalink: "/2025-11-13-Survey-Reveals-Challenges-in-DevOps-Platform-Migrations-and-AI-Tool-Integration.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Tool Integration", "Blogs", "Cloudbees", "Compliance", "Developer Productivity", "DevOps", "Enterprise IT", "Platform Engineering", "Platform Migration", "Real Time Analytics", "Security", "Security Integrations", "Social Facebook", "Social LinkedIn", "Social X", "Survey", "Tool Sprawl", "Workflow Optimization"]
-tags_normalized: ["ai", "ai tool integration", "blogs", "cloudbees", "compliance", "developer productivity", "devops", "enterprise it", "platform engineering", "platform migration", "real time analytics", "security", "security integrations", "social facebook", "social linkedin", "social x", "survey", "tool sprawl", "workflow optimization"]
+permalink: /ai/blogs/Survey-Reveals-Challenges-in-DevOps-Platform-Migrations-and-AI-Tool-Integration
+tags:
+- AI
+- AI Tool Integration
+- Blogs
+- Cloudbees
+- Compliance
+- Developer Productivity
+- DevOps
+- Enterprise IT
+- Platform Engineering
+- Platform Migration
+- Real Time Analytics
+- Security
+- Security Integrations
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Survey
+- Tool Sprawl
+- Workflow Optimization
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard discusses a survey of enterprise technology leaders, exploring the real-world difficulties of DevOps platform migrations, the risks of AI integration without review, and the impact on developer morale and security.<!--excerpt_end-->
 
 # Survey Reveals Challenges in DevOps Platform Migrations and AI Tool Integration

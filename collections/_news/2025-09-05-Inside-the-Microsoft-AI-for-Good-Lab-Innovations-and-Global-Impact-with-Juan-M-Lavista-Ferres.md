@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Inside the Microsoft AI for Good Lab: Innovations and Global Impact with Juan M. Lavista Ferres"
-description: "This deep dive explores the Microsoft AI for Good Lab, led by Juan M. Lavista Ferres, highlighting how the lab leverages AI to tackle urgent global problems. It covers real-world partnerships, innovative AI applications for disaster response and healthcare, and strategies for scaling AI’s positive social impact worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Inside the Microsoft AI for Good Lab: Innovations and Global Impact with Juan M. Lavista Ferres'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-05 13:53:45 +00:00
-permalink: "/2025-09-05-Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres.html"
-categories: ["AI"]
-tags: ["AI", "AI Ethics", "AI For Good Lab", "AI Research", "Applied AI", "Biodiversity", "Company News", "Disaster Response", "Edge Computing", "Global Partnerships", "Healthcare AI", "Impact Measurement", "Juan M. Lavista Ferres", "Machine Learning", "Microsoft", "News", "Project SPARROW", "Synthetic Aperture Radar"]
-tags_normalized: ["ai", "ai ethics", "ai for good lab", "ai research", "applied ai", "biodiversity", "company news", "disaster response", "edge computing", "global partnerships", "healthcare ai", "impact measurement", "juan mdot lavista ferres", "machine learning", "microsoft", "news", "project sparrow", "synthetic aperture radar"]
+permalink: /ai/news/Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres
+tags:
+- AI
+- AI Ethics
+- AI For Good Lab
+- AI Research
+- Applied AI
+- Biodiversity
+- Company News
+- Disaster Response
+- Edge Computing
+- Global Partnerships
+- Healthcare AI
+- Impact Measurement
+- Juan M. Lavista Ferres
+- Machine Learning
+- Microsoft
+- News
+- Project SPARROW
+- Synthetic Aperture Radar
+section_names:
+- ai
 ---
-
 stclarke examines the work of Juan M. Lavista Ferres and the Microsoft AI for Good Lab, showcasing how advanced AI research and global collaborations are driving positive societal change.<!--excerpt_end-->
 
 # Inside the Microsoft AI for Good Lab: Innovations and Global Impact

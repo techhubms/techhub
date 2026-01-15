@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents"
-description: "This resource explains how Microsoft Semantic Kernel elevates established business logic and automation scripts into intelligent, AI-orchestrated agents. It contrasts the limitations of basic LLM integrations (such as brittle prompts replacing expert workflows) with Semantic Kernel’s approach: using AI to orchestrate, not override, your reliable code. Readers discover setup steps, annotated code samples in Python, and guidance for improving real-world workflows across marketing, reporting, and operations. Practical examples help developers integrate SK to combine the power of AI with the dependability of existing business logic."
-author: "Abdulhamid_Onawole"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/educator-developer-blog/how-microsoft-semantic-kernel-transforms-proven-workflows-into/ba-p/4434731"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents
+author: Abdulhamid_Onawole
+canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-microsoft-semantic-kernel-transforms-proven-workflows-into/ba-p/4434731
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 07:00:00 +00:00
-permalink: "/2025-08-13-How-Microsoft-Semantic-Kernel-Transforms-Proven-Workflows-into-Intelligent-Agents.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Architecture", "AI", "AI Orchestration", "Business Intelligence", "Business Logic", "Code Execution", "Coding", "Community", "Data Analysis", "Email Automation", "Function Decorators", "Kernel Functions", "LLM Integration", "Matplotlib", "Microsoft Semantic Kernel", "Natural Language Processing", "OpenAI Integration", "Pandas", "Prompt Engineering", "Python", "Skill Plugins", "Workflow Automation"]
-tags_normalized: ["agent architecture", "ai", "ai orchestration", "business intelligence", "business logic", "code execution", "coding", "community", "data analysis", "email automation", "function decorators", "kernel functions", "llm integration", "matplotlib", "microsoft semantic kernel", "natural language processing", "openai integration", "pandas", "prompt engineering", "python", "skill plugins", "workflow automation"]
+permalink: /ai/community/How-Microsoft-Semantic-Kernel-Transforms-Proven-Workflows-into-Intelligent-Agents
+tags:
+- Agent Architecture
+- AI
+- AI Orchestration
+- Business Intelligence
+- Business Logic
+- Code Execution
+- Coding
+- Community
+- Data Analysis
+- Email Automation
+- Function Decorators
+- Kernel Functions
+- LLM Integration
+- Matplotlib
+- Microsoft Semantic Kernel
+- Natural Language Processing
+- OpenAI Integration
+- Pandas
+- Prompt Engineering
+- Python
+- Skill Plugins
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Abdulhamid_Onawole demonstrates how developers can leverage Microsoft Semantic Kernel to intelligently orchestrate existing business logic, preserving workflow reliability while adding natural language control.<!--excerpt_end-->
 
 # How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents

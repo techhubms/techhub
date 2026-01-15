@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL"
-description: "This news article explains how organizations can use Microsoft Fabric and Eon to unify, access, and query cloud database backups directly in OneLake, eliminating the need for traditional ETL processes and enabling secure, governed analytics, BI, and AI across Azure, AWS, and Google Cloud. It covers technical integration details, business impacts, security practices, and steps to get started."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/30438/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/30438/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 09:30:00 +00:00
-permalink: "/2025-11-24-Querying-Database-Backups-in-Microsoft-Fabric-In-Place-Analytics-Without-ETL.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "Analytics", "Apache Iceberg", "Azure", "Azure AI Foundry", "Cloud Data Lake", "Compliance", "Database Backup", "Delta Lake", "Eon", "ETL Elimination", "Fabric Data Warehouse", "Fabric Spark", "Governance", "Metadata Virtualization", "Microsoft Entra", "Microsoft Fabric", "ML", "Multi Cloud", "News", "OneLake", "Power BI", "Security"]
-tags_normalized: ["ai", "analytics", "apache iceberg", "azure", "azure ai foundry", "cloud data lake", "compliance", "database backup", "delta lake", "eon", "etl elimination", "fabric data warehouse", "fabric spark", "governance", "metadata virtualization", "microsoft entra", "microsoft fabric", "ml", "multi cloud", "news", "onelake", "power bi", "security"]
+permalink: /ai/news/Querying-Database-Backups-in-Microsoft-Fabric-In-Place-Analytics-Without-ETL
+tags:
+- AI
+- Analytics
+- Apache Iceberg
+- Azure
+- Azure AI Foundry
+- Cloud Data Lake
+- Compliance
+- Database Backup
+- Delta Lake
+- Eon
+- ETL Elimination
+- Fabric Data Warehouse
+- Fabric Spark
+- Governance
+- Metadata Virtualization
+- Microsoft Entra
+- Microsoft Fabric
+- ML
+- Multi Cloud
+- News
+- OneLake
+- Power BI
+- Security
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog details how, in collaboration with Peleg Kazaz and Liore Shai, organizations can leverage Eon's integration to query multi-cloud database backups directly in Microsoft Fabric—empowering analytics, AI, and compliance without ETL or duplication.<!--excerpt_end-->
 
 # Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL

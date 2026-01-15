@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Auto Model Selection for GitHub Copilot in Visual Studio: Public Preview"
-description: "This news post introduces the new Auto model selection feature for GitHub Copilot in Visual Studio. The Auto option lets Copilot automatically pick the best model from available options based on user subscription and model availability. The update aims to optimize user experience and model efficiency, with transparent controls and discount incentives for premium subscribers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Auto Model Selection for GitHub Copilot in Visual Studio: Public Preview'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-11 19:22:02 +00:00
-permalink: "/2025-11-11-Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Auto Model Selection", "Business", "Copilot", "Enterprise", "GitHub Copilot", "GPT 4.1", "GPT 5", "Haiku 4.5", "IDE Integration", "Model Picker", "News", "Premium Request", "Pro", "Public Preview", "Sonnet 4.5", "Subscription", "VS"]
-tags_normalized: ["ai", "auto model selection", "business", "copilot", "enterprise", "github copilot", "gpt 4dot1", "gpt 5", "haiku 4dot5", "ide integration", "model picker", "news", "premium request", "pro", "public preview", "sonnet 4dot5", "subscription", "vs"]
+permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview
+tags:
+- AI
+- Auto Model Selection
+- Business
+- Copilot
+- Enterprise
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Haiku 4.5
+- IDE Integration
+- Model Picker
+- News
+- Premium Request
+- Pro
+- Public Preview
+- Sonnet 4.5
+- Subscription
+- VS
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces a public preview of the Auto model selection feature for GitHub Copilot in Visual Studio, allowing developers to let Copilot automatically choose the optimal model based on their plan and preferences.<!--excerpt_end-->
 
 # Auto Model Selection for GitHub Copilot in Visual Studio: Public Preview

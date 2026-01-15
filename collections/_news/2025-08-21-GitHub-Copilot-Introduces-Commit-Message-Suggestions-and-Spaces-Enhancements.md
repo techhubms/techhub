@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements"
-description: "This news update explores GitHub Copilot's new feature offering contextual commit message suggestions directly on github.com file changes, helping developers streamline documentation. The announcement also highlights enhancements to GitHub Copilot Spaces, including repository, file, directory, and branch linking, aiming to improve workflow integration for individual and enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 15:10:53 +00:00
-permalink: "/2025-08-21-GitHub-Copilot-Introduces-Commit-Message-Suggestions-and-Spaces-Enhancements.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistance", "Code Review", "Commit Messages", "Commit Metadata", "Copilot Spaces", "Developer Tools", "Documentation Automation", "Enterprise Cloud", "GitHub Copilot", "GitHub.com", "News", "Productivity", "Public Preview", "Workflow Automation"]
-tags_normalized: ["ai", "ai code assistance", "code review", "commit messages", "commit metadata", "copilot spaces", "developer tools", "documentation automation", "enterprise cloud", "github copilot", "githubdotcom", "news", "productivity", "public preview", "workflow automation"]
+permalink: /github-copilot/news/GitHub-Copilot-Introduces-Commit-Message-Suggestions-and-Spaces-Enhancements
+tags:
+- AI
+- AI Code Assistance
+- Code Review
+- Commit Messages
+- Commit Metadata
+- Copilot Spaces
+- Developer Tools
+- Documentation Automation
+- Enterprise Cloud
+- GitHub Copilot
+- GitHub.com
+- News
+- Productivity
+- Public Preview
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details GitHub Copilot's new contextual commit message suggestions for file changes on github.com and enhanced Copilot Spaces functionality, improving developer workflows and documentation.<!--excerpt_end-->
 
 # GitHub Copilot Generated Commit Messages and Spaces Enhancements Now in Public Preview

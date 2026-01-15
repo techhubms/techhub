@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Building Your First MCP Server: Extending GitHub Copilot with Custom Tools"
-description: "This article by Chris Reddington explores how developers can extend GitHub Copilot capabilities using the Model Context Protocol (MCP). It demonstrates building a TypeScript-based MCP server as a turn-based game, discusses MCP architecture (tools, resources, prompts), wiring up in VS Code, and practical security considerations for integrating AI tools with custom workflows."
-author: "Chris Reddington"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Building Your First MCP Server: Extending GitHub Copilot with Custom Tools'
+author: Chris Reddington
+canonical_url: https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-22 16:52:27 +00:00
-permalink: "/2025-08-22-Building-Your-First-MCP-Server-Extending-GitHub-Copilot-with-Custom-Tools.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Extensibility", "AI Integration", "APIs", "Coding", "Custom API", "Developer Tools", "Game Server", "GitHub Copilot", "MCP", "MCP Server", "MCP Tools", "News", "Next.js", "Open Source", "Prompt Engineering", "Rock Paper Scissors", "Rubber Duck Thursdays", "SDK", "Tic Tac Toe", "TypeScript", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai extensibility", "ai integration", "apis", "coding", "custom api", "developer tools", "game server", "github copilot", "mcp", "mcp server", "mcp tools", "news", "nextdotjs", "open source", "prompt engineering", "rock paper scissors", "rubber duck thursdays", "sdk", "tic tac toe", "typescript", "vs code"]
+permalink: /github-copilot/news/Building-Your-First-MCP-Server-Extending-GitHub-Copilot-with-Custom-Tools
+tags:
+- AI
+- AI & ML
+- AI Extensibility
+- AI Integration
+- APIs
+- Coding
+- Custom API
+- Developer Tools
+- Game Server
+- GitHub Copilot
+- MCP
+- MCP Server
+- MCP Tools
+- News
+- Next.js
+- Open Source
+- Prompt Engineering
+- Rock Paper Scissors
+- Rubber Duck Thursdays
+- SDK
+- Tic Tac Toe
+- TypeScript
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Chris Reddington demonstrates how to extend GitHub Copilot with custom tools using the Model Context Protocol (MCP), sharing lessons learned by building a turn-based game MCP server in TypeScript.<!--excerpt_end-->
 
 # Building Your First MCP Server: Extending GitHub Copilot with Custom Tools

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "High-Performance Terrain Simulations in .NET"
-description: "This session delves into the architecture and low-level engineering behind Gaea’s terrain engine, showcasing how .NET can be leveraged for massive, high-performance terrain simulations. Topics include modular engine design, implementing SPMD execution in managed code for large-scale simulations, and the creation of a custom memory management system to meet the demands of billions of computations per build."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=M98JKrUfyI4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: High-Performance Terrain Simulations in .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=M98JKrUfyI4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 04:30:06 +00:00
-permalink: "/2025-11-14-High-Performance-Terrain-Simulations-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Architecture", "Coding", "Custom Memory Pool", "Gaea", "High Performance Computing", "Managed Code", "Memory Management", "Modular Engine Design", "Parallel Processing", "Simulation", "SPMD", "Terrain Simulation", "Videos"]
-tags_normalized: ["dotnet", "architecture", "coding", "custom memory pool", "gaea", "high performance computing", "managed code", "memory management", "modular engine design", "parallel processing", "simulation", "spmd", "terrain simulation", "videos"]
+permalink: /coding/videos/High-Performance-Terrain-Simulations-in-NET
+tags:
+- .NET
+- Architecture
+- Coding
+- Custom Memory Pool
+- Gaea
+- High Performance Computing
+- Managed Code
+- Memory Management
+- Modular Engine Design
+- Parallel Processing
+- Simulation
+- SPMD
+- Terrain Simulation
+- Videos
+section_names:
+- coding
 ---
-
 Presented by dotnet, this session explores the architectural decisions and programming techniques that enable Gaea’s terrain engine to push .NET beyond typical workloads for massive, high-performance simulations.<!--excerpt_end-->
 
 {% youtube M98JKrUfyI4 %}

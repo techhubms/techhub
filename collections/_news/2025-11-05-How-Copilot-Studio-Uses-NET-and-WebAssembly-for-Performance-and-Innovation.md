@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Copilot Studio Uses .NET and WebAssembly for Performance and Innovation"
-description: "This article explains how Microsoft Copilot Studio leverages .NET and WebAssembly (WASM) to create responsive, fast, and scalable conversational AI bots and automations. It covers the platform’s low-code development experience, WASM optimizations, performance gains from .NET 8, improvements in developer tooling, and the overall impact on AI-driven enterprise solutions."
-author: "Daniel Roth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: How Copilot Studio Uses .NET and WebAssembly for Performance and Innovation
+author: Daniel Roth
+canonical_url: https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-05 18:05:00 +00:00
-permalink: "/2025-11-05-How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-and-Innovation.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 8", "AI", "AI Agents", "AOT Compilation", "Bot Framework", "C#", "Coding", "Conversational AI", "Copilot Studio", "Debugging Tools", "Developer Stories", "JavaScript Interoperability", "JIT Compilation", "Low Code", "News", "Performance", "Performance Optimization", "Power Fx", "WASM", "WebAssembly"]
-tags_normalized: ["dotnet", "dotnet 8", "ai", "ai agents", "aot compilation", "bot framework", "csharp", "coding", "conversational ai", "copilot studio", "debugging tools", "developer stories", "javascript interoperability", "jit compilation", "low code", "news", "performance", "performance optimization", "power fx", "wasm", "webassembly"]
+permalink: /ai/news/How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-and-Innovation
+tags:
+- .NET
+- .NET 8
+- AI
+- AI Agents
+- AOT Compilation
+- Bot Framework
+- C#
+- Coding
+- Conversational AI
+- Copilot Studio
+- Debugging Tools
+- Developer Stories
+- JavaScript Interoperability
+- JIT Compilation
+- Low Code
+- News
+- Performance
+- Performance Optimization
+- Power Fx
+- WASM
+- WebAssembly
+section_names:
+- ai
+- coding
 ---
-
 Daniel Roth explores how Microsoft Copilot Studio utilizes .NET and WebAssembly to optimize the performance and scalability of conversational AI bots, highlighting significant platform enhancements for developers and organizations.<!--excerpt_end-->
 
 # How Copilot Studio Uses .NET and WebAssembly for Performance and Innovation

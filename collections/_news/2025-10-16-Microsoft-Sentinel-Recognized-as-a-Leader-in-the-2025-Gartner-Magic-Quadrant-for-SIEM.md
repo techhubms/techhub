@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Microsoft Sentinel Recognized as a Leader in the 2025 Gartner Magic Quadrant for SIEM"
-description: "This news outlines Microsoft’s recognition as a leader in the 2025 Gartner Magic Quadrant for Security Information and Event Management (SIEM) thanks to Microsoft Sentinel. The article details the platform’s evolution into an AI-powered, cloud-native security solution, discusses new cost and analytics features, highlights agentic AI innovations, deep integration with Microsoft Defender, and outlines the strategic direction for Microsoft’s security platforms. It summarizes how Microsoft Sentinel leverages advanced analytics, automation, and unified data lakes to enhance SOC operations and combat cyber threats."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/16/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-siem/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Sentinel Recognized as a Leader in the 2025 Gartner Magic Quadrant for SIEM
+author: Rob Lefferts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/16/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-siem/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-16 18:00:00 +00:00
-permalink: "/2025-10-16-Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic AI", "AI", "AI Powered Security", "Automation", "Azure", "Cloud Security", "Cyberthreat Response", "Data Lake", "Gartner Magic Quadrant", "Kusto Query Language", "Machine Learning", "MCP Server", "Microsoft Defender", "Microsoft Sentinel", "News", "Security", "Security Analytics", "Security Operations Center", "SIEM", "SOAR", "SOC", "Threat Detection", "Threat Intelligence", "UEBA"]
-tags_normalized: ["agentic ai", "ai", "ai powered security", "automation", "azure", "cloud security", "cyberthreat response", "data lake", "gartner magic quadrant", "kusto query language", "machine learning", "mcp server", "microsoft defender", "microsoft sentinel", "news", "security", "security analytics", "security operations center", "siem", "soar", "soc", "threat detection", "threat intelligence", "ueba"]
+permalink: /ai/news/Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM
+tags:
+- Agentic AI
+- AI
+- AI Powered Security
+- Automation
+- Azure
+- Cloud Security
+- Cyberthreat Response
+- Data Lake
+- Gartner Magic Quadrant
+- Kusto Query Language
+- Machine Learning
+- MCP Server
+- Microsoft Defender
+- Microsoft Sentinel
+- News
+- Security
+- Security Analytics
+- Security Operations Center
+- SIEM
+- SOAR
+- SOC
+- Threat Detection
+- Threat Intelligence
+- UEBA
+section_names:
+- ai
+- azure
+- security
 ---
-
 Rob Lefferts presents Microsoft's recognition as a Leader in the 2025 Gartner Magic Quadrant for SIEM, highlighting the evolving capabilities of Microsoft Sentinel and its impact on security operations.<!--excerpt_end-->
 
 # Microsoft Sentinel Recognized as a Leader in the 2025 Gartner Magic Quadrant for SIEM

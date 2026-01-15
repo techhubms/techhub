@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Cloud without Compromise: Redefining Private and Hybrid Cloud with Dell and Microsoft"
-description: "This session from Microsoft Ignite 2025 explores how Dell Technologies and Microsoft partner to deliver private and hybrid cloud solutions powered by Azure. Discover the features of Dell’s PowerScale for Azure, learn about storage innovation, cyber resilience, and data security, and see how integrated support and automation help organizations simplify operations, achieve high performance, and ensure security in modern workloads. The presenters detail deployment options, operational efficiency, and the benefits of combining Dell and Microsoft expertise for scalable, resilient, and secure cloud infrastructure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Zi9oTBjqU70"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Cloud without Compromise: Redefining Private and Hybrid Cloud with Dell and Microsoft'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Zi9oTBjqU70
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:50:59 +00:00
-permalink: "/2025-11-21-Cloud-without-Compromise-Redefining-Private-and-Hybrid-Cloud-with-Dell-and-Microsoft.html"
-categories: ["Azure", "Security"]
-tags: ["AI", "AI Ops Monitoring", "AI Ready Workloads", "Azure", "Azure Local", "Azure Storage", "Cloud Infrastructure", "Cyber Resilience", "Data Security", "Dell PowerScale", "Dell Technologies", "File Storage", "Governance", "Hybrid Cloud", "Infrastructure Automation", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Private Cloud", "ScalewithcloudandAIendpoints", "Security", "Tab0", "Videos"]
-tags_normalized: ["ai", "ai ops monitoring", "ai ready workloads", "azure", "azure local", "azure storage", "cloud infrastructure", "cyber resilience", "data security", "dell powerscale", "dell technologies", "file storage", "governance", "hybrid cloud", "infrastructure automation", "microsoft ignite", "msignite", "operational efficiency", "private cloud", "scalewithcloudandaiendpoints", "security", "tab0", "videos"]
+permalink: /azure/videos/Cloud-without-Compromise-Redefining-Private-and-Hybrid-Cloud-with-Dell-and-Microsoft
+tags:
+- AI
+- AI Ops Monitoring
+- AI Ready Workloads
+- Azure
+- Azure Local
+- Azure Storage
+- Cloud Infrastructure
+- Cyber Resilience
+- Data Security
+- Dell PowerScale
+- Dell Technologies
+- File Storage
+- Governance
+- Hybrid Cloud
+- Infrastructure Automation
+- Microsoft Ignite
+- MSIgnite
+- Operational Efficiency
+- Private Cloud
+- ScalewithcloudandAIendpoints
+- Security
+- Tab0
+- Videos
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events hosts this Microsoft Ignite 2025 session featuring Matt McSpirit and Rohit Tatachar, where they explore Dell and Microsoft’s partnership to deliver secure and scalable hybrid and private cloud solutions with Azure integration.<!--excerpt_end-->
 
 {% youtube Zi9oTBjqU70 %}

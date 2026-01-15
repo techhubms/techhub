@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Tokenization Task Alternatives for Cross-Platform Azure App Service Deployments"
-description: "This community discussion addresses challenges encountered when replacing the Solidify tokenization task in Azure DevOps pipelines. The main issues include the task's limitation to Windows agents and the requirement for installation on each runner. Participants share experiences and best practices for handling secrets and variable substitution across both Linux and Windows agents, aiming for a solution that avoids hardcoded secrets and agent-side installation. The conversation also touches on deployment philosophies, such as separation of build and deployment steps, and practical approaches for .NET 8 and Umbraco 13 deployments."
-author: "YaMoef"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mk7u14/better_solidify_tokenization_task/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Tokenization Task Alternatives for Cross-Platform Azure App Service Deployments
+author: YaMoef
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1mk7u14/better_solidify_tokenization_task/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-07 18:24:01 +00:00
-permalink: "/2025-08-07-Tokenization-Task-Alternatives-for-Cross-Platform-Azure-App-Service-Deployments.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 8", "Azure", "Azure App Service", "Azure DevOps", "CI/CD", "Coding", "Community", "Cross Platform", "Deployment Pipelines", "DevOps", "Environment Variables", "Linux Agents", "Runtime Configuration", "Secrets Management", "Solidify", "Tokenization", "Umbraco 13", "Variable Substitution", "Windows Agents", "ZIP Deploy"]
-tags_normalized: ["dotnet 8", "azure", "azure app service", "azure devops", "cislashcd", "coding", "community", "cross platform", "deployment pipelines", "devops", "environment variables", "linux agents", "runtime configuration", "secrets management", "solidify", "tokenization", "umbraco 13", "variable substitution", "windows agents", "zip deploy"]
+permalink: /coding/community/Tokenization-Task-Alternatives-for-Cross-Platform-Azure-App-Service-Deployments
+tags:
+- .NET 8
+- Azure
+- Azure App Service
+- Azure DevOps
+- CI/CD
+- Coding
+- Community
+- Cross Platform
+- Deployment Pipelines
+- DevOps
+- Environment Variables
+- Linux Agents
+- Runtime Configuration
+- Secrets Management
+- Solidify
+- Tokenization
+- Umbraco 13
+- Variable Substitution
+- Windows Agents
+- ZIP Deploy
+section_names:
+- azure
+- coding
+- devops
 ---
-
 YaMoef opens a discussion about the limitations of the Solidify tokenization task in Azure DevOps, focusing on multi-platform support and secure handling of secrets. Community responses offer practical deployment strategies.<!--excerpt_end-->
 
 # Tokenization Task Alternatives for Cross-Platform Azure App Service Deployments

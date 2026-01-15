@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Copilot Spaces"
-description: "Create custom AI agents with organizational context and knowledge"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Copilot Spaces
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: "/2026-08-29-Copilot-Spaces.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Enterprise"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Copilot-Spaces
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Enterprise
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Copilot Spaces feature. Create custom AI agents with organizational context and knowledge<!--excerpt_end-->
 
 ## Overview

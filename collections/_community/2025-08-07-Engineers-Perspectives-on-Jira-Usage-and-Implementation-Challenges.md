@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Engineers' Perspectives on Jira Usage and Implementation Challenges"
-description: "A multifaceted community discussion about the adoption, configuration, and daily experience of using Jira in engineering and management roles. Participants share frustrations with overcomplicated workflows, underutilized features, and implementation pitfalls, but also highlight the tool's flexibility, integration capabilities, and potential when properly managed."
-author: "jmch16"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mjuehw/the_jira_use_or_misuse/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Engineers' Perspectives on Jira Usage and Implementation Challenges
+author: jmch16
+canonical_url: https://www.reddit.com/r/devops/comments/1mjuehw/the_jira_use_or_misuse/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-07 08:20:19 +00:00
-permalink: "/2025-08-07-Engineers-Perspectives-on-Jira-Usage-and-Implementation-Challenges.html"
-categories: ["DevOps"]
-tags: ["Agile", "Atlassian", "Bitbucket", "Board Configuration", "Community", "DevOps", "DevOps Tools", "Engineering Management", "Integration", "Issue Tracking", "Jira", "Linear", "OpsGenie", "Product Management", "Project Management", "Reporting", "Software Engineering", "Sprint Management", "Workflow Automation", "Workflow Design"]
-tags_normalized: ["agile", "atlassian", "bitbucket", "board configuration", "community", "devops", "devops tools", "engineering management", "integration", "issue tracking", "jira", "linear", "opsgenie", "product management", "project management", "reporting", "software engineering", "sprint management", "workflow automation", "workflow design"]
+permalink: /devops/community/Engineers-Perspectives-on-Jira-Usage-and-Implementation-Challenges
+tags:
+- Agile
+- Atlassian
+- Bitbucket
+- Board Configuration
+- Community
+- DevOps
+- DevOps Tools
+- Engineering Management
+- Integration
+- Issue Tracking
+- Jira
+- Linear
+- OpsGenie
+- Product Management
+- Project Management
+- Reporting
+- Software Engineering
+- Sprint Management
+- Workflow Automation
+- Workflow Design
+section_names:
+- devops
 ---
-
 jmch16 and contributors discuss Jira's pros, cons, and cultural impact in software development teams. The conversation explores daily frustrations, implementation woes, and opportunities for improved workflow governance.<!--excerpt_end-->
 
 # Engineers' Perspectives on Jira Usage and Implementation Challenges

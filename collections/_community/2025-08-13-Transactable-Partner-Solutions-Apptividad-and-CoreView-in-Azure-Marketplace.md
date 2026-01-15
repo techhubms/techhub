@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace"
-description: "This post introduces two partner solutions now available as transact-capable offers in Azure Marketplace: Apptividad Onboarding, a biometric validation platform for secure user onboarding, and CoreView ONE, a governance platform for Microsoft 365 administration and security. Learn about their security, automation, and integration features."
-author: "Luxmi_Nagaraj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace'
+author: Luxmi_Nagaraj
+canonical_url: https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 13:00:00 +00:00
-permalink: "/2025-08-13-Transactable-Partner-Solutions-Apptividad-and-CoreView-in-Azure-Marketplace.html"
-categories: ["Azure", "Security"]
-tags: ["Apptividad Onboarding", "Automation", "Azure", "Azure Marketplace", "Biometric Validation", "Cloud Administration", "Community", "CoreView ONE", "Hybrid Environments", "Identity Verification", "License Management", "Microsoft 365 Governance", "Passive Liveness Detection", "Policy Enforcement", "Security"]
-tags_normalized: ["apptividad onboarding", "automation", "azure", "azure marketplace", "biometric validation", "cloud administration", "community", "coreview one", "hybrid environments", "identity verification", "license management", "microsoft 365 governance", "passive liveness detection", "policy enforcement", "security"]
+permalink: /azure/community/Transactable-Partner-Solutions-Apptividad-and-CoreView-in-Azure-Marketplace
+tags:
+- Apptividad Onboarding
+- Automation
+- Azure
+- Azure Marketplace
+- Biometric Validation
+- Cloud Administration
+- Community
+- CoreView ONE
+- Hybrid Environments
+- Identity Verification
+- License Management
+- Microsoft 365 Governance
+- Passive Liveness Detection
+- Policy Enforcement
+- Security
+section_names:
+- azure
+- security
 ---
-
 Luxmi_Nagaraj highlights two transact-capable partner offers in Azure Marketplace, detailing Apptividad’s biometric onboarding solution and CoreView’s governance platform for Microsoft 365 environments.<!--excerpt_end-->
 
 # Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace

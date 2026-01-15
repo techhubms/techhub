@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing .NET Aspire Event Hub Live Explorer"
-description: "LupusOnFire presents the Event Hub Live Explorer, a Blazor-based open-source tool for interacting with Azure Event Hubs during local development. It integrates with .NET Aspire dashboards, providing real-time message sending and reading capabilities to streamline event-driven workflows and diagnostics."
-author: "LupusOnFire"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mgm401/introducing_net_aspire_event_hub_live_explorer/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Introducing .NET Aspire Event Hub Live Explorer
+author: LupusOnFire
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mgm401/introducing_net_aspire_event_hub_live_explorer/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-03 15:28:59 +00:00
-permalink: "/2025-08-03-Introducing-NET-Aspire-Event-Hub-Live-Explorer.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET Aspire", "Azure", "Azure Event Hubs", "Blazor", "Coding", "Community", "Consumer Groups", "Dashboard Integration", "Developer Tooling", "DevOps", "Event Driven Workflows", "Local Development", "NuGet Package", "Open Source"]
-tags_normalized: ["dotnet", "dotnet aspire", "azure", "azure event hubs", "blazor", "coding", "community", "consumer groups", "dashboard integration", "developer tooling", "devops", "event driven workflows", "local development", "nuget package", "open source"]
+permalink: /coding/community/Introducing-NET-Aspire-Event-Hub-Live-Explorer
+tags:
+- .NET
+- .NET Aspire
+- Azure
+- Azure Event Hubs
+- Blazor
+- Coding
+- Community
+- Consumer Groups
+- Dashboard Integration
+- Developer Tooling
+- DevOps
+- Event Driven Workflows
+- Local Development
+- NuGet Package
+- Open Source
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Authored by LupusOnFire, this article introduces the .NET Aspire Event Hub Live Explorer—an open-source Blazor tool for local development with Azure Event Hubs.<!--excerpt_end-->
 
 ## Introducing .NET Aspire Event Hub Live Explorer

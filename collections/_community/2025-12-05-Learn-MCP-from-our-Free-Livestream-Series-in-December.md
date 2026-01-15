@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Learn MCP from our Free Livestream Series in December"
-description: "This three-part hands-on series, led by Pamela Fox, covers MCP (Model Context Protocol)—an open standard for connecting AI agents and chat interfaces to real-world tools, data, and services. The sessions move from local FastMCP server prototyping, to cloud deployments using Azure, to implementing enterprise authentication with Microsoft Entra, using Python and integrating with GitHub Copilot and agent frameworks."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Learn MCP from our Free Livestream Series in December
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-05 08:00:00 +00:00
-permalink: "/2025-12-05-Learn-MCP-from-our-Free-Livestream-Series-in-December.html"
-categories: ["AI", "Azure", "GitHub Copilot", "Security"]
-tags: ["Agent Interoperability", "AI", "AI Agents", "Authentication", "Azure", "Azure Container Apps", "Azure Functions", "Cloud Deployment", "Community", "Containerization", "FastMCP SDK", "GitHub Copilot", "Langchain", "MCP", "Microsoft Agent Framework", "Microsoft Entra", "OAuth2", "Python", "Security"]
-tags_normalized: ["agent interoperability", "ai", "ai agents", "authentication", "azure", "azure container apps", "azure functions", "cloud deployment", "community", "containerization", "fastmcp sdk", "github copilot", "langchain", "mcp", "microsoft agent framework", "microsoft entra", "oauth2", "python", "security"]
+permalink: /github-copilot/community/Learn-MCP-from-our-Free-Livestream-Series-in-December
+tags:
+- Agent Interoperability
+- AI
+- AI Agents
+- Authentication
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Cloud Deployment
+- Community
+- Containerization
+- FastMCP SDK
+- GitHub Copilot
+- Langchain
+- MCP
+- Microsoft Agent Framework
+- Microsoft Entra
+- OAuth2
+- Python
+- Security
+section_names:
+- ai
+- azure
+- github-copilot
+- security
 ---
-
 Pamela Fox presents a free December livestream series exploring MCP (Model Context Protocol) with a focus on Python, FastMCP SDK, GitHub Copilot, and cloud deployments using Azure, including secure authentication with Microsoft Entra.<!--excerpt_end-->
 
 # Learn MCP from our Free Livestream Series in December

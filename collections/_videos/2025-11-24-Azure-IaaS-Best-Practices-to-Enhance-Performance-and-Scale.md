@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure IaaS Best Practices to Enhance Performance and Scale"
-description: "A detailed session from Microsoft Ignite 2025 covering optimization strategies for Azure IaaS workloads. Learn best practices for compute, storage, and networking to achieve high performance, efficient scaling, and cost reductions. Key topics include Azure Boost, Compute Fleet, Virtual Machines, Storage solutions, advanced networking capabilities (QUIC, HTTP/3), automation with schedule actions, and direct virtualization enhancements with Hyper-V. Includes demos and insights into distributed storage and AI inferencing."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KXhW1gq7xNw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Azure IaaS Best Practices to Enhance Performance and Scale
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=KXhW1gq7xNw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:07:35 +00:00
-permalink: "/2025-11-24-Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale.html"
-categories: ["Azure"]
-tags: ["AI", "AI Inferencing", "Application Gateway", "Automation", "Azure", "Azure Boost", "Azure IaaS", "Azure Ultra Disk", "Compute Fleet", "Cost Optimization", "Distributed Storage", "HTTP/3", "Hyper V", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Networking", "Performance Optimization", "QUIC", "Scaling", "Storage Solutions", "Videos", "Virtual Machines"]
-tags_normalized: ["ai", "ai inferencing", "application gateway", "automation", "azure", "azure boost", "azure iaas", "azure ultra disk", "compute fleet", "cost optimization", "distributed storage", "httpslash3", "hyper v", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "networking", "performance optimization", "quic", "scaling", "storage solutions", "videos", "virtual machines"]
+permalink: /azure/videos/Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale
+tags:
+- AI
+- AI Inferencing
+- Application Gateway
+- Automation
+- Azure
+- Azure Boost
+- Azure IaaS
+- Azure Ultra Disk
+- Compute Fleet
+- Cost Optimization
+- Distributed Storage
+- HTTP/3
+- Hyper V
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Networking
+- Performance Optimization
+- QUIC
+- Scaling
+- Storage Solutions
+- Videos
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Presented by Yi Chai, Varun Shandilya, and Amit Srivastava at Microsoft Ignite 2025, this session explores Azure IaaS optimization for high performance and global scalability.<!--excerpt_end-->
 
 {% youtube KXhW1gq7xNw %}

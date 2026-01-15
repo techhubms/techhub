@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS"
-description: "This technical deep dive by lakshaymalik explains how Azure Application Gateway for Containers (AGC) integrates with Azure Kubernetes Service (AKS) networking models—both Overlay and Flat (Azure CNI). It covers AGC's support for network policies, Gateway API deployment, ALB Controller versions, subnetting requirements, and practical deployment YAML examples. The article helps Azure engineers understand traffic routing, security enforcement, and operational best practices for container networking in production environments."
-author: "lakshaymalik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS'
+author: lakshaymalik
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-31 15:28:07 +00:00
-permalink: "/2025-08-31-Container-Networking-with-Azure-Application-Gateway-for-Containers-AGC-Overlay-vs-Flat-AKS.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["AKS", "ALB Controller", "Application Gateway For Containers", "Azure", "Azure CNI", "Azure Firewall", "Calico", "Cilium", "Coding", "Community", "Container Networking", "DevOps", "Gateway API", "Ingress Controller", "Kubernetes Networking", "Network Policies", "NSG", "Overlay Networking", "Security", "Subnet Design", "YAML"]
-tags_normalized: ["aks", "alb controller", "application gateway for containers", "azure", "azure cni", "azure firewall", "calico", "cilium", "coding", "community", "container networking", "devops", "gateway api", "ingress controller", "kubernetes networking", "network policies", "nsg", "overlay networking", "security", "subnet design", "yaml"]
+permalink: /coding/community/Container-Networking-with-Azure-Application-Gateway-for-Containers-AGC-Overlay-vs-Flat-AKS
+tags:
+- AKS
+- ALB Controller
+- Application Gateway For Containers
+- Azure
+- Azure CNI
+- Azure Firewall
+- Calico
+- Cilium
+- Coding
+- Community
+- Container Networking
+- DevOps
+- Gateway API
+- Ingress Controller
+- Kubernetes Networking
+- Network Policies
+- NSG
+- Overlay Networking
+- Security
+- Subnet Design
+- YAML
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 lakshaymalik delivers a comprehensive look at deploying Azure Application Gateway for Containers (AGC) with AKS, comparing overlay and flat network models, security policies, and step-by-step Gateway API setup.<!--excerpt_end-->
 
 # Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS

@@ -1,20 +1,32 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's new with the GitHub Copilot coding agent: A look at the updates"
-description: "This video by GitHub highlights the latest enhancements to the GitHub Copilot coding agent, including expanded access for Copilot Business and Pro users, recent session tracking, Playwright MCP integration with UI validation, and support for remote MCP servers. Learn how these updates can streamline development workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vgPl6sK6rQo"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=vgPl6sK6rQo
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 14:01:34 +00:00
-permalink: "/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Coding Agent", "CodingAgent", "Copilot Business", "Copilot Pro", "Developer Tools", "GitHub", "GitHub Copilot", "Playwright MCP", "Remote MCP Servers", "Screenshot Validation", "Session Tracking", "UI Validation", "Videos"]
-tags_normalized: ["ai", "coding agent", "codingagent", "copilot business", "copilot pro", "developer tools", "github", "github copilot", "playwright mcp", "remote mcp servers", "screenshot validation", "session tracking", "ui validation", "videos"]
+permalink: /github-copilot/videos/Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates
+tags:
+- AI
+- Coding Agent
+- CodingAgent
+- Copilot Business
+- Copilot Pro
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Playwright MCP
+- Remote MCP Servers
+- Screenshot Validation
+- Session Tracking
+- UI Validation
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents an overview of recent upgrades to the GitHub Copilot coding agent. This roundup covers enhanced features, extended user access, and productivity-boosting tools for developers.<!--excerpt_end-->
 
 {% youtube vgPl6sK6rQo %}

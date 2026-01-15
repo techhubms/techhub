@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "We Need a European Sovereign Tech Fund to Sustain Open Source Software"
-description: "This post discusses GitHub's advocacy for a European Sovereign Tech Fund (EU-STF) to address the funding gap in open source maintenance. It reviews policy recommendations, funding models, and the strategic importance of open source infrastructure in the EU."
-author: "Felix Reda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/we-need-a-european-sovereign-tech-fund/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: We Need a European Sovereign Tech Fund to Sustain Open Source Software
+author: Felix Reda
+canonical_url: https://github.blog/open-source/maintainers/we-need-a-european-sovereign-tech-fund/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-23 07:01:00 +00:00
-permalink: "/2025-07-23-We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software.html"
-categories: ["DevOps", "Security"]
-tags: ["DevOps", "Digital Infrastructure", "EU Budget", "EU Policy", "European Commission", "Funding", "GitHub Sponsors", "Maintainers", "News", "News & Insights", "Open Source", "Open Source Funding", "OSS Maintainers", "Policy", "Public Private Partnership", "Security", "Software Sustainability", "Sovereign Tech Fund", "Supply Chain", "Supply Chain Security"]
-tags_normalized: ["devops", "digital infrastructure", "eu budget", "eu policy", "european commission", "funding", "github sponsors", "maintainers", "news", "news and insights", "open source", "open source funding", "oss maintainers", "policy", "public private partnership", "security", "software sustainability", "sovereign tech fund", "supply chain", "supply chain security"]
+permalink: /devops/news/We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software
+tags:
+- DevOps
+- Digital Infrastructure
+- EU Budget
+- EU Policy
+- European Commission
+- Funding
+- GitHub Sponsors
+- Maintainers
+- News
+- News & Insights
+- Open Source
+- Open Source Funding
+- OSS Maintainers
+- Policy
+- Public Private Partnership
+- Security
+- Software Sustainability
+- Sovereign Tech Fund
+- Supply Chain
+- Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Authored by Felix Reda, this article calls for greater public investment in open source software through a proposed European Sovereign Tech Fund, highlighting GitHub's policy efforts and recommendations to address the critical funding challenges facing OSS maintainers.<!--excerpt_end-->
 
 ## We Need a European Sovereign Tech Fund

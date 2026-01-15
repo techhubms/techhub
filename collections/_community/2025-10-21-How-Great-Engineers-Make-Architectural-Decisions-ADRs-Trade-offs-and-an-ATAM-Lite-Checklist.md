@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist"
-description: "This post by Antony_nganga dives into practical strategies for engineering decision-making, focusing on the use of Architecture Decision Records (ADRs), the Azure Well-Architected Framework, and a simplified ATAM checklist. It includes templates, real-world examples using Azure (Cosmos DB, Redis), and actionable steps for teams to create a traceable, transparent record of architectural trade-offs and decisions."
-author: "Antony_nganga"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist
+author: Antony_nganga
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-21 11:26:40 +00:00
-permalink: "/2025-10-21-How-Great-Engineers-Make-Architectural-Decisions-ADRs-Trade-offs-and-an-ATAM-Lite-Checklist.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["ADR", "Architecture Decision Records", "ATAM", "Azure", "Azure Well Architected Framework", "Caching", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "Cost Optimization", "Decision Matrix", "DevOps", "DevOps Best Practices", "Engineering Documentation", "Infrastructure", "Microsoft Patterns", "Operational Excellence", "Performance", "Redis", "Reliability", "Security", "Team Guidelines", "Trade Offs"]
-tags_normalized: ["adr", "architecture decision records", "atam", "azure", "azure well architected framework", "caching", "cloud architecture", "coding", "community", "cosmos db", "cost optimization", "decision matrix", "devops", "devops best practices", "engineering documentation", "infrastructure", "microsoft patterns", "operational excellence", "performance", "redis", "reliability", "security", "team guidelines", "trade offs"]
+permalink: /coding/community/How-Great-Engineers-Make-Architectural-Decisions-ADRs-Trade-offs-and-an-ATAM-Lite-Checklist
+tags:
+- ADR
+- Architecture Decision Records
+- ATAM
+- Azure
+- Azure Well Architected Framework
+- Caching
+- Cloud Architecture
+- Coding
+- Community
+- Cosmos DB
+- Cost Optimization
+- Decision Matrix
+- DevOps
+- DevOps Best Practices
+- Engineering Documentation
+- Infrastructure
+- Microsoft Patterns
+- Operational Excellence
+- Performance
+- Redis
+- Reliability
+- Security
+- Team Guidelines
+- Trade Offs
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Antony_nganga explores how great engineers make architectural decisions by balancing trade-offs and documenting outcomes—featuring ADRs, the Azure Well-Architected Framework, an ATAM-lite checklist, and practical team guidelines.<!--excerpt_end-->
 
 # How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist

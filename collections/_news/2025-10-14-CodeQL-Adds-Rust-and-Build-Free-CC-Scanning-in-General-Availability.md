@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "CodeQL Adds Rust and Build-Free C/C++ Scanning in General Availability"
-description: "GitHub has expanded CodeQL code scanning to support Rust and build-free C/C++ projects for general availability. Developers can now leverage robust security analysis for Rust, and scan C/C++ projects without requiring builds, streamlining security adoption for large codebases. The release includes integration with Copilot Autofix and is available on github.com, CodeQL CLI, and GitHub Enterprise Server 3.20+."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-14-codeql-scanning-rust-and-c-c-without-builds-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL Adds Rust and Build-Free C/C++ Scanning in General Availability
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-14-codeql-scanning-rust-and-c-c-without-builds-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 19:52:02 +00:00
-permalink: "/2025-10-14-CodeQL-Adds-Rust-and-Build-Free-CC-Scanning-in-General-Availability.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Build Automation", "C/C++", "Code Scanning", "CodeQL", "CodeQL CLI", "Continuous Integration", "Copilot Autofix", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "News", "OWASP Top 10", "Release Notes", "Rust", "Security", "Security Analysis"]
-tags_normalized: ["application security", "build automation", "cslashcplusplus", "code scanning", "codeql", "codeql cli", "continuous integration", "copilot autofix", "devops", "github", "github actions", "github enterprise server", "news", "owasp top 10", "release notes", "rust", "security", "security analysis"]
+permalink: /devops/news/CodeQL-Adds-Rust-and-Build-Free-CC-Scanning-in-General-Availability
+tags:
+- Application Security
+- Build Automation
+- C/C++
+- Code Scanning
+- CodeQL
+- CodeQL CLI
+- Continuous Integration
+- Copilot Autofix
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Enterprise Server
+- News
+- OWASP Top 10
+- Release Notes
+- Rust
+- Security
+- Security Analysis
+section_names:
+- devops
+- security
 ---
-
 Allison details GitHub's release of CodeQL support for Rust and build-free C/C++ scanning, enabling faster, more accessible security analysis for developers.<!--excerpt_end-->
 
 # CodeQL Adds Rust and Build-Free C/C++ Scanning in General Availability

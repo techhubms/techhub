@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud"
-description: "Thomas Maurer provides an in-depth overview of Commvault SHIFT 2025, focusing on the evolution of enterprise cyber resilience in the age of AI. The event highlights AI-driven data protection, cloud-native recovery, and integrated identity resilience, including special attention to Microsoft Active Directory (AD) and Entra ID systems. The article covers major announcements, platform capabilities, keynote takeaways, breakout sessions including best practices for AD & EntraID recovery, and recommends sessions for technical leaders building secure, robust infrastructures."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-24 08:29:00 +00:00
-permalink: "/2025-11-24-Commvault-SHIFT-Virtual-AI-and-Cyber-Resilience-Insights-for-Microsoft-Identity-and-Cloud.html"
-categories: ["AI", "Security"]
-tags: ["Active Directory Recovery", "AI", "AI Driven Security", "AI Governance", "Blogs", "Cloud Unity Platform", "Commvault", "Commvault Shift", "Cyber Recovery", "Cyber Resilience", "Hybrid Cloud Security", "Identity Protection", "Incident Response", "Microsoft Entra ID", "Proactive Recovery", "Sanjay Mirchandani", "Security", "Shift Virtual", "Threat Scan", "Virtual Event", "Virtualization", "Zero Trust IAM"]
-tags_normalized: ["active directory recovery", "ai", "ai driven security", "ai governance", "blogs", "cloud unity platform", "commvault", "commvault shift", "cyber recovery", "cyber resilience", "hybrid cloud security", "identity protection", "incident response", "microsoft entra id", "proactive recovery", "sanjay mirchandani", "security", "shift virtual", "threat scan", "virtual event", "virtualization", "zero trust iam"]
+permalink: /ai/blogs/Commvault-SHIFT-Virtual-AI-and-Cyber-Resilience-Insights-for-Microsoft-Identity-and-Cloud
+tags:
+- Active Directory Recovery
+- AI
+- AI Driven Security
+- AI Governance
+- Blogs
+- Cloud Unity Platform
+- Commvault
+- Commvault Shift
+- Cyber Recovery
+- Cyber Resilience
+- Hybrid Cloud Security
+- Identity Protection
+- Incident Response
+- Microsoft Entra ID
+- Proactive Recovery
+- Sanjay Mirchandani
+- Security
+- Shift Virtual
+- Threat Scan
+- Virtual Event
+- Virtualization
+- Zero Trust IAM
+section_names:
+- ai
+- security
 ---
-
 Thomas Maurer explores best practices and platform updates from Commvault SHIFT 2025, emphasizing AI-powered resilience and security for Microsoft identity systems like AD and Entra ID.<!--excerpt_end-->
 
 # Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud

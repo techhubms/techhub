@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Pulumi Introduces AI Agents for Automated Infrastructure Management"
-description: "This article examines Pulumi's preview of Pulumi Neo, a suite of AI agents designed to automate infrastructure-as-code (IaC) management, issue diagnosis, and task execution. It details the value for DevOps teams, compliance tracking, and the integration of AI agents into platform engineering, as well as the impacts and caution required when automating with AI."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/?utm_source=rss&utm_medium=rss&utm_campaign=pulumi-previews-ai-agents-trained-to-automate-infrastructure-management"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Pulumi Introduces AI Agents for Automated Infrastructure Management
+author: Mike Vizard
+canonical_url: https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/?utm_source=rss&utm_medium=rss&utm_campaign=pulumi-previews-ai-agents-trained-to-automate-infrastructure-management
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-16 13:00:31 +00:00
-permalink: "/2025-09-16-Pulumi-Introduces-AI-Agents-for-Automated-Infrastructure-Management.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Automation", "Blogs", "Cloud Management", "Compliance", "DevOps", "DevSecOps", "Digital Workforce", "IaC", "IT Infrastructure", "MCP", "Platform Engineering", "Platform Engineering Tools", "Policy Enforcement", "Pulumi", "Pulumi Neo", "Social Facebook", "Social LinkedIn", "Social X", "Task Automation"]
-tags_normalized: ["ai", "ai agents", "automation", "blogs", "cloud management", "compliance", "devops", "devsecops", "digital workforce", "iac", "it infrastructure", "mcp", "platform engineering", "platform engineering tools", "policy enforcement", "pulumi", "pulumi neo", "social facebook", "social linkedin", "social x", "task automation"]
+permalink: /ai/blogs/Pulumi-Introduces-AI-Agents-for-Automated-Infrastructure-Management
+tags:
+- AI
+- AI Agents
+- Automation
+- Blogs
+- Cloud Management
+- Compliance
+- DevOps
+- DevSecOps
+- Digital Workforce
+- IaC
+- IT Infrastructure
+- MCP
+- Platform Engineering
+- Platform Engineering Tools
+- Policy Enforcement
+- Pulumi
+- Pulumi Neo
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Task Automation
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard explores how Pulumi's new AI agents, now available in preview as Pulumi Neo, are poised to transform infrastructure management and DevOps practices through automation.<!--excerpt_end-->
 
 # Pulumi Introduces AI Agents for Automated Infrastructure Management

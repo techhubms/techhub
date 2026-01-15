@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Unpacking Zip Folders into Windows Long File Paths with .NET: Handling Path Limitations"
-description: "Rick Strahl explores the challenges of extracting zip files with long Windows file paths using .NET's ZipFile class. The post covers limitations of \\?\\ path syntax, system and app-level long path settings, and shares custom extraction workarounds for dealing with MAX_PATH constraints in C# applications."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Jun/22/Unpacking-Zip-Folders-into-Windows-Long-File-Paths"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: 'Unpacking Zip Folders into Windows Long File Paths with .NET: Handling Path Limitations'
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Jun/22/Unpacking-Zip-Folders-into-Windows-Long-File-Paths
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-06-22 11:00:48 +00:00
-permalink: "/2025-06-22-Unpacking-Zip-Folders-into-Windows-Long-File-Paths-with-NET-Handling-Path-Limitations.html"
-categories: ["Coding"]
-tags: [".NET", "Application Manifest", "Blogs", "C#", "Coding", "ExtractToDirectory", "File System", "Group Policy", "Long Paths", "MAX PATH", "Path Length", "Unpacking", "Utility Development", "Windows", "Windows Registry", "ZipFile"]
-tags_normalized: ["dotnet", "application manifest", "blogs", "csharp", "coding", "extracttodirectory", "file system", "group policy", "long paths", "max path", "path length", "unpacking", "utility development", "windows", "windows registry", "zipfile"]
+permalink: /coding/blogs/Unpacking-Zip-Folders-into-Windows-Long-File-Paths-with-NET-Handling-Path-Limitations
+tags:
+- .NET
+- Application Manifest
+- Blogs
+- C#
+- Coding
+- ExtractToDirectory
+- File System
+- Group Policy
+- Long Paths
+- MAX PATH
+- Path Length
+- Unpacking
+- Utility Development
+- Windows
+- Windows Registry
+- ZipFile
+section_names:
+- coding
 ---
-
 In this detailed blog post, Rick Strahl examines .NET's handling of long Windows file paths during zip extraction. He discusses the limitations of ZipFile.ExtractToDirectory, reviews Windows long path support options, and presents alternative coding approaches to overcome path length restrictions in C# projects.<!--excerpt_end-->
 
 # Unpacking Zip Folders into Windows Long File Paths with .NET

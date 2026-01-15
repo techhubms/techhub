@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Cost Optimization with Copilot Credit Pre-Purchase Plan for Microsoft Copilot Studio"
-description: "This article provides a comprehensive explanation of the Copilot Credit Pre-Purchase Plan (P3) for organizations using Microsoft Copilot Studio. It covers how P3 works, its benefits, best practices for purchasing and monitoring, and how it enables predictable AI project costs when developing custom Copilot agents and integrating with Dynamics 365."
-author: "kyleikeda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464517"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Cost Optimization with Copilot Credit Pre-Purchase Plan for Microsoft Copilot Studio
+author: kyleikeda
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464517
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 15:29:27 +00:00
-permalink: "/2025-10-27-Cost-Optimization-with-Copilot-Credit-Pre-Purchase-Plan-for-Microsoft-Copilot-Studio.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent Development", "Azure", "Billing", "Commit Units", "Community", "Copilot Credit", "Copilot Studio", "Cost Estimation", "Cost Optimization", "Dynamics 365", "Power Platform", "Pre Purchase Plan", "Subscription Management", "Volume Discount"]
-tags_normalized: ["ai", "ai agent development", "azure", "billing", "commit units", "community", "copilot credit", "copilot studio", "cost estimation", "cost optimization", "dynamics 365", "power platform", "pre purchase plan", "subscription management", "volume discount"]
+permalink: /ai/community/Cost-Optimization-with-Copilot-Credit-Pre-Purchase-Plan-for-Microsoft-Copilot-Studio
+tags:
+- AI
+- AI Agent Development
+- Azure
+- Billing
+- Commit Units
+- Community
+- Copilot Credit
+- Copilot Studio
+- Cost Estimation
+- Cost Optimization
+- Dynamics 365
+- Power Platform
+- Pre Purchase Plan
+- Subscription Management
+- Volume Discount
+section_names:
+- ai
+- azure
 ---
-
 kyleikeda explores how organizations can optimize their AI project budgets using the Copilot Credit Pre-Purchase Plan, designed for Microsoft Copilot Studio. This guide covers implementation, cost savings, and best practices.<!--excerpt_end-->
 
 # Cost Optimization with Copilot Credit Pre-Purchase Plan for Microsoft Copilot Studio

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure"
-description: "This article explores the security-focused design of GitHub Copilot's AI agents, outlining the threat models, specific risks (like data exfiltration, impersonation, and prompt injection), and the structured principles and controls used to ensure safe, human-in-the-loop execution. The author's guidelines are broadly applicable to anyone building AI-driven automation tools."
-author: "Rahul Zhade"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure
+author: Rahul Zhade
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-25 16:00:00 +00:00
-permalink: "/2025-11-25-How-GitHubs-Agentic-Security-Principles-Make-Copilot-AI-Agents-Secure.html"
-categories: ["AI", "GitHub Copilot", "Security"]
-tags: ["Action Attribution", "Agentic AI", "AI", "AI & ML", "AI Agents", "AI Risk Mitigation", "Copilot Coding Agent", "Data Exfiltration", "Firewall", "GitHub", "GitHub Copilot", "Human in The Loop", "News", "Permissions", "Prompt Injection", "Security", "Security Principles"]
-tags_normalized: ["action attribution", "agentic ai", "ai", "ai and ml", "ai agents", "ai risk mitigation", "copilot coding agent", "data exfiltration", "firewall", "github", "github copilot", "human in the loop", "news", "permissions", "prompt injection", "security", "security principles"]
+permalink: /github-copilot/news/How-GitHubs-Agentic-Security-Principles-Make-Copilot-AI-Agents-Secure
+tags:
+- Action Attribution
+- Agentic AI
+- AI
+- AI & ML
+- AI Agents
+- AI Risk Mitigation
+- Copilot Coding Agent
+- Data Exfiltration
+- Firewall
+- GitHub
+- GitHub Copilot
+- Human in The Loop
+- News
+- Permissions
+- Prompt Injection
+- Security
+- Security Principles
+section_names:
+- ai
+- github-copilot
+- security
 ---
-
 Rahul Zhade details the agentic security principles behind GitHub Copilot’s AI agents, including threat models and practical measures to keep automated coding tools safe and user-attributable.<!--excerpt_end-->
 
 # How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure

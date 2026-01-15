@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "Code Translation"
-description: "Convert code between different programming languages"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/UfQGauPcAgE"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Code Translation
+author: Fokko Veegens
+canonical_url: https://youtu.be/UfQGauPcAgE
 date: 2024-12-24 07:39:09 +00:00
-permalink: "/2024-12-24-Code-Translation.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "GitHub Copilot", "Translation", "Videos"]
-tags_normalized: ["ai", "code", "github copilot", "translation", "videos"]
+permalink: /github-copilot/videos/Code-Translation
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Code
+- GitHub Copilot
+- Translation
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Code Translation feature. Translate code across different languages with ease using Copilot.<!--excerpt_end-->
 
 {% youtube UfQGauPcAgE %}

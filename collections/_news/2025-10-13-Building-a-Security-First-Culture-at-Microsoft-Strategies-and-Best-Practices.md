@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building a Security-First Culture at Microsoft: Strategies and Best Practices"
-description: "This in-depth news article details Microsoft's comprehensive approach to establishing and maintaining a robust security-first culture throughout the organization. It covers the integration of security into engineering, organization-wide training initiatives against advanced cyberthreats (including AI-enabled attacks), leadership-driven priorities, employee engagement programs, and the measurable impact of the Secure Future Initiative (SFI). The content provides actionable frameworks and resources, including identity protection and AI threat defense, for other organizations seeking to emulate Microsoft’s security culture transformation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Building a Security-First Culture at Microsoft: Strategies and Best Practices'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-13 16:48:07 +00:00
-permalink: "/2025-10-13-Building-a-Security-First-Culture-at-Microsoft-Strategies-and-Best-Practices.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AI", "AI Cyberthreats", "Azure", "Chief Information Security Officer", "Company News", "DevOps", "DevSecOps", "Employee Awareness", "Engineering Security", "Governance", "Identity Protection", "Incident Response", "Microsoft Security", "Microsoft Security Academy", "News", "Secure Future Initiative", "Security", "Security Culture", "Security Foundations", "Security Training", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["ai", "ai cyberthreats", "azure", "chief information security officer", "company news", "devops", "devsecops", "employee awareness", "engineering security", "governance", "identity protection", "incident response", "microsoft security", "microsoft security academy", "news", "secure future initiative", "security", "security culture", "security foundations", "security training", "threat intelligence", "zero trust"]
+permalink: /azure/news/Building-a-Security-First-Culture-at-Microsoft-Strategies-and-Best-Practices
+tags:
+- AI
+- AI Cyberthreats
+- Azure
+- Chief Information Security Officer
+- Company News
+- DevOps
+- DevSecOps
+- Employee Awareness
+- Engineering Security
+- Governance
+- Identity Protection
+- Incident Response
+- Microsoft Security
+- Microsoft Security Academy
+- News
+- Secure Future Initiative
+- Security
+- Security Culture
+- Security Foundations
+- Security Training
+- Threat Intelligence
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 stclarke reports on how Microsoft embeds security at every organizational level, detailing practices from training and engineering to leadership accountability under the Secure Future Initiative. Key learning resources and actionable strategies are shared.<!--excerpt_end-->
 
 # Building a Security-First Culture at Microsoft: Strategies and Best Practices

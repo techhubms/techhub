@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Recover Your Azure Cloud Environment with Commvault Cloud Rewind"
-description: "Thomas Maurer sits down with Thomas Bryant from Commvault to discuss Commvault Cloud Rewind and its role in efficiently recovering Azure cloud environments. The conversation covers strategies to safeguard data against accidental deletions, cyber-attacks, and more, providing expert tips for maintaining cloud resilience."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/03/recover-your-azure-cloud-environment-with-cloud-rewind/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Recover Your Azure Cloud Environment with Commvault Cloud Rewind
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/03/recover-your-azure-cloud-environment-with-cloud-rewind/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-25 14:45:56 +00:00
-permalink: "/2025-03-25-Recover-Your-Azure-Cloud-Environment-with-Commvault-Cloud-Rewind.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Infrastructure", "Blogs", "Cloud", "Cloud Computing", "Cloud Recovery", "Cloud Rewind", "Commvault", "Cybersecurity", "Data Integrity", "Disaster Recovery", "Microsoft", "Microsoft Azure"]
-tags_normalized: ["azure", "azure infrastructure", "blogs", "cloud", "cloud computing", "cloud recovery", "cloud rewind", "commvault", "cybersecurity", "data integrity", "disaster recovery", "microsoft", "microsoft azure"]
+permalink: /azure/blogs/Recover-Your-Azure-Cloud-Environment-with-Commvault-Cloud-Rewind
+tags:
+- Azure
+- Azure Infrastructure
+- Blogs
+- Cloud
+- Cloud Computing
+- Cloud Recovery
+- Cloud Rewind
+- Commvault
+- Cybersecurity
+- Data Integrity
+- Disaster Recovery
+- Microsoft
+- Microsoft Azure
+section_names:
+- azure
 ---
-
 In this detailed post, Thomas Maurer interviews Thomas Bryant from Commvault to explore the recovery and resilience of Azure cloud environments using Commvault Cloud Rewind. This discussion provides crucial insights for IT professionals managing Microsoft Azure infrastructure.<!--excerpt_end-->
 
 ## Recover Your Azure Cloud Environment with Commvault Cloud Rewind

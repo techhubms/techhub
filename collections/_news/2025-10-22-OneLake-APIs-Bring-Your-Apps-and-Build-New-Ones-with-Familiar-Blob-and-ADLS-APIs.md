@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs"
-description: "This article introduces OneLake, the unified data lake for Microsoft Fabric, highlighting its support for Azure Data Lake Storage and Blob Storage APIs. It explains how developers and data engineers can migrate workloads, leverage familiar tools, and use standard endpoints without code rewrites. Real-world compatibility and migration strategies are covered with examples."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 09:00:00 +00:00
-permalink: "/2025-10-22-OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs.html"
-categories: ["Azure", "ML"]
-tags: ["API Compatibility", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Blob API", "C#", "Cloud File Systems", "Data Engineering", "Data Lake", "Data Migration", "Delta Tables", "Developer Tools", "DF API", "Microsoft Fabric", "ML", "News", "On Premises Mirroring", "OneLake"]
-tags_normalized: ["api compatibility", "azure", "azure blob storage", "azure data lake storage", "blob api", "csharp", "cloud file systems", "data engineering", "data lake", "data migration", "delta tables", "developer tools", "df api", "microsoft fabric", "ml", "news", "on premises mirroring", "onelake"]
+permalink: /ml/news/OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs
+tags:
+- API Compatibility
+- Azure
+- Azure Blob Storage
+- Azure Data Lake Storage
+- Blob API
+- C#
+- Cloud File Systems
+- Data Engineering
+- Data Lake
+- Data Migration
+- Delta Tables
+- Developer Tools
+- DF API
+- Microsoft Fabric
+- ML
+- News
+- On Premises Mirroring
+- OneLake
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how OneLake empowers developers and data engineers to integrate existing applications with Microsoft Fabric using familiar Blob and ADLS APIs, simplifying migration and supporting modern analytics.<!--excerpt_end-->
 
 # OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs

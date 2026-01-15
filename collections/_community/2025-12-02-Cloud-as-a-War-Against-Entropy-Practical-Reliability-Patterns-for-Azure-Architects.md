@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects"
-description: "This comprehensive guide by Lavan Nallainathan explores how principles from physics and information theory help architects design reliable, resilient cloud-native systems in Azure. It covers entropy, chaos theory, SLA mathematics, and detailed design patterns to combat complexity, enhance observability, and govern system reliability across regions and Availability Zones."
-author: "lavann320"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects'
+author: lavann320
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-02 01:24:03 +00:00
-permalink: "/2025-12-02-Cloud-as-a-War-Against-Entropy-Practical-Reliability-Patterns-for-Azure-Architects.html"
-categories: ["Azure", "DevOps"]
-tags: ["Architecture Review", "Availability Zones", "Azure", "Azure App Service", "Azure SQL Database", "Azure Storage", "Chaos Engineering", "Cloud Native Systems", "Cloud Reliability", "Community", "Configuration Management", "Data Consistency", "DevOps", "Domain Driven Design", "Idempotent APIs", "Incident Response", "Multi Region Deployment", "Observability", "Redundancy", "Resilience Patterns", "SLA Calculation", "Telemetry"]
-tags_normalized: ["architecture review", "availability zones", "azure", "azure app service", "azure sql database", "azure storage", "chaos engineering", "cloud native systems", "cloud reliability", "community", "configuration management", "data consistency", "devops", "domain driven design", "idempotent apis", "incident response", "multi region deployment", "observability", "redundancy", "resilience patterns", "sla calculation", "telemetry"]
+permalink: /azure/community/Cloud-as-a-War-Against-Entropy-Practical-Reliability-Patterns-for-Azure-Architects
+tags:
+- Architecture Review
+- Availability Zones
+- Azure
+- Azure App Service
+- Azure SQL Database
+- Azure Storage
+- Chaos Engineering
+- Cloud Native Systems
+- Cloud Reliability
+- Community
+- Configuration Management
+- Data Consistency
+- DevOps
+- Domain Driven Design
+- Idempotent APIs
+- Incident Response
+- Multi Region Deployment
+- Observability
+- Redundancy
+- Resilience Patterns
+- SLA Calculation
+- Telemetry
+section_names:
+- azure
+- devops
 ---
-
 Lavan Nallainathan shares actionable strategies for architects to build reliable Azure cloud-native systems, focusing on entropy management, chaos theory, SLA mathematics, and practical operational patterns to reduce downtime and strengthen resilience.<!--excerpt_end-->
 
 # Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects

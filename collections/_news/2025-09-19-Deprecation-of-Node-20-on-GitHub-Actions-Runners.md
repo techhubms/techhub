@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Deprecation of Node 20 on GitHub Actions Runners"
-description: "This announcement details the planned end-of-life for Node20 support on GitHub Actions runners, migration timing to Node24, changes in runner compatibility, operating system requirements, and specific update steps for both maintainers and users of GitHub Actions. It highlights required actions, environmental variable options, and critical deadlines for continued support."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Deprecation of Node 20 on GitHub Actions Runners
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 18:29:59 +00:00
-permalink: "/2025-09-19-Deprecation-of-Node-20-on-GitHub-Actions-Runners.html"
-categories: ["DevOps"]
-tags: ["Actions", "Actions Maintenance", "ARM32", "Continuous Integration", "Deprecation", "DevOps", "GitHub Actions", "Macos", "News", "Node20", "Node24", "Operating System Compatibility", "Retired", "Runner", "Self Hosted Runner", "Version Migration", "Workflow"]
-tags_normalized: ["actions", "actions maintenance", "arm32", "continuous integration", "deprecation", "devops", "github actions", "macos", "news", "node20", "node24", "operating system compatibility", "retired", "runner", "self hosted runner", "version migration", "workflow"]
+permalink: /devops/news/Deprecation-of-Node-20-on-GitHub-Actions-Runners
+tags:
+- Actions
+- Actions Maintenance
+- ARM32
+- Continuous Integration
+- Deprecation
+- DevOps
+- GitHub Actions
+- Macos
+- News
+- Node20
+- Node24
+- Operating System Compatibility
+- Retired
+- Runner
+- Self Hosted Runner
+- Version Migration
+- Workflow
+section_names:
+- devops
 ---
-
 Allison summarizes the end-of-life timeline for Node20 on GitHub Actions runners and outlines migration steps for maintainers and users as Node24 becomes the new default.<!--excerpt_end-->
 
 # Deprecation of Node 20 on GitHub Actions Runners

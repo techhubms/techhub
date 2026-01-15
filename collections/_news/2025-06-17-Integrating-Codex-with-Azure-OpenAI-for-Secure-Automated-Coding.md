@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Integrating Codex with Azure OpenAI for Secure Automated Coding"
-description: "This guide demonstrates how to integrate OpenAI’s Codex coding agent with Azure OpenAI, enabling secure, enterprise-grade AI-assisted code development. It covers configuration, deployment via Azure AI Foundry, the Codex CLI setup, agent guidance using AGENTS.md, CI integration with GitHub Actions, troubleshooting, and pointers to further agent-oriented tools."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/codex-azure-openai-integration-fast-secure-code-development/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Integrating Codex with Azure OpenAI for Secure Automated Coding
+author: Govind Kamtamneni
+canonical_url: https://devblogs.microsoft.com/all-things-azure/codex-azure-openai-integration-fast-secure-code-development/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-06-17 22:54:11 +00:00
-permalink: "/2025-06-17-Integrating-Codex-with-Azure-OpenAI-for-Secure-Automated-Coding.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agents", "AGENTS.md", "AI", "AI Agents", "All Things Azure", "API Integration", "App Development", "Azure", "Azure AI Foundry", "Azure OpenAI", "CI/CD", "CLI Tools", "Code Automation", "Codex", "Codex Mini", "Coding", "Coding Agent", "Developer Productivity", "DevOps", "Enterprise Security", "Entra ID", "GitHub Actions", "News", "OpenAI", "Python", "Token Based Authentication"]
-tags_normalized: ["agents", "agentsdotmd", "ai", "ai agents", "all things azure", "api integration", "app development", "azure", "azure ai foundry", "azure openai", "cislashcd", "cli tools", "code automation", "codex", "codex mini", "coding", "coding agent", "developer productivity", "devops", "enterprise security", "entra id", "github actions", "news", "openai", "python", "token based authentication"]
+permalink: /ai/news/Integrating-Codex-with-Azure-OpenAI-for-Secure-Automated-Coding
+tags:
+- Agents
+- AGENTS.md
+- AI
+- AI Agents
+- All Things Azure
+- API Integration
+- App Development
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- CI/CD
+- CLI Tools
+- Code Automation
+- Codex
+- Codex Mini
+- Coding
+- Coding Agent
+- Developer Productivity
+- DevOps
+- Enterprise Security
+- Entra ID
+- GitHub Actions
+- News
+- OpenAI
+- Python
+- Token Based Authentication
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Govind Kamtamneni details how to run OpenAI’s Codex securely on Azure infrastructure, showing developers how to set up Codex CLI with Azure OpenAI, configure advanced agent instructions, and automate coding workflows within enterprise boundaries.<!--excerpt_end-->
 
 # Integrating Codex with Azure OpenAI for Secure Automated Coding

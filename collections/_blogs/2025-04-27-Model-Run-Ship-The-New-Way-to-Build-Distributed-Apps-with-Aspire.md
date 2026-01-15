@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Model. Run. Ship. The New Way to Build Distributed Apps with Aspire"
-description: "David Fowler introduces Aspire, a new tool for modeling, running, and deploying distributed applications. Aspire makes the orchestration between app services explicit, simplifying both local development and production deployment, independent of underlying infrastructure. The article covers practical usage, deployment automation with CI/CD, and future directions including Terraform and Pulumi integration."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/model-run-ship-the-new-way-to-build-distributed-apps-48d67286a665?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+layout: post
+title: Model. Run. Ship. The New Way to Build Distributed Apps with Aspire
+author: David Fowler
+canonical_url: https://medium.com/@davidfowl/model-run-ship-the-new-way-to-build-distributed-apps-48d67286a665?source=rss-8163234c98f0------2
+viewing_mode: external
+feed_name: David Fowler's Blog
+feed_url: https://medium.com/feed/@davidfowl
 date: 2025-04-27 22:27:35 +00:00
-permalink: "/2025-04-27-Model-Run-Ship-The-New-Way-to-Build-Distributed-Apps-with-Aspire.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Application Modeling", "Aspire", "Automation", "Blogs", "C#", "Ci/cd", "Cloud Native", "Coding", "Deployment", "DevOps", "Distributed Applications", "Docker Compose", "GitHub Actions", "IaC", "Microservices", "Pulumi", "Software Development", "Terraform", "Web Development"]
-tags_normalized: ["dotnet", "application modeling", "aspire", "automation", "blogs", "csharp", "cislashcd", "cloud native", "coding", "deployment", "devops", "distributed applications", "docker compose", "github actions", "iac", "microservices", "pulumi", "software development", "terraform", "web development"]
+permalink: /coding/blogs/Model-Run-Ship-The-New-Way-to-Build-Distributed-Apps-with-Aspire
+tags:
+- .NET
+- Application Modeling
+- Aspire
+- Automation
+- Blogs
+- C#
+- Ci/cd
+- Cloud Native
+- Coding
+- Deployment
+- DevOps
+- Distributed Applications
+- Docker Compose
+- GitHub Actions
+- IaC
+- Microservices
+- Pulumi
+- Software Development
+- Terraform
+- Web Development
+section_names:
+- coding
+- devops
 ---
-
 In this post, David Fowler discusses how Aspire streamlines the modeling and deployment of distributed applications, making connections between services explicit and repeatable.<!--excerpt_end-->
 
 # Model. Run. Ship. The New Way to Build Distributed Apps with Aspire

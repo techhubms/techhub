@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Deprecation Notice: Updates to GitHub Models and Migration Guidance"
-description: "This news update informs users about the deprecation of several AI models in GitHub Models, specifically Mistral-Nemo, Mistral-large-2411, and Jais-30b-chat. It lists recommended replacement models and provides resources to aid in migration, aiming to ensure continued access to improved model features and support."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Deprecation Notice: Updates to GitHub Models and Migration Guidance'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-31 15:49:41 +00:00
-permalink: "/2025-10-31-Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance.html"
-categories: ["AI"]
-tags: ["AI", "AI Models", "Azure Machine Learning", "Community Discussions", "Documentation", "Ecosystem & Accessibility", "GitHub", "GitHub Models", "Jais 30b Chat", "Mistral Large 2411", "Mistral Medium 2505", "Mistral Nemo", "Mistral Small 2503", "Model Deprecation", "Model Migration", "News", "Retired"]
-tags_normalized: ["ai", "ai models", "azure machine learning", "community discussions", "documentation", "ecosystem and accessibility", "github", "github models", "jais 30b chat", "mistral large 2411", "mistral medium 2505", "mistral nemo", "mistral small 2503", "model deprecation", "model migration", "news", "retired"]
+permalink: /ai/news/Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance
+tags:
+- AI
+- AI Models
+- Azure Machine Learning
+- Community Discussions
+- Documentation
+- Ecosystem & Accessibility
+- GitHub
+- GitHub Models
+- Jais 30b Chat
+- Mistral Large 2411
+- Mistral Medium 2505
+- Mistral Nemo
+- Mistral Small 2503
+- Model Deprecation
+- Model Migration
+- News
+- Retired
+section_names:
+- ai
 ---
-
 Allison provides a news update on the deprecation of several models within GitHub Models, detailing alternative options and migration steps for continued AI development.<!--excerpt_end-->
 
 # Deprecated Models in GitHub Models: Migration Guidance

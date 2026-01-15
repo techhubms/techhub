@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Silo Busting for Nonprofits: Unifying People, Processes, and Technology with AI"
-description: "This session from Microsoft Ignite 2025 addresses common barriers to AI adoption in nonprofit organizations, including fragmented data systems and siloed teams. The presenters discuss how strategic AI-focused training and governance initiatives can unify processes, accelerate data migration, and foster organization-wide collaboration. Real-world examples, including a Gates Foundation AI strategy review, illustrate the impact of integrating Microsoft AI solutions such as Copilot and modular AI architectures."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1vQ0JxoYYQw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Silo Busting for Nonprofits: Unifying People, Processes, and Technology with AI'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=1vQ0JxoYYQw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:21:09 +00:00
-permalink: "/2025-11-20-Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "Collaboration", "Copilot Integration", "Data Migration", "Digital Transformation", "Governance", "Microsoft Ignite", "MSIgnite", "Nonprofit Technology", "Process Automation", "Secureyourdata", "Skilling", "Videos"]
-tags_normalized: ["ai", "ai adoption", "collaboration", "copilot integration", "data migration", "digital transformation", "governance", "microsoft ignite", "msignite", "nonprofit technology", "process automation", "secureyourdata", "skilling", "videos"]
+permalink: /ai/videos/Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI
+tags:
+- AI
+- AI Adoption
+- Collaboration
+- Copilot Integration
+- Data Migration
+- Digital Transformation
+- Governance
+- Microsoft Ignite
+- MSIgnite
+- Nonprofit Technology
+- Process Automation
+- Secureyourdata
+- Skilling
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Bob Benoit and Colin Corbin at Microsoft Ignite, this session explores how nonprofits are accelerating AI transformation through unified data strategies and targeted skilling, illustrating success with solutions like Microsoft Copilot.<!--excerpt_end-->
 
 {% youtube 1vQ0JxoYYQw %}

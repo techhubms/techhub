@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Copilot Business and Enterprise: Premium Request Overage Policy Now Available"
-description: "This update details GitHub's new premium request overage policy for Copilot Business and Copilot Enterprise customers. The policy introduces flexible options for organizations to manage premium request usage beyond the included quota, either by allowing charged overages or blocking additional usage. The change does not affect individual plans and preserves existing budgets."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot Business and Enterprise: Premium Request Overage Policy Now Available'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-22 16:00:50 +00:00
-permalink: "/2025-08-22-GitHub-Copilot-Business-and-Enterprise-Premium-Request-Overage-Policy-Now-Available.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Billing", "Copilot Business", "Copilot Enterprise", "Developer Tools", "Enterprise Software", "GitHub Copilot", "News", "Overage Policy", "Policy Management", "Premium Requests", "Usage Limits"]
-tags_normalized: ["ai", "billing", "copilot business", "copilot enterprise", "developer tools", "enterprise software", "github copilot", "news", "overage policy", "policy management", "premium requests", "usage limits"]
+permalink: /github-copilot/news/GitHub-Copilot-Business-and-Enterprise-Premium-Request-Overage-Policy-Now-Available
+tags:
+- AI
+- Billing
+- Copilot Business
+- Copilot Enterprise
+- Developer Tools
+- Enterprise Software
+- GitHub Copilot
+- News
+- Overage Policy
+- Policy Management
+- Premium Requests
+- Usage Limits
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison summarizes GitHub's introduction of a premium request overage policy for Copilot Business and Enterprise customers, offering flexible control over premium AI coding request limits.<!--excerpt_end-->
 
 # Premium Request Overage Policy for GitHub Copilot Business and Enterprise

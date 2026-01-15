@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "On-Device AI with Windows AI Foundry: Local Inference for Fast, Private Apps"
-description: "This article provides a practical overview of using Windows AI Foundry to run AI models directly on Windows devices. It describes the toolkit’s local runtime (Foundry Local), shows integration workflows, explains hybrid on-device/cloud strategies, and offers real code and design examples for developers seeking to add instant, privacy-first AI to their applications."
-author: "Nandhini_Elango"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'On-Device AI with Windows AI Foundry: Local Inference for Fast, Private Apps'
+author: Nandhini_Elango
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 08:00:00 +00:00
-permalink: "/2025-11-04-On-Device-AI-with-Windows-AI-Foundry-Local-Inference-for-Fast-Private-Apps.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Inference", "Application Workflow", "Azure AI Services", "Azure Cognitive Services", "Coding", "Community", "Developer Toolkit", "DirectML", "Edge AI", "Foundry Local", "Hybrid AI", "Local Models", "NPU Acceleration", "Offline AI", "On Device AI", "ONNX Runtime", "Privacy", "Python", "Windows AI Foundry"]
-tags_normalized: ["ai", "ai inference", "application workflow", "azure ai services", "azure cognitive services", "coding", "community", "developer toolkit", "directml", "edge ai", "foundry local", "hybrid ai", "local models", "npu acceleration", "offline ai", "on device ai", "onnx runtime", "privacy", "python", "windows ai foundry"]
+permalink: /ai/community/On-Device-AI-with-Windows-AI-Foundry-Local-Inference-for-Fast-Private-Apps
+tags:
+- AI
+- AI Inference
+- Application Workflow
+- Azure AI Services
+- Azure Cognitive Services
+- Coding
+- Community
+- Developer Toolkit
+- DirectML
+- Edge AI
+- Foundry Local
+- Hybrid AI
+- Local Models
+- NPU Acceleration
+- Offline AI
+- On Device AI
+- ONNX Runtime
+- Privacy
+- Python
+- Windows AI Foundry
+section_names:
+- ai
+- coding
 ---
-
 Nandhini_Elango explains how Windows AI Foundry enables developers to run AI models locally on Windows devices, enhancing privacy, speed, and offline capabilities. The article covers hybrid design patterns, integration guidance, and code approaches for practical implementation.<!--excerpt_end-->
 
 # On-Device AI with Windows AI Foundry: Local Inference for Fast, Private Apps

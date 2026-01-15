@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "August 2025 Microsoft Fabric Feature Summary: Data Engineering, ML, and Platform Enhancements"
-description: "This August 2025 summary, authored by the Microsoft Fabric Blog, details major enhancements across the Microsoft Fabric platform. The update covers upgraded deployment pipeline navigation, DevOps automation, Spark and data engineering features, seamless machine learning endpoints, SQL analytics innovations, improved data pipeline management, and Copilot-powered integration. Readers will find actionable insights for building, deploying, and managing modern data solutions with Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'August 2025 Microsoft Fabric Feature Summary: Data Engineering, ML, and Platform Enhancements'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-27 09:14:00 +00:00
-permalink: "/2025-08-27-August-2025-Microsoft-Fabric-Feature-Summary-Data-Engineering-ML-and-Platform-Enhancements.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
-tags: ["AI", "Apache Spark", "Audit Logging", "Autoscale Billing", "Azure", "Azure DevOps", "Coding", "Copilot", "Data Agent", "Data Engineering", "Data Factory", "Data Science", "Dataflow Gen2", "Deployment Pipelines", "DevOps", "Event Schema Registry", "Fabric APIs", "Livy API", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "OpenAPI", "Python Notebooks", "Real Time Intelligence", "REST API", "Service Principal", "SQL Analytics"]
-tags_normalized: ["ai", "apache spark", "audit logging", "autoscale billing", "azure", "azure devops", "coding", "copilot", "data agent", "data engineering", "data factory", "data science", "dataflow gen2", "deployment pipelines", "devops", "event schema registry", "fabric apis", "livy api", "machine learning", "microsoft fabric", "ml", "news", "onelake", "openapi", "python notebooks", "real time intelligence", "rest api", "service principal", "sql analytics"]
+permalink: /ai/news/August-2025-Microsoft-Fabric-Feature-Summary-Data-Engineering-ML-and-Platform-Enhancements
+tags:
+- AI
+- Apache Spark
+- Audit Logging
+- Autoscale Billing
+- Azure
+- Azure DevOps
+- Coding
+- Copilot
+- Data Agent
+- Data Engineering
+- Data Factory
+- Data Science
+- Dataflow Gen2
+- Deployment Pipelines
+- DevOps
+- Event Schema Registry
+- Fabric APIs
+- Livy API
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- OpenAPI
+- Python Notebooks
+- Real Time Intelligence
+- REST API
+- Service Principal
+- SQL Analytics
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog highlights the August 2025 Fabric Feature Summary, revealing core updates for developers and engineers, including new deployment pipeline features, Spark improvements, machine learning endpoints, Python Notebook integrations, and streamlined data engineering led by Microsoft.<!--excerpt_end-->
 
 # August 2025 Microsoft Fabric Feature Summary

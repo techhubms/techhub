@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Innovate with AI at Enterprise Scale: Microsoft Ignite Session BRK410"
-description: "This session from Microsoft Ignite explores how enterprises can accelerate innovation with AI at scale. Presenters showcase real-world examples where organizations leverage Microsoft technologies and startup solutions to move from experimentation to impactful production deployments. Topics include AI agent capabilities, strategies for enterprise adoption, and responsible scaling techniques."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jSlfqAb2HEw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Innovate with AI at Enterprise Scale: Microsoft Ignite Session BRK410'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=jSlfqAb2HEw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:55:10 +00:00
-permalink: "/2025-11-24-Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "AI Deployment", "AI Guardrails", "AI Market", "AI Strategy", "Business Innovation", "Digital Transformation", "Dynamo AI", "Emma Fusion", "Enterprise AI", "HR Automation", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Other", "Responsible AI", "Risk Management", "Sky Virtual Agent", "Startup Collaboration", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai deployment", "ai guardrails", "ai market", "ai strategy", "business innovation", "digital transformation", "dynamo ai", "emma fusion", "enterprise ai", "hr automation", "microsoft ignite", "msignite", "multi agent systems", "other", "responsible ai", "risk management", "sky virtual agent", "startup collaboration", "videos"]
+permalink: /ai/videos/Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410
+tags:
+- AI
+- AI Agents
+- AI Deployment
+- AI Guardrails
+- AI Market
+- AI Strategy
+- Business Innovation
+- Digital Transformation
+- Dynamo AI
+- Emma Fusion
+- Enterprise AI
+- HR Automation
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- Other
+- Responsible AI
+- Risk Management
+- Sky Virtual Agent
+- Startup Collaboration
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents a Microsoft Ignite session led by Surojit Chatterjee, Amee Desjourdy, Heena Purohit, and Hans Yang, discussing strategies for leveraging AI to drive impactful enterprise innovation, including responsible scaling and real-world success stories.<!--excerpt_end-->
 
 {% youtube jSlfqAb2HEw %}

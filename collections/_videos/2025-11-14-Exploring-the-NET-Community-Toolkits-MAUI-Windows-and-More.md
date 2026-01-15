@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Exploring the .NET Community Toolkits: MAUI, Windows, and More"
-description: "This resource features a discussion with the maintainers of the .NET Community Toolkit, the MAUI Community Toolkit, and the Windows Community Toolkit. It highlights the open-source tools available for .NET developers, their features, and how contributors and users can get involved. Coverage includes updates for .NET 10, ASP.NET Core 10, .NET MAUI 10, C# 14, F# 10, and the evolution of Visual Studio, making it relevant for developers across desktop, mobile, web, and cross-platform solutions."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=i_-dZEifOQQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Exploring the .NET Community Toolkits: MAUI, Windows, and More'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=i_-dZEifOQQ
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:55 +00:00
-permalink: "/2025-11-14-Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET Community Toolkit", "ASP.NET Core", "C#", "Coding", "Cross Platform Development", "Desktop Development", "F#", "MAUI", "MAUI Community Toolkit", "Microsoft", "Mobile Development", "Open Source", "Videos", "VS", "Web Development", "Windows Community Toolkit"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet community toolkit", "aspdotnet core", "csharp", "coding", "cross platform development", "desktop development", "fsharp", "maui", "maui community toolkit", "microsoft", "mobile development", "open source", "videos", "vs", "web development", "windows community toolkit"]
+permalink: /coding/videos/Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET Community Toolkit
+- ASP.NET Core
+- C#
+- Coding
+- Cross Platform Development
+- Desktop Development
+- F#
+- MAUI
+- MAUI Community Toolkit
+- Microsoft
+- Mobile Development
+- Open Source
+- Videos
+- VS
+- Web Development
+- Windows Community Toolkit
+section_names:
+- coding
 ---
-
 The .NET team hosts a discussion on Community Toolkits, with insights from maintainers and tips for contributing. Presented by dotnet.<!--excerpt_end-->
 
 {% youtube i_-dZEifOQQ %}

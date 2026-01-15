@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Emerging DevOps Trends: Security, Scalability and Sustainability"
-description: "The article by Harikrishna Kundariya discusses major trends shaping DevOps today, focusing on the growing importance of security, scalability, and sustainability. It highlights how DevOps practices are adapting to address new challenges and evolving requirements within modern software development."
-author: "Harikrishna Kundariya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/emerging-devops-trends-security-scalability-and-sustainability/?utm_source=rss&utm_medium=rss&utm_campaign=emerging-devops-trends-security-scalability-and-sustainability"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Emerging DevOps Trends: Security, Scalability and Sustainability'
+author: Harikrishna Kundariya
+canonical_url: https://devops.com/emerging-devops-trends-security-scalability-and-sustainability/?utm_source=rss&utm_medium=rss&utm_campaign=emerging-devops-trends-security-scalability-and-sustainability
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-07-30 10:46:10 +00:00
-permalink: "/2025-07-30-Emerging-DevOps-Trends-Security-Scalability-and-Sustainability.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Modernization", "Blogs", "Business Of DevOps", "Contributed Content", "Development Practices", "DevOps", "DevOps Trends", "Devsecops", "JFrog Platform", "Scalability", "Scalability in DevOps", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sustainability", "Sustainability in DevOps"]
-tags_normalized: ["application modernization", "blogs", "business of devops", "contributed content", "development practices", "devops", "devops trends", "devsecops", "jfrog platform", "scalability", "scalability in devops", "security", "social facebook", "social linkedin", "social x", "software development", "sustainability", "sustainability in devops"]
+permalink: /devops/blogs/Emerging-DevOps-Trends-Security-Scalability-and-Sustainability
+tags:
+- Application Modernization
+- Blogs
+- Business Of DevOps
+- Contributed Content
+- Development Practices
+- DevOps
+- DevOps Trends
+- Devsecops
+- JFrog Platform
+- Scalability
+- Scalability in DevOps
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+- Sustainability
+- Sustainability in DevOps
+section_names:
+- devops
+- security
 ---
-
 Harikrishna Kundariya explores key trends in the DevOps landscape, addressing how security, scalability, and sustainability are influencing modern development practices.<!--excerpt_end-->
 
 ## Overview

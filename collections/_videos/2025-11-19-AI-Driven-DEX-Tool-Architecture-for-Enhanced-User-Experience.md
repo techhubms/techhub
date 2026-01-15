@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AI-Driven DEX Tool Architecture for Enhanced User Experience"
-description: "This session from Microsoft Ignite 2025 explores how architectural choices in TeamViewer's DEX tool impact user experience and system reliability. Key topics include AI-driven automation, real-time event response, distributed vs centralized data storage, API-first designs, and the use of Databricks for data management. The video offers foundational insights into security enhancements and performance optimizations enabled by edge AI and advanced automation patterns using Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sjowc3bdWdA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Driven DEX Tool Architecture for Enhanced User Experience
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=sjowc3bdWdA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:22:41 +00:00
-permalink: "/2025-11-19-AI-Driven-DEX-Tool-Architecture-for-Enhanced-User-Experience.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Automation", "API First Design", "Azure", "Databricks", "DEX Tool", "Distributed Data Storage", "Edge AI", "Event Response", "Foundational Session", "Microsoft Ignite", "MSIgnite", "Network Dependence", "Secureyourdata", "Security", "System Architecture", "TeamViewer", "User Experience", "Videos", "Window Of Vulnerability"]
-tags_normalized: ["ai", "ai automation", "api first design", "azure", "databricks", "dex tool", "distributed data storage", "edge ai", "event response", "foundational session", "microsoft ignite", "msignite", "network dependence", "secureyourdata", "security", "system architecture", "teamviewer", "user experience", "videos", "window of vulnerability"]
+permalink: /ai/videos/AI-Driven-DEX-Tool-Architecture-for-Enhanced-User-Experience
+tags:
+- AI
+- AI Automation
+- API First Design
+- Azure
+- Databricks
+- DEX Tool
+- Distributed Data Storage
+- Edge AI
+- Event Response
+- Foundational Session
+- Microsoft Ignite
+- MSIgnite
+- Network Dependence
+- Secureyourdata
+- Security
+- System Architecture
+- TeamViewer
+- User Experience
+- Videos
+- Window Of Vulnerability
+section_names:
+- ai
+- azure
+- security
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events present an overview of how TeamViewer's DEX tool leverages AI-driven architecture, distributed data, and advanced automation for better security and user experience.<!--excerpt_end-->
 
 {% youtube sjowc3bdWdA %}

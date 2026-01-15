@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray"
-description: "This session explains how SQL Server 2025's new native REST features work together with Pure Storage FlashArray's advanced snapshot tagging to simplify backup management for DBAs. Attendees will learn how to automate snapshot creation and embed detailed metadata directly into snapshots using T-SQL, making backups more discoverable, portable, and self-describing. Practical demonstrations show how to use the sp_invoke_external_rest_endpoint stored procedure to interact with external REST APIs and build a searchable, context-rich backup catalog without external management tools."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gFOduTsR3kE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=gFOduTsR3kE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-11 16:01:15 +00:00
-permalink: "/2025-09-11-Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure SQL", "Backup Catalog", "Cloud Computing", "Cloud Replication", "Database Backup", "Database Management", "Dev", "Development", "FlashArray", "Metadata Tagging", "Microsoft", "Pure Storage", "REST API", "Snapshot Backup", "Sp Invoke External REST Endpoint", "SQL Server", "Storage Snapshots", "T SQL", "Tech", "Technology", "Videos"]
-tags_normalized: ["azure", "azure sql", "backup catalog", "cloud computing", "cloud replication", "database backup", "database management", "dev", "development", "flasharray", "metadata tagging", "microsoft", "pure storage", "rest api", "snapshot backup", "sp invoke external rest endpoint", "sql server", "storage snapshots", "t sql", "tech", "technology", "videos"]
+permalink: /azure/videos/Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray
+tags:
+- Azure
+- Azure SQL
+- Backup Catalog
+- Cloud Computing
+- Cloud Replication
+- Database Backup
+- Database Management
+- Dev
+- Development
+- FlashArray
+- Metadata Tagging
+- Microsoft
+- Pure Storage
+- REST API
+- Snapshot Backup
+- Sp Invoke External REST Endpoint
+- SQL Server
+- Storage Snapshots
+- T SQL
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
 ---
-
 Microsoft Developer presents how SQL Server 2025 integrates with Pure Storage FlashArray to create a self-documenting, metadata-rich backup snapshot catalog, covering automation and metadata embedding directly from T-SQL.<!--excerpt_end-->
 
 {% youtube gFOduTsR3kE %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft Security Copilot Entra Update and Conditional Access Agent"
-description: "This video overview by John Savill's Technical Training explores the significant updates to Microsoft Security Copilot for Entra, focusing on the new conditional access agent capability. It demonstrates enhancements in natural language to graph skills, deeper integration within the Entra portal, and practical security operations improvements. The walkthrough includes demos of conditional access agent usage and highlights how Security Copilot empowers security teams with AI-driven insights and automation."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MaOGP2JNs2E"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Microsoft Security Copilot Entra Update and Conditional Access Agent
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=MaOGP2JNs2E
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-14 14:12:06 +00:00
-permalink: "/2025-07-14-Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["A2A", "AI", "AI Security", "Azure", "Conditional Access", "Conditional Access Agent", "Copilot", "Generative AI", "Identity Security", "LLM", "MCP", "Microsoft Cloud", "Microsoft Entra", "Microsoft Security Copilot", "Natural Language Processing", "Security", "Security Automation", "Security Monitoring", "Security Operations", "Videos"]
-tags_normalized: ["a2a", "ai", "ai security", "azure", "conditional access", "conditional access agent", "copilot", "generative ai", "identity security", "llm", "mcp", "microsoft cloud", "microsoft entra", "microsoft security copilot", "natural language processing", "security", "security automation", "security monitoring", "security operations", "videos"]
+permalink: /ai/videos/Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent
+tags:
+- A2A
+- AI
+- AI Security
+- Azure
+- Conditional Access
+- Conditional Access Agent
+- Copilot
+- Generative AI
+- Identity Security
+- LLM
+- MCP
+- Microsoft Cloud
+- Microsoft Entra
+- Microsoft Security Copilot
+- Natural Language Processing
+- Security
+- Security Automation
+- Security Monitoring
+- Security Operations
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 John Savill's Technical Training delivers a deep dive into the latest updates for Microsoft Security Copilot and Entra, including a thorough look at conditional access agent capabilities for security teams.<!--excerpt_end-->
 
 {% youtube MaOGP2JNs2E %}

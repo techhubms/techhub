@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability"
-description: "This article provides an in-depth overview of implementing a Service Mesh architecture in Azure to manage microservices communication, security, and observability. It explores Azure-native options such as AKS with Istio or Open Service Mesh (OSM), details technical practices for traffic routing, zero-trust security, and monitoring, and delivers actionable guidance for organizations modernizing with cloud-native applications."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability'
+author: Dellenny
+canonical_url: https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-27 07:40:16 +00:00
-permalink: "/2025-08-27-Service-Mesh-Architecture-Pattern-in-Azure-Managing-Microservices-Communication-Security-and-Observability.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure Active Directory", "Azure Key Vault", "Azure Monitor", "Blogs", "CI/CD", "Cloud Native", "Consul", "Distributed Tracing", "Istio", "Microservices", "Mtls", "Observability", "Open Service Mesh", "Policy Automation", "RBAC", "Security", "Service Mesh", "Sidecar Proxy", "Solution Architecture", "Traffic Routing", "Zero Trust Security"]
-tags_normalized: ["aks", "application insights", "architecture", "azure", "azure active directory", "azure key vault", "azure monitor", "blogs", "cislashcd", "cloud native", "consul", "distributed tracing", "istio", "microservices", "mtls", "observability", "open service mesh", "policy automation", "rbac", "security", "service mesh", "sidecar proxy", "solution architecture", "traffic routing", "zero trust security"]
+permalink: /azure/blogs/Service-Mesh-Architecture-Pattern-in-Azure-Managing-Microservices-Communication-Security-and-Observability
+tags:
+- AKS
+- Application Insights
+- Architecture
+- Azure
+- Azure Active Directory
+- Azure Key Vault
+- Azure Monitor
+- Blogs
+- CI/CD
+- Cloud Native
+- Consul
+- Distributed Tracing
+- Istio
+- Microservices
+- Mtls
+- Observability
+- Open Service Mesh
+- Policy Automation
+- RBAC
+- Security
+- Service Mesh
+- Sidecar Proxy
+- Solution Architecture
+- Traffic Routing
+- Zero Trust Security
+section_names:
+- azure
+- security
 ---
-
 Dellenny discusses how Service Mesh architectures on Azure, using options like Istio and Open Service Mesh, streamline microservices communication, enhance security, and expand observability for cloud-native applications.<!--excerpt_end-->
 
 # Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability

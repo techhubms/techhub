@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building a Faster, Smarter GitHub Copilot with Custom Models"
-description: "This article provides a detailed look at the latest advancements in GitHub Copilot’s code completion functionality, outlining improvements in custom model development, evaluation methodologies (including offline benchmarks and reinforcement learning), and the measurable impact these updates have on developer workflow. Delving into engineering decisions—such as optimizing for accepted and retained characters, balancing metrics, and training techniques—the post transparently explains both successes and lessons learned in evolving GitHub Copilot. Readers will gain an understanding of the technical processes behind Copilot’s enhanced performance across diverse code editors and programming languages."
-author: "Shengyu Fu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/the-road-to-better-completions-building-a-faster-smarter-github-copilot-with-a-new-custom-model/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Building a Faster, Smarter GitHub Copilot with Custom Models
+author: Shengyu Fu
+canonical_url: https://github.blog/ai-and-ml/github-copilot/the-road-to-better-completions-building-a-faster-smarter-github-copilot-with-a-new-custom-model/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-23 18:31:12 +00:00
-permalink: "/2025-10-23-Building-a-Faster-Smarter-GitHub-Copilot-with-Custom-Models.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Agents", "AI Coding Tools", "AI Powered Development", "Code Completion", "Custom Models", "Developer Tools", "Editor Integration", "Fine Tuning", "GitHub Copilot", "HumanEval", "LLM", "LLM Judge", "Machine Learning Evaluation", "Model Training", "News", "Offline Evaluation", "Real Time Code Suggestions", "Reinforcement Learning", "Unit Testing"]
-tags_normalized: ["ai", "ai and ml", "ai agents", "ai coding tools", "ai powered development", "code completion", "custom models", "developer tools", "editor integration", "fine tuning", "github copilot", "humaneval", "llm", "llm judge", "machine learning evaluation", "model training", "news", "offline evaluation", "real time code suggestions", "reinforcement learning", "unit testing"]
+permalink: /github-copilot/news/Building-a-Faster-Smarter-GitHub-Copilot-with-Custom-Models
+tags:
+- AI
+- AI & ML
+- AI Agents
+- AI Coding Tools
+- AI Powered Development
+- Code Completion
+- Custom Models
+- Developer Tools
+- Editor Integration
+- Fine Tuning
+- GitHub Copilot
+- HumanEval
+- LLM
+- LLM Judge
+- Machine Learning Evaluation
+- Model Training
+- News
+- Offline Evaluation
+- Real Time Code Suggestions
+- Reinforcement Learning
+- Unit Testing
+section_names:
+- ai
+- github-copilot
 ---
-
 Shengyu Fu shares an in-depth perspective on the engineering journey behind GitHub Copilot’s enhanced completions, revealing technical model training strategies and real-world impact for developers.<!--excerpt_end-->
 
 # Building a Faster, Smarter GitHub Copilot with Custom Models

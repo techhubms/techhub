@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "OneLake Integration with COPY INTO and OPENROWSET Now in Microsoft Fabric Preview"
-description: "This news update from the Microsoft Fabric Blog introduces the preview release of integrating OneLake as a direct data source for the COPY INTO and OPENROWSET commands within Microsoft Fabric Data Warehouse. Users can now ingest and query files stored in Lakehouse folders without relying on external staging, storage accounts, or additional IAM configurations. The update streamlines data movement and access, leveraging Fabric’s built-in workspace governance and Entra ID–based security, and paves the way for further improvements in usability and collaboration. Detailed examples and links to official documentation are included for immediate adoption."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: OneLake Integration with COPY INTO and OPENROWSET Now in Microsoft Fabric Preview
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-31 09:00:00 +00:00
-permalink: "/2025-07-31-OneLake-Integration-with-COPY-INTO-and-OPENROWSET-Now-in-Microsoft-Fabric-Preview.html"
-categories: ["ML"]
-tags: ["COPY INTO", "Cross Workspace Data Loads", "CSV", "Data Engineering", "Data Ingestion", "Data Warehouse", "Entra ID", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Private Link", "SaaS", "Service Principals", "SQL", "Workspace Permissions"]
-tags_normalized: ["copy into", "cross workspace data loads", "csv", "data engineering", "data ingestion", "data warehouse", "entra id", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "private link", "saas", "service principals", "sql", "workspace permissions"]
+permalink: /ml/news/OneLake-Integration-with-COPY-INTO-and-OPENROWSET-Now-in-Microsoft-Fabric-Preview
+tags:
+- COPY INTO
+- Cross Workspace Data Loads
+- CSV
+- Data Engineering
+- Data Ingestion
+- Data Warehouse
+- Entra ID
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- OPENROWSET
+- Parquet
+- Private Link
+- SaaS
+- Service Principals
+- SQL
+- Workspace Permissions
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog presents an overview of the new preview capability where OneLake can be used directly as a source for COPY INTO and OPENROWSET, written by the Microsoft Fabric team.<!--excerpt_end-->
 
 # OneLake as a Source for COPY INTO and OPENROWSET (Preview)

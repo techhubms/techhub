@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor"
-description: "This post provides a detailed guide on how to send metrics, logs, and traces from Micronaut applications, including GraalVM Native Image builds, to Azure Monitor using the latest features in Micronaut 4.9.0. It covers suitable integration methods, dependency choices, Azure Container Apps specifics, and addresses compatibility with OpenTelemetry and Azure Monitor offerings."
-author: "Logico_jp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor
+author: Logico_jp
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-15 04:54:15 +00:00
-permalink: "/2025-08-15-Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor.html"
-categories: ["Azure"]
-tags: ["Application Insights", "Azure", "Azure Container Apps", "Azure Monitor", "Cloud Native", "Community", "Distributed Tracing", "Fat JAR", "GraalVM Native Image", "Java", "Java Agent", "Log Analytics Workspace", "Logging", "Metrics", "Micronaut", "Micronaut Azure Tracing", "Monitoring", "Observability", "OpenTelemetry"]
-tags_normalized: ["application insights", "azure", "azure container apps", "azure monitor", "cloud native", "community", "distributed tracing", "fat jar", "graalvm native image", "java", "java agent", "log analytics workspace", "logging", "metrics", "micronaut", "micronaut azure tracing", "monitoring", "observability", "opentelemetry"]
+permalink: /azure/community/Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor
+tags:
+- Application Insights
+- Azure
+- Azure Container Apps
+- Azure Monitor
+- Cloud Native
+- Community
+- Distributed Tracing
+- Fat JAR
+- GraalVM Native Image
+- Java
+- Java Agent
+- Log Analytics Workspace
+- Logging
+- Metrics
+- Micronaut
+- Micronaut Azure Tracing
+- Monitoring
+- Observability
+- OpenTelemetry
+section_names:
+- azure
 ---
-
 Logico_jp explains how to enable metrics, log, and trace telemetry for Micronaut applications, including GraalVM Native Images, on Azure Monitor. The article discusses integration options and the recently introduced micronaut-azure-tracing dependency.<!--excerpt_end-->
 
 # Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Introducing Microsoft’s Network Operations Agent: A Telco Framework for Autonomous Networks"
-description: "This article introduces Microsoft’s Network Operations Agent (NOA), a modular AI-powered framework for automating and modernizing telecom network operations. NOA brings together Azure, Microsoft Fabric, and Azure Agent Framework, enabling multi-agent intelligence, data unification, and secure, human-in-the-loop automation for the telecommunications industry."
-author: "bryangrimm"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Introducing Microsoft’s Network Operations Agent: A Telco Framework for Autonomous Networks'
+author: bryangrimm
+canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 02:44:20 +00:00
-permalink: "/2025-11-19-Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Agents", "AI Gateway", "AI Orchestration", "Azure", "Azure Agent Framework", "Azure API Management", "Azure Networking", "Community", "Copilot Integration", "Data Mesh", "Governance", "Hybrid Cloud", "Incident Response", "MCP", "Microsoft Fabric", "ML", "Multi Agent Systems", "Network Operations Agent", "NOA", "OSS/BSS", "Real Time Telemetry", "Security", "Security Compliance", "Telecom Automation"]
-tags_normalized: ["ai", "ai agents", "ai gateway", "ai orchestration", "azure", "azure agent framework", "azure api management", "azure networking", "community", "copilot integration", "data mesh", "governance", "hybrid cloud", "incident response", "mcp", "microsoft fabric", "ml", "multi agent systems", "network operations agent", "noa", "ossslashbss", "real time telemetry", "security", "security compliance", "telecom automation"]
+permalink: /ai/community/Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks
+tags:
+- AI
+- AI Agents
+- AI Gateway
+- AI Orchestration
+- Azure
+- Azure Agent Framework
+- Azure API Management
+- Azure Networking
+- Community
+- Copilot Integration
+- Data Mesh
+- Governance
+- Hybrid Cloud
+- Incident Response
+- MCP
+- Microsoft Fabric
+- ML
+- Multi Agent Systems
+- Network Operations Agent
+- NOA
+- OSS/BSS
+- Real Time Telemetry
+- Security
+- Security Compliance
+- Telecom Automation
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Bryan Grimm explains how Microsoft’s Network Operations Agent (NOA) empowers telecoms with AI-driven, secure, and extensible network automation, combining Azure, Fabric, and agent orchestration to optimize network reliability while keeping operators in control.<!--excerpt_end-->
 
 # Introducing Microsoft’s Network Operations Agent – A Telco Framework for Autonomous Networks

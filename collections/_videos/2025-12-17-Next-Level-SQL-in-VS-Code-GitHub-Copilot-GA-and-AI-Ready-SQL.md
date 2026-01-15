@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL"
-description: "This video covers the latest innovations in the MSSQL extension for Visual Studio Code, focusing on how GitHub Copilot's general availability (GA) and AI-driven features are enhancing SQL development. It demonstrates new tooling including the in-product changelog, Edit Data improvements, Copilot's contextual help (Ask and Agent modes), as well as integrating Python and semantic search for creating AI-ready SQL schemas using vector data types. The discussion and demos target developers seeking to accelerate SQL workflows and build intelligent applications in VS Code."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Sd-3KpSNJzo"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Sd-3KpSNJzo
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-17 17:00:47 +00:00
-permalink: "/2025-12-17-Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Ready Schema", "Ask And Agent Mode", "Azure", "Azure SQL", "Cloud Computing", "Code Workflow Automation", "Coding", "Database Development", "Dev", "Development", "GitHub Copilot", "Intelligent Applications", "Microsoft", "MSSQL Extension", "Python Integration", "Semantic Search", "SQL Development", "SQL Server", "Tech", "Technology", "Vector Data Types", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai ready schema", "ask and agent mode", "azure", "azure sql", "cloud computing", "code workflow automation", "coding", "database development", "dev", "development", "github copilot", "intelligent applications", "microsoft", "mssql extension", "python integration", "semantic search", "sql development", "sql server", "tech", "technology", "vector data types", "videos", "vs code", "vs code extensions"]
+permalink: /github-copilot/videos/Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL
+tags:
+- AI
+- AI Ready Schema
+- Ask And Agent Mode
+- Azure
+- Azure SQL
+- Cloud Computing
+- Code Workflow Automation
+- Coding
+- Database Development
+- Dev
+- Development
+- GitHub Copilot
+- Intelligent Applications
+- Microsoft
+- MSSQL Extension
+- Python Integration
+- Semantic Search
+- SQL Development
+- SQL Server
+- Tech
+- Technology
+- Vector Data Types
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Presented by Microsoft Developer, this Data Exposed episode explores advancing SQL development in VS Code using the updated MSSQL extension, GitHub Copilot (at GA), Python, and vector data types to accelerate building AI-powered applications.<!--excerpt_end-->
 
 {% youtube Sd-3KpSNJzo %}

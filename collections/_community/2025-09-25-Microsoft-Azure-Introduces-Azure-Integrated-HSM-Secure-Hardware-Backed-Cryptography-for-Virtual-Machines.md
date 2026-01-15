@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Azure Introduces Azure Integrated HSM: Secure Hardware-Backed Cryptography for Virtual Machines"
-description: "This announcement details the public preview of Azure Integrated HSM support for AMD v7 Trusted Launch Virtual Machines on Azure. Azure Integrated HSM offers a hardware security module cache and cryptographic accelerator within the VM environment, reducing network latency, improving cryptographic performance, and meeting FIPS 140-3 Level 3 security requirements. It targets customers with high-performance cryptography needs, provides local, secure key handling, and compares favorably with external Azure Key Vault HSM. The preview supports specific Windows VM series and will expand to Linux soon."
-author: "simranparkhe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba-p/4456283"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft Azure Introduces Azure Integrated HSM: Secure Hardware-Backed Cryptography for Virtual Machines'
+author: simranparkhe
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba-p/4456283
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 17:10:09 +00:00
-permalink: "/2025-09-25-Microsoft-Azure-Introduces-Azure-Integrated-HSM-Secure-Hardware-Backed-Cryptography-for-Virtual-Machines.html"
-categories: ["Azure", "Security"]
-tags: ["AMD V7 Series", "Azure", "Azure Integrated HSM", "Azure Key Vault", "Community", "Crypto Accelerator", "Cryptography", "Encryption", "FIPS 140 3", "Hardware Security Module", "Key Management", "Secure Compute", "Security", "Trusted Launch VMs", "Windows Virtual Machines"]
-tags_normalized: ["amd v7 series", "azure", "azure integrated hsm", "azure key vault", "community", "crypto accelerator", "cryptography", "encryption", "fips 140 3", "hardware security module", "key management", "secure compute", "security", "trusted launch vms", "windows virtual machines"]
+permalink: /azure/community/Microsoft-Azure-Introduces-Azure-Integrated-HSM-Secure-Hardware-Backed-Cryptography-for-Virtual-Machines
+tags:
+- AMD V7 Series
+- Azure
+- Azure Integrated HSM
+- Azure Key Vault
+- Community
+- Crypto Accelerator
+- Cryptography
+- Encryption
+- FIPS 140 3
+- Hardware Security Module
+- Key Management
+- Secure Compute
+- Security
+- Trusted Launch VMs
+- Windows Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 simranparkhe introduces the public preview of Azure Integrated HSM for AMD v7 Trusted Launch Virtual Machines, providing secure hardware-based cryptography directly within supported Azure VMs.<!--excerpt_end-->
 
 # Microsoft Azure Introduces Azure Integrated HSM: Secure Hardware-Backed Cryptography for Virtual Machines

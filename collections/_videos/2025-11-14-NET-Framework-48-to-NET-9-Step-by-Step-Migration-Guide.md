@@ -1,20 +1,36 @@
----
-layout: "post"
-title: ".NET Framework 4.8 to .NET 9 Step by Step Migration Guide"
-description: "This session shares a detailed, step-by-step approach for upgrading a legacy .NET Framework ASP.NET and Windows Service application (over 12 years old) to modern .NET 9. It covers pre-upgrade modernization using Microsoft.Extensions packages, converting libraries to .NET Standard, dual compilation techniques, updating admin sites (using AI assistance), and finalizing the migration while maintaining ongoing releases."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AEbJzTF03F0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Framework 4.8 to .NET 9 Step by Step Migration Guide
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=AEbJzTF03F0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 03:30:06 +00:00
-permalink: "/2025-11-14-NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 9", ".NET Conf", ".NET Framework 4.8", ".NET Standard", "AI", "AI Assistance", "ASP.NET", "Coding", "Dual Compilation", "Legacy Application", "Microsoft.Extensions", "Migration", "Modernization", "MVC", "Upgrade Process", "Videos", "Web API", "Windows Service"]
-tags_normalized: ["dotnet", "dotnet 9", "dotnet conf", "dotnet framework 4dot8", "dotnet standard", "ai", "ai assistance", "aspdotnet", "coding", "dual compilation", "legacy application", "microsoftdotextensions", "migration", "modernization", "mvc", "upgrade process", "videos", "web api", "windows service"]
+permalink: /coding/videos/NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide
+tags:
+- .NET
+- .NET 9
+- .NET Conf
+- .NET Framework 4.8
+- .NET Standard
+- AI
+- AI Assistance
+- ASP.NET
+- Coding
+- Dual Compilation
+- Legacy Application
+- Microsoft.Extensions
+- Migration
+- Modernization
+- MVC
+- Upgrade Process
+- Videos
+- Web API
+- Windows Service
+section_names:
+- coding
 ---
-
 dotnet explains how their team successfully migrated a 12-year-old .NET Framework application to .NET 9, outlining each critical step and the technical considerations involved.<!--excerpt_end-->
 
 {% youtube AEbJzTF03F0 %}

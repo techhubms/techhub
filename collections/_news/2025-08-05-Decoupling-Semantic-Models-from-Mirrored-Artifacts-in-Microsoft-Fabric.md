@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric"
-description: "Microsoft Fabric is evolving its semantic models by decoupling them from Mirrored artifacts. This change increases flexibility and transparency in data modeling, allowing customers to independently define, version, and manage semantic models on mirrored data. The update enables tailored analytics, improved access, and better organizational agility."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/25332/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/25332/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-05 11:30:00 +00:00
-permalink: "/2025-08-05-Decoupling-Semantic-Models-from-Mirrored-Artifacts-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Business Intelligence", "Data Analytics", "Data Architecture", "Data Modeling", "Data Science", "Microsoft Fabric", "Mirrored Artifacts", "ML", "News", "Semantic Models", "SQL", "Versioning"]
-tags_normalized: ["azure", "business intelligence", "data analytics", "data architecture", "data modeling", "data science", "microsoft fabric", "mirrored artifacts", "ml", "news", "semantic models", "sql", "versioning"]
+permalink: /ml/news/Decoupling-Semantic-Models-from-Mirrored-Artifacts-in-Microsoft-Fabric
+tags:
+- Azure
+- Business Intelligence
+- Data Analytics
+- Data Architecture
+- Data Modeling
+- Data Science
+- Microsoft Fabric
+- Mirrored Artifacts
+- ML
+- News
+- Semantic Models
+- SQL
+- Versioning
+section_names:
+- azure
+- ml
 ---
-
 This news update from the Microsoft Fabric Blog details a significant shift in how semantic models interact with Mirrored artifacts. The author explains the advantages and phased implementation of decoupling, providing improved flexibility and control for customers.<!--excerpt_end-->
 
 # Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric

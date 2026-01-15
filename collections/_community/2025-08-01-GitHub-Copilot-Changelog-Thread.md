@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Copilot Changelog Thread"
-description: "This thread serves as a centralized location for sharing and tracking change logs related to GitHub Copilot. Community members or moderators can post updates about new features, bug fixes, enhancements, and other modifications to GitHub Copilot as they are released."
-author: "AutoModerator"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mezre9/github_copilot_changelog_thread/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: GitHub Copilot Changelog Thread
+author: AutoModerator
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mezre9/github_copilot_changelog_thread/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 15:37:50 +00:00
-permalink: "/2025-08-01-GitHub-Copilot-Changelog-Thread.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered Coding", "Automation", "Bug Fixes", "Community", "Developer Tools", "Enhancements", "GitHub Copilot", "Release Notes"]
-tags_normalized: ["ai", "ai powered coding", "automation", "bug fixes", "community", "developer tools", "enhancements", "github copilot", "release notes"]
+permalink: /github-copilot/community/GitHub-Copilot-Changelog-Thread
+tags:
+- AI
+- AI Powered Coding
+- Automation
+- Bug Fixes
+- Community
+- Developer Tools
+- Enhancements
+- GitHub Copilot
+- Release Notes
+section_names:
+- ai
+- github-copilot
 ---
-
 Authored by AutoModerator, this thread is dedicated to posting and tracking GitHub Copilot changelogs. It acts as a resource for developers keen on staying updated with Copilot enhancements.<!--excerpt_end-->
 
 # GitHub Copilot Changelog Thread

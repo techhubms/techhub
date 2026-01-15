@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft and NVIDIA Announce Major AI Advancements for Azure AI and Edge"
-description: "This article details the latest partnership developments between Microsoft and NVIDIA, unveiling new enterprise AI solutions through Azure AI Foundry, enhanced GPU support for Azure Local, and next-generation AI infrastructure. Readers will learn about hybrid cloud AI capabilities, scalable AI deployments, and advanced orchestration tools empowering industries to innovate with AI at scale."
-author: "Omar Khan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft and NVIDIA Announce Major AI Advancements for Azure AI and Edge
+author: Omar Khan
+canonical_url: https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-28 18:30:00 +00:00
-permalink: "/2025-10-28-Microsoft-and-NVIDIA-Announce-Major-AI-Advancements-for-Azure-AI-and-Edge.html"
-categories: ["AI", "Azure"]
-tags: ["3D Asset Generation", "AI", "AI + Machine Learning", "AI Infrastructure", "AKS", "Azure", "Azure AI Foundry", "Azure Arc", "Azure Local", "Digital Twins", "Edge AI", "Enterprise AI", "GPU Orchestration", "Hybrid + Multicloud", "Hybrid Cloud", "Internet Of Things", "Machine Learning", "Microsoft TRELLIS", "Multimodal Models", "ND GB200 V6 VMs", "News", "NVIDIA", "NVIDIA Blackwell", "NVIDIA RTX PRO 6000", "NVIDIA Run:ai", "Supercomputing"]
-tags_normalized: ["3d asset generation", "ai", "ai plus machine learning", "ai infrastructure", "aks", "azure", "azure ai foundry", "azure arc", "azure local", "digital twins", "edge ai", "enterprise ai", "gpu orchestration", "hybrid plus multicloud", "hybrid cloud", "internet of things", "machine learning", "microsoft trellis", "multimodal models", "nd gb200 v6 vms", "news", "nvidia", "nvidia blackwell", "nvidia rtx pro 6000", "nvidia runai", "supercomputing"]
+permalink: /ai/news/Microsoft-and-NVIDIA-Announce-Major-AI-Advancements-for-Azure-AI-and-Edge
+tags:
+- 3D Asset Generation
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- AKS
+- Azure
+- Azure AI Foundry
+- Azure Arc
+- Azure Local
+- Digital Twins
+- Edge AI
+- Enterprise AI
+- GPU Orchestration
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Internet Of Things
+- Machine Learning
+- Microsoft TRELLIS
+- Multimodal Models
+- ND GB200 V6 VMs
+- News
+- NVIDIA
+- NVIDIA Blackwell
+- NVIDIA RTX PRO 6000
+- NVIDIA Run:ai
+- Supercomputing
+section_names:
+- ai
+- azure
 ---
-
 Omar Khan explores the expanded collaboration between Microsoft and NVIDIA, describing new Azure AI Foundry services, advanced GPU integration, and key hybrid cloud AI orchestration innovations aimed at enterprise AI scalability and performance.<!--excerpt_end-->
 
 # Microsoft and NVIDIA Announce Major AI Advancements for Azure AI and Edge

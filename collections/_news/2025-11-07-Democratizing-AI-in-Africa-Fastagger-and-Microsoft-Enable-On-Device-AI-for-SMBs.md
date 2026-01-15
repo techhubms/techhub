@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs"
-description: "This article explores how Fastagger, supported by Microsoft’s Africa Transformation Office, is empowering African small businesses with AI technology that works offline on low-cost devices. It discusses the importance of bridging the digital divide, the unique challenges faced by African SMBs, and Microsoft’s pivotal role in technical mentorship, particularly in deploying Azure AI and GitHub. The story highlights practical use cases across sectors and the transformative effects of machine learning at the edge."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs'
+author: stclarke
+canonical_url: https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-07 14:02:38 +00:00
-permalink: "/2025-11-07-Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs.html"
-categories: ["AI", "Azure"]
-tags: ["Africa Transformation Office", "AI", "AUNI System", "Azure", "Azure AI", "Company News", "Customer Retention", "Digital Divide", "Edge AI", "Fastagger", "Financial Inclusion", "GitHub", "IoT", "M PESA", "Machine Learning", "Microsoft", "Mobile Money", "Mobile Technology", "News", "NVIDIA GenAI", "On Device AI", "SaaS", "Small Business", "SMB", "Startup", "Work & Life"]
-tags_normalized: ["africa transformation office", "ai", "auni system", "azure", "azure ai", "company news", "customer retention", "digital divide", "edge ai", "fastagger", "financial inclusion", "github", "iot", "m pesa", "machine learning", "microsoft", "mobile money", "mobile technology", "news", "nvidia genai", "on device ai", "saas", "small business", "smb", "startup", "work and life"]
+permalink: /ai/news/Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs
+tags:
+- Africa Transformation Office
+- AI
+- AUNI System
+- Azure
+- Azure AI
+- Company News
+- Customer Retention
+- Digital Divide
+- Edge AI
+- Fastagger
+- Financial Inclusion
+- GitHub
+- IoT
+- M PESA
+- Machine Learning
+- Microsoft
+- Mobile Money
+- Mobile Technology
+- News
+- NVIDIA GenAI
+- On Device AI
+- SaaS
+- Small Business
+- SMB
+- Startup
+- Work & Life
+section_names:
+- ai
+- azure
 ---
-
 stclarke reviews how Fastagger, in partnership with Microsoft’s Africa Transformation Office, brings AI directly to African small businesses—enabling affordable, edge-based solutions with Azure AI and GitHub support.<!--excerpt_end-->
 
 # Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs

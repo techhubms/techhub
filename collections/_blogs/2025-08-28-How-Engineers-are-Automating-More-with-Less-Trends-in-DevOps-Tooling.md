@@ -1,20 +1,59 @@
----
-layout: "post"
-title: "How Engineers are Automating More with Less: Trends in DevOps Tooling"
-description: "This article, authored by Durojaye Olusegun, examines the evolution of DevOps tooling toward leaner, modular automation. It highlights how modern engineering teams streamline CI/CD with toolchain consolidation, composable pipelines, developer experience improvements, GitOps, and the integration of AI for anomaly detection and observability. The piece discusses benefits such as cost reduction, simplified maintenance, and smarter automation by leveraging tools like GitHub Actions and GitHub Copilot."
-author: "Durojaye Olusegun"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'How Engineers are Automating More with Less: Trends in DevOps Tooling'
+author: Durojaye Olusegun
+canonical_url: https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-28 05:45:55 +00:00
-permalink: "/2025-08-28-How-Engineers-are-Automating-More-with-Less-Trends-in-DevOps-Tooling.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI in DevOps", "AI Integration", "Anomaly Detection", "ArgoCD", "Autonomous Operations", "Blogs", "Business Of DevOps", "CI/CD", "CI/CD Evolution", "CloudRay", "Composable Workflows", "Contributed Content", "Cost Conscious Automation", "Dagger", "Developer Experience", "DevOps", "DevOps Automation", "Edge Automation", "Event Driven Automation", "Flux", "GitHub Actions", "GitHub Copilot", "GitLab DevSecOps Survey", "GitOps", "GitOps Automation", "IaC", "Low Code Automation", "Modular Pipelines", "No Code DevOps", "Observability", "Platform Consolidation", "Pull Based Deployment", "Serverless Workflows", "Social Facebook", "Social LinkedIn", "Social X", "Temporal", "Test Automation", "Toolchain Consolidation"]
-tags_normalized: ["ai", "ai in devops", "ai integration", "anomaly detection", "argocd", "autonomous operations", "blogs", "business of devops", "cislashcd", "cislashcd evolution", "cloudray", "composable workflows", "contributed content", "cost conscious automation", "dagger", "developer experience", "devops", "devops automation", "edge automation", "event driven automation", "flux", "github actions", "github copilot", "gitlab devsecops survey", "gitops", "gitops automation", "iac", "low code automation", "modular pipelines", "no code devops", "observability", "platform consolidation", "pull based deployment", "serverless workflows", "social facebook", "social linkedin", "social x", "temporal", "test automation", "toolchain consolidation"]
+permalink: /github-copilot/blogs/How-Engineers-are-Automating-More-with-Less-Trends-in-DevOps-Tooling
+tags:
+- AI
+- AI in DevOps
+- AI Integration
+- Anomaly Detection
+- ArgoCD
+- Autonomous Operations
+- Blogs
+- Business Of DevOps
+- CI/CD
+- CI/CD Evolution
+- CloudRay
+- Composable Workflows
+- Contributed Content
+- Cost Conscious Automation
+- Dagger
+- Developer Experience
+- DevOps
+- DevOps Automation
+- Edge Automation
+- Event Driven Automation
+- Flux
+- GitHub Actions
+- GitHub Copilot
+- GitLab DevSecOps Survey
+- GitOps
+- GitOps Automation
+- IaC
+- Low Code Automation
+- Modular Pipelines
+- No Code DevOps
+- Observability
+- Platform Consolidation
+- Pull Based Deployment
+- Serverless Workflows
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Temporal
+- Test Automation
+- Toolchain Consolidation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Durojaye Olusegun explores how engineering teams are transforming DevOps automation by embracing modular workflows and AI-powered tools like GitHub Copilot, resulting in smarter, more cost-effective pipelines.<!--excerpt_end-->
 
 # How Engineers are Automating More with Less: Trends in DevOps Tooling

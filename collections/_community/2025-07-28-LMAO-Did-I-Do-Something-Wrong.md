@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "LMAO Did I Do Something Wrong?"
-description: "Yourmelbguy shares a humorous interaction with GitHub Copilot, speculating about its perceived frustration based on a shared image. The post includes a direct link to the image and invites engagement with the Reddit community through comments and discussion links."
-author: "Yourmelbguy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mbdd6h/lmao_did_i_do_something_wrong/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: LMAO Did I Do Something Wrong?
+author: Yourmelbguy
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbdd6h/lmao_did_i_do_something_wrong/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 11:13:32 +00:00
-permalink: "/2025-07-28-LMAO-Did-I-Do-Something-Wrong.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automation", "Code Suggestions", "Community", "Community Discussion", "Developer Humor", "GitHub Copilot", "Programming Tools", "Reddit", "Software Development", "User Experience"]
-tags_normalized: ["ai", "ai assistant", "automation", "code suggestions", "community", "community discussion", "developer humor", "github copilot", "programming tools", "reddit", "software development", "user experience"]
+permalink: /github-copilot/community/LMAO-Did-I-Do-Something-Wrong
+tags:
+- AI
+- AI Assistant
+- Automation
+- Code Suggestions
+- Community
+- Community Discussion
+- Developer Humor
+- GitHub Copilot
+- Programming Tools
+- Reddit
+- Software Development
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 Yourmelbguy humorously shares an image depicting a seemingly annoyed response from GitHub Copilot, prompting discussion about AI behavior.<!--excerpt_end-->
 
 ## Summary

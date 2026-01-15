@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "The Role of Storytelling in Security Modeling"
-description: "This video explores why effective storytelling is crucial during security modeling, featuring insights from Michael Howard. It emphasizes that focusing on real incidents and the narratives behind them helps teams better understand risk, enhances communication, and drives stronger security outcomes, going beyond traditional methods like threat trees and crypto discussions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/0vjkCXWebe4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: The Role of Storytelling in Security Modeling
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/0vjkCXWebe4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-12 18:38:32 +00:00
-permalink: "/2025-12-12-The-Role-of-Storytelling-in-Security-Modeling.html"
-categories: ["Security"]
-tags: ["Incident Response", "Michael Howard", "Microsoft Security", "OneDevQuestion", "Risk Assessment", "Security", "Security Awareness", "Security Modeling", "Storytelling", "Team Communication", "Threat Modeling", "Videos"]
-tags_normalized: ["incident response", "michael howard", "microsoft security", "onedevquestion", "risk assessment", "security", "security awareness", "security modeling", "storytelling", "team communication", "threat modeling", "videos"]
+permalink: /security/videos/The-Role-of-Storytelling-in-Security-Modeling
+tags:
+- Incident Response
+- Michael Howard
+- Microsoft Security
+- OneDevQuestion
+- Risk Assessment
+- Security
+- Security Awareness
+- Security Modeling
+- Storytelling
+- Team Communication
+- Threat Modeling
+- Videos
+section_names:
+- security
 ---
-
 Michael Howard from Microsoft shares why storytelling is vital in security modeling, arguing that real-world incident narratives help teams grasp risks more effectively than theory alone.<!--excerpt_end-->
 
 {% youtube 0vjkCXWebe4 %}

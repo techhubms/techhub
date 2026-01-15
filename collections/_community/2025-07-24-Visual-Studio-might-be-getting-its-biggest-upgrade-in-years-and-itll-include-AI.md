@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Visual Studio might be getting its biggest upgrade in years, and it'll include AI"
-description: "This post discusses rumors about an upcoming major upgrade to Visual Studio, highlighting potential AI integration as a central feature. The topic is based on recent reports linking Microsoft's ongoing development to new AI-powered capabilities within the popular IDE."
-author: "thetechminer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1m81l7y/visual_studio_might_be_getting_its_biggest/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Visual Studio might be getting its biggest upgrade in years, and it'll include AI
+author: thetechminer
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1m81l7y/visual_studio_might_be_getting_its_biggest/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-24 11:14:13 +00:00
-permalink: "/2025-07-24-Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Features", "AI Integration", "Coding", "Community", "Development Tools", "IDE", "Microsoft", "Microsoft AI", "Programming", "Software Development", "Upgrade", "VS"]
-tags_normalized: ["ai", "ai features", "ai integration", "coding", "community", "development tools", "ide", "microsoft", "microsoft ai", "programming", "software development", "upgrade", "vs"]
+permalink: /ai/community/Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI
+tags:
+- AI
+- AI Features
+- AI Integration
+- Coding
+- Community
+- Development Tools
+- IDE
+- Microsoft
+- Microsoft AI
+- Programming
+- Software Development
+- Upgrade
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Author thetechminer shares insights into a potential major upgrade for Visual Studio, focusing on AI-driven improvements.<!--excerpt_end-->
 
 # Visual Studio Might Be Getting Its Biggest Upgrade in Years, and It'll Include AI

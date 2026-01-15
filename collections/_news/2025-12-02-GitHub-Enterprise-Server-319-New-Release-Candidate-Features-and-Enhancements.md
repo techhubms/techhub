@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Enterprise Server 3.19: New Release Candidate Features and Enhancements"
-description: "This article details the updates and new features available in GitHub Enterprise Server (GHES) 3.19, including improved repository creation, enhanced policy management, security improvements, metrics monitoring updates, and more. It highlights key technical enhancements for administrators and enterprise users aiming to streamline deployment and operational workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Enterprise Server 3.19: New Release Candidate Features and Enhancements'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-02 20:55:34 +00:00
-permalink: "/2025-12-02-GitHub-Enterprise-Server-319-New-Release-Candidate-Features-and-Enhancements.html"
-categories: ["DevOps", "Security"]
-tags: ["App Manager", "Collaboration Tools", "DevOps", "Enterprise Administration", "GHES 3.19", "GitHub Enterprise Server", "Monitoring", "News", "OpenTelemetry", "Policy Enforcement", "Release Candidate", "Repository Management", "Ruleset Management", "Security", "SHA Pinning", "TLS Ciphers", "Version Control"]
-tags_normalized: ["app manager", "collaboration tools", "devops", "enterprise administration", "ghes 3dot19", "github enterprise server", "monitoring", "news", "opentelemetry", "policy enforcement", "release candidate", "repository management", "ruleset management", "security", "sha pinning", "tls ciphers", "version control"]
+permalink: /devops/news/GitHub-Enterprise-Server-319-New-Release-Candidate-Features-and-Enhancements
+tags:
+- App Manager
+- Collaboration Tools
+- DevOps
+- Enterprise Administration
+- GHES 3.19
+- GitHub Enterprise Server
+- Monitoring
+- News
+- OpenTelemetry
+- Policy Enforcement
+- Release Candidate
+- Repository Management
+- Ruleset Management
+- Security
+- SHA Pinning
+- TLS Ciphers
+- Version Control
+section_names:
+- devops
+- security
 ---
-
 Allison outlines the technical highlights in GitHub Enterprise Server 3.19, focusing on improved repository workflows, security policies, monitoring updates, and administration enhancements for enterprise DevOps teams.<!--excerpt_end-->
 
 # GitHub Enterprise Server 3.19 Release Candidate: What's New

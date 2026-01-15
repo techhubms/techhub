@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Entra ID Recognized for Access Management Leadership in Gartner’s 2025 Magic Quadrant"
-description: "This article highlights Microsoft's recognition as a Leader in the 2025 Gartner Magic Quadrant for Access Management, emphasizing advancements in Microsoft Entra and identity protection. It covers emerging cyberthreats, integration of AI-driven security features, and new agent identity capabilities within the Entra platform, showcasing strategies for robust identity and access management in the AI era."
-author: "Joy Chik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/21/microsoft-named-a-leader-in-the-gartner-magic-quadrant-for-access-management-for-the-ninth-consecutive-year/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Entra ID Recognized for Access Management Leadership in Gartner’s 2025 Magic Quadrant
+author: Joy Chik
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/21/microsoft-named-a-leader-in-the-gartner-magic-quadrant-for-access-management-for-the-ninth-consecutive-year/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-21 17:00:00 +00:00
-permalink: "/2025-11-21-Microsoft-Entra-ID-Recognized-for-Access-Management-Leadership-in-Gartners-2025-Magic-Quadrant.html"
-categories: ["AI", "Security"]
-tags: ["Access Management", "Agent ID", "AI", "AI Powered Security", "Conditional Access", "Cybersecurity", "Entra External ID", "Gartner Magic Quadrant", "IAM", "Identity Governance", "Identity Solutions", "Microsoft Entra", "Microsoft Security", "Multifactor Authentication", "News", "Security", "Security Copilot", "Teams Integration", "Threat Response", "Zero Trust"]
-tags_normalized: ["access management", "agent id", "ai", "ai powered security", "conditional access", "cybersecurity", "entra external id", "gartner magic quadrant", "iam", "identity governance", "identity solutions", "microsoft entra", "microsoft security", "multifactor authentication", "news", "security", "security copilot", "teams integration", "threat response", "zero trust"]
+permalink: /ai/news/Microsoft-Entra-ID-Recognized-for-Access-Management-Leadership-in-Gartners-2025-Magic-Quadrant
+tags:
+- Access Management
+- Agent ID
+- AI
+- AI Powered Security
+- Conditional Access
+- Cybersecurity
+- Entra External ID
+- Gartner Magic Quadrant
+- IAM
+- Identity Governance
+- Identity Solutions
+- Microsoft Entra
+- Microsoft Security
+- Multifactor Authentication
+- News
+- Security
+- Security Copilot
+- Teams Integration
+- Threat Response
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Joy Chik presents an overview of Microsoft's position as a Leader in the 2025 Gartner Magic Quadrant for Access Management, detailing Entra’s unified identity solutions and their impact on organizational security.<!--excerpt_end-->
 
 # Microsoft Entra ID Recognized for Access Management Leadership

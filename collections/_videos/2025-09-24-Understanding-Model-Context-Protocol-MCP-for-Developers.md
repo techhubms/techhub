@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Understanding Model Context Protocol (MCP) for Developers"
-description: "In this video, Damian Brady from Microsoft Developer explains the Model Context Protocol (MCP) and why it's important for developers. MCP enables tools like GitHub Copilot to perform actual actions rather than merely providing code suggestions, expanding the range of developer productivity capabilities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/rTW1eM0T_90"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Understanding Model Context Protocol (MCP) for Developers
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/rTW1eM0T_90
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 15:59:41 +00:00
-permalink: "/2025-09-24-Understanding-Model-Context-Protocol-MCP-for-Developers.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Automation", "Copilot Integration", "Developer Tools", "GitHub Copilot", "MCP", "Microsoft", "Productivity Tools", "Software Development", "Videos"]
-tags_normalized: ["ai", "ai development", "automation", "copilot integration", "developer tools", "github copilot", "mcp", "microsoft", "productivity tools", "software development", "videos"]
+permalink: /github-copilot/videos/Understanding-Model-Context-Protocol-MCP-for-Developers
+tags:
+- AI
+- AI Development
+- Automation
+- Copilot Integration
+- Developer Tools
+- GitHub Copilot
+- MCP
+- Microsoft
+- Productivity Tools
+- Software Development
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 Microsoft Developer’s Damian Brady explains Model Context Protocol (MCP), making it clear why this matters for developers using GitHub Copilot and similar AI-powered tools.<!--excerpt_end-->
 
 {% youtube rTW1eM0T_90 %}

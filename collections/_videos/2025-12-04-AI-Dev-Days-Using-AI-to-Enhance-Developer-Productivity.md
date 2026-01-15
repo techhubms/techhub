@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "AI Dev Days: Using AI to Enhance Developer Productivity"
-description: "This video session explores how developers can use AI-powered tools like GitHub Copilot and Microsoft cloud services to improve coding practices. It covers Agent HQ, app modernization strategies, and hands-on labs with the latest versions of Visual Studio and VS Code, all in the context of Azure and Microsoft’s developer ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GCLYC5d7kpI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'AI Dev Days: Using AI to Enhance Developer Productivity'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=GCLYC5d7kpI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 01:07:13 +00:00
-permalink: "/2025-12-04-AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent HQ", "AI", "AI Developer Tools", "App Modernization", "Azure", "Coding", "Coding Agent", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "GitHub Copilot", "GitHub Universe", "GPT", "GPT 5", "GPT5", "Microsoft", "Microsoft Ignite", "Python", "Softwaredevelopers", "Videos", "VS", "VS Code"]
-tags_normalized: ["agent hq", "ai", "ai developer tools", "app modernization", "azure", "coding", "coding agent", "demo", "developer", "developer community", "developer productivity", "developer tools", "github copilot", "github universe", "gpt", "gpt 5", "gpt5", "microsoft", "microsoft ignite", "python", "softwaredevelopers", "videos", "vs", "vs code"]
+permalink: /github-copilot/videos/AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity
+tags:
+- Agent HQ
+- AI
+- AI Developer Tools
+- App Modernization
+- Azure
+- Coding
+- Coding Agent
+- Demo
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- GitHub Copilot
+- GitHub Universe
+- GPT
+- GPT 5
+- GPT5
+- Microsoft
+- Microsoft Ignite
+- Python
+- Softwaredevelopers
+- Videos
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Microsoft Developer presents key techniques for enhancing coding productivity with AI, Azure, and GitHub Copilot, featuring highlights from Ignite and GitHub Universe.<!--excerpt_end-->
 
 {% youtube GCLYC5d7kpI %}

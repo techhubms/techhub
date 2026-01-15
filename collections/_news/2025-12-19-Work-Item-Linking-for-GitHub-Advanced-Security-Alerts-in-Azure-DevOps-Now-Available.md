@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Work Item Linking for GitHub Advanced Security Alerts in Azure DevOps Now Available"
-description: "This announcement details the new feature that allows users to directly link work items in Azure DevOps Boards to security alerts surfaced by GitHub Advanced Security. It streamlines tracking, prioritizing, and fixing vulnerabilities by bridging the gap between security alerting and regular sprint/project management within Azure DevOps. The update enhances visibility and coordination for security and engineering teams, and is part of ongoing efforts to integrate security workflows natively into Azure DevOps."
-author: "Laura Jiang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/work-item-linking-for-advanced-security-alerts-now-available/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Work Item Linking for GitHub Advanced Security Alerts in Azure DevOps Now Available
+author: Laura Jiang
+canonical_url: https://devblogs.microsoft.com/devops/work-item-linking-for-advanced-security-alerts-now-available/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-19 18:24:14 +00:00
-permalink: "/2025-12-19-Work-Item-Linking-for-GitHub-Advanced-Security-Alerts-in-Azure-DevOps-Now-Available.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["#azure", "#devops", "Advanced Security Hub", "Azure", "Azure & Cloud", "Azure DevOps", "Dependency Scanning", "DevOps", "DevOps Boards", "GitHub Advanced Security", "News", "Permissions", "Security", "Security Alerts", "Security Workflow", "Sprint Planning", "Vulnerability Management", "Work Item Linking"]
-tags_normalized: ["sharpazure", "sharpdevops", "advanced security hub", "azure", "azure and cloud", "azure devops", "dependency scanning", "devops", "devops boards", "github advanced security", "news", "permissions", "security", "security alerts", "security workflow", "sprint planning", "vulnerability management", "work item linking"]
+permalink: /azure/news/Work-Item-Linking-for-GitHub-Advanced-Security-Alerts-in-Azure-DevOps-Now-Available
+tags:
+- '#azure'
+- '#devops'
+- Advanced Security Hub
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- Dependency Scanning
+- DevOps
+- DevOps Boards
+- GitHub Advanced Security
+- News
+- Permissions
+- Security
+- Security Alerts
+- Security Workflow
+- Sprint Planning
+- Vulnerability Management
+- Work Item Linking
+section_names:
+- azure
+- devops
+- security
 ---
-
 Laura Jiang announces the general availability of work item linking for GitHub Advanced Security alerts in Azure DevOps, simplifying security tracking and resolution in engineering teams.<!--excerpt_end-->
 
 # Work Item Linking for GitHub Advanced Security Alerts in Azure DevOps Now Available

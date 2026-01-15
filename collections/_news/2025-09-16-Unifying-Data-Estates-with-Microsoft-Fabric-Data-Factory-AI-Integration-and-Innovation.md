@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation"
-description: "This article from the Microsoft Fabric Blog announces major enhancements to Fabric Data Factory, detailing its AI-powered features, cross-cloud integration, pro-code and low-code orchestration, petabyte-scale data movement, mission-critical security updates, and pricing changes. The piece demonstrates how Fabric Data Factory, built on OneLake, simplifies data unification, supports zero-ETL patterns, introduces Dataflow Gen2 improvements, and integrates AI copilots and automation capabilities for modern enterprise data scenarios."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 01:00:00 +00:00
-permalink: "/2025-09-16-Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Copilot", "Azure", "Azure Key Vault", "Azure SQL", "Change Data Capture", "CI/CD", "Copy Job", "Data Integration", "Data Mirroring", "Data Orchestration", "Database Replication", "Dataflow Gen2", "Fabric Data Factory", "Lakehouse", "Managed Airflow", "Microsoft Fabric", "ML", "Natural Language Transformation", "News", "On Premises Gateway", "OneLake", "Pipelines", "Power Query", "Semantic Models", "VNet Gateway", "Zero ETL"]
-tags_normalized: ["ai", "ai copilot", "azure", "azure key vault", "azure sql", "change data capture", "cislashcd", "copy job", "data integration", "data mirroring", "data orchestration", "database replication", "dataflow gen2", "fabric data factory", "lakehouse", "managed airflow", "microsoft fabric", "ml", "natural language transformation", "news", "on premises gateway", "onelake", "pipelines", "power query", "semantic models", "vnet gateway", "zero etl"]
+permalink: /ai/news/Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation
+tags:
+- AI
+- AI Copilot
+- Azure
+- Azure Key Vault
+- Azure SQL
+- Change Data Capture
+- CI/CD
+- Copy Job
+- Data Integration
+- Data Mirroring
+- Data Orchestration
+- Database Replication
+- Dataflow Gen2
+- Fabric Data Factory
+- Lakehouse
+- Managed Airflow
+- Microsoft Fabric
+- ML
+- Natural Language Transformation
+- News
+- On Premises Gateway
+- OneLake
+- Pipelines
+- Power Query
+- Semantic Models
+- VNet Gateway
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team highlights recent innovations in Fabric Data Factory, focusing on enterprise-scale data integration, AI-driven features, and new performance updates to empower data engineers and analysts.<!--excerpt_end-->
 
 # Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation

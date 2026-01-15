@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Innovating with Intelligent Agents: Azure AI and Copilot Studio Applications"
-description: "This session from Microsoft Ignite 2025 explores the use of Azure AI and Copilot Studio in designing autonomous agents and scalable AI applications. Presenters demonstrate practical strategies for building agentic workflows, leveraging operational intelligence, and integrating AI-driven modules for sensing, deciding, and acting across business scenarios. Core topics include architecture patterns for agentic systems, operational modules, and real-world Azure AI integrations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MV8nhQ3pAqo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Innovating with Intelligent Agents: Azure AI and Copilot Studio Applications'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=MV8nhQ3pAqo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 17:09:31 +00:00
-permalink: "/2025-11-19-Innovating-with-Intelligent-Agents-Azure-AI-and-Copilot-Studio-Applications.html"
-categories: ["AI", "Azure"]
-tags: ["Admin Configuration", "Agent Efficiency", "Agentic Workflows", "AI", "AI Integration", "AI Summarization", "Autonomous Agents", "Azure", "Azure AI", "Business Impact", "Case 360 Architecture", "Copilot Studio", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Power Platform", "MSIgnite", "Operational Intelligence", "Recommendations", "User Validation", "Videos"]
-tags_normalized: ["admin configuration", "agent efficiency", "agentic workflows", "ai", "ai integration", "ai summarization", "autonomous agents", "azure", "azure ai", "business impact", "case 360 architecture", "copilot studio", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft power platform", "msignite", "operational intelligence", "recommendations", "user validation", "videos"]
+permalink: /ai/videos/Innovating-with-Intelligent-Agents-Azure-AI-and-Copilot-Studio-Applications
+tags:
+- Admin Configuration
+- Agent Efficiency
+- Agentic Workflows
+- AI
+- AI Integration
+- AI Summarization
+- Autonomous Agents
+- Azure
+- Azure AI
+- Business Impact
+- Case 360 Architecture
+- Copilot Studio
+- InnovatewithAzureAIappsandagents
+- Microsoft Ignite
+- Microsoft Power Platform
+- MSIgnite
+- Operational Intelligence
+- Recommendations
+- User Validation
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an Ignite 2025 session led by Renu Nair and Bhargav Parnandi on designing intelligent applications using Azure AI and Copilot Studio.<!--excerpt_end-->
 
 {% youtube MV8nhQ3pAqo %}

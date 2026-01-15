@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Context is all you need: Better AI results with custom instructions in VS Code"
-description: "This article introduces the general availability of custom instructions for GitHub Copilot within Visual Studio Code, showing developers how to tailor AI assistance using project-specific files, workspace settings, and reusable prompt files. The guide explores practical workflows, customization strategies, and hands-on examples for enhancing productivity and code quality."
-author: "Rob Conery, Harald Kirschner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/03/26/custom-instructions"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Context is all you need: Better AI results with custom instructions in VS Code'
+author: Rob Conery, Harald Kirschner
+canonical_url: https://code.visualstudio.com/blogs/2025/03/26/custom-instructions
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-03-26 00:00:00 +00:00
-permalink: "/2025-03-26-Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Generation", "Coding", "Commit Message Generation", "Copilot Chat", "Custom Instructions", "Development Workflow", "GitHub Copilot", "JavaScript", "News", "Node.js", "Project Configuration", "Prompt Engineering", "Prompt Files", "React", "VS Code", "Workspace Settings"]
-tags_normalized: ["ai", "code generation", "coding", "commit message generation", "copilot chat", "custom instructions", "development workflow", "github copilot", "javascript", "news", "nodedotjs", "project configuration", "prompt engineering", "prompt files", "react", "vs code", "workspace settings"]
+permalink: /github-copilot/news/Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code
+tags:
+- AI
+- Code Generation
+- Coding
+- Commit Message Generation
+- Copilot Chat
+- Custom Instructions
+- Development Workflow
+- GitHub Copilot
+- JavaScript
+- News
+- Node.js
+- Project Configuration
+- Prompt Engineering
+- Prompt Files
+- React
+- VS Code
+- Workspace Settings
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rob Conery and Harald Kirschner explain how developers can leverage custom instructions in VS Code to fine-tune GitHub Copilot, offering practical examples and strategies for enhancing AI-driven development workflows.<!--excerpt_end-->
 
 # Context is all you need: Better AI results with custom instructions in VS Code

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Previewing OneLake Table APIs for Microsoft Fabric"
-description: "This news post introduces the preview release of Microsoft OneLake Table APIs, enabling programmatic management and integration of data tables within Microsoft Fabric's unified data lake platform. Built on open standards like Apache Iceberg, these APIs support seamless interoperability for developers and data engineers building analytics pipelines and applications."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Previewing OneLake Table APIs for Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 07:00:00 +00:00
-permalink: "/2025-10-13-Previewing-OneLake-Table-APIs-for-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Apache Iceberg", "Azure", "Cloud Data", "Data Engineering", "Data Integration", "Data Lake", "Delta Lake", "Iceberg REST Catalog", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "OneLake Table APIs", "Open Table Formats", "Programmatic Data Access", "REST API"]
-tags_normalized: ["analytics", "apache iceberg", "azure", "cloud data", "data engineering", "data integration", "data lake", "delta lake", "iceberg rest catalog", "microsoft fabric", "microsoft onelake", "ml", "news", "onelake table apis", "open table formats", "programmatic data access", "rest api"]
+permalink: /ml/news/Previewing-OneLake-Table-APIs-for-Microsoft-Fabric
+tags:
+- Analytics
+- Apache Iceberg
+- Azure
+- Cloud Data
+- Data Engineering
+- Data Integration
+- Data Lake
+- Delta Lake
+- Iceberg REST Catalog
+- Microsoft Fabric
+- Microsoft OneLake
+- ML
+- News
+- OneLake Table APIs
+- Open Table Formats
+- Programmatic Data Access
+- REST API
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the OneLake Table APIs preview, allowing developers and data engineers to programmatically manage and integrate tables in Microsoft OneLake using open standards like Apache Iceberg.<!--excerpt_end-->
 
 # OneLake Table APIs (Preview) for Microsoft Fabric

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Front Door: Hardening Configuration Resiliency After October Outages"
-description: "This article, led by Abhishek Tiwari and the Azure Networking engineering team, gives a technical analysis of recent Azure Front Door outages in October, detailing their root causes and the comprehensive improvements implemented for resiliency. It covers configuration and data plane validation, new safety mechanisms, deployment safeguards, and outlines the platform’s ongoing journey to minimize service disruption for critical cloud workloads."
-author: "AbhishekTiwari"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-implementing-lessons-learned-following-october/ba-p/4479416"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Front Door: Hardening Configuration Resiliency After October Outages'
+author: AbhishekTiwari
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-implementing-lessons-learned-following-october/ba-p/4479416
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-19 02:15:12 +00:00
-permalink: "/2025-12-19-Azure-Front-Door-Hardening-Configuration-Resiliency-After-October-Outages.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Front Door", "Cloud Security", "Community", "Configuration Management", "Content Delivery Network", "Control Plane", "Data Plane", "DevOps", "Edge Networking", "High Availability", "Incident Response", "L7 DDoS Protection", "Multi Tenant Architecture", "Resiliency", "Safe Deployment Practices", "Security", "Service Outage", "Traffic Management", "Web Application Firewall"]
-tags_normalized: ["azure", "azure front door", "cloud security", "community", "configuration management", "content delivery network", "control plane", "data plane", "devops", "edge networking", "high availability", "incident response", "l7 ddos protection", "multi tenant architecture", "resiliency", "safe deployment practices", "security", "service outage", "traffic management", "web application firewall"]
+permalink: /azure/community/Azure-Front-Door-Hardening-Configuration-Resiliency-After-October-Outages
+tags:
+- Azure
+- Azure Front Door
+- Cloud Security
+- Community
+- Configuration Management
+- Content Delivery Network
+- Control Plane
+- Data Plane
+- DevOps
+- Edge Networking
+- High Availability
+- Incident Response
+- L7 DDoS Protection
+- Multi Tenant Architecture
+- Resiliency
+- Safe Deployment Practices
+- Security
+- Service Outage
+- Traffic Management
+- Web Application Firewall
+section_names:
+- azure
+- devops
+- security
 ---
-
 Abhishek Tiwari and the Azure Networking team examine the October Azure Front Door outages, sharing lessons learned and detailing the robust technical safeguards and architecture changes now in place.<!--excerpt_end-->
 
 # Azure Front Door: Implementing Lessons Learned Following October Outages

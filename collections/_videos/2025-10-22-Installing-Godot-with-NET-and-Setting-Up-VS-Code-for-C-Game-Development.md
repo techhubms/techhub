@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Installing Godot with .NET and Setting Up VS Code for C# Game Development"
-description: "This video guides viewers through the process of configuring Godot Engine to work with C#, including the installation of Godot with .NET support, setting up Visual Studio Code, installing the .NET SDK, and integrating key extensions for a streamlined C# development workflow. Viewers will also learn how to pull project files from GitHub, making this a complete environment setup for indie game developers interested in using Microsoft technologies with Godot."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MmuiwY_tiEo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Installing Godot with .NET and Setting Up VS Code for C# Game Development
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=MmuiwY_tiEo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:09 +00:00
-permalink: "/2025-10-22-Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development.html"
-categories: ["Coding"]
-tags: [".NET", "Beginner Tutorial", "C#", "C# Tools For Godot", "Coding", "Debugging", "Development Environment", "Game Development", "GitHub", "Godot", "Godot .NET", "Indie Games", "Microsoft", "SDK Installation", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["dotnet", "beginner tutorial", "csharp", "csharp tools for godot", "coding", "debugging", "development environment", "game development", "github", "godot", "godot dotnet", "indie games", "microsoft", "sdk installation", "videos", "vs code", "vs code extensions"]
+permalink: /coding/videos/Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development
+tags:
+- .NET
+- Beginner Tutorial
+- C#
+- C# Tools For Godot
+- Coding
+- Debugging
+- Development Environment
+- Game Development
+- GitHub
+- Godot
+- Godot .NET
+- Indie Games
+- Microsoft
+- SDK Installation
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- coding
 ---
-
 dotnet takes you through setting up Godot Engine with .NET and Visual Studio Code for C# game development, covering both the tooling installation and project setup steps vital for new developers.<!--excerpt_end-->
 
 {% youtube MmuiwY_tiEo %}

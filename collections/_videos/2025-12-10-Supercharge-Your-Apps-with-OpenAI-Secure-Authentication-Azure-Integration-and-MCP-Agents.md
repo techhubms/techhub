@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents"
-description: "This session from Microsoft Developer explores advanced integration of AI into applications using official OpenAI libraries for .NET, Python, JavaScript, Java, and Go. It explains the relationship between OpenAI, Azure OpenAI, and Azure AI Foundry Models, demonstrates secure authentication using Microsoft Entra ID, and showcases the use of Model Context Protocol (MCP) for building agentic apps that can securely connect to external tools and data sources."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sCv_noSKIBw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=sCv_noSKIBw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 23:42:25 +00:00
-permalink: "/2025-12-10-Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: [".NET", "Agentic Apps", "AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure OpenAI", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Developer", "Development", "Enterprise AI", "Go", "Java", "JavaScript", "MCP", "Microsoft", "Microsoft Entra ID", "OpenAI", "Python", "Secure Authentication", "Security", "Tech", "Technology", "Token Based Authentication", "Videos"]
-tags_normalized: ["dotnet", "agentic apps", "ai", "ai integration", "azure", "azure ai foundry", "azure openai", "cloud computing", "cloud development", "coding", "dev", "developer", "development", "enterprise ai", "go", "java", "javascript", "mcp", "microsoft", "microsoft entra id", "openai", "python", "secure authentication", "security", "tech", "technology", "token based authentication", "videos"]
+permalink: /ai/videos/Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents
+tags:
+- .NET
+- Agentic Apps
+- AI
+- AI Integration
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Cloud Computing
+- Cloud Development
+- Coding
+- Dev
+- Developer
+- Development
+- Enterprise AI
+- Go
+- Java
+- JavaScript
+- MCP
+- Microsoft
+- Microsoft Entra ID
+- OpenAI
+- Python
+- Secure Authentication
+- Security
+- Tech
+- Technology
+- Token Based Authentication
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 Microsoft Developer guides you through integrating AI into your applications using OpenAI libraries and Azure services, focusing on secure authentication with Microsoft Entra ID and leveraging MCP for agentic apps.<!--excerpt_end-->
 
 {% youtube sCv_noSKIBw %}

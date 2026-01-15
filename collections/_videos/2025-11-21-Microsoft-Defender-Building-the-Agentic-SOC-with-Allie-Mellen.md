@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Defender: Building the Agentic SOC with Allie Mellen"
-description: "This session from Microsoft Ignite 2025 features Rob Lefferts and Allie Mellen discussing Microsoft's vision for AI-powered security operations. It covers innovations in Microsoft Defender, the use of intelligent agents and automation to empower Security Operations Centers (SOC), and explores real-world impacts, such as threat response automation, alert management, and the evolving role of security analysts in an agentic era."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=X1bYxfpaP9w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Defender: Building the Agentic SOC with Allie Mellen'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=X1bYxfpaP9w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:57:25 +00:00
-permalink: "/2025-11-21-Microsoft-Defender-Building-the-Agentic-SOC-with-Allie-Mellen.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Security", "Alert Management", "Defender XDR", "Explainability", "Generative AI", "Guardrails", "Incident Response", "Microsoft Defender", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Runbooks", "Security", "Security Analysts", "Security Automation", "Security Operations Center", "SOC", "Threat Response", "Vendor Transparency", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai security", "alert management", "defender xdr", "explainability", "generative ai", "guardrails", "incident response", "microsoft defender", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "runbooks", "security", "security analysts", "security automation", "security operations center", "soc", "threat response", "vendor transparency", "videos"]
+permalink: /ai/videos/Microsoft-Defender-Building-the-Agentic-SOC-with-Allie-Mellen
+tags:
+- Agentic AI
+- AI
+- AI Security
+- Alert Management
+- Defender XDR
+- Explainability
+- Generative AI
+- Guardrails
+- Incident Response
+- Microsoft Defender
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Runbooks
+- Security
+- Security Analysts
+- Security Automation
+- Security Operations Center
+- SOC
+- Threat Response
+- Vendor Transparency
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events, joined by Allie Mellen, presents a deep dive into how Microsoft Defender is leveraging AI and agentic automation to transform security operations and enhance SOC effectiveness.<!--excerpt_end-->
 
 {% youtube X1bYxfpaP9w %}

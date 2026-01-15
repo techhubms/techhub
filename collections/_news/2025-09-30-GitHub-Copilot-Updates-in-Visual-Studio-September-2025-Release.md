@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Copilot Updates in Visual Studio September 2025 Release"
-description: "This news update details major enhancements introduced to GitHub Copilot in Visual Studio 2022 (v17.14) as of September 2025. Key features include new Profiler and .NET Modernization agents, improvements to agent mode, extended MCP customization, Mermaid diagram generation, and smarter code review capabilities. The article highlights tools for performance analysis, modernization workflows, and more seamless development with AI-powered assistance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Updates in Visual Studio September 2025 Release
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 17:34:58 +00:00
-permalink: "/2025-09-30-GitHub-Copilot-Updates-in-Visual-Studio-September-2025-Release.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Modernization Agent", "Agent Mode", "AI", "AI Development", "Azure Migration", "Code Review", "Coding", "Copilot", "Copilot Chat", "GitHub Copilot", "MCP Prompts", "Mermaid Diagrams", "News", "Performance Optimization", "Profiler Agent", "VS"]
-tags_normalized: ["dotnet", "dotnet modernization agent", "agent mode", "ai", "ai development", "azure migration", "code review", "coding", "copilot", "copilot chat", "github copilot", "mcp prompts", "mermaid diagrams", "news", "performance optimization", "profiler agent", "vs"]
+permalink: /github-copilot/news/GitHub-Copilot-Updates-in-Visual-Studio-September-2025-Release
+tags:
+- .NET
+- .NET Modernization Agent
+- Agent Mode
+- AI
+- AI Development
+- Azure Migration
+- Code Review
+- Coding
+- Copilot
+- Copilot Chat
+- GitHub Copilot
+- MCP Prompts
+- Mermaid Diagrams
+- News
+- Performance Optimization
+- Profiler Agent
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Allison summarizes the September 2025 Visual Studio update, showcasing new GitHub Copilot features such as Profiler and .NET Modernization agents, improved MCP prompts, and advanced code review tools.<!--excerpt_end-->
 
 # GitHub Copilot Updates in Visual Studio — September 2025 Release

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Data Intelligence at Your Fingertips: Fabric’s AI Functions & Data Agents"
-description: "This session explores the use of Microsoft Fabric’s built-in AI Functions and Data Agents to enable AI-driven analytics directly in data workflows. Learn how to leverage sentiment analysis, keyword extraction, text summarization, and conversational analytics without writing any code. The session features practical demos showing how these tools integrate with dashboards and reporting to empower both business and technical users for smarter, faster decision-making."
-author: "Pouya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/events/data-intelligence-at-your-fingertips-fabric-s-ai-functions-data/ec-p/4443431#M10"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Data Intelligence at Your Fingertips: Fabric’s AI Functions & Data Agents'
+author: Pouya
+canonical_url: https://techcommunity.microsoft.com/t5/events/data-intelligence-at-your-fingertips-fabric-s-ai-functions-data/ec-p/4443431#M10
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 13:13:08 +00:00
-permalink: "/2025-08-14-Data-Intelligence-at-Your-Fingertips-Fabrics-AI-Functions-and-Data-Agents.html"
-categories: ["AI", "ML"]
-tags: ["AI", "AI Functions", "Analytics Automation", "Business Intelligence", "Community", "Conversational AI", "Dashboarding", "Data Agents", "Data Analytics", "Data Workflows", "Keyword Extraction", "Microsoft Fabric", "ML", "Natural Language Processing", "No Code AI", "Productivity Tools", "Sentiment Analysis", "Text Summarization"]
-tags_normalized: ["ai", "ai functions", "analytics automation", "business intelligence", "community", "conversational ai", "dashboarding", "data agents", "data analytics", "data workflows", "keyword extraction", "microsoft fabric", "ml", "natural language processing", "no code ai", "productivity tools", "sentiment analysis", "text summarization"]
+permalink: /ai/community/Data-Intelligence-at-Your-Fingertips-Fabrics-AI-Functions-and-Data-Agents
+tags:
+- AI
+- AI Functions
+- Analytics Automation
+- Business Intelligence
+- Community
+- Conversational AI
+- Dashboarding
+- Data Agents
+- Data Analytics
+- Data Workflows
+- Keyword Extraction
+- Microsoft Fabric
+- ML
+- Natural Language Processing
+- No Code AI
+- Productivity Tools
+- Sentiment Analysis
+- Text Summarization
+section_names:
+- ai
+- ml
 ---
-
 Pouya highlights Ronak Vachhani’s session on leveraging Microsoft Fabric’s AI Functions and Data Agents for no-code analytics, showing how powerful AI-driven insights can enhance decision-making for users of any skill level.<!--excerpt_end-->
 
 # Data Intelligence at Your Fingertips: Fabric’s AI Functions & Data Agents

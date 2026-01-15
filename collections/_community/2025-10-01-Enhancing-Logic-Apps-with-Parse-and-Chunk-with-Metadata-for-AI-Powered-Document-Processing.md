@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing"
-description: "This article demonstrates how the newly introduced 'Parse document with metadata' and 'Chunk text with metadata' actions in Logic Apps can enrich document processing workflows by including contextual metadata. It covers ingesting enterprise contracts, integrating with Azure AI Search, and implementing an Agent Loop that uses Vector Search for accurate, citation-ready Q&A. The walkthrough includes prerequisites, end-to-end ingestion and Q&A flows, and practical implementation insights using Azure OpenAI, Azure Blob Storage, and Logic Apps."
-author: "shahparth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing
+author: shahparth
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 23:25:57 +00:00
-permalink: "/2025-10-01-Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Loop", "AI", "Azure", "Azure AI Search", "Azure OpenAI", "Blob Storage", "Chunk Text With Metadata", "Community", "Conversational AI", "Document Indexing", "Enterprise Contracts", "GPT 4.1", "Logic Apps", "Metadata Extraction", "Natural Language Processing", "Parse Document With Metadata", "RAG (retrieval Augmented Generation)", "Vector Search"]
-tags_normalized: ["agent loop", "ai", "azure", "azure ai search", "azure openai", "blob storage", "chunk text with metadata", "community", "conversational ai", "document indexing", "enterprise contracts", "gpt 4dot1", "logic apps", "metadata extraction", "natural language processing", "parse document with metadata", "rag retrieval augmented generation", "vector search"]
+permalink: /ai/community/Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing
+tags:
+- Agent Loop
+- AI
+- Azure
+- Azure AI Search
+- Azure OpenAI
+- Blob Storage
+- Chunk Text With Metadata
+- Community
+- Conversational AI
+- Document Indexing
+- Enterprise Contracts
+- GPT 4.1
+- Logic Apps
+- Metadata Extraction
+- Natural Language Processing
+- Parse Document With Metadata
+- RAG (retrieval Augmented Generation)
+- Vector Search
+section_names:
+- ai
+- azure
 ---
-
 shahparth discusses leveraging new AI-enhanced Logic Apps actions to parse and chunk documents with contextual metadata, integrating these capabilities into Azure AI Search and Agent Loops for production-ready document Q&A.<!--excerpt_end-->
 
 # Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Unlocking the Power of AI with Azure Cognitive Services"
-description: "This post explores how Azure Cognitive Services enables developers and organizations to rapidly add advanced AI capabilities such as vision, speech, language processing, and real-time decision making to their applications. It details the main categories of these services, practical real-world use cases across industries, and the key advantages of Microsoft's pre-built AI APIs, including integration with the Azure platform, scalability, and enterprise security."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Unlocking the Power of AI with Azure Cognitive Services
+author: Dellenny
+canonical_url: https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-16 18:18:45 +00:00
-permalink: "/2025-08-16-Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Anomaly Detector", "API Development", "Azure", "Azure Cognitive Services", "Blogs", "Cloud AI", "Content Moderator", "Developer Tools", "Enterprise AI", "Face API", "Form Recognizer", "Language API", "LUIS", "Machine Learning", "Microsoft Azure", "Natural Language Processing", "Personalizer", "Speech API", "Text Analytics", "Vision API"]
-tags_normalized: ["ai", "ai integration", "anomaly detector", "api development", "azure", "azure cognitive services", "blogs", "cloud ai", "content moderator", "developer tools", "enterprise ai", "face api", "form recognizer", "language api", "luis", "machine learning", "microsoft azure", "natural language processing", "personalizer", "speech api", "text analytics", "vision api"]
+permalink: /ai/blogs/Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services
+tags:
+- AI
+- AI Integration
+- Anomaly Detector
+- API Development
+- Azure
+- Azure Cognitive Services
+- Blogs
+- Cloud AI
+- Content Moderator
+- Developer Tools
+- Enterprise AI
+- Face API
+- Form Recognizer
+- Language API
+- LUIS
+- Machine Learning
+- Microsoft Azure
+- Natural Language Processing
+- Personalizer
+- Speech API
+- Text Analytics
+- Vision API
+section_names:
+- ai
+- azure
 ---
-
 Dellenny explains how Microsoft Azure Cognitive Services empower developers and organizations to add AI features—like vision, speech, and language understanding—to their apps, all without deep machine learning expertise.<!--excerpt_end-->
 
 # Unlocking the Power of AI with Azure Cognitive Services

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local"
-description: "This video features Ayan Gupta and Rory as they demonstrate how to build three distinct AI-powered applications for Java developers. The session covers creating a calculator service using Model Context Protocol (MCP), building a privacy-focused pet story generator with browser-based LLMs, and deploying large language models locally using Microsoft's Foundry Local. The episode walks through architectural choices, hands-on code generation with the AI Toolkit in Visual Studio Code, and practical comparisons of cloud, browser, and local AI deployment approaches. Viewers will learn tool usage, architectural insights, and receive actionable guidance for integrating AI into their Java projects."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2QXzxOLtCHM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=2QXzxOLtCHM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-29 16:00:05 +00:00
-permalink: "/2025-10-29-Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Code Generation", "AI", "AI Application Development", "AI Toolkit", "AIApplications", "AIToolkit", "Browser LLM", "BuildingWithAI", "Cloud AI", "CloudAI", "Code Integration", "Coding", "Foundry Local", "FoundryLocal", "GenerativeAI", "GitHub Codespaces", "Java", "JavaApps", "JavaDevelopment", "JavaScript", "Language Models", "LLM", "Local AI", "LocalAI", "MCP", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent code generation", "ai", "ai application development", "ai toolkit", "aiapplications", "aitoolkit", "browser llm", "buildingwithai", "cloud ai", "cloudai", "code integration", "coding", "foundry local", "foundrylocal", "generativeai", "github codespaces", "java", "javaapps", "javadevelopment", "javascript", "language models", "llm", "local ai", "localai", "mcp", "videos", "vs code", "vs code extensions"]
+permalink: /ai/videos/Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local
+tags:
+- Agent Code Generation
+- AI
+- AI Application Development
+- AI Toolkit
+- AIApplications
+- AIToolkit
+- Browser LLM
+- BuildingWithAI
+- Cloud AI
+- CloudAI
+- Code Integration
+- Coding
+- Foundry Local
+- FoundryLocal
+- GenerativeAI
+- GitHub Codespaces
+- Java
+- JavaApps
+- JavaDevelopment
+- JavaScript
+- Language Models
+- LLM
+- Local AI
+- LocalAI
+- MCP
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
 ---
-
 In this episode, Ayan Gupta and Rory demonstrate hands-on development of three different AI-powered apps, showcasing MCP, browser-based LLMs, and Microsoft's Foundry Local. Their step-by-step approach enables Java developers to learn practical AI integration.<!--excerpt_end-->
 
 {% youtube 2QXzxOLtCHM %}

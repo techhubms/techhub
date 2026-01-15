@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration"
-description: "This detailed community guide walks developers through deploying and integrating Azure AI Foundry capabilities in Azure App Service, focusing on production-ready code for Flask applications. It covers conversational AI, reasoning models, image and audio processing, structured outputs, setup, security, and enterprise integration tips. Designed for developers aiming to rapidly bring Azure-powered AI to web applications, it includes automated deployment, local development instructions, detailed integration patterns, sample tests, cost management advice, and links to code and documentation."
-author: "Nitesh_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration'
+author: Nitesh_Jain
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-28 10:42:08 +00:00
-permalink: "/2025-11-28-Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["AI", "API Integration", "Audio Transcription", "Azure", "Azure AI Foundry", "Azure App Service", "Azure CLI", "Azure Cognitive Services", "Azure Developer CLI", "Coding", "Community", "Conversational AI", "Enterprise Chat", "Flask", "Gpt 35 Turbo", "Gpt 4o Mini", "Image Analysis", "Managed Identity", "Microsoft Defender For Cloud", "Model Deployment", "Multimodal AI", "OpenAI", "Python", "RBAC", "Reasoning Models", "Security", "Security Best Practices"]
-tags_normalized: ["ai", "api integration", "audio transcription", "azure", "azure ai foundry", "azure app service", "azure cli", "azure cognitive services", "azure developer cli", "coding", "community", "conversational ai", "enterprise chat", "flask", "gpt 35 turbo", "gpt 4o mini", "image analysis", "managed identity", "microsoft defender for cloud", "model deployment", "multimodal ai", "openai", "python", "rbac", "reasoning models", "security", "security best practices"]
+permalink: /ai/community/Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration
+tags:
+- AI
+- API Integration
+- Audio Transcription
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure CLI
+- Azure Cognitive Services
+- Azure Developer CLI
+- Coding
+- Community
+- Conversational AI
+- Enterprise Chat
+- Flask
+- Gpt 35 Turbo
+- Gpt 4o Mini
+- Image Analysis
+- Managed Identity
+- Microsoft Defender For Cloud
+- Model Deployment
+- Multimodal AI
+- OpenAI
+- Python
+- RBAC
+- Reasoning Models
+- Security
+- Security Best Practices
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 Nitesh_Jain presents a comprehensive sample demonstrating how to add enterprise-grade Azure AI scenarios to Flask apps, including conversational, reasoning, and multimodal AI—all with secure App Service integration and automated deployment.<!--excerpt_end-->
 
 # Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration

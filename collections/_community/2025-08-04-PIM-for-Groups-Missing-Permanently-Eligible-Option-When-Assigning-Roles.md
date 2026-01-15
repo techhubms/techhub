@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "PIM for Groups: Missing \"Permanently Eligible\" Option When Assigning Roles"
-description: "The author describes an issue encountered while setting up Azure Privileged Identity Management (PIM) for Groups. They were previously able to designate users as \"permanently eligible\" for specific admin roles, but this option is now missing in a newly created group. They are seeking insight into possible causes."
-author: "velkkor"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhegiy/pim_for_group_no_permanently_eligible_option/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'PIM for Groups: Missing "Permanently Eligible" Option When Assigning Roles'
+author: velkkor
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mhegiy/pim_for_group_no_permanently_eligible_option/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 14:08:20 +00:00
-permalink: "/2025-08-04-PIM-for-Groups-Missing-Permanently-Eligible-Option-When-Assigning-Roles.html"
-categories: ["Azure"]
-tags: ["Access Control", "Azure", "Community", "Exchange Recipient Administrator", "Groups", "Identity Management", "Microsoft Entra", "Permanently Eligible", "PIM", "Privileged Identity Management", "Role Assignments", "SharePoint Administrator", "User Administrator"]
-tags_normalized: ["access control", "azure", "community", "exchange recipient administrator", "groups", "identity management", "microsoft entra", "permanently eligible", "pim", "privileged identity management", "role assignments", "sharepoint administrator", "user administrator"]
+permalink: /azure/community/PIM-for-Groups-Missing-Permanently-Eligible-Option-When-Assigning-Roles
+tags:
+- Access Control
+- Azure
+- Community
+- Exchange Recipient Administrator
+- Groups
+- Identity Management
+- Microsoft Entra
+- Permanently Eligible
+- PIM
+- Privileged Identity Management
+- Role Assignments
+- SharePoint Administrator
+- User Administrator
+section_names:
+- azure
 ---
-
 velkkor is troubleshooting an issue in Azure PIM where the "permanently eligible" option for group administrator roles is missing when assigning users, despite it being available previously.<!--excerpt_end-->
 
 ## Issue Description

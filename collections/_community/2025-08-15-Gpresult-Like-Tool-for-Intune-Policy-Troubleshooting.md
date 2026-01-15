@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Gpresult-Like Tool for Intune Policy Troubleshooting"
-description: "This article by Jonas Ohmsen introduces IntuneDebug, a PowerShell module designed to help troubleshoot Microsoft Intune policies by generating HTML reports similar to the classic GPresult tool used with on-premises Group Policy Objects. The article explains module installation, usage scenarios, available report sections, where the underlying data comes from, and tips for administration. Key topics include parsing Intune Management logs, using MdmDiagnosticsTool, and handling both device and user policy scopes."
-author: "jonasoh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Gpresult-Like Tool for Intune Policy Troubleshooting
+author: jonasoh
+canonical_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 07:50:53 +00:00
-permalink: "/2025-08-15-Gpresult-Like-Tool-for-Intune-Policy-Troubleshooting.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Administrative Scripts", "Azure", "Coding", "Community", "Defender", "Device Management", "EnterpriseDesktopAppManagement", "Get MDMPolicyReport", "HTML Reporting", "Intune Management Extension", "IntuneDebug", "LAPS", "MDM", "MDMDiagnosticsTool", "MDMDiagReport", "Microsoft Intune", "Policy Troubleshooting", "PolicyScope", "PowerShell", "Registry", "Security", "Win32Apps", "Windows"]
-tags_normalized: ["administrative scripts", "azure", "coding", "community", "defender", "device management", "enterprisedesktopappmanagement", "get mdmpolicyreport", "html reporting", "intune management extension", "intunedebug", "laps", "mdm", "mdmdiagnosticstool", "mdmdiagreport", "microsoft intune", "policy troubleshooting", "policyscope", "powershell", "registry", "security", "win32apps", "windows"]
+permalink: /coding/community/Gpresult-Like-Tool-for-Intune-Policy-Troubleshooting
+tags:
+- Administrative Scripts
+- Azure
+- Coding
+- Community
+- Defender
+- Device Management
+- EnterpriseDesktopAppManagement
+- Get MDMPolicyReport
+- HTML Reporting
+- Intune Management Extension
+- IntuneDebug
+- LAPS
+- MDM
+- MDMDiagnosticsTool
+- MDMDiagReport
+- Microsoft Intune
+- Policy Troubleshooting
+- PolicyScope
+- PowerShell
+- Registry
+- Security
+- Win32Apps
+- Windows
+section_names:
+- azure
+- coding
+- security
 ---
-
 Jonas Ohmsen presents a PowerShell module called IntuneDebug aimed at simplifying Microsoft Intune policy troubleshooting for Windows devices, with step-by-step usage details and reporting techniques.<!--excerpt_end-->
 
 # Gpresult-Like Tool for Intune Policy Troubleshooting

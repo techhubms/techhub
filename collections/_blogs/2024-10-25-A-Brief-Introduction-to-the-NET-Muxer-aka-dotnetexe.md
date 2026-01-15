@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "A Brief Introduction to the .NET Muxer (aka dotnet.exe)"
-description: "Steve Gordon provides an in-depth look at the .NET muxer (dotnet.exe), explaining its function as a multiplexer for .NET SDK and runtime versions. This post explores the internals, tracing functionality, and initial execution flow, setting the stage for a series on deep .NET infrastructure insights."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+layout: post
+title: A Brief Introduction to the .NET Muxer (aka dotnet.exe)
+author: Steve Gordon
+canonical_url: https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer
+viewing_mode: external
+feed_name: Steve Gordon's Blog
+feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-10-25 08:57:43 +00:00
-permalink: "/2024-10-25-A-Brief-Introduction-to-the-NET-Muxer-aka-dotnetexe.html"
-categories: ["Coding"]
-tags: [".NET", "Apphost", "Blogs", "CLI", "Coding", "CoreHost", "Corehost.cpp", "Debugging", "Dotnet.exe", "Execution Model", "Internals", "Microsoft", "Muxer", "Native Code", "Performance", "Runtime", "SDK", "Tracing"]
-tags_normalized: ["dotnet", "apphost", "blogs", "cli", "coding", "corehost", "corehostdotcpp", "debugging", "dotnetdotexe", "execution model", "internals", "microsoft", "muxer", "native code", "performance", "runtime", "sdk", "tracing"]
+permalink: /coding/blogs/A-Brief-Introduction-to-the-NET-Muxer-aka-dotnetexe
+tags:
+- .NET
+- Apphost
+- Blogs
+- CLI
+- Coding
+- CoreHost
+- Corehost.cpp
+- Debugging
+- Dotnet.exe
+- Execution Model
+- Internals
+- Microsoft
+- Muxer
+- Native Code
+- Performance
+- Runtime
+- SDK
+- Tracing
+section_names:
+- coding
 ---
-
 In this introduction by Steve Gordon, readers gain foundational knowledge of the .NET muxer (dotnet.exe), an essential component of the .NET ecosystem. Gordon's thorough exploration unveils the inner workings and key mechanisms underpinning the .NET command-line interface.<!--excerpt_end-->
 
 # A Brief Introduction to the .NET Muxer (aka dotnet.exe)

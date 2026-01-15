@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "SQL Server on Linux Now Supports cgroup v2"
-description: "This post details the new support for cgroup v2 in SQL Server 2025 preview and SQL Server 2022 CU 20, enabling improved memory and CPU resource management for Linux-based containerized deployments. Covering implementation steps, problem analysis, and real-world effects on Kubernetes, this content is valuable for DBAs and platform engineers."
-author: "Attinder_Pal_Singh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: SQL Server on Linux Now Supports cgroup v2
+author: Attinder_Pal_Singh
+canonical_url: https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 12:30:37 +00:00
-permalink: "/2025-08-12-SQL-Server-on-Linux-Now-Supports-cgroup-v2.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Cgroup", "Cgroup V2", "Community", "Container Orchestration", "Containerization", "DevOps", "Docker", "Errorlog", "Kubernetes", "Linux", "Memory Limits", "OpenShift", "Platform Engineering", "Quality Of Service", "Resource Enforcement", "Resource Management", "SQL Server", "SQL Server CU 20", "SQL Server On Linux"]
-tags_normalized: ["aks", "azure", "cgroup", "cgroup v2", "community", "container orchestration", "containerization", "devops", "docker", "errorlog", "kubernetes", "linux", "memory limits", "openshift", "platform engineering", "quality of service", "resource enforcement", "resource management", "sql server", "sql server cu 20", "sql server on linux"]
+permalink: /azure/community/SQL-Server-on-Linux-Now-Supports-cgroup-v2
+tags:
+- AKS
+- Azure
+- Cgroup
+- Cgroup V2
+- Community
+- Container Orchestration
+- Containerization
+- DevOps
+- Docker
+- Errorlog
+- Kubernetes
+- Linux
+- Memory Limits
+- OpenShift
+- Platform Engineering
+- Quality Of Service
+- Resource Enforcement
+- Resource Management
+- SQL Server
+- SQL Server CU 20
+- SQL Server On Linux
+section_names:
+- azure
+- devops
 ---
-
 Attinder Pal Singh gives a practical look at cgroup v2 support in SQL Server 2025 preview and SQL Server 2022 CU 20 on Linux, helping DBAs and engineers adopt better resource controls and avoid OOM errors on Kubernetes and other container platforms.<!--excerpt_end-->
 
 # Smarter Resource Management for Containers and Beyond

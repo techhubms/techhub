@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric"
-description: "This Microsoft Fabric Blog post introduces the Model Context Protocol (MCP) for Fabric, an open-source, developer-oriented framework that standardizes API context, item schemas, and best practices for AI-assisted code and item generation. Learn how Fabric MCP enables secure, local code generation, reduces onboarding time, and powers cross-platform AI workflows within data analytics and Microsoft Fabric environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 15:00:00 +00:00
-permalink: "/2025-10-02-Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: [".NET 9", "AI", "AI Assisted Development", "API Integration", "Azure", "Coding", "Data Analytics", "Dev Box", "Fabric API", "KQL", "Lakehouse", "MCP", "Microsoft Fabric", "ML", "News", "Open Source", "OpenAI", "Pipelines", "Python", "REST API", "Semantic Models", "SQL Server", "VS Code", "Workflow Automation"]
-tags_normalized: ["dotnet 9", "ai", "ai assisted development", "api integration", "azure", "coding", "data analytics", "dev box", "fabric api", "kql", "lakehouse", "mcp", "microsoft fabric", "ml", "news", "open source", "openai", "pipelines", "python", "rest api", "semantic models", "sql server", "vs code", "workflow automation"]
+permalink: /ai/news/Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric
+tags:
+- .NET 9
+- AI
+- AI Assisted Development
+- API Integration
+- Azure
+- Coding
+- Data Analytics
+- Dev Box
+- Fabric API
+- KQL
+- Lakehouse
+- MCP
+- Microsoft Fabric
+- ML
+- News
+- Open Source
+- OpenAI
+- Pipelines
+- Python
+- REST API
+- Semantic Models
+- SQL Server
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 This article by Microsoft Fabric Blog introduces the Fabric MCP (Preview), a developer-centric, open-source protocol empowering AI agents and coders with secure access to Microsoft Fabric APIs, schemas, and best practices for streamlined data analytics development.<!--excerpt_end-->
 
 # Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric

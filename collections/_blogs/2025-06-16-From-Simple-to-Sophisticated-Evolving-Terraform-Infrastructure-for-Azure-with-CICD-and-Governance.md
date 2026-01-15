@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "From Simple to Sophisticated: Evolving Terraform Infrastructure for Azure with CI/CD and Governance"
-description: "Hidde de Smet details a practical evolution of Terraform infrastructure on Azure, guiding teams from basic scripts to modular, automated, and governed solutions. The blog covers modularization, naming standards, environment strategies, CI/CD pipelines, testing, policy as code, cost management, and monitoring, offering actionable lessons and a phased roadmap."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/terraform-evolution"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'From Simple to Sophisticated: Evolving Terraform Infrastructure for Azure with CI/CD and Governance'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/terraform-evolution
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-16 05:00:00 +00:00
-permalink: "/2025-06-16-From-Simple-to-Sophisticated-Evolving-Terraform-Infrastructure-for-Azure-with-CICD-and-Governance.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Blogs", "CI/CD", "Cost Management", "DevOps", "Drift Detection", "Environment Separation", "GitHub", "GitHub Actions", "Governance", "IaC", "Modules", "Naming Conventions", "Policy as Code", "Terraform", "Terratest", "Testing"]
-tags_normalized: ["automation", "azure", "blogs", "cislashcd", "cost management", "devops", "drift detection", "environment separation", "github", "github actions", "governance", "iac", "modules", "naming conventions", "policy as code", "terraform", "terratest", "testing"]
+permalink: /azure/blogs/From-Simple-to-Sophisticated-Evolving-Terraform-Infrastructure-for-Azure-with-CICD-and-Governance
+tags:
+- Automation
+- Azure
+- Blogs
+- CI/CD
+- Cost Management
+- DevOps
+- Drift Detection
+- Environment Separation
+- GitHub
+- GitHub Actions
+- Governance
+- IaC
+- Modules
+- Naming Conventions
+- Policy as Code
+- Terraform
+- Terratest
+- Testing
+section_names:
+- azure
+- devops
 ---
-
 In this comprehensive guide, Hidde de Smet documents the step-by-step evolution of Terraform infrastructure for Azure. The post provides real-world insights and actionable patterns for teams modernizing their infrastructure-as-code, from basic setup to advanced automation and governance.<!--excerpt_end-->
 
 # From Simple to Sophisticated: Terraform Infrastructure Evolution

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Modeling Your Environment with Aspire"
-description: "David Fowler explains how Aspire enables structured modeling of software environments, making application topology explicit, tool-friendly, and automatable. With Aspire, developers can clearly define dependencies, configurations, and resources for both new and legacy projects, improving onboarding, automation, and reliability."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/modeling-your-environment-with-aspire-24e986752485?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+layout: post
+title: Modeling Your Environment with Aspire
+author: David Fowler
+canonical_url: https://medium.com/@davidfowl/modeling-your-environment-with-aspire-24e986752485?source=rss-8163234c98f0------2
+viewing_mode: external
+feed_name: David Fowler's Blog
+feed_url: https://medium.com/feed/@davidfowl
 date: 2025-04-07 15:32:09 +00:00
-permalink: "/2025-04-07-Modeling-Your-Environment-with-Aspire.html"
-categories: ["Coding", "DevOps"]
-tags: ["Application Modeling", "Application Topology", "Aspire", "Blogs", "C#", "Cloud Computing", "Coding", "Containerization", "Contract First Development", "DevOps", "DevOps Automation", "Environment Configuration", "IaC", "JavaScript Frontend", "PostgreSQL", "Redis", "Software Dependencies", "Software Development", "Tooling"]
-tags_normalized: ["application modeling", "application topology", "aspire", "blogs", "csharp", "cloud computing", "coding", "containerization", "contract first development", "devops", "devops automation", "environment configuration", "iac", "javascript frontend", "postgresql", "redis", "software dependencies", "software development", "tooling"]
+permalink: /coding/blogs/Modeling-Your-Environment-with-Aspire
+tags:
+- Application Modeling
+- Application Topology
+- Aspire
+- Blogs
+- C#
+- Cloud Computing
+- Coding
+- Containerization
+- Contract First Development
+- DevOps
+- DevOps Automation
+- Environment Configuration
+- IaC
+- JavaScript Frontend
+- PostgreSQL
+- Redis
+- Software Dependencies
+- Software Development
+- Tooling
+section_names:
+- coding
+- devops
 ---
-
 David Fowler discusses how Aspire transforms application modeling by making environment configuration and dependencies programmable, enabling automation and improved DevOps practices.<!--excerpt_end-->
 
 # Modeling Your Environment with Aspire

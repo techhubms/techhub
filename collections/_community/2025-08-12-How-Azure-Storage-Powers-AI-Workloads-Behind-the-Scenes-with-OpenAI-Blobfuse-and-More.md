@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How Azure Storage Powers AI Workloads: Behind the Scenes with OpenAI, Blobfuse & More"
-description: "This episode of E2E: 10-minute Drill features a discussion with Vamshi from the Azure Storage team about how Azure Blob Storage supports large-scale AI workloads. Insights include Microsoft's collaboration with OpenAI, innovations like Blobfuse2, and guidance for securely bringing enterprise data to AI services on Azure."
-author: "Pierre_Roman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/itops-talk-blog/how-azure-storage-powers-ai-workloads-behind-the-scenes-with/ba-p/4442540"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'How Azure Storage Powers AI Workloads: Behind the Scenes with OpenAI, Blobfuse & More'
+author: Pierre_Roman
+canonical_url: https://techcommunity.microsoft.com/t5/itops-talk-blog/how-azure-storage-powers-ai-workloads-behind-the-scenes-with/ba-p/4442540
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 14:33:42 +00:00
-permalink: "/2025-08-12-How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Workloads", "Azure", "Azure Blob Storage", "Azure OpenAI Service", "Azure Scaled Accounts", "Azure Storage", "Blobfuse2", "Cloud Infrastructure", "Community", "Data Management", "Data Pipelines", "Enterprise AI", "Exabyte Scale", "LLM Training", "Microsoft AI", "OpenAI", "Role Based Access Control"]
-tags_normalized: ["ai", "ai infrastructure", "ai workloads", "azure", "azure blob storage", "azure openai service", "azure scaled accounts", "azure storage", "blobfuse2", "cloud infrastructure", "community", "data management", "data pipelines", "enterprise ai", "exabyte scale", "llm training", "microsoft ai", "openai", "role based access control"]
+permalink: /ai/community/How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More
+tags:
+- AI
+- AI Infrastructure
+- AI Workloads
+- Azure
+- Azure Blob Storage
+- Azure OpenAI Service
+- Azure Scaled Accounts
+- Azure Storage
+- Blobfuse2
+- Cloud Infrastructure
+- Community
+- Data Management
+- Data Pipelines
+- Enterprise AI
+- Exabyte Scale
+- LLM Training
+- Microsoft AI
+- OpenAI
+- Role Based Access Control
+section_names:
+- ai
+- azure
 ---
-
 Pierre Roman sits down with Vamshi from the Azure Storage team to explore how Azure Blob Storage underpins AI workloads, supporting innovations with OpenAI and new data management features for enterprise developers.<!--excerpt_end-->
 
 # How Azure Storage Powers AI Workloads: Behind the Scenes with OpenAI, Blobfuse & More

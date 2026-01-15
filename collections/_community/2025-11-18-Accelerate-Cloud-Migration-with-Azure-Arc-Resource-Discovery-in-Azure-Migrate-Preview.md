@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Accelerate Cloud Migration with Azure Arc Resource Discovery in Azure Migrate (Preview)"
-description: "This update introduces the Arc-based discovery feature in Azure Migrate, enabling users to assess migration readiness and savings for Arc-enabled servers and SQL instances without deploying additional on-premises infrastructure. The content guides users through creating migration projects from Azure Arc Center, leveraging business case analysis, assessments, and performance-based SKU recommendations to simplify cloud migration planning. It also provides direct links to Microsoft's documentation and quick start guides for further implementation."
-author: "snehith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/accelerate-your-cloud-migration-journey-with-azure-arc-resource/ba-p/4469975"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Accelerate Cloud Migration with Azure Arc Resource Discovery in Azure Migrate (Preview)
+author: snehith
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/accelerate-your-cloud-migration-journey-with-azure-arc-resource/ba-p/4469975
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:23:18 +00:00
-permalink: "/2025-11-18-Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview.html"
-categories: ["Azure"]
-tags: ["Arc Enabled Resources", "Azure", "Azure Arc", "Azure Hybrid Use Benefits", "Azure Migrate", "Cloud Migration", "Collector VM Extension", "Community", "Cost Savings", "Extended Security Updates", "Hybrid Cloud", "Migration Assessment", "Migration Planning", "Migration Readiness", "Reserved Instances", "SQL Server", "Sustainability Impact"]
-tags_normalized: ["arc enabled resources", "azure", "azure arc", "azure hybrid use benefits", "azure migrate", "cloud migration", "collector vm extension", "community", "cost savings", "extended security updates", "hybrid cloud", "migration assessment", "migration planning", "migration readiness", "reserved instances", "sql server", "sustainability impact"]
+permalink: /azure/community/Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview
+tags:
+- Arc Enabled Resources
+- Azure
+- Azure Arc
+- Azure Hybrid Use Benefits
+- Azure Migrate
+- Cloud Migration
+- Collector VM Extension
+- Community
+- Cost Savings
+- Extended Security Updates
+- Hybrid Cloud
+- Migration Assessment
+- Migration Planning
+- Migration Readiness
+- Reserved Instances
+- SQL Server
+- Sustainability Impact
+section_names:
+- azure
 ---
-
 Snehith from Microsoft introduces the new Arc-based discovery capability in Azure Migrate, enabling streamlined cloud migration readiness and savings analysis for your hybrid resources.<!--excerpt_end-->
 
 # Accelerate Cloud Migration with Azure Arc Resource Discovery in Azure Migrate (Preview)

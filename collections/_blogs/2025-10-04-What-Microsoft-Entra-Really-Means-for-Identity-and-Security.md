@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "What Microsoft Entra Really Means for Identity and Security"
-description: "This article dives deep into Microsoft Entra, the evolution of Azure Active Directory, and its implications for identity and security strategy. It explains Entra’s unified approach to access control, conditional access, risk-based protection, governance, strong authentication, and hybrid integration, providing actionable advice for organizations adapting to Microsoft’s new identity platform."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/what-microsoft-entra-really-means-for-identity-and-security/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: What Microsoft Entra Really Means for Identity and Security
+author: Dellenny
+canonical_url: https://dellenny.com/what-microsoft-entra-really-means-for-identity-and-security/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-04 09:32:05 +00:00
-permalink: "/2025-10-04-What-Microsoft-Entra-Really-Means-for-Identity-and-Security.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Authentication", "Azure", "Azure Active Directory", "Blogs", "Conditional Access", "Governance", "Hybrid Cloud", "Identity Management", "Identity Protection", "Managed Identities", "Microsoft", "Microsoft Entra", "Microsoft Entra ID", "Microsoft General", "Passwordless Authentication", "Security", "SOC Integration", "Workload Identity", "Zero Trust"]
-tags_normalized: ["access control", "authentication", "azure", "azure active directory", "blogs", "conditional access", "governance", "hybrid cloud", "identity management", "identity protection", "managed identities", "microsoft", "microsoft entra", "microsoft entra id", "microsoft general", "passwordless authentication", "security", "soc integration", "workload identity", "zero trust"]
+permalink: /azure/blogs/What-Microsoft-Entra-Really-Means-for-Identity-and-Security
+tags:
+- Access Control
+- Authentication
+- Azure
+- Azure Active Directory
+- Blogs
+- Conditional Access
+- Governance
+- Hybrid Cloud
+- Identity Management
+- Identity Protection
+- Managed Identities
+- Microsoft
+- Microsoft Entra
+- Microsoft Entra ID
+- Microsoft General
+- Passwordless Authentication
+- Security
+- SOC Integration
+- Workload Identity
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Dellenny delivers a comprehensive look at Microsoft Entra and its central role in modern identity and security management for cloud and hybrid environments.<!--excerpt_end-->
 
 # What Microsoft Entra Really Means for Identity and Security

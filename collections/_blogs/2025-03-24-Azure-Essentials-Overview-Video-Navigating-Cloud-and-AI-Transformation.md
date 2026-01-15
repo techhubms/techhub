@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Essentials Overview Video: Navigating Cloud & AI Transformation"
-description: "Thomas Maurer hosts an episode of the Azure Essentials Show featuring Kailyn and Ben from Azure Marketing. They discuss the Azure Essentials solution—a Microsoft program helping organizations succeed in their cloud and AI adoption efforts—highlighting challenges, key planning principles, and real-world success stories."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/03/azure-essentials-overview-video/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Azure Essentials Overview Video: Navigating Cloud & AI Transformation'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/03/azure-essentials-overview-video/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-24 14:47:03 +00:00
-permalink: "/2025-03-24-Azure-Essentials-Overview-Video-Navigating-Cloud-and-AI-Transformation.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Transformation", "Azure", "Azure Essentials", "Azure Essentials Show", "Azure Marketing", "Azure OpenAI", "Blogs", "Cloud", "Cloud Adoption", "Cloud Computing", "Cloud Migration", "Cloud Strategy", "Innovation", "IT Project Success", "Microsoft", "Microsoft Azure", "Organizational Change", "Resource Kit", "Success Stories", "Video"]
-tags_normalized: ["ai", "ai transformation", "azure", "azure essentials", "azure essentials show", "azure marketing", "azure openai", "blogs", "cloud", "cloud adoption", "cloud computing", "cloud migration", "cloud strategy", "innovation", "it project success", "microsoft", "microsoft azure", "organizational change", "resource kit", "success stories", "video"]
+permalink: /ai/blogs/Azure-Essentials-Overview-Video-Navigating-Cloud-and-AI-Transformation
+tags:
+- AI
+- AI Transformation
+- Azure
+- Azure Essentials
+- Azure Essentials Show
+- Azure Marketing
+- Azure OpenAI
+- Blogs
+- Cloud
+- Cloud Adoption
+- Cloud Computing
+- Cloud Migration
+- Cloud Strategy
+- Innovation
+- IT Project Success
+- Microsoft
+- Microsoft Azure
+- Organizational Change
+- Resource Kit
+- Success Stories
+- Video
+section_names:
+- ai
+- azure
 ---
-
 In this Azure Essentials Show episode, Thomas Maurer interviews Kailyn and Ben from Azure Marketing about Azure Essentials, Microsoft's solution to streamline cloud and AI journeys. Explore organizational strategies, challenges in AI projects, and how Azure Essentials supports real-world transformation.<!--excerpt_end-->
 
 # Azure Essentials Overview Video

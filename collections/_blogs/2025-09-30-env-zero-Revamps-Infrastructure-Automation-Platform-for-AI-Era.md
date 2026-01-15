@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "env zero Revamps Infrastructure Automation Platform for AI Era"
-description: "This article covers env zero's overhaul of their Cloud Governance Platform, introducing advanced AI-driven features including a Static Code Analyzer Agent and support for the Model Context Protocol (MCP). The platform, compatible with various infrastructure-as-code tools such as Terraform and Kubernetes, aims to streamline automation, compliance, and security for DevOps teams leveraging AI agents to optimize infrastructure management."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: env zero Revamps Infrastructure Automation Platform for AI Era
+author: Mike Vizard
+canonical_url: https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-30 14:06:39 +00:00
-permalink: "/2025-09-30-env-zero-Revamps-Infrastructure-Automation-Platform-for-AI-Era.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Anthropic", "Automation", "Blogs", "Cloud Compliance", "Cloud Computing", "Cloud Governance Platform", "Cloud Security", "CloudFormation", "Compliance", "DevOps", "DevOps Automation", "IaC", "Infrastructure Automation", "Kubernetes", "MCP", "Policy as Code", "Pulumi", "Social Facebook", "Social LinkedIn", "Social X", "Static Code Analyzer Agent", "Terraform", "Terragrunt"]
-tags_normalized: ["ai", "ai agents", "anthropic", "automation", "blogs", "cloud compliance", "cloud computing", "cloud governance platform", "cloud security", "cloudformation", "compliance", "devops", "devops automation", "iac", "infrastructure automation", "kubernetes", "mcp", "policy as code", "pulumi", "social facebook", "social linkedin", "social x", "static code analyzer agent", "terraform", "terragrunt"]
+permalink: /ai/blogs/env-zero-Revamps-Infrastructure-Automation-Platform-for-AI-Era
+tags:
+- AI
+- AI Agents
+- Anthropic
+- Automation
+- Blogs
+- Cloud Compliance
+- Cloud Computing
+- Cloud Governance Platform
+- Cloud Security
+- CloudFormation
+- Compliance
+- DevOps
+- DevOps Automation
+- IaC
+- Infrastructure Automation
+- Kubernetes
+- MCP
+- Policy as Code
+- Pulumi
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Static Code Analyzer Agent
+- Terraform
+- Terragrunt
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard examines how env zero has reimagined its Cloud Governance Platform by introducing AI-powered capabilities that enhance automation, compliance, and security for DevOps teams managing infrastructure as code.<!--excerpt_end-->
 
 # env zero Revamps Infrastructure Automation Platform for AI Era

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud"
-description: "This article introduces Azure App Testing, a new service in the Azure Portal that combines Azure Load Testing and Microsoft Playwright Testing into one scalable hub. It highlights AI-driven automation, infrastructure-free parallel test execution, and seamless integration with development workflows using tools like VS Code and GitHub Copilot Agent. The post outlines core capabilities, migration guidance, and quickstarts for leveraging Azure App Testing to accelerate application quality, regression detection, and performance optimization."
-author: "John_Stallo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-azure-app-testing-scalable-end-to-end-app-validation/ba-p/4440496"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud'
+author: John_Stallo
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-azure-app-testing-scalable-end-to-end-app-validation/ba-p/4440496
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 17:43:18 +00:00
-permalink: "/2025-08-07-Azure-App-Testing-Unified-AI-Driven-Load-and-E2E-Testing-in-the-Cloud.html"
-categories: ["AI", "GitHub Copilot", "Azure", "DevOps", "Coding"]
-tags: ["AI", "AI Driven Testing", "Azure", "Azure App Testing", "Azure Load Testing", "CI/CD", "Cloud Testing", "Coding", "Community", "Continuous Integration", "Cross Browser Testing", "DevOps", "End To End Testing", "GitHub Copilot", "GitHub Copilot Agent", "Infrastructure Automation", "JMeter", "Load Testing", "Locust", "Microsoft Azure", "Microsoft Playwright Testing", "Performance Testing", "Playwright Workspaces", "Test Automation", "Test Parallelization", "VS Code"]
-tags_normalized: ["ai", "ai driven testing", "azure", "azure app testing", "azure load testing", "cislashcd", "cloud testing", "coding", "community", "continuous integration", "cross browser testing", "devops", "end to end testing", "github copilot", "github copilot agent", "infrastructure automation", "jmeter", "load testing", "locust", "microsoft azure", "microsoft playwright testing", "performance testing", "playwright workspaces", "test automation", "test parallelization", "vs code"]
+permalink: /github-copilot/community/Azure-App-Testing-Unified-AI-Driven-Load-and-E2E-Testing-in-the-Cloud
+tags:
+- AI
+- AI Driven Testing
+- Azure
+- Azure App Testing
+- Azure Load Testing
+- CI/CD
+- Cloud Testing
+- Coding
+- Community
+- Continuous Integration
+- Cross Browser Testing
+- DevOps
+- End To End Testing
+- GitHub Copilot
+- GitHub Copilot Agent
+- Infrastructure Automation
+- JMeter
+- Load Testing
+- Locust
+- Microsoft Azure
+- Microsoft Playwright Testing
+- Performance Testing
+- Playwright Workspaces
+- Test Automation
+- Test Parallelization
+- VS Code
+section_names:
+- ai
+- github-copilot
+- azure
+- devops
+- coding
 ---
-
 John_Stallo details Azure App Testing, a unified Azure Portal service enabling AI-powered load and end-to-end test automation. Learn how developers can use Playwright, JMeter, Locust, GitHub Copilot, and Azure-native scaling for application quality and performance.<!--excerpt_end-->
 
 # Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud

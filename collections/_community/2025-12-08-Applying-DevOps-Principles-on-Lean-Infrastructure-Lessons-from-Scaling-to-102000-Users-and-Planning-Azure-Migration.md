@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Applying DevOps Principles on Lean Infrastructure: Lessons from Scaling to 102,000 Users and Planning Azure Migration"
-description: "This detailed community post by onoja5, a Microsoft Certified DevOps Engineer, chronicles a real-world journey of scaling a social commerce platform from West Africa on a single VPS using DevOps practices, with a forward-looking plan to migrate to Azure in 2026. The content covers infrastructure details, cost management challenges, phased migration strategy, and specific questions about migrating DevOps workflows and cloud architecture. It provides insight into operational optimizations, migration anxieties, and requests advice from those who have gone through self-hosted to Azure migration."
-author: "onoja5"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/applying-devops-principles-on-lean-infrastructure-lessons-from/m-p/4476015#M22362"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Applying DevOps Principles on Lean Infrastructure: Lessons from Scaling to 102,000 Users and Planning Azure Migration'
+author: onoja5
+canonical_url: https://techcommunity.microsoft.com/t5/azure/applying-devops-principles-on-lean-infrastructure-lessons-from/m-p/4476015#M22362
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 11:27:19 +00:00
-permalink: "/2025-12-08-Applying-DevOps-Principles-on-Lean-Infrastructure-Lessons-from-Scaling-to-102000-Users-and-Planning-Azure-Migration.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Insights", "Azure", "Azure App Service", "Azure Blob Storage", "Azure Cache For Redis", "Azure CDN", "Azure Database For MySQL", "Azure Functions", "Azure Migration", "CI/CD Pipeline", "Cloud Cost Management", "Community", "DevOps", "GitHub Actions", "Hybrid Cloud", "IaC", "Laravel", "Monitoring And Observability", "MySQL", "PHP", "Redis", "Scaling", "Startup"]
-tags_normalized: ["application insights", "azure", "azure app service", "azure blob storage", "azure cache for redis", "azure cdn", "azure database for mysql", "azure functions", "azure migration", "cislashcd pipeline", "cloud cost management", "community", "devops", "github actions", "hybrid cloud", "iac", "laravel", "monitoring and observability", "mysql", "php", "redis", "scaling", "startup"]
+permalink: /azure/community/Applying-DevOps-Principles-on-Lean-Infrastructure-Lessons-from-Scaling-to-102000-Users-and-Planning-Azure-Migration
+tags:
+- Application Insights
+- Azure
+- Azure App Service
+- Azure Blob Storage
+- Azure Cache For Redis
+- Azure CDN
+- Azure Database For MySQL
+- Azure Functions
+- Azure Migration
+- CI/CD Pipeline
+- Cloud Cost Management
+- Community
+- DevOps
+- GitHub Actions
+- Hybrid Cloud
+- IaC
+- Laravel
+- Monitoring And Observability
+- MySQL
+- PHP
+- Redis
+- Scaling
+- Startup
+section_names:
+- azure
+- devops
 ---
-
 onoja5, a Microsoft Certified DevOps Engineer, shares insights from scaling a social commerce platform to over 100K users on VPS, detailing DevOps tactics and planning a multi-phase Azure migration while seeking advice from the Azure community.<!--excerpt_end-->
 
 # Applying DevOps Principles on Lean Infrastructure: Lessons from Scaling to 102,000 Users and Planning Azure Migration

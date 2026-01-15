@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Enterprise Cloud Data Residency Now Available in Japan"
-description: "This news update announces the general availability of GitHub Enterprise Cloud with data residency options in Japan. Enterprise customers can now choose to store their code and repository data within Japan, leveraging Microsoft's Azure cloud infrastructure for performance and compliance. The update provides guidance for organizations with regional data storage needs and highlights integration with GitHub's DevOps platform."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Enterprise Cloud Data Residency Now Available in Japan
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 17:00:58 +00:00
-permalink: "/2025-12-18-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-in-Japan.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Cloud Security", "Compliance", "Data Residency", "DevOps", "DevOps Platform", "Enterprise Management Tools", "Enterprise SaaS", "GitHub Enterprise Cloud", "Japan", "Microsoft Azure", "Multi Tenant Hosting", "News", "Regulatory Requirements", "Repository Management", "Security"]
-tags_normalized: ["azure", "cloud security", "compliance", "data residency", "devops", "devops platform", "enterprise management tools", "enterprise saas", "github enterprise cloud", "japan", "microsoft azure", "multi tenant hosting", "news", "regulatory requirements", "repository management", "security"]
+permalink: /azure/news/GitHub-Enterprise-Cloud-Data-Residency-Now-Available-in-Japan
+tags:
+- Azure
+- Cloud Security
+- Compliance
+- Data Residency
+- DevOps
+- DevOps Platform
+- Enterprise Management Tools
+- Enterprise SaaS
+- GitHub Enterprise Cloud
+- Japan
+- Microsoft Azure
+- Multi Tenant Hosting
+- News
+- Regulatory Requirements
+- Repository Management
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 Allison announces the general availability of GitHub Enterprise Cloud data residency in Japan, enabling organizations to store code within Japanese data centers on Microsoft Azure, supporting compliance and regional requirements.<!--excerpt_end-->
 
 # GitHub Enterprise Cloud Data Residency in Japan Now Generally Available

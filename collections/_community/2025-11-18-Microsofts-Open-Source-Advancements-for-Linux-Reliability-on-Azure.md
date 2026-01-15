@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft’s Open-Source Advancements for Linux Reliability on Azure"
-description: "This article from KashanK details how Microsoft’s Linux Systems Group is driving reliability, performance, and security improvements for platforms on Azure through open-source contributions. It covers kernel enhancements, networking performance for AI, security hardening, and ecosystem partnerships that benefit the broader cloud and Linux communities."
-author: "KashanK"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/innovations-and-strengthening-platforms-reliability-through-open/ba-p/4468172"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Microsoft’s Open-Source Advancements for Linux Reliability on Azure
+author: KashanK
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/innovations-and-strengthening-platforms-reliability-through-open/ba-p/4468172
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 06:42:34 +00:00
-permalink: "/2025-11-18-Microsofts-Open-Source-Advancements-for-Linux-Reliability-on-Azure.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["ARM64", "Azure", "Cloud Hypervisor", "Cloud LTS", "Coding", "Community", "Confidential Computing", "Container Security", "DevOps", "Hyper V", "Kernel Updates", "Kexec HandOver", "Linux Kernel", "Linux Systems Group", "LISA", "MANA Network Driver", "Mshv Vtl Driver", "Networking Optimization", "OP TEE", "Rust VMM", "Secure Boot", "Security", "Systemd", "Virtual File System"]
-tags_normalized: ["arm64", "azure", "cloud hypervisor", "cloud lts", "coding", "community", "confidential computing", "container security", "devops", "hyper v", "kernel updates", "kexec handover", "linux kernel", "linux systems group", "lisa", "mana network driver", "mshv vtl driver", "networking optimization", "op tee", "rust vmm", "secure boot", "security", "systemd", "virtual file system"]
+permalink: /coding/community/Microsofts-Open-Source-Advancements-for-Linux-Reliability-on-Azure
+tags:
+- ARM64
+- Azure
+- Cloud Hypervisor
+- Cloud LTS
+- Coding
+- Community
+- Confidential Computing
+- Container Security
+- DevOps
+- Hyper V
+- Kernel Updates
+- Kexec HandOver
+- Linux Kernel
+- Linux Systems Group
+- LISA
+- MANA Network Driver
+- Mshv Vtl Driver
+- Networking Optimization
+- OP TEE
+- Rust VMM
+- Secure Boot
+- Security
+- Systemd
+- Virtual File System
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 KashanK explains Microsoft’s latest open-source work to enhance Linux reliability and security on Azure. These efforts support developers and cloud engineers using Linux platforms at scale.<!--excerpt_end-->
 
 # Microsoft’s Open-Source Advancements for Linux Reliability on Azure

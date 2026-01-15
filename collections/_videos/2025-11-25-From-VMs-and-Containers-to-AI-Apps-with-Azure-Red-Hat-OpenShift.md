@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "From VMs and Containers to AI Apps with Azure Red Hat OpenShift"
-description: "This session from Microsoft Ignite 2025 explores how organizations can streamline operations and reduce costs by leveraging Red Hat OpenShift Virtualization on Azure Red Hat OpenShift (ARO), running containers and virtual machines on a unified platform. It also shares a real-world AI transformation story from Banco Bradesco, highlighting the use of Microsoft Foundry on ARO for secure, scalable enterprise AI innovation. The talk covers business challenges, migration strategies, virtualization demos, and lessons on building robust, governable AI solutions on Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=CV1SP3VN_dA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: From VMs and Containers to AI Apps with Azure Red Hat OpenShift
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=CV1SP3VN_dA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:54:09 +00:00
-permalink: "/2025-11-25-From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Strategy", "ARO", "Azure", "Azure Red Hat OpenShift", "Banco Bradesco", "Cluster Administration", "Containers", "Enterprise AI", "Governance", "Hybrid Cloud", "Kubernetes", "Microsoft Azure", "Microsoft Foundry", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Red Hat OpenShift Virtualization", "Videos", "Virtual Machines"]
-tags_normalized: ["ai", "ai strategy", "aro", "azure", "azure red hat openshift", "banco bradesco", "cluster administration", "containers", "enterprise ai", "governance", "hybrid cloud", "kubernetes", "microsoft azure", "microsoft foundry", "migrateandmodernizeyourestate", "migration", "msignite", "red hat openshift virtualization", "videos", "virtual machines"]
+permalink: /ai/videos/From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift
+tags:
+- AI
+- AI Strategy
+- ARO
+- Azure
+- Azure Red Hat OpenShift
+- Banco Bradesco
+- Cluster Administration
+- Containers
+- Enterprise AI
+- Governance
+- Hybrid Cloud
+- Kubernetes
+- Microsoft Azure
+- Microsoft Foundry
+- Migrateandmodernizeyourestate
+- Migration
+- MSIgnite
+- Red Hat OpenShift Virtualization
+- Videos
+- Virtual Machines
+section_names:
+- ai
+- azure
 ---
-
 Presented by Microsoft Events, this session shows how organizations use Azure Red Hat OpenShift to simplify operations and drive AI innovation at scale, featuring lessons and real-world examples from Banco Bradesco.<!--excerpt_end-->
 
 {% youtube CV1SP3VN_dA %}

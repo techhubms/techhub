@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI for Energy: From Advanced Operations to Emissions Management"
-description: "This session from Microsoft Ignite 2025 explores how energy companies are leveraging Microsoft AI tools—including agentic AI and copilots—to address decarbonization, improve operational efficiency, and expand predictive capabilities. Real-world use cases, such as methane emissions detection and digital twins for grid control, are discussed alongside Microsoft’s industry partnerships."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_oqaVtuzy9E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI for Energy: From Advanced Operations to Emissions Management'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_oqaVtuzy9E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:18:13 +00:00
-permalink: "/2025-11-21-AI-for-Energy-From-Advanced-Operations-to-Emissions-Management.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Adoption", "Autonomous Grid", "Compliance Workflows", "Computer Vision", "Copilot", "Copilotandagentsatwork", "Decarbonization", "Digital Twins", "Energy Industry", "Generative AI", "Methane Emissions", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Predictive Maintenance", "Transformer Monitoring", "Utility Industry", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "autonomous grid", "compliance workflows", "computer vision", "copilot", "copilotandagentsatwork", "decarbonization", "digital twins", "energy industry", "generative ai", "methane emissions", "microsoft ignite", "msignite", "operational efficiency", "predictive maintenance", "transformer monitoring", "utility industry", "videos"]
+permalink: /ai/videos/AI-for-Energy-From-Advanced-Operations-to-Emissions-Management
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- Autonomous Grid
+- Compliance Workflows
+- Computer Vision
+- Copilot
+- Copilotandagentsatwork
+- Decarbonization
+- Digital Twins
+- Energy Industry
+- Generative AI
+- Methane Emissions
+- Microsoft Ignite
+- MSIgnite
+- Operational Efficiency
+- Predictive Maintenance
+- Transformer Monitoring
+- Utility Industry
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents a session at Ignite 2025 led by Todd Inlander and Hany Soliman, showcasing how Microsoft’s AI tools, including agentic AI and Copilot, are driving innovation and sustainability in the energy sector.<!--excerpt_end-->
 
 {% youtube _oqaVtuzy9E %}

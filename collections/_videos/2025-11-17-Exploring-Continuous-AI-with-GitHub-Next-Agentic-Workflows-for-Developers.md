@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Exploring Continuous AI with GitHub Next: Agentic Workflows for Developers"
-description: "This video introduces 'Continuous AI,' a new approach in software development where AI agents work continuously within GitHub workflows, automating tasks that typically require human judgement. The speakers from GitHub Next demonstrate experimental practices, showcase live demos, and present their open-source tool, Agentic Workflows, which allows teams to build and try agentic automation. The session provides actionable insights for developers interested in integrating LLMs and agents into CI pipelines and improving code management."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=V-sdNfETPYQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Exploring Continuous AI with GitHub Next: Agentic Workflows for Developers'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=V-sdNfETPYQ
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-17 15:01:02 +00:00
-permalink: "/2025-11-17-Exploring-Continuous-AI-with-GitHub-Next-Agentic-Workflows-for-Developers.html"
-categories: ["AI", "DevOps"]
-tags: ["Accessibility Workflows", "Agentic Workflows", "AI", "AI Agents", "CI/CD", "Continuous AI", "DevOps", "DevOps Automation", "GitHub", "GitHub Actions", "GitHub Next", "GitHub Universe", "GitHubUniverse", "Issue Triage", "LLM Integration", "Localization Automation", "Open Source Tools", "Pelli", "Performance Optimization", "Software Development", "Test Coverage", "Videos"]
-tags_normalized: ["accessibility workflows", "agentic workflows", "ai", "ai agents", "cislashcd", "continuous ai", "devops", "devops automation", "github", "github actions", "github next", "github universe", "githubuniverse", "issue triage", "llm integration", "localization automation", "open source tools", "pelli", "performance optimization", "software development", "test coverage", "videos"]
+permalink: /ai/videos/Exploring-Continuous-AI-with-GitHub-Next-Agentic-Workflows-for-Developers
+tags:
+- Accessibility Workflows
+- Agentic Workflows
+- AI
+- AI Agents
+- CI/CD
+- Continuous AI
+- DevOps
+- DevOps Automation
+- GitHub
+- GitHub Actions
+- GitHub Next
+- GitHub Universe
+- GitHubUniverse
+- Issue Triage
+- LLM Integration
+- Localization Automation
+- Open Source Tools
+- Pelli
+- Performance Optimization
+- Software Development
+- Test Coverage
+- Videos
+section_names:
+- ai
+- devops
 ---
-
 GitHub's research team, featuring Eddie Aftandilian, Idan Gazit, Russell Horton, and Terkel Gjervig, present their experimental work on Continuous AI and agentic workflows for software teams.<!--excerpt_end-->
 
 {% youtube V-sdNfETPYQ %}

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions"
-description: "This video features a panel from Microsoft's Python advocacy team discussing major Python trends in 2025, learning resources, methods for staying current, challenges faced, and what they're looking forward to in 2026. Intended for Python developers and cloud engineers, the conversation highlights apply both to technical skill building and working with Python in cloud environments, especially within the Azure platform."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FiAH8Lh1pxM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=FiAH8Lh1pxM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-18 13:00:35 +00:00
-permalink: "/2025-12-18-Python-on-Azure-2025-Year-in-Review-Trends-Learning-and-Future-Directions.html"
-categories: ["Azure", "Coding"]
-tags: ["AI", "AI Trends", "Azure", "Cloud Computing", "Cloud Development", "Cloud Engineering", "Coding", "Dev", "Developer", "Developer Community", "Developer Learning", "Developer Tools", "Development", "Learning Resources", "Microsoft", "Microsoft Developer", "Programming Trends", "Python", "Python Community", "Python Development", "Software Developer", "Tech", "Technology", "Videos", "Year in Review", "Yearinreview"]
-tags_normalized: ["ai", "ai trends", "azure", "cloud computing", "cloud development", "cloud engineering", "coding", "dev", "developer", "developer community", "developer learning", "developer tools", "development", "learning resources", "microsoft", "microsoft developer", "programming trends", "python", "python community", "python development", "software developer", "tech", "technology", "videos", "year in review", "yearinreview"]
+permalink: /coding/videos/Python-on-Azure-2025-Year-in-Review-Trends-Learning-and-Future-Directions
+tags:
+- AI
+- AI Trends
+- Azure
+- Cloud Computing
+- Cloud Development
+- Cloud Engineering
+- Coding
+- Dev
+- Developer
+- Developer Community
+- Developer Learning
+- Developer Tools
+- Development
+- Learning Resources
+- Microsoft
+- Microsoft Developer
+- Programming Trends
+- Python
+- Python Community
+- Python Development
+- Software Developer
+- Tech
+- Technology
+- Videos
+- Year in Review
+- Yearinreview
+section_names:
+- azure
+- coding
 ---
-
 In this year-in-review video, Gwen and Marlene from Microsoft's Python advocacy team discuss 2025's top Python trends, learning resources, and what's ahead, joined by the full team. Hosted by Microsoft Developer.<!--excerpt_end-->
 
 {% youtube FiAH8Lh1pxM %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AKS Automatic with Azure Linux: Streamlining Kubernetes Operations"
-description: "This community post introduces the general availability of AKS Automatic, a new offering on Azure Kubernetes Service (AKS) that automates the operational overhead of cluster management. By default, AKS Automatic utilizes Azure Linux for all node pools, enhancing security, performance, and compliance. The post details features like secure-by-default configuration, CVE management, built-in tooling, and unified support. It also outlines the benefits of using AKS Automatic for efficient Kubernetes deployments and provides resources for getting started."
-author: "FloraTaagen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba-p/4454284"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'AKS Automatic with Azure Linux: Streamlining Kubernetes Operations'
+author: FloraTaagen
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba-p/4454284
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 17:37:20 +00:00
-permalink: "/2025-09-16-AKS-Automatic-with-Azure-Linux-Streamlining-Kubernetes-Operations.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "AKS Automatic", "Azure", "Azure Linux", "CIS Benchmarks", "Cloud Infrastructure", "Cluster Security", "Community", "Container Workloads", "CVE Management", "DevOps", "FedRAMP", "FIPS Compliance", "Kubernetes", "Monitoring Tools", "Node Management", "Operational Efficiency", "Performance Optimization", "Scaling", "Security"]
-tags_normalized: ["aks", "aks automatic", "azure", "azure linux", "cis benchmarks", "cloud infrastructure", "cluster security", "community", "container workloads", "cve management", "devops", "fedramp", "fips compliance", "kubernetes", "monitoring tools", "node management", "operational efficiency", "performance optimization", "scaling", "security"]
+permalink: /azure/community/AKS-Automatic-with-Azure-Linux-Streamlining-Kubernetes-Operations
+tags:
+- AKS
+- AKS Automatic
+- Azure
+- Azure Linux
+- CIS Benchmarks
+- Cloud Infrastructure
+- Cluster Security
+- Community
+- Container Workloads
+- CVE Management
+- DevOps
+- FedRAMP
+- FIPS Compliance
+- Kubernetes
+- Monitoring Tools
+- Node Management
+- Operational Efficiency
+- Performance Optimization
+- Scaling
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 FloraTaagen highlights the GA release of AKS Automatic for Azure Kubernetes Service, showcasing how Azure Linux integration enhances cluster security, performance, and operational simplicity.<!--excerpt_end-->
 
 # AKS Automatic with Azure Linux: Streamlining Kubernetes Operations

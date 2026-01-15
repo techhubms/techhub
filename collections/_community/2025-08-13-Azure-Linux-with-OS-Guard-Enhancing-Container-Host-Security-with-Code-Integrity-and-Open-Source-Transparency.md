@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Linux with OS Guard: Enhancing Container Host Security with Code Integrity and Open Source Transparency"
-description: "This in-depth post explores Azure Linux with OS Guard, a locked-down, immutable container host that builds on Azure Linux to deliver advanced code integrity, immutability, and mandatory access control for cloud-native workloads. It details how features like IPE, SELinux enforcement, Secure Boot, and trusted supply chain practices provide significant security benefits for Azure Kubernetes Service users and open source contributors. Readers will learn how OS Guard mitigates modern threats, supports compliance, and welcomes community exploration via public images and upstream contributions."
-author: "Sudhanva"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-with-os-guard-immutable-container-host-with-code/ba-p/4437473"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Azure Linux with OS Guard: Enhancing Container Host Security with Code Integrity and Open Source Transparency'
+author: Sudhanva
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-with-os-guard-immutable-container-host-with-code/ba-p/4437473
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:01:17 +00:00
-permalink: "/2025-08-13-Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Linux", "Code Integrity", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS 140 3", "Immutability", "IPE", "Microsoft Azure", "Open Source", "OS Guard", "Rootkit Protection", "Secure Boot", "Security", "Security Compliance", "SELinux", "Supply Chain Security", "Trusted Launch", "Unified Kernel Images", "Vtpm"]
-tags_normalized: ["aks", "azure", "azure linux", "code integrity", "community", "container security", "dm verity", "fedramp", "fips 140 3", "immutability", "ipe", "microsoft azure", "open source", "os guard", "rootkit protection", "secure boot", "security", "security compliance", "selinux", "supply chain security", "trusted launch", "unified kernel images", "vtpm"]
+permalink: /azure/community/Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency
+tags:
+- AKS
+- Azure
+- Azure Linux
+- Code Integrity
+- Community
+- Container Security
+- Dm Verity
+- FedRAMP
+- FIPS 140 3
+- Immutability
+- IPE
+- Microsoft Azure
+- Open Source
+- OS Guard
+- Rootkit Protection
+- Secure Boot
+- Security
+- Security Compliance
+- SELinux
+- Supply Chain Security
+- Trusted Launch
+- Unified Kernel Images
+- Vtpm
+section_names:
+- azure
+- security
 ---
-
 Sudhanva presents a comprehensive overview of Azure Linux with OS Guard, highlighting Microsoft's advancements in secure, immutable container hosting and the collaborative open source approach underlying these innovations.<!--excerpt_end-->
 
 # Azure Linux with OS Guard: Immutable Container Host with Code Integrity and Open Source Transparency

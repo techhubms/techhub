@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Next Edit Suggestions (NES) Public Preview for Xcode and Eclipse"
-description: "This announcement details the public preview release of GitHub Copilot's Next Edit Suggestions (NES) for Xcode and Eclipse. NES uses current development context to recommend logical edits, enabling a faster editing workflow. It covers setup instructions, IDE integration, and how developers benefit from streamlined code editing."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-github-copilot-next-edit-suggestions-nes-now-in-public-preview-for-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Next Edit Suggestions (NES) Public Preview for Xcode and Eclipse
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-github-copilot-next-edit-suggestions-nes-now-in-public-preview-for-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:11 +00:00
-permalink: "/2025-11-18-GitHub-Copilot-Next-Edit-Suggestions-NES-Public-Preview-for-Xcode-and-Eclipse.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistance", "Code Suggestions", "Copilot", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE", "Improvement", "NES", "News", "Next Edit Suggestions", "Plugin", "Productivity", "Public Preview", "Xcode"]
-tags_normalized: ["ai", "ai assistance", "code suggestions", "copilot", "developer tools", "eclipse", "github copilot", "ide", "improvement", "nes", "news", "next edit suggestions", "plugin", "productivity", "public preview", "xcode"]
+permalink: /github-copilot/news/GitHub-Copilot-Next-Edit-Suggestions-NES-Public-Preview-for-Xcode-and-Eclipse
+tags:
+- AI
+- AI Assistance
+- Code Suggestions
+- Copilot
+- Developer Tools
+- Eclipse
+- GitHub Copilot
+- IDE
+- Improvement
+- NES
+- News
+- Next Edit Suggestions
+- Plugin
+- Productivity
+- Public Preview
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces GitHub Copilot's new Next Edit Suggestions (NES) feature, now in public preview for Xcode and Eclipse, explaining its benefits and how developers can leverage AI-powered suggestions for faster coding.<!--excerpt_end-->
 
 # GitHub Copilot Next Edit Suggestions (NES) Public Preview for Xcode and Eclipse

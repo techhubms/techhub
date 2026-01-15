@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Survey Reveals IT Teams Struggle to Scale AI Workloads Due to Automation Gaps"
-description: "This article reviews findings from a ControlMonkey survey of 300 senior IT leaders regarding the readiness of organizations to manage AI workloads at scale. It highlights challenges in IT automation, skill gaps, cloud cost management, scaling and observability, as well as the growing need for modern infrastructure management using Infrastructure as Code (IaC) tools like Terraform. The discussion focuses on the pressures caused by a rapid increase in AI-driven workload demand and the steps IT teams are taking—or failing to take—to address operational and governance issues."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-most-it-teams-not-prepared-to-manage-ai-workloads/?utm_source=rss&utm_medium=rss&utm_campaign=survey-most-it-teams-not-prepared-to-manage-ai-workloads"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals IT Teams Struggle to Scale AI Workloads Due to Automation Gaps
+author: Mike Vizard
+canonical_url: https://devops.com/survey-most-it-teams-not-prepared-to-manage-ai-workloads/?utm_source=rss&utm_medium=rss&utm_campaign=survey-most-it-teams-not-prepared-to-manage-ai-workloads
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-09 13:00:22 +00:00
-permalink: "/2025-09-09-Survey-Reveals-IT-Teams-Struggle-to-Scale-AI-Workloads-Due-to-Automation-Gaps.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Deployment Challenges", "AI Governance", "AI Operations", "AI Operations Challenges", "AI Workload Management", "AI Workload Observability", "AI Workload Scaling", "Automation Readiness", "Blogs", "Cloud Cost Management", "ControlMonkey", "DevOps", "Governance", "IaC", "IaC Tools", "Infrastructure Modernization", "Infrastructure Scalability", "IT Automation", "IT Automation Readiness", "IT Infrastructure Automation", "IT Infrastructure Modernization", "IT Skill Gaps", "Observability", "Platform Engineering", "Scalability", "Social Facebook", "Social LinkedIn", "Social X", "Terraform", "Terraform Automation"]
-tags_normalized: ["ai", "ai deployment challenges", "ai governance", "ai operations", "ai operations challenges", "ai workload management", "ai workload observability", "ai workload scaling", "automation readiness", "blogs", "cloud cost management", "controlmonkey", "devops", "governance", "iac", "iac tools", "infrastructure modernization", "infrastructure scalability", "it automation", "it automation readiness", "it infrastructure automation", "it infrastructure modernization", "it skill gaps", "observability", "platform engineering", "scalability", "social facebook", "social linkedin", "social x", "terraform", "terraform automation"]
+permalink: /ai/blogs/Survey-Reveals-IT-Teams-Struggle-to-Scale-AI-Workloads-Due-to-Automation-Gaps
+tags:
+- AI
+- AI Deployment Challenges
+- AI Governance
+- AI Operations
+- AI Operations Challenges
+- AI Workload Management
+- AI Workload Observability
+- AI Workload Scaling
+- Automation Readiness
+- Blogs
+- Cloud Cost Management
+- ControlMonkey
+- DevOps
+- Governance
+- IaC
+- IaC Tools
+- Infrastructure Modernization
+- Infrastructure Scalability
+- IT Automation
+- IT Automation Readiness
+- IT Infrastructure Automation
+- IT Infrastructure Modernization
+- IT Skill Gaps
+- Observability
+- Platform Engineering
+- Scalability
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Terraform
+- Terraform Automation
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard shares insights from a ControlMonkey survey, highlighting the preparedness gaps IT teams face in scaling and managing AI workloads, and the importance of automation and infrastructure as code.<!--excerpt_end-->
 
 # Survey: Most IT Teams Not Prepared to Manage AI Workloads

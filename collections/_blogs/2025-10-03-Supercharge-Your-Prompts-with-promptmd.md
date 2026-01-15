@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Supercharge Your Prompts with .prompt.md"
-description: "This post explains how developers can leverage the .prompt.md file in a code repository to store reusable, project-specific instructions for GitHub Copilot. It covers practical examples such as API documentation prompts, unit test generation, and refactoring guides, plus tips for improving workflow consistency using prompt shortcuts."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Supercharge Your Prompts with .prompt.md
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-03 00:00:00 +00:00
-permalink: "/2025-10-03-Supercharge-Your-Prompts-with-promptmd.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".prompt.md", "AI", "API Documentation", "Blogs", "Code Quality", "Coding", "Copilot Chat", "Developer Workflow", "GitHub Copilot", "Jest", "Productivity", "Prompt Engineering", "React", "Refactoring", "TypeScript", "Unit Testing"]
-tags_normalized: ["dotpromptdotmd", "ai", "api documentation", "blogs", "code quality", "coding", "copilot chat", "developer workflow", "github copilot", "jest", "productivity", "prompt engineering", "react", "refactoring", "typescript", "unit testing"]
+permalink: /github-copilot/blogs/Supercharge-Your-Prompts-with-promptmd
+tags:
+- .prompt.md
+- AI
+- API Documentation
+- Blogs
+- Code Quality
+- Coding
+- Copilot Chat
+- Developer Workflow
+- GitHub Copilot
+- Jest
+- Productivity
+- Prompt Engineering
+- React
+- Refactoring
+- TypeScript
+- Unit Testing
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shows how to supercharge developer workflows by using .prompt.md files with GitHub Copilot, making prompts reusable and coding more efficient.<!--excerpt_end-->
 
 # Supercharge Your Prompts with .prompt.md

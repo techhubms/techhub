@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Secure Data Movement in Microsoft Fabric with Copy Job and VNET Data Gateway"
-description: "This announcement highlights the integration of Microsoft Fabric's Copy Job with the Virtual Network (VNET) Data Gateway. The solution enables secure, high-performance data transfers between private networks and Fabric, safeguarding data from public internet exposure and simplifying compliance for regulated industries."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-movement-with-copy-job-and-virtual-network-data-gateway/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Secure Data Movement in Microsoft Fabric with Copy Job and VNET Data Gateway
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-movement-with-copy-job-and-virtual-network-data-gateway/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 13:00:00 +00:00
-permalink: "/2025-09-30-Secure-Data-Movement-in-Microsoft-Fabric-with-Copy-Job-and-VNET-Data-Gateway.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Compliance", "Copy Job", "Data Integration", "Data Movement", "Data Privacy", "Data Security", "Enterprise Data", "ExpressRoute", "Microsoft Fabric", "ML", "Network Architecture", "News", "Operational Simplicity", "Private Network", "Security", "Virtual Network Data Gateway", "VNET"]
-tags_normalized: ["azure", "compliance", "copy job", "data integration", "data movement", "data privacy", "data security", "enterprise data", "expressroute", "microsoft fabric", "ml", "network architecture", "news", "operational simplicity", "private network", "security", "virtual network data gateway", "vnet"]
+permalink: /ml/news/Secure-Data-Movement-in-Microsoft-Fabric-with-Copy-Job-and-VNET-Data-Gateway
+tags:
+- Azure
+- Compliance
+- Copy Job
+- Data Integration
+- Data Movement
+- Data Privacy
+- Data Security
+- Enterprise Data
+- ExpressRoute
+- Microsoft Fabric
+- ML
+- Network Architecture
+- News
+- Operational Simplicity
+- Private Network
+- Security
+- Virtual Network Data Gateway
+- VNET
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces the integration of Copy Job with the Virtual Network Data Gateway, enabling secure, high-performance, and private data movement for enterprises handling sensitive workloads.<!--excerpt_end-->
 
 # Secure Your Data Movement with Copy Job and Virtual Network Data Gateway

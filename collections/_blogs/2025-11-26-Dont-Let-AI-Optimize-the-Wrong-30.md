@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Don’t Let AI Optimize the Wrong 30%"
-description: "Rene van Osnabrugge examines how organizations often focus AI on accelerating code writing for developers, which commonly addresses only a small fraction of the software development lifecycle. The article highlights greater opportunities for AI to streamline the less enjoyable, often neglected aspects such as meetings, documentation, CI/CD troubleshooting, and security handling."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/11/26/dont-let-ai-optimize-the-wrong-30/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Don’t Let AI Optimize the Wrong 30%
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/11/26/dont-let-ai-optimize-the-wrong-30/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-11-26 11:01:39 +00:00
-permalink: "/2025-11-26-Dont-Let-AI-Optimize-the-Wrong-30.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Driven Workflows", "AI For Meetings", "AI in Software Development", "AI Productivity", "AI SDLC", "AI Testing", "Blogs", "Chatgpt", "CI/CD Automation", "Developer Experience", "DevOps", "Documentation Automation", "Programming", "Requirements Management", "Security Automation", "Software Lifecycle", "Technology"]
-tags_normalized: ["ai", "ai driven workflows", "ai for meetings", "ai in software development", "ai productivity", "ai sdlc", "ai testing", "blogs", "chatgpt", "cislashcd automation", "developer experience", "devops", "documentation automation", "programming", "requirements management", "security automation", "software lifecycle", "technology"]
+permalink: /ai/blogs/Dont-Let-AI-Optimize-the-Wrong-30
+tags:
+- AI
+- AI Driven Workflows
+- AI For Meetings
+- AI in Software Development
+- AI Productivity
+- AI SDLC
+- AI Testing
+- Blogs
+- Chatgpt
+- CI/CD Automation
+- Developer Experience
+- DevOps
+- Documentation Automation
+- Programming
+- Requirements Management
+- Security Automation
+- Software Lifecycle
+- Technology
+section_names:
+- ai
+- devops
 ---
-
 Rene van Osnabrugge discusses how AI is often misapplied to speed up coding, which is only a minor part of development. He suggests AI's real power lies in reducing bottlenecks in the broader DevOps workflow.<!--excerpt_end-->
 
 # Don’t Let AI Optimize the Wrong 30%

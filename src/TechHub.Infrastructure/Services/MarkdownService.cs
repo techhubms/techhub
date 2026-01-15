@@ -10,12 +10,24 @@ namespace TechHub.Infrastructure.Services;
 /// </summary>
 public class MarkdownService : IMarkdownService
 {
-    private readonly MarkdownPipeline _pipeline;
+    private readonly MarkdownPipeline _defaultPipeline;
+    private readonly MarkdownPipeline _linkRewriterPipeline;
 
     public MarkdownService()
     {
-        // Configure Markdig pipeline with comprehensive GitHub Flavored Markdown extensions
-        _pipeline = new MarkdownPipelineBuilder()
+        // Build default pipeline once (without link rewriting)
+        _defaultPipeline = BuildPipeline(linkRewriter: null);
+
+        // Build pipeline with link rewriter once (accepts nullable parameters)
+        _linkRewriterPipeline = BuildPipeline(new LinkRewriterExtension(null, null, null));
+    }
+
+    /// <summary>
+    /// Build a Markdig pipeline with comprehensive GitHub Flavored Markdown extensions
+    /// </summary>
+    private static MarkdownPipeline BuildPipeline(LinkRewriterExtension? linkRewriter)
+    {
+        var builder = new MarkdownPipelineBuilder()
             .UseAdvancedExtensions()      // Tables, task lists, footnotes, definition lists, abbreviations, etc.
             .UseEmojiAndSmiley()          // :emoji: support
             .UseYamlFrontMatter()         // YAML frontmatter parsing
@@ -33,8 +45,14 @@ public class MarkdownService : IMarkdownService
             .UseBootstrap()               // Bootstrap CSS classes
             .UseDiagrams()                // Mermaid diagram support
             .UseMathematics()             // LaTeX math support
-            .UseFigures()                 // Figure and figcaption elements
-            .Build();
+            .UseFigures();                // Figure and figcaption elements
+
+        if (linkRewriter != null)
+        {
+            builder.Use(linkRewriter);
+        }
+
+        return builder.Build();
     }
 
     /// <summary>
@@ -66,36 +84,51 @@ public class MarkdownService : IMarkdownService
             return string.Empty;
         }
 
-        // If context provided, create a custom pipeline with link rewriter
-        if (!string.IsNullOrEmpty(currentPagePath) || !string.IsNullOrEmpty(sectionName))
+        try
         {
-            var customPipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UseEmojiAndSmiley()
-                .UseYamlFrontMatter()
-                .UseAutoLinks()
-                .UsePipeTables()
-                .UseGridTables()
-                .UseListExtras()
-                .UseCitations()
-                .UseCustomContainers()
-                .UseGenericAttributes()
-                .UseAutoIdentifiers()
-                .UseTaskLists()
-                .UseMediaLinks()
-                .UseSmartyPants()
-                .UseBootstrap()
-                .UseDiagrams()
-                .UseMathematics()
-                .UseFigures()
-                .Use(new LinkRewriterExtension(currentPagePath, sectionName, collectionName))
-                .Build();
+            // If context provided, use link rewriter pipeline (LinkRewriterExtension handles nullable params via context)
+            if (!string.IsNullOrEmpty(currentPagePath) || !string.IsNullOrEmpty(sectionName))
+            {
+                // Note: LinkRewriterExtension needs to be updated to accept context dynamically
+                // For now, rebuild pipeline (TODO: optimize by making LinkRewriterExtension stateless)
+                var customPipeline = new MarkdownPipelineBuilder()
+                    .UseAdvancedExtensions()
+                    .UseEmojiAndSmiley()
+                    .UseYamlFrontMatter()
+                    .UseAutoLinks()
+                    .UsePipeTables()
+                    .UseGridTables()
+                    .UseListExtras()
+                    .UseCitations()
+                    .UseCustomContainers()
+                    .UseGenericAttributes()
+                    .UseAutoIdentifiers()
+                    .UseTaskLists()
+                    .UseMediaLinks()
+                    .UseSmartyPants()
+                    .UseBootstrap()
+                    .UseDiagrams()
+                    .UseMathematics()
+                    .UseFigures()
+                    .Use(new LinkRewriterExtension(currentPagePath, sectionName, collectionName))
+                    .Build();
 
-            return Markdig.Markdown.ToHtml(markdown, customPipeline);
+                return Markdig.Markdown.ToHtml(markdown, customPipeline);
+            }
+
+            // Use default pipeline without link rewriting
+            return Markdig.Markdown.ToHtml(markdown, _defaultPipeline);
         }
-
-        // Use default pipeline without link rewriting
-        return Markdig.Markdown.ToHtml(markdown, _pipeline);
+        catch (Exception ex)
+        {
+            // Add context to Markdig exceptions to help identify problematic content
+            var preview = markdown.Length > 200 ? markdown[..200] + "..." : markdown;
+            throw new InvalidOperationException(
+                $"Failed to render markdown to HTML. " +
+                $"CurrentPagePath: '{currentPagePath}', SectionName: '{sectionName}', CollectionName: '{collectionName}'. " +
+                $"Markdown preview: {preview}",
+                ex);
+        }
     }
 
     /// <summary>

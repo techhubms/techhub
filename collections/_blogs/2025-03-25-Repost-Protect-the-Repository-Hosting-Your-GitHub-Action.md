@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Repost: Protect the Repository Hosting Your GitHub Action"
-description: "Jesse Houwing discusses crucial steps for securing GitHub Action repositories in light of security incidents like the changed-files hack. The post emphasizes the importance of repository protection, highlights weaknesses in tagging and branching for versioning, and references developments such as the potential move to GitHub Container Registry."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+layout: post
+title: 'Repost: Protect the Repository Hosting Your GitHub Action'
+author: Jesse Houwing
+canonical_url: https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-03-25 18:17:02 +00:00
-permalink: "/2025-03-25-Repost-Protect-the-Repository-Hosting-Your-GitHub-Action.html"
-categories: ["DevOps", "Security"]
-tags: ["Automation", "Blogs", "Changed Files Hack", "CI/CD", "DevOps", "GitHub", "GitHub Actions", "Repository Protection", "Security", "Security Best Practices", "Software Supply Chain", "Token Security", "Versioning"]
-tags_normalized: ["automation", "blogs", "changed files hack", "cislashcd", "devops", "github", "github actions", "repository protection", "security", "security best practices", "software supply chain", "token security", "versioning"]
+permalink: /devops/blogs/Repost-Protect-the-Repository-Hosting-Your-GitHub-Action
+tags:
+- Automation
+- Blogs
+- Changed Files Hack
+- CI/CD
+- DevOps
+- GitHub
+- GitHub Actions
+- Repository Protection
+- Security
+- Security Best Practices
+- Software Supply Chain
+- Token Security
+- Versioning
+section_names:
+- devops
+- security
 ---
-
 Authored by Jesse Houwing, this detailed post focuses on safeguarding GitHub Action repositories, outlining practical recommendations to counteract risks like those recently exposed in the changed-files hack.<!--excerpt_end-->
 
 ## Protect the Repository Hosting Your GitHub Action

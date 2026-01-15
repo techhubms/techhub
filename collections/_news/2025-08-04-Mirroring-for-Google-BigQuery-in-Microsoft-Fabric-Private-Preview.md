@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)"
-description: "Microsoft Fabric introduces Mirroring for Google BigQuery in Private Preview, enabling zero-ETL, near real-time replication of BigQuery tables into Fabric OneLake. This feature unifies analytics across cloud platforms and provides seamless integration with Power BI, notebooks, and pipelines, supporting cross-cloud data strategies without complex data movement."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-04 10:00:00 +00:00
-permalink: "/2025-08-04-Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Private-Preview.html"
-categories: ["ML"]
-tags: ["Cloud Data Platform", "Cross Cloud Integration", "Data Analytics", "Data Engineering", "Data Pipeline", "Data Replication", "Enterprise Security", "Google BigQuery", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Private Preview", "Real Time Analytics", "Zero ETL"]
-tags_normalized: ["cloud data platform", "cross cloud integration", "data analytics", "data engineering", "data pipeline", "data replication", "enterprise security", "google bigquery", "microsoft fabric", "ml", "news", "onelake", "power bi", "private preview", "real time analytics", "zero etl"]
+permalink: /ml/news/Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Private-Preview
+tags:
+- Cloud Data Platform
+- Cross Cloud Integration
+- Data Analytics
+- Data Engineering
+- Data Pipeline
+- Data Replication
+- Enterprise Security
+- Google BigQuery
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Power BI
+- Private Preview
+- Real Time Analytics
+- Zero ETL
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog details the Private Preview launch of Mirroring for Google BigQuery, highlighting near real-time, zero-ETL data replication and unified analytics solutions.<!--excerpt_end-->
 
 # Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Building Secure AI Agents with Microsoft’s Security Stack"
-description: "This advanced Microsoft Ignite session explores strategies, tools, and security principles for building resilient and safe agentic AI systems using Microsoft technologies. Topics include agent autonomy design, threat modeling, data protection, attack surface management, explicit agent schema design, and secure input guardrails. Tools such as Microsoft Security solutions and Microsoft Foundry are showcased to help you align with the Secure Future Initiative and implement robust governance for AI agents."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GWV7VXjYeFM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Secure AI Agents with Microsoft’s Security Stack
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=GWV7VXjYeFM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:40:30 +00:00
-permalink: "/2025-11-24-Building-Secure-AI-Agents-with-Microsofts-Security-Stack.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Risks", "AI Security", "Attack Surface", "Data Leakage", "Data Protection", "Governance", "Guardrails", "Latency Management", "Logging", "Memory Poisoning", "Microsoft Foundry", "Microsoft Security", "Monitoring", "MSIgnite", "Observability", "ProtectcloudAIplatformandapps", "Role Boundaries", "Secure Future Initiative", "Security", "Threat Modeling", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai risks", "ai security", "attack surface", "data leakage", "data protection", "governance", "guardrails", "latency management", "logging", "memory poisoning", "microsoft foundry", "microsoft security", "monitoring", "msignite", "observability", "protectcloudaiplatformandapps", "role boundaries", "secure future initiative", "security", "threat modeling", "videos"]
+permalink: /ai/videos/Building-Secure-AI-Agents-with-Microsofts-Security-Stack
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Risks
+- AI Security
+- Attack Surface
+- Data Leakage
+- Data Protection
+- Governance
+- Guardrails
+- Latency Management
+- Logging
+- Memory Poisoning
+- Microsoft Foundry
+- Microsoft Security
+- Monitoring
+- MSIgnite
+- Observability
+- ProtectcloudAIplatformandapps
+- Role Boundaries
+- Secure Future Initiative
+- Security
+- Threat Modeling
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events hosts an Ignite session featuring Neta Haiby, Harmony Mabrey, and Alyssa Ofstein, focused on building secure AI agents using Microsoft’s security tools and principles.<!--excerpt_end-->
 
 {% youtube GWV7VXjYeFM %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Microsoft Foundry: Empowering Developers with a Modular and Secure AI Agent Platform"
-description: "This announcement details the rapid evolution of Microsoft Foundry as a unified, modular AI agent stack for developers and enterprises. It covers new features in modular agent deployment, dynamic orchestration with Foundry IQ, the expansion of model choices from Anthropic, Cohere, and more, robust governance/security integrations, and tooling for building, testing, and managing large agent systems at scale. Integrations with Azure, GitHub Advanced Security, Microsoft Defender, and support for edge/Android further deepen its technical scope."
-author: "Asha Sharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-foundry-scale-innovation-on-a-modular-interoperable-and-secure-agent-stack/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Foundry: Empowering Developers with a Modular and Secure AI Agent Platform'
+author: Asha Sharma
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-foundry-scale-innovation-on-a-modular-interoperable-and-secure-agent-stack/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Microsoft-Foundry-Empowering-Developers-with-a-Modular-and-Secure-AI-Agent-Platform.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agent Orchestration", "Agent Stack", "AI", "AI + Machine Learning", "AI Agents", "Anthropic Claude", "Azure", "Azure App Service", "Cohere", "DevOps", "Enterprise AI", "Foundry Agent Service", "Foundry IQ", "GitHub Advanced Security", "Microsoft Defender", "Microsoft Foundry", "Microsoft Ignite", "Model Fine Tuning", "Model Router", "News", "Observability", "OpenAI", "Retrieval Augmented Generation", "Security", "Security And Governance"]
-tags_normalized: ["agent orchestration", "agent stack", "ai", "ai plus machine learning", "ai agents", "anthropic claude", "azure", "azure app service", "cohere", "devops", "enterprise ai", "foundry agent service", "foundry iq", "github advanced security", "microsoft defender", "microsoft foundry", "microsoft ignite", "model fine tuning", "model router", "news", "observability", "openai", "retrieval augmented generation", "security", "security and governance"]
+permalink: /ai/news/Microsoft-Foundry-Empowering-Developers-with-a-Modular-and-Secure-AI-Agent-Platform
+tags:
+- Agent Orchestration
+- Agent Stack
+- AI
+- AI + Machine Learning
+- AI Agents
+- Anthropic Claude
+- Azure
+- Azure App Service
+- Cohere
+- DevOps
+- Enterprise AI
+- Foundry Agent Service
+- Foundry IQ
+- GitHub Advanced Security
+- Microsoft Defender
+- Microsoft Foundry
+- Microsoft Ignite
+- Model Fine Tuning
+- Model Router
+- News
+- Observability
+- OpenAI
+- Retrieval Augmented Generation
+- Security
+- Security And Governance
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Asha Sharma introduces the latest updates to Microsoft Foundry, highlighting its modular agent stack, enhanced security, expanded AI model support, and powerful tools empowering developers and enterprises to build scalable, secure, and production-ready AI solutions.<!--excerpt_end-->
 
 # Microsoft Foundry: Empowering Developers with a Modular and Secure AI Agent Platform

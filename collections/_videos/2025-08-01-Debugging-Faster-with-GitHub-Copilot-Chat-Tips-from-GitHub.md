@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Debugging Faster with GitHub Copilot Chat: Tips from GitHub"
-description: "This video from GitHub demonstrates debugging techniques using GitHub Copilot chat, covering how to utilize Copilot for error messages, bug screenshots, and adding external files for context. It showcases practical ways developers can resolve issues more efficiently with Copilot's integrated chat features."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/grqNb30yuHw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Debugging Faster with GitHub Copilot Chat: Tips from GitHub'
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/grqNb30yuHw
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-01 14:01:09 +00:00
-permalink: "/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Bug Fixing", "Code Assistance", "Copilot Chat", "Debugging", "Developer Productivity", "Error Messages", "GitHub", "GitHub Copilot", "Programming", "Videos"]
-tags_normalized: ["ai", "automation", "bug fixing", "code assistance", "copilot chat", "debugging", "developer productivity", "error messages", "github", "github copilot", "programming", "videos"]
+permalink: /github-copilot/videos/Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub
+tags:
+- AI
+- Automation
+- Bug Fixing
+- Code Assistance
+- Copilot Chat
+- Debugging
+- Developer Productivity
+- Error Messages
+- GitHub
+- GitHub Copilot
+- Programming
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this GitHub video, the team shares practical debugging workflows using GitHub Copilot chat. The author, GitHub, presents ways developers can leverage Copilot to resolve code issues more quickly and efficiently.<!--excerpt_end-->
 
 {% youtube grqNb30yuHw %}

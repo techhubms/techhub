@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Repository Dashboard Preview: Centralized Search, Filtering, and Saved Queries on GitHub"
-description: "GitHub introduces its repository dashboard in preview, designed to help developers and teams quickly find, organize, and save views of their repositories. This tool aggregates all accessible repositories, supports advanced search and filtering (by language, visibility, organization), and allows saving custom queries for efficient workflow management. Relevance sorting highlights active projects, and curated views such as 'My contributions' and 'Adminable by me' make navigation easier. The dashboard currently only weighs repository activity from the last year and is evolving to further improve search accuracy and property suggestion automation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Repository Dashboard Preview: Centralized Search, Filtering, and Saved Queries on GitHub'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-11 16:10:17 +00:00
-permalink: "/2025-12-11-Repository-Dashboard-Preview-Centralized-Search-Filtering-and-Saved-Queries-on-GitHub.html"
-categories: ["DevOps"]
-tags: ["Collaboration Tools", "Collaborative Development", "Custom Views", "Developer Tools", "DevOps", "Enterprise Codebases", "Filtering", "GitHub", "News", "Relevance Sorting", "Repository Dashboard", "Saved Queries", "Search Optimization", "Workflow Management"]
-tags_normalized: ["collaboration tools", "collaborative development", "custom views", "developer tools", "devops", "enterprise codebases", "filtering", "github", "news", "relevance sorting", "repository dashboard", "saved queries", "search optimization", "workflow management"]
+permalink: /devops/news/Repository-Dashboard-Preview-Centralized-Search-Filtering-and-Saved-Queries-on-GitHub
+tags:
+- Collaboration Tools
+- Collaborative Development
+- Custom Views
+- Developer Tools
+- DevOps
+- Enterprise Codebases
+- Filtering
+- GitHub
+- News
+- Relevance Sorting
+- Repository Dashboard
+- Saved Queries
+- Search Optimization
+- Workflow Management
+section_names:
+- devops
 ---
-
 Allison explains the GitHub repository dashboard preview, showcasing how developers can efficiently find, filter, and save repository views to manage their workflows.<!--excerpt_end-->
 
 # Repository Dashboard: Find, Search, and Save Queries in Preview

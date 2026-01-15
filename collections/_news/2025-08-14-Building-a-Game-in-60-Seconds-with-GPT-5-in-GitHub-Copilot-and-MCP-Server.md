@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server"
-description: "This article by Kedasha Kerr explores how the release of GPT-5 in GitHub Copilot and the new Model Context Protocol (MCP) server are streamlining software development. It includes hands-on examples: building a real game from a natural language prompt, automating GitHub repository creation, and issue management—all within VS Code using natural language and advanced AI. Ideal for developers looking to leverage the latest AI-driven tools, the post provides practical, step-by-step advice for enabling GPT-5 in Copilot and integrating natural language automation into everyday workflows."
-author: "Kedasha Kerr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server
+author: Kedasha Kerr
+canonical_url: https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-14 16:30:00 +00:00
-permalink: "/2025-08-14-Building-a-Game-in-60-Seconds-with-GPT-5-in-GitHub-Copilot-and-MCP-Server.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Development", "Automation", "Coding", "Copilot Integration", "Developer Workflow", "DevOps", "Game Development", "Generative AI", "GitHub Actions", "GitHub Copilot", "GPT 5", "HTML5", "Issue Automation", "JavaScript", "MCP", "MCP Server", "Natural Language Automation", "News", "OpenAI", "Programming Productivity", "Repository Management", "Spec Driven Development", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai development", "automation", "coding", "copilot integration", "developer workflow", "devops", "game development", "generative ai", "github actions", "github copilot", "gpt 5", "html5", "issue automation", "javascript", "mcp", "mcp server", "natural language automation", "news", "openai", "programming productivity", "repository management", "spec driven development", "vs code"]
+permalink: /github-copilot/news/Building-a-Game-in-60-Seconds-with-GPT-5-in-GitHub-Copilot-and-MCP-Server
+tags:
+- AI
+- AI & ML
+- AI Development
+- Automation
+- Coding
+- Copilot Integration
+- Developer Workflow
+- DevOps
+- Game Development
+- Generative AI
+- GitHub Actions
+- GitHub Copilot
+- GPT 5
+- HTML5
+- Issue Automation
+- JavaScript
+- MCP
+- MCP Server
+- Natural Language Automation
+- News
+- OpenAI
+- Programming Productivity
+- Repository Management
+- Spec Driven Development
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Kedasha Kerr demonstrates how developers can rapidly build applications using GPT-5 in GitHub Copilot and automate GitHub workflows via the new MCP server, revolutionizing AI-powered coding and DevOps.<!--excerpt_end-->
 
 # Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server

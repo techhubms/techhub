@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How the .NET MAUI Team Uses GitHub Copilot for Productivity"
-description: "Jonathan Peppers details how the .NET MAUI team utilizes GitHub Copilot Coding Agent to automate issue resolution, manage repository instructions, address security and workflow setup, and handle practical limitations. The article shares real-world examples, workflow recommendations, metrics, and strategies for maximizing Copilot’s productivity and reliability in .NET projects."
-author: "Jonathan Peppers"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/maui-team-copilot-tips/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: How the .NET MAUI Team Uses GitHub Copilot for Productivity
+author: Jonathan Peppers
+canonical_url: https://devblogs.microsoft.com/dotnet/maui-team-copilot-tips/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-09 17:15:00 +00:00
-permalink: "/2025-07-09-How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "Automation", "C#", "CI/CD", "Coding", "Copilot Coding Agent", "Copilot Productivity", "DevOps", "Firewall Rules", "GitHub Copilot", "MAUI", "MCP Server", "MEAI", "News", "Pull Requests", "Repository Instructions", "VS Code"]
-tags_normalized: ["dotnet", "ai", "automation", "csharp", "cislashcd", "coding", "copilot coding agent", "copilot productivity", "devops", "firewall rules", "github copilot", "maui", "mcp server", "meai", "news", "pull requests", "repository instructions", "vs code"]
+permalink: /github-copilot/news/How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity
+tags:
+- .NET
+- AI
+- Automation
+- C#
+- CI/CD
+- Coding
+- Copilot Coding Agent
+- Copilot Productivity
+- DevOps
+- Firewall Rules
+- GitHub Copilot
+- MAUI
+- MCP Server
+- MEAI
+- News
+- Pull Requests
+- Repository Instructions
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Jonathan Peppers describes how the .NET MAUI team leverages GitHub Copilot to enhance productivity, sharing practical setup tips, workflow strategies, successes, and limitations.<!--excerpt_end-->
 
 ### Overview

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Update - 22nd August 2025"
-description: "John Savill provides an in-depth update on the latest features and changes across a range of Azure services as of August 22nd, 2025. Key topics include Azure Functions Flex Consumption, AKS Azure Bastion support, updates to App Gateway and File Storage, Azure Sentinel and Defender changes, Log Analytics improvements, and more."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_rPU590e1xA"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 22nd August 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=_rPU590e1xA
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-22 14:50:10 +00:00
-permalink: "/2025-08-22-Azure-Update-22nd-August-2025.html"
-categories: ["Azure"]
-tags: ["AKS", "Application Gateway", "Azure", "Azure Bastion", "Azure Billing", "Azure Cloud", "Azure Files Premium", "Azure Functions", "Azure NetApp Files", "Azure Updates", "Blob Storage", "Cloud", "Cloud Security", "CNAME Certificate Validation", "DC EC Esv6 VMs", "File Access Logs", "Log Analytics", "Microsoft", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Sentinel", "Videos"]
-tags_normalized: ["aks", "application gateway", "azure", "azure bastion", "azure billing", "azure cloud", "azure files premium", "azure functions", "azure netapp files", "azure updates", "blob storage", "cloud", "cloud security", "cname certificate validation", "dc ec esv6 vms", "file access logs", "log analytics", "microsoft", "microsoft azure", "microsoft defender for cloud", "microsoft sentinel", "videos"]
+permalink: /azure/videos/Azure-Update-22nd-August-2025
+tags:
+- AKS
+- Application Gateway
+- Azure
+- Azure Bastion
+- Azure Billing
+- Azure Cloud
+- Azure Files Premium
+- Azure Functions
+- Azure NetApp Files
+- Azure Updates
+- Blob Storage
+- Cloud
+- Cloud Security
+- CNAME Certificate Validation
+- DC EC Esv6 VMs
+- File Access Logs
+- Log Analytics
+- Microsoft
+- Microsoft Azure
+- Microsoft Defender For Cloud
+- Microsoft Sentinel
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training delivers a round-up of recent Azure updates, covering a variety of new features and changes. This summary highlights the most impactful items relevant to Azure practitioners.<!--excerpt_end-->
 
 {% youtube _rPU590e1xA %}

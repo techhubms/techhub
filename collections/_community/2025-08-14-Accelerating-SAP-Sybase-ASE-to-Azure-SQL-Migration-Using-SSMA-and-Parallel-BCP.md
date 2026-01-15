@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP"
-description: "This article provides a hands-on guide for enterprises migrating from SAP ASE (Sybase ASE) to Azure SQL Database. It details a custom script that uses parallelism with BCP to speed up large data transfers, reduce downtime, and tackle scalability bottlenecks that often arise during cloud modernization. The workflow includes configuration setup, pre-migration steps, performance benchmarking, and future enhancements aimed at broader table support and more efficient LOB column handling. Best practices and prerequisites ensure a smooth migration process, while performance results and recommendations allow teams to optimize resource utilization throughout the migration."
-author: "Manish_Kumar_Pandey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP
+author: Manish_Kumar_Pandey
+canonical_url: https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 01:25:53 +00:00
-permalink: "/2025-08-14-Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Data Migration", "Azure SQL Database", "BCP", "Cloud Modernization", "Community", "Data Chunking", "Data Engineering", "Database Migration", "Linux", "LOB Data Handling", "Migration Automation", "Parallel Data Transfer", "Performance Tuning", "SAP ASE", "Shell Script", "SQL Server", "SQL Server Migration Assistant", "SSMA", "Sybase ASE"]
-tags_normalized: ["azure", "azure data migration", "azure sql database", "bcp", "cloud modernization", "community", "data chunking", "data engineering", "database migration", "linux", "lob data handling", "migration automation", "parallel data transfer", "performance tuning", "sap ase", "shell script", "sql server", "sql server migration assistant", "ssma", "sybase ase"]
+permalink: /azure/community/Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP
+tags:
+- Azure
+- Azure Data Migration
+- Azure SQL Database
+- BCP
+- Cloud Modernization
+- Community
+- Data Chunking
+- Data Engineering
+- Database Migration
+- Linux
+- LOB Data Handling
+- Migration Automation
+- Parallel Data Transfer
+- Performance Tuning
+- SAP ASE
+- Shell Script
+- SQL Server
+- SQL Server Migration Assistant
+- SSMA
+- Sybase ASE
+section_names:
+- azure
 ---
-
 Manish_Kumar_Pandey presents a practical approach to migrating from SAP ASE (Sybase ASE) to Azure SQL Database, featuring a parallel BCP script that streamlines large-scale data transfers and optimizes performance.<!--excerpt_end-->
 
 # Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP

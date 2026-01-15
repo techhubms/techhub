@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How Microsoft Fabric's Forecasting Service Makes Spark Notebooks Instant"
-description: "This article examines Microsoft Fabric’s Forecasting Service, which uses hybrid AI/ML-driven resource provisioning to minimize Spark cluster startup latency and optimize cloud costs. The post provides an in-depth look at the architecture, technical implementation, and observed production benefits of proactively managing compute pools for scalable data science workloads in Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/how-fabric-makes-spark-notebook-feel-instant-proactive-resource-provisioning-for-scalable-data-science-data-engineering/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How Microsoft Fabric's Forecasting Service Makes Spark Notebooks Instant
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-fabric-makes-spark-notebook-feel-instant-proactive-resource-provisioning-for-scalable-data-science-data-engineering/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 09:00:00 +00:00
-permalink: "/2025-12-09-How-Microsoft-Fabrics-Forecasting-Service-Makes-Spark-Notebooks-Instant.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Cosmos DB", "Azure Data Explorer", "Big Data Infrastructure", "Cloud Cost Optimization", "Cluster Automation", "Cluster Provisioning", "Data Engineering", "Elastic Compute", "Forecasting Service", "Machine Learning", "Microsoft Fabric", "ML", "News", "Resource Optimization", "Spark", "Time Series Forecasting"]
-tags_normalized: ["ai", "azure", "azure cosmos db", "azure data explorer", "big data infrastructure", "cloud cost optimization", "cluster automation", "cluster provisioning", "data engineering", "elastic compute", "forecasting service", "machine learning", "microsoft fabric", "ml", "news", "resource optimization", "spark", "time series forecasting"]
+permalink: /ai/news/How-Microsoft-Fabrics-Forecasting-Service-Makes-Spark-Notebooks-Instant
+tags:
+- AI
+- Azure
+- Azure Cosmos DB
+- Azure Data Explorer
+- Big Data Infrastructure
+- Cloud Cost Optimization
+- Cluster Automation
+- Cluster Provisioning
+- Data Engineering
+- Elastic Compute
+- Forecasting Service
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- Resource Optimization
+- Spark
+- Time Series Forecasting
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog authors detail how Forecasting Service uses hybrid AI and ML models to optimize Spark cluster provisioning, reducing latency and cloud cost for analytics workloads.<!--excerpt_end-->
 
 # How Microsoft Fabric's Forecasting Service Makes Spark Notebooks Instant

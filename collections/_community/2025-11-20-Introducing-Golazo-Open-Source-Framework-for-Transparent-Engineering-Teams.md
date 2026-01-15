@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing Golazo: Open-Source Framework for Transparent Engineering Teams"
-description: "Golazo is an open-source engineering framework from Microsoft that emphasizes design-first workflows, collaborative peer review, transparent documentation, and asynchronous team practices. This announcement by Ben Martens introduces Golazo's practical tools for helping hybrid and in-person engineering teams work efficiently using clear documentation, shared ownership, and continuous improvement methodologies. The framework is documented on GitHub and supports modern engineering processes including tickets scoped for rapid iteration, documented requirements, and peer-driven development flow."
-author: "Ben Martens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/golazo-a-framework-for-streamlined-engineering/ba-p/4471142"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Introducing Golazo: Open-Source Framework for Transparent Engineering Teams'
+author: Ben Martens
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/golazo-a-framework-for-streamlined-engineering/ba-p/4471142
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 16:37:24 +00:00
-permalink: "/2025-11-20-Introducing-Golazo-Open-Source-Framework-for-Transparent-Engineering-Teams.html"
-categories: ["DevOps"]
-tags: ["Agile Practices", "Collaboration", "Community", "Continuous Improvement", "Design Documentation", "DevOps", "Engineering Framework", "GitHub", "Golazo", "Hybrid Teams", "Knowledge Management", "Microsoft", "Open Source", "Peer Review", "Software Engineering", "Standup Meetings", "Team Retrospectives", "Transparent Workflow", "Workflow Boards"]
-tags_normalized: ["agile practices", "collaboration", "community", "continuous improvement", "design documentation", "devops", "engineering framework", "github", "golazo", "hybrid teams", "knowledge management", "microsoft", "open source", "peer review", "software engineering", "standup meetings", "team retrospectives", "transparent workflow", "workflow boards"]
+permalink: /devops/community/Introducing-Golazo-Open-Source-Framework-for-Transparent-Engineering-Teams
+tags:
+- Agile Practices
+- Collaboration
+- Community
+- Continuous Improvement
+- Design Documentation
+- DevOps
+- Engineering Framework
+- GitHub
+- Golazo
+- Hybrid Teams
+- Knowledge Management
+- Microsoft
+- Open Source
+- Peer Review
+- Software Engineering
+- Standup Meetings
+- Team Retrospectives
+- Transparent Workflow
+- Workflow Boards
+section_names:
+- devops
 ---
-
 Ben Martens unveils Golazo, a new open-source engineering framework from Microsoft promoting design-first documentation, peer review, transparent collaboration, and agile team workflows.<!--excerpt_end-->
 
 # Golazo: A Framework for Streamlined Engineering

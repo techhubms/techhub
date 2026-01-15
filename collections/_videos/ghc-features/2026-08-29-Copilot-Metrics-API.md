@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Copilot Metrics API"
-description: "Programmatic access to Copilot usage metrics and analytics"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Copilot Metrics API
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: "/2026-08-29-Copilot-Metrics-API.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Business"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Copilot-Metrics-API
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Business
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Copilot Metrics API feature. Programmatic access to Copilot usage metrics and analytics<!--excerpt_end-->
 
 ## Overview

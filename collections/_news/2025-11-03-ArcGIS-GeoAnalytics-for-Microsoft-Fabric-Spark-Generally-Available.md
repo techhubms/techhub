@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "ArcGIS GeoAnalytics for Microsoft Fabric Spark (Generally Available)"
-description: "This announcement introduces the general availability of ArcGIS GeoAnalytics integration within Microsoft Fabric Spark. The collaboration between Microsoft and Esri enables Spark developers and data scientists to run advanced geospatial analytics natively inside Fabric, facilitating spatial data engineering, enrichment, trend analysis, and streamlined integration with Power BI for richer dashboards and reporting."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/arcgis-geoanalytics-for-microsoft-fabric-spark-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: ArcGIS GeoAnalytics for Microsoft Fabric Spark (Generally Available)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/arcgis-geoanalytics-for-microsoft-fabric-spark-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 08:30:00 +00:00
-permalink: "/2025-11-03-ArcGIS-GeoAnalytics-for-Microsoft-Fabric-Spark-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["ArcGIS GeoAnalytics", "Azure", "Clustering Analysis", "Data Engineering", "Data Science", "Data Transformation", "Esri", "Fabric Notebook", "Geospatial Analytics", "Location Intelligence", "Microsoft Fabric", "ML", "News", "Power BI", "Spark", "Spatial Data", "Spatial Joins", "Tracking Analysis"]
-tags_normalized: ["arcgis geoanalytics", "azure", "clustering analysis", "data engineering", "data science", "data transformation", "esri", "fabric notebook", "geospatial analytics", "location intelligence", "microsoft fabric", "ml", "news", "power bi", "spark", "spatial data", "spatial joins", "tracking analysis"]
+permalink: /ml/news/ArcGIS-GeoAnalytics-for-Microsoft-Fabric-Spark-Generally-Available
+tags:
+- ArcGIS GeoAnalytics
+- Azure
+- Clustering Analysis
+- Data Engineering
+- Data Science
+- Data Transformation
+- Esri
+- Fabric Notebook
+- Geospatial Analytics
+- Location Intelligence
+- Microsoft Fabric
+- ML
+- News
+- Power BI
+- Spark
+- Spatial Data
+- Spatial Joins
+- Tracking Analysis
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team announces the general availability of ArcGIS GeoAnalytics integration for Fabric Spark, enabling developers and data scientists to leverage Esri's advanced geospatial analytics natively in Fabric environments.<!--excerpt_end-->
 
 # ArcGIS GeoAnalytics for Microsoft Fabric Spark (Generally Available)

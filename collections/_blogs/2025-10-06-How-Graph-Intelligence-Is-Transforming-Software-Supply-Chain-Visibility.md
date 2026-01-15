@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How Graph Intelligence Is Transforming Software Supply Chain Visibility"
-description: "This article, authored by Alan Shimel, explores the intersection of graph intelligence and DevOps as discussed with Java community veteran Stephen Chin at swampUP 2025. It focuses on how graph data can enhance visibility, risk detection, and integrated security for modern software supply chains, with emphasis on AI-driven workflows and agile development practices."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Graph Intelligence Is Transforming Software Supply Chain Visibility
+author: Alan Shimel
+canonical_url: https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-06 17:37:15 +00:00
-permalink: "/2025-10-06-How-Graph-Intelligence-Is-Transforming-Software-Supply-Chain-Visibility.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic Automation", "AI", "AI Driven Workflows", "Automation", "Blogs", "Continuous Improvement", "Dependencies", "DevOps", "Ecosystem", "Graph Data", "Graph Intelligence", "JFrog Swampup", "RAG", "Risk Detection", "Security", "Software Delivery", "Software Supply Chain", "Transparency", "Video Interviews", "Visibility", "Vulnerabilities"]
-tags_normalized: ["agentic automation", "ai", "ai driven workflows", "automation", "blogs", "continuous improvement", "dependencies", "devops", "ecosystem", "graph data", "graph intelligence", "jfrog swampup", "rag", "risk detection", "security", "software delivery", "software supply chain", "transparency", "video interviews", "visibility", "vulnerabilities"]
+permalink: /ai/blogs/How-Graph-Intelligence-Is-Transforming-Software-Supply-Chain-Visibility
+tags:
+- Agentic Automation
+- AI
+- AI Driven Workflows
+- Automation
+- Blogs
+- Continuous Improvement
+- Dependencies
+- DevOps
+- Ecosystem
+- Graph Data
+- Graph Intelligence
+- JFrog Swampup
+- RAG
+- Risk Detection
+- Security
+- Software Delivery
+- Software Supply Chain
+- Transparency
+- Video Interviews
+- Visibility
+- Vulnerabilities
+section_names:
+- ai
+- devops
+- security
 ---
-
 Alan Shimel interviews Stephen Chin on how graph intelligence is reshaping visibility and security within software supply chains, highlighting DevOps and AI advances discussed at swampUP 2025.<!--excerpt_end-->
 
 # How Graph Intelligence Is Transforming Software Supply Chain Visibility

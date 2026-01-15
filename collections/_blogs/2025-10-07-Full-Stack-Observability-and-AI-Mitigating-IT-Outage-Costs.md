@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Full-Stack Observability and AI: Mitigating IT Outage Costs"
-description: "This article by James Maguire reviews a global New Relic survey examining the financial and operational benefits of implementing full-stack observability in IT environments. It discusses the impact of observability on downtime costs, detection improvements, productivity, and how AI monitoring is reshaping incident response and tooling strategies across enterprises."
-author: "James Maguire"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/report-full-stack-observability-cuts-downtime-costs/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Full-Stack Observability and AI: Mitigating IT Outage Costs'
+author: James Maguire
+canonical_url: https://devops.com/report-full-stack-observability-cuts-downtime-costs/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-07 17:58:25 +00:00
-permalink: "/2025-10-07-Full-Stack-Observability-and-AI-Mitigating-IT-Outage-Costs.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Monitoring", "AIOps", "Blogs", "DevOps", "Digital Experience Monitoring", "Full Stack Observability", "Incident Response", "IT Outages", "LLMs", "Log Management", "Machine Learning", "Mean Time To Detection", "Monitoring And Analytics", "New Relic", "Observability", "Operational Efficiency", "Predictive Analytics", "Root Cause Analysis", "Security", "Security Monitoring", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["ai", "ai monitoring", "aiops", "blogs", "devops", "digital experience monitoring", "full stack observability", "incident response", "it outages", "llms", "log management", "machine learning", "mean time to detection", "monitoring and analytics", "new relic", "observability", "operational efficiency", "predictive analytics", "root cause analysis", "security", "security monitoring", "social facebook", "social linkedin", "social x"]
+permalink: /ai/blogs/Full-Stack-Observability-and-AI-Mitigating-IT-Outage-Costs
+tags:
+- AI
+- AI Monitoring
+- AIOps
+- Blogs
+- DevOps
+- Digital Experience Monitoring
+- Full Stack Observability
+- Incident Response
+- IT Outages
+- LLMs
+- Log Management
+- Machine Learning
+- Mean Time To Detection
+- Monitoring And Analytics
+- New Relic
+- Observability
+- Operational Efficiency
+- Predictive Analytics
+- Root Cause Analysis
+- Security
+- Security Monitoring
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- ai
+- devops
+- security
 ---
-
 James Maguire summarizes a New Relic survey on the value of full-stack observability and AI-driven monitoring in cutting IT outage costs, with insights into productivity, incident detection, and enterprise tooling strategies.<!--excerpt_end-->
 
 # Full-Stack Observability and AI: Mitigating IT Outage Costs

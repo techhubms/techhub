@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "A 10x Faster TypeScript: Native Compiler Port and Performance Roadmap"
-description: "Anders Hejlsberg announces a native port of the TypeScript compiler aimed at providing a dramatic 10x speed increase, substantial memory reductions, and a stronger foundation for enhanced developer and AI-powered tooling. The roadmap outlines availability, benchmarks, and long-term support plans."
-author: "Anders Hejlsberg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/typescript-native-port/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'A 10x Faster TypeScript: Native Compiler Port and Performance Roadmap'
+author: Anders Hejlsberg
+canonical_url: https://devblogs.microsoft.com/typescript/typescript-native-port/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-03-11 14:31:27 +00:00
-permalink: "/2025-03-11-A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap.html"
-categories: ["Coding"]
-tags: ["Coding", "Developer Experience", "Editor Responsiveness", "Go", "JavaScript Ecosystem", "Language Services", "LSP", "Native Compiler", "News", "Open Source", "Performance Improvement", "Project Roadmap", "Source Code Management", "TypeScript", "TypeScript 7.0", "VS Code"]
-tags_normalized: ["coding", "developer experience", "editor responsiveness", "go", "javascript ecosystem", "language services", "lsp", "native compiler", "news", "open source", "performance improvement", "project roadmap", "source code management", "typescript", "typescript 7dot0", "vs code"]
+permalink: /coding/news/A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap
+tags:
+- Coding
+- Developer Experience
+- Editor Responsiveness
+- Go
+- JavaScript Ecosystem
+- Language Services
+- LSP
+- Native Compiler
+- News
+- Open Source
+- Performance Improvement
+- Project Roadmap
+- Source Code Management
+- TypeScript
+- TypeScript 7.0
+- VS Code
+section_names:
+- coding
 ---
-
 Anders Hejlsberg unveils major plans for TypeScript: a native compiler port offering significant speed and memory gains. This announcement details the benchmarks, roadmap, and expected impact on the developer workflow.<!--excerpt_end-->
 
 # A 10x Faster TypeScript: Native Compiler Port and Performance Roadmap

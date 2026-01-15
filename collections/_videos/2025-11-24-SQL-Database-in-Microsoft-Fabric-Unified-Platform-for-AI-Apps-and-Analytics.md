@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics"
-description: "This session from Microsoft Ignite 2025 explores how SQL in Microsoft Fabric brings together transactional and analytical workloads in a single cloud-native database platform. Presenters demonstrate how developers and data teams can simplify AI-driven application development using built-in AI, near real-time insights, and seamless integration with OneLake and end-to-end analytics services. Specific topics include the integrated Azure SQL Database architecture, performance monitoring tools, AI assistant creation, vector distance queries, Power BI Dashboards for AI usage monitoring, and live demos such as event streaming for fraud detection."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ni4CZDbe15U"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ni4CZDbe15U
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:19:39 +00:00
-permalink: "/2025-11-24-SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Driven Development", "Analytical Workloads", "Azure", "Azure SQL Database", "Event Streaming", "Fraud Detection", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "OneLake Integration", "Performance Monitoring", "Power BI Dashboards", "Real Time Analytics", "SQL in Fabric", "Transactional Workloads", "Unified Data Platform", "Unifyyourdataplatform", "Vector Search", "Videos"]
-tags_normalized: ["ai", "ai driven development", "analytical workloads", "azure", "azure sql database", "event streaming", "fraud detection", "microsoft fabric", "microsoft ignite", "ml", "msignite", "onelake integration", "performance monitoring", "power bi dashboards", "real time analytics", "sql in fabric", "transactional workloads", "unified data platform", "unifyyourdataplatform", "vector search", "videos"]
+permalink: /ai/videos/SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics
+tags:
+- AI
+- AI Driven Development
+- Analytical Workloads
+- Azure
+- Azure SQL Database
+- Event Streaming
+- Fraud Detection
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- MSIgnite
+- OneLake Integration
+- Performance Monitoring
+- Power BI Dashboards
+- Real Time Analytics
+- SQL in Fabric
+- Transactional Workloads
+- Unified Data Platform
+- Unifyyourdataplatform
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Learn from Microsoft Events speakers Anna Hoffman, Idris Motiwala, and Jeff Shood as they present how SQL in Microsoft Fabric enables unified transactional and analytical workloads for AI applications and analytics, including hands-on demos and architecture insights.<!--excerpt_end-->
 
 {% youtube ni4CZDbe15U %}

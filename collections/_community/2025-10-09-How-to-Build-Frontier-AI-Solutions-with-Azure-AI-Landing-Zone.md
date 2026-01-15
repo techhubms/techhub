@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Build Frontier AI Solutions with Azure AI Landing Zone"
-description: "This guide provides technical practitioners with a clear overview of the Azure AI Landing Zone — a standardized, secure, and scalable framework for AI workload deployment on Azure. Learn how the AI ALZ builds on Microsoft’s Cloud Adoption Framework and Well-Architected Framework, how Azure AI Foundry integrates into enterprise architectures, and see step-by-step approaches and reference architectures for robust AI adoption at scale."
-author: "VimalVerma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Build Frontier AI Solutions with Azure AI Landing Zone
+author: VimalVerma
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-09 00:09:13 +00:00
-permalink: "/2025-10-09-How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Adoption", "AKS", "App Service", "Azure", "Azure AI Foundry", "Azure AI Landing Zone", "Azure Container Apps", "Azure Functions", "Bicep", "Cloud Adoption Framework", "Community", "Enterprise Architecture", "Governance", "IaC", "Operational Excellence", "Terraform", "Well Architected Framework"]
-tags_normalized: ["ai", "ai adoption", "aks", "app service", "azure", "azure ai foundry", "azure ai landing zone", "azure container apps", "azure functions", "bicep", "cloud adoption framework", "community", "enterprise architecture", "governance", "iac", "operational excellence", "terraform", "well architected framework"]
+permalink: /ai/community/How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone
+tags:
+- AI
+- AI Adoption
+- AKS
+- App Service
+- Azure
+- Azure AI Foundry
+- Azure AI Landing Zone
+- Azure Container Apps
+- Azure Functions
+- Bicep
+- Cloud Adoption Framework
+- Community
+- Enterprise Architecture
+- Governance
+- IaC
+- Operational Excellence
+- Terraform
+- Well Architected Framework
+section_names:
+- ai
+- azure
 ---
-
 VimalVerma outlines a practitioner-focused approach to building production-grade AI solutions using Azure AI Landing Zone, emphasizing the use of Microsoft's proven architectural frameworks and the Azure AI Foundry platform.<!--excerpt_end-->
 
 # How to Build Frontier AI Solutions with Azure AI Landing Zone

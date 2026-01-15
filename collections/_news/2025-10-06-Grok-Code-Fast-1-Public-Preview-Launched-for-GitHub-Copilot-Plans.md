@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans"
-description: "GitHub announces the public preview of Grok Code Fast 1 for Copilot Pro, Pro+, Business, and Enterprise users. This update allows developers to access the new model in Copilot Chat across github.com, Visual Studio Code, Visual Studio, JetBrains IDEs, Xcode, and Eclipse. The post covers activation instructions for administrators, access guidance, and provides links to related documentation and feedback forums."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-06 16:11:26 +00:00
-permalink: "/2025-10-06-Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Model", "Ask Mode", "Copilot", "Copilot Chat", "Developer Tools", "Eclipse", "Edit Mode", "Enterprise Admin", "GitHub Copilot", "Grok Code Fast 1", "JetBrains IDEs", "News", "Policy Management", "Public Preview", "VS", "VS Code", "Xcode"]
-tags_normalized: ["agent mode", "ai", "ai model", "ask mode", "copilot", "copilot chat", "developer tools", "eclipse", "edit mode", "enterprise admin", "github copilot", "grok code fast 1", "jetbrains ides", "news", "policy management", "public preview", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans
+tags:
+- Agent Mode
+- AI
+- AI Model
+- Ask Mode
+- Copilot
+- Copilot Chat
+- Developer Tools
+- Eclipse
+- Edit Mode
+- Enterprise Admin
+- GitHub Copilot
+- Grok Code Fast 1
+- JetBrains IDEs
+- News
+- Policy Management
+- Public Preview
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares the news that Grok Code Fast 1 is now available in public preview for various GitHub Copilot plans, detailing how developers can access and enable the model across popular development environments.<!--excerpt_end-->
 
 # Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans

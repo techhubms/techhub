@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Weekly Microsoft Learning Rooms Community Roundup (8/7)"
-description: "This weekly roundup, authored by JulieSirrine, summarizes the latest activities and technical discussions from various Microsoft Learning Rooms. It highlights upcoming community events and topics spanning Azure, AI, Dev, security, Microsoft Fabric, Power BI, and more, providing central links and key session details for Microsoft practitioners."
-author: "JulieSirrine"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Weekly Microsoft Learning Rooms Community Roundup (8/7)
+author: JulieSirrine
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-08 18:40:34 +00:00
-permalink: "/2025-08-08-Weekly-Microsoft-Learning-Rooms-Community-Roundup-87.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["Access Control", "AI", "APIM Integration", "Azure", "Azure AI Foundry", "Azure APIM", "Cloud Security", "Coding", "Community", "Dev Community", "Domain Controller", "Event Sourcing", "Microsoft Community Hub", "Microsoft Fabric", "Microsoft Learning Rooms", "ML", "Multi Agent Systems", "Power BI", "Purview", "Real Time Data", "Security", "Tech Events"]
-tags_normalized: ["access control", "ai", "apim integration", "azure", "azure ai foundry", "azure apim", "cloud security", "coding", "community", "dev community", "domain controller", "event sourcing", "microsoft community hub", "microsoft fabric", "microsoft learning rooms", "ml", "multi agent systems", "power bi", "purview", "real time data", "security", "tech events"]
+permalink: /ai/community/Weekly-Microsoft-Learning-Rooms-Community-Roundup-87
+tags:
+- Access Control
+- AI
+- APIM Integration
+- Azure
+- Azure AI Foundry
+- Azure APIM
+- Cloud Security
+- Coding
+- Community
+- Dev Community
+- Domain Controller
+- Event Sourcing
+- Microsoft Community Hub
+- Microsoft Fabric
+- Microsoft Learning Rooms
+- ML
+- Multi Agent Systems
+- Power BI
+- Purview
+- Real Time Data
+- Security
+- Tech Events
+section_names:
+- ai
+- azure
+- coding
+- ml
+- security
 ---
-
 JulieSirrine shares a curated summary of activities from Microsoft Learning Rooms, spotlighting hands-on community events and technical discussions covering Azure, AI, Fabric, Power BI, cloud security, and coding topics for Microsoft professionals.<!--excerpt_end-->
 
 # Microsoft Learning Rooms Weekly Roundup (8/7)

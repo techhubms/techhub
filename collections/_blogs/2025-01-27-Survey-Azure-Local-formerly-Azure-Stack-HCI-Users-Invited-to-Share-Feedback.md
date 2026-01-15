@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Survey - Azure Local (formerly Azure Stack HCI) Users Invited to Share Feedback"
-description: "Thomas Maurer invites Azure Local (formerly Azure Stack HCI) users to participate in a survey about running AKS Arc on the platform. The survey seeks user input regardless of Kubernetes experience and offers a chance to win a $250 USD gift card."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/01/survey-azure-local-formerly-azure-stack-hci-users/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Survey - Azure Local (formerly Azure Stack HCI) Users Invited to Share Feedback
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/01/survey-azure-local-formerly-azure-stack-hci-users/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-01-27 16:16:53 +00:00
-permalink: "/2025-01-27-Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invited-to-Share-Feedback.html"
-categories: ["Azure"]
-tags: ["AKS", "AKS Arc", "Azure", "Azure Arc", "Azure Local", "Azure Stack HCI", "Blogs", "Microsoft", "Microsoft Azure", "Survey", "Thomas Maurer", "User Feedback", "Virtualization"]
-tags_normalized: ["aks", "aks arc", "azure", "azure arc", "azure local", "azure stack hci", "blogs", "microsoft", "microsoft azure", "survey", "thomas maurer", "user feedback", "virtualization"]
+permalink: /azure/blogs/Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invited-to-Share-Feedback
+tags:
+- AKS
+- AKS Arc
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Stack HCI
+- Blogs
+- Microsoft
+- Microsoft Azure
+- Survey
+- Thomas Maurer
+- User Feedback
+- Virtualization
+section_names:
+- azure
 ---
-
 Thomas Maurer invites Azure Local users to take a brief survey about using AKS Arc on the platform, regardless of prior Kubernetes experience.<!--excerpt_end-->
 
 ### Overview

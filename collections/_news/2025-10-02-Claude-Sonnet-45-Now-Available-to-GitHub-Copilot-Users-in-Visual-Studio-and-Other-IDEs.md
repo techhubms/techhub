@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Claude Sonnet 4.5 Now Available to GitHub Copilot Users in Visual Studio and Other IDEs"
-description: "This update announces the public preview availability of the Claude Sonnet 4.5 model to users of GitHub Copilot Pro, Pro+, Business, and Enterprise plans. The model can now be accessed via GitHub Copilot Chat in various popular IDEs, including Visual Studio, Visual Studio Code, JetBrains IDEs, Xcode, and Eclipse. Admins must enable the policy in Copilot settings to grant user access, and the announcement provides links for more information and community feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-02-claude-sonnet-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Sonnet 4.5 Now Available to GitHub Copilot Users in Visual Studio and Other IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-02-claude-sonnet-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-02 19:20:00 +00:00
-permalink: "/2025-10-02-Claude-Sonnet-45-Now-Available-to-GitHub-Copilot-Users-in-Visual-Studio-and-Other-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Claude Sonnet 4.5", "Copilot", "Copilot Enterprise", "Copilot Pro", "Eclipse", "GitHub Copilot", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "Public Preview", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai models", "claude sonnet 4dot5", "copilot", "copilot enterprise", "copilot pro", "eclipse", "github copilot", "ide integration", "jetbrains ides", "model picker", "news", "public preview", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/Claude-Sonnet-45-Now-Available-to-GitHub-Copilot-Users-in-Visual-Studio-and-Other-IDEs
+tags:
+- AI
+- AI Models
+- Claude Sonnet 4.5
+- Copilot
+- Copilot Enterprise
+- Copilot Pro
+- Eclipse
+- GitHub Copilot
+- IDE Integration
+- JetBrains IDEs
+- Model Picker
+- News
+- Public Preview
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares that Claude Sonnet 4.5 is now in public preview for GitHub Copilot Pro, Business, and Enterprise plans, expanding AI model options within Visual Studio and other major IDEs.<!--excerpt_end-->
 
 # Claude Sonnet 4.5 Now Available in Visual Studio, JetBrains IDEs, Xcode, and Eclipse

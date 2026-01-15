@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale"
-description: "This news post discusses Microsoft’s partnership with the Ministry of Labour and Employment in India, focusing on the use of AI and Azure to connect over 300 million informal workers to better jobs and increased social security. Insights from Satya Nadella and several community voices illustrate how AI-driven digital identity, resume building, language translation, and cloud-based security are transforming economic mobility. The discussion also addresses challenges and potential for deeper AI application in public infrastructure."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-10 02:11:00 +00:00
-permalink: "/2025-12-10-Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Adoption", "Azure", "Azure Services", "Cloud Security", "Company News", "Digital Identity", "E Shram", "Inclusive Innovation", "India", "Job Platform", "Language Translation", "LinkedIn Post", "Microsoft", "Ministry Of Labour And Employment", "NCS", "News", "Resume Builder", "Social Security", "Workforce Analytics"]
-tags_normalized: ["ai", "ai adoption", "azure", "azure services", "cloud security", "company news", "digital identity", "e shram", "inclusive innovation", "india", "job platform", "language translation", "linkedin post", "microsoft", "ministry of labour and employment", "ncs", "news", "resume builder", "social security", "workforce analytics"]
+permalink: /ai/news/Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale
+tags:
+- AI
+- AI Adoption
+- Azure
+- Azure Services
+- Cloud Security
+- Company News
+- Digital Identity
+- E Shram
+- Inclusive Innovation
+- India
+- Job Platform
+- Language Translation
+- LinkedIn Post
+- Microsoft
+- Ministry Of Labour And Employment
+- NCS
+- News
+- Resume Builder
+- Social Security
+- Workforce Analytics
+section_names:
+- ai
+- azure
 ---
-
 stclarke curates a discussion of Microsoft’s collaboration with the Indian Ministry of Labour, spotlighting Satya Nadella’s perspective and community reactions on AI’s role in empowering millions of workers at scale.<!--excerpt_end-->
 
 # Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale

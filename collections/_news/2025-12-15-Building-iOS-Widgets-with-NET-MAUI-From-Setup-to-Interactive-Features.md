@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building iOS Widgets with .NET MAUI: From Setup to Interactive Features"
-description: "This guide by Toine de Boer explores building professional iOS widgets using .NET MAUI, detailing the technical setup from Apple developer prerequisites to managing communication between your MAUI app and widget. It covers project structure in Xcode and Swift, data sharing strategies, interactive widget design, and integration best practices for cross-platform reusability."
-author: "Toine de Boer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Building iOS Widgets with .NET MAUI: From Setup to Interactive Features'
+author: Toine de Boer
+canonical_url: https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-15 18:05:00 +00:00
-permalink: "/2025-12-15-Building-iOS-Widgets-with-NET-MAUI-From-Setup-to-Interactive-Features.html"
-categories: ["Coding"]
-tags: [".NET", ".NET For Ios", "App Groups", "AppIntents", "Apple Developer Console", "Build Pipelines", "C#", "Coding", "Deep Linking", "Entitlements", "Interactive Widgets", "Ios", "Ios Widgets", "MAUI", "Mobile Development", "News", "Preferences", "Release Build", "Swift", "UserDefaults", "VS", "VS Code", "Widget Extension", "WidgetKit", "Widgets", "Xcode", "XReleases"]
-tags_normalized: ["dotnet", "dotnet for ios", "app groups", "appintents", "apple developer console", "build pipelines", "csharp", "coding", "deep linking", "entitlements", "interactive widgets", "ios", "ios widgets", "maui", "mobile development", "news", "preferences", "release build", "swift", "userdefaults", "vs", "vs code", "widget extension", "widgetkit", "widgets", "xcode", "xreleases"]
+permalink: /coding/news/Building-iOS-Widgets-with-NET-MAUI-From-Setup-to-Interactive-Features
+tags:
+- .NET
+- .NET For Ios
+- App Groups
+- AppIntents
+- Apple Developer Console
+- Build Pipelines
+- C#
+- Coding
+- Deep Linking
+- Entitlements
+- Interactive Widgets
+- Ios
+- Ios Widgets
+- MAUI
+- Mobile Development
+- News
+- Preferences
+- Release Build
+- Swift
+- UserDefaults
+- VS
+- VS Code
+- Widget Extension
+- WidgetKit
+- Widgets
+- Xcode
+- XReleases
+section_names:
+- coding
 ---
-
 Toine de Boer’s detailed post guides developers through the process of creating iOS widgets with .NET MAUI, from project setup to adding interactive features, focusing on core technical steps for seamless integration.<!--excerpt_end-->
 
 # Building iOS Widgets with .NET MAUI: From Setup to Interactive Features

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Reduced Pricing for GitHub-Hosted Runners Usage"
-description: "This announcement details the newly reduced pricing for GitHub-hosted runners, highlighting price drops of up to 39% based on machine types. The update affects Actions users, especially those using runners in private repositories, while public repository usage remains free. The article provides links to official pricing documentation, an Actions pricing calculator, and further guidance for understanding the changes."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Reduced Pricing for GitHub-Hosted Runners Usage
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-01 17:00:03 +00:00
-permalink: "/2026-01-01-Reduced-Pricing-for-GitHub-Hosted-Runners-Usage.html"
-categories: ["DevOps"]
-tags: ["Action Runners", "Actions", "Automation", "Billing", "CI/CD", "Cloud Runners", "Cost Reduction", "DevOps", "GitHub", "GitHub Actions", "Hosted Runners", "News", "Pricing", "Public Repositories", "Release Notes", "Workflow"]
-tags_normalized: ["action runners", "actions", "automation", "billing", "cislashcd", "cloud runners", "cost reduction", "devops", "github", "github actions", "hosted runners", "news", "pricing", "public repositories", "release notes", "workflow"]
+permalink: /devops/news/Reduced-Pricing-for-GitHub-Hosted-Runners-Usage
+tags:
+- Action Runners
+- Actions
+- Automation
+- Billing
+- CI/CD
+- Cloud Runners
+- Cost Reduction
+- DevOps
+- GitHub
+- GitHub Actions
+- Hosted Runners
+- News
+- Pricing
+- Public Repositories
+- Release Notes
+- Workflow
+section_names:
+- devops
 ---
-
 Allison outlines the new reduced pricing structure for GitHub-hosted runners, including up to 39% cost savings, and shares resources for understanding the impact on GitHub Actions users.<!--excerpt_end-->
 
 # Reduced Pricing for GitHub-Hosted Runners Usage

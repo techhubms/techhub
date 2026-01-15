@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Entra Group Source of Authority Conversion and Security Copilot Update"
-description: "This video by John Savill's Technical Training explores new features in Microsoft Security Copilot for Entra, focusing on conditional access agent capabilities and comprehensive identity governance. It covers converting the source of authority (SOA) for groups between Active Directory and Microsoft Entra ID, reviewing group writeback, and demonstrating hands-on group SOA changes using Graph Explorer. The tutorial provides practical guidance for identity architecture, governance, and management during cloud migrations."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VpRDtulXcUw"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Entra Group Source of Authority Conversion and Security Copilot Update
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=VpRDtulXcUw
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-04 13:59:18 +00:00
-permalink: "/2025-08-04-Entra-Group-Source-of-Authority-Conversion-and-Security-Copilot-Update.html"
-categories: ["Azure", "Security"]
-tags: ["Access Management", "Active Directory", "AD", "Azure", "Azure Active Directory", "Cloud Identity", "Conditional Access", "Entra Id", "Governance", "Graph Explorer", "Group Writeback", "Groups", "Hybrid Identity", "Identity", "Identity Governance", "Identity Management", "Microsoft Entra ID", "Microsoft Security", "Security", "Security Copilot", "SOA Conversion", "Videos"]
-tags_normalized: ["access management", "active directory", "ad", "azure", "azure active directory", "cloud identity", "conditional access", "entra id", "governance", "graph explorer", "group writeback", "groups", "hybrid identity", "identity", "identity governance", "identity management", "microsoft entra id", "microsoft security", "security", "security copilot", "soa conversion", "videos"]
+permalink: /azure/videos/Entra-Group-Source-of-Authority-Conversion-and-Security-Copilot-Update
+tags:
+- Access Management
+- Active Directory
+- AD
+- Azure
+- Azure Active Directory
+- Cloud Identity
+- Conditional Access
+- Entra Id
+- Governance
+- Graph Explorer
+- Group Writeback
+- Groups
+- Hybrid Identity
+- Identity
+- Identity Governance
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Security
+- Security
+- Security Copilot
+- SOA Conversion
+- Videos
+section_names:
+- azure
+- security
 ---
-
 John Savill's Technical Training presents an in-depth look at group source of authority conversions between Active Directory and Microsoft Entra ID, alongside updates to Microsoft Security Copilot.<!--excerpt_end-->
 
 {% youtube VpRDtulXcUw %}

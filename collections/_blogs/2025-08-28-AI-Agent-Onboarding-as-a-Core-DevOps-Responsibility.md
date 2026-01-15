@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "AI Agent Onboarding as a Core DevOps Responsibility"
-description: "This article explains why onboarding AI agents requires the same rigor as onboarding human engineers, positioning it as an essential DevOps function. It discusses environment setup, permissions, feedback loops, observability, and lifecycle management, emphasizing that treating autonomous AI agents as first-class deployable units is vital to mitigate operational risks and technical debt."
-author: "Alexander Williams"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: AI Agent Onboarding as a Core DevOps Responsibility
+author: Alexander Williams
+canonical_url: https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-28 05:00:39 +00:00
-permalink: "/2025-08-28-AI-Agent-Onboarding-as-a-Core-DevOps-Responsibility.html"
-categories: ["AI", "DevOps"]
-tags: ["Access Control", "Agent Lifecycle Management", "Agent Resilience", "AI", "AI Agent Onboarding", "AI Agents", "AI Deployment", "AI Deployment Best Practices", "AI Feedback Loops", "AI in Production", "AI Observability", "AI Security Risks", "Autonomous AI Agents", "Autonomous Systems", "Blogs", "Business Of DevOps", "CI/CD", "CI/CD For AI Agents", "Contributed Content", "DevOps", "DevOps And AI", "DevOps Ownership", "Digital Operations", "Feedback Loops", "Generative AI Governance", "Guardrails", "Guardrails For AI", "Human in The Loop", "Infrastructure Automation", "LLM Based Agents", "Observability", "Onboarding", "Operational Debt", "Scoped Permissions", "Security Risks", "Social Facebook", "Social LinkedIn", "Social X", "Versioning"]
-tags_normalized: ["access control", "agent lifecycle management", "agent resilience", "ai", "ai agent onboarding", "ai agents", "ai deployment", "ai deployment best practices", "ai feedback loops", "ai in production", "ai observability", "ai security risks", "autonomous ai agents", "autonomous systems", "blogs", "business of devops", "cislashcd", "cislashcd for ai agents", "contributed content", "devops", "devops and ai", "devops ownership", "digital operations", "feedback loops", "generative ai governance", "guardrails", "guardrails for ai", "human in the loop", "infrastructure automation", "llm based agents", "observability", "onboarding", "operational debt", "scoped permissions", "security risks", "social facebook", "social linkedin", "social x", "versioning"]
+permalink: /ai/blogs/AI-Agent-Onboarding-as-a-Core-DevOps-Responsibility
+tags:
+- Access Control
+- Agent Lifecycle Management
+- Agent Resilience
+- AI
+- AI Agent Onboarding
+- AI Agents
+- AI Deployment
+- AI Deployment Best Practices
+- AI Feedback Loops
+- AI in Production
+- AI Observability
+- AI Security Risks
+- Autonomous AI Agents
+- Autonomous Systems
+- Blogs
+- Business Of DevOps
+- CI/CD
+- CI/CD For AI Agents
+- Contributed Content
+- DevOps
+- DevOps And AI
+- DevOps Ownership
+- Digital Operations
+- Feedback Loops
+- Generative AI Governance
+- Guardrails
+- Guardrails For AI
+- Human in The Loop
+- Infrastructure Automation
+- LLM Based Agents
+- Observability
+- Onboarding
+- Operational Debt
+- Scoped Permissions
+- Security Risks
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Versioning
+section_names:
+- ai
+- devops
 ---
-
 Alexander Williams examines why DevOps teams must treat onboarding of AI agents as a top priority, providing structured processes to ensure operational safety and reliability.<!--excerpt_end-->
 
 # AI Agent Onboarding as a Core DevOps Responsibility

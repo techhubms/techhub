@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent Now Supports .instructions.md Custom Instructions"
-description: "GitHub Copilot coding agent introduces support for multiple .instructions.md files, allowing for fine-grained, context-sensitive custom instructions. This enhances automation and code quality, providing developers with better ways to guide Copilot’s behavior at the repository or directory level."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-23-github-copilot-coding-agent-now-supports-instructions-md-custom-instructions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Coding Agent Now Supports .instructions.md Custom Instructions
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-23-github-copilot-coding-agent-now-supports-instructions-md-custom-instructions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-23 16:11:38 +00:00
-permalink: "/2025-07-23-GitHub-Copilot-coding-agent-now-supports-instructionsmd-custom-instructions.html"
-categories: ["AI", "GitHub Copilot"]
-tags: [".instructions.md", "AI", "Automation", "Copilot Coding Agent", "Custom Instructions", "Enterprise", "GitHub CLI", "GitHub Copilot", "IDE Integration", "News", "Pro+", "Pull Requests", "Repository Automation", "Task Delegation", "YAML Frontmatter"]
-tags_normalized: ["dotinstructionsdotmd", "ai", "automation", "copilot coding agent", "custom instructions", "enterprise", "github cli", "github copilot", "ide integration", "news", "proplus", "pull requests", "repository automation", "task delegation", "yaml frontmatter"]
+permalink: /github-copilot/news/GitHub-Copilot-coding-agent-now-supports-instructionsmd-custom-instructions
+tags:
+- .instructions.md
+- AI
+- Automation
+- Copilot Coding Agent
+- Custom Instructions
+- Enterprise
+- GitHub CLI
+- GitHub Copilot
+- IDE Integration
+- News
+- Pro+
+- Pull Requests
+- Repository Automation
+- Task Delegation
+- YAML Frontmatter
+section_names:
+- ai
+- github-copilot
 ---
-
 Authored by Allison, this article introduces new capabilities for GitHub Copilot coding agent with support for multiple .instructions.md files, enabling tailored, context-aware custom instructions for improved automation and code quality.<!--excerpt_end-->
 
 ## GitHub Copilot Coding Agent: Now Supports .instructions.md Custom Instructions

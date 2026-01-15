@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Large Message Support Now Generally Available in Azure Event Hubs"
-description: "This announcement highlights the general availability of Large Message Support in Azure Event Hubs, allowing users to send and receive messages up to 20 MB in dedicated clusters. The update improves flexibility and reliability for data streaming solutions, supporting both AMQP and Apache Kafka protocols without client code changes. Key implementation details, eligibility, and client configuration considerations for large messages are covered."
-author: "Sannidhya_Glodha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Large Message Support Now Generally Available in Azure Event Hubs
+author: Sannidhya_Glodha
+canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 19:05:31 +00:00
-permalink: "/2025-11-18-Large-Message-Support-Now-Generally-Available-in-Azure-Event-Hubs.html"
-categories: ["Azure"]
-tags: ["AMQP", "Apache Kafka", "Azure", "Azure Event Hubs", "Azure Portal", "Client Configuration", "Cloud Messaging", "Cloud Native", "Community", "Data Streaming", "Dedicated Clusters", "Event Processing", "Large Message Support", "Message Size", "Microsoft Azure", "Reliability", "Streaming"]
-tags_normalized: ["amqp", "apache kafka", "azure", "azure event hubs", "azure portal", "client configuration", "cloud messaging", "cloud native", "community", "data streaming", "dedicated clusters", "event processing", "large message support", "message size", "microsoft azure", "reliability", "streaming"]
+permalink: /azure/community/Large-Message-Support-Now-Generally-Available-in-Azure-Event-Hubs
+tags:
+- AMQP
+- Apache Kafka
+- Azure
+- Azure Event Hubs
+- Azure Portal
+- Client Configuration
+- Cloud Messaging
+- Cloud Native
+- Community
+- Data Streaming
+- Dedicated Clusters
+- Event Processing
+- Large Message Support
+- Message Size
+- Microsoft Azure
+- Reliability
+- Streaming
+section_names:
+- azure
 ---
-
 Sannidhya_Glodha announces the general availability of Large Message Support in Azure Event Hubs, enabling streaming messages up to 20 MB in scalable dedicated clusters for reliable data processing.<!--excerpt_end-->
 
 # Large Message Support Now Generally Available in Azure Event Hubs

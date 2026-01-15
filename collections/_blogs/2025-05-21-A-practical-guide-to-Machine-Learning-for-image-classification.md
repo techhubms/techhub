@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "A Practical Guide to Machine Learning for Image Classification"
-description: "Hidde de Smet provides a comprehensive, step-by-step walkthrough of a typical machine learning workflow for image classification. The guide covers problem definition, supervised learning with CNNs, essential tooling, data preparation, model training, deployment using Flask, dockerization, and real-world implementation best practices."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/iasa-ai-course"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: A Practical Guide to Machine Learning for Image Classification
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/iasa-ai-course
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-21 07:00:00 +00:00
-permalink: "/2025-05-21-A-practical-guide-to-Machine-Learning-for-image-classification.html"
-categories: ["AI"]
-tags: ["AI", "Blogs", "Convolutional Neural Networks", "Data Augmentation", "Data Preparation", "Docker", "Experiment Tracking", "Flask", "IASA", "Image Classification", "Keras", "Machine Learning", "Model Deployment", "Supervised Learning", "TensorFlow", "Transfer Learning"]
-tags_normalized: ["ai", "blogs", "convolutional neural networks", "data augmentation", "data preparation", "docker", "experiment tracking", "flask", "iasa", "image classification", "keras", "machine learning", "model deployment", "supervised learning", "tensorflow", "transfer learning"]
+permalink: /ai/blogs/A-practical-guide-to-Machine-Learning-for-image-classification
+tags:
+- AI
+- Blogs
+- Convolutional Neural Networks
+- Data Augmentation
+- Data Preparation
+- Docker
+- Experiment Tracking
+- Flask
+- IASA
+- Image Classification
+- Keras
+- Machine Learning
+- Model Deployment
+- Supervised Learning
+- TensorFlow
+- Transfer Learning
+section_names:
+- ai
 ---
-
 Written by Hidde de Smet, this detailed guide walks readers through each stage of building and deploying an image classification solution using machine learning, covering both conceptual and practical considerations.<!--excerpt_end-->
 
 # A Practical Guide to Machine Learning for Image Classification

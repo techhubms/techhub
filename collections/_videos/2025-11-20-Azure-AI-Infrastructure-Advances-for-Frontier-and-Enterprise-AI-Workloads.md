@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure AI Infrastructure Advances for Frontier and Enterprise AI Workloads"
-description: "This session from Microsoft Ignite 2025 focuses on Azure's latest AI infrastructure developments designed for next-generation and enterprise workloads. It explores silicon-to-system optimization, hardware-software codesign, and major data center improvements including cooling, power, networking, and security. Featured technologies include NVIDIA Grace Blackwell Superchips, Quantum-2 InfiniBand, and ND GB200/GB300 VMs delivering exascale performance for demanding AI models such as LLAMA 70B. The discussion also covers new NC H100 and NC RTX Blackwell VMs tailored for enterprise-level inferencing."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DNvM7tyifwk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Azure AI Infrastructure Advances for Frontier and Enterprise AI Workloads
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=DNvM7tyifwk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:20:56 +00:00
-permalink: "/2025-11-20-Azure-AI-Infrastructure-Advances-for-Frontier-and-Enterprise-AI-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Mode", "AI", "AI Infrastructure", "AI Model Deployment", "Azure", "Azure AI", "Cooling Systems", "Datacenter Optimization", "Enterprise AI", "Enterprise Inferencing", "Exascale Performance", "GB300 VM", "Hardware Software Codesign", "LLAMA 70B", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NC H100 VM", "NC RTX Blackwell VM", "ND GB200 VM", "Network Security", "NVIDIA Grace Blackwell", "Quantum 2 InfiniBand", "Silicon Optimization", "Videos"]
-tags_normalized: ["agent mode", "ai", "ai infrastructure", "ai model deployment", "azure", "azure ai", "cooling systems", "datacenter optimization", "enterprise ai", "enterprise inferencing", "exascale performance", "gb300 vm", "hardware software codesign", "llama 70b", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nc h100 vm", "nc rtx blackwell vm", "nd gb200 vm", "network security", "nvidia grace blackwell", "quantum 2 infiniband", "silicon optimization", "videos"]
+permalink: /ai/videos/Azure-AI-Infrastructure-Advances-for-Frontier-and-Enterprise-AI-Workloads
+tags:
+- Agent Mode
+- AI
+- AI Infrastructure
+- AI Model Deployment
+- Azure
+- Azure AI
+- Cooling Systems
+- Datacenter Optimization
+- Enterprise AI
+- Enterprise Inferencing
+- Exascale Performance
+- GB300 VM
+- Hardware Software Codesign
+- LLAMA 70B
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- NC H100 VM
+- NC RTX Blackwell VM
+- ND GB200 VM
+- Network Security
+- NVIDIA Grace Blackwell
+- Quantum 2 InfiniBand
+- Silicon Optimization
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an in-depth look at Azure's latest AI infrastructure from Microsoft Ignite 2025, led by Param Shah and Matt Vegas, highlighting innovations for powering both frontier and enterprise AI workloads.<!--excerpt_end-->
 
 {% youtube DNvM7tyifwk %}

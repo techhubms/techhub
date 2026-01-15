@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry"
-description: "This session from Microsoft Ignite 2025 delivers an in-depth look at how Nasdaq Boardvantage leverages Azure Database for PostgreSQL and MySQL, Microsoft Foundry, Azure Kubernetes Service (AKS), and Azure API Management to build a secure, agentic AI-driven governance solution. It covers architectural patterns for data security, smart document summarization, AI Meeting Minutes, hybrid search using PG Vector, and advanced microservices orchestration with Azure Functions and Prompt Flow."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BkOcPQntsk4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=BkOcPQntsk4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-09 18:08:55 +00:00
-permalink: "/2025-12-09-Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Governance", "AI Meeting Minutes", "AKS", "API Management", "Azure", "Azure Database For MySQL", "Azure Database For PostgreSQL", "Azure Functions", "BRK137", "Cloud Architecture", "Data Security", "F5n1", "Hybrid Search", "Ignite", "Innovate With Azure AI Apps And Agents:azure PostgreSQL", "Innovate With Azure AI Apps And Agents:microsoft Foundry", "Microservices Orchestration", "Microsoft", "Microsoft Foundry", "Microsoft Ignite", "ML", "Ms Ignite", "Msft Ignite", "Nasdaq Boardvantage", "Nasdaq Boardvantage: AI Driven Governance On PostgreSQL And Microsoft Foundry | BRK137", "PG Vector", "Prompt Flow", "Regulatory Compliance", "Security", "Smart Document Summarization", "Unify Your Data Platform", "Videos"]
-tags_normalized: ["ai", "ai governance", "ai meeting minutes", "aks", "api management", "azure", "azure database for mysql", "azure database for postgresql", "azure functions", "brk137", "cloud architecture", "data security", "f5n1", "hybrid search", "ignite", "innovate with azure ai apps and agentsazure postgresql", "innovate with azure ai apps and agentsmicrosoft foundry", "microservices orchestration", "microsoft", "microsoft foundry", "microsoft ignite", "ml", "ms ignite", "msft ignite", "nasdaq boardvantage", "nasdaq boardvantage ai driven governance on postgresql and microsoft foundry pipe brk137", "pg vector", "prompt flow", "regulatory compliance", "security", "smart document summarization", "unify your data platform", "videos"]
+permalink: /ai/videos/Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry
+tags:
+- AI
+- AI Governance
+- AI Meeting Minutes
+- AKS
+- API Management
+- Azure
+- Azure Database For MySQL
+- Azure Database For PostgreSQL
+- Azure Functions
+- BRK137
+- Cloud Architecture
+- Data Security
+- F5n1
+- Hybrid Search
+- Ignite
+- Innovate With Azure AI Apps And Agents:azure PostgreSQL
+- Innovate With Azure AI Apps And Agents:microsoft Foundry
+- Microservices Orchestration
+- Microsoft
+- Microsoft Foundry
+- Microsoft Ignite
+- ML
+- Ms Ignite
+- Msft Ignite
+- Nasdaq Boardvantage
+- 'Nasdaq Boardvantage: AI Driven Governance On PostgreSQL And Microsoft Foundry | BRK137'
+- PG Vector
+- Prompt Flow
+- Regulatory Compliance
+- Security
+- Smart Document Summarization
+- Unify Your Data Platform
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Events presents an advanced session with Charles Feddersen and Mohsin Shafqat, exploring how Nasdaq Boardvantage utilizes Azure open-source databases and Microsoft Foundry to achieve secure, AI-powered board governance.<!--excerpt_end-->
 
 {% youtube BkOcPQntsk4 %}

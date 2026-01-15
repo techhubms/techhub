@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "VS Code Live at GitHub Universe: Live Coding with Copilot"
-description: "A live broadcast from the VS Code and GitHub teams during GitHub Universe, focusing on collaborative coding projects and demonstrations of GitHub Copilot integrated within Visual Studio Code. Community members participate in live sessions showing how Copilot accelerates coding workflows using real-world examples."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pZenafOYtfI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live at GitHub Universe: Live Coding with Copilot'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=pZenafOYtfI
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-23 18:14:40 +00:00
-permalink: "/2025-10-23-VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code", "Code Collaboration", "Coding", "Coding Workflow", "Community Event", "Copilot Integration", "Developer", "Developer Community", "Developer Tools", "Figma", "GitHub Copilot", "GitHub Universe", "Live Coding", "Mcp", "Mcpserver", "Microsoft", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["ai", "code", "code collaboration", "coding", "coding workflow", "community event", "copilot integration", "developer", "developer community", "developer tools", "figma", "github copilot", "github universe", "live coding", "mcp", "mcpserver", "microsoft", "software developer", "videos", "vs code"]
+permalink: /github-copilot/videos/VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot
+tags:
+- AI
+- Code
+- Code Collaboration
+- Coding
+- Coding Workflow
+- Community Event
+- Copilot Integration
+- Developer
+- Developer Community
+- Developer Tools
+- Figma
+- GitHub Copilot
+- GitHub Universe
+- Live Coding
+- Mcp
+- Mcpserver
+- Microsoft
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code presents a live session from GitHub Universe featuring live coding demonstrations alongside GitHub Copilot, highlighting contributions from both the VS Code and GitHub teams.<!--excerpt_end-->
 
 {% youtube pZenafOYtfI %}

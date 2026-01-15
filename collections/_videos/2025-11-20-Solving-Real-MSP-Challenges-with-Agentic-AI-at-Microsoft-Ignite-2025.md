@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Solving Real MSP Challenges with Agentic AI at Microsoft Ignite 2025"
-description: "This session from Microsoft Ignite 2025 explores how TD SYNNEX leverages advanced AI agents to address managed service provider (MSP) challenges, including service management, security, billing, and automation. It highlights real-world use cases in help desk operations, supply chain, retail, and business process integration, along with insights into AI monetization strategies and partner enablement through StreamOne and Destination AI."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8tP0NX9nXpw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Solving Real MSP Challenges with Agentic AI at Microsoft Ignite 2025
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=8tP0NX9nXpw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:14:23 +00:00
-permalink: "/2025-11-20-Solving-Real-MSP-Challenges-with-Agentic-AI-at-Microsoft-Ignite-2025.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "Billing Automation", "Copilot Chat", "Copilotandagentsatwork", "Destination AI", "Generative AI", "Help Desk", "HR Onboarding", "Monetization", "MS Ignite", "MSIgnite", "Process Integration", "Retail Automation", "Security Automation", "Service Management", "StreamOne", "Supply Chain", "TD SYNNEX", "Videos"]
-tags_normalized: ["ai", "ai agents", "billing automation", "copilot chat", "copilotandagentsatwork", "destination ai", "generative ai", "help desk", "hr onboarding", "monetization", "ms ignite", "msignite", "process integration", "retail automation", "security automation", "service management", "streamone", "supply chain", "td synnex", "videos"]
+permalink: /ai/videos/Solving-Real-MSP-Challenges-with-Agentic-AI-at-Microsoft-Ignite-2025
+tags:
+- AI
+- AI Agents
+- Billing Automation
+- Copilot Chat
+- Copilotandagentsatwork
+- Destination AI
+- Generative AI
+- Help Desk
+- HR Onboarding
+- Monetization
+- MS Ignite
+- MSIgnite
+- Process Integration
+- Retail Automation
+- Security Automation
+- Service Management
+- StreamOne
+- Supply Chain
+- TD SYNNEX
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents speakers Brianna Berry and Jan Jofra in a Microsoft Ignite 2025 session on deploying real agentic AI to solve MSP challenges, covering monetization and use cases across various industries.<!--excerpt_end-->
 
 {% youtube 8tP0NX9nXpw %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Streamline Community Health Files with AI and GitHub Copilot"
-description: "This guide explains how to enhance and update open source project community health files—like README, contributor guides, and licenses—using GitHub Copilot. It covers the significance of community health documentation, actionable AI-driven workflows, prompt engineering, checklists for better outputs, and tutorials for automating file creation and maintenance. The content helps maintainers and developers leverage AI tools to save time, improve open source project governance, and strengthen contributor collaboration."
-author: "Alexandra Lietzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-update-community-health-files-with-ai/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Streamline Community Health Files with AI and GitHub Copilot
+author: Alexandra Lietzke
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-update-community-health-files-with-ai/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-21 16:00:00 +00:00
-permalink: "/2025-10-21-Streamline-Community-Health-Files-with-AI-and-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Documentation", "Automation", "Checklist", "Community Health Files", "CONTRIBUTING.md", "Copilot Chat", "Documentation Best Practices", "GitHub Copilot", "LICENSE", "Maintainers", "News", "Open Source", "Project Maintainers", "Prompt Engineering", "README", "Repository Management"]
-tags_normalized: ["ai", "ai and ml", "ai documentation", "automation", "checklist", "community health files", "contributingdotmd", "copilot chat", "documentation best practices", "github copilot", "license", "maintainers", "news", "open source", "project maintainers", "prompt engineering", "readme", "repository management"]
+permalink: /github-copilot/news/Streamline-Community-Health-Files-with-AI-and-GitHub-Copilot
+tags:
+- AI
+- AI & ML
+- AI Documentation
+- Automation
+- Checklist
+- Community Health Files
+- CONTRIBUTING.md
+- Copilot Chat
+- Documentation Best Practices
+- GitHub Copilot
+- LICENSE
+- Maintainers
+- News
+- Open Source
+- Project Maintainers
+- Prompt Engineering
+- README
+- Repository Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Alexandra Lietzke guides maintainers and developers through using GitHub Copilot and AI to automate and optimize community health files, with practical tutorials, checklists, and prompt engineering tips.<!--excerpt_end-->
 
 # Streamline Community Health Files with AI and GitHub Copilot

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft Agent Pre-Purchase Plan: Unified AI Procurement for Foundry and Copilot Studio"
-description: "This article introduces the Microsoft Agent Pre-Purchase Plan (P3) announced at Ignite 2025. It explains how P3 unifies AI service procurement, reduces complexity, and provides cost savings for organizations deploying intelligent agents using Microsoft Foundry, Copilot Studio, and the new Work IQ, Fabric IQ, and Foundry IQ intelligence layers. Readers learn about ACUs, plan benefits, pricing, purchase steps, and how P3 supports scalable agentic solutions."
-author: "kyleikeda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft Agent Pre-Purchase Plan: Unified AI Procurement for Foundry and Copilot Studio'
+author: kyleikeda
+canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 21:58:27 +00:00
-permalink: "/2025-12-08-Microsoft-Agent-Pre-Purchase-Plan-Unified-AI-Procurement-for-Foundry-and-Copilot-Studio.html"
-categories: ["AI", "Azure"]
-tags: ["ACU", "Agent Commit Units", "Agent Deployment", "Agent Factory", "AI", "AI Agent Architecture", "Azure", "Azure AI Search", "Azure Cognitive Services", "Azure Procurement", "Community", "Copilot Credit", "Copilot Studio", "Cost Optimization", "Enterprise AI", "Fabric IQ", "Foundry IQ", "Ignite", "Microsoft Agent Pre Purchase Plan", "Microsoft Foundry", "Orchestration Tools", "Private Preview", "Provisioned Throughput Unit", "PTU", "Reservations", "Work IQ"]
-tags_normalized: ["acu", "agent commit units", "agent deployment", "agent factory", "ai", "ai agent architecture", "azure", "azure ai search", "azure cognitive services", "azure procurement", "community", "copilot credit", "copilot studio", "cost optimization", "enterprise ai", "fabric iq", "foundry iq", "ignite", "microsoft agent pre purchase plan", "microsoft foundry", "orchestration tools", "private preview", "provisioned throughput unit", "ptu", "reservations", "work iq"]
+permalink: /ai/community/Microsoft-Agent-Pre-Purchase-Plan-Unified-AI-Procurement-for-Foundry-and-Copilot-Studio
+tags:
+- ACU
+- Agent Commit Units
+- Agent Deployment
+- Agent Factory
+- AI
+- AI Agent Architecture
+- Azure
+- Azure AI Search
+- Azure Cognitive Services
+- Azure Procurement
+- Community
+- Copilot Credit
+- Copilot Studio
+- Cost Optimization
+- Enterprise AI
+- Fabric IQ
+- Foundry IQ
+- Ignite
+- Microsoft Agent Pre Purchase Plan
+- Microsoft Foundry
+- Orchestration Tools
+- Private Preview
+- Provisioned Throughput Unit
+- PTU
+- Reservations
+- Work IQ
+section_names:
+- ai
+- azure
 ---
-
 Kyle Ikeda explains the Microsoft Agent Pre-Purchase Plan, highlighting unified procurement, ACU credits, and cost optimization for building intelligent agents with Microsoft Foundry and Copilot Studio.<!--excerpt_end-->
 
 # Microsoft Agent Pre-Purchase Plan: Unified AI Procurement for Foundry and Copilot Studio

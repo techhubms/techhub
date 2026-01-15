@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Balancing Speed and Quality with AI and GitHub Copilot in Development"
-description: "This article by Gwen Davis explores how development teams can harness AI tools, including GitHub Copilot and GitHub Code Quality, to increase coding speed without sacrificing software reliability. It presents actionable strategies: using AI-driven code analysis, maintaining clear intent in prompts, and documenting technical decisions to avoid quality pitfalls often seen with rapid AI-generated workflows."
-author: "Gwen Davis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Balancing Speed and Quality with AI and GitHub Copilot in Development
+author: Gwen Davis
+canonical_url: https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-09 17:00:00 +00:00
-permalink: "/2025-12-09-Balancing-Speed-and-Quality-with-AI-and-GitHub-Copilot-in-Development.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Driven Development", "Automated Code Analysis", "Best Practices", "Code Review Automation", "CodeQL", "Coding", "Coding Agent", "Coding Standards", "Continuous Improvement", "Developer Tools", "Feature Documentation", "Generative AI", "GitHub Code Quality", "GitHub Copilot", "IDE Integration", "News", "Prompt Engineering", "Pull Request Workflow", "Quality Guardrails", "Software Maintainability", "Technical Debt", "Technical Documentation"]
-tags_normalized: ["ai", "ai and ml", "ai driven development", "automated code analysis", "best practices", "code review automation", "codeql", "coding", "coding agent", "coding standards", "continuous improvement", "developer tools", "feature documentation", "generative ai", "github code quality", "github copilot", "ide integration", "news", "prompt engineering", "pull request workflow", "quality guardrails", "software maintainability", "technical debt", "technical documentation"]
+permalink: /github-copilot/news/Balancing-Speed-and-Quality-with-AI-and-GitHub-Copilot-in-Development
+tags:
+- AI
+- AI & ML
+- AI Driven Development
+- Automated Code Analysis
+- Best Practices
+- Code Review Automation
+- CodeQL
+- Coding
+- Coding Agent
+- Coding Standards
+- Continuous Improvement
+- Developer Tools
+- Feature Documentation
+- Generative AI
+- GitHub Code Quality
+- GitHub Copilot
+- IDE Integration
+- News
+- Prompt Engineering
+- Pull Request Workflow
+- Quality Guardrails
+- Software Maintainability
+- Technical Debt
+- Technical Documentation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Gwen Davis shares key strategies for maintaining high code quality while leveraging AI tools like GitHub Copilot and Code Quality, helping developers balance speed with reliability.<!--excerpt_end-->
 
 # Balancing Speed and Quality with AI and GitHub Copilot in Development

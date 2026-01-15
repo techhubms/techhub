@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Reimagining VM Application Management for an AI-Powered, Secure Future"
-description: "This article explains Azure VM Applications, a managed solution for VM software lifecycle on Azure. It covers accelerated AI-driven deployment, enhanced security and resilience, modular governance, and step-by-step publishing and deployment methods for virtual machines and scale sets. The guide emphasizes integration with DevOps pipelines and compliance automation."
-author: "tanmay-gore"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/reimagining-vm-application-management-for-an-ai-powered-secure/ba-p/4470127"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Reimagining VM Application Management for an AI-Powered, Secure Future
+author: tanmay-gore
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/reimagining-vm-application-management-for-an-ai-powered-secure/ba-p/4470127
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Workflow", "Application Lifecycle", "Application Packaging", "ARM Templates", "Azure", "Azure DevOps", "Azure Policy", "Azure Resource Graph", "Azure VM Applications", "Community", "DevOps", "DevOps CI/CD", "GitHub Actions", "Governance", "Monitoring", "PowerShell Automation", "Regional Resiliency", "Secure Deployment", "Security", "Version Control", "Virtual Machines", "VM Scale Sets"]
-tags_normalized: ["ai", "ai workflow", "application lifecycle", "application packaging", "arm templates", "azure", "azure devops", "azure policy", "azure resource graph", "azure vm applications", "community", "devops", "devops cislashcd", "github actions", "governance", "monitoring", "powershell automation", "regional resiliency", "secure deployment", "security", "version control", "virtual machines", "vm scale sets"]
+permalink: /ai/community/Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future
+tags:
+- AI
+- AI Workflow
+- Application Lifecycle
+- Application Packaging
+- ARM Templates
+- Azure
+- Azure DevOps
+- Azure Policy
+- Azure Resource Graph
+- Azure VM Applications
+- Community
+- DevOps
+- DevOps CI/CD
+- GitHub Actions
+- Governance
+- Monitoring
+- PowerShell Automation
+- Regional Resiliency
+- Secure Deployment
+- Security
+- Version Control
+- Virtual Machines
+- VM Scale Sets
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Tanmay Gore outlines how Azure VM Applications simplify and secure VM software deployment for AI-scale workloads, integrating CI/CD automation, versioning, and governance in the Azure ecosystem.<!--excerpt_end-->
 
 # Reimagining VM Application Management for an AI-Powered, Secure Future

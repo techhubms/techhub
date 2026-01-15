@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Swiggy's Real-Time Data Processing with Microsoft Fabric"
-description: "This news post highlights how Swiggy leverages Microsoft Fabric to process billions of data points in near real time, driving innovations in operational convenience for millions of users. The use case demonstrates large-scale streaming data analysis and the strategic role of data architecture in enabling actionable insights and transforming digital logistics. While technical implementation details are not deep, Microsoft Fabric's central role in stream processing and enterprise-scale analytics is clearly established."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Swiggy's Real-Time Data Processing with Microsoft Fabric
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 04:10:00 +00:00
-permalink: "/2025-12-11-Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data", "Batch Processing", "Big Data", "Cloud Data", "Company News", "Data Architecture", "Data Platform", "Digital Logistics", "Enterprise Analytics", "Innovation", "LinkedIn Post", "Microsoft Fabric", "ML", "Near Real Time", "News", "Operational Intelligence", "Real Time Data Processing", "Streaming Analytics", "Swiggy"]
-tags_normalized: ["azure", "azure data", "batch processing", "big data", "cloud data", "company news", "data architecture", "data platform", "digital logistics", "enterprise analytics", "innovation", "linkedin post", "microsoft fabric", "ml", "near real time", "news", "operational intelligence", "real time data processing", "streaming analytics", "swiggy"]
+permalink: /ml/news/Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric
+tags:
+- Azure
+- Azure Data
+- Batch Processing
+- Big Data
+- Cloud Data
+- Company News
+- Data Architecture
+- Data Platform
+- Digital Logistics
+- Enterprise Analytics
+- Innovation
+- LinkedIn Post
+- Microsoft Fabric
+- ML
+- Near Real Time
+- News
+- Operational Intelligence
+- Real Time Data Processing
+- Streaming Analytics
+- Swiggy
+section_names:
+- azure
+- ml
 ---
-
 stclarke reports on how Swiggy uses Microsoft Fabric to process streaming data in near real time, enabling new capabilities in convenience delivery for millions of users.<!--excerpt_end-->
 
 # Swiggy's Real-Time Data Processing with Microsoft Fabric

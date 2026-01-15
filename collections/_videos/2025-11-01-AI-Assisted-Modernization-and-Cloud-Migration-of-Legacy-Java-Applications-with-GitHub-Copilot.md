@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot"
-description: "This episode, led by Ayan Gupta, demonstrates how the GitHub Copilot App Modernization tool accelerates the upgrade and migration of legacy Java applications. It covers upgrading Java runtimes, resolving security vulnerabilities, and migrating databases and services from AWS to Azure, leveraging AI-driven automation for assessment, planning, and implementation."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9gmp_ADmRuE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=9gmp_ADmRuE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-01 00:00:14 +00:00
-permalink: "/2025-11-01-AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Modernization", "AIAssisted", "AppModernization", "Asset Manager", "AWS S3", "Azure", "Azure Migration", "AzureMigration", "Cloud Migration", "CloudMigration", "Coding", "CVE Scanning", "DevOps", "GitHub Copilot", "Java 21", "Java Migration", "Java Upgrade", "Java21", "JavaMigration", "JavaModernization", "JavaUpgrade", "Legacy Code", "LegacyCode", "OpenRewrite", "PostgreSQL", "RabbitMQ", "Security Vulnerabilities", "Spring Boot", "Videos"]
-tags_normalized: ["ai", "ai assisted modernization", "aiassisted", "appmodernization", "asset manager", "aws s3", "azure", "azure migration", "azuremigration", "cloud migration", "cloudmigration", "coding", "cve scanning", "devops", "github copilot", "java 21", "java migration", "java upgrade", "java21", "javamigration", "javamodernization", "javaupgrade", "legacy code", "legacycode", "openrewrite", "postgresql", "rabbitmq", "security vulnerabilities", "spring boot", "videos"]
+permalink: /github-copilot/videos/AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Modernization
+- AIAssisted
+- AppModernization
+- Asset Manager
+- AWS S3
+- Azure
+- Azure Migration
+- AzureMigration
+- Cloud Migration
+- CloudMigration
+- Coding
+- CVE Scanning
+- DevOps
+- GitHub Copilot
+- Java 21
+- Java Migration
+- Java Upgrade
+- Java21
+- JavaMigration
+- JavaModernization
+- JavaUpgrade
+- Legacy Code
+- LegacyCode
+- OpenRewrite
+- PostgreSQL
+- RabbitMQ
+- Security Vulnerabilities
+- Spring Boot
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 In this episode, Microsoft Developer Ayan Gupta shows how GitHub Copilot and AI transform legacy Java app modernization, focusing on upgrading and migrating enterprise workloads to Azure.<!--excerpt_end-->
 
 {% youtube 9gmp_ADmRuE %}

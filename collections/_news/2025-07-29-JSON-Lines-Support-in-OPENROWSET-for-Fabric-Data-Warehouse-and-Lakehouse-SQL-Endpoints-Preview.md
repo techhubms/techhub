@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)"
-description: "Microsoft Fabric introduces preview support for querying JSON Lines (JSONL) files with the OPENROWSET(BULK) T-SQL function in Data Warehouse and Lakehouse SQL endpoints. This expands the ability to work with semi-structured data, making it easier to ingest, analyze, and utilize external data formats in analytics solutions."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-29 11:30:00 +00:00
-permalink: "/2025-07-29-JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Data Analytics", "Data Lake", "Data Warehouse", "External Data", "JSON Lines", "JSONL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Semi Structured Data", "SQL Endpoints", "T SQL"]
-tags_normalized: ["azure", "data analytics", "data lake", "data warehouse", "external data", "json lines", "jsonl", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "semi structured data", "sql endpoints", "t sql"]
+permalink: /ml/news/JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview
+tags:
+- Azure
+- Data Analytics
+- Data Lake
+- Data Warehouse
+- External Data
+- JSON Lines
+- JSONL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OPENROWSET
+- Semi Structured Data
+- SQL Endpoints
+- T SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces preview support for JSON Lines (JSONL) in OPENROWSET for Data Warehouse and Lakehouse SQL endpoints, simplifying access to semi-structured data.<!--excerpt_end-->
 
 ## JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)

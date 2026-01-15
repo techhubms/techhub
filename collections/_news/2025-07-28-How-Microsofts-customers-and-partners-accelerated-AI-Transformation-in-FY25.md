@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How Microsoft’s customers and partners accelerated AI Transformation in FY25"
-description: "This article explores how Microsoft’s customers and partners drove significant AI transformation in FY25. It highlights innovative strategies, key success stories, and Microsoft's AI technologies that shaped business growth and future preparedness."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/07/28/how-microsofts-customers-and-partners-accelerated-ai-transformation-in-fy25-to-innovate-with-purpose-and-shape-their-future-success/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Microsoft’s customers and partners accelerated AI Transformation in FY25
+author: stclarke
+canonical_url: https://blogs.microsoft.com/blog/2025/07/28/how-microsofts-customers-and-partners-accelerated-ai-transformation-in-fy25-to-innovate-with-purpose-and-shape-their-future-success/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 14:11:23 +00:00
-permalink: "/2025-07-28-How-Microsofts-customers-and-partners-accelerated-AI-Transformation-in-FY25.html"
-categories: ["AI"]
-tags: ["AI", "AI Technologies", "AI Transformation", "Business Growth", "Company News", "Customers", "Digital Transformation", "FY25", "Innovation", "Microsoft", "News", "Partners", "Success Stories"]
-tags_normalized: ["ai", "ai technologies", "ai transformation", "business growth", "company news", "customers", "digital transformation", "fy25", "innovation", "microsoft", "news", "partners", "success stories"]
+permalink: /ai/news/How-Microsofts-customers-and-partners-accelerated-AI-Transformation-in-FY25
+tags:
+- AI
+- AI Technologies
+- AI Transformation
+- Business Growth
+- Company News
+- Customers
+- Digital Transformation
+- FY25
+- Innovation
+- Microsoft
+- News
+- Partners
+- Success Stories
+section_names:
+- ai
 ---
-
 Authored by stclarke, this article details how Microsoft’s customers and partners accelerated their AI transformation efforts in FY25, driving innovation and future competitiveness.<!--excerpt_end-->
 
 ## Summary

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub"
-description: "This news update presents the general availability of secret scanning alert assignees and security campaigns in GitHub, designed to improve tracking and remediation of security alerts. It introduces new notification features, REST API and webhook support, campaign list views, and role-based alert assignment for better security management in repositories."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 17:51:00 +00:00
-permalink: "/2025-11-25-Secret-Scanning-Alert-Assignees-and-Security-Campaigns-Now-Available-in-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["Alert Assignees", "Application Security", "Bulk Actions", "CI/CD", "DevOps", "GitHub", "News", "Remediation", "Repository Security", "REST API", "Secret Scanning", "Security", "Security Alerts", "Security Automation", "Security Campaigns", "Security Dashboard", "Webhooks"]
-tags_normalized: ["alert assignees", "application security", "bulk actions", "cislashcd", "devops", "github", "news", "remediation", "repository security", "rest api", "secret scanning", "security", "security alerts", "security automation", "security campaigns", "security dashboard", "webhooks"]
+permalink: /devops/news/Secret-Scanning-Alert-Assignees-and-Security-Campaigns-Now-Available-in-GitHub
+tags:
+- Alert Assignees
+- Application Security
+- Bulk Actions
+- CI/CD
+- DevOps
+- GitHub
+- News
+- Remediation
+- Repository Security
+- REST API
+- Secret Scanning
+- Security
+- Security Alerts
+- Security Automation
+- Security Campaigns
+- Security Dashboard
+- Webhooks
+section_names:
+- devops
+- security
 ---
-
 Allison reports on GitHub's latest features for secret scanning alert assignees and security campaigns, highlighting improvements in alert notifications, remediation workflows, and security automation for development teams.<!--excerpt_end-->
 
 # Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub

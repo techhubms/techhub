@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "What’s New in OneLake and the Fabric Platform: Expanded Sources, Security, and Capacity Management"
-description: "This announcement details the latest innovations in Microsoft Fabric and OneLake, presenting new zero-ETL source integrations, mirroring capabilities for SAP, Cosmos DB, and SQL Server, advanced governance and security features, and enhanced capacity management tooling. It highlights how these features help organizations unify data estates, enable real-time analytics and AI applications, and deploy secure, governed solutions across multi-cloud environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-onelake-and-the-fabric-platform-more-sources-security-and-capacity-tooling/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'What’s New in OneLake and the Fabric Platform: Expanded Sources, Security, and Capacity Management'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-onelake-and-the-fabric-platform-more-sources-security-and-capacity-tooling/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Whats-New-in-OneLake-and-the-Fabric-Platform-Expanded-Sources-Security-and-Capacity-Management.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Readiness", "Azure", "Capacity Management", "Cosmos DB", "Customer Managed Keys", "Data Governance", "Data Lake", "Data Mirroring", "Data Shortcuts", "Fabric IQ", "Foundry IQ", "Microsoft 365", "Microsoft Fabric", "ML", "News", "OneLake", "Outbound Access Protection", "Power BI", "Real Time Analytics", "SAP Integration", "Security", "SQL Server", "Zero ETL"]
-tags_normalized: ["ai", "ai readiness", "azure", "capacity management", "cosmos db", "customer managed keys", "data governance", "data lake", "data mirroring", "data shortcuts", "fabric iq", "foundry iq", "microsoft 365", "microsoft fabric", "ml", "news", "onelake", "outbound access protection", "power bi", "real time analytics", "sap integration", "security", "sql server", "zero etl"]
+permalink: /ai/news/Whats-New-in-OneLake-and-the-Fabric-Platform-Expanded-Sources-Security-and-Capacity-Management
+tags:
+- AI
+- AI Readiness
+- Azure
+- Capacity Management
+- Cosmos DB
+- Customer Managed Keys
+- Data Governance
+- Data Lake
+- Data Mirroring
+- Data Shortcuts
+- Fabric IQ
+- Foundry IQ
+- Microsoft 365
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Outbound Access Protection
+- Power BI
+- Real Time Analytics
+- SAP Integration
+- Security
+- SQL Server
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces a major update to OneLake and the Fabric platform, revealing new mirroring sources, security controls, and AI-ready data governance features for organizations seeking unified, intelligent data estates.<!--excerpt_end-->
 
 # What’s New in OneLake and the Fabric Platform: Expanded Sources, Security, and Capacity Management

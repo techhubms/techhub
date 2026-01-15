@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Designing Effective AI Agents: Insights from Armchair Architects"
-description: "In this episode of the Armchair Architects series on the Azure Essentials Show, architects Uli Homann, Eric Charran, and David Blank-Edelman dissect the core building blocks and operational challenges of designing advanced AI agents for enterprise use. The session explores language models, vector knowledge bases, orchestration frameworks, memory management, and agent governance, offering actionable best practices and references to Microsoft architectures and tools like Semantic Kernel, RAG, and Autogen. This episode is ideal for developers and architects seeking to deepen their technical understanding of robust, secure, up-to-date AI agent design in Microsoft-focused environments."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wTg9tFwjAOc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Designing Effective AI Agents: Insights from Armchair Architects'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=wTg9tFwjAOc
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-13 08:01:10 +00:00
-permalink: "/2025-11-13-Designing-Effective-AI-Agents-Insights-from-Armchair-Architects.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Autonomy", "AI", "AI Agent Architecture", "Armchair Architects", "Autogen", "Azure", "Azure Essentials", "Enterprise AI", "Governance", "LangChain", "Language Models", "Memory Management", "Microsoft AI", "Orchestration Frameworks", "RAG", "Retrieval Augmented Generation", "Semantic Kernel", "Vector Databases", "Videos"]
-tags_normalized: ["agent autonomy", "ai", "ai agent architecture", "armchair architects", "autogen", "azure", "azure essentials", "enterprise ai", "governance", "langchain", "language models", "memory management", "microsoft ai", "orchestration frameworks", "rag", "retrieval augmented generation", "semantic kernel", "vector databases", "videos"]
+permalink: /ai/videos/Designing-Effective-AI-Agents-Insights-from-Armchair-Architects
+tags:
+- Agent Autonomy
+- AI
+- AI Agent Architecture
+- Armchair Architects
+- Autogen
+- Azure
+- Azure Essentials
+- Enterprise AI
+- Governance
+- LangChain
+- Language Models
+- Memory Management
+- Microsoft AI
+- Orchestration Frameworks
+- RAG
+- Retrieval Augmented Generation
+- Semantic Kernel
+- Vector Databases
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Hosted by Uli Homann, Eric Charran, and David Blank-Edelman, this Armchair Architects episode dives deep into designing effective AI agents, covering architecture, memory, and governance for Microsoft enterprise solutions.<!--excerpt_end-->
 
 {% youtube wTg9tFwjAOc %}

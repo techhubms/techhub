@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Cybersecurity Teams Can Work Better with DevOps"
-description: "This article, authored by Samuel Ogbonna, provides an in-depth examination of integrating security (DevSecOps) practices into fast-moving DevOps workflows. It covers common collaboration challenges, essential best practices, and cultural shifts needed for security and DevOps teams to work together, including clear roles, automation, cross-training, and communication routines for continuous software delivery improvement."
-author: "Samuel Ogbonna"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-cybersecurity-teams-can-work-better-with-devops/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How Cybersecurity Teams Can Work Better with DevOps
+author: Samuel Ogbonna
+canonical_url: https://devops.com/how-cybersecurity-teams-can-work-better-with-devops/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-03 19:50:57 +00:00
-permalink: "/2025-11-03-How-Cybersecurity-Teams-Can-Work-Better-with-DevOps.html"
-categories: ["DevOps", "Security"]
-tags: ["Automation", "Blogs", "CI/CD", "Cloud Security", "Cloud Security Best Practices", "Continuous Improvement", "Contributed Content", "Cross Training", "Cyber Security", "Cybersecurity", "DevOps", "DevSecOps", "Pipeline Security", "Secure Development", "Security", "Security Automation", "Security Best Practices", "Security Champions", "Security Integration", "Social Facebook", "Social LinkedIn", "Social X", "Team Collaboration"]
-tags_normalized: ["automation", "blogs", "cislashcd", "cloud security", "cloud security best practices", "continuous improvement", "contributed content", "cross training", "cyber security", "cybersecurity", "devops", "devsecops", "pipeline security", "secure development", "security", "security automation", "security best practices", "security champions", "security integration", "social facebook", "social linkedin", "social x", "team collaboration"]
+permalink: /devops/blogs/How-Cybersecurity-Teams-Can-Work-Better-with-DevOps
+tags:
+- Automation
+- Blogs
+- CI/CD
+- Cloud Security
+- Cloud Security Best Practices
+- Continuous Improvement
+- Contributed Content
+- Cross Training
+- Cyber Security
+- Cybersecurity
+- DevOps
+- DevSecOps
+- Pipeline Security
+- Secure Development
+- Security
+- Security Automation
+- Security Best Practices
+- Security Champions
+- Security Integration
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Team Collaboration
+section_names:
+- devops
+- security
 ---
-
 Samuel Ogbonna details how cybersecurity and DevOps teams can enhance collaboration by embedding security throughout the DevOps pipeline, sharing actionable best practices and communication strategies.<!--excerpt_end-->
 
 # How Cybersecurity Teams Can Work Better with DevOps

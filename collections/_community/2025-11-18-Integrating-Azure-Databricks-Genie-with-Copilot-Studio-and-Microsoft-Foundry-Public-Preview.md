@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Integrating Azure Databricks Genie with Copilot Studio and Microsoft Foundry: Public Preview"
-description: "This blog post authored by AnaviNahar and co-authored by Toussaint Webb details the public preview of AI/BI Genie integration with Microsoft Copilot Studio and Microsoft Foundry, streamlining access to conversational analytics and trusted data insights within the Microsoft ecosystem. It explains new simplified workflows for connecting Genie spaces to Copilot Studio agents and Foundry agents, leveraging Microsoft platform connectors and authentication, thus enabling organizations to scale data-driven solutions without complex custom code integrations."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Integrating Azure Databricks Genie with Copilot Studio and Microsoft Foundry: Public Preview'
+author: AnaviNahar
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:48:18 +00:00
-permalink: "/2025-11-18-Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Databricks", "Community", "Conversational Analytics", "Copilot Studio", "Data Democratization", "Data Insights", "Enterprise Data", "Entra ID", "Genie", "Integration", "Machine Learning", "MCP", "Microsoft Foundry", "ML", "OAuth", "Power Apps", "Teams Integration"]
-tags_normalized: ["ai", "azure", "azure databricks", "community", "conversational analytics", "copilot studio", "data democratization", "data insights", "enterprise data", "entra id", "genie", "integration", "machine learning", "mcp", "microsoft foundry", "ml", "oauth", "power apps", "teams integration"]
+permalink: /ai/community/Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview
+tags:
+- AI
+- Azure
+- Azure Databricks
+- Community
+- Conversational Analytics
+- Copilot Studio
+- Data Democratization
+- Data Insights
+- Enterprise Data
+- Entra ID
+- Genie
+- Integration
+- Machine Learning
+- MCP
+- Microsoft Foundry
+- ML
+- OAuth
+- Power Apps
+- Teams Integration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 AnaviNahar, in collaboration with Toussaint Webb, outlines how teams can easily integrate Azure Databricks Genie spaces with Copilot Studio and Microsoft Foundry agents, unlocking scalable conversational analytics across Microsoft platforms.<!--excerpt_end-->
 
 # Integrating Azure Databricks Genie with Copilot Studio and Microsoft Foundry: Public Preview

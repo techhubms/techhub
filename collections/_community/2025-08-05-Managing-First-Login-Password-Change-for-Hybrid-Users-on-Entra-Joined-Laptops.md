@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Managing First Login Password Change for Hybrid Users on Entra Joined Laptops"
-description: "The article discusses challenges and possible solutions for enforcing password changes on first login for hybrid users when switching from hybrid joined to Microsoft Entra joined laptops, especially during device setup via Autopilot. It covers issues with the password expiry flag and Entra join behavior."
-author: "simdre79"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mi1ffw/hybrid_users_entra_joined_laptops_force_password/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Managing First Login Password Change for Hybrid Users on Entra Joined Laptops
+author: simdre79
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mi1ffw/hybrid_users_entra_joined_laptops_force_password/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-05 06:09:28 +00:00
-permalink: "/2025-08-05-Managing-First-Login-Password-Change-for-Hybrid-Users-on-Entra-Joined-Laptops.html"
-categories: ["Azure", "Security"]
-tags: ["Autopilot V2", "Azure", "Azure Active Directory", "Community", "Device Enrollment", "Entra Join", "First Login", "Hybrid Users", "Identity Management", "IT Support Standards", "Microsoft Entra ID", "Pass Through Authentication", "Password Management", "Security", "User Provisioning"]
-tags_normalized: ["autopilot v2", "azure", "azure active directory", "community", "device enrollment", "entra join", "first login", "hybrid users", "identity management", "it support standards", "microsoft entra id", "pass through authentication", "password management", "security", "user provisioning"]
+permalink: /azure/community/Managing-First-Login-Password-Change-for-Hybrid-Users-on-Entra-Joined-Laptops
+tags:
+- Autopilot V2
+- Azure
+- Azure Active Directory
+- Community
+- Device Enrollment
+- Entra Join
+- First Login
+- Hybrid Users
+- Identity Management
+- IT Support Standards
+- Microsoft Entra ID
+- Pass Through Authentication
+- Password Management
+- Security
+- User Provisioning
+section_names:
+- azure
+- security
 ---
-
 Author simdre79 explores the difficulties of enforcing password changes at first login for hybrid users on Entra joined laptops, especially after transitioning from hybrid to Entra join. This article offers insights and practical issues encountered during device enrollment and user onboarding.<!--excerpt_end-->
 
 ## Introduction

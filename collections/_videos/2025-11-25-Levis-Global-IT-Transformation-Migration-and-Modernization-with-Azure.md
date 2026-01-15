@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Levi’s Global IT Transformation: Migration and Modernization with Azure"
-description: "This session from Microsoft Ignite 2025 explores how Levi’s transitioned its worldwide IT estate—including Windows Server, SQL Server, SAP, Oracle, and more—through a strategic migration to Azure. The presentation covers challenges with legacy data centers, the phased approach to cloud migration, use of Azure Kubernetes Service (AKS) and Azure SQL, data and app modernization, infrastructure re-platforming, and practical lessons learned. Key focus areas include unlocking agility, scalability, cost savings, and integrating AI-driven workflows for technical teams. The discussion includes a breakdown of migration scale, cloud skills development, and the establishment of a FinOps program for cloud cost governance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UNJm-ipuQE8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Levi’s Global IT Transformation: Migration and Modernization with Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=UNJm-ipuQE8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:08:40 +00:00
-permalink: "/2025-11-25-Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Workflows", "AKS", "Application Modernization", "Azure", "Azure SQL", "Cloud Migration", "Cloud Skills", "Coding", "Cost Savings", "Data Modernization", "DevOps", "Enterprise Modernization", "FinOps", "Infrastructure Re Platforming", "Legacy Data Centers", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Oracle", "Public Cloud", "SAP", "SQL Server", "Videos", "Windows Server"]
-tags_normalized: ["ai", "ai workflows", "aks", "application modernization", "azure", "azure sql", "cloud migration", "cloud skills", "coding", "cost savings", "data modernization", "devops", "enterprise modernization", "finops", "infrastructure re platforming", "legacy data centers", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "oracle", "public cloud", "sap", "sql server", "videos", "windows server"]
+permalink: /ai/videos/Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure
+tags:
+- AI
+- AI Workflows
+- AKS
+- Application Modernization
+- Azure
+- Azure SQL
+- Cloud Migration
+- Cloud Skills
+- Coding
+- Cost Savings
+- Data Modernization
+- DevOps
+- Enterprise Modernization
+- FinOps
+- Infrastructure Re Platforming
+- Legacy Data Centers
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Oracle
+- Public Cloud
+- SAP
+- SQL Server
+- Videos
+- Windows Server
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Microsoft Events presents Levi’s IT transformation journey at Ignite 2025, featuring speakers Maria Bledsoe, Shawn Harris, and Michael Womack’s insights on migrating and modernizing Levi’s global estate with Azure.<!--excerpt_end-->
 
 {% youtube UNJm-ipuQE8 %}

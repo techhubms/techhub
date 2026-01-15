@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Announcing a Flexible, Predictable Billing Model for Azure SRE Agent"
-description: "This article introduces the new billing model for Azure SRE Agent, an AI-powered tool in Azure for incident management and reliability. It details the Azure Agent Unit (AAU) pricing metric, baseline and usage-based billing components, and provides example cost scenarios, supporting SREs and DevOps in streamlining operations."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-a-flexible-predictable-billing-model-for-azure-sre/ba-p/4427270"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing a Flexible, Predictable Billing Model for Azure SRE Agent
+author: Mayunk_Jain
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-a-flexible-predictable-billing-model-for-azure-sre/ba-p/4427270
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-02 03:15:53 +00:00
-permalink: "/2025-08-02-Announcing-a-Flexible-Predictable-Billing-Model-for-Azure-SRE-Agent.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic DevOps", "AI", "AI in DevOps", "Automation", "Azure", "Azure Agent Unit", "Azure SRE Agent", "Billing Model", "Cloud Operations", "Community", "Cost Scenarios", "DevOps", "Incident Response", "Machine Learning", "Predictable Pricing", "Security", "Site Reliability Engineering"]
-tags_normalized: ["agentic devops", "ai", "ai in devops", "automation", "azure", "azure agent unit", "azure sre agent", "billing model", "cloud operations", "community", "cost scenarios", "devops", "incident response", "machine learning", "predictable pricing", "security", "site reliability engineering"]
+permalink: /ai/community/Announcing-a-Flexible-Predictable-Billing-Model-for-Azure-SRE-Agent
+tags:
+- Agentic DevOps
+- AI
+- AI in DevOps
+- Automation
+- Azure
+- Azure Agent Unit
+- Azure SRE Agent
+- Billing Model
+- Cloud Operations
+- Community
+- Cost Scenarios
+- DevOps
+- Incident Response
+- Machine Learning
+- Predictable Pricing
+- Security
+- Site Reliability Engineering
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Authored by Mayunk_Jain, this article presents the upcoming billing structure for Azure SRE Agent and provides an in-depth look at its AI-driven incident management capabilities and cost models tailored for cloud reliability engineering.<!--excerpt_end-->
 
 ---

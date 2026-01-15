@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Teams Management Relocated to Settings in GitHub"
-description: "GitHub has updated the interface for managing Teams, moving all team-related administration from the left-hand navigation menu to a dedicated 'Settings → Teams' page. This streamlining aims to improve navigation and make other important features more accessible. Users are guided to the new location by a dismissible banner and are encouraged to participate in community discussions for feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-teams-management-now-moved-to-settings"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Teams Management Relocated to Settings in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-teams-management-now-moved-to-settings
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 16:51:29 +00:00
-permalink: "/2025-12-18-Teams-Management-Relocated-to-Settings-in-GitHub.html"
-categories: ["DevOps"]
-tags: ["Collaboration", "Collaboration Tools", "Community Discussion", "Developer Tools", "DevOps", "Feedback", "GitHub", "Improvement", "Navigation Update", "News", "Settings", "Team Administration", "Teams Management", "User Interface"]
-tags_normalized: ["collaboration", "collaboration tools", "community discussion", "developer tools", "devops", "feedback", "github", "improvement", "navigation update", "news", "settings", "team administration", "teams management", "user interface"]
+permalink: /devops/news/Teams-Management-Relocated-to-Settings-in-GitHub
+tags:
+- Collaboration
+- Collaboration Tools
+- Community Discussion
+- Developer Tools
+- DevOps
+- Feedback
+- GitHub
+- Improvement
+- Navigation Update
+- News
+- Settings
+- Team Administration
+- Teams Management
+- User Interface
+section_names:
+- devops
 ---
-
 Allison explains the latest GitHub update moving Teams management to the Settings page, detailing the interface changes and how users can provide feedback.<!--excerpt_end-->
 
 # Teams Management Relocated to Settings in GitHub

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Entra Synced Passkeys and Passkey Profiles"
-description: "This video explores the capabilities of synced passkeys within Microsoft Entra ID, demonstrating how device-bound and cloud-synced passkeys operate. The walkthrough covers passkey policies, practical usage, and user choice when deploying passkeys for identity management in the Azure ecosystem. Examples and provided resources help viewers apply best practices around passkey synchronization and security."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=e0FPn-gJeO4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Entra Synced Passkeys and Passkey Profiles
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=e0FPn-gJeO4
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-03 13:07:04 +00:00
-permalink: "/2025-12-03-Entra-Synced-Passkeys-and-Passkey-Profiles.html"
-categories: ["Azure", "Security"]
-tags: ["Apple Icloud Keychain", "Authentication", "Azure", "Azure Cloud", "Azure Identity", "Cloud", "Cloud Synced Passkey", "Device Bound Passkey", "Digital Identity", "Entra Id", "Google Password Manager", "Identity", "Identity Management", "Microsoft", "Microsoft Azure", "Passkey Policies", "Passkeys", "Policy Management", "Security", "Synced Credentials", "Videos"]
-tags_normalized: ["apple icloud keychain", "authentication", "azure", "azure cloud", "azure identity", "cloud", "cloud synced passkey", "device bound passkey", "digital identity", "entra id", "google password manager", "identity", "identity management", "microsoft", "microsoft azure", "passkey policies", "passkeys", "policy management", "security", "synced credentials", "videos"]
+permalink: /azure/videos/Entra-Synced-Passkeys-and-Passkey-Profiles
+tags:
+- Apple Icloud Keychain
+- Authentication
+- Azure
+- Azure Cloud
+- Azure Identity
+- Cloud
+- Cloud Synced Passkey
+- Device Bound Passkey
+- Digital Identity
+- Entra Id
+- Google Password Manager
+- Identity
+- Identity Management
+- Microsoft
+- Microsoft Azure
+- Passkey Policies
+- Passkeys
+- Policy Management
+- Security
+- Synced Credentials
+- Videos
+section_names:
+- azure
+- security
 ---
-
 John Savill's Technical Training presents a practical guide to managing synced passkeys and passkey profiles in Microsoft Entra ID, focusing on identity protection and Azure integration.<!--excerpt_end-->
 
 {% youtube e0FPn-gJeO4 %}

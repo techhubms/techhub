@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "MCP Dev Days Day 2: From Concept to Code"
-description: "This keynote from the Microsoft Developer team explores practical steps for implementing the Model Context Protocol (MCP) in production environments. Learn about essential Azure services, prompt-driven workflows, real-world MCP architectures, tools in VS Code, and best practices for deploying secure and scalable MCP-powered AI solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=CRjRI0zHz54"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'MCP Dev Days Day 2: From Concept to Code'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=CRjRI0zHz54
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:20:09 +00:00
-permalink: "/2025-07-30-MCP-Dev-Days-Day-2-From-Concept-to-Code.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["AI", "AI Agents", "API Management", "Azure", "Azure Functions", "Cloud Computing", "Coding", "Dev", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Production Deployment", "Prompt Driven Development", "Scalable Architectures", "Security", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "api management", "azure", "azure functions", "cloud computing", "coding", "dev", "development", "foundry agent service", "mcp", "microsoft", "production deployment", "prompt driven development", "scalable architectures", "security", "tech", "technology", "videos", "vs code"]
+permalink: /ai/videos/MCP-Dev-Days-Day-2-From-Concept-to-Code
+tags:
+- AI
+- AI Agents
+- API Management
+- Azure
+- Azure Functions
+- Cloud Computing
+- Coding
+- Dev
+- Development
+- Foundry Agent Service
+- MCP
+- Microsoft
+- Production Deployment
+- Prompt Driven Development
+- Scalable Architectures
+- Security
+- Tech
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 In this session, Microsoft Developer details the journey from MCP proof-of-concept to production, covering essential Azure services, real-world architectures, and secure deployment strategies for scalable AI solutions.<!--excerpt_end-->
 
 {% youtube CRjRI0zHz54 %}

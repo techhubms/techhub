@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit"
-description: "This detailed guide introduces Dalec, a CNCF Sandbox project that modernizes Linux package and container image building using declarative YAML specifications and Docker BuildKit. Dalec supports multiple distributions, including Azure Linux, and can integrate into CI/CD pipelines, streamline compliance with SBOMs and signing, and simplify complex packaging workflows for developers and operators."
-author: "SertacOzercan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit'
+author: SertacOzercan
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-29 20:33:52 +00:00
-permalink: "/2025-10-29-Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Linux", "CI/CD", "Community", "Container Images", "Dalec", "Declarative Configuration", "DevOps", "Docker BuildKit", "Kubernetes", "Linux Packaging", "Multi Architecture Builds", "Package Signing", "Provenance", "RPM", "SBOM", "Security", "YAML"]
-tags_normalized: ["azure", "azure linux", "cislashcd", "community", "container images", "dalec", "declarative configuration", "devops", "docker buildkit", "kubernetes", "linux packaging", "multi architecture builds", "package signing", "provenance", "rpm", "sbom", "security", "yaml"]
+permalink: /azure/community/Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit
+tags:
+- Azure
+- Azure Linux
+- CI/CD
+- Community
+- Container Images
+- Dalec
+- Declarative Configuration
+- DevOps
+- Docker BuildKit
+- Kubernetes
+- Linux Packaging
+- Multi Architecture Builds
+- Package Signing
+- Provenance
+- RPM
+- SBOM
+- Security
+- YAML
+section_names:
+- azure
+- devops
+- security
 ---
-
 SertacOzercan presents Dalec, a declarative BuildKit frontend for building system packages and containers across distributions like Azure Linux. The guide highlights key benefits for developers, operators, and security-conscious teams.<!--excerpt_end-->
 
 # Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit

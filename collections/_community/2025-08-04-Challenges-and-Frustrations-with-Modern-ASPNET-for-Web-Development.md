@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Challenges and Frustrations with Modern ASP.NET for Web Development"
-description: "Kingside2 expresses frustration with the evolution of ASP.NET technologies, critiquing Webforms, Razor, and Blazor. The post discusses limitations of tooling in Visual Studio and VS Code for JavaScript and Razor, and suggests deeper integration of modern JavaScript servers with ASP.NET to help Microsoft rejoin the competitive web development landscape."
-author: "Kingside2"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhajoh/asp_nightmare_2025/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Challenges and Frustrations with Modern ASP.NET for Web Development
+author: Kingside2
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mhajoh/asp_nightmare_2025/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 11:12:31 +00:00
-permalink: "/2025-08-04-Challenges-and-Frustrations-with-Modern-ASPNET-for-Web-Development.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET", "Blazor", "Bun", "C#", "Coding", "Community", "Deno", "JavaScript Frameworks", "Node.js", "Razor", "SignalR", "VS", "VS Code", "Vue", "Webforms"]
-tags_normalized: ["dotnet", "aspdotnet", "blazor", "bun", "csharp", "coding", "community", "deno", "javascript frameworks", "nodedotjs", "razor", "signalr", "vs", "vs code", "vue", "webforms"]
+permalink: /coding/community/Challenges-and-Frustrations-with-Modern-ASPNET-for-Web-Development
+tags:
+- .NET
+- ASP.NET
+- Blazor
+- Bun
+- C#
+- Coding
+- Community
+- Deno
+- JavaScript Frameworks
+- Node.js
+- Razor
+- SignalR
+- VS
+- VS Code
+- Vue
+- Webforms
+section_names:
+- coding
 ---
-
 Kingside2 critically examines the current state of ASP.NET and related technologies, highlighting pain points with Webforms, Razor, Blazor, and developer tooling.<!--excerpt_end-->
 
 ## Overview

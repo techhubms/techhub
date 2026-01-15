@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deploying and Comparing Models in Microsoft Foundry"
-description: "This video, led by April from Microsoft Developer, explores deploying and comparing models within the Microsoft Foundry portal. It covers navigating the models experience, evaluating benchmarks, deploying models, and moving from the interactive Foundry chat interface to a code-first workflow using the web version of Visual Studio Code. The session is ideal for developers interested in leveraging Azure AI Foundry tools for model management and hands-on coding."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zPvEYmj8Mi4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Deploying and Comparing Models in Microsoft Foundry
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=zPvEYmj8Mi4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:05:52 +00:00
-permalink: "/2025-11-19-Deploying-and-Comparing-Models-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Development", "AI Model Deployment", "Azure", "Azure AI Foundry", "Cloud Computing", "Code First Workflow", "Dev", "Developer Tools", "Development", "Microsoft", "Microsoft Foundry", "Model Benchmarks", "Model Comparison", "Model Playground", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai development", "ai model deployment", "azure", "azure ai foundry", "cloud computing", "code first workflow", "dev", "developer tools", "development", "microsoft", "microsoft foundry", "model benchmarks", "model comparison", "model playground", "tech", "technology", "videos", "vs code"]
+permalink: /ai/videos/Deploying-and-Comparing-Models-in-Microsoft-Foundry
+tags:
+- AI
+- AI Development
+- AI Model Deployment
+- Azure
+- Azure AI Foundry
+- Cloud Computing
+- Code First Workflow
+- Dev
+- Developer Tools
+- Development
+- Microsoft
+- Microsoft Foundry
+- Model Benchmarks
+- Model Comparison
+- Model Playground
+- Tech
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 April from Microsoft Developer demonstrates how to deploy and compare models in the Microsoft Foundry portal, guiding viewers through model benchmarking, deployment, interactive testing, and coding integrations.<!--excerpt_end-->
 
 {% youtube zPvEYmj8Mi4 %}

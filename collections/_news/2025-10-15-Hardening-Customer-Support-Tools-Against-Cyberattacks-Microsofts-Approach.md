@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Hardening Customer Support Tools Against Cyberattacks: Microsoft’s Approach"
-description: "This article by Raji Dani, Deputy CISO at Microsoft, covers practical strategies and lessons learned for securing customer support tools against cyberattacks. Emphasizing real-world risks, it details Microsoft's layered approach to identity isolation, least privilege, RBAC, telemetry, and risk reduction strategies that can be adapted by organizations of any size."
-author: "Raji Dani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Hardening Customer Support Tools Against Cyberattacks: Microsoft’s Approach'
+author: Raji Dani
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-15 16:00:00 +00:00
-permalink: "/2025-10-15-Hardening-Customer-Support-Tools-Against-Cyberattacks-Microsofts-Approach.html"
-categories: ["Security"]
-tags: ["Cloud Security", "Customer Support Security", "Cyberattack Mitigation", "Identity Isolation", "Incident Response", "Just Enough Access", "Just in Time Access", "Lateral Movement", "Microsoft 365", "News", "Privileged Access Management", "RBAC", "Security", "Security Strategy", "Telemetry", "Zero Trust"]
-tags_normalized: ["cloud security", "customer support security", "cyberattack mitigation", "identity isolation", "incident response", "just enough access", "just in time access", "lateral movement", "microsoft 365", "news", "privileged access management", "rbac", "security", "security strategy", "telemetry", "zero trust"]
+permalink: /security/news/Hardening-Customer-Support-Tools-Against-Cyberattacks-Microsofts-Approach
+tags:
+- Cloud Security
+- Customer Support Security
+- Cyberattack Mitigation
+- Identity Isolation
+- Incident Response
+- Just Enough Access
+- Just in Time Access
+- Lateral Movement
+- Microsoft 365
+- News
+- Privileged Access Management
+- RBAC
+- Security
+- Security Strategy
+- Telemetry
+- Zero Trust
+section_names:
+- security
 ---
-
 Raji Dani, Microsoft’s Deputy CISO, shares actionable insights on securing customer support systems, focusing on identity management, least-privilege principles, and proactive monitoring, with adaptable guidance suitable for any organization's security posture.<!--excerpt_end-->
 
 # Hardening Customer Support Tools Against Cyberattacks: Microsoft’s Approach

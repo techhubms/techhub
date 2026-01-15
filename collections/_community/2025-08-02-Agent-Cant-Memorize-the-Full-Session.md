@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Agent Can't Memorize the Full Session?"
-description: "The author observes that GitHub Copilot's agent inconsistently remembers code execution context within a session. Initially, it used `docker-compose`, but after code updates, it reverted to plain `python`. The article suggests better context retention for improved usability, referencing how Claude maintains such context."
-author: "Own-Dark14"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mfu87w/agent_cant_memorize_the_full_session/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Agent Can't Memorize the Full Session?
+author: Own-Dark14
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mfu87w/agent_cant_memorize_the_full_session/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 16:05:40 +00:00
-permalink: "/2025-08-02-Agent-Cant-Memorize-the-Full-Session.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Behavior", "AI", "Claude", "Code Execution", "Community", "Context Retention", "Contextual Consistency", "Docker Compose", "GitHub Copilot", "Python Execution", "Session Memory", "User Experience"]
-tags_normalized: ["agent behavior", "ai", "claude", "code execution", "community", "context retention", "contextual consistency", "docker compose", "github copilot", "python execution", "session memory", "user experience"]
+permalink: /github-copilot/community/Agent-Cant-Memorize-the-Full-Session
+tags:
+- Agent Behavior
+- AI
+- Claude
+- Code Execution
+- Community
+- Context Retention
+- Contextual Consistency
+- Docker Compose
+- GitHub Copilot
+- Python Execution
+- Session Memory
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 Own-Dark14 highlights a limitation in GitHub Copilot's session memory, where the agent fails to retain context consistently during code execution.<!--excerpt_end-->
 
 ### Summary

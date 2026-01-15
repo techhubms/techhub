@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Defending the cloud: Azure neutralized a record-breaking 15 Tbps DDoS attack"
-description: "This post describes how Azure DDoS Protection automatically detected and mitigated a massive, multi-vector DDoS attack of 15.72 Tbps—the largest observed in the cloud to date. The article details the attack's origins from the Aisuru IoT botnet, mitigation methods used, and the importance of ongoing readiness and simulation exercises for internet-facing workloads."
-author: "Sean_Whalen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Defending the cloud: Azure neutralized a record-breaking 15 Tbps DDoS attack'
+author: Sean_Whalen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 16:00:00 +00:00
-permalink: "/2025-11-17-Defending-the-cloud-Azure-neutralized-a-record-breaking-15-Tbps-DDoS-attack.html"
-categories: ["Azure", "Security"]
-tags: ["Aisuru Botnet", "Australia Endpoint", "Azure", "Azure DDoS Protection", "Azure Infrastructure", "Cloud Security", "Community", "Cybersecurity", "Distributed Denial Of Service", "Internet Facing Applications", "IoT Security", "Mitigation Strategies", "Network Protection", "Operational Readiness", "Provider Enforcement", "Security", "Turbo Mirai", "UDP Flood"]
-tags_normalized: ["aisuru botnet", "australia endpoint", "azure", "azure ddos protection", "azure infrastructure", "cloud security", "community", "cybersecurity", "distributed denial of service", "internet facing applications", "iot security", "mitigation strategies", "network protection", "operational readiness", "provider enforcement", "security", "turbo mirai", "udp flood"]
+permalink: /azure/community/Defending-the-cloud-Azure-neutralized-a-record-breaking-15-Tbps-DDoS-attack
+tags:
+- Aisuru Botnet
+- Australia Endpoint
+- Azure
+- Azure DDoS Protection
+- Azure Infrastructure
+- Cloud Security
+- Community
+- Cybersecurity
+- Distributed Denial Of Service
+- Internet Facing Applications
+- IoT Security
+- Mitigation Strategies
+- Network Protection
+- Operational Readiness
+- Provider Enforcement
+- Security
+- Turbo Mirai
+- UDP Flood
+section_names:
+- azure
+- security
 ---
-
 Sean_Whalen outlines how Azure DDoS Protection countered a historic 15 Tbps multi-vector attack, explaining the attack methods and proactive security strategies for cloud workloads.<!--excerpt_end-->
 
 # Defending the Cloud: Azure Neutralized a Record-Breaking 15 Tbps DDoS Attack

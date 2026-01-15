@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Agent: Concurrent Orchestration in Semantic Kernel"
-description: "This video by Learn Microsoft AI explores the concurrent pattern in AI agent orchestration using Semantic Kernel. Viewers are introduced to how the concurrent pattern enables multiple agents to process the same task in parallel, with real-world examples such as brainstorming, ensemble reasoning, and voting systems. The presentation includes a hands-on coding demo that demonstrates running multiple agents concurrently using Semantic Kernel, highlighting best practices in AI application development with Microsoft technologies."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ixhQyZEpwWk"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: 'Agent: Concurrent Orchestration in Semantic Kernel'
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=ixhQyZEpwWk
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-02 06:45:23 +00:00
-permalink: "/2025-06-02-Agent-Concurrent-Orchestration-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Aggregation", "AI", "AI Agent Orchestration", "AI Agents", "AI Demo", "AI in .NET", "AI Patterns", "AIDemo", "AIinTamil", "AIOrchestration", "BrainstormingAI", "Coding", "Concurrent Pattern", "ConcurrentPattern", "DotNetAI", "Ensemble Reasoning", "Microsoft AI", "Microsoft Ecosystem", "OpenAI", "OpenAISolutions", "Parallel Processing", "Semantic Kernel", "Videos", "Voting Systems"]
-tags_normalized: ["agent aggregation", "ai", "ai agent orchestration", "ai agents", "ai demo", "ai in dotnet", "ai patterns", "aidemo", "aiintamil", "aiorchestration", "brainstormingai", "coding", "concurrent pattern", "concurrentpattern", "dotnetai", "ensemble reasoning", "microsoft ai", "microsoft ecosystem", "openai", "openaisolutions", "parallel processing", "semantic kernel", "videos", "voting systems"]
+permalink: /ai/videos/Agent-Concurrent-Orchestration-in-Semantic-Kernel
+tags:
+- Agent Aggregation
+- AI
+- AI Agent Orchestration
+- AI Agents
+- AI Demo
+- AI in .NET
+- AI Patterns
+- AIDemo
+- AIinTamil
+- AIOrchestration
+- BrainstormingAI
+- Coding
+- Concurrent Pattern
+- ConcurrentPattern
+- DotNetAI
+- Ensemble Reasoning
+- Microsoft AI
+- Microsoft Ecosystem
+- OpenAI
+- OpenAISolutions
+- Parallel Processing
+- Semantic Kernel
+- Videos
+- Voting Systems
+section_names:
+- ai
+- coding
 ---
-
 Learn Microsoft AI presents an in-depth demo on concurrent orchestration in Semantic Kernel, showcasing how to run multiple AI agents in parallel and aggregate their results in .NET applications.<!--excerpt_end-->
 
 {% youtube ixhQyZEpwWk %}

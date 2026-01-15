@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How Microsoft and Nvidia are working together to unlock the secrets of biodiversity"
-description: "Microsoft and Nvidia partner to leverage advanced technology in exploring and understanding biodiversity."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/catalyst-basecamp-research-leverages-microsoft-and-nvidia-ai-to-unlock-secrets-of-biodiversity/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Microsoft and Nvidia are working together to unlock the secrets of biodiversity
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/catalyst-basecamp-research-leverages-microsoft-and-nvidia-ai-to-unlock-secrets-of-biodiversity/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 14:00:42 +00:00
-permalink: "/2025-07-24-How-Microsoft-and-Nvidia-are-working-together-to-unlock-the-secrets-of-biodiversity.html"
-categories: ["AI"]
-tags: ["AI", "Biodiversity", "Collaboration", "Company News", "Data Analysis", "Environment", "Machine Learning", "Microsoft", "News", "Nvidia", "Partnership", "Research", "Sustainability", "Technology"]
-tags_normalized: ["ai", "biodiversity", "collaboration", "company news", "data analysis", "environment", "machine learning", "microsoft", "news", "nvidia", "partnership", "research", "sustainability", "technology"]
+permalink: /ai/news/How-Microsoft-and-Nvidia-are-working-together-to-unlock-the-secrets-of-biodiversity
+tags:
+- AI
+- Biodiversity
+- Collaboration
+- Company News
+- Data Analysis
+- Environment
+- Machine Learning
+- Microsoft
+- News
+- Nvidia
+- Partnership
+- Research
+- Sustainability
+- Technology
+section_names:
+- ai
 ---
-
 In this article, stclarke explores how Microsoft and Nvidia are joining forces to advance biodiversity research. By combining their technological expertise, the two companies aim to develop sophisticated solutions for unlocking deeper insights into global biodiversity challenges.<!--excerpt_end-->
 
 ## Summary

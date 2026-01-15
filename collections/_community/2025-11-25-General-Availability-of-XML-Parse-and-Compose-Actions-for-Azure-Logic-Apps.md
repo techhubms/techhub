@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "General Availability of XML Parse and Compose Actions for Azure Logic Apps"
-description: "This guide introduces the new XML Operations connector in Azure Logic Apps, detailing the capabilities of 'Parse XML with schema' and 'Compose XML with schema' actions. It shares actionable recommendations for handling array inputs, managing non-UTF-8 XML, setting output encoding, consuming XML in downstream workflows, and using external documentation for advanced scenarios. These enhancements optimize data manipulation and interoperability in cloud workflows."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of XML Parse and Compose Actions for Azure Logic Apps
+author: hcamposu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 03:45:25 +00:00
-permalink: "/2025-11-25-General-Availability-of-XML-Parse-and-Compose-Actions-for-Azure-Logic-Apps.html"
-categories: ["Azure", "Coding"]
-tags: ["Array Input", "Azure", "Azure Logic Apps", "BizTalk Migration", "Cloud Workflow", "Coding", "Community", "Compose XML", "Content Type", "Data Integration", "Encoding", "HTTP Request", "Integration Account", "Parse XML", "Rules Engine", "Token Picker", "Workflow Automation", "XML Operations Connector", "XML Schema", "XSD Schema", "XSLT"]
-tags_normalized: ["array input", "azure", "azure logic apps", "biztalk migration", "cloud workflow", "coding", "community", "compose xml", "content type", "data integration", "encoding", "http request", "integration account", "parse xml", "rules engine", "token picker", "workflow automation", "xml operations connector", "xml schema", "xsd schema", "xslt"]
+permalink: /coding/community/General-Availability-of-XML-Parse-and-Compose-Actions-for-Azure-Logic-Apps
+tags:
+- Array Input
+- Azure
+- Azure Logic Apps
+- BizTalk Migration
+- Cloud Workflow
+- Coding
+- Community
+- Compose XML
+- Content Type
+- Data Integration
+- Encoding
+- HTTP Request
+- Integration Account
+- Parse XML
+- Rules Engine
+- Token Picker
+- Workflow Automation
+- XML Operations Connector
+- XML Schema
+- XSD Schema
+- XSLT
+section_names:
+- azure
+- coding
 ---
-
 hcamposu announces the general availability of XML Parse and Compose actions in Azure Logic Apps, offering enhanced XML workflow capabilities for cloud developers.<!--excerpt_end-->
 
 # General Availability: XML Parse and Compose Actions in Azure Logic Apps

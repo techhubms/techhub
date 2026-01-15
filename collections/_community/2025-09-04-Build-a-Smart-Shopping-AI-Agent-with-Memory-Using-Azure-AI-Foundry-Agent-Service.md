@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Build a Smart Shopping AI Agent with Memory Using Azure AI Foundry Agent Service"
-description: "This article by Bobur Umurzokov demonstrates how to create an AI-powered shopping assistant that remembers user preferences, budgets, and shopping history. It leverages Memori as an open-source memory layer and integrates it into the Azure AI Foundry Agent Service, providing step-by-step code, deployment guidance, and ideas for customization in real-world applications. Readers will learn about both the architecture and developer workflows involved in building a memory-aware AI agent in Python, including practical deployment details, database configuration, and production-oriented extensibility."
-author: "Bobur_Umurzokov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-a-smart-shopping-ai-agent-with-memory-using-the-azure-ai/ba-p/4450348"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build a Smart Shopping AI Agent with Memory Using Azure AI Foundry Agent Service
+author: Bobur_Umurzokov
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-a-smart-shopping-ai-agent-with-memory-using-the-azure-ai/ba-p/4450348
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-04 07:00:00 +00:00
-permalink: "/2025-09-04-Build-a-Smart-Shopping-AI-Agent-with-Memory-Using-Azure-AI-Foundry-Agent-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Development", "AI", "AI Agents", "API Integration", "Azure", "Azure AI Foundry", "Coding", "Community", "FunctionTool", "GPT 4o", "Memori", "Memory Persistence", "Microsoft Azure", "Multi Agent Systems", "OpenAI", "Persistent Storage", "Personalization", "Python", "Recommendation Systems", "SQLite"]
-tags_normalized: ["agent development", "ai", "ai agents", "api integration", "azure", "azure ai foundry", "coding", "community", "functiontool", "gpt 4o", "memori", "memory persistence", "microsoft azure", "multi agent systems", "openai", "persistent storage", "personalization", "python", "recommendation systems", "sqlite"]
+permalink: /ai/community/Build-a-Smart-Shopping-AI-Agent-with-Memory-Using-Azure-AI-Foundry-Agent-Service
+tags:
+- Agent Development
+- AI
+- AI Agents
+- API Integration
+- Azure
+- Azure AI Foundry
+- Coding
+- Community
+- FunctionTool
+- GPT 4o
+- Memori
+- Memory Persistence
+- Microsoft Azure
+- Multi Agent Systems
+- OpenAI
+- Persistent Storage
+- Personalization
+- Python
+- Recommendation Systems
+- SQLite
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Bobur Umurzokov showcases how to build a smart shopping assistant using Memori with the Azure AI Foundry Agent service, enabling AI agents to remember customer data and personalize interactions effectively.<!--excerpt_end-->
 
 # Build a Smart Shopping AI Agent with Memory Using Azure AI Foundry Agent Service

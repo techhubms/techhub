@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Upgrade MSVC with GitHub Copilot App Modernization for C++"
-description: "This video introduces GitHub Copilot app modernization for C++, a tool designed to assist developers in migrating their C++ projects to the latest Microsoft C++ (MSVC) Build Tools. It explains how Copilot helps developers retarget projects and resolve code issues that may arise due to deprecations or changes in recent MSVC versions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eCFb_VyNMWU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Upgrade MSVC with GitHub Copilot App Modernization for C++
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=eCFb_VyNMWU
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-29 16:01:19 +00:00
-permalink: "/2025-10-29-Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "App Modernization", "C++", "Cloud Computing", "Code Migration", "Coding", "Copilot", "Copilot Agents", "Dev", "Developer Tools", "Development", "Error Resolution", "GitHub Copilot", "IDE", "Microsoft", "Microsoft C++ Build Tools", "Modernization", "MSVC", "Retargeting", "Source Code Upgrade", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "app modernization", "cplusplus", "cloud computing", "code migration", "coding", "copilot", "copilot agents", "dev", "developer tools", "development", "error resolution", "github copilot", "ide", "microsoft", "microsoft cplusplus build tools", "modernization", "msvc", "retargeting", "source code upgrade", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C
+tags:
+- AI
+- App Modernization
+- C++
+- Cloud Computing
+- Code Migration
+- Coding
+- Copilot
+- Copilot Agents
+- Dev
+- Developer Tools
+- Development
+- Error Resolution
+- GitHub Copilot
+- IDE
+- Microsoft
+- Microsoft C++ Build Tools
+- Modernization
+- MSVC
+- Retargeting
+- Source Code Upgrade
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer showcases how GitHub Copilot app modernization for C++ streamlines migration to the latest MSVC Build Tools, guiding developers through code adjustments and modernization.<!--excerpt_end-->
 
 {% youtube eCFb_VyNMWU %}

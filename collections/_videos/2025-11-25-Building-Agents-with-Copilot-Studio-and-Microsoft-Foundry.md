@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Agents with Copilot Studio and Microsoft Foundry"
-description: "This session explores how to build and deploy enterprise-grade agents using Copilot Studio, Microsoft Foundry, and the Microsoft Agent Framework. It covers integrating connected agents, custom models, and data, deploying solutions to Microsoft 365 Copilot, and implementing unified observability. The talk includes live demos and guidance for creating seamless AI agent experiences with Microsoft's low-code tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tGbcQZ4WeZ0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Agents with Copilot Studio and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tGbcQZ4WeZ0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:52:27 +00:00
-permalink: "/2025-11-25-Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry.html"
-categories: ["AI"]
-tags: ["Agent Deployment", "AI", "AI Integration", "Copilot Studio", "Cross Platform Orchestration", "Custom AI Models", "Enterprise AI", "Innovatewithlow", "Live Demos", "Low Code Development", "Microsoft 365 Copilot (deployment Target)", "Microsoft Agent Framework", "Microsoft Foundry", "MSIgnite", "Observability", "Policy Processing", "Session BRK314", "Unified SDK", "Unified Tracing", "Videos"]
-tags_normalized: ["agent deployment", "ai", "ai integration", "copilot studio", "cross platform orchestration", "custom ai models", "enterprise ai", "innovatewithlow", "live demos", "low code development", "microsoft 365 copilot deployment target", "microsoft agent framework", "microsoft foundry", "msignite", "observability", "policy processing", "session brk314", "unified sdk", "unified tracing", "videos"]
+permalink: /ai/videos/Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry
+tags:
+- Agent Deployment
+- AI
+- AI Integration
+- Copilot Studio
+- Cross Platform Orchestration
+- Custom AI Models
+- Enterprise AI
+- Innovatewithlow
+- Live Demos
+- Low Code Development
+- Microsoft 365 Copilot (deployment Target)
+- Microsoft Agent Framework
+- Microsoft Foundry
+- MSIgnite
+- Observability
+- Policy Processing
+- Session BRK314
+- Unified SDK
+- Unified Tracing
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents a session featuring Matthew Barbour, Matthew Bolanos, and Seth Juarez, demonstrating how enterprises can use Copilot Studio, Microsoft Foundry, and the Microsoft Agent Framework to build robust AI-powered agents.<!--excerpt_end-->
 
 {% youtube tGbcQZ4WeZ0 %}

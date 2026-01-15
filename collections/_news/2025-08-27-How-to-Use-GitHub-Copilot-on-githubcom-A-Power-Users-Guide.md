@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How to Use GitHub Copilot on github.com: A Power User’s Guide"
-description: "This guide by Andrea Griffiths explains how to use GitHub Copilot directly on github.com without an IDE. Learn to automate project management tasks, assign AI agents for bug fixes, rapidly prototype with Spark, switch between AI models, and strategically combine web and IDE workflows for an efficient development process."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'How to Use GitHub Copilot on github.com: A Power User’s Guide'
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-27 16:00:00 +00:00
-permalink: "/2025-08-27-How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Agent", "Claude Sonnet 4", "Coding", "Development Workflow", "DevOps", "GitHub Checkout", "GitHub Copilot", "GitHub.com", "GPT 4.1", "Issue Tracking", "Model Selection", "News", "Opus 4", "Project Management", "Prototyping", "Pull Requests", "Spark", "VS Code Integration", "Workflow Automation"]
-tags_normalized: ["ai", "ai and ml", "ai agent", "claude sonnet 4", "coding", "development workflow", "devops", "github checkout", "github copilot", "githubdotcom", "gpt 4dot1", "issue tracking", "model selection", "news", "opus 4", "project management", "prototyping", "pull requests", "spark", "vs code integration", "workflow automation"]
+permalink: /github-copilot/news/How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide
+tags:
+- AI
+- AI & ML
+- AI Agent
+- Claude Sonnet 4
+- Coding
+- Development Workflow
+- DevOps
+- GitHub Checkout
+- GitHub Copilot
+- GitHub.com
+- GPT 4.1
+- Issue Tracking
+- Model Selection
+- News
+- Opus 4
+- Project Management
+- Prototyping
+- Pull Requests
+- Spark
+- VS Code Integration
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Andrea Griffiths shares practical strategies for using GitHub Copilot on github.com. The article covers automating tasks, assigning AI agents, prototyping with Spark, switching between models, and optimizing your development workflow—without relying on your IDE.<!--excerpt_end-->
 
 # How to Use GitHub Copilot on github.com: A Power User’s Guide

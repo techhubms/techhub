@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How to Modernize Oracle Workloads on Azure | BRK162"
-description: "This session from Microsoft Ignite 2025, led by Kalyan Kaki and Tushar Pandit, covers how organizations can migrate and modernize Oracle applications and databases using Azure. It explains integrating Oracle workloads on Azure's secure cloud network, unifying data with Microsoft Fabric, leveraging Azure AI services, and streamlining operations with Azure's enterprise features. Key topics include security integration with Azure Key Vault and Sentinel, adopting Oracle Database cloud services, procurement via Azure Marketplace, and AI/data unification for enterprise workloads."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dTRL3tlaj5g"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: How to Modernize Oracle Workloads on Azure | BRK162
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=dTRL3tlaj5g
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:46:06 +00:00
-permalink: "/2025-11-20-How-to-Modernize-Oracle-Workloads-on-Azure-BRK162.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agent Demonstration", "AI", "App Modernization", "Azure", "Azure AI Services", "Azure Key Vault", "Azure Marketplace", "Azure Sentinel", "Cloud Security", "Data Integration", "Enterprise Adoption", "Frontier AI", "Microsoft Fabric", "Migrateandmodernizeyourestate", "Migration", "ML", "MSIgnite", "Oracle Database", "Security", "Videos"]
-tags_normalized: ["agent demonstration", "ai", "app modernization", "azure", "azure ai services", "azure key vault", "azure marketplace", "azure sentinel", "cloud security", "data integration", "enterprise adoption", "frontier ai", "microsoft fabric", "migrateandmodernizeyourestate", "migration", "ml", "msignite", "oracle database", "security", "videos"]
+permalink: /ai/videos/How-to-Modernize-Oracle-Workloads-on-Azure-BRK162
+tags:
+- Agent Demonstration
+- AI
+- App Modernization
+- Azure
+- Azure AI Services
+- Azure Key Vault
+- Azure Marketplace
+- Azure Sentinel
+- Cloud Security
+- Data Integration
+- Enterprise Adoption
+- Frontier AI
+- Microsoft Fabric
+- Migrateandmodernizeyourestate
+- Migration
+- ML
+- MSIgnite
+- Oracle Database
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Presented by Kalyan Kaki and Tushar Pandit at Microsoft Ignite 2025, this session explores how to migrate and modernize Oracle workloads using Azure, with deep dives into security, data integration, and AI-powered modernization.<!--excerpt_end-->
 
 {% youtube dTRL3tlaj5g %}

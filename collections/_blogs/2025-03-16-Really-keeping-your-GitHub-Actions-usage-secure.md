@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Really Keeping Your GitHub Actions Usage Secure"
-description: "Rob Bos discusses a recent compromise of a popular GitHub Action and highlights practical steps for securing GitHub Actions use, including backup strategies, dependency monitoring, supply chain security, and leveraging tools like Dependency Security Alerts. The post provides actionable advice and resources for teams using GitHub Actions."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: Really Keeping Your GitHub Actions Usage Secure
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-03-16 00:00:00 +00:00
-permalink: "/2025-03-16-Really-keeping-your-GitHub-Actions-usage-secure.html"
-categories: ["DevOps", "Security"]
-tags: ["Action Backups", "Blogs", "CVE 30066", "Dependency Monitoring", "DevOps", "GitHub Actions", "GitHub Advanced Security", "Internal Marketplace", "Security", "Security Alerts", "Slsa.dev", "StepSecurity", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["action backups", "blogs", "cve 30066", "dependency monitoring", "devops", "github actions", "github advanced security", "internal marketplace", "security", "security alerts", "slsadotdev", "stepsecurity", "supply chain security", "workflow automation"]
+permalink: /devops/blogs/Really-keeping-your-GitHub-Actions-usage-secure
+tags:
+- Action Backups
+- Blogs
+- CVE 30066
+- Dependency Monitoring
+- DevOps
+- GitHub Actions
+- GitHub Advanced Security
+- Internal Marketplace
+- Security
+- Security Alerts
+- Slsa.dev
+- StepSecurity
+- Supply Chain Security
+- Workflow Automation
+section_names:
+- devops
+- security
 ---
-
 In this post, Rob Bos details a recent security incident involving a compromised GitHub Action and offers guidance on securing your CI/CD pipelines with robust processes and tooling.<!--excerpt_end-->
 
 ## Really Keeping Your GitHub Actions Usage Secure

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed"
-description: "This video introduces a new feature for Azure SQL Hyperscale, increasing the maximum number of geo-replicas from one to four. Scheduled for public preview in late summer 2025, this update brings geo-replication parity to the Hyperscale tier compared to other Azure SQL Database service tiers. The presentation covers technical details, demonstrates the setup of secondary replicas, and provides resources for getting started."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nOy8pN3UwmQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=nOy8pN3UwmQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-31 16:01:20 +00:00
-permalink: "/2025-07-31-Multiple-Geo-Replicas-for-Azure-SQL-Hyperscale-Data-Exposed.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL Database", "Azure SQL Hyperscale", "Cloud Computing", "Cloud Development", "Cloud Scalability", "Data Replication", "Database Architecture", "Dev", "Development", "Disaster Recovery", "Geo Replication", "High Availability", "Microsoft", "Microsoft Azure", "ML", "Public Preview", "Secondary Replicas", "SQL Server", "Tech", "Technical Demo", "Technology", "Videos"]
-tags_normalized: ["azure", "azure sql database", "azure sql hyperscale", "cloud computing", "cloud development", "cloud scalability", "data replication", "database architecture", "dev", "development", "disaster recovery", "geo replication", "high availability", "microsoft", "microsoft azure", "ml", "public preview", "secondary replicas", "sql server", "tech", "technical demo", "technology", "videos"]
+permalink: /ml/videos/Multiple-Geo-Replicas-for-Azure-SQL-Hyperscale-Data-Exposed
+tags:
+- Azure
+- Azure SQL Database
+- Azure SQL Hyperscale
+- Cloud Computing
+- Cloud Development
+- Cloud Scalability
+- Data Replication
+- Database Architecture
+- Dev
+- Development
+- Disaster Recovery
+- Geo Replication
+- High Availability
+- Microsoft
+- Microsoft Azure
+- ML
+- Public Preview
+- Secondary Replicas
+- SQL Server
+- Tech
+- Technical Demo
+- Technology
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Developer presents an in-depth overview of the upcoming enhancement to Azure SQL Hyperscale, where Anna Hoffman discusses increasing geo-replicas from one to four and demonstrates how to leverage this new feature.<!--excerpt_end-->
 
 {% youtube nOy8pN3UwmQ %}

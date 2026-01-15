@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Using the Cognitive Verifier Pattern with GitHub Copilot"
-description: "This article by Randy Pagels explains the Cognitive Verifier Pattern, a technique for prompting GitHub Copilot to ask clarifying questions before generating a solution. It outlines practical strategies developers can use to improve Copilot’s responses by encouraging verification and reflection. The guide includes example prompts and scenarios, highlighting the value of clarity in complex coding tasks."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Using the Cognitive Verifier Pattern with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-11-21 00:00:00 +00:00
-permalink: "/2025-11-21-Using-the-Cognitive-Verifier-Pattern-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Blogs", "Clarifying Questions", "Code Quality", "Cognitive Verifier Pattern", "Copilot Patterns", "Developer Workflow", "GitHub Copilot", "Pro Tips", "Prompt Engineering", "Reflection"]
-tags_normalized: ["ai", "ai assisted development", "blogs", "clarifying questions", "code quality", "cognitive verifier pattern", "copilot patterns", "developer workflow", "github copilot", "pro tips", "prompt engineering", "reflection"]
+permalink: /github-copilot/blogs/Using-the-Cognitive-Verifier-Pattern-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Development
+- Blogs
+- Clarifying Questions
+- Code Quality
+- Cognitive Verifier Pattern
+- Copilot Patterns
+- Developer Workflow
+- GitHub Copilot
+- Pro Tips
+- Prompt Engineering
+- Reflection
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels presents actionable recipes for using the Cognitive Verifier Pattern with GitHub Copilot, showing developers how to prompt Copilot to ask clarifying questions for cleaner, more accurate answers.<!--excerpt_end-->
 
 # The Cognitive Verifier Pattern: Asking Before Answering with Copilot

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft Unveils Partnership with TitletownTech and NJ AI Hub to Advance Scientific Discovery via AI"
-description: "Microsoft has launched a new partnership with TitletownTech and the New Jersey AI Hub, integrating the Microsoft Discovery platform to foster collaborative scientific research. By leveraging AI, high-performance computing, and local innovation networks, this initiative aims to accelerate breakthroughs in chemistry, life sciences, manufacturing, and environmental sustainability."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/10/30/microsoft-techspark-partners-with-titletowntech-and-the-new-jersey-ai-hub-to-accelerate-scientific-discovery/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Unveils Partnership with TitletownTech and NJ AI Hub to Advance Scientific Discovery via AI
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/10/30/microsoft-techspark-partners-with-titletowntech-and-the-new-jersey-ai-hub-to-accelerate-scientific-discovery/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-30 16:45:37 +00:00
-permalink: "/2025-10-30-Microsoft-Unveils-Partnership-with-TitletownTech-and-NJ-AI-Hub-to-Advance-Scientific-Discovery-via-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "Azure", "Chemistry", "Collaboration", "Company News", "Data Analysis", "Graph Based Knowledge Engine", "High Performance Computing", "Innovation", "Life Sciences", "Manufacturing", "Microsoft Discovery", "New Jersey AI Hub", "News", "On The Issues", "Princeton University", "Quantum", "Scientific Research", "TechSpark", "TitletownTech"]
-tags_normalized: ["agentic ai", "ai", "azure", "chemistry", "collaboration", "company news", "data analysis", "graph based knowledge engine", "high performance computing", "innovation", "life sciences", "manufacturing", "microsoft discovery", "new jersey ai hub", "news", "on the issues", "princeton university", "quantum", "scientific research", "techspark", "titletowntech"]
+permalink: /ai/news/Microsoft-Unveils-Partnership-with-TitletownTech-and-NJ-AI-Hub-to-Advance-Scientific-Discovery-via-AI
+tags:
+- Agentic AI
+- AI
+- Azure
+- Chemistry
+- Collaboration
+- Company News
+- Data Analysis
+- Graph Based Knowledge Engine
+- High Performance Computing
+- Innovation
+- Life Sciences
+- Manufacturing
+- Microsoft Discovery
+- New Jersey AI Hub
+- News
+- On The Issues
+- Princeton University
+- Quantum
+- Scientific Research
+- TechSpark
+- TitletownTech
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on Microsoft's new partnership with TitletownTech and the New Jersey AI Hub, employing the advanced Microsoft Discovery platform and AI tools to drive collaborative scientific breakthroughs across multiple fields.<!--excerpt_end-->
 
 # Microsoft Unveils Partnership with TitletownTech and NJ AI Hub to Advance Scientific Discovery via AI

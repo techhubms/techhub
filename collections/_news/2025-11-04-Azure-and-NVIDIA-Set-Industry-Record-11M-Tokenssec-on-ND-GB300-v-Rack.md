@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack"
-description: "This news highlights Microsoft's Azure platform achieving an industry milestone by processing 1.1 million tokens per second on a single rack of GB300 GPUs. The achievement stems from deep collaboration with NVIDIA and demonstrates the convergence of hardware and AI infrastructure engineering for large-scale, high-performance AI workloads in the cloud."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack'
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-04 03:36:00 +00:00
-permalink: "/2025-11-04-Azure-and-NVIDIA-Set-Industry-Record-11M-Tokenssec-on-ND-GB300-v-Rack.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI At Scale", "AI Infrastructure", "Azure", "Azure AI", "Azure ND GB300 V", "Cloud AI", "Cloud Engineering", "Company News", "GPU", "High Performance Computing", "LinkedIn Post", "Microsoft Azure", "Model Optimization", "Network Fabric", "News", "NVIDIA", "Production Scale AI", "Token Throughput"]
-tags_normalized: ["ai", "ai at scale", "ai infrastructure", "azure", "azure ai", "azure nd gb300 v", "cloud ai", "cloud engineering", "company news", "gpu", "high performance computing", "linkedin post", "microsoft azure", "model optimization", "network fabric", "news", "nvidia", "production scale ai", "token throughput"]
+permalink: /ai/news/Azure-and-NVIDIA-Set-Industry-Record-11M-Tokenssec-on-ND-GB300-v-Rack
+tags:
+- AI
+- AI At Scale
+- AI Infrastructure
+- Azure
+- Azure AI
+- Azure ND GB300 V
+- Cloud AI
+- Cloud Engineering
+- Company News
+- GPU
+- High Performance Computing
+- LinkedIn Post
+- Microsoft Azure
+- Model Optimization
+- Network Fabric
+- News
+- NVIDIA
+- Production Scale AI
+- Token Throughput
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella, Microsoft CEO, announces an industry milestone with Azure and NVIDIA achieving 1.1 million tokens/sec on a single rack—setting a new benchmark for AI infrastructure and cloud performance.<!--excerpt_end-->
 
 # Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack

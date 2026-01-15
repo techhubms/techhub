@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Premier League’s Data-Driven Fan Engagement at Scale"
-description: "This session from Microsoft Ignite 2025 explores how the Premier League leverages data strategy, AI orchestration, and Microsoft Fabric to deliver personalized, real-time fan experiences. Covering integration of match data, editorial content, and video, it offers actionable insights from Microsoft and Premier League leaders for building scalable, intelligent engagement solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dPuLe0r96uU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Premier League’s Data-Driven Fan Engagement at Scale
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=dPuLe0r96uU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 18:21:39 +00:00
-permalink: "/2025-11-26-Premier-Leagues-Data-Driven-Fan-Engagement-at-Scale.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Orchestration", "Azure", "BRK227", "Data Platform", "Data Strategy", "English (us)", "F5n1", "Fan Engagement", "Ignite", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Microsoft Ignite", "ML", "Ms Ignite", "Msft Ignite", "Personalization", "Premier League", "Premier League’s Data Driven Fan Engagement At Scale | BRK227", "Real Time Data", "Scalable Architecture", "Unify Your Data Platform", "Unify Your Data Platform:microsoft Fabric", "Video Analytics", "Videos"]
-tags_normalized: ["ai", "ai orchestration", "azure", "brk227", "data platform", "data strategy", "english us", "f5n1", "fan engagement", "ignite", "microsoft", "microsoft azure", "microsoft fabric", "microsoft ignite", "ml", "ms ignite", "msft ignite", "personalization", "premier league", "premier leagues data driven fan engagement at scale pipe brk227", "real time data", "scalable architecture", "unify your data platform", "unify your data platformmicrosoft fabric", "video analytics", "videos"]
+permalink: /ai/videos/Premier-Leagues-Data-Driven-Fan-Engagement-at-Scale
+tags:
+- AI
+- AI Orchestration
+- Azure
+- BRK227
+- Data Platform
+- Data Strategy
+- English (us)
+- F5n1
+- Fan Engagement
+- Ignite
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- Ms Ignite
+- Msft Ignite
+- Personalization
+- Premier League
+- Premier League’s Data Driven Fan Engagement At Scale | BRK227
+- Real Time Data
+- Scalable Architecture
+- Unify Your Data Platform
+- Unify Your Data Platform:microsoft Fabric
+- Video Analytics
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents a Microsoft Ignite 2025 session with Darren Hardman, Simon Brown, Pedro Gomes, and Akash Jain, showcasing how the Premier League leverages Microsoft Fabric, AI, and robust data strategies to enhance fan engagement at scale.<!--excerpt_end-->
 
 {% youtube dPuLe0r96uU %}

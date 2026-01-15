@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Infinite Scale: Architecture of the Azure AI Superfactory"
-description: "This article explores the technical architecture behind Microsoft's new Azure AI superfactory, 'Fairwater,' designed for unprecedented AI compute needs. It highlights innovations in datacenter density, liquid-based cooling, networking for hyperscale GPU clusters, and the AI WAN backbone, forming a planet-scale infrastructure that supports large AI training and development workloads. The piece also discusses sustainability measures and how these advances empower organizations to build next-generation AI solutions with Azure's global platform."
-author: "Scott Guthrie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://aka.ms/AAyjgcy"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Infinite Scale: Architecture of the Azure AI Superfactory'
+author: Scott Guthrie
+canonical_url: https://aka.ms/AAyjgcy
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-12 17:33:00 +00:00
-permalink: "/2025-11-12-Infinite-Scale-Architecture-of-the-Azure-AI-Superfactory.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "AI Training", "AI WAN", "Azure", "Azure AI", "Cloud Infrastructure", "Datacenter Architecture", "Fairwater", "GPU Clusters", "High Density Compute", "Liquid Cooling", "Network Engineering", "News", "NVIDIA Blackwell", "SONiC", "Supercomputer", "Superfactory"]
-tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "ai training", "ai wan", "azure", "azure ai", "cloud infrastructure", "datacenter architecture", "fairwater", "gpu clusters", "high density compute", "liquid cooling", "network engineering", "news", "nvidia blackwell", "sonic", "supercomputer", "superfactory"]
+permalink: /ai/news/Infinite-Scale-Architecture-of-the-Azure-AI-Superfactory
+tags:
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- AI Training
+- AI WAN
+- Azure
+- Azure AI
+- Cloud Infrastructure
+- Datacenter Architecture
+- Fairwater
+- GPU Clusters
+- High Density Compute
+- Liquid Cooling
+- Network Engineering
+- News
+- NVIDIA Blackwell
+- SONiC
+- Supercomputer
+- Superfactory
+section_names:
+- ai
+- azure
 ---
-
 Scott Guthrie details the architectural innovations powering Microsoft's Azure AI superfactory, focusing on hyperscale AI datacenters, advanced cooling, and networking systems, offering organizations unmatched scale and flexibility for AI development workloads.<!--excerpt_end-->
 
 # Infinite Scale: Architecture of the Azure AI Superfactory

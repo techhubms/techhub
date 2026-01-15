@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Securing Azure OpenAI Access from On-Premises with Application Gateway: A Customer Success Story"
-description: "This post details how an enterprise overcame the challenge of securely accessing Azure OpenAI Service from an on-premises environment lacking private network connectivity. It explores their network limitations, security requirements, and the Azure-based architecture deployed—including Application Gateway as a reverse proxy, Network Security Groups, and custom SSL certificates—to ensure secure, governed connectivity to hosted large language models."
-author: "vnamani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/using-application-gateway-to-secure-access-to-the-azure-openai/ba-p/4456696"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Securing Azure OpenAI Access from On-Premises with Application Gateway: A Customer Success Story'
+author: vnamani
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/using-application-gateway-to-secure-access-to-the-azure-openai/ba-p/4456696
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 21:12:24 +00:00
-permalink: "/2025-09-25-Securing-Azure-OpenAI-Access-from-On-Premises-with-Application-Gateway-A-Customer-Success-Story.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Application Gateway", "Azure", "Azure Networking", "Azure OpenAI", "Cloud Governance", "Community", "Enterprise Security", "Generative AI", "IP Firewall", "Large Language Model", "Network Security Group", "On Premises Integration", "Public IP", "Reverse Proxy", "Security", "SSL Certificate", "SSL Termination", "Virtual Network", "Web Application Firewall"]
-tags_normalized: ["ai", "application gateway", "azure", "azure networking", "azure openai", "cloud governance", "community", "enterprise security", "generative ai", "ip firewall", "large language model", "network security group", "on premises integration", "public ip", "reverse proxy", "security", "ssl certificate", "ssl termination", "virtual network", "web application firewall"]
+permalink: /ai/community/Securing-Azure-OpenAI-Access-from-On-Premises-with-Application-Gateway-A-Customer-Success-Story
+tags:
+- AI
+- Application Gateway
+- Azure
+- Azure Networking
+- Azure OpenAI
+- Cloud Governance
+- Community
+- Enterprise Security
+- Generative AI
+- IP Firewall
+- Large Language Model
+- Network Security Group
+- On Premises Integration
+- Public IP
+- Reverse Proxy
+- Security
+- SSL Certificate
+- SSL Termination
+- Virtual Network
+- Web Application Firewall
+section_names:
+- ai
+- azure
+- security
 ---
-
 vnamani shares a detailed case study on securing Azure OpenAI Service for an on-premises application using Application Gateway, focusing on network security and governance.<!--excerpt_end-->
 
 # Securing Azure OpenAI Access from On-Premises with Application Gateway: A Customer Success Story

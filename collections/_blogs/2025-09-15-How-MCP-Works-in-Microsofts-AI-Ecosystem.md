@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How MCP Works in Microsoft’s AI Ecosystem"
-description: "This article provides a comprehensive overview of the Model Context Protocol (MCP) and its integration within Microsoft’s AI ecosystem. It explains MCP’s role as an open standard for connecting AI models and agents to external tools, APIs, and memory resources, and details Microsoft’s implementation across Copilot Studio, Azure AI Foundry, Dynamics 365, and developer SDKs. The article highlights architectural flows, practical benefits (such as reusability and governance), key challenges, and how MCP supports Microsoft’s broader strategy for open, interoperable AI systems."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How MCP Works in Microsoft’s AI Ecosystem
+author: Dellenny
+canonical_url: https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:41:15 +00:00
-permalink: "/2025-09-15-How-MCP-Works-in-Microsofts-AI-Ecosystem.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic Web", "AI", "AI Agent", "AI Governance", "AI Integration", "APIs", "Azure", "Azure AI Foundry", "Blogs", "C# SDK", "Coding", "Copilot Studio", "Dynamics 365", "General", "MCP", "Microsoft AI", "Open Standards", "Semantic Kernel", "Tool Standardization"]
-tags_normalized: ["agentic web", "ai", "ai agent", "ai governance", "ai integration", "apis", "azure", "azure ai foundry", "blogs", "csharp sdk", "coding", "copilot studio", "dynamics 365", "general", "mcp", "microsoft ai", "open standards", "semantic kernel", "tool standardization"]
+permalink: /ai/blogs/How-MCP-Works-in-Microsofts-AI-Ecosystem
+tags:
+- Agentic Web
+- AI
+- AI Agent
+- AI Governance
+- AI Integration
+- APIs
+- Azure
+- Azure AI Foundry
+- Blogs
+- C# SDK
+- Coding
+- Copilot Studio
+- Dynamics 365
+- General
+- MCP
+- Microsoft AI
+- Open Standards
+- Semantic Kernel
+- Tool Standardization
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Dellenny dives deep into Microsoft’s use of the Model Context Protocol (MCP), showing how this open standard powers AI agent integration in Copilot Studio, Azure AI Foundry, Dynamics 365, and beyond.<!--excerpt_end-->
 
 # How MCP Works in Microsoft’s AI Ecosystem

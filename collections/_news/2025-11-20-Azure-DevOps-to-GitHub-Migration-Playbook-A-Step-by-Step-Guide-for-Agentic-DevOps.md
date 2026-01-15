@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure DevOps to GitHub Migration Playbook: A Step-by-Step Guide for Agentic DevOps"
-description: "This guide by Philippe Didiergeorges provides a comprehensive migration playbook for transitioning from Azure DevOps to GitHub Enterprise. It details the benefits of both platforms, a hybrid strategy, and step-by-step instructions—covering prerequisites, tools, migration script generation, execution, and post-migration validation—while highlighting the integration of GitHub Copilot for AI-powered development."
-author: "Philippe Didiergeorges"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: 'Azure DevOps to GitHub Migration Playbook: A Step-by-Step Guide for Agentic DevOps'
+author: Philippe Didiergeorges
+canonical_url: https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-20 11:03:44 +00:00
-permalink: "/2025-11-20-Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic DevOps", "AI", "AI Developer Tools", "All Things Azure", "Automation", "Azure", "Azure Boards", "Azure DevOps", "Azure Pipelines", "CI/CD", "Coding", "Developer Productivity", "DevOps", "DevOps Integration", "GHE", "GitHub", "GitHub CLI", "GitHub Copilot", "GitHub Enterprise", "Hybrid Cloud", "Migration", "News", "Personal Access Token", "Repository Management", "Source Code Migration"]
-tags_normalized: ["agentic devops", "ai", "ai developer tools", "all things azure", "automation", "azure", "azure boards", "azure devops", "azure pipelines", "cislashcd", "coding", "developer productivity", "devops", "devops integration", "ghe", "github", "github cli", "github copilot", "github enterprise", "hybrid cloud", "migration", "news", "personal access token", "repository management", "source code migration"]
+permalink: /github-copilot/news/Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps
+tags:
+- Agentic DevOps
+- AI
+- AI Developer Tools
+- All Things Azure
+- Automation
+- Azure
+- Azure Boards
+- Azure DevOps
+- Azure Pipelines
+- CI/CD
+- Coding
+- Developer Productivity
+- DevOps
+- DevOps Integration
+- GHE
+- GitHub
+- GitHub CLI
+- GitHub Copilot
+- GitHub Enterprise
+- Hybrid Cloud
+- Migration
+- News
+- Personal Access Token
+- Repository Management
+- Source Code Migration
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Philippe Didiergeorges delivers a thorough migration playbook for moving from Azure DevOps to GitHub, demonstrating how to combine both platforms while unlocking AI-driven developer productivity with GitHub Copilot.<!--excerpt_end-->
 
 # Azure DevOps to GitHub Migration Playbook: Unlocking Agentic DevOps

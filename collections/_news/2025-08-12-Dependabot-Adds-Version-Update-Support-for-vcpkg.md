@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Dependabot Adds Version Update Support for vcpkg"
-description: "This news item announces that Dependabot now supports automatic version updates for vcpkg, Microsoft's open-source C/C++ package manager. Teams using vcpkg can take advantage of Dependabot to keep dependencies up-to-date, enhancing security and maintainability in C and C++ projects. Instructions are provided for configuring this integration within GitHub workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Adds Version Update Support for vcpkg
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 16:22:46 +00:00
-permalink: "/2025-08-12-Dependabot-Adds-Version-Update-Support-for-vcpkg.html"
-categories: ["Coding", "DevOps"]
-tags: ["C++", "Coding", "Continuous Integration", "Dependabot", "Dependency Updates", "DevOps", "DevOps Automation", "GitHub", "Manifest Mode", "Microsoft", "News", "Open Source Tools", "Package Management", "Vcpkg"]
-tags_normalized: ["cplusplus", "coding", "continuous integration", "dependabot", "dependency updates", "devops", "devops automation", "github", "manifest mode", "microsoft", "news", "open source tools", "package management", "vcpkg"]
+permalink: /coding/news/Dependabot-Adds-Version-Update-Support-for-vcpkg
+tags:
+- C++
+- Coding
+- Continuous Integration
+- Dependabot
+- Dependency Updates
+- DevOps
+- DevOps Automation
+- GitHub
+- Manifest Mode
+- Microsoft
+- News
+- Open Source Tools
+- Package Management
+- Vcpkg
+section_names:
+- coding
+- devops
 ---
-
 Allison details the new Dependabot support for automatic version updates in vcpkg, enabling C/C++ projects to maintain secure and current dependencies within GitHub workflows.<!--excerpt_end-->
 
 # Dependabot Adds Version Update Support for vcpkg

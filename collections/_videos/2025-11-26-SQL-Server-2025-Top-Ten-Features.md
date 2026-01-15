@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "SQL Server 2025 Top Ten Features"
-description: "A concise overview of the top new features in SQL Server 2025, including vector and AI integration, expanded data types, REST and GraphQL endpoints, change event streaming, AI-enabled tools, integration with Arc and Fabric, engine improvements, and highlights from different editions. This video provides actionable insights for technical professionals interested in the latest Microsoft SQL Server capabilities and platform integrations."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=45I_m50kInE"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: SQL Server 2025 Top Ten Features
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=45I_m50kInE
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-26 16:52:12 +00:00
-permalink: "/2025-11-26-SQL-Server-2025-Top-Ten-Features.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure Arc", "Change Event Streaming", "Coding", "Database", "Diskann", "Engine Improvements", "Express Edition", "Fuzzy Matching", "GraphQL", "JSON", "Microsoft", "Microsoft Fabric", "ML", "Python Driver", "RAG", "Regex", "REST API", "SQL", "SQL Server", "Standard Edition", "Vector Support", "Videos"]
-tags_normalized: ["ai", "ai integration", "azure", "azure arc", "change event streaming", "coding", "database", "diskann", "engine improvements", "express edition", "fuzzy matching", "graphql", "json", "microsoft", "microsoft fabric", "ml", "python driver", "rag", "regex", "rest api", "sql", "sql server", "standard edition", "vector support", "videos"]
+permalink: /ai/videos/SQL-Server-2025-Top-Ten-Features
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure Arc
+- Change Event Streaming
+- Coding
+- Database
+- Diskann
+- Engine Improvements
+- Express Edition
+- Fuzzy Matching
+- GraphQL
+- JSON
+- Microsoft
+- Microsoft Fabric
+- ML
+- Python Driver
+- RAG
+- Regex
+- REST API
+- SQL
+- SQL Server
+- Standard Edition
+- Vector Support
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 John Savill presents a breakdown of the top ten new features in SQL Server 2025, including vector and AI integration, change streaming, and new data type support.<!--excerpt_end-->
 
 {% youtube 45I_m50kInE %}

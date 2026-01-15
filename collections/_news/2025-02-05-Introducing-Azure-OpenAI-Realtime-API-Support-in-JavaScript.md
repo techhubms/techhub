@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing Azure OpenAI Realtime API Support in JavaScript"
-description: "This article by Deyaaeldeen Almahallawi introduces the new Realtime API support in the OpenAI JavaScript library, enabling instant messaging with Azure OpenAI models. It provides practical steps for setup, example code, event handling strategies, and further resources to help developers build responsive, interactive applications."
-author: "Deyaaeldeen Almahallawi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/introducing-azure-openai-realtime-api-support-in-javascript/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Introducing Azure OpenAI Realtime API Support in JavaScript
+author: Deyaaeldeen Almahallawi
+canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-azure-openai-realtime-api-support-in-javascript/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-05 05:35:07 +00:00
-permalink: "/2025-02-05-Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Authentication", "Azure", "Azure OpenAI", "Azure SDK", "Coding", "DefaultAzureCredential", "Event Handling", "JavaScript", "News", "Node.js", "OpenAI", "OpenAI Library", "Realtime API", "Streaming Data", "Typescript", "WebSocket"]
-tags_normalized: ["ai", "authentication", "azure", "azure openai", "azure sdk", "coding", "defaultazurecredential", "event handling", "javascript", "news", "nodedotjs", "openai", "openai library", "realtime api", "streaming data", "typescript", "websocket"]
+permalink: /ai/news/Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript
+tags:
+- AI
+- Authentication
+- Azure
+- Azure OpenAI
+- Azure SDK
+- Coding
+- DefaultAzureCredential
+- Event Handling
+- JavaScript
+- News
+- Node.js
+- OpenAI
+- OpenAI Library
+- Realtime API
+- Streaming Data
+- Typescript
+- WebSocket
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Deyaaeldeen Almahallawi explains how developers can leverage the new Realtime API in the Azure OpenAI JavaScript library for fast, interactive applications.<!--excerpt_end-->
 
 ## Overview

@@ -1,20 +1,42 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
-description: "This intermediate session from Microsoft Ignite 2025 discusses the latest updates in Microsoft Entra for secure identity and network access in AI-powered environments. Topics include agent governance with Entra Agent ID, Zero Trust expansion, prompt injection protection, lifecycle management, app visibility, and granular access policies. The session features demonstrations and practical guidance for administrators and security professionals."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ptMM56u6Ay0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ptMM56u6Ay0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 23:30:22 +00:00
-permalink: "/2025-11-25-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
-categories: ["AI", "Security"]
-tags: ["Access Policies", "Admin Setup", "Agent Governance", "Agent ID", "AI", "AI Security", "App Lifecycle Management", "Authentication", "Cloud Security", "Conditional Access", "Identity Management", "Lifecycle Management", "Microsoft Entra ID", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Security", "Permissions", "Prompt Injection Protection", "Secure Access", "Security", "Security Operations", "Videos", "Zero Trust"]
-tags_normalized: ["access policies", "admin setup", "agent governance", "agent id", "ai", "ai security", "app lifecycle management", "authentication", "cloud security", "conditional access", "identity management", "lifecycle management", "microsoft entra id", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "network security", "permissions", "prompt injection protection", "secure access", "security", "security operations", "videos", "zero trust"]
+permalink: /ai/videos/Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier
+tags:
+- Access Policies
+- Admin Setup
+- Agent Governance
+- Agent ID
+- AI
+- AI Security
+- App Lifecycle Management
+- Authentication
+- Cloud Security
+- Conditional Access
+- Identity Management
+- Lifecycle Management
+- Microsoft Entra ID
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Network Security
+- Permissions
+- Prompt Injection Protection
+- Secure Access
+- Security
+- Security Operations
+- Videos
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an overview of new secure access innovations in Microsoft Entra for AI environments, detailing governance insights and security controls from speakers Joy Chik, Nichole Peterson, and John Savill.<!--excerpt_end-->
 
 {% youtube ptMM56u6Ay0 %}

@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "Azure Update - October 2025 Announcements and Retirements"
-description: "This Azure update by John Savill's Technical Training covers the latest retirements, new features, and major changes as of October 2025. Topics include Azure Functions Linux Consumption plan retirement, AVS AV36 and NVv4 VM retirement, SQL Database immutability, enhancements to Azure Compute Gallery, AKS Network Policy Manager, Microsoft Sentinel updates, new ARM metrics, and advances in Microsoft AI Foundry. Get a fast, practical summary relevant to consultants, architects, and developers."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DPYO8hxqCcs"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - October 2025 Announcements and Retirements
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=DPYO8hxqCcs
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-03 10:51:11 +00:00
-permalink: "/2025-10-03-Azure-Update-October-2025-Announcements-and-Retirements.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["ACA Connector", "AI", "AKS", "ARM Metrics", "AVS AV36", "Azure", "Azure AI Foundry", "Azure Cloud", "Azure Compute Gallery", "Azure Functions", "Azure Machine Learning", "Azure Update", "BlobFuse", "Cloud", "Cloud Security", "Data Labelling", "Data Lake", "Deprecation", "Grok 4", "Linux Consumption", "Microsoft", "Microsoft Agent Framework", "Microsoft Azure", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MSSQL Extension", "NVv4 VM", "Security", "SQL Database", "Traffic Manager", "Videos"]
-tags_normalized: ["aca connector", "ai", "aks", "arm metrics", "avs av36", "azure", "azure ai foundry", "azure cloud", "azure compute gallery", "azure functions", "azure machine learning", "azure update", "blobfuse", "cloud", "cloud security", "data labelling", "data lake", "deprecation", "grok 4", "linux consumption", "microsoft", "microsoft agent framework", "microsoft azure", "microsoft fabric", "microsoft sentinel", "ml", "mssql extension", "nvv4 vm", "security", "sql database", "traffic manager", "videos"]
+permalink: /ai/videos/Azure-Update-October-2025-Announcements-and-Retirements
+tags:
+- ACA Connector
+- AI
+- AKS
+- ARM Metrics
+- AVS AV36
+- Azure
+- Azure AI Foundry
+- Azure Cloud
+- Azure Compute Gallery
+- Azure Functions
+- Azure Machine Learning
+- Azure Update
+- BlobFuse
+- Cloud
+- Cloud Security
+- Data Labelling
+- Data Lake
+- Deprecation
+- Grok 4
+- Linux Consumption
+- Microsoft
+- Microsoft Agent Framework
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Sentinel
+- ML
+- MSSQL Extension
+- NVv4 VM
+- Security
+- SQL Database
+- Traffic Manager
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 John Savill's Technical Training delivers a concise Azure Update for October 2025, summarizing cloud platform changes, major service retirements, security features, and notable developments in Azure AI and ML.<!--excerpt_end-->
 
 {% youtube DPYO8hxqCcs %}

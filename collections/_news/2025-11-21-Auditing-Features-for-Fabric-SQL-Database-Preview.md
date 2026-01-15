@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Auditing Features for Fabric SQL Database (Preview)"
-description: "This official Microsoft Fabric blog post introduces the auditing capabilities for Fabric SQL database (in preview), highlighting how auditing can strengthen security, facilitate compliance, and provide deep operational insights. The article outlines flexible configuration options, secure log storage in OneLake, role-based access control, and integration with T-SQL for querying audit logs. It discusses compliance scenarios, security investigations, operational monitoring, and access management, tailored to organizations seeking robust audit trails and governance for their Fabric SQL environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-auditing-for-fabric-sql-database/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Auditing Features for Fabric SQL Database (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-auditing-for-fabric-sql-database/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 08:00:00 +00:00
-permalink: "/2025-11-21-Auditing-Features-for-Fabric-SQL-Database-Preview.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Control", "Audit Logs", "Auditing", "Azure", "Compliance", "Data Governance", "Fabric SQL Database", "HIPAA", "Microsoft Fabric", "ML", "News", "OneLake", "Retention Policy", "Role Based Access", "Security", "SOX", "T SQL"]
-tags_normalized: ["access control", "audit logs", "auditing", "azure", "compliance", "data governance", "fabric sql database", "hipaa", "microsoft fabric", "ml", "news", "onelake", "retention policy", "role based access", "security", "sox", "t sql"]
+permalink: /ml/news/Auditing-Features-for-Fabric-SQL-Database-Preview
+tags:
+- Access Control
+- Audit Logs
+- Auditing
+- Azure
+- Compliance
+- Data Governance
+- Fabric SQL Database
+- HIPAA
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Retention Policy
+- Role Based Access
+- Security
+- SOX
+- T SQL
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog details new auditing features for Fabric SQL databases. This article shows how organizations can strengthen security, meet compliance, and gain operational insights using audit logs stored in OneLake.<!--excerpt_end-->
 
 # Auditing Features for Fabric SQL Database (Preview)

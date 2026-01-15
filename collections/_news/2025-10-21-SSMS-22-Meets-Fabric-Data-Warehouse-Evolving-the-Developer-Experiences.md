@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "SSMS 22 Meets Fabric Data Warehouse: Evolving the Developer Experiences"
-description: "This article details the new integration between Microsoft Fabric Data Warehouse and SQL Server Management Studio (SSMS) 22, focusing on enhanced developer workflows. It introduces features such as schema-based object grouping, warehouse-centric views, improved context menus, and direct querying of snapshots. The update aligns web and desktop experiences, aiming for productivity and continuity for SQL developers."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/ssms-22-meets-fabric-data-warehouse-evolving-the-developer-experiences/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'SSMS 22 Meets Fabric Data Warehouse: Evolving the Developer Experiences'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ssms-22-meets-fabric-data-warehouse-evolving-the-developer-experiences/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-21 10:00:00 +00:00
-permalink: "/2025-10-21-SSMS-22-Meets-Fabric-Data-Warehouse-Evolving-the-Developer-Experiences.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Azure", "Azure Data Platform", "Coding", "Data Warehouse", "Database Projects", "Developer Tools", "Fabric Web Editor", "IntelliSense", "Microsoft Fabric", "ML", "News", "Query Management", "Schema Grouping", "SQL Analytics Endpoint", "SQL Server Management Studio", "SSMS 22", "T SQL", "Warehouse Snapshots"]
-tags_normalized: ["azure", "azure data platform", "coding", "data warehouse", "database projects", "developer tools", "fabric web editor", "intellisense", "microsoft fabric", "ml", "news", "query management", "schema grouping", "sql analytics endpoint", "sql server management studio", "ssms 22", "t sql", "warehouse snapshots"]
+permalink: /ml/news/SSMS-22-Meets-Fabric-Data-Warehouse-Evolving-the-Developer-Experiences
+tags:
+- Azure
+- Azure Data Platform
+- Coding
+- Data Warehouse
+- Database Projects
+- Developer Tools
+- Fabric Web Editor
+- IntelliSense
+- Microsoft Fabric
+- ML
+- News
+- Query Management
+- Schema Grouping
+- SQL Analytics Endpoint
+- SQL Server Management Studio
+- SSMS 22
+- T SQL
+- Warehouse Snapshots
+section_names:
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog presents a comprehensive overview of the SSMS 22 integration with Fabric Data Warehouse, highlighting new features that enhance SQL development workflows and align cross-platform experiences for developers.<!--excerpt_end-->
 
 # SSMS 22 Meets Fabric Data Warehouse: Evolving the Developer Experiences

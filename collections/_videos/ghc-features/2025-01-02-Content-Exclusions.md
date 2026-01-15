@@ -1,22 +1,27 @@
----
-layout: "post"
-title: "Content Exclusions"
-description: "Exclude sensitive files from being sent to Copilot"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/J2qaVAaQzY8"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Content Exclusions
+author: Rob Bos
+canonical_url: https://youtu.be/J2qaVAaQzY8
 date: 2025-01-02 11:20:08 +00:00
-permalink: "/2025-01-02-Content-Exclusions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Pro", "Business"]
-alt-collection: "features"
-tags: ["AI", "Code", "Content Management", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "code", "content management", "github copilot", "videos"]
+permalink: /github-copilot/videos/Content-Exclusions
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Pro
+- Business
+alt-collection: features
+tags:
+- AI
+- Code
+- Content Management
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Content Exclusions feature. With Content Exclusions you can exclude certain parts of your codebase from being sent to Copilot. Think for example of files containing sensitive information, like secrets.<!--excerpt_end-->
 
 {% youtube J2qaVAaQzY8 %}

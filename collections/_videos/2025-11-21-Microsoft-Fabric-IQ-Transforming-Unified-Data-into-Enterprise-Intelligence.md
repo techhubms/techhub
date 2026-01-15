@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Fabric IQ: Transforming Unified Data into Enterprise Intelligence"
-description: "This session from Microsoft Ignite 2025 explores how Fabric IQ leverages Microsoft Fabric to unify data and deliver real-time, semantic models of business entities, relationships, and rules. The presentation showcases advanced ontology integration, enabling AI-driven collaboration, operations automation, and intelligent decision-making for enterprises. Demonstrations include geospatial analysis, rule automation, agentic AI, and operational scenarios powered by Teams and Kyndryl."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yy7M_O_z_wQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Fabric IQ: Transforming Unified Data into Enterprise Intelligence'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=yy7M_O_z_wQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:28:24 +00:00
-permalink: "/2025-11-21-Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Collaboration", "Automation", "Azure", "Digital Trust", "Entity Relationship Modeling", "Geospatial Analysis", "Kyndryl", "Microsoft Fabric", "Microsoft Fabric IQ", "Microsoft Teams Integration", "ML", "MSIgnite", "Ontology", "Operational Intelligence", "Real Time Insights", "Rule Automation", "Semantic Model", "Unified Data", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai collaboration", "automation", "azure", "digital trust", "entity relationship modeling", "geospatial analysis", "kyndryl", "microsoft fabric", "microsoft fabric iq", "microsoft teams integration", "ml", "msignite", "ontology", "operational intelligence", "real time insights", "rule automation", "semantic model", "unified data", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence
+tags:
+- Agentic AI
+- AI
+- AI Collaboration
+- Automation
+- Azure
+- Digital Trust
+- Entity Relationship Modeling
+- Geospatial Analysis
+- Kyndryl
+- Microsoft Fabric
+- Microsoft Fabric IQ
+- Microsoft Teams Integration
+- ML
+- MSIgnite
+- Ontology
+- Operational Intelligence
+- Real Time Insights
+- Rule Automation
+- Semantic Model
+- Unified Data
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents an in-depth session on Fabric IQ at Ignite 2025, detailing how Fabric IQ integrates unified data, ontology, and AI for intelligent enterprise operations.<!--excerpt_end-->
 
 {% youtube yy7M_O_z_wQ %}

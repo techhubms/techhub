@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Automate Open-Source Dependency Scanning in Azure DevOps with Advanced Security"
-description: "Laura Jiang details how to leverage GitHub Advanced Security for Azure DevOps to automate injection of open-source dependency scanning tasks in pipelines. The blog guides users through setup, configuration options, and handling results, ensuring that vulnerable dependencies are flagged throughout the development life cycle."
-author: "Laura Jiang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/automate-your-open-source-dependency-scanning-with-advanced-security/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Automate Open-Source Dependency Scanning in Azure DevOps with Advanced Security
+author: Laura Jiang
+canonical_url: https://devblogs.microsoft.com/devops/automate-your-open-source-dependency-scanning-with-advanced-security/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-04 17:17:37 +00:00
-permalink: "/2025-08-04-Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Advanced Security", "Azure", "Azure DevOps", "Build Validation", "CI/CD", "Dependency Scanning", "DevOps", "DevOps Pipelines", "GitHub Advanced Security", "News", "Open Source", "Open Source Vulnerabilities", "Pipeline Automation", "Pull Request Annotations", "Repository Settings", "Security", "Security Alerts"]
-tags_normalized: ["advanced security", "azure", "azure devops", "build validation", "cislashcd", "dependency scanning", "devops", "devops pipelines", "github advanced security", "news", "open source", "open source vulnerabilities", "pipeline automation", "pull request annotations", "repository settings", "security", "security alerts"]
+permalink: /azure/news/Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security
+tags:
+- Advanced Security
+- Azure
+- Azure DevOps
+- Build Validation
+- CI/CD
+- Dependency Scanning
+- DevOps
+- DevOps Pipelines
+- GitHub Advanced Security
+- News
+- Open Source
+- Open Source Vulnerabilities
+- Pipeline Automation
+- Pull Request Annotations
+- Repository Settings
+- Security
+- Security Alerts
+section_names:
+- azure
+- devops
+- security
 ---
-
 Laura Jiang explores automating open-source dependency scanning in Azure DevOps with GitHub Advanced Security, focusing on setup, integration, and how results are surfaced for developers.<!--excerpt_end-->
 
 # Automate Open-Source Dependency Scanning in Azure DevOps with Advanced Security

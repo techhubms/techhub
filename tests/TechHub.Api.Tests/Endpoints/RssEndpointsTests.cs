@@ -1,5 +1,6 @@
 using System.Net;
 using System.Xml.Linq;
+using FluentAssertions;
 
 namespace TechHub.Api.Tests.Endpoints;
 
@@ -17,24 +18,24 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var response = await _client.GetAsync("/api/rss/all");
 
         // Assert
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        Assert.Equal("application/rss+xml; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 
         var xml = await response.Content.ReadAsStringAsync();
-        Assert.NotEmpty(xml);
+        xml.Should().NotBeEmpty();
 
         // Validate RSS structure
         var doc = XDocument.Parse(xml);
         var rss = doc.Element("rss");
-        Assert.NotNull(rss);
-        Assert.Equal("2.0", rss.Attribute("version")?.Value);
+        rss.Should().NotBeNull();
+        rss!.Attribute("version")?.Value.Should().Be("2.0");
 
         var channel = rss.Element("channel");
-        Assert.NotNull(channel);
-        Assert.NotNull(channel.Element("title"));
-        Assert.NotNull(channel.Element("link"));
-        Assert.NotNull(channel.Element("description"));
-        Assert.NotNull(channel.Element("lastBuildDate"));
+        channel.Should().NotBeNull();
+        channel!.Element("title").Should().NotBeNull();
+        channel.Element("link").Should().NotBeNull();
+        channel.Element("description").Should().NotBeNull();
+        channel.Element("lastBuildDate").Should().NotBeNull();
     }
 
     [Fact]
@@ -47,15 +48,15 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         // Assert
         var doc = XDocument.Parse(xml);
         var items = doc.Descendants("item");
-        Assert.NotEmpty(items);
+        items.Should().NotBeEmpty();
 
         // Validate first item structure
         var firstItem = items.First();
-        Assert.NotNull(firstItem.Element("title"));
-        Assert.NotNull(firstItem.Element("link"));
-        Assert.NotNull(firstItem.Element("description"));
-        Assert.NotNull(firstItem.Element("pubDate"));
-        Assert.NotNull(firstItem.Element("guid"));
+        firstItem.Element("title").Should().NotBeNull();
+        firstItem.Element("link").Should().NotBeNull();
+        firstItem.Element("description").Should().NotBeNull();
+        firstItem.Element("pubDate").Should().NotBeNull();
+        firstItem.Element("guid").Should().NotBeNull();
     }
 
     [Theory]
@@ -72,8 +73,8 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var response = await _client.GetAsync($"/api/rss/{sectionName}");
 
         // Assert
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        Assert.Equal("application/rss+xml; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 
         var xml = await response.Content.ReadAsStringAsync();
         var doc = XDocument.Parse(xml);
@@ -81,8 +82,8 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
 
         // Validate channel title contains section name
         var title = channel.Element("title")?.Value;
-        Assert.NotNull(title);
-        Assert.Contains("Tech Hub", title);
+        title.Should().NotBeNull();
+        title.Should().Contain("Tech Hub");
     }
 
     [Fact]
@@ -92,7 +93,7 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var response = await _client.GetAsync("/api/rss/nonexistent");
 
         // Assert
-        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
 
     [Fact]
@@ -102,8 +103,8 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var response = await _client.GetAsync("/api/rss/collection/roundups");
 
         // Assert
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        Assert.Equal("application/rss+xml; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 
         var xml = await response.Content.ReadAsStringAsync();
         var doc = XDocument.Parse(xml);
@@ -111,8 +112,8 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
 
         // Validate channel contains "Roundups"
         var title = channel.Element("title")?.Value;
-        Assert.NotNull(title);
-        Assert.Contains("Roundups", title);
+        title.Should().NotBeNull();
+        title.Should().Contain("Roundups");
     }
 
     [Fact]
@@ -122,7 +123,7 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var response = await _client.GetAsync("/api/rss/collection/nonexistent");
 
         // Assert
-        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
 
     [Fact]
@@ -143,10 +144,7 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
                 .ToList();
 
             // Verify descending order (newest first)
-            for (int i = 0; i < dates.Count - 1; i++)
-            {
-                Assert.True(dates[i] >= dates[i + 1], "Items should be sorted by date descending");
-            }
+            dates.Should().BeInDescendingOrder("items should be sorted by date descending (newest first)");
         }
     }
 
@@ -160,7 +158,7 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         // Assert
         var doc = XDocument.Parse(xml);
         var items = doc.Descendants("item");
-        Assert.True(items.Count() <= 50, "Feed should contain at most 50 items");
+        items.Should().HaveCountLessThanOrEqualTo(50, "feed should contain at most 50 items");
     }
 
     [Fact]
@@ -175,11 +173,11 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var firstItem = doc.Descendants("item").First();
         var pubDate = firstItem.Element("pubDate")?.Value;
 
-        Assert.NotNull(pubDate);
+        pubDate.Should().NotBeNull();
 
         // RFC1123 format can be parsed by DateTime
-        var parsed = DateTime.Parse(pubDate);
-        Assert.NotEqual(default, parsed);
+        var parsed = DateTime.Parse(pubDate!);
+        parsed.Should().NotBe(default(DateTime));
     }
 
     [Fact]
@@ -194,9 +192,9 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
         var firstItem = doc.Descendants("item").First();
         var guid = firstItem.Element("guid");
 
-        Assert.NotNull(guid);
-        Assert.Equal("true", guid.Attribute("isPermaLink")?.Value);
-        Assert.StartsWith("https://", guid.Value);
+        guid.Should().NotBeNull();
+        guid!.Attribute("isPermaLink")?.Value.Should().Be("true");
+        guid.Value.Should().StartWith("https://");
     }
 
     [Fact]
@@ -208,17 +206,14 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
 
         // Assert - If XML parses successfully, special characters were properly escaped
         var doc = XDocument.Parse(xml);
-        Assert.NotNull(doc);
+        doc.Should().NotBeNull();
 
         // Additional validation: ensure we can access item content
         var items = doc.Descendants("item");
-        foreach (var item in items)
+        items.Should().AllSatisfy(item =>
         {
-            var title = item.Element("title")?.Value;
-            var description = item.Element("description")?.Value;
-
-            Assert.NotNull(title);
-            Assert.NotNull(description);
-        }
+            item.Element("title")?.Value.Should().NotBeNull();
+            item.Element("description")?.Value.Should().NotBeNull();
+        });
     }
 }

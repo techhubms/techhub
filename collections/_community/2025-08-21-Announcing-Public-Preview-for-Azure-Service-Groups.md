@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Announcing Public Preview for Azure Service Groups"
-description: "This announcement introduces Azure Service Groups—a new Azure resource container that enables flexible membership, hierarchy management, and enhanced observability across your Azure tenant. Service Groups are designed for low-privilege management and allow you to group resources from anywhere in your tenant, supporting advanced monitoring and organizational scenarios without impacting RBAC or policy settings."
-author: "kenieva"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Public Preview for Azure Service Groups
+author: kenieva
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-21 17:58:39 +00:00
-permalink: "/2025-08-21-Announcing-Public-Preview-for-Azure-Service-Groups.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Governance", "Azure Monitor", "Azure Service Groups", "Cloud Management", "Community", "Hierarchy Management", "Management Groups", "Microsoft Entra", "Observability", "RBAC", "Resource Management", "REST API", "Tenant Level Resources"]
-tags_normalized: ["azure", "azure governance", "azure monitor", "azure service groups", "cloud management", "community", "hierarchy management", "management groups", "microsoft entra", "observability", "rbac", "resource management", "rest api", "tenant level resources"]
+permalink: /azure/community/Announcing-Public-Preview-for-Azure-Service-Groups
+tags:
+- Azure
+- Azure Governance
+- Azure Monitor
+- Azure Service Groups
+- Cloud Management
+- Community
+- Hierarchy Management
+- Management Groups
+- Microsoft Entra
+- Observability
+- RBAC
+- Resource Management
+- REST API
+- Tenant Level Resources
+section_names:
+- azure
 ---
-
 kenieva introduces Azure Service Groups, now in public preview. This Azure feature allows flexible grouping and monitoring of resources at the tenant level, offering low-privilege management with support for varied hierarchies.<!--excerpt_end-->
 
 # Announcing Public Preview for Azure Service Groups!

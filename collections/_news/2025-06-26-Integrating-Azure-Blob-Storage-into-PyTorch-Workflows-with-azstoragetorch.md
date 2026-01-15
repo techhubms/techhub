@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating Azure Blob Storage into PyTorch Workflows with azstoragetorch"
-description: "This post introduces azstoragetorch, a library connecting Azure Blob Storage with PyTorch. It details installation, authentication, saving/loading models, using datasets directly from Azure Storage, and real-world benefits for machine learning with distributed training and large datasets."
-author: "Rohit Ganguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-storage-connector-for-pytorch/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Integrating Azure Blob Storage into PyTorch Workflows with azstoragetorch
+author: Rohit Ganguly
+canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-storage-connector-for-pytorch/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-26 15:00:12 +00:00
-permalink: "/2025-06-26-Integrating-Azure-Blob-Storage-into-PyTorch-Workflows-with-azstoragetorch.html"
-categories: ["Azure", "ML"]
-tags: ["Azstoragetorch", "Azure", "Azure Blob Storage", "Azure SDK", "Azure Storage", "DataLoader", "Datasets", "DefaultAzureCredential", "Distributed Training", "Machine Learning", "ML", "Model Checkpointing", "Model Deployment", "News", "Python", "Pytorch", "Storage"]
-tags_normalized: ["azstoragetorch", "azure", "azure blob storage", "azure sdk", "azure storage", "dataloader", "datasets", "defaultazurecredential", "distributed training", "machine learning", "ml", "model checkpointing", "model deployment", "news", "python", "pytorch", "storage"]
+permalink: /ml/news/Integrating-Azure-Blob-Storage-into-PyTorch-Workflows-with-azstoragetorch
+tags:
+- Azstoragetorch
+- Azure
+- Azure Blob Storage
+- Azure SDK
+- Azure Storage
+- DataLoader
+- Datasets
+- DefaultAzureCredential
+- Distributed Training
+- Machine Learning
+- ML
+- Model Checkpointing
+- Model Deployment
+- News
+- Python
+- Pytorch
+- Storage
+section_names:
+- azure
+- ml
 ---
-
 Authored by Rohit Ganguly, this article details the release and capabilities of azstoragetorch, enabling direct Azure Blob Storage integration in PyTorch-based machine learning workflows.<!--excerpt_end-->
 
 ## Introducing the Azure Storage Connector for PyTorch

@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Compound Software Development with Async SWE Agents: Orchestrating AI for Engineering Productivity"
-description: "This episode of Sip and Sync with Azure explores how software engineering is transforming from individual coding to orchestrating fleets of AI agents. Hosts Priyanka Vergadia and Govind Kamtamneni give live demos on leveraging Microsoft technologies like Azure AI Foundry, GitHub Copilot, and GitHub Actions for agent-based development. The session covers Research Agents, rapid prototyping, M365 Copilot integration, monitoring via Teams, and automating testing workflows, emphasizing that human engineers are shifting to roles of verification, context engineering, and risk management while AI takes over large portions of coding."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=A3YdGa95rrQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Compound Software Development with Async SWE Agents: Orchestrating AI for Engineering Productivity'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=A3YdGa95rrQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-05 15:02:29 +00:00
-permalink: "/2025-08-05-Compound-Software-Development-with-Async-SWE-Agents-Orchestrating-AI-for-Engineering-Productivity.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agent Monitoring", "Agent Unlock", "Agent Workflows", "AI", "AI Agent Orchestration", "Aifoundry.app", "Async Loom", "Asyncloom.com", "Automated Testing", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Development", "Context Engineering", "Dev", "Development", "DevOps", "GitHub Actions", "GitHub Copilot", "Govind Kamtamneni", "M365 Copilot", "Microsoft", "Microsoft Teams Integration", "Priyanka Vergadia", "SDLC Automation", "Sip And Sync", "Software Engineering", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent monitoring", "agent unlock", "agent workflows", "ai", "ai agent orchestration", "aifoundrydotapp", "async loom", "asyncloomdotcom", "automated testing", "azure", "azure ai foundry", "cloud computing", "cloud development", "context engineering", "dev", "development", "devops", "github actions", "github copilot", "govind kamtamneni", "m365 copilot", "microsoft", "microsoft teams integration", "priyanka vergadia", "sdlc automation", "sip and sync", "software engineering", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/Compound-Software-Development-with-Async-SWE-Agents-Orchestrating-AI-for-Engineering-Productivity
+tags:
+- Agent Monitoring
+- Agent Unlock
+- Agent Workflows
+- AI
+- AI Agent Orchestration
+- Aifoundry.app
+- Async Loom
+- Asyncloom.com
+- Automated Testing
+- Azure
+- Azure AI Foundry
+- Cloud Computing
+- Cloud Development
+- Context Engineering
+- Dev
+- Development
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Govind Kamtamneni
+- M365 Copilot
+- Microsoft
+- Microsoft Teams Integration
+- Priyanka Vergadia
+- SDLC Automation
+- Sip And Sync
+- Software Engineering
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 In this Sip and Sync with Azure episode, Priyanka Vergadia and Govind Kamtamneni demonstrate how engineers can use Microsoft’s Azure AI, GitHub Copilot, and automated agent orchestration to multiply coding productivity, shifting focus from manual coding to context engineering and software verification.<!--excerpt_end-->
 
 {% youtube A3YdGa95rrQ %}

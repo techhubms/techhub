@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building and Shipping Edge AI Apps with Microsoft Foundry"
-description: "This advanced session from Microsoft Ignite 2025 presents Edge AI development with Microsoft Foundry, focusing on running intelligence locally and deploying AI models on edge devices via Azure Arc. It covers Foundry Local’s client-side capabilities, new feature highlights, cross-platform support, workflow automation for model updates, and live demonstrations. Developers discover how Foundry streamlines AI transition from cloud to edge and the practical steps to build, ship, and scale on-device AI applications using Microsoft’s platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b88tJ0hdTSQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building and Shipping Edge AI Apps with Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=b88tJ0hdTSQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:33:59 +00:00
-permalink: "/2025-11-24-Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Demonstrations", "AI Workflow", "Android Integration", "Audio Transcription", "Azure", "Azure Arc", "Client Applications", "Cloud To Edge", "Cross Platform Support", "Custom Model Fine Tuning", "Edge AI", "Foundry Local", "GitOps", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "Model Deployment", "Model Versioning", "MSIgnite", "OCI Registry", "On Device AI", "ORAS Tool", "PhonePe Collaboration", "Videos"]
-tags_normalized: ["ai", "ai demonstrations", "ai workflow", "android integration", "audio transcription", "azure", "azure arc", "client applications", "cloud to edge", "cross platform support", "custom model fine tuning", "edge ai", "foundry local", "gitops", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "model deployment", "model versioning", "msignite", "oci registry", "on device ai", "oras tool", "phonepe collaboration", "videos"]
+permalink: /ai/videos/Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry
+tags:
+- AI
+- AI Demonstrations
+- AI Workflow
+- Android Integration
+- Audio Transcription
+- Azure
+- Azure Arc
+- Client Applications
+- Cloud To Edge
+- Cross Platform Support
+- Custom Model Fine Tuning
+- Edge AI
+- Foundry Local
+- GitOps
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Microsoft Ignite
+- Model Deployment
+- Model Versioning
+- MSIgnite
+- OCI Registry
+- On Device AI
+- ORAS Tool
+- PhonePe Collaboration
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events delivers an advanced overview of Edge AI development with Microsoft Foundry at Ignite 2025, guiding developers on building and deploying on-device and edge AI apps.<!--excerpt_end-->
 
 {% youtube b88tJ0hdTSQ %}

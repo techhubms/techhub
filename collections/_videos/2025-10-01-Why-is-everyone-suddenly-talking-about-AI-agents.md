@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Why is everyone suddenly talking about AI agents?"
-description: "John Maeda explores the industry shift from a heavy focus on AI models to the rising interest in AI agents, highlighting how decreasing costs of AI models are enabling new possibilities. The discussion mentions Azure AI Foundry as a key technology, hinting at broader changes and future trends in Microsoft's AI ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vewSU9egocs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Why is everyone suddenly talking about AI agents?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=vewSU9egocs
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-01 15:52:33 +00:00
-permalink: "/2025-10-01-Why-is-everyone-suddenly-talking-about-AI-agents.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "AI Development", "AI Model Costs", "AI Trends", "Azure AI Foundry", "John Maeda", "Microsoft AI", "Onedevquestion", "Tech Shifts", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai development", "ai model costs", "ai trends", "azure ai foundry", "john maeda", "microsoft ai", "onedevquestion", "tech shifts", "videos"]
+permalink: /ai/videos/Why-is-everyone-suddenly-talking-about-AI-agents
+tags:
+- AI
+- AI Agents
+- AI Development
+- AI Model Costs
+- AI Trends
+- Azure AI Foundry
+- John Maeda
+- Microsoft AI
+- Onedevquestion
+- Tech Shifts
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer presents John Maeda's insights into the transition from AI models to AI agents, emphasizing the impact of lowered model costs and Microsoft's Azure AI Foundry.<!--excerpt_end-->
 
 {% youtube vewSU9egocs %}

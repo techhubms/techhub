@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Agent Lightning: Making AI Agents Smarter Without Rewriting Code"
-description: "This in-depth post introduces Agent Lightning, an open-source reinforcement learning framework from Microsoft Research Asia that enables AI agents to be trained and improved with RL without requiring developers to significantly rewrite agent code. The article explains the system’s architecture, benefits for scaling and modularity, and summarizes real-world evaluation results across text-to-SQL, retrieval-augmented generation, and mathematical QA tasks. It details how the middleware design abstracts agent execution and training, helping streamline RL adoption in agentic systems and providing actionable insight for developers looking to build scalable, trainable AI agents using Microsoft’s software ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Agent Lightning: Making AI Agents Smarter Without Rewriting Code'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-12 17:20:21 +00:00
-permalink: "/2025-12-12-Agent-Lightning-Making-AI-Agents-Smarter-Without-Rewriting-Code.html"
-categories: ["AI"]
-tags: ["Agent Development", "Agent Lightning", "AI", "AI Agents", "AutoGen", "Company News", "LangChain", "LightningRL", "LLM", "Mathematical QA", "Microsoft", "Microsoft Research", "Middleware Architecture", "News", "Open Source", "OpenAI Agents SDK", "Reinforcement Learning", "Retrieval Augmented Generation", "Reward Assignment", "RL Algorithms", "Scalable Systems", "Text To SQL"]
-tags_normalized: ["agent development", "agent lightning", "ai", "ai agents", "autogen", "company news", "langchain", "lightningrl", "llm", "mathematical qa", "microsoft", "microsoft research", "middleware architecture", "news", "open source", "openai agents sdk", "reinforcement learning", "retrieval augmented generation", "reward assignment", "rl algorithms", "scalable systems", "text to sql"]
+permalink: /ai/news/Agent-Lightning-Making-AI-Agents-Smarter-Without-Rewriting-Code
+tags:
+- Agent Development
+- Agent Lightning
+- AI
+- AI Agents
+- AutoGen
+- Company News
+- LangChain
+- LightningRL
+- LLM
+- Mathematical QA
+- Microsoft
+- Microsoft Research
+- Middleware Architecture
+- News
+- Open Source
+- OpenAI Agents SDK
+- Reinforcement Learning
+- Retrieval Augmented Generation
+- Reward Assignment
+- RL Algorithms
+- Scalable Systems
+- Text To SQL
+section_names:
+- ai
 ---
-
 stclarke introduces Agent Lightning, an open-source reinforcement learning framework from Microsoft Research Asia that lets developers train AI agents without code rewrites, highlighting real-world tasks and scalable system design.<!--excerpt_end-->
 
 # Agent Lightning: Making AI Agents Smarter Without Rewriting Code

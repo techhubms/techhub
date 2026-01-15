@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The Latest AI Features in Visual Studio Code"
-description: "This video from the Visual Studio Code team introduces new AI-powered features in the latest VS Code release. It covers productivity enhancements such as new AI models, chat history with suggested actions, Plan Mode, a GitHub Copilot Coding Agent, updated extension tools, and AI-powered merge conflict resolution workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EGZKvuB5jWw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: The Latest AI Features in Visual Studio Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=EGZKvuB5jWw
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-09 17:41:40 +00:00
-permalink: "/2025-10-09-The-Latest-AI-Features-in-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Merge Conflict", "AI Models", "Claude Sonnet", "Code Editing", "Coding", "Extension Tools", "GitHub Copilot", "GPT 5", "IDE Updates", "MCP Servers", "Plan Mode", "Productivity Tools", "Suggested Actions", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai integration", "ai merge conflict", "ai models", "claude sonnet", "code editing", "coding", "extension tools", "github copilot", "gpt 5", "ide updates", "mcp servers", "plan mode", "productivity tools", "suggested actions", "videos", "vs code"]
+permalink: /github-copilot/videos/The-Latest-AI-Features-in-Visual-Studio-Code
+tags:
+- AI
+- AI Integration
+- AI Merge Conflict
+- AI Models
+- Claude Sonnet
+- Code Editing
+- Coding
+- Extension Tools
+- GitHub Copilot
+- GPT 5
+- IDE Updates
+- MCP Servers
+- Plan Mode
+- Productivity Tools
+- Suggested Actions
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code presents the latest release packed with AI-driven features. Hosted by the team, this update highlights improvements to code editing, conflict resolution, and introduces the GitHub Copilot Coding Agent.<!--excerpt_end-->
 
 {% youtube EGZKvuB5jWw %}

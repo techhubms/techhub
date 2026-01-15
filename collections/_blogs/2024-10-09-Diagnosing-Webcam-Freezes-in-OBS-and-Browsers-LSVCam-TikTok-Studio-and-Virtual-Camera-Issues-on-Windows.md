@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Diagnosing Webcam Freezes in OBS and Browsers: LSVCam, TikTok Studio, and Virtual Camera Issues on Windows"
-description: "Scott Hanselman shares a detailed troubleshooting journey into mysterious webcam pauses affecting OBS Studio and browser-based video apps, tracing the issue to faulty virtual camera drivers from TikTok Live Studio (LSVCam). The article offers tools, registry hacks, and technical insights for identifying and resolving virtual camera-related hangs on Windows systems."
-author: "Scott Hanselman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.hanselman.com/blog/webcam-randomly-pausing-in-obs-discord-and-websites-lsvcam-and-tiktok-studio"
-viewing_mode: "external"
-feed_name: "Scott Hanselman's Blog"
-feed_url: "https://www.hanselman.com/blog/SyndicationService.asmx/GetRss"
+﻿---
+layout: post
+title: 'Diagnosing Webcam Freezes in OBS and Browsers: LSVCam, TikTok Studio, and Virtual Camera Issues on Windows'
+author: Scott Hanselman
+canonical_url: https://www.hanselman.com/blog/webcam-randomly-pausing-in-obs-discord-and-websites-lsvcam-and-tiktok-studio
+viewing_mode: external
+feed_name: Scott Hanselman's Blog
+feed_url: https://www.hanselman.com/blog/SyndicationService.asmx/GetRss
 date: 2024-10-09 19:32:28 +00:00
-permalink: "/2024-10-09-Diagnosing-Webcam-Freezes-in-OBS-and-Browsers-LSVCam-TikTok-Studio-and-Virtual-Camera-Issues-on-Windows.html"
-categories: ["Coding"]
-tags: ["Blogs", "Browser APIs", "Bugs", "Coding", "Device Drivers", "DirectShow", "LSVCam", "Media Device Enumeration", "OBS Studio", "PowerShell", "Registry", "TikTok Live Studio", "Troubleshooting", "Video Streaming", "Virtual Camera", "Webcam", "Windows", "Windows Media Foundation"]
-tags_normalized: ["blogs", "browser apis", "bugs", "coding", "device drivers", "directshow", "lsvcam", "media device enumeration", "obs studio", "powershell", "registry", "tiktok live studio", "troubleshooting", "video streaming", "virtual camera", "webcam", "windows", "windows media foundation"]
+permalink: /coding/blogs/Diagnosing-Webcam-Freezes-in-OBS-and-Browsers-LSVCam-TikTok-Studio-and-Virtual-Camera-Issues-on-Windows
+tags:
+- Blogs
+- Browser APIs
+- Bugs
+- Coding
+- Device Drivers
+- DirectShow
+- LSVCam
+- Media Device Enumeration
+- OBS Studio
+- PowerShell
+- Registry
+- TikTok Live Studio
+- Troubleshooting
+- Video Streaming
+- Virtual Camera
+- Webcam
+- Windows
+- Windows Media Foundation
+section_names:
+- coding
 ---
-
 Scott Hanselman documents his investigation into persistent webcam hangs affecting OBS Studio and browser apps on Windows, identifying the LSVCam virtual camera from TikTok Live Studio as the culprit. He details detection methods, registry fixes, and practical observations.<!--excerpt_end-->
 
 # Diagnosing Webcam Freezes in OBS and Browsers: LSVCam, TikTok Studio, and Virtual Camera Issues on Windows
@@ -40,14 +55,13 @@ Scott discovered that neither Windows settings nor the main UI offer a comprehen
 Get-CimInstance -Namespace root\cimv2 -ClassName Win32_PnPEntity | Where-Object { ---
 layout: "post"
 title: "Diagnosing Webcam Freezes in OBS and Browsers: LSVCam, TikTok Studio, and Virtual Camera Issues on Windows"
-description: "Scott Hanselman shares a detailed troubleshooting journey into mysterious webcam pauses affecting OBS Studio and browser-based video apps, tracing the issue to faulty virtual camera drivers from TikTok Live Studio (LSVCam). The article offers tools, registry hacks, and technical insights for identifying and resolving virtual camera-related hangs on Windows systems."
 author: "Scott Hanselman"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://www.hanselman.com/blog/webcam-randomly-pausing-in-obs-discord-and-websites-lsvcam-and-tiktok-studio"
 viewing_mode: "external"
 feed_name: "Scott Hanselman's Blog"
 feed_url: https://www.hanselman.com/blog/SyndicationService.asmx/GetRss
-date: 2024-10-09 19:32:28 +00:00
+date: "2024-10-09 19:32:28 +00:00"
 permalink: "2024-10-09-Diagnosing-Webcam-Freezes-in-OBS-and-Browsers-LSVCam-TikTok-Studio-and-Virtual-Camera-Issues-on-Windows.html"
 categories: ["Coding"]
 tags: ["Browser APIs", "Bugs", "Coding", "Device Drivers", "DirectShow", "LSVCam", "Media Device Enumeration", "OBS Studio", "Blogs", "PowerShell", "Registry", "TikTok Live Studio", "Troubleshooting", "Video Streaming", "Virtual Camera", "Webcam", "Windows", "Windows Media Foundation"]

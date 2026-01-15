@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering"
-description: "This article explores new features in Azure AI Foundry, focusing on enhancements to Conversational Language Understanding (CLU) and Custom Question Answering (CQA) for conversational agent development. It details customization, streamlined deployment, and improved question-answering capabilities for building intelligent, multilingual agents."
-author: "peytonfraser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/enhancing-conversational-agents-with-azure-ai-language-conversational-language-understanding-and-custom-question-answering/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering'
+author: peytonfraser
+canonical_url: https://devblogs.microsoft.com/foundry/enhancing-conversational-agents-with-azure-ai-language-conversational-language-understanding-and-custom-question-answering/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-03 22:20:12 +00:00
-permalink: "/2025-06-03-Enhancing-Conversational-Agents-with-Azure-AI-Language-CLU-and-Custom-Question-Answering.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Development", "AI", "AI Agents", "AI Applications", "Azure", "Azure AI Foundry", "Azure AI Foundry Labs", "Azure AI Language", "Azure AI Services", "CLU", "Conversational AI", "Conversational Language Understanding", "CQA", "Custom Question Answering", "Intent Triage Agent", "Language Model Customization", "LLM", "Microsoft Build", "Model Deployment", "News", "QnA Maker", "Question Answering Agent"]
-tags_normalized: ["agent development", "ai", "ai agents", "ai applications", "azure", "azure ai foundry", "azure ai foundry labs", "azure ai language", "azure ai services", "clu", "conversational ai", "conversational language understanding", "cqa", "custom question answering", "intent triage agent", "language model customization", "llm", "microsoft build", "model deployment", "news", "qna maker", "question answering agent"]
+permalink: /ai/news/Enhancing-Conversational-Agents-with-Azure-AI-Language-CLU-and-Custom-Question-Answering
+tags:
+- Agent Development
+- AI
+- AI Agents
+- AI Applications
+- Azure
+- Azure AI Foundry
+- Azure AI Foundry Labs
+- Azure AI Language
+- Azure AI Services
+- CLU
+- Conversational AI
+- Conversational Language Understanding
+- CQA
+- Custom Question Answering
+- Intent Triage Agent
+- Language Model Customization
+- LLM
+- Microsoft Build
+- Model Deployment
+- News
+- QnA Maker
+- Question Answering Agent
+section_names:
+- ai
+- azure
 ---
-
 Authored by peytonfraser, this article provides a comprehensive overview of the latest advancements in Azure AI Foundry’s conversational agent capabilities. It highlights new customization features in CLU and CQA and provides practical guidance for leveraging these tools in enterprise AI solutions.<!--excerpt_end-->
 
 # Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering

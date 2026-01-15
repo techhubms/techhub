@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Modernizing Windows Server Workloads with Azure Administration, AI, and Security Tools"
-description: "This advanced session from Microsoft Ignite explores optimizing Windows Server workloads within Azure using modern infrastructure, management tools, and AI-powered administration. Key topics include the use of Azure Copilot, AI Shell, and Windows Admin Center for workload management, security, monitoring, compliance, disaster recovery, and identity simplification through Microsoft Entra Domain Services. The session presents real-world configuration steps, integration scenarios, and best practices for migration and modernization."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YK_MNYAmpVA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing Windows Server Workloads with Azure Administration, AI, and Security Tools
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=YK_MNYAmpVA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:43:53 +00:00
-permalink: "/2025-11-20-Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Shell", "Azure", "Azure Administration", "Azure Arc", "Azure Copilot", "Azure Infrastructure", "Azure Migrate", "Cloud Migration", "Compliance", "Dependency Mapping", "Disaster Recovery", "Entra Domain Services", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Performance Insights", "Security", "Software Updates", "Videos", "Virtualization", "Windows Admin Center", "Windows Server", "Workload Modernization"]
-tags_normalized: ["ai", "ai shell", "azure", "azure administration", "azure arc", "azure copilot", "azure infrastructure", "azure migrate", "cloud migration", "compliance", "dependency mapping", "disaster recovery", "entra domain services", "migrateandmodernizeyourestate", "monitoring", "msignite", "performance insights", "security", "software updates", "videos", "virtualization", "windows admin center", "windows server", "workload modernization"]
+permalink: /ai/videos/Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools
+tags:
+- AI
+- AI Shell
+- Azure
+- Azure Administration
+- Azure Arc
+- Azure Copilot
+- Azure Infrastructure
+- Azure Migrate
+- Cloud Migration
+- Compliance
+- Dependency Mapping
+- Disaster Recovery
+- Entra Domain Services
+- Migrateandmodernizeyourestate
+- Monitoring
+- MSIgnite
+- Performance Insights
+- Security
+- Software Updates
+- Videos
+- Virtualization
+- Windows Admin Center
+- Windows Server
+- Workload Modernization
+section_names:
+- ai
+- azure
+- security
 ---
-
 Presented by Dan Cuomo and Jeff Woolsey at Microsoft Ignite, this advanced session details how to manage and modernize Windows Server workloads in Azure with AI, Copilot, and security tools.<!--excerpt_end-->
 
 {% youtube YK_MNYAmpVA %}

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Dashboard Feed Page Updated for Better Performance and Consistency"
-description: "This GitHub changelog announces enhancements to the /dashboard-feed page on GitHub.com, featuring upgrades like faster and fresher event updates, a unified design, expanded event types, and tunable recommendations. The update aims to create a more consistent and reliable experience by leveraging GitHub's latest feeds infrastructure, paving the way for further performance improvements."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Dashboard Feed Page Updated for Better Performance and Consistency
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 21:07:51 +00:00
-permalink: "/2025-09-04-GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency.html"
-categories: ["DevOps"]
-tags: ["Dashboard Feed", "DevOps", "Event Feeds", "Feed Upgrades", "GitHub", "GitHub Homepage", "Infrastructure", "News", "Performance Improvements", "Product Update", "Recommendations", "Release Notes", "User Experience"]
-tags_normalized: ["dashboard feed", "devops", "event feeds", "feed upgrades", "github", "github homepage", "infrastructure", "news", "performance improvements", "product update", "recommendations", "release notes", "user experience"]
+permalink: /devops/news/GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency
+tags:
+- Dashboard Feed
+- DevOps
+- Event Feeds
+- Feed Upgrades
+- GitHub
+- GitHub Homepage
+- Infrastructure
+- News
+- Performance Improvements
+- Product Update
+- Recommendations
+- Release Notes
+- User Experience
+section_names:
+- devops
 ---
-
 Allison outlines improvements to GitHub's dashboard-feed page, delivering a faster, more consistent user experience with new event types and tunable recommendations.<!--excerpt_end-->
 
 # GitHub Dashboard Feed Page Updated for Better Performance and Consistency

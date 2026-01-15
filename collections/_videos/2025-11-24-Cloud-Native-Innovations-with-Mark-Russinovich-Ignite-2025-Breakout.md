@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout"
-description: "Azure CTO Mark Russinovich presents advanced cloud native computing topics at Microsoft Ignite 2025, covering serverless containers, eBPF routing, confidential container groups, distributed cache performance, and new Microsoft incubation projects for multi-cloud portability and event-driven architectures. Technical experts learn about Azure innovation for cloud native development, hardware-based security, and project origins within the Azure incubations team."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=-xcNd5ZU0Z8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=-xcNd5ZU0Z8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:45:11 +00:00
-permalink: "/2025-11-24-Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Azure", "Azure Container Instances", "CADA", "Cloud Native", "Coding", "Confidential Containers", "Containers", "Dapper", "Distributed Cache", "DRASI", "Ebpf", "Event Driven Architecture", "Hardware Based Security", "Mark Russinovich", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Cloud", "RADIUS", "Security", "Serverless Containers", "Videos"]
-tags_normalized: ["azure", "azure container instances", "cada", "cloud native", "coding", "confidential containers", "containers", "dapper", "distributed cache", "drasi", "ebpf", "event driven architecture", "hardware based security", "mark russinovich", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi cloud", "radius", "security", "serverless containers", "videos"]
+permalink: /coding/videos/Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout
+tags:
+- Azure
+- Azure Container Instances
+- CADA
+- Cloud Native
+- Coding
+- Confidential Containers
+- Containers
+- Dapper
+- Distributed Cache
+- DRASI
+- Ebpf
+- Event Driven Architecture
+- Hardware Based Security
+- Mark Russinovich
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Multi Cloud
+- RADIUS
+- Security
+- Serverless Containers
+- Videos
+section_names:
+- azure
+- coding
+- security
 ---
-
 Microsoft Events features Mark Russinovich discussing core Azure innovations in cloud native computing, containers, security, and multi-cloud solutions as presented at Ignite 2025.<!--excerpt_end-->
 
 {% youtube -xcNd5ZU0Z8 %}

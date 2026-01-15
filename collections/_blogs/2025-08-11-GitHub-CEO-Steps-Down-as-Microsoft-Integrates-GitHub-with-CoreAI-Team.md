@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub CEO Steps Down as Microsoft Integrates GitHub with CoreAI Team"
-description: "This article covers the significant leadership transition at GitHub as CEO Thomas Dohmke announces his departure, marking a shift in GitHub’s organizational structure. The move aligns GitHub more closely with Microsoft’s CoreAI engineering team, signaling changes in the company’s approach to AI coding tools and tighter integration within Microsoft’s AI and platform strategy."
-author: "Jon Swartz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team/?utm_source=rss&utm_medium=rss&utm_campaign=github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: GitHub CEO Steps Down as Microsoft Integrates GitHub with CoreAI Team
+author: Jon Swartz
+canonical_url: https://devops.com/github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team/?utm_source=rss&utm_medium=rss&utm_campaign=github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-11 19:55:55 +00:00
-permalink: "/2025-08-11-GitHub-CEO-Steps-Down-as-Microsoft-Integrates-GitHub-with-CoreAI-Team.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Coding", "AI Engineering", "AI Tools", "Blogs", "Career Moves", "CoreAI", "Cursor", "Developer Tools", "DevOps", "GitHub", "GitHub Integration", "Google", "Leadership Transition", "Microsoft", "Open Source", "Organizational Change", "Platform Strategy", "Social Facebook", "Social LinkedIn", "Social X", "Thomas Dohmke"]
-tags_normalized: ["ai", "ai coding", "ai engineering", "ai tools", "blogs", "career moves", "coreai", "cursor", "developer tools", "devops", "github", "github integration", "google", "leadership transition", "microsoft", "open source", "organizational change", "platform strategy", "social facebook", "social linkedin", "social x", "thomas dohmke"]
+permalink: /ai/blogs/GitHub-CEO-Steps-Down-as-Microsoft-Integrates-GitHub-with-CoreAI-Team
+tags:
+- AI
+- AI Coding
+- AI Engineering
+- AI Tools
+- Blogs
+- Career Moves
+- CoreAI
+- Cursor
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Integration
+- Google
+- Leadership Transition
+- Microsoft
+- Open Source
+- Organizational Change
+- Platform Strategy
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Thomas Dohmke
+section_names:
+- ai
+- devops
 ---
-
 Jon Swartz discusses Thomas Dohmke’s decision to step down as GitHub CEO, emphasizing how GitHub will operate more closely with Microsoft’s CoreAI team and what this means for AI-driven developer tooling.<!--excerpt_end-->
 
 # GitHub CEO Steps Down as Microsoft Tightly Integrates GitHub with CoreAI Team

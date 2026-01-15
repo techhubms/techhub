@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Promptception: Using GitHub Copilot to Craft Better Prompts"
-description: "This post introduces 'Promptception'—the practice of leveraging GitHub Copilot's Chat, Edit, and Agent Modes to help developers write and refine prompts for Copilot itself. It covers step-by-step examples in different Copilot modes, showing how prompt engineering can improve Copilot's code suggestions and boost workflow efficiency. Practical advice is given on using Copilot for prompt generation, rewrites, style guidance, and code/document review, culminating in strategies for making your own prompts more effective inside developer tools."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Promptception: Using GitHub Copilot to Craft Better Prompts'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-11 00:00:00 +00:00
-permalink: "/2025-04-11-Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async Await", "Blogs", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Tools", "GitHub Copilot", "IDE Tools", "Meta Prompt", "Playwright", "Prompt Engineering", "Prompt Optimization", "Readme Generation", "Software Development"]
-tags_normalized: ["ai", "async await", "blogs", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit", "developer tools", "github copilot", "ide tools", "meta prompt", "playwright", "prompt engineering", "prompt optimization", "readme generation", "software development"]
+permalink: /github-copilot/blogs/Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts
+tags:
+- AI
+- Async Await
+- Blogs
+- Code Review
+- Coding
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Edit
+- Developer Tools
+- GitHub Copilot
+- IDE Tools
+- Meta Prompt
+- Playwright
+- Prompt Engineering
+- Prompt Optimization
+- Readme Generation
+- Software Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels explores 'Promptception'—how to use GitHub Copilot itself to create, rewrite, and optimize prompts for Copilot Chat, Edit, and Agent Mode, sharing actionable examples for developers.<!--excerpt_end-->
 
 # Promptception – Improve Prompts with Copilot

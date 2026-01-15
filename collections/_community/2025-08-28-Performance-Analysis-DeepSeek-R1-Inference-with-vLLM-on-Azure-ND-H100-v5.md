@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Performance Analysis: DeepSeek R1 Inference with vLLM on Azure ND-H100-v5"
-description: "This article presents a technical performance analysis of deploying the DeepSeek R1 large language model for AI inference using vLLM on Azure ND_H100_v5 GPUs. It covers the necessary infrastructure setup, benchmarking methodology, comparison against smaller models, cost analysis, and deployment considerations for practitioners evaluating large-scale reasoning models on Azure."
-author: "CormacGarvey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-analysis-of-deepseek-r1-ai-inference-using-vllm-on/ba-p/4449351"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Performance Analysis: DeepSeek R1 Inference with vLLM on Azure ND-H100-v5'
+author: CormacGarvey
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-analysis-of-deepseek-r1-ai-inference-using-vllm-on/ba-p/4449351
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-28 22:13:32 +00:00
-permalink: "/2025-08-28-Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Azure ND H100 V5", "Chain Of Thought", "Community", "Cost Analysis", "DeepSeek R1", "FP8 Precision", "GPU Utilization", "HPC", "Inference Benchmarking", "InfiniBand", "Latency Analysis", "Model Deployment", "NVIDIA H100", "NVLink", "Token Throughput", "Vllm"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "azure nd h100 v5", "chain of thought", "community", "cost analysis", "deepseek r1", "fp8 precision", "gpu utilization", "hpc", "inference benchmarking", "infiniband", "latency analysis", "model deployment", "nvidia h100", "nvlink", "token throughput", "vllm"]
+permalink: /ai/community/Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Azure ND H100 V5
+- Chain Of Thought
+- Community
+- Cost Analysis
+- DeepSeek R1
+- FP8 Precision
+- GPU Utilization
+- HPC
+- Inference Benchmarking
+- InfiniBand
+- Latency Analysis
+- Model Deployment
+- NVIDIA H100
+- NVLink
+- Token Throughput
+- Vllm
+section_names:
+- ai
+- azure
 ---
-
 CormacGarvey examines the deployment and benchmarking of the DeepSeek R1 reasoning model on Azure ND_H100_v5 nodes using vLLM, providing practical insights into infrastructure demands and performance.<!--excerpt_end-->
 
 # Performance Analysis: DeepSeek R1 Inference with vLLM on Azure ND-H100-v5

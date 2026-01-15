@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search"
-description: "This news update highlights the general availability of the new 'enterprise:' qualifier in GitHub code search. The qualifier enables users to search across all organizations within a GitHub enterprise, streamlining previously complex multi-org search queries. The post explores how the new qualifier works, links to relevant documentation, and clarifies that this feature is available for GitHub Enterprise Cloud customers. Technical users and administrators managing codebases at scale will benefit from a more efficient code search experience."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-05 19:49:17 +00:00
-permalink: "/2025-11-05-GitHub-Introduces-enterprise-Qualifier-for-Enhanced-Code-Search.html"
-categories: ["DevOps"]
-tags: ["Boolean Operators", "Code Search", "Codebase Management", "Collaboration Tools", "DevOps", "Documentation", "Enterprise Qualifier", "GitHub", "GitHub Enterprise Cloud", "Improvement", "News", "Query Operators", "Search Syntax"]
-tags_normalized: ["boolean operators", "code search", "codebase management", "collaboration tools", "devops", "documentation", "enterprise qualifier", "github", "github enterprise cloud", "improvement", "news", "query operators", "search syntax"]
+permalink: /devops/news/GitHub-Introduces-enterprise-Qualifier-for-Enhanced-Code-Search
+tags:
+- Boolean Operators
+- Code Search
+- Codebase Management
+- Collaboration Tools
+- DevOps
+- Documentation
+- Enterprise Qualifier
+- GitHub
+- GitHub Enterprise Cloud
+- Improvement
+- News
+- Query Operators
+- Search Syntax
+section_names:
+- devops
 ---
-
 Allison details the rollout of the 'enterprise:' qualifier in GitHub code search, a new feature making it easier for GitHub Enterprise Cloud customers to search codes across multiple organizations within their enterprise.<!--excerpt_end-->
 
 # GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search

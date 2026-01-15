@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Terraform Provider for Microsoft Fabric: #3 Creating a Workload Identity with Fabric Permissions"
-description: "This article covers the process of setting up a workload identity with Microsoft Fabric permissions using the Terraform provider. It builds on previous posts by moving from development in a user context to configuring resources with practical permissions, offering advice for real-world deployment."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-3-creating-a-workload-identity-with-fabric-permissions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Terraform Provider for Microsoft Fabric: #3 Creating a Workload Identity with Fabric Permissions'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-3-creating-a-workload-identity-with-fabric-permissions/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-30 07:00:00 +00:00
-permalink: "/2025-07-30-Terraform-Provider-for-Microsoft-Fabric-3-Creating-a-Workload-Identity-with-Fabric-Permissions.html"
-categories: ["DevOps", "Azure", "ML"]
-tags: ["Automation", "Azure", "Deployment", "DevOps", "Fabric Administrator", "IaC", "Identity Management", "Microsoft Fabric", "ML", "News", "Permissions", "Resource Configuration", "Terraform", "Workload Identity"]
-tags_normalized: ["automation", "azure", "deployment", "devops", "fabric administrator", "iac", "identity management", "microsoft fabric", "ml", "news", "permissions", "resource configuration", "terraform", "workload identity"]
+permalink: /ml/news/Terraform-Provider-for-Microsoft-Fabric-3-Creating-a-Workload-Identity-with-Fabric-Permissions
+tags:
+- Automation
+- Azure
+- Deployment
+- DevOps
+- Fabric Administrator
+- IaC
+- Identity Management
+- Microsoft Fabric
+- ML
+- News
+- Permissions
+- Resource Configuration
+- Terraform
+- Workload Identity
+section_names:
+- devops
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explores how to create a workload identity with proper Fabric permissions using Terraform, building upon earlier configuration and admin resource setup advice.<!--excerpt_end-->
 
 ## Introduction

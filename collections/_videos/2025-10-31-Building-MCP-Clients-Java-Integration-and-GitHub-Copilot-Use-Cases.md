@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building MCP Clients: Java Integration and GitHub Copilot Use Cases"
-description: "This episode explores building clients for the Model Context Protocol (MCP), focusing on real-world implementations. It covers testing clients using MCP Inspector, integrating MCP into Visual Studio Code with GitHub Copilot, and developing a Java chat application with LangChain4j and local AI models like Llama. Learn how GitHub Copilot and custom MCP tools enhance developer workflows and how to implement real-time AI-assisted client applications in Java."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HQQavvdrAA0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Building MCP Clients: Java Integration and GitHub Copilot Use Cases'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=HQQavvdrAA0
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 00:00:22 +00:00
-permalink: "/2025-10-31-Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Integration", "AIIntegration", "AITools", "Chat Applications", "ChatApplications", "Client Server", "Coding", "Copilot Integration", "Dev Tools", "GitHub Copilot", "Java", "Java Development", "JavaClient", "JavaDevelopment", "LangChain4j", "Llama", "LlamaAI", "Local LLM", "LocalLLM", "MCP", "MCP Inspector", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai integration", "aiintegration", "aitools", "chat applications", "chatapplications", "client server", "coding", "copilot integration", "dev tools", "github copilot", "java", "java development", "javaclient", "javadevelopment", "langchain4j", "llama", "llamaai", "local llm", "localllm", "mcp", "mcp inspector", "videos", "vs code"]
+permalink: /github-copilot/videos/Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases
+tags:
+- Agent Mode
+- AI
+- AI Integration
+- AIIntegration
+- AITools
+- Chat Applications
+- ChatApplications
+- Client Server
+- Coding
+- Copilot Integration
+- Dev Tools
+- GitHub Copilot
+- Java
+- Java Development
+- JavaClient
+- JavaDevelopment
+- LangChain4j
+- Llama
+- LlamaAI
+- Local LLM
+- LocalLLM
+- MCP
+- MCP Inspector
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer presents a hands-on walkthrough featuring Ayan Gupta, Bruno Borges, and Sandra Ahlgrimm on building MCP clients, integrating GitHub Copilot, and developing Java chat applications with AI.<!--excerpt_end-->
 
 {% youtube HQQavvdrAA0 %}

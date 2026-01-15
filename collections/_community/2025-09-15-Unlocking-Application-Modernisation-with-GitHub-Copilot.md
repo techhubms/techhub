@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Unlocking Application Modernisation with GitHub Copilot"
-description: "This comprehensive guide by Richard_Healy explores how GitHub Copilot and AI tools are transforming the landscape of legacy application modernisation. The article dives into practical ways Copilot accelerates code refactoring, cloud migrations, DevOps, developer productivity, and business agility by leveraging Azure and Microsoft technologies."
-author: "Richard_Healy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Unlocking Application Modernisation with GitHub Copilot
+author: Richard_Healy
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 13:37:12 +00:00
-permalink: "/2025-09-15-Unlocking-Application-Modernisation-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agentic AI", "AI", "App Configuration", "Application Modernisation", "Azure", "Azure AD", "Azure Functions", "Azure SQL", "CI/CD Pipelines", "Cloud Migration", "Coding", "Community", "DevOps", "DevOps Automation", "Docker", "GitHub Copilot", "IaC", "Java", "Key Vault", "Kubernetes", "Legacy Code Refactoring", "Technical Debt Reduction", "Unit Testing"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "app configuration", "application modernisation", "azure", "azure ad", "azure functions", "azure sql", "cislashcd pipelines", "cloud migration", "coding", "community", "devops", "devops automation", "docker", "github copilot", "iac", "java", "key vault", "kubernetes", "legacy code refactoring", "technical debt reduction", "unit testing"]
+permalink: /github-copilot/community/Unlocking-Application-Modernisation-with-GitHub-Copilot
+tags:
+- .NET
+- Agentic AI
+- AI
+- App Configuration
+- Application Modernisation
+- Azure
+- Azure AD
+- Azure Functions
+- Azure SQL
+- CI/CD Pipelines
+- Cloud Migration
+- Coding
+- Community
+- DevOps
+- DevOps Automation
+- Docker
+- GitHub Copilot
+- IaC
+- Java
+- Key Vault
+- Kubernetes
+- Legacy Code Refactoring
+- Technical Debt Reduction
+- Unit Testing
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Richard_Healy shares an in-depth look at how GitHub Copilot, agentic AI, and Azure are revolutionizing application modernisation, empowering teams to refactor legacy systems, accelerate cloud adoption, and boost developer productivity.<!--excerpt_end-->
 
 # Unlocking Application Modernisation with GitHub Copilot

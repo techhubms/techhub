@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Data Security with Security Copilot and Microsoft Purview"
-description: "This session from Microsoft Ignite 2025 highlights how Security Copilot and Microsoft Purview's AI agents empower data security teams to protect sensitive information efficiently. It covers automation in alert triage, reduced manual workload, risk classification, and showcases live demos of real-world security challenges and AI-driven incident response workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2H8cvsjJ8ao"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Powered Data Security with Security Copilot and Microsoft Purview
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=2H8cvsjJ8ao
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 05:10:08 +00:00
-permalink: "/2025-11-24-AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview.html"
-categories: ["AI", "Security"]
-tags: ["Advanced Security Solutions", "AI", "AI Agents", "Alert Triage", "Automation", "Data Leak Prevention", "Data Security", "Incident Response", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Policy Comparison", "Risk Management", "Secureyourdata", "Security", "Security Copilot", "Security Operations", "Videos"]
-tags_normalized: ["advanced security solutions", "ai", "ai agents", "alert triage", "automation", "data leak prevention", "data security", "incident response", "microsoft ignite", "microsoft purview", "msignite", "policy comparison", "risk management", "secureyourdata", "security", "security copilot", "security operations", "videos"]
+permalink: /ai/videos/AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview
+tags:
+- Advanced Security Solutions
+- AI
+- AI Agents
+- Alert Triage
+- Automation
+- Data Leak Prevention
+- Data Security
+- Incident Response
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Policy Comparison
+- Risk Management
+- Secureyourdata
+- Security
+- Security Copilot
+- Security Operations
+- Videos
+section_names:
+- ai
+- security
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events presenters demonstrate how Security Copilot and Microsoft Purview use AI to automate and accelerate data security operations, featuring demos and practical scenarios.<!--excerpt_end-->
 
 {% youtube 2H8cvsjJ8ao %}

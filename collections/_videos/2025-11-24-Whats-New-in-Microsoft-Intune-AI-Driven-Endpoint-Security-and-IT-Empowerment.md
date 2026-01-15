@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment"
-description: "This session from Microsoft Ignite 2025 covers the latest innovations in Microsoft Intune, highlighting how IT teams can leverage new AI-powered features, streamline device management with Copilot, and improve endpoint security and compliance. The presentation details updates such as Intune Recovery for device restoration, enhanced app inventory reporting, Copilot Chat and Explorer for device management using natural language, automation of vulnerability remediation through Defender integration, and the move from assistive to agentic AI experiences. Attendees will learn how these advancements foster more resilient, secure, and productive environments across organizations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fotUEeeC_H0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fotUEeeC_H0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 04:55:05 +00:00
-permalink: "/2025-11-24-Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Capabilities", "App Inventory", "Automation", "Azure Defender Integration", "Copilot Chat", "Copilot Explorer", "Device Compliance", "Endpoint Management", "Endpoint Privilege Management", "IT Empowerment", "Microsoft Ignite", "Microsoft Intune", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Videos", "Vulnerability Remediation"]
-tags_normalized: ["ai", "ai capabilities", "app inventory", "automation", "azure defender integration", "copilot chat", "copilot explorer", "device compliance", "endpoint management", "endpoint privilege management", "it empowerment", "microsoft ignite", "microsoft intune", "msignite", "scalewithcloudandaiendpoints", "security", "videos", "vulnerability remediation"]
+permalink: /ai/videos/Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment
+tags:
+- AI
+- AI Capabilities
+- App Inventory
+- Automation
+- Azure Defender Integration
+- Copilot Chat
+- Copilot Explorer
+- Device Compliance
+- Endpoint Management
+- Endpoint Privilege Management
+- IT Empowerment
+- Microsoft Ignite
+- Microsoft Intune
+- MSIgnite
+- ScalewithcloudandAIendpoints
+- Security
+- Videos
+- Vulnerability Remediation
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events, with speakers Eugenie Burrage and Jason Roszak, cover how Intune is integrating AI, Copilot, and enhanced security to empower IT and protect endpoints.<!--excerpt_end-->
 
 {% youtube fotUEeeC_H0 %}

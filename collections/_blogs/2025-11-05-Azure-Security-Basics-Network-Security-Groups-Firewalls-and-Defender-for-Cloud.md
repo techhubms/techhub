@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Security Basics: Network Security Groups, Firewalls, and Defender for Cloud"
-description: "This comprehensive guide by Dellenny explores the foundational elements of securing Microsoft Azure networks. Covering Network Security Groups (NSGs), Azure Firewall, and Microsoft Defender for Cloud, the article examines each tool’s role in controlling traffic, enforcing security policies, and providing real-time monitoring. Readers will learn best practices for implementing a layered defense-in-depth strategy to protect Azure environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure Security Basics: Network Security Groups, Firewalls, and Defender for Cloud'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-05 09:26:10 +00:00
-permalink: "/2025-11-05-Azure-Security-Basics-Network-Security-Groups-Firewalls-and-Defender-for-Cloud.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Monitor", "Blogs", "Cloud Architecture", "Cloud Security", "Defense in Depth", "Firewall Policies", "Incident Response", "Just in Time Access", "Log Analytics", "Microsoft Defender For Cloud", "Network Security Group", "NSG", "Security", "Security Auditing", "Security Posture Management", "Security Recommendations", "Threat Intelligence", "Virtual Networks", "Zero Trust"]
-tags_normalized: ["azure", "azure firewall", "azure monitor", "blogs", "cloud architecture", "cloud security", "defense in depth", "firewall policies", "incident response", "just in time access", "log analytics", "microsoft defender for cloud", "network security group", "nsg", "security", "security auditing", "security posture management", "security recommendations", "threat intelligence", "virtual networks", "zero trust"]
+permalink: /azure/blogs/Azure-Security-Basics-Network-Security-Groups-Firewalls-and-Defender-for-Cloud
+tags:
+- Azure
+- Azure Firewall
+- Azure Monitor
+- Blogs
+- Cloud Architecture
+- Cloud Security
+- Defense in Depth
+- Firewall Policies
+- Incident Response
+- Just in Time Access
+- Log Analytics
+- Microsoft Defender For Cloud
+- Network Security Group
+- NSG
+- Security
+- Security Auditing
+- Security Posture Management
+- Security Recommendations
+- Threat Intelligence
+- Virtual Networks
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Dellenny provides a practitioner-focused walkthrough on securing Azure networks using Network Security Groups, Azure Firewall, and Defender for Cloud, outlining practical strategies and best practices for cloud security.<!--excerpt_end-->
 
 # Azure Security Basics: Network Security Groups, Firewalls, and Defender for Cloud

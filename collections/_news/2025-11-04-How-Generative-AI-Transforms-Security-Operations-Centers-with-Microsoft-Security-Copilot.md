@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How Generative AI Transforms Security Operations Centers with Microsoft Security Copilot"
-description: "This article by Rob Lefferts explores the impact of generative AI, specifically Microsoft Security Copilot, on modern security operations centers (SOCs). It details how AI can mitigate alert fatigue, speed up threat triage, and empower proactive threat hunting, while improving efficiency and resilience across security workflows. Covering topics like automated incident summarization, guidance for analysts, AI-powered investigations, and real-world statistics, it demonstrates how SOC teams benefit from AI-driven solutions for faster, smarter security operations."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/04/learn-what-generative-ai-can-do-for-your-security-operations-center-soc/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: How Generative AI Transforms Security Operations Centers with Microsoft Security Copilot
+author: Rob Lefferts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/04/learn-what-generative-ai-can-do-for-your-security-operations-center-soc/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-04 17:00:00 +00:00
-permalink: "/2025-11-04-How-Generative-AI-Transforms-Security-Operations-Centers-with-Microsoft-Security-Copilot.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Powered Security", "Alert Triage", "Cybersecurity", "Generative AI", "Incident Management", "Incident Response", "Microsoft Security", "Microsoft Security Copilot", "News", "Operational Efficiency", "Security", "Security Automation", "Security Operations Center", "Security Reporting", "SOC", "Threat Hunting", "Threat Intelligence"]
-tags_normalized: ["ai", "ai powered security", "alert triage", "cybersecurity", "generative ai", "incident management", "incident response", "microsoft security", "microsoft security copilot", "news", "operational efficiency", "security", "security automation", "security operations center", "security reporting", "soc", "threat hunting", "threat intelligence"]
+permalink: /ai/news/How-Generative-AI-Transforms-Security-Operations-Centers-with-Microsoft-Security-Copilot
+tags:
+- AI
+- AI Powered Security
+- Alert Triage
+- Cybersecurity
+- Generative AI
+- Incident Management
+- Incident Response
+- Microsoft Security
+- Microsoft Security Copilot
+- News
+- Operational Efficiency
+- Security
+- Security Automation
+- Security Operations Center
+- Security Reporting
+- SOC
+- Threat Hunting
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 Rob Lefferts highlights how generative AI, through Microsoft Security Copilot, transforms security operations centers by reducing alert fatigue, accelerating incident response, and enabling proactive defense with AI-driven capabilities.<!--excerpt_end-->
 
 # How Generative AI Transforms Security Operations Centers with Microsoft Security Copilot

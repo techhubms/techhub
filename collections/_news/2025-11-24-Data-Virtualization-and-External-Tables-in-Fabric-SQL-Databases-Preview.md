@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Data Virtualization and External Tables in Fabric SQL Databases (Preview)"
-description: "This news post introduces the Data Virtualization feature (Preview) in Fabric SQL Databases, allowing users to query, analyze, and ingest OneLake data (CSV, Parquet, JSON) using SQL features like OPENROWSET and External Tables. It outlines real-time analytics on external data, seamless integration, schema abstraction, and T-SQL/JSON function support. Readers will learn how to access and manage external data with minimal code changes and discover Copilot capabilities for generating insights."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Data Virtualization and External Tables in Fabric SQL Databases (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 10:00:00 +00:00
-permalink: "/2025-11-24-Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["ABFS", "AI", "Azure", "Azure Data Lake Gen2", "Azure SQL Database", "BULK Operations", "Copilot", "CSV", "Data Virtualization", "External Data Sources", "External Tables", "Fabric SQL Database", "JSON", "JSON Functions", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Real Time Analytics", "Reverse ETL", "Schema Abstraction", "SQL Server", "T SQL"]
-tags_normalized: ["abfs", "ai", "azure", "azure data lake gen2", "azure sql database", "bulk operations", "copilot", "csv", "data virtualization", "external data sources", "external tables", "fabric sql database", "json", "json functions", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "real time analytics", "reverse etl", "schema abstraction", "sql server", "t sql"]
+permalink: /ai/news/Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview
+tags:
+- ABFS
+- AI
+- Azure
+- Azure Data Lake Gen2
+- Azure SQL Database
+- BULK Operations
+- Copilot
+- CSV
+- Data Virtualization
+- External Data Sources
+- External Tables
+- Fabric SQL Database
+- JSON
+- JSON Functions
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- OPENROWSET
+- Parquet
+- Real Time Analytics
+- Reverse ETL
+- Schema Abstraction
+- SQL Server
+- T SQL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details new Data Virtualization features for Fabric SQL Databases, enabling real-time analytics and schema abstraction using OPENROWSET, External Tables, and Copilot integration.<!--excerpt_end-->
 
 # Data Virtualization and External Tables in Fabric SQL Databases (Preview)

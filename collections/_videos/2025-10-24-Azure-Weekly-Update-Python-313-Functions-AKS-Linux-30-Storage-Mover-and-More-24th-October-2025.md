@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)"
-description: "This Azure update video from John Savill's Technical Training covers new developments and features introduced in late October 2025, including Python 3.13 support for Azure Functions, AKS Azure Linux 3.0 target upgrades, improvements to Azure Storage Mover, new migration scripts, PostgreSQL scaling, SQL Managed Instance updates, regional expansion, containerization, and more. The update provides concise overviews of each topic, enabling Azure professionals to stay current on the latest enhancements to core Azure services and tools."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=I2wFjDrZAPo"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=I2wFjDrZAPo
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-24 14:44:20 +00:00
-permalink: "/2025-10-24-Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025.html"
-categories: ["Azure"]
-tags: ["AKS", "App Gateway Migration", "Azure", "Azure Cloud", "Azure Functions", "Azure Linux 3.0", "Azure Regions", "Azure Storage Mover", "Cloud", "Cloud Services", "Cloud Updates", "Containerization", "Gpt 4o", "Hyperscale", "Image Analysis", "John Savill", "Managed PostgreSQL", "Microsoft", "Microsoft Azure", "Python 3.13", "SQL Managed Instance", "Videos", "VM Vcore"]
-tags_normalized: ["aks", "app gateway migration", "azure", "azure cloud", "azure functions", "azure linux 3dot0", "azure regions", "azure storage mover", "cloud", "cloud services", "cloud updates", "containerization", "gpt 4o", "hyperscale", "image analysis", "john savill", "managed postgresql", "microsoft", "microsoft azure", "python 3dot13", "sql managed instance", "videos", "vm vcore"]
+permalink: /azure/videos/Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025
+tags:
+- AKS
+- App Gateway Migration
+- Azure
+- Azure Cloud
+- Azure Functions
+- Azure Linux 3.0
+- Azure Regions
+- Azure Storage Mover
+- Cloud
+- Cloud Services
+- Cloud Updates
+- Containerization
+- Gpt 4o
+- Hyperscale
+- Image Analysis
+- John Savill
+- Managed PostgreSQL
+- Microsoft
+- Microsoft Azure
+- Python 3.13
+- SQL Managed Instance
+- Videos
+- VM Vcore
+section_names:
+- azure
 ---
-
 John Savill's Technical Training shares the latest Azure announcements and updates for October 2025, highlighting new features and enhancements across Azure Functions, AKS, Storage, and data services.<!--excerpt_end-->
 
 {% youtube I2wFjDrZAPo %}

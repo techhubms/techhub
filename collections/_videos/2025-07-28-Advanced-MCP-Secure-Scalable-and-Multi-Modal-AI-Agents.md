@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents"
-description: "This video covers advanced techniques for building enterprise-grade MCP servers, including multi-modal support, real-time streaming, scaling strategies, and robust security with Microsoft tools. It provides hands-on code samples and discusses integration with Azure OpenAI and Microsoft AI Foundry."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4yjmGvJzYdY"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=4yjmGvJzYdY
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:13 +00:00
-permalink: "/2025-07-28-Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents.html"
-categories: ["AI", "Azure", "Security", "DevOps", "Coding"]
-tags: ["AI", "API Management", "Azure", "Azure OpenAI", "Cloud Native", "Coding", "Containers", "DevOps", "Enterprise Security", "Load Balancers", "MCP", "Microsoft AI Foundry", "Microsoft Entra ID", "Multi Modal AI", "OAuth2", "Performance Optimization", "Real Time Streaming", "Scaling Strategies", "Security", "Videos"]
-tags_normalized: ["ai", "api management", "azure", "azure openai", "cloud native", "coding", "containers", "devops", "enterprise security", "load balancers", "mcp", "microsoft ai foundry", "microsoft entra id", "multi modal ai", "oauth2", "performance optimization", "real time streaming", "scaling strategies", "security", "videos"]
+permalink: /ai/videos/Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents
+tags:
+- AI
+- API Management
+- Azure
+- Azure OpenAI
+- Cloud Native
+- Coding
+- Containers
+- DevOps
+- Enterprise Security
+- Load Balancers
+- MCP
+- Microsoft AI Foundry
+- Microsoft Entra ID
+- Multi Modal AI
+- OAuth2
+- Performance Optimization
+- Real Time Streaming
+- Scaling Strategies
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+- devops
+- coding
 ---
-
 In this advanced chapter, Microsoft Developer guides you through best practices and hands-on patterns for creating secure, scalable, and multi-modal MCP-based AI infrastructure, focusing on Microsoft technologies.<!--excerpt_end-->
 
 {% youtube 4yjmGvJzYdY %}

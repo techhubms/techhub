@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Troubleshooting Azure Firewall and VPN Gateway Routing in Hub-Spoke Topology"
-description: "This community post discusses an advanced Azure hub-spoke architecture using VPN Gateway with BGP and Azure Firewall for network inspection. The author describes routing challenges encountered after implementing custom user-defined routes (UDRs) to force traffic through firewalls and shares details of current configurations and routing logic in both Hub-A and Hub-B environments."
-author: "CUrti300"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Troubleshooting Azure Firewall and VPN Gateway Routing in Hub-Spoke Topology
+author: CUrti300
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 18:04:09 +00:00
-permalink: "/2025-11-20-Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Hybrid Connectivity", "Azure Networking", "BGP", "Community", "Connectivity Issues", "Hub Spoke Architecture", "Inbound Private Resolver", "Network Security", "Network Segmentation", "Route Propagation", "Routing Troubleshooter", "Security", "UDR", "User Defined Routing", "Virtual Appliance", "Virtual Network", "VPN Gateway"]
-tags_normalized: ["azure", "azure firewall", "azure hybrid connectivity", "azure networking", "bgp", "community", "connectivity issues", "hub spoke architecture", "inbound private resolver", "network security", "network segmentation", "route propagation", "routing troubleshooter", "security", "udr", "user defined routing", "virtual appliance", "virtual network", "vpn gateway"]
+permalink: /azure/community/Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology
+tags:
+- Azure
+- Azure Firewall
+- Azure Hybrid Connectivity
+- Azure Networking
+- BGP
+- Community
+- Connectivity Issues
+- Hub Spoke Architecture
+- Inbound Private Resolver
+- Network Security
+- Network Segmentation
+- Route Propagation
+- Routing Troubleshooter
+- Security
+- UDR
+- User Defined Routing
+- Virtual Appliance
+- Virtual Network
+- VPN Gateway
+section_names:
+- azure
+- security
 ---
-
 CUrti300 shares real-world troubleshooting experience with Azure VPN Gateway, BGP, and Firewall in a hub-spoke environment, highlighting obstacles with custom routing and inspection.<!--excerpt_end-->
 
 # Troubleshooting Azure Firewall and VPN Gateway Routing in Hub-Spoke Topology

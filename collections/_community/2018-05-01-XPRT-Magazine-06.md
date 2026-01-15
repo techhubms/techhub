@@ -1,17 +1,35 @@
----
-layout: "post"
-title: "XPRT Magazine 06"
-description: "This issue covers OpenFaaS, DevOps mindset, Kubernetes, Blazor, ChatOps, security, bots, and more."
-categories: ["DevOps", "Coding", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 06
 date: 2018-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2018-05-01-XPRT-Magazine-06.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["Automation", "Blazor", "Bots", "Browser Security", "ChatOps", "Cloud", "Coding", "Community", "DevOps", "FaaS", "Kubernetes", "Magazines", "Mindset", "Mob Programming", "OpenFaaS", "Performance", "Security", "Web", "Website Speed"]
-tags_normalized: ["automation", "blazor", "bots", "browser security", "chatops", "cloud", "coding", "community", "devops", "faas", "kubernetes", "magazines", "mindset", "mob programming", "openfaas", "performance", "security", "web", "website speed"]
+author: Xebia
+viewing_mode: external
+permalink: /coding/community/XPRT-Magazine-06
+tags:
+- Automation
+- Blazor
+- Bots
+- Browser Security
+- ChatOps
+- Cloud
+- Coding
+- Community
+- DevOps
+- FaaS
+- Kubernetes
+- Magazines
+- Mindset
+- Mob Programming
+- OpenFaaS
+- Performance
+- Security
+- Web
+- Website Speed
+section_names:
+- devops
+- coding
+- security
 ---
-
 XPRT Magazine 06 explores OpenFaaS, DevOps mindset, Kubernetes, Blazor, ChatOps, browser security, mob programming, bots, and more. This issue provides practical strategies and technical insights for building modern, secure, and high-performing solutions.
 <!--excerpt_end-->
 

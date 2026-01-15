@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "A Practical Guide to Setting up Microsoft Azure Trusted Signing for Code Signing Certificates"
-description: "Rick Strahl details his challenging experience setting up Microsoft Azure Trusted Signing for code signing, outlining the complexities of certificate rules, service pricing, infrastructure requirements, tooling, and performance considerations. This post includes step-by-step setup instructions, troubleshooting tips, alternative approaches, and community feedback."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: A Practical Guide to Setting up Microsoft Azure Trusted Signing for Code Signing Certificates
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-07-21 00:56:23 +00:00
-permalink: "/2025-07-21-A-Practical-Guide-to-Setting-up-Microsoft-Azure-Trusted-Signing-for-Code-Signing-Certificates.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Azure CLI", "Azure Trusted Signing", "Blogs", "Certificate Authority", "Certificate Management", "Code Signing", "Cryptography", "Developer Experience", "Key Vault", "Microsoft Azure", "NuGet", "Security", "Security Module", "Signtool", "Windows"]
-tags_normalized: ["automation", "azure", "azure cli", "azure trusted signing", "blogs", "certificate authority", "certificate management", "code signing", "cryptography", "developer experience", "key vault", "microsoft azure", "nuget", "security", "security module", "signtool", "windows"]
+permalink: /azure/blogs/A-Practical-Guide-to-Setting-up-Microsoft-Azure-Trusted-Signing-for-Code-Signing-Certificates
+tags:
+- Automation
+- Azure
+- Azure CLI
+- Azure Trusted Signing
+- Blogs
+- Certificate Authority
+- Certificate Management
+- Code Signing
+- Cryptography
+- Developer Experience
+- Key Vault
+- Microsoft Azure
+- NuGet
+- Security
+- Security Module
+- Signtool
+- Windows
+section_names:
+- azure
+- security
 ---
-
 In this extensive guide, Rick Strahl shares his experience with setting up Microsoft Azure Trusted Signing for code signing, discussing certificate requirements, Azure configuration, and practical challenges developers may face.<!--excerpt_end-->
 
 # Fighting through Setting up Microsoft Trusted Signing

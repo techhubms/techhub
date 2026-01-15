@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code Live: Highlights from GitHub Universe Announcements"
-description: "Burke Holland from Visual Studio Code and April Yoho from GitHub provide a recap of major announcements from this week's GitHub Universe event. The discussion covers new features, tools, and integrations relevant to developers working with GitHub and Visual Studio Code, with a focus on advancements in developer productivity and ecosystem updates."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=u-YQ624i8qE"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live: Highlights from GitHub Universe Announcements'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=u-YQ624i8qE
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-27 16:35:14 +00:00
-permalink: "/2025-10-27-VS-Code-Live-Highlights-from-GitHub-Universe-Announcements.html"
-categories: ["DevOps"]
-tags: ["Code", "Code Demos", "Demo", "Developer", "Developer Community", "Developer Tools", "Developerevents", "DevOps", "Event Recap", "GitHub", "GitHub Universe", "Githubuniverse", "Microsoft", "Product Announcements", "Software Developer", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["code", "code demos", "demo", "developer", "developer community", "developer tools", "developerevents", "devops", "event recap", "github", "github universe", "githubuniverse", "microsoft", "product announcements", "software developer", "software development", "videos", "vs code"]
+permalink: /devops/videos/VS-Code-Live-Highlights-from-GitHub-Universe-Announcements
+tags:
+- Code
+- Code Demos
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Developerevents
+- DevOps
+- Event Recap
+- GitHub
+- GitHub Universe
+- Githubuniverse
+- Microsoft
+- Product Announcements
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+section_names:
+- devops
 ---
-
 Visual Studio Code's Burke Holland and GitHub's April Yoho break down the key developer-focused announcements from GitHub Universe, sharing insights for the community.<!--excerpt_end-->
 
 {% youtube u-YQ624i8qE %}

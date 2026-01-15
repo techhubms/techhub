@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Getting Started with GraphQL in .NET"
-description: "This video features Michael Staib, the creator of HotChocolate, demonstrating how to build GraphQL APIs using the HotChocolate library in .NET. The session is introduced by Nick Chapsas and focuses on essential steps for developers to begin leveraging GraphQL within C#/.NET applications."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YL07NyBXC7M"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Getting Started with GraphQL in .NET
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=YL07NyBXC7M
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-08-06 11:00:58 +00:00
-permalink: "/2025-08-06-Getting-Started-with-GraphQL-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "API Development", "ASP.NET Core", "Backend Development", "C#", "Coding", "GraphQL", "GraphQL API", "HotChocolate", "Michael Staib", "Microsoft", "Nick Chapsas", "Videos"]
-tags_normalized: ["dotnet", "api development", "aspdotnet core", "backend development", "csharp", "coding", "graphql", "graphql api", "hotchocolate", "michael staib", "microsoft", "nick chapsas", "videos"]
+permalink: /coding/videos/Getting-Started-with-GraphQL-in-NET
+tags:
+- .NET
+- API Development
+- ASP.NET Core
+- Backend Development
+- C#
+- Coding
+- GraphQL
+- GraphQL API
+- HotChocolate
+- Michael Staib
+- Microsoft
+- Nick Chapsas
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas introduces Michael Staib as he demonstrates how to create GraphQL APIs in .NET using the HotChocolate library, helping developers start working with GraphQL in a Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube YL07NyBXC7M %}

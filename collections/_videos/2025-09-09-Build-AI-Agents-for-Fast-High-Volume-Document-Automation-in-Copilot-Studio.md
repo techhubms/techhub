@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Build AI Agents for Fast, High-Volume Document Automation in Copilot Studio"
-description: "Elaiza Benitez and Ragavan Rajan explore how Microsoft Copilot Studio and AI Builder can automate data extraction from heavy vehicle permits. The session demonstrates setting up AI models for document processing, deploying agents for bulk automation, and monitoring workflows in real time—all without coding. Practical benefits like reducing manual tasks and integrating AI into business processes with Power Platform are discussed."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=crHR6sEnTpE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Build AI Agents for Fast, High-Volume Document Automation in Copilot Studio
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=crHR6sEnTpE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-09 07:00:27 +00:00
-permalink: "/2025-09-09-Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "AI Builder", "Bulk Processing", "Business Process Automation", "Cloud Computing", "Conversational AI", "Copilot Studio", "Data Extraction", "Dev", "Development", "Document Automation", "Microsoft", "No Code Development", "Power Platform", "Real Time Alerts", "Tech", "Technology", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "ai builder", "bulk processing", "business process automation", "cloud computing", "conversational ai", "copilot studio", "data extraction", "dev", "development", "document automation", "microsoft", "no code development", "power platform", "real time alerts", "tech", "technology", "videos", "workflow automation"]
+permalink: /ai/videos/Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio
+tags:
+- AI
+- AI Agents
+- AI Builder
+- Bulk Processing
+- Business Process Automation
+- Cloud Computing
+- Conversational AI
+- Copilot Studio
+- Data Extraction
+- Dev
+- Development
+- Document Automation
+- Microsoft
+- No Code Development
+- Power Platform
+- Real Time Alerts
+- Tech
+- Technology
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Microsoft Developer, featuring Ragavan Rajan, presents strategies for creating AI agents in Copilot Studio to automate document processing for heavy vehicle permits, focusing on no-code solutions.<!--excerpt_end-->
 
 {% youtube crHR6sEnTpE %}

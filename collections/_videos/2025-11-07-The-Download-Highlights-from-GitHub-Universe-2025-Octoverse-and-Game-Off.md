@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off"
-description: "This video episode of The Download, hosted by Christina Warren, covers the major announcements from GitHub Universe 2025, explores insights from the Octoverse report, spotlights the open-source project uv as a potential pip alternative, and kicks off the GitHub Game Off 2025. The episode also includes a tour of the Open Source Zone at GitHub Universe, showcasing notable projects and new developments within the developer ecosystem."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1JxLIxbEzxQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=1JxLIxbEzxQ
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-07 17:54:56 +00:00
-permalink: "/2025-11-07-The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off.html"
-categories: ["DevOps"]
-tags: ["Agent HQ", "Community Events", "Developer News", "DevOps", "GitHub", "GitHub Game Off", "GitHub Universe", "GitHubUniverse", "Octoverse", "Open Source", "Open Source Security", "pip", "Project Spotlight", "Python Tools", "TheDownload", "TypeScript", "Uv", "Videos"]
-tags_normalized: ["agent hq", "community events", "developer news", "devops", "github", "github game off", "github universe", "githubuniverse", "octoverse", "open source", "open source security", "pip", "project spotlight", "python tools", "thedownload", "typescript", "uv", "videos"]
+permalink: /devops/videos/The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off
+tags:
+- Agent HQ
+- Community Events
+- Developer News
+- DevOps
+- GitHub
+- GitHub Game Off
+- GitHub Universe
+- GitHubUniverse
+- Octoverse
+- Open Source
+- Open Source Security
+- pip
+- Project Spotlight
+- Python Tools
+- TheDownload
+- TypeScript
+- Uv
+- Videos
+section_names:
+- devops
 ---
-
 Christina Warren hosts this video episode covering GitHub Universe 2025 highlights, the latest Octoverse developer trends, new open source tool uv, and the GitHub Game Off launch.<!--excerpt_end-->
 
 {% youtube 1JxLIxbEzxQ %}

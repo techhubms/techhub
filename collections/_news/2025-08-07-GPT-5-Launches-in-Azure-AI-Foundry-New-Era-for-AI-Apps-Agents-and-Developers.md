@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents, and Developers"
-description: "Microsoft announces general availability of GPT-5 in Azure AI Foundry, offering its most advanced large language model yet. The news details GPT-5's capabilities, availability across agentic workloads, integrations with GitHub Copilot and Visual Studio Code, and new safety, security, and governance controls. The article also covers real-world business impacts and technical advances in orchestration, coding, and compliance."
-author: "Steve Sweetman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents, and Developers'
+author: Steve Sweetman
+canonical_url: https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-07 17:00:00 +00:00
-permalink: "/2025-08-07-GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: ["Agentic Workflows", "AI", "AI + Machine Learning", "AI Content Safety", "API Integration", "Azure", "Azure AI", "Azure AI Foundry", "Code Generation", "Coding", "Compliance", "GitHub Copilot", "GPT 5", "Hebbia", "Large Language Model", "MCP", "Microsoft Defender For Cloud", "Microsoft Purview", "Model Router", "News", "OpenAI", "Reasoning", "Relativity", "SAP", "Security", "SLM", "VS Code", "VS Code Extension"]
-tags_normalized: ["agentic workflows", "ai", "ai plus machine learning", "ai content safety", "api integration", "azure", "azure ai", "azure ai foundry", "code generation", "coding", "compliance", "github copilot", "gpt 5", "hebbia", "large language model", "mcp", "microsoft defender for cloud", "microsoft purview", "model router", "news", "openai", "reasoning", "relativity", "sap", "security", "slm", "vs code", "vs code extension"]
+permalink: /github-copilot/news/GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers
+tags:
+- Agentic Workflows
+- AI
+- AI + Machine Learning
+- AI Content Safety
+- API Integration
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Code Generation
+- Coding
+- Compliance
+- GitHub Copilot
+- GPT 5
+- Hebbia
+- Large Language Model
+- MCP
+- Microsoft Defender For Cloud
+- Microsoft Purview
+- Model Router
+- News
+- OpenAI
+- Reasoning
+- Relativity
+- SAP
+- Security
+- SLM
+- VS Code
+- VS Code Extension
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 Steve Sweetman announces the general availability of GPT-5 in Azure AI Foundry, detailing its rollout to developers via GitHub Copilot and VS Code, enhanced reasoning, orchestration features, and robust security and governance layers for enterprise AI adoption.<!--excerpt_end-->
 
 # GPT-5 in Azure AI Foundry: The Future of AI Apps and Agents Starts Here

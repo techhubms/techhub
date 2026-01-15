@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Introducing Agent HQ Mission Control for GitHub Copilot"
-description: "This video introduces Agent HQ Mission Control, a centralized command center that integrates with GitHub Copilot. It offers a unified interface across GitHub, Visual Studio Code, GitHub Mobile, and the CLI, enabling developers to direct, monitor, and manage AI-driven tasks efficiently. Viewers will learn about parallel agent assignment, tracking progress across devices, and how mission control streamlines the developer workflow with AI-enhanced capabilities, making collaboration and automation more accessible for software projects."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KniyIrpTDE8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Introducing Agent HQ Mission Control for GitHub Copilot
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=KniyIrpTDE8
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-28 16:05:02 +00:00
-permalink: "/2025-10-28-Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent HQ", "AgentHQ", "AI", "AI Agents", "AI Driven Workflow", "Automation", "CLI", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "Parallel Tasks", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["agent hq", "agenthq", "ai", "ai agents", "ai driven workflow", "automation", "cli", "developer tools", "github", "github copilot", "mission control", "parallel tasks", "software development", "videos", "vs code"]
+permalink: /github-copilot/videos/Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot
+tags:
+- Agent HQ
+- AgentHQ
+- AI
+- AI Agents
+- AI Driven Workflow
+- Automation
+- CLI
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Mission Control
+- Parallel Tasks
+- Software Development
+- Videos
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 In this official video by GitHub, viewers are introduced to Agent HQ Mission Control, where AI-driven agents can be managed, monitored, and directed across GitHub and developer tools with a consistent interface.<!--excerpt_end-->
 
 {% youtube KniyIrpTDE8 %}

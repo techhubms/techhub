@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Survey Reveals DevOps Bottlenecks Created by AI-Generated Code"
-description: "This article analyzes the results of a large survey of engineers and technical managers, revealing both productivity gains and new challenges in DevOps caused by the adoption of AI-based code generation. While code shipping velocity is up, downstream issues like production incidents and security vulnerabilities are becoming more common, highlighting the need for robust AI integration and pipeline modernization."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Reveals DevOps Bottlenecks Created by AI-Generated Code
+author: Mike Vizard
+canonical_url: https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-30 15:59:01 +00:00
-permalink: "/2025-09-30-Survey-Reveals-DevOps-Bottlenecks-Created-by-AI-Generated-Code.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Generated Code", "AI Tools", "Blogs", "Code", "Continuous Delivery", "DevOps", "Governance", "Harness", "Large Language Models", "Pipeline Automation", "Production Incidents", "Productivity", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Software Vulnerabilities", "Survey"]
-tags_normalized: ["ai", "ai adoption", "ai generated code", "ai tools", "blogs", "code", "continuous delivery", "devops", "governance", "harness", "large language models", "pipeline automation", "production incidents", "productivity", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "software vulnerabilities", "survey"]
+permalink: /ai/blogs/Survey-Reveals-DevOps-Bottlenecks-Created-by-AI-Generated-Code
+tags:
+- AI
+- AI Adoption
+- AI Generated Code
+- AI Tools
+- Blogs
+- Code
+- Continuous Delivery
+- DevOps
+- Governance
+- Harness
+- Large Language Models
+- Pipeline Automation
+- Production Incidents
+- Productivity
+- Sdlc
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+- Software Engineering
+- Software Vulnerabilities
+- Survey
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard presents findings from a survey showing that AI code generation is speeding up development but also introducing new DevOps challenges, from downstream incidents to security concerns.<!--excerpt_end-->
 
 # Survey Surfaces Downstream DevOps Challenges Created by AI Code

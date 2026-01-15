@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Overcoming the limitations when using AI"
-description: "This video session, presented by Michael Washington at .NET Conf 2025, addresses the complexities of integrating artificial intelligence into real-world applications. It emphasizes practical strategies and proven implementation techniques to mitigate AI's inherent imprecision. The session features open-source AI applications such as AIStoryBuildeers.com and BlazorData.net, illustrating hands-on solutions to common AI challenges."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QZsxrDC8hr0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Overcoming the limitations when using AI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=QZsxrDC8hr0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 02:00:06 +00:00
-permalink: "/2025-11-14-Overcoming-the-limitations-when-using-AI.html"
-categories: ["AI"]
-tags: [".NET Conf", "AI", "AI Challenges", "AI Implementation", "AI Limitations", "AIStoryBuildeers.com", "BlazorData.net", "Mitigation Strategies", "Open Source", "Practical AI", "Real World Applications", "Session Speaker: Michael Washington", "Videos"]
-tags_normalized: ["dotnet conf", "ai", "ai challenges", "ai implementation", "ai limitations", "aistorybuildeersdotcom", "blazordatadotnet", "mitigation strategies", "open source", "practical ai", "real world applications", "session speaker michael washington", "videos"]
+permalink: /ai/videos/Overcoming-the-limitations-when-using-AI
+tags:
+- .NET Conf
+- AI
+- AI Challenges
+- AI Implementation
+- AI Limitations
+- AIStoryBuildeers.com
+- BlazorData.net
+- Mitigation Strategies
+- Open Source
+- Practical AI
+- Real World Applications
+- 'Session Speaker: Michael Washington'
+- Videos
+section_names:
+- ai
 ---
-
 In this .NET Conf 2025 session, Michael Washington explores practical methods for overcoming the limitations of artificial intelligence in real-world implementations, using examples from open-source projects.<!--excerpt_end-->
 
 {% youtube QZsxrDC8hr0 %}

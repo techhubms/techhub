@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6"
-description: "This post, authored by Mishty Dhekial and Hugo Affaticati, presents a deep-dive into benchmarking Azure ND GB200 v6 virtual machines for pretraining lightweight Llama3 8B models using the NVIDIA NeMo framework. It covers model architecture, parallelism strategies, telemetry metrics, and benchmarking methodology, highlighting recommendations for optimal performance. Readers will learn about fine-grained tuning on Azure VMs, practical impacts of parallelism parameters, and actionable results for reproducible, scalable AI workloads."
-author: "HugoAffaticati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6
+author: HugoAffaticati
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-18 22:45:01 +00:00
-permalink: "/2025-08-18-Optimizing-Large-Scale-AI-Performance-with-Pretraining-Validation-on-a-Single-Azure-ND-GB200-v6.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI Benchmarking Guide", "Azure ND GB200 V6", "Benchmarking", "Bf16", "Cloud Infrastructure", "Community", "Context Parallelism", "Data Parallelism", "Fp16", "Fp8 Mixed Precision", "GPU Utilization", "GPUs", "Large Language Models", "Llama3", "LLM Architecture", "Machine Learning", "Memory Usage", "Micro Batch Size", "ML", "Model Validation", "NVIDIA NeMo", "Parallelism", "Performance Tuning", "Pipeline Parallelism", "Pretraining", "Scalable AI Workloads", "SM Clock Speed", "Telemetry", "Tensor Parallelism"]
-tags_normalized: ["ai", "azure", "azure ai benchmarking guide", "azure nd gb200 v6", "benchmarking", "bf16", "cloud infrastructure", "community", "context parallelism", "data parallelism", "fp16", "fp8 mixed precision", "gpu utilization", "gpus", "large language models", "llama3", "llm architecture", "machine learning", "memory usage", "micro batch size", "ml", "model validation", "nvidia nemo", "parallelism", "performance tuning", "pipeline parallelism", "pretraining", "scalable ai workloads", "sm clock speed", "telemetry", "tensor parallelism"]
+permalink: /ai/community/Optimizing-Large-Scale-AI-Performance-with-Pretraining-Validation-on-a-Single-Azure-ND-GB200-v6
+tags:
+- AI
+- Azure
+- Azure AI Benchmarking Guide
+- Azure ND GB200 V6
+- Benchmarking
+- Bf16
+- Cloud Infrastructure
+- Community
+- Context Parallelism
+- Data Parallelism
+- Fp16
+- Fp8 Mixed Precision
+- GPU Utilization
+- GPUs
+- Large Language Models
+- Llama3
+- LLM Architecture
+- Machine Learning
+- Memory Usage
+- Micro Batch Size
+- ML
+- Model Validation
+- NVIDIA NeMo
+- Parallelism
+- Performance Tuning
+- Pipeline Parallelism
+- Pretraining
+- Scalable AI Workloads
+- SM Clock Speed
+- Telemetry
+- Tensor Parallelism
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Authored by Mishty Dhekial and Hugo Affaticati, this analysis explores single-VM benchmarking of the Llama3 8B model on Azure ND GB200 v6 using NVIDIA NeMo framework, offering concrete techniques and recommendations for optimizing large-scale AI training.<!--excerpt_end-->
 
 # Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6

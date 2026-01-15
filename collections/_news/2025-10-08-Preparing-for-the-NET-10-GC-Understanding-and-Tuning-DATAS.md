@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Preparing for the .NET 10 GC: Understanding and Tuning DATAS"
-description: "This article, authored by Maoni and originally posted on the .NET Blog, provides an in-depth exploration of DATAS (Dynamic Adaptation To Application Sizes) in .NET 10. It explains how DATAS changes Server Garbage Collection (GC) behavior, its impact on memory usage, performance, and throughput, and practical guidance on tuning or disabling DATAS to fit various workloads. Real-world tuning scenarios, detailed explanations of relevant configs, and key metrics for evaluation are discussed, offering actionable advice for developers transitioning to .NET 10."
-author: "maoni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Preparing for the .NET 10 GC: Understanding and Tuning DATAS'
+author: maoni
+canonical_url: https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-08 17:00:00 +00:00
-permalink: "/2025-10-08-Preparing-for-the-NET-10-GC-Understanding-and-Tuning-DATAS.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "Application Optimization", "C#", "Coding", "Configuration Settings", "Containerization", "DATAS", "Garbage Collection", "GC", "GCDTargetTCP", "GCDynAdaptationMode", "GCHeapCount", "Kubernetes", "Memory", "Memory Management", "News", "Performance", "Runtime Configuration", "Server GC", "Throughput", "Tuning"]
-tags_normalized: ["dotnet", "dotnet 10", "application optimization", "csharp", "coding", "configuration settings", "containerization", "datas", "garbage collection", "gc", "gcdtargettcp", "gcdynadaptationmode", "gcheapcount", "kubernetes", "memory", "memory management", "news", "performance", "runtime configuration", "server gc", "throughput", "tuning"]
+permalink: /coding/news/Preparing-for-the-NET-10-GC-Understanding-and-Tuning-DATAS
+tags:
+- .NET
+- .NET 10
+- Application Optimization
+- C#
+- Coding
+- Configuration Settings
+- Containerization
+- DATAS
+- Garbage Collection
+- GC
+- GCDTargetTCP
+- GCDynAdaptationMode
+- GCHeapCount
+- Kubernetes
+- Memory
+- Memory Management
+- News
+- Performance
+- Runtime Configuration
+- Server GC
+- Throughput
+- Tuning
+section_names:
+- coding
 ---
-
 Maoni presents a comprehensive guide for developers preparing for the .NET 10 release, focusing on how the new DATAS feature in Garbage Collection changes memory and performance profiles, with actionable advice for evaluating, tuning, or disabling this functionality.<!--excerpt_end-->
 
 # Preparing for the .NET 10 GC (DATAS)

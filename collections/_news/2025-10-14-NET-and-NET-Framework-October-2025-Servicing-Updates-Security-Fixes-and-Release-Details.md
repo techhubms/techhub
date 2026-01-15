@@ -1,20 +1,38 @@
----
-layout: "post"
-title: ".NET and .NET Framework October 2025 Servicing Updates: Security Fixes and Release Details"
-description: "This update brings the latest security and non-security fixes for .NET and .NET Framework as of October 2025. It details patched vulnerabilities, links to release notes, installation resources, and changelogs for .NET 8.0, .NET 9.0, and supported .NET Framework versions. Practitioners can review CVEs addressed and access relevant resources to maintain secure, up-to-date environments."
-author: "Tara Overfield, Victor Israel-Bolarinwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: '.NET and .NET Framework October 2025 Servicing Updates: Security Fixes and Release Details'
+author: Tara Overfield, Victor Israel-Bolarinwa
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-14 22:50:29 +00:00
-permalink: "/2025-10-14-NET-and-NET-Framework-October-2025-Servicing-Updates-Security-Fixes-and-Release-Details.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "Arcade", "ASP.NET Core", "Coding", "CVE", "Installer", "Maintenance & Updates", "Microsoft", "News", "Patching", "Release Notes", "Runtime", "SDK", "Security", "Security Update", "Servicing", "Vulnerability Management"]
-tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "arcade", "aspdotnet core", "coding", "cve", "installer", "maintenance and updates", "microsoft", "news", "patching", "release notes", "runtime", "sdk", "security", "security update", "servicing", "vulnerability management"]
+permalink: /coding/news/NET-and-NET-Framework-October-2025-Servicing-Updates-Security-Fixes-and-Release-Details
+tags:
+- .NET
+- .NET 8.0
+- .NET 9.0
+- .NET Framework
+- Arcade
+- ASP.NET Core
+- Coding
+- CVE
+- Installer
+- Maintenance & Updates
+- Microsoft
+- News
+- Patching
+- Release Notes
+- Runtime
+- SDK
+- Security
+- Security Update
+- Servicing
+- Vulnerability Management
+section_names:
+- coding
+- security
 ---
-
 Tara Overfield and Victor Israel-Bolarinwa provide a thorough overview of the October 2025 .NET and .NET Framework servicing updates, highlighting key security patches and release details.<!--excerpt_end-->
 
 # .NET and .NET Framework October 2025 Servicing Updates

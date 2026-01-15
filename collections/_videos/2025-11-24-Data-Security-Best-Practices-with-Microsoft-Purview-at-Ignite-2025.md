@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Data Security Best Practices with Microsoft Purview at Ignite 2025"
-description: "This session from Microsoft Ignite 2025 demonstrates how organizations can strengthen their data security posture using Microsoft Purview. It provides guidance on developing scalable engagement models for securing data across on-premises and cloud environments, including best practices for generative AI scenarios. The presentation highlights successful partner case studies, introduces advisory and strategic service approaches, and explores resources and incentives available to enhance data protection and trust. Key segments cover partner wins, eligibility for Copilot in Power investments, and access to specialized training and learning resources designed to help partners unlock business growth."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jcyVxYES_mE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Data Security Best Practices with Microsoft Purview at Ignite 2025
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=jcyVxYES_mE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:45:39 +00:00
-permalink: "/2025-11-24-Data-Security-Best-Practices-with-Microsoft-Purview-at-Ignite-2025.html"
-categories: ["AI", "Security"]
-tags: ["Advisory Services", "AI", "AI Security Training", "Cloud Security", "Co Sell Journey", "Compliance", "Copilot Investments", "Data", "Data Protection", "Data Security", "Generative AI", "Microsoft Ignite", "Microsoft Purview", "MicrosoftAICloudPartnerProgram", "MSIgnite", "On Premises Security", "Partner Engagement", "Power Platform", "Security", "Skilling Hub", "Videos"]
-tags_normalized: ["advisory services", "ai", "ai security training", "cloud security", "co sell journey", "compliance", "copilot investments", "data", "data protection", "data security", "generative ai", "microsoft ignite", "microsoft purview", "microsoftaicloudpartnerprogram", "msignite", "on premises security", "partner engagement", "power platform", "security", "skilling hub", "videos"]
+permalink: /ai/videos/Data-Security-Best-Practices-with-Microsoft-Purview-at-Ignite-2025
+tags:
+- Advisory Services
+- AI
+- AI Security Training
+- Cloud Security
+- Co Sell Journey
+- Compliance
+- Copilot Investments
+- Data
+- Data Protection
+- Data Security
+- Generative AI
+- Microsoft Ignite
+- Microsoft Purview
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- On Premises Security
+- Partner Engagement
+- Power Platform
+- Security
+- Skilling Hub
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events provides actionable strategies for partners to drive data security using Microsoft Purview, with insights from Jim Banach and Laura Brick at Ignite 2025.<!--excerpt_end-->
 
 {% youtube jcyVxYES_mE %}

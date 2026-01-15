@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Service Groups: Flexible Resource Organization Explained"
-description: "This video by John Savill covers the new Azure Service Groups feature, offering a flexible and hierarchical way to organize cloud resources within Azure. It explains how service groups extend beyond traditional resource groups to allow broader scoping for functionalities like health monitoring, permission management, and organizational relationships, with practical insights and limitations."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wurJ2LKmDs4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Service Groups: Flexible Resource Organization Explained'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=wurJ2LKmDs4
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-25 14:57:08 +00:00
-permalink: "/2025-08-25-Azure-Service-Groups-Flexible-Resource-Organization-Explained.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure AD", "Azure Governance", "Azure Monitoring", "Azure Resource Manager", "Azure Service Groups", "Cloud", "Cloud Resource Organization", "Control Plane", "Entra Id", "Hierarchy", "Microsoft Azure", "Permissions", "Resource Group", "Resource Relationships", "Resources", "Scope Management", "Service Groups", "Subscription", "Videos"]
-tags_normalized: ["azure", "azure ad", "azure governance", "azure monitoring", "azure resource manager", "azure service groups", "cloud", "cloud resource organization", "control plane", "entra id", "hierarchy", "microsoft azure", "permissions", "resource group", "resource relationships", "resources", "scope management", "service groups", "subscription", "videos"]
+permalink: /azure/videos/Azure-Service-Groups-Flexible-Resource-Organization-Explained
+tags:
+- Azure
+- Azure AD
+- Azure Governance
+- Azure Monitoring
+- Azure Resource Manager
+- Azure Service Groups
+- Cloud
+- Cloud Resource Organization
+- Control Plane
+- Entra Id
+- Hierarchy
+- Microsoft Azure
+- Permissions
+- Resource Group
+- Resource Relationships
+- Resources
+- Scope Management
+- Service Groups
+- Subscription
+- Videos
+section_names:
+- azure
 ---
-
 John Savill introduces Azure Service Groups, detailing how this new feature enables more adaptable and hierarchical resource organization in Azure, with deep dives into setup, permissions, and practical uses.<!--excerpt_end-->
 
 {% youtube wurJ2LKmDs4 %}

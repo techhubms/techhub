@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Architecting Azure VPN P2S and ExpressRoute Coexistence in a Hub & Spoke Topology"
-description: "This community post discusses strategies for enabling connectivity between Azure VPN Point-to-Site (P2S) users and on-premises resources via ExpressRoute, within a hub-and-spoke architecture. It highlights challenges, routing considerations, and cost-effective alternatives, including Azure Firewall, address space management, and the use (or avoidance) of Azure Route Server for remote workforce scenarios."
-author: "tampasmix"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Architecting Azure VPN P2S and ExpressRoute Coexistence in a Hub & Spoke Topology
+author: tampasmix
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-08 11:50:57 +00:00
-permalink: "/2025-08-08-Architecting-Azure-VPN-P2S-and-ExpressRoute-Coexistence-in-a-Hub-and-Spoke-Topology.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Route Server", "Azure VPN", "Community", "Cost Optimization", "ExpressRoute", "Hub And Spoke", "Network Architecture", "Network Security", "On Premises Connectivity", "Point To Site VPN", "RDP", "Remote Access", "Security", "Transitive Routing", "Virtual Network Gateway", "Virtual WAN"]
-tags_normalized: ["azure", "azure firewall", "azure route server", "azure vpn", "community", "cost optimization", "expressroute", "hub and spoke", "network architecture", "network security", "on premises connectivity", "point to site vpn", "rdp", "remote access", "security", "transitive routing", "virtual network gateway", "virtual wan"]
+permalink: /azure/community/Architecting-Azure-VPN-P2S-and-ExpressRoute-Coexistence-in-a-Hub-and-Spoke-Topology
+tags:
+- Azure
+- Azure Firewall
+- Azure Route Server
+- Azure VPN
+- Community
+- Cost Optimization
+- ExpressRoute
+- Hub And Spoke
+- Network Architecture
+- Network Security
+- On Premises Connectivity
+- Point To Site VPN
+- RDP
+- Remote Access
+- Security
+- Transitive Routing
+- Virtual Network Gateway
+- Virtual WAN
+section_names:
+- azure
+- security
 ---
-
 tampasmix explores approaches for connecting Azure VPN P2S remote users to on-premises networks via ExpressRoute in a hub-and-spoke architecture, discussing routing, gateway setup, and practical options for solving connectivity challenges.<!--excerpt_end-->
 
 # Azure VPN P2S and ExpressRoute Coexistence in Hub & Spoke Architecture

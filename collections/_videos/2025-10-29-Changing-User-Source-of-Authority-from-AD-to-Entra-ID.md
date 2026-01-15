@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Changing User Source of Authority from AD to Entra ID"
-description: "This video by John Savill's Technical Training provides an in-depth look at migrating users' source of authority from traditional Active Directory (AD) to Microsoft Entra ID. The content covers key motivations for the change, prerequisites, required steps (like moving group SOA first), and how to leverage Entra ID's governance and security features. Viewers will get practical guidance and links to official Microsoft documentation and whiteboard diagrams to inform planning and successful execution of the migration process."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QnY-D5bdh4Y"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Changing User Source of Authority from AD to Entra ID
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=QnY-D5bdh4Y
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-29 12:47:36 +00:00
-permalink: "/2025-10-29-Changing-User-Source-of-Authority-from-AD-to-Entra-ID.html"
-categories: ["Azure", "Security"]
-tags: ["Access Management", "Active Directory", "Azure", "Azure AD", "Cloud", "Cloud Identity", "Cloud Security", "Entra Id", "Governance", "Identity", "Identity Management", "Identity Provider", "Idp", "Microsoft", "Microsoft Documentation", "Migration", "Security", "Technical Training", "User Source Of Authority", "Videos"]
-tags_normalized: ["access management", "active directory", "azure", "azure ad", "cloud", "cloud identity", "cloud security", "entra id", "governance", "identity", "identity management", "identity provider", "idp", "microsoft", "microsoft documentation", "migration", "security", "technical training", "user source of authority", "videos"]
+permalink: /azure/videos/Changing-User-Source-of-Authority-from-AD-to-Entra-ID
+tags:
+- Access Management
+- Active Directory
+- Azure
+- Azure AD
+- Cloud
+- Cloud Identity
+- Cloud Security
+- Entra Id
+- Governance
+- Identity
+- Identity Management
+- Identity Provider
+- Idp
+- Microsoft
+- Microsoft Documentation
+- Migration
+- Security
+- Technical Training
+- User Source Of Authority
+- Videos
+section_names:
+- azure
+- security
 ---
-
 John Savill's Technical Training explains the steps and considerations for migrating user authority from AD to Entra ID, highlighting governance and security improvements.<!--excerpt_end-->
 
 {% youtube QnY-D5bdh4Y %}

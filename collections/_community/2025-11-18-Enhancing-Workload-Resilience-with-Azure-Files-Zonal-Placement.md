@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhancing Workload Resilience with Azure Files Zonal Placement"
-description: "This post announces the General Availability of zonal placement for Azure Files Premium LRS in select Azure regions, allowing users to pin storage accounts to a specific Availability Zone. Zonal placement enables improved data locality, reduced latency, and increased resilience for applications using Azure Files. The article outlines benefits, configuration steps, and architectural considerations for leveraging zonal placement in latency-sensitive and highly available workloads on Azure."
-author: "hanagpal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/reduce-latency-and-enhance-resilience-with-azure-files-zonal/ba-p/4470811"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enhancing Workload Resilience with Azure Files Zonal Placement
+author: hanagpal
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/reduce-latency-and-enhance-resilience-with-azure-files-zonal/ba-p/4470811
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:18:59 +00:00
-permalink: "/2025-11-18-Enhancing-Workload-Resilience-with-Azure-Files-Zonal-Placement.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Level Replication", "Availability Zones", "Azure", "Azure Files", "Azure Storage", "Community", "DevOps", "Enterprise Workloads", "Failure Domain Isolation", "High Availability", "Latency Optimization", "Linux Workloads", "Local Redundant Storage", "NFS Shares", "Premium LRS", "SMB Shares", "Storage Account", "Virtual Machines", "Windows Workloads", "Zonal Placement", "Zone Redundant Storage"]
-tags_normalized: ["application level replication", "availability zones", "azure", "azure files", "azure storage", "community", "devops", "enterprise workloads", "failure domain isolation", "high availability", "latency optimization", "linux workloads", "local redundant storage", "nfs shares", "premium lrs", "smb shares", "storage account", "virtual machines", "windows workloads", "zonal placement", "zone redundant storage"]
+permalink: /azure/community/Enhancing-Workload-Resilience-with-Azure-Files-Zonal-Placement
+tags:
+- Application Level Replication
+- Availability Zones
+- Azure
+- Azure Files
+- Azure Storage
+- Community
+- DevOps
+- Enterprise Workloads
+- Failure Domain Isolation
+- High Availability
+- Latency Optimization
+- Linux Workloads
+- Local Redundant Storage
+- NFS Shares
+- Premium LRS
+- SMB Shares
+- Storage Account
+- Virtual Machines
+- Windows Workloads
+- Zonal Placement
+- Zone Redundant Storage
+section_names:
+- azure
+- devops
 ---
-
 hanagpal explains the benefits of using zonal placement for Azure Files Premium LRS, highlighting how it improves latency and resilience for diverse Azure workloads.<!--excerpt_end-->
 
 # Enhancing Workload Resilience with Azure Files Zonal Placement

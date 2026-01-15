@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Evaluation Frameworks for Document Pipelines Using Azure AI & Search"
-description: "This article by anishganguli presents a structured evaluation framework for intelligent document processing pipelines built on Microsoft technologies, such as Azure Document Intelligence (ADI), Azure AI Search, and Azure OpenAI. It covers methods for preparing ground truth data, evaluating preprocessing and labelling, measuring retrieval and extraction accuracy, and establishing a continuous improvement loop involving SMEs. The guide is highly practical, aimed at consultants and engineers seeking actionable strategies and metrics for pipeline reliability, scalability, and precision."
-author: "anishganguli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-in-depth/ba-p/4474060"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Evaluation Frameworks for Document Pipelines Using Azure AI & Search
+author: anishganguli
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-in-depth/ba-p/4474060
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 20:24:10 +00:00
-permalink: "/2025-12-15-Evaluation-Frameworks-for-Document-Pipelines-Using-Azure-AI-and-Search.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI Search", "Azure Document Intelligence", "Best Practices", "Community", "Continuous Improvement", "Document Intelligence", "Domain Expert", "Evaluation Metrics", "Extraction Accuracy", "Ground Truth", "IDP", "Microsoft AI", "ML", "ML Labeling", "OCR", "OpenAI", "Pipeline Validation", "Precision@K", "Recall@K", "Sampling"]
-tags_normalized: ["ai", "azure", "azure ai search", "azure document intelligence", "best practices", "community", "continuous improvement", "document intelligence", "domain expert", "evaluation metrics", "extraction accuracy", "ground truth", "idp", "microsoft ai", "ml", "ml labeling", "ocr", "openai", "pipeline validation", "precisionatk", "recallatk", "sampling"]
+permalink: /ai/community/Evaluation-Frameworks-for-Document-Pipelines-Using-Azure-AI-and-Search
+tags:
+- AI
+- Azure
+- Azure AI Search
+- Azure Document Intelligence
+- Best Practices
+- Community
+- Continuous Improvement
+- Document Intelligence
+- Domain Expert
+- Evaluation Metrics
+- Extraction Accuracy
+- Ground Truth
+- IDP
+- Microsoft AI
+- ML
+- ML Labeling
+- OCR
+- OpenAI
+- Pipeline Validation
+- Precision@K
+- Recall@K
+- Sampling
+section_names:
+- ai
+- azure
+- ml
 ---
-
 anishganguli shares a comprehensive technical guide to evaluating document processing pipelines using Microsoft AI services, covering everything from ground truth setup and OCR validation to precision-driven continuous improvement.<!--excerpt_end-->
 
 # Evaluation Frameworks for Document Pipelines Using Azure AI & Search

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Junior Developers Can Thrive with AI and GitHub Copilot"
-description: "This article addresses the evolving role of junior developers in the era of AI. It covers how new entrants can leverage AI tools like GitHub Copilot as learning aids, participate in open source, automate workflows with GitHub Actions, and use AI for smarter debugging and code reviews. The guide provides actionable steps using Copilot within VS Code, promoting critical thinking, creativity, and building project portfolios to stand out to employers."
-author: "Gwen Davis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How Junior Developers Can Thrive with AI and GitHub Copilot
+author: Gwen Davis
+canonical_url: https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-07 21:05:55 +00:00
-permalink: "/2025-08-07-How-Junior-Developers-Can-Thrive-with-AI-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Career Skills", "AI Powered Development", "AI Tools", "Automation", "Code Review", "Coding", "Coding Best Practices", "Debugging", "Developer Portfolio", "Developer Skills", "DevOps", "Generative AI", "GitHub Actions", "GitHub Copilot", "Junior Developers", "News", "Open Source Contribution", "Software Engineering", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai career skills", "ai powered development", "ai tools", "automation", "code review", "coding", "coding best practices", "debugging", "developer portfolio", "developer skills", "devops", "generative ai", "github actions", "github copilot", "junior developers", "news", "open source contribution", "software engineering", "vs code"]
+permalink: /github-copilot/news/How-Junior-Developers-Can-Thrive-with-AI-and-GitHub-Copilot
+tags:
+- AI
+- AI & ML
+- AI Career Skills
+- AI Powered Development
+- AI Tools
+- Automation
+- Code Review
+- Coding
+- Coding Best Practices
+- Debugging
+- Developer Portfolio
+- Developer Skills
+- DevOps
+- Generative AI
+- GitHub Actions
+- GitHub Copilot
+- Junior Developers
+- News
+- Open Source Contribution
+- Software Engineering
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Gwen Davis outlines practical strategies for junior developers to succeed in the age of AI, focusing on leveraging GitHub Copilot, developing core coding skills, and thriving within open-source and DevOps workflows.<!--excerpt_end-->
 
 # How Junior Developers Can Thrive with AI and GitHub Copilot

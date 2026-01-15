@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CTERA in Action: Building Data Fabric for Enterprises at Microsoft Ignite"
-description: "This Microsoft Ignite session, presented by Kyle Edsall, demonstrates how global enterprises leverage CTERA to eliminate data silos and strengthen collaboration across work environments. The session features real-world approaches to unifying data through AI-readiness, secure data management, and operational scaling using intelligent file systems. Key highlights include the integration of virtual experts, data intelligence stack overview, and practical workflows within Microsoft Teams, focusing on building an AI-ready enterprise data fabric."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GjgmoN_m3T4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'CTERA in Action: Building Data Fabric for Enterprises at Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=GjgmoN_m3T4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:07:07 +00:00
-permalink: "/2025-11-19-CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Readiness", "Azure", "CTERA", "Data Fabric", "Data Intelligence", "Data Silos", "Data Sources", "Enterprise Collaboration", "Integration", "Intelligent File Operations", "MCP", "Microsoft Ignite", "Microsoft Teams", "MSIgnite", "Operational Scalability", "Secure Data Management", "Unified File Systems", "Unifyyourdataplatform", "Videos", "Virtual Experts"]
-tags_normalized: ["ai", "ai readiness", "azure", "ctera", "data fabric", "data intelligence", "data silos", "data sources", "enterprise collaboration", "integration", "intelligent file operations", "mcp", "microsoft ignite", "microsoft teams", "msignite", "operational scalability", "secure data management", "unified file systems", "unifyyourdataplatform", "videos", "virtual experts"]
+permalink: /ai/videos/CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite
+tags:
+- AI
+- AI Readiness
+- Azure
+- CTERA
+- Data Fabric
+- Data Intelligence
+- Data Silos
+- Data Sources
+- Enterprise Collaboration
+- Integration
+- Intelligent File Operations
+- MCP
+- Microsoft Ignite
+- Microsoft Teams
+- MSIgnite
+- Operational Scalability
+- Secure Data Management
+- Unified File Systems
+- Unifyyourdataplatform
+- Videos
+- Virtual Experts
+section_names:
+- ai
+- azure
 ---
-
 Kyle Edsall, former CTERA customer and Technical Product Marketing Manager, shares insights into building an enterprise data fabric at Microsoft Ignite, focusing on eliminating silos and enabling AI-driven collaboration.<!--excerpt_end-->
 
 {% youtube GjgmoN_m3T4 %}

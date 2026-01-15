@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How GitHub Copilot Accelerated Secret Protection Engineering"
-description: "This in-depth article details how the GitHub Secret Protection engineering team leveraged GitHub Copilot coding agents to dramatically expand the coverage of secret validity checks. Readers will learn about the team's framework-driven workflow, the specific roles Copilot played in automating coding tasks, and practical insights on integrating AI-powered agents into development pipelines while maintaining rigorous human oversight."
-author: "Parth Sehgal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot Accelerated Secret Protection Engineering
+author: Parth Sehgal
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-28 17:08:51 +00:00
-permalink: "/2025-08-28-How-GitHub-Copilot-Accelerated-Secret-Protection-Engineering.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic AI", "AI", "AI & ML", "API Integration", "Application Security", "Automation", "Coding", "Coding Automation", "Credential Management", "DevOps", "DevOps Workflow", "Engineering Productivity", "Framework Driven Development", "GitHub Actions", "GitHub Copilot", "News", "Pull Requests", "Secret Protection", "Security", "Software Engineering", "Token Validation"]
-tags_normalized: ["agentic ai", "ai", "ai and ml", "api integration", "application security", "automation", "coding", "coding automation", "credential management", "devops", "devops workflow", "engineering productivity", "framework driven development", "github actions", "github copilot", "news", "pull requests", "secret protection", "security", "software engineering", "token validation"]
+permalink: /github-copilot/news/How-GitHub-Copilot-Accelerated-Secret-Protection-Engineering
+tags:
+- Agentic AI
+- AI
+- AI & ML
+- API Integration
+- Application Security
+- Automation
+- Coding
+- Coding Automation
+- Credential Management
+- DevOps
+- DevOps Workflow
+- Engineering Productivity
+- Framework Driven Development
+- GitHub Actions
+- GitHub Copilot
+- News
+- Pull Requests
+- Secret Protection
+- Security
+- Software Engineering
+- Token Validation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Parth Sehgal shares how the GitHub engineering team used GitHub Copilot coding agents to automate and scale secret protection, offering practical lessons for engineering teams.<!--excerpt_end-->
 
 # How GitHub Copilot Accelerated Secret Protection Engineering

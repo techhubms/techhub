@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Copilot Chat Extension Goes Open Source: First Milestone for AI in VS Code"
-description: "This news update from the VS Code team announces the open sourcing of the GitHub Copilot Chat extension, marking a key milestone in making Visual Studio Code an open source AI editor. The article outlines motivations for open sourcing, invites community contributions, and discusses integration plans for Copilot Chat into VS Code core, emphasizing transparency and openness in AI tool development."
-author: "The VS Code team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'GitHub Copilot Chat Extension Goes Open Source: First Milestone for AI in VS Code'
+author: The VS Code team
+canonical_url: https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-30 00:00:00 +00:00
-permalink: "/2025-06-30-GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Editor", "Coding", "Community Contribution", "GitHub Copilot", "GitHub Copilot Chat", "LLM", "Microsoft", "MIT License", "News", "Open Source", "Prompt Engineering", "Pull Requests", "Telemetry", "Transparency", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent mode", "ai", "ai editor", "coding", "community contribution", "github copilot", "github copilot chat", "llm", "microsoft", "mit license", "news", "open source", "prompt engineering", "pull requests", "telemetry", "transparency", "vs code", "vs code extensions"]
+permalink: /github-copilot/news/GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code
+tags:
+- Agent Mode
+- AI
+- AI Editor
+- Coding
+- Community Contribution
+- GitHub Copilot
+- GitHub Copilot Chat
+- LLM
+- Microsoft
+- MIT License
+- News
+- Open Source
+- Prompt Engineering
+- Pull Requests
+- Telemetry
+- Transparency
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 The VS Code team, in this update, announces their first major milestone: open sourcing the GitHub Copilot Chat extension under the MIT license. This move invites the community to explore, contribute, and help shape the future of AI-powered development in VS Code.<!--excerpt_end-->
 
 # Open Source AI Editor: First Milestone

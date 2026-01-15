@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Chart your AI App and Agent Strategy with Microsoft Marketplace"
-description: "This community session discusses strategic approaches to obtaining AI apps and agents—whether to build, buy, or blend solutions—emphasizing how Microsoft Marketplace streamlines access to trusted AI models and tools. The session outlines benefits, trade-offs, and best practices for leveraging the Marketplace to accelerate adoption, maintain governance, and manage costs while exploring thousands of AI solutions."
-author: "j_weller_nv"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/chart-your-ai-app-and-agent-strategy-with-microsoft-marketplace/ec-p/4473304#M662"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Chart your AI App and Agent Strategy with Microsoft Marketplace
+author: j_weller_nv
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/chart-your-ai-app-and-agent-strategy-with-microsoft-marketplace/ec-p/4473304#M662
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 18:19:58 +00:00
-permalink: "/2025-11-26-Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Applications", "AI Strategy", "Azure", "Azure AI", "Build VS Buy", "Cloud Marketplace", "Community", "Cost Control", "Enterprise AI", "Governance", "Microsoft Marketplace", "Model Catalog", "Procurement", "Time To Value"]
-tags_normalized: ["ai", "ai agents", "ai applications", "ai strategy", "azure", "azure ai", "build vs buy", "cloud marketplace", "community", "cost control", "enterprise ai", "governance", "microsoft marketplace", "model catalog", "procurement", "time to value"]
+permalink: /ai/community/Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace
+tags:
+- AI
+- AI Agents
+- AI Applications
+- AI Strategy
+- Azure
+- Azure AI
+- Build VS Buy
+- Cloud Marketplace
+- Community
+- Cost Control
+- Enterprise AI
+- Governance
+- Microsoft Marketplace
+- Model Catalog
+- Procurement
+- Time To Value
+section_names:
+- ai
+- azure
 ---
-
 j_weller_nv invites the community to a session on making strategic decisions for AI app and agent adoption, highlighting how Microsoft Marketplace can accelerate deployment and maintain governance for organizations embracing AI.<!--excerpt_end-->
 
 # Chart Your AI App and Agent Strategy with Microsoft Marketplace

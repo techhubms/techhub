@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Bounty Program Year in Review: $17 Million Awarded to Security Researchers"
-description: "This article reviews the accomplishments of the Microsoft Bounty Program for the past year, highlighting $17 million in rewards distributed to 344 security researchers from 59 countries. It covers program expansions, including those focused on AI and Copilot products, details of the Zero Day Quest live hacking event, and updates to several Microsoft bounty initiatives such as Defender, Identity, Dynamics 365, and Power Platform. The report emphasizes Microsoft’s commitment to proactive security through community engagement and bounty programs."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://msrc.microsoft.com/blog/2025/08/microsoft-bounty-program-year-in-review-17-million-in-rewards/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Bounty Program Year in Review: $17 Million Awarded to Security Researchers'
+author: stclarke
+canonical_url: https://msrc.microsoft.com/blog/2025/08/microsoft-bounty-program-year-in-review-17-million-in-rewards/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 17:21:40 +00:00
-permalink: "/2025-08-06-Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Bug Bounty", "Cloud Security", "Company News", "Copilot Bounty Program", "Dynamics 365", "Identity Bounty Program", "Microsoft 365", "Microsoft Bounty Program", "Microsoft Defender", "MSRC", "News", "Power Platform", "Security", "Security Research", "Vulnerability Disclosure", "Windows", "Zero Day Quest"]
-tags_normalized: ["ai", "ai security", "bug bounty", "cloud security", "company news", "copilot bounty program", "dynamics 365", "identity bounty program", "microsoft 365", "microsoft bounty program", "microsoft defender", "msrc", "news", "power platform", "security", "security research", "vulnerability disclosure", "windows", "zero day quest"]
+permalink: /ai/news/Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers
+tags:
+- AI
+- AI Security
+- Bug Bounty
+- Cloud Security
+- Company News
+- Copilot Bounty Program
+- Dynamics 365
+- Identity Bounty Program
+- Microsoft 365
+- Microsoft Bounty Program
+- Microsoft Defender
+- MSRC
+- News
+- Power Platform
+- Security
+- Security Research
+- Vulnerability Disclosure
+- Windows
+- Zero Day Quest
+section_names:
+- ai
+- security
 ---
-
 stclarke presents a comprehensive year-in-review of the Microsoft Bounty Program, showcasing $17 million in rewards, the impact of security research collaborations, and updates to Microsoft's vulnerability reward initiatives.<!--excerpt_end-->
 
 # Microsoft Bounty Program Year in Review: $17 Million Awarded to Security Researchers

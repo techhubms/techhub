@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "ArmorCode Expands Anya AI to Deliver Custom Code Fixes for Runtime Environments"
-description: "This article by Mike Vizard reports on ArmorCode’s expansion of its Anya AI tool, announced at Black Hat USA 2025, to generate context-aware code fixes tailored for specific runtime environments. It also covers the addition of a software supply chain module, automated SBOM generation, enhanced Model Context Protocol (MCP) support, and broader implications for DevSecOps teams striving to address growing software vulnerabilities and streamline remediation workflows."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments/?utm_source=rss&utm_medium=rss&utm_campaign=armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: ArmorCode Expands Anya AI to Deliver Custom Code Fixes for Runtime Environments
+author: Mike Vizard
+canonical_url: https://devops.com/armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments/?utm_source=rss&utm_medium=rss&utm_campaign=armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-07 18:24:19 +00:00
-permalink: "/2025-08-07-ArmorCode-Expands-Anya-AI-to-Deliver-Custom-Code-Fixes-for-Runtime-Environments.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Code Generation", "AI Tools", "Anya AI", "Application Security", "Application Security Posture Management", "ArmorCode", "Automation", "Black Hat USA", "BlackHatUSA2025", "Blogs", "Business Of DevOps", "Code Remediation", "Compliance", "Cyber Resilience Act", "DevOps", "DevSecOps", "MCP", "Runtime Environments", "SBOM", "Security", "Security Metrics", "Security Orchestration", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Spotlight", "Third Party Integrations", "VEX Format", "Vulnerability Management"]
-tags_normalized: ["ai", "ai code generation", "ai tools", "anya ai", "application security", "application security posture management", "armorcode", "automation", "black hat usa", "blackhatusa2025", "blogs", "business of devops", "code remediation", "compliance", "cyber resilience act", "devops", "devsecops", "mcp", "runtime environments", "sbom", "security", "security metrics", "security orchestration", "social facebook", "social linkedin", "social x", "software supply chain", "spotlight", "third party integrations", "vex format", "vulnerability management"]
+permalink: /ai/blogs/ArmorCode-Expands-Anya-AI-to-Deliver-Custom-Code-Fixes-for-Runtime-Environments
+tags:
+- AI
+- AI Code Generation
+- AI Tools
+- Anya AI
+- Application Security
+- Application Security Posture Management
+- ArmorCode
+- Automation
+- Black Hat USA
+- BlackHatUSA2025
+- Blogs
+- Business Of DevOps
+- Code Remediation
+- Compliance
+- Cyber Resilience Act
+- DevOps
+- DevSecOps
+- MCP
+- Runtime Environments
+- SBOM
+- Security
+- Security Metrics
+- Security Orchestration
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Spotlight
+- Third Party Integrations
+- VEX Format
+- Vulnerability Management
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard examines how ArmorCode’s Anya AI now generates automated, environment-specific code fixes and brings software supply chain insight to application security, as announced at Black Hat USA 2025.<!--excerpt_end-->
 
 # ArmorCode Expands Anya AI to Deliver Custom Code Fixes for Runtime Environments

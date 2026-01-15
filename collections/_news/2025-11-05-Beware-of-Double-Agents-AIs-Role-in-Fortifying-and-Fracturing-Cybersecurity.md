@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Beware of Double Agents: AI’s Role in Fortifying and Fracturing Cybersecurity"
-description: "This article explores how the rise of AI agents is transforming the cybersecurity landscape, introducing both new opportunities and risks for organizations. It covers Microsoft’s approach to managing AI security, including Agentic Zero Trust principles, the importance of identity and governance, and practical strategies such as Containment and Alignment. Key Microsoft technologies like Entra Agent ID, Copilot Studio, Azure AI Foundry, Defender, and Security Copilot are discussed in the context of helping organizations safeguard their digital environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Beware of Double Agents: AI’s Role in Fortifying and Fracturing Cybersecurity'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 14:08:19 +00:00
-permalink: "/2025-11-05-Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Zero Trust", "AI", "AI Agents", "AI Risk Management", "AI Security", "Azure", "Azure AI Foundry", "Company News", "Containment And Alignment", "Cybersecurity", "Data Governance", "Enterprise Security", "Identity Governance", "Microsoft Copilot Studio", "Microsoft Defender", "Microsoft Entra Agent ID", "News", "Phishing", "Security", "Security Copilot", "Zero Trust"]
-tags_normalized: ["agentic zero trust", "ai", "ai agents", "ai risk management", "ai security", "azure", "azure ai foundry", "company news", "containment and alignment", "cybersecurity", "data governance", "enterprise security", "identity governance", "microsoft copilot studio", "microsoft defender", "microsoft entra agent id", "news", "phishing", "security", "security copilot", "zero trust"]
+permalink: /ai/news/Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity
+tags:
+- Agentic Zero Trust
+- AI
+- AI Agents
+- AI Risk Management
+- AI Security
+- Azure
+- Azure AI Foundry
+- Company News
+- Containment And Alignment
+- Cybersecurity
+- Data Governance
+- Enterprise Security
+- Identity Governance
+- Microsoft Copilot Studio
+- Microsoft Defender
+- Microsoft Entra Agent ID
+- News
+- Phishing
+- Security
+- Security Copilot
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke discusses how organizations can manage AI agents as both powerful allies and new cybersecurity risks, introducing concepts like Agentic Zero Trust and Microsoft's latest innovations.<!--excerpt_end-->
 
 # Beware of Double Agents: AI’s Role in Fortifying and Fracturing Cybersecurity

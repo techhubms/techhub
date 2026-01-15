@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Common VSCode Papercuts for .NET Developers"
-description: "A peer-driven discussion highlighting pain points and user experience gaps when developing C# and .NET projects in VSCode compared to Visual Studio. The post details specific feature limitations, such as NuGet package management, Solution Explorer iconography, and build output legibility, while also acknowledging improvements and sharing extensions and workarounds adopted by the community."
-author: "Sure-Natural-9086"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Common VSCode Papercuts for .NET Developers
+author: Sure-Natural-9086
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 14:11:04 +00:00
-permalink: "/2025-08-07-Common-VSCode-Papercuts-for-NET-Developers.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET Build", "C#", "C# Dev Kit", "Coding", "Community", "Cross Platform Development", "Debugging", "Developer Experience", "DevOps", "Extension Management", "IDE Comparison", "IntelliSense", "NuGet", "Productivity", "Solution Explorer", "VS Code"]
-tags_normalized: ["dotnet", "dotnet build", "csharp", "csharp dev kit", "coding", "community", "cross platform development", "debugging", "developer experience", "devops", "extension management", "ide comparison", "intellisense", "nuget", "productivity", "solution explorer", "vs code"]
+permalink: /coding/community/Common-VSCode-Papercuts-for-NET-Developers
+tags:
+- .NET
+- .NET Build
+- C#
+- C# Dev Kit
+- Coding
+- Community
+- Cross Platform Development
+- Debugging
+- Developer Experience
+- DevOps
+- Extension Management
+- IDE Comparison
+- IntelliSense
+- NuGet
+- Productivity
+- Solution Explorer
+- VS Code
+section_names:
+- coding
+- devops
 ---
-
 Sure-Natural-9086 leads a community discussion on the usability gaps ('paper cuts') faced by .NET developers using VSCode, with practical suggestions and peer insights.<!--excerpt_end-->
 
 # Common VSCode Papercuts for .NET Developers

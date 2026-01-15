@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Internal MCP Registry and Allowlist Controls for Copilot in VS Code and Visual Studio"
-description: "This news covers new governance features for GitHub Copilot, allowing enterprise administrators to manage MCP (Model Context Protocol) server registries and enforce allowlist policies in Visual Studio Code. It details the configuration options, registry setup methods, support status in VS Code and Visual Studio, and links to setup instructions and policy documentation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Internal MCP Registry and Allowlist Controls for Copilot in VS Code and Visual Studio
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 16:39:20 +00:00
-permalink: "/2025-11-18-Internal-MCP-Registry-and-Allowlist-Controls-for-Copilot-in-VS-Code-and-Visual-Studio.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Allowlist Policy", "Azure API Center", "Configuration", "Copilot", "Copilot Business", "Copilot Enterprise", "Developer Tools", "DevOps", "Enforcement", "Enterprise Governance", "GitHub Copilot", "Improvement", "Internal Registry", "MCP Registry", "MCP Server", "MCP Specification", "News", "Platform Governance", "Policy Management", "Remote Server", "Security Policy", "VS", "VS Code"]
-tags_normalized: ["ai", "allowlist policy", "azure api center", "configuration", "copilot", "copilot business", "copilot enterprise", "developer tools", "devops", "enforcement", "enterprise governance", "github copilot", "improvement", "internal registry", "mcp registry", "mcp server", "mcp specification", "news", "platform governance", "policy management", "remote server", "security policy", "vs", "vs code"]
+permalink: /github-copilot/news/Internal-MCP-Registry-and-Allowlist-Controls-for-Copilot-in-VS-Code-and-Visual-Studio
+tags:
+- AI
+- Allowlist Policy
+- Azure API Center
+- Configuration
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Developer Tools
+- DevOps
+- Enforcement
+- Enterprise Governance
+- GitHub Copilot
+- Improvement
+- Internal Registry
+- MCP Registry
+- MCP Server
+- MCP Specification
+- News
+- Platform Governance
+- Policy Management
+- Remote Server
+- Security Policy
+- VS
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison explains how GitHub Copilot enterprise customers can now configure MCP registries and enforce allowlist policies in VS Code, with early support in Visual Studio. This marks a key step in platform governance for organizations.<!--excerpt_end-->
 
 # Internal MCP Registry and Allowlist Controls for Copilot in VS Code and Visual Studio

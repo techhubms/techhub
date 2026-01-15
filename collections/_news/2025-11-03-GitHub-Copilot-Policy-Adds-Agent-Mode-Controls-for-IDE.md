@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Policy Adds Agent Mode Controls for IDE"
-description: "This update explains how GitHub administrators can now enable or disable Copilot agent mode for IDEs through enterprise or organization Copilot policies on github.com. The new policy, introduced for improved governance, defaults to enabled, giving organizations direct control over agent mode availability."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-03-github-copilot-policy-now-supports-agent-mode-in-the-ide"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot Policy Adds Agent Mode Controls for IDE
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-03-github-copilot-policy-now-supports-agent-mode-in-the-ide
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 18:13:16 +00:00
-permalink: "/2025-11-03-GitHub-Copilot-Policy-Adds-Agent-Mode-Controls-for-IDE.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Access Controls", "Agent Mode", "AI", "AI Controls", "Copilot", "Copilot Policies", "Developer Tools", "Enterprise Management", "Enterprise Management Tools", "GitHub Administration", "GitHub Copilot", "Governance", "IDE Integration", "Improvement", "News", "Policy Management"]
-tags_normalized: ["access controls", "agent mode", "ai", "ai controls", "copilot", "copilot policies", "developer tools", "enterprise management", "enterprise management tools", "github administration", "github copilot", "governance", "ide integration", "improvement", "news", "policy management"]
+permalink: /github-copilot/news/GitHub-Copilot-Policy-Adds-Agent-Mode-Controls-for-IDE
+tags:
+- Access Controls
+- Agent Mode
+- AI
+- AI Controls
+- Copilot
+- Copilot Policies
+- Developer Tools
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Administration
+- GitHub Copilot
+- Governance
+- IDE Integration
+- Improvement
+- News
+- Policy Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details how GitHub admins can centrally manage Copilot agent mode access in IDEs using new policy controls, improving governance for enterprise and organization users.<!--excerpt_end-->
 
 # GitHub Copilot Policy Adds Agent Mode Controls for IDE

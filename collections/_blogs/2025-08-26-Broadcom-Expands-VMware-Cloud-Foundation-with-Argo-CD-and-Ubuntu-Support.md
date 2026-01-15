@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Broadcom Expands VMware Cloud Foundation with Argo CD and Ubuntu Support"
-description: "This article covers Broadcom's latest enhancements to VMware Cloud Foundation (VCF), highlighting embedded Kubernetes support for Argo CD, expanded Ubuntu integration via Canonical, support for Chiseled Ubuntu containers, new developer services, and features like hardened containers and accelerated AI workload deployment using GPUs. The platform strategy reflects a shift toward unified DevOps workflows, compliance, and operational efficiency at scale."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Broadcom Expands VMware Cloud Foundation with Argo CD and Ubuntu Support
+author: Mike Vizard
+canonical_url: https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-26 19:42:36 +00:00
-permalink: "/2025-08-26-Broadcom-Expands-VMware-Cloud-Foundation-with-Argo-CD-and-Ubuntu-Support.html"
-categories: ["DevOps"]
-tags: ["AI", "AI Workloads", "Argo CD", "Blogs", "Broadcom", "Canonical", "Chiseled Ubuntu", "CloudOps", "Compliance", "Containers", "Continuous Delivery", "Database Support", "DevOps", "Enterprise IT", "GPU Drivers", "Infrastructure Management", "Istio", "Kubernetes", "Platform Engineering", "Social Facebook", "Social LinkedIn", "Social X", "Ubuntu", "VCF", "Vmware", "VMware Cloud Foundation", "Vsphere Kubernetes Service"]
-tags_normalized: ["ai", "ai workloads", "argo cd", "blogs", "broadcom", "canonical", "chiseled ubuntu", "cloudops", "compliance", "containers", "continuous delivery", "database support", "devops", "enterprise it", "gpu drivers", "infrastructure management", "istio", "kubernetes", "platform engineering", "social facebook", "social linkedin", "social x", "ubuntu", "vcf", "vmware", "vmware cloud foundation", "vsphere kubernetes service"]
+permalink: /devops/blogs/Broadcom-Expands-VMware-Cloud-Foundation-with-Argo-CD-and-Ubuntu-Support
+tags:
+- AI
+- AI Workloads
+- Argo CD
+- Blogs
+- Broadcom
+- Canonical
+- Chiseled Ubuntu
+- CloudOps
+- Compliance
+- Containers
+- Continuous Delivery
+- Database Support
+- DevOps
+- Enterprise IT
+- GPU Drivers
+- Infrastructure Management
+- Istio
+- Kubernetes
+- Platform Engineering
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Ubuntu
+- VCF
+- Vmware
+- VMware Cloud Foundation
+- Vsphere Kubernetes Service
+section_names:
+- devops
 ---
-
 Mike Vizard presents a summary of Broadcom's updates to VMware Cloud Foundation, including integrated Argo CD support, Ubuntu optimizations, and a stronger focus on developer services for unified DevOps and IT operations.<!--excerpt_end-->
 
 # Broadcom Expands VMware Cloud Foundation with Argo CD and Ubuntu Support

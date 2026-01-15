@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis"
-description: "This episode presents a hands-on demonstration of GraphRAG, an open-source Microsoft project that combines Retrieval-Augmented Generation with graph-based search for enhanced security data analysis. Security intern Anisha Latchman walks through setup, configuration, node extraction, prompt engineering, chunking strategies, and performance comparisons using email datasets. The session also highlights practical tips for AI builders and the technical value of graph embeddings in security contexts."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gv5fRtBk8IM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=gv5fRtBk8IM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-26 18:29:14 +00:00
-permalink: "/2025-08-26-Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "API Setup", "Azure", "Azure AI Foundry", "Azure OpenAI", "Chunking Strategies", "Cloud Computing", "Data Relationships", "Dev", "Development", "Entity Extraction", "Graph Embedding", "Graph Search", "GraphRAG", "Microsoft", "Open Source", "Prompt Engineering", "Retrieval Augmented Generation", "Security", "Security Data Analysis", "Semantic Search", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "api setup", "azure", "azure ai foundry", "azure openai", "chunking strategies", "cloud computing", "data relationships", "dev", "development", "entity extraction", "graph embedding", "graph search", "graphrag", "microsoft", "open source", "prompt engineering", "retrieval augmented generation", "security", "security data analysis", "semantic search", "tech", "technology", "videos"]
+permalink: /ai/videos/Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis
+tags:
+- AI
+- API Setup
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Chunking Strategies
+- Cloud Computing
+- Data Relationships
+- Dev
+- Development
+- Entity Extraction
+- Graph Embedding
+- Graph Search
+- GraphRAG
+- Microsoft
+- Open Source
+- Prompt Engineering
+- Retrieval Augmented Generation
+- Security
+- Security Data Analysis
+- Semantic Search
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Developer features Anisha Latchman demonstrating how GraphRAG leverages Azure OpenAI and advanced graph embeddings to transform security data search and analysis in this practical and insightful video.<!--excerpt_end-->
 
 {% youtube gv5fRtBk8IM %}

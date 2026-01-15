@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Announcing tech.hub.ms: Curated Microsoft Tech Content Platform"
-description: "Reinier van Maanen introduces tech.hub.ms, a new platform that aggregates, categorizes, and curates technical content from across the Microsoft ecosystem. The site covers Azure, AI, ML, GitHub Copilot, .NET, Security, and DevOps, offering AI-powered tagging, regular roundups, and a transparent process for contributors. Reinier details why the site was created, its underlying technology, community involvement, and plans for future enhancement."
-author: "Reinier van Maanen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://r-vm.com/new-website-tech-hub-ms.html"
-viewing_mode: "external"
-feed_name: "Reinier van Maanen's blog"
-feed_url: "https://r-vm.com/feed.xml"
+﻿---
+layout: post
+title: 'Announcing tech.hub.ms: Curated Microsoft Tech Content Platform'
+author: Reinier van Maanen
+canonical_url: https://r-vm.com/new-website-tech-hub-ms.html
+viewing_mode: external
+feed_name: Reinier van Maanen's blog
+feed_url: https://r-vm.com/feed.xml
 date: 2025-08-19 00:00:00 +00:00
-permalink: "/2025-08-19-Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Powered Tagging", "Azure", "Azure App Services", "Azure Static Web Apps", "Blogs", "Curated Content", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Pages", "Jekyll", "Machine Learning", "Microsoft", "Microsoft Tech Hub", "OpenAI", "Personalization", "Playwright", "Site Launch", "Tech News", "Weekly Roundup"]
-tags_normalized: ["dotnet", "ai", "ai powered tagging", "azure", "azure app services", "azure static web apps", "blogs", "curated content", "developer tools", "devops", "github copilot", "github pages", "jekyll", "machine learning", "microsoft", "microsoft tech hub", "openai", "personalization", "playwright", "site launch", "tech news", "weekly roundup"]
+permalink: /github-copilot/blogs/Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform
+tags:
+- .NET
+- AI
+- AI Powered Tagging
+- Azure
+- Azure App Services
+- Azure Static Web Apps
+- Blogs
+- Curated Content
+- Developer Tools
+- DevOps
+- GitHub Copilot
+- GitHub Pages
+- Jekyll
+- Machine Learning
+- Microsoft
+- Microsoft Tech Hub
+- OpenAI
+- Personalization
+- Playwright
+- Site Launch
+- Tech News
+- Weekly Roundup
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Reinier van Maanen shares the launch of tech.hub.ms, a Microsoft tech news aggregator with AI-driven categorization, built in collaboration with Rob Bos and Xebia colleagues.<!--excerpt_end-->
 
 # Announcing tech.hub.ms — Curated Microsoft Tech Content Platform

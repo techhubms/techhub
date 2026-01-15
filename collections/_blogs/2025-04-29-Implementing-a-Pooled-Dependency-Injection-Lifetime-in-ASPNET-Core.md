@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core"
-description: "Andrew Lock examines how to implement a 'pooled' dependency injection scope in ASP.NET Core, inspired by EF Core's DbContext pooling. The post details requirements, design decisions, implementation, testing, limitations, and considerations for pooling within the .NET dependency injection system."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core
+author: Andrew Lock
+canonical_url: https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-29 09:00:00 +00:00
-permalink: "/2025-04-29-Implementing-a-Pooled-Dependency-Injection-Lifetime-in-ASPNET-Core.html"
-categories: ["Coding"]
-tags: [".NET Core", "ASP.NET Core", "Blogs", "Coding", "DbContext Pooling", "Dependency Injection", "IResettableService", "Performance", "Pooled Services", "Scoped Services", "Service Lifetimes", "Singleton Services"]
-tags_normalized: ["dotnet core", "aspdotnet core", "blogs", "coding", "dbcontext pooling", "dependency injection", "iresettableservice", "performance", "pooled services", "scoped services", "service lifetimes", "singleton services"]
+permalink: /coding/blogs/Implementing-a-Pooled-Dependency-Injection-Lifetime-in-ASPNET-Core
+tags:
+- .NET Core
+- ASP.NET Core
+- Blogs
+- Coding
+- DbContext Pooling
+- Dependency Injection
+- IResettableService
+- Performance
+- Pooled Services
+- Scoped Services
+- Service Lifetimes
+- Singleton Services
+section_names:
+- coding
 ---
-
 In this in-depth post, Andrew Lock explores how to create a pooled dependency injection lifetime in ASP.NET Core, discussing design choices, implementation details, and broader implications.<!--excerpt_end-->
 
 # Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core

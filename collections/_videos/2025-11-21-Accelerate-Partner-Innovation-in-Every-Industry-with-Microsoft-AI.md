@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Accelerate Partner Innovation in Every Industry with Microsoft AI"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft and its partners are using AI to drive industry innovation. It covers Microsoft's FY26 Industry Strategy, highlights how partners can leverage engineering solutions to create and integrate AI agents, and features real-world examples of co-innovation, co-sell, and measurable business impact. Leaders and partners share insights on building AI-powered solutions and successful go-to-market activities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qeRDuU1XnwE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerate Partner Innovation in Every Industry with Microsoft AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=qeRDuU1XnwE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:16:13 +00:00
-permalink: "/2025-11-21-Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Ask Ralph", "Azure", "Co Innovation", "Co Sell", "Colin Fleming", "Go To Market", "Ihab Foudeh", "Industry Solutions", "Infosys", "Kathleen Mitford", "Lufthansa", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Innovation", "Satish Thomas", "ServiceNow", "Sunil Senan", "Teleperformance", "Videos", "Virtual Stylist"]
-tags_normalized: ["ai", "ai agents", "ask ralph", "azure", "co innovation", "co sell", "colin fleming", "go to market", "ihab foudeh", "industry solutions", "infosys", "kathleen mitford", "lufthansa", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner innovation", "satish thomas", "servicenow", "sunil senan", "teleperformance", "videos", "virtual stylist"]
+permalink: /ai/videos/Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI
+tags:
+- AI
+- AI Agents
+- Ask Ralph
+- Azure
+- Co Innovation
+- Co Sell
+- Colin Fleming
+- Go To Market
+- Ihab Foudeh
+- Industry Solutions
+- Infosys
+- Kathleen Mitford
+- Lufthansa
+- Microsoft AI Cloud Partner Program
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Innovation
+- Satish Thomas
+- ServiceNow
+- Sunil Senan
+- Teleperformance
+- Videos
+- Virtual Stylist
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts an insightful Ignite session where speakers like Kathleen Mitford and partners share how Microsoft and its partner ecosystem accelerate industry impact with AI, offering practical examples of co-innovation and AI agent integration.<!--excerpt_end-->
 
 {% youtube qeRDuU1XnwE %}

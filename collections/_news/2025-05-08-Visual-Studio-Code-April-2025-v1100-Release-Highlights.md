@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Visual Studio Code April 2025 (v1.100) Release Highlights"
-description: "The April 2025 release of Visual Studio Code (version 1.100) introduces a wealth of enhancements across AI-powered development, agent mode chat, GitHub integration, notebook tools, security, and accessibility. Key innovations include NES-powered code suggestions, custom prompt/instruction files for chat, improved agent mode with OpenAI and Anthropic models, advanced tools for Python and Jupyter, and extension signature verification for Linux. This release also brings updates to accessibility features, source control, container development, and extension authoring, supporting a streamlined and secure developer experience."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_100"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Visual Studio Code April 2025 (v1.100) Release Highlights
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_100
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-08 17:00:00 +00:00
-permalink: "/2025-05-08-Visual-Studio-Code-April-2025-v1100-Release-Highlights.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Accessibility", "Agent Mode", "AI", "AI Assisted Development", "Anthropic Claude", "Chat Instructions", "Coding", "Copilot Chat", "DevOps", "Extension Security", "Floating Windows", "GitHub Copilot", "GitHub Pull Requests", "JavaScript Debugging", "Jupyter Notebooks", "MCP Server", "News", "Next Edit Suggestions", "OpenAI GPT 4.1", "Prompt Files", "Python Tools", "Security", "Semantic Search", "Source Control", "TypeScript", "VS Code", "VS Code 1.100"]
-tags_normalized: ["accessibility", "agent mode", "ai", "ai assisted development", "anthropic claude", "chat instructions", "coding", "copilot chat", "devops", "extension security", "floating windows", "github copilot", "github pull requests", "javascript debugging", "jupyter notebooks", "mcp server", "news", "next edit suggestions", "openai gpt 4dot1", "prompt files", "python tools", "security", "semantic search", "source control", "typescript", "vs code", "vs code 1dot100"]
+permalink: /github-copilot/news/Visual-Studio-Code-April-2025-v1100-Release-Highlights
+tags:
+- Accessibility
+- Agent Mode
+- AI
+- AI Assisted Development
+- Anthropic Claude
+- Chat Instructions
+- Coding
+- Copilot Chat
+- DevOps
+- Extension Security
+- Floating Windows
+- GitHub Copilot
+- GitHub Pull Requests
+- JavaScript Debugging
+- Jupyter Notebooks
+- MCP Server
+- News
+- Next Edit Suggestions
+- OpenAI GPT 4.1
+- Prompt Files
+- Python Tools
+- Security
+- Semantic Search
+- Source Control
+- TypeScript
+- VS Code
+- VS Code 1.100
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Visual Studio Code Team delivers an in-depth summary of the April 2025 (v1.100) release, focusing on new AI chat workflows, Copilot-powered code editing, agent mode, developer security, and ecosystem improvements.<!--excerpt_end-->
 
 # Visual Studio Code April 2025 (v1.100) Release Highlights

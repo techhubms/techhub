@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Aurora: Microsoft’s Open-Source AI Model for Weather and Climate Forecasting"
-description: "This article introduces the next phase of Aurora, Microsoft’s open-source AI foundation model focused on weather and climate forecasting. It details Aurora’s technical approach, research partnerships, and its commitment to open collaboration to advance forecasting accuracy, scientific discovery, and support for meteorological services worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/11/13/the-next-phase-of-aurora-open-and-collaborative-ai-for-weather-and-climate-forecasting/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Aurora: Microsoft’s Open-Source AI Model for Weather and Climate Forecasting'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/13/the-next-phase-of-aurora-open-and-collaborative-ai-for-weather-and-climate-forecasting/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-13 18:35:31 +00:00
-permalink: "/2025-11-13-Aurora-Microsofts-Open-Source-AI-Model-for-Weather-and-Climate-Forecasting.html"
-categories: ["AI"]
-tags: ["AI", "AI For Good", "AI Model", "Atmospheric Data", "Aurora", "Climate Science", "Community Collaboration", "Company News", "Earth Systems Modeling", "Environmental Data", "Machine Learning", "Meteorological Services", "Microsoft Research", "News", "On The Issues", "Open Source", "SPARROW", "Sustainability", "Weather Forecasting"]
-tags_normalized: ["ai", "ai for good", "ai model", "atmospheric data", "aurora", "climate science", "community collaboration", "company news", "earth systems modeling", "environmental data", "machine learning", "meteorological services", "microsoft research", "news", "on the issues", "open source", "sparrow", "sustainability", "weather forecasting"]
+permalink: /ai/news/Aurora-Microsofts-Open-Source-AI-Model-for-Weather-and-Climate-Forecasting
+tags:
+- AI
+- AI For Good
+- AI Model
+- Atmospheric Data
+- Aurora
+- Climate Science
+- Community Collaboration
+- Company News
+- Earth Systems Modeling
+- Environmental Data
+- Machine Learning
+- Meteorological Services
+- Microsoft Research
+- News
+- On The Issues
+- Open Source
+- SPARROW
+- Sustainability
+- Weather Forecasting
+section_names:
+- ai
 ---
-
 stclarke highlights Microsoft’s Aurora project, an open-source AI model for weather and climate forecasting, emphasizing its collaborative development and potential impact on global science and community resilience.<!--excerpt_end-->
 
 # Aurora: Microsoft’s Open-Source AI Model for Weather and Climate Forecasting

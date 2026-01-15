@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security"
-description: "This advanced breakout session from Microsoft Ignite 2025 spotlights new and upcoming productivity tools for developers and IT professionals on Windows 11. Topics include updates to Windows Subsystem for Linux (WSL), the new 'Edit' text editor, Windows Terminal improvements, PowerToys CLI integration, and actionable strategies for security and enterprise-grade manageability, with live demos and practical guidance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mJQxAKYkCBk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mJQxAKYkCBk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:56:18 +00:00
-permalink: "/2025-11-24-Windows-11-Developer-Productivity-Tools-WSL-Terminal-PowerToys-and-Enterprise-Security.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["AI", "AI Agent", "CLI Tools", "Coding", "Developer Productivity", "DevOps", "Enterprise IT", "MCP Server", "Microsoft Ignite", "MSIgnite", "Open Source", "PowerShell", "PowerToys", "ScalewithcloudandAIendpoints", "Security", "Text Editor", "Videos", "Windows 11", "Windows Subsystem For Linux", "Windows Terminal", "WSL", "Zero Trust"]
-tags_normalized: ["ai", "ai agent", "cli tools", "coding", "developer productivity", "devops", "enterprise it", "mcp server", "microsoft ignite", "msignite", "open source", "powershell", "powertoys", "scalewithcloudandaiendpoints", "security", "text editor", "videos", "windows 11", "windows subsystem for linux", "windows terminal", "wsl", "zero trust"]
+permalink: /coding/videos/Windows-11-Developer-Productivity-Tools-WSL-Terminal-PowerToys-and-Enterprise-Security
+tags:
+- AI
+- AI Agent
+- CLI Tools
+- Coding
+- Developer Productivity
+- DevOps
+- Enterprise IT
+- MCP Server
+- Microsoft Ignite
+- MSIgnite
+- Open Source
+- PowerShell
+- PowerToys
+- ScalewithcloudandAIendpoints
+- Security
+- Text Editor
+- Videos
+- Windows 11
+- Windows Subsystem For Linux
+- Windows Terminal
+- WSL
+- Zero Trust
+section_names:
+- coding
+- devops
+- security
 ---
-
 Microsoft Events brings together new and updated developer and IT productivity tools for Windows 11, focusing on WSL, Windows Terminal, PowerToys, security, and enterprise management features.<!--excerpt_end-->
 
 {% youtube mJQxAKYkCBk %}

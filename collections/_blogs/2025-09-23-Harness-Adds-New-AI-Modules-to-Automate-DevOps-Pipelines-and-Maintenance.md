@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Harness Adds New AI Modules to Automate DevOps Pipelines and Maintenance"
-description: "This article explores Harness's latest enhancements to its AI-powered DevOps platform, introducing new modules for automated code maintenance and deployment rollback. It details how AI is used to design secure, high-quality pipelines and support DevOps engineers by reducing repetitive tasks. The coverage includes Architect Mode, Autonomous Code Maintenance, and AI-powered Release Orchestration, highlighting the growing role of AI in streamlining DevOps workflows."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/harness-extends-scope-and-reach-of-ai-platform-for-automating-devops-workflows/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Harness Adds New AI Modules to Automate DevOps Pipelines and Maintenance
+author: Mike Vizard
+canonical_url: https://devops.com/harness-extends-scope-and-reach-of-ai-platform-for-automating-devops-workflows/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-23 13:00:11 +00:00
-permalink: "/2025-09-23-Harness-Adds-New-AI-Modules-to-Automate-DevOps-Pipelines-and-Maintenance.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agent", "AI For DevOps", "AI in Software Delivery", "AI Modules", "AI Observability Integration", "AI Rollback", "AI Verification", "Architect Mode", "Architect Mode DevOps", "Autonomous Code Maintenance", "Blogs", "Code Maintenance", "Compliance Automation", "Deployment Rollback", "Developer Portal", "DevOps", "DevOps Automation", "DevOps Best Practices", "Harness AI Platform", "Internal Developer Portal AI", "Observability Integration", "Pipeline Design", "Pull Request Automation", "Release Orchestration", "Release Orchestration AI", "Security Automation", "Self Healing Builds", "Social Facebook", "Social LinkedIn", "Social X", "YAML Generation"]
-tags_normalized: ["ai", "ai agent", "ai for devops", "ai in software delivery", "ai modules", "ai observability integration", "ai rollback", "ai verification", "architect mode", "architect mode devops", "autonomous code maintenance", "blogs", "code maintenance", "compliance automation", "deployment rollback", "developer portal", "devops", "devops automation", "devops best practices", "harness ai platform", "internal developer portal ai", "observability integration", "pipeline design", "pull request automation", "release orchestration", "release orchestration ai", "security automation", "self healing builds", "social facebook", "social linkedin", "social x", "yaml generation"]
+permalink: /ai/blogs/Harness-Adds-New-AI-Modules-to-Automate-DevOps-Pipelines-and-Maintenance
+tags:
+- AI
+- AI Agent
+- AI For DevOps
+- AI in Software Delivery
+- AI Modules
+- AI Observability Integration
+- AI Rollback
+- AI Verification
+- Architect Mode
+- Architect Mode DevOps
+- Autonomous Code Maintenance
+- Blogs
+- Code Maintenance
+- Compliance Automation
+- Deployment Rollback
+- Developer Portal
+- DevOps
+- DevOps Automation
+- DevOps Best Practices
+- Harness AI Platform
+- Internal Developer Portal AI
+- Observability Integration
+- Pipeline Design
+- Pull Request Automation
+- Release Orchestration
+- Release Orchestration AI
+- Security Automation
+- Self Healing Builds
+- Social Facebook
+- Social LinkedIn
+- Social X
+- YAML Generation
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard examines how Harness is extending its AI platform with new modules designed to automate code maintenance and streamline DevOps workflows for development teams.<!--excerpt_end-->
 
 # Harness Adds New AI Modules to Automate DevOps Pipelines and Maintenance

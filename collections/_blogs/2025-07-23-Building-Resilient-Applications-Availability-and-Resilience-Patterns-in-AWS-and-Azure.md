@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure"
-description: "This article by Dellenny explores essential cloud architecture patterns for application resilience and high availability, focusing on how these are implemented in both Amazon Web Services (AWS) and Microsoft Azure. Readers will learn failover, health monitoring, retry, and circuit breaker patterns, with practical Azure examples such as Traffic Manager, Azure Load Balancer, Application Insights, and .NET resilience libraries. The post emphasizes how to use these patterns as foundational blocks to ensure applications remain online during disruptions."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/building-resilient-applications-availability-resilience-patterns-in-aws-and-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure'
+author: Dellenny
+canonical_url: https://dellenny.com/building-resilient-applications-availability-resilience-patterns-in-aws-and-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-23 11:04:36 +00:00
-permalink: "/2025-07-23-Building-Resilient-Applications-Availability-and-Resilience-Patterns-in-AWS-and-Azure.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Application Insights", "Architecture", "AWS", "Azure", "Azure Front Door", "Azure Load Balancer", "Azure Monitor", "Azure SQL Database", "Azure Traffic Manager", "Blogs", "Circuit Breaker", "Cloud Architecture", "Cloud Patterns", "Coding", "Failover Pattern", "High Availability", "Polly", "Resilience", "Retry Policy", "Solution Architecture"]
-tags_normalized: ["dotnet", "application insights", "architecture", "aws", "azure", "azure front door", "azure load balancer", "azure monitor", "azure sql database", "azure traffic manager", "blogs", "circuit breaker", "cloud architecture", "cloud patterns", "coding", "failover pattern", "high availability", "polly", "resilience", "retry policy", "solution architecture"]
+permalink: /coding/blogs/Building-Resilient-Applications-Availability-and-Resilience-Patterns-in-AWS-and-Azure
+tags:
+- .NET
+- Application Insights
+- Architecture
+- AWS
+- Azure
+- Azure Front Door
+- Azure Load Balancer
+- Azure Monitor
+- Azure SQL Database
+- Azure Traffic Manager
+- Blogs
+- Circuit Breaker
+- Cloud Architecture
+- Cloud Patterns
+- Coding
+- Failover Pattern
+- High Availability
+- Polly
+- Resilience
+- Retry Policy
+- Solution Architecture
+section_names:
+- azure
+- coding
 ---
-
 Dellenny details key cloud resilience and availability patterns, comparing their implementation between AWS and Microsoft Azure. Readers discover practical Azure tools and strategies for building robust applications capable of weathering system failures.<!--excerpt_end-->
 
 # Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure

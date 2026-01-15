@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Improved Onboarding Flow for GitHub Projects"
-description: "This news update outlines the latest enhancements to GitHub Projects onboarding, aimed at making it faster and more intuitive for users to start new projects. Key improvements include the ability to import items from repositories, set default repositories for issues, utilize new workflows, and benefit from API upgrades. Several UI and workflow updates also streamline project management and automation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Onboarding Flow for GitHub Projects
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-06 17:50:59 +00:00
-permalink: "/2025-11-06-Improved-Onboarding-Flow-for-GitHub-Projects.html"
-categories: ["DevOps"]
-tags: ["DevOps", "DevOps Tools", "GitHub Projects", "GraphQL API", "Improvement", "Issue Management", "News", "Onboarding", "Project Templates", "Projects & Issues", "Pull Requests", "Repository Integration", "Software Development", "Team Planning", "Workflow Automation"]
-tags_normalized: ["devops", "devops tools", "github projects", "graphql api", "improvement", "issue management", "news", "onboarding", "project templates", "projects and issues", "pull requests", "repository integration", "software development", "team planning", "workflow automation"]
+permalink: /devops/news/Improved-Onboarding-Flow-for-GitHub-Projects
+tags:
+- DevOps
+- DevOps Tools
+- GitHub Projects
+- GraphQL API
+- Improvement
+- Issue Management
+- News
+- Onboarding
+- Project Templates
+- Projects & Issues
+- Pull Requests
+- Repository Integration
+- Software Development
+- Team Planning
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison reports on recent upgrades to the GitHub Projects onboarding experience, detailing new automation workflows, repository integration features, and key API improvements for developers and project managers.<!--excerpt_end-->
 
 # Improved Onboarding Flow for GitHub Projects

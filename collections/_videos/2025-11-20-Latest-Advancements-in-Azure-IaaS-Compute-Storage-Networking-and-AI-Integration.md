@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Latest Advancements in Azure IaaS: Compute, Storage, Networking, and AI Integration"
-description: "This Microsoft Ignite session showcases the newest updates in Azure Infrastructure as a Service (IaaS), covering breakthrough features in compute, storage, and networking. It highlights how Azure’s evolving global backbone, enhanced resiliency, and flexible services support mission-critical workloads, cloud-native architectures, and AI-driven operations. Topics include security enhancements, workload optimization, Azure Copilot for management, new disk snapshot capabilities for fast recovery, AKS system node pool automation, confidential compute, and real-world customer use cases."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SXLc-pCUpzg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Latest Advancements in Azure IaaS: Compute, Storage, Networking, and AI Integration'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=SXLc-pCUpzg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:13:27 +00:00
-permalink: "/2025-11-20-Latest-Advancements-in-Azure-IaaS-Compute-Storage-Networking-and-AI-Integration.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Transformation", "AKS", "Automation", "Azure", "Azure Cobalt 100", "Azure Copilot", "Azure IaaS", "Cloud Native", "Compute", "Confidential Compute", "Cost Efficiency", "Databricks", "Disk Instant Access", "Managed System Node Pools", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Networking", "Resiliency", "Security", "Snapshots", "Storage", "Videos", "Workload Optimization"]
-tags_normalized: ["ai", "ai transformation", "aks", "automation", "azure", "azure cobalt 100", "azure copilot", "azure iaas", "cloud native", "compute", "confidential compute", "cost efficiency", "databricks", "disk instant access", "managed system node pools", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "networking", "resiliency", "security", "snapshots", "storage", "videos", "workload optimization"]
+permalink: /ai/videos/Latest-Advancements-in-Azure-IaaS-Compute-Storage-Networking-and-AI-Integration
+tags:
+- AI
+- AI Transformation
+- AKS
+- Automation
+- Azure
+- Azure Cobalt 100
+- Azure Copilot
+- Azure IaaS
+- Cloud Native
+- Compute
+- Confidential Compute
+- Cost Efficiency
+- Databricks
+- Disk Instant Access
+- Managed System Node Pools
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Networking
+- Resiliency
+- Security
+- Snapshots
+- Storage
+- Videos
+- Workload Optimization
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an overview of the newest Azure IaaS capabilities, with Igal Figlin, Narayan Annamalai, and Aung Oo highlighting innovations in compute, storage, networking, and AI-powered cloud operations.<!--excerpt_end-->
 
 {% youtube SXLc-pCUpzg %}

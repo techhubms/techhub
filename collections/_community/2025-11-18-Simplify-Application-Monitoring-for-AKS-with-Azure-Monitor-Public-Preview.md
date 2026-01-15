@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Simplify Application Monitoring for AKS with Azure Monitor (Public Preview)"
-description: "This guide introduces developers and operators to new unified monitoring capabilities in Azure Monitor for Azure Kubernetes Service (AKS), now in Public Preview. It covers seamless onboarding, OpenTelemetry support, auto-instrumentation for Java and NodeJS workloads, integration with Application Insights and Container Insights, and curated Grafana dashboards. Readers will learn how to enable, configure, and extend application monitoring for AKS to achieve automated, full-stack observability and troubleshooting in the Azure ecosystem."
-author: "austonli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/simplify-application-monitoring-for-aks-with-azure-monitor/ba-p/4470136"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Simplify Application Monitoring for AKS with Azure Monitor (Public Preview)
+author: austonli
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/simplify-application-monitoring-for-aks-with-azure-monitor/ba-p/4470136
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:15:50 +00:00
-permalink: "/2025-11-18-Simplify-Application-Monitoring-for-AKS-with-Azure-Monitor-Public-Preview.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["AKS", "AKS Monitoring", "App Performance", "Application Insights", "Auto Instrumentation", "Azure", "Azure Monitor", "Azure Portal", "Cloud Native", "Coding", "Community", "Container Insights", "CRD", "DevOps", "Grafana Dashboards", "Java", "Kubernetes", "Namespaces", "NodeJS", "OpenTelemetry", "Preview Features", "Telemetry Collection", "Troubleshooting"]
-tags_normalized: ["aks", "aks monitoring", "app performance", "application insights", "auto instrumentation", "azure", "azure monitor", "azure portal", "cloud native", "coding", "community", "container insights", "crd", "devops", "grafana dashboards", "java", "kubernetes", "namespaces", "nodejs", "opentelemetry", "preview features", "telemetry collection", "troubleshooting"]
+permalink: /coding/community/Simplify-Application-Monitoring-for-AKS-with-Azure-Monitor-Public-Preview
+tags:
+- AKS
+- AKS Monitoring
+- App Performance
+- Application Insights
+- Auto Instrumentation
+- Azure
+- Azure Monitor
+- Azure Portal
+- Cloud Native
+- Coding
+- Community
+- Container Insights
+- CRD
+- DevOps
+- Grafana Dashboards
+- Java
+- Kubernetes
+- Namespaces
+- NodeJS
+- OpenTelemetry
+- Preview Features
+- Telemetry Collection
+- Troubleshooting
+section_names:
+- azure
+- coding
+- devops
 ---
-
 austonli details Azure Monitor's new public preview features for unified application monitoring on AKS, empowering developers with seamless onboarding and advanced observability.<!--excerpt_end-->
 
 # Simplify Application Monitoring for AKS with Azure Monitor (Public Preview)

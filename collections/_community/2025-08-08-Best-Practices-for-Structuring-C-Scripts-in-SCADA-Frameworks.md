@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Best Practices for Structuring C# Scripts in SCADA Frameworks"
-description: "A practical community discussion highlighting strategies and advice for organizing C# scripts within SCADA frameworks. Covers maintainability, reusability, performance, applying core design principles, using shared libraries or DLLs, and considerations around algorithmic complexity and optimization in industrial environments."
-author: "DouglasRoldan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: Best Practices for Structuring C# Scripts in SCADA Frameworks
+author: DouglasRoldan
+canonical_url: https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-08 01:55:00 +00:00
-permalink: "/2025-08-08-Best-Practices-for-Structuring-C-Scripts-in-SCADA-Frameworks.html"
-categories: ["Coding"]
-tags: ["Algorithmic Complexity", "Best Practices", "C#", "Code Organization", "Coding", "Community", "DLL", "DRY", "Maintainability", "Performance", "Reusability", "SCADA", "Scripting", "Shared Libraries", "SOLID"]
-tags_normalized: ["algorithmic complexity", "best practices", "csharp", "code organization", "coding", "community", "dll", "dry", "maintainability", "performance", "reusability", "scada", "scripting", "shared libraries", "solid"]
+permalink: /coding/community/Best-Practices-for-Structuring-C-Scripts-in-SCADA-Frameworks
+tags:
+- Algorithmic Complexity
+- Best Practices
+- C#
+- Code Organization
+- Coding
+- Community
+- DLL
+- DRY
+- Maintainability
+- Performance
+- Reusability
+- SCADA
+- Scripting
+- Shared Libraries
+- SOLID
+section_names:
+- coding
 ---
-
 DouglasRoldan initiates a thoughtful conversation on best practices for writing maintainable and reusable C# scripts within SCADA frameworks, gathering community insights about code structuring and optimization.<!--excerpt_end-->
 
 # Best Practices for Structuring C# Scripts in SCADA Frameworks

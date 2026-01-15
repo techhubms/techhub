@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GPT-5.1 and GPT-5.1-Codex Now Available in GitHub Copilot"
-description: "This announcement details the general availability of GPT-5.1 and GPT-5.1-Codex models in GitHub Copilot, providing developers with enhanced AI-powered code completion and chat functionalities across multiple IDEs, including Visual Studio Code and JetBrains. The post explains access procedures for both individual and enterprise users, and directs users to official documentation and community feedback channels."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GPT-5.1 and GPT-5.1-Codex Now Available in GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 16:16:42 +00:00
-permalink: "/2025-12-17-GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Completion", "AI Models", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Eclipse", "GitHub Copilot", "GPT 5.1", "GPT 5.1 Codex", "IDE Integration", "JetBrains", "Model Deployment", "News", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai code completion", "ai models", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "eclipse", "github copilot", "gpt 5dot1", "gpt 5dot1 codex", "ide integration", "jetbrains", "model deployment", "news", "vs code", "xcode"]
+permalink: /github-copilot/news/GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot
+tags:
+- AI
+- AI Code Completion
+- AI Models
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro
+- Eclipse
+- GitHub Copilot
+- GPT 5.1
+- GPT 5.1 Codex
+- IDE Integration
+- JetBrains
+- Model Deployment
+- News
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the general availability of GPT-5.1 and GPT-5.1-Codex for GitHub Copilot users, with expanded access and integration instructions for both organizations and individuals.<!--excerpt_end-->
 
 # GPT-5.1 and GPT-5.1-Codex Now Available in GitHub Copilot

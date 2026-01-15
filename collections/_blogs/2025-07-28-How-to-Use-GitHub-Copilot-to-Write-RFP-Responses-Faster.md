@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to Use GitHub Copilot to Write RFP Responses Faster"
-description: "This guide by Dellenny demonstrates specific ways developers, consultants, and technical teams can utilize GitHub Copilot to draft, optimize, and accelerate the creation of winning responses to RFPs (Request for Proposals). It covers step-by-step usage scenarios, actionable prompt examples, and workflow improvements tailored for technical proposal writing."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/win-more-bids-how-to-use-github-copilot-to-write-winning-rfp-responses-faster/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How to Use GitHub Copilot to Write RFP Responses Faster
+author: Dellenny
+canonical_url: https://dellenny.com/win-more-bids-how-to-use-github-copilot-to-write-winning-rfp-responses-faster/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-28 13:21:42 +00:00
-permalink: "/2025-07-28-How-to-Use-GitHub-Copilot-to-Write-RFP-Responses-Faster.html"
-categories: ["AI", "GitHub Copilot"]
-tags: [".NET", "Agile", "AI", "AI Assistant", "Blogs", "Budget Estimation", "Copilot", "Copilot Chat", "GitHub Copilot", "Markdown Templates", "Project Planning", "Prompt Engineering", "Proposal Automation", "RFP Response", "Software Development Lifecycle", "Team Bio Generation", "Technical Writing"]
-tags_normalized: ["dotnet", "agile", "ai", "ai assistant", "blogs", "budget estimation", "copilot", "copilot chat", "github copilot", "markdown templates", "project planning", "prompt engineering", "proposal automation", "rfp response", "software development lifecycle", "team bio generation", "technical writing"]
+permalink: /github-copilot/blogs/How-to-Use-GitHub-Copilot-to-Write-RFP-Responses-Faster
+tags:
+- .NET
+- Agile
+- AI
+- AI Assistant
+- Blogs
+- Budget Estimation
+- Copilot
+- Copilot Chat
+- GitHub Copilot
+- Markdown Templates
+- Project Planning
+- Prompt Engineering
+- Proposal Automation
+- RFP Response
+- Software Development Lifecycle
+- Team Bio Generation
+- Technical Writing
+section_names:
+- ai
+- github-copilot
 ---
-
 Dellenny explains how GitHub Copilot can streamline and supercharge the process of responding to RFPs, offering practical steps and Copilot prompt strategies for technical teams and developers.<!--excerpt_end-->
 
 # How to Use GitHub Copilot to Write RFP Responses Faster

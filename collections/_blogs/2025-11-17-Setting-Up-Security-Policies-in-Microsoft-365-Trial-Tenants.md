@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Setting Up Security Policies in Microsoft 365 Trial Tenants"
-description: "This guide by Dellenny details step-by-step procedures for establishing core security policies in a Microsoft 365 trial tenant. It covers multi-factor authentication, blocking legacy authentication, configuring Defender for Office 365 protection, enforcing password settings, using Conditional Access, managing admin roles, and enabling security alerts to create a secure cloud environment from the start."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Setting Up Security Policies in Microsoft 365 Trial Tenants
+author: Dellenny
+canonical_url: https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-17 09:17:43 +00:00
-permalink: "/2025-11-17-Setting-Up-Security-Policies-in-Microsoft-365-Trial-Tenants.html"
-categories: ["Security"]
-tags: ["Admin Roles", "Audit Logs", "Authentication Methods", "Azure Active Directory", "Blogs", "Cloud Security", "Conditional Access", "Defender For Office 365", "Email Security", "Entra ID", "Identity Protection", "Least Privilege", "Malware Protection", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Multi Factor Authentication", "Password Policies", "Phishing Protection", "Privileged Identity Management", "Purview", "Security", "Security Defaults", "Threat Protection", "Trial Tenant"]
-tags_normalized: ["admin roles", "audit logs", "authentication methods", "azure active directory", "blogs", "cloud security", "conditional access", "defender for office 365", "email security", "entra id", "identity protection", "least privilege", "malware protection", "microsoft 365", "microsoft 365 certified fundamentals", "multi factor authentication", "password policies", "phishing protection", "privileged identity management", "purview", "security", "security defaults", "threat protection", "trial tenant"]
+permalink: /security/blogs/Setting-Up-Security-Policies-in-Microsoft-365-Trial-Tenants
+tags:
+- Admin Roles
+- Audit Logs
+- Authentication Methods
+- Azure Active Directory
+- Blogs
+- Cloud Security
+- Conditional Access
+- Defender For Office 365
+- Email Security
+- Entra ID
+- Identity Protection
+- Least Privilege
+- Malware Protection
+- Microsoft 365
+- 'Microsoft 365 Certified: Fundamentals'
+- Multi Factor Authentication
+- Password Policies
+- Phishing Protection
+- Privileged Identity Management
+- Purview
+- Security
+- Security Defaults
+- Threat Protection
+- Trial Tenant
+section_names:
+- security
 ---
-
 Dellenny guides readers through setting up baseline security protections for Microsoft 365 trial tenants, highlighting practical steps to reduce vulnerabilities and secure cloud services.<!--excerpt_end-->
 
 # Setting Up Security Policies in Microsoft 365 Trial Tenants

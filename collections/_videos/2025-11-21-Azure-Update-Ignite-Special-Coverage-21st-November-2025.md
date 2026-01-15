@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Azure Update - Ignite Special Coverage (21st November 2025)"
-description: "This video from John Savill's Technical Training delivers an extensive roundup of new Azure and Microsoft cloud announcements, updates, and platform enhancements from Ignite 2025. It covers major changes across AKS, App Service, Azure Functions, storage, networking, security, databases, AI infrastructure, Microsoft Fabric, Entra ID, and more, providing practitioners with a rapid overview of technical advancements and actionable knowledge."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ayWSbRDQ1ds"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - Ignite Special Coverage (21st November 2025)
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=ayWSbRDQ1ds
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-21 17:57:53 +00:00
-permalink: "/2025-11-21-Azure-Update-Ignite-Special-Coverage-21st-November-2025.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AKS", "App Service", "Azure", "Azure AI", "Azure Boost", "Azure Cloud", "Azure Container Apps", "Azure Cosmos DB", "Azure Entra ID", "Azure Functions", "Azure Ignite", "Azure Logic Apps", "Azure Marketplace", "Azure Monitor", "Azure Networking", "Azure SQL", "Azure Storage", "Cloud", "Cloud Infrastructure", "DevOps", "Ignite", "Kubernetes", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Microsoft Foundry", "ML", "Security", "Videos"]
-tags_normalized: ["ai", "aks", "app service", "azure", "azure ai", "azure boost", "azure cloud", "azure container apps", "azure cosmos db", "azure entra id", "azure functions", "azure ignite", "azure logic apps", "azure marketplace", "azure monitor", "azure networking", "azure sql", "azure storage", "cloud", "cloud infrastructure", "devops", "ignite", "kubernetes", "microsoft", "microsoft azure", "microsoft fabric", "microsoft foundry", "ml", "security", "videos"]
+permalink: /ai/videos/Azure-Update-Ignite-Special-Coverage-21st-November-2025
+tags:
+- AI
+- AKS
+- App Service
+- Azure
+- Azure AI
+- Azure Boost
+- Azure Cloud
+- Azure Container Apps
+- Azure Cosmos DB
+- Azure Entra ID
+- Azure Functions
+- Azure Ignite
+- Azure Logic Apps
+- Azure Marketplace
+- Azure Monitor
+- Azure Networking
+- Azure SQL
+- Azure Storage
+- Cloud
+- Cloud Infrastructure
+- DevOps
+- Ignite
+- Kubernetes
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Foundry
+- ML
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 John Savill's Technical Training presents an in-depth Ignite 2025 Azure update, highlighting major releases, improvements, security upgrades, AI and ML advancements, and DevOps innovations across the Microsoft cloud ecosystem.<!--excerpt_end-->
 
 {% youtube ayWSbRDQ1ds %}

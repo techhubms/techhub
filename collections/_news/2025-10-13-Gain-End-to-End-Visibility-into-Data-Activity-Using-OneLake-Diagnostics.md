@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics"
-description: "This news update from the Microsoft Fabric Blog details the general availability of OneLake diagnostics, a robust monitoring and governance feature for Microsoft Fabric's unified data lake. The post outlines how organizations can use OneLake diagnostics to track and analyze data access across Fabric workspaces, supporting operations, compliance, and security. Key capabilities include capturing diagnostic events in Lakehouses, integration with analytics tools like Spark and Power BI, and adoption best practices for secure and scalable deployment."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 11:00:00 +00:00
-permalink: "/2025-10-13-Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Blob Storage", "Compliance", "Data Activity", "Data Governance", "Data Lake", "Data Management", "Diagnostics", "JSON Logs", "Lakehouse", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "OneLake", "Power BI", "Security", "Security Monitoring", "Spark", "Workspace Monitoring"]
-tags_normalized: ["azure", "azure blob storage", "compliance", "data activity", "data governance", "data lake", "data management", "diagnostics", "json logs", "lakehouse", "microsoft fabric", "microsoft purview", "ml", "news", "onelake", "power bi", "security", "security monitoring", "spark", "workspace monitoring"]
+permalink: /ml/news/Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics
+tags:
+- Azure
+- Azure Blob Storage
+- Compliance
+- Data Activity
+- Data Governance
+- Data Lake
+- Data Management
+- Diagnostics
+- JSON Logs
+- Lakehouse
+- Microsoft Fabric
+- Microsoft Purview
+- ML
+- News
+- OneLake
+- Power BI
+- Security
+- Security Monitoring
+- Spark
+- Workspace Monitoring
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces the general availability of OneLake diagnostics, empowering organizations with comprehensive visibility into data activity and governance across Fabric workspaces. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics

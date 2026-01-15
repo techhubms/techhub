@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Ralph Lauren's Ask Ralph: Conversational Shopping with Microsoft Azure OpenAI"
-description: "This news article introduces Ask Ralph, Ralph Lauren's AI-powered shopping experience utilizing Microsoft Azure OpenAI. The piece explains how conversational AI is being used to enhance customer engagement, streamline product search, and bring a personalized experience to retail, all built upon Microsoft's cloud AI services."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 13:20:25 +00:00
-permalink: "/2025-09-09-Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Ask Ralph", "Azure", "Azure OpenAI Service", "Cloud AI", "Company News", "Conversational AI", "Customer Experience", "E Commerce", "Machine Learning", "Microsoft Azure", "News", "Ralph Lauren", "Retail Technology"]
-tags_normalized: ["ai", "ai integration", "ask ralph", "azure", "azure openai service", "cloud ai", "company news", "conversational ai", "customer experience", "e commerce", "machine learning", "microsoft azure", "news", "ralph lauren", "retail technology"]
+permalink: /ai/news/Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI
+tags:
+- AI
+- AI Integration
+- Ask Ralph
+- Azure
+- Azure OpenAI Service
+- Cloud AI
+- Company News
+- Conversational AI
+- Customer Experience
+- E Commerce
+- Machine Learning
+- Microsoft Azure
+- News
+- Ralph Lauren
+- Retail Technology
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on Ralph Lauren's launch of Ask Ralph, an AI-driven shopping assistant powered by Microsoft Azure OpenAI, aimed at revolutionizing digital retail engagement.<!--excerpt_end-->
 
 # Ralph Lauren's Ask Ralph: Conversational Shopping with Microsoft Azure OpenAI

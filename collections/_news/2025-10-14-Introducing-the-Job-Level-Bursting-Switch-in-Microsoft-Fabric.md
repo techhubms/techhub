@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing the Job-Level Bursting Switch in Microsoft Fabric"
-description: "This announcement from the Microsoft Fabric Blog introduces the Job-Level Bursting Switch, a new feature allowing administrators to control how Spark jobs utilize burst capacity in Microsoft Fabric. The switch helps balance peak job performance and high concurrency, adapting to various data engineering and data science workloads. It outlines configuration scenarios, billing considerations, and provides direct links to documentation for effective Spark resource management."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing the Job-Level Bursting Switch in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 07:00:00 +00:00
-permalink: "/2025-10-14-Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Autoscale Billing", "Azure", "Burst Capacity", "Capacity Administrator", "Compute Units", "Concurrency", "Data Engineering", "Data Science", "ETL Workloads", "Fabric Capacity", "Interactive Notebooks", "Job Level Bursting", "Microsoft Fabric", "ML", "News", "Performance Optimization", "Resource Management", "Spark"]
-tags_normalized: ["autoscale billing", "azure", "burst capacity", "capacity administrator", "compute units", "concurrency", "data engineering", "data science", "etl workloads", "fabric capacity", "interactive notebooks", "job level bursting", "microsoft fabric", "ml", "news", "performance optimization", "resource management", "spark"]
+permalink: /ml/news/Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric
+tags:
+- Autoscale Billing
+- Azure
+- Burst Capacity
+- Capacity Administrator
+- Compute Units
+- Concurrency
+- Data Engineering
+- Data Science
+- ETL Workloads
+- Fabric Capacity
+- Interactive Notebooks
+- Job Level Bursting
+- Microsoft Fabric
+- ML
+- News
+- Performance Optimization
+- Resource Management
+- Spark
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team announces a new Job-Level Bursting Switch for Spark compute in Fabric, granting administrators enhanced control over burst capacity and concurrency optimization.<!--excerpt_end-->
 
 # Introducing the Job-Level Bursting Switch in Microsoft Fabric

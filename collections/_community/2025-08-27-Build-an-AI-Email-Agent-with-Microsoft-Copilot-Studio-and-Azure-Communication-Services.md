@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Build an AI Email Agent with Microsoft Copilot Studio and Azure Communication Services"
-description: "This step-by-step tutorial guides you through creating a custom AI agent with Microsoft Copilot Studio, enabling it to send emails using Azure Communication Services. You'll set up backend services with Azure, develop an Azure Function in Python as an integration bridge, and design conversation flows within Copilot Studio. The walkthrough includes configuration, deployment, testing, multi-channel publishing, and practical troubleshooting tips for common issues such as agent loops and unnecessary prompts."
-author: "farhanhussain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build an AI Email Agent with Microsoft Copilot Studio and Azure Communication Services
+author: farhanhussain
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-27 22:49:57 +00:00
-permalink: "/2025-08-27-Build-an-AI-Email-Agent-with-Microsoft-Copilot-Studio-and-Azure-Communication-Services.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agent", "Azure", "Azure Communication Services", "Azure Functions", "Azure Portal", "Bot Development", "Coding", "Community", "Conversation Design", "Debugging", "Email Automation", "Function App", "HTTP API Integration", "M365 Integration", "Microsoft Copilot Studio", "Microsoft Teams", "Python", "VS Code"]
-tags_normalized: ["ai", "ai agent", "azure", "azure communication services", "azure functions", "azure portal", "bot development", "coding", "community", "conversation design", "debugging", "email automation", "function app", "http api integration", "m365 integration", "microsoft copilot studio", "microsoft teams", "python", "vs code"]
+permalink: /ai/community/Build-an-AI-Email-Agent-with-Microsoft-Copilot-Studio-and-Azure-Communication-Services
+tags:
+- AI
+- AI Agent
+- Azure
+- Azure Communication Services
+- Azure Functions
+- Azure Portal
+- Bot Development
+- Coding
+- Community
+- Conversation Design
+- Debugging
+- Email Automation
+- Function App
+- HTTP API Integration
+- M365 Integration
+- Microsoft Copilot Studio
+- Microsoft Teams
+- Python
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 farhanhussain presents a practical guide to building an AI-powered agent that sends emails using Microsoft Copilot Studio and Azure Communication Services, including backend setup, conversation flow, and troubleshooting.<!--excerpt_end-->
 
 # Build an AI Email Agent with Microsoft Copilot Studio and Azure Communication Services

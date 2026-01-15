@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Effortless Extension Migration in Visual Studio 2026: Modern Compatibility Model for Developers"
-description: "This article introduces Visual Studio 2026’s new extension compatibility model, which eliminates manual upgrades for most extensions and streamlines the migration process for extension developers. The post explains key changes to vsixmanifest handling, details new principles for extension stability, and provides guidance for both extension users and developers on taking advantage of these modern improvements."
-author: "Tina Schrepfer (LI)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Effortless Extension Migration in Visual Studio 2026: Modern Compatibility Model for Developers'
+author: Tina Schrepfer (LI)
+canonical_url: https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-21 14:00:36 +00:00
-permalink: "/2025-10-21-Effortless-Extension-Migration-in-Visual-Studio-2026-Modern-Compatibility-Model-for-Developers.html"
-categories: ["Coding"]
-tags: ["Additive APIs", "API Compatibility", "Backward Compatibility", "Coding", "Developer Experience", "Developer Tools", "Extensibility", "Extension Development", "Extension Migration", "Extensions", "IDE", "Marketplace", "Microsoft", "MSI Installers", "News", "VisualStudio.Extensibility", "VS", "VSIX", "Vsixmanifest"]
-tags_normalized: ["additive apis", "api compatibility", "backward compatibility", "coding", "developer experience", "developer tools", "extensibility", "extension development", "extension migration", "extensions", "ide", "marketplace", "microsoft", "msi installers", "news", "visualstudiodotextensibility", "vs", "vsix", "vsixmanifest"]
+permalink: /coding/news/Effortless-Extension-Migration-in-Visual-Studio-2026-Modern-Compatibility-Model-for-Developers
+tags:
+- Additive APIs
+- API Compatibility
+- Backward Compatibility
+- Coding
+- Developer Experience
+- Developer Tools
+- Extensibility
+- Extension Development
+- Extension Migration
+- Extensions
+- IDE
+- Marketplace
+- Microsoft
+- MSI Installers
+- News
+- VisualStudio.Extensibility
+- VS
+- VSIX
+- Vsixmanifest
+section_names:
+- coding
 ---
-
 Tina Schrepfer presents an overview of the new extension compatibility model in Visual Studio 2026, easing migration for extension developers and users.<!--excerpt_end-->
 
 # Effortless Extension Migration in Visual Studio 2026: Modern Compatibility Model for Developers

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "The Signals Loop: Fine-Tuning for World-Class AI Apps and Agents"
-description: "This article explores the shift toward autonomous AI workflows powered by continuous learning and real-time feedback loops, known as the 'signals loop.' Highlighting real-world examples like Dragon Copilot and GitHub Copilot, it explains fine-tuning strategies, architecture evolution, and the pivotal role played by Azure AI Foundry in building adaptive AI solutions and agents."
-author: "Asha Sharma and Rolf Harms"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'The Signals Loop: Fine-Tuning for World-Class AI Apps and Agents'
+author: Asha Sharma and Rolf Harms
+canonical_url: https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-21 15:00:00 +00:00
-permalink: "/2025-10-21-The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML"]
-tags: ["Agent Design", "AI", "AI + Machine Learning", "AI Agents", "Autonomous Workflows", "Azure", "Azure AI Foundry", "Azure OpenAI", "Cloud AI", "Compliance", "Continuous Learning", "Distillation", "Dragon Copilot", "Feedback Loops", "Fine Tuning", "GitHub Copilot", "LLM Architecture", "LoRA", "ML", "Model Evaluation", "News", "Open Source Models", "Productivity", "Real Time Telemetry", "Reinforcement Learning", "Signals Loop"]
-tags_normalized: ["agent design", "ai", "ai plus machine learning", "ai agents", "autonomous workflows", "azure", "azure ai foundry", "azure openai", "cloud ai", "compliance", "continuous learning", "distillation", "dragon copilot", "feedback loops", "fine tuning", "github copilot", "llm architecture", "lora", "ml", "model evaluation", "news", "open source models", "productivity", "real time telemetry", "reinforcement learning", "signals loop"]
+permalink: /github-copilot/news/The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents
+tags:
+- Agent Design
+- AI
+- AI + Machine Learning
+- AI Agents
+- Autonomous Workflows
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Cloud AI
+- Compliance
+- Continuous Learning
+- Distillation
+- Dragon Copilot
+- Feedback Loops
+- Fine Tuning
+- GitHub Copilot
+- LLM Architecture
+- LoRA
+- ML
+- Model Evaluation
+- News
+- Open Source Models
+- Productivity
+- Real Time Telemetry
+- Reinforcement Learning
+- Signals Loop
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
 ---
-
 Asha Sharma and Rolf Harms detail how signals loops, fine-tuning, and continuous feedback drive world-class AI apps and agents—exploring practical insights from Dragon Copilot, GitHub Copilot, and Azure AI Foundry.<!--excerpt_end-->
 
 # The Signals Loop: Fine-Tuning for World-Class AI Apps and Agents

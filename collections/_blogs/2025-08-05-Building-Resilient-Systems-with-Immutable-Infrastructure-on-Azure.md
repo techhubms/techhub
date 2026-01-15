@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building Resilient Systems with Immutable Infrastructure on Azure"
-description: "This blog post by Dellenny dives into the concept of immutable infrastructure within modern DevOps and cloud-native environments, using Azure as the primary platform. It breaks down the differences between mutable and immutable approaches, outlines key benefits, and provides actionable steps for implementing immutable infrastructure on Azure using tools such as ARM templates, Bicep, Terraform, VM Scale Sets, and Azure DevOps Pipelines. The post illustrates workflow examples, automation strategies, and cloud services involved, highlighting how adopting this pattern can improve consistency, auditability, and security in enterprise-grade cloud systems."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Building Resilient Systems with Immutable Infrastructure on Azure
+author: Dellenny
+canonical_url: https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-05 09:46:27 +00:00
-permalink: "/2025-08-05-Building-Resilient-Systems-with-Immutable-Infrastructure-on-Azure.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Architecture", "ARM Templates", "Automation", "Azure", "Azure Compute Gallery", "Azure DevOps", "Azure VM Scale Sets", "Bicep", "Blogs", "Blue Green Deployment", "CI/CD", "Coding", "Deployment Slots", "DevOps", "Image Builder", "Immutable Infrastructure", "Infra as Code", "Packer", "Rolling Upgrade", "Solution Architecture", "Terraform", "Virtual Machines"]
-tags_normalized: ["architecture", "arm templates", "automation", "azure", "azure compute gallery", "azure devops", "azure vm scale sets", "bicep", "blogs", "blue green deployment", "cislashcd", "coding", "deployment slots", "devops", "image builder", "immutable infrastructure", "infra as code", "packer", "rolling upgrade", "solution architecture", "terraform", "virtual machines"]
+permalink: /coding/blogs/Building-Resilient-Systems-with-Immutable-Infrastructure-on-Azure
+tags:
+- Architecture
+- ARM Templates
+- Automation
+- Azure
+- Azure Compute Gallery
+- Azure DevOps
+- Azure VM Scale Sets
+- Bicep
+- Blogs
+- Blue Green Deployment
+- CI/CD
+- Coding
+- Deployment Slots
+- DevOps
+- Image Builder
+- Immutable Infrastructure
+- Infra as Code
+- Packer
+- Rolling Upgrade
+- Solution Architecture
+- Terraform
+- Virtual Machines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Dellenny presents a practical guide to adopting immutable infrastructure on Azure, detailing the steps, best practices, and tooling for reliable cloud deployments with DevOps workflows.<!--excerpt_end-->
 
 # Building Resilient Systems with Immutable Infrastructure on Azure

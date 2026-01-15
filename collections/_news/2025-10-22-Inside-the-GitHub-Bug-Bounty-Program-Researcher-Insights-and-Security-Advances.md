@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Inside the GitHub Bug Bounty Program: Researcher Insights and Security Advances"
-description: "This article spotlights a top security researcher participating in GitHub’s Bug Bounty Program, focusing on their methodologies for discovering vulnerabilities—including injection flaws and supply chain security gaps—within GitHub and related platforms. It highlights the evolution of GitHub’s proactive security measures, the importance of collaborative vulnerability research, and how AI-powered features like GitHub Copilot increase the focus on secure development. The post details tools, workflows, and advice for those interested in vulnerability research and bug bounty programs."
-author: "Shilpa Kumari"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/top-security-researcher-shares-their-bug-bounty-process/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Inside the GitHub Bug Bounty Program: Researcher Insights and Security Advances'
+author: Shilpa Kumari
+canonical_url: https://github.blog/security/top-security-researcher-shares-their-bug-bounty-process/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-22 16:00:00 +00:00
-permalink: "/2025-10-22-Inside-the-GitHub-Bug-Bounty-Program-Researcher-Insights-and-Security-Advances.html"
-categories: ["DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "Application Security", "Bug Bounty", "Cybersecurity", "Cybersecurity Awareness Month", "DevOps", "DevOps Security", "GitHub", "GitHub Copilot", "GitHub Security", "Injection Vulnerabilities", "Logical Flaws", "News", "Security", "Security Engineering", "Security Research", "Security Tooling", "Software Vulnerabilities", "Supply Chain Security", "Vulnerability Research", "Web Application Security"]
-tags_normalized: ["ai", "ai security", "application security", "bug bounty", "cybersecurity", "cybersecurity awareness month", "devops", "devops security", "github", "github copilot", "github security", "injection vulnerabilities", "logical flaws", "news", "security", "security engineering", "security research", "security tooling", "software vulnerabilities", "supply chain security", "vulnerability research", "web application security"]
+permalink: /github-copilot/news/Inside-the-GitHub-Bug-Bounty-Program-Researcher-Insights-and-Security-Advances
+tags:
+- AI
+- AI Security
+- Application Security
+- Bug Bounty
+- Cybersecurity
+- Cybersecurity Awareness Month
+- DevOps
+- DevOps Security
+- GitHub
+- GitHub Copilot
+- GitHub Security
+- Injection Vulnerabilities
+- Logical Flaws
+- News
+- Security
+- Security Engineering
+- Security Research
+- Security Tooling
+- Software Vulnerabilities
+- Supply Chain Security
+- Vulnerability Research
+- Web Application Security
+section_names:
+- devops
+- github-copilot
+- security
 ---
-
 Shilpa Kumari highlights @dev-bio, a top researcher in GitHub’s Bug Bounty Program, exploring their process for vulnerability discovery, the importance of security research, and the evolving landscape with AI-powered tools like GitHub Copilot.<!--excerpt_end-->
 
 # Inside the GitHub Bug Bounty Program: Researcher Insights and Security Advances

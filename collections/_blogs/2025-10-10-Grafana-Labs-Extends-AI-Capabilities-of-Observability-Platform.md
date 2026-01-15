@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "Grafana Labs Extends AI Capabilities of Observability Platform"
-description: "This article by Mike Vizard details recent AI-powered enhancements to Grafana Labs' observability platform, as announced at ObservabilityCON 2025. It covers the release of Grafana Assistant, an AI agent for query generation and incident management, along with new features like Adaptive Traces, compliance options, and increased cloud integration capabilities, all aimed at streamlining IT monitoring, analytics, and root cause investigation for diverse enterprise environments."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Grafana Labs Extends AI Capabilities of Observability Platform
+author: Mike Vizard
+canonical_url: https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-10 10:02:58 +00:00
-permalink: "/2025-10-10-Grafana-Labs-Extends-AI-Capabilities-of-Observability-Platform.html"
-categories: ["AI", "DevOps"]
-tags: ["Adaptive Profiles", "Adaptive Traces", "AI", "AI Driven Observability", "AI For IT Operations", "AI in DevOps", "AI Incident Management", "AI Observability", "AIOps", "Blogs", "Bring Your Own Cloud", "BYOC", "Cloud Compliance", "Dashboard Automation", "Democratizing Observability", "DevOps", "DevOps Tooling", "DoD IL5", "FedRAMP", "Grafana Assistant", "Grafana Cloud Knowledge Graph", "Grafana ObservabilityCON", "Incident Management", "Incident Remediation AI", "IT Monitoring", "IT Root Cause Analysis", "LogQL", "OpenTelemetry", "PromQL", "RCA Workbench", "Root Cause Analysis", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry Data Analysis", "TraceQL"]
-tags_normalized: ["adaptive profiles", "adaptive traces", "ai", "ai driven observability", "ai for it operations", "ai in devops", "ai incident management", "ai observability", "aiops", "blogs", "bring your own cloud", "byoc", "cloud compliance", "dashboard automation", "democratizing observability", "devops", "devops tooling", "dod il5", "fedramp", "grafana assistant", "grafana cloud knowledge graph", "grafana observabilitycon", "incident management", "incident remediation ai", "it monitoring", "it root cause analysis", "logql", "opentelemetry", "promql", "rca workbench", "root cause analysis", "social facebook", "social linkedin", "social x", "telemetry data analysis", "traceql"]
+permalink: /ai/blogs/Grafana-Labs-Extends-AI-Capabilities-of-Observability-Platform
+tags:
+- Adaptive Profiles
+- Adaptive Traces
+- AI
+- AI Driven Observability
+- AI For IT Operations
+- AI in DevOps
+- AI Incident Management
+- AI Observability
+- AIOps
+- Blogs
+- Bring Your Own Cloud
+- BYOC
+- Cloud Compliance
+- Dashboard Automation
+- Democratizing Observability
+- DevOps
+- DevOps Tooling
+- DoD IL5
+- FedRAMP
+- Grafana Assistant
+- Grafana Cloud Knowledge Graph
+- Grafana ObservabilityCON
+- Incident Management
+- Incident Remediation AI
+- IT Monitoring
+- IT Root Cause Analysis
+- LogQL
+- OpenTelemetry
+- PromQL
+- RCA Workbench
+- Root Cause Analysis
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry Data Analysis
+- TraceQL
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard reports on the expansion of AI-driven tools within Grafana Labs' observability platform, highlighting the new Grafana Assistant and other innovations designed to empower IT professionals and simplify incident response.<!--excerpt_end-->
 
 # Grafana Labs Extends AI Capabilities of Observability Platform

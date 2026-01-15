@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Expanding Global Reach and Enhanced Observability with Oracle Database@Azure"
-description: "This article details the expanded regional availability of Oracle Database@Azure, now accessible in 23 regions including Germany North. It also introduces enhanced observability features for Oracle Exadata VM Clusters and Infrastructure, enabling organizations to leverage Azure Monitor and Microsoft Sentinel for unified monitoring, security, compliance, and streamlined operations in hybrid cloud environments."
-author: "bhbandam"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Expanding Global Reach and Enhanced Observability with Oracle Database@Azure
+author: bhbandam
+canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 22:42:37 +00:00
-permalink: "/2025-08-14-Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Monitor", "Azure Regions", "Azure Security Center", "Cloud Scalability", "Community", "Compliance", "Exadata", "Germany North", "Hybrid Cloud", "Kusto Query Language", "Log Analytics", "Microsoft Sentinel", "Observability", "Operational Monitoring", "Oracle Database@Azure", "Security", "Security Information And Event Management"]
-tags_normalized: ["azure", "azure monitor", "azure regions", "azure security center", "cloud scalability", "community", "compliance", "exadata", "germany north", "hybrid cloud", "kusto query language", "log analytics", "microsoft sentinel", "observability", "operational monitoring", "oracle databaseatazure", "security", "security information and event management"]
+permalink: /azure/community/Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure
+tags:
+- Azure
+- Azure Monitor
+- Azure Regions
+- Azure Security Center
+- Cloud Scalability
+- Community
+- Compliance
+- Exadata
+- Germany North
+- Hybrid Cloud
+- Kusto Query Language
+- Log Analytics
+- Microsoft Sentinel
+- Observability
+- Operational Monitoring
+- Oracle Database@Azure
+- Security
+- Security Information And Event Management
+section_names:
+- azure
+- security
 ---
-
 bhbandam, co-authoring with Jeni Mattson, outlines new global regions and advanced monitoring capabilities for Oracle Database@Azure, showcasing how Azure Monitor and Microsoft Sentinel enhance operational visibility and security for enterprise deployments.<!--excerpt_end-->
 
 # Expanding Global Reach and Enhanced Observability with Oracle Database@Azure

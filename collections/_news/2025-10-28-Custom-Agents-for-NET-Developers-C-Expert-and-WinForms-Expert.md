@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Custom Agents for .NET Developers: C# Expert and WinForms Expert"
-description: "This article introduces experimental custom GitHub Copilot agents tailored for .NET developers: C# Expert and WinForms Expert. It details their specific features, guidance for integration, improvements they bring to the coding experience, and practical steps for usage within Visual Studio, VS Code, and the Copilot ecosystem."
-author: "Wendy Breiding (SHE/HER)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Custom Agents for .NET Developers: C# Expert and WinForms Expert'
+author: Wendy Breiding (SHE/HER)
+canonical_url: https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-28 22:05:00 +00:00
-permalink: "/2025-10-28-Custom-Agents-for-NET-Developers-C-Expert-and-WinForms-Expert.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agents", "AI", "Async Programming", "C#", "Coding", "Copilot", "Copilot CLI", "Custom Agents", "Designer File Protection", "Developer Tools", "Event Driven Programming", "GitHub Copilot", "MVP", "MVVM", "News", "TDD", "Unit Testing", "VS", "VS Code", "WinForms"]
-tags_normalized: ["dotnet", "agents", "ai", "async programming", "csharp", "coding", "copilot", "copilot cli", "custom agents", "designer file protection", "developer tools", "event driven programming", "github copilot", "mvp", "mvvm", "news", "tdd", "unit testing", "vs", "vs code", "winforms"]
+permalink: /github-copilot/news/Custom-Agents-for-NET-Developers-C-Expert-and-WinForms-Expert
+tags:
+- .NET
+- Agents
+- AI
+- Async Programming
+- C#
+- Coding
+- Copilot
+- Copilot CLI
+- Custom Agents
+- Designer File Protection
+- Developer Tools
+- Event Driven Programming
+- GitHub Copilot
+- MVP
+- MVVM
+- News
+- TDD
+- Unit Testing
+- VS
+- VS Code
+- WinForms
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Wendy Breiding presents experimental custom GitHub Copilot agents for .NET developers—C# Expert and WinForms Expert—designed to enhance code quality, architecture, and workflow in C# and WinForms projects.<!--excerpt_end-->
 
 # Custom Agents for .NET Developers: C# Expert and WinForms Expert

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Smarter AI Agents with Azure Managed Redis"
-description: "This session from Microsoft Ignite 2025 explores how Azure Managed Redis, Mem0, and Agent Framework enhance AI agent capabilities. The presentation covers transforming stateless AI agents into intelligent, collaborative systems using real-time data, persistent memory, and advanced agent orchestration. Attendees will learn about Redis's role in collaboration and semantic routing, Mem0’s provision of persistent context, and the Agent Framework's reasoning and planning features. Demos and practical use cases show the real-world potential for scalable, multi-agent AI solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9RwCgcYL-PQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Smarter AI Agents with Azure Managed Redis
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=9RwCgcYL-PQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:58:08 +00:00
-permalink: "/2025-11-20-Smarter-AI-Agents-with-Azure-Managed-Redis.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Framework", "AI", "AI Agents", "Azure", "Azure Managed Redis", "Cache Management", "Knowledge Management", "MCP Server", "Mem0", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Persistent Memory", "Real Time Collaboration", "Semantic Routing", "Session Persistence", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agent framework", "ai", "ai agents", "azure", "azure managed redis", "cache management", "knowledge management", "mcp server", "mem0", "microsoft ignite", "msignite", "multi agent systems", "persistent memory", "real time collaboration", "semantic routing", "session persistence", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Smarter-AI-Agents-with-Azure-Managed-Redis
+tags:
+- Agent Framework
+- AI
+- AI Agents
+- Azure
+- Azure Managed Redis
+- Cache Management
+- Knowledge Management
+- MCP Server
+- Mem0
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- Persistent Memory
+- Real Time Collaboration
+- Semantic Routing
+- Session Persistence
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Presented by Simon Brown, Shruti Pathak, Georgios Theologou, and Mark Weitzel at Microsoft Ignite, this session demonstrates how Azure Managed Redis and supporting frameworks enable smarter, collaborative AI agents.<!--excerpt_end-->
 
 {% youtube 9RwCgcYL-PQ %}

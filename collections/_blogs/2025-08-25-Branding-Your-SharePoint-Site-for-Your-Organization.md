@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Branding Your SharePoint Site for Your Organization"
-description: "This guide walks you through step-by-step instructions for branding your SharePoint site, including adding your company logo, customizing themes and layouts, and ensuring consistency and accessibility. Learn best practices for designing a digital workspace that reinforces your organization's culture and identity, driving user adoption and productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/branding-your-sharepoint-site-for-your-organization/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Branding Your SharePoint Site for Your Organization
+author: Dellenny
+canonical_url: https://dellenny.com/branding-your-sharepoint-site-for-your-organization/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-25 10:06:56 +00:00
-permalink: "/2025-08-25-Branding-Your-SharePoint-Site-for-Your-Organization.html"
-categories: ["Coding"]
-tags: ["Accessibility", "Blogs", "Branding", "Coding", "Company Logo", "Employee Experience", "Hub Sites", "Intranet", "Microsoft 365", "Navigation", "SharePoint", "SharePoint Online", "Site Customization", "Site Templates", "Themes", "User Adoption", "Web Parts"]
-tags_normalized: ["accessibility", "blogs", "branding", "coding", "company logo", "employee experience", "hub sites", "intranet", "microsoft 365", "navigation", "sharepoint", "sharepoint online", "site customization", "site templates", "themes", "user adoption", "web parts"]
+permalink: /coding/blogs/Branding-Your-SharePoint-Site-for-Your-Organization
+tags:
+- Accessibility
+- Blogs
+- Branding
+- Coding
+- Company Logo
+- Employee Experience
+- Hub Sites
+- Intranet
+- Microsoft 365
+- Navigation
+- SharePoint
+- SharePoint Online
+- Site Customization
+- Site Templates
+- Themes
+- User Adoption
+- Web Parts
+section_names:
+- coding
 ---
-
 Dellenny provides a practical, step-by-step guide to branding your SharePoint site, covering customization, design best practices, and tips for creating a unified digital workspace that reflects your organization’s identity.<!--excerpt_end-->
 
 # Branding Your SharePoint Site for Your Organization

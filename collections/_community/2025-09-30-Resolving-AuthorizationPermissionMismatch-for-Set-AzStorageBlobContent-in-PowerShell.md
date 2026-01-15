@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Resolving AuthorizationPermissionMismatch for Set-AzStorageBlobContent in PowerShell"
-description: "This discussion explores why uploading a file to an Azure Storage Account works in the browser but fails with the Set-AzStorageBlobContent PowerShell command, resulting in an AuthorizationPermissionMismatch error. The post examines permission differences, role assignments, and troubleshooting steps specific to Azure Storage authentication and PowerShell integration."
-author: "Petri-X"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Resolving AuthorizationPermissionMismatch for Set-AzStorageBlobContent in PowerShell
+author: Petri-X
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 08:04:55 +00:00
-permalink: "/2025-09-30-Resolving-AuthorizationPermissionMismatch-for-Set-AzStorageBlobContent-in-PowerShell.html"
-categories: ["Azure"]
-tags: ["Access Control", "AuthorizationPermissionMismatch", "Azure", "Azure CLI", "Azure Data Access", "Azure Portal", "Azure Roles", "Azure Storage", "Azure Storage Account", "Blob Upload", "Community", "HTTP 403", "PowerShell", "RBAC", "Role Assignments", "Set AzStorageBlobContent", "Storage Permissions"]
-tags_normalized: ["access control", "authorizationpermissionmismatch", "azure", "azure cli", "azure data access", "azure portal", "azure roles", "azure storage", "azure storage account", "blob upload", "community", "http 403", "powershell", "rbac", "role assignments", "set azstorageblobcontent", "storage permissions"]
+permalink: /azure/community/Resolving-AuthorizationPermissionMismatch-for-Set-AzStorageBlobContent-in-PowerShell
+tags:
+- Access Control
+- AuthorizationPermissionMismatch
+- Azure
+- Azure CLI
+- Azure Data Access
+- Azure Portal
+- Azure Roles
+- Azure Storage
+- Azure Storage Account
+- Blob Upload
+- Community
+- HTTP 403
+- PowerShell
+- RBAC
+- Role Assignments
+- Set AzStorageBlobContent
+- Storage Permissions
+section_names:
+- azure
 ---
-
 Petri-X reports an issue where uploading to Azure Storage works in the browser but fails via Set-AzStorageBlobContent in PowerShell, highlighting a permissions mismatch.<!--excerpt_end-->
 
 # Troubleshooting Authorization Errors with Set-AzStorageBlobContent in PowerShell

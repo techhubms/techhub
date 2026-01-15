@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Trail Bike: A New Cycling App Prototype Using .NET MAUI"
-description: "Rywent shares an early-stage project for a cycling route planner app built with C# and the .NET MAUI framework. The post outlines the concept, highlights planned features like route generation and social sharing, and discusses intentions to learn MAUI during the development process. Community feedback and ideas are welcome as the project is still in its UI prototyping stage."
-author: "Rywent"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'Trail Bike: A New Cycling App Prototype Using .NET MAUI'
+author: Rywent
+canonical_url: https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-05 14:40:13 +00:00
-permalink: "/2025-08-05-Trail-Bike-A-New-Cycling-App-Prototype-Using-NET-MAUI.html"
-categories: ["Coding"]
-tags: ["App Prototyping", "C#", "Coding", "Community", "Community Projects", "Cross Platform Development", "Cycling App", "MAUI", "Mobile App Development", "Programming", "Social Network Features", "UI Design"]
-tags_normalized: ["app prototyping", "csharp", "coding", "community", "community projects", "cross platform development", "cycling app", "maui", "mobile app development", "programming", "social network features", "ui design"]
+permalink: /coding/community/Trail-Bike-A-New-Cycling-App-Prototype-Using-NET-MAUI
+tags:
+- App Prototyping
+- C#
+- Coding
+- Community
+- Community Projects
+- Cross Platform Development
+- Cycling App
+- MAUI
+- Mobile App Development
+- Programming
+- Social Network Features
+- UI Design
+section_names:
+- coding
 ---
-
 Rywent introduces a prototype cycling app built with C# and MAUI, inviting feedback from the development community as he explores MAUI for cross-platform application design.<!--excerpt_end-->
 
 # Trail Bike: A New Cycling App Prototype Using .NET MAUI

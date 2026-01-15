@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Scaling Kubernetes Securely and Reliably with AKS"
-description: "This Microsoft Ignite session explores real-world strategies for managing large-scale Kubernetes clusters using Azure Kubernetes Service (AKS). It covers best practices for reliability, security, and efficiency, including Azure Kubernetes Fleet Manager, smart AI scheduling, and methods for simplifying multi-cluster operations in hybrid and edge environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=c0WqMuVYfmk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Scaling Kubernetes Securely and Reliably with AKS
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=c0WqMuVYfmk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:22:46 +00:00
-permalink: "/2025-11-21-Scaling-Kubernetes-Securely-and-Reliably-with-AKS.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Workloads", "AKS", "Azure", "Azure Fleet Manager", "Cloud Operations", "Cluster Management", "Edge Computing", "Enterprise Security", "Hybrid Cloud", "Infrastructure", "InnovatewithAzureAIappsandagents", "Kubernetes", "Microsoft Ignite", "MSIgnite", "Multi Cluster", "Scalability", "Scheduling", "Security", "Videos"]
-tags_normalized: ["ai", "ai workloads", "aks", "azure", "azure fleet manager", "cloud operations", "cluster management", "edge computing", "enterprise security", "hybrid cloud", "infrastructure", "innovatewithazureaiappsandagents", "kubernetes", "microsoft ignite", "msignite", "multi cluster", "scalability", "scheduling", "security", "videos"]
+permalink: /ai/videos/Scaling-Kubernetes-Securely-and-Reliably-with-AKS
+tags:
+- AI
+- AI Workloads
+- AKS
+- Azure
+- Azure Fleet Manager
+- Cloud Operations
+- Cluster Management
+- Edge Computing
+- Enterprise Security
+- Hybrid Cloud
+- Infrastructure
+- InnovatewithAzureAIappsandagents
+- Kubernetes
+- Microsoft Ignite
+- MSIgnite
+- Multi Cluster
+- Scalability
+- Scheduling
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents practical lessons on operating large Kubernetes clusters with AKS, featuring security, scaling, and cluster management tips from Microsoft Ignite 2025 speakers Brendan Burns, Jorge Palma, and Durga Rachapudi.<!--excerpt_end-->
 
 {% youtube c0WqMuVYfmk %}

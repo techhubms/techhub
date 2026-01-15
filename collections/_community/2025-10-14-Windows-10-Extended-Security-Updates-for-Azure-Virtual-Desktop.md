@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Windows 10 Extended Security Updates for Azure Virtual Desktop"
-description: "This article by ivaylo_ivanov describes the Windows 10 lifecycle for Azure Virtual Desktop environments as Windows 10 approaches its end of support date. The guide explains extended security update (ESU) eligibility, deployment, and lifecycle differences for session host images, and outlines support considerations for Microsoft 365 Apps and migration to Windows 11."
-author: "ivaylo_ivanov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Windows 10 Extended Security Updates for Azure Virtual Desktop
+author: ivaylo_ivanov
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 22:00:00 +00:00
-permalink: "/2025-10-14-Windows-10-Extended-Security-Updates-for-Azure-Virtual-Desktop.html"
-categories: ["Azure", "Security"]
-tags: ["Autopatch", "Azure", "Azure Marketplace", "Azure Virtual Desktop", "Community", "Cybersecurity", "ESU", "Extended Security Updates", "Microsoft 365 Apps", "Operating System Support", "Security", "Session Hosts", "Windows 10", "Windows 11 Migration", "Windows Lifecycle", "Windows Update"]
-tags_normalized: ["autopatch", "azure", "azure marketplace", "azure virtual desktop", "community", "cybersecurity", "esu", "extended security updates", "microsoft 365 apps", "operating system support", "security", "session hosts", "windows 10", "windows 11 migration", "windows lifecycle", "windows update"]
+permalink: /azure/community/Windows-10-Extended-Security-Updates-for-Azure-Virtual-Desktop
+tags:
+- Autopatch
+- Azure
+- Azure Marketplace
+- Azure Virtual Desktop
+- Community
+- Cybersecurity
+- ESU
+- Extended Security Updates
+- Microsoft 365 Apps
+- Operating System Support
+- Security
+- Session Hosts
+- Windows 10
+- Windows 11 Migration
+- Windows Lifecycle
+- Windows Update
+section_names:
+- azure
+- security
 ---
-
 ivaylo_ivanov explains how Azure Virtual Desktop customers can handle Windows 10's end of support and leverage Extended Security Updates (ESU) for ongoing security and compliance in session host environments.<!--excerpt_end-->
 
 # Windows 10 Extended Security Updates for Azure Virtual Desktop

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Infrastructure as Code, Security Blind Spots, and the Messy Reality of DevOps"
-description: "This article by Marcin Wyszynski critically examines the real-world intersection between DevOps, infrastructure as code, and security practices. Drawing on deep experience in SRE and platform engineering, it explores the persistent challenges of audits, automation, human behavior, and AI within modern operations. The discussion addresses why well-intentioned processes often fail, highlights the dangers of hidden infrastructure risks, and offers tactical advice for building actionable, human-friendly security and automation strategies."
-author: "Marcin Wyszynski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/infrastructure-as-code-security-blind-spots-and-the-messy-reality-of-devops/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Infrastructure as Code, Security Blind Spots, and the Messy Reality of DevOps
+author: Marcin Wyszynski
+canonical_url: https://devops.com/infrastructure-as-code-security-blind-spots-and-the-messy-reality-of-devops/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-17 15:19:37 +00:00
-permalink: "/2025-10-17-Infrastructure-as-Code-Security-Blind-Spots-and-the-Messy-Reality-of-DevOps.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI in Security", "Audit Logging", "Automation", "Blogs", "Cloud Security", "Credential Management", "DevOps", "Federated Identity", "Human Factors", "IaC", "Incident Response", "Policy as Code", "Security", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "Techstrong Council", "Terraform", "Version Control"]
-tags_normalized: ["ai", "ai in security", "audit logging", "automation", "blogs", "cloud security", "credential management", "devops", "federated identity", "human factors", "iac", "incident response", "policy as code", "security", "social facebook", "social linkedin", "social x", "sre", "techstrong council", "terraform", "version control"]
+permalink: /ai/blogs/Infrastructure-as-Code-Security-Blind-Spots-and-the-Messy-Reality-of-DevOps
+tags:
+- AI
+- AI in Security
+- Audit Logging
+- Automation
+- Blogs
+- Cloud Security
+- Credential Management
+- DevOps
+- Federated Identity
+- Human Factors
+- IaC
+- Incident Response
+- Policy as Code
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE
+- Techstrong Council
+- Terraform
+- Version Control
+section_names:
+- ai
+- devops
+- security
 ---
-
 Marcin Wyszynski draws on years of infrastructure and reliability engineering experience to dissect the messy reality of DevOps and security, highlighting the challenges with audits, automation, and the human element.<!--excerpt_end-->
 
 # Infrastructure as Code, Security Blind Spots, and the Messy Reality of DevOps

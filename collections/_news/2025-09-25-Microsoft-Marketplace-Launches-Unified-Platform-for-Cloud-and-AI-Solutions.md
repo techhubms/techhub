@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Marketplace Launches Unified Platform for Cloud and AI Solutions"
-description: "This article introduces the new Microsoft Marketplace, a unified destination for cloud solutions, AI apps, and agent deployment. The marketplace merges Azure Marketplace and Microsoft AppSource to streamline discovery, purchase, and management of solutions across Azure, Microsoft 365, Dynamics 365, Power Platform, and Microsoft Security. Details include expansive partner integrations, industry-focused AI apps, procurement flexibility, and new features for partners and customers. The piece explains how organizations can leverage the Marketplace to accelerate innovation, increase operational efficiency, and scale AI adoption alongside trusted partners, with specific examples from Siemens and Mars Inc."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/09/25/introducing-microsoft-marketplace-thousands-of-solutions-millions-of-customers-one-marketplace/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Marketplace Launches Unified Platform for Cloud and AI Solutions
+author: stclarke
+canonical_url: https://blogs.microsoft.com/blog/2025/09/25/introducing-microsoft-marketplace-thousands-of-solutions-millions-of-customers-one-marketplace/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-25 14:13:11 +00:00
-permalink: "/2025-09-25-Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Apps", "Azure", "Azure AI Foundry", "Azure Marketplace", "Cloud Management", "Cloud Solutions", "Company News", "CSP Integration", "Dynamics 365", "Enterprise Solutions", "IT Procurement", "MCP", "Microsoft 365 Copilot", "Microsoft AppSource", "Microsoft Marketplace", "Microsoft Security", "News", "Partner Ecosystem", "Power Platform", "Private Offers"]
-tags_normalized: ["ai", "ai agents", "ai apps", "azure", "azure ai foundry", "azure marketplace", "cloud management", "cloud solutions", "company news", "csp integration", "dynamics 365", "enterprise solutions", "it procurement", "mcp", "microsoft 365 copilot", "microsoft appsource", "microsoft marketplace", "microsoft security", "news", "partner ecosystem", "power platform", "private offers"]
+permalink: /ai/news/Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions
+tags:
+- AI
+- AI Agents
+- AI Apps
+- Azure
+- Azure AI Foundry
+- Azure Marketplace
+- Cloud Management
+- Cloud Solutions
+- Company News
+- CSP Integration
+- Dynamics 365
+- Enterprise Solutions
+- IT Procurement
+- MCP
+- Microsoft 365 Copilot
+- Microsoft AppSource
+- Microsoft Marketplace
+- Microsoft Security
+- News
+- Partner Ecosystem
+- Power Platform
+- Private Offers
+section_names:
+- ai
+- azure
 ---
-
 stclarke presents the launch of Microsoft Marketplace: a revamped platform unifying cloud solutions, AI apps, and agents for organizations to accelerate AI transformation and streamline management via the Microsoft Cloud ecosystem.<!--excerpt_end-->
 
 # Microsoft Marketplace Launches Unified Platform for Cloud and AI Solutions

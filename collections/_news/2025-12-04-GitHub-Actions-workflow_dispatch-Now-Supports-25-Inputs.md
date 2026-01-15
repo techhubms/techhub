@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Actions workflow_dispatch Now Supports 25 Inputs"
-description: "This announcement highlights the increase of input parameters for GitHub Actions workflows triggered via the workflow_dispatch event. Previously capped at 10, users can now leverage up to 25 inputs, allowing for greater customization and flexibility when manually or programmatically triggering workflows. This update removes the need for common workarounds, simplifying workflow management for developers and DevOps teams who rely on parameterized automation pipelines."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Actions workflow_dispatch Now Supports 25 Inputs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-04 19:58:47 +00:00
-permalink: "/2025-12-04-GitHub-Actions-workflow_dispatch-Now-Supports-25-Inputs.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "CI/CD", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Improvement", "News", "Workflow API", "Workflow Dispatch", "Workflow Inputs", "Workflow Trigger"]
-tags_normalized: ["actions", "automation", "cislashcd", "continuous integration", "devops", "github", "github actions", "improvement", "news", "workflow api", "workflow dispatch", "workflow inputs", "workflow trigger"]
+permalink: /devops/news/GitHub-Actions-workflow_dispatch-Now-Supports-25-Inputs
+tags:
+- Actions
+- Automation
+- CI/CD
+- Continuous Integration
+- DevOps
+- GitHub
+- GitHub Actions
+- Improvement
+- News
+- Workflow API
+- Workflow Dispatch
+- Workflow Inputs
+- Workflow Trigger
+section_names:
+- devops
 ---
-
 Allison announces that GitHub Actions workflows triggered by workflow_dispatch now support up to 25 input parameters, resolving previous limitations and improving workflow flexibility for the DevOps community.<!--excerpt_end-->
 
 # GitHub Actions workflow_dispatch Now Supports 25 Inputs

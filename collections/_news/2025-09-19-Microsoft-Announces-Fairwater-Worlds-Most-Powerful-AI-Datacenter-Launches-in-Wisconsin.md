@@ -1,20 +1,42 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Microsoft Announces Fairwater: World's Most Powerful AI Datacenter Launches in Wisconsin"
-description: "Microsoft has unveiled Fairwater, an advanced AI datacenter in southeastern Wisconsin designed to deliver unprecedented compute power for AI development. Leveraging hundreds of thousands of NVIDIA GB200 GPUs, liquid cooling, and renewable energy, Fairwater is engineered for large-scale AI training and inference, raising the standards for sustainable and high-performance cloud infrastructure worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_if-intelligence-is-the-log-of-compute-it-activity-7374444167059468288-wxxV"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_if-intelligence-is-the-log-of-compute-it-activity-7374444167059468288-wxxV
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-19 01:19:00 +00:00
-permalink: "/2025-09-19-Microsoft-Announces-Fairwater-Worlds-Most-Powerful-AI-Datacenter-Launches-in-Wisconsin.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Datacenter", "AI Inference", "AI Training", "Azure", "Cloud Infrastructure", "Cluster Computing", "Company News", "Data Center Architecture", "Fairwater", "Global Scale", "GPU Fleet", "High Performance Computing", "LinkedIn Post", "Liquid Cooling", "Microsoft", "Model Training", "News", "NVIDIA GB200", "Renewable Energy", "RL Tuning", "Supercomputer", "Sustainability", "Wisconsin"]
-tags_normalized: ["ai", "ai datacenter", "ai inference", "ai training", "azure", "cloud infrastructure", "cluster computing", "company news", "data center architecture", "fairwater", "global scale", "gpu fleet", "high performance computing", "linkedin post", "liquid cooling", "microsoft", "model training", "news", "nvidia gb200", "renewable energy", "rl tuning", "supercomputer", "sustainability", "wisconsin"]
+permalink: /ai/news/Microsoft-Announces-Fairwater-Worlds-Most-Powerful-AI-Datacenter-Launches-in-Wisconsin
+tags:
+- AI
+- AI Datacenter
+- AI Inference
+- AI Training
+- Azure
+- Cloud Infrastructure
+- Cluster Computing
+- Company News
+- Data Center Architecture
+- Fairwater
+- Global Scale
+- GPU Fleet
+- High Performance Computing
+- LinkedIn Post
+- Liquid Cooling
+- Microsoft
+- Model Training
+- News
+- NVIDIA GB200
+- Renewable Energy
+- RL Tuning
+- Supercomputer
+- Sustainability
+- Wisconsin
+section_names:
+- ai
+- azure
 ---
-
 Microsoft, led by Satya Nadella, introduces Fairwater: a groundbreaking AI datacenter in Wisconsin engineered for exponential AI workloads with unmatched sustainability and compute capacity.<!--excerpt_end-->
 
 # Microsoft Announces Fairwater: World's Most Powerful AI Datacenter Launches in Wisconsin

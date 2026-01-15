@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Getting Started with GitHub Copilot CLI in the Terminal"
-description: "This article introduces GitHub Copilot CLI, detailing how developers can bring AI-powered code assistance directly into their terminal. It walks readers through installation, authentication, usage scenarios—including onboarding, environment checks, finding issues, and opening pull requests—and highlights advanced controls like permissions and MCP server extensions. Developers learn to streamline their command-line workflows using AI."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Getting Started with GitHub Copilot CLI in the Terminal
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-13 22:40:04 +00:00
-permalink: "/2025-10-13-Getting-Started-with-GitHub-Copilot-CLI-in-the-Terminal.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Assistant", "Automation", "CLI", "CLI Tools", "Coding", "Command Line Interface", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Installation", "MCP Server", "News", "Node.js", "npm", "Permissions", "Pull Requests", "Repository Onboarding", "Terminal"]
-tags_normalized: ["ai", "ai and ml", "ai assistant", "automation", "cli", "cli tools", "coding", "command line interface", "developer workflow", "github", "github copilot", "github copilot cli", "installation", "mcp server", "news", "nodedotjs", "npm", "permissions", "pull requests", "repository onboarding", "terminal"]
+permalink: /github-copilot/news/Getting-Started-with-GitHub-Copilot-CLI-in-the-Terminal
+tags:
+- AI
+- AI & ML
+- AI Assistant
+- Automation
+- CLI
+- CLI Tools
+- Coding
+- Command Line Interface
+- Developer Workflow
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- Installation
+- MCP Server
+- News
+- Node.js
+- npm
+- Permissions
+- Pull Requests
+- Repository Onboarding
+- Terminal
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Andrea Griffiths guides developers through using GitHub Copilot CLI, explaining how to install, authenticate, and bring powerful AI assistance to the command-line workflow.<!--excerpt_end-->
 
 # Getting Started with GitHub Copilot CLI in the Terminal

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Implementing Vector Search in Your Application with SQL Server 2025"
-description: "This episode explores advanced semantic search and vector search capabilities in SQL Server 2025. It goes beyond basic semantic search concepts by demonstrating how to implement vector search in applications, handle large-scale data ingestion, and leverage SQL Server and Azure SQL services for AI-driven app scenarios."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WBPFjYLIhsA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Implementing Vector Search in Your Application with SQL Server 2025
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=WBPFjYLIhsA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-27 15:57:28 +00:00
-permalink: "/2025-10-27-Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Applications", "Azure", "Azure SQL", "Cloud Computing", "Cloud Database", "Data Ingestion", "Data Platform", "Database Development", "Demo", "Dev", "Development", "Machine Learning", "Microsoft", "Microsoft Data Platform", "ML", "Performance Tuning", "Semantic Search", "SQL Functions", "SQL Server", "Tech", "Technology", "Transact SQL", "Vector Search", "Videos"]
-tags_normalized: ["ai", "ai applications", "azure", "azure sql", "cloud computing", "cloud database", "data ingestion", "data platform", "database development", "demo", "dev", "development", "machine learning", "microsoft", "microsoft data platform", "ml", "performance tuning", "semantic search", "sql functions", "sql server", "tech", "technology", "transact sql", "vector search", "videos"]
+permalink: /ai/videos/Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025
+tags:
+- AI
+- AI Applications
+- Azure
+- Azure SQL
+- Cloud Computing
+- Cloud Database
+- Data Ingestion
+- Data Platform
+- Database Development
+- Demo
+- Dev
+- Development
+- Machine Learning
+- Microsoft
+- Microsoft Data Platform
+- ML
+- Performance Tuning
+- Semantic Search
+- SQL Functions
+- SQL Server
+- Tech
+- Technology
+- Transact SQL
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Developer presents an MVP Edition episode featuring Joseph D'Antoni, demonstrating how to implement vector search using SQL Server 2025 and Azure SQL for AI-powered applications.<!--excerpt_end-->
 
 {% youtube WBPFjYLIhsA %}

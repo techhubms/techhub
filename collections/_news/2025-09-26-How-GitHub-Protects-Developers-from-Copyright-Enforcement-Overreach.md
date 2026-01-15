@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How GitHub Protects Developers from Copyright Enforcement Overreach"
-description: "This article explores GitHub's approach to DMCA takedown requests, its developer-first content moderation policies, and recent updates to transparency and acceptable use policy. It highlights the importance of ongoing legal developments, such as the U.S. Supreme Court's consideration in Cox v. Sony, and outlines GitHub's commitment to safeguarding developers, fostering collaboration, and maintaining transparent practices when responding to copyright claims and government requests."
-author: "Margaret Tucker"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub Protects Developers from Copyright Enforcement Overreach
+author: Margaret Tucker
+canonical_url: https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-26 17:06:17 +00:00
-permalink: "/2025-09-26-How-GitHub-Protects-Developers-from-Copyright-Enforcement-Overreach.html"
-categories: ["DevOps"]
-tags: ["Acceptable Use Policy", "Content Moderation", "Copyright", "Cox V. Sony", "Developer Community", "DevOps", "DMCA", "DMCA Takedown", "GitHub", "GitHub Policy", "Government Takedowns", "News", "News & Insights", "Open Source", "Platform Liability", "Policy", "Safe Harbor", "Terms Of Service", "Transparency", "U.S. Supreme Court"]
-tags_normalized: ["acceptable use policy", "content moderation", "copyright", "cox vdot sony", "developer community", "devops", "dmca", "dmca takedown", "github", "github policy", "government takedowns", "news", "news and insights", "open source", "platform liability", "policy", "safe harbor", "terms of service", "transparency", "udotsdot supreme court"]
+permalink: /devops/news/How-GitHub-Protects-Developers-from-Copyright-Enforcement-Overreach
+tags:
+- Acceptable Use Policy
+- Content Moderation
+- Copyright
+- Cox V. Sony
+- Developer Community
+- DevOps
+- DMCA
+- DMCA Takedown
+- GitHub
+- GitHub Policy
+- Government Takedowns
+- News
+- News & Insights
+- Open Source
+- Platform Liability
+- Policy
+- Safe Harbor
+- Terms Of Service
+- Transparency
+- U.S. Supreme Court
+section_names:
+- devops
 ---
-
 Margaret Tucker explains how GitHub's copyright, policy, and transparency practices aim to protect developers from overreach, impacts of DMCA takedowns, and evolving legal requirements.<!--excerpt_end-->
 
 # How GitHub Protects Developers from Copyright Enforcement Overreach

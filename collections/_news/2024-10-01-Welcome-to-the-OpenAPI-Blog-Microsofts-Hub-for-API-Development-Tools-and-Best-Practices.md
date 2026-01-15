@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Welcome to the OpenAPI Blog: Microsoft’s Hub for API Development, Tools, and Best Practices"
-description: "Darrel Miller introduces the new OpenAPI Blog at Microsoft, outlining its focus on OpenAPI tools, libraries, client code generation, design-first API development, and integrations with Azure, Power Platform, AI, and Copilot. The blog will provide updates, guidance, and news for developers building APIs with Microsoft technologies."
-author: "Darrel Miller"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/openapi/welcome-post/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/openapi/feed/"
+﻿---
+layout: post
+title: 'Welcome to the OpenAPI Blog: Microsoft’s Hub for API Development, Tools, and Best Practices'
+author: Darrel Miller
+canonical_url: https://devblogs.microsoft.com/openapi/welcome-post/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2024-10-01 18:48:35 +00:00
-permalink: "/2024-10-01-Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "API Center", "API Design", "API Development", "ASP.NET Core", "Azure", "Azure API Management", "Client Code Generation", "Coding", "Copilot Agents", "GitHub Copilot", "Hidi", "Kiota", "Microsoft", "News", "OpenAPI", "Power Platform", "Semantic Kernel", "TypeSpec"]
-tags_normalized: ["dotnet", "ai", "api center", "api design", "api development", "aspdotnet core", "azure", "azure api management", "client code generation", "coding", "copilot agents", "github copilot", "hidi", "kiota", "microsoft", "news", "openapi", "power platform", "semantic kernel", "typespec"]
+permalink: /github-copilot/news/Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices
+tags:
+- .NET
+- AI
+- API Center
+- API Design
+- API Development
+- ASP.NET Core
+- Azure
+- Azure API Management
+- Client Code Generation
+- Coding
+- Copilot Agents
+- GitHub Copilot
+- Hidi
+- Kiota
+- Microsoft
+- News
+- OpenAPI
+- Power Platform
+- Semantic Kernel
+- TypeSpec
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Darrel Miller launches the Microsoft OpenAPI Blog, detailing what developers can expect on topics including API design, OpenAPI tools, Azure integrations, AI plugins, Copilot agents, and more.<!--excerpt_end-->
 
 # Welcome to the OpenAPI Blog

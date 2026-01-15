@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Securing AI at Scale: Microsoft’s Latest Innovations in Agent, App, and Data Protection"
-description: "This session from Microsoft Ignite highlights new advancements in securing AI apps and agents. Covering enhancements in Defender, Purview, and Entra, the presentation focuses on identity, lifecycle controls, threat detection, governance, and the newly introduced Security Dashboard for AI. The content addresses security across Microsoft and third-party AI systems, managing agent sprawl, and global customer concerns about regulatory compliance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0k8OfUxmK4A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Securing AI at Scale: Microsoft’s Latest Innovations in Agent, App, and Data Protection'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=0k8OfUxmK4A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:26:49 +00:00
-permalink: "/2025-11-24-Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection.html"
-categories: ["AI", "Security"]
-tags: ["Agent 365", "AI", "AI Agents", "AI Governance", "AI Security", "Copilot Security", "Data Protection", "Defender", "Entra", "Identity Management", "Lifecycle Management", "Microsoft Ignite", "Microsoft Security", "MSIgnite", "Other", "Purview", "Regulatory Compliance", "Security", "Security Dashboard For AI", "Supply Chain Security", "Threat Detection", "Videos"]
-tags_normalized: ["agent 365", "ai", "ai agents", "ai governance", "ai security", "copilot security", "data protection", "defender", "entra", "identity management", "lifecycle management", "microsoft ignite", "microsoft security", "msignite", "other", "purview", "regulatory compliance", "security", "security dashboard for ai", "supply chain security", "threat detection", "videos"]
+permalink: /ai/videos/Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection
+tags:
+- Agent 365
+- AI
+- AI Agents
+- AI Governance
+- AI Security
+- Copilot Security
+- Data Protection
+- Defender
+- Entra
+- Identity Management
+- Lifecycle Management
+- Microsoft Ignite
+- Microsoft Security
+- MSIgnite
+- Other
+- Purview
+- Regulatory Compliance
+- Security
+- Security Dashboard For AI
+- Supply Chain Security
+- Threat Detection
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents a deep dive into advances for securing AI at scale, focusing on new controls for agents, applications, and data, as well as the introduction of the Security Dashboard for AI.<!--excerpt_end-->
 
 {% youtube 0k8OfUxmK4A %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "VS Code Private Marketplace: Enterprise Control Meets Developer Speed"
-description: "This announcement details the general availability of Private Marketplace for Visual Studio Code (VS Code). The video covers how enterprises can deploy Private Marketplace on Azure or other container hosts, curate internal and public extensions, enforce security, and streamline extension publishing using CI/CD pipelines, all while preserving developer productivity."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nQLdmy50cb0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Private Marketplace: Enterprise Control Meets Developer Speed'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=nQLdmy50cb0
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-18 16:15:06 +00:00
-permalink: "/2025-11-18-VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Azure", "Azure Deployment", "CI/CD", "Coding", "Compliance", "Copilot Enterprise", "Developer Tools", "DevOps", "Enterprise Extensions", "Extension Governance", "GitHub Integration", "Group Policy", "Security", "Security Policy", "Videos", "VS Code", "VS Code Private Marketplace"]
-tags_normalized: ["azure", "azure deployment", "cislashcd", "coding", "compliance", "copilot enterprise", "developer tools", "devops", "enterprise extensions", "extension governance", "github integration", "group policy", "security", "security policy", "videos", "vs code", "vs code private marketplace"]
+permalink: /coding/videos/VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed
+tags:
+- Azure
+- Azure Deployment
+- CI/CD
+- Coding
+- Compliance
+- Copilot Enterprise
+- Developer Tools
+- DevOps
+- Enterprise Extensions
+- Extension Governance
+- GitHub Integration
+- Group Policy
+- Security
+- Security Policy
+- Videos
+- VS Code
+- VS Code Private Marketplace
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Visual Studio Code’s team introduces Private Marketplace general availability, showing developers and IT how to deploy, secure, and govern VS Code extensions in enterprise environments.<!--excerpt_end-->
 
 {% youtube nQLdmy50cb0 %}

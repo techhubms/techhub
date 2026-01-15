@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Delivering Web Applications Over IPv6 Using Azure Networking Services"
-description: "This article by Marc de Droog provides a detailed guide for Microsoft Azure practitioners on enabling and architecting IPv6 delivery for public-facing web applications. It covers Azure's support for dual-stack networks, step-by-step deployment using External Load Balancer, Global Load Balancer, Application Gateway, Traffic Manager, and Front Door, including multi-region, DNS, security, and Private Link integration. Technical caveats, architectural decisions, and deployment strategies are explained for real-world scenarios."
-author: "Marc de Droog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Delivering Web Applications Over IPv6 Using Azure Networking Services
+author: Marc de Droog
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 13:57:25 +00:00
-permalink: "/2025-11-14-Delivering-Web-Applications-Over-IPv6-Using-Azure-Networking-Services.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Anycast", "Application Gateway", "Azure", "Azure DDoS Protection", "Azure DNS", "Azure Front Door", "Azure Virtual Network", "Cloud Networking", "Community", "DevOps", "Dual Stack Networking", "ExpressRoute", "External Load Balancer", "Global Load Balancer", "IPv4 Exhaustion", "IPv6", "Layer 4 Load Balancer", "Layer 7 Load Balancer", "Network Security Group", "Private Link", "Public IP", "Security", "Traffic Manager", "VNET Peering", "Web Application Firewall"]
-tags_normalized: ["anycast", "application gateway", "azure", "azure ddos protection", "azure dns", "azure front door", "azure virtual network", "cloud networking", "community", "devops", "dual stack networking", "expressroute", "external load balancer", "global load balancer", "ipv4 exhaustion", "ipv6", "layer 4 load balancer", "layer 7 load balancer", "network security group", "private link", "public ip", "security", "traffic manager", "vnet peering", "web application firewall"]
+permalink: /azure/community/Delivering-Web-Applications-Over-IPv6-Using-Azure-Networking-Services
+tags:
+- Anycast
+- Application Gateway
+- Azure
+- Azure DDoS Protection
+- Azure DNS
+- Azure Front Door
+- Azure Virtual Network
+- Cloud Networking
+- Community
+- DevOps
+- Dual Stack Networking
+- ExpressRoute
+- External Load Balancer
+- Global Load Balancer
+- IPv4 Exhaustion
+- IPv6
+- Layer 4 Load Balancer
+- Layer 7 Load Balancer
+- Network Security Group
+- Private Link
+- Public IP
+- Security
+- Traffic Manager
+- VNET Peering
+- Web Application Firewall
+section_names:
+- azure
+- devops
+- security
 ---
-
 Marc de Droog expertly walks through practical strategies for delivering Azure-hosted web applications over IPv6, detailing key networking services, deployment steps, and architectural considerations for scalable, future-ready, and secure global access.<!--excerpt_end-->
 
 # Delivering Web Applications Over IPv6 Using Azure Networking Services

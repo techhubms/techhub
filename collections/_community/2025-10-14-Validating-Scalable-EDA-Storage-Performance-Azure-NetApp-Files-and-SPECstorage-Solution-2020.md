@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Validating Scalable EDA Storage Performance: Azure NetApp Files and SPECstorage Solution 2020"
-description: "This in-depth post explores how Azure NetApp Files meets the stringent demands of Electronic Design Automation (EDA) by delivering robust, scalable, and high-performance storage, validated through SPECstorage Solution 2020 EDA_BLENDED benchmarks. It addresses cost optimization, global collaboration, operational simplicity, and provides real benchmark data and methodology for semiconductor and HPC teams seeking to run large-scale simulations on Azure."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba-p/4459517"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Validating Scalable EDA Storage Performance: Azure NetApp Files and SPECstorage Solution 2020'
+author: GeertVanTeylingen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba-p/4459517
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 01:37:14 +00:00
-permalink: "/2025-10-14-Validating-Scalable-EDA-Storage-Performance-Azure-NetApp-Files-and-SPECstorage-Solution-2020.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Architecture", "Azure NetApp Files", "Benchmarking", "Cloud File Storage", "Cloud Storage", "Community", "Data Management", "DevOps", "Electronic Design Automation", "Global Collaboration", "High Performance Computing", "HPC", "Hybrid Cloud", "IaC", "Latency Optimization", "Performance Engineering", "Resilience", "Scalability", "SPECstorage Solution", "Storage Optimization", "Virtual Networks"]
-tags_normalized: ["azure", "azure architecture", "azure netapp files", "benchmarking", "cloud file storage", "cloud storage", "community", "data management", "devops", "electronic design automation", "global collaboration", "high performance computing", "hpc", "hybrid cloud", "iac", "latency optimization", "performance engineering", "resilience", "scalability", "specstorage solution", "storage optimization", "virtual networks"]
+permalink: /azure/community/Validating-Scalable-EDA-Storage-Performance-Azure-NetApp-Files-and-SPECstorage-Solution-2020
+tags:
+- Azure
+- Azure Architecture
+- Azure NetApp Files
+- Benchmarking
+- Cloud File Storage
+- Cloud Storage
+- Community
+- Data Management
+- DevOps
+- Electronic Design Automation
+- Global Collaboration
+- High Performance Computing
+- HPC
+- Hybrid Cloud
+- IaC
+- Latency Optimization
+- Performance Engineering
+- Resilience
+- Scalability
+- SPECstorage Solution
+- Storage Optimization
+- Virtual Networks
+section_names:
+- azure
+- devops
 ---
-
 GeertVanTeylingen presents a thorough analysis of how Azure NetApp Files powers electronic design automation (EDA) with scalable, high-performance, and globally distributed cloud storage, validated via SPECstorage Solution 2020 benchmarks.<!--excerpt_end-->
 
 # Validating Scalable EDA Storage Performance: Azure NetApp Files and SPECstorage Solution 2020

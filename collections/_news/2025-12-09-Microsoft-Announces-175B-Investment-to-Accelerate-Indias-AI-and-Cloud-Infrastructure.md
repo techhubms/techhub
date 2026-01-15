@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Announces $17.5B Investment to Accelerate India's AI and Cloud Infrastructure"
-description: "This news post outlines Microsoft’s historic $17.5 billion commitment to expand hyperscale cloud and AI infrastructure in India through 2029. Highlights include new sovereign cloud solutions, advanced Azure-powered public platforms for 310 million informal workers, and a doubling of AI skilling programs aiming to reach 20 million citizens by 2030. The investment supports infrastructure, skilling, digital sovereignty, and technological innovation, positioning India as a global leader in population-scale AI integration."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/12/09/microsoft-invests-us17-5-billion-in-india-to-drive-ai-diffusion-at-population-scale/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Announces $17.5B Investment to Accelerate India's AI and Cloud Infrastructure
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/2025/12/09/microsoft-invests-us17-5-billion-in-india-to-drive-ai-diffusion-at-population-scale/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 15:56:34 +00:00
-permalink: "/2025-12-09-Microsoft-Announces-175B-Investment-to-Accelerate-Indias-AI-and-Cloud-Infrastructure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Integration", "AI Skilling", "Azure", "Azure Machine Learning", "Azure OpenAI Service", "Company News", "Data Centers", "Digital Sovereignty", "E Shram", "Government Technology", "Microsoft 365 Local", "Microsoft India", "Multilingual Access", "National Career Service", "News", "NVIDIA GPUs", "Population Scale AI", "Predictive Analytics", "Public Cloud", "Sovereign Cloud"]
-tags_normalized: ["ai", "ai infrastructure", "ai integration", "ai skilling", "azure", "azure machine learning", "azure openai service", "company news", "data centers", "digital sovereignty", "e shram", "government technology", "microsoft 365 local", "microsoft india", "multilingual access", "national career service", "news", "nvidia gpus", "population scale ai", "predictive analytics", "public cloud", "sovereign cloud"]
+permalink: /ai/news/Microsoft-Announces-175B-Investment-to-Accelerate-Indias-AI-and-Cloud-Infrastructure
+tags:
+- AI
+- AI Infrastructure
+- AI Integration
+- AI Skilling
+- Azure
+- Azure Machine Learning
+- Azure OpenAI Service
+- Company News
+- Data Centers
+- Digital Sovereignty
+- E Shram
+- Government Technology
+- Microsoft 365 Local
+- Microsoft India
+- Multilingual Access
+- National Career Service
+- News
+- NVIDIA GPUs
+- Population Scale AI
+- Predictive Analytics
+- Public Cloud
+- Sovereign Cloud
+section_names:
+- ai
+- azure
 ---
-
 stclarke covers Microsoft’s landmark $17.5B investment plan for India, highlighting new AI infrastructure, sovereign cloud solutions, and workforce skilling programs targeted to reach millions.<!--excerpt_end-->
 
 # Microsoft Announces $17.5B Investment to Accelerate India's AI and Cloud Infrastructure

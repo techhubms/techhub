@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Fabric Influencers Spotlight: Highlights from the Microsoft Fabric Community, November 2025"
-description: "This November edition of the Fabric Influencers Spotlight showcases blog posts, videos, and tutorials created by Microsoft MVPs and Fabric Super Users. It features operational, engineering, and data science innovation within Microsoft Fabric, including Power BI development, Lakehouse architecture, Delta Tables, Entra ID group management, advanced pipelines, GraphQL, and cross-cloud data mirroring. Each resource presents practical, actionable insights for technical professionals working with Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Influencers Spotlight: Highlights from the Microsoft Fabric Community, November 2025'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-28 10:00:00 +00:00
-permalink: "/2025-11-28-Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Advanced Pipelines", "Azure", "Azure Tenants", "BigQuery Mirroring", "Coding", "Custom Transformers", "Data Engineering", "Data Science", "Data Warehousing", "Delta Tables", "Entra ID", "Fabric Community", "Fabric Governance", "Fabric Lakehouse", "Fabric Super User", "GraphQL", "Microsoft Fabric", "Microsoft MVP", "ML", "News", "Power BI", "Real Time Intelligence", "Row Level Security"]
-tags_normalized: ["advanced pipelines", "azure", "azure tenants", "bigquery mirroring", "coding", "custom transformers", "data engineering", "data science", "data warehousing", "delta tables", "entra id", "fabric community", "fabric governance", "fabric lakehouse", "fabric super user", "graphql", "microsoft fabric", "microsoft mvp", "ml", "news", "power bi", "real time intelligence", "row level security"]
+permalink: /ml/news/Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025
+tags:
+- Advanced Pipelines
+- Azure
+- Azure Tenants
+- BigQuery Mirroring
+- Coding
+- Custom Transformers
+- Data Engineering
+- Data Science
+- Data Warehousing
+- Delta Tables
+- Entra ID
+- Fabric Community
+- Fabric Governance
+- Fabric Lakehouse
+- Fabric Super User
+- GraphQL
+- Microsoft Fabric
+- Microsoft MVP
+- ML
+- News
+- Power BI
+- Real Time Intelligence
+- Row Level Security
+section_names:
+- azure
+- coding
+- ml
 ---
-
 The Microsoft Fabric Blog presents a November roundup spotlighting MVPs and Super Users' technical resources, from Power BI Calendar tips by Wyn Hopkins to guides on advanced data engineering by Aleksi Partanen and Sahir Maharaj.<!--excerpt_end-->
 
 # Fabric Influencers Spotlight: November 2025

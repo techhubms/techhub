@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How SleekFlow Uses Azure and AI to Orchestrate Enterprise Customer Conversations"
-description: "This article, authored by Leo Choi from SleekFlow, details how their AgentFlow platform leverages Microsoft Azure services—including Azure AI Foundry, Cosmos DB, Container Apps, Semantic Kernel, and more—to deliver high-performance, scalable, and secure conversational AI for enterprise businesses. The post outlines challenges faced in scaling intelligent customer interactions, the technical architecture choices behind AgentFlow, the benefits in operational agility and speed, and security measures that build enterprise trust. Readers will gain insights into practical implementations with Azure AI, from architecture for multi-agent orchestration to KEDA-based autoscaling and data compliance."
-author: "mtoiba"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/staying-in-the-flow-sleekflow-and-azure-turn-customer/ba-p/4467945"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How SleekFlow Uses Azure and AI to Orchestrate Enterprise Customer Conversations
+author: mtoiba
+canonical_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/staying-in-the-flow-sleekflow-and-azure-turn-customer/ba-p/4467945
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 17:54:01 +00:00
-permalink: "/2025-11-10-How-SleekFlow-Uses-Azure-and-AI-to-Orchestrate-Enterprise-Customer-Conversations.html"
-categories: ["AI", "Azure"]
-tags: ["AgentFlow", "AI", "Azure", "Azure AI Foundry", "Azure Container Apps", "Azure Cosmos DB", "Azure OpenAI", "Cloud Architecture", "Community", "Compliance", "Conversational AI", "DiskANN", "KEDA Autoscaling", "Microservices", "Microsoft Phi", "Retrieval Augmented Generation", "Semantic Kernel", "Vector Search"]
-tags_normalized: ["agentflow", "ai", "azure", "azure ai foundry", "azure container apps", "azure cosmos db", "azure openai", "cloud architecture", "community", "compliance", "conversational ai", "diskann", "keda autoscaling", "microservices", "microsoft phi", "retrieval augmented generation", "semantic kernel", "vector search"]
+permalink: /ai/community/How-SleekFlow-Uses-Azure-and-AI-to-Orchestrate-Enterprise-Customer-Conversations
+tags:
+- AgentFlow
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Container Apps
+- Azure Cosmos DB
+- Azure OpenAI
+- Cloud Architecture
+- Community
+- Compliance
+- Conversational AI
+- DiskANN
+- KEDA Autoscaling
+- Microservices
+- Microsoft Phi
+- Retrieval Augmented Generation
+- Semantic Kernel
+- Vector Search
+section_names:
+- ai
+- azure
 ---
-
 Leo Choi, Director of Engineering at SleekFlow, explains how their AgentFlow platform leverages Microsoft Azure AI technologies and modern cloud architecture to enable responsive, scalable, and secure enterprise customer conversations.<!--excerpt_end-->
 
 # How SleekFlow Uses Azure and AI to Orchestrate Enterprise Customer Conversations

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Flexible Time-Based Reporting with DATE_BUCKET() in Microsoft Fabric Data Warehouse"
-description: "This article introduces the DATE_BUCKET() function in Microsoft Fabric Data Warehouse, designed to simplify and enhance time-based reporting. It demonstrates how DATE_BUCKET() allows for flexible aggregation over custom intervals—such as 2-month or 3-week periods—enabling data professionals to easily group and analyze data across any time span."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/date_bucket-function-in-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Flexible Time-Based Reporting with DATE_BUCKET() in Microsoft Fabric Data Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/date_bucket-function-in-fabric-data-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 09:00:00 +00:00
-permalink: "/2025-12-18-Flexible-Time-Based-Reporting-with-DATE_BUCKET-in-Microsoft-Fabric-Data-Warehouse.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Custom Aggregation", "Data Analytics", "Data Grouping", "Data Warehouse", "DATE BUCKET", "Date Functions", "Interval Bucketing", "Microsoft Fabric", "ML", "News", "Reporting", "Sales Order Analysis", "SQL Functions", "T SQL", "Time Based Reporting"]
-tags_normalized: ["azure", "custom aggregation", "data analytics", "data grouping", "data warehouse", "date bucket", "date functions", "interval bucketing", "microsoft fabric", "ml", "news", "reporting", "sales order analysis", "sql functions", "t sql", "time based reporting"]
+permalink: /ml/news/Flexible-Time-Based-Reporting-with-DATE_BUCKET-in-Microsoft-Fabric-Data-Warehouse
+tags:
+- Azure
+- Custom Aggregation
+- Data Analytics
+- Data Grouping
+- Data Warehouse
+- DATE BUCKET
+- Date Functions
+- Interval Bucketing
+- Microsoft Fabric
+- ML
+- News
+- Reporting
+- Sales Order Analysis
+- SQL Functions
+- T SQL
+- Time Based Reporting
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how the new DATE_BUCKET() function in Fabric Data Warehouse empowers data professionals to efficiently group and report on date-based data using custom intervals.<!--excerpt_end-->
 
 # Flexible Time-Based Reporting with DATE_BUCKET() in Microsoft Fabric Data Warehouse

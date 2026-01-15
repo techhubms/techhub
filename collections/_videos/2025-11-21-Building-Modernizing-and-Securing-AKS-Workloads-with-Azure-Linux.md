@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building, Modernizing, and Securing AKS Workloads with Azure Linux"
-description: "This advanced session from Microsoft Ignite 2025 explores the Azure Linux Container Host, designed for optimizing container workloads on Azure Kubernetes Service (AKS). The presentation covers seamless migrations from other OSes (like Ubuntu) to Azure Linux, performance improvements with its lightweight design, and innovations such as pod sandboxing and OS Guard. Security is highlighted through features like Integrity Policy Enforcement, SELinux, and dm-verity. Case studies and future enhancements, including GPU support and minimal images, help enterprises modernize, scale, and secure AKS deployments effectively."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=YZJCVtt0bwQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building, Modernizing, and Securing AKS Workloads with Azure Linux
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=YZJCVtt0bwQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:13:59 +00:00
-permalink: "/2025-11-21-Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Linux", "CBL Mariner", "Container Host", "Dm Verity", "GPU Support", "Integrity Policy Enforcement", "Kata Container Architecture", "Linux On Azure", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Node Lifecycle Management", "OS Guard", "Pod Sandboxing", "Security", "SELinux", "Videos", "Workload Isolation"]
-tags_normalized: ["aks", "azure", "azure linux", "cbl mariner", "container host", "dm verity", "gpu support", "integrity policy enforcement", "kata container architecture", "linux on azure", "migrateandmodernizeyourestate", "migration", "msignite", "node lifecycle management", "os guard", "pod sandboxing", "security", "selinux", "videos", "workload isolation"]
+permalink: /azure/videos/Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux
+tags:
+- AKS
+- Azure
+- Azure Linux
+- CBL Mariner
+- Container Host
+- Dm Verity
+- GPU Support
+- Integrity Policy Enforcement
+- Kata Container Architecture
+- Linux On Azure
+- Migrateandmodernizeyourestate
+- Migration
+- MSIgnite
+- Node Lifecycle Management
+- OS Guard
+- Pod Sandboxing
+- Security
+- SELinux
+- Videos
+- Workload Isolation
+section_names:
+- azure
+- security
 ---
-
 Presented by Sudhanva Huruli and Dongha Paek at Microsoft Ignite, this session guides enterprises on modernizing and securing AKS container workloads using Azure Linux, with hands-on deep-dives into new performance and security features.<!--excerpt_end-->
 
 {% youtube YZJCVtt0bwQ %}

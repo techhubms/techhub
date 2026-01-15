@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Solving the Inference Problem for Open Source AI Projects with GitHub Models"
-description: "This article explores how GitHub Models—a free, OpenAI-compatible inference API—removes barriers to integrating AI features in open source projects. The piece details setup, CI/CD integration, scaling options, and how this service makes AI-powered software more accessible and easier for contributors and users."
-author: "Sean Goedecke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Solving the Inference Problem for Open Source AI Projects with GitHub Models
+author: Sean Goedecke
+canonical_url: https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-23 16:00:00 +00:00
-permalink: "/2025-07-23-Solving-the-inference-problem-for-open-source-AI-projects-with-GitHub-Models.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI & ML", "AI in Open Source", "AI Models", "CI/CD", "DeepSeek R1", "DevOps", "GitHub Actions", "GitHub Models", "GPT 4o", "Inference API", "Llama 3", "LLMs", "News", "OpenAI Compatible", "Personal Access Token"]
-tags_normalized: ["ai", "ai and ml", "ai in open source", "ai models", "cislashcd", "deepseek r1", "devops", "github actions", "github models", "gpt 4o", "inference api", "llama 3", "llms", "news", "openai compatible", "personal access token"]
+permalink: /ai/news/Solving-the-inference-problem-for-open-source-AI-projects-with-GitHub-Models
+tags:
+- AI
+- AI & ML
+- AI in Open Source
+- AI Models
+- CI/CD
+- DeepSeek R1
+- DevOps
+- GitHub Actions
+- GitHub Models
+- GPT 4o
+- Inference API
+- Llama 3
+- LLMs
+- News
+- OpenAI Compatible
+- Personal Access Token
+section_names:
+- ai
+- devops
 ---
-
 Sean Goedecke explains how GitHub Models, a free inference API, simplifies adding AI features to open source software. The article provides practical advice for integration and scaling, aiming to lower barriers for users and contributors.<!--excerpt_end-->
 
 # Solving the Inference Problem for Open Source AI Projects with GitHub Models

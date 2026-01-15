@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How AI and Microsoft Are Transforming the Energy Sector: Insights from EPRI"
-description: "This episode explores the impact of AI and digital transformation in the energy industry. Darryl from Microsoft Cloud speaks with Arshad Mansoor, President and CEO of the Electric Power Research Institute (EPRI), about the launch of the Open Power AI Consortium (OPAI), Microsoft's role in digital solutions for utilities, and collaborative strategies for building a sustainable and resilient energy future. The conversation covers practical steps for adopting AI, expected benefits from industry initiatives, and the importance of public-private partnerships."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=janSWREvB3U"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: 'How AI and Microsoft Are Transforming the Energy Sector: Insights from EPRI'
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=janSWREvB3U
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-24 15:01:15 +00:00
-permalink: "/2025-06-24-How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI.html"
-categories: ["AI"]
-tags: ["AI", "Collaboration", "Digital Transformation", "Electric Power Research Institute", "Energy", "Energy Industry", "EPRI", "Industry Trends", "Microsoft", "Microsoft Cloud", "OPAI", "Open Power AI Consortium", "Resilience", "Sustainability", "Utilities", "Videos"]
-tags_normalized: ["ai", "collaboration", "digital transformation", "electric power research institute", "energy", "energy industry", "epri", "industry trends", "microsoft", "microsoft cloud", "opai", "open power ai consortium", "resilience", "sustainability", "utilities", "videos"]
+permalink: /ai/videos/How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI
+tags:
+- AI
+- Collaboration
+- Digital Transformation
+- Electric Power Research Institute
+- Energy
+- Energy Industry
+- EPRI
+- Industry Trends
+- Microsoft
+- Microsoft Cloud
+- OPAI
+- Open Power AI Consortium
+- Resilience
+- Sustainability
+- Utilities
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Cloud’s Darryl hosts EPRI’s Arshad Mansoor in a discussion about AI’s transformative role in the energy industry, sharing insights into collaborative innovation and sustainability.<!--excerpt_end-->
 
 {% youtube janSWREvB3U %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Choosing and Deploying Advanced AI Models Using Microsoft Foundry"
-description: "This video session from Microsoft Ignite 2025 covers strategies for selecting, combining, and deploying top AI models—including Anthropic Claude, OpenAI, Cohere, Meta, and more—within the Microsoft Foundry platform. It provides guidance on balancing cost, latency, and accuracy while ensuring enterprise security and responsible AI governance. Viewers learn how to use Foundry's unified framework, model router, and API tools to build general-purpose and multimodal AI agents, and how recent integrations like Cohere directly from Azure expand deployment options for scaling AI adoption."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fyqDLhCnYio"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Choosing and Deploying Advanced AI Models Using Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fyqDLhCnYio
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:26:01 +00:00
-permalink: "/2025-11-20-Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Advanced AI", "AI", "AI Agents", "AI Deployment", "Anthropic Claude", "API Tools", "Azure", "Azure AI", "Cohere", "Enterprise Security", "Governance", "Ignite", "InnovatewithAzureAIappsandagents", "Meta AI", "Microsoft Foundry", "Mistral AI", "Model Routing", "MSIgnite", "Multimodal Models", "OpenAI", "Responsible AI", "RF3 Tool", "Scalable AI", "Videos", "Xai"]
-tags_normalized: ["advanced ai", "ai", "ai agents", "ai deployment", "anthropic claude", "api tools", "azure", "azure ai", "cohere", "enterprise security", "governance", "ignite", "innovatewithazureaiappsandagents", "meta ai", "microsoft foundry", "mistral ai", "model routing", "msignite", "multimodal models", "openai", "responsible ai", "rf3 tool", "scalable ai", "videos", "xai"]
+permalink: /ai/videos/Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry
+tags:
+- Advanced AI
+- AI
+- AI Agents
+- AI Deployment
+- Anthropic Claude
+- API Tools
+- Azure
+- Azure AI
+- Cohere
+- Enterprise Security
+- Governance
+- Ignite
+- InnovatewithAzureAIappsandagents
+- Meta AI
+- Microsoft Foundry
+- Mistral AI
+- Model Routing
+- MSIgnite
+- Multimodal Models
+- OpenAI
+- Responsible AI
+- RF3 Tool
+- Scalable AI
+- Videos
+- Xai
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents expert guidance on using Microsoft Foundry to evaluate and deploy advanced AI models from providers like OpenAI, Anthropic, and Cohere, featuring speakers William Flannery, Keiji Kanazawa, Naomi Moneypenny, Steve Sweetman, and Tao Zhang.<!--excerpt_end-->
 
 {% youtube fyqDLhCnYio %}

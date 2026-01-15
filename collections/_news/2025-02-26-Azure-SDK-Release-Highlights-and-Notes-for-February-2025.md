@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights and Notes for February 2025"
-description: "This post covers the February 2025 Azure SDK release highlights, including notable version updates, platform support notes, initial stable and beta releases for multiple languages, and essential migration recommendations. It provides release notes and resources for developers using the Azure SDK."
-author: "Hector Norzagaray"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK Release Highlights and Notes for February 2025
+author: Hector Norzagaray
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-26 19:09:17 +00:00
-permalink: "/2025-02-26-Azure-SDK-Release-Highlights-and-Notes-for-February-2025.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Android", "Azure", "Azure SDK", "C++", "Coding", "Compute Schedule", "Dependency Management", "DevOps", "Embedded C", "Go", "Ios", "Java", "JavaScript", "Library", "News", "Node.js", "Open Telemetry", "Pinecone Vector DB", "Platform Support", "Python", "SDK"]
-tags_normalized: ["dotnet", "android", "azure", "azure sdk", "cplusplus", "coding", "compute schedule", "dependency management", "devops", "embedded c", "go", "ios", "java", "javascript", "library", "news", "nodedotjs", "open telemetry", "pinecone vector db", "platform support", "python", "sdk"]
+permalink: /coding/news/Azure-SDK-Release-Highlights-and-Notes-for-February-2025
+tags:
+- .NET
+- Android
+- Azure
+- Azure SDK
+- C++
+- Coding
+- Compute Schedule
+- Dependency Management
+- DevOps
+- Embedded C
+- Go
+- Ios
+- Java
+- JavaScript
+- Library
+- News
+- Node.js
+- Open Telemetry
+- Pinecone Vector DB
+- Platform Support
+- Python
+- SDK
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this news update, Hector Norzagaray summarizes the key highlights and notes from the February 2025 Azure SDK release, including support advisories, new stable and beta library releases, and links to in-depth documentation.<!--excerpt_end-->
 
 # Azure SDK Release – February 2025

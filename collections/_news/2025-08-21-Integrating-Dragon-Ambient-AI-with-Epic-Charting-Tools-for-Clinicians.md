@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating Dragon Ambient AI with Epic Charting Tools for Clinicians"
-description: "Microsoft announces a partnership with Epic to integrate Dragon’s ambient AI technology into Epic’s charting tools, aiming to help clinicians devote more time to patient care and less to documentation. This update highlights the use of Microsoft’s advanced AI solutions in transforming healthcare workflows and enhancing clinician-patient interactions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Integrating Dragon Ambient AI with Epic Charting Tools for Clinicians
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-21 15:09:00 +00:00
-permalink: "/2025-08-21-Integrating-Dragon-Ambient-AI-with-Epic-Charting-Tools-for-Clinicians.html"
-categories: ["AI"]
-tags: ["AI", "AI Assistant", "AI in Healthcare", "Ambient AI", "Charting Tools", "Clinical AI", "Company News", "Dragon Copilot", "Epic Systems", "Healthcare Innovation", "Healthcare Technology", "LinkedIn Post", "Medical Documentation", "Microsoft", "Microsoft AI", "News", "Patient Care", "Workflow Automation"]
-tags_normalized: ["ai", "ai assistant", "ai in healthcare", "ambient ai", "charting tools", "clinical ai", "company news", "dragon copilot", "epic systems", "healthcare innovation", "healthcare technology", "linkedin post", "medical documentation", "microsoft", "microsoft ai", "news", "patient care", "workflow automation"]
+permalink: /ai/news/Integrating-Dragon-Ambient-AI-with-Epic-Charting-Tools-for-Clinicians
+tags:
+- AI
+- AI Assistant
+- AI in Healthcare
+- Ambient AI
+- Charting Tools
+- Clinical AI
+- Company News
+- Dragon Copilot
+- Epic Systems
+- Healthcare Innovation
+- Healthcare Technology
+- LinkedIn Post
+- Medical Documentation
+- Microsoft
+- Microsoft AI
+- News
+- Patient Care
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Satya Nadella shares an update on the collaboration between Microsoft and Epic, focusing on integrating Dragon’s ambient AI into Epic’s charting tools to improve clinician workflows.<!--excerpt_end-->
 
 # Integrating Dragon Ambient AI with Epic Charting Tools

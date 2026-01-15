@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Cut Your Azure Bill in Half Without Losing Performance"
-description: "This guide provides practical, actionable strategies for significantly reducing Azure cloud costs without sacrificing performance. It walks through right-sizing VMs, leveraging reserved pricing, automating shutdowns, optimizing storage, making use of licensing benefits, and implementing ongoing cost monitoring and automation. The focus is on real-world steps and Azure-native tools to help technical teams drive maximum efficiency from their Microsoft cloud workloads."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How to Cut Your Azure Bill in Half Without Losing Performance
+author: Dellenny
+canonical_url: https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:19:24 +00:00
-permalink: "/2025-09-17-How-to-Cut-Your-Azure-Bill-in-Half-Without-Losing-Performance.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Blob Storage", "Azure Cost Management", "Azure Monitor", "Blogs", "Budgets And Alerts", "Cloud Cost Optimization", "Dev/Test Environments", "Hybrid Benefit", "Lifecycle Management", "Logic Apps", "Reserved Instances", "Resource Tagging", "Savings Plans", "Virtual Machines"]
-tags_normalized: ["azure", "azure advisor", "azure automation", "azure blob storage", "azure cost management", "azure monitor", "blogs", "budgets and alerts", "cloud cost optimization", "devslashtest environments", "hybrid benefit", "lifecycle management", "logic apps", "reserved instances", "resource tagging", "savings plans", "virtual machines"]
+permalink: /azure/blogs/How-to-Cut-Your-Azure-Bill-in-Half-Without-Losing-Performance
+tags:
+- Azure
+- Azure Advisor
+- Azure Automation
+- Azure Blob Storage
+- Azure Cost Management
+- Azure Monitor
+- Blogs
+- Budgets And Alerts
+- Cloud Cost Optimization
+- Dev/Test Environments
+- Hybrid Benefit
+- Lifecycle Management
+- Logic Apps
+- Reserved Instances
+- Resource Tagging
+- Savings Plans
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Dellenny offers a detailed, step-by-step breakdown of proven techniques for cutting Azure cloud bills by up to 50%—without sacrificing workload performance—using in-built Azure tools and hands-on cost management best practices.<!--excerpt_end-->
 
 # How to Cut Your Azure Bill in Half Without Losing Performance

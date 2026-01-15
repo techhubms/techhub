@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Performing CI/CD for SQL Databases in Fabric Using Azure DevOps"
-description: "This episode of Data Exposed: MVP Edition explores two practical approaches to executing continuous integration and deployment (CI/CD) for SQL databases within Microsoft Fabric using Azure DevOps. The discussion focuses on isolating database deployments apart from other Fabric items, providing clear demos of workflows, and sharing key resources for database project management."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LJzNNR8nFlI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Performing CI/CD for SQL Databases in Fabric Using Azure DevOps
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=LJzNNR8nFlI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-15 17:00:39 +00:00
-permalink: "/2025-12-15-Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Azure DevOps", "Azure SQL", "CI/CD", "Cloud", "Cloud Computing", "Continuous Deployment", "Data Exposed", "Database Projects", "Dev", "Development", "DevOps", "Microsoft", "Microsoft Developer", "Microsoft Fabric", "MVP", "SQL Database", "SQL Server", "SqlPackage", "Tech", "Technology", "Videos"]
-tags_normalized: ["automation", "azure", "azure devops", "azure sql", "cislashcd", "cloud", "cloud computing", "continuous deployment", "data exposed", "database projects", "dev", "development", "devops", "microsoft", "microsoft developer", "microsoft fabric", "mvp", "sql database", "sql server", "sqlpackage", "tech", "technology", "videos"]
+permalink: /azure/videos/Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps
+tags:
+- Automation
+- Azure
+- Azure DevOps
+- Azure SQL
+- CI/CD
+- Cloud
+- Cloud Computing
+- Continuous Deployment
+- Data Exposed
+- Database Projects
+- Dev
+- Development
+- DevOps
+- Microsoft
+- Microsoft Developer
+- Microsoft Fabric
+- MVP
+- SQL Database
+- SQL Server
+- SqlPackage
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
+- devops
 ---
-
 Microsoft Developer demonstrates two methods for performing CI/CD on SQL databases in Fabric using Azure DevOps, providing clear demos and technical resources.<!--excerpt_end-->
 
 {% youtube LJzNNR8nFlI %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Troubleshooting Kubernetes Network Issues with Retina and eBPF"
-description: "This article, authored by kamilp, explores how the open-source Retina platform streamlines network troubleshooting for Kubernetes environments at scale. It demonstrates using Retina's CLI for distributed packet captures, persistent storage, and advanced network debugging via eBPF-powered tools (pwru, bpftool, Inspektor Gadget). The post details practical CLI examples and advanced use of Retina Shell for deep inspection on AKS and other cloud-native clusters."
-author: "kamilp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Troubleshooting Kubernetes Network Issues with Retina and eBPF
+author: kamilp
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-22 16:38:59 +00:00
-permalink: "/2025-08-22-Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Bpftool", "Cloud Native", "Community", "DevOps", "Distributed Systems", "Ebpf", "Inspektor Gadget", "Kubectl", "Kubernetes", "Network Debugging", "Network Troubleshooting", "Observability", "Packet Capture", "Persistent Volume", "Pwru", "Retina", "Security"]
-tags_normalized: ["aks", "azure", "bpftool", "cloud native", "community", "devops", "distributed systems", "ebpf", "inspektor gadget", "kubectl", "kubernetes", "network debugging", "network troubleshooting", "observability", "packet capture", "persistent volume", "pwru", "retina", "security"]
+permalink: /azure/community/Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF
+tags:
+- AKS
+- Azure
+- Bpftool
+- Cloud Native
+- Community
+- DevOps
+- Distributed Systems
+- Ebpf
+- Inspektor Gadget
+- Kubectl
+- Kubernetes
+- Network Debugging
+- Network Troubleshooting
+- Observability
+- Packet Capture
+- Persistent Volume
+- Pwru
+- Retina
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 kamilp provides a deep dive into network observability for Kubernetes clusters using Retina. The article explains distributed packet capture, persistent storage, and advanced eBPF-based network analysis using Retina and its accompanying shell tools.<!--excerpt_end-->
 
 # Troubleshooting Kubernetes Network Issues with Retina and eBPF

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Showcasing a Quantum Computing Educational Platform with Custom Copilot"
-description: "This video features Johnny Hooyberghs presenting an educational platform built using ASP.NET Blazor. The platform enables participants of a Microsoft quantum computing workshop to solve Q# programming challenges interactively, run code via the Q# compiler and simulator powered by .NET, and receive real-time feedback. It also includes a custom Copilot designed to assist and teach users through live access to challenge data and solutions, all hosted on Azure."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qzZTCPiXJtY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Showcasing a Quantum Computing Educational Platform with Custom Copilot
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=qzZTCPiXJtY
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-12 23:04:41 +00:00
-permalink: "/2025-12-12-Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "ASP.NET Blazor", "Azure", "Coding", "Custom Copilot", "Educational Platform", "Interactive Learning", "Microsoft Quantum", "Programming Challenges", "Q#", "Q# Compiler", "Quantum Computing", "Real Time Feedback", "Simulator", "Videos"]
-tags_normalized: ["dotnet", "ai", "aspdotnet blazor", "azure", "coding", "custom copilot", "educational platform", "interactive learning", "microsoft quantum", "programming challenges", "qsharp", "qsharp compiler", "quantum computing", "real time feedback", "simulator", "videos"]
+permalink: /ai/videos/Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot
+tags:
+- .NET
+- AI
+- ASP.NET Blazor
+- Azure
+- Coding
+- Custom Copilot
+- Educational Platform
+- Interactive Learning
+- Microsoft Quantum
+- Programming Challenges
+- Q#
+- Q# Compiler
+- Quantum Computing
+- Real Time Feedback
+- Simulator
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet hosts Johnny Hooyberghs as he demonstrates an educational quantum computing platform created for Microsoft workshops, featuring interactive Q# programming, live feedback, and a custom Copilot.<!--excerpt_end-->
 
 {% youtube qzZTCPiXJtY %}

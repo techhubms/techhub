@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Securing Private Wireless: From Design to Deployment"
-description: "This session from Microsoft Ignite 2025 explores security frameworks for private wireless networks, demonstrating how field-tested strategies and AI-powered defenses—leveraging Azure-based platforms—have enhanced security, reduced cyber incidents, and protected critical telecom infrastructure. The session covers authentication improvements, AI-driven threat hunting, incident response playbooks, and 5G security orchestration in distributed telecom environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SI6P5ljakrw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Securing Private Wireless: From Design to Deployment'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=SI6P5ljakrw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:17:15 +00:00
-permalink: "/2025-11-24-Securing-Private-Wireless-From-Design-to-Deployment.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["5G Security", "AI", "AI Powered Defense", "AI Security", "Authentication", "Azure", "Cyber Threat Defense", "Incident Management", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Security", "Private Wireless", "Security", "Security Orchestration", "Telecom Security", "Threat Hunting", "Videos"]
-tags_normalized: ["5g security", "ai", "ai powered defense", "ai security", "authentication", "azure", "cyber threat defense", "incident management", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "network security", "private wireless", "security", "security orchestration", "telecom security", "threat hunting", "videos"]
+permalink: /ai/videos/Securing-Private-Wireless-From-Design-to-Deployment
+tags:
+- 5G Security
+- AI
+- AI Powered Defense
+- AI Security
+- Authentication
+- Azure
+- Cyber Threat Defense
+- Incident Management
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Network Security
+- Private Wireless
+- Security
+- Security Orchestration
+- Telecom Security
+- Threat Hunting
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a Microsoft Ignite session where Krishnan Jagannathan and Rick Lievano share insights on securing private wireless networks using Azure-based AI security platforms, highlighting operational strategies and real-world results.<!--excerpt_end-->
 
 {% youtube SI6P5ljakrw %}

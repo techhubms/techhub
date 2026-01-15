@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Fabric Environment Library Management Performance Improvements for Developers"
-description: "This news post details major performance upgrades in Microsoft Fabric Environment library management, including much faster publishing times for JAR and Python files, and significantly reduced Spark session startup times for Python libraries. It explains the technical benefits for developers and highlights coming enhancements such as a new lightweight library installation mode."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-environment-library-management-performance-improvement/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric Environment Library Management Performance Improvements for Developers
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-environment-library-management-performance-improvement/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-15 10:00:00 +00:00
-permalink: "/2025-12-15-Fabric-Environment-Library-Management-Performance-Improvements-for-Developers.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark", "Azure", "Custom Packages", "Data Engineering", "Developer Experience", "Environment Publishing", "JAR Files", "Library Management", "Microsoft Fabric", "ML", "News", "Performance Improvement", "Python Packages", "Session Startup"]
-tags_normalized: ["apache spark", "azure", "custom packages", "data engineering", "developer experience", "environment publishing", "jar files", "library management", "microsoft fabric", "ml", "news", "performance improvement", "python packages", "session startup"]
+permalink: /ml/news/Fabric-Environment-Library-Management-Performance-Improvements-for-Developers
+tags:
+- Apache Spark
+- Azure
+- Custom Packages
+- Data Engineering
+- Developer Experience
+- Environment Publishing
+- JAR Files
+- Library Management
+- Microsoft Fabric
+- ML
+- News
+- Performance Improvement
+- Python Packages
+- Session Startup
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog reveals substantial library management speedups, benefiting developers with faster publishing and Spark session startups, curated by the Fabric team.<!--excerpt_end-->
 
 # Fabric Environment Library Management Performance Improvements for Developers

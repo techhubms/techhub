@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Termix v1.2.0: .NET Terminal File Manager Adds Cut, Copy, Move, and Stable Fuzzy Search"
-description: "Termix v1.2.0 introduces robust file management features including copy, move, and paste operations via keyboard shortcuts, along with enhanced status indicators and improved fuzzy search stability. This .NET-based terminal file navigator can now be easily installed or updated as a dotnet global tool."
-author: "amrohann"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhgcod/beautiful_terminal_based_file_manager_now/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Termix v1.2.0: .NET Terminal File Manager Adds Cut, Copy, Move, and Stable Fuzzy Search'
+author: amrohann
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mhgcod/beautiful_terminal_based_file_manager_now/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 15:20:46 +00:00
-permalink: "/2025-08-04-Termix-v120-NET-Terminal-File-Manager-Adds-Cut-Copy-Move-and-Stable-Fuzzy-Search.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Tool", "Coding", "Community", "Copy", "File Manager", "Fuzzy Search", "Keyboard Shortcuts", "Move", "Open Source", "Paste", "Progress Bar", "Terminal", "Termix"]
-tags_normalized: ["dotnet", "dotnet tool", "coding", "community", "copy", "file manager", "fuzzy search", "keyboard shortcuts", "move", "open source", "paste", "progress bar", "terminal", "termix"]
+permalink: /coding/community/Termix-v120-NET-Terminal-File-Manager-Adds-Cut-Copy-Move-and-Stable-Fuzzy-Search
+tags:
+- .NET
+- .NET Tool
+- Coding
+- Community
+- Copy
+- File Manager
+- Fuzzy Search
+- Keyboard Shortcuts
+- Move
+- Open Source
+- Paste
+- Progress Bar
+- Terminal
+- Termix
+section_names:
+- coding
 ---
-
 In this post, amrohann presents Termix v1.2.0, a .NET-powered terminal file manager, highlighting major new features and installation tips.<!--excerpt_end-->
 
 ## About Termix v1.2.0

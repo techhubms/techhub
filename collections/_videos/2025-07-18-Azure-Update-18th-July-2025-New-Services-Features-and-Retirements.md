@@ -1,20 +1,58 @@
----
-layout: "post"
-title: "Azure Update – 18th July 2025: New Services, Features & Retirements"
-description: "This video, hosted by John Savill, summarizes a wide range of new Azure service updates and feature changes announced in mid-July 2025. Key topics covered include PowerShell Durable Functions SDK, Durable Functions orchestration versioning, new AKS (Azure Kubernetes Service) capabilities, Azure Functions Kafka triggers, Event Hub geo-replication, Cosmos DB in Microsoft Fabric, Databricks Unity Catalog to Fabric OneLake, Azure Cloud HSM, backup policy migrations, and Azure AI service retirements. The video also outlines upcoming changes for Azure CDN and other cloud services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b65KgVInTNo"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update – 18th July 2025: New Services, Features & Retirements'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=b65KgVInTNo
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-18 14:55:42 +00:00
-permalink: "/2025-07-18-Azure-Update-18th-July-2025-New-Services-Features-and-Retirements.html"
-categories: ["AI", "Azure", "Coding", "ML", "DevOps", "Security"]
-tags: ["AFD Classic", "AI", "AKS Extension Manager", "AKS Migration Command", "AKS Node Provisioning", "AKS VM Node Pools", "Azure", "Azure AI Speaker Recognition", "Azure Backup", "Azure CDN", "Azure Cloud", "Azure Cloud HSM", "Azure Kubernetes Service (aks)", "Azure Security", "Azure Updates", "BlobNFS", "Cloud", "Cloud Migration", "Coding", "Cosmos DB", "Databricks Unity Catalog", "DevOps", "Durable Functions Orchestration", "Event Hub Geo Replication", "ExpressRoute Gateway", "Fabric OneLake", "HOBO Public IP", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "ML", "PostgreSQL Flexible Server", "PowerShell Durable Functions SDK", "Security", "SSD Ephemeral OS Disk", "Videos"]
-tags_normalized: ["afd classic", "ai", "aks extension manager", "aks migration command", "aks node provisioning", "aks vm node pools", "azure", "azure ai speaker recognition", "azure backup", "azure cdn", "azure cloud", "azure cloud hsm", "azure kubernetes service aks", "azure security", "azure updates", "blobnfs", "cloud", "cloud migration", "coding", "cosmos db", "databricks unity catalog", "devops", "durable functions orchestration", "event hub geo replication", "expressroute gateway", "fabric onelake", "hobo public ip", "microsoft", "microsoft azure", "microsoft fabric", "ml", "postgresql flexible server", "powershell durable functions sdk", "security", "ssd ephemeral os disk", "videos"]
+permalink: /ai/videos/Azure-Update-18th-July-2025-New-Services-Features-and-Retirements
+tags:
+- AFD Classic
+- AI
+- AKS Extension Manager
+- AKS Migration Command
+- AKS Node Provisioning
+- AKS VM Node Pools
+- Azure
+- Azure AI Speaker Recognition
+- Azure Backup
+- Azure CDN
+- Azure Cloud
+- Azure Cloud HSM
+- Azure Kubernetes Service (aks)
+- Azure Security
+- Azure Updates
+- BlobNFS
+- Cloud
+- Cloud Migration
+- Coding
+- Cosmos DB
+- Databricks Unity Catalog
+- DevOps
+- Durable Functions Orchestration
+- Event Hub Geo Replication
+- ExpressRoute Gateway
+- Fabric OneLake
+- HOBO Public IP
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- ML
+- PostgreSQL Flexible Server
+- PowerShell Durable Functions SDK
+- Security
+- SSD Ephemeral OS Disk
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- ml
+- devops
+- security
 ---
-
 John Savill delivers a comprehensive roundup of the latest Azure platform updates as of July 18th, 2025. This episode covers new Azure services, feature retirements, and key changes relevant for developers and IT professionals.<!--excerpt_end-->
 
 {% youtube b65KgVInTNo %}

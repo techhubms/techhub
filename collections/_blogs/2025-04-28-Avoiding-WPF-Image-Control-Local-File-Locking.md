@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Avoiding WPF Image Control Local File Locking"
-description: "Rick Strahl explores the problem of WPF's Image control locking local files and presents solutions using XAML techniques and a custom binding converter with built-in image caching, addressing performance and file update scenarios for desktop .NET applications."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Apr/28/WPF-Image-Control-Local-File-Locking"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Avoiding WPF Image Control Local File Locking
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Apr/28/WPF-Image-Control-Local-File-Locking
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-04-28 22:01:46 +00:00
-permalink: "/2025-04-28-Avoiding-WPF-Image-Control-Local-File-Locking.html"
-categories: ["Coding"]
-tags: [".NET", "Binding Converter", "BitmapImage", "Blogs", "Coding", "Desktop Applications", "File Locking", "Image Caching", "Image Control", "TreeView", "Windows", "WPF", "WPF .NET Windows", "XAML"]
-tags_normalized: ["dotnet", "binding converter", "bitmapimage", "blogs", "coding", "desktop applications", "file locking", "image caching", "image control", "treeview", "windows", "wpf", "wpf dotnet windows", "xaml"]
+permalink: /coding/blogs/Avoiding-WPF-Image-Control-Local-File-Locking
+tags:
+- .NET
+- Binding Converter
+- BitmapImage
+- Blogs
+- Coding
+- Desktop Applications
+- File Locking
+- Image Caching
+- Image Control
+- TreeView
+- Windows
+- WPF
+- WPF .NET Windows
+- XAML
+section_names:
+- coding
 ---
-
 In this technical post, Rick Strahl discusses how WPF’s Image control locks local image files, the issues it causes, and presents XAML and custom binding converter strategies—including image caching—to solve the problem efficiently for .NET Windows applications.<!--excerpt_end-->
 
 # Avoiding WPF Image Control Local File Locking

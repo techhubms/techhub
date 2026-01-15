@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building an AI Receptionist: Hands-On Demo with Azure Communication Services and OpenAI"
-description: "This post presents a practical walkthrough for building an AI-powered SMS receptionist using Azure Communication Services, Azure OpenAI, FastAPI, and Event Grid. It guides developers from setting up a responsive conversational SMS system with a simulated calendar to extending the solution for production use. Topics include event-driven architecture, conversational prompt strategies, core Azure integrations, and tips for enhancing scheduling automation."
-author: "seankeegan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/building-an-ai-receptionist-a-hands-on-demo-with-azure/ba-p/4442959"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Building an AI Receptionist: Hands-On Demo with Azure Communication Services and OpenAI'
+author: seankeegan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/building-an-ai-receptionist-a-hands-on-demo-with-azure/ba-p/4442959
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:35:46 +00:00
-permalink: "/2025-08-13-Building-an-AI-Receptionist-Hands-On-Demo-with-Azure-Communication-Services-and-OpenAI.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Integration", "Appointment Management", "Azure", "Azure Communication Services", "Azure OpenAI", "Coding", "Community", "Conversational AI", "Event Driven Architecture", "Event Grid", "FastAPI", "Microsoft Cloud", "Prompt Engineering", "Python", "Scheduling Automation", "SMS Automation", "Webhook"]
-tags_normalized: ["ai", "api integration", "appointment management", "azure", "azure communication services", "azure openai", "coding", "community", "conversational ai", "event driven architecture", "event grid", "fastapi", "microsoft cloud", "prompt engineering", "python", "scheduling automation", "sms automation", "webhook"]
+permalink: /ai/community/Building-an-AI-Receptionist-Hands-On-Demo-with-Azure-Communication-Services-and-OpenAI
+tags:
+- AI
+- API Integration
+- Appointment Management
+- Azure
+- Azure Communication Services
+- Azure OpenAI
+- Coding
+- Community
+- Conversational AI
+- Event Driven Architecture
+- Event Grid
+- FastAPI
+- Microsoft Cloud
+- Prompt Engineering
+- Python
+- Scheduling Automation
+- SMS Automation
+- Webhook
+section_names:
+- ai
+- azure
+- coding
 ---
-
 In this post, seankeegan demonstrates how to build an AI-driven SMS receptionist with Azure Communication Services and Azure OpenAI, sharing step-by-step guidance for developers seeking to automate scheduling via conversational text.<!--excerpt_end-->
 
 # Building an AI Receptionist: Hands-On Demo with Azure Communication Services and OpenAI

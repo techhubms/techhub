@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Connect with the Security Community at Microsoft Ignite 2025"
-description: "Learn about the upcoming Microsoft Ignite 2025 event in San Francisco and online, featuring interactive sessions, hands-on labs, and networking for security professionals. Discover the latest Microsoft innovations and strategies for AI-powered security, participate in community events, and explore opportunities for professional growth and certification."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/13/connect-with-the-security-community-at-microsoft-ignite-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Connect with the Security Community at Microsoft Ignite 2025
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/13/connect-with-the-security-community-at-microsoft-ignite-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-13 17:09:05 +00:00
-permalink: "/2025-08-13-Connect-with-the-Security-Community-at-Microsoft-Ignite-2025.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Career Growth", "Cloud Security", "Company News", "Cybersecurity", "Identity Protection", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Ignite", "Microsoft Security", "Networking", "News", "SecOps", "Secure AI Adoption", "Security", "Security Certifications", "Security Community", "Security Governance", "Security Operations", "Threat Intelligence"]
-tags_normalized: ["ai", "ai security", "career growth", "cloud security", "company news", "cybersecurity", "identity protection", "microsoft defender", "microsoft entra id", "microsoft ignite", "microsoft security", "networking", "news", "secops", "secure ai adoption", "security", "security certifications", "security community", "security governance", "security operations", "threat intelligence"]
+permalink: /ai/news/Connect-with-the-Security-Community-at-Microsoft-Ignite-2025
+tags:
+- AI
+- AI Security
+- Career Growth
+- Cloud Security
+- Company News
+- Cybersecurity
+- Identity Protection
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Ignite
+- Microsoft Security
+- Networking
+- News
+- SecOps
+- Secure AI Adoption
+- Security
+- Security Certifications
+- Security Community
+- Security Governance
+- Security Operations
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 stclarke highlights Microsoft Ignite 2025, an event tailored for security professionals and leaders to explore AI-powered security innovations, network with peers, and participate in hands-on labs and certification opportunities.<!--excerpt_end-->
 
 # Connect with the Security Community at Microsoft Ignite 2025

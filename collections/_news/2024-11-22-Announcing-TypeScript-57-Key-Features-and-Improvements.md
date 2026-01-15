@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing TypeScript 5.7: Key Features and Improvements"
-description: "This news update from Daniel Rosenwasser introduces TypeScript 5.7, highlighting major enhancements such as improved variable initialization checks, new compiler options for path rewriting, support for ECMAScript 2024, and editor experience changes for composite projects. Developers can expect better tooling, faster project checks, and enhanced compilation workflows, especially when working with modern JavaScript and large TypeScript codebases."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript 5.7: Key Features and Improvements'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2024-11-22 18:15:19 +00:00
-permalink: "/2024-11-22-Announcing-TypeScript-57-Key-Features-and-Improvements.html"
-categories: ["Coding"]
-tags: ["Code Editor Tools", "Coding", "Compiler Options", "Composite Projects", "ECMAScript", "ES2024", "JavaScript", "News", "Node.js", "npm Packages", "Path Rewriting", "Tsc", "Tsconfig.json", "Type Checking", "TypedArray", "TypeScript", "TypeScript 5.7", "V8 Compile Cache", "VS Code"]
-tags_normalized: ["code editor tools", "coding", "compiler options", "composite projects", "ecmascript", "es2024", "javascript", "news", "nodedotjs", "npm packages", "path rewriting", "tsc", "tsconfigdotjson", "type checking", "typedarray", "typescript", "typescript 5dot7", "v8 compile cache", "vs code"]
+permalink: /coding/news/Announcing-TypeScript-57-Key-Features-and-Improvements
+tags:
+- Code Editor Tools
+- Coding
+- Compiler Options
+- Composite Projects
+- ECMAScript
+- ES2024
+- JavaScript
+- News
+- Node.js
+- npm Packages
+- Path Rewriting
+- Tsc
+- Tsconfig.json
+- Type Checking
+- TypedArray
+- TypeScript
+- TypeScript 5.7
+- V8 Compile Cache
+- VS Code
+section_names:
+- coding
 ---
-
 Daniel Rosenwasser announces the release of TypeScript 5.7, detailing key upgrades for developers. This update offers improved checks, modern JavaScript support, and faster editor experiences.<!--excerpt_end-->
 
 # Announcing TypeScript 5.7: Key Features and Improvements

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "What is Model Context Protocol (MCP)?"
-description: "Damian Brady explains the Model Context Protocol (MCP) and its significance for developers, focusing on how it empowers tools like GitHub Copilot to perform real-world actions, not just generate code suggestions. This video demystifies MCP and its practical impact on modern developer workflows."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yVPmHIvJLYg"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: What is Model Context Protocol (MCP)?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=yVPmHIvJLYg
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 15:59:03 +00:00
-permalink: "/2025-09-24-What-is-Model-Context-Protocol-MCP.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Automation", "Developer Tools", "GitHub Copilot", "Intelligent Agents", "MCP", "Microsoft", "Programming", "Software Engineering", "Videos"]
-tags_normalized: ["ai", "ai development", "automation", "developer tools", "github copilot", "intelligent agents", "mcp", "microsoft", "programming", "software engineering", "videos"]
+permalink: /github-copilot/videos/What-is-Model-Context-Protocol-MCP
+tags:
+- AI
+- AI Development
+- Automation
+- Developer Tools
+- GitHub Copilot
+- Intelligent Agents
+- MCP
+- Microsoft
+- Programming
+- Software Engineering
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video, Microsoft Developer and Damian Brady discuss the Model Context Protocol (MCP), showing how it enables GitHub Copilot to perform powerful actions. Key concepts are presented for developers.<!--excerpt_end-->
 
 {% youtube yVPmHIvJLYg %}

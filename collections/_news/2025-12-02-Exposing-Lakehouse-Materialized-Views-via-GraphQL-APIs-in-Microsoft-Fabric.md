@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Exposing Lakehouse Materialized Views via GraphQL APIs in Microsoft Fabric"
-description: "This guide details how to quickly expose data from Microsoft Fabric Lakehouse using Materialized Lake Views and the API for GraphQL. Learn how to set up a Lakehouse, create high-performance materialized views with Spark SQL, and provide developers with fast, flexible API access using GraphQL—all managed within the Microsoft Fabric platform."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/exposing-lakehouse-materialized-views-to-applications-in-minutes-with-graphql-apis-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Exposing Lakehouse Materialized Views via GraphQL APIs in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/exposing-lakehouse-materialized-views-to-applications-in-minutes-with-graphql-apis-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-02 14:00:00 +00:00
-permalink: "/2025-12-02-Exposing-Lakehouse-Materialized-Views-via-GraphQL-APIs-in-Microsoft-Fabric.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Analytics", "API Development", "Azure", "Coding", "Data Engineering", "Data Integration", "Data Platform", "Fabric Runtime", "GraphQL API", "Lakehouse", "Materialized View", "Microsoft Fabric", "ML", "News", "Retail Data", "Schema Support", "Spark SQL"]
-tags_normalized: ["analytics", "api development", "azure", "coding", "data engineering", "data integration", "data platform", "fabric runtime", "graphql api", "lakehouse", "materialized view", "microsoft fabric", "ml", "news", "retail data", "schema support", "spark sql"]
+permalink: /ml/news/Exposing-Lakehouse-Materialized-Views-via-GraphQL-APIs-in-Microsoft-Fabric
+tags:
+- Analytics
+- API Development
+- Azure
+- Coding
+- Data Engineering
+- Data Integration
+- Data Platform
+- Fabric Runtime
+- GraphQL API
+- Lakehouse
+- Materialized View
+- Microsoft Fabric
+- ML
+- News
+- Retail Data
+- Schema Support
+- Spark SQL
+section_names:
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog presents a step-by-step tutorial on how to expose Lakehouse Materialized Views to applications in minutes using GraphQL APIs, combining performance and developer flexibility.<!--excerpt_end-->
 
 # Exposing Lakehouse Materialized Views via GraphQL APIs in Microsoft Fabric

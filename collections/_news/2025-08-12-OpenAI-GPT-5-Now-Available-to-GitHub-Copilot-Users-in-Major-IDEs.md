@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs"
-description: "This news article announces the public preview rollout of OpenAI's GPT-5 model for users of GitHub Copilot across popular development environments, including Visual Studio, JetBrains IDEs, Xcode, and Eclipse. It covers enhancements brought by GPT-5, eligibility, activation procedures for organizations, and resources for getting started."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 17:30:37 +00:00
-permalink: "/2025-08-12-OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Model", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Developer Tools", "Eclipse", "GitHub Copilot", "GPT 5", "IDE Integration", "JetBrains IDEs", "News", "OpenAI", "VS", "Xcode"]
-tags_normalized: ["ai", "ai coding assistant", "ai model", "copilot business", "copilot chat", "copilot enterprise", "developer tools", "eclipse", "github copilot", "gpt 5", "ide integration", "jetbrains ides", "news", "openai", "vs", "xcode"]
+permalink: /github-copilot/news/OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs
+tags:
+- AI
+- AI Coding Assistant
+- AI Model
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Developer Tools
+- Eclipse
+- GitHub Copilot
+- GPT 5
+- IDE Integration
+- JetBrains IDEs
+- News
+- OpenAI
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison informs developers about the release of GPT-5 for GitHub Copilot users in Visual Studio, JetBrains IDEs, Xcode, and Eclipse, highlighting model improvements and steps to gain access.<!--excerpt_end-->
 
 # OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs

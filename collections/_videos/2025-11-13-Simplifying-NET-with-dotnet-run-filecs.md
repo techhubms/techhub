@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Simplifying .NET with 'dotnet run file.cs'"
-description: "This session explores the new 'dotnet run file.cs' command in .NET, making it possible to execute C# code files directly without a project file. Key topics include rapid prototyping, automation scripting, educational use cases, and how the command improves developer workflows for both beginners and experienced engineers."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KjqePh3naKQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Simplifying .NET with 'dotnet run file.cs'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=KjqePh3naKQ
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Run", "ASP.NET Core", "Automation", "C#", "Coding", "Developer Productivity", "Educational Scenarios", "F#", "MAUI", "Programming Language Features", "Rapid Prototyping", "Scripting", "Unified Development", "Utility Programs", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet run", "aspdotnet core", "automation", "csharp", "coding", "developer productivity", "educational scenarios", "fsharp", "maui", "programming language features", "rapid prototyping", "scripting", "unified development", "utility programs", "videos", "vs"]
+permalink: /coding/videos/Simplifying-NET-with-dotnet-run-filecs
+tags:
+- .NET
+- .NET 10
+- .NET Run
+- ASP.NET Core
+- Automation
+- C#
+- Coding
+- Developer Productivity
+- Educational Scenarios
+- F#
+- MAUI
+- Programming Language Features
+- Rapid Prototyping
+- Scripting
+- Unified Development
+- Utility Programs
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 dotnet introduces developers to the powerful 'dotnet run file.cs' command, which streamlines C# scripting and direct code execution, focusing on practical use cases for rapid prototyping and automation.<!--excerpt_end-->
 
 {% youtube KjqePh3naKQ %}

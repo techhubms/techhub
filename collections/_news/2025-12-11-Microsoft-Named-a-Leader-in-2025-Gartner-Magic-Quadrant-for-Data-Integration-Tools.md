@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Named a Leader in 2025 Gartner Magic Quadrant for Data Integration Tools"
-description: "This post from the Microsoft Fabric Blog announces that Microsoft has been named a Leader in the 2025 Gartner Magic Quadrant for Data Integration Tools. The article highlights Microsoft Fabric's data integration strategy, its unified platform approach, and innovations like OneLake, Data Factory, and Real-Time Intelligence. It also describes customer successes, technical features, and ongoing community engagement, emphasizing how Fabric enables organizations to unify data, streamline workflows, and unlock AI-powered insights."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Named a Leader in 2025 Gartner Magic Quadrant for Data Integration Tools
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 11:30:00 +00:00
-permalink: "/2025-12-11-Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Powered Analytics", "Apache Iceberg", "Azure", "Cloud Data", "Cross Cloud Integration", "Data Governance", "Data Integration", "Data Lake", "Data Orchestration", "Delta Lake", "ETL", "Fabric Data Factory", "Gartner Magic Quadrant", "Microsoft Fabric", "ML", "News", "OneLake", "Real Time Intelligence", "SaaS", "Streaming Analytics"]
-tags_normalized: ["ai", "ai powered analytics", "apache iceberg", "azure", "cloud data", "cross cloud integration", "data governance", "data integration", "data lake", "data orchestration", "delta lake", "etl", "fabric data factory", "gartner magic quadrant", "microsoft fabric", "ml", "news", "onelake", "real time intelligence", "saas", "streaming analytics"]
+permalink: /ai/news/Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools
+tags:
+- AI
+- AI Powered Analytics
+- Apache Iceberg
+- Azure
+- Cloud Data
+- Cross Cloud Integration
+- Data Governance
+- Data Integration
+- Data Lake
+- Data Orchestration
+- Delta Lake
+- ETL
+- Fabric Data Factory
+- Gartner Magic Quadrant
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Real Time Intelligence
+- SaaS
+- Streaming Analytics
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog, authored by Microsoft, shares that Microsoft has been named a Leader in the 2025 Gartner Magic Quadrant for Data Integration Tools and explores the unified and AI-powered data capabilities of Microsoft Fabric.<!--excerpt_end-->
 
 # Microsoft Named a Leader in 2025 Gartner Magic Quadrant for Data Integration Tools

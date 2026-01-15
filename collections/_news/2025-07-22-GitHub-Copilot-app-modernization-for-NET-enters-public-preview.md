@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot app modernization for .NET enters public preview"
-description: "GitHub Copilot app modernization for .NET facilitates enterprise migrations to Azure, streamlining assessment, code remediation, and validation using AI-driven tools."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-21-github-copilot-app-modernization-for-net-enters-public-preview"
-categories: ["AI", "Azure", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: GitHub Copilot app modernization for .NET enters public preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-21-github-copilot-app-modernization-for-net-enters-public-preview
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-22 02:36:29 +00:00
-permalink: "/2025-07-22-GitHub-Copilot-app-modernization-for-NET-enters-public-preview.html"
-viewing_mode: "external"
-tags: [".NET", "AI", "AI Tools", "App Modernization", "Assessment", "Azure", "Cloud Migration", "Code Remediation", "Enterprise Migration", "GitHub Copilot", "News", "Validation"]
-tags_normalized: ["dotnet", "ai", "ai tools", "app modernization", "assessment", "azure", "cloud migration", "code remediation", "enterprise migration", "github copilot", "news", "validation"]
+permalink: /github-copilot/news/GitHub-Copilot-app-modernization-for-NET-enters-public-preview
+viewing_mode: external
+tags:
+- .NET
+- AI
+- AI Tools
+- App Modernization
+- Assessment
+- Azure
+- Cloud Migration
+- Code Remediation
+- Enterprise Migration
+- GitHub Copilot
+- News
+- Validation
+section_names:
+- ai
+- azure
+- github-copilot
 ---
-
 Authored by Allison, this article explores how GitHub Copilot app modernization for .NET assists enterprises in migrating their applications to Azure. It discusses features such as assessment, code remediation, and validation, all leveraging AI-powered intelligence, and highlights benefits for organizations aiming for efficient and confident migration.<!--excerpt_end-->
 
 ## GitHub Copilot App Modernization for .NET: Streamlining Enterprise Migration to Azure

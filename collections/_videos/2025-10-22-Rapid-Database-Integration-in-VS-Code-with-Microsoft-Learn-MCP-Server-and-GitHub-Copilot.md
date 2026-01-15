@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot"
-description: "This video demonstrates how developers can streamline the process of adding a database to an application using the Microsoft Learn MCP server and GitHub Copilot, all within Visual Studio Code. The walkthrough covers setup, accessing up-to-date documentation without context switching, and using Copilot for generating deployment scripts quickly."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=s2DGC7NMKxo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=s2DGC7NMKxo
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-22 14:01:34 +00:00
-permalink: "/2025-10-22-Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automation", "Beginner", "Code Generation", "Coding", "Copilot", "Database Deployment", "Demo", "Dev Tools", "Developer", "Developer Productivity", "GitHub", "GitHub Copilot", "Mcp", "MCP Server", "Microsoft Learn MCP", "Postgres", "Programming Tutorial", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["ai", "automation", "beginner", "code generation", "coding", "copilot", "database deployment", "demo", "dev tools", "developer", "developer productivity", "github", "github copilot", "mcp", "mcp server", "microsoft learn mcp", "postgres", "programming tutorial", "software developer", "videos", "vs code"]
+permalink: /github-copilot/videos/Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot
+tags:
+- AI
+- Automation
+- Beginner
+- Code Generation
+- Coding
+- Copilot
+- Database Deployment
+- Demo
+- Dev Tools
+- Developer
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Mcp
+- MCP Server
+- Microsoft Learn MCP
+- Postgres
+- Programming Tutorial
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code showcases how Chris Noring leverages the Microsoft Learn MCP server and GitHub Copilot to add a database to an app swiftly, reducing context switching and enhancing developer efficiency.<!--excerpt_end-->
 
 {% youtube s2DGC7NMKxo %}

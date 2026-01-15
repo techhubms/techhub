@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Introducing Agent HQ: Your Mission Control for AI Agents"
-description: "This announcement introduces Agent HQ, a GitHub solution for managing AI agents. The platform provides developers with a centralized interface to oversee agent sessions, assign tasks, track progress, and review code across projects. Users can utilize Agent HQ through the CLI, web, or their IDE, offering flexible integration into common developer workflows. The content targets developers interested in leveraging AI integration and workflow enhancements within the GitHub ecosystem."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/sP-SQEE7K-Y"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Introducing Agent HQ: Your Mission Control for AI Agents'
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/sP-SQEE7K-Y
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-28 21:17:43 +00:00
-permalink: "/2025-10-28-Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents.html"
-categories: ["AI", "DevOps"]
-tags: ["AgentHQ", "AI", "AI Agents", "Code Review", "Command Line Interface", "Developer Productivity", "Developer Tools", "DevOps", "GitHub", "Project Tracking", "Session Management", "Task Assignment", "Videos", "Web IDE"]
-tags_normalized: ["agenthq", "ai", "ai agents", "code review", "command line interface", "developer productivity", "developer tools", "devops", "github", "project tracking", "session management", "task assignment", "videos", "web ide"]
+permalink: /ai/videos/Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents
+tags:
+- AgentHQ
+- AI
+- AI Agents
+- Code Review
+- Command Line Interface
+- Developer Productivity
+- Developer Tools
+- DevOps
+- GitHub
+- Project Tracking
+- Session Management
+- Task Assignment
+- Videos
+- Web IDE
+section_names:
+- ai
+- devops
 ---
-
 GitHub presents Agent HQ, an integrated platform for developers to manage AI agents across projects. This video, presented by the GitHub team, highlights enhanced task assignment, code reviews, and workflow flexibility.<!--excerpt_end-->
 
 {% youtube sP-SQEE7K-Y %}

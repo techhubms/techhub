@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Copilot code review: copilot-instruction.md support is now generally available"
-description: "This update announces that support for copilot-instructions.md file customization in GitHub Copilot code review is now generally available to all users, enabling developers to tailor Copilot’s code review workflow using natural language instructions within their repositories. The feature previously in public preview is now open for everyone, allowing greater flexibility and control over automated code review processes."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-06-copilot-code-review-copilot-instruction-md-support-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: 'Copilot code review: copilot-instruction.md support is now generally available'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-06-copilot-code-review-copilot-instruction-md-support-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 17:31:54 +00:00
-permalink: "/2025-08-06-Copilot-code-review-copilot-instructionmd-support-is-now-generally-available.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Code Review", "Code Review Automation", "Copilot Code Review", "Copilot Instructions.md", "Developer Tools", "General Availability", "GitHub", "GitHub Copilot", "Natural Language Instructions", "News", "Workflow Customization"]
-tags_normalized: ["ai", "ai assisted code review", "code review automation", "copilot code review", "copilot instructionsdotmd", "developer tools", "general availability", "github", "github copilot", "natural language instructions", "news", "workflow customization"]
+permalink: /github-copilot/news/Copilot-code-review-copilot-instructionmd-support-is-now-generally-available
+tags:
+- AI
+- AI Assisted Code Review
+- Code Review Automation
+- Copilot Code Review
+- Copilot Instructions.md
+- Developer Tools
+- General Availability
+- GitHub
+- GitHub Copilot
+- Natural Language Instructions
+- News
+- Workflow Customization
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces that copilot-instructions.md support in GitHub Copilot code review is now generally available, empowering developers to customize Copilot's review workflow directly within repositories.<!--excerpt_end-->
 
 # Copilot Code Review: copilot-instructions.md Support is Now Generally Available

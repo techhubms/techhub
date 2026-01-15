@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Sanity Check On .NET Framework / Mono / MacOS"
-description: "The author shares their experience attempting to build and unit test .NET Framework 4.8 worker services on MacOS using Mono. They encounter assembly version issues related to System.Net.Http, ultimately questioning if cross-platform development for legacy .NET is feasible for teams using MacBooks."
-author: "tparikka"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mfy7yk/sanity_check_on_net_framework_mono_macos/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Sanity Check On .NET Framework / Mono / MacOS
+author: tparikka
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mfy7yk/sanity_check_on_net_framework_mono_macos/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 18:53:34 +00:00
-permalink: "/2025-08-02-Sanity-Check-On-NET-Framework-Mono-MacOS.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Framework", "Assembly Versioning", "Build Toolchain", "Coding", "Community", "Cross Platform Development", "Developer Workflow", "MacOS", "Mono", "Rider IDE", "System.Net.Http", "Unit Testing"]
-tags_normalized: ["dotnet", "dotnet framework", "assembly versioning", "build toolchain", "coding", "community", "cross platform development", "developer workflow", "macos", "mono", "rider ide", "systemdotnetdothttp", "unit testing"]
+permalink: /coding/community/Sanity-Check-On-NET-Framework-Mono-MacOS
+tags:
+- .NET
+- .NET Framework
+- Assembly Versioning
+- Build Toolchain
+- Coding
+- Community
+- Cross Platform Development
+- Developer Workflow
+- MacOS
+- Mono
+- Rider IDE
+- System.Net.Http
+- Unit Testing
+section_names:
+- coding
 ---
-
 Author tparikka discusses the challenges of building and testing .NET Framework 4.8 services on MacOS using Mono, highlighting assembly compatibility issues.<!--excerpt_end-->
 
 ## Summary

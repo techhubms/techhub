@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Signify Boosts Customer Service Accuracy with Microsoft PIKE-RAG on Azure"
-description: "This article details how Signify, a leader in connected LED lighting solutions, collaborated with Microsoft Research Asia to enhance its customer service capabilities using the PIKE-RAG technology and Microsoft Azure. By integrating advanced AI and retrieval-augmented generation, Signify improved its knowledge management system, tackling challenges in multimodal document parsing and domain reasoning. The piece also highlights PIKE-RAG's broader potential for industrial applications beyond lighting."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Signify Boosts Customer Service Accuracy with Microsoft PIKE-RAG on Azure
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 17:14:37 +00:00
-permalink: "/2025-11-06-Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Algorithm Optimization", "Azure", "Company News", "Customer Service AI", "Document Intelligence", "Domain Adaptation", "Enterprise AI", "Industrial AI", "Knowledge Management", "LED Lighting", "Microsoft Azure OpenAI", "Microsoft Research Asia", "Multimodal AI", "News", "PIKE RAG", "Retrieval Augmented Generation", "Signify", "Technology"]
-tags_normalized: ["ai", "algorithm optimization", "azure", "company news", "customer service ai", "document intelligence", "domain adaptation", "enterprise ai", "industrial ai", "knowledge management", "led lighting", "microsoft azure openai", "microsoft research asia", "multimodal ai", "news", "pike rag", "retrieval augmented generation", "signify", "technology"]
+permalink: /ai/news/Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure
+tags:
+- AI
+- Algorithm Optimization
+- Azure
+- Company News
+- Customer Service AI
+- Document Intelligence
+- Domain Adaptation
+- Enterprise AI
+- Industrial AI
+- Knowledge Management
+- LED Lighting
+- Microsoft Azure OpenAI
+- Microsoft Research Asia
+- Multimodal AI
+- News
+- PIKE RAG
+- Retrieval Augmented Generation
+- Signify
+- Technology
+section_names:
+- ai
+- azure
 ---
-
 stclarke explores how Signify enhanced its customer service knowledge management system using Microsoft Azure and PIKE-RAG, collaborating with Microsoft Research Asia to achieve greater answer accuracy and efficiency.<!--excerpt_end-->
 
 # Signify Boosts Customer Service Accuracy with Microsoft PIKE-RAG on Azure

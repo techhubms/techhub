@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Replicating VMware Workloads to Azure with Azure Site Recovery for Disaster Recovery"
-description: "This community post by ADEDAYO1880 outlines requirements and asks for recommendations on replicating over 80 VMware-hosted workloads, including databases and application servers, to Azure using Azure Site Recovery (ASR). The post covers seamless failover, backup frequency, Entra ID integration, database replication, application server strategies, network security integration, cost optimization, and best practices for disaster recovery drills."
-author: "ADEDAYO1880"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Replicating VMware Workloads to Azure with Azure Site Recovery for Disaster Recovery
+author: ADEDAYO1880
+canonical_url: https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-11 18:46:30 +00:00
-permalink: "/2025-10-11-Replicating-VMware-Workloads-to-Azure-with-Azure-Site-Recovery-for-Disaster-Recovery.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Site Recovery", "Backup", "Community", "Cost Optimization", "Database Replication", "Disaster Recovery", "Failover", "Linux", "Microsoft Entra ID", "MySQL", "Network Security", "Non Destructive DR Drill", "Oracle", "Security", "SQL Server", "VMware", "Windows Server"]
-tags_normalized: ["azure", "azure site recovery", "backup", "community", "cost optimization", "database replication", "disaster recovery", "failover", "linux", "microsoft entra id", "mysql", "network security", "non destructive dr drill", "oracle", "security", "sql server", "vmware", "windows server"]
+permalink: /azure/community/Replicating-VMware-Workloads-to-Azure-with-Azure-Site-Recovery-for-Disaster-Recovery
+tags:
+- Azure
+- Azure Site Recovery
+- Backup
+- Community
+- Cost Optimization
+- Database Replication
+- Disaster Recovery
+- Failover
+- Linux
+- Microsoft Entra ID
+- MySQL
+- Network Security
+- Non Destructive DR Drill
+- Oracle
+- Security
+- SQL Server
+- VMware
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 ADEDAYO1880 seeks guidance on replicating VMware workloads to Azure using Azure Site Recovery, covering database replication, application server strategies, security integration, backup practices, and DR tests.<!--excerpt_end-->
 
 # Replicating VMware Workloads to Azure Using Azure Site Recovery (ASR)

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Secret Scanning Expands Support: 12 New Token Validators Added to GitHub"
-description: "This news update details GitHub's addition of validity check support for 12 new API token types from 11 providers—including Cockroach Labs, Polar, Yandex, and more. Developers using secret scanning will now benefit from enhanced automatic detection and verification for a wider range of credentials. The update covers expanded provider support, improvements to active credential alerting, and directs users to documentation for the full supported list."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-12-secret-scanning-adds-12-validators-including-cockroach-labs-polar-and-yandex"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Secret Scanning Expands Support: 12 New Token Validators Added to GitHub'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-12-secret-scanning-adds-12-validators-including-cockroach-labs-polar-and-yandex
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 21:20:14 +00:00
-permalink: "/2025-08-12-Secret-Scanning-Expands-Support-12-New-Token-Validators-Added-to-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["API Tokens", "Apify", "Asaas", "Cockroach Labs", "Code Security", "Continuous Integration", "Credential Validation", "Developer Tools", "DevOps", "DevOps Security", "Fullstory", "GitHub", "Grafana", "News", "Polar", "RunPod", "Secret Scanning", "Security", "Sourcegraph", "Telnyx", "Token Validity Checks", "Val Town", "Yandex"]
-tags_normalized: ["api tokens", "apify", "asaas", "cockroach labs", "code security", "continuous integration", "credential validation", "developer tools", "devops", "devops security", "fullstory", "github", "grafana", "news", "polar", "runpod", "secret scanning", "security", "sourcegraph", "telnyx", "token validity checks", "val town", "yandex"]
+permalink: /devops/news/Secret-Scanning-Expands-Support-12-New-Token-Validators-Added-to-GitHub
+tags:
+- API Tokens
+- Apify
+- Asaas
+- Cockroach Labs
+- Code Security
+- Continuous Integration
+- Credential Validation
+- Developer Tools
+- DevOps
+- DevOps Security
+- Fullstory
+- GitHub
+- Grafana
+- News
+- Polar
+- RunPod
+- Secret Scanning
+- Security
+- Sourcegraph
+- Telnyx
+- Token Validity Checks
+- Val Town
+- Yandex
+section_names:
+- devops
+- security
 ---
-
 Allison reports on GitHub’s secret scanning improvements, highlighting expanded support for 12 new token types and enhanced credential validity checks to bolster repository security.<!--excerpt_end-->
 
 # Secret Scanning Expands Support: 12 New Token Validators Added to GitHub

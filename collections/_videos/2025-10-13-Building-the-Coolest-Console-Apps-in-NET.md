@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Building the Coolest Console Apps in .NET"
-description: "Nick Chapsas demonstrates how to create advanced and visually impressive console applications in .NET using the RazorConsole library. The video covers how RazorConsole leverages Razor Pages to build unique console interfaces, making console app development in C# more engaging and dynamic. Source code links and additional resources are shared."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1C1gTRm7BB4"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Building the Coolest Console Apps in .NET
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=1C1gTRm7BB4
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-10-13 10:45:00 +00:00
-permalink: "/2025-10-13-Building-the-Coolest-Console-Apps-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Application Development", "C#", "Code Tutorial", "Coding", "Console Applications", "Library", "Open Source", "Programming", "Razor Pages", "RazorConsole", "Videos"]
-tags_normalized: ["dotnet", "application development", "csharp", "code tutorial", "coding", "console applications", "library", "open source", "programming", "razor pages", "razorconsole", "videos"]
+permalink: /coding/videos/Building-the-Coolest-Console-Apps-in-NET
+tags:
+- .NET
+- Application Development
+- C#
+- Code Tutorial
+- Coding
+- Console Applications
+- Library
+- Open Source
+- Programming
+- Razor Pages
+- RazorConsole
+- Videos
+section_names:
+- coding
 ---
-
 In this video, Nick Chapsas explores building visually dynamic console applications in .NET using the RazorConsole library, demonstrating how developers can leverage Razor Pages in C# for console app development.<!--excerpt_end-->
 
 {% youtube 1C1gTRm7BB4 %}

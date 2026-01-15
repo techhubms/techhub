@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Modern C# Features to Enhance Your Coding Habits"
-description: "This session explores practical new features introduced in C# versions 12 through 14, highlighting improvements that make development more enjoyable and productive. Suitable for both current C# developers and those returning to the language, it provides a hands-on look at features spanning two long-term support (LTS) releases and offers actionable insights for evolving everyday coding practices."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yIswUU7lKpk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Modern C# Features to Enhance Your Coding Habits
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=yIswUU7lKpk
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 01:15:07 +00:00
-permalink: "/2025-11-14-Modern-C-Features-to-Enhance-Your-Coding-Habits.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Conf", "Best Practices", "C# 12", "C# 13", "C# 14", "C# Improvements", "Code Quality", "Coding", "Developer Tips", "Language Features", "LTS Release", "Productivity", "Refactoring", "Videos"]
-tags_normalized: ["dotnet", "dotnet conf", "best practices", "csharp 12", "csharp 13", "csharp 14", "csharp improvements", "code quality", "coding", "developer tips", "language features", "lts release", "productivity", "refactoring", "videos"]
+permalink: /coding/videos/Modern-C-Features-to-Enhance-Your-Coding-Habits
+tags:
+- .NET
+- .NET Conf
+- Best Practices
+- C# 12
+- C# 13
+- C# 14
+- C# Improvements
+- Code Quality
+- Coding
+- Developer Tips
+- Language Features
+- LTS Release
+- Productivity
+- Refactoring
+- Videos
+section_names:
+- coding
 ---
-
 Dotnet presents a walkthrough of the latest C# language features from versions 12 to 14, designed to improve coding habits and productivity for developers.<!--excerpt_end-->
 
 {% youtube yIswUU7lKpk %}

@@ -1,21 +1,35 @@
----
-layout: "post"
-title: "Coding Agent Integration in Visual Studio Code"
-description: "This video demonstrates how to use GitHub Copilot's autonomous coding agent within Visual Studio Code via the GitHub Pull Requests extension. It covers prerequisites, a walkthrough of app features, assigning issues to Copilot, handling active pull requests, iterating on changes, and delegating coding work to Copilot—all without leaving your editor."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xGYHPN5NNd0"
-viewing_mode: "internal"
-section: "github-copilot"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Coding Agent Integration in Visual Studio Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=xGYHPN5NNd0
+viewing_mode: internal
+section: github-copilot
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-25 14:01:36 +00:00
-permalink: "/2025-07-25-Coding-Agent-Integration-in-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Developer", "Coding", "Coding Agent", "Copilot Automation", "Developer Workflow", "Editor Integration", "GitHub Copilot", "GitHub Pull Requests Extension", "Issue Assignment", "Pull Request Management", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai coding assistant", "ai developer", "coding", "coding agent", "copilot automation", "developer workflow", "editor integration", "github copilot", "github pull requests extension", "issue assignment", "pull request management", "software development", "videos", "vs code"]
+permalink: /github-copilot/videos/Coding-Agent-Integration-in-Visual-Studio-Code
+tags:
+- AI
+- AI Coding Assistant
+- AI Developer
+- Coding
+- Coding Agent
+- Copilot Automation
+- Developer Workflow
+- Editor Integration
+- GitHub Copilot
+- GitHub Pull Requests Extension
+- Issue Assignment
+- Pull Request Management
+- Software Development
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's team presents a walkthrough on integrating GitHub Copilot's coding agent within VS Code, showing developers how to delegate tasks and streamline workflows using AI-powered features.<!--excerpt_end-->
 
 {% youtube xGYHPN5NNd0 %}

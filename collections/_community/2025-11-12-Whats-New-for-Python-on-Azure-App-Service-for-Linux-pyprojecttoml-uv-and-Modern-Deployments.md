@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments"
-description: "This post by TulikaC details new Python build and deployment enhancements on Azure App Service for Linux. It walks through support for pyproject.toml with uv, setup.py, improved container shell experience, and new GitHub Actions workflows. Learn how modern Python tools and updated Azure pipelines streamline reproducible builds and deployment for developers."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments'
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 15:16:13 +00:00
-permalink: "/2025-11-12-Whats-New-for-Python-on-Azure-App-Service-for-Linux-pyprojecttoml-uv-and-Modern-Deployments.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["App Service For Linux", "Azure", "Azure App Service", "CI/CD", "Cloud Development", "Coding", "Community", "Continuous Deployment", "Deployment Pipeline", "DevOps", "Flask", "GitHub Actions", "Oryx", "PEP 621", "Poetry", "Pyproject.toml", "Python", "Setup.py", "Setuptools", "Uv", "Virtual Environments"]
-tags_normalized: ["app service for linux", "azure", "azure app service", "cislashcd", "cloud development", "coding", "community", "continuous deployment", "deployment pipeline", "devops", "flask", "github actions", "oryx", "pep 621", "poetry", "pyprojectdottoml", "python", "setupdotpy", "setuptools", "uv", "virtual environments"]
+permalink: /coding/community/Whats-New-for-Python-on-Azure-App-Service-for-Linux-pyprojecttoml-uv-and-Modern-Deployments
+tags:
+- App Service For Linux
+- Azure
+- Azure App Service
+- CI/CD
+- Cloud Development
+- Coding
+- Community
+- Continuous Deployment
+- Deployment Pipeline
+- DevOps
+- Flask
+- GitHub Actions
+- Oryx
+- PEP 621
+- Poetry
+- Pyproject.toml
+- Python
+- Setup.py
+- Setuptools
+- Uv
+- Virtual Environments
+section_names:
+- azure
+- coding
+- devops
 ---
-
 TulikaC explains recent upgrades for building and deploying Python apps on Azure App Service for Linux, covering modern tools like pyproject.toml, uv, Poetry, and offering improved DevOps workflows.<!--excerpt_end-->
 
 # What’s New for Python on App Service for Linux: pyproject.toml, uv, and More

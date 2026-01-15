@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Reimagining IT Operations with Agentic AI on Microsoft Azure"
-description: "This Microsoft Ignite video showcases Tata Consultancy Services' Autonomous Operations (TAO), an AI-enabled agentic solution for IT operations built on Microsoft Foundry and hosted on Azure. TAO integrates with ITSM tools and leverages operational data to automate triage and resolution processes, utilizing AI agents to enable digital-first interactions and improve incident handling efficiency. The session provides a walkthrough of TAO's agents, code fix automation, escalation procedures, and real-world outcomes such as reduced incident rates and improved mean time to resolution (MTTR)."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LO1fQDWt2iI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Reimagining IT Operations with Agentic AI on Microsoft Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=LO1fQDWt2iI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:53:29 +00:00
-permalink: "/2025-11-19-Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Agents", "Autonomous Operations", "Azure", "Digital Operations", "Incident Management", "Infrastructure Management", "InnovatewithAzureAIappsandagents", "ITSM", "Microsoft Azure", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "MTTR", "Operational Automation", "Operational Efficiency", "Service Request", "TAO", "TCS", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "autonomous operations", "azure", "digital operations", "incident management", "infrastructure management", "innovatewithazureaiappsandagents", "itsm", "microsoft azure", "microsoft foundry", "microsoft ignite", "msignite", "mttr", "operational automation", "operational efficiency", "service request", "tao", "tcs", "videos"]
+permalink: /ai/videos/Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- Autonomous Operations
+- Azure
+- Digital Operations
+- Incident Management
+- Infrastructure Management
+- InnovatewithAzureAIappsandagents
+- ITSM
+- Microsoft Azure
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- MTTR
+- Operational Automation
+- Operational Efficiency
+- Service Request
+- TAO
+- TCS
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents Deepraj Khot discussing TCS Autonomous Operations (TAO), an agentic AI solution on Microsoft Azure, demonstrating automated incident triage and resolution for IT operations.<!--excerpt_end-->
 
 {% youtube LO1fQDWt2iI %}

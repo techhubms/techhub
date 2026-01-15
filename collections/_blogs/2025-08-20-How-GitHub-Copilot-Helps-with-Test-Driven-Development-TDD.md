@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How GitHub Copilot Helps with Test-Driven Development (TDD)"
-description: "This article by Dellenny explores how GitHub Copilot can accelerate the Test-Driven Development (TDD) workflow, highlighting its impact on test generation, Red-Green-Refactor cycles, edge case coverage, and reducing cognitive load, while cautioning developers against over-reliance on AI-generated suggestions."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot Helps with Test-Driven Development (TDD)
+author: Dellenny
+canonical_url: https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-20 08:04:32 +00:00
-permalink: "/2025-08-20-How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Assertion Generation", "Blogs", "Code Automation", "Coding", "Developer Productivity", "Edge Case Generation", "GitHub Copilot", "JUnit", "Pytest", "Red Green Refactor", "RSpec", "Software Engineering", "TDD", "Test Driven Development", "Test Scaffolding", "Testing Frameworks", "Unit Testing", "Unittest"]
-tags_normalized: ["ai", "ai coding assistant", "assertion generation", "blogs", "code automation", "coding", "developer productivity", "edge case generation", "github copilot", "junit", "pytest", "red green refactor", "rspec", "software engineering", "tdd", "test driven development", "test scaffolding", "testing frameworks", "unit testing", "unittest"]
+permalink: /github-copilot/blogs/How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD
+tags:
+- AI
+- AI Coding Assistant
+- Assertion Generation
+- Blogs
+- Code Automation
+- Coding
+- Developer Productivity
+- Edge Case Generation
+- GitHub Copilot
+- JUnit
+- Pytest
+- Red Green Refactor
+- RSpec
+- Software Engineering
+- TDD
+- Test Driven Development
+- Test Scaffolding
+- Testing Frameworks
+- Unit Testing
+- Unittest
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Dellenny discusses how GitHub Copilot supports Test-Driven Development (TDD) by helping developers write tests efficiently, generate edge cases, and stay productive throughout the coding cycle.<!--excerpt_end-->
 
 # How GitHub Copilot Helps with Test-Driven Development (TDD)

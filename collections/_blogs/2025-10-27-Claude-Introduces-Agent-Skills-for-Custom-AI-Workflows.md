@@ -1,20 +1,56 @@
----
-layout: "post"
-title: "Claude Introduces Agent Skills for Custom AI Workflows"
-description: "This article by Tom Smith explores Anthropic's new Agent Skills for Claude, which allow DevOps and engineering teams to package scripts, instructions, and resources into reusable, composable components (Skills) for use across Claude's products. The piece covers implementation details, benefits for DevOps automation and infrastructure as code, API and code execution support, as well as current limitations and best practices for adoption."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Claude Introduces Agent Skills for Custom AI Workflows
+author: Tom Smith
+canonical_url: https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-27 09:23:33 +00:00
-permalink: "/2025-10-27-Claude-Introduces-Agent-Skills-for-Custom-AI-Workflows.html"
-categories: ["AI", "DevOps"]
-tags: ["Agent Skills", "Agentic Development", "AI", "AI Agents", "AI Automation", "AI For Developers", "AI For DevOps Teams", "AI Workflows", "Anthropic Agent Skills", "Anthropic AI Tools", "Anthropic Claude", "Automation", "Blogs", "Business Of DevOps", "CI/CD Pipelines", "Claude AI Update", "Claude API", "Claude Code", "Claude Code Execution Tool", "Claude Marketplace", "Claude Planning", "Claude SDK", "Claude Skills", "Claude Web App", "Custom AI Workflows", "DevOps", "DevOps AI", "DevOps Automation", "IaC", "Infrastructure Automation", "Intent Driven Development", "Reusable AI Skills", "Runbook Automation", "Skills Marketplace", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Automation"]
-tags_normalized: ["agent skills", "agentic development", "ai", "ai agents", "ai automation", "ai for developers", "ai for devops teams", "ai workflows", "anthropic agent skills", "anthropic ai tools", "anthropic claude", "automation", "blogs", "business of devops", "cislashcd pipelines", "claude ai update", "claude api", "claude code", "claude code execution tool", "claude marketplace", "claude planning", "claude sdk", "claude skills", "claude web app", "custom ai workflows", "devops", "devops ai", "devops automation", "iac", "infrastructure automation", "intent driven development", "reusable ai skills", "runbook automation", "skills marketplace", "social facebook", "social linkedin", "social x", "workflow automation"]
+permalink: /ai/blogs/Claude-Introduces-Agent-Skills-for-Custom-AI-Workflows
+tags:
+- Agent Skills
+- Agentic Development
+- AI
+- AI Agents
+- AI Automation
+- AI For Developers
+- AI For DevOps Teams
+- AI Workflows
+- Anthropic Agent Skills
+- Anthropic AI Tools
+- Anthropic Claude
+- Automation
+- Blogs
+- Business Of DevOps
+- CI/CD Pipelines
+- Claude AI Update
+- Claude API
+- Claude Code
+- Claude Code Execution Tool
+- Claude Marketplace
+- Claude Planning
+- Claude SDK
+- Claude Skills
+- Claude Web App
+- Custom AI Workflows
+- DevOps
+- DevOps AI
+- DevOps Automation
+- IaC
+- Infrastructure Automation
+- Intent Driven Development
+- Reusable AI Skills
+- Runbook Automation
+- Skills Marketplace
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Workflow Automation
+section_names:
+- ai
+- devops
 ---
-
 Tom Smith reviews Anthropic's Agent Skills for Claude, a new system enabling DevOps and engineering teams to package, share, and automate reusable components for complex AI-driven workflows.<!--excerpt_end-->
 
 # Claude Introduces Agent Skills for Custom AI Workflows

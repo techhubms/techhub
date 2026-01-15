@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Safeguarding VS Code Against Prompt Injections: Securing GitHub Copilot Chat"
-description: "This in-depth analysis by Michael Stepankin explores recent vulnerabilities found in the Copilot Chat extension for Visual Studio Code, focusing on indirect prompt injection risks. The article breaks down how attackers can exploit agent tools to leak tokens or execute code, the fixes and mitigations implemented by the VS Code and GitHub teams, and best practices for developers to securely use AI-powered code assistants."
-author: "Michael Stepankin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Safeguarding VS Code Against Prompt Injections: Securing GitHub Copilot Chat'
+author: Michael Stepankin
+canonical_url: https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-25 16:01:12 +00:00
-permalink: "/2025-08-25-Safeguarding-VS-Code-Against-Prompt-Injections-Securing-GitHub-Copilot-Chat.html"
-categories: ["AI", "Coding", "GitHub Copilot", "Security"]
-tags: ["Agent Mode", "AI", "AI Security", "Application Security", "Coding", "CVE", "Developer Containers", "Editfile Tool", "Exploit", "Fetch Webpage Tool", "GitHub Codespaces", "GitHub Copilot", "GitHub Security Lab", "Language Models", "LLM", "MCP Server", "News", "Prompt Injection", "Sandboxing", "Security", "Security Mitigation", "Simple Browser Tool", "Supply Chain Security", "Token Leakage", "Tool API", "VS Code", "Vulnerability Research", "Web Application Security", "Workspace Trust"]
-tags_normalized: ["agent mode", "ai", "ai security", "application security", "coding", "cve", "developer containers", "editfile tool", "exploit", "fetch webpage tool", "github codespaces", "github copilot", "github security lab", "language models", "llm", "mcp server", "news", "prompt injection", "sandboxing", "security", "security mitigation", "simple browser tool", "supply chain security", "token leakage", "tool api", "vs code", "vulnerability research", "web application security", "workspace trust"]
+permalink: /github-copilot/news/Safeguarding-VS-Code-Against-Prompt-Injections-Securing-GitHub-Copilot-Chat
+tags:
+- Agent Mode
+- AI
+- AI Security
+- Application Security
+- Coding
+- CVE
+- Developer Containers
+- Editfile Tool
+- Exploit
+- Fetch Webpage Tool
+- GitHub Codespaces
+- GitHub Copilot
+- GitHub Security Lab
+- Language Models
+- LLM
+- MCP Server
+- News
+- Prompt Injection
+- Sandboxing
+- Security
+- Security Mitigation
+- Simple Browser Tool
+- Supply Chain Security
+- Token Leakage
+- Tool API
+- VS Code
+- Vulnerability Research
+- Web Application Security
+- Workspace Trust
+section_names:
+- ai
+- coding
+- github-copilot
+- security
 ---
-
 Michael Stepankin details prompt injection vulnerabilities in the VS Code Copilot Chat extension, examining how attackers target agent tools and how the GitHub and VS Code teams have responded. The article is vital reading for developers using AI-powered assistants.<!--excerpt_end-->
 
 # Safeguarding VS Code Against Prompt Injections: Securing GitHub Copilot Chat

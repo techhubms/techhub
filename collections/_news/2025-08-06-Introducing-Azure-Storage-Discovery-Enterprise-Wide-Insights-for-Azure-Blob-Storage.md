@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage"
-description: "Announcing the public preview of Azure Storage Discovery, a fully managed Azure service that provides comprehensive visibility and actionable insights across your Azure Blob Storage data estate. The service offers integration with Azure Copilot, interactive reporting, cost optimization features, and advanced security analysis."
-author: "Aung Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage'
+author: Aung Oo
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-06 15:00:00 +00:00
-permalink: "/2025-08-06-Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure Blob Storage", "Azure Copilot", "Azure Storage Discovery", "Cloud Storage", "Cost Optimization", "Data Governance", "Data Insights", "Enterprise Data Estate", "Historical Data Analytics", "Interactive Reports", "Microsoft Entra", "News", "Operational Efficiency", "Security Compliance", "Storage", "Storage Management"]
-tags_normalized: ["ai", "azure", "azure blob storage", "azure copilot", "azure storage discovery", "cloud storage", "cost optimization", "data governance", "data insights", "enterprise data estate", "historical data analytics", "interactive reports", "microsoft entra", "news", "operational efficiency", "security compliance", "storage", "storage management"]
+permalink: /ai/news/Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage
+tags:
+- AI
+- Azure
+- Azure Blob Storage
+- Azure Copilot
+- Azure Storage Discovery
+- Cloud Storage
+- Cost Optimization
+- Data Governance
+- Data Insights
+- Enterprise Data Estate
+- Historical Data Analytics
+- Interactive Reports
+- Microsoft Entra
+- News
+- Operational Efficiency
+- Security Compliance
+- Storage
+- Storage Management
+section_names:
+- ai
+- azure
 ---
-
 Authored by Aung Oo, this blog post announces Azure Storage Discovery, a new Azure service for managing and analyzing enterprise Blob Storage. Learn about its features, Copilot integration, and user experiences.<!--excerpt_end-->
 
 # Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Driving Efficiency and Cost Optimization for Azure IaaS Deployments"
-description: "This session from Microsoft Ignite 2025 explores strategies for improving efficiency and optimizing costs in Azure IaaS (Infrastructure as a Service) environments. It covers Azure's latest features for reducing total cost of ownership (TCO), including storage improvements, network enhancements, and guidance on application profiling. Real-world insights from Morgan Stanley and practical demos illustrate how to leverage Azure for scalable, informed cloud infrastructure decisions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FJIWbOczakQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Driving Efficiency and Cost Optimization for Azure IaaS Deployments
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=FJIWbOczakQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:24:25 +00:00
-permalink: "/2025-11-24-Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments.html"
-categories: ["Azure"]
-tags: ["AI", "AI Tools", "Azure", "Azure Blob Storage", "Azure IaaS", "Cloud Infrastructure", "Compute Optimization", "Cost Optimization", "Deployments", "ExpressRoute", "Log Filtering", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Monitoring", "Power BI", "Smart Tiering", "Storage Provisioning", "TCO Reduction", "Videos"]
-tags_normalized: ["ai", "ai tools", "azure", "azure blob storage", "azure iaas", "cloud infrastructure", "compute optimization", "cost optimization", "deployments", "expressroute", "log filtering", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network monitoring", "power bi", "smart tiering", "storage provisioning", "tco reduction", "videos"]
+permalink: /azure/videos/Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments
+tags:
+- AI
+- AI Tools
+- Azure
+- Azure Blob Storage
+- Azure IaaS
+- Cloud Infrastructure
+- Compute Optimization
+- Cost Optimization
+- Deployments
+- ExpressRoute
+- Log Filtering
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Network Monitoring
+- Power BI
+- Smart Tiering
+- Storage Provisioning
+- TCO Reduction
+- Videos
+section_names:
+- azure
 ---
-
 Presented by Yuemin Lu, Rajeesh Ramachandran, and Sam Shteingart at Microsoft Ignite, this session details how organizations can leverage Azure IaaS to optimize infrastructure costs and drive efficiency, using new platform features and real-world examples.<!--excerpt_end-->
 
 {% youtube FJIWbOczakQ %}

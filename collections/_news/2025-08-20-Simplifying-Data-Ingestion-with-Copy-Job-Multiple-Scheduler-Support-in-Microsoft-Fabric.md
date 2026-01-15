@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric"
-description: "This post details recent enhancements to Copy Job within Microsoft Fabric Data Factory, focusing on new multiple scheduler support. The update allows users to configure multiple triggers within a single Copy job, supporting scenarios such as daily and weekly runs and improving orchestration and efficiency. It also covers native integration with Git, Deployment Pipelines, and public APIs, with links to official documentation and community resources."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 09:00:00 +00:00
-permalink: "/2025-08-20-Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Bulk Copy", "CI/CD", "Copy Job", "Data Engineering", "Data Factory", "Data Ingestion", "Deployment Pipelines", "Git Integration", "Incremental Copy", "Microsoft Fabric", "ML", "Multiple Scheduler", "News", "Orchestration", "Public APIs"]
-tags_normalized: ["azure", "bulk copy", "cislashcd", "copy job", "data engineering", "data factory", "data ingestion", "deployment pipelines", "git integration", "incremental copy", "microsoft fabric", "ml", "multiple scheduler", "news", "orchestration", "public apis"]
+permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric
+tags:
+- Azure
+- Bulk Copy
+- CI/CD
+- Copy Job
+- Data Engineering
+- Data Factory
+- Data Ingestion
+- Deployment Pipelines
+- Git Integration
+- Incremental Copy
+- Microsoft Fabric
+- ML
+- Multiple Scheduler
+- News
+- Orchestration
+- Public APIs
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog outlines recent improvements to Copy Job in Data Factory, with multiple scheduler support enabling advanced data ingestion scheduling and orchestration by the platform team.<!--excerpt_end-->
 
 # Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric

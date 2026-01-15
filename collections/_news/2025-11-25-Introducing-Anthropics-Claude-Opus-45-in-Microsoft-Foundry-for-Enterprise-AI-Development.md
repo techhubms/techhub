@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development"
-description: "A detailed announcement showcasing Anthropic's Claude Opus 4.5 now available within Microsoft Foundry, GitHub Copilot paid plans, and Copilot Studio. Covering technical benchmarks, agentic coding, integration with developer workflows, security improvements, pricing, and practical use cases such as software engineering, cybersecurity, and financial modeling—all within the Microsoft cloud ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 16:10:35 +00:00
-permalink: "/2025-11-25-Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: ["Agentic Coding", "AI", "AI Models", "Anthropic", "Azure", "Benchmarks", "Claude Opus 4.5", "Coding", "Compaction Control", "Company News", "Copilot Studio", "Cybersecurity", "Developer Tools", "Enterprise Workflows", "GitHub Copilot", "MCP Atlas", "Microsoft Foundry", "Multilingual Coding", "News", "Pricing", "Python Tool Calling", "SDK Helpers", "Security", "Software Engineering", "SWE Bench", "Visual Reasoning"]
-tags_normalized: ["agentic coding", "ai", "ai models", "anthropic", "azure", "benchmarks", "claude opus 4dot5", "coding", "compaction control", "company news", "copilot studio", "cybersecurity", "developer tools", "enterprise workflows", "github copilot", "mcp atlas", "microsoft foundry", "multilingual coding", "news", "pricing", "python tool calling", "sdk helpers", "security", "software engineering", "swe bench", "visual reasoning"]
+permalink: /github-copilot/news/Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development
+tags:
+- Agentic Coding
+- AI
+- AI Models
+- Anthropic
+- Azure
+- Benchmarks
+- Claude Opus 4.5
+- Coding
+- Compaction Control
+- Company News
+- Copilot Studio
+- Cybersecurity
+- Developer Tools
+- Enterprise Workflows
+- GitHub Copilot
+- MCP Atlas
+- Microsoft Foundry
+- Multilingual Coding
+- News
+- Pricing
+- Python Tool Calling
+- SDK Helpers
+- Security
+- Software Engineering
+- SWE Bench
+- Visual Reasoning
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 Authored by stclarke, this announcement details the rollout of Anthropic’s Claude Opus 4.5 on Microsoft Foundry, with full support for developers, enhanced coding benchmarks, security, and integration with GitHub Copilot paid plans.<!--excerpt_end-->
 
 # Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry

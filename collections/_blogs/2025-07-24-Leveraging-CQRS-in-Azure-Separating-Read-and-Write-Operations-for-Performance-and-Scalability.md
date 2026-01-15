@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Leveraging CQRS in Azure: Separating Read and Write Operations for Performance and Scalability"
-description: "This article explains how developers can implement the Command Query Responsibility Segregation (CQRS) pattern on Microsoft Azure to achieve scalable, high-performance cloud-native applications. Key Azure services, architectural approaches, best practices, and real-world examples are presented to highlight the value of separating read and write operations for both performance optimization and maintainability."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/leveraging-cqrs-in-azure-separating-read-and-write-operations-for-performance-and-scalability/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Leveraging CQRS in Azure: Separating Read and Write Operations for Performance and Scalability'
+author: Dellenny
+canonical_url: https://dellenny.com/leveraging-cqrs-in-azure-separating-read-and-write-operations-for-performance-and-scalability/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-24 09:10:36 +00:00
-permalink: "/2025-07-24-Leveraging-CQRS-in-Azure-Separating-Read-and-Write-Operations-for-Performance-and-Scalability.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Application Design", "Architecture", "Azure", "Azure API Management", "Azure Cache For Redis", "Azure Cosmos DB", "Azure Event Grid", "Azure Front Door", "Azure Functions", "Azure Service Bus", "Azure SQL Database", "Blogs", "Cloud Native", "Coding", "Command Query Responsibility Segregation", "CQRS", "DevOps", "Event Driven Architecture", "Eventual Consistency", "Microservices", "Performance Optimization", "Read Model", "Scalability", "Solution Architecture", "Write Model"]
-tags_normalized: ["application design", "architecture", "azure", "azure api management", "azure cache for redis", "azure cosmos db", "azure event grid", "azure front door", "azure functions", "azure service bus", "azure sql database", "blogs", "cloud native", "coding", "command query responsibility segregation", "cqrs", "devops", "event driven architecture", "eventual consistency", "microservices", "performance optimization", "read model", "scalability", "solution architecture", "write model"]
+permalink: /coding/blogs/Leveraging-CQRS-in-Azure-Separating-Read-and-Write-Operations-for-Performance-and-Scalability
+tags:
+- Application Design
+- Architecture
+- Azure
+- Azure API Management
+- Azure Cache For Redis
+- Azure Cosmos DB
+- Azure Event Grid
+- Azure Front Door
+- Azure Functions
+- Azure Service Bus
+- Azure SQL Database
+- Blogs
+- Cloud Native
+- Coding
+- Command Query Responsibility Segregation
+- CQRS
+- DevOps
+- Event Driven Architecture
+- Eventual Consistency
+- Microservices
+- Performance Optimization
+- Read Model
+- Scalability
+- Solution Architecture
+- Write Model
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Dellenny describes how to apply the CQRS pattern using Microsoft Azure services, guiding developers through separating read and write operations to maximize performance, scalability, and maintainability in modern cloud-native applications.<!--excerpt_end-->
 
 # Leveraging CQRS in Azure: Separating Read and Write Operations for Performance and Scalability

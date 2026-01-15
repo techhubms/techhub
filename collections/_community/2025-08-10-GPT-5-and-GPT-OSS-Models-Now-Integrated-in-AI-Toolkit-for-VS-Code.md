@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GPT-5 and GPT OSS Models Now Integrated in AI Toolkit for VS Code"
-description: "This detailed overview introduces the v0.18.3 release of AI Toolkit for VS Code, highlighting the integration of the latest GPT-5 family of models and OpenAI’s open-source GPT OSS models via Azure AI Foundry, GitHub, and ONNX Runtime. Readers learn how to explore, compare, and deploy these advanced AI models both in cloud and local environments for various development scenarios."
-author: "junjieli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-family-of-models-gpt-oss-are-now-available-in-ai-toolkit/ba-p/4441394"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: GPT-5 and GPT OSS Models Now Integrated in AI Toolkit for VS Code
+author: junjieli
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-family-of-models-gpt-oss-are-now-available-in-ai-toolkit/ba-p/4441394
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-10 04:15:00 +00:00
-permalink: "/2025-08-10-GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Cloud AI", "Code Generation", "Community", "Edge AI", "GitHub", "GPT 5", "GPT OSS", "JavaScript", "Model Comparison", "Model Deployment", "ONNX Runtime", "OpenAI", "Python", "SDK Snippets", "VS Code"]
-tags_normalized: ["ai", "ai toolkit", "azure", "azure ai foundry", "cloud ai", "code generation", "community", "edge ai", "github", "gpt 5", "gpt oss", "javascript", "model comparison", "model deployment", "onnx runtime", "openai", "python", "sdk snippets", "vs code"]
+permalink: /ai/community/GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code
+tags:
+- AI
+- AI Toolkit
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Code Generation
+- Community
+- Edge AI
+- GitHub
+- GPT 5
+- GPT OSS
+- JavaScript
+- Model Comparison
+- Model Deployment
+- ONNX Runtime
+- OpenAI
+- Python
+- SDK Snippets
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 junjieli explains how the AI Toolkit v0.18.3 for VS Code brings full support for GPT-5 and GPT OSS models, providing developers with powerful AI integration and deployment features across Azure and local environments.<!--excerpt_end-->
 
 # GPT-5 Family of Models & GPT OSS Are Now Available in AI Toolkit for VS Code

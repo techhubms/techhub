@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Your First MCP Server with .NET 10 and Publishing to NuGet"
-description: "This guide by Jon Douglas, Joel Verhagen, and Jon Galloway covers creating a Model Context Protocol (MCP) server using .NET 10, enhancing it with custom tools, testing it with GitHub Copilot, and publishing it to NuGet for the .NET AI ecosystem."
-author: "Jon Douglas, Joel Verhagen, Jon Galloway"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Building Your First MCP Server with .NET 10 and Publishing to NuGet
+author: Jon Douglas, Joel Verhagen, Jon Galloway
+canonical_url: https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-15 20:00:00 +00:00
-permalink: "/2025-07-15-Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet.html"
-categories: ["AI", "GitHub Copilot", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Assistants", "C#", "Coding", "Community Tools", "Configuration", "GitHub Copilot", "MCP", "News", "NuGet", "Open Standard", "Project Publishing", "SDK", "Server Development", "Templates", "VS Code"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai assistants", "csharp", "coding", "community tools", "configuration", "github copilot", "mcp", "news", "nuget", "open standard", "project publishing", "sdk", "server development", "templates", "vs code"]
+permalink: /github-copilot/news/Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Assistants
+- C#
+- Coding
+- Community Tools
+- Configuration
+- GitHub Copilot
+- MCP
+- News
+- NuGet
+- Open Standard
+- Project Publishing
+- SDK
+- Server Development
+- Templates
+- VS Code
+section_names:
+- ai
+- github-copilot
+- coding
 ---
-
 Written by Jon Douglas, Joel Verhagen, and Jon Galloway, this article demonstrates how to build, customize, and publish your first Model Context Protocol (MCP) server using .NET 10, enabling discoverable AI integrations via NuGet.<!--excerpt_end-->
 
 ## Building Your First MCP Server with .NET and Publishing to NuGet

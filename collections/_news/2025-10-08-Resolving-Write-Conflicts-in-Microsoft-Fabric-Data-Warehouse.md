@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Resolving Write Conflicts in Microsoft Fabric Data Warehouse"
-description: "This article explains how Microsoft Fabric Data Warehouse handles concurrency with Snapshot Isolation, explores the causes and impact of write-write conflicts, and presents best practices and new features like Compaction Preemption to help developers and data engineers build robust, high-concurrency solutions on Fabric DW."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Resolving Write Conflicts in Microsoft Fabric Data Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-08 07:00:00 +00:00
-permalink: "/2025-10-08-Resolving-Write-Conflicts-in-Microsoft-Fabric-Data-Warehouse.html"
-categories: ["Azure", "ML"]
-tags: ["ACID Transactions", "Atomic Operations", "Azure", "Compaction Preemption", "Concurrency Control", "Conflict Resolution", "Data Warehouse", "Error Handling", "ETL Pipelines", "Microsoft Fabric", "ML", "News", "Snapshot Isolation", "T SQL", "Table Level Locking", "Transaction Management", "Write Conflicts"]
-tags_normalized: ["acid transactions", "atomic operations", "azure", "compaction preemption", "concurrency control", "conflict resolution", "data warehouse", "error handling", "etl pipelines", "microsoft fabric", "ml", "news", "snapshot isolation", "t sql", "table level locking", "transaction management", "write conflicts"]
+permalink: /ml/news/Resolving-Write-Conflicts-in-Microsoft-Fabric-Data-Warehouse
+tags:
+- ACID Transactions
+- Atomic Operations
+- Azure
+- Compaction Preemption
+- Concurrency Control
+- Conflict Resolution
+- Data Warehouse
+- Error Handling
+- ETL Pipelines
+- Microsoft Fabric
+- ML
+- News
+- Snapshot Isolation
+- T SQL
+- Table Level Locking
+- Transaction Management
+- Write Conflicts
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog addresses how write-write conflicts occur in Fabric Data Warehouse and shares best practices and new system features to help data professionals manage concurrency and improve workflow reliability.<!--excerpt_end-->
 
 # Resolving Write Conflicts in Microsoft Fabric Data Warehouse

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Security Copilot: Automating and Accelerating Defense with Agentic Workflows"
-description: "This advanced session from Microsoft Ignite 2025 explores Security Copilot agents, focusing on how organizations can automate security tasks, enhance their defenses, and accelerate response using agentic workflows. The presenters demonstrate Microsoft’s approach to agent development, showcase a phishing triage agent, discuss agent impact metrics, and cover building trust, interactive query capabilities, and multi-domain orchestration. Key topics include custom and partner-created agents, device and identity security, and leveraging the security marketplace."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ZUoQE5UJNyk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Security Copilot: Automating and Accelerating Defense with Agentic Workflows'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ZUoQE5UJNyk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:01:05 +00:00
-permalink: "/2025-11-21-Security-Copilot-Automating-and-Accelerating-Defense-with-Agentic-Workflows.html"
-categories: ["AI", "Security"]
-tags: ["Agent Orchestration", "Agentic Workflows", "AI", "Device Security", "Identity Security", "Interactive Queries", "Microsoft Ignite", "Microsoft Security", "Modern SecOps", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Partner Solutions", "Phishing Triage", "Security", "Security Agents", "Security Automation", "Security Copilot", "Security Marketplace", "Trust Metrics", "Videos"]
-tags_normalized: ["agent orchestration", "agentic workflows", "ai", "device security", "identity security", "interactive queries", "microsoft ignite", "microsoft security", "modern secops", "modernizesecopswithaunifiedplatform", "msignite", "partner solutions", "phishing triage", "security", "security agents", "security automation", "security copilot", "security marketplace", "trust metrics", "videos"]
+permalink: /ai/videos/Security-Copilot-Automating-and-Accelerating-Defense-with-Agentic-Workflows
+tags:
+- Agent Orchestration
+- Agentic Workflows
+- AI
+- Device Security
+- Identity Security
+- Interactive Queries
+- Microsoft Ignite
+- Microsoft Security
+- Modern SecOps
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Partner Solutions
+- Phishing Triage
+- Security
+- Security Agents
+- Security Automation
+- Security Copilot
+- Security Marketplace
+- Trust Metrics
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events brings an advanced Ignite 2025 session featuring speakers Lizzie Heinze and Sarat Subramaniam. They demonstrate how Security Copilot agents can automate security tasks, strengthen defenses, and enable rapid response across multiple security domains.<!--excerpt_end-->
 
 {% youtube ZUoQE5UJNyk %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Update - 15th August 2025"
-description: "This weekly update video by John Savill covers the latest Azure news and features as of August 15, 2025. Highlights include updates to App Service (IPv6 inbound), Private App Gateway v2, ADF upsert and scripting for Azure PostgreSQL, Managed Cassandra, Cosmos DB enhancements, Azure App Testing, Azure Monitor health alerts, Azure Automation, and more. The video targets Azure practitioners and delivers concise, actionable updates on new Azure services, tools, and platform changes."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ggyEFocbRiQ"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 15th August 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=ggyEFocbRiQ
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-15 14:36:41 +00:00
-permalink: "/2025-08-15-Azure-Update-15th-August-2025.html"
-categories: ["Azure"]
-tags: ["ADF Upsert", "App Service", "Azure", "Azure App Testing", "Azure Automation", "Azure Cloud", "Azure Data Factory", "Azure Monitor", "Azure PostgreSQL", "Azure Updates", "Cloud", "Cosmos DB For MongoDB", "Customer Managed Keys", "Databricks Connector", "IPv6", "Managed Cassandra V5.0", "Microsoft", "Microsoft Azure", "Power Platform", "Private App Gateway V2", "Tenant Health Alerts", "Videos"]
-tags_normalized: ["adf upsert", "app service", "azure", "azure app testing", "azure automation", "azure cloud", "azure data factory", "azure monitor", "azure postgresql", "azure updates", "cloud", "cosmos db for mongodb", "customer managed keys", "databricks connector", "ipv6", "managed cassandra v5dot0", "microsoft", "microsoft azure", "power platform", "private app gateway v2", "tenant health alerts", "videos"]
+permalink: /azure/videos/Azure-Update-15th-August-2025
+tags:
+- ADF Upsert
+- App Service
+- Azure
+- Azure App Testing
+- Azure Automation
+- Azure Cloud
+- Azure Data Factory
+- Azure Monitor
+- Azure PostgreSQL
+- Azure Updates
+- Cloud
+- Cosmos DB For MongoDB
+- Customer Managed Keys
+- Databricks Connector
+- IPv6
+- Managed Cassandra V5.0
+- Microsoft
+- Microsoft Azure
+- Power Platform
+- Private App Gateway V2
+- Tenant Health Alerts
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training delivers the August 15th, 2025 Azure Update, highlighting new features and changes across App Service, Data Factory, PostgreSQL, Cosmos DB, and tools useful for cloud engineers.<!--excerpt_end-->
 
 {% youtube ggyEFocbRiQ %}

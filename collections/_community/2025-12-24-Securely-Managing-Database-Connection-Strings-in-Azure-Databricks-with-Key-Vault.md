@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Securely Managing Database Connection Strings in Azure Databricks with Key Vault"
-description: "This article explains a practical approach to safeguarding database connection strings within Azure Databricks notebooks by integrating Azure Key Vault. It outlines the required Azure app registrations, configuring access policies, installing libraries, and programmatic secret retrieval using Python. The guidance focuses on removing credential exposure, keeping workflows compliant, and strengthening overall security for data engineers working with Databricks."
-author: "bhramesh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securely Managing Database Connection Strings in Azure Databricks with Key Vault
+author: bhramesh
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-24 08:00:00 +00:00
-permalink: "/2025-12-24-Securely-Managing-Database-Connection-Strings-in-Azure-Databricks-with-Key-Vault.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Policies", "App Registration", "Azure", "Azure Identity", "Azure Key Vault", "Cloud Security", "Cluster Configuration", "Community", "Connection String", "Credential Management", "Data Engineering", "Database Security", "Databricks", "ML", "Python", "Secret Management", "Secrets Retrieval", "Security"]
-tags_normalized: ["access policies", "app registration", "azure", "azure identity", "azure key vault", "cloud security", "cluster configuration", "community", "connection string", "credential management", "data engineering", "database security", "databricks", "ml", "python", "secret management", "secrets retrieval", "security"]
+permalink: /ml/community/Securely-Managing-Database-Connection-Strings-in-Azure-Databricks-with-Key-Vault
+tags:
+- Access Policies
+- App Registration
+- Azure
+- Azure Identity
+- Azure Key Vault
+- Cloud Security
+- Cluster Configuration
+- Community
+- Connection String
+- Credential Management
+- Data Engineering
+- Database Security
+- Databricks
+- ML
+- Python
+- Secret Management
+- Secrets Retrieval
+- Security
+section_names:
+- azure
+- ml
+- security
 ---
-
 bhramesh demonstrates how to use Azure Key Vault to securely retrieve database connection strings in Databricks notebooks, focusing on reducing vulnerabilities and improving workflow security.<!--excerpt_end-->
 
 # Securely Managing Database Connection Strings in Azure Databricks with Key Vault

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "VS Code Beast Mode Explained: Features and Usage"
-description: "This video episode dives into the new 'Beast mode' feature in Visual Studio Code with hosts Burke Holland and James Montemagno. It explains how to enable and use Beast mode, demonstrating its integration with developer workflows in VS Code. The discussion also references related blog content for deeper exploration."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0Muxg3xhRLo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Beast Mode Explained: Features and Usage'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=0Muxg3xhRLo
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-14 20:17:42 +00:00
-permalink: "/2025-08-14-VS-Code-Beast-Mode-Explained-Features-and-Usage.html"
-categories: ["Coding"]
-tags: ["Beast Mode", "Beastmode", "Burke Holland", "Code", "Code Editing", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "James Montemagno", "Microsoft", "Productivity", "Software Developer", "Software Development", "Vibecoding", "Videos", "VS Code", "VS Code Extensions", "VS Code Features"]
-tags_normalized: ["beast mode", "beastmode", "burke holland", "code", "code editing", "coding", "demo", "developer", "developer community", "developer tools", "james montemagno", "microsoft", "productivity", "software developer", "software development", "vibecoding", "videos", "vs code", "vs code extensions", "vs code features"]
+permalink: /coding/videos/VS-Code-Beast-Mode-Explained-Features-and-Usage
+tags:
+- Beast Mode
+- Beastmode
+- Burke Holland
+- Code
+- Code Editing
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- James Montemagno
+- Microsoft
+- Productivity
+- Software Developer
+- Software Development
+- Vibecoding
+- Videos
+- VS Code
+- VS Code Extensions
+- VS Code Features
+section_names:
+- coding
 ---
-
 Burke Holland and James Montemagno walk through the new Beast mode in Visual Studio Code, offering practical insights for developers seeking enhanced workflows.<!--excerpt_end-->
 
 {% youtube 0Muxg3xhRLo %}

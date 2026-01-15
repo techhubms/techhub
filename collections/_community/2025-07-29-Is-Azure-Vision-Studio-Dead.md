@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Is Azure Vision Studio Dead?"
-description: "The author discusses challenges with Azure Vision Studio during object detection POC work. Despite initial positive results using out-of-the-box features, the API for training models on custom datasets appears deprecated, with no clear migration path. The author details technical issues and questions ongoing support for the service."
-author: "damianvandoom"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Is Azure Vision Studio Dead?
+author: damianvandoom
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 10:09:33 +00:00
-permalink: "/2025-07-29-Is-Azure-Vision-Studio-Dead.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Deprecation", "Azure", "Azure Cognitive Services", "Azure Vision Studio", "Cloud AI", "Community", "Custom Datasets", "East US", "Image Analysis", "Machine Learning", "Object Detection", "Vision APIs"]
-tags_normalized: ["ai", "api deprecation", "azure", "azure cognitive services", "azure vision studio", "cloud ai", "community", "custom datasets", "east us", "image analysis", "machine learning", "object detection", "vision apis"]
+permalink: /ai/community/Is-Azure-Vision-Studio-Dead
+tags:
+- AI
+- API Deprecation
+- Azure
+- Azure Cognitive Services
+- Azure Vision Studio
+- Cloud AI
+- Community
+- Custom Datasets
+- East US
+- Image Analysis
+- Machine Learning
+- Object Detection
+- Vision APIs
+section_names:
+- ai
+- azure
 ---
-
 Author damianvandoom outlines difficulties encountered when using Azure Vision Studio for object detection, particularly in training custom datasets and facing deprecated APIs.<!--excerpt_end-->
 
 ## Is Azure Vision Studio Dead?

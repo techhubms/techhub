@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Windows ML Now Generally Available: Empowering Developers to Deploy Local AI on Windows Devices"
-description: "This post announces the general availability of Windows ML, the built-in AI inferencing runtime for Windows 11. It details how Windows ML empowers developers to deploy and optimize AI models locally across diverse Windows hardware, manage model dependencies, and leverage optimized execution providers for CPUs, GPUs, and NPUs. The article highlights developer tooling, silicon partner collaborations with AMD, Intel, NVIDIA, and Qualcomm, and real-world adoption by leading software vendors. Step-by-step guidance is provided for integrating Windows ML into production apps using ONNX models and the Windows App SDK."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsdeveloper/2025/09/23/windows-ml-is-generally-available-empowering-developers-to-scale-local-ai-across-windows-devices/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Windows ML Now Generally Available: Empowering Developers to Deploy Local AI on Windows Devices'
+author: stclarke
+canonical_url: https://blogs.windows.com/windowsdeveloper/2025/09/23/windows-ml-is-generally-available-empowering-developers-to-scale-local-ai-across-windows-devices/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:23:25 +00:00
-permalink: "/2025-09-24-Windows-ML-Now-Generally-Available-Empowering-Developers-to-Deploy-Local-AI-on-Windows-Devices.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Dev Gallery", "AI Inference", "AI Toolkit For VS Code", "AMD Ryzen AI", "App Development", "Coding", "Company News", "CPU", "Edge AI", "GPU", "Intel OpenVINO", "Local AI", "Model Deployment", "Model Quantization", "News", "NPU", "NVIDIA TensorRT", "ONNX Runtime", "Qualcomm Snapdragon", "Silicon Partners", "Windows 11", "Windows App SDK", "Windows ML"]
-tags_normalized: ["ai", "ai dev gallery", "ai inference", "ai toolkit for vs code", "amd ryzen ai", "app development", "coding", "company news", "cpu", "edge ai", "gpu", "intel openvino", "local ai", "model deployment", "model quantization", "news", "npu", "nvidia tensorrt", "onnx runtime", "qualcomm snapdragon", "silicon partners", "windows 11", "windows app sdk", "windows ml"]
+permalink: /ai/news/Windows-ML-Now-Generally-Available-Empowering-Developers-to-Deploy-Local-AI-on-Windows-Devices
+tags:
+- AI
+- AI Dev Gallery
+- AI Inference
+- AI Toolkit For VS Code
+- AMD Ryzen AI
+- App Development
+- Coding
+- Company News
+- CPU
+- Edge AI
+- GPU
+- Intel OpenVINO
+- Local AI
+- Model Deployment
+- Model Quantization
+- News
+- NPU
+- NVIDIA TensorRT
+- ONNX Runtime
+- Qualcomm Snapdragon
+- Silicon Partners
+- Windows 11
+- Windows App SDK
+- Windows ML
+section_names:
+- ai
+- coding
 ---
-
 stclarke summarizes how Microsoft’s Windows ML is now generally available for developers to deploy, optimize, and manage AI models locally on Windows 11 devices, with deep integration across diverse hardware and tools.<!--excerpt_end-->
 
 # Windows ML Is Generally Available: Empowering Developers to Scale Local AI Across Windows Devices

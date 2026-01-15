@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Enterprise-Wide Custom Organization Roles and Increased Role Limits in GitHub"
-description: "This update outlines the new ability for GitHub enterprise owners to define standardized custom organization roles across all organizations within an enterprise. It covers the management, assignment, and scalability of these roles, including increased limits and details on role configuration, empowering greater compliance and consistency for enterprise workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-21-enterprises-can-create-organization-roles-for-use-across-their-enterprise-and-custom-role-limits-have-been-increased"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enterprise-Wide Custom Organization Roles and Increased Role Limits in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-21-enterprises-can-create-organization-roles-for-use-across-their-enterprise-and-custom-role-limits-have-been-increased
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 22:36:21 +00:00
-permalink: "/2025-08-21-Enterprise-Wide-Custom-Organization-Roles-and-Increased-Role-Limits-in-GitHub.html"
-categories: ["DevOps"]
-tags: ["Access Control", "Compliance", "Custom Roles", "DevOps", "Enterprise Roles", "GHES 3.19", "GitHub Enterprise", "GitHub Roles API", "News", "Organization Administration", "Organization Settings", "Permissions", "Public Preview", "Role Management"]
-tags_normalized: ["access control", "compliance", "custom roles", "devops", "enterprise roles", "ghes 3dot19", "github enterprise", "github roles api", "news", "organization administration", "organization settings", "permissions", "public preview", "role management"]
+permalink: /devops/news/Enterprise-Wide-Custom-Organization-Roles-and-Increased-Role-Limits-in-GitHub
+tags:
+- Access Control
+- Compliance
+- Custom Roles
+- DevOps
+- Enterprise Roles
+- GHES 3.19
+- GitHub Enterprise
+- GitHub Roles API
+- News
+- Organization Administration
+- Organization Settings
+- Permissions
+- Public Preview
+- Role Management
+section_names:
+- devops
 ---
-
 Allison details GitHub's introduction of enterprise-wide custom organization roles, standardized management, and higher limits, streamlining role-based access for enterprise users.<!--excerpt_end-->
 
 # Enterprise-Wide Custom Organization Roles and Increased Role Limits in GitHub

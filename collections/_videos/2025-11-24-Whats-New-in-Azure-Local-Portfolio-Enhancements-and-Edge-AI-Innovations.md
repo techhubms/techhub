@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations"
-description: "This session from Microsoft Ignite 2025 explores the latest advancements in Azure Local, focusing on enhanced private cloud capabilities for regulated environments. The speakers highlight portfolio improvements—including sovereignty options, network security, NVIDIA RTX GPU support for edge AI, and migration features—to help organizations modernize operations and meet compliance wherever data and applications reside."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=e8mQhReST3s"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=e8mQhReST3s
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:00:15 +00:00
-permalink: "/2025-11-24-Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Acceleration", "Azure", "Azure Local", "Compliance", "Data Sovereignty", "Edge AI", "Healthcare IT", "Identity Management", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Network Security", "NVIDIA RTX GPU", "Private Cloud", "Regulated Industries", "Security", "Videos"]
-tags_normalized: ["ai", "ai acceleration", "azure", "azure local", "compliance", "data sovereignty", "edge ai", "healthcare it", "identity management", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "network security", "nvidia rtx gpu", "private cloud", "regulated industries", "security", "videos"]
+permalink: /ai/videos/Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations
+tags:
+- AI
+- AI Acceleration
+- Azure
+- Azure Local
+- Compliance
+- Data Sovereignty
+- Edge AI
+- Healthcare IT
+- Identity Management
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration
+- MSIgnite
+- Network Security
+- NVIDIA RTX GPU
+- Private Cloud
+- Regulated Industries
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an in-depth session on Azure Local's newest features, with Meena Gowdar, Mohamed Khalid, and Dean Paron discussing portfolio enhancements, compliance for regulated industries, and edge AI acceleration.<!--excerpt_end-->
 
 {% youtube e8mQhReST3s %}

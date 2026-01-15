@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Curso gratuito: IA Generativa y Python - Serie de 9 transmisiones en vivo"
-description: "Este curso gratuito, dirigido por gwyneth-penas, ofrece una serie de nueve transmisiones en vivo (en inglés y español) centradas en el desarrollo de aplicaciones con IA generativa en Python. Aborda modelos de lenguaje (LLMs), embeddings, visión, recuperación aumentada (RAG), salidas estructuradas, tool/function calling, agentes de IA, seguridad, y uso de tecnologías Microsoft como Azure AI Search y Semantic Kernel."
-author: "gwyneth-penas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Curso gratuito: IA Generativa y Python - Serie de 9 transmisiones en vivo'
+author: gwyneth-penas
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 18:55:15 +00:00
-permalink: "/2025-10-06-Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["Agentes De IA", "AI", "Autogen", "Azure", "Azure AI Content Safety", "Azure AI Search", "Coding", "Community", "Embeddings", "Evaluación ML", "FastMCP", "IA Generativa", "Langchain", "Langgraph", "LLM", "MCP", "Modelos De Lenguaje", "Modelos De Visión", "OpenAI SDK", "Pydantic AI", "Python", "RAG", "Security", "Seguridad En IA", "Semantic Kernel", "Structured Outputs", "Tool Calling", "Vector Search"]
-tags_normalized: ["agentes de ia", "ai", "autogen", "azure", "azure ai content safety", "azure ai search", "coding", "community", "embeddings", "evaluacin ml", "fastmcp", "ia generativa", "langchain", "langgraph", "llm", "mcp", "modelos de lenguaje", "modelos de visin", "openai sdk", "pydantic ai", "python", "rag", "security", "seguridad en ia", "semantic kernel", "structured outputs", "tool calling", "vector search"]
+permalink: /ai/community/Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo
+tags:
+- Agentes De IA
+- AI
+- Autogen
+- Azure
+- Azure AI Content Safety
+- Azure AI Search
+- Coding
+- Community
+- Embeddings
+- Evaluación ML
+- FastMCP
+- IA Generativa
+- Langchain
+- Langgraph
+- LLM
+- MCP
+- Modelos De Lenguaje
+- Modelos De Visión
+- OpenAI SDK
+- Pydantic AI
+- Python
+- RAG
+- Security
+- Seguridad En IA
+- Semantic Kernel
+- Structured Outputs
+- Tool Calling
+- Vector Search
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 gwyneth-penas presenta una completa serie de transmisiones en vivo gratuitas sobre IA generativa y Python, cubriendo LLMs, embeddings, visión, RAG, herramientas de Microsoft, y seguridad para desarrolladores.<!--excerpt_end-->
 
 # Curso oficial y gratuito de GenAI y Python

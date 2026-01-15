@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "How to Integrate Quantum-Safe Security into Your DevOps Workflow"
-description: "This article by Carl Torrence explores the challenges and solutions for integrating quantum-safe security measures into modern DevOps workflows. It provides a practical guide to preparing CI/CD pipelines for quantum threats, including steps for vulnerability assessment, upgrading encryption protocols, transitioning from legacy systems, and automating quantum-safe security. The article highlights the urgency of adapting to the quantum computing era for secure software delivery."
-author: "Carl Torrence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How to Integrate Quantum-Safe Security into Your DevOps Workflow
+author: Carl Torrence
+canonical_url: https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-30 11:50:54 +00:00
-permalink: "/2025-10-30-How-to-Integrate-Quantum-Safe-Security-into-Your-DevOps-Workflow.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Business Of DevOps", "CI/CD Pipeline Security", "CI/CD Pipelines", "Cloud Security", "Contributed Content", "Crypto Agility", "Cybersecurity", "Cybersecurity Modernization", "DevOps", "DevOps Security", "Devsecops", "Encryption Protocols", "Future Proof DevOps", "Hybrid Encryption", "Legacy Migration", "Legacy To Quantum Safe Migration", "Pipeline Vulnerability", "Post Quantum Cryptography", "Quantum Computing", "Quantum Cybersecurity", "Quantum Key Distribution", "Quantum Resistant Algorithms", "Quantum Risk Mitigation", "Quantum Safe Automation", "Quantum Safe CI/CD", "Quantum Safe Encryption", "Quantum Safe Security", "Quantum Threats in DevOps", "Secure DevOps Workflows", "Security", "Security Audits", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["blogs", "business of devops", "cislashcd pipeline security", "cislashcd pipelines", "cloud security", "contributed content", "crypto agility", "cybersecurity", "cybersecurity modernization", "devops", "devops security", "devsecops", "encryption protocols", "future proof devops", "hybrid encryption", "legacy migration", "legacy to quantum safe migration", "pipeline vulnerability", "post quantum cryptography", "quantum computing", "quantum cybersecurity", "quantum key distribution", "quantum resistant algorithms", "quantum risk mitigation", "quantum safe automation", "quantum safe cislashcd", "quantum safe encryption", "quantum safe security", "quantum threats in devops", "secure devops workflows", "security", "security audits", "security automation", "social facebook", "social linkedin", "social x"]
+permalink: /devops/blogs/How-to-Integrate-Quantum-Safe-Security-into-Your-DevOps-Workflow
+tags:
+- Blogs
+- Business Of DevOps
+- CI/CD Pipeline Security
+- CI/CD Pipelines
+- Cloud Security
+- Contributed Content
+- Crypto Agility
+- Cybersecurity
+- Cybersecurity Modernization
+- DevOps
+- DevOps Security
+- Devsecops
+- Encryption Protocols
+- Future Proof DevOps
+- Hybrid Encryption
+- Legacy Migration
+- Legacy To Quantum Safe Migration
+- Pipeline Vulnerability
+- Post Quantum Cryptography
+- Quantum Computing
+- Quantum Cybersecurity
+- Quantum Key Distribution
+- Quantum Resistant Algorithms
+- Quantum Risk Mitigation
+- Quantum Safe Automation
+- Quantum Safe CI/CD
+- Quantum Safe Encryption
+- Quantum Safe Security
+- Quantum Threats in DevOps
+- Secure DevOps Workflows
+- Security
+- Security Audits
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- devops
+- security
 ---
-
 Carl Torrence offers a practical guide for DevOps professionals to integrate quantum-safe security into their workflows, outlining key steps to assess vulnerabilities, update encryption protocols, and automate secure practices in the face of quantum computing risks.<!--excerpt_end-->
 
 # How to Integrate Quantum-Safe Security into Your DevOps Workflow

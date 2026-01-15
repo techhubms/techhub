@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Perforce Adds AI-Driven Synthetic Data Generation to Delphix Platform for DevOps Testing"
-description: "Perforce Software has integrated small language model (SLM) AI capabilities into its Delphix platform, empowering DevOps teams to generate synthetic data for secure application testing. This feature supports data masking, automated compliance testing, and enables safe experimentation even in air-gapped or highly regulated environments. The SLM-based approach, leveraging technology from Meta's Llama project, allows development and operations to securely simulate real-world testing scenarios without exposing sensitive production data. Perforce intends to further extend these capabilities with AI-driven discovery and automated data delivery for MLOps pipelines."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Perforce Adds AI-Driven Synthetic Data Generation to Delphix Platform for DevOps Testing
+author: Mike Vizard
+canonical_url: https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-09 12:00:08 +00:00
-permalink: "/2025-09-09-Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Automation", "AI in DevOps", "Air Gapped Environments", "Air Gapped IT Environments", "Application Testing", "Blogs", "Compliance", "Compliance Testing AI", "Data Masking", "Data Masking Automation", "Delphix", "DevOps", "DevOps AI", "Llama", "MLOps", "Perforce", "Secure Application Testing", "Secure Testing", "Small Language Model", "Small Language Model (slm)", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Data", "Synthetic Data Testing"]
-tags_normalized: ["ai", "ai automation", "ai in devops", "air gapped environments", "air gapped it environments", "application testing", "blogs", "compliance", "compliance testing ai", "data masking", "data masking automation", "delphix", "devops", "devops ai", "llama", "mlops", "perforce", "secure application testing", "secure testing", "small language model", "small language model slm", "social facebook", "social linkedin", "social x", "synthetic data", "synthetic data testing"]
+permalink: /ai/blogs/Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing
+tags:
+- AI
+- AI Automation
+- AI in DevOps
+- Air Gapped Environments
+- Air Gapped IT Environments
+- Application Testing
+- Blogs
+- Compliance
+- Compliance Testing AI
+- Data Masking
+- Data Masking Automation
+- Delphix
+- DevOps
+- DevOps AI
+- Llama
+- MLOps
+- Perforce
+- Secure Application Testing
+- Secure Testing
+- Small Language Model
+- Small Language Model (slm)
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Synthetic Data
+- Synthetic Data Testing
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard examines how Perforce's integration of small language model AI into Delphix enables DevOps teams to securely generate and use synthetic data for testing applications in regulated and air-gapped environments.<!--excerpt_end-->
 
 # Perforce Adds AI-Driven Synthetic Data Generation to Delphix Platform for DevOps Testing

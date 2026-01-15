@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "OpenTelemetry and AI are Unlocking Logs as the Essential Signal for 'Why'"
-description: "This article explores how OpenTelemetry's evolving capabilities combined with AI and Large Language Models are revolutionizing log management. It covers standardizing log schemas, the role of OTLP transport, AI-driven log parsing, enrichment, and correlation, and the practical impact on system observability, particularly for site reliability engineers (SREs) managing modern cloud native and agentic AI workloads."
-author: "Bahubali Shetti"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: OpenTelemetry and AI are Unlocking Logs as the Essential Signal for 'Why'
+author: Bahubali Shetti
+canonical_url: https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 08:57:16 +00:00
-permalink: "/2025-10-23-OpenTelemetry-and-AI-are-Unlocking-Logs-as-the-Essential-Signal-for-Why.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Driven Observability", "AI Incident Response", "AI Observability", "Blogs", "Business Of DevOps", "Cloud Native", "Cloud Native Telemetry", "Contributed Content", "Cross Signal Correlation", "DevOps", "ECS", "Elastic Common Schema", "Incident Response", "KubeCon + CloudNativeCon Europe", "KubeCon + CNC NA", "Kubernetes", "LLM", "LLM Log Parsing", "Log Analysis", "Log Management", "Log Normalization", "Log Parsing", "MELT Stack", "OpenTelemetry", "OTel", "OTel Logs", "OTel Semantics", "OTLP", "Root Cause Analysis", "Schema Standardization", "Semantic Conventions", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "SRE Workflows", "Telemetry Pipelines"]
-tags_normalized: ["agentic ai", "ai", "ai driven observability", "ai incident response", "ai observability", "blogs", "business of devops", "cloud native", "cloud native telemetry", "contributed content", "cross signal correlation", "devops", "ecs", "elastic common schema", "incident response", "kubecon plus cloudnativecon europe", "kubecon plus cnc na", "kubernetes", "llm", "llm log parsing", "log analysis", "log management", "log normalization", "log parsing", "melt stack", "opentelemetry", "otel", "otel logs", "otel semantics", "otlp", "root cause analysis", "schema standardization", "semantic conventions", "social facebook", "social linkedin", "social x", "sre", "sre workflows", "telemetry pipelines"]
+permalink: /ai/blogs/OpenTelemetry-and-AI-are-Unlocking-Logs-as-the-Essential-Signal-for-Why
+tags:
+- Agentic AI
+- AI
+- AI Driven Observability
+- AI Incident Response
+- AI Observability
+- Blogs
+- Business Of DevOps
+- Cloud Native
+- Cloud Native Telemetry
+- Contributed Content
+- Cross Signal Correlation
+- DevOps
+- ECS
+- Elastic Common Schema
+- Incident Response
+- KubeCon + CloudNativeCon Europe
+- KubeCon + CNC NA
+- Kubernetes
+- LLM
+- LLM Log Parsing
+- Log Analysis
+- Log Management
+- Log Normalization
+- Log Parsing
+- MELT Stack
+- OpenTelemetry
+- OTel
+- OTel Logs
+- OTel Semantics
+- OTLP
+- Root Cause Analysis
+- Schema Standardization
+- Semantic Conventions
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE
+- SRE Workflows
+- Telemetry Pipelines
+section_names:
+- ai
+- devops
 ---
-
 Bahubali Shetti examines how OpenTelemetry and AI technologies are transforming log data from raw text into actionable insights for modern observability, helping SREs and DevOps teams identify the 'why' behind system issues.<!--excerpt_end-->
 
 # OpenTelemetry and AI are Unlocking Logs as the Essential Signal for 'Why'

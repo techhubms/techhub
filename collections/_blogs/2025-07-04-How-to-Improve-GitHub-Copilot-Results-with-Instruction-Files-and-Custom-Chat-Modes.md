@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "How to Improve GitHub Copilot Results with Instruction Files and Custom Chat Modes"
-description: "Harald Binkle shares actionable strategies to boost GitHub Copilot’s effectiveness in large projects, focusing on creating targeted instruction files and leveraging custom chat modes. The article includes detailed examples and best practices for optimizing Copilot’s code suggestions and team collaboration."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/improve-github-copilot-results/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+layout: post
+title: How to Improve GitHub Copilot Results with Instruction Files and Custom Chat Modes
+author: Harald Binkle
+canonical_url: https://harrybin.de/posts/improve-github-copilot-results/
+viewing_mode: external
+feed_name: Harald Binkle's blog
+feed_url: https://harrybin.de/rss.xml
 date: 2025-07-04 17:00:00 +00:00
-permalink: "/2025-07-04-How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Astro", "Blogs", "Coding Standards", "Contextual Code Assistance", "Custom Chat Modes", "Developer Productivity", "Developer Workflows", "GitHub Copilot", "Instruction Files", "Project Collaboration", "React", "TypeScript", "VS Code"]
-tags_normalized: ["ai", "astro", "blogs", "coding standards", "contextual code assistance", "custom chat modes", "developer productivity", "developer workflows", "github copilot", "instruction files", "project collaboration", "react", "typescript", "vs code"]
+permalink: /github-copilot/blogs/How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes
+tags:
+- AI
+- Astro
+- Blogs
+- Coding Standards
+- Contextual Code Assistance
+- Custom Chat Modes
+- Developer Productivity
+- Developer Workflows
+- GitHub Copilot
+- Instruction Files
+- Project Collaboration
+- React
+- TypeScript
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 In this post, Harald Binkle explores practical methods for improving GitHub Copilot results in your projects, focusing on instruction files and advanced custom chat modes.<!--excerpt_end-->
 
 # How to Improve GitHub Copilot Results with Instruction Files and Custom Chat Modes
@@ -182,7 +194,6 @@ Beyond `.github/copilot-instructions.md`, you can define targeted instructions f
 
 ```markdown
 ---
-description: Instructions for documentation and markdown files
 applyTo: "**/*.md"
 ---
 
@@ -207,7 +218,6 @@ applyTo: "**/*.md"
 
 ```markdown
 ---
-description: Instructions for configuration files
 applyTo: "**/{config,*.config.*,*.json,*.yml,*.yaml,*.toml,*.env*}"
 ---
 
@@ -226,7 +236,6 @@ applyTo: "**/{config,*.config.*,*.json,*.yml,*.yaml,*.toml,*.env*}"
 
 ```markdown
 ---
-description: Instructions for test files
 applyTo: "**/{test,tests,spec,__tests__}/**/*.{js,ts,jsx,tsx}"
 ---
 

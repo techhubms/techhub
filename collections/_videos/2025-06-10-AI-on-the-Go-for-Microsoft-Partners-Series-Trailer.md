@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "AI on the Go for Microsoft Partners: Series Trailer"
-description: "This video introduces 'AI on the Go for Microsoft Partners,' a short-format series featuring AI and industry trends, announcements from Microsoft leaders, and updates for partners in the Microsoft Cloud ecosystem. The trailer highlights topics such as Agentic AI, industry solutions, and current opportunities through the Microsoft AI Cloud Partner Program."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cWIHcbOihY4"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: 'AI on the Go for Microsoft Partners: Series Trailer'
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=cWIHcbOihY4
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-10 14:01:04 +00:00
-permalink: "/2025-06-10-AI-on-the-Go-for-Microsoft-Partners-Series-Trailer.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI in Business", "AI Trends", "Brand Experience", "Customer Experience", "Industry Solutions", "Microsoft AI", "Microsoft AI Partner Program", "Microsoft Cloud", "Microsoft Cloud Partner Program", "Microsoft Leaders", "Partner Opportunities", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai in business", "ai trends", "brand experience", "customer experience", "industry solutions", "microsoft ai", "microsoft ai partner program", "microsoft cloud", "microsoft cloud partner program", "microsoft leaders", "partner opportunities", "videos"]
+permalink: /ai/videos/AI-on-the-Go-for-Microsoft-Partners-Series-Trailer
+tags:
+- Agentic AI
+- AI
+- AI in Business
+- AI Trends
+- Brand Experience
+- Customer Experience
+- Industry Solutions
+- Microsoft AI
+- Microsoft AI Partner Program
+- Microsoft Cloud
+- Microsoft Cloud Partner Program
+- Microsoft Leaders
+- Partner Opportunities
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Cloud previews its 'AI on the Go for Microsoft Partners' video series, offering partners bite-sized updates on Microsoft AI trends, upcoming opportunities, and leadership insights.<!--excerpt_end-->
 
 {% youtube cWIHcbOihY4 %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Secure Foundations for Smarter Work: Lenovo and Microsoft Security Strategies"
-description: "This session from Microsoft Ignite 2025 highlights how Lenovo’s Cybersecurity Services integrate Microsoft Defender, Sentinel, and Security Copilot to deliver robust enterprise resilience. The discussion explores strategic approaches to securing AI workloads, extending cloud infrastructure, and fostering trust in business transformation. Learn how technologies like TruScale, ThinkAgile, and Azure Stack HCI drive secure, intelligent operations for modern organizations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GkqKMwhadB0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Secure Foundations for Smarter Work: Lenovo and Microsoft Security Strategies'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=GkqKMwhadB0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:33:11 +00:00
-permalink: "/2025-11-24-Secure-Foundations-for-Smarter-Work-Lenovo-and-Microsoft-Security-Strategies.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Innovation", "AI Security", "Azure", "Azure Stack HCI", "Business Transformation", "CISO", "Cloud Infrastructure", "Data Protection", "Enterprise Resiliency", "Lenovo Cybersecurity Services", "Microsoft Defender", "Microsoft Sentinel", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Security Copilot", "Security Services", "ThinkAgile", "TruScale", "Videos"]
-tags_normalized: ["ai", "ai innovation", "ai security", "azure", "azure stack hci", "business transformation", "ciso", "cloud infrastructure", "data protection", "enterprise resiliency", "lenovo cybersecurity services", "microsoft defender", "microsoft sentinel", "msignite", "scalewithcloudandaiendpoints", "security", "security copilot", "security services", "thinkagile", "truscale", "videos"]
+permalink: /ai/videos/Secure-Foundations-for-Smarter-Work-Lenovo-and-Microsoft-Security-Strategies
+tags:
+- AI
+- AI Innovation
+- AI Security
+- Azure
+- Azure Stack HCI
+- Business Transformation
+- CISO
+- Cloud Infrastructure
+- Data Protection
+- Enterprise Resiliency
+- Lenovo Cybersecurity Services
+- Microsoft Defender
+- Microsoft Sentinel
+- MSIgnite
+- ScalewithcloudandAIendpoints
+- Security
+- Security Copilot
+- Security Services
+- ThinkAgile
+- TruScale
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events, joined by Lenovo’s experts, discuss secure cloud and AI operations at Ignite 2025, emphasizing integration of Defender, Sentinel, and Security Copilot for enterprise resiliency.<!--excerpt_end-->
 
 {% youtube GkqKMwhadB0 %}

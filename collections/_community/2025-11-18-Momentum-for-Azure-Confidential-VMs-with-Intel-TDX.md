@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Momentum for Azure Confidential VMs with Intel® TDX"
-description: "This update highlights Azure's new generation of Confidential Virtual Machines powered by 5th Gen Intel® Xeon® processors and Intel® Trust Domain Extensions (TDX), now in preview. The post explains technical improvements, security guarantees, performance benchmarks of NVMe SSD integration, customer feedback on confidential workloads, and details on new open-source paravisor technologies. It covers VM series features and upcoming availability, targeting practitioners needing secure, confidential, and performant cloud workloads."
-author: "simranparkhe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Momentum for Azure Confidential VMs with Intel® TDX
+author: simranparkhe
+canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:00:00 +00:00
-permalink: "/2025-11-18-Momentum-for-Azure-Confidential-VMs-with-Intel-TDX.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["5th Gen Intel Xeon", "AI", "Azure", "Azure Boost", "Azure Confidential VM", "Cloud Infrastructure", "Community", "Confidential AI", "Confidential Computing", "Data Security", "DCesv6 Series", "ECesv6 Series", "Encryption", "Hardware Security", "Intel TDX", "Intel Trust Domain Extensions", "Memory Encryption", "NVMe SSD", "Open Paravisor", "OpenHCL", "Performance Benchmark", "Remote Storage", "Security", "Trusted Execution", "VM Security"]
-tags_normalized: ["5th gen intel xeon", "ai", "azure", "azure boost", "azure confidential vm", "cloud infrastructure", "community", "confidential ai", "confidential computing", "data security", "dcesv6 series", "ecesv6 series", "encryption", "hardware security", "intel tdx", "intel trust domain extensions", "memory encryption", "nvme ssd", "open paravisor", "openhcl", "performance benchmark", "remote storage", "security", "trusted execution", "vm security"]
+permalink: /ai/community/Momentum-for-Azure-Confidential-VMs-with-Intel-TDX
+tags:
+- 5th Gen Intel Xeon
+- AI
+- Azure
+- Azure Boost
+- Azure Confidential VM
+- Cloud Infrastructure
+- Community
+- Confidential AI
+- Confidential Computing
+- Data Security
+- DCesv6 Series
+- ECesv6 Series
+- Encryption
+- Hardware Security
+- Intel TDX
+- Intel Trust Domain Extensions
+- Memory Encryption
+- NVMe SSD
+- Open Paravisor
+- OpenHCL
+- Performance Benchmark
+- Remote Storage
+- Security
+- Trusted Execution
+- VM Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 Simran Parkhe shares insights on Azure's next-gen Confidential VMs with Intel® TDX, detailing technical advancements, security boundaries, performance updates, and customer adoption stories.<!--excerpt_end-->
 
 # Azure Confidential VMs Momentum with Intel® TDX

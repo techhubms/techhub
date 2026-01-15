@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Copilot and Query Editor Now Generally Available in SQL Database on Microsoft Fabric"
-description: "This news update from Microsoft Fabric Blog announces the general availability of SQL Database in Fabric, built on SQL Server and Azure SQL Database engines. It highlights deep integration of Copilot AI-assisted features and an enhanced Query Editor, empowering developers and data professionals to work efficiently with enterprise-grade data platforms using tools like SSMS and VS Code, code snippets, shared query management, new execution modes, and intelligent assistance. The release marks a step forward in unifying operational and analytical data and integrating AI into SQL workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/copilot-and-query-editor-in-sql-database-in-fabric-ga-update/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Copilot and Query Editor Now Generally Available in SQL Database on Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-and-query-editor-in-sql-database-in-fabric-ga-update/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 10:30:00 +00:00
-permalink: "/2025-11-20-Copilot-and-Query-Editor-Now-Generally-Available-in-SQL-Database-on-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Assistance", "Azure", "Azure SQL Database", "Coding", "Copilot", "Data Engineering", "Data Grid", "Database Design", "Developer Tools", "Keyboard Shortcuts", "Microsoft Fabric", "ML", "Natural Language To SQL", "News", "Performance Optimization", "Query Editor", "SaaS", "Schema Designer", "Shared Queries", "SQL Database", "SQL Server", "SSMS", "T SQL", "Telemetry", "VS Code"]
-tags_normalized: ["ai", "ai assistance", "azure", "azure sql database", "coding", "copilot", "data engineering", "data grid", "database design", "developer tools", "keyboard shortcuts", "microsoft fabric", "ml", "natural language to sql", "news", "performance optimization", "query editor", "saas", "schema designer", "shared queries", "sql database", "sql server", "ssms", "t sql", "telemetry", "vs code"]
+permalink: /ai/news/Copilot-and-Query-Editor-Now-Generally-Available-in-SQL-Database-on-Microsoft-Fabric
+tags:
+- AI
+- AI Assistance
+- Azure
+- Azure SQL Database
+- Coding
+- Copilot
+- Data Engineering
+- Data Grid
+- Database Design
+- Developer Tools
+- Keyboard Shortcuts
+- Microsoft Fabric
+- ML
+- Natural Language To SQL
+- News
+- Performance Optimization
+- Query Editor
+- SaaS
+- Schema Designer
+- Shared Queries
+- SQL Database
+- SQL Server
+- SSMS
+- T SQL
+- Telemetry
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog details the GA release of SQL Database in Fabric and highlights how Copilot and enhanced Query Editor tools empower developers and data professionals through AI-powered SQL workflows and enterprise integration.<!--excerpt_end-->
 
 # Copilot and Query Editor in SQL Database in Fabric (Generally Available)

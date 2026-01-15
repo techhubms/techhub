@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Delegated Bypass Controls for Push Protection Now Available at the Enterprise Level"
-description: "This news update details the introduction of delegated bypass controls for push protection in secret scanning at the enterprise level, allowing organizations to choose specific users as bypass approvers, streamline bypass request reviews across all organizations, and manage permissions through Enterprise Security Configuration and APIs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-16-delegated-bypass-controls-for-push-protection-now-available-at-the-enterprise-level"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Delegated Bypass Controls for Push Protection Now Available at the Enterprise Level
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-16-delegated-bypass-controls-for-push-protection-now-available-at-the-enterprise-level
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 21:29:55 +00:00
-permalink: "/2025-09-16-Delegated-Bypass-Controls-for-Push-Protection-Now-Available-at-the-Enterprise-Level.html"
-categories: ["DevOps", "Security"]
-tags: ["API Integration", "Application Security", "Approver Management", "Bypass Controls", "Code Security", "DevOps", "Enterprise Security", "GitHub Enterprise", "Improvement", "News", "Push Protection", "Reviewers", "Secret Scanning", "Security", "Security Automation", "Security Configuration", "Security Workflow"]
-tags_normalized: ["api integration", "application security", "approver management", "bypass controls", "code security", "devops", "enterprise security", "github enterprise", "improvement", "news", "push protection", "reviewers", "secret scanning", "security", "security automation", "security configuration", "security workflow"]
+permalink: /devops/news/Delegated-Bypass-Controls-for-Push-Protection-Now-Available-at-the-Enterprise-Level
+tags:
+- API Integration
+- Application Security
+- Approver Management
+- Bypass Controls
+- Code Security
+- DevOps
+- Enterprise Security
+- GitHub Enterprise
+- Improvement
+- News
+- Push Protection
+- Reviewers
+- Secret Scanning
+- Security
+- Security Automation
+- Security Configuration
+- Security Workflow
+section_names:
+- devops
+- security
 ---
-
 Allison announces new enterprise-level delegated bypass controls for push protection in GitHub secret scanning, highlighting features for managing approvers and reviewer workflows.<!--excerpt_end-->
 
 # Delegated Bypass Controls for Push Protection Now Available at the Enterprise Level

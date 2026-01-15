@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Maximize the Cost Efficiency of AI Agents on Azure: Comprehensive Learning Path"
-description: "This in-depth learning path from Microsoft guides technical professionals, IT leaders, and business decision-makers through seven practical modules focused on cost-effective AI agent solutions on Azure. Covering use case identification, cost drivers, ROI forecasting, best practices, development approaches, scalable architecture, and ongoing optimization, learners gain actionable insights and strategies for sustainable, financially responsible AI adoption."
-author: "Fernando_Vasconcellos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Maximize the Cost Efficiency of AI Agents on Azure: Comprehensive Learning Path'
+author: Fernando_Vasconcellos
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 14:46:02 +00:00
-permalink: "/2025-11-05-Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Center Of Excellence", "AI Development", "Application Insights", "Azure", "Azure AI Foundry", "Cloud Architecture", "Community", "Cost Management", "Cost Optimization", "FinOps", "Governance", "Microsoft Copilot Studio", "Operational Efficiency", "Reference Architectures", "ROI Forecasting"]
-tags_normalized: ["ai", "ai agents", "ai center of excellence", "ai development", "application insights", "azure", "azure ai foundry", "cloud architecture", "community", "cost management", "cost optimization", "finops", "governance", "microsoft copilot studio", "operational efficiency", "reference architectures", "roi forecasting"]
+permalink: /ai/community/Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path
+tags:
+- AI
+- AI Agents
+- AI Center Of Excellence
+- AI Development
+- Application Insights
+- Azure
+- Azure AI Foundry
+- Cloud Architecture
+- Community
+- Cost Management
+- Cost Optimization
+- FinOps
+- Governance
+- Microsoft Copilot Studio
+- Operational Efficiency
+- Reference Architectures
+- ROI Forecasting
+section_names:
+- ai
+- azure
 ---
-
 Fernando Vasconcellos introduces a comprehensive Microsoft learning path for building, deploying, and managing cost-efficient AI agents on Azure, offering practical strategies for both technical and business leaders.<!--excerpt_end-->
 
 # Maximize the Cost Efficiency of AI Agents on Azure

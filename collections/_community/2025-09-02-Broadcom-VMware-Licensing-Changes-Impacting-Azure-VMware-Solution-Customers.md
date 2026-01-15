@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Broadcom VMware Licensing Changes Impacting Azure VMware Solution Customers"
-description: "This article provides an in-depth overview of recent changes in Broadcom's VMware licensing model and their implications for Azure VMware Solution (AVS) customers. It addresses the new bring-your-own-license (BYOL) requirements, key transition dates, compatibility with AVS, and offers practical guidance for navigating the upcoming changes."
-author: "christopheherrbach"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Broadcom VMware Licensing Changes Impacting Azure VMware Solution Customers
+author: christopheherrbach
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 17:41:37 +00:00
-permalink: "/2025-09-02-Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers.html"
-categories: ["Azure"]
-tags: ["AVS", "Azure", "Azure VMware Solution", "Broadcom", "BYOL", "Cloud Deployment", "Cloud Licensing", "Community", "Hyperscaler Platforms", "Infrastructure Management", "Licensing", "Microsoft", "Microsoft Azure", "Reserved Instance", "VCF", "VMware Cloud Foundation"]
-tags_normalized: ["avs", "azure", "azure vmware solution", "broadcom", "byol", "cloud deployment", "cloud licensing", "community", "hyperscaler platforms", "infrastructure management", "licensing", "microsoft", "microsoft azure", "reserved instance", "vcf", "vmware cloud foundation"]
+permalink: /azure/community/Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers
+tags:
+- AVS
+- Azure
+- Azure VMware Solution
+- Broadcom
+- BYOL
+- Cloud Deployment
+- Cloud Licensing
+- Community
+- Hyperscaler Platforms
+- Infrastructure Management
+- Licensing
+- Microsoft
+- Microsoft Azure
+- Reserved Instance
+- VCF
+- VMware Cloud Foundation
+section_names:
+- azure
 ---
-
 Christophe Herrbach explains the upcoming changes to Broadcom's VMware licensing and how Azure VMware Solution customers can adapt to the new bring-your-own license model.<!--excerpt_end-->
 
 # Broadcom VMware Licensing Changes: What Azure VMware Solution Customers Need to Know

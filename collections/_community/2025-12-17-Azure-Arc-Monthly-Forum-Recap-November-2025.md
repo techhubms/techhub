@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Arc Monthly Forum Recap – November 2025"
-description: "A detailed summary of the November 2025 Azure Arc Monthly Forum, highlighting new features like Auto Agent Upgrade (public preview), Essential Machine Management (private preview), and Machine Configuration CIS Baseline Compliance. The forum covered key management, compliance, and monitoring improvements for hybrid and cloud infrastructure using Azure technologies, answered common FAQs, and provided links to resources and feedback channels."
-author: "yunishussein"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Arc Monthly Forum Recap – November 2025
+author: yunishussein
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 17:55:17 +00:00
-permalink: "/2025-12-17-Azure-Arc-Monthly-Forum-Recap-November-2025.html"
-categories: ["Azure", "Security"]
-tags: ["Auto Agent Upgrade", "AZCM Agent", "Azure", "Azure Arc", "Azure Monitor", "Azure Policy", "Change Tracking", "CIS Baseline Compliance", "Community", "Essential Machine Management", "Hybrid Cloud", "Inventory", "Linux Support", "Log Analytics", "Machine Configuration", "Operations Center", "Preview", "Security", "Security Baseline", "Windows Server"]
-tags_normalized: ["auto agent upgrade", "azcm agent", "azure", "azure arc", "azure monitor", "azure policy", "change tracking", "cis baseline compliance", "community", "essential machine management", "hybrid cloud", "inventory", "linux support", "log analytics", "machine configuration", "operations center", "preview", "security", "security baseline", "windows server"]
+permalink: /azure/community/Azure-Arc-Monthly-Forum-Recap-November-2025
+tags:
+- Auto Agent Upgrade
+- AZCM Agent
+- Azure
+- Azure Arc
+- Azure Monitor
+- Azure Policy
+- Change Tracking
+- CIS Baseline Compliance
+- Community
+- Essential Machine Management
+- Hybrid Cloud
+- Inventory
+- Linux Support
+- Log Analytics
+- Machine Configuration
+- Operations Center
+- Preview
+- Security
+- Security Baseline
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 yunishussein summarizes the key discussions from the November 2025 Azure Arc Monthly Forum, with highlights on Auto Agent Upgrade, Essential Machine Management, CIS Baseline Compliance, and answers to common Azure management and security questions.<!--excerpt_end-->
 
 # Azure Arc Monthly Forum Recap – November 2025

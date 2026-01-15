@@ -1,22 +1,27 @@
----
-layout: "post"
-title: "Unit Tests"
-description: "Automatically generate unit tests for your code"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/RDpAJAjXkqo"
-categories: ["AI", "Coding", "GitHub Copilot"]
+﻿---
+layout: post
+title: Unit Tests
+author: Randy Pagels
+canonical_url: https://youtu.be/RDpAJAjXkqo
 date: 2025-01-02 11:05:46 +00:00
-permalink: "/2025-01-02-Unit-Tests.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Coding", "GitHub Copilot", "Testing", "Videos"]
-tags_normalized: ["ai", "coding", "github copilot", "testing", "videos"]
+permalink: /github-copilot/videos/Unit-Tests
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Coding
+- GitHub Copilot
+- Testing
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Unit Tests feature. Automate your testing process with Copilot's unit test generation.<!--excerpt_end-->
 
 {% youtube RDpAJAjXkqo %}

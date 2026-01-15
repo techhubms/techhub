@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory"
-description: "This article by therlinge offers practical troubleshooting guidance for developers deploying Python web apps (with AI-related packages) to Azure Linux Web Apps, highlighting common pitfalls such as package compatibility issues, environment variable scoping, build timing, and memory limits. Through detailed examples, the guide explains how differences between local and Azure environments impact build and execution—particularly with packages like sklearn and numpy—and shows how to diagnose failures via Azure’s deployment logs and configuration options. The article is especially valuable for those integrating Flask, scikit-learn, or other Python AI packages on Azure and needing actionable solutions for deployment errors."
-author: "theringe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory'
+author: theringe
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-30 09:14:23 +00:00
-permalink: "/2025-11-30-Troubleshooting-Azure-Linux-Web-App-Deployment-Compatibility-Environment-Variables-and-Memory.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "App Service SKU", "Azure", "Azure App Service", "Azure Portal", "Build Troubleshooting", "Coding", "Community", "Compatibility", "Container Startup", "Deployment Center", "DevOps", "Environment Variables", "Exit Code 137", "Flask", "Gunicorn", "Linux Web App", "Memory Scaling", "Numpy", "Oryx Build", "pip", "Python", "PyTorch", "Requirements.txt", "Scikit Learn", "Sklearn", "Startup Script", "Streamlit"]
-tags_normalized: ["ai", "app service sku", "azure", "azure app service", "azure portal", "build troubleshooting", "coding", "community", "compatibility", "container startup", "deployment center", "devops", "environment variables", "exit code 137", "flask", "gunicorn", "linux web app", "memory scaling", "numpy", "oryx build", "pip", "python", "pytorch", "requirementsdottxt", "scikit learn", "sklearn", "startup script", "streamlit"]
+permalink: /ai/community/Troubleshooting-Azure-Linux-Web-App-Deployment-Compatibility-Environment-Variables-and-Memory
+tags:
+- AI
+- App Service SKU
+- Azure
+- Azure App Service
+- Azure Portal
+- Build Troubleshooting
+- Coding
+- Community
+- Compatibility
+- Container Startup
+- Deployment Center
+- DevOps
+- Environment Variables
+- Exit Code 137
+- Flask
+- Gunicorn
+- Linux Web App
+- Memory Scaling
+- Numpy
+- Oryx Build
+- pip
+- Python
+- PyTorch
+- Requirements.txt
+- Scikit Learn
+- Sklearn
+- Startup Script
+- Streamlit
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 theringe provides a practical troubleshooting guide for deploying Python web apps with AI-related packages on Azure Linux Web Apps, focusing on compatibility, environment variables, and memory challenges.<!--excerpt_end-->
 
 # Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory

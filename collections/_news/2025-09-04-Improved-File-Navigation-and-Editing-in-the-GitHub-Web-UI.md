@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Improved File Navigation and Editing in the GitHub Web UI"
-description: "This announcement details new enhancements to GitHub's web user interface, designed to make file navigation and editing more intuitive. Key updates include easier editing from search results, improved branch navigation, and contextual UI changes to assist new and experienced contributors. These updates aim to reduce friction for open source contributors and streamline workflow."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved File Navigation and Editing in the GitHub Web UI
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 18:41:12 +00:00
-permalink: "/2025-09-04-Improved-File-Navigation-and-Editing-in-the-GitHub-Web-UI.html"
-categories: ["DevOps"]
-tags: ["Branch Management", "Contributor Workflow", "Default Branch", "DevOps", "Editing", "File Navigation", "GitHub", "News", "Open Source", "Search Improvements", "User Experience", "Web UI"]
-tags_normalized: ["branch management", "contributor workflow", "default branch", "devops", "editing", "file navigation", "github", "news", "open source", "search improvements", "user experience", "web ui"]
+permalink: /devops/news/Improved-File-Navigation-and-Editing-in-the-GitHub-Web-UI
+tags:
+- Branch Management
+- Contributor Workflow
+- Default Branch
+- DevOps
+- Editing
+- File Navigation
+- GitHub
+- News
+- Open Source
+- Search Improvements
+- User Experience
+- Web UI
+section_names:
+- devops
 ---
-
 Allison outlines new GitHub web UI features that simplify file editing and navigation, especially for open source contributors, focusing on branch workflows and improved UI feedback.<!--excerpt_end-->
 
 # Improved File Navigation and Editing in the GitHub Web UI

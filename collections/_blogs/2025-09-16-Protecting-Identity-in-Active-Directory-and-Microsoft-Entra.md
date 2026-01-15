@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Protecting Identity in Active Directory & Microsoft Entra"
-description: "This episode features Thomas Maurer and Thomas Bryant delving into the technical challenges of identity protection and recovery in modern hybrid environments. The discussion focuses on securing and recovering Active Directory and Microsoft Entra (Entra ID), examining threats, resilience, and solutions for identity infrastructure—essential knowledge for IT leaders and practitioners responsible for Microsoft-centric security architectures."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Protecting Identity in Active Directory & Microsoft Entra
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-09-16 12:29:00 +00:00
-permalink: "/2025-09-16-Protecting-Identity-in-Active-Directory-and-Microsoft-Entra.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Authentication", "Azure", "Blogs", "Cloud", "Cloud Security", "Commvault", "Cybersecurity", "Directory Services", "Entra", "Identity Management", "Identity Protection", "Identity Recovery", "IT Security", "Microsoft", "Microsoft Azure", "Microsoft Entra ID", "Podcast", "Resilience", "Security", "Security Architecture", "Windows Server", "Zero Trust"]
-tags_normalized: ["active directory", "authentication", "azure", "blogs", "cloud", "cloud security", "commvault", "cybersecurity", "directory services", "entra", "identity management", "identity protection", "identity recovery", "it security", "microsoft", "microsoft azure", "microsoft entra id", "podcast", "resilience", "security", "security architecture", "windows server", "zero trust"]
+permalink: /azure/blogs/Protecting-Identity-in-Active-Directory-and-Microsoft-Entra
+tags:
+- Active Directory
+- Authentication
+- Azure
+- Blogs
+- Cloud
+- Cloud Security
+- Commvault
+- Cybersecurity
+- Directory Services
+- Entra
+- Identity Management
+- Identity Protection
+- Identity Recovery
+- IT Security
+- Microsoft
+- Microsoft Azure
+- Microsoft Entra ID
+- Podcast
+- Resilience
+- Security
+- Security Architecture
+- Windows Server
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Thomas Maurer, joined by Thomas Bryant, unpacks identity protection and recovery for Active Directory and Microsoft Entra. The episode delivers practical security strategies for practitioners safeguarding Microsoft identity platforms.<!--excerpt_end-->
 
 # Protecting Identity in Active Directory & Microsoft Entra

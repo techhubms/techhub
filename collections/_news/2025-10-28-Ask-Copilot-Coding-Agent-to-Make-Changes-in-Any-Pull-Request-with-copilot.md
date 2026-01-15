@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot"
-description: "This news update announces a new feature for GitHub Copilot: users can now ask Copilot to make changes to existing pull requests by mentioning @copilot in a comment. The Copilot coding agent works asynchronously, creating a new pull request on top of the existing branch and requests review, while users maintain full control over their original branch. The feature is available to Copilot Pro, Pro+, Business, and Enterprise subscribers, with additional admin setup required for Business and Enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:20:57 +00:00
-permalink: "/2025-10-28-Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["@copilot", "AI", "Automation", "Code Review", "Copilot", "Copilot Business", "Copilot Coding Agent", "Feature Update", "GitHub", "GitHub Copilot", "GitHub Enterprise", "GitHub Pro", "Improvement", "News", "Pull Requests", "Software Development", "Universe25", "Version Control"]
-tags_normalized: ["atcopilot", "ai", "automation", "code review", "copilot", "copilot business", "copilot coding agent", "feature update", "github", "github copilot", "github enterprise", "github pro", "improvement", "news", "pull requests", "software development", "universe25", "version control"]
+permalink: /github-copilot/news/Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot
+tags:
+- '@copilot'
+- AI
+- Automation
+- Code Review
+- Copilot
+- Copilot Business
+- Copilot Coding Agent
+- Feature Update
+- GitHub
+- GitHub Copilot
+- GitHub Enterprise
+- GitHub Pro
+- Improvement
+- News
+- Pull Requests
+- Software Development
+- Universe25
+- Version Control
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares the latest GitHub Copilot feature, allowing users to delegate changes to existing pull requests by simply mentioning @copilot, making code collaboration more efficient.<!--excerpt_end-->
 
 # Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot

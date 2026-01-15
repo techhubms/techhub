@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "What's New in Visual Studio Code November 2025 Insiders Release (v1.107)"
-description: "Comprehensive release notes for Visual Studio Code November 2025 Insiders build (version 1.107), featuring new Copilot CLI integration, enhanced authentication, chat improvements, terminal upgrades, GitHub extension updates, and accessibility enhancements. Professional developers will find actionable details on coding workflow improvements, DevOps enhancements, and collaboration tools."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_107"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: What's New in Visual Studio Code November 2025 Insiders Release (v1.107)
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_107
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/2025-12-10-Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "Code Chat", "Codespaces", "Coding", "Copilot CLI", "DevOps", "Editor Improvements", "GitHub Copilot", "GitHub MCP Server", "Microsoft Authentication", "MSAL", "News", "PowerShell", "Terminal", "Tree Sitter", "VS Code", "VS Code 1.107"]
-tags_normalized: ["accessibility", "ai", "code chat", "codespaces", "coding", "copilot cli", "devops", "editor improvements", "github copilot", "github mcp server", "microsoft authentication", "msal", "news", "powershell", "terminal", "tree sitter", "vs code", "vs code 1dot107"]
+permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107
+tags:
+- Accessibility
+- AI
+- Code Chat
+- Codespaces
+- Coding
+- Copilot CLI
+- DevOps
+- Editor Improvements
+- GitHub Copilot
+- GitHub MCP Server
+- Microsoft Authentication
+- MSAL
+- News
+- PowerShell
+- Terminal
+- Tree Sitter
+- VS Code
+- VS Code 1.107
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Visual Studio Code Team delivers extensive release notes for the November 2025 Insiders build (v1.107), showcasing new Copilot CLI agent sessions, authentication and chat improvements, and a variety of developer experience upgrades.<!--excerpt_end-->
 
 # Visual Studio Code November 2025 Insiders (version 1.107) Release Notes

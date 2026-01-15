@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Innovation in Data Factory: Microsoft Fabric Data Integration Features Announced at Ignite 2025"
-description: "This news article from the Microsoft Fabric blog highlights new feature announcements and architectural advancements for Data Factory in Microsoft Fabric. It covers AI-powered transformations, integration with dbt, SAP mirroring capabilities, multi-cloud orchestration, and secure, cost-effective data engineering within Microsoft’s unified Fabric platform. Readers will learn about OneLake, zero-copy data sharing, pipeline automation, and collaboration between Microsoft and dbt Labs on future developer tools."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/advancing-data-integration-innovations-in-data-factory-in-ms-fabric-at-ignite-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Innovation in Data Factory: Microsoft Fabric Data Integration Features Announced at Ignite 2025'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/advancing-data-integration-innovations-in-data-factory-in-ms-fabric-at-ignite-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Innovation-in-Data-Factory-Microsoft-Fabric-Data-Integration-Features-Announced-at-Ignite-2025.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Function Transforms", "Apache Airflow API", "Azure", "Azure Data Factory", "Coding", "Copilot Integration", "CosmosDB", "Data Factory", "Data Lake", "Dbt Fusion", "Dbt Job", "Microsoft Fabric", "ML", "News", "OneLake", "Open Mirroring", "Pipeline Automation", "PostgreSQL", "Power BI", "Power Query", "SAP Business Data Cloud Connect", "Snowflake", "SQL Server", "Synapse Pipeline Migration", "Zero ETL"]
-tags_normalized: ["ai", "ai function transforms", "apache airflow api", "azure", "azure data factory", "coding", "copilot integration", "cosmosdb", "data factory", "data lake", "dbt fusion", "dbt job", "microsoft fabric", "ml", "news", "onelake", "open mirroring", "pipeline automation", "postgresql", "power bi", "power query", "sap business data cloud connect", "snowflake", "sql server", "synapse pipeline migration", "zero etl"]
+permalink: /ai/news/Innovation-in-Data-Factory-Microsoft-Fabric-Data-Integration-Features-Announced-at-Ignite-2025
+tags:
+- AI
+- AI Function Transforms
+- Apache Airflow API
+- Azure
+- Azure Data Factory
+- Coding
+- Copilot Integration
+- CosmosDB
+- Data Factory
+- Data Lake
+- Dbt Fusion
+- Dbt Job
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Open Mirroring
+- Pipeline Automation
+- PostgreSQL
+- Power BI
+- Power Query
+- SAP Business Data Cloud Connect
+- Snowflake
+- SQL Server
+- Synapse Pipeline Migration
+- Zero ETL
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog details the latest Data Factory innovations unveiled at Ignite 2025, including AI-powered data integration, SAP mirroring, and deep developer tooling improvements—with insights from the Microsoft team.<!--excerpt_end-->
 
 # Innovation in Data Factory: Microsoft Fabric Data Integration Features Announced at Ignite 2025

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Improve Code Health with GitHub Code Quality"
-description: "This video introduces GitHub Code Quality, a feature designed to help developers enhance code reliability, maintainability, and efficiency. It covers actionable insights, automated fixes, and strategies for reducing technical debt and improving overall repository health using GitHub tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dlgYCpQI_lU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Improve Code Health with GitHub Code Quality
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=dlgYCpQI_lU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-04 15:01:18 +00:00
-permalink: "/2025-12-04-How-to-Improve-Code-Health-with-GitHub-Code-Quality.html"
-categories: ["DevOps"]
-tags: ["Automated Fixes", "Code Health", "Code Quality", "CodeHealth", "CodeQuality", "Coding Standards", "Continuous Integration", "Developer Tools", "DevOps", "GitHub", "Repository Health", "Software Maintenance", "Technical Debt", "Videos"]
-tags_normalized: ["automated fixes", "code health", "code quality", "codehealth", "codequality", "coding standards", "continuous integration", "developer tools", "devops", "github", "repository health", "software maintenance", "technical debt", "videos"]
+permalink: /devops/videos/How-to-Improve-Code-Health-with-GitHub-Code-Quality
+tags:
+- Automated Fixes
+- Code Health
+- Code Quality
+- CodeHealth
+- CodeQuality
+- Coding Standards
+- Continuous Integration
+- Developer Tools
+- DevOps
+- GitHub
+- Repository Health
+- Software Maintenance
+- Technical Debt
+- Videos
+section_names:
+- devops
 ---
-
 GitHub presents an overview of the Code Quality feature, highlighting how developers can utilize actionable insights and automation to maintain and improve their repository health.<!--excerpt_end-->
 
 {% youtube dlgYCpQI_lU %}

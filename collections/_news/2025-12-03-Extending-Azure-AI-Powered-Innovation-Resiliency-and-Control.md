@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Extending Azure: AI-Powered Innovation, Resiliency, and Control"
-description: "This article highlights Microsoft's adaptive cloud strategy, introducing new Azure Local and Azure Arc features for mission-critical workloads, data sovereignty, and operational autonomy. It details recent advancements in AI, IoT, and analytics with Microsoft Fabric and improved management for distributed environments, offering organizations unified control and robust innovation on their terms."
-author: "Douglas Phillips"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Extending Azure: AI-Powered Innovation, Resiliency, and Control'
+author: Douglas Phillips
+canonical_url: https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 17:00:00 +00:00
-permalink: "/2025-12-03-Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Advanced Analytics", "AI", "AI Innovation", "Azure", "Azure Arc", "Azure Device Registry", "Azure IoT", "Azure Key Vault", "Azure Local", "Compliance", "Data Sovereignty", "Digital Twin", "Disconnected Operations", "Distributed Estate", "Edge Computing", "Fabric IQ", "Hybrid + Multicloud", "Hybrid Cloud", "Internet Of Things", "Kubernetes", "Microsoft Fabric", "Mission Critical Workloads", "ML", "News", "Operational Sovereignty", "Private Cloud", "Security"]
-tags_normalized: ["advanced analytics", "ai", "ai innovation", "azure", "azure arc", "azure device registry", "azure iot", "azure key vault", "azure local", "compliance", "data sovereignty", "digital twin", "disconnected operations", "distributed estate", "edge computing", "fabric iq", "hybrid plus multicloud", "hybrid cloud", "internet of things", "kubernetes", "microsoft fabric", "mission critical workloads", "ml", "news", "operational sovereignty", "private cloud", "security"]
+permalink: /ai/news/Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control
+tags:
+- Advanced Analytics
+- AI
+- AI Innovation
+- Azure
+- Azure Arc
+- Azure Device Registry
+- Azure IoT
+- Azure Key Vault
+- Azure Local
+- Compliance
+- Data Sovereignty
+- Digital Twin
+- Disconnected Operations
+- Distributed Estate
+- Edge Computing
+- Fabric IQ
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Internet Of Things
+- Kubernetes
+- Microsoft Fabric
+- Mission Critical Workloads
+- ML
+- News
+- Operational Sovereignty
+- Private Cloud
+- Security
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Douglas Phillips presents Microsoft's latest Azure innovations, focusing on AI, operational resiliency, and control for enterprises facing complex data and sovereignty needs.<!--excerpt_end-->
 
 # Extending Azure: AI-Powered Innovation, Resiliency, and Control

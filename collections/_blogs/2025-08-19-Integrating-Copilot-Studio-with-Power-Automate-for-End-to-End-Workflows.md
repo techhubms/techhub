@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating Copilot Studio with Power Automate for End-to-End Workflows"
-description: "This guide demonstrates how to integrate Microsoft Copilot Studio with Power Automate to build conversational AI agents that trigger automated workflows across platforms such as SharePoint, Teams, and Dynamics 365. You'll learn setup steps, data mapping techniques, and best practices for combining conversational AI with workflow automation."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Integrating Copilot Studio with Power Automate for End-to-End Workflows
+author: Dellenny
+canonical_url: https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-19 09:15:44 +00:00
-permalink: "/2025-08-19-Integrating-Copilot-Studio-with-Power-Automate-for-End-to-End-Workflows.html"
-categories: ["AI"]
-tags: ["AI", "AI Workflows", "Automation", "Blogs", "Business Process Automation", "Conversational AI", "Copilot", "Copilot Studio", "Custom Copilot", "Dynamics 365", "Low Code", "Microsoft Power Platform", "Power Automate", "SharePoint Integration", "Teams Integration", "Variables Mapping", "Workflow Orchestration", "Workflow Testing"]
-tags_normalized: ["ai", "ai workflows", "automation", "blogs", "business process automation", "conversational ai", "copilot", "copilot studio", "custom copilot", "dynamics 365", "low code", "microsoft power platform", "power automate", "sharepoint integration", "teams integration", "variables mapping", "workflow orchestration", "workflow testing"]
+permalink: /ai/blogs/Integrating-Copilot-Studio-with-Power-Automate-for-End-to-End-Workflows
+tags:
+- AI
+- AI Workflows
+- Automation
+- Blogs
+- Business Process Automation
+- Conversational AI
+- Copilot
+- Copilot Studio
+- Custom Copilot
+- Dynamics 365
+- Low Code
+- Microsoft Power Platform
+- Power Automate
+- SharePoint Integration
+- Teams Integration
+- Variables Mapping
+- Workflow Orchestration
+- Workflow Testing
+section_names:
+- ai
 ---
-
 Dellenny explains how to integrate Microsoft Copilot Studio with Power Automate for seamless end-to-end AI-powered workflow automation, outlining configuration steps, data mapping, and real-world use cases.<!--excerpt_end-->
 
 # Integrating Copilot Studio with Power Automate for End-to-End Workflows

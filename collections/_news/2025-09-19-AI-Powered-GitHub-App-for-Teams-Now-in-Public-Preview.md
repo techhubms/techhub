@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI-Powered GitHub App for Teams Now in Public Preview"
-description: "This news post introduces the public preview of the new GitHub app for Microsoft Teams, which deeply integrates GitHub Copilot to automate coding tasks and enhance collaboration directly within Teams conversations. The app supports developer workflows such as task assignment, code generation, pull request management, and repository analysis, all through conversational interfaces. It aims to streamline the entire software development lifecycle in Teams by leveraging AI, reducing manual effort, and increasing productivity for development teams."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: AI-Powered GitHub App for Teams Now in Public Preview
+author: sbaynes
+canonical_url: https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-19 21:45:38 +00:00
-permalink: "/2025-09-19-AI-Powered-GitHub-App-for-Teams-Now-in-Public-Preview.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "AI Coding Agent", "ChatOps", "Code Collaboration", "Coding", "Coding Productivity", "Company News", "Continuous Integration", "DevOps", "DevOps Automation", "GitHub App", "GitHub Copilot", "Microsoft Teams", "News", "Pull Requests", "Repository Analysis", "Task Automation", "Team Workflows", "Technology"]
-tags_normalized: ["ai", "ai assistant", "ai coding agent", "chatops", "code collaboration", "coding", "coding productivity", "company news", "continuous integration", "devops", "devops automation", "github app", "github copilot", "microsoft teams", "news", "pull requests", "repository analysis", "task automation", "team workflows", "technology"]
+permalink: /github-copilot/news/AI-Powered-GitHub-App-for-Teams-Now-in-Public-Preview
+tags:
+- AI
+- AI Assistant
+- AI Coding Agent
+- ChatOps
+- Code Collaboration
+- Coding
+- Coding Productivity
+- Company News
+- Continuous Integration
+- DevOps
+- DevOps Automation
+- GitHub App
+- GitHub Copilot
+- Microsoft Teams
+- News
+- Pull Requests
+- Repository Analysis
+- Task Automation
+- Team Workflows
+- Technology
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 sbaynes introduces the new GitHub app for Teams, integrating GitHub Copilot for automated coding and DevOps tasks within Microsoft Teams. Learn how this AI-powered tool streamlines collaborative development in your workspace.<!--excerpt_end-->
 
 # GitHub App for Teams Now in Public Preview

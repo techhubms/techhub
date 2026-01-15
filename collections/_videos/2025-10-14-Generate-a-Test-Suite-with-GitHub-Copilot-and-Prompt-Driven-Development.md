@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Generate a Test Suite with GitHub Copilot and Prompt-Driven Development"
-description: "This video demonstrates how to use GitHub Copilot and Prompt-driven Development (PDD) within Visual Studio Code to generate comprehensive test suites. The walkthrough covers creating end-to-end, unit, and integration tests, with a focus on API integration, edge cases, and practical testing strategies. Viewers learn how to leverage Copilot-assisted prompt engineering to efficiently scaffold and execute robust test cases for their applications, improving code reliability within VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f-4NNlIQzQw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Generate a Test Suite with GitHub Copilot and Prompt-Driven Development
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=f-4NNlIQzQw
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-14 16:30:26 +00:00
-permalink: "/2025-10-14-Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Testing", "Coding", "Demo", "Developer", "Developer Tools", "Developertipsandtricks", "End To End Testing", "GitHub Copilot", "Integration Testing", "Microsoft", "Mocking Strategy", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Prompts", "Test Automation", "Unit Testing", "Videos", "VS Code"]
-tags_normalized: ["ai", "api testing", "coding", "demo", "developer", "developer tools", "developertipsandtricks", "end to end testing", "github copilot", "integration testing", "microsoft", "mocking strategy", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "prompts", "test automation", "unit testing", "videos", "vs code"]
+permalink: /github-copilot/videos/Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development
+tags:
+- AI
+- API Testing
+- Coding
+- Demo
+- Developer
+- Developer Tools
+- Developertipsandtricks
+- End To End Testing
+- GitHub Copilot
+- Integration Testing
+- Microsoft
+- Mocking Strategy
+- Prompt Driven Development
+- Prompt Engineering
+- Promptdrivendevelopment
+- Prompts
+- Test Automation
+- Unit Testing
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this video, Liam Hampton demonstrates how developers can use GitHub Copilot with Prompt-driven Development workflows in Visual Studio Code to write and run automated test suites, including end-to-end, unit, and integration tests.<!--excerpt_end-->
 
 {% youtube f-4NNlIQzQw %}

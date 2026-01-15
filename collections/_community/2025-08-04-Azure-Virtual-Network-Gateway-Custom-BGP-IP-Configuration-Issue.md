@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Azure Virtual Network Gateway: Custom BGP IP Configuration Issue"
-description: "A user discusses challenges configuring a custom APIPA BGP IP address on an Azure Virtual Network Gateway. Despite setting the custom BGP IP, querying the configuration returns only the default address. This is impacting the establishment of an IPSEC tunnel with a third party, who suspects this is the cause of BGP peering issues."
-author: "FewActivity9721"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mh967w/azure_virtual_network_gateway_with_custom_bgp/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Azure Virtual Network Gateway: Custom BGP IP Configuration Issue'
+author: FewActivity9721
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mh967w/azure_virtual_network_gateway_with_custom_bgp/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 09:52:09 +00:00
-permalink: "/2025-08-04-Azure-Virtual-Network-Gateway-Custom-BGP-IP-Configuration-Issue.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Virtual Network Gateway", "BGP", "BGP Peer IP", "Community", "Custom APIPA IP", "GatewaySubnet", "Get AzVirtualNetworkGateway", "IPSEC Tunnel", "Network Configuration", "PowerShell", "Troubleshooting"]
-tags_normalized: ["azure", "azure virtual network gateway", "bgp", "bgp peer ip", "community", "custom apipa ip", "gatewaysubnet", "get azvirtualnetworkgateway", "ipsec tunnel", "network configuration", "powershell", "troubleshooting"]
+permalink: /azure/community/Azure-Virtual-Network-Gateway-Custom-BGP-IP-Configuration-Issue
+tags:
+- Azure
+- Azure Virtual Network Gateway
+- BGP
+- BGP Peer IP
+- Community
+- Custom APIPA IP
+- GatewaySubnet
+- Get AzVirtualNetworkGateway
+- IPSEC Tunnel
+- Network Configuration
+- PowerShell
+- Troubleshooting
+section_names:
+- azure
 ---
-
 Author FewActivity9721 describes a problem configuring custom BGP IP addresses on an Azure Virtual Network Gateway, impacting IPSEC tunnel setup.<!--excerpt_end-->
 
 ## Azure Virtual Network Gateway and Custom BGP IP Configuration Issue

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Boost Performance with Fast Copy in Dataflows Gen2 for Snowflake"
-description: "This announcement from the Microsoft Fabric Blog explores Fast Copy in Dataflows Gen2, a new feature designed to significantly increase performance and cost efficiency when moving large datasets, such as those from Snowflake, into Microsoft Fabric Lakehouse. The article compares data loading scenarios before and after Fast Copy, showing clear operational benefits."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/boost-performance-with-fast-copy-in-dataflows-gen2-for-snowflake/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Boost Performance with Fast Copy in Dataflows Gen2 for Snowflake
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/boost-performance-with-fast-copy-in-dataflows-gen2-for-snowflake/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-31 11:00:00 +00:00
-permalink: "/2025-07-31-Boost-Performance-with-Fast-Copy-in-Dataflows-Gen2-for-Snowflake.html"
-categories: ["ML"]
-tags: ["Benchmarking", "Big Data", "Copy Activity", "Data Ingestion", "Data Migration", "Data Pipelines", "Dataflows Gen2", "ETL", "Fast Copy", "Lakehouse", "Microsoft Fabric", "ML", "News", "Performance Optimization", "Production Workloads", "Snowflake"]
-tags_normalized: ["benchmarking", "big data", "copy activity", "data ingestion", "data migration", "data pipelines", "dataflows gen2", "etl", "fast copy", "lakehouse", "microsoft fabric", "ml", "news", "performance optimization", "production workloads", "snowflake"]
+permalink: /ml/news/Boost-Performance-with-Fast-Copy-in-Dataflows-Gen2-for-Snowflake
+tags:
+- Benchmarking
+- Big Data
+- Copy Activity
+- Data Ingestion
+- Data Migration
+- Data Pipelines
+- Dataflows Gen2
+- ETL
+- Fast Copy
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Performance Optimization
+- Production Workloads
+- Snowflake
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog demonstrates how Fast Copy in Dataflows Gen2 dramatically improves Snowflake-to-Lakehouse loading performance, with insights and benchmarks for data engineers.<!--excerpt_end-->
 
 # Boost Performance with Fast Copy in Dataflows Gen2 for Snowflake

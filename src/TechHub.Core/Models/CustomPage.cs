@@ -12,7 +12,7 @@ public record CustomPage
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required string Permalink { get; init; }
-    public required IReadOnlyList<string> Categories { get; init; }
+    public required IReadOnlyList<string> SectionNames { get; init; }
     public required string Content { get; init; }
     public JsonElement? SidebarInfo { get; init; }
 }

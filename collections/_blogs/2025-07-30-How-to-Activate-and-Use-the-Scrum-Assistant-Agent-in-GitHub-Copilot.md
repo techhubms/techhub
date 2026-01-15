@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How to Activate and Use the Scrum Assistant Agent in GitHub Copilot"
-description: "This article provides a step-by-step guide to enabling and utilizing the Scrum Assistant agent within GitHub Copilot. It explains how Agile Scrum teams can automate daily workflows, such as standups, retrospectives, and backlog grooming, using AI-powered assistance directly in their development environment. Key tips, activation procedures, prompt examples, and practical value for developer productivity are covered."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-activate-and-use-the-scrum-assistant-agent-in-github-copilot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How to Activate and Use the Scrum Assistant Agent in GitHub Copilot
+author: Dellenny
+canonical_url: https://dellenny.com/how-to-activate-and-use-the-scrum-assistant-agent-in-github-copilot/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-30 08:08:05 +00:00
-permalink: "/2025-07-30-How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agile", "AI", "AI Agents", "Automation", "Backlog Grooming", "Blocker Tracking", "Blogs", "Copilot Chat", "Copilot Workspace", "DevOps", "GitHub Copilot", "M365 Copilot", "Microsoft 365 Copilot", "Productivity Tools", "Retrospective Summaries", "Scrum", "Scrum Assistant", "Sprint Planning", "Standup Automation", "Team Collaboration", "User Stories", "VS Code"]
-tags_normalized: ["agile", "ai", "ai agents", "automation", "backlog grooming", "blocker tracking", "blogs", "copilot chat", "copilot workspace", "devops", "github copilot", "m365 copilot", "microsoft 365 copilot", "productivity tools", "retrospective summaries", "scrum", "scrum assistant", "sprint planning", "standup automation", "team collaboration", "user stories", "vs code"]
+permalink: /github-copilot/blogs/How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot
+tags:
+- Agile
+- AI
+- AI Agents
+- Automation
+- Backlog Grooming
+- Blocker Tracking
+- Blogs
+- Copilot Chat
+- Copilot Workspace
+- DevOps
+- GitHub Copilot
+- M365 Copilot
+- Microsoft 365 Copilot
+- Productivity Tools
+- Retrospective Summaries
+- Scrum
+- Scrum Assistant
+- Sprint Planning
+- Standup Automation
+- Team Collaboration
+- User Stories
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Dellenny details how GitHub Copilot’s Scrum Assistant agent can automate and enhance Agile ceremonies, guiding development teams through daily standups, sprint planning, and more with AI-driven workflow support.<!--excerpt_end-->
 
 # How to Activate and Use the Scrum Assistant Agent in GitHub Copilot

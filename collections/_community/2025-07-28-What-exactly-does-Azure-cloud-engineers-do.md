@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "What exactly does Azure cloud engineers do?"
-description: "The author, transitioning from C# .NET development to Azure, seeks advice on becoming a cloud engineer. They share their experience with Azure Functions and training for Azure Developer Associate certification, and request practical insights into typical responsibilities and learning paths for Azure cloud engineers."
-author: "curious_monk77"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mbp183/what_exactly_does_azure_cloud_engineers_do/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: What exactly does Azure cloud engineers do?
+author: curious_monk77
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mbp183/what_exactly_does_azure_cloud_engineers_do/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 18:59:43 +00:00
-permalink: "/2025-07-28-What-exactly-does-Azure-cloud-engineers-do.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "APIs", "Azure", "Azure Certification", "Azure Functions", "C#", "Career Transition", "Cloud Development", "Cloud Engineer", "Cloud Migration", "Coding", "Community", "DevOps"]
-tags_normalized: ["dotnet", "apis", "azure", "azure certification", "azure functions", "csharp", "career transition", "cloud development", "cloud engineer", "cloud migration", "coding", "community", "devops"]
+permalink: /coding/community/What-exactly-does-Azure-cloud-engineers-do
+tags:
+- .NET
+- APIs
+- Azure
+- Azure Certification
+- Azure Functions
+- C#
+- Career Transition
+- Cloud Development
+- Cloud Engineer
+- Cloud Migration
+- Coding
+- Community
+- DevOps
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Author curious_monk77, a C# .NET developer exploring Azure, asks for advice on transitioning to a cloud engineer role and seeks insights into daily activities and skills relevant for Azure platform specialists.<!--excerpt_end-->
 
 ## Summary

@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers"
-description: "AI Dev Days is a free, two-day virtual event on December 10-11, 2025, presented by Microsoft and GitHub. It features live sessions and hands-on workshops focused on modern AI application development—including agents, automation, developer productivity tools, and integrating GitHub Copilot with Azure. Learn from expert speakers and access source code and demos to accelerate your AI skills."
-author: "James Montemagno"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/join-us-for-ai-devdays"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers'
+author: James Montemagno
+canonical_url: https://devblogs.microsoft.com/blog/join-us-for-ai-devdays
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-05 19:30:22 +00:00
-permalink: "/2025-12-05-AI-Dev-Days-2025-Microsoft-and-GitHub-Virtual-Event-for-Developers.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Framework", "AI", "AI Agents", "AI Dev Days", "Anthropic", "App Modernization", "AutoGen", "Azure", "Cloud Development", "Code Automation", "Coding", "Devdays", "Developer Events", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP Protocol", "Microsoft Foundry", "Model Orchestration", "News", "OpenAI", "Semantic Kernel", "Spec Kit", "VS", "VS Code", "Workshop", "Workshops"]
-tags_normalized: ["agent framework", "ai", "ai agents", "ai dev days", "anthropic", "app modernization", "autogen", "azure", "cloud development", "code automation", "coding", "devdays", "developer events", "developer productivity", "devops", "github copilot", "mcp protocol", "microsoft foundry", "model orchestration", "news", "openai", "semantic kernel", "spec kit", "vs", "vs code", "workshop", "workshops"]
+permalink: /github-copilot/news/AI-Dev-Days-2025-Microsoft-and-GitHub-Virtual-Event-for-Developers
+tags:
+- Agent Framework
+- AI
+- AI Agents
+- AI Dev Days
+- Anthropic
+- App Modernization
+- AutoGen
+- Azure
+- Cloud Development
+- Code Automation
+- Coding
+- Devdays
+- Developer Events
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- MCP Protocol
+- Microsoft Foundry
+- Model Orchestration
+- News
+- OpenAI
+- Semantic Kernel
+- Spec Kit
+- VS
+- VS Code
+- Workshop
+- Workshops
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 James Montemagno invites developers to AI Dev Days, a Microsoft and GitHub event showcasing hands-on workshops and technical sessions on AI, GitHub Copilot, Azure, and developer productivity.<!--excerpt_end-->
 
 # AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers

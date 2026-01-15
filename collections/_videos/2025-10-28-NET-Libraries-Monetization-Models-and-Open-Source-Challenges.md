@@ -1,20 +1,31 @@
----
-layout: "post"
-title: ".NET Libraries: Monetization Models and Open Source Challenges"
-description: "Nick Chapsas discusses the state of the .NET open-source library ecosystem, highlighting monetization models, the sustainability of open-source work, and the community dynamics around forking and maintaining .NET projects. The video explores the dilemma library authors face when managing open sources in the modern .NET landscape."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5K1NiGtUrhw"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: '.NET Libraries: Monetization Models and Open Source Challenges'
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=5K1NiGtUrhw
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-10-28 12:00:14 +00:00
-permalink: "/2025-10-28-NET-Libraries-Monetization-Models-and-Open-Source-Challenges.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Community", ".NET Libraries", "C#", "Coding", "Community Development", "Developer Tools", "Forking Projects", "Library Ecosystem", "Monetization", "Open Source", "Software Maintenance", "Sustainability", "Videos"]
-tags_normalized: ["dotnet", "dotnet community", "dotnet libraries", "csharp", "coding", "community development", "developer tools", "forking projects", "library ecosystem", "monetization", "open source", "software maintenance", "sustainability", "videos"]
+permalink: /coding/videos/NET-Libraries-Monetization-Models-and-Open-Source-Challenges
+tags:
+- .NET
+- .NET Community
+- .NET Libraries
+- C#
+- Coding
+- Community Development
+- Developer Tools
+- Forking Projects
+- Library Ecosystem
+- Monetization
+- Open Source
+- Software Maintenance
+- Sustainability
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas examines the complexities facing .NET open-source libraries, addressing monetization, project sustainability, and whether forking can genuinely 'save' abandoned projects.<!--excerpt_end-->
 
 {% youtube 5K1NiGtUrhw %}

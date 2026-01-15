@@ -1,20 +1,40 @@
----
-layout: "post"
-title: ".NET Conf 2025 Call for Content: Share Your .NET 10 Expertise"
-description: "The .NET Conf 2025 Call for Content is open until August 31, inviting developers to submit session proposals for the virtual event on November 11-13. The conference will feature .NET 10, .NET Aspire, AI, web, mobile, desktop, IoT, games, DevOps, and community stories."
-author: "Jeffrey T. Fritz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: '.NET Conf 2025 Call for Content: Share Your .NET 10 Expertise'
+author: Jeffrey T. Fritz
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-05 16:00:00 +00:00
-permalink: "/2025-08-05-NET-Conf-2025-Call-for-Content-Share-Your-NET-10-Expertise.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Conf", "AI", "Blazor", "Cloud", "Coding", "Conference", "Developers", "DevOps", "IoT", "Machine Learning", "MAUI", "Mobile Apps", "News", "Open Source", "Productivity", "Session Proposal", "Speakers", "Virtual Event", "Web"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet conf", "ai", "blazor", "cloud", "coding", "conference", "developers", "devops", "iot", "machine learning", "maui", "mobile apps", "news", "open source", "productivity", "session proposal", "speakers", "virtual event", "web"]
+permalink: /ai/news/NET-Conf-2025-Call-for-Content-Share-Your-NET-10-Expertise
+tags:
+- .NET
+- .NET 10
+- .NET Conf
+- AI
+- Blazor
+- Cloud
+- Coding
+- Conference
+- Developers
+- DevOps
+- IoT
+- Machine Learning
+- MAUI
+- Mobile Apps
+- News
+- Open Source
+- Productivity
+- Session Proposal
+- Speakers
+- Virtual Event
+- Web
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Jeffrey T. Fritz invites the global .NET developer community to propose sessions for .NET Conf 2025, a premier virtual event launching .NET 10. Share your insights and projects, whether in web, mobile, AI, DevOps or open source, and be part of this worldwide celebration.<!--excerpt_end-->
 
 # .NET Conf 2025 – Announcing the Call for Content

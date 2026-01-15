@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure Networking: Latest Updates for Security, Reliability, and AI/ML Workloads"
-description: "This article summarizes the latest advancements in Azure networking services, focusing on improving security, resilience, scale, and high availability to support AI and cloud-native workloads. Topics include new features for NAT Gateway, enhanced DNS security policies, ExpressRoute 400G, advanced container networking for AKS, VPN, Private Link, Application Gateway, and traffic filtering capabilities. Readers learn how Azure's globally distributed infrastructure and intelligent network services are evolving to meet the demands of AI-driven cloud workloads, with technical highlights and links to Microsoft documentation."
-author: "Narayan Annamalai"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliability-and-high-availability/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Azure Networking: Latest Updates for Security, Reliability, and AI/ML Workloads'
+author: Narayan Annamalai
+canonical_url: https://azure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliability-and-high-availability/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 17:00:00 +00:00
-permalink: "/2025-12-01-Azure-Networking-Latest-Updates-for-Security-Reliability-and-AIML-Workloads.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Workloads", "AKS", "Application Gateway", "Azure", "Azure Bastion", "Azure DDoS Protection", "Azure DNS", "Azure ExpressRoute", "Azure Firewall", "Azure Networking", "Cloud Security", "Container Networking", "Ebpf Host Routing", "JWT Validation", "NAT Gateway V2", "Networking", "News", "Pod CIDR Expansion", "Private Link", "Security", "Threat Intelligence", "Traffic Filtering", "Virtual WAN", "VPN Gateway", "Web Application Firewall", "Zone Redundancy"]
-tags_normalized: ["ai", "ai workloads", "aks", "application gateway", "azure", "azure bastion", "azure ddos protection", "azure dns", "azure expressroute", "azure firewall", "azure networking", "cloud security", "container networking", "ebpf host routing", "jwt validation", "nat gateway v2", "networking", "news", "pod cidr expansion", "private link", "security", "threat intelligence", "traffic filtering", "virtual wan", "vpn gateway", "web application firewall", "zone redundancy"]
+permalink: /ai/news/Azure-Networking-Latest-Updates-for-Security-Reliability-and-AIML-Workloads
+tags:
+- AI
+- AI Workloads
+- AKS
+- Application Gateway
+- Azure
+- Azure Bastion
+- Azure DDoS Protection
+- Azure DNS
+- Azure ExpressRoute
+- Azure Firewall
+- Azure Networking
+- Cloud Security
+- Container Networking
+- Ebpf Host Routing
+- JWT Validation
+- NAT Gateway V2
+- Networking
+- News
+- Pod CIDR Expansion
+- Private Link
+- Security
+- Threat Intelligence
+- Traffic Filtering
+- Virtual WAN
+- VPN Gateway
+- Web Application Firewall
+- Zone Redundancy
+section_names:
+- ai
+- azure
+- security
 ---
-
 Narayan Annamalai shares the latest Azure networking updates, covering new security, reliability, and scalability features designed for demanding AI and cloud-native workloads, with insights on practical implementation.<!--excerpt_end-->
 
 # Azure Networking: Latest Updates for Security, Reliability, and AI/ML Workloads

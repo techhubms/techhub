@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Ignite 2025 NYC Watch Party: Keynotes, AI, Azure, and Community Sessions"
-description: "Join the Microsoft Ignite 2025 Watch Party in Times Square, NYC, for two days of live keynotes, technical sessions, and community networking. The agenda covers modern AI, cloud, Azure, coding with .NET, Power Platform, Copilot Studio, and open-source orchestration. Connect with MVPs, Microsoft experts, and local technologists for hands-on discussions and insights."
-author: "MariselaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft Ignite 2025 NYC Watch Party: Keynotes, AI, Azure, and Community Sessions'
+author: MariselaC
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 23:00:00 +00:00
-permalink: "/2025-10-07-Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure-and-Community-Sessions.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic Orchestration", "AI", "Automation", "Azure", "Azure AI Foundry", "Azure Load Balancer", "Cloud", "Coding", "Community", "Copilot Studio", "Microsoft Ignite", "MVP", "Open Source", "Power Apps", "Power BI", "Vector Search"]
-tags_normalized: ["dotnet", "agentic orchestration", "ai", "automation", "azure", "azure ai foundry", "azure load balancer", "cloud", "coding", "community", "copilot studio", "microsoft ignite", "mvp", "open source", "power apps", "power bi", "vector search"]
+permalink: /ai/community/Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure-and-Community-Sessions
+tags:
+- .NET
+- Agentic Orchestration
+- AI
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure Load Balancer
+- Cloud
+- Coding
+- Community
+- Copilot Studio
+- Microsoft Ignite
+- MVP
+- Open Source
+- Power Apps
+- Power BI
+- Vector Search
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Organized by MariselaC, the Microsoft Ignite 2025 NYC Watch Party brings the tech community together for keynotes, AI/ML sessions, .NET, Azure, Power Platform, and networking opportunities in Times Square.<!--excerpt_end-->
 
 # Microsoft Ignite 2025 NYC Watch Party

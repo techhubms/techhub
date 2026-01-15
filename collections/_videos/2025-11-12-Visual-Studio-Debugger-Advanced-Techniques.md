@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Visual Studio Debugger: Advanced Techniques"
-description: "This session offers a deep dive into Visual Studio's advanced debugging features, including conditional breakpoints, tracepoints, data breakpoints, and new AI-powered debugging insights. Developers will discover practical tips for troubleshooting async code, analyzing memory issues, and fully utilizing the watch and immediate windows to improve efficiency and code understanding."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6afeRSFQiw0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Visual Studio Debugger: Advanced Techniques'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=6afeRSFQiw0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/2025-11-12-Visual-Studio-Debugger-Advanced-Techniques.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI 10", "AI", "AI Debugging", "ASP.NET Core 10", "Async Code", "C# 14", "Code Troubleshooting", "Coding", "Conditional Breakpoints", "Data Breakpoints", "Debugging", "Developer Productivity", "F# 10", "Immediate Window", "Memory Analysis", "Tracepoints", "Videos", "VS", "Watch Window"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "ai", "ai debugging", "aspdotnet core 10", "async code", "csharp 14", "code troubleshooting", "coding", "conditional breakpoints", "data breakpoints", "debugging", "developer productivity", "fsharp 10", "immediate window", "memory analysis", "tracepoints", "videos", "vs", "watch window"]
+permalink: /ai/videos/Visual-Studio-Debugger-Advanced-Techniques
+tags:
+- .NET
+- .NET 10
+- .NET MAUI 10
+- AI
+- AI Debugging
+- ASP.NET Core 10
+- Async Code
+- C# 14
+- Code Troubleshooting
+- Coding
+- Conditional Breakpoints
+- Data Breakpoints
+- Debugging
+- Developer Productivity
+- F# 10
+- Immediate Window
+- Memory Analysis
+- Tracepoints
+- Videos
+- VS
+- Watch Window
+section_names:
+- ai
+- coding
 ---
-
 dotnet presents advanced techniques and AI-powered insights for debugging with Visual Studio, revealing tools and methods that help developers troubleshoot and resolve even the toughest coding issues efficiently.<!--excerpt_end-->
 
 {% youtube 6afeRSFQiw0 %}

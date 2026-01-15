@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI Operations: Real-Time Monitoring and Governance with Microsoft Foundry Control Plane"
-description: "This Microsoft Ignite session explores robust observability, operational efficiency, and security best practices for organizations deploying AI at scale using the Microsoft Foundry Control Plane. Speakers Ken Archer, Sarah Bird, and Florent Ricci walk through features including real-time monitoring, guardrails against prompt injection and PII leaks, continuous production evaluation, and deep integration with Microsoft Defender to deliver a secure, compliant AI environment. A customer case study shows practical management of AI agents in production."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=oOO6OG4biEY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Operations: Real-Time Monitoring and Governance with Microsoft Foundry Control Plane'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=oOO6OG4biEY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:29:22 +00:00
-permalink: "/2025-11-21-AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agent Operations", "Azure", "Azure AI", "Case Study", "Compliance", "Continuous Evaluation", "Governance", "Human Oversight", "InnovatewithAzureAIappsandagents", "Microsoft Defender", "Microsoft Foundry", "MSIgnite", "Observability", "PII Protection", "Production Monitoring", "Prompt Injection Protection", "Security", "Threat Detection", "Trustworthy AI", "Videos"]
-tags_normalized: ["ai", "ai agent operations", "azure", "azure ai", "case study", "compliance", "continuous evaluation", "governance", "human oversight", "innovatewithazureaiappsandagents", "microsoft defender", "microsoft foundry", "msignite", "observability", "pii protection", "production monitoring", "prompt injection protection", "security", "threat detection", "trustworthy ai", "videos"]
+permalink: /ai/videos/AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane
+tags:
+- AI
+- AI Agent Operations
+- Azure
+- Azure AI
+- Case Study
+- Compliance
+- Continuous Evaluation
+- Governance
+- Human Oversight
+- InnovatewithAzureAIappsandagents
+- Microsoft Defender
+- Microsoft Foundry
+- MSIgnite
+- Observability
+- PII Protection
+- Production Monitoring
+- Prompt Injection Protection
+- Security
+- Threat Detection
+- Trustworthy AI
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presenters Ken Archer, Sarah Bird, and Florent Ricci deliver insights on monitoring, optimizing, and securing enterprise-scale AI agents using the Microsoft Foundry Control Plane at Ignite 2025.<!--excerpt_end-->
 
 {% youtube oOO6OG4biEY %}

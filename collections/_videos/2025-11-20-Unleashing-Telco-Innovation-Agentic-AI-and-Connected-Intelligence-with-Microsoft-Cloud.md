@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unleashing Telco Innovation: Agentic AI & Connected Intelligence with Microsoft Cloud"
-description: "This Microsoft Ignite 2025 breakout session explores how telecom organizations leverage Microsoft AI and cloud solutions to unify data, automate network operations, and deliver new service capabilities. Industry experts discuss agent integration, model tuning, ML insights, security agents, and future trends in autonomous network systems, providing actionable strategies for telco practitioners wanting to modernize and innovate."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mTfjrZbUkts"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Unleashing Telco Innovation: Agentic AI & Connected Intelligence with Microsoft Cloud'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mTfjrZbUkts
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:01:31 +00:00
-permalink: "/2025-11-20-Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agentic AI", "AI", "Autonomous Networks", "Azure", "Cloud Solutions", "Connected Intelligence", "Data Unification", "Machine Learning", "Microsoft AI", "Microsoft Ignite", "ML", "Model Tuning", "MSIgnite", "Network Automation", "Nokia", "Security", "Security Agents", "Service Delivery", "Telecom", "TM Forum Standards", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agentic ai", "ai", "autonomous networks", "azure", "cloud solutions", "connected intelligence", "data unification", "machine learning", "microsoft ai", "microsoft ignite", "ml", "model tuning", "msignite", "network automation", "nokia", "security", "security agents", "service delivery", "telecom", "tm forum standards", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud
+tags:
+- Agentic AI
+- AI
+- Autonomous Networks
+- Azure
+- Cloud Solutions
+- Connected Intelligence
+- Data Unification
+- Machine Learning
+- Microsoft AI
+- Microsoft Ignite
+- ML
+- Model Tuning
+- MSIgnite
+- Network Automation
+- Nokia
+- Security
+- Security Agents
+- Service Delivery
+- Telecom
+- TM Forum Standards
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 In this Microsoft Ignite session, Rick Lievano, Gustavo do Couto Duarte, and Mathew George showcase how telecoms deploy Microsoft AI and Azure solutions for network automation and secure autonomous operations.<!--excerpt_end-->
 
 {% youtube mTfjrZbUkts %}

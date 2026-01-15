@@ -1,20 +1,64 @@
----
-layout: "post"
-title: "Vibe Coding Can Create Unseen Vulnerabilities"
-description: "This article analyzes the rise of 'vibe coding,' an AI-driven approach to software development that enables rapid prototyping but introduces risks such as security flaws, technical debt, and compliance issues. Jeff Kuo explores the significance of developer oversight, the pitfalls of unchecked AI-generated code, and strategies to mitigate vulnerabilities inherent in black-box and AI-assisted coding practices."
-author: "Jeff Kuo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/vibe-coding-can-create-unseen-vulnerabilities/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Vibe Coding Can Create Unseen Vulnerabilities
+author: Jeff Kuo
+canonical_url: https://devops.com/vibe-coding-can-create-unseen-vulnerabilities/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-11 09:30:29 +00:00
-permalink: "/2025-11-11-Vibe-Coding-Can-Create-Unseen-Vulnerabilities.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI And Cybersecurity", "AI Automation", "AI Code Review", "AI Code Validation", "AI Coding", "AI Coding Ethics", "AI Development Oversight", "AI Hallucination", "AI in App Development", "AI Programming", "AI Software Development", "AI Software Reliability", "AI Software Security", "Application Security", "Black Box Coding", "Blogs", "Business Of DevOps", "Code Review", "Coding", "Compliance Risks", "Contributed Content", "Developer in The Loop", "Developer Oversight", "DevOps", "DevOps Workflows", "Firebase Breach", "GenAI", "Generative AI", "Large Language Models", "Low Code Development", "Low Code Platforms", "Machine Learning", "No Code Platforms", "No Code Tools", "Secure Coding", "Secure Coding Practices", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality Assurance", "Technical Debt", "Vibe Coding"]
-tags_normalized: ["ai", "ai and cybersecurity", "ai automation", "ai code review", "ai code validation", "ai coding", "ai coding ethics", "ai development oversight", "ai hallucination", "ai in app development", "ai programming", "ai software development", "ai software reliability", "ai software security", "application security", "black box coding", "blogs", "business of devops", "code review", "coding", "compliance risks", "contributed content", "developer in the loop", "developer oversight", "devops", "devops workflows", "firebase breach", "genai", "generative ai", "large language models", "low code development", "low code platforms", "machine learning", "no code platforms", "no code tools", "secure coding", "secure coding practices", "security", "social facebook", "social linkedin", "social x", "software quality assurance", "technical debt", "vibe coding"]
+permalink: /ai/blogs/Vibe-Coding-Can-Create-Unseen-Vulnerabilities
+tags:
+- AI
+- AI And Cybersecurity
+- AI Automation
+- AI Code Review
+- AI Code Validation
+- AI Coding
+- AI Coding Ethics
+- AI Development Oversight
+- AI Hallucination
+- AI in App Development
+- AI Programming
+- AI Software Development
+- AI Software Reliability
+- AI Software Security
+- Application Security
+- Black Box Coding
+- Blogs
+- Business Of DevOps
+- Code Review
+- Coding
+- Compliance Risks
+- Contributed Content
+- Developer in The Loop
+- Developer Oversight
+- DevOps
+- DevOps Workflows
+- Firebase Breach
+- GenAI
+- Generative AI
+- Large Language Models
+- Low Code Development
+- Low Code Platforms
+- Machine Learning
+- No Code Platforms
+- No Code Tools
+- Secure Coding
+- Secure Coding Practices
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Quality Assurance
+- Technical Debt
+- Vibe Coding
+section_names:
+- ai
+- coding
+- devops
+- security
 ---
-
 Jeff Kuo explores how AI-powered vibe coding speeds up software creation, but warns that developer supervision is required to avoid security and quality issues in the final product.<!--excerpt_end-->
 
 # Vibe Coding Can Create Unseen Vulnerabilities

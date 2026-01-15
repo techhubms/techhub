@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Enterprise Cloud Access Restrictions Now Support Multiple Enterprises"
-description: "This news update announces that GitHub Enterprise Cloud customers managing multiple Enterprise Managed Users (EMU) accounts can now configure a single proxy header to restrict traffic to github.com for all included enterprises. The feature streamlines security setup for organizations with multiple business entities and provides guidance on implementing network-based access restrictions and managing Copilot usage."
-author: "Usha Narayanabhatta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-06-enterprise-access-restrictions-now-supports-multiple-enterprises"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Enterprise Cloud Access Restrictions Now Support Multiple Enterprises
+author: Usha Narayanabhatta
+canonical_url: https://github.blog/changelog/2025-10-06-enterprise-access-restrictions-now-supports-multiple-enterprises
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-06 23:52:41 +00:00
-permalink: "/2025-10-06-GitHub-Enterprise-Cloud-Access-Restrictions-Now-Support-Multiple-Enterprises.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Restrictions", "Authentication Security", "Copilot Access", "Corporate Proxy", "DevOps", "Enterprise ID", "Enterprise Managed Users", "Enterprise Management Tools", "Firewall Configuration", "GitHub Enterprise Cloud", "Improvement", "Network Security", "News", "Platform Governance", "Proxy Header", "Security"]
-tags_normalized: ["access restrictions", "authentication security", "copilot access", "corporate proxy", "devops", "enterprise id", "enterprise managed users", "enterprise management tools", "firewall configuration", "github enterprise cloud", "improvement", "network security", "news", "platform governance", "proxy header", "security"]
+permalink: /devops/news/GitHub-Enterprise-Cloud-Access-Restrictions-Now-Support-Multiple-Enterprises
+tags:
+- Access Restrictions
+- Authentication Security
+- Copilot Access
+- Corporate Proxy
+- DevOps
+- Enterprise ID
+- Enterprise Managed Users
+- Enterprise Management Tools
+- Firewall Configuration
+- GitHub Enterprise Cloud
+- Improvement
+- Network Security
+- News
+- Platform Governance
+- Proxy Header
+- Security
+section_names:
+- devops
+- security
 ---
-
 Usha Narayanabhatta highlights the latest update to GitHub Enterprise Cloud: organizations with multiple EMU accounts can now use a single proxy header for unified access restriction and improved network security.<!--excerpt_end-->
 
 # GitHub Enterprise Access Restrictions Now Support Multiple Enterprises

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Empowering Nonprofits with Agentic AI: Adoption Lessons from Microsoft Ignite"
-description: "This Microsoft Ignite session highlights how nonprofits are leveraging agentic AI to drive mission-critical outcomes in program management, fundraising, and operations. Featuring real-world examples and practical strategies, the event showcases multi-agent systems that customize proposals, assess risk, detect trends, and power grant evaluation dashboards, with a focus on the successes and challenges of early AI adoption in the sector."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aosIvPgLug4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Empowering Nonprofits with Agentic AI: Adoption Lessons from Microsoft Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=aosIvPgLug4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:10:10 +00:00
-permalink: "/2025-11-24-Empowering-Nonprofits-with-Agentic-AI-Adoption-Lessons-from-Microsoft-Ignite.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Leadership", "Digital Transformation", "Fundraising", "Grant Evaluation Dashboard", "Knowledge Sharing", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Nonprofit Solutions", "Operational AI", "Program Management", "Proposal Customization", "Reference Architecture", "Risk Assessment", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai leadership", "digital transformation", "fundraising", "grant evaluation dashboard", "knowledge sharing", "microsoft ignite", "msignite", "multi agent systems", "nonprofit solutions", "operational ai", "program management", "proposal customization", "reference architecture", "risk assessment", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Empowering-Nonprofits-with-Agentic-AI-Adoption-Lessons-from-Microsoft-Ignite
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Leadership
+- Digital Transformation
+- Fundraising
+- Grant Evaluation Dashboard
+- Knowledge Sharing
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- Nonprofit Solutions
+- Operational AI
+- Program Management
+- Proposal Customization
+- Reference Architecture
+- Risk Assessment
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents insights from early nonprofit adopters of agentic AI at Ignite, featuring Morteza Ghazai. The session covers practical strategies and real-world challenges in AI-driven operations.<!--excerpt_end-->
 
 {% youtube aosIvPgLug4 %}

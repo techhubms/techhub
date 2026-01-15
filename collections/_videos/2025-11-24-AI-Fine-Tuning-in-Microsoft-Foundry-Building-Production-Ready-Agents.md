@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents"
-description: "This advanced Microsoft Ignite session focuses on practical fine-tuning techniques in Microsoft Foundry, including customizing Azure OpenAI and open-source models. The speakers demonstrate how to create agents that excel in tool calling, data extraction, and workflow execution, utilizing synthetic data generation and multi-agent collaboration. Real-world scenarios and live demos illustrate effective model selection, synthetic data strategies, and scalable AI solutions for contract processing."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dXUy9evg1yo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=dXUy9evg1yo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:25:11 +00:00
-permalink: "/2025-11-24-AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "AI Workflows", "Azure", "Azure OpenAI Service", "Contract Processing", "Data Extraction", "Fine Tuning", "GPT 5", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "ML", "Model Customization", "MS Ignite", "MSIgnite", "Multi Agent Collaboration", "Navigator", "O4 Mini", "OSS Models", "Swagger", "Synthetic Data Generation", "Tool Calling", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "ai workflows", "azure", "azure openai service", "contract processing", "data extraction", "fine tuning", "gpt 5", "innovatewithazureaiappsandagents", "microsoft foundry", "ml", "model customization", "ms ignite", "msignite", "multi agent collaboration", "navigator", "o4 mini", "oss models", "swagger", "synthetic data generation", "tool calling", "videos", "workflow automation"]
+permalink: /ai/videos/AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents
+tags:
+- AI
+- AI Agents
+- AI Workflows
+- Azure
+- Azure OpenAI Service
+- Contract Processing
+- Data Extraction
+- Fine Tuning
+- GPT 5
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- ML
+- Model Customization
+- MS Ignite
+- MSIgnite
+- Multi Agent Collaboration
+- Navigator
+- O4 Mini
+- OSS Models
+- Swagger
+- Synthetic Data Generation
+- Tool Calling
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents an advanced demo-driven session featuring Alicia Frame, Ramachandra Kota, and Omkar More. They explore fine-tuning in Microsoft Foundry for Azure OpenAI and open-source models, highlighting synthetic data strategies and AI-powered agent development.<!--excerpt_end-->
 
 {% youtube dXUy9evg1yo %}

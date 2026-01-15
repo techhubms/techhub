@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era"
-description: "This article by Joydip Kanjilal explores how AIOps (Artificial Intelligence for IT operations) is transforming DevOps monitoring practices within modern cloud and hybrid environments. The piece outlines the key challenges of traditional monitoring, details the benefits and integration of AIOps in DevOps pipelines, and discusses the growing role of AI-driven automation and analytics in operational excellence."
-author: "Joydip Kanjilal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era
+author: Joydip Kanjilal
+canonical_url: https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-04 10:55:16 +00:00
-permalink: "/2025-11-04-How-AIOps-is-Revolutionizing-DevOps-Monitoring-in-the-Cloud-Era.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Driven DevOps", "AI in IT Operations", "AIOps", "Anomaly Detection", "Application Performance Management", "Application Performance Management/Monitoring", "Automation", "Automation in Cloud", "Blogs", "Business Of DevOps", "CI/CD Pipelines", "Cloud Computing", "Cloud Monitoring", "Cloud Native", "Cloud Native Monitoring", "Contributed Content", "DevOps", "Digital Transformation", "Hybrid Cloud", "Incident Management", "Intelligent Automation", "IT Operations", "Observability", "Operational Excellence", "Predictive Analytics", "Predictive Monitoring", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["ai", "ai driven devops", "ai in it operations", "aiops", "anomaly detection", "application performance management", "application performance managementslashmonitoring", "automation", "automation in cloud", "blogs", "business of devops", "cislashcd pipelines", "cloud computing", "cloud monitoring", "cloud native", "cloud native monitoring", "contributed content", "devops", "digital transformation", "hybrid cloud", "incident management", "intelligent automation", "it operations", "observability", "operational excellence", "predictive analytics", "predictive monitoring", "social facebook", "social linkedin", "social x"]
+permalink: /ai/blogs/How-AIOps-is-Revolutionizing-DevOps-Monitoring-in-the-Cloud-Era
+tags:
+- AI
+- AI Driven DevOps
+- AI in IT Operations
+- AIOps
+- Anomaly Detection
+- Application Performance Management
+- Application Performance Management/Monitoring
+- Automation
+- Automation in Cloud
+- Blogs
+- Business Of DevOps
+- CI/CD Pipelines
+- Cloud Computing
+- Cloud Monitoring
+- Cloud Native
+- Cloud Native Monitoring
+- Contributed Content
+- DevOps
+- Digital Transformation
+- Hybrid Cloud
+- Incident Management
+- Intelligent Automation
+- IT Operations
+- Observability
+- Operational Excellence
+- Predictive Analytics
+- Predictive Monitoring
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- ai
+- devops
 ---
-
 Joydip Kanjilal examines the impact of AIOps on DevOps monitoring, highlighting how AI, automation, and predictive analytics enable proactive and efficient management of modern cloud environments.<!--excerpt_end-->
 
 # How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era

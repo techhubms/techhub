@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms"
-description: "This announcement explains Microsoft’s recognition as a leader in Gartner’s 2025 Magic Quadrant for Cloud-Native Application Platforms. It details Azure’s developer productivity enhancements, AI-native app innovations, advancements in serverless and container services, and real-world examples of customer success using Microsoft’s application platform and integrated AI solutions."
-author: "Scott Hunter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms
+author: Scott Hunter
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 15:00:00 +00:00
-permalink: "/2025-08-21-Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agentic DevOps", "AI", "AI + Machine Learning", "AI Model Deployment", "App Lifecycle", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Container Apps", "Azure Functions", "Azure Static Web Apps", "Cloud Native", "Coding", "Compute", "Containers", "Cost Optimization", "Developer Productivity", "DevOps", "Enterprise Scalability", "Event Driven Architectures", "Gartner® Magic Quadrant™", "Internet Of Things", "Microservices", "News", "PaaS", "Serverless", "SRE", "VS", "Web", "Web Applications"]
-tags_normalized: ["agentic devops", "ai", "ai plus machine learning", "ai model deployment", "app lifecycle", "azure", "azure ai foundry", "azure app service", "azure container apps", "azure functions", "azure static web apps", "cloud native", "coding", "compute", "containers", "cost optimization", "developer productivity", "devops", "enterprise scalability", "event driven architectures", "gartner magic quadrant", "internet of things", "microservices", "news", "paas", "serverless", "sre", "vs", "web", "web applications"]
+permalink: /ai/news/Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms
+tags:
+- Agentic DevOps
+- AI
+- AI + Machine Learning
+- AI Model Deployment
+- App Lifecycle
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure Container Apps
+- Azure Functions
+- Azure Static Web Apps
+- Cloud Native
+- Coding
+- Compute
+- Containers
+- Cost Optimization
+- Developer Productivity
+- DevOps
+- Enterprise Scalability
+- Event Driven Architectures
+- Gartner® Magic Quadrant™
+- Internet Of Things
+- Microservices
+- News
+- PaaS
+- Serverless
+- SRE
+- VS
+- Web
+- Web Applications
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Scott Hunter shares Microsoft’s leadership position in the 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms, highlighting advances in Azure’s cloud-native, AI, and developer tools.<!--excerpt_end-->
 
 # Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms

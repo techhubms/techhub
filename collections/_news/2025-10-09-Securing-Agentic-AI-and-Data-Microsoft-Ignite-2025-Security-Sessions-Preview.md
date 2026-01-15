@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Securing Agentic AI and Data: Microsoft Ignite 2025 Security Sessions Preview"
-description: "This guide from the Microsoft Security Team previews the security-focused sessions, labs, and events at Microsoft Ignite 2025. It highlights dedicated tracks and hands-on opportunities for security professionals to explore the latest advancements in Microsoft's unified, AI-driven security solutions addressing data, cloud, and agentic AI protection."
-author: "Microsoft Security Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/09/securing-agentic-ai-your-guide-to-the-microsoft-ignite-sessions-catalog/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Securing Agentic AI and Data: Microsoft Ignite 2025 Security Sessions Preview'
+author: Microsoft Security Team
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/securing-agentic-ai-your-guide-to-the-microsoft-ignite-sessions-catalog/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-09 16:00:00 +00:00
-permalink: "/2025-10-09-Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic AI", "AI", "Azure", "Certification", "Cloud Security", "Compliance", "Data Protection", "Hands On Labs", "Identity Protection", "Insider Risk Management", "Microsoft Defender", "Microsoft Entra", "Microsoft Ignite", "Microsoft Purview", "Microsoft Security", "Microsoft Sentinel", "MISA", "News", "Security", "Security Copilot", "Security Operations Center", "Security Posture Management", "Threat Detection", "Zero Trust"]
-tags_normalized: ["agentic ai", "ai", "azure", "certification", "cloud security", "compliance", "data protection", "hands on labs", "identity protection", "insider risk management", "microsoft defender", "microsoft entra", "microsoft ignite", "microsoft purview", "microsoft security", "microsoft sentinel", "misa", "news", "security", "security copilot", "security operations center", "security posture management", "threat detection", "zero trust"]
+permalink: /ai/news/Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview
+tags:
+- Agentic AI
+- AI
+- Azure
+- Certification
+- Cloud Security
+- Compliance
+- Data Protection
+- Hands On Labs
+- Identity Protection
+- Insider Risk Management
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Ignite
+- Microsoft Purview
+- Microsoft Security
+- Microsoft Sentinel
+- MISA
+- News
+- Security
+- Security Copilot
+- Security Operations Center
+- Security Posture Management
+- Threat Detection
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 The Microsoft Security Team presents a comprehensive guide to the security sessions at Microsoft Ignite 2025, covering AI-augmented security platforms, hands-on experiences, and the latest advancements in protecting data, cloud infrastructure, and agentic AI.<!--excerpt_end-->
 
 # Securing Agentic AI and Data: Microsoft Ignite 2025 Security Sessions Preview

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft"
-description: "This article explains how Microsoft has fundamentally shifted its approach to AI agents by treating them as collaborators in engineering projects, not just automation tools. Jenny Ferries details the framework used in an Entra SDK migration, showing how adopting a partnership model with AI led to dramatic improvements in accuracy, quality, and developer outcomes. The post shares actionable guidelines, a prompt template, and key learnings for integrating AI into complex technical workflows requiring judgment."
-author: "Jenny Ferries"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/"
-viewing_mode: "external"
-feed_name: "Microsoft Engineering Blog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+layout: post
+title: 'Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft'
+author: Jenny Ferries
+canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/
+viewing_mode: external
+feed_name: Microsoft Engineering Blog
+feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-12-03 01:46:50 +00:00
-permalink: "/2025-12-03-Collaborating-with-AI-Agents-A-Framework-for-Engineering-Transformation-at-Microsoft.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "AI Agents", "AI Transformation", "Code Migration", "Collaboration", "Developer Productivity", "Developer Workflow", "Engineering Productivity", "Engineering@Microsoft", "Entra SDK", "Human AI Partnership", "Microsoft Entra", "Migration Framework", "News", "Prompt Engineering", "Prompt Template", "Security Boundaries"]
-tags_normalized: ["ai", "ai agent", "ai agents", "ai transformation", "code migration", "collaboration", "developer productivity", "developer workflow", "engineering productivity", "engineeringatmicrosoft", "entra sdk", "human ai partnership", "microsoft entra", "migration framework", "news", "prompt engineering", "prompt template", "security boundaries"]
+permalink: /ai/news/Collaborating-with-AI-Agents-A-Framework-for-Engineering-Transformation-at-Microsoft
+tags:
+- AI
+- AI Agent
+- AI Agents
+- AI Transformation
+- Code Migration
+- Collaboration
+- Developer Productivity
+- Developer Workflow
+- Engineering Productivity
+- Engineering@Microsoft
+- Entra SDK
+- Human AI Partnership
+- Microsoft Entra
+- Migration Framework
+- News
+- Prompt Engineering
+- Prompt Template
+- Security Boundaries
+section_names:
+- ai
 ---
-
 Jenny Ferries shares insights from Microsoft's journey towards treating AI agents as collaborators, outlining a practical framework for boosting engineering outcomes through human-AI partnership in complex projects.<!--excerpt_end-->
 
 # Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft

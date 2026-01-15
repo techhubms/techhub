@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Rolling Your Own SSO: Centralized Authentication with OpenIddict"
-description: "This session explores how to build a centralized Single Sign-On (SSO) solution for multiple applications using OpenIddict in the Microsoft ecosystem. The speaker presents real-world challenges such as unreliable external providers, duplicated authentication logic, and fragmented user management. Attendees learn when custom SSO is appropriate, how to architect it with OpenIddict, and best practices for integration and maintenance within .NET-based environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=q4NhguFDP5s"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Rolling Your Own SSO: Centralized Authentication with OpenIddict'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=q4NhguFDP5s
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 07:30:06 +00:00
-permalink: "/2025-11-14-Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "ADFS", "Application Integration", "Authentication", "Authorization", "Centralized Login", "Coding", "Custom Authentication", "Entra ID", "Identity Management", "OpenIddict", "Security", "Security Best Practices", "Session Management", "Single Sign On", "SSO Architecture", "User Workflow", "Videos"]
-tags_normalized: ["dotnet", "adfs", "application integration", "authentication", "authorization", "centralized login", "coding", "custom authentication", "entra id", "identity management", "openiddict", "security", "security best practices", "session management", "single sign on", "sso architecture", "user workflow", "videos"]
+permalink: /coding/videos/Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict
+tags:
+- .NET
+- ADFS
+- Application Integration
+- Authentication
+- Authorization
+- Centralized Login
+- Coding
+- Custom Authentication
+- Entra ID
+- Identity Management
+- OpenIddict
+- Security
+- Security Best Practices
+- Session Management
+- Single Sign On
+- SSO Architecture
+- User Workflow
+- Videos
+section_names:
+- coding
+- security
 ---
-
 This practical guide by Dustin Kingen demonstrates how to implement centralized SSO using OpenIddict for multiple .NET applications, presenting design strategies and integration tips for improved authentication.<!--excerpt_end-->
 
 {% youtube q4NhguFDP5s %}

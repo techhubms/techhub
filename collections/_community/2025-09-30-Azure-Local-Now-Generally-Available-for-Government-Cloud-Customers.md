@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Local Now Generally Available for Government Cloud Customers"
-description: "This announcement details the general availability of Azure Local for Microsoft Azure Government Cloud users. The blog highlights Azure Local's ability to bring the Azure cloud experience to on-premises environments, focusing on secure infrastructure management, compliance, and unified operations for government agencies. Key features include streamlined deployment and management, unified observability with Azure Monitor and Arc, robust built-in security links to Microsoft Defender for Cloud, extended security updates, and support for a wide range of workloads. The article guides agencies in getting started and emphasizes the platform's benefits for modernization and operational control."
-author: "meenagowdar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Local Now Generally Available for Government Cloud Customers
+author: meenagowdar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 19:12:33 +00:00
-permalink: "/2025-09-30-Azure-Local-Now-Generally-Available-for-Government-Cloud-Customers.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "ARM Templates", "Azure", "Azure Arc", "Azure Government", "Azure Local", "Azure Monitor", "BitLocker", "Cloud Management", "Community", "Compliance", "Data Residency", "Government IT", "Hybrid Cloud", "IaC", "Kubernetes", "Microsoft Defender For Cloud", "Operational Control", "Security", "Security Updates", "Trusted Launch", "Virtual Machines", "Vtpm"]
-tags_normalized: ["aks", "arm templates", "azure", "azure arc", "azure government", "azure local", "azure monitor", "bitlocker", "cloud management", "community", "compliance", "data residency", "government it", "hybrid cloud", "iac", "kubernetes", "microsoft defender for cloud", "operational control", "security", "security updates", "trusted launch", "virtual machines", "vtpm"]
+permalink: /azure/community/Azure-Local-Now-Generally-Available-for-Government-Cloud-Customers
+tags:
+- AKS
+- ARM Templates
+- Azure
+- Azure Arc
+- Azure Government
+- Azure Local
+- Azure Monitor
+- BitLocker
+- Cloud Management
+- Community
+- Compliance
+- Data Residency
+- Government IT
+- Hybrid Cloud
+- IaC
+- Kubernetes
+- Microsoft Defender For Cloud
+- Operational Control
+- Security
+- Security Updates
+- Trusted Launch
+- Virtual Machines
+- Vtpm
+section_names:
+- azure
+- security
 ---
-
 meenagowdar outlines the release of Azure Local's general availability for Azure Government, offering government agencies secure, compliant cloud capabilities with on-premises control and advanced infrastructure security.<!--excerpt_end-->
 
 # Azure Local Now Generally Available for Government Cloud Customers

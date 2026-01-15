@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure DevOps Server RC Release: New Features, Lifecycle Policy, and Branding Updates"
-description: "This announcement introduces the release candidate (RC) of Azure DevOps Server, highlighting enhanced feature parity with the hosted Azure DevOps, support for upgrade paths from Team Foundation Server, and a transition to Microsoft’s Modern Lifecycle Policy. It outlines what’s new in the release, changes to product branding, support timelines, and licensing, providing guidance for enterprises and development teams."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure DevOps Server RC Release: New Features, Lifecycle Policy, and Branding Updates'
+author: Gloridel Morales
+canonical_url: https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-07 20:14:45 +00:00
-permalink: "/2025-10-07-Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure DevOps Server", "Continuous Delivery", "DevOps", "Microsoft Azure", "Modern Lifecycle Policy", "News", "Product Branding", "Release Candidate", "REST API", "Security Updates", "Software Licensing", "Team Foundation Server", "Test Plan Recovery", "TFX Validation", "Upgrade Path"]
-tags_normalized: ["azure", "azure devops server", "continuous delivery", "devops", "microsoft azure", "modern lifecycle policy", "news", "product branding", "release candidate", "rest api", "security updates", "software licensing", "team foundation server", "test plan recovery", "tfx validation", "upgrade path"]
+permalink: /azure/news/Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates
+tags:
+- Azure
+- Azure DevOps Server
+- Continuous Delivery
+- DevOps
+- Microsoft Azure
+- Modern Lifecycle Policy
+- News
+- Product Branding
+- Release Candidate
+- REST API
+- Security Updates
+- Software Licensing
+- Team Foundation Server
+- Test Plan Recovery
+- TFX Validation
+- Upgrade Path
+section_names:
+- azure
+- devops
 ---
-
 Gloridel Morales shares an overview of the Azure DevOps Server RC release, detailing new features, lifecycle policy changes, and the shift to continuous updates under Microsoft's branding strategy.<!--excerpt_end-->
 
 # Announcing the Azure DevOps Server RC Release

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy"
-description: "This article from the Microsoft Fabric Blog details how to securely transfer data from firewall-enabled Azure Storage accounts to Microsoft OneLake using the AzCopy tool. It outlines the process for configuring trusted workspace access, setting up managed identities, and leveraging AzCopy’s performance and security features for large-scale data movement in Fabric environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 11:30:00 +00:00
-permalink: "/2025-08-12-Load-Data-from-Network-Protected-Azure-Storage-Accounts-to-Microsoft-OneLake-with-AzCopy.html"
-categories: ["Azure"]
-tags: ["ARM Template", "AzCopy", "Azure", "Azure Data Engineering", "Azure Storage", "Cloud Data Integration", "Cloud Security", "Data Movement", "Data Pipeline", "Fabric", "Firewall", "Managed Identity", "Microsoft OneLake", "News", "OneLake Shortcut", "Resource Instance Rule", "Trusted Workspace Access"]
-tags_normalized: ["arm template", "azcopy", "azure", "azure data engineering", "azure storage", "cloud data integration", "cloud security", "data movement", "data pipeline", "fabric", "firewall", "managed identity", "microsoft onelake", "news", "onelake shortcut", "resource instance rule", "trusted workspace access"]
+permalink: /azure/news/Load-Data-from-Network-Protected-Azure-Storage-Accounts-to-Microsoft-OneLake-with-AzCopy
+tags:
+- ARM Template
+- AzCopy
+- Azure
+- Azure Data Engineering
+- Azure Storage
+- Cloud Data Integration
+- Cloud Security
+- Data Movement
+- Data Pipeline
+- Fabric
+- Firewall
+- Managed Identity
+- Microsoft OneLake
+- News
+- OneLake Shortcut
+- Resource Instance Rule
+- Trusted Workspace Access
+section_names:
+- azure
 ---
-
 Microsoft Fabric Blog explains how to use AzCopy for transferring data from firewall-enabled Azure Storage accounts to Microsoft OneLake, highlighting secure access setup and performance best practices.<!--excerpt_end-->
 
 # Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy

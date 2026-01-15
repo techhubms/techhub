@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework"
-description: "This article presents a step-by-step walkthrough of a GitHub Universe demo showing how to build a cloud-native, intelligent application from scratch using Visual Studio Code, GitHub Copilot, the Microsoft Agent Framework, and new agentic DevOps workflows. It covers everything from generating code with AI, orchestrating agent-powered features, to automating DevOps and SRE operations with Azure-native tools. Key concepts include prompt-driven development, agent orchestration, AI-assisted coding, and leveraging Azure services to automate deployment and operations."
-author: "Amanda Silver, Rong Lu, Shayne Boyer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework'
+author: Amanda Silver, Rong Lu, Shayne Boyer
+canonical_url: https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-31 19:00:45 +00:00
-permalink: "/2025-10-31-From-Idea-to-Production-Building-Intelligent-Cloud-Native-Apps-with-VS-Code-GitHub-Copilot-and-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Orchestration", "Agentic DevOps", "AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Azure SRE Agent", "CI/CD", "Cloud Native", "Coding", "Developer Events", "DevOps", "GitHub Copilot", "GitHub Spec Kit", "Intelligent Applications", "Microsoft Agent Framework", "Microsoft For Developers", "Natural Language Programming", "News", "Prompt Engineering", "VS Code"]
-tags_normalized: ["agent orchestration", "agentic devops", "ai", "ai toolkit", "azure", "azure ai foundry", "azure sre agent", "cislashcd", "cloud native", "coding", "developer events", "devops", "github copilot", "github spec kit", "intelligent applications", "microsoft agent framework", "microsoft for developers", "natural language programming", "news", "prompt engineering", "vs code"]
+permalink: /github-copilot/news/From-Idea-to-Production-Building-Intelligent-Cloud-Native-Apps-with-VS-Code-GitHub-Copilot-and-Microsoft-Agent-Framework
+tags:
+- Agent Orchestration
+- Agentic DevOps
+- AI
+- AI Toolkit
+- Azure
+- Azure AI Foundry
+- Azure SRE Agent
+- CI/CD
+- Cloud Native
+- Coding
+- Developer Events
+- DevOps
+- GitHub Copilot
+- GitHub Spec Kit
+- Intelligent Applications
+- Microsoft Agent Framework
+- Microsoft For Developers
+- Natural Language Programming
+- News
+- Prompt Engineering
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Amanda Silver, Rong Lu, and Shayne Boyer showcase how to rapidly build and operate cloud-native, AI-powered applications using Visual Studio Code, GitHub Copilot, Microsoft Agent Framework, and Azure tools, highlighting a new era of developer productivity.<!--excerpt_end-->
 
 # From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework

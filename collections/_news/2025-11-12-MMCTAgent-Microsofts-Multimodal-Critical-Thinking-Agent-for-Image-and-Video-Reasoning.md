@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning"
-description: "This article introduces MMCTAgent, Microsoft Research’s new multimodal AI agent framework that enables advanced reasoning over long-form video and large image collections. It describes the Planner–Critic architecture, tool ecosystem, Azure AI Foundry Labs integration, and experimental results evaluating MMCTAgent’s scalable approach to AI-driven video and image understanding. Key features include modular extensibility, domain-specific tools, and support for Azure-native deployment."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 16:23:01 +00:00
-permalink: "/2025-11-12-MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AutoGen", "Azure", "Azure AI Foundry Labs", "Azure AI Search", "Company News", "GPT 4V", "GPT4o", "Image Reasoning", "ImageAgent", "Knowledge Base", "Microsoft Research", "MMCTAgent", "Modular Agents", "Multimodal AI", "News", "Object Detection", "OCR", "Open Source Tools", "Performance Evaluation", "Planner–Critic Architecture", "Semantic Retrieval", "Video Reasoning", "VideoAgent", "Visual Question Answering"]
-tags_normalized: ["ai", "autogen", "azure", "azure ai foundry labs", "azure ai search", "company news", "gpt 4v", "gpt4o", "image reasoning", "imageagent", "knowledge base", "microsoft research", "mmctagent", "modular agents", "multimodal ai", "news", "object detection", "ocr", "open source tools", "performance evaluation", "plannercritic architecture", "semantic retrieval", "video reasoning", "videoagent", "visual question answering"]
+permalink: /ai/news/MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning
+tags:
+- AI
+- AutoGen
+- Azure
+- Azure AI Foundry Labs
+- Azure AI Search
+- Company News
+- GPT 4V
+- GPT4o
+- Image Reasoning
+- ImageAgent
+- Knowledge Base
+- Microsoft Research
+- MMCTAgent
+- Modular Agents
+- Multimodal AI
+- News
+- Object Detection
+- OCR
+- Open Source Tools
+- Performance Evaluation
+- Planner–Critic Architecture
+- Semantic Retrieval
+- Video Reasoning
+- VideoAgent
+- Visual Question Answering
+section_names:
+- ai
+- azure
 ---
-
 stclarke explores MMCTAgent, Microsoft Research’s agentic, multimodal AI framework for scalable reasoning over videos and images, describing its innovative architecture and Azure integration.<!--excerpt_end-->
 
 # MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning

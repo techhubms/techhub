@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio"
-description: "This article introduces EFCore.Visualizer, a Visual Studio extension developed by Giorgi Dalakishvili. The extension enables developers to visualize and analyze Entity Framework Core query execution plans directly within Visual Studio. It illustrates common query performance pitfalls, demonstrates installation and usage, and discusses how the extension helps optimize EF Core queries across major relational databases."
-author: "Giorgi Dalakishvili"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio'
+author: Giorgi Dalakishvili
+canonical_url: https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-27 17:05:00 +00:00
-permalink: "/2025-08-27-EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Plans-in-Visual-Studio.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Data", "Coding", "Database Indexes", "Debugger Visualizer", "EF", "EF Core", "EFCore.Visualizer", "LINQ", "MySQL", "News", "Oracle", "ORM", "Performance Tuning", "PostgreSQL", "Query Execution Plan", "RDBMS", "SQL Server", "SQLite", "Visual Studio Extension", "VS"]
-tags_normalized: ["dotnet", "dotnet data", "coding", "database indexes", "debugger visualizer", "ef", "ef core", "efcoredotvisualizer", "linq", "mysql", "news", "oracle", "orm", "performance tuning", "postgresql", "query execution plan", "rdbms", "sql server", "sqlite", "visual studio extension", "vs"]
+permalink: /coding/news/EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Plans-in-Visual-Studio
+tags:
+- .NET
+- .NET Data
+- Coding
+- Database Indexes
+- Debugger Visualizer
+- EF
+- EF Core
+- EFCore.Visualizer
+- LINQ
+- MySQL
+- News
+- Oracle
+- ORM
+- Performance Tuning
+- PostgreSQL
+- Query Execution Plan
+- RDBMS
+- SQL Server
+- SQLite
+- Visual Studio Extension
+- VS
+section_names:
+- coding
 ---
-
 Giorgi Dalakishvili details how the EFCore.Visualizer extension for Visual Studio helps developers analyze and optimize Entity Framework Core query execution plans directly from the IDE.<!--excerpt_end-->
 
 # EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio

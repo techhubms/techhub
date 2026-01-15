@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-assisted load test authoring in Azure Load Testing"
-description: "This guide introduces AI-assisted load test authoring within Azure Load Testing, detailing how developers can create scalable, production-ready JMeter scripts more efficiently. It showcases the use of the Azure App Testing browser extension to record user journeys and leverage AI for script enhancement, parameterization, and best practice recommendations, all while maintaining control over customization and execution."
-author: "Nikita_Nallamothu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-load-testing/ba-p/4480652"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI-assisted load test authoring in Azure Load Testing
+author: Nikita_Nallamothu
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-load-testing/ba-p/4480652
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-23 21:50:11 +00:00
-permalink: "/2025-12-23-AI-assisted-load-test-authoring-in-Azure-Load-Testing.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Assisted Authoring", "Azure", "Azure App Testing Extension", "Azure Load Testing", "Browser Recording", "Cloud Scalability", "Community", "Correlation", "DevOps", "JMeter", "Microsoft Azure", "Parameterization", "Performance Testing", "Script Quality", "Test Automation", "Think Times"]
-tags_normalized: ["ai", "ai assisted authoring", "azure", "azure app testing extension", "azure load testing", "browser recording", "cloud scalability", "community", "correlation", "devops", "jmeter", "microsoft azure", "parameterization", "performance testing", "script quality", "test automation", "think times"]
+permalink: /ai/community/AI-assisted-load-test-authoring-in-Azure-Load-Testing
+tags:
+- AI
+- AI Assisted Authoring
+- Azure
+- Azure App Testing Extension
+- Azure Load Testing
+- Browser Recording
+- Cloud Scalability
+- Community
+- Correlation
+- DevOps
+- JMeter
+- Microsoft Azure
+- Parameterization
+- Performance Testing
+- Script Quality
+- Test Automation
+- Think Times
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Nikita Nallamothu explains how Azure Load Testing combines AI assistance and browser-based recording to accelerate reliable load test authoring for scalable cloud applications.<!--excerpt_end-->
 
 # AI-assisted load test authoring in Azure Load Testing

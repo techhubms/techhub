@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps"
-description: "This session explores how enterprise integration is being transformed through adaptive, agentic workflows powered by Azure Logic Apps and AI. Learn how to modernize existing integrations, migrate from BizTalk, and implement secure, AI-driven patterns. The video covers live demos, compliance scenarios, customer stories, Model Context Protocol (MCP), agent deployment in Microsoft Teams, and more."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JAHevcsT7pQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=JAHevcsT7pQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:27:04 +00:00
-permalink: "/2025-11-24-The-Future-of-Integration-Agentic-Workflows-and-AI-Driven-Patterns-with-Azure-Logic-Apps.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Access Control", "Adaptive Systems", "Agent Loop", "Agentic Workflows", "AI", "AI Driven Integration", "Azure", "Azure Logic Apps", "BizTalk Migration", "Compliance", "Customer Story", "Data Integration", "DevOps", "Enterprise Integration", "InnovatewithAzureAIappsandagents", "MCP", "Microsoft Teams", "MSIgnite", "Scalability", "Security", "ServiceNow", "Videos"]
-tags_normalized: ["access control", "adaptive systems", "agent loop", "agentic workflows", "ai", "ai driven integration", "azure", "azure logic apps", "biztalk migration", "compliance", "customer story", "data integration", "devops", "enterprise integration", "innovatewithazureaiappsandagents", "mcp", "microsoft teams", "msignite", "scalability", "security", "servicenow", "videos"]
+permalink: /ai/videos/The-Future-of-Integration-Agentic-Workflows-and-AI-Driven-Patterns-with-Azure-Logic-Apps
+tags:
+- Access Control
+- Adaptive Systems
+- Agent Loop
+- Agentic Workflows
+- AI
+- AI Driven Integration
+- Azure
+- Azure Logic Apps
+- BizTalk Migration
+- Compliance
+- Customer Story
+- Data Integration
+- DevOps
+- Enterprise Integration
+- InnovatewithAzureAIappsandagents
+- MCP
+- Microsoft Teams
+- MSIgnite
+- Scalability
+- Security
+- ServiceNow
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Presented by Pratik Shinde, Eric Summers, Divya Swarnkar, and Kent Weare at Microsoft Ignite, this session shows how agentic workflows and AI-driven integration patterns are reshaping enterprise integration using Azure Logic Apps.<!--excerpt_end-->
 
 {% youtube JAHevcsT7pQ %}

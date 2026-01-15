@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity"
-description: "Rob Bos presents a comprehensive guide to creating and deploying custom GitHub Copilot Extensions. This post covers extension types, step-by-step extension development, integrating with APIs and knowledge bases, leveraging the Copilot Extension SDK, working within Codespaces, and handling user interactions securely."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: 'GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity'
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-09-14 00:00:00 +00:00
-permalink: "/2024-09-14-GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "APIs", "Blogs", "Codespaces", "Copilot Extension SDK", "Copilot Extensions", "Custom Extensions", "Developer Productivity", "DevOps", "GitHub Apps", "GitHub Copilot", "LLM", "OpenAI", "Retrieval Augmented Generation", "User Confirmation", "VS Code"]
-tags_normalized: ["ai", "apis", "blogs", "codespaces", "copilot extension sdk", "copilot extensions", "custom extensions", "developer productivity", "devops", "github apps", "github copilot", "llm", "openai", "retrieval augmented generation", "user confirmation", "vs code"]
+permalink: /github-copilot/blogs/GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity
+tags:
+- AI
+- APIs
+- Blogs
+- Codespaces
+- Copilot Extension SDK
+- Copilot Extensions
+- Custom Extensions
+- Developer Productivity
+- DevOps
+- GitHub Apps
+- GitHub Copilot
+- LLM
+- OpenAI
+- Retrieval Augmented Generation
+- User Confirmation
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this detailed article, Rob Bos explores how developers can create custom GitHub Copilot Extensions. He describes extension types, provides a development walkthrough, and offers practical tips for integrating APIs and managing user interactions within Copilot Chat.<!--excerpt_end-->
 
 Date posted: **14 Sep 2024**, 6 minutes to read

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Hack the Future of Data with Microsoft Fabric: Global AI & Data Hackathon"
-description: "This announcement from the Microsoft Fabric Blog invites developers, data engineers, analysts, and AI enthusiasts to join the FabCon Global Hackathon, starting September 15, 2025. Participants are encouraged to innovate with Microsoft Fabric’s AI, data engineering, and analytics capabilities, with a chance to win prizes and gain recognition. The event features hands-on challenges in AI, real-time intelligence, analytics, and open data integration, supported by livestream learning and expert community channels."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Hack the Future of Data with Microsoft Fabric: Global AI & Data Hackathon'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 08:58:36 +00:00
-permalink: "/2025-09-15-Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Analytics", "AutoML", "Azure", "Azure Databases", "Copilot Studio", "Cosmos DB", "Data Agents", "Data Engineering", "Data Integration", "Event Hubs", "Hackathon", "Livestream Learning", "Microsoft Fabric", "ML", "News", "Open Mirroring", "Power BI", "Real Time Intelligence", "SynapseML"]
-tags_normalized: ["ai", "analytics", "automl", "azure", "azure databases", "copilot studio", "cosmos db", "data agents", "data engineering", "data integration", "event hubs", "hackathon", "livestream learning", "microsoft fabric", "ml", "news", "open mirroring", "power bi", "real time intelligence", "synapseml"]
+permalink: /ai/news/Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon
+tags:
+- AI
+- Analytics
+- AutoML
+- Azure
+- Azure Databases
+- Copilot Studio
+- Cosmos DB
+- Data Agents
+- Data Engineering
+- Data Integration
+- Event Hubs
+- Hackathon
+- Livestream Learning
+- Microsoft Fabric
+- ML
+- News
+- Open Mirroring
+- Power BI
+- Real Time Intelligence
+- SynapseML
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog announces a global hackathon inviting participants to build innovative AI and data solutions with Microsoft Fabric. This event features livestream training, prizes, and community support. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Hack the Future of Data with Microsoft Fabric: FabCon Global Hackathon

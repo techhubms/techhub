@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enterprise-Grade AI Governance with GitHub Copilot and Advanced Security"
-description: "This session from GitHub Universe, led by GitHub's Chief Product Officer Mario Rodriguez and product leadership, explores how enterprise administrators and platform engineering teams can harness agentic AI, such as GitHub Copilot Enterprise, to transform the software development lifecycle. Focusing on security, governance, and operational control, the presentation provides hands-on demonstrations of new GitHub features—including Copilot Metrics, agent control planes, and real-world examples for implementing custom development agents—showing how organizations can ship code faster without sacrificing compliance or control."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7YEi5SoVzNQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Enterprise-Grade AI Governance with GitHub Copilot and Advanced Security
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=7YEi5SoVzNQ
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-31 14:00:21 +00:00
-permalink: "/2025-10-31-Enterprise-Grade-AI-Governance-with-GitHub-Copilot-and-Advanced-Security.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "Control Plane", "Copilot Metrics", "Custom Agents", "Developer Experience", "DevOps", "Enterprise Governance", "GitHub", "GitHub Advanced Security", "GitHub Copilot", "GitHub Copilot Enterprise", "GitHubUniverse", "Platform Engineering", "SDLC", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agent", "control plane", "copilot metrics", "custom agents", "developer experience", "devops", "enterprise governance", "github", "github advanced security", "github copilot", "github copilot enterprise", "githubuniverse", "platform engineering", "sdlc", "videos", "vs code"]
+permalink: /github-copilot/videos/Enterprise-Grade-AI-Governance-with-GitHub-Copilot-and-Advanced-Security
+tags:
+- AI
+- AI Agent
+- Control Plane
+- Copilot Metrics
+- Custom Agents
+- Developer Experience
+- DevOps
+- Enterprise Governance
+- GitHub
+- GitHub Advanced Security
+- GitHub Copilot
+- GitHub Copilot Enterprise
+- GitHubUniverse
+- Platform Engineering
+- SDLC
+- Videos
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub’s Mario Rodriguez, Kate Catlin, and Todd Manion demonstrate how enterprise admins can use GitHub Copilot Enterprise, Advanced Security, and new agent controls to balance innovation with security and governance at scale.<!--excerpt_end-->
 
 {% youtube 7YEi5SoVzNQ %}

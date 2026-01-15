@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "How Veeam Delivers Planet-Scale Semantic Search with Azure Cosmos DB"
-description: "This session, presented at Microsoft Ignite 2025 by the Azure Cosmos DB engineering team and Veeam, explores advanced capabilities of Azure Cosmos DB for large-scale and high-performance semantic search. It covers vector search, full-text indexing, system architecture integrating Azure Event Hubs and Databricks, and detailed demonstrations of hybrid search combining vector and text-based ranking. Attendees gain insights into optimizing data platforms for AI-driven search, multi-tenant scenarios, security, scalability, and global compliance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=s3TTzeQI94A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: How Veeam Delivers Planet-Scale Semantic Search with Azure Cosmos DB
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=s3TTzeQI94A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:12:47 +00:00
-permalink: "/2025-11-21-How-Veeam-Delivers-Planet-Scale-Semantic-Search-with-Azure-Cosmos-DB.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Container Apps", "Azure Cosmos DB", "Azure Databricks", "Azure Event Hubs", "Compliance", "Data Enrichment", "Data Platform", "Full Text Indexing", "Garnet Cache", "Hybrid Search", "Microsoft Ignite", "ML", "MSIgnite", "Multi Tenant IO", "Reliability", "Scalability", "Semantic Search", "Shard Keys", "System Architecture", "Unifyyourdataplatform", "Vector Search", "Videos"]
-tags_normalized: ["ai", "azure", "azure container apps", "azure cosmos db", "azure databricks", "azure event hubs", "compliance", "data enrichment", "data platform", "full text indexing", "garnet cache", "hybrid search", "microsoft ignite", "ml", "msignite", "multi tenant io", "reliability", "scalability", "semantic search", "shard keys", "system architecture", "unifyyourdataplatform", "vector search", "videos"]
+permalink: /ai/videos/How-Veeam-Delivers-Planet-Scale-Semantic-Search-with-Azure-Cosmos-DB
+tags:
+- AI
+- Azure
+- Azure Container Apps
+- Azure Cosmos DB
+- Azure Databricks
+- Azure Event Hubs
+- Compliance
+- Data Enrichment
+- Data Platform
+- Full Text Indexing
+- Garnet Cache
+- Hybrid Search
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Multi Tenant IO
+- Reliability
+- Scalability
+- Semantic Search
+- Shard Keys
+- System Architecture
+- Unifyyourdataplatform
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events shares insights from the Azure Cosmos DB engineering team and Veeam on using Cosmos DB for large-scale semantic search, detailing architecture, demos, and optimization strategies.<!--excerpt_end-->
 
 {% youtube s3TTzeQI94A %}

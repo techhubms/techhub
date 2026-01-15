@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Introducing Modularized Azure SDK Libraries for JavaScript"
-description: "This announcement details new modularized Azure SDK libraries for JavaScript, explaining their architecture, bundle size optimizations, user experience improvements, and support for both ECMAScript Modules and CommonJS formats. The modular design enables fine-grained imports, better tree-shaking, and enhanced developer flexibility."
-author: "Qiaoqiao Zhang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Introducing Modularized Azure SDK Libraries for JavaScript
+author: Qiaoqiao Zhang
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-23 16:25:10 +00:00
-permalink: "/2025-04-23-Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure SDK", "Bundle Size", "Client Libraries", "Coding", "CommonJS", "ESM", "JavaScript", "Long Running Operations", "Modular", "Modularization", "News", "Pagination", "REST Level Clients", "SDK", "Serialization", "Subpath Exports", "Tree Shaking", "TypeScript"]
-tags_normalized: ["azure", "azure sdk", "bundle size", "client libraries", "coding", "commonjs", "esm", "javascript", "long running operations", "modular", "modularization", "news", "pagination", "rest level clients", "sdk", "serialization", "subpath exports", "tree shaking", "typescript"]
+permalink: /coding/news/Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript
+tags:
+- Azure
+- Azure SDK
+- Bundle Size
+- Client Libraries
+- Coding
+- CommonJS
+- ESM
+- JavaScript
+- Long Running Operations
+- Modular
+- Modularization
+- News
+- Pagination
+- REST Level Clients
+- SDK
+- Serialization
+- Subpath Exports
+- Tree Shaking
+- TypeScript
+section_names:
+- azure
+- coding
 ---
-
 Qiaoqiao Zhang introduces the new modularized Azure SDK libraries for JavaScript, focusing on bundle size optimization, usability improvements, and architectural enhancements that benefit developers building Azure-integrated applications.<!--excerpt_end-->
 
 # Azure SDK Modularized Libraries for JavaScript

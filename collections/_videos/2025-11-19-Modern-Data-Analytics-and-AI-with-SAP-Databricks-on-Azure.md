@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Modern Data Analytics and AI with SAP Databricks on Azure"
-description: "This session from Microsoft Ignite 2025 explores how Azure Databricks, integrated natively with SAP Business Data Cloud, enables next-generation analytics, machine learning, and business intelligence on unified enterprise data. Key topics include seamless access via Delta Sharing, automated forecasting, live demonstrations, data agent benefits, and Power BI integration—all emphasizing SAP and third-party data modernization on Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wsLgjpQZx6U"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modern Data Analytics and AI with SAP Databricks on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=wsLgjpQZx6U
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:03:01 +00:00
-permalink: "/2025-11-19-Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Applications", "Automated Forecasting", "Azure", "Azure Databricks", "Business Intelligence", "Data Agents", "Data Analytics", "Data Collaboration", "Delta Sharing", "Enterprise Data", "Feature Importance", "Machine Learning", "Microsoft Ignite", "ML", "Model Diagnostics", "MSIgnite", "Power BI Integration", "SAP Business Data Cloud", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "ai applications", "automated forecasting", "azure", "azure databricks", "business intelligence", "data agents", "data analytics", "data collaboration", "delta sharing", "enterprise data", "feature importance", "machine learning", "microsoft ignite", "ml", "model diagnostics", "msignite", "power bi integration", "sap business data cloud", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure
+tags:
+- AI
+- AI Applications
+- Automated Forecasting
+- Azure
+- Azure Databricks
+- Business Intelligence
+- Data Agents
+- Data Analytics
+- Data Collaboration
+- Delta Sharing
+- Enterprise Data
+- Feature Importance
+- Machine Learning
+- Microsoft Ignite
+- ML
+- Model Diagnostics
+- MSIgnite
+- Power BI Integration
+- SAP Business Data Cloud
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents a session on integrating SAP Databricks and Azure, featuring Anavi Nahar and Shanku Niyogi. The content covers advanced analytics, AI, ML, and BI on trusted SAP and third-party data, with live demonstrations and technical guidance.<!--excerpt_end-->
 
 {% youtube wsLgjpQZx6U %}

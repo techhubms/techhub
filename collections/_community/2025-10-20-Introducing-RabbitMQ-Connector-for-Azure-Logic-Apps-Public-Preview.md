@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing RabbitMQ Connector for Azure Logic Apps (Public Preview)"
-description: "This announcement introduces the RabbitMQ Connector for Azure Logic Apps (Standard and Hybrid), enabling users to send and receive messages between Logic Apps and RabbitMQ. The content details key features, benefits, supported actions (triggers, publishes, completes), and highlights hybrid and on-premises scenarios, as well as the worldwide rollout."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing RabbitMQ Connector for Azure Logic Apps (Public Preview)
+author: hcamposu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 13:00:00 +00:00
-permalink: "/2025-10-20-Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Logic Apps", "Cloud Native", "Community", "Connectors", "Exchange Routing", "High Availability", "Hybrid Cloud", "Integration", "Message Broker", "Messaging", "Microservices", "Queue", "RabbitMQ", "Scalability", "Triggers", "Workflow Automation"]
-tags_normalized: ["azure", "azure logic apps", "cloud native", "community", "connectors", "exchange routing", "high availability", "hybrid cloud", "integration", "message broker", "messaging", "microservices", "queue", "rabbitmq", "scalability", "triggers", "workflow automation"]
+permalink: /azure/community/Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview
+tags:
+- Azure
+- Azure Logic Apps
+- Cloud Native
+- Community
+- Connectors
+- Exchange Routing
+- High Availability
+- Hybrid Cloud
+- Integration
+- Message Broker
+- Messaging
+- Microservices
+- Queue
+- RabbitMQ
+- Scalability
+- Triggers
+- Workflow Automation
+section_names:
+- azure
 ---
-
 hcamposu details the new RabbitMQ Connector for Azure Logic Apps, outlining its features and configuration steps for sending and receiving messages in modern integration solutions.<!--excerpt_end-->
 
 # Introducing RabbitMQ Connector for Azure Logic Apps (Public Preview)

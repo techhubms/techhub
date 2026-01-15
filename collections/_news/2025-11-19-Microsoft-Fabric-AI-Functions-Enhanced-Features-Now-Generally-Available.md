@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Microsoft Fabric AI Functions: Enhanced Features Now Generally Available"
-description: "This news article summarizes the latest enhancements to Microsoft Fabric AI functions, including new features, additional configuration options, support for advanced models (like GPT-5), and improved concurrency for faster data processing. Developers and data scientists can now apply advanced parameters, use new embedding capabilities, and benefit from broader model integration — including Azure OpenAI and AI Foundry resources — across PySpark and pandas workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/29826/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric AI Functions: Enhanced Features Now Generally Available'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/29826/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 01:30:00 +00:00
-permalink: "/2025-11-19-Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Functions", "Ai.analyze Sentiment", "Ai.classify", "Ai.embed", "Ai.extract", "Ai.fix Grammar", "Ai.generate Response", "Ai.similarity", "Ai.summarize", "Ai.translate", "Azure", "Azure AI Foundry", "Azure OpenAI", "Claude", "Concurrency", "Data Science", "GPT 5", "LLaMA", "Machine Learning", "Microsoft Fabric", "ML", "Model Configuration", "News", "Pandas", "PySpark", "Vector Embeddings"]
-tags_normalized: ["ai", "ai functions", "aidotanalyze sentiment", "aidotclassify", "aidotembed", "aidotextract", "aidotfix grammar", "aidotgenerate response", "aidotsimilarity", "aidotsummarize", "aidottranslate", "azure", "azure ai foundry", "azure openai", "claude", "concurrency", "data science", "gpt 5", "llama", "machine learning", "microsoft fabric", "ml", "model configuration", "news", "pandas", "pyspark", "vector embeddings"]
+permalink: /ai/news/Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available
+tags:
+- AI
+- AI Functions
+- Ai.analyze Sentiment
+- Ai.classify
+- Ai.embed
+- Ai.extract
+- Ai.fix Grammar
+- Ai.generate Response
+- Ai.similarity
+- Ai.summarize
+- Ai.translate
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Claude
+- Concurrency
+- Data Science
+- GPT 5
+- LLaMA
+- Machine Learning
+- Microsoft Fabric
+- ML
+- Model Configuration
+- News
+- Pandas
+- PySpark
+- Vector Embeddings
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the latest generally available enhancements to Fabric AI functions, including deeper configurability and new features for developers, data scientists, and analysts.<!--excerpt_end-->
 
 # Microsoft Fabric AI Functions: Enhanced Features Now Generally Available

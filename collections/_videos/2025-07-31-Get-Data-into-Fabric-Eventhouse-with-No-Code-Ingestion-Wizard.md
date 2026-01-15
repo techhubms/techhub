@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Get Data into Fabric Eventhouse with No-Code Ingestion Wizard"
-description: "This video from the Data Exposed series explores the powerful no-code Get Data wizard in Microsoft Fabric Eventhouse, designed to streamline and automate data ingestion for analytics. The session walks through ingesting data from Azure Storage, Amazon S3, EventHub, local files, OneLake, and Eventstreams. Key features include continuous ingestion for real-time analytics, schema inference and editing, and built-in data preview. Viewers learn how to ensure their data is structured and ready for downstream processing and analysis within the Microsoft ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pABc7L9hWjU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Get Data into Fabric Eventhouse with No-Code Ingestion Wizard
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=pABc7L9hWjU
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-31 18:16:15 +00:00
-permalink: "/2025-07-31-Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard.html"
-categories: ["Azure", "ML"]
-tags: ["Amazon S3", "Azure", "Azure Storage", "Cloud Computing", "Continuous Ingestion", "Data Engineering", "Data Exposed", "Data Ingestion", "Data Management", "Data Preview", "Data Processing", "Data Transformation", "Dev", "Development", "EventHub", "Fabric Eventhouse", "Microsoft", "Microsoft Fabric", "ML", "No Code Wizard", "OneLake", "Real Time Analytics", "Schema Inference", "Tech", "Technology", "Videos"]
-tags_normalized: ["amazon s3", "azure", "azure storage", "cloud computing", "continuous ingestion", "data engineering", "data exposed", "data ingestion", "data management", "data preview", "data processing", "data transformation", "dev", "development", "eventhub", "fabric eventhouse", "microsoft", "microsoft fabric", "ml", "no code wizard", "onelake", "real time analytics", "schema inference", "tech", "technology", "videos"]
+permalink: /ml/videos/Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard
+tags:
+- Amazon S3
+- Azure
+- Azure Storage
+- Cloud Computing
+- Continuous Ingestion
+- Data Engineering
+- Data Exposed
+- Data Ingestion
+- Data Management
+- Data Preview
+- Data Processing
+- Data Transformation
+- Dev
+- Development
+- EventHub
+- Fabric Eventhouse
+- Microsoft
+- Microsoft Fabric
+- ML
+- No Code Wizard
+- OneLake
+- Real Time Analytics
+- Schema Inference
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 In this Data Exposed episode, Microsoft Developer presents how to use the no-code Get Data wizard in Fabric Eventhouse to ingest and manage data efficiently for analytics and real-time processing.<!--excerpt_end-->
 
 {% youtube pABc7L9hWjU %}

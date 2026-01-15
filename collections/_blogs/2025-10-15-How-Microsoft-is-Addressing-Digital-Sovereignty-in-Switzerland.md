@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "How Microsoft is Addressing Digital Sovereignty in Switzerland"
-description: "This article by Thomas Maurer explores Microsoft’s initiatives to support digital sovereignty in Switzerland. It covers the company’s Sovereign Cloud offerings, options for local data residency, hybrid and multi-cloud management with Azure Arc, specialized compliance controls, and major investments in Swiss cloud infrastructure. The guide is aimed at technical professionals, IT leaders, and architects seeking to understand how to leverage Microsoft’s cloud platforms while maintaining compliance, control, and transparency over data in the Swiss context."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: How Microsoft is Addressing Digital Sovereignty in Switzerland
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-15 07:36:15 +00:00
-permalink: "/2025-10-15-How-Microsoft-is-Addressing-Digital-Sovereignty-in-Switzerland.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure Local", "Azure Policy", "Blogs", "Cloud", "Compliance", "Confidential Computing", "Data Guardian", "Digital Sovereignty", "EMEA", "EU Data Boundary", "Europe", "External Key Management", "Hybrid Cloud", "Microsoft", "Microsoft 365", "Microsoft 365 Local", "Microsoft Azure", "Microsoft Sovereign Cloud", "Microsoft Sovereign Private Cloud", "Microsoft Sovereign Public Cloud", "Multi Cloud", "National Partner Cloud", "Regulated Environment Management", "Security", "Sovereign Cloud", "Sovereign Landing Zones", "Sovereign Private Cloud", "Sovereign Public Cloud", "Switzerland"]
-tags_normalized: ["azure", "azure arc", "azure local", "azure policy", "blogs", "cloud", "compliance", "confidential computing", "data guardian", "digital sovereignty", "emea", "eu data boundary", "europe", "external key management", "hybrid cloud", "microsoft", "microsoft 365", "microsoft 365 local", "microsoft azure", "microsoft sovereign cloud", "microsoft sovereign private cloud", "microsoft sovereign public cloud", "multi cloud", "national partner cloud", "regulated environment management", "security", "sovereign cloud", "sovereign landing zones", "sovereign private cloud", "sovereign public cloud", "switzerland"]
+permalink: /azure/blogs/How-Microsoft-is-Addressing-Digital-Sovereignty-in-Switzerland
+tags:
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Policy
+- Blogs
+- Cloud
+- Compliance
+- Confidential Computing
+- Data Guardian
+- Digital Sovereignty
+- EMEA
+- EU Data Boundary
+- Europe
+- External Key Management
+- Hybrid Cloud
+- Microsoft
+- Microsoft 365
+- Microsoft 365 Local
+- Microsoft Azure
+- Microsoft Sovereign Cloud
+- Microsoft Sovereign Private Cloud
+- Microsoft Sovereign Public Cloud
+- Multi Cloud
+- National Partner Cloud
+- Regulated Environment Management
+- Security
+- Sovereign Cloud
+- Sovereign Landing Zones
+- Sovereign Private Cloud
+- Sovereign Public Cloud
+- Switzerland
+section_names:
+- azure
+- security
 ---
-
 Thomas Maurer details how Microsoft is helping Swiss organizations achieve digital sovereignty, highlighting cloud region options, compliance features, and secure multi-cloud management for technical stakeholders.<!--excerpt_end-->
 
 # How Microsoft is Addressing Digital Sovereignty in Switzerland

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor"
-description: "This article introduces the new Monitoring Coverage (preview) feature within Azure Monitor. It explains how this centralized tool consolidates insights from Azure Advisor and enables at-scale configuration and enhancement of monitoring for Azure resources like Virtual Machines and AKS clusters. Readers will learn how to access Monitoring Coverage, interpret monitoring health, apply recommendations, and streamline observability management."
-author: "Nathan_Mangum"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor'
+author: Nathan_Mangum
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Azure Advisor", "Azure Monitor", "Centralized Monitoring", "Community", "Configuration Management", "DevOps", "Log Analytics", "Monitoring Coverage", "Monitoring Recommendations", "Observability", "Preview Features", "Resource Monitoring", "Virtual Machines"]
-tags_normalized: ["aks", "azure", "azure advisor", "azure monitor", "centralized monitoring", "community", "configuration management", "devops", "log analytics", "monitoring coverage", "monitoring recommendations", "observability", "preview features", "resource monitoring", "virtual machines"]
+permalink: /azure/community/Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor
+tags:
+- AKS
+- Azure
+- Azure Advisor
+- Azure Monitor
+- Centralized Monitoring
+- Community
+- Configuration Management
+- DevOps
+- Log Analytics
+- Monitoring Coverage
+- Monitoring Recommendations
+- Observability
+- Preview Features
+- Resource Monitoring
+- Virtual Machines
+section_names:
+- azure
+- devops
 ---
-
 Nathan Mangum details the preview release of Monitoring Coverage in Azure Monitor, outlining how organizations can assess and enhance monitoring across Azure resources using a unified, scalable approach.<!--excerpt_end-->
 
 # Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor

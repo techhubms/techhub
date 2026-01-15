@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "English as the New Programming Language: Natural Language in Software Development"
-description: "This article by Rene van Osnabrugge examines the emerging role of English and natural language as key interfaces for modern software development teams, highlighting how AI tools like GitHub Copilot and ChatGPT bridge the gap between idea and code. The piece explores the impacts on collaboration, team skills, and development processes, emphasizing opportunities and limitations of natural language-driven development."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: 'English as the New Programming Language: Natural Language in Software Development'
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-11-28 13:27:50 +00:00
-permalink: "/2025-11-28-English-as-the-New-Programming-Language-Natural-Language-in-Software-Development.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI SDLC", "Architecture", "Blogs", "C#", "Chatgpt", "Code Generation", "Coding", "Development Skills", "Development Workflow", "GitHub Copilot", "Natural Language Programming", "Programming", "Prompt Engineering", "Python", "Software Development", "Team Collaboration", "Technology", "TypeScript"]
-tags_normalized: ["ai", "ai coding assistant", "ai sdlc", "architecture", "blogs", "csharp", "chatgpt", "code generation", "coding", "development skills", "development workflow", "github copilot", "natural language programming", "programming", "prompt engineering", "python", "software development", "team collaboration", "technology", "typescript"]
+permalink: /github-copilot/blogs/English-as-the-New-Programming-Language-Natural-Language-in-Software-Development
+tags:
+- AI
+- AI Coding Assistant
+- AI SDLC
+- Architecture
+- Blogs
+- C#
+- Chatgpt
+- Code Generation
+- Coding
+- Development Skills
+- Development Workflow
+- GitHub Copilot
+- Natural Language Programming
+- Programming
+- Prompt Engineering
+- Python
+- Software Development
+- Team Collaboration
+- Technology
+- TypeScript
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rene van Osnabrugge explores how English and AI coding assistants like GitHub Copilot and ChatGPT are changing software development, lowering barriers for teams and reshaping collaboration.<!--excerpt_end-->
 
 # English as the New Programming Language: Natural Language in Software Development

@@ -1,17 +1,40 @@
----
-layout: "post"
-title: "XPRT Magazine 14"
-description: "This issue covers digital transformation, AI, ChatGPT, cloud security, Blazor, CI/CD, and more."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 14
 date: 2023-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2023-05-01-XPRT-Magazine-14.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Bicep", "Blazor", "ChatGPT", "CI/CD", "Cloud Security", "Coding", "Community", "DevOps", "Digital Transformation", "EF", "Identity", "Load Testing", "Magazines", "Mutation Testing", "OAuth2", "Pulumi", "Security", "Terraform", "Zero Trust"]
-tags_normalized: ["ai", "automation", "azure", "bicep", "blazor", "chatgpt", "cislashcd", "cloud security", "coding", "community", "devops", "digital transformation", "ef", "identity", "load testing", "magazines", "mutation testing", "oauth2", "pulumi", "security", "terraform", "zero trust"]
+author: Xebia
+viewing_mode: external
+permalink: /ai/community/XPRT-Magazine-14
+tags:
+- AI
+- Automation
+- Azure
+- Bicep
+- Blazor
+- ChatGPT
+- CI/CD
+- Cloud Security
+- Coding
+- Community
+- DevOps
+- Digital Transformation
+- EF
+- Identity
+- Load Testing
+- Magazines
+- Mutation Testing
+- OAuth2
+- Pulumi
+- Security
+- Terraform
+- Zero Trust
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 XPRT Magazine 14 explores digital transformation, the rise of AI and ChatGPT, cloud security, Blazor migrations, CI/CD workflows, load testing, identity management, and more. This issue provides practical strategies and technical insights for navigating modern software engineering and security challenges.
 <!--excerpt_end-->
 

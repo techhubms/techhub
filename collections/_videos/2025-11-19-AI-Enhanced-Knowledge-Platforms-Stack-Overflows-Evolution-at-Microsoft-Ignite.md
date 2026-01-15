@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "AI-Enhanced Knowledge Platforms: Stack Overflow's Evolution at Microsoft Ignite"
-description: "This session from Microsoft Ignite 2025 introduces Stack Overflow Internal, an enterprise knowledge platform evolving from Stack Overflow for Teams. It covers features like AI-assisted curation, document transformation into Q&A with confidence scoring, human-in-the-loop validation, and the integration of MCP (Microsoft Cloud Platform) as a bi-directional system for enterprise knowledge sharing, all aimed at empowering technologists using Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fnTRaNHfFek"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fnTRaNHfFek
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:19:07 +00:00
-permalink: "/2025-11-19-AI-Enhanced-Knowledge-Platforms-Stack-Overflows-Evolution-at-Microsoft-Ignite.html"
-categories: ["AI"]
-tags: ["AI", "AI Assisted Curation", "Content Scoring", "Copilotandagentsatwork", "Document Intelligence", "Enterprise AI", "Enterprise Knowledge Platform", "Human in The Loop", "Intelligence Layer", "Knowledge Sharing", "MCP Integration", "Microsoft Cloud Platform", "Microsoft Ignite", "MSIgnite", "Q&A Generation", "Stack Overflow For Teams", "Stack Overflow Internal", "Trusted Solutions", "Videos"]
-tags_normalized: ["ai", "ai assisted curation", "content scoring", "copilotandagentsatwork", "document intelligence", "enterprise ai", "enterprise knowledge platform", "human in the loop", "intelligence layer", "knowledge sharing", "mcp integration", "microsoft cloud platform", "microsoft ignite", "msignite", "qanda generation", "stack overflow for teams", "stack overflow internal", "trusted solutions", "videos"]
+permalink: /ai/videos/AI-Enhanced-Knowledge-Platforms-Stack-Overflows-Evolution-at-Microsoft-Ignite
+tags:
+- AI
+- AI Assisted Curation
+- Content Scoring
+- Copilotandagentsatwork
+- Document Intelligence
+- Enterprise AI
+- Enterprise Knowledge Platform
+- Human in The Loop
+- Intelligence Layer
+- Knowledge Sharing
+- MCP Integration
+- Microsoft Cloud Platform
+- Microsoft Ignite
+- MSIgnite
+- Q&A Generation
+- Stack Overflow For Teams
+- Stack Overflow Internal
+- Trusted Solutions
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents an Ignite 2025 session led by Peter O'Connor, exploring Stack Overflow Internal’s transformation as an AI-enhanced enterprise knowledge platform using Microsoft Cloud technologies.<!--excerpt_end-->
 
 {% youtube fnTRaNHfFek %}

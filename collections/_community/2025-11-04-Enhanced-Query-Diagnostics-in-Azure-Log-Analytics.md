@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Enhanced Query Diagnostics in Azure Log Analytics"
-description: "This announcement details new features in Azure Log Analytics designed to make query diagnostics and troubleshooting more effective. The enhancements include improved query notifications, actionable recommendations, a revamped Query Details pane with granular performance metrics, raw error payloads for debugging, and direct integration in the Azure Portal interface. These updates help users resolve query issues efficiently, optimize performance, and analyze log data more thoroughly within Azure Monitor."
-author: "Ron Frenkel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-the-enhanced-query-diagnostics-in-azure-log/ba-p/4466993"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enhanced Query Diagnostics in Azure Log Analytics
+author: Ron Frenkel
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-the-enhanced-query-diagnostics-in-azure-log/ba-p/4466993
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 14:35:59 +00:00
-permalink: "/2025-11-04-Enhanced-Query-Diagnostics-in-Azure-Log-Analytics.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Log Analytics", "Azure Monitor", "Azure Portal", "Community", "Error Handling", "Kusto Query Language", "Log Analytics Service", "Monitoring", "Performance Optimization", "Query Diagnostics", "Query Execution", "Query Performance", "Troubleshooting"]
-tags_normalized: ["azure", "azure log analytics", "azure monitor", "azure portal", "community", "error handling", "kusto query language", "log analytics service", "monitoring", "performance optimization", "query diagnostics", "query execution", "query performance", "troubleshooting"]
+permalink: /azure/community/Enhanced-Query-Diagnostics-in-Azure-Log-Analytics
+tags:
+- Azure
+- Azure Log Analytics
+- Azure Monitor
+- Azure Portal
+- Community
+- Error Handling
+- Kusto Query Language
+- Log Analytics Service
+- Monitoring
+- Performance Optimization
+- Query Diagnostics
+- Query Execution
+- Query Performance
+- Troubleshooting
+section_names:
+- azure
 ---
-
 Ron Frenkel introduces significant improvements to query diagnostics in Azure Log Analytics, offering actionable recommendations and deeper performance insights for users seeking to optimize and troubleshoot log queries within the Azure Portal.<!--excerpt_end-->
 
 # Enhanced Query Diagnostics in Azure Log Analytics

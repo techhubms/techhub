@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Hush Security Unveils Platform to Eliminate Application Secrets"
-description: "This article reviews Hush Security’s new platform aimed at removing the need for storing application secrets through continuous discovery, runtime identity controls, and integration with the CNCF SPIFFE framework. The platform targets pain points in cloud-native and AI agent-driven environments, enforcing just-in-time, least-privilege access without secret vaults. Key insights are provided for DevSecOps and application security practitioners."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/hush-security-emerges-to-eliminate-need-for-application-secrets/?utm_source=rss&utm_medium=rss&utm_campaign=hush-security-emerges-to-eliminate-need-for-application-secrets"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Hush Security Unveils Platform to Eliminate Application Secrets
+author: Mike Vizard
+canonical_url: https://devops.com/hush-security-emerges-to-eliminate-need-for-application-secrets/?utm_source=rss&utm_medium=rss&utm_campaign=hush-security-emerges-to-eliminate-need-for-application-secrets
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-10 11:27:59 +00:00
-permalink: "/2025-09-10-Hush-Security-Unveils-Platform-to-Eliminate-Application-Secrets.html"
-categories: ["DevOps", "Security"]
-tags: ["AI", "AI Agent Security", "API Key Protection", "Application Secrets", "Application Secrets Management", "Blogs", "Cloud Native Security", "CNCF", "CNCF SPIFFE", "Credential Free Security", "Credential Theft Prevention", "DevOps", "DevSecOps", "DevSecOps Secrets Management", "Identity Management", "Just in Time Access", "Just in Time Access Controls", "Least Privilege", "Microservices", "Microservices Secrets", "Runtime Identity", "Runtime Identity Controls", "Secrets Discovery", "Secrets Management", "Secrets Sprawl", "Security", "Social Facebook", "Social LinkedIn", "Social X", "SPIFFE", "SPIFFE Runtime Access", "Zero Trust", "Zero Trust Secrets"]
-tags_normalized: ["ai", "ai agent security", "api key protection", "application secrets", "application secrets management", "blogs", "cloud native security", "cncf", "cncf spiffe", "credential free security", "credential theft prevention", "devops", "devsecops", "devsecops secrets management", "identity management", "just in time access", "just in time access controls", "least privilege", "microservices", "microservices secrets", "runtime identity", "runtime identity controls", "secrets discovery", "secrets management", "secrets sprawl", "security", "social facebook", "social linkedin", "social x", "spiffe", "spiffe runtime access", "zero trust", "zero trust secrets"]
+permalink: /devops/blogs/Hush-Security-Unveils-Platform-to-Eliminate-Application-Secrets
+tags:
+- AI
+- AI Agent Security
+- API Key Protection
+- Application Secrets
+- Application Secrets Management
+- Blogs
+- Cloud Native Security
+- CNCF
+- CNCF SPIFFE
+- Credential Free Security
+- Credential Theft Prevention
+- DevOps
+- DevSecOps
+- DevSecOps Secrets Management
+- Identity Management
+- Just in Time Access
+- Just in Time Access Controls
+- Least Privilege
+- Microservices
+- Microservices Secrets
+- Runtime Identity
+- Runtime Identity Controls
+- Secrets Discovery
+- Secrets Management
+- Secrets Sprawl
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SPIFFE
+- SPIFFE Runtime Access
+- Zero Trust
+- Zero Trust Secrets
+section_names:
+- devops
+- security
 ---
-
 Mike Vizard discusses how Hush Security's new platform addresses application secrets management using runtime identity controls and SPIFFE integration, offering DevSecOps teams a modern way to reduce risks from secret sprawl.<!--excerpt_end-->
 
 # Hush Security Unveils Platform to Eliminate Application Secrets

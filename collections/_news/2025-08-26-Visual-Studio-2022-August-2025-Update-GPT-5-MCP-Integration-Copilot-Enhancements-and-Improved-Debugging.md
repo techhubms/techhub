@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Visual Studio 2022 August 2025 Update: GPT-5, MCP Integration, Copilot Enhancements, and Improved Debugging"
-description: "This detailed overview covers the August 2025 update for Visual Studio 2022 (v17.14), introducing GPT-5 AI support, streamlined MCP tool connectivity, smarter and more configurable GitHub Copilot features, enhanced debugging for Unreal Engine, and various productivity improvements designed to help developers stay focused and efficient."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/the-visual-studio-august-update-is-here-smarter-ai-better-debugging-and-more-control/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio 2022 August 2025 Update: GPT-5, MCP Integration, Copilot Enhancements, and Improved Debugging'
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/the-visual-studio-august-update-is-here-smarter-ai-better-debugging-and-more-control/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-26 18:22:28 +00:00
-permalink: "/2025-08-26-Visual-Studio-2022-August-2025-Update-GPT-5-MCP-Integration-Copilot-Enhancements-and-Improved-Debugging.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "C++", "Code Completion", "Code Suggestions", "Coding", "Copilot", "Copilot Chat", "Debug", "Developer Tools", "Git", "Git Integration", "GitHub Copilot", "GPT 5", "MCP", "Models", "News", "Next Edits Suggestion", "OAuth", "OpenAI", "Productivity", "Productivity Tools", "Semantic Search", "Sign in", "Unreal Engine Debugging", "VS"]
-tags_normalized: ["ai", "ai integration", "cplusplus", "code completion", "code suggestions", "coding", "copilot", "copilot chat", "debug", "developer tools", "git", "git integration", "github copilot", "gpt 5", "mcp", "models", "news", "next edits suggestion", "oauth", "openai", "productivity", "productivity tools", "semantic search", "sign in", "unreal engine debugging", "vs"]
+permalink: /github-copilot/news/Visual-Studio-2022-August-2025-Update-GPT-5-MCP-Integration-Copilot-Enhancements-and-Improved-Debugging
+tags:
+- AI
+- AI Integration
+- C++
+- Code Completion
+- Code Suggestions
+- Coding
+- Copilot
+- Copilot Chat
+- Debug
+- Developer Tools
+- Git
+- Git Integration
+- GitHub Copilot
+- GPT 5
+- MCP
+- Models
+- News
+- Next Edits Suggestion
+- OAuth
+- OpenAI
+- Productivity
+- Productivity Tools
+- Semantic Search
+- Sign in
+- Unreal Engine Debugging
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Mads Kristensen shares the highlights of the August 2025 Visual Studio 2022 update, including GPT-5 support, smarter and more flexible Copilot features, MCP tool integration, and debugging enhancements for C++ and Unreal Engine.<!--excerpt_end-->
 
 # Visual Studio 2022 August 2025 Update: Key Features and Enhancements

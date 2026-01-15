@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Why Nano Updates Only Work if You Begin with the Latest and Greatest Software"
-description: "This article by Dustin Kirkland explores the importance of adopting nano updates—small, precise updates to software systems—and explains why starting from the most current software versions is essential. The discussion covers technical debt, continuous update practices, CI/CD integration, and collaboration between engineering and security teams to minimize risk and maintain secure, reliable systems."
-author: "Dustin Kirkland"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/why-nano-updates-only-work-if-you-begin-with-the-latest-and-greatest-software/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Why Nano Updates Only Work if You Begin with the Latest and Greatest Software
+author: Dustin Kirkland
+canonical_url: https://devops.com/why-nano-updates-only-work-if-you-begin-with-the-latest-and-greatest-software/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 06:00:19 +00:00
-permalink: "/2025-10-23-Why-Nano-Updates-Only-Work-if-You-Begin-with-the-Latest-and-Greatest-Software.html"
-categories: ["DevOps", "Security"]
-tags: ["Automated Updates", "Blogs", "Business Of DevOps", "CI/CD", "Container Updates", "Continuous Delivery", "Continuous Improvement", "Contributed Content", "CVE Reduction", "Dependency Management", "DevOps", "Devsecops", "Engineering And Security Collaboration", "Engineering Collaboration", "Incremental Updates", "Legacy Modernization", "Linux Base Images", "Modern Software Stacks", "Nano Updates", "Secure Development Practices", "Security", "Security Collaboration", "Security Patching", "Social Facebook", "Social LinkedIn", "Social X", "Software Hygiene", "Software Maintenance", "Software Updates", "Technical Debt", "Vulnerability Management"]
-tags_normalized: ["automated updates", "blogs", "business of devops", "cislashcd", "container updates", "continuous delivery", "continuous improvement", "contributed content", "cve reduction", "dependency management", "devops", "devsecops", "engineering and security collaboration", "engineering collaboration", "incremental updates", "legacy modernization", "linux base images", "modern software stacks", "nano updates", "secure development practices", "security", "security collaboration", "security patching", "social facebook", "social linkedin", "social x", "software hygiene", "software maintenance", "software updates", "technical debt", "vulnerability management"]
+permalink: /devops/blogs/Why-Nano-Updates-Only-Work-if-You-Begin-with-the-Latest-and-Greatest-Software
+tags:
+- Automated Updates
+- Blogs
+- Business Of DevOps
+- CI/CD
+- Container Updates
+- Continuous Delivery
+- Continuous Improvement
+- Contributed Content
+- CVE Reduction
+- Dependency Management
+- DevOps
+- Devsecops
+- Engineering And Security Collaboration
+- Engineering Collaboration
+- Incremental Updates
+- Legacy Modernization
+- Linux Base Images
+- Modern Software Stacks
+- Nano Updates
+- Secure Development Practices
+- Security
+- Security Collaboration
+- Security Patching
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Hygiene
+- Software Maintenance
+- Software Updates
+- Technical Debt
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Dustin Kirkland examines why nano updates are most effective when organizations start with the latest software versions, highlighting best practices for minimizing technical debt and bridging security with engineering through continuous, incremental updates.<!--excerpt_end-->
 
 # Why Nano Updates Only Work if You Begin with the Latest and Greatest Software

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Dependabot Security Updates Now Support uv"
-description: "This news update announces that Dependabot, GitHub's automated dependency security tool, now supports security alerts and update automation for the uv package manager. Developers can respond to vulnerabilities discovered in uv dependencies with automatic alerts and pull requests to help maintain secure software supply chains using GitHub's security ecosystem."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-dependabot-security-updates-now-support-uv"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Security Updates Now Support uv
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-dependabot-security-updates-now-support-uv
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:42:46 +00:00
-permalink: "/2025-12-16-Dependabot-Security-Updates-Now-Support-uv.html"
-categories: ["DevOps", "Security"]
-tags: ["Automated Updates", "Code Security", "Dependabot", "Dependency Management", "DevOps", "DevOps Tools", "GitHub", "News", "Security", "Security Updates", "Supply Chain Security", "Uv", "Vulnerability Management"]
-tags_normalized: ["automated updates", "code security", "dependabot", "dependency management", "devops", "devops tools", "github", "news", "security", "security updates", "supply chain security", "uv", "vulnerability management"]
+permalink: /devops/news/Dependabot-Security-Updates-Now-Support-uv
+tags:
+- Automated Updates
+- Code Security
+- Dependabot
+- Dependency Management
+- DevOps
+- DevOps Tools
+- GitHub
+- News
+- Security
+- Security Updates
+- Supply Chain Security
+- Uv
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Allison reports that Dependabot now provides automated security alerting and update support for uv dependencies, streamlining vulnerability management for developers on GitHub.<!--excerpt_end-->
 
 # Dependabot Security Updates Now Support uv

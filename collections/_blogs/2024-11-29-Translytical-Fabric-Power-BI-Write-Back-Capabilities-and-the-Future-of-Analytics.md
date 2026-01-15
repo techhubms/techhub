@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Translytical Fabric: Power BI Write-Back Capabilities and the Future of Analytics"
-description: "Antti Suanto explores the forthcoming 'Translytical' features in Power BI, announced at Microsoft Ignite 2024. These features enable direct data updates within Power BI, eliminating the need for external integrations and marking a significant shift in the platform's capabilities. The article discusses the potential impact on business applications and analytics."
-author: "Antti Suanto"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/translytical-fabric-ie-power-bi-write-back/"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
+﻿---
+layout: post
+title: 'Translytical Fabric: Power BI Write-Back Capabilities and the Future of Analytics'
+author: Antti Suanto
+canonical_url: https://zure.com/blog/translytical-fabric-ie-power-bi-write-back/
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-29 12:30:19 +00:00
-permalink: "/2024-11-29-Translytical-Fabric-Power-BI-Write-Back-Capabilities-and-the-Future-of-Analytics.html"
-categories: ["Azure", "ML"]
-tags: ["AI", "Azure", "Blogs", "Business Intelligence", "Data & AI", "Data Analytics", "Data Integration", "Fabric Database", "Ignite", "Microsoft Fabric", "ML", "Power BI", "Reporting", "Translytical", "User Data Functions", "VertiPaq", "Write Back"]
-tags_normalized: ["ai", "azure", "blogs", "business intelligence", "data and ai", "data analytics", "data integration", "fabric database", "ignite", "microsoft fabric", "ml", "power bi", "reporting", "translytical", "user data functions", "vertipaq", "write back"]
+permalink: /ml/blogs/Translytical-Fabric-Power-BI-Write-Back-Capabilities-and-the-Future-of-Analytics
+tags:
+- AI
+- Azure
+- Blogs
+- Business Intelligence
+- Data & AI
+- Data Analytics
+- Data Integration
+- Fabric Database
+- Ignite
+- Microsoft Fabric
+- ML
+- Power BI
+- Reporting
+- Translytical
+- User Data Functions
+- VertiPaq
+- Write Back
+section_names:
+- azure
+- ml
 ---
-
 In this post, Antti Suanto discusses the major announcement of 'Translytical' features in Power BI at Ignite 2024, shedding light on how write-back functionality could transform business analytics applications.<!--excerpt_end-->
 
 ## Translytical Fabric (Power BI Write Back): A New Era for Business Analytics

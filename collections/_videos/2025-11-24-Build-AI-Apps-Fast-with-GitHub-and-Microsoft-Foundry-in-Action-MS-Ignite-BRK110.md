@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)"
-description: "This session from Microsoft Ignite 2025 demonstrates how to accelerate AI application development using GitHub and Microsoft Foundry. It covers the complete lifecycle from experimentation to production, focusing on orchestration, security, governance, and multi-agent architectures. IT professionals will see demos of AI Toolkit integration, agent design for scalability, and best practices for deploying intelligent apps at scale."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ofWdnCHY_LY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ofWdnCHY_LY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:11:10 +00:00
-permalink: "/2025-11-24-Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Framework", "AI", "AI Toolkit", "App Deployment", "Azure", "Azure AI", "Cloud Security", "Coding", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Modular Architecture", "MSIgnite", "Multi Agent Systems", "Orchestration", "Retrieval Augmented Generation", "Videos"]
-tags_normalized: ["agent framework", "ai", "ai toolkit", "app deployment", "azure", "azure ai", "cloud security", "coding", "developer tools", "devops", "github", "github actions", "github copilot", "innovatewithazureaiappsandagents", "microsoft foundry", "modular architecture", "msignite", "multi agent systems", "orchestration", "retrieval augmented generation", "videos"]
+permalink: /github-copilot/videos/Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110
+tags:
+- Agent Framework
+- AI
+- AI Toolkit
+- App Deployment
+- Azure
+- Azure AI
+- Cloud Security
+- Coding
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Modular Architecture
+- MSIgnite
+- Multi Agent Systems
+- Orchestration
+- Retrieval Augmented Generation
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Presented by Kate Catlin and Facundo Santiago at Microsoft Ignite, this session explores how IT professionals can build, customize, and deploy AI-driven apps quickly using GitHub and Microsoft Foundry. The talk highlights agentic architectures, multi-agent workflows, security, and demo-driven insights.<!--excerpt_end-->
 
 {% youtube ofWdnCHY_LY %}

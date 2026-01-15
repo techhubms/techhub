@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Observe Integrates AI Agents to Enhance Observability for DevOps Teams"
-description: "Observe Inc. introduces the AI SRE Agent and o11y.ai Agent to its observability platform, enabling DevOps teams to automate incident investigation, generate OpenTelemetry code automatically, and leverage natural language queries to understand and debug applications. The new features aim to reduce toil and accelerate troubleshooting for developers and site reliability engineers (SREs)."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/observe-adds-two-ai-agents-to-improve-observability/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Observe Integrates AI Agents to Enhance Observability for DevOps Teams
+author: Mike Vizard
+canonical_url: https://devops.com/observe-adds-two-ai-agents-to-improve-observability/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-04 14:00:41 +00:00
-permalink: "/2025-11-04-Observe-Integrates-AI-Agents-to-Enhance-Observability-for-DevOps-Teams.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Debugging", "AI in DevOps", "AI Observability", "AI SRE Agent", "AIOps", "Blogs", "Business Of DevOps", "Code Instrumentation", "Debugging", "Developer Productivity", "DevOps", "DevOps Automation", "Incident Investigation", "Incident Triage", "MCP", "MCP Server", "Natural Language Queries", "O11y.ai", "Observability", "Observability Platform", "OpenAI Codex", "OpenTelemetry", "Site Reliability Engineering", "Social Facebook", "Social LinkedIn", "Social X", "SRE Automation", "Telemetry Data"]
-tags_normalized: ["ai", "ai debugging", "ai in devops", "ai observability", "ai sre agent", "aiops", "blogs", "business of devops", "code instrumentation", "debugging", "developer productivity", "devops", "devops automation", "incident investigation", "incident triage", "mcp", "mcp server", "natural language queries", "o11ydotai", "observability", "observability platform", "openai codex", "opentelemetry", "site reliability engineering", "social facebook", "social linkedin", "social x", "sre automation", "telemetry data"]
+permalink: /ai/blogs/Observe-Integrates-AI-Agents-to-Enhance-Observability-for-DevOps-Teams
+tags:
+- AI
+- AI Debugging
+- AI in DevOps
+- AI Observability
+- AI SRE Agent
+- AIOps
+- Blogs
+- Business Of DevOps
+- Code Instrumentation
+- Debugging
+- Developer Productivity
+- DevOps
+- DevOps Automation
+- Incident Investigation
+- Incident Triage
+- MCP
+- MCP Server
+- Natural Language Queries
+- O11y.ai
+- Observability
+- Observability Platform
+- OpenAI Codex
+- OpenTelemetry
+- Site Reliability Engineering
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE Automation
+- Telemetry Data
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard details how Observe Inc. equips its observability platform with two new AI agents, empowering DevOps and SRE teams to automate root cause analysis, streamline code instrumentation, and use natural language tools for advanced debugging.<!--excerpt_end-->
 
 # Observe Integrates AI Agents to Enhance Observability for DevOps Teams

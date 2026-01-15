@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development"
-description: "This article, authored by Yina Arenas, outlines how Azure AI Foundry aims to streamline the journey from prototyping to deploying enterprise-ready AI agents. It explores trends in agentic AI development, best practices for modern agent platforms, open standards for interoperability, and the developer-centric tools available. Readers will learn how Azure AI Foundry integrates with familiar developer workflows like VS Code and GitHub, supports both Microsoft-first and open-source frameworks, and provides the connectors, governance, and observability required for production-scale deployments."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development'
+author: Yina Arenas
+canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 15:00:00 +00:00
-permalink: "/2025-09-03-Agent-Factory-From-Prototype-to-ProductionDeveloper-Tools-and-Rapid-Agent-Development.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["A2A Protocol", "Agent Development", "Agent Factory", "AI", "AI + Machine Learning", "AI Agents", "AutoGen", "Azure", "Azure AI Foundry", "CI/CD", "Coding", "CrewAI", "DevOps", "DevOps Integration", "Enterprise Deployment", "Guardrails", "Interoperability", "LangGraph", "LlamaIndex", "MCP", "Microsoft 365 Agents SDK", "News", "Observability", "Semantic Kernel", "VS Code Extension"]
-tags_normalized: ["a2a protocol", "agent development", "agent factory", "ai", "ai plus machine learning", "ai agents", "autogen", "azure", "azure ai foundry", "cislashcd", "coding", "crewai", "devops", "devops integration", "enterprise deployment", "guardrails", "interoperability", "langgraph", "llamaindex", "mcp", "microsoft 365 agents sdk", "news", "observability", "semantic kernel", "vs code extension"]
+permalink: /ai/news/Agent-Factory-From-Prototype-to-ProductionDeveloper-Tools-and-Rapid-Agent-Development
+tags:
+- A2A Protocol
+- Agent Development
+- Agent Factory
+- AI
+- AI + Machine Learning
+- AI Agents
+- AutoGen
+- Azure
+- Azure AI Foundry
+- CI/CD
+- Coding
+- CrewAI
+- DevOps
+- DevOps Integration
+- Enterprise Deployment
+- Guardrails
+- Interoperability
+- LangGraph
+- LlamaIndex
+- MCP
+- Microsoft 365 Agents SDK
+- News
+- Observability
+- Semantic Kernel
+- VS Code Extension
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Yina Arenas explains how Azure AI Foundry empowers developers to build, test, and deploy AI agents, detailing tools, frameworks, and open standards for moving from prototype to production.<!--excerpt_end-->
 
 # Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development

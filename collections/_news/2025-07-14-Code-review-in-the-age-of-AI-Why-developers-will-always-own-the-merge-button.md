@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Code review in the age of AI - Why developers will always own the merge button"
-description: "Explores how GitHub Copilot can enhance code merging while emphasizing that final decisions rest with developers."
-author: "Elle Shwer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/code-review-in-the-age-of-ai-why-developers-will-always-own-the-merge-button/"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Code review in the age of AI - Why developers will always own the merge button
+author: Elle Shwer
+canonical_url: https://github.blog/ai-and-ml/generative-ai/code-review-in-the-age-of-ai-why-developers-will-always-own-the-merge-button/
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-14 16:38:03 +00:00
-permalink: "/2025-07-14-Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button.html"
-viewing_mode: "external"
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "AI Assisted Coding", "Automation", "Code Merging", "Code Review", "Coding Workflow", "Collaboration", "Developer Tools", "Generative AI", "GitHub Copilot", "Merge Decisions", "News", "Programming Productivity", "Software Development"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "ai assisted coding", "automation", "code merging", "code review", "coding workflow", "collaboration", "developer tools", "generative ai", "github copilot", "merge decisions", "news", "programming productivity", "software development"]
+permalink: /github-copilot/news/Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button
+viewing_mode: external
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Agents
+- AI Assisted Coding
+- Automation
+- Code Merging
+- Code Review
+- Coding Workflow
+- Collaboration
+- Developer Tools
+- Generative AI
+- GitHub Copilot
+- Merge Decisions
+- News
+- Programming Productivity
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 Author Elle Shwer discusses the evolving role of GitHub Copilot in assisting with code merging processes, while emphasizing that ultimate control stays with developers. The article offers insights into how intelligent tools can support but not replace human judgement during critical development workflows.<!--excerpt_end-->
 
 ## GitHub Copilot's Role in Code Merging

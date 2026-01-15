@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Reliably Test Htmx Applications with Playwright in C#"
-description: "Khalid Abuhakmeh demonstrates a robust method for testing ASP.NET Core applications that use Htmx with the Playwright framework. By leveraging lifecycle events, he ensures reliable synchronization between frontend updates and test assertions, providing sample code and reusable extensions for consistent automated testing."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/htmx-and-playwright-tests-in-csharp"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: How to Reliably Test Htmx Applications with Playwright in C#
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/htmx-and-playwright-tests-in-csharp
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-09-24 00:00:00 +00:00
-permalink: "/2024-09-24-How-to-Reliably-Test-Htmx-Applications-with-Playwright-in-C.html"
-categories: ["Coding", "DevOps"]
-tags: ["ASP.NET Core", "Blogs", "C#", "Coding", "DevOps", "Frontend Testing", "Htmx", "Integration Testing", "JavaScript Events", "Playwright", "Test Automation", "Test Synchronization", "Web Testing"]
-tags_normalized: ["aspdotnet core", "blogs", "csharp", "coding", "devops", "frontend testing", "htmx", "integration testing", "javascript events", "playwright", "test automation", "test synchronization", "web testing"]
+permalink: /coding/blogs/How-to-Reliably-Test-Htmx-Applications-with-Playwright-in-C
+tags:
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- DevOps
+- Frontend Testing
+- Htmx
+- Integration Testing
+- JavaScript Events
+- Playwright
+- Test Automation
+- Test Synchronization
+- Web Testing
+section_names:
+- coding
+- devops
 ---
-
 In this post, Khalid Abuhakmeh introduces a seamless technique for automating tests in Htmx-powered ASP.NET Core applications using Playwright, ensuring stable and reliable results.<!--excerpt_end-->
 
 # How to Reliably Test Htmx Applications with Playwright in C#

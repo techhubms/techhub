@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Modernize .NET Apps in Days with GitHub Copilot"
-description: "This video guides developers step by step through modernizing legacy .NET applications using GitHub Copilot. It shows how Copilot automates application and code updates, assists with migration tasks, reduces bugs and security issues, and streamlines developer workflows. The video demonstrates migration, upgrade planning, use of Azure Container Apps, resource provisioning with Bicep and AZD, and provides actionable insights for taking apps from .NET Framework to cloud-ready, enterprise-grade solutions."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=-YKguff5GY8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Modernize .NET Apps in Days with GitHub Copilot
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=-YKguff5GY8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/2025-09-23-Modernize-NET-Apps-in-Days-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET Framework", ".NET Upgrade Tool", "AI", "App Modernization", "AZD", "Azure", "Azure Container Apps", "Azure Deployment", "Bicep", "Cloud Migration", "Code Automation", "Coding", "Compliance", "Developer Productivity", "DevOps", "Error Handling", "GitHub Copilot", "Legacy Migration", "Mermaid Diagrams", "Upgrade Planning", "Videos"]
-tags_normalized: ["dotnet", "dotnet framework", "dotnet upgrade tool", "ai", "app modernization", "azd", "azure", "azure container apps", "azure deployment", "bicep", "cloud migration", "code automation", "coding", "compliance", "developer productivity", "devops", "error handling", "github copilot", "legacy migration", "mermaid diagrams", "upgrade planning", "videos"]
+permalink: /github-copilot/videos/Modernize-NET-Apps-in-Days-with-GitHub-Copilot
+tags:
+- .NET
+- .NET Framework
+- .NET Upgrade Tool
+- AI
+- App Modernization
+- AZD
+- Azure
+- Azure Container Apps
+- Azure Deployment
+- Bicep
+- Cloud Migration
+- Code Automation
+- Coding
+- Compliance
+- Developer Productivity
+- DevOps
+- Error Handling
+- GitHub Copilot
+- Legacy Migration
+- Mermaid Diagrams
+- Upgrade Planning
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 dotnet presents a detailed walkthrough of modernizing legacy .NET applications using GitHub Copilot, including automation of upgrades and seamless Azure deployment.<!--excerpt_end-->
 
 {% youtube -YKguff5GY8 %}

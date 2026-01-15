@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Understanding Azure Availability Zone Mappings for Subscriptions"
-description: "This video by John Savill offers a concise guide to how Azure availability zones (AZs) in a subscription map to the underlying datacenter sets and how those align with AZs in other subscriptions. It includes a walkthrough of a custom PowerShell script, explains the physical vs logical separation of AZs, and demonstrates practical techniques for assessing regional AZ alignment. Resources and further learning links are also provided."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jBpxG2Fk2jA"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Understanding Azure Availability Zone Mappings for Subscriptions
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=jBpxG2Fk2jA
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-22 16:32:44 +00:00
-permalink: "/2025-10-22-Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions.html"
-categories: ["Azure"]
-tags: ["Availability Zone", "AZ Alignment", "Azure", "Azure Availability Zones", "Azure Capacity", "Azure Cloud", "Azure Scripting", "Capacity", "Cloud", "Cloud Architecture", "Disaster Recovery", "High Availability", "Logical Zones", "Microsoft", "Microsoft Azure", "Physical Datacenters", "PowerShell", "Read AzureAZs.ps1", "Regional Mapping", "Subscriptions", "Videos"]
-tags_normalized: ["availability zone", "az alignment", "azure", "azure availability zones", "azure capacity", "azure cloud", "azure scripting", "capacity", "cloud", "cloud architecture", "disaster recovery", "high availability", "logical zones", "microsoft", "microsoft azure", "physical datacenters", "powershell", "read azureazsdotps1", "regional mapping", "subscriptions", "videos"]
+permalink: /azure/videos/Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions
+tags:
+- Availability Zone
+- AZ Alignment
+- Azure
+- Azure Availability Zones
+- Azure Capacity
+- Azure Cloud
+- Azure Scripting
+- Capacity
+- Cloud
+- Cloud Architecture
+- Disaster Recovery
+- High Availability
+- Logical Zones
+- Microsoft
+- Microsoft Azure
+- Physical Datacenters
+- PowerShell
+- Read AzureAZs.ps1
+- Regional Mapping
+- Subscriptions
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training explains how Azure subscription availability zones map to physical datacenters and align across different subscriptions, featuring a PowerShell script walkthrough.<!--excerpt_end-->
 
 {% youtube jBpxG2Fk2jA %}

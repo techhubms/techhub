@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Innovation Session: Microsoft Fabric and Azure Databases - the Data Estate for AI"
-description: "This session from Microsoft Ignite 2025 unveils major announcements across Microsoft Fabric, Power BI, Azure SQL, and Azure PostgreSQL. It details how Microsoft's integrated data platform is evolving to power AI transformation, including customer success stories, live demos, and insights on unifying analytics, transactional workloads, and real-time data for intelligent applications. Highlights include Fabric growth milestones, ISV partnerships, DocumentDB open sourcing, developer tools for PostgreSQL, and the new Fabric IQ for operational and AI use cases."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wXeHChqpxDo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Innovation Session: Microsoft Fabric and Azure Databases - the Data Estate for AI'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=wXeHChqpxDo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:58:10 +00:00
-permalink: "/2025-11-21-Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Transformation", "Azure", "Azure PostgreSQL", "Azure SQL", "Customer Success", "Data Engineering", "DocumentDB", "Fabric IQ", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "OneLake", "Power BI", "Real Time Analytics", "Semantic Models", "Unified Data Platform", "Unifyyourdataplatform", "Videos", "VS Code Extension"]
-tags_normalized: ["ai", "ai transformation", "azure", "azure postgresql", "azure sql", "customer success", "data engineering", "documentdb", "fabric iq", "microsoft fabric", "microsoft ignite", "ml", "msignite", "onelake", "power bi", "real time analytics", "semantic models", "unified data platform", "unifyyourdataplatform", "videos", "vs code extension"]
+permalink: /ai/videos/Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI
+tags:
+- AI
+- AI Transformation
+- Azure
+- Azure PostgreSQL
+- Azure SQL
+- Customer Success
+- Data Engineering
+- DocumentDB
+- Fabric IQ
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- MSIgnite
+- OneLake
+- Power BI
+- Real Time Analytics
+- Semantic Models
+- Unified Data Platform
+- Unifyyourdataplatform
+- Videos
+- VS Code Extension
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents an in-depth session from Ignite 2025 featuring Arun Ulag and Michel Porter on how Microsoft Fabric, Power BI, Azure SQL, and Azure PostgreSQL empower unified, AI-ready data platforms.<!--excerpt_end-->
 
 {% youtube wXeHChqpxDo %}

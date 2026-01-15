@@ -1,22 +1,28 @@
----
-layout: "post"
-title: "Usage Metrics"
-description: "Track and analyze Copilot usage across your team."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/43yFNFT8-R4"
-categories: ["AI", "GitHub Copilot", "Coding"]
+﻿---
+layout: post
+title: Usage Metrics
+author: Rob Bos
+canonical_url: https://youtu.be/43yFNFT8-R4
 date: 2025-01-02 11:20:07 +00:00
-permalink: "/2025-01-02-Usage-Metrics.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Pro", "Business"]
-alt-collection: "features"
-tags: ["AI", "Analytics", "Coding", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "analytics", "coding", "github copilot", "videos"]
+permalink: /github-copilot/videos/Usage-Metrics
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Pro
+- Business
+alt-collection: features
+tags:
+- AI
+- Analytics
+- Coding
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+- coding
 ---
-
 This video demonstrates GitHub Copilot's Usage Metrics feature. Track and analyze Copilot usage across your team.<!--excerpt_end-->
 
 {% youtube 43yFNFT8-R4 %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Update - 30th May 2025"
-description: "John Savill covers the latest Azure updates, including Azure AI Foundry, App Service, Cosmos DB, and more. He also addresses viewer questions and shares learning resources."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cR1AjFH2yLE"
-categories: ["AI", "Azure", "ML"]
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 30th May 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=cR1AjFH2yLE
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-05-30 14:11:15 +00:00
-permalink: "/2025-05-30-Azure-Update-30th-May-2025.html"
-viewing_mode: "internal"
-tags: ["AFD Container Apps", "AI", "API Management", "App Service Hybrid Connection", "Application Gateway SSE", "Azure", "Azure AI Foundry", "Azure Firewall", "Azure Migrate", "Cloud", "Cosmos DB", "DocumentDB", "Elastic SAN", "Johnsavillstechnicaltraining", "Microsoft", "Microsoft Planetary Computer", "ML", "Onboard to Azure", "PostgreSQL", "Videos"]
-tags_normalized: ["afd container apps", "ai", "api management", "app service hybrid connection", "application gateway sse", "azure", "azure ai foundry", "azure firewall", "azure migrate", "cloud", "cosmos db", "documentdb", "elastic san", "johnsavillstechnicaltraining", "microsoft", "microsoft planetary computer", "ml", "onboard to azure", "postgresql", "videos"]
+permalink: /ai/videos/Azure-Update-30th-May-2025
+viewing_mode: internal
+tags:
+- AFD Container Apps
+- AI
+- API Management
+- App Service Hybrid Connection
+- Application Gateway SSE
+- Azure
+- Azure AI Foundry
+- Azure Firewall
+- Azure Migrate
+- Cloud
+- Cosmos DB
+- DocumentDB
+- Elastic SAN
+- Johnsavillstechnicaltraining
+- Microsoft
+- Microsoft Planetary Computer
+- ML
+- Onboard to Azure
+- PostgreSQL
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 In this weekly Azure update, John Savill's Technical Training shares a comprehensive roundup of recent Azure service enhancements, ranging from App Service and Azure Firewall to Cosmos DB and API Management improvements. The episode highlights new Azure AI Foundry features, discusses logging, authentication, and integration upgrades, and provides viewers with guidance on accessing learning resources. John also explains how viewers can find content on specific topics and provides suggestions for community support.<!--excerpt_end-->
 
 {% youtube cR1AjFH2yLE %}

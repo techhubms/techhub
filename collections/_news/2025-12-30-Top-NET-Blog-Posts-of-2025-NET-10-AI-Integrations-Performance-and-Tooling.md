@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Top .NET Blog Posts of 2025: .NET 10, AI Integrations, Performance, and Tooling"
-description: "A comprehensive roundup of the most-read .NET blog posts from 2025, covering the launch of .NET 10, key AI integrations, major performance improvements, new productivity features fueled by GitHub Copilot, cloud-native development with Aspire, and developer tooling advances. The roundup links to detailed posts, recaps, and community highlights."
-author: "Jon Galloway"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Top .NET Blog Posts of 2025: .NET 10, AI Integrations, Performance, and Tooling'
+author: Jon Galloway
+canonical_url: https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2025/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-30 18:05:00 +00:00
-permalink: "/2025-12-30-Top-NET-Blog-Posts-of-2025-NET-10-AI-Integrations-Performance-and-Tooling.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET CLI", "AI", "Aspire", "Aspire 9.3", "C#", "Cloud Native", "Coding", "Copilot", "DevOps", "GC", "GitHub Copilot", "MCP", "Microsoft Agent Framework", "News", "NuGet", "Performance", "Productivity", "SLNX", "Testing", "Tooling", "VS", "VS Code", "Wrapped"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet cli", "ai", "aspire", "aspire 9dot3", "csharp", "cloud native", "coding", "copilot", "devops", "gc", "github copilot", "mcp", "microsoft agent framework", "news", "nuget", "performance", "productivity", "slnx", "testing", "tooling", "vs", "vs code", "wrapped"]
+permalink: /github-copilot/news/Top-NET-Blog-Posts-of-2025-NET-10-AI-Integrations-Performance-and-Tooling
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET CLI
+- AI
+- Aspire
+- Aspire 9.3
+- C#
+- Cloud Native
+- Coding
+- Copilot
+- DevOps
+- GC
+- GitHub Copilot
+- MCP
+- Microsoft Agent Framework
+- News
+- NuGet
+- Performance
+- Productivity
+- SLNX
+- Testing
+- Tooling
+- VS
+- VS Code
+- Wrapped
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Jon Galloway highlights the defining .NET blog posts from 2025, including .NET 10's release, practical AI and Copilot integrations, performance gains, developer tooling updates, and community events relevant to modern .NET developers.<!--excerpt_end-->
 
 # Top .NET Blog Posts of 2025

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem"
-description: "This video by John Savill's Technical Training examines how GPT-5 can be used across the Microsoft ecosystem, with practical demonstrations using Azure AI Foundry, GitHub Copilot, and Copilot Studio. The video covers the advantages of GPT-5, practical integration on Azure, leveraging development and maker tools, and clarifies distinctions between developer and productivity-focused Copilot offerings."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=360I_jTLI_I"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=360I_jTLI_I
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-13 17:48:44 +00:00
-permalink: "/2025-08-13-Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem.html"
-categories: ["AI", "Azure", "GitHub Copilot"]
-tags: ["Agent Development", "Agents", "AI", "AI Integration", "Azure", "Azure AI Foundry", "Copilot Chat", "Copilot Studio", "Copilot Studio Maker", "Developer Tools", "Generative AI", "GitHub Copilot", "GPT 5", "Large Language Models", "LLM", "Microsoft Copilot", "Microsoft Ecosystem", "Videos"]
-tags_normalized: ["agent development", "agents", "ai", "ai integration", "azure", "azure ai foundry", "copilot chat", "copilot studio", "copilot studio maker", "developer tools", "generative ai", "github copilot", "gpt 5", "large language models", "llm", "microsoft copilot", "microsoft ecosystem", "videos"]
+permalink: /github-copilot/videos/Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem
+tags:
+- Agent Development
+- Agents
+- AI
+- AI Integration
+- Azure
+- Azure AI Foundry
+- Copilot Chat
+- Copilot Studio
+- Copilot Studio Maker
+- Developer Tools
+- Generative AI
+- GitHub Copilot
+- GPT 5
+- Large Language Models
+- LLM
+- Microsoft Copilot
+- Microsoft Ecosystem
+- Videos
+section_names:
+- ai
+- azure
+- github-copilot
 ---
-
 John Savill's Technical Training explores how developers and makers can use GPT-5 on Microsoft platforms, focusing on Azure AI Foundry, GitHub Copilot, and Copilot Studio for AI-powered solutions.<!--excerpt_end-->
 
 {% youtube 360I_jTLI_I %}

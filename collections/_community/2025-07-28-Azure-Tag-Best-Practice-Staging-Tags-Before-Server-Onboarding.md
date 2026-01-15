@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Azure Tag Best Practice: Staging Tags Before Server Onboarding"
-description: "The author seeks advice on whether Azure allows users to predefine and stage resource tags and patching schedules before servers are onboarded, aiming for efficient organization and management during infrastructure expansion. The post discusses current Azure tagging capabilities and asks about best practices and potential limitations."
-author: "jyoungii"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Azure Tag Best Practice: Staging Tags Before Server Onboarding'
+author: jyoungii
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 20:43:49 +00:00
-permalink: "/2025-07-28-Azure-Tag-Best-Practice-Staging-Tags-Before-Server-Onboarding.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Best Practices", "Community", "Maintenance Configurations", "Onboarding", "Patching", "POC", "Resource Management", "Resource Tagging", "Schedules", "Security"]
-tags_normalized: ["azure", "azure arc", "best practices", "community", "maintenance configurations", "onboarding", "patching", "poc", "resource management", "resource tagging", "schedules", "security"]
+permalink: /azure/community/Azure-Tag-Best-Practice-Staging-Tags-Before-Server-Onboarding
+tags:
+- Azure
+- Azure Arc
+- Best Practices
+- Community
+- Maintenance Configurations
+- Onboarding
+- Patching
+- POC
+- Resource Management
+- Resource Tagging
+- Schedules
+- Security
+section_names:
+- azure
+- security
 ---
-
 Author jyoungii asks the community about best practices for staging and managing Azure tags for patching and onboarding servers, specifically in the context of Azure Arc.<!--excerpt_end-->
 
 ## Azure Tag Best Practice: Staging Tags Before Server Onboarding

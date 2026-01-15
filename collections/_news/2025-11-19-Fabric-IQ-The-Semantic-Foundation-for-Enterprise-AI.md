@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Fabric IQ: The Semantic Foundation for Enterprise AI"
-description: "This news article introduces Fabric IQ, a unified semantic foundation within Microsoft Fabric designed to streamline enterprise AI adoption. Fabric IQ’s Ontology feature links data, business meaning, and actions to empower AI agents with real-time, trustworthy context, while enabling governance, low-code modeling, and integration with analytics through Power BI and other Microsoft tools. The article details ontology's benefits, capabilities, agent integration, and practical business outcomes."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-iq-the-semantic-foundation-for-enterprise-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric IQ: The Semantic Foundation for Enterprise AI'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-iq-the-semantic-foundation-for-enterprise-ai/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 10:00:00 +00:00
-permalink: "/2025-11-19-Fabric-IQ-The-Semantic-Foundation-for-Enterprise-AI.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Business Rules", "Data Agent", "Data Governance", "Data Lake", "Enterprise AI", "Fabric IQ", "Foundry IQ", "Governance", "Graph Modeling", "Live Data Binding", "Low Code", "Microsoft Fabric", "ML", "News", "Ontology", "Operational Intelligence", "Operations Agent", "Power BI", "Semantic Modeling", "Unified Semantics"]
-tags_normalized: ["ai", "ai agents", "azure", "business rules", "data agent", "data governance", "data lake", "enterprise ai", "fabric iq", "foundry iq", "governance", "graph modeling", "live data binding", "low code", "microsoft fabric", "ml", "news", "ontology", "operational intelligence", "operations agent", "power bi", "semantic modeling", "unified semantics"]
+permalink: /ai/news/Fabric-IQ-The-Semantic-Foundation-for-Enterprise-AI
+tags:
+- AI
+- AI Agents
+- Azure
+- Business Rules
+- Data Agent
+- Data Governance
+- Data Lake
+- Enterprise AI
+- Fabric IQ
+- Foundry IQ
+- Governance
+- Graph Modeling
+- Live Data Binding
+- Low Code
+- Microsoft Fabric
+- ML
+- News
+- Ontology
+- Operational Intelligence
+- Operations Agent
+- Power BI
+- Semantic Modeling
+- Unified Semantics
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog unveils Fabric IQ, highlighting how its Ontology feature provides enterprises with a semantic layer that connects data, meaning, and actions for reliable, governed, and actionable AI integration.<!--excerpt_end-->
 
 # Fabric IQ: The Semantic Foundation for Enterprise AI

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Spec Kit and GitHub Copilot: Spec-Driven Development in VS Code with Den"
-description: "This video dives into Spec-Driven Development using the new Spec-Kit project, featuring live demonstrations in Visual Studio Code. Den Delimarsky joins James Montemagno, Burke Holland, and Pierce Boggan to show how executable specifications can generate working implementations and how GitHub Copilot integrates into this workflow. Viewers will learn about the open-source Spec-Kit toolkit, how to use it in VS Code, and how AI enhances the process of specification-driven coding."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qzTqjJECIRk"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Spec Kit and GitHub Copilot: Spec-Driven Development in VS Code with Den'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=qzTqjJECIRk
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-19 14:37:29 +00:00
-permalink: "/2025-09-19-Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Code Generation", "Coding", "Den Delimarsky", "GitHub Copilot", "Live Demo", "Open Source Toolkit", "Software Specifications", "Spec Driven Development", "Spec Kit", "Speckit", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "code generation", "coding", "den delimarsky", "github copilot", "live demo", "open source toolkit", "software specifications", "spec driven development", "spec kit", "speckit", "videos", "vs code"]
+permalink: /github-copilot/videos/Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den
+tags:
+- AI
+- AI Tools
+- Code Generation
+- Coding
+- Den Delimarsky
+- GitHub Copilot
+- Live Demo
+- Open Source Toolkit
+- Software Specifications
+- Spec Driven Development
+- Spec Kit
+- Speckit
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Den Delimarsky joins Visual Studio Code hosts to demonstrate how Spec-Kit and GitHub Copilot enable specification-driven development, showcasing the toolkit and AI coding features for a modern workflow.<!--excerpt_end-->
 
 {% youtube qzTqjJECIRk %}

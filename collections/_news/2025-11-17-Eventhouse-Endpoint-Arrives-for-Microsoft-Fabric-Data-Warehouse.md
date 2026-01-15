@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Eventhouse Endpoint Arrives for Microsoft Fabric Data Warehouse"
-description: "This announcement details how Microsoft Fabric now brings its real-time Eventhouse analytics engine to the Fabric Data Warehouse, enabling unified, high-performance querying across time-series, structured, and semi-structured data. Users can seamlessly leverage KQL and SQL to explore warehouse tables, mirror schemas, and generate real-time insights without ETL overhead—ideal for business KPI monitoring, anomaly detection, and live dashboards."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Eventhouse Endpoint Arrives for Microsoft Fabric Data Warehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-17 09:00:00 +00:00
-permalink: "/2025-11-17-Eventhouse-Endpoint-Arrives-for-Microsoft-Fabric-Data-Warehouse.html"
-categories: ["ML"]
-tags: ["Anomaly Detection", "Business KPIs", "Dashboards", "Data Monitoring", "Data Warehouse", "Eventhouse", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "Operational Metrics", "Real Time Analytics", "Schema Mirroring", "SQL", "Telemetry Data", "Time Series Data", "Unified Architecture"]
-tags_normalized: ["anomaly detection", "business kpis", "dashboards", "data monitoring", "data warehouse", "eventhouse", "kql", "lakehouse", "microsoft fabric", "ml", "news", "operational metrics", "real time analytics", "schema mirroring", "sql", "telemetry data", "time series data", "unified architecture"]
+permalink: /ml/news/Eventhouse-Endpoint-Arrives-for-Microsoft-Fabric-Data-Warehouse
+tags:
+- Anomaly Detection
+- Business KPIs
+- Dashboards
+- Data Monitoring
+- Data Warehouse
+- Eventhouse
+- KQL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Operational Metrics
+- Real Time Analytics
+- Schema Mirroring
+- SQL
+- Telemetry Data
+- Time Series Data
+- Unified Architecture
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog announces the new Eventhouse Endpoint for Fabric Data Warehouse, allowing real-time analytics and unified querying over diverse data types with robust performance.<!--excerpt_end-->
 
 # Eventhouse Endpoint Arrives for Microsoft Fabric Data Warehouse

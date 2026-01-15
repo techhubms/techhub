@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "GitHub Copilot in Visual Studio Code Upgraded with OpenAI Codex and New Agent Features"
-description: "This news update highlights recent enhancements to GitHub Copilot in Visual Studio Code Insiders, announced at GitHub Universe 2025. Key new features include OpenAI Codex integration for Copilot Pro+ subscribers, a unified Agent Sessions view for managing local and cloud sessions, context-isolated sub-agents to optimize workflows, and a new Plan Mode that generates and validates step-by-step implementation plans. These updates aim to streamline developer productivity and code management in VS Code."
-author: "Dylan Birtolo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot in Visual Studio Code Upgraded with OpenAI Codex and New Agent Features
+author: Dylan Birtolo
+canonical_url: https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:30:02 +00:00
-permalink: "/2025-10-28-GitHub-Copilot-in-Visual-Studio-Code-Upgraded-with-OpenAI-Codex-and-New-Agent-Features.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Sessions", "AI", "AI Agents", "Code Completion", "Coding", "Copilot", "Copilot Pro+", "Developer Productivity", "GitHub Copilot", "GitHub Universe", "Improvement", "News", "OpenAI Codex", "Plan Mode", "Subagents", "TDD Workflows", "Universe25", "VS Code", "VS Code Insiders"]
-tags_normalized: ["agent sessions", "ai", "ai agents", "code completion", "coding", "copilot", "copilot proplus", "developer productivity", "github copilot", "github universe", "improvement", "news", "openai codex", "plan mode", "subagents", "tdd workflows", "universe25", "vs code", "vs code insiders"]
+permalink: /github-copilot/news/GitHub-Copilot-in-Visual-Studio-Code-Upgraded-with-OpenAI-Codex-and-New-Agent-Features
+tags:
+- Agent Sessions
+- AI
+- AI Agents
+- Code Completion
+- Coding
+- Copilot
+- Copilot Pro+
+- Developer Productivity
+- GitHub Copilot
+- GitHub Universe
+- Improvement
+- News
+- OpenAI Codex
+- Plan Mode
+- Subagents
+- TDD Workflows
+- Universe25
+- VS Code
+- VS Code Insiders
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Dylan Birtolo outlines notable upgrades to GitHub Copilot in Visual Studio Code Insiders, including OpenAI Codex integration, new agent management features, and Plan Mode for improved coding workflows.<!--excerpt_end-->
 
 # GitHub Copilot in Visual Studio Code Gets Upgraded

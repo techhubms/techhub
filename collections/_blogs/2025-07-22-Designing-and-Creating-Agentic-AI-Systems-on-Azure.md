@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Designing and Creating Agentic AI Systems on Azure"
-description: "This post provides a practical guide for building agentic AI systems using Microsoft Azure's ecosystem, focusing on autonomous agent architectures, tool integration with Azure OpenAI, Functions, Logic Apps, and best practices for security, observability, and memory in enterprise scenarios."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/designing-and-creating-agentic-ai-in-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Designing and Creating Agentic AI Systems on Azure
+author: Dellenny
+canonical_url: https://dellenny.com/designing-and-creating-agentic-ai-in-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-22 10:53:51 +00:00
-permalink: "/2025-07-22-Designing-and-Creating-Agentic-AI-Systems-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Architecture", "AutoGPT", "Azure", "Azure AI", "Azure AI Studio", "Azure Cognitive Search", "Azure Cosmos DB", "Azure Functions", "Azure Logic Apps", "Azure Machine Learning", "Azure Monitor", "Azure OpenAI Service", "BabyAGI", "Blogs", "Chain Of Thought", "Cosmos DB", "Enterprise Assistant", "Function Calling", "GPT 4", "Long Term Memory", "Microsoft Graph API", "Planning Module", "Prompt Engineering", "PromptFlow", "RBAC", "ReAct Pattern", "Security Best Practices", "Semantic Search", "Tree Of Thought", "Workflow Orchestration"]
-tags_normalized: ["agentic ai", "ai", "ai architecture", "autogpt", "azure", "azure ai", "azure ai studio", "azure cognitive search", "azure cosmos db", "azure functions", "azure logic apps", "azure machine learning", "azure monitor", "azure openai service", "babyagi", "blogs", "chain of thought", "cosmos db", "enterprise assistant", "function calling", "gpt 4", "long term memory", "microsoft graph api", "planning module", "prompt engineering", "promptflow", "rbac", "react pattern", "security best practices", "semantic search", "tree of thought", "workflow orchestration"]
+permalink: /ai/blogs/Designing-and-Creating-Agentic-AI-Systems-on-Azure
+tags:
+- Agentic AI
+- AI
+- AI Architecture
+- AutoGPT
+- Azure
+- Azure AI
+- Azure AI Studio
+- Azure Cognitive Search
+- Azure Cosmos DB
+- Azure Functions
+- Azure Logic Apps
+- Azure Machine Learning
+- Azure Monitor
+- Azure OpenAI Service
+- BabyAGI
+- Blogs
+- Chain Of Thought
+- Cosmos DB
+- Enterprise Assistant
+- Function Calling
+- GPT 4
+- Long Term Memory
+- Microsoft Graph API
+- Planning Module
+- Prompt Engineering
+- PromptFlow
+- RBAC
+- ReAct Pattern
+- Security Best Practices
+- Semantic Search
+- Tree Of Thought
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Dellenny presents a comprehensive, hands-on blueprint for creating agentic AI with Azure, guiding readers through architecture, implementation, and practical integration of AI services and serverless tools.<!--excerpt_end-->
 
 # Designing and Creating Agentic AI in Azure

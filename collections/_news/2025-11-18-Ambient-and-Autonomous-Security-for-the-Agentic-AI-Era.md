@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Ambient and Autonomous Security for the Agentic AI Era"
-description: "This article outlines Microsoft's strategy and latest innovations for securing AI agents, applications, and cloud infrastructure in the agentic era. It introduces new capabilities across Microsoft Defender, Microsoft Entra, Intune, Purview, Sentinel, and more, focusing on trust, observability, and adaptive protection. The content provides technical guidance for security leaders and practitioners on how Microsoft solutions enable end-to-end security for emerging AI technologies."
-author: "Vasu Jakkal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Ambient and Autonomous Security for the Agentic AI Era
+author: Vasu Jakkal
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Ambient-and-Autonomous-Security-for-the-Agentic-AI-Era.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Access Control", "Agent 365", "Agentic AI", "AI", "AI Agents", "Azure", "Baseline Security Mode", "Cloud Security", "Compliance", "Data Loss Prevention", "DevOps", "Incident Response", "Microsoft Defender", "Microsoft Entra", "Microsoft Foundry", "Microsoft Intune", "Microsoft Purview", "Microsoft Sentinel", "News", "Predictive Shielding", "Security", "Security Copilot", "SIEM", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["access control", "agent 365", "agentic ai", "ai", "ai agents", "azure", "baseline security mode", "cloud security", "compliance", "data loss prevention", "devops", "incident response", "microsoft defender", "microsoft entra", "microsoft foundry", "microsoft intune", "microsoft purview", "microsoft sentinel", "news", "predictive shielding", "security", "security copilot", "siem", "threat intelligence", "zero trust"]
+permalink: /ai/news/Ambient-and-Autonomous-Security-for-the-Agentic-AI-Era
+tags:
+- Access Control
+- Agent 365
+- Agentic AI
+- AI
+- AI Agents
+- Azure
+- Baseline Security Mode
+- Cloud Security
+- Compliance
+- Data Loss Prevention
+- DevOps
+- Incident Response
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Foundry
+- Microsoft Intune
+- Microsoft Purview
+- Microsoft Sentinel
+- News
+- Predictive Shielding
+- Security
+- Security Copilot
+- SIEM
+- Threat Intelligence
+- Zero Trust
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Vasu Jakkal explains Microsoft's approach to securing AI and cloud platforms in the agentic era, unveiling integrated security features across Defender, Entra, Purview, Intune, and Sentinel. This news post is essential reading for security and IT professionals navigating rapid advances in AI.<!--excerpt_end-->
 
 # Ambient and Autonomous Security for the Agentic AI Era

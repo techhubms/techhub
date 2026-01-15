@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Resolving Orphaned Azure Subscription Access When No Owner Is Reachable"
-description: "This community post outlines the challenge of recovering access to an orphaned Azure subscription where no user has Owner privileges. The post discusses failed attempts to contact Azure support due to insufficient permissions, reviews documentation, and shares potential escalation strategies, including elevating Global Admin privileges and using alternative Microsoft support channels."
-author: "GelatinousCubeZantar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Resolving Orphaned Azure Subscription Access When No Owner Is Reachable
+author: GelatinousCubeZantar
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 18:31:50 +00:00
-permalink: "/2025-08-07-Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable.html"
-categories: ["Azure", "Security"]
-tags: ["Access Recovery", "Azure", "Azure Portal", "Azure Subscription", "Azure Support", "Community", "Entra ID", "Global Admin", "Identity Management", "Management Groups", "Microsoft Documentation", "Role Based Access Control", "Security", "Subscription Ownership", "Subscription Transfer"]
-tags_normalized: ["access recovery", "azure", "azure portal", "azure subscription", "azure support", "community", "entra id", "global admin", "identity management", "management groups", "microsoft documentation", "role based access control", "security", "subscription ownership", "subscription transfer"]
+permalink: /azure/community/Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable
+tags:
+- Access Recovery
+- Azure
+- Azure Portal
+- Azure Subscription
+- Azure Support
+- Community
+- Entra ID
+- Global Admin
+- Identity Management
+- Management Groups
+- Microsoft Documentation
+- Role Based Access Control
+- Security
+- Subscription Ownership
+- Subscription Transfer
+section_names:
+- azure
+- security
 ---
-
 GelatinousCubeZantar details the process and obstacles in recovering access to an orphaned Azure subscription, including real-world escalation attempts and technical suggestions based on Microsoft's documentation.<!--excerpt_end-->
 
 # Resolving Orphaned Azure Subscription Access When No Owner Is Reachable

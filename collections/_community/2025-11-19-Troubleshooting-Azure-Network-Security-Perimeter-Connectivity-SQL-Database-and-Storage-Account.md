@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Troubleshooting Azure Network Security Perimeter Connectivity: SQL Database and Storage Account"
-description: "This discussion by Antonio Buonaiuto explores a scenario where two resources, an Azure SQL Database and a Storage Account, are assigned to the same Network Security Perimeter (NSP) in Azure. Despite both resources being within the perimeter and public connectivity being denied, he encounters challenges with SQL accessing storage for bulk data operations. The post compares the behavior with Azure Key Vault, considers the impact of resource preview/GAs, and seeks community insights on expected NSP behavior and Azure networking implementation nuances."
-author: "Antonio Buonaiuto"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Troubleshooting Azure Network Security Perimeter Connectivity: SQL Database and Storage Account'
+author: Antonio Buonaiuto
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 08:57:53 +00:00
-permalink: "/2025-11-19-Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Networking", "Azure Platform", "Azure SQL Database", "Azure Storage Account", "Bulk Insert", "Community", "Data Security", "Firewall Rules", "GA", "Key Vault", "Network Security Perimeter", "NSP", "Preview Features", "Resource Connectivity", "Security"]
-tags_normalized: ["azure", "azure networking", "azure platform", "azure sql database", "azure storage account", "bulk insert", "community", "data security", "firewall rules", "ga", "key vault", "network security perimeter", "nsp", "preview features", "resource connectivity", "security"]
+permalink: /azure/community/Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account
+tags:
+- Azure
+- Azure Networking
+- Azure Platform
+- Azure SQL Database
+- Azure Storage Account
+- Bulk Insert
+- Community
+- Data Security
+- Firewall Rules
+- GA
+- Key Vault
+- Network Security Perimeter
+- NSP
+- Preview Features
+- Resource Connectivity
+- Security
+section_names:
+- azure
+- security
 ---
-
 Antonio Buonaiuto describes a networking issue in Azure where an SQL Database can't access a Storage Account within the same Network Security Perimeter, detailing his troubleshooting steps and raising questions about expected Azure NSP behavior.<!--excerpt_end-->
 
 # Networking Troubles in Azure Network Security Perimeter (NSP)

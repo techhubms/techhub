@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "What’s New in Azure AI Foundry: August 2025 Release Highlights"
-description: "August 2025 brings substantial updates to Azure AI Foundry, including the arrival of the GPT-5 model family, new Browser Automation tools for agents, Sora and FLUX model enhancements, the GA release of the Responses API, Mistral Document AI integration, and major SDK/documentation improvements for Python, .NET, Java, and JavaScript/TypeScript developers."
-author: "Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'What’s New in Azure AI Foundry: August 2025 Release Highlights'
+author: Nick Brady
+canonical_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-03 15:00:50 +00:00
-permalink: "/2025-09-03-Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET SDK", "Agents", "AI", "Azure", "Azure AI Foundry", "Azure OpenAI", "Azure SDKs", "Browser Automation", "CMK", "Coding", "FLUX", "FLUX Models", "Foundry Local", "GPT 5", "GPT OSS", "Java SDK", "JavaScript SDK", "Mistral Document AI", "Model Deployment", "Model Router", "News", "Observability", "OpenAI Gpt Oss", "Playwright Testing", "Provisioned Throughput", "Python SDK", "Region Availability", "Responses API", "REST API", "Serverless Inference", "Sora", "Sora API", "Tracing", "VibeVoice"]
-tags_normalized: ["dotnet sdk", "agents", "ai", "azure", "azure ai foundry", "azure openai", "azure sdks", "browser automation", "cmk", "coding", "flux", "flux models", "foundry local", "gpt 5", "gpt oss", "java sdk", "javascript sdk", "mistral document ai", "model deployment", "model router", "news", "observability", "openai gpt oss", "playwright testing", "provisioned throughput", "python sdk", "region availability", "responses api", "rest api", "serverless inference", "sora", "sora api", "tracing", "vibevoice"]
+permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights
+tags:
+- .NET SDK
+- Agents
+- AI
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Azure SDKs
+- Browser Automation
+- CMK
+- Coding
+- FLUX
+- FLUX Models
+- Foundry Local
+- GPT 5
+- GPT OSS
+- Java SDK
+- JavaScript SDK
+- Mistral Document AI
+- Model Deployment
+- Model Router
+- News
+- Observability
+- OpenAI Gpt Oss
+- Playwright Testing
+- Provisioned Throughput
+- Python SDK
+- Region Availability
+- Responses API
+- REST API
+- Serverless Inference
+- Sora
+- Sora API
+- Tracing
+- VibeVoice
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Nick Brady summarizes the August 2025 updates to Azure AI Foundry, highlighting the launch of the GPT-5 family, new agent tools like Browser Automation, updated AI/ML models, and significant enhancements to APIs, SDKs, and documentation for Microsoft-centric developers.<!--excerpt_end-->
 
 # What’s New in Azure AI Foundry: August 2025 Release Highlights

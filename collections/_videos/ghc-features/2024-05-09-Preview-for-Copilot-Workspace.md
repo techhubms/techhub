@@ -1,22 +1,28 @@
----
-layout: "post"
-title: "Preview for Copilot Workspace"
-description: "Get a preview of the Copilot Workspace environment for better collaboration."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/N64ozm3x88k"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Preview for Copilot Workspace
+author: Rob Bos
+canonical_url: https://youtu.be/N64ozm3x88k
 date: 2024-05-09 13:02:12 +00:00
-permalink: "/2024-05-09-Preview-for-Copilot-Workspace.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Pro+", "Enterprise"]
-alt-collection: "features"
-tags: ["AI", "Code Review", "GitHub Copilot", "Pull Request", "Videos", "Workspace"]
-tags_normalized: ["ai", "code review", "github copilot", "pull request", "videos", "workspace"]
+permalink: /github-copilot/videos/Preview-for-Copilot-Workspace
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Pro+
+- Enterprise
+alt-collection: features
+tags:
+- AI
+- Code Review
+- GitHub Copilot
+- Pull Request
+- Videos
+- Workspace
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Preview for Copilot Workspace feature. Get a preview of the Copilot Workspace environment for better collaboration.<!--excerpt_end-->
 
 **⚠️ DEPRECATED**: The Copilot Workspace technical preview was sunset on May 30, 2025. This feature is no longer available.

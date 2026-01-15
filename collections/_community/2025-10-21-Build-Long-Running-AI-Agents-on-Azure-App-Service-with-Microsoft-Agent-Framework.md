@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Build Long-Running AI Agents on Azure App Service with Microsoft Agent Framework"
-description: "This article provides a thorough walkthrough on building production-ready, long-running intelligent AI agents with Microsoft Agent Framework, deployed on Azure App Service using asynchronous patterns. It explains key architectural considerations, the benefits of the async request-reply pattern, and how to integrate critical Azure services like Service Bus, Cosmos DB, and AI Foundry. A practical travel planner sample app is featured to demonstrate the architecture, with deployment resources included."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build Long-Running AI Agents on Azure App Service with Microsoft Agent Framework
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-21 17:04:22 +00:00
-permalink: "/2025-10-21-Build-Long-Running-AI-Agents-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET 9", "Agent Framework Samples", "AI", "AI Agents", "Async Pattern", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Durable Functions", "Background Workers", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "GPT 4o", "Long Running Workflows", "Microsoft Agent Framework", "Production AI", "Request Reply Pattern", "Service Bus"]
-tags_normalized: ["dotnet 9", "agent framework samples", "ai", "ai agents", "async pattern", "azure", "azure ai foundry", "azure app service", "azure durable functions", "background workers", "cloud architecture", "coding", "community", "cosmos db", "gpt 4o", "long running workflows", "microsoft agent framework", "production ai", "request reply pattern", "service bus"]
+permalink: /ai/community/Build-Long-Running-AI-Agents-on-Azure-App-Service-with-Microsoft-Agent-Framework
+tags:
+- .NET 9
+- Agent Framework Samples
+- AI
+- AI Agents
+- Async Pattern
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure Durable Functions
+- Background Workers
+- Cloud Architecture
+- Coding
+- Community
+- Cosmos DB
+- GPT 4o
+- Long Running Workflows
+- Microsoft Agent Framework
+- Production AI
+- Request Reply Pattern
+- Service Bus
+section_names:
+- ai
+- azure
+- coding
 ---
-
 jordanselig delivers a comprehensive guide on developing robust, intelligent AI agents using Microsoft Agent Framework and Azure App Service, addressing long-running workflow scenarios with modern async architectures.<!--excerpt_end-->
 
 # Build Long-Running AI Agents on Azure App Service with Microsoft Agent Framework

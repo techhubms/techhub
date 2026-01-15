@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Agentic Cloud Operations and Azure Copilot: Intelligent Cloud Management"
-description: "This article introduces agentic cloud operations powered by Azure Copilot, detailing how intelligent agents orchestrate key aspects of cloud management like migration, deployment, observability, optimization, resiliency, and troubleshooting. It explains the new agentic interface, how AI-driven automation transforms cloud operations, and how governance and security are maintained using Azure-native controls such as RBAC and BYOS. The content also covers how users can enable agents, participate in feedback programs, and learn about the technical documentation behind Azure Copilot."
-author: "anniepearl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ushering-in-the-era-of-agentic-cloud-operations-with-azure/ba-p/4469664"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Agentic Cloud Operations and Azure Copilot: Intelligent Cloud Management'
+author: anniepearl
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ushering-in-the-era-of-agentic-cloud-operations-with-azure/ba-p/4469664
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:02:38 +00:00
-permalink: "/2025-11-18-Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic Cloud Ops", "AI", "AI Agents", "Application Insights", "Azure", "Azure Copilot", "Azure Deployment", "Azure Migration", "Azure Monitor", "Azure Security", "BYOS", "Cloud Automation", "Cloud Management", "Community", "DevOps", "Governance", "IaC", "Intelligent Automation", "Microsoft Azure", "Observability", "PowerShell", "RBAC", "Resiliency", "Security", "Troubleshooting", "Well Architected Framework"]
-tags_normalized: ["agentic cloud ops", "ai", "ai agents", "application insights", "azure", "azure copilot", "azure deployment", "azure migration", "azure monitor", "azure security", "byos", "cloud automation", "cloud management", "community", "devops", "governance", "iac", "intelligent automation", "microsoft azure", "observability", "powershell", "rbac", "resiliency", "security", "troubleshooting", "well architected framework"]
+permalink: /ai/community/Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management
+tags:
+- Agentic Cloud Ops
+- AI
+- AI Agents
+- Application Insights
+- Azure
+- Azure Copilot
+- Azure Deployment
+- Azure Migration
+- Azure Monitor
+- Azure Security
+- BYOS
+- Cloud Automation
+- Cloud Management
+- Community
+- DevOps
+- Governance
+- IaC
+- Intelligent Automation
+- Microsoft Azure
+- Observability
+- PowerShell
+- RBAC
+- Resiliency
+- Security
+- Troubleshooting
+- Well Architected Framework
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Anniepearl showcases the transformational role of Azure Copilot and agentic cloud operations, demonstrating how AI-driven agents streamline cloud management and ensure governance in Microsoft Azure environments.<!--excerpt_end-->
 
 # Agentic Cloud Operations and Azure Copilot: Intelligent Cloud Management

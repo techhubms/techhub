@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Understanding .gitignore: Keeping Your Git Repository Clean"
-description: "This video from GitHub explains the basics and importance of the .gitignore file for developers. You'll learn how file exclusion prevents unwanted files from clogging up your project history (like .DS_Store files on macOS), and discover useful tools like gitignore.io for generating OS- and framework-specific templates. The focus is on practical advice for maintaining a professional codebase using standard Git and GitHub workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/0qdRS3xYwIY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Understanding .gitignore: Keeping Your Git Repository Clean'
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/0qdRS3xYwIY
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-28 15:00:03 +00:00
-permalink: "/2025-11-28-Understanding-gitignore-Keeping-Your-Git-Repository-Clean.html"
-categories: ["DevOps"]
-tags: [".gitignore", "Beginner Guide", "Development Best Practices", "DevOps", "File Exclusion", "Git", "GitHub", "Githubforbeginners", "Gitignore.io", "Macos", "Repository Cleanliness", "Source Control", "Version Control", "Videos", "Workflow Tips"]
-tags_normalized: ["dotgitignore", "beginner guide", "development best practices", "devops", "file exclusion", "git", "github", "githubforbeginners", "gitignoredotio", "macos", "repository cleanliness", "source control", "version control", "videos", "workflow tips"]
+permalink: /devops/videos/Understanding-gitignore-Keeping-Your-Git-Repository-Clean
+tags:
+- .gitignore
+- Beginner Guide
+- Development Best Practices
+- DevOps
+- File Exclusion
+- Git
+- GitHub
+- Githubforbeginners
+- Gitignore.io
+- Macos
+- Repository Cleanliness
+- Source Control
+- Version Control
+- Videos
+- Workflow Tips
+section_names:
+- devops
 ---
-
 GitHub presents a developer-focused overview of .gitignore files, featuring best practices for maintaining clean repositories and automating template creation.<!--excerpt_end-->
 
 {% youtube 0qdRS3xYwIY %}

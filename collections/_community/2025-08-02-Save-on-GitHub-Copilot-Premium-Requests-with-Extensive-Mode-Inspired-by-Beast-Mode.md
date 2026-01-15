@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Save on GitHub Copilot Premium Requests with Extensive Mode Inspired by Beast Mode"
-description: "Author cyb3rofficial introduces 'Extensive Mode' for GitHub Copilot, inspired by Beast Mode. This enhanced prompt set improves task coverage, supports memory retention, and aids with workflows like research, refactoring, and bug testing. A gist link provides the mode file for integration and further use."
-author: "cyb3rofficial"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mfja7z/want_to_save_on_your_premium_request_well/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Save on GitHub Copilot Premium Requests with Extensive Mode Inspired by Beast Mode
+author: cyb3rofficial
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mfja7z/want_to_save_on_your_premium_request_well/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 06:09:33 +00:00
-permalink: "/2025-08-02-Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Beast Mode", "Best Practices", "Bug Testing", "Community", "Extensive Mode", "GitHub Copilot", "GPT 4.1", "Memory System", "Prompt Engineering", "Refactoring"]
-tags_normalized: ["ai", "automation", "beast mode", "best practices", "bug testing", "community", "extensive mode", "github copilot", "gpt 4dot1", "memory system", "prompt engineering", "refactoring"]
+permalink: /github-copilot/community/Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode
+tags:
+- AI
+- Automation
+- Beast Mode
+- Best Practices
+- Bug Testing
+- Community
+- Extensive Mode
+- GitHub Copilot
+- GPT 4.1
+- Memory System
+- Prompt Engineering
+- Refactoring
+section_names:
+- ai
+- github-copilot
 ---
-
 cyb3rofficial shares their creation, 'Extensive Mode', a robust prompt mode for GitHub Copilot. Drawing inspiration from Beast Mode, it introduces advanced features to support developers in a wide range of coding scenarios.<!--excerpt_end-->
 
 ## Summary

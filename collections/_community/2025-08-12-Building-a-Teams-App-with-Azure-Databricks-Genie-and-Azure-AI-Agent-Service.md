@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Building a Teams App with Azure Databricks Genie and Azure AI Agent Service"
-description: "This guide demonstrates how to develop a Microsoft Teams application that connects Azure Databricks Genie APIs through Azure AI Foundry and Azure AI Agent Service. The article covers architecture, required setup, authentication, integration strategies, and sample queries, providing hands-on resources and best practices for secure, AI-powered data intelligence within Teams."
-author: "GISV-PSA-MSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/supercharge-data-intelligence-build-teams-app-with-azure/ba-p/4442653"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Building a Teams App with Azure Databricks Genie and Azure AI Agent Service
+author: GISV-PSA-MSFT
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/supercharge-data-intelligence-build-teams-app-with-azure/ba-p/4442653
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:10:22 +00:00
-permalink: "/2025-08-12-Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Azure AI Agent Service", "Azure AI Foundry", "Azure App Service", "Azure Databricks", "Bot Service", "Coding", "Community", "Conversational AI", "Data Intelligence", "Data Visualization", "DevTunnel", "Enterprise AI Integration", "Genie API", "GitHub", "Kubernetes", "LLM Integration", "Microsoft Teams App", "ML", "Natural Language Analytics", "On Behalf Of Authentication", "Python", "Sample Code", "Secure Data Access"]
-tags_normalized: ["ai", "ai agents", "azure", "azure ai agent service", "azure ai foundry", "azure app service", "azure databricks", "bot service", "coding", "community", "conversational ai", "data intelligence", "data visualization", "devtunnel", "enterprise ai integration", "genie api", "github", "kubernetes", "llm integration", "microsoft teams app", "ml", "natural language analytics", "on behalf of authentication", "python", "sample code", "secure data access"]
+permalink: /ai/community/Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service
+tags:
+- AI
+- AI Agents
+- Azure
+- Azure AI Agent Service
+- Azure AI Foundry
+- Azure App Service
+- Azure Databricks
+- Bot Service
+- Coding
+- Community
+- Conversational AI
+- Data Intelligence
+- Data Visualization
+- DevTunnel
+- Enterprise AI Integration
+- Genie API
+- GitHub
+- Kubernetes
+- LLM Integration
+- Microsoft Teams App
+- ML
+- Natural Language Analytics
+- On Behalf Of Authentication
+- Python
+- Sample Code
+- Secure Data Access
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 GISV-PSA-MSFT walks through integrating Azure Databricks Genie APIs with Azure AI Foundry to build a secure Teams app in Python, offering actionable examples for developers and data engineers.<!--excerpt_end-->
 
 # Building a Teams App with Azure Databricks Genie and Azure AI Agent Service

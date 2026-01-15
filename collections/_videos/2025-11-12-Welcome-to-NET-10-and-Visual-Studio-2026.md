@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Welcome to .NET 10 & Visual Studio 2026!"
-description: "This keynote introduces the release of .NET 10, C# 14, .NET MAUI 10, and Visual Studio 2026. Hosted by Scott Hanselman and the .NET and Visual Studio teams, the session demonstrates new productivity features, language improvements, and tools for building modern, secure, and cloud-native apps across platforms using the latest Microsoft technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kbW7qHMBM6A"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Welcome to .NET 10 & Visual Studio 2026!
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=kbW7qHMBM6A
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/2025-11-12-Welcome-to-NET-10-and-Visual-Studio-2026.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "App Development", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform", "Developer Tools", "DevOps", "F# 10", "Language Enhancements", "Modern Web Development", "Orchestration", "Productivity", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "app development", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform", "developer tools", "devops", "fsharp 10", "language enhancements", "modern web development", "orchestration", "productivity", "videos", "vs"]
+permalink: /coding/videos/Welcome-to-NET-10-and-Visual-Studio-2026
+tags:
+- .NET
+- .NET 10
+- .NET Aspire 13
+- .NET MAUI 10
+- App Development
+- ASP.NET Core 10
+- C# 14
+- Cloud Native
+- Coding
+- Cross Platform
+- Developer Tools
+- DevOps
+- F# 10
+- Language Enhancements
+- Modern Web Development
+- Orchestration
+- Productivity
+- Videos
+- VS
+section_names:
+- coding
+- devops
 ---
-
 dotnet and the .NET team present a keynote introducing .NET 10, C# 14, and Visual Studio 2026, highlighting major new features and productivity upgrades for modern app development.<!--excerpt_end-->
 
 {% youtube kbW7qHMBM6A %}

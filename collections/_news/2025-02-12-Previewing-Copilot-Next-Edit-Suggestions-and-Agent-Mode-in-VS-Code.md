@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Previewing Copilot Next Edit Suggestions and Agent Mode in VS Code"
-description: "This article introduces three major previews for GitHub Copilot in Visual Studio Code: Next Edit Suggestions (NES), Agent Mode for Copilot Edits, and Vision support. It details how these AI-powered features can help developers write, edit, and refactor code more efficiently, catch mistakes, and streamline their workflow in VS Code."
-author: "Brigit Murtaugh, Burke Holland"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Previewing Copilot Next Edit Suggestions and Agent Mode in VS Code
+author: Brigit Murtaugh, Burke Holland
+canonical_url: https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-02-12 00:00:00 +00:00
-permalink: "/2025-02-12-Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Code Completion", "AI Pair Programming", "Code Refactoring", "Coding", "Copilot Chat", "Editing Assistance", "Editor Automation", "GitHub Copilot", "GPT 4o", "News", "Next Edit Suggestions", "Preview Features", "Vision Feature", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent mode", "ai", "ai code completion", "ai pair programming", "code refactoring", "coding", "copilot chat", "editing assistance", "editor automation", "github copilot", "gpt 4o", "news", "next edit suggestions", "preview features", "vision feature", "vs code", "vs code extensions"]
+permalink: /github-copilot/news/Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code
+tags:
+- Agent Mode
+- AI
+- AI Code Completion
+- AI Pair Programming
+- Code Refactoring
+- Coding
+- Copilot Chat
+- Editing Assistance
+- Editor Automation
+- GitHub Copilot
+- GPT 4o
+- News
+- Next Edit Suggestions
+- Preview Features
+- Vision Feature
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Brigit Murtaugh and Burke Holland introduce developers to the latest AI-driven enhancements in GitHub Copilot for Visual Studio Code, including Next Edit Suggestions, Agent Mode, and Vision capabilities.<!--excerpt_end-->
 
 # Copilot Next Edit Suggestions (preview)

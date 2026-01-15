@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Advanced Security Trials Expanded for Enterprise Customers"
-description: "This announcement details the availability of self-serve GitHub Advanced Security trials for a broader set of GitHub Enterprise customers. Enterprises can now access enhanced code security and secret protection features, with eligibility for repeat trials after 180 days. Instructions for accessing and learning more about the trial are provided."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-github-advanced-security-trials-now-available-for-more-github-enterprise-customers"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Advanced Security Trials Expanded for Enterprise Customers
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-github-advanced-security-trials-now-available-for-more-github-enterprise-customers
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 17:36:42 +00:00
-permalink: "/2025-12-18-GitHub-Advanced-Security-Trials-Expanded-for-Enterprise-Customers.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Code Security", "DevOps", "Enterprise Security", "GitHub", "GitHub Advanced Security", "Improvement", "Licensing", "News", "Secret Protection", "Security", "Security Features", "Security Trial"]
-tags_normalized: ["application security", "code security", "devops", "enterprise security", "github", "github advanced security", "improvement", "licensing", "news", "secret protection", "security", "security features", "security trial"]
+permalink: /devops/news/GitHub-Advanced-Security-Trials-Expanded-for-Enterprise-Customers
+tags:
+- Application Security
+- Code Security
+- DevOps
+- Enterprise Security
+- GitHub
+- GitHub Advanced Security
+- Improvement
+- Licensing
+- News
+- Secret Protection
+- Security
+- Security Features
+- Security Trial
+section_names:
+- devops
+- security
 ---
-
 Allison reports on the broader availability of GitHub Advanced Security self-serve trials for Enterprise customers, highlighting new eligibility rules and features for code and secret protection.<!--excerpt_end-->
 
 # GitHub Advanced Security Trials Expanded for Enterprise Customers

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "On-premises Data Gateway November 2025 Release Now Available"
-description: "The November 2025 release of the on-premises data gateway (version 3000.294) synchronizes compatibility with Power BI Desktop's latest version, ensuring seamless data refreshes and consistent query execution in the Power BI Service. This update provides direct download links for both standard and personal modes and recommends reviewing new connector updates in the Power BI feature summary."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: On-premises Data Gateway November 2025 Release Now Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-26 09:00:00 +00:00
-permalink: "/2025-11-26-On-premises-Data-Gateway-November-2025-Release-Now-Available.html"
-categories: ["ML"]
-tags: ["Analytics Platform", "Business Intelligence", "Dashboard", "Data Connectivity", "Data Connectors", "Data Integration", "Data Refresh", "Data Source", "Gateway Update", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Report Publishing"]
-tags_normalized: ["analytics platform", "business intelligence", "dashboard", "data connectivity", "data connectors", "data integration", "data refresh", "data source", "gateway update", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "report publishing"]
+permalink: /ml/news/On-premises-Data-Gateway-November-2025-Release-Now-Available
+tags:
+- Analytics Platform
+- Business Intelligence
+- Dashboard
+- Data Connectivity
+- Data Connectors
+- Data Integration
+- Data Refresh
+- Data Source
+- Gateway Update
+- Microsoft Fabric
+- ML
+- News
+- On Premises Data Gateway
+- Power BI
+- Power BI Desktop
+- Report Publishing
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog announces the November 2025 release of the on-premises data gateway. This update, version 3000.294, aligns with the latest Power BI Desktop and enhances data refresh consistency for business intelligence tasks.<!--excerpt_end-->
 
 # On-premises Data Gateway November 2025 Release (Version 3000.294)

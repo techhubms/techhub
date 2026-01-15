@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers"
-description: "Rob Bos shares insights from his GitHub Universe 2024 talk on effectively scaling GitHub Copilot across large developer organizations. The session covers strategies, real-world experiences, and access to both the recorded talk and session slides."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: 'GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers'
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-10-30 00:00:00 +00:00
-permalink: "/2024-10-30-GitHub-Universe-2024-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Blogs", "Conference", "Copilot Adoption", "Developer Tooling", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Organizational Implementation", "Scalability", "Slides"]
-tags_normalized: ["ai", "blogs", "conference", "copilot adoption", "developer tooling", "devops", "github", "github copilot", "github universe", "organizational implementation", "scalability", "slides"]
+permalink: /github-copilot/blogs/GitHub-Universe-2024-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers
+tags:
+- AI
+- Blogs
+- Conference
+- Copilot Adoption
+- Developer Tooling
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- Organizational Implementation
+- Scalability
+- Slides
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this session recap, Rob Bos discusses strategies for scaling GitHub Copilot to thousands of developers, as presented at GitHub Universe 2024. The post includes a recorded session and slides.<!--excerpt_end-->
 
 # GitHub Universe 2024 - Successfully Scaling GitHub Copilot to Thousands of Developers

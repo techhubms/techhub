@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "The Complete Playwright End-to-End Testing Story: Tools, AI Integration, and Real-World Workflows"
-description: "This article presents a comprehensive overview of Playwright’s ecosystem for end-to-end testing, covering test creation, debugging, reporting, observability, and AI-powered automation. It introduces tools like Playwright MCP, the VS Code extension, and new integrations with GitHub Copilot’s Coding Agent and Azure App Testing, exploring both practical workflows and the future of intelligent, automated testing."
-author: "Debbie O'Brien"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'The Complete Playwright End-to-End Testing Story: Tools, AI Integration, and Real-World Workflows'
+author: Debbie O'Brien
+canonical_url: https://devblogs.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-07 18:00:52 +00:00
-permalink: "/2025-08-07-The-Complete-Playwright-End-to-End-Testing-Story-Tools-AI-Integration-and-Real-World-Workflows.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Automation", "Automated Debugging", "Azure", "Azure App Testing", "Browser Automation", "Codegen", "Coding", "Continuous Integration", "DevOps", "End To End Testing", "Functional Testing", "GitHub Copilot", "GitHub Copilot Coding Agent", "JavaScript", "MCP", "News", "Playwright", "Playwright MCP", "Reporting", "Test Automation", "Testing Workflows", "Trace Viewer", "TypeScript", "UI Mode", "VS Code Extension"]
-tags_normalized: ["ai", "ai automation", "automated debugging", "azure", "azure app testing", "browser automation", "codegen", "coding", "continuous integration", "devops", "end to end testing", "functional testing", "github copilot", "github copilot coding agent", "javascript", "mcp", "news", "playwright", "playwright mcp", "reporting", "test automation", "testing workflows", "trace viewer", "typescript", "ui mode", "vs code extension"]
+permalink: /github-copilot/news/The-Complete-Playwright-End-to-End-Testing-Story-Tools-AI-Integration-and-Real-World-Workflows
+tags:
+- AI
+- AI Automation
+- Automated Debugging
+- Azure
+- Azure App Testing
+- Browser Automation
+- Codegen
+- Coding
+- Continuous Integration
+- DevOps
+- End To End Testing
+- Functional Testing
+- GitHub Copilot
+- GitHub Copilot Coding Agent
+- JavaScript
+- MCP
+- News
+- Playwright
+- Playwright MCP
+- Reporting
+- Test Automation
+- Testing Workflows
+- Trace Viewer
+- TypeScript
+- UI Mode
+- VS Code Extension
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Debbie O'Brien offers an in-depth look at Playwright’s modern testing ecosystem, highlighting end-to-end workflows, AI-powered tools, and integrations with GitHub Copilot and Azure App Testing.<!--excerpt_end-->
 
 # The Complete Playwright End-to-End Testing Story: Tools, AI Integration, and Real-World Workflows

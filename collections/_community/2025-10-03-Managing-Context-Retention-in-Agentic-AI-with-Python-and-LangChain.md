@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Managing Context Retention in Agentic AI with Python and LangChain"
-description: "This guide explains context retention challenges in agentic AI systems and provides hands-on strategies for managing context using Python. It covers Python’s ecosystem—including libraries like LangChain and CrewAI—for memory management, state persistence, and scalable multi-agent workflows. Readers will learn how to implement, test, and refine robust, context-aware AI agents for real-world applications."
-author: "RavinderGupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Managing Context Retention in Agentic AI with Python and LangChain
+author: RavinderGupta
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 05:09:48 +00:00
-permalink: "/2025-10-03-Managing-Context-Retention-in-Agentic-AI-with-Python-and-LangChain.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Development", "Community", "Context Retention", "Conversation Memory", "Conversational AI", "CrewAI", "LangChain", "Memory Management", "Multi Agent Systems", "OpenAI API", "Python", "Python Scripting", "SQLite", "State Persistence"]
-tags_normalized: ["agentic ai", "ai", "ai development", "community", "context retention", "conversation memory", "conversational ai", "crewai", "langchain", "memory management", "multi agent systems", "openai api", "python", "python scripting", "sqlite", "state persistence"]
+permalink: /ai/community/Managing-Context-Retention-in-Agentic-AI-with-Python-and-LangChain
+tags:
+- Agentic AI
+- AI
+- AI Development
+- Community
+- Context Retention
+- Conversation Memory
+- Conversational AI
+- CrewAI
+- LangChain
+- Memory Management
+- Multi Agent Systems
+- OpenAI API
+- Python
+- Python Scripting
+- SQLite
+- State Persistence
+section_names:
+- ai
 ---
-
 RavinderGupta presents a technical walkthrough on managing context retention in agentic AI using Python, featuring practical code examples, LangChain memory components, and best practices for multi-agent systems.<!--excerpt_end-->
 
 # Managing Context Retention in Agentic AI with Python

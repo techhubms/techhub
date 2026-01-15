@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds"
-description: "This article by Mike Vizard reports on a survey of 1,519 application security stakeholders, highlighting the pervasive impact of vulnerable code on security breaches. It covers key risk factors, the use of development and security tools, the role of AI in code generation and security, and the persistent challenges associated with securing the software supply chain and DevSecOps adoption."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds
+author: Mike Vizard
+canonical_url: https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-14 11:00:40 +00:00
-permalink: "/2025-08-14-Most-Organizations-Face-Breaches-Caused-by-Vulnerable-Code-Survey-Finds.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "API Security", "Application Security", "Blogs", "Breaches", "Business Of DevOps", "Checkmarx One", "CI/CD Pipelines", "Cloud Infrastructure", "Developer Tools", "DevOps", "DevSecOps", "Dynamic Application Security Testing", "Infrastructure as Code Scanning", "Open Source Vulnerabilities", "Security", "Security Breaches", "Social Facebook", "Social LinkedIn", "Social X", "Software Supple Chain", "Software Supply Chain", "Vulnerabilities", "Vulnerable Code"]
-tags_normalized: ["ai", "ai coding tools", "api security", "application security", "blogs", "breaches", "business of devops", "checkmarx one", "cislashcd pipelines", "cloud infrastructure", "developer tools", "devops", "devsecops", "dynamic application security testing", "infrastructure as code scanning", "open source vulnerabilities", "security", "security breaches", "social facebook", "social linkedin", "social x", "software supple chain", "software supply chain", "vulnerabilities", "vulnerable code"]
+permalink: /ai/blogs/Most-Organizations-Face-Breaches-Caused-by-Vulnerable-Code-Survey-Finds
+tags:
+- AI
+- AI Coding Tools
+- API Security
+- Application Security
+- Blogs
+- Breaches
+- Business Of DevOps
+- Checkmarx One
+- CI/CD Pipelines
+- Cloud Infrastructure
+- Developer Tools
+- DevOps
+- DevSecOps
+- Dynamic Application Security Testing
+- Infrastructure as Code Scanning
+- Open Source Vulnerabilities
+- Security
+- Security Breaches
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supple Chain
+- Software Supply Chain
+- Vulnerabilities
+- Vulnerable Code
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard analyzes survey findings about the widespread impact of vulnerable code on organizational security, including the challenge of AI-generated code, adoption of security tools, and the ongoing evolution of DevSecOps practices.<!--excerpt_end-->
 
 # Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds

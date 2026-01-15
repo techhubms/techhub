@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Automate Repetitive Code with GitHub Copilot"
-description: "This article demonstrates how developers can use GitHub Copilot to automate repetitive coding tasks such as boilerplate, loops, and API calls. It provides practical steps, tips, and examples for leveraging Copilot's pattern recognition to streamline your workflow and reduce manual errors."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Automate Repetitive Code with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-13 00:00:00 +00:00
-permalink: "/2025-06-13-Automate-Repetitive-Code-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Coding", "API Calls", "Blogs", "Boilerplate Reduction", "C#", "Code Generation", "Coding", "Coding Assistant", "Developer Productivity", "GitHub Copilot", "JavaScript", "Natural Language Comments", "Pattern Recognition", "Python", "Repetitive Code Automation", "Tab Completion", "Workflow Automation"]
-tags_normalized: ["ai", "ai powered coding", "api calls", "blogs", "boilerplate reduction", "csharp", "code generation", "coding", "coding assistant", "developer productivity", "github copilot", "javascript", "natural language comments", "pattern recognition", "python", "repetitive code automation", "tab completion", "workflow automation"]
+permalink: /github-copilot/blogs/Automate-Repetitive-Code-with-GitHub-Copilot
+tags:
+- AI
+- AI Powered Coding
+- API Calls
+- Blogs
+- Boilerplate Reduction
+- C#
+- Code Generation
+- Coding
+- Coding Assistant
+- Developer Productivity
+- GitHub Copilot
+- JavaScript
+- Natural Language Comments
+- Pattern Recognition
+- Python
+- Repetitive Code Automation
+- Tab Completion
+- Workflow Automation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shares practical tips on using GitHub Copilot to automate repetitive coding tasks, highlighting how AI-powered code completion streamlines development and saves time.<!--excerpt_end-->
 
 # Automate Repetitive Code with GitHub Copilot

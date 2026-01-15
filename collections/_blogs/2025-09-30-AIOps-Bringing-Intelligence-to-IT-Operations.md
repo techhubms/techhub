@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "AIOps: Bringing Intelligence to IT Operations"
-description: "This article introduces the core concepts and practical implementation steps for AIOps (Artificial Intelligence for IT Operations). It explains how IT teams can leverage machine learning and automation to improve incident detection, reduce manual effort, and enhance system resilience, featuring actionable guidance from choosing a platform to automating remediation."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/aiops-bringing-intelligence-to-it-operations/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'AIOps: Bringing Intelligence to IT Operations'
+author: Dellenny
+canonical_url: https://dellenny.com/aiops-bringing-intelligence-to-it-operations/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-30 08:30:48 +00:00
-permalink: "/2025-09-30-AIOps-Bringing-Intelligence-to-IT-Operations.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AIOps", "Anomaly Detection", "Automation", "Blogs", "Continuous Delivery", "Data Pipeline", "DevOps", "ELK Stack", "Incident Response", "IT Operations", "Kubernetes", "Machine Learning", "Monitoring", "Observability", "Predictive Analytics", "Root Cause Analysis"]
-tags_normalized: ["ai", "aiops", "anomaly detection", "automation", "blogs", "continuous delivery", "data pipeline", "devops", "elk stack", "incident response", "it operations", "kubernetes", "machine learning", "monitoring", "observability", "predictive analytics", "root cause analysis"]
+permalink: /ai/blogs/AIOps-Bringing-Intelligence-to-IT-Operations
+tags:
+- AI
+- AIOps
+- Anomaly Detection
+- Automation
+- Blogs
+- Continuous Delivery
+- Data Pipeline
+- DevOps
+- ELK Stack
+- Incident Response
+- IT Operations
+- Kubernetes
+- Machine Learning
+- Monitoring
+- Observability
+- Predictive Analytics
+- Root Cause Analysis
+section_names:
+- ai
+- devops
 ---
-
 Dellenny explores how AIOps leverages AI and automation to transform IT operations, focusing on actionable strategies for implementing intelligent, proactive systems management.<!--excerpt_end-->
 
 # AIOps: Bringing Intelligence to IT Operations

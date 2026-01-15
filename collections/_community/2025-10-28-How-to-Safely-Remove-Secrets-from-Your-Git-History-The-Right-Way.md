@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to Safely Remove Secrets from Your Git History (The Right Way)"
-description: "This guide by Sakshi_Gupta22 explains how to thoroughly purge sensitive secrets from your Git history, including step-by-step usage of git filter-repo, best practices for backup and verification, and key security reasons for complete removal. It emphasizes coordinated team effort, risk factors, and preventive measures for modern development workflows."
-author: "Sakshi_Gupta22"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Safely Remove Secrets from Your Git History (The Right Way)
+author: Sakshi_Gupta22
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 11:05:12 +00:00
-permalink: "/2025-10-28-How-to-Safely-Remove-Secrets-from-Your-Git-History-The-Right-Way.html"
-categories: ["DevOps", "Security"]
-tags: [".gitignore", "API Keys", "Backup", "Community", "DevOps", "DevOps Best Practices", "Force Push", "Git", "Git Filter Repo", "GitHub", "History Rewriting", "Incident Response", "Secret Management", "Security", "Team Coordination", "Token Rotation", "Version Control"]
-tags_normalized: ["dotgitignore", "api keys", "backup", "community", "devops", "devops best practices", "force push", "git", "git filter repo", "github", "history rewriting", "incident response", "secret management", "security", "team coordination", "token rotation", "version control"]
+permalink: /devops/community/How-to-Safely-Remove-Secrets-from-Your-Git-History-The-Right-Way
+tags:
+- .gitignore
+- API Keys
+- Backup
+- Community
+- DevOps
+- DevOps Best Practices
+- Force Push
+- Git
+- Git Filter Repo
+- GitHub
+- History Rewriting
+- Incident Response
+- Secret Management
+- Security
+- Team Coordination
+- Token Rotation
+- Version Control
+section_names:
+- devops
+- security
 ---
-
 Sakshi_Gupta22 offers a thorough walkthrough on how developers can use git filter-repo to scrub sensitive files from Git repositories, enhancing security and reducing the risk of leaked secrets.<!--excerpt_end-->
 
 # How to Safely Remove Secrets from Your Git History (The Right Way)

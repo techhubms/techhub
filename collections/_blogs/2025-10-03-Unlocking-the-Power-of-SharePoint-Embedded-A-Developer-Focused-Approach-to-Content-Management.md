@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Unlocking the Power of SharePoint Embedded: A Developer-Focused Approach to Content Management"
-description: "This article introduces SharePoint Embedded, a headless, API-first service built on Microsoft 365 for developers and ISVs. Authored by Dellenny, the post covers key benefits, integration steps, and use cases, highlighting how to incorporate secure, scalable, and compliant document management into custom applications using Microsoft Graph APIs and Azure."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Unlocking the Power of SharePoint Embedded: A Developer-Focused Approach to Content Management'
+author: Dellenny
+canonical_url: https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-03 14:09:54 +00:00
-permalink: "/2025-10-03-Unlocking-the-Power-of-SharePoint-Embedded-A-Developer-Focused-Approach-to-Content-Management.html"
-categories: ["Coding"]
-tags: ["API Integration", "Blogs", "Coding", "Compliance", "Content Management", "Developer Tools", "Document Storage", "Governance", "ISV Solutions", "Microsoft 365", "Microsoft Graph API", "SaaS", "SharePoint", "SharePoint Embedded", "SharePoint Online"]
-tags_normalized: ["api integration", "blogs", "coding", "compliance", "content management", "developer tools", "document storage", "governance", "isv solutions", "microsoft 365", "microsoft graph api", "saas", "sharepoint", "sharepoint embedded", "sharepoint online"]
+permalink: /coding/blogs/Unlocking-the-Power-of-SharePoint-Embedded-A-Developer-Focused-Approach-to-Content-Management
+tags:
+- API Integration
+- Blogs
+- Coding
+- Compliance
+- Content Management
+- Developer Tools
+- Document Storage
+- Governance
+- ISV Solutions
+- Microsoft 365
+- Microsoft Graph API
+- SaaS
+- SharePoint
+- SharePoint Embedded
+- SharePoint Online
+section_names:
+- coding
 ---
-
 Dellenny explains SharePoint Embedded, focusing on its API-first architecture that enables developers to integrate enterprise-grade content management into custom apps with secure, compliant storage and flexible billing, using Microsoft 365 and Azure.<!--excerpt_end-->
 
 # Unlocking the Power of SharePoint Embedded: A Modern Approach to Content Management

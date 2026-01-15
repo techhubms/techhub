@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Bring Your Own Language Model to Visual Studio Chat"
-description: "This update details a new Visual Studio Chat capability: developers can now connect API keys from external model providers like OpenAI, Anthropic, and Google. The guide explains enabling model integration, key features such as customization and infrastructure control, supported scenarios, and necessary usage caveats. It focuses on expanding developer choice when working with AI models within the Visual Studio environment."
-author: "Rhea Patel, Samruddhi Khandale"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+﻿---
+layout: post
+title: Bring Your Own Language Model to Visual Studio Chat
+author: Rhea Patel, Samruddhi Khandale
+canonical_url: https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-08-20 15:40:20 +00:00
-permalink: "/2025-08-20-Bring-Your-Own-Language-Model-to-Visual-Studio-Chat.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Providers", "Anthropic", "API Integration", "BYOK", "BYOM", "Chat", "Claude", "Coding", "Copilot", "Customization", "Developer Tools", "Gemini", "Google", "GPT", "Key", "Large Language Models", "Models", "News", "OpenAI", "VS"]
-tags_normalized: ["ai", "ai providers", "anthropic", "api integration", "byok", "byom", "chat", "claude", "coding", "copilot", "customization", "developer tools", "gemini", "google", "gpt", "key", "large language models", "models", "news", "openai", "vs"]
+permalink: /ai/news/Bring-Your-Own-Language-Model-to-Visual-Studio-Chat
+tags:
+- AI
+- AI Providers
+- Anthropic
+- API Integration
+- BYOK
+- BYOM
+- Chat
+- Claude
+- Coding
+- Copilot
+- Customization
+- Developer Tools
+- Gemini
+- Google
+- GPT
+- Key
+- Large Language Models
+- Models
+- News
+- OpenAI
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Rhea Patel and Samruddhi Khandale introduce a new Visual Studio Chat feature allowing developers to bring their own language models from providers like OpenAI, Anthropic, and Google, enabling customization, flexibility, and direct API integration.<!--excerpt_end-->
 
 # Bring Your Own Language Model to Visual Studio Chat

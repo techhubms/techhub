@@ -1,20 +1,42 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
-description: "This session from Microsoft Ignite 2025 explores enhancements in Microsoft Entra focused on secure identity and access for AI-driven scenarios. Topics include expanding Zero Trust architecture, agent governance using Entra Agent ID, prompt injection risk management, unified app visibility and lifecycle management, and conditional access policies. Demos illustrate practical techniques for managing identities, authentication, permissions, and granular security controls in the context of AI innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lYMuKxR5JLY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=lYMuKxR5JLY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:57:00 +00:00
-permalink: "/2025-11-20-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Account Recovery", "Agent Governance", "Agent ID", "AI", "AI Security", "App Lifecycle Management", "Authentication", "Azure", "Cloud Security", "Conditional Access", "Identity Governance", "Microsoft Entra ID", "Microsoft Ignite", "Modern Identity", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Permissions", "Prompt Injection Protection", "Security", "Security Architecture", "Unified Platform", "Videos", "Zero Trust"]
-tags_normalized: ["account recovery", "agent governance", "agent id", "ai", "ai security", "app lifecycle management", "authentication", "azure", "cloud security", "conditional access", "identity governance", "microsoft entra id", "microsoft ignite", "modern identity", "modernizesecopswithaunifiedplatform", "msignite", "permissions", "prompt injection protection", "security", "security architecture", "unified platform", "videos", "zero trust"]
+permalink: /ai/videos/Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier
+tags:
+- Account Recovery
+- Agent Governance
+- Agent ID
+- AI
+- AI Security
+- App Lifecycle Management
+- Authentication
+- Azure
+- Cloud Security
+- Conditional Access
+- Identity Governance
+- Microsoft Entra ID
+- Microsoft Ignite
+- Modern Identity
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Permissions
+- Prompt Injection Protection
+- Security
+- Security Architecture
+- Unified Platform
+- Videos
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Presented by Microsoft Events, this session details advancements in Microsoft Entra for securing AI-powered identities and networks, featuring agent governance, prompt injection risk protection, and modern approaches to Zero Trust.<!--excerpt_end-->
 
 {% youtube lYMuKxR5JLY %}

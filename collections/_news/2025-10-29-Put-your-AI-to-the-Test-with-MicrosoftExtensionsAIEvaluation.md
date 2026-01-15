@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Put your AI to the Test with Microsoft.Extensions.AI.Evaluation"
-description: "This post explains how developers can use the Microsoft.Extensions.AI.Evaluation libraries to introduce repeatable, meaningful AI evaluations into .NET intelligent app development. The libraries offer deep integration with Azure OpenAI, Azure DevOps, and Visual Studio, supporting quality, safety, and NLP evaluation of AI outputs. Features include ready-made and extensible evaluators, Azure Blob storage integration, CI pipeline support, and customizable reporting tools for tracking and monitoring evaluation data across environments."
-author: "McKenna Barlow, Shyam Namboodiripad"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Put your AI to the Test with Microsoft.Extensions.AI.Evaluation
+author: McKenna Barlow, Shyam Namboodiripad
+canonical_url: https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-29 17:00:39 +00:00
-permalink: "/2025-10-29-Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Evaluation", "Azure", "Azure Blob Storage", "Azure DevOps", "Azure OpenAI", "CI/CD", "Coding", "Content Safety", "Custom Evaluators", "DevOps", "Evaluations", "LLM", "Meai", "Microsoft.Extensions.AI.Evaluation", "MSTest", "Natural Language Processing", "News", "NuGet", "NUnit", "Quality Metrics", "Reporting", "Responsible AI", "Test Automation", "VS", "xUnit"]
-tags_normalized: ["dotnet", "ai", "ai evaluation", "azure", "azure blob storage", "azure devops", "azure openai", "cislashcd", "coding", "content safety", "custom evaluators", "devops", "evaluations", "llm", "meai", "microsoftdotextensionsdotaidotevaluation", "mstest", "natural language processing", "news", "nuget", "nunit", "quality metrics", "reporting", "responsible ai", "test automation", "vs", "xunit"]
+permalink: /ai/news/Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation
+tags:
+- .NET
+- AI
+- AI Evaluation
+- Azure
+- Azure Blob Storage
+- Azure DevOps
+- Azure OpenAI
+- CI/CD
+- Coding
+- Content Safety
+- Custom Evaluators
+- DevOps
+- Evaluations
+- LLM
+- Meai
+- Microsoft.Extensions.AI.Evaluation
+- MSTest
+- Natural Language Processing
+- News
+- NuGet
+- NUnit
+- Quality Metrics
+- Reporting
+- Responsible AI
+- Test Automation
+- VS
+- xUnit
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 McKenna Barlow and Shyam Namboodiripad detail how developers can leverage Microsoft.Extensions.AI.Evaluation to systematically assess and improve the quality, safety, and relevance of AI outputs in .NET applications.<!--excerpt_end-->
 
 # Put your AI to the Test with Microsoft.Extensions.AI.Evaluation

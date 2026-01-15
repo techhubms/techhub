@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "On .NET Live – Practical Use of Source Generators in Jinget"
-description: "This session explores how Source Generators in .NET, leveraged by the Jinget framework, automate code, improve productivity, and reduce boilerplate. Guest Vahid Farahmandian discusses integration strategies, lessons learned, and best practices, along with a walkthrough and live demo. Hosted by Maira Wenzel and Scott Addie."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=24o_LuUEhhk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: On .NET Live – Practical Use of Source Generators in Jinget
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=24o_LuUEhhk
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-29 05:04:52 +00:00
-permalink: "/2025-07-29-On-NET-Live-Practical-Use-of-Source-Generators-in-Jinget.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 5", "Boilerplate Reduction", "Coding", "Compile Time Code Generation", "Demo", "Developer Community", "Developer Productivity", "Dotnetdeveloper", "Framework Design", "Jinget", "Microsoft", "Software Developer", "Software Development", "Source Generators", "Sourcegenerators", "Videos"]
-tags_normalized: ["dotnet", "dotnet 5", "boilerplate reduction", "coding", "compile time code generation", "demo", "developer community", "developer productivity", "dotnetdeveloper", "framework design", "jinget", "microsoft", "software developer", "software development", "source generators", "sourcegenerators", "videos"]
+permalink: /coding/videos/On-NET-Live-Practical-Use-of-Source-Generators-in-Jinget
+tags:
+- .NET
+- .NET 5
+- Boilerplate Reduction
+- Coding
+- Compile Time Code Generation
+- Demo
+- Developer Community
+- Developer Productivity
+- Dotnetdeveloper
+- Framework Design
+- Jinget
+- Microsoft
+- Software Developer
+- Software Development
+- Source Generators
+- Sourcegenerators
+- Videos
+section_names:
+- coding
 ---
-
 In this On .NET Live session, guest Vahid Farahmandian, along with hosts Maira Wenzel and Scott Addie, delve into Source Generators in .NET as used in the Jinget framework. Discover integration strategies, challenges, and real-world benefits.<!--excerpt_end-->
 
 {% youtube 24o_LuUEhhk %}

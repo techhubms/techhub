@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical"
-description: "Andrew Lock explores the challenges of maintaining applications on rapidly evolving .NET versions, examining Microsoft's official support lifecycle and arguing that paying for post-End-of-Life (EOL) support from providers like HeroDevs may be a practical solution. The post details .NET's active and maintenance support phases, the regulatory and technical risks of running unsupported versions, and demonstrates how HeroDevs' Never Ending Support for .NET 6 protects legacy apps from critical vulnerabilities, such as CVE-2025-55315."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-11-18 10:00:00 +00:00
-permalink: "/2025-11-18-Managing-NET-Support-Lifecycles-Why-Paying-for-Post-EOL-Support-Is-Practical.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET 10", ".NET 6", ".NET 8", ".NET 9", ".NET Core", "ASP.NET Core", "Blogs", "Coding", "CVE 55315", "End Of Life", "Enterprise Compliance", "EOL Support", "HeroDevs", "LTS", "Never Ending Support", "Patching", "Regulatory Risk", "Request Smuggling", "Runtime", "SDK", "Security", "Security Fixes", "Security Vulnerability", "STS", "Support Lifecycle", "Version Upgrades"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 6", "dotnet 8", "dotnet 9", "dotnet core", "aspdotnet core", "blogs", "coding", "cve 55315", "end of life", "enterprise compliance", "eol support", "herodevs", "lts", "never ending support", "patching", "regulatory risk", "request smuggling", "runtime", "sdk", "security", "security fixes", "security vulnerability", "sts", "support lifecycle", "version upgrades"]
+permalink: /coding/blogs/Managing-NET-Support-Lifecycles-Why-Paying-for-Post-EOL-Support-Is-Practical
+tags:
+- .NET
+- .NET 10
+- .NET 6
+- .NET 8
+- .NET 9
+- .NET Core
+- ASP.NET Core
+- Blogs
+- Coding
+- CVE 55315
+- End Of Life
+- Enterprise Compliance
+- EOL Support
+- HeroDevs
+- LTS
+- Never Ending Support
+- Patching
+- Regulatory Risk
+- Request Smuggling
+- Runtime
+- SDK
+- Security
+- Security Fixes
+- Security Vulnerability
+- STS
+- Support Lifecycle
+- Version Upgrades
+section_names:
+- coding
+- security
 ---
-
 Andrew Lock reviews the .NET support lifecycle and demonstrates how organizations can avoid risks from unsupported versions by leveraging HeroDevs' Never Ending Support for .NET 6.<!--excerpt_end-->
 
 # Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical

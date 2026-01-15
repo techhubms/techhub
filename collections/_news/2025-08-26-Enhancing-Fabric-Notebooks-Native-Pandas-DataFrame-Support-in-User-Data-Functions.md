@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhancing Fabric Notebooks: Native Pandas DataFrame Support in User Data Functions"
-description: "This post details a major update to Microsoft Fabric's Notebook integration with User Data Functions (UDFs), adding native support for Pandas DataFrames and Series via Apache Arrow. The new feature increases performance and efficiency, enabling seamless large-scale data processing and improved collaboration across Python, PySpark, Scala, and R environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Enhancing Fabric Notebooks: Native Pandas DataFrame Support in User Data Functions'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 11:45:35 +00:00
-permalink: "/2025-08-26-Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Arrow", "Azure", "Cross Language Support", "Data Analytics", "Data Engineering", "Data Processing", "DataFrames", "Microsoft Fabric", "ML", "News", "Notebook", "Pandas", "Performance Optimization", "PySpark", "Python", "Python Notebooks", "Scala", "UDF", "User Data Functions"]
-tags_normalized: ["apache arrow", "azure", "cross language support", "data analytics", "data engineering", "data processing", "dataframes", "microsoft fabric", "ml", "news", "notebook", "pandas", "performance optimization", "pyspark", "python", "python notebooks", "scala", "udf", "user data functions"]
+permalink: /ml/news/Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions
+tags:
+- Apache Arrow
+- Azure
+- Cross Language Support
+- Data Analytics
+- Data Engineering
+- Data Processing
+- DataFrames
+- Microsoft Fabric
+- ML
+- News
+- Notebook
+- Pandas
+- Performance Optimization
+- PySpark
+- Python
+- Python Notebooks
+- Scala
+- UDF
+- User Data Functions
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces a major update by enabling native Pandas DataFrame and Series support in User Data Functions within Fabric Notebooks. This enhancement, powered by Apache Arrow, streamlines large-scale data analysis and enables high-efficiency workflows for data engineers and scientists.<!--excerpt_end-->
 
 # Enhancing Fabric Notebooks: Native Pandas DataFrame Support in User Data Functions

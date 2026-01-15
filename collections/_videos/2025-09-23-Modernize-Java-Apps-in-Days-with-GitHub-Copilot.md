@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Modernize Java Apps in Days with GitHub Copilot"
-description: "This short video from Microsoft Developer spotlights how GitHub Copilot can enhance the process of modernizing Java applications. It covers features that assist in streamlining upgrades, fixing code quickly, addressing vulnerabilities, and helping organizations implement secure and compliant modernization workflows. The content targets developers looking to accelerate Java app improvements using GitHub Copilot in enterprise settings."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/D-fES6lwrks"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Modernize Java Apps in Days with GitHub Copilot
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/D-fES6lwrks
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-23 15:28:19 +00:00
-permalink: "/2025-09-23-Modernize-Java-Apps-in-Days-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Accelerated Development", "AI", "App Modernization", "Cloud Computing", "Cloud Migration", "Code Automation", "Code Security", "Compliance", "Copilot", "Dev", "Developer Tools", "Development", "Enterprise Security", "GitHub", "GitHub Copilot", "Java", "Microsoft", "Modernize", "Software Updates", "Tech", "Technology", "Videos", "Vulnerability Fixing"]
-tags_normalized: ["accelerated development", "ai", "app modernization", "cloud computing", "cloud migration", "code automation", "code security", "compliance", "copilot", "dev", "developer tools", "development", "enterprise security", "github", "github copilot", "java", "microsoft", "modernize", "software updates", "tech", "technology", "videos", "vulnerability fixing"]
+permalink: /github-copilot/videos/Modernize-Java-Apps-in-Days-with-GitHub-Copilot
+tags:
+- Accelerated Development
+- AI
+- App Modernization
+- Cloud Computing
+- Cloud Migration
+- Code Automation
+- Code Security
+- Compliance
+- Copilot
+- Dev
+- Developer Tools
+- Development
+- Enterprise Security
+- GitHub
+- GitHub Copilot
+- Java
+- Microsoft
+- Modernize
+- Software Updates
+- Tech
+- Technology
+- Videos
+- Vulnerability Fixing
+section_names:
+- ai
+- github-copilot
 ---
-
 Microsoft Developer highlights the benefits of using GitHub Copilot to modernize Java applications, showing how it can streamline upgrades and help ensure secure, fast, and compliant code.<!--excerpt_end-->
 
 {% youtube D-fES6lwrks %}

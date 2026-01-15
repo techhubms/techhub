@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Malicious Nx Packages Used in Two Waves of Supply Chain Attack"
-description: "This article offers a detailed report on a sophisticated supply chain attack targeting the Nx build system, revealing how attackers exploited GitHub workflows and npm registry vulnerabilities, leaked thousands of secrets, and abused AI CLI tools. It analyzes the phases of the attack, the technical mechanisms involved, and the steps taken by the Nx maintainers and the broader DevOps community to remediate and prevent future breaches, emphasizing supply chain security challenges."
-author: "Jeff Burt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Malicious Nx Packages Used in Two Waves of Supply Chain Attack
+author: Jeff Burt
+canonical_url: https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-29 17:15:10 +00:00
-permalink: "/2025-08-29-Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI CLI Tools", "Automation", "Blogs", "Credential Theft", "DevOps", "DevOps And Open Technologies", "DevOps Security", "GitGuardian", "GitHub", "GitHub Workflow", "Malware", "npm Registry", "Nx", "Open Source Security", "Publish.yml", "Repository Permissions", "Security", "Social Facebook", "Social LinkedIn", "Social X", "StepSecurity", "Supply Chain Attack", "Supply Chain Attacks", "Token Leakage", "Trusted Publisher", "Wiz"]
-tags_normalized: ["ai", "ai cli tools", "automation", "blogs", "credential theft", "devops", "devops and open technologies", "devops security", "gitguardian", "github", "github workflow", "malware", "npm registry", "nx", "open source security", "publishdotyml", "repository permissions", "security", "social facebook", "social linkedin", "social x", "stepsecurity", "supply chain attack", "supply chain attacks", "token leakage", "trusted publisher", "wiz"]
+permalink: /ai/blogs/Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack
+tags:
+- AI
+- AI CLI Tools
+- Automation
+- Blogs
+- Credential Theft
+- DevOps
+- DevOps And Open Technologies
+- DevOps Security
+- GitGuardian
+- GitHub
+- GitHub Workflow
+- Malware
+- npm Registry
+- Nx
+- Open Source Security
+- Publish.yml
+- Repository Permissions
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- StepSecurity
+- Supply Chain Attack
+- Supply Chain Attacks
+- Token Leakage
+- Trusted Publisher
+- Wiz
+section_names:
+- ai
+- devops
+- security
 ---
-
 Jeff Burt reports on a major supply chain attack against the Nx build system, highlighting credential theft, GitHub workflow abuse, and innovative use of AI CLI tools in a rapidly evolving DevOps security landscape.<!--excerpt_end-->
 
 # Malicious Nx Packages Used in Two Waves of Supply Chain Attack

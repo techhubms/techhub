@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Advanced Agent Development with Copilot Studio"
-description: "This Microsoft Ignite 2025 breakout session, led by Scott Durow, provides an in-depth look at advanced agent development in Microsoft Copilot Studio. Tailored for both makers and developers, it covers the orchestration of intelligent autonomous agents, management of AI models, knowledge grounding, automated triggers, multi-agent orchestration, and integration with UI automation tools to transform business operations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FQfjBTR7nsQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Advanced Agent Development with Copilot Studio
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=FQfjBTR7nsQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:00:16 +00:00
-permalink: "/2025-11-21-Advanced-Agent-Development-with-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["Advanced AI", "Agent Orchestration", "AI", "AI Agents", "AI Development", "Anthropic Models", "Autonomous Triggers", "Business Process Automation", "Copilot Studio", "Demo", "Innovatewithlow", "Knowledge Grounding", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Scott Durow", "UI Automation", "Videos"]
-tags_normalized: ["advanced ai", "agent orchestration", "ai", "ai agents", "ai development", "anthropic models", "autonomous triggers", "business process automation", "copilot studio", "demo", "innovatewithlow", "knowledge grounding", "microsoft ignite", "msignite", "multi agent systems", "scott durow", "ui automation", "videos"]
+permalink: /ai/videos/Advanced-Agent-Development-with-Copilot-Studio
+tags:
+- Advanced AI
+- Agent Orchestration
+- AI
+- AI Agents
+- AI Development
+- Anthropic Models
+- Autonomous Triggers
+- Business Process Automation
+- Copilot Studio
+- Demo
+- Innovatewithlow
+- Knowledge Grounding
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- Scott Durow
+- UI Automation
+- Videos
+section_names:
+- ai
 ---
-
 Scott Durow, at Microsoft Ignite 2025, presents a session for makers and developers on advanced agent development with Copilot Studio, focusing on orchestrating intelligent agents and automating real business processes.<!--excerpt_end-->
 
 {% youtube FQfjBTR7nsQ %}

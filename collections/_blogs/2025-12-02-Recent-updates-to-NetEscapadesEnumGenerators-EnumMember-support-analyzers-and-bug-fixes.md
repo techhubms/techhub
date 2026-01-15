@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes"
-description: "This article by Andrew Lock details updates in the NetEscapades.EnumGenerators source generator, a NuGet package for generating fast enum methods in .NET. Topics covered include support for [EnumMember], improved metadata attribute selection, addition of new Roslyn analyzers for diagnostic feedback, and several bug fixes related to C#14 extension members and reserved word handling. The post provides practical examples, benchmarks, and code snippets illustrating how developers can use and configure the package for better performance and maintainability."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-12-02 09:00:00 +00:00
-permalink: "/2025-12-02-Recent-updates-to-NetEscapadesEnumGenerators-EnumMember-support-analyzers-and-bug-fixes.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Core", "Analyzers", "BenchmarkDotNet", "Blogs", "C#", "Coding", "DescriptionAttribute", "Diagnostics", "DisplayAttribute", "EnumGenerators", "EnumMember", "Extension Methods", "Metadata Attributes", "NuGet", "Performance Optimization", "Roslyn", "Source Generator", "Source Generators"]
-tags_normalized: ["dotnet", "dotnet core", "analyzers", "benchmarkdotnet", "blogs", "csharp", "coding", "descriptionattribute", "diagnostics", "displayattribute", "enumgenerators", "enummember", "extension methods", "metadata attributes", "nuget", "performance optimization", "roslyn", "source generator", "source generators"]
+permalink: /coding/blogs/Recent-updates-to-NetEscapadesEnumGenerators-EnumMember-support-analyzers-and-bug-fixes
+tags:
+- .NET
+- .NET Core
+- Analyzers
+- BenchmarkDotNet
+- Blogs
+- C#
+- Coding
+- DescriptionAttribute
+- Diagnostics
+- DisplayAttribute
+- EnumGenerators
+- EnumMember
+- Extension Methods
+- Metadata Attributes
+- NuGet
+- Performance Optimization
+- Roslyn
+- Source Generator
+- Source Generators
+section_names:
+- coding
 ---
-
 Andrew Lock explains the recent improvements to NetEscapades.EnumGenerators, a .NET source generator package, including support for [EnumMember], additional analyzers, and bug fixes. Developers gain new metadata options and guidance on edge cases.<!--excerpt_end-->
 
 # Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes

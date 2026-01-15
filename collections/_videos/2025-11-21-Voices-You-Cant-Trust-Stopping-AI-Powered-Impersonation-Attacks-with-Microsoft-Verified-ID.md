@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Voices You Can't Trust: Stopping AI-Powered Impersonation Attacks with Microsoft Verified ID"
-description: "This Microsoft Ignite session, presented by Jeremy Nelson, examines real-world cases of AI-powered deepfake fraud, including a $25 million scam, and explores how attackers use deepfakes to bypass standard identity checks. The session introduces Microsoft's Verified ID as a solution for securing support desk interactions and provides actionable strategies for organizations to defend against AI-driven impersonation threats."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QHBc5hh4gKk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=QHBc5hh4gKk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:53:42 +00:00
-permalink: "/2025-11-21-Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Deepfakes", "Decentralized Identity", "Enterprise Security", "Fraud Prevention", "Impersonation Attacks", "Microsoft Ignite", "MSIgnite", "Organizational Change Management", "ProtectcloudAIplatformandapps", "Security", "Social Engineering", "Threat Protection", "Verified ID", "Videos"]
-tags_normalized: ["ai", "ai deepfakes", "decentralized identity", "enterprise security", "fraud prevention", "impersonation attacks", "microsoft ignite", "msignite", "organizational change management", "protectcloudaiplatformandapps", "security", "social engineering", "threat protection", "verified id", "videos"]
+permalink: /ai/videos/Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID
+tags:
+- AI
+- AI Deepfakes
+- Decentralized Identity
+- Enterprise Security
+- Fraud Prevention
+- Impersonation Attacks
+- Microsoft Ignite
+- MSIgnite
+- Organizational Change Management
+- ProtectcloudAIplatformandapps
+- Security
+- Social Engineering
+- Threat Protection
+- Verified ID
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Jeremy Nelson from Microsoft presents at Ignite, detailing how AI-driven deepfake fraud is happening today and how Microsoft's Verified ID can help organizations strengthen their defenses against impersonation attacks.<!--excerpt_end-->
 
 {% youtube QHBc5hh4gKk %}

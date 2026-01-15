@@ -1,20 +1,58 @@
----
-layout: "post"
-title: ".NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development"
-description: "This news preview covers .NET Conf 2025, a free three-day virtual conference held November 11-13, focusing on the launch of .NET 10 and Visual Studio 2026, Microsoft’s latest developer tools, and innovations in AI, cloud-native development, Aspire, security, containers, and more. Featuring deep dives from the product teams, community sessions around real-world projects, and a dedicated Student Zone, the event explores new C# 14 features, Azure-native workloads, Blazor, .NET MAUI, AI frameworks, agentic development, and practical migration strategies. The conference includes interactive sessions, networking, and hands-on learning opportunities."
-author: "Jon Galloway"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: '.NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development'
+author: Jon Galloway
+canonical_url: https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-04 18:00:00 +00:00
-permalink: "/2025-11-04-NET-Conf-2025-Launching-NET-10-Visual-Studio-2026-and-the-Future-of-Cloud-Native-and-AI-Development.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET Conf", "AI", "ASP.NET", "ASP.NET Core", "Aspire", "Azure", "Azure AI Foundry", "Azure Keynote", "Blazor", "C# 14", "Cloud", "Cloud Native", "Coding", "Community Sessions", "Containers", "DevOps", "Dotnetconf", "F#", "GitHub Copilot", "MAUI", "MCP", "Microsoft Agent Framework", "ML", "News", "NuGet", "Observability", "OpenTelemetry", "Passkeys", "Security", "Student Zone", "Testing", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet conf", "ai", "aspdotnet", "aspdotnet core", "aspire", "azure", "azure ai foundry", "azure keynote", "blazor", "csharp 14", "cloud", "cloud native", "coding", "community sessions", "containers", "devops", "dotnetconf", "fsharp", "github copilot", "maui", "mcp", "microsoft agent framework", "ml", "news", "nuget", "observability", "opentelemetry", "passkeys", "security", "student zone", "testing", "vs"]
+permalink: /github-copilot/news/NET-Conf-2025-Launching-NET-10-Visual-Studio-2026-and-the-Future-of-Cloud-Native-and-AI-Development
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET Conf
+- AI
+- ASP.NET
+- ASP.NET Core
+- Aspire
+- Azure
+- Azure AI Foundry
+- Azure Keynote
+- Blazor
+- C# 14
+- Cloud
+- Cloud Native
+- Coding
+- Community Sessions
+- Containers
+- DevOps
+- Dotnetconf
+- F#
+- GitHub Copilot
+- MAUI
+- MCP
+- Microsoft Agent Framework
+- ML
+- News
+- NuGet
+- Observability
+- OpenTelemetry
+- Passkeys
+- Security
+- Student Zone
+- Testing
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- ml
+- security
 ---
-
 Jon Galloway previews .NET Conf 2025, spotlighting the release of .NET 10, Visual Studio 2026, cloud-native and AI advancements, plus deep technical and community-driven learning opportunities for developers.<!--excerpt_end-->
 
 # .NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development

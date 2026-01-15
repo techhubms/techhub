@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Community Experiences with GPT-5 in GitHub Copilot and Coding Workflows"
-description: "This community discussion collects firsthand experiences using GPT-5, particularly through GitHub Copilot and coding agents in Visual Studio Code. Contributors share insights on GPT-5’s coding strengths and weaknesses, performance compared to other LLMs, integration in workflows, and practical developer pain points including speed issues, cost, agent configuration, and buggy behavior."
-author: "gullu_7278"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mkse98/how_is_gpt5_experience_for_everyone/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Community Experiences with GPT-5 in GitHub Copilot and Coding Workflows
+author: gullu_7278
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mkse98/how_is_gpt5_experience_for_everyone/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-08 11:14:40 +00:00
-permalink: "/2025-08-08-Community-Experiences-with-GPT-5-in-GitHub-Copilot-and-Coding-Workflows.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistants", "Beast Mode", "Bug Fixing", "Claude 4", "Coding", "Community", "Copilot Chat", "Cost Analysis", "Data Science", "Developer Workflow", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 5", "LLM Performance", "Prompt Engineering", "React", "Sonnet 4", "VS Code", "VS Code Settings"]
-tags_normalized: ["ai", "ai coding assistants", "beast mode", "bug fixing", "claude 4", "coding", "community", "copilot chat", "cost analysis", "data science", "developer workflow", "gemini 2dot5 pro", "github copilot", "gpt 5", "llm performance", "prompt engineering", "react", "sonnet 4", "vs code", "vs code settings"]
+permalink: /github-copilot/community/Community-Experiences-with-GPT-5-in-GitHub-Copilot-and-Coding-Workflows
+tags:
+- AI
+- AI Coding Assistants
+- Beast Mode
+- Bug Fixing
+- Claude 4
+- Coding
+- Community
+- Copilot Chat
+- Cost Analysis
+- Data Science
+- Developer Workflow
+- Gemini 2.5 Pro
+- GitHub Copilot
+- GPT 5
+- LLM Performance
+- Prompt Engineering
+- React
+- Sonnet 4
+- VS Code
+- VS Code Settings
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 gullu_7278 starts a community conversation sharing personal results and frustrations with GPT-5 inside GitHub Copilot and VS Code, inviting others to reflect on speed, cost, and code quality in practical developer settings.<!--excerpt_end-->
 
 # Community Experiences with GPT-5 in GitHub Copilot and Coding Workflows

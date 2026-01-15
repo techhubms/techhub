@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support"
-description: "This tutorial by justinyoo demonstrates how to design a single Model Context Protocol (MCP) server in .NET that supports both STDIO (console) and HTTP transports. The solution uses the .NET builder pattern, leveraging command-line arguments or environment variables to determine the hosting mode at runtime. The guide walks through using shared logic, minimizing code duplication, and applying conditional setup to create a versatile, manageable server deployment."
-author: "justinyoo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support'
+author: justinyoo
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-15 08:02:40 +00:00
-permalink: "/2025-08-15-Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", ".NET Builder Pattern", "ASP.NET", "Azure", "C#", "Coding", "Command Line Arguments", "Community", "Copilot Studio", "Dependency Injection", "Environment Variables", "Host", "HostApplicationBuilder", "HTTP Transport", "IHost", "MCP", "Sample Applications", "Server Deployment", "STDIO Transport", "WebApplication", "WebApplicationBuilder"]
-tags_normalized: ["dotnet", "dotnet builder pattern", "aspdotnet", "azure", "csharp", "coding", "command line arguments", "community", "copilot studio", "dependency injection", "environment variables", "host", "hostapplicationbuilder", "http transport", "ihost", "mcp", "sample applications", "server deployment", "stdio transport", "webapplication", "webapplicationbuilder"]
+permalink: /coding/community/Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support
+tags:
+- .NET
+- .NET Builder Pattern
+- ASP.NET
+- Azure
+- C#
+- Coding
+- Command Line Arguments
+- Community
+- Copilot Studio
+- Dependency Injection
+- Environment Variables
+- Host
+- HostApplicationBuilder
+- HTTP Transport
+- IHost
+- MCP
+- Sample Applications
+- Server Deployment
+- STDIO Transport
+- WebApplication
+- WebApplicationBuilder
+section_names:
+- azure
+- coding
 ---
-
 justinyoo explains how to implement a .NET MCP server with runtime-selectable STDIO and HTTP transports, reducing management overhead and supporting integration with Copilot Studio and other platforms.<!--excerpt_end-->
 
 # Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support

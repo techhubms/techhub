@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AI Frontiers with Foundry Labs at Microsoft Ignite: Experimenting with Multi-Agent Orchestration"
-description: "This session from Microsoft Ignite 2025 explores Foundry Labs, a platform that empowers researchers to experiment with cutting-edge AI models and agent orchestration tools. Highlights include demonstrations of Trellis for 3D object generation, the introduction of Autogen as an open-source agent framework, and previews of emerging AI showcases like Aurora and MMCT Agent. Attendees gain insights into global research collaborations, advanced modeling applications in sectors such as agriculture and energy, and the integration of Azure AI Search for agent-driven workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kyb-ZISRa48"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Frontiers with Foundry Labs at Microsoft Ignite: Experimenting with Multi-Agent Orchestration'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=kyb-ZISRa48
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:34:55 +00:00
-permalink: "/2025-11-20-AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experimenting-with-Multi-Agent-Orchestration.html"
-categories: ["AI", "Azure"]
-tags: ["3D Object Generation", "Agent Factory", "AI", "AI Agents", "Aurora", "Autogen Framework", "Azure", "Azure AI", "Azure AI Search", "Enterprise AI", "Fine Tuning", "InnovatewithAzureAIappsandagents", "Microsoft Foundry Labs", "Microsoft Research", "MMCT Agent", "MSIgnite", "Multi Agent Orchestration", "Planner Critic Architecture", "Trellis", "Videos", "Weather Modeling"]
-tags_normalized: ["3d object generation", "agent factory", "ai", "ai agents", "aurora", "autogen framework", "azure", "azure ai", "azure ai search", "enterprise ai", "fine tuning", "innovatewithazureaiappsandagents", "microsoft foundry labs", "microsoft research", "mmct agent", "msignite", "multi agent orchestration", "planner critic architecture", "trellis", "videos", "weather modeling"]
+permalink: /ai/videos/AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experimenting-with-Multi-Agent-Orchestration
+tags:
+- 3D Object Generation
+- Agent Factory
+- AI
+- AI Agents
+- Aurora
+- Autogen Framework
+- Azure
+- Azure AI
+- Azure AI Search
+- Enterprise AI
+- Fine Tuning
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry Labs
+- Microsoft Research
+- MMCT Agent
+- MSIgnite
+- Multi Agent Orchestration
+- Planner Critic Architecture
+- Trellis
+- Videos
+- Weather Modeling
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an advanced session at Ignite 2025 focusing on AI experimentation in Foundry Labs. The talk features Ashley Llorens, Marco Casalaina, and Shannon Monroe, and dives into agent orchestration, open-source frameworks, and Microsoft’s research innovations.<!--excerpt_end-->
 
 {% youtube kyb-ZISRa48 %}

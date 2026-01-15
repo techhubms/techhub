@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How to Build an MCP Server and Connect It to Semantic Kernel: Full Tutorial"
-description: "This video tutorial guides developers through building an MCP (Model Context Protocol) Server from scratch and connecting it to a Semantic Kernel Client. Viewers learn core concepts of MCP, practical steps for server setup, and integration techniques to leverage real-time context for AI applications using Microsoft's Semantic Kernel platform."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=i3UfPHg8hM8"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: 'How to Build an MCP Server and Connect It to Semantic Kernel: Full Tutorial'
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=i3UfPHg8hM8
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-04-28 06:47:49 +00:00
-permalink: "/2025-04-28-How-to-Build-an-MCP-Server-and-Connect-It-to-Semantic-Kernel-Full-Tutorial.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Development", "AI Integration", "Aidevelopment", "Coding", "Context Providers", "Dynamic Applications", "MCP", "MCPServer", "Microsoft", "Microsoft AI", "OpenAI", "Programming", "Real Time Context", "Semantic Kernel", "Semantic Kernel Client", "SemanticKernelClient", "Server Setup", "Tutorial", "Videos"]
-tags_normalized: ["ai", "ai development", "ai integration", "aidevelopment", "coding", "context providers", "dynamic applications", "mcp", "mcpserver", "microsoft", "microsoft ai", "openai", "programming", "real time context", "semantic kernel", "semantic kernel client", "semantickernelclient", "server setup", "tutorial", "videos"]
+permalink: /ai/videos/How-to-Build-an-MCP-Server-and-Connect-It-to-Semantic-Kernel-Full-Tutorial
+tags:
+- AI
+- AI Development
+- AI Integration
+- Aidevelopment
+- Coding
+- Context Providers
+- Dynamic Applications
+- MCP
+- MCPServer
+- Microsoft
+- Microsoft AI
+- OpenAI
+- Programming
+- Real Time Context
+- Semantic Kernel
+- Semantic Kernel Client
+- SemanticKernelClient
+- Server Setup
+- Tutorial
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Learn Microsoft AI presents a hands-on tutorial for developers on building an MCP Server and seamlessly integrating it with Semantic Kernel, highlighting practical AI development using Microsoft technologies.<!--excerpt_end-->
 
 {% youtube i3UfPHg8hM8 %}

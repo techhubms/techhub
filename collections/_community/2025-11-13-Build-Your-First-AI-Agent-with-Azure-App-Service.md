@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Build Your First AI Agent with Azure App Service"
-description: "This guide by jordanselig shows developers how to leverage Azure App Service for building AI agents and agentic web applications. It explores native integrations with Azure OpenAI, Semantic Kernel, and agent development frameworks. Key sections include building chatbots, using agentic patterns, integrating OpenAPI tools, and advancing to production-grade AI agents with Microsoft's Agent Framework. Security and DevOps practices are also touched on, offering practical steps and resources for getting started."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-your-first-ai-agent-with-azure-app-service/ba-p/4468725"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build Your First AI Agent with Azure App Service
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-your-first-ai-agent-with-azure-app-service/ba-p/4468725
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 17:43:25 +00:00
-permalink: "/2025-11-13-Build-Your-First-AI-Agent-with-Azure-App-Service.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "Agentic Applications", "AI", "AI Agent", "Azure", "Azure AI Foundry", "Azure App Service", "Azure OpenAI", "Codespaces", "Coding", "Community", "DevOps", "GitHub Actions", "Java", "LangGraph", "MCP", "Microsoft Agent Framework", "Network Isolation", "Node.js", "OpenAPI Integration", "PaaS", "Python", "RAG Applications", "Role Based Access Control", "Semantic Kernel", "Web Apps"]
-tags_normalized: ["dotnet", "agentic applications", "ai", "ai agent", "azure", "azure ai foundry", "azure app service", "azure openai", "codespaces", "coding", "community", "devops", "github actions", "java", "langgraph", "mcp", "microsoft agent framework", "network isolation", "nodedotjs", "openapi integration", "paas", "python", "rag applications", "role based access control", "semantic kernel", "web apps"]
+permalink: /ai/community/Build-Your-First-AI-Agent-with-Azure-App-Service
+tags:
+- .NET
+- Agentic Applications
+- AI
+- AI Agent
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure OpenAI
+- Codespaces
+- Coding
+- Community
+- DevOps
+- GitHub Actions
+- Java
+- LangGraph
+- MCP
+- Microsoft Agent Framework
+- Network Isolation
+- Node.js
+- OpenAPI Integration
+- PaaS
+- Python
+- RAG Applications
+- Role Based Access Control
+- Semantic Kernel
+- Web Apps
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 jordanselig walks through modern approaches for building AI agents and agentic web apps on Azure App Service, highlighting integration strategies, frameworks, and practical developer resources.<!--excerpt_end-->
 
 # Build Your First AI Agent with Azure App Service

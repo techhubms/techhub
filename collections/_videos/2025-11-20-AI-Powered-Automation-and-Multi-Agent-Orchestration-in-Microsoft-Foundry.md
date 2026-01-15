@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry"
-description: "This expert-level session from Microsoft Ignite 2025 dives into designing and orchestrating multi-agent systems using Microsoft Foundry. The presentation covers the transition from single-agent prototypes to ensemble orchestration with the Foundry Agent Framework, leveraging Semantic Kernel and AutoGen, as well as integrations with LangGraph and OpenAI Agents SDK. Topics include shared state, human-in-the-loop processes, A2A activity protocol, Purview governance, and OpenTelemetry-based observability, with practical insights and policy enforcement for deploying governed, secure agents at scale."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U20tVialbao"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=U20tVialbao
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:47:30 +00:00
-permalink: "/2025-11-20-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Activity Protocol", "Agent Framework", "Agent Orchestration", "AI", "AutoGen", "Azure", "Azure AI", "Azure Purview", "Containerized Agents", "Data Governance", "GitHub Copilot", "GitHub Copilot Extensions", "Human in The Loop", "InnovatewithAzureAIappsandagents", "LangGraph", "MCP Toolchains", "Microsoft Foundry", "ML", "MSIgnite", "Multi Agent Systems", "OpenAI Agents SDK", "OpenTelemetry", "Policy Middleware", "Secure Deployment", "Security", "Semantic Kernel", "Videos", "VS"]
-tags_normalized: ["activity protocol", "agent framework", "agent orchestration", "ai", "autogen", "azure", "azure ai", "azure purview", "containerized agents", "data governance", "github copilot", "github copilot extensions", "human in the loop", "innovatewithazureaiappsandagents", "langgraph", "mcp toolchains", "microsoft foundry", "ml", "msignite", "multi agent systems", "openai agents sdk", "opentelemetry", "policy middleware", "secure deployment", "security", "semantic kernel", "videos", "vs"]
+permalink: /ai/videos/AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry
+tags:
+- Activity Protocol
+- Agent Framework
+- Agent Orchestration
+- AI
+- AutoGen
+- Azure
+- Azure AI
+- Azure Purview
+- Containerized Agents
+- Data Governance
+- GitHub Copilot
+- GitHub Copilot Extensions
+- Human in The Loop
+- InnovatewithAzureAIappsandagents
+- LangGraph
+- MCP Toolchains
+- Microsoft Foundry
+- ML
+- MSIgnite
+- Multi Agent Systems
+- OpenAI Agents SDK
+- OpenTelemetry
+- Policy Middleware
+- Secure Deployment
+- Security
+- Semantic Kernel
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Events presents a deep dive session on multi-agent orchestration and automation in Microsoft Foundry, featuring Christof Gebhart, Shawn Henry, Tina Manghnani, and Mark Wallace. Learn about scaling from single agent prototypes to secure, governed, and observable fleets, leveraging Semantic Kernel, AutoGen, and Azure AI.<!--excerpt_end-->
 
 {% youtube U20tVialbao %}

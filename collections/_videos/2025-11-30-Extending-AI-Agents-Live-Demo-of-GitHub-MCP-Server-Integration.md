@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Extending AI Agents: Live Demo of GitHub MCP Server Integration"
-description: "This video demonstrates the extensibility of AI agents using GitHub MCP Server, focusing on setting up Copilot agent mode within VS Code. It covers prompt engineering, agent-to-agent workflows, multi-step automations, and how natural language can be utilized to interact directly with GitHub. Key features such as the MCP registry, visual summaries, and practical integrations are explained to help developers streamline their workflow."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LwqUp4Dc1mQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Extending AI Agents: Live Demo of GitHub MCP Server Integration'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=LwqUp4Dc1mQ
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-30 15:00:40 +00:00
-permalink: "/2025-11-30-Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Architecture", "AI", "AI Agents", "Automation", "Coding", "Copilot Agent Mode", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub MCP Server", "GitHub Registry", "GitHub Universe", "GitHubUniverse", "MCP", "Mermaid Charts", "Multi Step Workflow", "Prompt Engineering", "Videos", "VS Code"]
-tags_normalized: ["agent architecture", "ai", "ai agents", "automation", "coding", "copilot agent mode", "developer workflow", "github", "github copilot", "github mcp server", "github registry", "github universe", "githubuniverse", "mcp", "mermaid charts", "multi step workflow", "prompt engineering", "videos", "vs code"]
+permalink: /github-copilot/videos/Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration
+tags:
+- Agent Architecture
+- AI
+- AI Agents
+- Automation
+- Coding
+- Copilot Agent Mode
+- Developer Workflow
+- GitHub
+- GitHub Copilot
+- GitHub MCP Server
+- GitHub Registry
+- GitHub Universe
+- GitHubUniverse
+- MCP
+- Mermaid Charts
+- Multi Step Workflow
+- Prompt Engineering
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub presents a live demonstration led by Sam Morrow and Toby Padilla, showcasing how developers can extend AI agent capabilities in VS Code using the GitHub MCP Server and Copilot agent mode.<!--excerpt_end-->
 
 {% youtube LwqUp4Dc1mQ %}

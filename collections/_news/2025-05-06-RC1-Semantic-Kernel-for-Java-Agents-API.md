@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "RC1 - Semantic Kernel for Java Agents API"
-description: "Semantic Kernel for Java Agents API release candidate brings intelligent agent capabilities to Java developers, enabling rich AI experiences using the Semantic Kernel framework."
-author: "Derek Keeler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/preview-release-semantic-kernel-for-java-agents-api/"
-viewing_mode: "external"
-categories: ["AI"]
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: RC1 - Semantic Kernel for Java Agents API
+author: Derek Keeler
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/preview-release-semantic-kernel-for-java-agents-api/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-06 09:11:34 +00:00
-permalink: "/2025-05-06-RC1-Semantic-Kernel-for-Java-Agents-API.html"
-tags: ["Agents", "AI", "API", "Framework", "Intelligent Agents", "Java", "Microsoft Semantic Kernel", "News", "Semantic Kernel"]
-tags_normalized: ["agents", "ai", "api", "framework", "intelligent agents", "java", "microsoft semantic kernel", "news", "semantic kernel"]
+permalink: /ai/news/RC1-Semantic-Kernel-for-Java-Agents-API
+tags:
+- Agents
+- AI
+- API
+- Framework
+- Intelligent Agents
+- Java
+- Microsoft Semantic Kernel
+- News
+- Semantic Kernel
+section_names:
+- ai
 ---
-
 In this article, Derek Keeler announces the release candidate of the Semantic Kernel for Java Agents API, providing Java developers with robust tools to integrate intelligent agents into their applications. <!--excerpt_end-->
 
 ## Introduction

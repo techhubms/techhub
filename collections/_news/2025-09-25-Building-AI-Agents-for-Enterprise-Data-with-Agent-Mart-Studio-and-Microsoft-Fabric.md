@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Building AI Agents for Enterprise Data with Agent Mart Studio and Microsoft Fabric"
-description: "This article explores how Lucid Data Hub's Agent Mart Studio integration with Microsoft Fabric and OneLake empowers business users to build, deploy, and customize AI agents for automating workflows and generating insights from enterprise data. Learn about common challenges, a step-by-step agent creation workflow, and real-world examples in retail automation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/27082/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Building AI Agents for Enterprise Data with Agent Mart Studio and Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/27082/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-25 11:00:00 +00:00
-permalink: "/2025-09-25-Building-AI-Agents-for-Enterprise-Data-with-Agent-Mart-Studio-and-Microsoft-Fabric.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Mart Studio", "AI", "AI Agents", "Azure", "Business Process Automation", "Data Automation", "Data Integration", "Enterprise Data", "Lucid Data Hub", "Microsoft Fabric", "News", "No Code AI", "OneLake", "Retail Automation", "Workflow Automation"]
-tags_normalized: ["agent mart studio", "ai", "ai agents", "azure", "business process automation", "data automation", "data integration", "enterprise data", "lucid data hub", "microsoft fabric", "news", "no code ai", "onelake", "retail automation", "workflow automation"]
+permalink: /ai/news/Building-AI-Agents-for-Enterprise-Data-with-Agent-Mart-Studio-and-Microsoft-Fabric
+tags:
+- Agent Mart Studio
+- AI
+- AI Agents
+- Azure
+- Business Process Automation
+- Data Automation
+- Data Integration
+- Enterprise Data
+- Lucid Data Hub
+- Microsoft Fabric
+- News
+- No Code AI
+- OneLake
+- Retail Automation
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Authored by the Microsoft Fabric Blog team, this guide explains how Venu Amancha and Roy Hasson demonstrate using Agent Mart Studio on Microsoft Fabric to enable business users to create and deploy AI agents directly on enterprise data stored in OneLake.<!--excerpt_end-->
 
 # Building AI Agents for Enterprise Data with Agent Mart Studio and Microsoft Fabric

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era"
-description: "Microsoft's newly announced Quantum Safe Program Strategy sets forth a detailed plan for enabling quantum-resistant cryptographic capabilities across its products and services, with the aim of preparing customers and partners for the coming era of quantum computing. The initiative outlines early adoption milestones, government and industry partnerships, recommended policy actions, and a vision for secure digital infrastructure in the face of quantum-driven threats."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era
+author: sbaynes
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 20:57:04 +00:00
-permalink: "/2025-08-20-Microsoft-Unveils-Quantum-Safe-Program-Strategy-to-Prepare-for-Post-Quantum-Security-Era.html"
-categories: ["Security"]
-tags: ["Company News", "Cryptographic Algorithms", "Cybersecurity", "Digital Infrastructure", "Encryption", "Internet Engineering Task Force", "Linux", "Microsoft Security", "MITRE", "National Security", "News", "NIST", "On The Issues", "Open Quantum Safe Project", "Policy Recommendations", "Post Quantum Cryptography", "PQC Capabilities", "Quantum Computing", "Quantum Safe Program", "Security", "TLS", "Windows", "Workforce Readiness", "X.509"]
-tags_normalized: ["company news", "cryptographic algorithms", "cybersecurity", "digital infrastructure", "encryption", "internet engineering task force", "linux", "microsoft security", "mitre", "national security", "news", "nist", "on the issues", "open quantum safe project", "policy recommendations", "post quantum cryptography", "pqc capabilities", "quantum computing", "quantum safe program", "security", "tls", "windows", "workforce readiness", "xdot509"]
+permalink: /security/news/Microsoft-Unveils-Quantum-Safe-Program-Strategy-to-Prepare-for-Post-Quantum-Security-Era
+tags:
+- Company News
+- Cryptographic Algorithms
+- Cybersecurity
+- Digital Infrastructure
+- Encryption
+- Internet Engineering Task Force
+- Linux
+- Microsoft Security
+- MITRE
+- National Security
+- News
+- NIST
+- On The Issues
+- Open Quantum Safe Project
+- Policy Recommendations
+- Post Quantum Cryptography
+- PQC Capabilities
+- Quantum Computing
+- Quantum Safe Program
+- Security
+- TLS
+- Windows
+- Workforce Readiness
+- X.509
+section_names:
+- security
 ---
-
 sbaynes details Microsoft's Quantum Safe Program Strategy, outlining the company's proactive approach to post-quantum cybersecurity and strategic partnerships with governments and industry to safeguard global digital infrastructure.<!--excerpt_end-->
 
 # Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era

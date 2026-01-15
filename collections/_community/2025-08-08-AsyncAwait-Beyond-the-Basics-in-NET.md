@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Async/Await - Beyond the Basics in .NET"
-description: "This community discussion explores advanced concepts and common pitfalls in async/await programming within .NET, focusing on the notorious 'sync-over-async' pattern, its impact on application performance, and strategies for proper asynchronous programming. The conversation provides hands-on explanations, code examples, and practical insights community members often encounter when using async/await, including handling GUI frameworks, threading, and mistakes to avoid."
-author: "Delicious_Jaguar_341"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mkxmt5/asyncawait_beyond_the_basics/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Async/Await - Beyond the Basics in .NET
+author: Delicious_Jaguar_341
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mkxmt5/asyncawait_beyond_the_basics/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-08 15:04:02 +00:00
-permalink: "/2025-08-08-AsyncAwait-Beyond-the-Basics-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Async/await", "Asynchronous Programming", "C#", "Code Refactoring", "Coding", "Community", "Event Handlers", "GetAwaiter().GetResult()", "GUI Frameworks", "I/O Operations", "Microsoft", "Performance", "Result", "State Machine", "Sync Over Async", "Task Based Programming", "ThreadPool"]
-tags_normalized: ["dotnet", "asyncslashawait", "asynchronous programming", "csharp", "code refactoring", "coding", "community", "event handlers", "getawaiterdotgetresult", "gui frameworks", "islasho operations", "microsoft", "performance", "result", "state machine", "sync over async", "task based programming", "threadpool"]
+permalink: /coding/community/AsyncAwait-Beyond-the-Basics-in-NET
+tags:
+- .NET
+- Async/await
+- Asynchronous Programming
+- C#
+- Code Refactoring
+- Coding
+- Community
+- Event Handlers
+- GetAwaiter().GetResult()
+- GUI Frameworks
+- I/O Operations
+- Microsoft
+- Performance
+- Result
+- State Machine
+- Sync Over Async
+- Task Based Programming
+- ThreadPool
+section_names:
+- coding
 ---
-
 Delicious_Jaguar_341 shares a thoughtful discussion about advanced async/await usage in .NET, examining performance problems caused by the sync-over-async pattern and providing actionable tips for developers.<!--excerpt_end-->
 
 # Async/Await - Beyond the Basics in .NET

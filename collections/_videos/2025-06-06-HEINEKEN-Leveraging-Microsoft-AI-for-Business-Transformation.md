@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "HEINEKEN: Leveraging Microsoft AI for Business Transformation"
-description: "This video features Ronald den Elzen, Chief Digital & Technology Officer at The HEINEKEN Company, discussing how the company is utilizing Microsoft AI, specifically agentic AI, to drive business transformation and connectivity. The content highlights how generative AI technologies present strategic opportunities beyond digital transformation for an established global company."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Vo647KQyMus"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: 'HEINEKEN: Leveraging Microsoft AI for Business Transformation'
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=Vo647KQyMus
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-06 17:34:50 +00:00
-permalink: "/2025-06-06-HEINEKEN-Leveraging-Microsoft-AI-for-Business-Transformation.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Strategy", "Business Transformation", "Digital Innovation", "Enterprise AI", "Gen AI", "Generative AI", "Growth", "HEINEKEN", "Microsoft AI", "Microsoft AI Transformation", "Microsoft Cloud", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai strategy", "business transformation", "digital innovation", "enterprise ai", "gen ai", "generative ai", "growth", "heineken", "microsoft ai", "microsoft ai transformation", "microsoft cloud", "videos"]
+permalink: /ai/videos/HEINEKEN-Leveraging-Microsoft-AI-for-Business-Transformation
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI Strategy
+- Business Transformation
+- Digital Innovation
+- Enterprise AI
+- Gen AI
+- Generative AI
+- Growth
+- HEINEKEN
+- Microsoft AI
+- Microsoft AI Transformation
+- Microsoft Cloud
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Cloud shares insights from Ronald den Elzen of HEINEKEN on how the company is using Microsoft AI to drive digital transformation and business growth.<!--excerpt_end-->
 
 {% youtube Vo647KQyMus %}

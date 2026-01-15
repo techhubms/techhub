@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "What’s New in Copilot Studio: July 2025 Feature Roundup"
-description: "This post by stclarke outlines July 2025 updates for Microsoft Copilot Studio, including native advanced NLU configuration, Fabric data agent integration, enhanced admin and analytics features, secure agent management, and new Power Platform admin center controls to optimize, govern, and scale AI-powered workflows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'What’s New in Copilot Studio: July 2025 Feature Roundup'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-05 15:42:51 +00:00
-permalink: "/2025-08-05-Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup.html"
-categories: ["AI", "Security"]
-tags: ["Admin Center", "AI", "Analytics", "Company News", "Compliance", "Copilot Studio", "Dataverse", "Fabric Data Agents", "Governance", "Microsoft Copilot", "Natural Language Understanding", "News", "NLU+", "Power Platform", "Purview", "ROI Analysis", "Security"]
-tags_normalized: ["admin center", "ai", "analytics", "company news", "compliance", "copilot studio", "dataverse", "fabric data agents", "governance", "microsoft copilot", "natural language understanding", "news", "nluplus", "power platform", "purview", "roi analysis", "security"]
+permalink: /ai/news/Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup
+tags:
+- Admin Center
+- AI
+- Analytics
+- Company News
+- Compliance
+- Copilot Studio
+- Dataverse
+- Fabric Data Agents
+- Governance
+- Microsoft Copilot
+- Natural Language Understanding
+- News
+- NLU+
+- Power Platform
+- Purview
+- ROI Analysis
+- Security
+section_names:
+- ai
+- security
 ---
-
 In this comprehensive roundup, stclarke highlights major new capabilities added to Microsoft Copilot Studio in July 2025, focusing on AI-powered agent creation, secure data integration, and robust analytics and admin improvements for enterprise users.<!--excerpt_end-->
 
 # What’s New in Copilot Studio: July 2025

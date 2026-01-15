@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Getting Started with Copilot Studio: Build Your First AI-Powered Bot"
-description: "This guide provides a step-by-step walkthrough for building your first AI-powered bot using Microsoft Copilot Studio, a low-code platform for creating conversational copilots. Learn how to set up, design, integrate, test, and extend intelligent bots with seamless connections to Power Platform, Azure OpenAI Service, and generative AI capabilities."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Getting Started with Copilot Studio: Build Your First AI-Powered Bot'
+author: Dellenny
+canonical_url: https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-07 06:43:47 +00:00
-permalink: "/2025-08-07-Getting-Started-with-Copilot-Studio-Build-Your-First-AI-Powered-Bot.html"
-categories: ["AI"]
-tags: ["AI", "Azure OpenAI Service", "Blogs", "Bot Development", "Conversational Bots", "Copilot", "Copilot Studio", "Dynamics 365", "Generative AI", "Low Code", "Microsoft 365", "Microsoft Copilot Studio", "No Code Bots", "Power Automate", "Power Platform", "Power Virtual Agents"]
-tags_normalized: ["ai", "azure openai service", "blogs", "bot development", "conversational bots", "copilot", "copilot studio", "dynamics 365", "generative ai", "low code", "microsoft 365", "microsoft copilot studio", "no code bots", "power automate", "power platform", "power virtual agents"]
+permalink: /ai/blogs/Getting-Started-with-Copilot-Studio-Build-Your-First-AI-Powered-Bot
+tags:
+- AI
+- Azure OpenAI Service
+- Blogs
+- Bot Development
+- Conversational Bots
+- Copilot
+- Copilot Studio
+- Dynamics 365
+- Generative AI
+- Low Code
+- Microsoft 365
+- Microsoft Copilot Studio
+- No Code Bots
+- Power Automate
+- Power Platform
+- Power Virtual Agents
+section_names:
+- ai
 ---
-
 Dellenny demonstrates how to build, test, and deploy your first bot using Microsoft Copilot Studio’s low-code environment, providing practical steps for anyone interested in conversational AI solutions.<!--excerpt_end-->
 
 # Getting Started with Copilot Studio: Build Your First AI-Powered Bot

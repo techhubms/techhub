@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Public Preview: Multicloud Connector Support for GCP via Azure Arc"
-description: "This announcement details the public preview of the Multicloud connector for Google Cloud environments, enabled by Azure Arc. It outlines how users can connect GCP and AWS workloads to Azure, leverage centralized inventory, automate Azure Arc onboarding for VMs, and use Azure management services such as Azure Monitor and Microsoft Defender for Cloud. The post provides step-by-step setup instructions, technical documentation references, and further resources for deep dives."
-author: "Meagan McCrory"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-multicloud-connector-support-for-google-cloud/ba-p/4470700"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: Multicloud Connector Support for GCP via Azure Arc'
+author: Meagan McCrory
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-multicloud-connector-support-for-google-cloud/ba-p/4470700
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:23:35 +00:00
-permalink: "/2025-11-18-Public-Preview-Multicloud-Connector-Support-for-GCP-via-Azure-Arc.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentless Inventory", "Arc Enabled", "AWS", "Azure", "Azure Arc", "Azure Monitor", "Cloud Operations", "Community", "DevOps", "GCP", "Google Cloud", "Inventory", "Kubernetes", "Microsoft Defender For Cloud", "Microsoft Services", "Multicloud", "OIDC Federation", "Preview", "Resource Graph", "Security", "Security Monitoring", "VM Management"]
-tags_normalized: ["agentless inventory", "arc enabled", "aws", "azure", "azure arc", "azure monitor", "cloud operations", "community", "devops", "gcp", "google cloud", "inventory", "kubernetes", "microsoft defender for cloud", "microsoft services", "multicloud", "oidc federation", "preview", "resource graph", "security", "security monitoring", "vm management"]
+permalink: /azure/community/Public-Preview-Multicloud-Connector-Support-for-GCP-via-Azure-Arc
+tags:
+- Agentless Inventory
+- Arc Enabled
+- AWS
+- Azure
+- Azure Arc
+- Azure Monitor
+- Cloud Operations
+- Community
+- DevOps
+- GCP
+- Google Cloud
+- Inventory
+- Kubernetes
+- Microsoft Defender For Cloud
+- Microsoft Services
+- Multicloud
+- OIDC Federation
+- Preview
+- Resource Graph
+- Security
+- Security Monitoring
+- VM Management
+section_names:
+- azure
+- devops
+- security
 ---
-
 Meagan McCrory introduces the public preview of the Multicloud connector for GCP with Azure Arc, describing its features for integrated inventory and management across cloud providers.<!--excerpt_end-->
 
 # Public Preview: Multicloud Connector Support for GCP via Azure Arc

@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "What Vibe Coding Means for the Enterprise: Fast Code, Real Considerations"
-description: "This article by Tom Howlett explores the rise of 'vibe coding'—using AI coding assistants to rapidly prototype software—and its impact on enterprise development. It dives into shifting developer roles, the risks of AI-generated code at scale, issues of security and maintainability, and the need for strong governance and accountability. The author offers actionable advice for enterprises looking to leverage AI-assisted development effectively, emphasizing guardrails, validation, and team responsibility as essential to avoid technical debt and security pitfalls."
-author: "Tom Howlett"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations/?utm_source=rss&utm_medium=rss&utm_campaign=what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'What Vibe Coding Means for the Enterprise: Fast Code, Real Considerations'
+author: Tom Howlett
+canonical_url: https://devops.com/what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations/?utm_source=rss&utm_medium=rss&utm_campaign=what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-07 08:15:41 +00:00
-permalink: "/2025-08-07-What-Vibe-Coding-Means-for-the-Enterprise-Fast-Code-Real-Considerations.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["Accountability", "AI", "AI Coding Assistants", "AI Generated Code", "AI Governance", "Automation", "Blogs", "Code Quality", "Code Security", "Code Validation", "Coding", "Contributed Content", "Developer Roles", "Developer's Jobs", "Developers", "DevOps", "DevOps Practices", "Enterprise", "Enterprise Development", "Guardrails", "Prompt Engineering", "Security", "Security Risks", "Social Facebook", "Social LinkedIn", "Social X", "Software Prototyping", "System Integration", "Technical Debt", "Unit Testing", "Vibe Coding"]
-tags_normalized: ["accountability", "ai", "ai coding assistants", "ai generated code", "ai governance", "automation", "blogs", "code quality", "code security", "code validation", "coding", "contributed content", "developer roles", "developers jobs", "developers", "devops", "devops practices", "enterprise", "enterprise development", "guardrails", "prompt engineering", "security", "security risks", "social facebook", "social linkedin", "social x", "software prototyping", "system integration", "technical debt", "unit testing", "vibe coding"]
+permalink: /ai/blogs/What-Vibe-Coding-Means-for-the-Enterprise-Fast-Code-Real-Considerations
+tags:
+- Accountability
+- AI
+- AI Coding Assistants
+- AI Generated Code
+- AI Governance
+- Automation
+- Blogs
+- Code Quality
+- Code Security
+- Code Validation
+- Coding
+- Contributed Content
+- Developer Roles
+- Developer's Jobs
+- Developers
+- DevOps
+- DevOps Practices
+- Enterprise
+- Enterprise Development
+- Guardrails
+- Prompt Engineering
+- Security
+- Security Risks
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Prototyping
+- System Integration
+- Technical Debt
+- Unit Testing
+- Vibe Coding
+section_names:
+- ai
+- coding
+- devops
+- security
 ---
-
 Tom Howlett examines the enterprise-level implications of vibe coding and AI-assisted development, highlighting both the acceleration of innovation and the real risks in security and code maintainability.<!--excerpt_end-->
 
 # What Vibe Coding Means for the Enterprise: Fast Code, Real Considerations

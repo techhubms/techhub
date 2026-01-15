@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps"
-description: "This guide explores how Application Insights Code Optimizations empowers .NET developers to diagnose and remediate performance bottlenecks. It covers integration with the Application Insights .NET Profiler, Azure Monitor, and GitHub Copilot, providing AI-powered, actionable recommendations to enhance application performance and streamline developer workflows."
-author: "Chuck Weininger"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps'
+author: Chuck Weininger
+canonical_url: https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-15 17:05:00 +00:00
-permalink: "/2025-09-15-Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "Application Insights", "Azure", "Azure Monitor", "Blocking Insights", "Code Recommendations", "Coding", "Debugging", "DevOps", "GitHub Copilot", "GitHub Issues", "News", "OpenTelemetry", "Performance", "Performance Optimization", "Profiler", "Profiling", "Trace Analysis", "VS", "VS Code", "Work Items"]
-tags_normalized: ["dotnet", "ai", "application insights", "azure", "azure monitor", "blocking insights", "code recommendations", "coding", "debugging", "devops", "github copilot", "github issues", "news", "opentelemetry", "performance", "performance optimization", "profiler", "profiling", "trace analysis", "vs", "vs code", "work items"]
+permalink: /github-copilot/news/Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps
+tags:
+- .NET
+- AI
+- Application Insights
+- Azure
+- Azure Monitor
+- Blocking Insights
+- Code Recommendations
+- Coding
+- Debugging
+- DevOps
+- GitHub Copilot
+- GitHub Issues
+- News
+- OpenTelemetry
+- Performance
+- Performance Optimization
+- Profiler
+- Profiling
+- Trace Analysis
+- VS
+- VS Code
+- Work Items
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Chuck Weininger introduces Application Insights Code Optimizations, showing .NET developers how to leverage AI-powered performance recommendations with GitHub Copilot and Azure Monitor for more efficient application tuning.<!--excerpt_end-->
 
 # Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps

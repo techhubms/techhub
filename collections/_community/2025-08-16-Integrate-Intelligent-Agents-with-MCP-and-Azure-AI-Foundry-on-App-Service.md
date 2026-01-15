@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service"
-description: "This post by jordanselig explains how to easily integrate intelligent agents into existing web applications using Azure AI Foundry and Model Context Protocol (MCP), all hosted on Azure App Service. The article details the MCP standard, showcases a reference implementation, and walks through deployment steps so that developers can quickly enable robust AI agent capabilities without custom code."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-16 01:15:20 +00:00
-permalink: "/2025-08-16-Integrate-Intelligent-Agents-with-MCP-and-Azure-AI-Foundry-on-App-Service.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Service", "AI", "AI Agent Integration", "App Deployment", "Automation", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Developer CLI", "Cloud Hosting", "Community", "Developer Guide", "FastAPI", "LLMs", "Managed Identity", "MCP", "MCP Server", "Natural Language Processing", "OpenAPI", "Python", "To Do List App", "Web Applications"]
-tags_normalized: ["agent service", "ai", "ai agent integration", "app deployment", "automation", "azure", "azure ai foundry", "azure app service", "azure developer cli", "cloud hosting", "community", "developer guide", "fastapi", "llms", "managed identity", "mcp", "mcp server", "natural language processing", "openapi", "python", "to do list app", "web applications"]
+permalink: /ai/community/Integrate-Intelligent-Agents-with-MCP-and-Azure-AI-Foundry-on-App-Service
+tags:
+- Agent Service
+- AI
+- AI Agent Integration
+- App Deployment
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure Developer CLI
+- Cloud Hosting
+- Community
+- Developer Guide
+- FastAPI
+- LLMs
+- Managed Identity
+- MCP
+- MCP Server
+- Natural Language Processing
+- OpenAPI
+- Python
+- To Do List App
+- Web Applications
+section_names:
+- ai
+- azure
 ---
-
 jordanselig walks through how developers can connect Azure AI Foundry agents to any application using the Model Context Protocol (MCP) and App Service, with practical examples and deployment guidance.<!--excerpt_end-->
 
 # Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service

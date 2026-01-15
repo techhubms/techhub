@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Modernize Java Apps with AI: Deploy Your Applications to Azure"
-description: "This session, hosted by Ayan Gupta, walks viewers through deploying a modernized Java application to Azure using the GitHub Copilot App Modernization tool. Building on a previous migration and upgrade, the episode demonstrates the AI-driven approach to cloud deployment, highlighting automated infrastructure provisioning, architecture diagram generation, deployment plan creation, and iterative deployment to Azure using the Azure Developer CLI. The process covers reviewing the deployment, provisioning resources, and testing the application live in the Azure Portal."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GlEiDHHYCao"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Modernize Java Apps with AI: Deploy Your Applications to Azure'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=GlEiDHHYCao
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-03 17:00:34 +00:00
-permalink: "/2025-11-03-Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "AIAssisted", "App Modernization", "AppModernization", "Architecture Diagrams", "Azure", "Azure App Service", "Azure Deployment", "Azure Developer CLI", "Azure Portal", "Azure SQL", "AzureCLI", "AzureDeployment", "CI/CD", "Cloud Deployment", "Cloud Migration", "CloudDeployment", "CloudMigration", "Deployment Automation", "DevOps", "GitHub Copilot", "Java", "JavaAzure", "JavaCloud", "Videos", "YAML"]
-tags_normalized: ["ai", "ai assisted development", "aiassisted", "app modernization", "appmodernization", "architecture diagrams", "azure", "azure app service", "azure deployment", "azure developer cli", "azure portal", "azure sql", "azurecli", "azuredeployment", "cislashcd", "cloud deployment", "cloud migration", "clouddeployment", "cloudmigration", "deployment automation", "devops", "github copilot", "java", "javaazure", "javacloud", "videos", "yaml"]
+permalink: /github-copilot/videos/Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure
+tags:
+- AI
+- AI Assisted Development
+- AIAssisted
+- App Modernization
+- AppModernization
+- Architecture Diagrams
+- Azure
+- Azure App Service
+- Azure Deployment
+- Azure Developer CLI
+- Azure Portal
+- Azure SQL
+- AzureCLI
+- AzureDeployment
+- CI/CD
+- Cloud Deployment
+- Cloud Migration
+- CloudDeployment
+- CloudMigration
+- Deployment Automation
+- DevOps
+- GitHub Copilot
+- Java
+- JavaAzure
+- JavaCloud
+- Videos
+- YAML
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 In this session, Microsoft Developer's Ayan Gupta guides you through the AI-powered deployment of a Java application to Azure using the GitHub Copilot App Modernization tool, showcasing how automated processes streamline cloud migration.<!--excerpt_end-->
 
 {% youtube GlEiDHHYCao %}

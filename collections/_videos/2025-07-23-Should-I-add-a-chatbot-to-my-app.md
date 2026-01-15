@@ -1,21 +1,29 @@
----
-layout: "post"
-title: "Should I add a chatbot to my app?"
-description: "Steve Sanderson advises that automating business processes with AI usually delivers faster value than adding chatbots to apps."
-author: "Dotnet's Youtube channel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QwG-PbVlIvM"
-categories: ["AI"]
-feed_name: "dotnet"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Should I add a chatbot to my app?
+author: Dotnet's Youtube channel
+canonical_url: https://www.youtube.com/watch?v=QwG-PbVlIvM
+feed_name: dotnet
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-23 15:35:24 +00:00
-permalink: "/2025-07-23-Should-I-add-a-chatbot-to-my-app.html"
-viewing_mode: "internal"
-page: "videos"
-tags: ["AI", "AI Learning Hub", "AI Strategy", "App Development", "Business Automation", "Chatbots", "Microsoft", "OneDevQuestion", "Process Automation", "Steve Sanderson", "Videos"]
-tags_normalized: ["ai", "ai learning hub", "ai strategy", "app development", "business automation", "chatbots", "microsoft", "onedevquestion", "process automation", "steve sanderson", "videos"]
+permalink: /ai/videos/Should-I-add-a-chatbot-to-my-app
+viewing_mode: internal
+page: videos
+tags:
+- AI
+- AI Learning Hub
+- AI Strategy
+- App Development
+- Business Automation
+- Chatbots
+- Microsoft
+- OneDevQuestion
+- Process Automation
+- Steve Sanderson
+- Videos
+section_names:
+- ai
 ---
-
 In this article, author dotnet highlights Steve Sanderson's nuanced view on the use of chatbots in app development. Sanderson contends that while chatbot integration is popular, beginning with AI-powered automation of business processes is often a more effective approach. The article points readers to additional learning resources from Microsoft’s AI Learning Hub.<!--excerpt_end-->
 
 {% youtube QwG-PbVlIvM %}

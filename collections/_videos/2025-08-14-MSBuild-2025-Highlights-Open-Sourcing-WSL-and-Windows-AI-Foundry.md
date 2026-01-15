@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "MSBuild 2025 Highlights: Open Sourcing WSL and Windows AI Foundry"
-description: "Craig Loewen from Microsoft Developer shares his excitement about two major announcements at MSBuild 2025: the Windows Subsystem for Linux (WSL) becoming fully open source and the introduction of Windows AI Foundry for running local AI models. The video highlights the impact of these developments for the developer community."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PUHypVSs1JE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'MSBuild 2025 Highlights: Open Sourcing WSL and Windows AI Foundry'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=PUHypVSs1JE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-14 19:05:59 +00:00
-permalink: "/2025-08-14-MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry.html"
-categories: ["AI"]
-tags: ["AI", "AI On Windows", "Developer Tools", "Local AI Models", "Microsoft Build", "MSBuild", "OneDevQuestion", "Open Source", "Videos", "Windows AI Foundry", "Windows Development", "Windows Subsystem For Linux", "WSL Open Source"]
-tags_normalized: ["ai", "ai on windows", "developer tools", "local ai models", "microsoft build", "msbuild", "onedevquestion", "open source", "videos", "windows ai foundry", "windows development", "windows subsystem for linux", "wsl open source"]
+permalink: /ai/videos/MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry
+tags:
+- AI
+- AI On Windows
+- Developer Tools
+- Local AI Models
+- Microsoft Build
+- MSBuild
+- OneDevQuestion
+- Open Source
+- Videos
+- Windows AI Foundry
+- Windows Development
+- Windows Subsystem For Linux
+- WSL Open Source
+section_names:
+- ai
 ---
-
 Craig Loewen discusses major announcements at MSBuild 2025, including the open sourcing of WSL and new opportunities with Windows AI Foundry, offering valuable insights for developers.<!--excerpt_end-->
 
 {% youtube PUHypVSs1JE %}

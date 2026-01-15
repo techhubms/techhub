@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub GraphQL API Resource Limits Introduced"
-description: "This news post from GitHub announces new execution resource limits for the GitHub GraphQL API. These safeguards cap resource usage per query, preventing operations that consume excessive infrastructure resources. The changes target queries fetching large object sets or deeply nested relationships. Developers are advised to review integration patterns to avoid hitting new limits."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-01-graphql-api-resource-limits"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub GraphQL API Resource Limits Introduced
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-01-graphql-api-resource-limits
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-01 16:00:30 +00:00
-permalink: "/2025-09-01-GitHub-GraphQL-API-Resource-Limits-Introduced.html"
-categories: ["DevOps"]
-tags: ["API Best Practices", "API Design", "API Resource Limits", "Developer Integrations", "DevOps", "Error Handling", "GitHub", "GraphQL API", "News", "Partial Responses", "Query Optimization", "Rate Limiting"]
-tags_normalized: ["api best practices", "api design", "api resource limits", "developer integrations", "devops", "error handling", "github", "graphql api", "news", "partial responses", "query optimization", "rate limiting"]
+permalink: /devops/news/GitHub-GraphQL-API-Resource-Limits-Introduced
+tags:
+- API Best Practices
+- API Design
+- API Resource Limits
+- Developer Integrations
+- DevOps
+- Error Handling
+- GitHub
+- GraphQL API
+- News
+- Partial Responses
+- Query Optimization
+- Rate Limiting
+section_names:
+- devops
 ---
-
 Allison details GitHub's introduction of execution resource limits in the GraphQL API, highlighting implications for developer integrations and guidance on avoiding new query restrictions.<!--excerpt_end-->
 
 # GitHub GraphQL API Resource Limits Introduced

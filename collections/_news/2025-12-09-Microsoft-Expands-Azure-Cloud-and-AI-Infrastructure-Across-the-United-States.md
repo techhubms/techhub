@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Expands Azure Cloud and AI Infrastructure Across the United States"
-description: "This article details Microsoft's significant investments and expansion of its Azure cloud infrastructure across the United States, including the upcoming launch of the East US 3 region in Greater Atlanta. It covers new data center regions, enhanced resiliency through Availability Zones, sustainability commitments, real-world customer use cases in cloud adoption, and robust support for government and enterprise clients seeking secure, reliable, and high-performance Azure cloud and AI services."
-author: "Omar Khan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Expands Azure Cloud and AI Infrastructure Across the United States
+author: Omar Khan
+canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 16:00:00 +00:00
-permalink: "/2025-12-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Availability Zones", "Azure", "Azure Government", "Cloud Infrastructure", "Cloud Strategy", "Compliance", "Datacenter Expansion", "Disaster Recovery", "East US 3", "LEED Certification", "Multi Region Architecture", "News", "Resilience", "Sustainability"]
-tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "availability zones", "azure", "azure government", "cloud infrastructure", "cloud strategy", "compliance", "datacenter expansion", "disaster recovery", "east us 3", "leed certification", "multi region architecture", "news", "resilience", "sustainability"]
+permalink: /ai/news/Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States
+tags:
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- Availability Zones
+- Azure
+- Azure Government
+- Cloud Infrastructure
+- Cloud Strategy
+- Compliance
+- Datacenter Expansion
+- Disaster Recovery
+- East US 3
+- LEED Certification
+- Multi Region Architecture
+- News
+- Resilience
+- Sustainability
+section_names:
+- ai
+- azure
 ---
-
 Omar Khan discusses Microsoft's ongoing investments in expanding Azure cloud and AI infrastructure in the US, highlighting new data centers, added resiliency, sustainability, and use cases across education and government.<!--excerpt_end-->
 
 # Microsoft Expands Azure Cloud and AI Infrastructure Across the United States

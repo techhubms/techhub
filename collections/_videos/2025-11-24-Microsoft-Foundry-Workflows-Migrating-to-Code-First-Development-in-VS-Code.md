@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code"
-description: "This video tutorial guides viewers through migrating Microsoft Foundry workflows to a code-first approach using Visual Studio Code on the local machine. April demonstrates environment setup, workflow code editing with the Foundry extension, and leveraging GitHub Copilot Agent Mode for improved workflow modification and iteration."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aR7hAbrIlps"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=aR7hAbrIlps
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:14 +00:00
-permalink: "/2025-11-24-Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Azure Cloud", "Cloud Computing", "Code First Development", "Coding", "Copilot Agent Mode", "Dev", "Development", "Development Tools", "Environment Setup", "Extension Integration", "GitHub Copilot", "Local Development", "Microsoft", "Microsoft AI", "Microsoft Foundry", "Model Mondays", "Tech", "Technology", "Videos", "VS Code", "Workflow Migration", "Workflows"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "azure cloud", "cloud computing", "code first development", "coding", "copilot agent mode", "dev", "development", "development tools", "environment setup", "extension integration", "github copilot", "local development", "microsoft", "microsoft ai", "microsoft foundry", "model mondays", "tech", "technology", "videos", "vs code", "workflow migration", "workflows"]
+permalink: /github-copilot/videos/Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Cloud
+- Cloud Computing
+- Code First Development
+- Coding
+- Copilot Agent Mode
+- Dev
+- Development
+- Development Tools
+- Environment Setup
+- Extension Integration
+- GitHub Copilot
+- Local Development
+- Microsoft
+- Microsoft AI
+- Microsoft Foundry
+- Model Mondays
+- Tech
+- Technology
+- Videos
+- VS Code
+- Workflow Migration
+- Workflows
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Microsoft Developer and April provide a step-by-step tutorial for migrating Microsoft Foundry workflows to a local code-first experience in VS Code, utilizing GitHub Copilot Agent Mode for code modification.<!--excerpt_end-->
 
 {% youtube aR7hAbrIlps %}

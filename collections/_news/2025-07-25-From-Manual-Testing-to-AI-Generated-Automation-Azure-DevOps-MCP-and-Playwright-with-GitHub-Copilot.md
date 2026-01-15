@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright with GitHub Copilot"
-description: "Igor Najdenovski details how his team automated their manual test backlog by integrating Azure DevOps MCP server with GitHub Copilot and Playwright. The article explores their step-by-step methodology, prompt engineering lessons, challenges faced, and provides actionable prompts for automation success in a CI/CD pipeline."
-author: "Igor Najdenovski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/from-manual-testing-to-ai-generated-automation-our-azure-devops-mcp-playwright-success-story/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright with GitHub Copilot'
+author: Igor Najdenovski
+canonical_url: https://devblogs.microsoft.com/devops/from-manual-testing-to-ai-generated-automation-our-azure-devops-mcp-playwright-success-story/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-25 06:47:36 +00:00
-permalink: "/2025-07-25-From-Manual-Testing-to-AI-Generated-Automation-Azure-DevOps-MCP-and-Playwright-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Generated Code", "Automated Testing", "Azure", "Azure DevOps", "CI/CD", "Coding", "DevOps", "End To End Testing", "GitHub Copilot", "MCP Server", "News", "Playwright", "Prompt Engineering", "Software Quality", "Test", "Test Automation", "Test Pipelines", "Test Scripts", "TypeScript"]
-tags_normalized: ["ai", "ai generated code", "automated testing", "azure", "azure devops", "cislashcd", "coding", "devops", "end to end testing", "github copilot", "mcp server", "news", "playwright", "prompt engineering", "software quality", "test", "test automation", "test pipelines", "test scripts", "typescript"]
+permalink: /github-copilot/news/From-Manual-Testing-to-AI-Generated-Automation-Azure-DevOps-MCP-and-Playwright-with-GitHub-Copilot
+tags:
+- AI
+- AI Generated Code
+- Automated Testing
+- Azure
+- Azure DevOps
+- CI/CD
+- Coding
+- DevOps
+- End To End Testing
+- GitHub Copilot
+- MCP Server
+- News
+- Playwright
+- Prompt Engineering
+- Software Quality
+- Test
+- Test Automation
+- Test Pipelines
+- Test Scripts
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Igor Najdenovski shares insights on transforming manual test suites into automated, AI-generated scripts using Azure DevOps MCP server, GitHub Copilot, and Playwright. This post covers practical steps, challenges, and recommendations based on real team experience.<!--excerpt_end-->
 
 ## From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright Success Story

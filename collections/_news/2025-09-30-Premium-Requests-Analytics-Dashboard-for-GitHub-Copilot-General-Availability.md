@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Premium Requests Analytics Dashboard for GitHub Copilot: General Availability"
-description: "This announcement introduces GitHub's new premium request analytics dashboard, available from September 29, 2025. The dashboard provides detailed visibility into Copilot premium request usage, including insights into billing, per-user and per-model breakdowns, and expanded API access for custom analytics. Designed for enterprise and individual Copilot subscribers, the feature aims to help teams and developers monitor and optimize their Copilot-related expenses and workflows with actionable data and robust filtering capabilities."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Premium Requests Analytics Dashboard for GitHub Copilot: General Availability'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 18:05:46 +00:00
-permalink: "/2025-09-30-Premium-Requests-Analytics-Dashboard-for-GitHub-Copilot-General-Availability.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Analytics", "API Integration", "Billing", "Copilot", "Cost Tracking", "Data Visualization", "Developer Tools", "DevOps", "Enterprise Reporting", "GitHub", "GitHub Copilot", "News", "Premium Requests", "Subscription Management", "Usage Dashboard"]
-tags_normalized: ["ai", "analytics", "api integration", "billing", "copilot", "cost tracking", "data visualization", "developer tools", "devops", "enterprise reporting", "github", "github copilot", "news", "premium requests", "subscription management", "usage dashboard"]
+permalink: /github-copilot/news/Premium-Requests-Analytics-Dashboard-for-GitHub-Copilot-General-Availability
+tags:
+- AI
+- Analytics
+- API Integration
+- Billing
+- Copilot
+- Cost Tracking
+- Data Visualization
+- Developer Tools
+- DevOps
+- Enterprise Reporting
+- GitHub
+- GitHub Copilot
+- News
+- Premium Requests
+- Subscription Management
+- Usage Dashboard
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details the release of GitHub's premium requests analytics dashboard, helping Copilot users, organizations, and enterprises gain actionable insights into usage and spending.<!--excerpt_end-->
 
 # Premium Requests Analytics Dashboard for GitHub Copilot

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Decoupling Default Semantic Models for Existing Items in Microsoft Fabric"
-description: "This news update from the Microsoft Fabric Blog details changes to how default semantic models are handled within Microsoft Fabric. The automatic generation of default semantic models for new data warehouses and lakehouses has already been discontinued; now, default models previously created automatically for older items are being decoupled and migrated to standalone semantic model items. The article describes the benefits of this shift, provides guidance and scripts for managing and cleaning up decoupled models via Fabric APIs, and emphasizes increased control over data modeling within Fabric workspaces."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Decoupling Default Semantic Models for Existing Items in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 10:00:00 +00:00
-permalink: "/2025-11-05-Decoupling-Default-Semantic-Models-for-Existing-Items-in-Microsoft-Fabric.html"
-categories: ["ML"]
-tags: ["API Integration", "Automation", "Business Intelligence", "Data Engineering", "Data Lifecycle", "Data Modeling", "Data Warehouses", "Lakehouses", "Microsoft Fabric", "ML", "Model Management", "News", "Python Script", "Reporting", "REST API", "Semantic Models", "Workspace Management"]
-tags_normalized: ["api integration", "automation", "business intelligence", "data engineering", "data lifecycle", "data modeling", "data warehouses", "lakehouses", "microsoft fabric", "ml", "model management", "news", "python script", "reporting", "rest api", "semantic models", "workspace management"]
+permalink: /ml/news/Decoupling-Default-Semantic-Models-for-Existing-Items-in-Microsoft-Fabric
+tags:
+- API Integration
+- Automation
+- Business Intelligence
+- Data Engineering
+- Data Lifecycle
+- Data Modeling
+- Data Warehouses
+- Lakehouses
+- Microsoft Fabric
+- ML
+- Model Management
+- News
+- Python Script
+- Reporting
+- REST API
+- Semantic Models
+- Workspace Management
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog explains the migration of default semantic models to standalone items, with guidance on using the Fabric API to manage and remove unused models. Learn how these changes empower users with finer control over data modeling. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Decoupling Default Semantic Models for Existing Items in Microsoft Fabric

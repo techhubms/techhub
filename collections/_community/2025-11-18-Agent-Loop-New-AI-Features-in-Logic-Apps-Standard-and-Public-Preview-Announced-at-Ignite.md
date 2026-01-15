@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite"
-description: "This announcement details the general availability and major AI-focused enhancements of Agent Loop in Azure Logic Apps Standard, as well as new public preview features expanding model integration, MCP tool extensibility, Teams/M365 deployment, security, and a redesigned workflow designer. Developers gain new options for building secure, scalable, agentic workflows with AI and automation on Azure."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite'
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 23:47:06 +00:00
-permalink: "/2025-11-18-Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agent Loop", "AI", "AI Automation", "AI Gateway", "Azure", "Azure AI Search", "Azure API Management", "Azure Logic Apps", "BYOM", "Community", "Connector Ecosystem", "DevOps", "Document Level Security", "Identity And Access Management", "MCP", "Microsoft Entra ID", "Microsoft Teams Integration", "Okta Integration", "RAG", "Security", "Serverless", "Workflow Designer"]
-tags_normalized: ["agent loop", "ai", "ai automation", "ai gateway", "azure", "azure ai search", "azure api management", "azure logic apps", "byom", "community", "connector ecosystem", "devops", "document level security", "identity and access management", "mcp", "microsoft entra id", "microsoft teams integration", "okta integration", "rag", "security", "serverless", "workflow designer"]
+permalink: /ai/community/Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite
+tags:
+- Agent Loop
+- AI
+- AI Automation
+- AI Gateway
+- Azure
+- Azure AI Search
+- Azure API Management
+- Azure Logic Apps
+- BYOM
+- Community
+- Connector Ecosystem
+- DevOps
+- Document Level Security
+- Identity And Access Management
+- MCP
+- Microsoft Entra ID
+- Microsoft Teams Integration
+- Okta Integration
+- RAG
+- Security
+- Serverless
+- Workflow Designer
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 DivSwa announces the release of Agent Loop General Availability in Logic Apps Standard, alongside a suite of new AI capabilities in public preview, offering developers advanced options for secure, scalable agent-based workflows.<!--excerpt_end-->
 
 # Agent Loop Ignite Update: AI Features Now in Public Preview

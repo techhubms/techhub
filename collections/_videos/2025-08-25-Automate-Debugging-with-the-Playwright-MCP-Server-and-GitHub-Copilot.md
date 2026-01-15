@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Automate Debugging with the Playwright MCP Server and GitHub Copilot"
-description: "This video demonstrates how GitHub Copilot Agent Mode integrates with the Playwright MCP server to automate debugging workflows. Viewers will learn how Copilot uses Playwright to reproduce bugs, confirm issues, identify root causes, apply code fixes, and validate resolutions. The demo highlights how MCP servers extend Copilot's abilities as an AI-powered peer programmer within the coding environment."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Sh9D3lQs3A8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Automate Debugging with the Playwright MCP Server and GitHub Copilot
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=Sh9D3lQs3A8
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-25 18:37:00 +00:00
-permalink: "/2025-08-25-Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Peer Programmer", "AI Programming Assistant", "Automated Testing", "Bug Automation", "Code Fix Validation", "Coding", "CodingAgent", "Copilot Agent Mode", "CopilotCodingAgent", "Debugging", "Error Reproduction", "Frontend Testing", "GitHub Copilot", "Playwright MCP Server", "Root Cause Analysis", "Software Development Tools", "Videos"]
-tags_normalized: ["ai", "ai peer programmer", "ai programming assistant", "automated testing", "bug automation", "code fix validation", "coding", "codingagent", "copilot agent mode", "copilotcodingagent", "debugging", "error reproduction", "frontend testing", "github copilot", "playwright mcp server", "root cause analysis", "software development tools", "videos"]
+permalink: /github-copilot/videos/Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot
+tags:
+- AI
+- AI Peer Programmer
+- AI Programming Assistant
+- Automated Testing
+- Bug Automation
+- Code Fix Validation
+- Coding
+- CodingAgent
+- Copilot Agent Mode
+- CopilotCodingAgent
+- Debugging
+- Error Reproduction
+- Frontend Testing
+- GitHub Copilot
+- Playwright MCP Server
+- Root Cause Analysis
+- Software Development Tools
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this GitHub-produced demo, viewers see how Copilot Agent Mode—working with the Playwright MCP server—automates bug reproduction, debugging, and resolution as a coding assistant.<!--excerpt_end-->
 
 {% youtube Sh9D3lQs3A8 %}

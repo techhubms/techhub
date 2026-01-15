@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Sprint Planning and Capacity Management in Azure DevOps Without Predefined Tasks"
-description: "This community discussion explores strategies for teams adopting Azure DevOps who want to leverage story point forecasting for sprint planning without pre-defining all tasks. It addresses capacity planning, progress tracking, and avoiding common pitfalls, offering practical solutions and insights for agile teams."
-author: "TimePerfect8403"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mks3po/planning_without_tasks/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Sprint Planning and Capacity Management in Azure DevOps Without Predefined Tasks
+author: TimePerfect8403
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1mks3po/planning_without_tasks/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-08 10:59:17 +00:00
-permalink: "/2025-08-08-Sprint-Planning-and-Capacity-Management-in-Azure-DevOps-Without-Predefined-Tasks.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agile", "Azure", "Azure DevOps", "Backlog Management", "Capacity Planning", "Community", "DevOps", "Forecasting", "Sprint Planning", "Story Points", "Task Tracking", "User Stories", "Workflow Management"]
-tags_normalized: ["agile", "azure", "azure devops", "backlog management", "capacity planning", "community", "devops", "forecasting", "sprint planning", "story points", "task tracking", "user stories", "workflow management"]
+permalink: /azure/community/Sprint-Planning-and-Capacity-Management-in-Azure-DevOps-Without-Predefined-Tasks
+tags:
+- Agile
+- Azure
+- Azure DevOps
+- Backlog Management
+- Capacity Planning
+- Community
+- DevOps
+- Forecasting
+- Sprint Planning
+- Story Points
+- Task Tracking
+- User Stories
+- Workflow Management
+section_names:
+- azure
+- devops
 ---
-
 TimePerfect8403 describes the challenge of migrating sprint planning to Azure DevOps, emphasizing story point forecasting over task-level estimation, and provides tips for agile, team-centric capacity management.<!--excerpt_end-->
 
 # Sprint Planning and Capacity Management in Azure DevOps Without Predefined Tasks

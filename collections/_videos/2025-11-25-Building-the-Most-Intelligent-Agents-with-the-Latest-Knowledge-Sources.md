@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building the Most Intelligent Agents with the Latest Knowledge Sources"
-description: "This session from Microsoft Ignite 2025 explores how Copilot Studio equips developers to build advanced AI agents by integrating a wide range of knowledge sources, using connectors, APIs, and Microsoft cloud technologies. You'll learn about agent architecture, authentication strategies, data extraction, and practical examples of low-code AI agent solutions, including real-world use cases like the 'Genie' agent from Gilead Sciences. The talk covers integration with Microsoft Graph, Azure AI Search, Active Directory, and best practices for working with structured and unstructured data."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VcLOXhpd_-A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building the Most Intelligent Agents with the Latest Knowledge Sources
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=VcLOXhpd_-A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:51:30 +00:00
-permalink: "/2025-11-25-Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources.html"
-categories: ["AI"]
-tags: ["Active Directory", "AI", "AI Agents", "API Integration", "Azure AI Search", "Connectors", "Copilot Agents", "Copilot Studio", "Data Extraction", "Evaluation", "Innovatewithlow", "Knowledge Sources", "Low Code Development", "MCP Servers", "Microsoft Graph", "Microsoft Ignite", "MSIgnite", "Personalization", "Videos", "Visualization"]
-tags_normalized: ["active directory", "ai", "ai agents", "api integration", "azure ai search", "connectors", "copilot agents", "copilot studio", "data extraction", "evaluation", "innovatewithlow", "knowledge sources", "low code development", "mcp servers", "microsoft graph", "microsoft ignite", "msignite", "personalization", "videos", "visualization"]
+permalink: /ai/videos/Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources
+tags:
+- Active Directory
+- AI
+- AI Agents
+- API Integration
+- Azure AI Search
+- Connectors
+- Copilot Agents
+- Copilot Studio
+- Data Extraction
+- Evaluation
+- Innovatewithlow
+- Knowledge Sources
+- Low Code Development
+- MCP Servers
+- Microsoft Graph
+- Microsoft Ignite
+- MSIgnite
+- Personalization
+- Videos
+- Visualization
+section_names:
+- ai
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events and guest speakers discuss leveraging Copilot Studio for building intelligent AI agents, with practical demonstrations and architecture insights. Speakers include Anjli Chaudhry, Eli Coon, Hardik Modi, and Nick Taylor.<!--excerpt_end-->
 
 {% youtube VcLOXhpd_-A %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building Resilient AI Agents with the Durable Task Extension for Microsoft Agent Framework"
-description: "This guide introduces the durable task extension for the Microsoft Agent Framework, a new feature that enables developers to build robust, scalable AI agents on Azure. Learn how the extension leverages Azure Durable Functions to add durable execution, distributed orchestration, and serverless hosting for stateful, production-ready AI agents. Real-world coding examples in Python and C# show how to create agents that can survive crashes, scale across thousands of instances, and pause for human approval without incurring compute costs."
-author: "greenie-msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Resilient AI Agents with the Durable Task Extension for Microsoft Agent Framework
+author: greenie-msft
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 20:33:42 +00:00
-permalink: "/2025-11-13-Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "Azure", "Azure Durable Functions", "Azure Functions", "C#", "Coding", "Community", "Distributed Systems", "Durable Task Extension", "Human in The Loop", "Microsoft Agent Framework", "Multi Agent Systems", "Orchestration", "Production Grade Reliability", "Python", "Serverless Architecture", "Session Management", "State Management"]
-tags_normalized: ["ai", "ai agents", "azure", "azure durable functions", "azure functions", "csharp", "coding", "community", "distributed systems", "durable task extension", "human in the loop", "microsoft agent framework", "multi agent systems", "orchestration", "production grade reliability", "python", "serverless architecture", "session management", "state management"]
+permalink: /ai/community/Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
+tags:
+- AI
+- AI Agents
+- Azure
+- Azure Durable Functions
+- Azure Functions
+- C#
+- Coding
+- Community
+- Distributed Systems
+- Durable Task Extension
+- Human in The Loop
+- Microsoft Agent Framework
+- Multi Agent Systems
+- Orchestration
+- Production Grade Reliability
+- Python
+- Serverless Architecture
+- Session Management
+- State Management
+section_names:
+- ai
+- azure
+- coding
 ---
-
 greenie-msft explains how the durable task extension for the Microsoft Agent Framework simplifies building highly resilient and scalable AI agents on Azure, with practical code samples and best practices for serverless durability.<!--excerpt_end-->
 
 # Building Resilient AI Agents with the Durable Task Extension for Microsoft Agent Framework

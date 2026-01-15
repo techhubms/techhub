@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copilot Coding Agent Improves Branch Naming and Pull Request Titles"
-description: "This announcement details improvements to the GitHub Copilot coding agent, a background automation tool for developers. The update focuses on making branch names and pull request titles clearer and more descriptive, enhancing code collaboration and workflow review for Copilot Pro and Enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Coding Agent Improves Branch Naming and Pull Request Titles
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 20:32:39 +00:00
-permalink: "/2025-10-16-Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Background Agent", "Branch Naming", "CI/CD", "Copilot", "Copilot Coding Agent", "Developer Tools", "Enterprise Subscribers", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pro Subscribers", "Pull Request Titles", "Workflow Improvement"]
-tags_normalized: ["ai", "automation", "background agent", "branch naming", "cislashcd", "copilot", "copilot coding agent", "developer tools", "enterprise subscribers", "github actions", "github copilot", "improvement", "news", "pro subscribers", "pull request titles", "workflow improvement"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles
+tags:
+- AI
+- Automation
+- Background Agent
+- Branch Naming
+- CI/CD
+- Copilot
+- Copilot Coding Agent
+- Developer Tools
+- Enterprise Subscribers
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- News
+- Pro Subscribers
+- Pull Request Titles
+- Workflow Improvement
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares news about updates to the GitHub Copilot coding agent, highlighting enhanced branch naming and pull request title generation for streamlined developer workflows.<!--excerpt_end-->
 
 # Copilot Coding Agent: Better Branch Names and Pull Request Titles

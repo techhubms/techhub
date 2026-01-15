@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Trustworthy AI at Microsoft: From Commitments to Capabilities"
-description: "This session from Microsoft Ignite 2025 explores Microsoft's Trustworthy AI approach, emphasizing its commitments, product capabilities, and ongoing research. Presenters illustrate how security, sovereignty, sustainability, and safety are prioritized in developing and deploying AI systems, with practical examples spanning Microsoft Foundry, Copilot Studio, and the Azure AI platform. Industry stories and expert discussions cover risk management, secure deployment, and promoting user trust through testing, collaboration, and education."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QQCQyq48USM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Trustworthy AI at Microsoft: From Commitments to Capabilities'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=QQCQyq48USM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:17:57 +00:00
-permalink: "/2025-11-21-Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Workflow", "AI", "AI Deployment", "AI Governance", "AI Security", "Azure", "Azure AI", "Change Management", "Compliance", "Copilot Studio", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Palo Alto Networks", "Policy as Code", "Pre Deployment Testing", "Responsible AI", "Risk Assessment", "Security", "Sovereignty", "Stanley Black & Decker", "Trustworthy AI", "Videos"]
-tags_normalized: ["agentic workflow", "ai", "ai deployment", "ai governance", "ai security", "azure", "azure ai", "change management", "compliance", "copilot studio", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "palo alto networks", "policy as code", "pre deployment testing", "responsible ai", "risk assessment", "security", "sovereignty", "stanley black and decker", "trustworthy ai", "videos"]
+permalink: /ai/videos/Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities
+tags:
+- Agentic Workflow
+- AI
+- AI Deployment
+- AI Governance
+- AI Security
+- Azure
+- Azure AI
+- Change Management
+- Compliance
+- Copilot Studio
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Palo Alto Networks
+- Policy as Code
+- Pre Deployment Testing
+- Responsible AI
+- Risk Assessment
+- Security
+- Sovereignty
+- Stanley Black & Decker
+- Trustworthy AI
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an Ignite 2025 session featuring Sarah Bird, Natasha Crampton, Florent Ricci, and others, focusing on how Microsoft's Trustworthy AI principles drive real-world capabilities and secure AI deployments.<!--excerpt_end-->
 
 {% youtube QQCQyq48USM %}

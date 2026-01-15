@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "CodeQL Expands Support for Kotlin and Improves Static Analysis Accuracy"
-description: "This news update highlights recent enhancements to CodeQL, the static analysis engine used in GitHub code scanning. The update introduces support for the latest Kotlin version, expands Rust support, and presents several accuracy improvements, especially for React and JavaScript security analysis. The news also details updated queries and code scanning integration for GitHub and GitHub Enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-14-codeql-expands-kotlin-support-and-additional-accuracy-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL Expands Support for Kotlin and Improves Static Analysis Accuracy
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-14-codeql-expands-kotlin-support-and-additional-accuracy-improvements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 21:54:44 +00:00
-permalink: "/2025-08-14-CodeQL-Expands-Support-for-Kotlin-and-Improves-Static-Analysis-Accuracy.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "CI/CD", "Code Scanning", "CodeQL", "DevOps", "DevSecOps", "Framework Modeling", "GitHub", "GitHub Enterprise Server", "JavaScript", "Kotlin", "News", "Query Pack", "React", "Rust", "Security", "Security Scanning", "Static Analysis", "Taint Analysis"]
-tags_normalized: ["application security", "cislashcd", "code scanning", "codeql", "devops", "devsecops", "framework modeling", "github", "github enterprise server", "javascript", "kotlin", "news", "query pack", "react", "rust", "security", "security scanning", "static analysis", "taint analysis"]
+permalink: /devops/news/CodeQL-Expands-Support-for-Kotlin-and-Improves-Static-Analysis-Accuracy
+tags:
+- Application Security
+- CI/CD
+- Code Scanning
+- CodeQL
+- DevOps
+- DevSecOps
+- Framework Modeling
+- GitHub
+- GitHub Enterprise Server
+- JavaScript
+- Kotlin
+- News
+- Query Pack
+- React
+- Rust
+- Security
+- Security Scanning
+- Static Analysis
+- Taint Analysis
+section_names:
+- devops
+- security
 ---
-
 Allison reports on recent updates to CodeQL, featuring expanded Kotlin support, enhanced Rust analysis, and improved query accuracy for JavaScript and React, ensuring better static analysis and security scanning for GitHub projects.<!--excerpt_end-->
 
 # CodeQL Expands Support for Kotlin and Improves Static Analysis Accuracy

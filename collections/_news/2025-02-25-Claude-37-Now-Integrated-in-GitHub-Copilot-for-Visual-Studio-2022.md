@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Claude 3.7 Now Integrated in GitHub Copilot for Visual Studio 2022"
-description: "Anthropic’s Claude 3.7 Sonnet model is now available within GitHub Copilot for Visual Studio 2022 (version 17.13). This integration enables paid Copilot users to choose Claude as their AI coding assistant, providing advanced AI assistance directly in their development workflows. Configuration requirements and access steps are detailed."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+﻿---
+layout: post
+title: Claude 3.7 Now Integrated in GitHub Copilot for Visual Studio 2022
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-02-25 01:45:58 +00:00
-permalink: "/2025-02-25-Claude-37-Now-Integrated-in-GitHub-Copilot-for-Visual-Studio-2022.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Anthropic", "Claude 3.7", "Coding", "Copilot", "Copilot Chat", "Copilot Integration", "Developer Tools", "GitHub Copilot", "Model Picker", "News", "Sonnet Model", "VS"]
-tags_normalized: ["ai", "ai coding assistant", "anthropic", "claude 3dot7", "coding", "copilot", "copilot chat", "copilot integration", "developer tools", "github copilot", "model picker", "news", "sonnet model", "vs"]
+permalink: /github-copilot/news/Claude-37-Now-Integrated-in-GitHub-Copilot-for-Visual-Studio-2022
+tags:
+- AI
+- AI Coding Assistant
+- Anthropic
+- Claude 3.7
+- Coding
+- Copilot
+- Copilot Chat
+- Copilot Integration
+- Developer Tools
+- GitHub Copilot
+- Model Picker
+- News
+- Sonnet Model
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this post, Rhea Patel details the direct integration of Anthropic’s Claude 3.7 Sonnet model into GitHub Copilot for Visual Studio 2022, covering access steps and feature highlights.<!--excerpt_end-->
 
 ## Claude 3.7 Now Integrated in GitHub Copilot for Visual Studio 2022

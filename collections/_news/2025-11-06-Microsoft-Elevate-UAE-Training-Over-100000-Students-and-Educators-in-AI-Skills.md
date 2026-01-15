@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Elevate UAE: Training Over 100,000 Students and Educators in AI Skills"
-description: "This news article details Microsoft's commitment to growing AI skills across the United Arab Emirates through the Microsoft Elevate initiative. The post outlines substantial investment, partnerships with education and government, and programs aiming to train and credential more than 100,000 students, educators, and government employees in advanced AI concepts and responsible AI adoption."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Elevate UAE: Training Over 100,000 Students and Educators in AI Skills'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 17:33:18 +00:00
-permalink: "/2025-11-06-Microsoft-Elevate-UAE-Training-Over-100000-Students-and-Educators-in-AI-Skills.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Fundamentals", "AI Skills Training", "Company News", "Copilot Workshops", "Digital Transformation", "Education Technology", "GEMS Education", "Government Training", "Human Capital Development", "INJAZ UAE", "JAHIZ Platform", "Leadership Development", "MBZUAI", "Microsoft Elevate", "News", "On The Issues", "UAE"]
-tags_normalized: ["ai", "ai adoption", "ai fundamentals", "ai skills training", "company news", "copilot workshops", "digital transformation", "education technology", "gems education", "government training", "human capital development", "injaz uae", "jahiz platform", "leadership development", "mbzuai", "microsoft elevate", "news", "on the issues", "uae"]
+permalink: /ai/news/Microsoft-Elevate-UAE-Training-Over-100000-Students-and-Educators-in-AI-Skills
+tags:
+- AI
+- AI Adoption
+- AI Fundamentals
+- AI Skills Training
+- Company News
+- Copilot Workshops
+- Digital Transformation
+- Education Technology
+- GEMS Education
+- Government Training
+- Human Capital Development
+- INJAZ UAE
+- JAHIZ Platform
+- Leadership Development
+- MBZUAI
+- Microsoft Elevate
+- News
+- On The Issues
+- UAE
+section_names:
+- ai
 ---
-
 stclarke breaks down Microsoft's efforts to accelerate AI upskilling in the UAE, highlighting initiatives that train educators, students, and government workers for an AI-driven future.<!--excerpt_end-->
 
 # Microsoft Elevate UAE: Training Over 100,000 Students and Educators in AI Skills

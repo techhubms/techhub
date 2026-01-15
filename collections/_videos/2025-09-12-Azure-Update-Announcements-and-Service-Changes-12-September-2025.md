@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Update: Announcements and Service Changes (12 September 2025)"
-description: "This video provides a roundup of new features, service updates, and retirements across Azure. Covered topics include Azure Red Hat OpenShift expansion, VM SKU updates, new resource types for Azure File Shares, updates to Azure Databricks and Cosmos DB, as well as changes to managed database services such as PostgreSQL and MySQL. The update also addresses Azure master class resources, DevOps and PowerShell training, and Microsoft Playwright Testing retirement."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6ZfVssHBvUw"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update: Announcements and Service Changes (12 September 2025)'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=6ZfVssHBvUw
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-12 14:44:04 +00:00
-permalink: "/2025-09-12-Azure-Update-Announcements-and-Service-Changes-12-September-2025.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Cloud", "Azure Databricks", "Azure File Share", "Azure Files", "Azure MySQL", "Azure PostgreSQL", "Azure Red Hat OpenShift", "Azure Services", "Certification", "Cloud", "Cloud Updates", "Cosmos DB", "DevOps", "GQL in KQL", "Microsoft", "Microsoft Azure", "Multi Tenant Container Insights", "PowerShell", "Resource Migration", "Standard HDD Retirement", "Videos", "VM SKU Updates"]
-tags_normalized: ["azure", "azure cloud", "azure databricks", "azure file share", "azure files", "azure mysql", "azure postgresql", "azure red hat openshift", "azure services", "certification", "cloud", "cloud updates", "cosmos db", "devops", "gql in kql", "microsoft", "microsoft azure", "multi tenant container insights", "powershell", "resource migration", "standard hdd retirement", "videos", "vm sku updates"]
+permalink: /azure/videos/Azure-Update-Announcements-and-Service-Changes-12-September-2025
+tags:
+- Azure
+- Azure Cloud
+- Azure Databricks
+- Azure File Share
+- Azure Files
+- Azure MySQL
+- Azure PostgreSQL
+- Azure Red Hat OpenShift
+- Azure Services
+- Certification
+- Cloud
+- Cloud Updates
+- Cosmos DB
+- DevOps
+- GQL in KQL
+- Microsoft
+- Microsoft Azure
+- Multi Tenant Container Insights
+- PowerShell
+- Resource Migration
+- Standard HDD Retirement
+- Videos
+- VM SKU Updates
+section_names:
+- azure
+- devops
 ---
-
 John Savill's Technical Training delivers the Azure Update for 12th September 2025, highlighting the latest service expansions, feature enhancements, and product retirements within the Microsoft Azure ecosystem.<!--excerpt_end-->
 
 {% youtube 6ZfVssHBvUw %}

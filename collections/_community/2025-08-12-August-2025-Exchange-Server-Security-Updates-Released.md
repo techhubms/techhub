@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "August 2025 Exchange Server Security Updates Released"
-description: "This announcement details Microsoft's release of security updates for Exchange Server Subscription Edition, 2019, and 2016, addressing recent vulnerabilities. It covers available update versions, the cumulative nature of Exchange SUs, default AMSI message body scanning, installation guidance, troubleshooting, and hybrid scenarios. Administrators are strongly urged to apply the updates promptly to maintain security and compatibility, with references to accompanying scripts and documentation for health checks, update processes, and issue resolution."
-author: "The_Exchange_Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: August 2025 Exchange Server Security Updates Released
+author: The_Exchange_Team
+canonical_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 17:48:04 +00:00
-permalink: "/2025-08-12-August-2025-Exchange-Server-Security-Updates-Released.html"
-categories: ["Security"]
-tags: ["AMSI Integration", "August Update", "Community", "Cumulative Update (cu)", "CVE 53786", "Exchange Management Tools", "Exchange Server", "Exchange Server Subscription Edition", "Health Checker Script", "Hybrid Deployment", "Microsoft Security", "On Premises Exchange", "Security", "Security Update", "SetupAssist Script", "Vulnerability"]
-tags_normalized: ["amsi integration", "august update", "community", "cumulative update cu", "cve 53786", "exchange management tools", "exchange server", "exchange server subscription edition", "health checker script", "hybrid deployment", "microsoft security", "on premises exchange", "security", "security update", "setupassist script", "vulnerability"]
+permalink: /security/community/August-2025-Exchange-Server-Security-Updates-Released
+tags:
+- AMSI Integration
+- August Update
+- Community
+- Cumulative Update (cu)
+- CVE 53786
+- Exchange Management Tools
+- Exchange Server
+- Exchange Server Subscription Edition
+- Health Checker Script
+- Hybrid Deployment
+- Microsoft Security
+- On Premises Exchange
+- Security
+- Security Update
+- SetupAssist Script
+- Vulnerability
+section_names:
+- security
 ---
-
 The_Exchange_Team explains the August 2025 Security Updates for Exchange Server, offering guidance on installation, new AMSI features, update paths, and security best practices for on-premises and hybrid Exchange environments.<!--excerpt_end-->
 
 # August 2025 Exchange Server Security Updates Released

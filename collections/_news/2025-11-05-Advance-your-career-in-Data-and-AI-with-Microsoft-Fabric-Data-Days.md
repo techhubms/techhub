@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Advance your career in Data & AI with Microsoft Fabric Data Days"
-description: "This news post introduces Fabric Data Days, a multi-week series of live and on-demand learning events aimed at data professionals and students interested in Microsoft Fabric, Data Engineering, Data Science, and AI. Attendees gain access to expert-led sessions, certification exam support, hands-on challenges, and contests to build real-world skills with Microsoft technologies."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Advance your career in Data & AI with Microsoft Fabric Data Days
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 09:30:00 +00:00
-permalink: "/2025-11-05-Advance-your-career-in-Data-and-AI-with-Microsoft-Fabric-Data-Days.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Certification", "Contests", "Data Engineering", "Data Science", "Data Visualization", "DP 600", "DP 700", "DP 900", "Learning Events", "Microsoft Certified Trainer", "Microsoft Data Platform", "Microsoft Fabric", "ML", "News", "Notebooks", "PL 300", "Power BI", "Skills Challenge", "Study Groups"]
-tags_normalized: ["ai", "azure", "certification", "contests", "data engineering", "data science", "data visualization", "dp 600", "dp 700", "dp 900", "learning events", "microsoft certified trainer", "microsoft data platform", "microsoft fabric", "ml", "news", "notebooks", "pl 300", "power bi", "skills challenge", "study groups"]
+permalink: /ai/news/Advance-your-career-in-Data-and-AI-with-Microsoft-Fabric-Data-Days
+tags:
+- AI
+- Azure
+- Certification
+- Contests
+- Data Engineering
+- Data Science
+- Data Visualization
+- DP 600
+- DP 700
+- DP 900
+- Learning Events
+- Microsoft Certified Trainer
+- Microsoft Data Platform
+- Microsoft Fabric
+- ML
+- News
+- Notebooks
+- PL 300
+- Power BI
+- Skills Challenge
+- Study Groups
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog highlights Fabric Data Days, where data professionals and students can learn about Microsoft Fabric, Data Science, and AI through interactive sessions, expert speakers, and certification opportunities.<!--excerpt_end-->
 
 # Advance your career in Data & AI with Microsoft Fabric Data Days

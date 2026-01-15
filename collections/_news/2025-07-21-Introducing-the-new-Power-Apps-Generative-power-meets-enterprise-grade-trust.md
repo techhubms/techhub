@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Introducing the new Power Apps - Generative power meets enterprise-grade trust"
-description: "Microsoft unveils new Power Apps, combining generative AI features with enterprise-grade security and trust for business application development."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-the-new-power-apps-generative-power-meets-enterprise-grade-trust/"
-categories: ["AI"]
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Introducing the new Power Apps - Generative power meets enterprise-grade trust
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-the-new-power-apps-generative-power-meets-enterprise-grade-trust/
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-21 16:52:37 +00:00
-permalink: "/2025-07-21-Introducing-the-new-Power-Apps-Generative-power-meets-enterprise-grade-trust.html"
-viewing_mode: "external"
-tags: ["AI", "AI Integration", "Automation", "Business Applications", "Company News", "Enterprise Trust", "Generative AI", "Low Code", "Microsoft", "News", "Power Apps", "Power Platform"]
-tags_normalized: ["ai", "ai integration", "automation", "business applications", "company news", "enterprise trust", "generative ai", "low code", "microsoft", "news", "power apps", "power platform"]
+permalink: /ai/news/Introducing-the-new-Power-Apps-Generative-power-meets-enterprise-grade-trust
+viewing_mode: external
+tags:
+- AI
+- AI Integration
+- Automation
+- Business Applications
+- Company News
+- Enterprise Trust
+- Generative AI
+- Low Code
+- Microsoft
+- News
+- Power Apps
+- Power Platform
+section_names:
+- ai
 ---
-
 In this article, stclarke introduces the new Microsoft Power Apps, which bring together cutting-edge generative AI capabilities and high standards of enterprise trust. The article explores how these innovations support secure, intelligent business applications.<!--excerpt_end-->
 
 ## Summary

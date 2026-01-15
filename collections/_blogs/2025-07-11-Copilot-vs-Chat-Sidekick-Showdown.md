@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Copilot vs. Chat: Sidekick Showdown"
-description: "This article breaks down the strengths and ideal scenarios for both GitHub Copilot's inline code suggestions and conversational AI chatbots like Copilot Chat, ChatGPT, and Gemini. Readers will learn how to optimize their workflow by combining instant, context-aware code completions with chat-driven problem solving for debugging, code review, and documentation tasks."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Copilot vs. Chat: Sidekick Showdown'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-11 00:00:00 +00:00
-permalink: "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Blogs", "ChatGPT", "Code Completion", "Code Review", "Coding Tools", "Copilot Chat", "Developer Productivity", "Gemini", "GitHub Copilot", "Integrated Development Environment", "Workflow Tips"]
-tags_normalized: ["ai", "ai assistant", "blogs", "chatgpt", "code completion", "code review", "coding tools", "copilot chat", "developer productivity", "gemini", "github copilot", "integrated development environment", "workflow tips"]
+permalink: /github-copilot/blogs/Copilot-vs-Chat-Sidekick-Showdown
+tags:
+- AI
+- AI Assistant
+- Blogs
+- ChatGPT
+- Code Completion
+- Code Review
+- Coding Tools
+- Copilot Chat
+- Developer Productivity
+- Gemini
+- GitHub Copilot
+- Integrated Development Environment
+- Workflow Tips
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels compares GitHub Copilot's inline code completions with conversational AI chatbots, outlining when and how developers can leverage both to accelerate coding and solve complex problems.<!--excerpt_end-->
 
 # Copilot vs. Chat: Sidekick Showdown

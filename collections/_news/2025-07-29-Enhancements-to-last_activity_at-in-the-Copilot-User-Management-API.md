@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Enhancements to last_activity_at in the Copilot User Management API"
-description: "GitHub has improved the durability and reliability of the `last_activity_at` field in the Copilot User Management API. These updates increase resilience and scalability for activity tracking without introducing any breaking API changes. The refresh interval for activity metrics remains unchanged."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-29-enhancements-to-last_activity_at-in-the-user-management-api"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Enhancements to last_activity_at in the Copilot User Management API
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-29-enhancements-to-last_activity_at-in-the-user-management-api
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-29 16:05:17 +00:00
-permalink: "/2025-07-29-Enhancements-to-last_activity_at-in-the-Copilot-User-Management-API.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Activity Tracking", "AI", "API Durability", "API Updates", "Copilot API", "Feature Usage", "GitHub Copilot", "Last Activity At", "Metrics", "News", "Pipeline Resilience", "User Management"]
-tags_normalized: ["activity tracking", "ai", "api durability", "api updates", "copilot api", "feature usage", "github copilot", "last activity at", "metrics", "news", "pipeline resilience", "user management"]
+permalink: /github-copilot/news/Enhancements-to-last_activity_at-in-the-Copilot-User-Management-API
+tags:
+- Activity Tracking
+- AI
+- API Durability
+- API Updates
+- Copilot API
+- Feature Usage
+- GitHub Copilot
+- Last Activity At
+- Metrics
+- News
+- Pipeline Resilience
+- User Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison outlines recent improvements to the `last_activity_at` field in the GitHub Copilot User Management API, increasing reliability in tracking user activity.<!--excerpt_end-->
 
 ## Enhancements to `last_activity_at` in the User Management API

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Fast and Easy Windows Setup & Configuration with WinGet and Desired State Configuration"
-description: "This session from Microsoft Ignite 2025 explores WinGet's latest advancements in Windows configuration management. Learn how WinGet now supports Microsoft Desired State Configuration (DSC), allowing IT professionals and developers to automate and simplify Windows setup using configuration as code. See practical demos covering schema insights, Visual Studio Code, PowerShell integration, and discover how the new open-source WinGet Studio empowers community-driven contribution."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KnH7FHyEsbE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Fast and Easy Windows Setup & Configuration with WinGet and Desired State Configuration
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=KnH7FHyEsbE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:43:12 +00:00
-permalink: "/2025-11-24-Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration.html"
-categories: ["Coding", "DevOps"]
-tags: ["Coding", "Command Line Interface", "Configuration as Code", "Configuration Management", "Desired State Configuration", "Developer Tools", "DevOps", "DSC", "Font Management", "IT Automation", "Microsoft Ignite", "MSIgnite", "Open Source", "PowerShell", "ScalewithcloudandAIendpoints", "Terminal Tools", "UI Modernization", "Videos", "VS Code", "Windows Configuration", "WinGet", "Winget Studio"]
-tags_normalized: ["coding", "command line interface", "configuration as code", "configuration management", "desired state configuration", "developer tools", "devops", "dsc", "font management", "it automation", "microsoft ignite", "msignite", "open source", "powershell", "scalewithcloudandaiendpoints", "terminal tools", "ui modernization", "videos", "vs code", "windows configuration", "winget", "winget studio"]
+permalink: /coding/videos/Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration
+tags:
+- Coding
+- Command Line Interface
+- Configuration as Code
+- Configuration Management
+- Desired State Configuration
+- Developer Tools
+- DevOps
+- DSC
+- Font Management
+- IT Automation
+- Microsoft Ignite
+- MSIgnite
+- Open Source
+- PowerShell
+- ScalewithcloudandAIendpoints
+- Terminal Tools
+- UI Modernization
+- Videos
+- VS Code
+- Windows Configuration
+- WinGet
+- Winget Studio
+section_names:
+- coding
+- devops
 ---
-
 Presented by Demitrius Nelon at Microsoft Ignite 2025, this session dives into WinGet's new capabilities for fast Windows setup and configuration using Desired State Configuration, with code-centric demos for IT professionals and developers.<!--excerpt_end-->
 
 {% youtube KnH7FHyEsbE %}

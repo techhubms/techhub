@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia"
-description: "A deep dive into the FSO Skills Accelerator-AI initiative, a partnership led by Future Skills Organisation and Microsoft to address Australia’s AI skills gap through the VET system. The program targets both learners and over 30,000 educators, aiming to scale practical, job-ready AI training and shape Australia’s AI-enabled workforce. The initiative seeks broad industry involvement and focuses on practical, collaborative approaches to AI education."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/fso-microsoft-skills-accelerator-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/fso-microsoft-skills-accelerator-ai/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-13 17:15:39 +00:00
-permalink: "/2025-08-13-Future-Skills-Organisation-and-Microsoft-Launch-Nationwide-AI-Skills-Accelerator-in-Australia.html"
-categories: ["AI"]
-tags: ["AI", "AI Education", "AI Skilling", "AI Skills Accelerator", "AI Training", "Australia", "Company News", "Future Skills Organisation", "Generative AI", "Industry Collaboration", "Microsoft", "National AI Centre", "News", "Patrick Kidd", "Rachel Bondi", "VET", "Vocational Education And Training", "Workforce Transformation"]
-tags_normalized: ["ai", "ai education", "ai skilling", "ai skills accelerator", "ai training", "australia", "company news", "future skills organisation", "generative ai", "industry collaboration", "microsoft", "national ai centre", "news", "patrick kidd", "rachel bondi", "vet", "vocational education and training", "workforce transformation"]
+permalink: /ai/news/Future-Skills-Organisation-and-Microsoft-Launch-Nationwide-AI-Skills-Accelerator-in-Australia
+tags:
+- AI
+- AI Education
+- AI Skilling
+- AI Skills Accelerator
+- AI Training
+- Australia
+- Company News
+- Future Skills Organisation
+- Generative AI
+- Industry Collaboration
+- Microsoft
+- National AI Centre
+- News
+- Patrick Kidd
+- Rachel Bondi
+- VET
+- Vocational Education And Training
+- Workforce Transformation
+section_names:
+- ai
 ---
-
 stclarke covers the launch of the FSO Skills Accelerator-AI initiative, a strategic partnership between Future Skills Organisation and Microsoft designed to scale AI skills across Australia's workforce and educators.<!--excerpt_end-->
 
 # Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia

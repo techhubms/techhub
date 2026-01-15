@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Local Training Program: Self-Paced Cloud Management Skills"
-description: "This announcement introduces the Azure Local Training Program, a self-paced and comprehensive learning platform for managing Azure Local environments. Covering topics such as deployment, networking, security, Arc integration, monitoring, and billing, the program addresses various skill levels and is constantly updated to reflect Azure’s evolving features."
-author: "ShireenIsab"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Local Training Program: Self-Paced Cloud Management Skills'
+author: ShireenIsab
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 22:50:03 +00:00
-permalink: "/2025-09-03-Azure-Local-Training-Program-Self-Paced-Cloud-Management-Skills.html"
-categories: ["Azure", "Security"]
-tags: ["Arc Registration", "Azure", "Azure Local", "Azure Migrate", "Azure Monitoring", "Azure Security", "Azure Training", "Azure VM Management", "Billing", "Cloud Management", "Community", "Configurator App", "Environment Checker", "Networking", "Security", "Self Paced Learning"]
-tags_normalized: ["arc registration", "azure", "azure local", "azure migrate", "azure monitoring", "azure security", "azure training", "azure vm management", "billing", "cloud management", "community", "configurator app", "environment checker", "networking", "security", "self paced learning"]
+permalink: /azure/community/Azure-Local-Training-Program-Self-Paced-Cloud-Management-Skills
+tags:
+- Arc Registration
+- Azure
+- Azure Local
+- Azure Migrate
+- Azure Monitoring
+- Azure Security
+- Azure Training
+- Azure VM Management
+- Billing
+- Cloud Management
+- Community
+- Configurator App
+- Environment Checker
+- Networking
+- Security
+- Self Paced Learning
+section_names:
+- azure
+- security
 ---
-
 ShireenIsab announces the Azure Local Training Program, providing a free, self-paced education platform designed to help users master Azure Local environment management.<!--excerpt_end-->
 
 # Azure Local Training Program: Empowering You to Succeed

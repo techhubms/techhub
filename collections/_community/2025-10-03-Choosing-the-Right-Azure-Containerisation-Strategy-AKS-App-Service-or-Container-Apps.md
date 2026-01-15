@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?"
-description: "This community guide by zaracheema provides an in-depth comparison of Azure Kubernetes Service (AKS), Azure App Service, and Azure Container Apps, helping developers and architects decide which Azure container hosting option best fits their workload. It covers use cases, advantages, disadvantages, and key decision factors for each Azure containerisation service."
-author: "zaracheema"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba-p/4456645"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?'
+author: zaracheema
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba-p/4456645
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 14:06:10 +00:00
-permalink: "/2025-10-03-Choosing-the-Right-Azure-Containerisation-Strategy-AKS-App-Service-or-Container-Apps.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Azure App Service", "Azure Container Apps", "CI/CD", "Cloud Native", "Community", "Containerisation", "Dapr", "DevOps", "Infrastructure Management", "KEDA", "Kubernetes", "Linux Containers", "Microservices", "Orchestration", "PaaS", "Scaling", "Serverless", "Windows Containers"]
-tags_normalized: ["aks", "azure", "azure app service", "azure container apps", "cislashcd", "cloud native", "community", "containerisation", "dapr", "devops", "infrastructure management", "keda", "kubernetes", "linux containers", "microservices", "orchestration", "paas", "scaling", "serverless", "windows containers"]
+permalink: /azure/community/Choosing-the-Right-Azure-Containerisation-Strategy-AKS-App-Service-or-Container-Apps
+tags:
+- AKS
+- Azure
+- Azure App Service
+- Azure Container Apps
+- CI/CD
+- Cloud Native
+- Community
+- Containerisation
+- Dapr
+- DevOps
+- Infrastructure Management
+- KEDA
+- Kubernetes
+- Linux Containers
+- Microservices
+- Orchestration
+- PaaS
+- Scaling
+- Serverless
+- Windows Containers
+section_names:
+- azure
+- devops
 ---
-
 zaracheema compares Azure Kubernetes Service (AKS), Azure App Service, and Azure Container Apps to help you choose the right Azure containerisation approach for different application scenarios.<!--excerpt_end-->
 
 # Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?

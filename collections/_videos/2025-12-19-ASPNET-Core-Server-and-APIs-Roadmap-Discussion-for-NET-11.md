@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "ASP.NET Core Server & APIs Roadmap Discussion for .NET 11"
-description: "This video features a community standup session with Daniel Roth, Mike Kistler, and Jose Perez Rodriguez, discussing the future roadmap for ASP.NET Core in .NET 11. The session focuses on backend server improvements, API functionality enhancements, and community input on .NET's direction. Key insights are shared regarding upcoming priorities for developers building APIs and server-side applications with ASP.NET Core."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=C-Rn-8MbXtA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: ASP.NET Core Server & APIs Roadmap Discussion for .NET 11
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=C-Rn-8MbXtA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-19 17:34:57 +00:00
-permalink: "/2025-12-19-ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", ".NET Roadmap", "API Development", "API Enhancements", "Apis", "ASP.NET Core", "Backend", "Coding", "Community Standup", "Daniel Roth", "Developer", "Developer Community", "Dotnet10", "Dotnet11", "Dotnetdeveloper", "Dotnetten", "Jose Perez Rodriguez", "Microsoft", "Mike Kistler", "Server Architecture", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "dotnet 11", "dotnet roadmap", "api development", "api enhancements", "apis", "aspdotnet core", "backend", "coding", "community standup", "daniel roth", "developer", "developer community", "dotnet10", "dotnet11", "dotnetdeveloper", "dotnetten", "jose perez rodriguez", "microsoft", "mike kistler", "server architecture", "software developer", "videos"]
+permalink: /coding/videos/ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11
+tags:
+- .NET
+- .NET 11
+- .NET Roadmap
+- API Development
+- API Enhancements
+- Apis
+- ASP.NET Core
+- Backend
+- Coding
+- Community Standup
+- Daniel Roth
+- Developer
+- Developer Community
+- Dotnet10
+- Dotnet11
+- Dotnetdeveloper
+- Dotnetten
+- Jose Perez Rodriguez
+- Microsoft
+- Mike Kistler
+- Server Architecture
+- Software Developer
+- Videos
+section_names:
+- coding
 ---
-
 In this community standup, Daniel Roth, Mike Kistler, and Jose Perez Rodriguez discuss the direction of ASP.NET Core server and APIs for .NET 11, inviting developer feedback and sharing planned improvements.<!--excerpt_end-->
 
 {% youtube C-Rn-8MbXtA %}

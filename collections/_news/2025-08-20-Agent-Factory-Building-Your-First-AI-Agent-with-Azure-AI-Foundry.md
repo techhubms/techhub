@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Agent Factory: Building Your First AI Agent with Azure AI Foundry"
-description: "This article explores best practices and tools for building enterprise-ready agentic AI solutions using Azure AI Foundry. It covers open protocols such as the Model Context Protocol (MCP), governance strategies, enterprise toolchains, and practical guidance for integrating and managing AI tools securely and at scale within Microsoft Azure environments."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Agent Factory: Building Your First AI Agent with Azure AI Foundry'
+author: Yina Arenas
+canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 15:00:00 +00:00
-permalink: "/2025-08-20-Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Factory", "Agentic AI", "AI", "AI + Machine Learning", "AI Agents", "API Governance", "APIM", "APIs", "Azure", "Azure AI Foundry", "Azure API Management", "Azure Logic Apps", "Data Connectors", "Enterprise Automation", "Enterprise Toolchain", "Governance", "Identity Management", "Large Language Models (llms)", "MCP", "Microsoft Entra ID", "News", "Observability", "OpenAPI", "Security", "Security Best Practices"]
-tags_normalized: ["agent factory", "agentic ai", "ai", "ai plus machine learning", "ai agents", "api governance", "apim", "apis", "azure", "azure ai foundry", "azure api management", "azure logic apps", "data connectors", "enterprise automation", "enterprise toolchain", "governance", "identity management", "large language models llms", "mcp", "microsoft entra id", "news", "observability", "openapi", "security", "security best practices"]
+permalink: /ai/news/Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Foundry
+tags:
+- Agent Factory
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Agents
+- API Governance
+- APIM
+- APIs
+- Azure
+- Azure AI Foundry
+- Azure API Management
+- Azure Logic Apps
+- Data Connectors
+- Enterprise Automation
+- Enterprise Toolchain
+- Governance
+- Identity Management
+- Large Language Models (llms)
+- MCP
+- Microsoft Entra ID
+- News
+- Observability
+- OpenAPI
+- Security
+- Security Best Practices
+section_names:
+- ai
+- azure
+- security
 ---
-
 Yina Arenas details how to build and securely manage agentic AI solutions in Azure AI Foundry, offering practical patterns, protocols, and governance strategies for enterprise adoption.<!--excerpt_end-->
 
 # Agent Factory: Building Your First AI Agent with Azure AI Foundry

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "The Complete MCP Experience: Full Specification Support in VS Code"
-description: "This article announces the full integration of the Model Context Protocol (MCP) specification within Visual Studio Code, empowering developers to build advanced AI agent workflows. It covers new features such as authorization, prompts, resource management, and model sampling, as well as security enhancements through industry-standard OAuth provider support. Readers will learn how these enhancements transform MCP from a toolset into a complete standard for AI agent integrations in development environments, demonstrated by the GitHub MCP server and Microsoft's identity collaboration."
-author: "Harald Kirschner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'The Complete MCP Experience: Full Specification Support in VS Code'
+author: Harald Kirschner
+canonical_url: https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-12 00:00:00 +00:00
-permalink: "/2025-06-12-The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Agent Integration", "Authorization", "Coding", "Developer Tools", "DevOps", "GitHub MCP Server", "Identity Providers", "MCP", "Microsoft", "News", "OAuth", "Prompts", "Remote Servers", "Resources", "Sampling", "VS Code", "Workspace Automation"]
-tags_normalized: ["ai", "ai agent integration", "authorization", "coding", "developer tools", "devops", "github mcp server", "identity providers", "mcp", "microsoft", "news", "oauth", "prompts", "remote servers", "resources", "sampling", "vs code", "workspace automation"]
+permalink: /ai/news/The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code
+tags:
+- AI
+- AI Agent Integration
+- Authorization
+- Coding
+- Developer Tools
+- DevOps
+- GitHub MCP Server
+- Identity Providers
+- MCP
+- Microsoft
+- News
+- OAuth
+- Prompts
+- Remote Servers
+- Resources
+- Sampling
+- VS Code
+- Workspace Automation
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Harald Kirschner and collaborators present the complete integration of the Model Context Protocol specification in VS Code, detailing new authorization, prompts, and resource management features that empower AI agent workflows for developers.<!--excerpt_end-->
 
 # The Complete MCP Experience: Full Specification Support in VS Code

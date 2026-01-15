@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Easily Connect AI Workloads to Azure Blob Storage with adlfs"
-description: "This article details how the adlfs Python library simplifies and accelerates the connection between AI and ML workloads and Azure Blob or Data Lake Storage. It highlights Microsoft's ongoing collaboration with the open-source fsspec community and outlines recent adlfs performance enhancements, improved reliability for large files, fast uploads, and seamless integration with popular Python data frameworks such as Dask, Pandas, Ray, and PyTorch. Example usage and installation guidance are included."
-author: "Vishnu Charan TJ"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Easily Connect AI Workloads to Azure Blob Storage with adlfs
+author: Vishnu Charan TJ
+canonical_url: https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-15 17:17:17 +00:00
-permalink: "/2025-10-15-Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Adlfs", "AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure SDK", "Blob Storage", "Cloud Storage", "Concurrent Uploads", "Dask", "Data Engineering", "Data Lake", "Data Pipelines", "ETL", "Fsspec", "Machine Learning", "ML", "News", "Pandas", "Performance Optimization", "Python", "PyTorch", "Ray", "Storage", "Storage Authentication"]
-tags_normalized: ["adlfs", "ai", "ai workloads", "azure", "azure blob storage", "azure data lake storage", "azure sdk", "blob storage", "cloud storage", "concurrent uploads", "dask", "data engineering", "data lake", "data pipelines", "etl", "fsspec", "machine learning", "ml", "news", "pandas", "performance optimization", "python", "pytorch", "ray", "storage", "storage authentication"]
+permalink: /ai/news/Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs
+tags:
+- Adlfs
+- AI
+- AI Workloads
+- Azure
+- Azure Blob Storage
+- Azure Data Lake Storage
+- Azure SDK
+- Blob Storage
+- Cloud Storage
+- Concurrent Uploads
+- Dask
+- Data Engineering
+- Data Lake
+- Data Pipelines
+- ETL
+- Fsspec
+- Machine Learning
+- ML
+- News
+- Pandas
+- Performance Optimization
+- Python
+- PyTorch
+- Ray
+- Storage
+- Storage Authentication
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Vishnu Charan TJ explains the latest enhancements in adlfs, empowering data professionals to efficiently connect Python-based AI and ML workloads to Azure Blob and Data Lake Storage, with real-world framework integrations and best practices.<!--excerpt_end-->
 
 # Easily Connect AI Workloads to Azure Blob Storage with adlfs

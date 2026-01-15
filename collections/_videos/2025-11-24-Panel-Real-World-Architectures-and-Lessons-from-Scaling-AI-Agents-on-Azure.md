@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure"
-description: "This Microsoft Ignite 2025 panel features customers and partners sharing candid insights on building, scaling, and deploying AI agent solutions using open frameworks and Azure services. The discussion covers architectural strategies, model selection within Microsoft Foundry, reliability, autoscaling, and overcoming production challenges such as security and orchestration. Speakers also highlight responsible AI practices, human-in-the-loop design, and measuring business impact with agentic innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=baPvHB27gwY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=baPvHB27gwY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:37:46 +00:00
-permalink: "/2025-11-24-Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Architecture", "AI", "AI Agents", "AI Governance", "Autoscaling", "Azure", "Azure AI", "Enterprise AI", "Fault Tolerance", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Interactive Prototyping", "Microsoft Foundry", "Model Selection", "MSIgnite", "Observability", "Panel Discussion", "Production Challenges", "Videos"]
-tags_normalized: ["agent architecture", "ai", "ai agents", "ai governance", "autoscaling", "azure", "azure ai", "enterprise ai", "fault tolerance", "human in the loop", "innovatewithazureaiappsandagents", "interactive prototyping", "microsoft foundry", "model selection", "msignite", "observability", "panel discussion", "production challenges", "videos"]
+permalink: /ai/videos/Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure
+tags:
+- Agent Architecture
+- AI
+- AI Agents
+- AI Governance
+- Autoscaling
+- Azure
+- Azure AI
+- Enterprise AI
+- Fault Tolerance
+- Human in The Loop
+- InnovatewithAzureAIappsandagents
+- Interactive Prototyping
+- Microsoft Foundry
+- Model Selection
+- MSIgnite
+- Observability
+- Panel Discussion
+- Production Challenges
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a panel discussion at Ignite 2025, featuring Mark Austin, Luis Héctor Chávez, Adam Orentlicher, and Naga Surendran as they share real-world approaches to architecting AI agents using Azure and open AI frameworks.<!--excerpt_end-->
 
 {% youtube baPvHB27gwY %}

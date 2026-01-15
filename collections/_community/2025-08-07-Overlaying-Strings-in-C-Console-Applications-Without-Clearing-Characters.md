@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Overlaying Strings in C# Console Applications Without Clearing Characters"
-description: "This community discussion explores methods for overlaying one string on top of another in a C# console application, focusing on the challenge of preventing space characters from erasing existing screen content. Multiple solutions are suggested, including cursor manipulation, escape sequences, and custom buffer logic."
-author: "06Hexagram"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: Overlaying Strings in C# Console Applications Without Clearing Characters
+author: 06Hexagram
+canonical_url: https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-07 18:08:40 +00:00
-permalink: "/2025-08-07-Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters.html"
-categories: ["Coding"]
-tags: [".NET", "ANSI Codes", "C#", "Character Output", "Coding", "Community", "Console Application", "Cursor Positioning", "Display Logic", "Escape Sequences", "Extension Methods", "Screen Buffer", "Spectre.Console", "String Manipulation", "String Overlay", "System.Console"]
-tags_normalized: ["dotnet", "ansi codes", "csharp", "character output", "coding", "community", "console application", "cursor positioning", "display logic", "escape sequences", "extension methods", "screen buffer", "spectredotconsole", "string manipulation", "string overlay", "systemdotconsole"]
+permalink: /coding/community/Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters
+tags:
+- .NET
+- ANSI Codes
+- C#
+- Character Output
+- Coding
+- Community
+- Console Application
+- Cursor Positioning
+- Display Logic
+- Escape Sequences
+- Extension Methods
+- Screen Buffer
+- Spectre.Console
+- String Manipulation
+- String Overlay
+- System.Console
+section_names:
+- coding
 ---
-
 06Hexagram initiates a discussion about overlaying strings in C# console apps without overwriting non-space characters, with community members contributing practical solutions.<!--excerpt_end-->
 
 # Overlaying Strings in C# Console Applications Without Clearing Characters

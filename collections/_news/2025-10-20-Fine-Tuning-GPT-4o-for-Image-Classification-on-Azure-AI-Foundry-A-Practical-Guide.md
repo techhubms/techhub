@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Fine-Tuning GPT-4o for Image Classification on Azure AI Foundry: A Practical Guide"
-description: "This in-depth guide by Alexandre Levret walks you through fine-tuning the GPT-4o Vision-Language Model (VLM) on Azure AI Foundry for image classification tasks. It covers data preparation, batch inference using Azure OpenAI, direct comparison with traditional CNN approaches, and hands-on details regarding cost, latency, and accuracy improvements gained through Vision Fine-Tuning. All steps are illustrated with real-world examples and provide actionable advice for developers looking to leverage advanced AI models in practical projects."
-author: "Alexandre Levret"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/a-developers-guide-to-fine-tuning-gpt-4o-for-image-classification-on-azure-ai-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Fine-Tuning GPT-4o for Image Classification on Azure AI Foundry: A Practical Guide'
+author: Alexandre Levret
+canonical_url: https://devblogs.microsoft.com/foundry/a-developers-guide-to-fine-tuning-gpt-4o-for-image-classification-on-azure-ai-foundry/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-20 07:11:50 +00:00
-permalink: "/2025-10-20-Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Azure Machine Learning", "Azure OpenAI", "Batch API", "CNN", "Cost Analysis", "Fine Tuning", "GPT 4o", "Image Classification", "Inference", "Latency", "ML", "Model Deployment", "Model Evaluation", "News", "Stanford Dogs Dataset", "Supervised Fine Tuning", "Vision Language Models"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "azure machine learning", "azure openai", "batch api", "cnn", "cost analysis", "fine tuning", "gpt 4o", "image classification", "inference", "latency", "ml", "model deployment", "model evaluation", "news", "stanford dogs dataset", "supervised fine tuning", "vision language models"]
+permalink: /ai/news/Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Azure Machine Learning
+- Azure OpenAI
+- Batch API
+- CNN
+- Cost Analysis
+- Fine Tuning
+- GPT 4o
+- Image Classification
+- Inference
+- Latency
+- ML
+- Model Deployment
+- Model Evaluation
+- News
+- Stanford Dogs Dataset
+- Supervised Fine Tuning
+- Vision Language Models
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Alexandre Levret demonstrates how developers can fine-tune GPT-4o using Azure AI Foundry to enhance image classification accuracy, providing a hands-on comparison against conventional CNNs and exploring practical trade-offs in performance, cost, and development workflow.<!--excerpt_end-->
 
 # Fine-Tuning GPT-4o for Image Classification on Azure AI Foundry

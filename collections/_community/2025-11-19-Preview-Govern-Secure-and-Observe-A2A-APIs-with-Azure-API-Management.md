@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Preview: Govern, Secure, and Observe A2A APIs with Azure API Management"
-description: "This announcement introduces preview support for Agent2Agent (A2A) APIs in Azure API Management, enabling organizations to manage and govern agent APIs along with AI model APIs, Model Context Protocol (MCP) tools, and traditional APIs. The new capability extends governance, security, and observability to agentic and AI-powered systems, supporting policy management, OpenTelemetry GenAI semantic conventions, and integration with Application Insights for monitoring and debugging."
-author: "budzynski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Preview: Govern, Secure, and Observe A2A APIs with Azure API Management'
+author: budzynski
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 19:21:35 +00:00
-permalink: "/2025-11-19-Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-API-Management.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["A2A API", "Agent2Agent", "AI", "AI Agent", "API Gateway", "API Governance", "API Integration", "API Observability", "API Policy", "Application Insights", "Azure", "Azure API Management", "Community", "Enterprise Integration", "GenAI", "JSON RPC", "MCP Tools", "OpenTelemetry", "Security"]
-tags_normalized: ["a2a api", "agent2agent", "ai", "ai agent", "api gateway", "api governance", "api integration", "api observability", "api policy", "application insights", "azure", "azure api management", "community", "enterprise integration", "genai", "json rpc", "mcp tools", "opentelemetry", "security"]
+permalink: /ai/community/Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-API-Management
+tags:
+- A2A API
+- Agent2Agent
+- AI
+- AI Agent
+- API Gateway
+- API Governance
+- API Integration
+- API Observability
+- API Policy
+- Application Insights
+- Azure
+- Azure API Management
+- Community
+- Enterprise Integration
+- GenAI
+- JSON RPC
+- MCP Tools
+- OpenTelemetry
+- Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 budzynski announces the preview of A2A API support in Azure API Management, giving organizations new ways to govern, secure, and monitor agent and AI APIs within a unified management plane.<!--excerpt_end-->
 
 # Govern, Secure, and Observe A2A APIs with Azure API Management (Preview)

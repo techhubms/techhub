@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Innovation in Microsoft Databases: AI-Ready Data and Modern Apps"
-description: "This session from Microsoft Ignite 2025, presented by Shireesh Thota and team, explores the latest advancements across Microsoft's database portfolio, including SQL Server 2025, Azure CosmosDB, Horizon DB, and integration with AI technologies like GPT-5. It includes dynamic demos on boosting data productivity, leveraging AI for semantic search and vector operations, open-source contributions, and next-generation app development with Microsoft databases."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Y17b0rJ_psk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Innovation in Microsoft Databases: AI-Ready Data and Modern Apps'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Y17b0rJ_psk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:12:58 +00:00
-permalink: "/2025-11-21-Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Adobe Platform AI Engineering", "AI", "AI Integration", "Azure", "Azure CosmosDB", "Data Extraction", "Database Innovation", "DocumentDB", "Fabric Integration", "Global Consistency", "GPT 5", "Horizon DB", "Microsoft Ignite", "ML", "MSIgnite", "Multi Cloud", "Open Source", "PostgreSQL", "Semantic Search", "SQL Server", "Unifyyourdataplatform", "Vector Database", "Videos", "VS Code"]
-tags_normalized: ["adobe platform ai engineering", "ai", "ai integration", "azure", "azure cosmosdb", "data extraction", "database innovation", "documentdb", "fabric integration", "global consistency", "gpt 5", "horizon db", "microsoft ignite", "ml", "msignite", "multi cloud", "open source", "postgresql", "semantic search", "sql server", "unifyyourdataplatform", "vector database", "videos", "vs code"]
+permalink: /ai/videos/Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps
+tags:
+- Adobe Platform AI Engineering
+- AI
+- AI Integration
+- Azure
+- Azure CosmosDB
+- Data Extraction
+- Database Innovation
+- DocumentDB
+- Fabric Integration
+- Global Consistency
+- GPT 5
+- Horizon DB
+- Microsoft Ignite
+- ML
+- MSIgnite
+- Multi Cloud
+- Open Source
+- PostgreSQL
+- Semantic Search
+- SQL Server
+- Unifyyourdataplatform
+- Vector Database
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events hosts Shireesh Thota with other experts to reveal innovations in Microsoft databases, highlighting AI-powered features, open-source efforts, and demos that empower developers and data engineers.<!--excerpt_end-->
 
 {% youtube Y17b0rJ_psk %}

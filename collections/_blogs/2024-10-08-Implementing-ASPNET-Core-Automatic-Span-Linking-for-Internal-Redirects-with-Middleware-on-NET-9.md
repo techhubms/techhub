@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Implementing ASP.NET Core Automatic Span Linking for Internal Redirects with Middleware on .NET 9"
-description: "Steve Gordon explores how to implement automatic span (activity) linking between request traces in ASP.NET Core during internal redirects using OpenTelemetry and new .NET 9 features. The post details middleware setup, trace propagation, example code, and production considerations to enhance observability for .NET applications."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/implementing-aspnetcore-span-linking-for-redirects-with-middleware"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+layout: post
+title: Implementing ASP.NET Core Automatic Span Linking for Internal Redirects with Middleware on .NET 9
+author: Steve Gordon
+canonical_url: https://www.stevejgordon.co.uk/implementing-aspnetcore-span-linking-for-redirects-with-middleware
+viewing_mode: external
+feed_name: Steve Gordon's Blog
+feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-10-08 07:20:31 +00:00
-permalink: "/2024-10-08-Implementing-ASPNET-Core-Automatic-Span-Linking-for-Internal-Redirects-with-Middleware-on-NET-9.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET 9", "Activity", "ASP.NET Core", "Blogs", "Coding", "DevOps", "Distributed Tracing", "ITempDataDictionaryFactory", "Middleware", "Observability", "OpenTelemetry", "Span Linking", "Tracing"]
-tags_normalized: ["dotnet 9", "activity", "aspdotnet core", "blogs", "coding", "devops", "distributed tracing", "itempdatadictionaryfactory", "middleware", "observability", "opentelemetry", "span linking", "tracing"]
+permalink: /coding/blogs/Implementing-ASPNET-Core-Automatic-Span-Linking-for-Internal-Redirects-with-Middleware-on-NET-9
+tags:
+- .NET 9
+- Activity
+- ASP.NET Core
+- Blogs
+- Coding
+- DevOps
+- Distributed Tracing
+- ITempDataDictionaryFactory
+- Middleware
+- Observability
+- OpenTelemetry
+- Span Linking
+- Tracing
+section_names:
+- coding
+- devops
 ---
-
 In this detailed post by Steve Gordon, the author demonstrates a practical approach to implementing automatic span linking for internal redirects in ASP.NET Core apps with .NET 9, enhancing traceability and observability.<!--excerpt_end-->
 
 # Implementing ASP.NET Core Automatic Span (Activity) Linking for Internal Redirects with Middleware on .NET 9

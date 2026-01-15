@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Discussion: Nominal Union Types Demoed at VS Live, Redmond"
-description: "A developer session recap from VS Live at Redmond where Mads Torgerson showcased 'nominal union types' in C#. The post covers what they are, the community’s impressions, the status of the proposal, probable timeline for inclusion in C#/.NET, and comparisons with TypeScript and discriminated unions."
-author: "ThinksAboutTooMuch"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mj96yf/nominal_union_types_were_demoted_at_vs_live_at/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'Discussion: Nominal Union Types Demoed at VS Live, Redmond'
+author: ThinksAboutTooMuch
+canonical_url: https://www.reddit.com/r/csharp/comments/1mj96yf/nominal_union_types_were_demoted_at_vs_live_at/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 16:22:18 +00:00
-permalink: "/2025-08-06-Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "C#", "C# 15", "Coding", "Community", "Discriminated Unions", "Language Design", "Language Features", "Mads Torgerson", "Nominal Union Types", "TypeScript", "Union Types", "VS Live"]
-tags_normalized: ["dotnet", "dotnet 11", "csharp", "csharp 15", "coding", "community", "discriminated unions", "language design", "language features", "mads torgerson", "nominal union types", "typescript", "union types", "vs live"]
+permalink: /coding/community/Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond
+tags:
+- .NET
+- .NET 11
+- C#
+- C# 15
+- Coding
+- Community
+- Discriminated Unions
+- Language Design
+- Language Features
+- Mads Torgerson
+- Nominal Union Types
+- TypeScript
+- Union Types
+- VS Live
+section_names:
+- coding
 ---
-
 ThinksAboutTooMuch shares insights from a VS Live Redmond session where Mads Torgerson demoed nominal union types for C#, exploring upcoming language features and community reactions.<!--excerpt_end-->
 
 # Recap: Demo of Nominal Union Types at VS Live Redmond

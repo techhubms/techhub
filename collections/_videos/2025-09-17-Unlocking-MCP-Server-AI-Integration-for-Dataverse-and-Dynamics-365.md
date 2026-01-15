@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365"
-description: "This video episode, hosted by Elaiza Benitez with guest Nathan Rose (Microsoft MVP and HSO Functional Architect), explores how the Model Context Protocol (MCP) Server enables seamless AI integration for low-code development through Dataverse, Dynamics 365, and Copilot Studio. The episode provides hands-on demos, discusses interactive and autonomous agentic AI, and outlines both opportunities and limitations—including security considerations. Designed for developers and solution architects, the content is valuable for those building intelligent agents or incorporating AI within enterprise Microsoft platforms."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bjMdBPLl4Kc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=bjMdBPLl4Kc
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-17 07:00:41 +00:00
-permalink: "/2025-09-17-Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Integration", "Autonomous Agents", "Cloud Computing", "Copilot Studio", "Dataverse", "Dev", "Development", "Dynamics 365", "Enterprise Applications", "Interactive Agents", "Low Code Development", "MCP", "MCP Server", "Microsoft", "Microsoft Learn", "Microsoft MVP", "Preview Features", "Security Considerations", "Tech", "Technology", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai integration", "autonomous agents", "cloud computing", "copilot studio", "dataverse", "dev", "development", "dynamics 365", "enterprise applications", "interactive agents", "low code development", "mcp", "mcp server", "microsoft", "microsoft learn", "microsoft mvp", "preview features", "security considerations", "tech", "technology", "videos"]
+permalink: /ai/videos/Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365
+tags:
+- Agentic AI
+- AI
+- AI Integration
+- Autonomous Agents
+- Cloud Computing
+- Copilot Studio
+- Dataverse
+- Dev
+- Development
+- Dynamics 365
+- Enterprise Applications
+- Interactive Agents
+- Low Code Development
+- MCP
+- MCP Server
+- Microsoft
+- Microsoft Learn
+- Microsoft MVP
+- Preview Features
+- Security Considerations
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer presents Elaiza Benitez and Nathan Rose discussing how to leverage MCP Server for low-code AI integration in Dataverse, Dynamics 365, and Copilot Studio, with practical demos and expert insights.<!--excerpt_end-->
 
 {% youtube bjMdBPLl4Kc %}

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Managed Instance on Azure App Service: Public Preview Announcement and Technical Overview"
-description: "This announcement introduces the Public Preview of Managed Instance on Azure App Service at Ignite 2025, highlighting technical solutions for migrating and modernizing legacy applications. It explains how the new capabilities address configuration, dependency management, storage integration, and DevOps automation using Azure-native features for rapid, secure cloud adoption. Key scenarios include lift-and-shift migration, hybrid workloads with compliance, and incremental modernization strategies for complex .NET and enterprise apps, enabling developers to move applications to Azure with minimal code changes."
-author: "apwestgarth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Managed Instance on Azure App Service: Public Preview Announcement and Technical Overview'
+author: apwestgarth
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET Framework", "Azure", "Azure App Service", "Azure Bastion", "Azure Storage", "Cloud Migration", "Coding", "Community", "Compliance", "DevOps", "DevOps Automation", "Enterprise Applications", "Key Vault", "Legacy Modernization", "Managed Instance", "PowerShell", "Premium V4", "RDP", "Security", "VNET Integration", "Windows Registry"]
-tags_normalized: ["dotnet framework", "azure", "azure app service", "azure bastion", "azure storage", "cloud migration", "coding", "community", "compliance", "devops", "devops automation", "enterprise applications", "key vault", "legacy modernization", "managed instance", "powershell", "premium v4", "rdp", "security", "vnet integration", "windows registry"]
+permalink: /coding/community/Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview
+tags:
+- .NET Framework
+- Azure
+- Azure App Service
+- Azure Bastion
+- Azure Storage
+- Cloud Migration
+- Coding
+- Community
+- Compliance
+- DevOps
+- DevOps Automation
+- Enterprise Applications
+- Key Vault
+- Legacy Modernization
+- Managed Instance
+- PowerShell
+- Premium V4
+- RDP
+- Security
+- VNET Integration
+- Windows Registry
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Written by apwestgarth, this announcement details the new Managed Instance on Azure App Service, describing technical features designed to help developers migrate and modernize legacy .NET applications for the cloud with reduced code changes and strong security.<!--excerpt_end-->
 
 # Managed Instance on Azure App Service: Public Preview Announcement

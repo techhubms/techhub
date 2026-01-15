@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure VNet Flow Logs Migration and Traffic Analytics with Terraform"
-description: "This in-depth guide by Ibrahim Baig details the migration from Azure NSG Flow Logs to VNet Flow Logs using Terraform, covering the key dates, motivations, operational and security benefits, cost considerations, Traffic Analytics integration, challenges, and best practice implementation strategies. It includes code samples for Terraform, Azure CLI, and insights for large-scale deployments. Readers will also learn utilization of Azure Log Analytics and validation techniques for ensuring a smooth migration in line with Microsoft's timeline for NSG Flow Log retirement."
-author: "ibrahimbaig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-vnet-flow-logs-with-terraform-the-complete-migration-and/ba-p/4468225"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure VNet Flow Logs Migration and Traffic Analytics with Terraform
+author: ibrahimbaig
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-vnet-flow-logs-with-terraform-the-complete-migration-and/ba-p/4468225
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 08:29:35 +00:00
-permalink: "/2025-11-08-Azure-VNet-Flow-Logs-Migration-and-Traffic-Analytics-with-Terraform.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["AVNM", "Azure", "Azure CLI", "Azure Policy", "Azure Security", "Azure Storage", "Azure VNet Flow Logs", "Coding", "Community", "Cost Optimization", "DevOps", "IaC", "KQL", "Log Analytics", "Network Monitoring", "Network Watcher", "NSG Flow Logs", "Resource Management", "Security", "Terraform", "Traffic Analytics"]
-tags_normalized: ["avnm", "azure", "azure cli", "azure policy", "azure security", "azure storage", "azure vnet flow logs", "coding", "community", "cost optimization", "devops", "iac", "kql", "log analytics", "network monitoring", "network watcher", "nsg flow logs", "resource management", "security", "terraform", "traffic analytics"]
+permalink: /coding/community/Azure-VNet-Flow-Logs-Migration-and-Traffic-Analytics-with-Terraform
+tags:
+- AVNM
+- Azure
+- Azure CLI
+- Azure Policy
+- Azure Security
+- Azure Storage
+- Azure VNet Flow Logs
+- Coding
+- Community
+- Cost Optimization
+- DevOps
+- IaC
+- KQL
+- Log Analytics
+- Network Monitoring
+- Network Watcher
+- NSG Flow Logs
+- Resource Management
+- Security
+- Terraform
+- Traffic Analytics
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Ibrahim Baig provides a technical guide on migrating from Azure NSG Flow Logs to VNet Flow Logs using Terraform, discussing benefits, migration steps, implementation details, Traffic Analytics integration, and practical validation.<!--excerpt_end-->
 
 # Azure VNet Flow Logs with Terraform: The Complete Migration and Traffic Analytics Guide

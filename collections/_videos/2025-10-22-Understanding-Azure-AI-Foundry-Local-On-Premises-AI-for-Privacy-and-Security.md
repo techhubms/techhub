@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security"
-description: "In this video, Dona Sarkar from Microsoft Developer introduces Azure AI Foundry Local, a solution enabling the deployment and operation of AI models on local infrastructure instead of the cloud. The discussion highlights key scenarios where running AI workloads locally enhances privacy, security, and supports offline capabilities, making it valuable for regulated industries and edge solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/KPa9PE27ESU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/KPa9PE27ESU
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 16:49:42 +00:00
-permalink: "/2025-10-22-Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security.html"
-categories: ["AI"]
-tags: ["AI", "AI Models", "Azure AI Foundry Local", "Cloud VS Local Deployment", "Dona Sarkar", "Edge Computing", "Microsoft Azure", "Offline Scenarios", "On Premises AI", "Privacy", "Videos"]
-tags_normalized: ["ai", "ai models", "azure ai foundry local", "cloud vs local deployment", "dona sarkar", "edge computing", "microsoft azure", "offline scenarios", "on premises ai", "privacy", "videos"]
+permalink: /ai/videos/Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security
+tags:
+- AI
+- AI Models
+- Azure AI Foundry Local
+- Cloud VS Local Deployment
+- Dona Sarkar
+- Edge Computing
+- Microsoft Azure
+- Offline Scenarios
+- On Premises AI
+- Privacy
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer's Dona Sarkar offers insights into Azure AI Foundry Local, emphasizing privacy, security, and offline benefits for organizations running AI models outside the cloud.<!--excerpt_end-->
 
 {% youtube KPa9PE27ESU %}

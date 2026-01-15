@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "SonarSweep: Improving AI-Generated Code Quality and Security"
-description: "This post explores Sonar’s new SonarSweep service, which targets the quality and security of code produced by large language models. SonarSweep helps organizations training their own AI models by identifying bugs and vulnerabilities in AI-generated code. The service leverages reinforcement techniques to optimize coding datasets, aiming to reduce security risks and improve the reliability of AI models used in software development workflows."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'SonarSweep: Improving AI-Generated Code Quality and Security'
+author: Mike Vizard
+canonical_url: https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-21 13:00:47 +00:00
-permalink: "/2025-10-21-SonarSweep-Improving-AI-Generated-Code-Quality-and-Security.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Code Quality", "AI Code Review", "AI Code Security", "AI Generated Code", "AI Model Training", "Blogs", "Bug Reduction", "Code Vulnerabilities", "Cybersecurity", "Cybersecurity in AI", "DevOps", "Devsecops", "Large Language Models", "Reinforcement Learning", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sonar Platform", "SonarSweep"]
-tags_normalized: ["ai", "ai code quality", "ai code review", "ai code security", "ai generated code", "ai model training", "blogs", "bug reduction", "code vulnerabilities", "cybersecurity", "cybersecurity in ai", "devops", "devsecops", "large language models", "reinforcement learning", "secure coding", "security", "social facebook", "social linkedin", "social x", "software development", "sonar platform", "sonarsweep"]
+permalink: /ai/blogs/SonarSweep-Improving-AI-Generated-Code-Quality-and-Security
+tags:
+- AI
+- AI Code Quality
+- AI Code Review
+- AI Code Security
+- AI Generated Code
+- AI Model Training
+- Blogs
+- Bug Reduction
+- Code Vulnerabilities
+- Cybersecurity
+- Cybersecurity in AI
+- DevOps
+- Devsecops
+- Large Language Models
+- Reinforcement Learning
+- Secure Coding
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+- Sonar Platform
+- SonarSweep
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard discusses how Sonar’s SonarSweep service helps AI development teams reduce bugs and vulnerabilities in AI-generated code, offering actionable insights for DevOps and security professionals.<!--excerpt_end-->
 
 # SonarSweep: Improving AI-Generated Code Quality and Security

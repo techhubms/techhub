@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Defender Leads Modern Endpoint Security Market for Third Consecutive Year"
-description: "This news article highlights Microsoft Defender’s achievement as the number one endpoint security solution in worldwide market share for the third consecutive year, according to IDC’s 2024 report. It covers Defender’s cross-platform security innovations, AI-powered protection, and the reasons organizations are increasingly choosing Microsoft’s unified security platform."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Defender Leads Modern Endpoint Security Market for Third Consecutive Year
+author: Rob Lefferts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-27 15:00:00 +00:00
-permalink: "/2025-08-27-Microsoft-Defender-Leads-Modern-Endpoint-Security-Market-for-Third-Consecutive-Year.html"
-categories: ["Security"]
-tags: ["AI", "AI Security", "Automatic Attack Disruption", "Cross Platform Security", "Cybersecurity", "Endpoint Security", "Exposure Management", "Extended Detection And Response", "IDC Report", "Linux Security", "Market Share", "Microsoft Defender", "News", "Security", "Security Operations Center", "Threat Protection", "Zero Trust"]
-tags_normalized: ["ai", "ai security", "automatic attack disruption", "cross platform security", "cybersecurity", "endpoint security", "exposure management", "extended detection and response", "idc report", "linux security", "market share", "microsoft defender", "news", "security", "security operations center", "threat protection", "zero trust"]
+permalink: /security/news/Microsoft-Defender-Leads-Modern-Endpoint-Security-Market-for-Third-Consecutive-Year
+tags:
+- AI
+- AI Security
+- Automatic Attack Disruption
+- Cross Platform Security
+- Cybersecurity
+- Endpoint Security
+- Exposure Management
+- Extended Detection And Response
+- IDC Report
+- Linux Security
+- Market Share
+- Microsoft Defender
+- News
+- Security
+- Security Operations Center
+- Threat Protection
+- Zero Trust
+section_names:
+- security
 ---
-
 Rob Lefferts reports on Microsoft Defender’s continued leadership in endpoint security, emphasizing market share growth, cross-platform capabilities, and AI-powered threat disruption.<!--excerpt_end-->
 
 # Microsoft Defender Leads Modern Endpoint Security Market for Third Consecutive Year

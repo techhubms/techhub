@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Optimize Azure Costs with Reserved Instances"
-description: "This guide, based on an episode of the Azure Essentials Show, explores how organizations can reduce cloud expenses by using Azure Reserved Virtual Machine Instances. It covers the basics of reserved instances, practical strategies to leverage Azure’s cost recommendations, and essential best practices for maximizing savings while sustaining performance and scalability in cloud environments."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Optimize Azure Costs with Reserved Instances
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-31 12:57:06 +00:00
-permalink: "/2025-10-31-Optimize-Azure-Costs-with-Reserved-Instances.html"
-categories: ["Azure"]
-tags: ["Auto Renewal", "Azure", "Azure Advisor", "Azure Essentials Show", "Azure Reserved Instances", "Azure VM", "Best Practices", "Billing", "Blogs", "Cloud", "Cloud Cost Management", "Cloud Strategy", "Cost Optimization", "Microsoft", "Microsoft Azure", "Utilization Alerts", "Virtual Machines"]
-tags_normalized: ["auto renewal", "azure", "azure advisor", "azure essentials show", "azure reserved instances", "azure vm", "best practices", "billing", "blogs", "cloud", "cloud cost management", "cloud strategy", "cost optimization", "microsoft", "microsoft azure", "utilization alerts", "virtual machines"]
+permalink: /azure/blogs/Optimize-Azure-Costs-with-Reserved-Instances
+tags:
+- Auto Renewal
+- Azure
+- Azure Advisor
+- Azure Essentials Show
+- Azure Reserved Instances
+- Azure VM
+- Best Practices
+- Billing
+- Blogs
+- Cloud
+- Cloud Cost Management
+- Cloud Strategy
+- Cost Optimization
+- Microsoft
+- Microsoft Azure
+- Utilization Alerts
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Thomas Maurer shares practical advice on optimizing Azure expenses using Reserved Instances. In partnership with Microsoft Azure’s Priyanshi, this episode highlights essential cost-saving strategies for cloud workloads.<!--excerpt_end-->
 
 # Optimize Azure Costs with Reserved Instances

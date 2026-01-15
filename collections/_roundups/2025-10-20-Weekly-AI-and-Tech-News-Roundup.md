@@ -1,17 +1,37 @@
----
-layout: "post"
-title: "Updated AI Tools, Open-Source Security, and Azure Integration"
-description: "This week’s roundup features new capabilities in developer AI, open-source security, and cloud infrastructure. GitHub Copilot now supports additional IDEs and workflows, while Azure introduces expanded integrations for enterprise AI, DevOps, and data engineering. Security updates include open silicon, enhanced supply chain controls, and detailed guidance for streamlined automation, transparency, and resilience."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: Updated AI Tools, Open-Source Security, and Azure Integration
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-10-20 09:00:00 +00:00
-permalink: "/2025-10-20-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Automation", "Azure", "Cloud Infrastructure", "Coding", "Developer Workflows", "DevOps", "GitHub Copilot", "Machine Learning", "MCP", "ML", "Open Source", "Quantum Resilient Hardware", "Roundups", "Security", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "automation", "azure", "cloud infrastructure", "coding", "developer workflows", "devops", "github copilot", "machine learning", "mcp", "ml", "open source", "quantum resilient hardware", "roundups", "security", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Cloud Infrastructure
+- Coding
+- Developer Workflows
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- MCP
+- ML
+- Open Source
+- Quantum Resilient Hardware
+- Roundups
+- Security
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s technology roundup. In this edition, we highlight the recent developments in developer-focused AI, new advancements in open-source and cloud security, improved efficiency for data and machine learning pipelines, and an increased interest in automation within hybrid and agent-based workflows.
 
 GitHub Copilot has evolved from a code completion tool into a multi-model, AI-supported platform, expanding its integration across areas such as legacy system modernization, PowerShell scripting, SQL Server, and AI-driven code review. Azure’s latest updates introduce updates to open infrastructure, new developer CLI features, unified analytics, and carbon-aware API management for sustainable operations. On the security side, you’ll find Microsoft’s updates in quantum-resilient silicon, clear AI security benchmarks, and strengthened supply chain and marketplace protections, covering everything from source code to cloud deployments.
@@ -83,7 +103,7 @@ A new preview brings Copilot into SQL Server Management Studio 22, supporting T-
 - [GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant](https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/)
 - [Claude Sonnet 4.5 Now Available in GitHub Copilot](https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot)
 - [Grok Code Fast 1 Now Available in GitHub Copilot](https://github.blog/changelog/2025-10-16-grok-code-fast-1-is-now-generally-available-in-github-copilot)
-- [Introducing GitHub Copilot Integration in SQL Server Management Studio 22]({{ "/videos/2025-10-16-Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22.html" | relative_url }})
+- [Introducing GitHub Copilot Integration in SQL Server Management Studio 22](/videos/2025-10-16-Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22.html)
 - [Copilot-Generated Commit Messages Now Generally Available on GitHub.com](https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available)
 - [Migrating Copilot Knowledge Bases to Copilot Spaces](https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces)
 
@@ -107,7 +127,7 @@ Agent mode now enforces use of fully qualified tool names, aligning with the MCP
 
 VS Code updates include enhanced keyboard shortcuts, system-aware profile detection, and stronger integration with test suites, all based on developer feedback. Collaboration continues to make agentic workflows smoother within the editor.
 
-- [Visual Studio Code and GitHub Copilot - What's new in 1.105]({{ "/videos/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html" | relative_url }})
+- [Visual Studio Code and GitHub Copilot - What's new in 1.105](/videos/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html)
 
 ### Copilot Coding Agent and Automation Features
 
@@ -133,7 +153,7 @@ Copilot’s ability to generate test suites in VS Code using prompts improves on
 
 For mainframe modernization, Copilot and agent frameworks work alongside Azure orchestration to support updating legacy COBOL systems.
 
-- [Generate a Test Suite with GitHub Copilot and Prompt-Driven Development]({{ "/videos/2025-10-14-Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development.html" | relative_url }})
+- [Generate a Test Suite with GitHub Copilot and Prompt-Driven Development](/videos/2025-10-14-Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development.html)
 - [Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins](https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/)
 - [How GitHub Copilot and AI Agents Modernize Legacy COBOL Systems](https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/)
 
@@ -144,13 +164,13 @@ Developers can now use Agent Package Manager in conjunction with GitHub Actions 
 A technical podcast with Harald Kirschner offers insight into customizing chat agents within VS Code, covering the new Agent Memory extension for context management. These updates add new customization options to Copilot’s agent-based features.
 
 - [How to Build Reliable AI Workflows with Agentic Primitives and Context Engineering](https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/)
-- [Building Agent Memory for VS Code with Harald Kirschner]({{ "/videos/2025-10-13-Building-Agent-Memory-for-VS-Code-with-Harald-Kirschner.html" | relative_url }})
+- [Building Agent Memory for VS Code with Harald Kirschner](/videos/2025-10-13-Building-Agent-Memory-for-VS-Code-with-Harald-Kirschner.html)
 
 ### Copilot in Real-World and Open Source Projects
 
 Case studies such as the ‘No Bark’ open-source project illustrate how Copilot supports accessibility and deployment for those without a coding background. Developers are also encouraged to join the open source MCP community and contribute to agentic workflow innovation.
 
-- [How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution]({{ "/videos/2025-10-15-How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution.html" | relative_url }})
+- [How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution](/videos/2025-10-15-How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution.html)
 
 ## AI
 
@@ -184,8 +204,8 @@ Hosting agentic AI is now easier, with agents like Goose scaling on Azure Contai
 Archestra, featured in Open Source Friday, is built on the Microsoft Cloud Platform and allows secure, permissioned orchestration of agents and models. The MCP registry progresses, helping standardize context metadata and support effective collaboration among developers of open-source AI tools.
 
 - [Building Agents on Azure Container Apps with Goose AI Agent, Ollama, and gpt-oss](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215)
-- [Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP]({{ "/videos/2025-10-14-Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP.html" | relative_url }})
-- [Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools]({{ "/videos/2025-10-18-Unlocking-the-Power-of-MCP-Model-Context-Protocol-in-Open-Source-AI-Tools.html" | relative_url }})
+- [Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP](/videos/2025-10-14-Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP.html)
+- [Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools](/videos/2025-10-18-Unlocking-the-Power-of-MCP-Model-Context-Protocol-in-Open-Source-AI-Tools.html)
 
 ### AI Workflows and Developer Empowerment in the Enterprise
 
@@ -205,7 +225,7 @@ A GenAI Solution Accelerator for energy permitting uses AI to automate approvals
 
 - [Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners](https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/)
 - [Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows](https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh)
-- [Microsoft GenAI for Energy Permitting Solution Accelerator]({{ "/videos/2025-10-16-Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator.html" | relative_url }})
+- [Microsoft GenAI for Energy Permitting Solution Accelerator](/videos/2025-10-16-Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator.html)
 
 ### AI Infrastructure and Datacenter Operations
 
@@ -340,7 +360,7 @@ Available resources include deployment strategies for Azure Linux Web Apps and i
 
 This week’s Azure Weekly Update covers releases for serverless compute, storage, security, migration, SAP-Databricks integration, and new GPT models.
 
-- [Azure Weekly Update: October 17, 2025]({{ "/videos/2025-10-17-Azure-Weekly-Update-October-17-2025.html" | relative_url }})
+- [Azure Weekly Update: October 17, 2025](/videos/2025-10-17-Azure-Weekly-Update-October-17-2025.html)
 
 New EDA benchmarking shows Azure NetApp Files can meet scale and performance targets for HPC workloads.
 
@@ -371,8 +391,8 @@ A new guide highlights how to use RazorConsole to build interactive, visually ri
 
 Building on last week’s discussions on debugging and workflow improvement, these tools enhance .NET development experiences and customizability.
 
-- [VS Code Live: Integrating Figma MCP Server with Code Connect]({{ "/videos/2025-10-16-VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect.html" | relative_url }})
-- [Building the Coolest Console Apps in .NET]({{ "/videos/2025-10-13-Building-the-Coolest-Console-Apps-in-NET.html" | relative_url }})
+- [VS Code Live: Integrating Figma MCP Server with Code Connect](/videos/2025-10-16-VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect.html)
+- [Building the Coolest Console Apps in .NET](/videos/2025-10-13-Building-the-Coolest-Console-Apps-in-NET.html)
 
 ## DevOps
 
@@ -397,7 +417,7 @@ GitHub MCP Server introduces management for Projects, centralizing configuration
 Spec Kit rolls out a specification-first approach, using commands like `/specify`, `/plan`, and `/implement` to convert requirements into actionable code plans and scaffolding, supporting more systematic automation of software projects.
 
 - [GitHub MCP Server Adds GitHub Projects Management and Improves Toolset Efficiency](https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more)
-- [Introducing GitHub Spec Kit: A New Approach to Software Development]({{ "/videos/2025-10-13-Introducing-GitHub-Spec-Kit-A-New-Approach-to-Software-Development.html" | relative_url }})
+- [Introducing GitHub Spec Kit: A New Approach to Software Development](/videos/2025-10-13-Introducing-GitHub-Spec-Kit-A-New-Approach-to-Software-Development.html)
 
 ### Observability, Toolchain Unification, and Real-World Security Practices
 

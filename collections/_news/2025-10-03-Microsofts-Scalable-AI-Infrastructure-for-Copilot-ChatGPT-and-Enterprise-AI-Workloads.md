@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft's Scalable AI Infrastructure for Copilot, ChatGPT, and Enterprise AI Workloads"
-description: "This news piece summarizes Microsoft's evolving approach to building flexible and high-yield AI infrastructure, as explained by Scott Guthrie and Satya Nadella. It highlights Microsoft's strategy to support large AI workloads—including Copilot and ChatGPT—through an adaptable, maximally utilized infrastructure, serving enterprise and third-party developers at global scale."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_our-approach-to-ai-infra-is-simple-build-activity-7379681735934083073-Scma"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft's Scalable AI Infrastructure for Copilot, ChatGPT, and Enterprise AI Workloads
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_our-approach-to-ai-infra-is-simple-build-activity-7379681735934083073-Scma
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-03 01:48:00 +00:00
-permalink: "/2025-10-03-Microsofts-Scalable-AI-Infrastructure-for-Copilot-ChatGPT-and-Enterprise-AI-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Inference", "AI Infrastructure", "AI Training", "APIs", "Azure", "ChatGPT", "Cloud Architecture", "Company News", "Copilot", "Data Center", "Enterprise AI", "LinkedIn Post", "Microsoft 365 Copilot", "Microsoft Azure", "News", "Nuance", "Satya Nadella", "Scalability", "Scott Guthrie"]
-tags_normalized: ["ai", "ai inference", "ai infrastructure", "ai training", "apis", "azure", "chatgpt", "cloud architecture", "company news", "copilot", "data center", "enterprise ai", "linkedin post", "microsoft 365 copilot", "microsoft azure", "news", "nuance", "satya nadella", "scalability", "scott guthrie"]
+permalink: /ai/news/Microsofts-Scalable-AI-Infrastructure-for-Copilot-ChatGPT-and-Enterprise-AI-Workloads
+tags:
+- AI
+- AI Inference
+- AI Infrastructure
+- AI Training
+- APIs
+- Azure
+- ChatGPT
+- Cloud Architecture
+- Company News
+- Copilot
+- Data Center
+- Enterprise AI
+- LinkedIn Post
+- Microsoft 365 Copilot
+- Microsoft Azure
+- News
+- Nuance
+- Satya Nadella
+- Scalability
+- Scott Guthrie
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella and Scott Guthrie discuss with Alex Kantrowitz how Microsoft’s adaptable AI infrastructure meets the real-world demands of large workloads like Copilot and ChatGPT, providing valuable insights for technical leaders and developers.<!--excerpt_end-->
 
 # Microsoft's Scalable AI Infrastructure for Copilot, ChatGPT, and Enterprise AI Workloads

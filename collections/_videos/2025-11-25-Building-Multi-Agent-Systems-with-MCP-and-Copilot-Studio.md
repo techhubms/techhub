@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Multi-Agent Systems with MCP and Copilot Studio"
-description: "This session from Microsoft Ignite 2025 explores advanced multi-agent capabilities in Copilot Studio, focusing on how developers and enterprise teams can use MCP servers, agents from Microsoft Foundry, Fabric Data Agents, and the M365 Agents SDK to build scalable, enterprise-ready multi-agent systems. The video features demonstrations, discusses challenges in configuration for non-technical users, and covers protocols and integrations for extending Copilot Studio solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vpJKxsolaGc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Multi-Agent Systems with MCP and Copilot Studio
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=vpJKxsolaGc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:49:32 +00:00
-permalink: "/2025-11-25-Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["A2A", "Agent Integration", "Agent Protocols", "AI", "Copilot Studio", "Enterprise AI", "Fabric Data Agents", "Innovatewithlow", "Low Code", "M365 Agents SDK", "MCP", "MCP Servers", "Microsoft 365", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Videos"]
-tags_normalized: ["a2a", "agent integration", "agent protocols", "ai", "copilot studio", "enterprise ai", "fabric data agents", "innovatewithlow", "low code", "m365 agents sdk", "mcp", "mcp servers", "microsoft 365", "microsoft foundry", "microsoft ignite", "msignite", "multi agent systems", "videos"]
+permalink: /ai/videos/Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio
+tags:
+- A2A
+- Agent Integration
+- Agent Protocols
+- AI
+- Copilot Studio
+- Enterprise AI
+- Fabric Data Agents
+- Innovatewithlow
+- Low Code
+- M365 Agents SDK
+- MCP
+- MCP Servers
+- Microsoft 365
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents an Ignite 2025 session on evolving multi-agent features in Copilot Studio, led by Matthew Bolanos, Zankar Desai, Kendra Springer, and Ziv Ventura. The talk addresses implementing scalable, enterprise-ready multi-agent systems using Microsoft's MCP platform.<!--excerpt_end-->
 
 {% youtube vpJKxsolaGc %}

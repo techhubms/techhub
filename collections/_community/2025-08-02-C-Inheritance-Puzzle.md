@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "C# Inheritance Puzzle"
-description: "This article presents a C# inheritance puzzle involving class constructors and method overriding. Readers are challenged to predict the output of a short code snippet that demonstrates how constructors and overridden methods interact when instantiating derived classes."
-author: "calorap99"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: C# Inheritance Puzzle
+author: calorap99
+canonical_url: https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 20:00:17 +00:00
-permalink: "/2025-08-02-C-Inheritance-Puzzle.html"
-categories: ["Coding"]
-tags: ["Base Class", "C#", "Code Puzzle", "Coding", "Community", "Console Output", "Constructor", "Derived Class", "Inheritance", "Method Overriding", "Object Oriented Programming", "Virtual Methods"]
-tags_normalized: ["base class", "csharp", "code puzzle", "coding", "community", "console output", "constructor", "derived class", "inheritance", "method overriding", "object oriented programming", "virtual methods"]
+permalink: /coding/community/C-Inheritance-Puzzle
+tags:
+- Base Class
+- C#
+- Code Puzzle
+- Coding
+- Community
+- Console Output
+- Constructor
+- Derived Class
+- Inheritance
+- Method Overriding
+- Object Oriented Programming
+- Virtual Methods
+section_names:
+- coding
 ---
-
 calorap99 shares a challenging C# inheritance puzzle, inviting readers to predict the console output of a code snippet involving constructors and method overriding.<!--excerpt_end-->
 
 ## Summary

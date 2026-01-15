@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "The Origins & Evolution of the GitHub MCP Registry with Toby Padilla"
-description: "This episode discusses the inception and development of the GitHub MCP (Model Context Protocol) Registry, its importance as an open standard, and how cross-company collaboration shapes its progress. Toby Padilla explains Model Context Protocol, the steering committee, and how GitHub and Visual Studio Code leverage MCP servers to improve discoverability and standards in AI tooling."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rafl28faFec"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: The Origins & Evolution of the GitHub MCP Registry with Toby Padilla
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=rafl28faFec
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-29 07:01:00 +00:00
-permalink: "/2025-09-29-The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Tooling", "Cross Company Collaboration", "Developer Tools", "GitHub Copilot", "GitHub MCP Registry", "MCP", "MCP Server", "Open Standards", "Registry Standard", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tooling", "cross company collaboration", "developer tools", "github copilot", "github mcp registry", "mcp", "mcp server", "open standards", "registry standard", "videos", "vs code"]
+permalink: /github-copilot/videos/The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla
+tags:
+- AI
+- AI Tooling
+- Cross Company Collaboration
+- Developer Tools
+- GitHub Copilot
+- GitHub MCP Registry
+- MCP
+- MCP Server
+- Open Standards
+- Registry Standard
+- Videos
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Toby Padilla joins Visual Studio Code to discuss the history and significance of the GitHub MCP Registry, offering insights on open standardization and how GitHub Copilot and VS Code integrate Model Context Protocol servers.<!--excerpt_end-->
 
 {% youtube rafl28faFec %}

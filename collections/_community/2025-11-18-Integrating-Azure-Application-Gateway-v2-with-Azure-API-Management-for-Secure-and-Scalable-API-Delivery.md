@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Integrating Azure Application Gateway v2 with Azure API Management for Secure and Scalable API Delivery"
-description: "This community post provides a detailed technical walkthrough on integrating Azure Application Gateway v2 (with Web Application Firewall) and Azure API Management to build a secure, scalable front door for APIs. It covers architectural scenarios, networking, certificate management with Azure Key Vault, end-to-end automation using Terraform and Azure DevOps, WAF policy tuning, diagnostics, and security hardening strategies including Private Endpoints and zero-trust principles."
-author: "ranjsharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/integrating-azure-application-gateway-v2-with-azure-api/ba-p/4470804"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Integrating Azure Application Gateway v2 with Azure API Management for Secure and Scalable API Delivery
+author: ranjsharma
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/integrating-azure-application-gateway-v2-with-azure-api/ba-p/4470804
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:33:43 +00:00
-permalink: "/2025-11-18-Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["API Security", "Azure", "Azure API Management", "Azure Application Gateway", "Azure DevOps", "Certificates", "CI/CD", "Coding", "Community", "DevOps", "Key Vault", "Layer 7 Routing", "Log Analytics", "Mtls", "Networking", "OWASP", "Private Endpoint", "Rate Limiting", "Security", "Terraform", "VNet", "WAF", "Zero Trust"]
-tags_normalized: ["api security", "azure", "azure api management", "azure application gateway", "azure devops", "certificates", "cislashcd", "coding", "community", "devops", "key vault", "layer 7 routing", "log analytics", "mtls", "networking", "owasp", "private endpoint", "rate limiting", "security", "terraform", "vnet", "waf", "zero trust"]
+permalink: /coding/community/Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery
+tags:
+- API Security
+- Azure
+- Azure API Management
+- Azure Application Gateway
+- Azure DevOps
+- Certificates
+- CI/CD
+- Coding
+- Community
+- DevOps
+- Key Vault
+- Layer 7 Routing
+- Log Analytics
+- Mtls
+- Networking
+- OWASP
+- Private Endpoint
+- Rate Limiting
+- Security
+- Terraform
+- VNet
+- WAF
+- Zero Trust
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 ranjsharma presents a step-by-step guide to integrating Azure Application Gateway v2 and Azure API Management for secure, scalable API solutions, including automation with Terraform and Azure DevOps.<!--excerpt_end-->
 
 # Integrating Azure Application Gateway v2 with Azure API Management for Secure and Scalable API Delivery

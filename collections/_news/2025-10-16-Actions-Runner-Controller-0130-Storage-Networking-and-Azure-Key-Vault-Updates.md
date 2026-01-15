@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Actions Runner Controller 0.13.0: Storage, Networking, and Azure Key Vault Updates"
-description: "This release overview provides a detailed look at Actions Runner Controller (ARC) 0.13.0, highlighting new features in storage, networking, platform support, security enhancements, and observability. Key updates include container lifecycle hooks, dual-stack networking, Azure Key Vault integration, OpenShift support, and improved metrics for more efficient CI/CD operations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-16-actions-runner-controller-release-0-13-0"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Actions Runner Controller 0.13.0: Storage, Networking, and Azure Key Vault Updates'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-16-actions-runner-controller-release-0-13-0
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 14:01:35 +00:00
-permalink: "/2025-10-16-Actions-Runner-Controller-0130-Storage-Networking-and-Azure-Key-Vault-Updates.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Actions", "Actions Runner Controller", "ARC", "Azure", "Azure Key Vault", "CI/CD", "Container Lifecycle Hooks", "CSI Driver", "DevOps", "GitHub Actions", "Kubernetes", "Managed Identity", "Metrics", "Networking", "News", "Observability", "Red Hat OpenShift", "Secrets Management", "Security", "Vault Integration"]
-tags_normalized: ["actions", "actions runner controller", "arc", "azure", "azure key vault", "cislashcd", "container lifecycle hooks", "csi driver", "devops", "github actions", "kubernetes", "managed identity", "metrics", "networking", "news", "observability", "red hat openshift", "secrets management", "security", "vault integration"]
+permalink: /azure/news/Actions-Runner-Controller-0130-Storage-Networking-and-Azure-Key-Vault-Updates
+tags:
+- Actions
+- Actions Runner Controller
+- ARC
+- Azure
+- Azure Key Vault
+- CI/CD
+- Container Lifecycle Hooks
+- CSI Driver
+- DevOps
+- GitHub Actions
+- Kubernetes
+- Managed Identity
+- Metrics
+- Networking
+- News
+- Observability
+- Red Hat OpenShift
+- Secrets Management
+- Security
+- Vault Integration
+section_names:
+- azure
+- devops
+- security
 ---
-
 Allison details what's new in Actions Runner Controller 0.13.0, spotlighting improvements in storage, networking, Azure Key Vault integration, security, platform compatibility, and observability for GitHub Actions workflows.<!--excerpt_end-->
 
 # Actions Runner Controller 0.13.0: Storage, Networking, and Azure Key Vault Updates

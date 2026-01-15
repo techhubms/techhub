@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "What's New in Azure App Service for .NET Developers"
-description: "This session explores the latest Azure App Service enhancements tailored for .NET developers, including updates in deployment workflows, diagnostics, monitoring, .NET 10 support, and integrations with Azure DevOps and GitHub Actions. The presentation covers best practices for performance optimization, scalability, and security for web apps, APIs, and microservices built on Azure."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WSHMfrCHD0c"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: What's New in Azure App Service for .NET Developers
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=WSHMfrCHD0c
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Whats-New-in-Azure-App-Service-for-NET-Developers.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "Application Security", "ASP.NET Core 10", "Azure", "Azure App Service", "Azure DevOps", "C# 14", "Cloud Deployment", "Coding", "DevOps", "Diagnostics", "F# 10", "GitHub Actions", "Microservices", "Monitoring", "Performance Optimization", "Scaling Applications", "Security", "Videos", "VS", "Web Apps"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "application security", "aspdotnet core 10", "azure", "azure app service", "azure devops", "csharp 14", "cloud deployment", "coding", "devops", "diagnostics", "fsharp 10", "github actions", "microservices", "monitoring", "performance optimization", "scaling applications", "security", "videos", "vs", "web apps"]
+permalink: /coding/videos/Whats-New-in-Azure-App-Service-for-NET-Developers
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- Application Security
+- ASP.NET Core 10
+- Azure
+- Azure App Service
+- Azure DevOps
+- C# 14
+- Cloud Deployment
+- Coding
+- DevOps
+- Diagnostics
+- F# 10
+- GitHub Actions
+- Microservices
+- Monitoring
+- Performance Optimization
+- Scaling Applications
+- Security
+- Videos
+- VS
+- Web Apps
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Byron Tardif presents the latest features of Azure App Service for .NET developers, covering deployment, monitoring, integration with DevOps tools, and strategies for optimizing and securing cloud applications.<!--excerpt_end-->
 
 {% youtube WSHMfrCHD0c %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Deployment and Build Strategies for Azure Linux Web Apps"
-description: "This tutorial walks through four deployment and build approaches for Azure Linux Web Apps using a sample Python application. It covers deploying from a laptop and from CI/CD tools, using Oryx and runtime builds, and explores advantages, limitations, and troubleshooting. Whether you are working with Python, Node.js, or PHP, you'll learn practical insights into environment configuration and process automation."
-author: "theringe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deployment and Build Strategies for Azure Linux Web Apps
+author: theringe
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-16 12:39:45 +00:00
-permalink: "/2025-10-16-Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure App Service", "Azure DevOps", "Azure Web Apps", "Build Pipeline", "CI/CD", "Coding", "Community", "Deployment Automation", "DevOps", "Environment Variables", "Flask", "Linux Web Apps", "Oryx Build", "PaaS", "Python", "Startup Script", "VS Code", "YAML Pipelines"]
-tags_normalized: ["azure", "azure app service", "azure devops", "azure web apps", "build pipeline", "cislashcd", "coding", "community", "deployment automation", "devops", "environment variables", "flask", "linux web apps", "oryx build", "paas", "python", "startup script", "vs code", "yaml pipelines"]
+permalink: /coding/community/Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps
+tags:
+- Azure
+- Azure App Service
+- Azure DevOps
+- Azure Web Apps
+- Build Pipeline
+- CI/CD
+- Coding
+- Community
+- Deployment Automation
+- DevOps
+- Environment Variables
+- Flask
+- Linux Web Apps
+- Oryx Build
+- PaaS
+- Python
+- Startup Script
+- VS Code
+- YAML Pipelines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 theringe explains practical deployment and build strategies for Azure Linux Web Apps, showing how to use Oryx, runtime scripting, and CI/CD to streamline Python app delivery and troubleshooting.<!--excerpt_end-->
 
 # Deployment and Build Strategies for Azure Linux Web Apps

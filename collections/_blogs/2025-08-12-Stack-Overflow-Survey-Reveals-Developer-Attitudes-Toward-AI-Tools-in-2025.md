@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025"
-description: "A detailed analysis of the 2025 Stack Overflow Developer Survey, delving into how developers are adopting AI tools such as ChatGPT and GitHub Copilot, their growing caution toward AI reliability, and the emerging landscape of agentic AI within software development workflows."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025
+author: Alan Shimel
+canonical_url: https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-12 09:37:44 +00:00
-permalink: "/2025-08-12-Stack-Overflow-Survey-Reveals-Developer-Attitudes-Toward-AI-Tools-in-2025.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Assisted Development", "AI Daily Usage", "AI in Software Development", "AI Outputs", "AI Tools", "AI Trust", "Blogs", "Business Of DevOps", "Claude Sonnet", "Developer Sentiment", "Developer Workflows", "Developers", "Gemini Flash", "Generative AI", "GitHub Copilot", "OpenAI GPT", "Social Facebook", "Social LinkedIn", "Social X", "Stack Overflow Survey", "Survey", "Survey Insights"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai assisted development", "ai daily usage", "ai in software development", "ai outputs", "ai tools", "ai trust", "blogs", "business of devops", "claude sonnet", "developer sentiment", "developer workflows", "developers", "gemini flash", "generative ai", "github copilot", "openai gpt", "social facebook", "social linkedin", "social x", "stack overflow survey", "survey", "survey insights"]
+permalink: /github-copilot/blogs/Stack-Overflow-Survey-Reveals-Developer-Attitudes-Toward-AI-Tools-in-2025
+tags:
+- Agentic AI
+- AI
+- AI Adoption
+- AI Assisted Development
+- AI Daily Usage
+- AI in Software Development
+- AI Outputs
+- AI Tools
+- AI Trust
+- Blogs
+- Business Of DevOps
+- Claude Sonnet
+- Developer Sentiment
+- Developer Workflows
+- Developers
+- Gemini Flash
+- Generative AI
+- GitHub Copilot
+- OpenAI GPT
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Stack Overflow Survey
+- Survey
+- Survey Insights
+section_names:
+- ai
+- github-copilot
 ---
-
 Alan Shimel presents insights from the 2025 Stack Overflow Developer Survey, highlighting how developers like those using GitHub Copilot are widely adopting generative AI tools but remain cautious about deeper AI automation.<!--excerpt_end-->
 
 # Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Unleashing the Power of VS Code: IT-Tage Frankfurt 2024 Talk Announcement"
-description: "Harald Binkle announces his upcoming talk at IT-Tage Frankfurt 2024, focusing on harnessing Visual Studio Code for full-stack development with web frontends, C# backends, and CI/CD in Azure DevOps and GitHub."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/joinmeatittagefrankfurt2024/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+layout: post
+title: 'Unleashing the Power of VS Code: IT-Tage Frankfurt 2024 Talk Announcement'
+author: Harald Binkle
+canonical_url: https://harrybin.de/posts/joinmeatittagefrankfurt2024/
+viewing_mode: external
+feed_name: Harald Binkle's blog
+feed_url: https://harrybin.de/rss.xml
 date: 2024-11-15 10:00:00 +00:00
-permalink: "/2024-11-15-Unleashing-the-Power-of-VS-Code-IT-Tage-Frankfurt-2024-Talk-Announcement.html"
-categories: ["Coding", "DevOps"]
-tags: ["Azure DevOps", "Blogs", "C#", "CI/CD", "Coding", "Conference", "DevOps", "Full Stack Development", "GitHub", "Harald Binkle", "IT Tage Frankfurt", "React", "VS Code"]
-tags_normalized: ["azure devops", "blogs", "csharp", "cislashcd", "coding", "conference", "devops", "full stack development", "github", "harald binkle", "it tage frankfurt", "react", "vs code"]
+permalink: /coding/blogs/Unleashing-the-Power-of-VS-Code-IT-Tage-Frankfurt-2024-Talk-Announcement
+tags:
+- Azure DevOps
+- Blogs
+- C#
+- CI/CD
+- Coding
+- Conference
+- DevOps
+- Full Stack Development
+- GitHub
+- Harald Binkle
+- IT Tage Frankfurt
+- React
+- VS Code
+section_names:
+- coding
+- devops
 ---
-
 In this announcement, Harald Binkle shares details about his talk at IT-Tage Frankfurt 2024, where he will demonstrate Visual Studio Code’s standout features for full-stack development and integration with Azure DevOps and GitHub.<!--excerpt_end-->
 
 # Unleashing the Power of VS Code: IT-Tage Frankfurt 2024 Talk Announcement

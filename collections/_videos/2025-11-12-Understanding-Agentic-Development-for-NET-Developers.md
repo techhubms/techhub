@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Understanding Agentic Development for .NET Developers"
-description: "This session outlines the principles of agentic AI—AI systems that reason, plan, and act autonomously—and explores how .NET developers can implement these patterns. Learn about core agent architectures, planning approaches, execution of complex functions, agent collaboration, and leveraging modern .NET frameworks and languages to build next-generation intelligent applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=V_sIYwc9Tvs"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Understanding Agentic Development for .NET Developers
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=V_sIYwc9Tvs
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-Understanding-Agentic-Development-for-NET-Developers.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Aspire", "Agent Collaboration", "Agentic AI", "AI", "AI Agents", "AI Frameworks", "ASP.NET Core", "Autonomous Systems", "C#", "Coding", "F#", "Function Execution", "Machine Intelligence", "MAUI", "Planning And Reasoning", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "agent collaboration", "agentic ai", "ai", "ai agents", "ai frameworks", "aspdotnet core", "autonomous systems", "csharp", "coding", "fsharp", "function execution", "machine intelligence", "maui", "planning and reasoning", "videos", "vs"]
+permalink: /ai/videos/Understanding-Agentic-Development-for-NET-Developers
+tags:
+- .NET
+- .NET Aspire
+- Agent Collaboration
+- Agentic AI
+- AI
+- AI Agents
+- AI Frameworks
+- ASP.NET Core
+- Autonomous Systems
+- C#
+- Coding
+- F#
+- Function Execution
+- Machine Intelligence
+- MAUI
+- Planning And Reasoning
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 dotnet presents the future of AI for .NET developers, focusing on agentic AI: systems that reason, plan, and act to accomplish complex tasks through advanced frameworks and design patterns.<!--excerpt_end-->
 
 {% youtube V_sIYwc9Tvs %}

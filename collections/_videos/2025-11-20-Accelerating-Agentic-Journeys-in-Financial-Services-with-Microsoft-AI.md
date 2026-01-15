@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Accelerating Agentic Journeys in Financial Services with Microsoft AI"
-description: "This Microsoft Ignite session highlights how leading financial services organizations use Microsoft AI technologies and Copilot Studio to build intelligent agents. It focuses on industry use cases—banking, capital markets, insurance—and details adoption phases, implementation strategies, and real-world examples. The Morningstar case study illustrates data integration and agent deployment for analyzing client holdings and enabling advanced analytics within the Microsoft ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9AQu3a7Y8so"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating Agentic Journeys in Financial Services with Microsoft AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=9AQu3a7Y8so
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:23:30 +00:00
-permalink: "/2025-11-20-Accelerating-Agentic-Journeys-in-Financial-Services-with-Microsoft-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Journeys", "AI", "AI Adoption", "Azure", "Azure AI Foundry", "Client Agents", "Copilot Studio", "Data Integration", "Financial Services", "Intelligent Agents", "MCP Server", "Microsoft AI", "Microsoft Cloud", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Morningstar Case Study", "MSIgnite", "Partner Program", "Videos"]
-tags_normalized: ["agentic journeys", "ai", "ai adoption", "azure", "azure ai foundry", "client agents", "copilot studio", "data integration", "financial services", "intelligent agents", "mcp server", "microsoft ai", "microsoft cloud", "microsoft ignite", "microsoftaicloudpartnerprogram", "morningstar case study", "msignite", "partner program", "videos"]
+permalink: /ai/videos/Accelerating-Agentic-Journeys-in-Financial-Services-with-Microsoft-AI
+tags:
+- Agentic Journeys
+- AI
+- AI Adoption
+- Azure
+- Azure AI Foundry
+- Client Agents
+- Copilot Studio
+- Data Integration
+- Financial Services
+- Intelligent Agents
+- MCP Server
+- Microsoft AI
+- Microsoft Cloud
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- Morningstar Case Study
+- MSIgnite
+- Partner Program
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents how top financial services partners accelerate agentic journeys using Microsoft AI technologies, with a focus on Copilot Studio and real-world case studies like Morningstar.<!--excerpt_end-->
 
 {% youtube 9AQu3a7Y8so %}

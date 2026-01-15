@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8"
-description: "This post outlines practical strategies and tools for identifying and replacing obsolete or unsupported .NET Framework APIs during migration to .NET 8. It explores the limitations of automated migration tools like Upgrade Assistant and highlights best practices and utilities for streamlining multi-project modernization."
-author: "GopalKrishnan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+﻿---
+layout: post
+title: Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8
+author: GopalKrishnan
+canonical_url: https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-08-22 09:39:46 +00:00
-permalink: "/2025-08-22-Tools-and-Approaches-for-Migrating-Obsolete-NET-Framework-APIs-to-NET-8.html"
-categories: ["Coding"]
-tags: [".NET 8", ".NET Framework 4.8", "API Migration", "Code Modernization", "Coding", "Community", "Dependency Analysis", "Multi Project Solutions", "Obsolete APIs", "Portability Analyzer", "Project Migration", "Upgrade Assistant"]
-tags_normalized: ["dotnet 8", "dotnet framework 4dot8", "api migration", "code modernization", "coding", "community", "dependency analysis", "multi project solutions", "obsolete apis", "portability analyzer", "project migration", "upgrade assistant"]
+permalink: /coding/community/Tools-and-Approaches-for-Migrating-Obsolete-NET-Framework-APIs-to-NET-8
+tags:
+- .NET 8
+- .NET Framework 4.8
+- API Migration
+- Code Modernization
+- Coding
+- Community
+- Dependency Analysis
+- Multi Project Solutions
+- Obsolete APIs
+- Portability Analyzer
+- Project Migration
+- Upgrade Assistant
+section_names:
+- coding
 ---
-
 GopalKrishnan shares challenges and seeks advice on migrating a multi-project solution from .NET Framework 4.8 to .NET 8, focusing on identifying and updating obsolete APIs for successful modernization.<!--excerpt_end-->
 
 # Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8

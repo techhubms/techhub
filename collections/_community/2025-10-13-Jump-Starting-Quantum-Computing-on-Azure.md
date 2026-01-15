@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Jump Starting Quantum Computing on Azure"
-description: "This article offers a practical, down-to-earth introduction to the basics of quantum computing, focusing on key concepts like qubits, superposition, and entanglement. It walks through the quantum teleportation protocol and demonstrates how to run an example on Azure Quantum with Qiskit and Python, providing step-by-step guidance for practitioners and researchers looking to explore Microsoft's quantum ecosystem."
-author: "notanaha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Jump Starting Quantum Computing on Azure
+author: notanaha
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-13 23:40:03 +00:00
-permalink: "/2025-10-13-Jump-Starting-Quantum-Computing-on-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Azure", "Azure Quantum", "Azure Quantum Development Kit", "Cloud Quantum Computing", "CNOT Gate", "Coding", "Community", "Entanglement", "Hadamard Gate", "Python", "Qiskit", "Quantum Algorithm", "Quantum Circuit", "Quantum Computing", "Quantum Gates", "Quantum SDK", "Quantum Simulator", "Quantum Teleportation", "Quantum Workspace", "Qubit", "Shor's Algorithm", "Superposition", "VS Code"]
-tags_normalized: ["ai", "azure", "azure quantum", "azure quantum development kit", "cloud quantum computing", "cnot gate", "coding", "community", "entanglement", "hadamard gate", "python", "qiskit", "quantum algorithm", "quantum circuit", "quantum computing", "quantum gates", "quantum sdk", "quantum simulator", "quantum teleportation", "quantum workspace", "qubit", "shors algorithm", "superposition", "vs code"]
+permalink: /ai/community/Jump-Starting-Quantum-Computing-on-Azure
+tags:
+- AI
+- Azure
+- Azure Quantum
+- Azure Quantum Development Kit
+- Cloud Quantum Computing
+- CNOT Gate
+- Coding
+- Community
+- Entanglement
+- Hadamard Gate
+- Python
+- Qiskit
+- Quantum Algorithm
+- Quantum Circuit
+- Quantum Computing
+- Quantum Gates
+- Quantum SDK
+- Quantum Simulator
+- Quantum Teleportation
+- Quantum Workspace
+- Qubit
+- Shor's Algorithm
+- Superposition
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 notanaha explains quantum computing fundamentals and demonstrates, step by step, how to run the quantum teleportation protocol with real code on Azure Quantum using Python and Qiskit.<!--excerpt_end-->
 
 # Jump Starting Quantum Computing on Azure

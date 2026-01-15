@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Red Hat Enterprise Linux Billing Meter ID Migration: What You Need to Know"
-description: "This community post details the upcoming changes to Red Hat Enterprise Linux (RHEL) billing on Microsoft Azure. It explains the migration to new billing meter IDs in response to Red Hat's updated vCPU-based pricing, outlines the effective timeline, impacts for PAYG customers, and provides practical guidance on updating cost management tools, dashboards, and automated scripts for a smooth transition."
-author: "abbottkarl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Red Hat Enterprise Linux Billing Meter ID Migration: What You Need to Know'
+author: abbottkarl
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-28 23:18:00 +00:00
-permalink: "/2025-08-28-Azure-Red-Hat-Enterprise-Linux-Billing-Meter-ID-Migration-What-You-Need-to-Know.html"
-categories: ["Azure"]
-tags: ["APIs", "Automation", "Azure", "Billing Meter ID", "Budget Alerts", "Community", "Cost Management", "Cost Optimization", "Meter Migration", "Microsoft Azure", "Power BI", "Red Hat Enterprise Linux", "Reserved Instances", "RHEL", "Vcpu Based Pricing", "Virtual Machines"]
-tags_normalized: ["apis", "automation", "azure", "billing meter id", "budget alerts", "community", "cost management", "cost optimization", "meter migration", "microsoft azure", "power bi", "red hat enterprise linux", "reserved instances", "rhel", "vcpu based pricing", "virtual machines"]
+permalink: /azure/community/Azure-Red-Hat-Enterprise-Linux-Billing-Meter-ID-Migration-What-You-Need-to-Know
+tags:
+- APIs
+- Automation
+- Azure
+- Billing Meter ID
+- Budget Alerts
+- Community
+- Cost Management
+- Cost Optimization
+- Meter Migration
+- Microsoft Azure
+- Power BI
+- Red Hat Enterprise Linux
+- Reserved Instances
+- RHEL
+- Vcpu Based Pricing
+- Virtual Machines
+section_names:
+- azure
 ---
-
 abbottkarl explains changes coming to Azure billing for Red Hat Enterprise Linux, describing the shift to new meter IDs, how it affects customers, and the steps required to update your reports and tools.<!--excerpt_end-->
 
 # Azure Red Hat Enterprise Linux Billing Meter ID Updates

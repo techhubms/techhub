@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Cut migration costs with B-Series and Cobalt 100 VM support in Azure Migrate"
-description: "This article introduces Azure Migrate's support for B-Series and Cobalt 100 virtual machines, helping organizations optimize migration costs and performance on Azure. The content explains the benefits of burstable B-Series VMs for variable workloads, and highlights Cobalt 100 VMs as an ARM-native solution for ARM64 workloads. Cost comparisons and assessment tools are provided."
-author: "ankitsurkar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba-p/4460285"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Cut migration costs with B-Series and Cobalt 100 VM support in Azure Migrate
+author: ankitsurkar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba-p/4460285
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-09 10:26:14 +00:00
-permalink: "/2025-10-09-Cut-migration-costs-with-B-Series-and-Cobalt-100-VM-support-in-Azure-Migrate.html"
-categories: ["Azure"]
-tags: ["ARM Native Workloads", "ARM64", "Azure", "Azure Infrastructure", "Azure Migrate", "Azure Virtual Machines", "B Series VM", "Burstable VMs", "Cloud Migration", "Cobalt 100 VM", "Community", "Cost Estimation", "Energy Efficiency", "VM Cost Optimization", "Workload Assessment"]
-tags_normalized: ["arm native workloads", "arm64", "azure", "azure infrastructure", "azure migrate", "azure virtual machines", "b series vm", "burstable vms", "cloud migration", "cobalt 100 vm", "community", "cost estimation", "energy efficiency", "vm cost optimization", "workload assessment"]
+permalink: /azure/community/Cut-migration-costs-with-B-Series-and-Cobalt-100-VM-support-in-Azure-Migrate
+tags:
+- ARM Native Workloads
+- ARM64
+- Azure
+- Azure Infrastructure
+- Azure Migrate
+- Azure Virtual Machines
+- B Series VM
+- Burstable VMs
+- Cloud Migration
+- Cobalt 100 VM
+- Community
+- Cost Estimation
+- Energy Efficiency
+- VM Cost Optimization
+- Workload Assessment
+section_names:
+- azure
 ---
-
 ankitsurkar explains how Azure Migrate’s new support for B-Series and Cobalt 100 VMs enables smarter, more cost-effective cloud migrations by allowing better alignment of workloads with infrastructure options.<!--excerpt_end-->
 
 # Cut Migration Costs with B-Series and Cobalt 100 VM Support in Azure Migrate

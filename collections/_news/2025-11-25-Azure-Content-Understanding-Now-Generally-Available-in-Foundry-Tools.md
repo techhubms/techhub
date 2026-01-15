@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Content Understanding Now Generally Available in Foundry Tools"
-description: "Azure Content Understanding is now generally available within Microsoft Foundry Tools, offering developers and organizations advanced capabilities for document analysis, multimodal content extraction, and tight integration with Foundry Models, Azure AI Search, and agent ecosystems. The GA release enables flexible model deployments, production reliability, support for domain and RAG-specific analyzers, and improved regional availability. Purpose-built for intelligent, structure-aware solutions, this update features prebuilt analyzers for documents, audio, video, and images, empowering the creation of robust end-to-end workflows. Customer examples from KPMG, DataSnipper, and SJR highlight real-world impact across audit, finance, and personalized digital experiences."
-author: "Joe Filcik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Azure Content Understanding Now Generally Available in Foundry Tools
+author: Joe Filcik
+canonical_url: https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:24 +00:00
-permalink: "/2025-11-25-Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Ecosystem", "AI", "Audit Automation", "Azure", "Azure AI Search", "Azure AI Services", "Azure Content Understanding", "Content Extraction", "Document Intelligence", "Domain Specific Analyzers", "Field Extraction", "Finance Workflows", "Foundry Tools", "Generative AI", "Layout Analysis", "Microsoft Foundry", "News", "OCR", "Prebuilt Analyzers", "Production Workloads", "RAG", "Retrieval Augmented Generation", "Unstructured Data"]
-tags_normalized: ["agent ecosystem", "ai", "audit automation", "azure", "azure ai search", "azure ai services", "azure content understanding", "content extraction", "document intelligence", "domain specific analyzers", "field extraction", "finance workflows", "foundry tools", "generative ai", "layout analysis", "microsoft foundry", "news", "ocr", "prebuilt analyzers", "production workloads", "rag", "retrieval augmented generation", "unstructured data"]
+permalink: /ai/news/Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools
+tags:
+- Agent Ecosystem
+- AI
+- Audit Automation
+- Azure
+- Azure AI Search
+- Azure AI Services
+- Azure Content Understanding
+- Content Extraction
+- Document Intelligence
+- Domain Specific Analyzers
+- Field Extraction
+- Finance Workflows
+- Foundry Tools
+- Generative AI
+- Layout Analysis
+- Microsoft Foundry
+- News
+- OCR
+- Prebuilt Analyzers
+- Production Workloads
+- RAG
+- Retrieval Augmented Generation
+- Unstructured Data
+section_names:
+- ai
+- azure
 ---
-
 Joe Filcik announces the general availability of Azure Content Understanding in Microsoft Foundry Tools, detailing enhancements in model deployment, document analysis, generative AI integration, and practical customer applications across industries.<!--excerpt_end-->
 
 # Azure Content Understanding Now Generally Available in Foundry Tools

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry"
-description: "This session explores the new capabilities of Microsoft Foundry, highlighting how developers can build, orchestrate, and manage intelligent agents through modular AI workflows. The discussion covers the unification of models, data, and tools under an enterprise security and observability framework, tailored for scalable AI solutions on Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LnzvpisAkcs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=LnzvpisAkcs
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Factory", "AI", "AI Agents", "AI Application Development", "Azure", "Azure Free Trial", "Cloud Computing", "Dev", "Developer", "Development", "Enterprise Security", "Intelligent Agents", "Microsoft", "Microsoft Foundry", "Modular AI", "Observability", "Tech", "Technology", "Videos", "Workflow Orchestration"]
-tags_normalized: ["agent factory", "ai", "ai agents", "ai application development", "azure", "azure free trial", "cloud computing", "dev", "developer", "development", "enterprise security", "intelligent agents", "microsoft", "microsoft foundry", "modular ai", "observability", "tech", "technology", "videos", "workflow orchestration"]
+permalink: /ai/videos/Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry
+tags:
+- Agent Factory
+- AI
+- AI Agents
+- AI Application Development
+- Azure
+- Azure Free Trial
+- Cloud Computing
+- Dev
+- Developer
+- Development
+- Enterprise Security
+- Intelligent Agents
+- Microsoft
+- Microsoft Foundry
+- Modular AI
+- Observability
+- Tech
+- Technology
+- Videos
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Presented by Microsoft Developer, this Ignite session delves into building and managing modular AI apps with Microsoft Foundry, focusing on unified agent workflows and enterprise-level capabilities.<!--excerpt_end-->
 
 {% youtube LnzvpisAkcs %}

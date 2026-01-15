@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft Named Leader in Gartner Magic Quadrant for AI Application Development Platforms"
-description: "This news article highlights Microsoft's recognition as a leader in the 2025 Gartner Magic Quadrant for AI Application Development Platforms. It details Microsoft's technical innovations in agent frameworks, orchestration, and enterprise-grade governance through the Microsoft Foundry platform. The article covers key features such as agent-driven workflows, deep integration with developer tools, and production-grade AI capabilities, as well as real-world customer success stories across multiple industries."
-author: "Don Scott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Named Leader in Gartner Magic Quadrant for AI Application Development Platforms
+author: Don Scott
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-17 19:00:00 +00:00
-permalink: "/2025-12-17-Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Application-Development-Platforms.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Based Systems", "Agent Framework", "AI", "AI + Machine Learning", "AI Application Development", "AI Governance", "AI Models", "AI Workflow Integration", "Azure", "Cloud To Edge AI", "Developer Tools", "Distributed AI", "Enterprise AI", "Enterprise Integration", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "GenAI Ops", "Microsoft Foundry", "News", "Observability", "Orchestration"]
-tags_normalized: ["agent based systems", "agent framework", "ai", "ai plus machine learning", "ai application development", "ai governance", "ai models", "ai workflow integration", "azure", "cloud to edge ai", "developer tools", "distributed ai", "enterprise ai", "enterprise integration", "gartner magic quadrant", "gartner magic quadrant", "genai ops", "microsoft foundry", "news", "observability", "orchestration"]
+permalink: /ai/news/Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Application-Development-Platforms
+tags:
+- Agent Based Systems
+- Agent Framework
+- AI
+- AI + Machine Learning
+- AI Application Development
+- AI Governance
+- AI Models
+- AI Workflow Integration
+- Azure
+- Cloud To Edge AI
+- Developer Tools
+- Distributed AI
+- Enterprise AI
+- Enterprise Integration
+- Gartner Magic Quadrant
+- Gartner® Magic Quadrant™
+- GenAI Ops
+- Microsoft Foundry
+- News
+- Observability
+- Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Don Scott shares Microsoft's recognition as a Leader in the Gartner Magic Quadrant for AI Application Development Platforms, spotlighting technical innovation in agent frameworks and the Microsoft Foundry platform.<!--excerpt_end-->
 
 # Microsoft Named Leader in Gartner Magic Quadrant for AI Application Development Platforms

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Service Principal Support in Semantic Link: Enabling Scalable, Secure Automation"
-description: "This article from the Microsoft Fabric Blog introduces Service Principal support in Semantic Link—a major update that enhances secure, scalable automation for data workflows on Microsoft Fabric. It explains how Service Principals allow automated notebooks and pipelines to run reliably without user credentials, provides integration code samples, and discusses benefits for data professionals managing enterprise-scale deployments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/service-principal-support-in-semantic-link-enabling-scalable-secure-automation/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Service Principal Support in Semantic Link: Enabling Scalable, Secure Automation'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/service-principal-support-in-semantic-link-enabling-scalable-secure-automation/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 10:00:00 +00:00
-permalink: "/2025-10-06-Service-Principal-Support-in-Semantic-Link-Enabling-Scalable-Secure-Automation.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Automation", "Azure", "Azure Active Directory", "Data Pipelines", "Enterprise Data", "Key Vault", "Microsoft Fabric", "ML", "News", "Notebook Integration", "Python", "Scheduling", "Secure Authentication", "Security", "Sem.py", "Semantic Link", "Service Principal"]
-tags_normalized: ["automation", "azure", "azure active directory", "data pipelines", "enterprise data", "key vault", "microsoft fabric", "ml", "news", "notebook integration", "python", "scheduling", "secure authentication", "security", "semdotpy", "semantic link", "service principal"]
+permalink: /ml/news/Service-Principal-Support-in-Semantic-Link-Enabling-Scalable-Secure-Automation
+tags:
+- Automation
+- Azure
+- Azure Active Directory
+- Data Pipelines
+- Enterprise Data
+- Key Vault
+- Microsoft Fabric
+- ML
+- News
+- Notebook Integration
+- Python
+- Scheduling
+- Secure Authentication
+- Security
+- Sem.py
+- Semantic Link
+- Service Principal
+section_names:
+- azure
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog team outlines how the introduction of Service Principal support in Semantic Link empowers data professionals to build secure, scalable automation for notebooks and pipelines—without relying on user credentials.<!--excerpt_end-->
 
 # Service Principal Support in Semantic Link: Enabling Scalable, Secure Automation

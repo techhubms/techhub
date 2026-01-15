@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing Model Context Protocol Support in Azure AI Foundry Agent Service (Preview)"
-description: "Linda Li introduces preview support for the Model Context Protocol (MCP) in Azure AI Foundry Agent Service, enabling seamless AI agent integration with any compliant MCP server for tool and resource discovery, alongside hands-on Python code samples and links to relevant Azure AI Foundry tools and documentation."
-author: "Linda Li"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/announcing-model-context-protocol-support-preview-in-azure-ai-foundry-agent-service/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Announcing Model Context Protocol Support in Azure AI Foundry Agent Service (Preview)
+author: Linda Li
+canonical_url: https://devblogs.microsoft.com/foundry/announcing-model-context-protocol-support-preview-in-azure-ai-foundry-agent-service/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-27 22:30:03 +00:00
-permalink: "/2025-06-27-Announcing-Model-Context-Protocol-Support-in-Azure-AI-Foundry-Agent-Service-Preview.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Integration", "AI", "AI Agent", "AI Agent Tools", "Anthropic", "Azure", "Azure AI Foundry", "Coding", "Generative AI Agents", "JSON RPC", "MCP", "Microsoft Build", "News", "Open By Design", "Python Code Samples", "VS Code"]
-tags_normalized: ["agent integration", "ai", "ai agent", "ai agent tools", "anthropic", "azure", "azure ai foundry", "coding", "generative ai agents", "json rpc", "mcp", "microsoft build", "news", "open by design", "python code samples", "vs code"]
+permalink: /ai/news/Announcing-Model-Context-Protocol-Support-in-Azure-AI-Foundry-Agent-Service-Preview
+tags:
+- Agent Integration
+- AI
+- AI Agent
+- AI Agent Tools
+- Anthropic
+- Azure
+- Azure AI Foundry
+- Coding
+- Generative AI Agents
+- JSON RPC
+- MCP
+- Microsoft Build
+- News
+- Open By Design
+- Python Code Samples
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 In this announcement, Linda Li details the preview of Model Context Protocol (MCP) support in Azure AI Foundry Agent Service, highlighting easier AI agent integration, open standards, and practical steps for developers.<!--excerpt_end-->
 
 # Announcing Model Context Protocol Support (Preview) in Azure AI Foundry Agent Service

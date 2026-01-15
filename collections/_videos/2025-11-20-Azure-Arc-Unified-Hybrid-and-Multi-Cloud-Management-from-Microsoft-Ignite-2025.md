@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure Arc: Unified Hybrid and Multi-Cloud Management from Microsoft Ignite 2025"
-description: "This advanced Microsoft Ignite session explores how Azure Arc extends Azure's management, governance, and security capabilities to on-premises, hybrid, and multi-cloud environments. Key topics include toolsets for Windows/Linux modernization, unified server and cluster management, Kubernetes Fleet Manager integration, scaling strategies for high-demand scenarios, hybrid application deployments, Azure Managed Flux advantages over open source, and cross-cloud resource governance including AWS. System Center users also receive guidance on cloud-native management transitions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zjfWn4_xSV4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Azure Arc: Unified Hybrid and Multi-Cloud Management from Microsoft Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=zjfWn4_xSV4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:58:22 +00:00
-permalink: "/2025-11-20-Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-from-Microsoft-Ignite-2025.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Deployment", "AWS Integration", "Azure", "Azure Arc", "Azure Ignite", "Azure Managed Flux", "Brendan Burns", "Cloud Management", "Cloud Native Apps", "Cluster Scaling", "DevOps", "Governance", "Hybrid Cloud", "Kubernetes Fleet Manager", "Linux Modernization", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Multi Cloud", "Policy Management", "Security", "Steven Bucher", "System Center", "Update Management", "Videos", "Windows Modernization"]
-tags_normalized: ["application deployment", "aws integration", "azure", "azure arc", "azure ignite", "azure managed flux", "brendan burns", "cloud management", "cloud native apps", "cluster scaling", "devops", "governance", "hybrid cloud", "kubernetes fleet manager", "linux modernization", "migrateandmodernizeyourestate", "monitoring", "msignite", "multi cloud", "policy management", "security", "steven bucher", "system center", "update management", "videos", "windows modernization"]
+permalink: /azure/videos/Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-from-Microsoft-Ignite-2025
+tags:
+- Application Deployment
+- AWS Integration
+- Azure
+- Azure Arc
+- Azure Ignite
+- Azure Managed Flux
+- Brendan Burns
+- Cloud Management
+- Cloud Native Apps
+- Cluster Scaling
+- DevOps
+- Governance
+- Hybrid Cloud
+- Kubernetes Fleet Manager
+- Linux Modernization
+- Migrateandmodernizeyourestate
+- Monitoring
+- MSIgnite
+- Multi Cloud
+- Policy Management
+- Security
+- Steven Bucher
+- System Center
+- Update Management
+- Videos
+- Windows Modernization
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Events hosts Brendan Burns and Steven Bucher in an advanced Ignite 2025 session on Azure Arc, demonstrating hybrid/multi-cloud management, security, and application operations for modern IT environments.<!--excerpt_end-->
 
 {% youtube zjfWn4_xSV4 %}

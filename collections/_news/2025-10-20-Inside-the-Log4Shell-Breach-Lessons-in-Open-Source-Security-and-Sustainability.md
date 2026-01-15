@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability"
-description: "This in-depth article by Gregg Cochran explores the untold story behind the Log4Shell vulnerability in the Log4j library, highlighting the immense technical and human challenges faced by maintainers. The piece examines the technical root of the breach, its vast impact, the personal toll on open source maintainers, and initiatives like the GitHub Secure Open Source Fund aimed at improving software supply chain security. Readers will gain actionable security best practices and learn about the systemic reforms needed to bolster the open source ecosystem’s resilience."
-author: "Gregg Cochran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability'
+author: Gregg Cochran
+canonical_url: https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-20 16:00:16 +00:00
-permalink: "/2025-10-20-Inside-the-Log4Shell-Breach-Lessons-in-Open-Source-Security-and-Sustainability.html"
-categories: ["Security"]
-tags: ["CVSS", "Dependabot", "DevSecOps", "GitHub Secure Open Source Fund", "Java Security", "JNDI", "Log4j", "Log4Shell", "News", "Open Source", "Open Source Security", "OpenSSF", "Remote Code Execution", "SBOM", "Security", "Security Best Practices", "Software Maintenance", "Supply Chain Security", "Vulnerability Management"]
-tags_normalized: ["cvss", "dependabot", "devsecops", "github secure open source fund", "java security", "jndi", "log4j", "log4shell", "news", "open source", "open source security", "openssf", "remote code execution", "sbom", "security", "security best practices", "software maintenance", "supply chain security", "vulnerability management"]
+permalink: /security/news/Inside-the-Log4Shell-Breach-Lessons-in-Open-Source-Security-and-Sustainability
+tags:
+- CVSS
+- Dependabot
+- DevSecOps
+- GitHub Secure Open Source Fund
+- Java Security
+- JNDI
+- Log4j
+- Log4Shell
+- News
+- Open Source
+- Open Source Security
+- OpenSSF
+- Remote Code Execution
+- SBOM
+- Security
+- Security Best Practices
+- Software Maintenance
+- Supply Chain Security
+- Vulnerability Management
+section_names:
+- security
 ---
-
 Gregg Cochran shares the inside story of the Log4Shell vulnerability, focusing on the personal and technical challenges faced by Log4j maintainers and highlighting the critical need for open source security reforms.<!--excerpt_end-->
 
 # Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability

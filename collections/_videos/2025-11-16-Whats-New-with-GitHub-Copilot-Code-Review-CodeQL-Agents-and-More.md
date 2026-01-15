@@ -1,20 +1,40 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New with GitHub Copilot Code Review: CodeQL, Agents & More"
-description: "This video explores the latest additions to GitHub Copilot's code review capabilities, highlighting the integration of AI-driven agents with deterministic analysis tools like CodeQL. It walks through new session views, action workflows, handoff processes, and enhanced repository experiences to help developers streamline code review and automation."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ikIosF_iiz4"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=ikIosF_iiz4
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-16 14:01:16 +00:00
-permalink: "/2025-11-16-Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions Workflow", "AI", "AI Agent", "AI Integration", "Code Analysis", "Code Review", "CodeQL", "CodeReview", "Coding Agent", "Copilot", "Deterministic Detection", "Developer Tooling", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "Pull Request", "Repository Automation", "Session View", "Software Development", "Videos"]
-tags_normalized: ["actions workflow", "ai", "ai agent", "ai integration", "code analysis", "code review", "codeql", "codereview", "coding agent", "copilot", "deterministic detection", "developer tooling", "devops", "github", "github actions", "github copilot", "pull request", "repository automation", "session view", "software development", "videos"]
+permalink: /github-copilot/videos/Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More
+tags:
+- Actions Workflow
+- AI
+- AI Agent
+- AI Integration
+- Code Analysis
+- Code Review
+- CodeQL
+- CodeReview
+- Coding Agent
+- Copilot
+- Deterministic Detection
+- Developer Tooling
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- Pull Request
+- Repository Automation
+- Session View
+- Software Development
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub presents an overview of advanced Copilot code review features, focusing on the synergy between AI agents, CodeQL analysis, session views, and automation workflows for repository management.<!--excerpt_end-->
 
 {% youtube ikIosF_iiz4 %}

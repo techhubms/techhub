@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "How to Use Azure Developer CLI AI Agent Extension with Microsoft Foundry"
-description: "This post explains how to streamline AI agent development and deployment using the new Azure Developer CLI (azd) AI agent extension. Readers will learn to initialize projects, provision resources, and publish agents to Microsoft Foundry from their local development environment, leveraging Infrastructure as Code, secure authentication, and automated workflows. The walkthrough includes practical steps for setup, configuration, deployment, and testing, plus advanced customization options and links to documentation and sample repositories."
-author: "Kristen Womack, Jeff Omhover"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: How to Use Azure Developer CLI AI Agent Extension with Microsoft Foundry
+author: Kristen Womack, Jeff Omhover
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-11-19 17:22:31 +00:00
-permalink: "/2025-11-19-How-to-Use-Azure-Developer-CLI-AI-Agent-Extension-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "Agent Initialization", "Agents", "AI", "AI Agent", "Azd", "Azure", "Azure Developer CLI", "Azure Resource Manager", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Container Registry", "Declarative Configuration", "DevOps", "Docker", "Environment Variables", "GitHub", "IaC", "Java", "JavaScript", "Kubernetes", "Managed Identity", "Microsoft Foundry", "News", "Project Scaffolding", "Python", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "agent initialization", "agents", "ai", "ai agent", "azd", "azure", "azure developer cli", "azure resource manager", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "container registry", "declarative configuration", "devops", "docker", "environment variables", "github", "iac", "java", "javascript", "kubernetes", "managed identity", "microsoft foundry", "news", "project scaffolding", "python", "typescript", "vs code"]
+permalink: /ai/news/How-to-Use-Azure-Developer-CLI-AI-Agent-Extension-with-Microsoft-Foundry
+tags:
+- .NET
+- Agent Initialization
+- Agents
+- AI
+- AI Agent
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure Resource Manager
+- Azure SDK
+- Bicep
+- CI/CD
+- Codespaces
+- Coding
+- Container Registry
+- Declarative Configuration
+- DevOps
+- Docker
+- Environment Variables
+- GitHub
+- IaC
+- Java
+- JavaScript
+- Kubernetes
+- Managed Identity
+- Microsoft Foundry
+- News
+- Project Scaffolding
+- Python
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Kristen Womack and Jeff Omhover guide you through using the new Azure Developer CLI AI agent extension for rapid development, provisioning, and deployment of Microsoft Foundry agents with secure, automated workflows.<!--excerpt_end-->
 
 # How to Use Azure Developer CLI AI Agent Extension with Microsoft Foundry

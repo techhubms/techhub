@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs"
-description: "Jesse Houwing shares insights from extensive GitHub Copilot workshops, focusing on common keyboard shortcut and plugin conflicts in JetBrains IDEs. The article provides practical troubleshooting steps to resolve shortcut clashes and integration issues between GitHub Copilot and JetBrains' own code completion features."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+layout: post
+title: Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs
+author: Jesse Houwing
+canonical_url: https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-01-22 18:39:29 +00:00
-permalink: "/2025-01-22-Troubleshooting-GitHub-Copilot-keyboard-shortcuts-in-Jetbrains-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Blogs", "Codespaces", "GitHub", "GitHub Copilot", "IDE Configuration", "IntelliJ", "Jetbrains", "Keyboard Shortcuts", "Line Completion", "Plugin Conflicts", "Pycharm", "Rider", "RubyMine", "VS", "VS Code", "Webstorm"]
-tags_normalized: ["ai", "blogs", "codespaces", "github", "github copilot", "ide configuration", "intellij", "jetbrains", "keyboard shortcuts", "line completion", "plugin conflicts", "pycharm", "rider", "rubymine", "vs", "vs code", "webstorm"]
+permalink: /github-copilot/blogs/Troubleshooting-GitHub-Copilot-keyboard-shortcuts-in-Jetbrains-IDEs
+tags:
+- AI
+- Blogs
+- Codespaces
+- GitHub
+- GitHub Copilot
+- IDE Configuration
+- IntelliJ
+- Jetbrains
+- Keyboard Shortcuts
+- Line Completion
+- Plugin Conflicts
+- Pycharm
+- Rider
+- RubyMine
+- VS
+- VS Code
+- Webstorm
+section_names:
+- ai
+- github-copilot
 ---
-
 Jesse Houwing provides a practical guide to resolving keyboard shortcut and code completion conflicts when using GitHub Copilot in JetBrains IDEs. This article outlines the main issues developers face and step-by-step solutions based on Houwing's workshop experiences.<!--excerpt_end-->
 
 # Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs

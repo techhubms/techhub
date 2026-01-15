@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Ignite 2024: Key Updates and Insights from the Microsoft Fabric Perspective"
-description: "Samu Niemelä examines the latest developments in Microsoft Fabric announced at Ignite 2024, including updates on AI integration, real-time intelligence, data management with OneLake, open mirroring, and upcoming AI features. The post covers how these advancements support enterprise data strategies and AI-driven business innovation."
-author: "Samu Niemelä"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/microsoft-ignite-2024-key-updates-for-fabric/"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
+﻿---
+layout: post
+title: 'Microsoft Ignite 2024: Key Updates and Insights from the Microsoft Fabric Perspective'
+author: Samu Niemelä
+canonical_url: https://zure.com/blog/microsoft-ignite-2024-key-updates-for-fabric/
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-20 06:19:29 +00:00
-permalink: "/2024-11-20-Microsoft-Ignite-2024-Key-Updates-and-Insights-from-the-Microsoft-Fabric-Perspective.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Skills", "Azure", "Blogs", "CI/CD", "Copilot", "Data & AI", "Data Integration", "Data Platform", "Ignite", "Lakehouse", "Microsoft Fabric", "ML", "OneLake", "Open Mirroring", "Real Time Intelligence", "Semantic Models", "Streaming Data"]
-tags_normalized: ["ai", "ai skills", "azure", "blogs", "cislashcd", "copilot", "data and ai", "data integration", "data platform", "ignite", "lakehouse", "microsoft fabric", "ml", "onelake", "open mirroring", "real time intelligence", "semantic models", "streaming data"]
+permalink: /ai/blogs/Microsoft-Ignite-2024-Key-Updates-and-Insights-from-the-Microsoft-Fabric-Perspective
+tags:
+- AI
+- AI Skills
+- Azure
+- Blogs
+- CI/CD
+- Copilot
+- Data & AI
+- Data Integration
+- Data Platform
+- Ignite
+- Lakehouse
+- Microsoft Fabric
+- ML
+- OneLake
+- Open Mirroring
+- Real Time Intelligence
+- Semantic Models
+- Streaming Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 In this article, Samu Niemelä highlights the most significant Microsoft Fabric announcements from Ignite 2024, providing detailed insights for data and AI practitioners.<!--excerpt_end-->
 
 # Microsoft Ignite 2024: Key Updates and Insights from the Microsoft Fabric Perspective

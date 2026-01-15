@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Shai-Hulud 2.0: Guidance for Detecting, Investigating, and Defending Against the Supply Chain Attack"
-description: "This news article from the Microsoft Defender Security Research Team provides a technical deep dive into the Shai-Hulud 2.0 supply chain attack. It outlines attack mechanisms leveraging compromised npm packages, automation in deployment, lateral movement across cloud workloads, and credential theft. The guidance focuses on detection, mitigation, and defense strategies using Microsoft Defender, as well as hunting queries and integration with Microsoft Sentinel, Defender for Cloud, and Security Copilot to counter advanced supply chain threats impacting developer and DevOps workflows."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Shai-Hulud 2.0: Guidance for Detecting, Investigating, and Defending Against the Supply Chain Attack'
+author: Microsoft Defender Security Research Team
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-09 21:41:32 +00:00
-permalink: "/2025-12-09-Shai-Hulud-20-Guidance-for-Detecting-Investigating-and-Defending-Against-the-Supply-Chain-Attack.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Attack Path Analysis", "Azure", "Azure Key Vault", "Bun Runtime", "CI/CD Pipelines", "Cloud Security Explorer", "Credential Theft", "Defender For Cloud", "Defender XDR", "DevOps", "GitHub Actions", "Incident Response", "Key Vault", "Microsoft Defender", "Microsoft Sentinel", "News", "Node.js", "npm Package Security", "Security", "Security Copilot", "Shai Hulud 2.0", "Supply Chain Attack", "Threat Intelligence", "TruffleHog"]
-tags_normalized: ["attack path analysis", "azure", "azure key vault", "bun runtime", "cislashcd pipelines", "cloud security explorer", "credential theft", "defender for cloud", "defender xdr", "devops", "github actions", "incident response", "key vault", "microsoft defender", "microsoft sentinel", "news", "nodedotjs", "npm package security", "security", "security copilot", "shai hulud 2dot0", "supply chain attack", "threat intelligence", "trufflehog"]
+permalink: /azure/news/Shai-Hulud-20-Guidance-for-Detecting-Investigating-and-Defending-Against-the-Supply-Chain-Attack
+tags:
+- Attack Path Analysis
+- Azure
+- Azure Key Vault
+- Bun Runtime
+- CI/CD Pipelines
+- Cloud Security Explorer
+- Credential Theft
+- Defender For Cloud
+- Defender XDR
+- DevOps
+- GitHub Actions
+- Incident Response
+- Key Vault
+- Microsoft Defender
+- Microsoft Sentinel
+- News
+- Node.js
+- npm Package Security
+- Security
+- Security Copilot
+- Shai Hulud 2.0
+- Supply Chain Attack
+- Threat Intelligence
+- TruffleHog
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Defender Security Research Team presents an in-depth analysis of the Shai-Hulud 2.0 attack, offering actionable detection, investigation, and defense guidance for developers and security professionals in cloud-native environments.<!--excerpt_end-->
 
 # Shai-Hulud 2.0: Guidance for Detecting, Investigating, and Defending Against the Supply Chain Attack

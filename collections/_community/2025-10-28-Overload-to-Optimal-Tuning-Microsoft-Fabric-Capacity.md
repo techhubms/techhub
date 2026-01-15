@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Overload to Optimal: Tuning Microsoft Fabric Capacity"
-description: "This guide details performance and cost optimization strategies for Microsoft Fabric, focusing on practical diagnostics with the Monitoring Hub, Capacity Metrics App, and Spark UI. Readers learn data and cluster-level tuning, remediation tactics, and actionable best practices for maintaining high-performance analytics workloads on Microsoft Fabric."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Overload to Optimal: Tuning Microsoft Fabric Capacity'
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 16:48:43 +00:00
-permalink: "/2025-10-28-Overload-to-Optimal-Tuning-Microsoft-Fabric-Capacity.html"
-categories: ["Azure", "ML"]
-tags: ["Autotune", "Azure", "Azure Analytics", "Capacity Metrics", "Capacity Planning", "Cluster Optimization", "Community", "Concurrency", "Data Engineering", "Data Skew", "Delta Lake", "Microsoft Fabric", "ML", "Monitoring Hub", "Native Execution Engine", "Performance Tuning", "Spark", "Spark UI", "Table Compaction"]
-tags_normalized: ["autotune", "azure", "azure analytics", "capacity metrics", "capacity planning", "cluster optimization", "community", "concurrency", "data engineering", "data skew", "delta lake", "microsoft fabric", "ml", "monitoring hub", "native execution engine", "performance tuning", "spark", "spark ui", "table compaction"]
+permalink: /ml/community/Overload-to-Optimal-Tuning-Microsoft-Fabric-Capacity
+tags:
+- Autotune
+- Azure
+- Azure Analytics
+- Capacity Metrics
+- Capacity Planning
+- Cluster Optimization
+- Community
+- Concurrency
+- Data Engineering
+- Data Skew
+- Delta Lake
+- Microsoft Fabric
+- ML
+- Monitoring Hub
+- Native Execution Engine
+- Performance Tuning
+- Spark
+- Spark UI
+- Table Compaction
+section_names:
+- azure
+- ml
 ---
-
 Rafia Aqil, with Daya Ram, offers a thorough walkthrough on optimizing Microsoft Fabric capacity and Spark analytics, outlining practical steps for diagnostics, cluster and data best practices, and cost management.<!--excerpt_end-->
 
 # Overload to Optimal: Tuning Microsoft Fabric Capacity

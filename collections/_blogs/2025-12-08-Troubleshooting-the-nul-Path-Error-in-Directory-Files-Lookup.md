@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Troubleshooting the `\\.\\nul` Path Error in Directory Files Lookup"
-description: "This article by Rick Strahl explores a puzzling `\\.\\nul` device error affecting directory file lookups in his Markdown Monster application. He examines the underlying causes, investigates Windows filesystem behaviors, and proposes practical .NET code workarounds to prevent and handle these exceptions when browsing directories. The discussion includes actionable advice on filtering device files with EnumerationOptions and handling unexpected exceptions for robust file browser implementations."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Troubleshooting the `\.\nul` Path Error in Directory Files Lookup
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-12-08 23:15:18 +00:00
-permalink: "/2025-12-08-Troubleshooting-the-nul-Path-Error-in-Directory-Files-Lookup.html"
-categories: ["Coding"]
-tags: [".NET", "Application Insights", "Blogs", "C#", "Code Workarounds", "Coding", "Directory.GetFiles", "EnumerationOptions", "Error Handling", "Exception Handling", "File Browser", "FileAttributes", "Hidden Files", "Markdown Monster", "Symlink", "System.IO", "Windows Devices"]
-tags_normalized: ["dotnet", "application insights", "blogs", "csharp", "code workarounds", "coding", "directorydotgetfiles", "enumerationoptions", "error handling", "exception handling", "file browser", "fileattributes", "hidden files", "markdown monster", "symlink", "systemdotio", "windows devices"]
+permalink: /coding/blogs/Troubleshooting-the-nul-Path-Error-in-Directory-Files-Lookup
+tags:
+- .NET
+- Application Insights
+- Blogs
+- C#
+- Code Workarounds
+- Coding
+- Directory.GetFiles
+- EnumerationOptions
+- Error Handling
+- Exception Handling
+- File Browser
+- FileAttributes
+- Hidden Files
+- Markdown Monster
+- Symlink
+- System.IO
+- Windows Devices
+section_names:
+- coding
 ---
-
 Rick Strahl analyzes frequent `\\.\nul` device errors breaking file lookups in Markdown Monster, offering insights into the Windows filesystem and practical .NET solutions for developers.<!--excerpt_end-->
 
 # Troubleshooting the `\\.\nul` Path Error in Directory Files Lookup

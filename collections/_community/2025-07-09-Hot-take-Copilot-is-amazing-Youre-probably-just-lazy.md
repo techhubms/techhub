@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Hot take - Copilot is amazing! You're probably just lazy."
-description: "A seasoned enterprise developer shares insights on using Copilot effectively, emphasizing experience, planning, and proper prompt engineering for optimal results."
-author: "shifty303"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/"
-categories: ["AI", "Coding", "GitHub Copilot"]
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Hot take - Copilot is amazing! You're probably just lazy.
+author: shifty303
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-09 20:18:19 +00:00
-permalink: "/2025-07-09-Hot-take-Copilot-is-amazing-Youre-probably-just-lazy.html"
-viewing_mode: "external"
-tags: [".NET", "AI", "Angular", "Backend Development", "Claude 4", "Coding", "Community", "Enterprise Software", "Frontend Development", "GitHub Copilot", "Junior Developers", "Prompt Engineering", "Software Maintenance", "Solution Architecture", "Testability"]
-tags_normalized: ["dotnet", "ai", "angular", "backend development", "claude 4", "coding", "community", "enterprise software", "frontend development", "github copilot", "junior developers", "prompt engineering", "software maintenance", "solution architecture", "testability"]
+permalink: /github-copilot/community/Hot-take-Copilot-is-amazing-Youre-probably-just-lazy
+viewing_mode: external
+tags:
+- .NET
+- AI
+- Angular
+- Backend Development
+- Claude 4
+- Coding
+- Community
+- Enterprise Software
+- Frontend Development
+- GitHub Copilot
+- Junior Developers
+- Prompt Engineering
+- Software Maintenance
+- Solution Architecture
+- Testability
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this article, shifty303, an experienced enterprise developer, discusses their hands-on use of GitHub Copilot and Claude 4, highlighting how expertise and thoughtful planning are essential when leveraging AI tools for software development. The author offers practical advice on prompt crafting, solution architecture, and avoiding common pitfalls encountered by less experienced developers.<!--excerpt_end-->
 
 ### Effective Use of Copilot in Software Development: Lessons from Experience

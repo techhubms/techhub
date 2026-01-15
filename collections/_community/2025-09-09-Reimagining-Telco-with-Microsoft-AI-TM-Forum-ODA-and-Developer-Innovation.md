@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation"
-description: "This article explores Microsoft's strategic approach at TM Forum Innovate Americas 2025, focusing on AI-driven transformation, open digital architectures, and developer enablement in the telecom industry. It highlights key sessions, showcases, and real-world use cases including Azure AI Foundry, Model Context Protocol, and GitHub Copilot's impact on accelerating TM Forum Open API development."
-author: "rickliev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation'
+author: rickliev
+canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 16:54:57 +00:00
-permalink: "/2025-09-09-Reimagining-Telco-with-Microsoft-AI-TM-Forum-ODA-and-Developer-Innovation.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentic AI", "AI", "AI Governance", "API Development", "Azure", "Azure AI Foundry", "Cloud Native", "Coding", "Community", "Connected Intelligence", "Copilot Chat", "Customer Management API", "Developer Productivity", "DevOps", "Enterprise AI", "GitHub Copilot", "MCP", "Microsoft Azure", "Open Digital Architecture", "OSS/BSS", "Telco", "TM Forum", "TMF Open APIs"]
-tags_normalized: ["agent mode", "agentic ai", "ai", "ai governance", "api development", "azure", "azure ai foundry", "cloud native", "coding", "community", "connected intelligence", "copilot chat", "customer management api", "developer productivity", "devops", "enterprise ai", "github copilot", "mcp", "microsoft azure", "open digital architecture", "ossslashbss", "telco", "tm forum", "tmf open apis"]
+permalink: /github-copilot/community/Reimagining-Telco-with-Microsoft-AI-TM-Forum-ODA-and-Developer-Innovation
+tags:
+- Agent Mode
+- Agentic AI
+- AI
+- AI Governance
+- API Development
+- Azure
+- Azure AI Foundry
+- Cloud Native
+- Coding
+- Community
+- Connected Intelligence
+- Copilot Chat
+- Customer Management API
+- Developer Productivity
+- DevOps
+- Enterprise AI
+- GitHub Copilot
+- MCP
+- Microsoft Azure
+- Open Digital Architecture
+- OSS/BSS
+- Telco
+- TM Forum
+- TMF Open APIs
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 rickliev shares how Microsoft leverages AI, Azure, and developer-focused tools like GitHub Copilot at TM Forum Innovate Americas 2025 to drive telco innovation, modernize IT architectures, and accelerate open API development.<!--excerpt_end-->
 
 # Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation

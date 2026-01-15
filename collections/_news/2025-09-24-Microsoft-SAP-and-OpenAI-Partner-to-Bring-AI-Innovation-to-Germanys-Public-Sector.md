@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft, SAP, and OpenAI Partner to Bring AI Innovation to Germany's Public Sector"
-description: "This news highlights a partnership between Microsoft, SAP, and OpenAI to introduce advanced AI solutions in Germany’s public sector, with a focus on secure, responsible use and strict data sovereignty via Microsoft Azure. The initiative promises to help millions of German public sector employees use AI tools while maintaining high standards for data security and legal compliance."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_sap-and-openai-partner-to-launch-sovereign-activity-7376627188332335104-2h6b"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft, SAP, and OpenAI Partner to Bring AI Innovation to Germany's Public Sector
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_sap-and-openai-partner-to-launch-sovereign-activity-7376627188332335104-2h6b
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:29:50 +00:00
-permalink: "/2025-09-24-Microsoft-SAP-and-OpenAI-Partner-to-Bring-AI-Innovation-to-Germanys-Public-Sector.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Innovation", "Azure", "Azure AI", "Azure Security", "Cloud Computing", "Company News", "Data Sovereignty", "Enterprise Collaboration", "Germany", "Legal Compliance", "LinkedIn Post", "Microsoft Azure", "News", "OpenAI", "Partnership", "Privacy Compliance", "Public Sector", "Responsible AI", "SAP", "Security", "Security Standards"]
-tags_normalized: ["ai", "ai innovation", "azure", "azure ai", "azure security", "cloud computing", "company news", "data sovereignty", "enterprise collaboration", "germany", "legal compliance", "linkedin post", "microsoft azure", "news", "openai", "partnership", "privacy compliance", "public sector", "responsible ai", "sap", "security", "security standards"]
+permalink: /ai/news/Microsoft-SAP-and-OpenAI-Partner-to-Bring-AI-Innovation-to-Germanys-Public-Sector
+tags:
+- AI
+- AI Innovation
+- Azure
+- Azure AI
+- Azure Security
+- Cloud Computing
+- Company News
+- Data Sovereignty
+- Enterprise Collaboration
+- Germany
+- Legal Compliance
+- LinkedIn Post
+- Microsoft Azure
+- News
+- OpenAI
+- Partnership
+- Privacy Compliance
+- Public Sector
+- Responsible AI
+- SAP
+- Security
+- Security Standards
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke summarizes Microsoft's partnership with SAP and OpenAI aimed at delivering responsible and secure AI solutions for the German public sector using Microsoft Azure.<!--excerpt_end-->
 
 # Microsoft, SAP, and OpenAI Partner to Bring AI Innovation to Germany's Public Sector

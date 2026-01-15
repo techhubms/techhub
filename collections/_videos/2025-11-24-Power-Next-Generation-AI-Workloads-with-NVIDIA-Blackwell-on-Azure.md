@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure"
-description: "This Microsoft Ignite session explores advancements in AI computing using NVIDIA Blackwell architecture alongside Azure cloud. Key topics include multi-modal inference, robotics simulation, agentic AI, confidential computing with GPUs, and performance optimization using NVLink. The session demonstrates how collaboration between NVIDIA and Microsoft Azure enables secure, scalable, and efficient AI workloads for physical and agentic applications, with insights into the design frameworks and real-world use cases such as manufacturing and warehouse optimization using the Omniverse platform."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=k3HASRvfpnE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=k3HASRvfpnE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:46:29 +00:00
-permalink: "/2025-11-24-Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Super Factories", "Azure", "Confidential Computing", "GPU Acceleration", "Microsoft Ignite", "Mixture Of Experts", "MSIgnite", "Multimodal Inference", "NVIDIA Blackwell", "NVLink", "Omniverse", "Pareto Curve", "Physical AI", "Robotics Simulation", "RTX PRO 6000 Blackwell", "Videos"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai super factories", "azure", "confidential computing", "gpu acceleration", "microsoft ignite", "mixture of experts", "msignite", "multimodal inference", "nvidia blackwell", "nvlink", "omniverse", "pareto curve", "physical ai", "robotics simulation", "rtx pro 6000 blackwell", "videos"]
+permalink: /ai/videos/Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI
+- AI Super Factories
+- Azure
+- Confidential Computing
+- GPU Acceleration
+- Microsoft Ignite
+- Mixture Of Experts
+- MSIgnite
+- Multimodal Inference
+- NVIDIA Blackwell
+- NVLink
+- Omniverse
+- Pareto Curve
+- Physical AI
+- Robotics Simulation
+- RTX PRO 6000 Blackwell
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a session led by Dave Salvator, showcasing how NVIDIA Blackwell architecture and Azure cloud enable high-performance, secure, and scalable AI workloads for agentic and physical applications.<!--excerpt_end-->
 
 {% youtube k3HASRvfpnE %}

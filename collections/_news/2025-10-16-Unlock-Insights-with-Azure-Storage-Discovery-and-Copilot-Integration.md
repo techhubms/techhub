@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unlock Insights with Azure Storage Discovery and Copilot Integration"
-description: "This news article details the general availability of Azure Storage Discovery, a Microsoft Azure service offering enterprise-wide visibility and actionable insights into data estates stored in Azure Blob Storage and Data Lake Storage. It explores how the integration with Copilot in Azure enables natural language access to data management analytics, including capacity, activity, security, and error reporting, enhancing transparency, governance, and operational efficiency for IT managers and technical teams."
-author: "Maneesh Sah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Unlock Insights with Azure Storage Discovery and Copilot Integration
+author: Maneesh Sah
+canonical_url: https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-16 15:00:00 +00:00
-permalink: "/2025-10-16-Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Marketplace", "Azure Storage Discovery", "Capacity Planning", "Copilot", "Copilot in Azure", "Cost Optimization", "Data Compliance", "Data Insights", "Data Security", "Data Visualization", "Microsoft Azure", "Microsoft Entra ID", "Natural Language Queries", "News", "Redundancy", "Security", "Storage", "Storage Automation", "Storage Management"]
-tags_normalized: ["ai", "azure", "azure blob storage", "azure data lake storage", "azure marketplace", "azure storage discovery", "capacity planning", "copilot", "copilot in azure", "cost optimization", "data compliance", "data insights", "data security", "data visualization", "microsoft azure", "microsoft entra id", "natural language queries", "news", "redundancy", "security", "storage", "storage automation", "storage management"]
+permalink: /ai/news/Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration
+tags:
+- AI
+- Azure
+- Azure Blob Storage
+- Azure Data Lake Storage
+- Azure Marketplace
+- Azure Storage Discovery
+- Capacity Planning
+- Copilot
+- Copilot in Azure
+- Cost Optimization
+- Data Compliance
+- Data Insights
+- Data Security
+- Data Visualization
+- Microsoft Azure
+- Microsoft Entra ID
+- Natural Language Queries
+- News
+- Redundancy
+- Security
+- Storage
+- Storage Automation
+- Storage Management
+section_names:
+- ai
+- azure
+- security
 ---
-
 Maneesh Sah introduces Azure Storage Discovery's general availability, focusing on its advanced integration with Copilot for intuitive data estate analysis, operational insight, and storage management in the Azure platform.<!--excerpt_end-->
 
 # Unlock Insights with Azure Storage Discovery and Copilot Integration

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Octoverse 2025: AI Adoption and TypeScript Rise Drive Unprecedented Developer Growth on GitHub"
-description: "This year’s Octoverse report from GitHub Staff examines how artificial intelligence (AI), generative agents, and the rapid uptake of typed languages like TypeScript are reshaping global software development. Covering statistics through 2025, the article provides data-driven insights into developer population booms, AI’s mainstream integration via tools like GitHub Copilot and Copilot Autofix, language adoption trends, open source activity, and the effects of automation and security improvements across the ecosystem."
-author: "GitHub Staff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Octoverse 2025: AI Adoption and TypeScript Rise Drive Unprecedented Developer Growth on GitHub'
+author: GitHub Staff
+canonical_url: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-28 16:07:06 +00:00
-permalink: "/2025-10-28-Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agents", "AI", "AI Adoption", "CI/CD", "CodeQL", "Coding", "Copilot Autofix", "Dependabot", "Developer Productivity", "DevOps", "DevOps Automation", "Generative AI", "GitHub Copilot", "Global Developer Growth", "Jupyter Notebook", "Language Trends", "LLM SDKs", "News", "News & Insights", "Octoverse", "Open Source", "Pull Requests", "Python", "Security", "Security Automation", "TypeScript"]
-tags_normalized: ["agents", "ai", "ai adoption", "cislashcd", "codeql", "coding", "copilot autofix", "dependabot", "developer productivity", "devops", "devops automation", "generative ai", "github copilot", "global developer growth", "jupyter notebook", "language trends", "llm sdks", "news", "news and insights", "octoverse", "open source", "pull requests", "python", "security", "security automation", "typescript"]
+permalink: /github-copilot/news/Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub
+tags:
+- Agents
+- AI
+- AI Adoption
+- CI/CD
+- CodeQL
+- Coding
+- Copilot Autofix
+- Dependabot
+- Developer Productivity
+- DevOps
+- DevOps Automation
+- Generative AI
+- GitHub Copilot
+- Global Developer Growth
+- Jupyter Notebook
+- Language Trends
+- LLM SDKs
+- News
+- News & Insights
+- Octoverse
+- Open Source
+- Pull Requests
+- Python
+- Security
+- Security Automation
+- TypeScript
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 GitHub Staff explores the 2025 Octoverse, analyzing explosive global developer growth, AI integration through Copilot, the ascent of TypeScript, and transformative effects on productivity, open source, and security across the software development landscape.<!--excerpt_end-->
 
 # Octoverse 2025: AI Integration, Typed Languages, and Global Developer Growth

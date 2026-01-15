@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Live-Coding a DJ App with VS Code and GitHub Copilot"
-description: "Explore how to use Visual Studio Code and GitHub Copilot to build a browser-based DJ application from scratch. Julia demonstrates live music-coding techniques using Tone.js, leveraging Copilot's AI for composing, layering, and remixing electronic beats straight from code. The session covers building patterns, experimenting with effects, and integrating AI code assistance, offering creative inspiration and real technical guidance."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9NKNNHCsykQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Live-Coding a DJ App with VS Code and GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=9NKNNHCsykQ
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-21 14:00:16 +00:00
-permalink: "/2025-10-21-Live-Coding-a-DJ-App-with-VS-Code-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Browser Application", "Code", "Coding", "Creative Coding", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "JavaScript", "Live Coding", "Microsoft", "Music Programming", "Real Time Audio", "Software Developer", "Tone.js", "Videos", "VS Code", "VS Code Extensions", "Web Development"]
-tags_normalized: ["ai", "ai powered development", "browser application", "code", "coding", "creative coding", "developer", "developer community", "developer tools", "github copilot", "javascript", "live coding", "microsoft", "music programming", "real time audio", "software developer", "tonedotjs", "videos", "vs code", "vs code extensions", "web development"]
+permalink: /github-copilot/videos/Live-Coding-a-DJ-App-with-VS-Code-and-GitHub-Copilot
+tags:
+- AI
+- AI Powered Development
+- Browser Application
+- Code
+- Coding
+- Creative Coding
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub Copilot
+- JavaScript
+- Live Coding
+- Microsoft
+- Music Programming
+- Real Time Audio
+- Software Developer
+- Tone.js
+- Videos
+- VS Code
+- VS Code Extensions
+- Web Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Julia Kasper demonstrates how to turn Visual Studio Code into a music studio using GitHub Copilot and Tone.js, live-coding a DJ app that generates techno rhythms and beats.<!--excerpt_end-->
 
 {% youtube 9NKNNHCsykQ %}

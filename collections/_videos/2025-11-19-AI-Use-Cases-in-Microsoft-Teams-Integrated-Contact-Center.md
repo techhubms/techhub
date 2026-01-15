@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI Use Cases in Microsoft Teams Integrated Contact Center"
-description: "This session explores practical AI enhancements for Microsoft Teams Integrated Contact Centers, focusing on real-world scenarios to improve customer service. Key features demonstrated include an AI-powered IVR digital assistant, AI-driven transfer assistant, contextual resource suggestions, an AI agent checklist, failover mechanisms to human agents, and integration with Power Platform for advanced insights. The presentation addresses how AI supports and empowers customer service agents to operate more efficiently and handle inquiries with increased accuracy, offering scalable performance tracking and enabling new agents to perform like seasoned professionals."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IggA_sx3LzI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI Use Cases in Microsoft Teams Integrated Contact Center
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=IggA_sx3LzI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:33:03 +00:00
-permalink: "/2025-11-19-AI-Use-Cases-in-Microsoft-Teams-Integrated-Contact-Center.html"
-categories: ["AI"]
-tags: ["Agent Assist", "Agenticbusinessapplications", "AI", "AI Integration", "Business System Integration", "Contact Center", "Customer Service", "Digital Assistant", "FAQ Model", "IVR", "Microsoft Teams", "MSIgnite", "Performance Tracking", "Power Platform", "Scalable Performance", "Supervisor Functionality", "Videos"]
-tags_normalized: ["agent assist", "agenticbusinessapplications", "ai", "ai integration", "business system integration", "contact center", "customer service", "digital assistant", "faq model", "ivr", "microsoft teams", "msignite", "performance tracking", "power platform", "scalable performance", "supervisor functionality", "videos"]
+permalink: /ai/videos/AI-Use-Cases-in-Microsoft-Teams-Integrated-Contact-Center
+tags:
+- Agent Assist
+- Agenticbusinessapplications
+- AI
+- AI Integration
+- Business System Integration
+- Contact Center
+- Customer Service
+- Digital Assistant
+- FAQ Model
+- IVR
+- Microsoft Teams
+- MSIgnite
+- Performance Tracking
+- Power Platform
+- Scalable Performance
+- Supervisor Functionality
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Microsoft Events, this session at Microsoft Ignite showcases how AI can transform customer service within Teams Integrated Contact Centers through agent assist features, IVR improvements, and Power Platform integration.<!--excerpt_end-->
 
 {% youtube IggA_sx3LzI %}

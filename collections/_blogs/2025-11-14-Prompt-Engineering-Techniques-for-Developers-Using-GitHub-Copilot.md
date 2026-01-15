@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Prompt Engineering Techniques for Developers Using GitHub Copilot"
-description: "This guide explores how developers can leverage prompt engineering strategies to optimize GitHub Copilot's AI-powered code suggestions. It delves into specificity, context, iterative approaches, common mistakes to avoid, and actionable techniques for crafting effective AI prompts, ultimately helping developers write better code and maximize Copilot's productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Prompt Engineering Techniques for Developers Using GitHub Copilot
+author: Dellenny
+canonical_url: https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-14 08:50:07 +00:00
-permalink: "/2025-11-14-Prompt-Engineering-Techniques-for-Developers-Using-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Best Practices", "Blogs", "Boilerplate Generation", "Code Quality", "Code Review", "Code Suggestions", "Coding", "Contextual Prompts", "Developer Productivity", "GitHub Copilot", "Iterative Development", "OpenAI", "Programming Tutorials", "Prompt Engineering", "Python", "Software Development"]
-tags_normalized: ["ai", "ai coding assistant", "best practices", "blogs", "boilerplate generation", "code quality", "code review", "code suggestions", "coding", "contextual prompts", "developer productivity", "github copilot", "iterative development", "openai", "programming tutorials", "prompt engineering", "python", "software development"]
+permalink: /github-copilot/blogs/Prompt-Engineering-Techniques-for-Developers-Using-GitHub-Copilot
+tags:
+- AI
+- AI Coding Assistant
+- Best Practices
+- Blogs
+- Boilerplate Generation
+- Code Quality
+- Code Review
+- Code Suggestions
+- Coding
+- Contextual Prompts
+- Developer Productivity
+- GitHub Copilot
+- Iterative Development
+- OpenAI
+- Programming Tutorials
+- Prompt Engineering
+- Python
+- Software Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Dellenny explains how developers can use prompt engineering to get the most from GitHub Copilot. This article shares practical strategies and examples for crafting better prompts and improving code generation results.<!--excerpt_end-->
 
 # Prompt Engineering for Developers: Getting the Best Out of Copilot

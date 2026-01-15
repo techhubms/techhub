@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI"
-description: "James Montemagno guides readers through the process of rapidly building a full-featured podcast analytics dashboard using GitHub Copilot, Claude Sonnet 4.5, and VS Code. The article shows how outcome-driven prompts can allow AI to architect, implement, and deploy a modern web app—including React, TypeScript, Tailwind CSS, and GitHub Actions—without writing traditional code by hand."
-author: "James Montemagno"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI
+author: James Montemagno
+canonical_url: https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-09 18:00:49 +00:00
-permalink: "/2025-10-09-Vibe-Coding-a-Podcast-Analytics-Dashboard-with-GitHub-Copilot-and-AI.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Claude Sonnet 4.5", "Coding", "Component Architecture", "CSV Parsing", "Dashboard", "DevOps", "GitHub Actions", "GitHub Copilot", "Lucide React", "Memoization", "News", "Pages Deployment", "Podcast Analytics", "React", "Recharts", "Retention Analysis", "Tailwind CSS", "Topic Extraction", "TypeScript", "Vite", "VS Code", "VS Code Agent Mode"]
-tags_normalized: ["ai", "ai development", "claude sonnet 4dot5", "coding", "component architecture", "csv parsing", "dashboard", "devops", "github actions", "github copilot", "lucide react", "memoization", "news", "pages deployment", "podcast analytics", "react", "recharts", "retention analysis", "tailwind css", "topic extraction", "typescript", "vite", "vs code", "vs code agent mode"]
+permalink: /github-copilot/news/Vibe-Coding-a-Podcast-Analytics-Dashboard-with-GitHub-Copilot-and-AI
+tags:
+- AI
+- AI Development
+- Claude Sonnet 4.5
+- Coding
+- Component Architecture
+- CSV Parsing
+- Dashboard
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Lucide React
+- Memoization
+- News
+- Pages Deployment
+- Podcast Analytics
+- React
+- Recharts
+- Retention Analysis
+- Tailwind CSS
+- Topic Extraction
+- TypeScript
+- Vite
+- VS Code
+- VS Code Agent Mode
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 James Montemagno shares his experience creating a podcast analytics dashboard in just minutes with GitHub Copilot and Claude Sonnet 4.5, highlighting how AI handled both architecture and implementation.<!--excerpt_end-->
 
 # Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI

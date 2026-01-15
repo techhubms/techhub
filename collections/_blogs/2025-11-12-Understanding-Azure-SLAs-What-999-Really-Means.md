@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Understanding Azure SLAs: What 99.9% Really Means"
-description: "This guide provides a down-to-earth breakdown of what Azure service level agreements (SLAs) actually mean for architects and developers. It explains Microsoft's uptime guarantees, clarifies common misconceptions about “three nines” reliability, and offers practical advice on designing resilient cloud architectures that meet—or exceed—Azure’s SLA requirements. Readers will learn how downtime is calculated, how composite SLAs work across multiple services, and what steps can be taken to improve overall availability."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/understanding-azure-slas-what-99-9-really-means/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Understanding Azure SLAs: What 99.9% Really Means'
+author: Dellenny
+canonical_url: https://dellenny.com/understanding-azure-slas-what-99-9-really-means/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-12 16:11:15 +00:00
-permalink: "/2025-11-12-Understanding-Azure-SLAs-What-999-Really-Means.html"
-categories: ["Azure"]
-tags: ["Application Architecture", "Application Insights", "Auto Scaling", "Availability Zones", "Azure", "Azure Monitor", "Blogs", "Cloud Downtime", "Cloud Planning", "Cloud Reliability", "Composite SLA", "Failover Strategies", "Load Balancer", "Redundancy", "Service Level Agreement", "SLA"]
-tags_normalized: ["application architecture", "application insights", "auto scaling", "availability zones", "azure", "azure monitor", "blogs", "cloud downtime", "cloud planning", "cloud reliability", "composite sla", "failover strategies", "load balancer", "redundancy", "service level agreement", "sla"]
+permalink: /azure/blogs/Understanding-Azure-SLAs-What-999-Really-Means
+tags:
+- Application Architecture
+- Application Insights
+- Auto Scaling
+- Availability Zones
+- Azure
+- Azure Monitor
+- Blogs
+- Cloud Downtime
+- Cloud Planning
+- Cloud Reliability
+- Composite SLA
+- Failover Strategies
+- Load Balancer
+- Redundancy
+- Service Level Agreement
+- SLA
+section_names:
+- azure
 ---
-
 Dellenny explores the reality behind Azure’s SLA numbers, helping developers and businesses interpret uptime percentages and plan more reliable cloud architectures.<!--excerpt_end-->
 
 # Understanding Azure SLAs: What 99.9% Really Means

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Visual Studio 2015 Retirement: Support Deadlines and Upgrade Recommendations"
-description: "This announcement summarizes the upcoming end-of-support dates for Visual Studio 2015 and other older Visual Studio versions, providing Microsoft consultants and developers with key timelines and upgrade guidance. The post highlights benefits of moving to Visual Studio 2022, including AI-powered code completions, integrated GitHub support, enhanced .NET tooling, and continued security updates."
-author: "Paul Chapman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio 2015 Retirement: Support Deadlines and Upgrade Recommendations'
+author: Paul Chapman
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-05 16:16:53 +00:00
-permalink: "/2025-08-05-Visual-Studio-2015-Retirement-Support-Deadlines-and-Upgrade-Recommendations.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET 8", ".NET 9", "Administration", "AI", "AI Code Completion", "C++ Redistributable", "Coding", "Developer Tools", "DevOps", "GitHub Integration", "IDE Support", "Installation And Updates", "Lifecycle", "Lifecycle Management", "Microsoft", "MSVC Tools", "News", "Productivity Tools", "Support", "Upgrade Guidance", "Version Control", "Visual Studio Subscriptions", "VS"]
-tags_normalized: ["dotnet 8", "dotnet 9", "administration", "ai", "ai code completion", "cplusplus redistributable", "coding", "developer tools", "devops", "github integration", "ide support", "installation and updates", "lifecycle", "lifecycle management", "microsoft", "msvc tools", "news", "productivity tools", "support", "upgrade guidance", "version control", "visual studio subscriptions", "vs"]
+permalink: /coding/news/Visual-Studio-2015-Retirement-Support-Deadlines-and-Upgrade-Recommendations
+tags:
+- .NET 8
+- .NET 9
+- Administration
+- AI
+- AI Code Completion
+- C++ Redistributable
+- Coding
+- Developer Tools
+- DevOps
+- GitHub Integration
+- IDE Support
+- Installation And Updates
+- Lifecycle
+- Lifecycle Management
+- Microsoft
+- MSVC Tools
+- News
+- Productivity Tools
+- Support
+- Upgrade Guidance
+- Version Control
+- Visual Studio Subscriptions
+- VS
+section_names:
+- coding
+- devops
 ---
-
 Paul Chapman discusses key support deadlines for Visual Studio editions, urging developers to upgrade to Visual Studio 2022 for modern features and security, including GitHub integration and AI-powered coding.<!--excerpt_end-->
 
 # Visual Studio 2015 Retirement: Support Deadlines and Upgrade Recommendations

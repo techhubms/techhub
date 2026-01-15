@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Blueprint for Building the SOC of the Future"
-description: "This session from Microsoft Ignite 2025 provides a practical blueprint for designing a modern Security Operations Center (SOC) using Microsoft Sentinel and Microsoft Defender. It explains the architecture, real-time threat detection, predictive shielding, and key AI-driven technologies like agentic AI and graph-powered reasoning for proactive and adaptive security operations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LZIRB-gu-gE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Blueprint for Building the SOC of the Future
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=LZIRB-gu-gE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:27:33 +00:00
-permalink: "/2025-11-20-Blueprint-for-Building-the-SOC-of-the-Future.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Security", "Attack Path Mapping", "Automated Response", "Graph Reasoning", "Incident Response", "Microsoft Defender", "Microsoft Ignite", "Microsoft Sentinel", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Predictive Shielding", "Security", "Security Operations", "SOC Architecture", "Threat Detection", "Unified Identity Inventory", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai security", "attack path mapping", "automated response", "graph reasoning", "incident response", "microsoft defender", "microsoft ignite", "microsoft sentinel", "modernizesecopswithaunifiedplatform", "msignite", "predictive shielding", "security", "security operations", "soc architecture", "threat detection", "unified identity inventory", "videos"]
+permalink: /ai/videos/Blueprint-for-Building-the-SOC-of-the-Future
+tags:
+- Agentic AI
+- AI
+- AI Security
+- Attack Path Mapping
+- Automated Response
+- Graph Reasoning
+- Incident Response
+- Microsoft Defender
+- Microsoft Ignite
+- Microsoft Sentinel
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Predictive Shielding
+- Security
+- Security Operations
+- SOC Architecture
+- Threat Detection
+- Unified Identity Inventory
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events hosts a session outlining how to architect the SOC of the future, leveraging Microsoft Sentinel, Defender, and advanced AI-powered security operations.<!--excerpt_end-->
 
 {% youtube LZIRB-gu-gE %}

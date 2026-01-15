@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Is DevOps Dead? Or Just Evolving?"
-description: "Rene van Osnabrugge reflects on the evolution of DevOps, the rise of platform engineering, and key insights from the LEAD podcast. The article discusses challenges teams face with DevOps, how platform engineering supports DevOps principles, and best practices for platform teams to enhance engineering culture and productivity."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Is DevOps Dead? Or Just Evolving?
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-05-28 07:48:00 +00:00
-permalink: "/2025-05-28-Is-DevOps-Dead-Or-just-evolving.html"
-categories: ["DevOps"]
-tags: ["Automation", "Blogs", "CI/CD Pipelines", "Developer Experience", "DevOps", "Engineering Culture", "Internal Platforms", "Lead Podcast", "Platform Engineering", "Software Delivery", "Software Teams", "Team Ownership"]
-tags_normalized: ["automation", "blogs", "cislashcd pipelines", "developer experience", "devops", "engineering culture", "internal platforms", "lead podcast", "platform engineering", "software delivery", "software teams", "team ownership"]
+permalink: /devops/blogs/Is-DevOps-Dead-Or-just-evolving
+tags:
+- Automation
+- Blogs
+- CI/CD Pipelines
+- Developer Experience
+- DevOps
+- Engineering Culture
+- Internal Platforms
+- Lead Podcast
+- Platform Engineering
+- Software Delivery
+- Software Teams
+- Team Ownership
+section_names:
+- devops
 ---
-
 In this article, Rene van Osnabrugge shares insights from his LEAD podcast and discusses whether DevOps is truly dead or simply evolving, highlighting the impact of platform engineering on modern engineering culture.<!--excerpt_end-->
 
 # Is DevOps Dead? Or Just Evolving?

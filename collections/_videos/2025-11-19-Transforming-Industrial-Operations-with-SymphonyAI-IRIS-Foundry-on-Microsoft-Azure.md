@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Transforming Industrial Operations with SymphonyAI IRIS Foundry on Microsoft Azure"
-description: "This session from Microsoft Ignite highlights how SymphonyAI Industrial leverages Microsoft Azure and IRIS Foundry to revolutionize manufacturing and industrial operations. Discover how organizations can unify data, utilize AI-powered knowledge graphs and Copilot features, and implement Unified Namespace and DataOps for advanced industrial workflows. The session includes demonstrations, technical explanations, and real-world integration scenarios for AI and DataOps in industrial environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=t37ZpdNQmAM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Transforming Industrial Operations with SymphonyAI IRIS Foundry on Microsoft Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=t37ZpdNQmAM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:50:50 +00:00
-permalink: "/2025-11-19-Transforming-Industrial-Operations-with-SymphonyAI-IRIS-Foundry-on-Microsoft-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agenticbusinessapplications", "AI", "AI Modeling", "Asset Hierarchies", "Azure", "CMMS", "Data Integration", "Human in The Loop Validation", "Industrial DataOps", "Industrial Operations", "IRIS Foundry", "Knowledge Graphs", "Manufacturing Analytics", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "SymphonyAI", "Unified Data Models", "Unified Namespace", "Videos"]
-tags_normalized: ["agenticbusinessapplications", "ai", "ai modeling", "asset hierarchies", "azure", "cmms", "data integration", "human in the loop validation", "industrial dataops", "industrial operations", "iris foundry", "knowledge graphs", "manufacturing analytics", "microsoft azure", "microsoft ignite", "msignite", "symphonyai", "unified data models", "unified namespace", "videos"]
+permalink: /ai/videos/Transforming-Industrial-Operations-with-SymphonyAI-IRIS-Foundry-on-Microsoft-Azure
+tags:
+- Agenticbusinessapplications
+- AI
+- AI Modeling
+- Asset Hierarchies
+- Azure
+- CMMS
+- Data Integration
+- Human in The Loop Validation
+- Industrial DataOps
+- Industrial Operations
+- IRIS Foundry
+- Knowledge Graphs
+- Manufacturing Analytics
+- Microsoft Azure
+- Microsoft Ignite
+- MSIgnite
+- SymphonyAI
+- Unified Data Models
+- Unified Namespace
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an expert session on SymphonyAI IRIS Foundry and Microsoft Azure, exploring AI, DataOps, and Unified Namespace solutions for modern industrial operations.<!--excerpt_end-->
 
 {% youtube t37ZpdNQmAM %}

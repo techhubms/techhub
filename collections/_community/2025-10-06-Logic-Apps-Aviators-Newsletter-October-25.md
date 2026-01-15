@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter - October 25"
-description: "This October edition of the Logic Apps Aviators Newsletter delivers key updates on Azure Logic Apps, integration trends, AI-powered automation, MCP servers, community highlights, migration from BizTalk, workflow best practices, and multifaceted integration with Microsoft technologies. Developers and architects will find actionable content for building, optimizing, and securing modern integration and automation solutions with Logic Apps, AI agents, and the wider Microsoft Azure ecosystem."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-october-25/ba-p/4458456"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Logic Apps Aviators Newsletter - October 25
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-october-25/ba-p/4458456
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 15:00:00 +00:00
-permalink: "/2025-10-06-Logic-Apps-Aviators-Newsletter-October-25.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Adaptive Cards", "Agent Loop", "AI", "AI Agents", "API Center", "API Management", "Approval Workflows", "Automation", "Azure", "Azure Container Apps", "Azure Logic Apps", "BizTalk Migration", "Cloud Security", "Coding", "Community", "Data Processing", "DevOps", "Enterprise Integration", "Entra ID", "Hybrid Integration", "Integration", "MCP", "Microsoft Teams", "Python Code Interpreter", "Security"]
-tags_normalized: ["adaptive cards", "agent loop", "ai", "ai agents", "api center", "api management", "approval workflows", "automation", "azure", "azure container apps", "azure logic apps", "biztalk migration", "cloud security", "coding", "community", "data processing", "devops", "enterprise integration", "entra id", "hybrid integration", "integration", "mcp", "microsoft teams", "python code interpreter", "security"]
+permalink: /ai/community/Logic-Apps-Aviators-Newsletter-October-25
+tags:
+- Adaptive Cards
+- Agent Loop
+- AI
+- AI Agents
+- API Center
+- API Management
+- Approval Workflows
+- Automation
+- Azure
+- Azure Container Apps
+- Azure Logic Apps
+- BizTalk Migration
+- Cloud Security
+- Coding
+- Community
+- Data Processing
+- DevOps
+- Enterprise Integration
+- Entra ID
+- Hybrid Integration
+- Integration
+- MCP
+- Microsoft Teams
+- Python Code Interpreter
+- Security
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 WSilveira curates the October 25 Logic Apps Aviators Newsletter, featuring in-depth product updates, AI-driven workflow advances, migration tips, and expert insights from the Azure integration ecosystem.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter - October 25

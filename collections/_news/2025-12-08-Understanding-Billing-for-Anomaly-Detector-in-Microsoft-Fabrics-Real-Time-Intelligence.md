@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Understanding Billing for Anomaly Detector in Microsoft Fabric’s Real-Time Intelligence"
-description: "This article provides a clear overview of upcoming billing changes for the Anomaly Detector feature within Microsoft Fabric's Real-Time Intelligence (RTI). It explains how capacity usage will be measured, outlines the new dedicated billing meter, and highlights what these updates mean for users working with streaming data and anomaly detection."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Understanding Billing for Anomaly Detector in Microsoft Fabric’s Real-Time Intelligence
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-08 10:00:00 +00:00
-permalink: "/2025-12-08-Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence.html"
-categories: ["Azure", "ML"]
-tags: ["Anomaly Detector", "Azure", "Billing", "Capacity Metrics", "Capacity Units", "Data Monitoring", "Eventhouse", "Microsoft Fabric", "ML", "News", "Operational Analytics", "Real Time Intelligence", "Streaming Data"]
-tags_normalized: ["anomaly detector", "azure", "billing", "capacity metrics", "capacity units", "data monitoring", "eventhouse", "microsoft fabric", "ml", "news", "operational analytics", "real time intelligence", "streaming data"]
+permalink: /ml/news/Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence
+tags:
+- Anomaly Detector
+- Azure
+- Billing
+- Capacity Metrics
+- Capacity Units
+- Data Monitoring
+- Eventhouse
+- Microsoft Fabric
+- ML
+- News
+- Operational Analytics
+- Real Time Intelligence
+- Streaming Data
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines key billing changes for customers using the Anomaly Detector in Real-Time Intelligence, explaining what users like you need to know about capacity-based billing, query execution charges, and resource usage reporting.<!--excerpt_end-->
 
 # Understanding Billing for Anomaly Detector in Microsoft Fabric’s Real-Time Intelligence

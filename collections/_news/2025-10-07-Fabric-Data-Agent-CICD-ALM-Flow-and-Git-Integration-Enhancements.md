@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Fabric Data Agent: CI/CD, ALM Flow, and Git Integration Enhancements"
-description: "This article from the Microsoft Fabric Blog details new features for Fabric data agents, including CI/CD, application lifecycle management (ALM) flow, and Git integration. Learn how these capabilities help you manage agent artifacts, implement version control, and streamline collaboration across development, testing, and production environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Data Agent: CI/CD, ALM Flow, and Git Integration Enhancements'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-07 10:00:00 +00:00
-permalink: "/2025-10-07-Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancements.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["ALM", "Application Lifecycle Management", "Azure", "CI/CD", "Collaboration", "Data Engineering", "Data Management", "Deployment Pipeline", "Development Workspace", "DevOps", "Fabric Data Agent", "Git Integration", "Microsoft Fabric", "ML", "News", "Production Workspace", "Source Control", "Version Control"]
-tags_normalized: ["alm", "application lifecycle management", "azure", "cislashcd", "collaboration", "data engineering", "data management", "deployment pipeline", "development workspace", "devops", "fabric data agent", "git integration", "microsoft fabric", "ml", "news", "production workspace", "source control", "version control"]
+permalink: /ml/news/Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancements
+tags:
+- ALM
+- Application Lifecycle Management
+- Azure
+- CI/CD
+- Collaboration
+- Data Engineering
+- Data Management
+- Deployment Pipeline
+- Development Workspace
+- DevOps
+- Fabric Data Agent
+- Git Integration
+- Microsoft Fabric
+- ML
+- News
+- Production Workspace
+- Source Control
+- Version Control
+section_names:
+- azure
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog introduces major updates for Fabric data agents, with CI/CD, ALM flow, and Git integration. Authored by Microsoft Fabric Blog, the article explains how these features enhance development, collaboration, and data management across environments.<!--excerpt_end-->
 
 # Fabric Data Agent: CI/CD, ALM Flow, and Git Integration Enhancements

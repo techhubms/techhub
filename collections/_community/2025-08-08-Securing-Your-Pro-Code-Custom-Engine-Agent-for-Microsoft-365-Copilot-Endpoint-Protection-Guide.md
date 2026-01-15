@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Securing Your Pro-Code Custom Engine Agent for Microsoft 365 Copilot: Endpoint Protection Guide"
-description: "This article by daisami examines security techniques for protecting the endpoints of a pro-code custom engine agent for Microsoft 365 Copilot, focusing on application-level security with Azure Bot Service and ASP.NET Core. It explains how to enforce JWT token validation, restrict unauthorized Entra ID tenants, and harden publicly accessible endpoints hosted on Azure App Service when integrating with Teams. Practical code samples and references to official Microsoft docs are provided."
-author: "daisami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-your-pro-code-custom-engine-agent-of-microsoft-365/ba-p/4440495"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Securing Your Pro-Code Custom Engine Agent for Microsoft 365 Copilot: Endpoint Protection Guide'
+author: daisami
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-your-pro-code-custom-engine-agent-of-microsoft-365/ba-p/4440495
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-08 17:44:53 +00:00
-permalink: "/2025-08-08-Securing-Your-Pro-Code-Custom-Engine-Agent-for-Microsoft-365-Copilot-Endpoint-Protection-Guide.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Application Security", "ASP.NET Core", "Authentication", "Azure", "Azure App Service", "Azure Bot Service", "Azure Firewall", "Bot Framework", "C#", "Coding", "Community", "Custom Engine Agent", "Entra ID", "JWT Token Validation", "Microsoft 365 Copilot", "Microsoft Teams", "Network Security", "NSG", "Security", "Service Principal", "Tenant Restriction"]
-tags_normalized: ["application security", "aspdotnet core", "authentication", "azure", "azure app service", "azure bot service", "azure firewall", "bot framework", "csharp", "coding", "community", "custom engine agent", "entra id", "jwt token validation", "microsoft 365 copilot", "microsoft teams", "network security", "nsg", "security", "service principal", "tenant restriction"]
+permalink: /coding/community/Securing-Your-Pro-Code-Custom-Engine-Agent-for-Microsoft-365-Copilot-Endpoint-Protection-Guide
+tags:
+- Application Security
+- ASP.NET Core
+- Authentication
+- Azure
+- Azure App Service
+- Azure Bot Service
+- Azure Firewall
+- Bot Framework
+- C#
+- Coding
+- Community
+- Custom Engine Agent
+- Entra ID
+- JWT Token Validation
+- Microsoft 365 Copilot
+- Microsoft Teams
+- Network Security
+- NSG
+- Security
+- Service Principal
+- Tenant Restriction
+section_names:
+- azure
+- coding
+- security
 ---
-
 daisami presents a practical guide on securing pro-code custom engine agent endpoints for Microsoft 365 Copilot, detailing application-level controls, code samples, and Azure integration strategies.<!--excerpt_end-->
 
 # Securing Pro-Code Custom Engine Agents for Microsoft 365 Copilot

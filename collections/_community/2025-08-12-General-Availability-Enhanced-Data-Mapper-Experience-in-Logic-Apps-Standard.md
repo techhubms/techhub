@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)"
-description: "This post announces the general availability of the redesigned Data Mapper UX in the Azure Logic Apps (Standard) extension for Visual Studio Code. It highlights new features such as improved map editing, Mac schema support, enhanced function documentation, and offers a preview of upcoming functionalities like smart mapping and CSV schema handling, focusing on integration developer experience within the Azure ecosystem."
-author: "shahparth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)'
+author: shahparth
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 23:19:21 +00:00
-permalink: "/2025-08-12-General-Availability-Enhanced-Data-Mapper-Experience-in-Logic-Apps-Standard.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure Integration Services", "Azure Logic Apps", "BizTalk Migration", "Coding", "Community", "CSV Schema", "Data Mapper UX", "Data Transformation", "Enterprise Integration", "Function Documentation", "GA Release", "Integration Development", "Macos Support", "Map Transformation", "Microsoft", "Schema Mapping", "Smart Mapping", "VS Code", "XML", "XSLT"]
-tags_normalized: ["azure", "azure integration services", "azure logic apps", "biztalk migration", "coding", "community", "csv schema", "data mapper ux", "data transformation", "enterprise integration", "function documentation", "ga release", "integration development", "macos support", "map transformation", "microsoft", "schema mapping", "smart mapping", "vs code", "xml", "xslt"]
+permalink: /coding/community/General-Availability-Enhanced-Data-Mapper-Experience-in-Logic-Apps-Standard
+tags:
+- Azure
+- Azure Integration Services
+- Azure Logic Apps
+- BizTalk Migration
+- Coding
+- Community
+- CSV Schema
+- Data Mapper UX
+- Data Transformation
+- Enterprise Integration
+- Function Documentation
+- GA Release
+- Integration Development
+- Macos Support
+- Map Transformation
+- Microsoft
+- Schema Mapping
+- Smart Mapping
+- VS Code
+- XML
+- XSLT
+section_names:
+- azure
+- coding
 ---
-
 shahparth shares the general availability details of the enhanced Data Mapper UX in Azure Logic Apps (Standard), focusing on new and upcoming features for integration developers.<!--excerpt_end-->
 
 # General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)

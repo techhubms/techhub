@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "API Gateway Pattern in Azure: Managing APIs and Routing Requests to Microservices"
-description: "This article by Dellenny explores how the API Gateway pattern is implemented on Microsoft Azure, focusing on using Azure API Management (APIM) to simplify and secure microservices architectures. It covers routing, securing, transforming, and aggregating API requests, plus operational best practices and architectural insights for modern cloud solutions."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/api-gateway-pattern-in-azure-managing-apis-and-routing-requests-to-microservices/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'API Gateway Pattern in Azure: Managing APIs and Routing Requests to Microservices'
+author: Dellenny
+canonical_url: https://dellenny.com/api-gateway-pattern-in-azure-managing-apis-and-routing-requests-to-microservices/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-14 10:36:12 +00:00
-permalink: "/2025-08-14-API-Gateway-Pattern-in-Azure-Managing-APIs-and-Routing-Requests-to-Microservices.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Gateway Pattern", "API Policies", "API Security", "API Throttling", "Application Insights", "Architecture", "Azure", "Azure API Management", "Azure Monitor", "Blogs", "Caching", "Cloud Architecture", "DevOps", "JWT Validation", "Microservices", "OAuth 2.0", "Payload Transformation", "Request Aggregation", "Routing", "Security", "Solution Architecture", "Subscription Keys", "Versioning"]
-tags_normalized: ["api gateway pattern", "api policies", "api security", "api throttling", "application insights", "architecture", "azure", "azure api management", "azure monitor", "blogs", "caching", "cloud architecture", "devops", "jwt validation", "microservices", "oauth 2dot0", "payload transformation", "request aggregation", "routing", "security", "solution architecture", "subscription keys", "versioning"]
+permalink: /azure/blogs/API-Gateway-Pattern-in-Azure-Managing-APIs-and-Routing-Requests-to-Microservices
+tags:
+- API Gateway Pattern
+- API Policies
+- API Security
+- API Throttling
+- Application Insights
+- Architecture
+- Azure
+- Azure API Management
+- Azure Monitor
+- Blogs
+- Caching
+- Cloud Architecture
+- DevOps
+- JWT Validation
+- Microservices
+- OAuth 2.0
+- Payload Transformation
+- Request Aggregation
+- Routing
+- Security
+- Solution Architecture
+- Subscription Keys
+- Versioning
+section_names:
+- azure
+- devops
+- security
 ---
-
 Dellenny provides a hands-on guide to implementing the API Gateway pattern on Azure using API Management, explaining how to route, secure, and monitor requests to microservices for robust and maintainable architectures.<!--excerpt_end-->
 
 # API Gateway Pattern in Azure: Managing APIs and Routing Requests to Microservices

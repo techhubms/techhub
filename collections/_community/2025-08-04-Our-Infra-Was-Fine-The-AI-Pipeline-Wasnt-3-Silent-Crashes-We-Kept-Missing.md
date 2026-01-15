@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Our Infra Was Fine. The AI Pipeline Wasn’t — 3 Silent Crashes We Kept Missing"
-description: "Author wfgy_engine recounts recurring failures in production LLM pipelines where classic DevOps problems mask as AI issues. The post identifies failure modes like bootstrap ordering, deployment deadlocks, and pre-deploy collapse, offering practical mitigations and tools such as semantic health checks and a problem map to improve reliability."
-author: "wfgy_engine"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mh3s57/our_infra_was_fine_the_ai_pipeline_wasnt_3_silent/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: Our Infra Was Fine. The AI Pipeline Wasn’t — 3 Silent Crashes We Kept Missing
+author: wfgy_engine
+canonical_url: https://www.reddit.com/r/devops/comments/1mh3s57/our_infra_was_fine_the_ai_pipeline_wasnt_3_silent/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-04 04:16:15 +00:00
-permalink: "/2025-08-04-Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing.html"
-categories: ["DevOps", "AI", "Security"]
-tags: ["AI", "Bootstrap Ordering", "Canary Prompt", "CI/CD", "Community", "Deployment Deadlock", "DevOps", "Incident Response", "LLM Pipeline", "Pre Deploy Collapse", "Problem Mapping", "Production Failures", "Security", "Semantic Health Checks", "Semantic Tree"]
-tags_normalized: ["ai", "bootstrap ordering", "canary prompt", "cislashcd", "community", "deployment deadlock", "devops", "incident response", "llm pipeline", "pre deploy collapse", "problem mapping", "production failures", "security", "semantic health checks", "semantic tree"]
+permalink: /ai/community/Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing
+tags:
+- AI
+- Bootstrap Ordering
+- Canary Prompt
+- CI/CD
+- Community
+- Deployment Deadlock
+- DevOps
+- Incident Response
+- LLM Pipeline
+- Pre Deploy Collapse
+- Problem Mapping
+- Production Failures
+- Security
+- Semantic Health Checks
+- Semantic Tree
+section_names:
+- devops
+- ai
+- security
 ---
-
 wfgy_engine highlights persistent DevOps challenges in AI pipelines, describing how classic infrastructure issues led to subtle, production-breaking failures and how their team created a problem map and lightweight controls to address them.<!--excerpt_end-->
 
 ## Overview

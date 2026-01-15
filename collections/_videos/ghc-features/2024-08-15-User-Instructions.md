@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "User Instructions"
-description: "Guide Copilot with custom instructions for your codebase"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/IsEXdeTbi1I"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: User Instructions
+author: Rob Bos
+canonical_url: https://youtu.be/IsEXdeTbi1I
 date: 2024-08-15 14:57:39 +00:00
-permalink: "/2024-08-15-User-Instructions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "GitHub Copilot", "Instructions", "Videos"]
-tags_normalized: ["ai", "code", "github copilot", "instructions", "videos"]
+permalink: /github-copilot/videos/User-Instructions
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Code
+- GitHub Copilot
+- Instructions
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's User Instructions feature. With user instructions in VS Code you can help guide Copilot in the right direction for your codebase, like being a Python 3 developer and skip older language constructs.<!--excerpt_end-->
 
 {% youtube IsEXdeTbi1I %}

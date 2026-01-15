@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Identity in Azure: Understanding Azure AD, Authentication, and Authorization"
-description: "This comprehensive guide explains the fundamentals of identity management within Microsoft Azure, focusing on Azure Active Directory (Azure AD). It covers key concepts such as authentication, authorization, integration methods, security best practices, and how Azure AD streamlines access management for cloud applications and hybrid environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Identity in Azure: Understanding Azure AD, Authentication, and Authorization'
+author: Dellenny
+canonical_url: https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-05 10:44:47 +00:00
-permalink: "/2025-11-05-Identity-in-Azure-Understanding-Azure-AD-Authentication-and-Authorization.html"
-categories: ["Azure", "Security"]
-tags: ["Authentication", "Authorization", "Azure", "Azure Active Directory", "Azure AD", "Blogs", "Cloud Security", "Conditional Access", "IAM", "Identity Management", "Multi Factor Authentication", "OAuth 2.0", "OpenID Connect", "Privileged Identity Management", "Role Based Access Control", "SAML", "Security", "Single Sign On"]
-tags_normalized: ["authentication", "authorization", "azure", "azure active directory", "azure ad", "blogs", "cloud security", "conditional access", "iam", "identity management", "multi factor authentication", "oauth 2dot0", "openid connect", "privileged identity management", "role based access control", "saml", "security", "single sign on"]
+permalink: /azure/blogs/Identity-in-Azure-Understanding-Azure-AD-Authentication-and-Authorization
+tags:
+- Authentication
+- Authorization
+- Azure
+- Azure Active Directory
+- Azure AD
+- Blogs
+- Cloud Security
+- Conditional Access
+- IAM
+- Identity Management
+- Multi Factor Authentication
+- OAuth 2.0
+- OpenID Connect
+- Privileged Identity Management
+- Role Based Access Control
+- SAML
+- Security
+- Single Sign On
+section_names:
+- azure
+- security
 ---
-
 Dellenny offers IT professionals an in-depth look at managing digital identities and access in Azure, emphasizing concepts like authentication, authorization, and practical use of Azure Active Directory for secure application access.<!--excerpt_end-->
 
 # Identity in Azure: Understanding Azure AD, Authentication, and Authorization

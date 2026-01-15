@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry"
-description: "This episode features Trish Winter-Hunt, Product Design Manager at Microsoft, discussing innovative approaches to content design, UX with AI agents, and technical best practices such as grounding AI agents using Azure AI Foundry. The conversation provides actionable insights into improving error messages and leveraging AI tools like Copilot and ChatGPT for scalable, human-centered product design. Listeners will learn practical strategies for combining creativity and technical rigor in AI-focused content and UX development."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NnltG78qREE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=NnltG78qREE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-12 15:33:36 +00:00
-permalink: "/2025-08-12-Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Adoption", "AI Agents", "AI Hallucinations Handling", "AI UX", "Azure", "Azure AI Foundry", "ChatGPT", "Cloud Computing", "Content Design", "Content Strategy", "Copilot", "Dev", "Development", "Error Message Design", "Generative AI", "Grounded AI", "Human Centered Design", "Microsoft", "Product Design", "Software Development", "Tech", "Technical Communication", "Technology", "User Experience", "UX Writing", "Videos"]
-tags_normalized: ["ai", "ai adoption", "ai agents", "ai hallucinations handling", "ai ux", "azure", "azure ai foundry", "chatgpt", "cloud computing", "content design", "content strategy", "copilot", "dev", "development", "error message design", "generative ai", "grounded ai", "human centered design", "microsoft", "product design", "software development", "tech", "technical communication", "technology", "user experience", "ux writing", "videos"]
+permalink: /ai/videos/Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry
+tags:
+- AI
+- AI Adoption
+- AI Agents
+- AI Hallucinations Handling
+- AI UX
+- Azure
+- Azure AI Foundry
+- ChatGPT
+- Cloud Computing
+- Content Design
+- Content Strategy
+- Copilot
+- Dev
+- Development
+- Error Message Design
+- Generative AI
+- Grounded AI
+- Human Centered Design
+- Microsoft
+- Product Design
+- Software Development
+- Tech
+- Technical Communication
+- Technology
+- User Experience
+- UX Writing
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Trish Winter-Hunt, Product Design Manager at Microsoft, joins John Maeda's Cozy AI Kitchen to share her expertise on empathetic content design and grounding AI agents using Azure AI Foundry.<!--excerpt_end-->
 
 {% youtube NnltG78qREE %}

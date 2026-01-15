@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "GitHub Copilot for Azure Public Preview Launched in Visual Studio 2022 with MCP"
-description: "This news article by Yun Jung Choi introduces the public preview of GitHub Copilot for Azure as a Visual Studio 2022 extension, integrating Azure developer tools and Model Context Protocol (MCP) directly within Copilot Agent Mode. The extension provides seamless installation and broad Azure service coverage, enhancing productivity for Azure developers inside Visual Studio."
-author: "Yun Jung Choi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-launches-in-visual-studio-2022-with-azure-mcp-support/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: GitHub Copilot for Azure Public Preview Launched in Visual Studio 2022 with MCP
+author: Yun Jung Choi
+canonical_url: https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-launches-in-visual-studio-2022-with-azure-mcp-support/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-25 18:36:28 +00:00
-permalink: "/2025-08-25-GitHub-Copilot-for-Azure-Public-Preview-Launched-in-Visual-Studio-2022-with-MCP.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agents", "AI", "Azure", "Azure CLI", "Azure Container Registry", "Azure Cosmos DB", "Azure Dev CLI", "Azure Functions", "Azure Key Vault", "Azure MCP Server", "Azure SQL Database", "Cloud", "Cloud Development", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "LLM", "MCP", "Microsoft", "News", "Visual Studio Extensions", "VS"]
-tags_normalized: ["agent mode", "agents", "ai", "azure", "azure cli", "azure container registry", "azure cosmos db", "azure dev cli", "azure functions", "azure key vault", "azure mcp server", "azure sql database", "cloud", "cloud development", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "llm", "mcp", "microsoft", "news", "visual studio extensions", "vs"]
+permalink: /github-copilot/news/GitHub-Copilot-for-Azure-Public-Preview-Launched-in-Visual-Studio-2022-with-MCP
+tags:
+- Agent Mode
+- Agents
+- AI
+- Azure
+- Azure CLI
+- Azure Container Registry
+- Azure Cosmos DB
+- Azure Dev CLI
+- Azure Functions
+- Azure Key Vault
+- Azure MCP Server
+- Azure SQL Database
+- Cloud
+- Cloud Development
+- Coding
+- Copilot
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- LLM
+- MCP
+- Microsoft
+- News
+- Visual Studio Extensions
+- VS
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Yun Jung Choi brings news of the public preview launch of GitHub Copilot for Azure in Visual Studio 2022, highlighting how developers can now access Azure tools through Copilot Agent Mode with integrated Model Context Protocol support.<!--excerpt_end-->
 
 # GitHub Copilot for Azure (Preview) Launches in Visual Studio 2022 with Azure MCP Support

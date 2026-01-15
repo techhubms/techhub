@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "What's New in ASP.NET Core for .NET 10"
-description: "This session explores upcoming enhancements in ASP.NET Core as part of .NET 10. It highlights important feature updates for web application and API development, including performance optimizations, OpenAPI and passkey authentication support, improved validation for minimal APIs, and Blazor updates. The session demonstrates how these features enable modern, secure, and cloud-native applications with .NET technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LgUZB_rhyX4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: What's New in ASP.NET Core for .NET 10
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=LgUZB_rhyX4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-Whats-New-in-ASPNET-Core-for-NET-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "API Development", "ASP.NET Core", "Blazor", "C#", "Cloud Native", "Coding", "Minimal APIs", "OpenAPI", "Passkey Authentication", "Performance Improvements", "Validation", "Videos", "Web Application Development"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "api development", "aspdotnet core", "blazor", "csharp", "cloud native", "coding", "minimal apis", "openapi", "passkey authentication", "performance improvements", "validation", "videos", "web application development"]
+permalink: /coding/videos/Whats-New-in-ASPNET-Core-for-NET-10
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- API Development
+- ASP.NET Core
+- Blazor
+- C#
+- Cloud Native
+- Coding
+- Minimal APIs
+- OpenAPI
+- Passkey Authentication
+- Performance Improvements
+- Validation
+- Videos
+- Web Application Development
+section_names:
+- coding
 ---
-
 dotnet presents an overview of the latest ASP.NET Core features in .NET 10, showcasing improvements in performance, OpenAPI support, authentication, and modern web development for developers.<!--excerpt_end-->
 
 {% youtube LgUZB_rhyX4 %}

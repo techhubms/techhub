@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Reinventing .NET Build and Release: Unified Build Approach"
-description: "This in-depth article by Matt Mitchell explores the journey from .NET’s complex, distributed build and shipping processes to the new Unified Build system. The piece discusses historical challenges, the evolution to vertical and monolithic builds, and the dramatic gains in build speed, flexibility, and maintainability for developers and release engineers. Insights into Linux Source Build, code flow strategies, infrastructural improvements, and future directions are included, making it essential reading for anyone involved in .NET build engineering, DevOps, or cross-platform distribution."
-author: "Matt Mitchell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Reinventing .NET Build and Release: Unified Build Approach'
+author: Matt Mitchell
+canonical_url: https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-20 18:05:00 +00:00
-permalink: "/2025-11-20-Reinventing-NET-Build-and-Release-Unified-Build-Approach.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET VMR", "Azure DevOps", "Build Complexity", "Build Orchestration", "CI/CD", "Code Flow", "Coding", "Cross Platform Build", "Dependency Flow", "DevOps", "Distributed Systems", "Infrastructure", "Infrastructure Automation", "Linux Distro", "Monolithic Repository", "News", "Overhead Reduction", "Product Construction", "Scenario Testing", "Source Build", "Unified Build", "Vertical Build"]
-tags_normalized: ["dotnet", "dotnet vmr", "azure devops", "build complexity", "build orchestration", "cislashcd", "code flow", "coding", "cross platform build", "dependency flow", "devops", "distributed systems", "infrastructure", "infrastructure automation", "linux distro", "monolithic repository", "news", "overhead reduction", "product construction", "scenario testing", "source build", "unified build", "vertical build"]
+permalink: /coding/news/Reinventing-NET-Build-and-Release-Unified-Build-Approach
+tags:
+- .NET
+- .NET VMR
+- Azure DevOps
+- Build Complexity
+- Build Orchestration
+- CI/CD
+- Code Flow
+- Coding
+- Cross Platform Build
+- Dependency Flow
+- DevOps
+- Distributed Systems
+- Infrastructure
+- Infrastructure Automation
+- Linux Distro
+- Monolithic Repository
+- News
+- Overhead Reduction
+- Product Construction
+- Scenario Testing
+- Source Build
+- Unified Build
+- Vertical Build
+section_names:
+- coding
+- devops
 ---
-
 Matt Mitchell takes a deep dive into .NET's transition from distributed builds to the Unified Build strategy, revealing behind-the-scenes engineering and DevOps lessons.<!--excerpt_end-->
 
 # Reinventing .NET Build and Release: Unified Build Approach

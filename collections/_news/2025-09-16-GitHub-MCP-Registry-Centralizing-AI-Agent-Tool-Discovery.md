@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub MCP Registry: Centralizing AI Agent Tool Discovery"
-description: "This announcement covers the launch of the GitHub MCP Registry—a new platform designed to centralize discovery of MCP servers for AI agents and development tools. The article addresses typical pain points developers face around scattered AI infrastructure, and explains how the new registry streamlines access, interoperability, and security for builders using GitHub Copilot, agentic workflows, and MCP-compatible tools. Developers are encouraged to explore the curated registry and contribute their own MCP servers via open source channels."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-16-github-mcp-registry-the-fastest-way-to-discover-ai-tools"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub MCP Registry: Centralizing AI Agent Tool Discovery'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-16-github-mcp-registry-the-fastest-way-to-discover-ai-tools
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 15:55:14 +00:00
-permalink: "/2025-09-16-GitHub-MCP-Registry-Centralizing-AI-Agent-Tool-Discovery.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "AI Ecosystem", "AI Tools", "Copilot", "Developer Experience", "GitHub", "GitHub Copilot", "MCP", "MCP Registry", "MCP Servers", "News", "Open Source", "Registry", "Tool Discovery"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "ai ecosystem", "ai tools", "copilot", "developer experience", "github", "github copilot", "mcp", "mcp registry", "mcp servers", "news", "open source", "registry", "tool discovery"]
+permalink: /github-copilot/news/GitHub-MCP-Registry-Centralizing-AI-Agent-Tool-Discovery
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- AI Ecosystem
+- AI Tools
+- Copilot
+- Developer Experience
+- GitHub
+- GitHub Copilot
+- MCP
+- MCP Registry
+- MCP Servers
+- News
+- Open Source
+- Registry
+- Tool Discovery
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the launch of the GitHub MCP Registry, making it easier for developers to discover, explore, and use MCP servers for AI agents and tools—including GitHub Copilot—within a centralized, open ecosystem.<!--excerpt_end-->
 
 # GitHub MCP Registry: Centralizing AI Agent Tool Discovery

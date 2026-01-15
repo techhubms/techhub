@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Model Mondays S2E9: Models for AI Agents"
-description: "This blog post, authored by Sharda_Kaur for the Model Mondays series, delves into the latest developments in the Azure AI and agentic AI ecosystem. It highlights the release of new GPT-5 and GPT-OSS models in Azure AI Foundry, advanced agent orchestration using Azure AI Agent Service and Agent Catalog, as well as real-world customer implementations like Atomic Work. Key themes include modular agent workflows, no-code tools, and best practices for developers looking to leverage AI models and orchestration in the Microsoft Azure environment."
-author: "Sharda_Kaur"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Model Mondays S2E9: Models for AI Agents'
+author: Sharda_Kaur
+canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 10:01:06 +00:00
-permalink: "/2025-08-14-Model-Mondays-S2E9-Models-for-AI-Agents.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Catalog", "Agent Workflow", "AI", "Atomic Work", "Azure", "Azure AI Agent Service", "Azure AI Foundry", "Azure AI Services", "Azure Logic Apps", "Browser Automation Tool", "Community", "Discord Community", "Enterprise AI", "Flux Vision Models", "GPT 5", "GPT OSS", "Image Playground", "Integration", "Model Router", "Multi Agent Orchestration", "OpenAI", "Playwright MCP", "Workflow Designer"]
-tags_normalized: ["agent catalog", "agent workflow", "ai", "atomic work", "azure", "azure ai agent service", "azure ai foundry", "azure ai services", "azure logic apps", "browser automation tool", "community", "discord community", "enterprise ai", "flux vision models", "gpt 5", "gpt oss", "image playground", "integration", "model router", "multi agent orchestration", "openai", "playwright mcp", "workflow designer"]
+permalink: /ai/community/Model-Mondays-S2E9-Models-for-AI-Agents
+tags:
+- Agent Catalog
+- Agent Workflow
+- AI
+- Atomic Work
+- Azure
+- Azure AI Agent Service
+- Azure AI Foundry
+- Azure AI Services
+- Azure Logic Apps
+- Browser Automation Tool
+- Community
+- Discord Community
+- Enterprise AI
+- Flux Vision Models
+- GPT 5
+- GPT OSS
+- Image Playground
+- Integration
+- Model Router
+- Multi Agent Orchestration
+- OpenAI
+- Playwright MCP
+- Workflow Designer
+section_names:
+- ai
+- azure
 ---
-
 Sharda_Kaur presents a detailed recap of Model Mondays S2E9, highlighting the rollout of GPT-5 and GPT-OSS in Azure AI Foundry, agent workflow features in Azure AI Agent Service, and a customer case study on agentic AI in practice.<!--excerpt_end-->
 
 # Model Mondays S2E9: Models for AI Agents

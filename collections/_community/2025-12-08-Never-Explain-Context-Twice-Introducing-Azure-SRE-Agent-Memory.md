@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Never Explain Context Twice: Introducing Azure SRE Agent Memory"
-description: "This post explores the new memory capabilities of Azure SRE Agent—a feature that enables AI-powered operations to retain institutional knowledge, remember team preferences, and continuously improve troubleshooting accuracy. It covers core concepts like context engineering, persistent team memories, knowledge base document integration, and how these drive smarter, faster incident resolution in the cloud."
-author: "Dalibor_Kovacevic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Never Explain Context Twice: Introducing Azure SRE Agent Memory'
+author: Dalibor_Kovacevic
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 19:51:45 +00:00
-permalink: "/2025-12-08-Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Ops", "Automation", "Azure", "Azure DevOps", "Azure SRE Agent", "Community", "Context Engineering", "Custom Sub Agents", "DevOps", "DevOps Automation", "Incident Management", "Knowledge Base", "Memory Tool", "Operational Excellence", "Runbooks", "Session Insights", "Site Reliability Engineering"]
-tags_normalized: ["ai", "ai ops", "automation", "azure", "azure devops", "azure sre agent", "community", "context engineering", "custom sub agents", "devops", "devops automation", "incident management", "knowledge base", "memory tool", "operational excellence", "runbooks", "session insights", "site reliability engineering"]
+permalink: /ai/community/Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory
+tags:
+- AI
+- AI Ops
+- Automation
+- Azure
+- Azure DevOps
+- Azure SRE Agent
+- Community
+- Context Engineering
+- Custom Sub Agents
+- DevOps
+- DevOps Automation
+- Incident Management
+- Knowledge Base
+- Memory Tool
+- Operational Excellence
+- Runbooks
+- Session Insights
+- Site Reliability Engineering
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Dalibor Kovacevic details how Azure SRE Agent’s memory feature transforms AI-driven operations by capturing institutional knowledge, improving troubleshooting, and sharing insights across teams.<!--excerpt_end-->
 
 # Never Explain Context Twice: Introducing Azure SRE Agent Memory

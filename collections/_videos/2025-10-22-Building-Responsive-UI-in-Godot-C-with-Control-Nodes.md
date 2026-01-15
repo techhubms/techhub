@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Responsive UI in Godot C# with Control Nodes"
-description: "This final episode in the Godot C# training series guides developers through designing responsive user interfaces in Godot. The video focuses on using control nodes, signal-driven interactions, and reusable UI components, demonstrating best practices for integrating UI with gameplay. Viewers will see live walkthroughs of dynamic layouts, custom button visuals, code-based UI instantiation, and the creation of a crafting system tied to game state."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Vav3Ml4z6-8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Responsive UI in Godot C# with Control Nodes
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Vav3Ml4z6-8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:14 +00:00
-permalink: "/2025-10-22-Building-Responsive-UI-in-Godot-C-with-Control-Nodes.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Control Nodes", "Crafting System", "Dynamic UI", "Game Development", "GameDev", "Godot Engine", "Indie Development", "Microsoft Developer", "Reusable Components", "Signals", "Sprite Atlas", "UI Design", "UI Programming", "User Interface", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "csharp", "coding", "control nodes", "crafting system", "dynamic ui", "game development", "gamedev", "godot engine", "indie development", "microsoft developer", "reusable components", "signals", "sprite atlas", "ui design", "ui programming", "user interface", "videos", "vs code"]
+permalink: /coding/videos/Building-Responsive-UI-in-Godot-C-with-Control-Nodes
+tags:
+- .NET
+- C#
+- Coding
+- Control Nodes
+- Crafting System
+- Dynamic UI
+- Game Development
+- GameDev
+- Godot Engine
+- Indie Development
+- Microsoft Developer
+- Reusable Components
+- Signals
+- Sprite Atlas
+- UI Design
+- UI Programming
+- User Interface
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 dotnet demonstrates how to create responsive user interfaces in Godot with C#, showcasing practical techniques to integrate dynamic UI elements directly with gameplay.<!--excerpt_end-->
 
 {% youtube Vav3Ml4z6-8 %}

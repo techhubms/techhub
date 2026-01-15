@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Implementing a Center of Excellence for Generative AI"
-description: "This video episode from the Azure Essentials Show features Thomas Maurer and Ben Brauer discussing the practical steps to establish an AI Center of Excellence (CoE) within organizations. The content explores team structure, governance, strategy alignment, and Microsoft-recommended frameworks and resources to enable responsible, scalable, and organization-wide adoption of AI technologies across the enterprise. Viewers will gain actionable guidance on how to create, structure, and evolve an AI CoE using Microsoft's Cloud Adoption and Well-Architected Frameworks."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SwNcZbc2UAM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Implementing a Center of Excellence for Generative AI
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=SwNcZbc2UAM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-05 07:00:27 +00:00
-permalink: "/2025-08-05-Implementing-a-Center-of-Excellence-for-Generative-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Center Of Excellence", "AI Governance", "AI Resources", "AI Strategy", "Azure", "Azure Essentials", "Azure Well Architected Framework", "Continuous Improvement", "Ethical AI", "Generative AI", "Microsoft Azure", "Microsoft Cloud Adoption Framework", "Organizational Adoption", "Team Structure", "Videos"]
-tags_normalized: ["ai", "ai center of excellence", "ai governance", "ai resources", "ai strategy", "azure", "azure essentials", "azure well architected framework", "continuous improvement", "ethical ai", "generative ai", "microsoft azure", "microsoft cloud adoption framework", "organizational adoption", "team structure", "videos"]
+permalink: /ai/videos/Implementing-a-Center-of-Excellence-for-Generative-AI
+tags:
+- AI
+- AI Center Of Excellence
+- AI Governance
+- AI Resources
+- AI Strategy
+- Azure
+- Azure Essentials
+- Azure Well Architected Framework
+- Continuous Improvement
+- Ethical AI
+- Generative AI
+- Microsoft Azure
+- Microsoft Cloud Adoption Framework
+- Organizational Adoption
+- Team Structure
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this Azure Essentials video, Microsoft Developer's Thomas Maurer and Ben Brauer guide viewers through establishing an AI Center of Excellence, covering best practices for governance, strategy, and scalable, responsible AI adoption.<!--excerpt_end-->
 
 {% youtube SwNcZbc2UAM %}

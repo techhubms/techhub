@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Deploying AI Solutions with Azure AI Landing Zones"
-description: "This episode of the Azure Essentials Show features Thomas Maurer and Azure experts Bilal Amjad and Mike Swantek as they discuss how Azure AI Landing Zones streamline the deployment of AI solutions. The show covers the challenges IT professionals face, the value of integrated governance and security, and demonstrates how to use infrastructure as code for scalable, secure, and reliable AI adoption in Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8FWdFG55nXw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Deploying AI Solutions with Azure AI Landing Zones
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=8FWdFG55nXw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-11 08:00:07 +00:00
-permalink: "/2025-11-11-Deploying-AI-Solutions-with-Azure-AI-Landing-Zones.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Deployment", "AI Solutions", "Azure", "Azure AI Landing Zones", "Azure Essentials", "Azure Governance", "Azure Well Architected Framework", "Cloud Adoption Framework", "Cloud Architecture", "Deployment Best Practices", "DevOps", "Establish", "IaC", "IT Governance", "Landing Zone Automation", "Microsoft Azure", "Security", "Videos"]
-tags_normalized: ["ai", "ai deployment", "ai solutions", "azure", "azure ai landing zones", "azure essentials", "azure governance", "azure well architected framework", "cloud adoption framework", "cloud architecture", "deployment best practices", "devops", "establish", "iac", "it governance", "landing zone automation", "microsoft azure", "security", "videos"]
+permalink: /ai/videos/Deploying-AI-Solutions-with-Azure-AI-Landing-Zones
+tags:
+- AI
+- AI Deployment
+- AI Solutions
+- Azure
+- Azure AI Landing Zones
+- Azure Essentials
+- Azure Governance
+- Azure Well Architected Framework
+- Cloud Adoption Framework
+- Cloud Architecture
+- Deployment Best Practices
+- DevOps
+- Establish
+- IaC
+- IT Governance
+- Landing Zone Automation
+- Microsoft Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Thomas Maurer, joined by Bilal Amjad and Mike Swantek, explains Azure AI Landing Zones, illustrating their role in enabling secure, scalable, and governed AI deployments in Azure.<!--excerpt_end-->
 
 {% youtube 8FWdFG55nXw %}

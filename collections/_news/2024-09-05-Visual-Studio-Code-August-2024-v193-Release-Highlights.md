@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Visual Studio Code August 2024 (v1.93) Release Highlights"
-description: "The Visual Studio Code August 2024 update (version 1.93) introduces numerous enhancements and new features for developers. This release brings updates to accessibility, editor usability, GitHub Copilot capabilities, Linux window controls, Python Django testing, Remote Development, terminal integration, and TypeScript support, among others. The update also includes bug fixes, experimental APIs, and significant community contributions. Developers will benefit from improved chat and code generation with Copilot, better testing and debugging tools, and more robust source control. The release continues VS Code’s commitment to a streamlined developer experience across Microsoft and open source ecosystems."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_93"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Visual Studio Code August 2024 (v1.93) Release Highlights
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_93
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-09-05 17:00:00 +00:00
-permalink: "/2024-09-05-Visual-Studio-Code-August-2024-v193-Release-Highlights.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "August Release", "Code Generation", "Coding", "Debugging", "DevOps", "Django", "ECMAScript Modules", "Extensions", "Git", "GitHub Copilot", "IntelliSense", "JavaScript", "News", "Python", "Remote Development", "Settings", "Source Control", "Terminal Integration", "TypeScript 5.6", "Unit Testing", "V1.93", "VS Code"]
-tags_normalized: ["accessibility", "ai", "august release", "code generation", "coding", "debugging", "devops", "django", "ecmascript modules", "extensions", "git", "github copilot", "intellisense", "javascript", "news", "python", "remote development", "settings", "source control", "terminal integration", "typescript 5dot6", "unit testing", "v1dot93", "vs code"]
+permalink: /github-copilot/news/Visual-Studio-Code-August-2024-v193-Release-Highlights
+tags:
+- Accessibility
+- AI
+- August Release
+- Code Generation
+- Coding
+- Debugging
+- DevOps
+- Django
+- ECMAScript Modules
+- Extensions
+- Git
+- GitHub Copilot
+- IntelliSense
+- JavaScript
+- News
+- Python
+- Remote Development
+- Settings
+- Source Control
+- Terminal Integration
+- TypeScript 5.6
+- Unit Testing
+- V1.93
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team details the August 2024 (v1.93) update, highlighting new features in GitHub Copilot, DevOps workflows, code editing, and community contributions.<!--excerpt_end-->
 
 # Visual Studio Code August 2024 (v1.93) Release Highlights

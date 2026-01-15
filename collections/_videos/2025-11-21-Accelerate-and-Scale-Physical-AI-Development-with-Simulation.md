@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Accelerate and Scale Physical AI Development with Simulation"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft Azure, in partnership with NVIDIA and Wandelbots, is accelerating the development and deployment of physical AI for robotics. It covers the use of simulation, digital twins, and synthetic data, detailing collaborative frameworks powered by Azure and NVIDIA Omniverse. Topics include edge deployment with Azure ARC, the integration of AI for autonomous and industrial robotics, and the impact of open standards like OpenUSD in creating robust, scalable robotics solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RbVZNijijpo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerate and Scale Physical AI Development with Simulation
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=RbVZNijijpo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:21:47 +00:00
-permalink: "/2025-11-21-Accelerate-and-Scale-Physical-AI-Development-with-Simulation.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI For Robotics", "Azure", "Azure ARC", "Continuous Integration", "Digital Twins", "Edge Deployment", "Hybrid Systems", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "NVIDIA Omniverse", "OpenUSD", "Physical AI", "Robotics Development", "Simulation", "Synthetic Data", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai for robotics", "azure", "azure arc", "continuous integration", "digital twins", "edge deployment", "hybrid systems", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "nvidia omniverse", "openusd", "physical ai", "robotics development", "simulation", "synthetic data", "videos"]
+permalink: /ai/videos/Accelerate-and-Scale-Physical-AI-Development-with-Simulation
+tags:
+- Agentic AI
+- AI
+- AI For Robotics
+- Azure
+- Azure ARC
+- Continuous Integration
+- Digital Twins
+- Edge Deployment
+- Hybrid Systems
+- Microsoft Azure
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- NVIDIA Omniverse
+- OpenUSD
+- Physical AI
+- Robotics Development
+- Simulation
+- Synthetic Data
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Presented by Microsoft Events, this Ignite 2025 session examines how Microsoft Azure and NVIDIA accelerate physical AI and robotics development using simulation, digital twins, and advanced AI infrastructure.<!--excerpt_end-->
 
 {% youtube RbVZNijijpo %}

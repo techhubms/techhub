@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GitHub MCP Server Adds Tool-Specific Configuration and Security Features"
-description: "This release news covers major updates to the GitHub MCP Server, including support for tool-specific configuration via the X-MCP-Tools header, new Lockdown security mode, default content sanitization to prevent prompt injection, and migration to the official MCP Go SDK. Users can now fine-tune tool loading, reduce context window usage, and improve the security of AI-integrated GitHub workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub MCP Server Adds Tool-Specific Configuration and Security Features
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 11:01:02 +00:00
-permalink: "/2025-12-10-GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Workflows", "Content Sanitization", "Context Window", "Copilot", "DevOps", "GitHub", "GitHub MCP Server", "Go SDK", "Granular Permissions", "Lockdown Mode", "MCP", "News", "Prompt Injection Mitigation", "Public Repositories", "Security", "Security Hardening", "Server Configuration", "Tool Configuration", "X MCP Tools"]
-tags_normalized: ["ai", "ai workflows", "content sanitization", "context window", "copilot", "devops", "github", "github mcp server", "go sdk", "granular permissions", "lockdown mode", "mcp", "news", "prompt injection mitigation", "public repositories", "security", "security hardening", "server configuration", "tool configuration", "x mcp tools"]
+permalink: /ai/news/GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features
+tags:
+- AI
+- AI Workflows
+- Content Sanitization
+- Context Window
+- Copilot
+- DevOps
+- GitHub
+- GitHub MCP Server
+- Go SDK
+- Granular Permissions
+- Lockdown Mode
+- MCP
+- News
+- Prompt Injection Mitigation
+- Public Repositories
+- Security
+- Security Hardening
+- Server Configuration
+- Tool Configuration
+- X MCP Tools
+section_names:
+- ai
+- devops
+- security
 ---
-
 Allison introduces new features in the GitHub MCP Server, including tool-specific configuration, improved context reduction, enhanced security via Lockdown mode, and migration to the official Go SDK for the Model Context Protocol.<!--excerpt_end-->
 
 # GitHub MCP Server: Tool-Specific Configuration, Security, and Protocol Upgrades

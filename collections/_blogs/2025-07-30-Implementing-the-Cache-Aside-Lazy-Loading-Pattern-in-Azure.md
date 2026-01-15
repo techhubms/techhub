@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Implementing the Cache-Aside (Lazy Loading) Pattern in Azure"
-description: "A practical guide for architects and developers on implementing the Cache-Aside (Lazy Loading) caching pattern in Azure. Learn how to boost application performance and scalability by using Azure Cache for Redis in combination with Azure SQL Database, with step-by-step .NET Core examples, best practices, and operational considerations tailored for cloud environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Implementing the Cache-Aside (Lazy Loading) Pattern in Azure
+author: Dellenny
+canonical_url: https://dellenny.com/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-30 07:42:57 +00:00
-permalink: "/2025-07-30-Implementing-the-Cache-Aside-Lazy-Loading-Pattern-in-Azure.html"
-categories: ["Azure", "Coding"]
-tags: [".NET Core", "Application Scalability", "Architecture", "Azure", "Azure Cache For Redis", "Azure Monitor", "Azure SQL Database", "Blogs", "Cache Aside Pattern", "Cache Invalidation", "Caching Strategies", "Cloud Architecture", "Coding", "Data Consistency", "Idempotency", "Lazy Loading", "Performance Optimization", "Serialization", "Solution Architecture", "StackExchange.Redis", "Staleness", "Thread Safe Caching", "TTL", "Write Behind Caching", "Write Through Caching"]
-tags_normalized: ["dotnet core", "application scalability", "architecture", "azure", "azure cache for redis", "azure monitor", "azure sql database", "blogs", "cache aside pattern", "cache invalidation", "caching strategies", "cloud architecture", "coding", "data consistency", "idempotency", "lazy loading", "performance optimization", "serialization", "solution architecture", "stackexchangedotredis", "staleness", "thread safe caching", "ttl", "write behind caching", "write through caching"]
+permalink: /coding/blogs/Implementing-the-Cache-Aside-Lazy-Loading-Pattern-in-Azure
+tags:
+- .NET Core
+- Application Scalability
+- Architecture
+- Azure
+- Azure Cache For Redis
+- Azure Monitor
+- Azure SQL Database
+- Blogs
+- Cache Aside Pattern
+- Cache Invalidation
+- Caching Strategies
+- Cloud Architecture
+- Coding
+- Data Consistency
+- Idempotency
+- Lazy Loading
+- Performance Optimization
+- Serialization
+- Solution Architecture
+- StackExchange.Redis
+- Staleness
+- Thread Safe Caching
+- TTL
+- Write Behind Caching
+- Write Through Caching
+section_names:
+- azure
+- coding
 ---
-
 Dellenny demonstrates how to implement the Cache-Aside (Lazy Loading) pattern for efficient application caching in Azure, using Azure Cache for Redis and .NET Core.<!--excerpt_end-->
 
 # Implementing the Cache-Aside (Lazy Loading) Pattern in Azure

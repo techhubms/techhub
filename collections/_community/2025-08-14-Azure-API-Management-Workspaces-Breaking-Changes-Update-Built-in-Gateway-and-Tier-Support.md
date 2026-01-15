@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure API Management Workspaces Breaking Changes Update: Built-in Gateway & Tier Support"
-description: "This update from budzynski details recent changes regarding workspace support on the built-in gateway within Azure API Management. Key takeaways include reinstated workspace functionality in specific service tiers, revised limits for each tier, and ongoing guidance concerning workspace gateways for scalability and reliability. The article clarifies which breaking changes remain, outlines tier-specific workspace limits, and highlights available resources for further information. Users relying on preview workspaces or non-Premium tiers will benefit from this update as Azure adapts to customer usage patterns."
-author: "budzynski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/update-to-api-management-workspaces-breaking-changes-built-in/ba-p/4443668"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Azure API Management Workspaces Breaking Changes Update: Built-in Gateway & Tier Support'
+author: budzynski
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/update-to-api-management-workspaces-breaking-changes-built-in/ba-p/4443668
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 20:52:17 +00:00
-permalink: "/2025-08-14-Azure-API-Management-Workspaces-Breaking-Changes-Update-Built-in-Gateway-and-Tier-Support.html"
-categories: ["Azure"]
-tags: ["API Limits", "API Management", "Azure", "Azure API Management", "Breaking Changes", "Built in Gateway", "Cloud Integration", "Community", "Developer Tier", "Federated API", "Managed Identities", "Microsoft Azure", "Premium V2", "Service Tiers", "Standard V2", "Workspace Gateways", "Workspaces"]
-tags_normalized: ["api limits", "api management", "azure", "azure api management", "breaking changes", "built in gateway", "cloud integration", "community", "developer tier", "federated api", "managed identities", "microsoft azure", "premium v2", "service tiers", "standard v2", "workspace gateways", "workspaces"]
+permalink: /azure/community/Azure-API-Management-Workspaces-Breaking-Changes-Update-Built-in-Gateway-and-Tier-Support
+tags:
+- API Limits
+- API Management
+- Azure
+- Azure API Management
+- Breaking Changes
+- Built in Gateway
+- Cloud Integration
+- Community
+- Developer Tier
+- Federated API
+- Managed Identities
+- Microsoft Azure
+- Premium V2
+- Service Tiers
+- Standard V2
+- Workspace Gateways
+- Workspaces
+section_names:
+- azure
 ---
-
 budzynski outlines the latest adjustments to Azure API Management workspace support, specifically regarding built-in gateway functionality and tier-based limitations. This update is crucial for developers and architects managing APIs across various Azure service tiers.<!--excerpt_end-->
 
 # Update To API Management Workspaces Breaking Changes: Built-in Gateway & Tiers Support

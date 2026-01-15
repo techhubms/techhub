@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc"
-description: "This update introduces Azure Local, a full-stack infrastructure platform enabling organizations to run Azure services and cloud-native workloads at distributed or sovereign locations, all managed through Azure Arc. The article details recent capabilities such as SAN storage and rack-aware clustering, large scale deployments, enhanced GPU support, local identity using Azure Key Vault, and robust security features. It covers use cases including data sovereignty, hybrid infrastructure, legacy modernization, and security management, highlighting the platform’s flexibility and scale for diverse industries."
-author: "meenagowdar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc'
+author: meenagowdar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:05:17 +00:00
-permalink: "/2025-11-18-Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Azure Arc", "Azure Key Vault", "Azure Local", "Cloud Managed Services", "Community", "Containers", "Data Sovereignty", "DevOps", "Distributed Infrastructure", "Edge Computing", "Hybrid Cloud", "Infrastructure Modernization", "Microsoft Defender For Cloud", "Network Security Groups", "NVIDIA RTX Pro 6000", "Rack Aware Clustering", "SAN Storage", "Security", "Sovereign Private Cloud", "Virtual Machines", "VM Migration", "VMware Migration"]
-tags_normalized: ["aks", "azure", "azure arc", "azure key vault", "azure local", "cloud managed services", "community", "containers", "data sovereignty", "devops", "distributed infrastructure", "edge computing", "hybrid cloud", "infrastructure modernization", "microsoft defender for cloud", "network security groups", "nvidia rtx pro 6000", "rack aware clustering", "san storage", "security", "sovereign private cloud", "virtual machines", "vm migration", "vmware migration"]
+permalink: /azure/community/Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc
+tags:
+- AKS
+- Azure
+- Azure Arc
+- Azure Key Vault
+- Azure Local
+- Cloud Managed Services
+- Community
+- Containers
+- Data Sovereignty
+- DevOps
+- Distributed Infrastructure
+- Edge Computing
+- Hybrid Cloud
+- Infrastructure Modernization
+- Microsoft Defender For Cloud
+- Network Security Groups
+- NVIDIA RTX Pro 6000
+- Rack Aware Clustering
+- SAN Storage
+- Security
+- Sovereign Private Cloud
+- Virtual Machines
+- VM Migration
+- VMware Migration
+section_names:
+- azure
+- devops
+- security
 ---
-
 meenagowdar presents a comprehensive overview of Azure Local, detailing its new features for distributed cloud infrastructure, enhanced security, and management via Azure Arc.<!--excerpt_end-->
 
 # What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc

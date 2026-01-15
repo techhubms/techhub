@@ -1,22 +1,29 @@
----
-layout: "post"
-title: "Local In-Editor Code Reviews"
-description: "Review and highlight code changes directly in VS Code"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/t74rlukNevM"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Local In-Editor Code Reviews
+author: Randy Pagels
+canonical_url: https://youtu.be/t74rlukNevM
 date: 2024-12-16 22:13:51 +00:00
-permalink: "/2024-12-16-Local-In-Editor-Code-Reviews.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Pro", "Business"]
-alt-collection: "features"
-tags: ["AI", "Code", "Code Review", "Editing", "GitHub Copilot", "IDE", "Videos"]
-tags_normalized: ["ai", "code", "code review", "editing", "github copilot", "ide", "videos"]
+permalink: /github-copilot/videos/Local-In-Editor-Code-Reviews
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Pro
+- Business
+alt-collection: features
+tags:
+- AI
+- Code
+- Code Review
+- Editing
+- GitHub Copilot
+- IDE
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Local In-Editor Code Reviews feature. Highlight and review suggested code changes directly from within the Visual Studio editor.<!--excerpt_end-->
 
 {% youtube t74rlukNevM %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Mastering Declarative Data Transformations with Materialized Lake Views"
-description: "This article demonstrates how enterprises can leverage Microsoft Fabric's Lakehouse architecture and materialized lake views to streamline the transformation of mirrored SQL data for analytics. It covers mirroring Azure SQL databases to OneLake, building medallion architectures (Bronze, Silver, Gold), and automating data enrichment using declarative views for better governance, performance, and AI-driven insight generation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Mastering Declarative Data Transformations with Materialized Lake Views
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: "/2025-08-26-Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Azure SQL Database", "Data Engineering", "Data Governance", "Data Monitoring", "Data Orchestration", "Data Pipeline", "Data Quality", "Declarative Transformation", "ETL", "Lakehouse", "Materialized Lake Views", "Medallion Architecture", "Microsoft Fabric", "ML", "News", "OneLake", "SQL Mirroring"]
-tags_normalized: ["analytics", "azure", "azure sql database", "data engineering", "data governance", "data monitoring", "data orchestration", "data pipeline", "data quality", "declarative transformation", "etl", "lakehouse", "materialized lake views", "medallion architecture", "microsoft fabric", "ml", "news", "onelake", "sql mirroring"]
+permalink: /ml/news/Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views
+tags:
+- Analytics
+- Azure
+- Azure SQL Database
+- Data Engineering
+- Data Governance
+- Data Monitoring
+- Data Orchestration
+- Data Pipeline
+- Data Quality
+- Declarative Transformation
+- ETL
+- Lakehouse
+- Materialized Lake Views
+- Medallion Architecture
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- SQL Mirroring
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how organizations can use materialized lake views in Fabric's Lakehouse architecture to automate, monitor, and scale data transformation from Azure SQL Databases. The article covers step-by-step methods for improved analytics and governance.<!--excerpt_end-->
 
 # Mastering Declarative Data Transformations with Materialized Lake Views

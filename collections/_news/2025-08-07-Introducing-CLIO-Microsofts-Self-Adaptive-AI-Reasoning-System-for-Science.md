@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing CLIO: Microsoft’s Self-Adaptive AI Reasoning System for Science"
-description: "This article highlights Microsoft’s development of CLIO, a self-adaptive AI reasoning system designed to make scientific discovery more controllable, transparent, and effective. It details how CLIO enables customizable, steerable reasoning and outperforms traditional large language models in domains like biology and medicine by introducing in-situ cognitive loops and user-accessible control knobs. The post also discusses broader implications for AI trustworthiness and scientific rigor."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Introducing CLIO: Microsoft’s Self-Adaptive AI Reasoning System for Science'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-07 18:08:54 +00:00
-permalink: "/2025-08-07-Introducing-CLIO-Microsofts-Self-Adaptive-AI-Reasoning-System-for-Science.html"
-categories: ["AI"]
-tags: ["AI", "AI Evaluation", "AI in Science", "AI Trustworthiness", "Biomedical AI", "CLIO", "Cognitive Loop", "Company News", "Explainable AI", "GraphRAG", "HLE", "Humanity’s Last Exam", "in Situ Optimization", "MAI DxO", "Microsoft Discovery Platform", "Microsoft Research", "News", "OpenAI GPT 4.1", "Scientific Discovery", "Self Adaptive AI", "Transparent Reasoning", "Uncertainty Handling", "User Control"]
-tags_normalized: ["ai", "ai evaluation", "ai in science", "ai trustworthiness", "biomedical ai", "clio", "cognitive loop", "company news", "explainable ai", "graphrag", "hle", "humanitys last exam", "in situ optimization", "mai dxo", "microsoft discovery platform", "microsoft research", "news", "openai gpt 4dot1", "scientific discovery", "self adaptive ai", "transparent reasoning", "uncertainty handling", "user control"]
+permalink: /ai/news/Introducing-CLIO-Microsofts-Self-Adaptive-AI-Reasoning-System-for-Science
+tags:
+- AI
+- AI Evaluation
+- AI in Science
+- AI Trustworthiness
+- Biomedical AI
+- CLIO
+- Cognitive Loop
+- Company News
+- Explainable AI
+- GraphRAG
+- HLE
+- Humanity’s Last Exam
+- in Situ Optimization
+- MAI DxO
+- Microsoft Discovery Platform
+- Microsoft Research
+- News
+- OpenAI GPT 4.1
+- Scientific Discovery
+- Self Adaptive AI
+- Transparent Reasoning
+- Uncertainty Handling
+- User Control
+section_names:
+- ai
 ---
-
 stclarke presents Microsoft’s CLIO, an AI system enabling self-adaptive and controllable reasoning for challenging scientific problems, demonstrating sizable performance gains and enhanced transparency for researchers.<!--excerpt_end-->
 
 # Introducing CLIO: Microsoft’s Self-Adaptive AI Reasoning System for Science

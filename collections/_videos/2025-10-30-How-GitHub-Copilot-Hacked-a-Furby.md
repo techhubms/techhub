@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How GitHub Copilot Hacked a Furby"
-description: "This presentation highlights a fun and creative showcase from a GitHub keynote, where Martin, VP of Developer Relations, used GitHub Copilot to hack an old Furby toy. The Furby was programmed to sing, talk, and dance, integrated with Home Assistant, demonstrating practical and playful uses for developer AI tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/oETSqqi4CqU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How GitHub Copilot Hacked a Furby
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/oETSqqi4CqU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-30 14:01:27 +00:00
-permalink: "/2025-10-30-How-GitHub-Copilot-Hacked-a-Furby.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Coding", "Developer Tools", "Furby", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Hacking", "Home Assistant", "Integration", "IoT", "Machine Learning", "Programming", "Python", "Robotics", "Toy Hacking", "Videos"]
-tags_normalized: ["ai", "coding", "developer tools", "furby", "github copilot", "github universe", "githubuniverse", "hacking", "home assistant", "integration", "iot", "machine learning", "programming", "python", "robotics", "toy hacking", "videos"]
+permalink: /github-copilot/videos/How-GitHub-Copilot-Hacked-a-Furby
+tags:
+- AI
+- Coding
+- Developer Tools
+- Furby
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Hacking
+- Home Assistant
+- Integration
+- IoT
+- Machine Learning
+- Programming
+- Python
+- Robotics
+- Toy Hacking
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub's VP of Developer Relations, Martin, demonstrates how he repurposed a Furby toy using GitHub Copilot, showing creative AI-assisted coding. This video blends fun hardware hacking with software integration.<!--excerpt_end-->
 
 {% youtube oETSqqi4CqU %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Serverless MCP Agent with LangChain.js v1: Full-Stack GenAI Deployment on Azure"
-description: "This guide by sinedied explores an end-to-end serverless GenAI sample featuring LangChain.js v1 and the Model Context Protocol (MCP). You'll learn how to build, deploy, and extend a Node.js AI agent—including streaming outputs, leveraging MCP for tool integration, and running on Azure with production readiness. The post covers architecture, developer experience details, deployment with Azure Developer CLI, and practical extensions. Ideal for anyone building real AI agent solutions on Microsoft Azure."
-author: "sinedied"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Serverless MCP Agent with LangChain.js v1: Full-Stack GenAI Deployment on Azure'
+author: sinedied
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 07:29:14 +00:00
-permalink: "/2025-10-22-Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "Azure Static Web Apps", "Coding", "Community", "Cosmos DB", "Debugging", "GenAI", "IaC", "JavaScript", "LangChain.js", "LLM Agents", "MCP", "MCP Inspector", "Node.js", "OpenTelemetry", "Production Architecture", "Serverless", "Streaming APIs", "Tool Integration", "Web Components"]
-tags_normalized: ["ai", "authentication", "azure", "azure developer cli", "azure functions", "azure static web apps", "coding", "community", "cosmos db", "debugging", "genai", "iac", "javascript", "langchaindotjs", "llm agents", "mcp", "mcp inspector", "nodedotjs", "opentelemetry", "production architecture", "serverless", "streaming apis", "tool integration", "web components"]
+permalink: /ai/community/Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure
+tags:
+- AI
+- Authentication
+- Azure
+- Azure Developer CLI
+- Azure Functions
+- Azure Static Web Apps
+- Coding
+- Community
+- Cosmos DB
+- Debugging
+- GenAI
+- IaC
+- JavaScript
+- LangChain.js
+- LLM Agents
+- MCP
+- MCP Inspector
+- Node.js
+- OpenTelemetry
+- Production Architecture
+- Serverless
+- Streaming APIs
+- Tool Integration
+- Web Components
+section_names:
+- ai
+- azure
+- coding
 ---
-
 sinedied presents a step-by-step technical walkthrough of building a production-ready serverless AI agent using LangChain.js v1 and MCP, fully deployed and observable on Microsoft Azure.<!--excerpt_end-->
 
 # Serverless MCP Agent with LangChain.js v1 — Burgers, Tools, and Traces 🍔

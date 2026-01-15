@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Introducing Image Customizer for Azure Linux"
-description: "This post introduces Image Customizer, an open-source tool developed by the Azure Linux team. Image Customizer enables users to rapidly and reliably tailor Azure Linux images for different scenarios without needing to boot a VM. It supports dm-verity for security and integrates seamlessly into CI/CD workflows, offering multiple input and output formats and compatibility with key platforms. Comprehensive documentation and community support are available."
-author: "Kavya_Nagalakunta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing Image Customizer for Azure Linux
+author: Kavya_Nagalakunta
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 15:00:00 +00:00
-permalink: "/2025-09-18-Introducing-Image-Customizer-for-Azure-Linux.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Linux", "Base Images", "Chroot", "CI/CD", "Cloud Security", "Community", "Container Tools", "Custom Images", "Declarative API", "DevOps", "Dm Verity", "Image Customization", "Image Customizer", "ISO", "Linux", "Microsoft", "Open Source", "OS Guard", "Production Ready", "QCOW2", "Ubuntu", "VHD", "WSL2"]
-tags_normalized: ["azure", "azure linux", "base images", "chroot", "cislashcd", "cloud security", "community", "container tools", "custom images", "declarative api", "devops", "dm verity", "image customization", "image customizer", "iso", "linux", "microsoft", "open source", "os guard", "production ready", "qcow2", "ubuntu", "vhd", "wsl2"]
+permalink: /azure/community/Introducing-Image-Customizer-for-Azure-Linux
+tags:
+- Azure
+- Azure Linux
+- Base Images
+- Chroot
+- CI/CD
+- Cloud Security
+- Community
+- Container Tools
+- Custom Images
+- Declarative API
+- DevOps
+- Dm Verity
+- Image Customization
+- Image Customizer
+- ISO
+- Linux
+- Microsoft
+- Open Source
+- OS Guard
+- Production Ready
+- QCOW2
+- Ubuntu
+- VHD
+- WSL2
+section_names:
+- azure
+- devops
 ---
-
 Kavya_Nagalakunta presents Image Customizer—a new open-source tool from the Azure Linux team—enabling fast, reliable, and secure customization of Azure Linux images and seamless CI/CD integration.<!--excerpt_end-->
 
 # Introducing Image Customizer for Azure Linux

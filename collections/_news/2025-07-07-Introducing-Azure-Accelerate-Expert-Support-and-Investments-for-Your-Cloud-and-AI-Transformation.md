@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation"
-description: "This post introduces Azure Accelerate, a comprehensive offering that unifies expert guidance, Microsoft investments, and a suite of Azure tools to support organizations throughout their cloud and AI journey. It covers program benefits, real-world customer success stories, and outlines how organizations can leverage Azure Accelerate for transformation."
-author: "Cyril Belikoff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation'
+author: Cyril Belikoff
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-07 15:00:00 +00:00
-permalink: "/2025-07-07-Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "Azure", "Azure Accelerate", "Azure AI Search", "Azure Essentials", "Azure Innovate", "Azure Migrate", "Azure OpenAI", "Azure Well Architected Framework", "Cloud Accelerate Factory", "Cloud Transformation", "Customer Success", "Data Modernization", "Expert Support", "Funding", "Management And Governance", "Microsoft Partners", "Migration", "News"]
-tags_normalized: ["ai", "ai plus machine learning", "azure", "azure accelerate", "azure ai search", "azure essentials", "azure innovate", "azure migrate", "azure openai", "azure well architected framework", "cloud accelerate factory", "cloud transformation", "customer success", "data modernization", "expert support", "funding", "management and governance", "microsoft partners", "migration", "news"]
+permalink: /ai/news/Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation
+tags:
+- AI
+- AI + Machine Learning
+- Azure
+- Azure Accelerate
+- Azure AI Search
+- Azure Essentials
+- Azure Innovate
+- Azure Migrate
+- Azure OpenAI
+- Azure Well Architected Framework
+- Cloud Accelerate Factory
+- Cloud Transformation
+- Customer Success
+- Data Modernization
+- Expert Support
+- Funding
+- Management And Governance
+- Microsoft Partners
+- Migration
+- News
+section_names:
+- ai
+- azure
 ---
-
 Authored by Cyril Belikoff, this detailed post explains how Azure Accelerate brings together expert support, funding, and a unified set of tools to help organizations manage cloud and AI transformation efforts successfully.<!--excerpt_end-->
 
 # Introducing Azure Accelerate: Fueling Transformation with Experts and Investments Across Your Cloud and AI Journey

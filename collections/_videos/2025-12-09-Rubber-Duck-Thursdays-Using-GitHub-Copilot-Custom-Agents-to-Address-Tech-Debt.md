@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt"
-description: "A casual livestream from GitHub focusing on live coding with GitHub Copilot custom agents. This episode demonstrates how to use custom Copilot agents to refactor and improve GitHub Action workflows, tackling technical debt in real-world projects. Viewers will see practical use of AI-driven tools to streamline development."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OgFacJ6lIBc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=OgFacJ6lIBc
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-09 13:22:36 +00:00
-permalink: "/2025-12-09-Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "CI/CD", "Custom Agents", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "Live Coding", "Refactoring", "Software Maintenance", "Tech Debt", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "cislashcd", "custom agents", "developer tools", "devops", "github", "github actions", "github copilot", "live coding", "refactoring", "software maintenance", "tech debt", "videos", "workflow automation"]
+permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt
+tags:
+- AI
+- Automation
+- CI/CD
+- Custom Agents
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- Live Coding
+- Refactoring
+- Software Maintenance
+- Tech Debt
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub hosts Rubber Duck Thursdays, where developers live code with GitHub Copilot custom agents to tackle tech debt. See practical AI-driven solutions in action.<!--excerpt_end-->
 
 {% youtube OgFacJ6lIBc %}

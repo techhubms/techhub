@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Copilot Code Review Now Available in JetBrains IDEs and Visual Studio"
-description: "This announcement details the expansion of GitHub Copilot code review to JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, etc.) and Visual Studio. Developers can now request AI-driven review feedback directly in their editors before opening pull requests, enabling early detection of logic, security, and performance issues in code. The Copilot code review plugin supports self-review workflows, integrating actionable AI suggestions into day-to-day development across popular Microsoft and JetBrains environments."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-18-copilot-code-review-now-in-jetbrains-ides-and-visual-studio"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Code Review Now Available in JetBrains IDEs and Visual Studio
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-18-copilot-code-review-now-in-jetbrains-ides-and-visual-studio
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 16:19:21 +00:00
-permalink: "/2025-09-18-Copilot-Code-Review-Now-Available-in-JetBrains-IDEs-and-Visual-Studio.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development Tools", "Code Review Automation", "Copilot", "Copilot Code Review", "Developer Productivity", "Editor Plugins", "GitHub Copilot", "IntelliJ IDEA", "JetBrains IDEs", "News", "PyCharm", "Self Review", "VS", "WebStorm"]
-tags_normalized: ["ai", "ai development tools", "code review automation", "copilot", "copilot code review", "developer productivity", "editor plugins", "github copilot", "intellij idea", "jetbrains ides", "news", "pycharm", "self review", "vs", "webstorm"]
+permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-in-JetBrains-IDEs-and-Visual-Studio
+tags:
+- AI
+- AI Development Tools
+- Code Review Automation
+- Copilot
+- Copilot Code Review
+- Developer Productivity
+- Editor Plugins
+- GitHub Copilot
+- IntelliJ IDEA
+- JetBrains IDEs
+- News
+- PyCharm
+- Self Review
+- VS
+- WebStorm
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the expansion of GitHub Copilot code review to JetBrains IDEs and Visual Studio, allowing developers to access AI-powered review feedback within their preferred editors.<!--excerpt_end-->
 
 # Copilot Code Review: Now in JetBrains IDEs and Visual Studio

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "NEA Receives Microsoft Grant to Advance AI Literacy and Leadership in Education"
-description: "This article covers the National Education Association (NEA) receiving a $325,000 grant from Microsoft Elevate to enhance AI literacy and leadership among U.S. educators. It details the partnership's aim to empower teachers with AI knowledge, informs Microsoft’s AI tool development, and expands professional learning and policy engagement regarding artificial intelligence in education."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/09/10/nea-receives-microsoft-grant-to-expand-ai-literacy-and-leadership/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: NEA Receives Microsoft Grant to Advance AI Literacy and Leadership in Education
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/09/10/nea-receives-microsoft-grant-to-expand-ai-literacy-and-leadership/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-10 15:16:47 +00:00
-permalink: "/2025-09-10-NEA-Receives-Microsoft-Grant-to-Advance-AI-Literacy-and-Leadership-in-Education.html"
-categories: ["AI"]
-tags: ["AI", "AI in Schools", "AI Literacy", "Company News", "Education Technology", "Educational Policy", "Educator Training", "ISTE", "K 12 Education", "Micro Credentials", "Microsoft", "Microsoft Elevate", "NEA", "News", "Policy Development", "Professional Learning"]
-tags_normalized: ["ai", "ai in schools", "ai literacy", "company news", "education technology", "educational policy", "educator training", "iste", "k 12 education", "micro credentials", "microsoft", "microsoft elevate", "nea", "news", "policy development", "professional learning"]
+permalink: /ai/news/NEA-Receives-Microsoft-Grant-to-Advance-AI-Literacy-and-Leadership-in-Education
+tags:
+- AI
+- AI in Schools
+- AI Literacy
+- Company News
+- Education Technology
+- Educational Policy
+- Educator Training
+- ISTE
+- K 12 Education
+- Micro Credentials
+- Microsoft
+- Microsoft Elevate
+- NEA
+- News
+- Policy Development
+- Professional Learning
+section_names:
+- ai
 ---
-
 stclarke reports on NEA's partnership with Microsoft, as the organization receives a significant grant to expand AI literacy, leadership initiatives, and professional development for educators across the United States.<!--excerpt_end-->
 
 # NEA Receives Microsoft Grant to Advance AI Literacy and Leadership in Education

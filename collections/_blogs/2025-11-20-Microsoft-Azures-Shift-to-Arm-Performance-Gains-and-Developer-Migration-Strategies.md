@@ -1,20 +1,43 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Microsoft Azure's Shift to Arm: Performance Gains and Developer Migration Strategies"
-description: "This article analyzes the adoption of Arm Neoverse-based processors by cloud hyperscalers, with particular emphasis on Microsoft Azure's Cobalt series. It explores performance benchmarks, cost and energy improvements, major migration projects (including Google and AWS), and hands-on guidance for developers migrating workloads, including Azure VM deployment and related AI optimizations."
-author: "David Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+author: David Gordon
+canonical_url: https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2025-11-20 09:00:00 +00:00
-permalink: "/2025-11-20-Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Workloads", "ARM 22824 Sp1", "ARM Neoverse", "Arm64 Runners", "Azure", "Blogs", "Cloud Migration", "Cobalt 100", "Cobalt 200", "Coding", "Databricks", "Developer Tools", "Efficiency", "Kubernetes", "Machine Learning", "Microsoft Azure", "ML", "ONNX Runtime", "Price Performance", "Snowflake", "Virtual Machines", "VMs"]
-tags_normalized: ["ai", "ai workloads", "arm 22824 sp1", "arm neoverse", "arm64 runners", "azure", "blogs", "cloud migration", "cobalt 100", "cobalt 200", "coding", "databricks", "developer tools", "efficiency", "kubernetes", "machine learning", "microsoft azure", "ml", "onnx runtime", "price performance", "snowflake", "virtual machines", "vms"]
+permalink: /ai/blogs/Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies
+tags:
+- AI
+- AI Workloads
+- ARM 22824 Sp1
+- ARM Neoverse
+- Arm64 Runners
+- Azure
+- Blogs
+- Cloud Migration
+- Cobalt 100
+- Cobalt 200
+- Coding
+- Databricks
+- Developer Tools
+- Efficiency
+- Kubernetes
+- Machine Learning
+- Microsoft Azure
+- ML
+- ONNX Runtime
+- Price Performance
+- Snowflake
+- Virtual Machines
+- VMs
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 David Gordon explores the major transition toward Arm-based architectures in cloud computing, focusing on Microsoft Azure's Cobalt series. The article outlines performance benchmarks, developer migration strategies, and efficiency gains for ML and AI workloads.<!--excerpt_end-->
 
 # Microsoft Azure's Shift to Arm: Performance Gains and Developer Migration Strategies

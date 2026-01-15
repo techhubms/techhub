@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "GitHub MCP Registry Integration with Playwright in VS Code Insiders"
-description: "This video showcases how developers can enhance their workflow by integrating the GitHub MCP Registry in Visual Studio Code Insiders, with a focus on using the new Playwright MCP extension to write and run automated tests. The walkthrough covers initial setup, extension installation, and a practical demonstration of automating test activities within VS Code using GitHub Copilot and Model Context Protocol (MCP). Included are links to official documentation and repositories, along with further learning resources for developers interested in advanced developer toolchains and automation."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=STigfiK_n1Q"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: GitHub MCP Registry Integration with Playwright in VS Code Insiders
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=STigfiK_n1Q
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-23 17:15:04 +00:00
-permalink: "/2025-09-23-GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automated Testing", "Code", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "Developer Workflow", "Developerworkflow", "DevOps", "Extension Development", "GitHub Copilot", "GitHub MCP", "Mcp", "MCP Registry", "Playwright", "Software Developer", "Software Development", "Testing Automation", "Videos", "VS Code", "VS Code Insiders"]
-tags_normalized: ["ai", "automated testing", "code", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "developer workflow", "developerworkflow", "devops", "extension development", "github copilot", "github mcp", "mcp", "mcp registry", "playwright", "software developer", "software development", "testing automation", "videos", "vs code", "vs code insiders"]
+permalink: /github-copilot/videos/GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders
+tags:
+- AI
+- Automated Testing
+- Code
+- Coding
+- Copilot
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Developer Workflow
+- Developerworkflow
+- DevOps
+- Extension Development
+- GitHub Copilot
+- GitHub MCP
+- Mcp
+- MCP Registry
+- Playwright
+- Software Developer
+- Software Development
+- Testing Automation
+- Videos
+- VS Code
+- VS Code Insiders
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Visual Studio Code presents a demonstration by Liam Hampton on boosting developer productivity by integrating the GitHub MCP Registry and Playwright MCP extension within VS Code Insiders.<!--excerpt_end-->
 
 {% youtube STigfiK_n1Q %}

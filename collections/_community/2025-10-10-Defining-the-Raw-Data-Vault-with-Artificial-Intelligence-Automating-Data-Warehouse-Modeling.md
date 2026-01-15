@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling"
-description: "This article, technically reviewed by Naveed Hussain and Ian Clarke, explores how artificial intelligence can automate the definition of Raw Data Vault models in enterprise data platforms. It covers metadata-driven warehouse automation, the generative AI platform Flow.BI, integration with Microsoft technologies such as Fabric, and considerations for security, privacy, and multilingual environments. The article demonstrates how AI enhances scalability and reduces manual effort for Data Vault and other schema-on-read models."
-author: "Naveed-Hussain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling'
+author: Naveed-Hussain
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-10 12:33:30 +00:00
-permalink: "/2025-10-10-Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Data Lake Storage", "Cloud Analytics", "Community", "Data Engineering", "Data Integration", "Data Modeling", "Data Privacy", "Data Vault", "Data Warehouse Automation", "Enterprise Data Model", "Flow.BI", "Machine Learning", "Metadata Driven", "Microsoft Fabric", "Microsoft SQL Server", "ML", "Multilingual Metadata", "Neural Networks", "Raw Data Vault", "Synapse"]
-tags_normalized: ["ai", "azure", "azure data lake storage", "cloud analytics", "community", "data engineering", "data integration", "data modeling", "data privacy", "data vault", "data warehouse automation", "enterprise data model", "flowdotbi", "machine learning", "metadata driven", "microsoft fabric", "microsoft sql server", "ml", "multilingual metadata", "neural networks", "raw data vault", "synapse"]
+permalink: /ai/community/Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling
+tags:
+- AI
+- Azure
+- Azure Data Lake Storage
+- Cloud Analytics
+- Community
+- Data Engineering
+- Data Integration
+- Data Modeling
+- Data Privacy
+- Data Vault
+- Data Warehouse Automation
+- Enterprise Data Model
+- Flow.BI
+- Machine Learning
+- Metadata Driven
+- Microsoft Fabric
+- Microsoft SQL Server
+- ML
+- Multilingual Metadata
+- Neural Networks
+- Raw Data Vault
+- Synapse
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Naveed Hussain and Ian Clarke provide a technical review of Michael Olschimke's in-depth exploration of AI-driven Raw Data Vault automation, focusing on efficiency gains, Microsoft platform integrations, and advanced data modeling practices.<!--excerpt_end-->
 
 # Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling

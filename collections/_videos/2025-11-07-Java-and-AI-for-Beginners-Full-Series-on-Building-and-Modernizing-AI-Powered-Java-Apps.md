@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps"
-description: "This comprehensive video series by Microsoft Developer teaches how to incorporate Microsoft AI and generative AI (GenAI) services into Java applications. Covering both modernization of legacy projects and building new AI-driven apps, the series guides developers through MCP integration, application upgrades, responsible AI, deployment to Azure, context engineering, and running GenAI workloads in containers with GPU support."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yPlJf5DA5So"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=yPlJf5DA5So
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-07 05:01:19 +00:00
-permalink: "/2025-11-07-Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent", "AI", "AI Integration", "Application Migration", "Azure", "Azure Deployment", "Cloud Computing", "Coding", "Containers", "Context Engineering", "Dev", "Development", "Generative AI", "GPU", "Java", "Java Development", "MCP", "Microsoft", "Microsoft Azure", "Modernization", "Responsible AI", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent", "ai", "ai integration", "application migration", "azure", "azure deployment", "cloud computing", "coding", "containers", "context engineering", "dev", "development", "generative ai", "gpu", "java", "java development", "mcp", "microsoft", "microsoft azure", "modernization", "responsible ai", "tech", "technology", "videos"]
+permalink: /ai/videos/Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps
+tags:
+- Agent
+- AI
+- AI Integration
+- Application Migration
+- Azure
+- Azure Deployment
+- Cloud Computing
+- Coding
+- Containers
+- Context Engineering
+- Dev
+- Development
+- Generative AI
+- GPU
+- Java
+- Java Development
+- MCP
+- Microsoft
+- Microsoft Azure
+- Modernization
+- Responsible AI
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer presents a thorough video guide for developers on integrating AI and Microsoft cloud platform features into Java applications, covering modernization, deployment, and responsible AI practices.<!--excerpt_end-->
 
 {% youtube yPlJf5DA5So %}

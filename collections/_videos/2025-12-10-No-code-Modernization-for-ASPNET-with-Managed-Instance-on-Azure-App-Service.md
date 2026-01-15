@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "No-code Modernization for ASP.NET with Managed Instance on Azure App Service"
-description: "This demo-focused session guides developers through modernizing existing ASP.NET apps using Managed Instance on Azure App Service, a specialized PaaS solution that eliminates common migration barriers. Attendees will learn strategies to migrate without code rewrite, improve scalability and performance, and integrate legacy Web APIs with new agentic workflows for enterprise innovation."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ZtHjLHwgy68"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: No-code Modernization for ASP.NET with Managed Instance on Azure App Service
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=ZtHjLHwgy68
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:42 +00:00
-permalink: "/2025-12-10-No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Agentic Workflows", "ASP.NET", "Azure", "Azure App Service", "Cloud Modernization", "Coding", "Custom Installers", "Enterprise Innovation", "Integration", "Managed Instance", "Migration", "PaaS", "Performance Optimization", "Scalability", "System Commands", "Total Cost Of Ownership", "Videos", "Web API"]
-tags_normalized: ["dotnet", "agentic workflows", "aspdotnet", "azure", "azure app service", "cloud modernization", "coding", "custom installers", "enterprise innovation", "integration", "managed instance", "migration", "paas", "performance optimization", "scalability", "system commands", "total cost of ownership", "videos", "web api"]
+permalink: /coding/videos/No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service
+tags:
+- .NET
+- Agentic Workflows
+- ASP.NET
+- Azure
+- Azure App Service
+- Cloud Modernization
+- Coding
+- Custom Installers
+- Enterprise Innovation
+- Integration
+- Managed Instance
+- Migration
+- PaaS
+- Performance Optimization
+- Scalability
+- System Commands
+- Total Cost Of Ownership
+- Videos
+- Web API
+section_names:
+- azure
+- coding
 ---
-
 Presented by dotnet, this session explores how to modernize ASP.NET applications with Managed Instance on Azure App Service, highlighting best practices for seamless migration and integration.<!--excerpt_end-->
 
 {% youtube ZtHjLHwgy68 %}

@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Tabnine Launches AI Agents for Automated DevOps Workflows"
-description: "This article by Mike Vizard discusses the introduction of Tabnine Agentic, a new generation of AI-powered autonomous agents designed to automate complex DevOps workflows, such as refactoring, debugging, and documentation. The piece explores the platform's Context Engine, governance features, flexible LLM integration, and cost controls aimed at addressing challenges in code automation for DevOps teams."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/tabnine-adds-agents-capable-of-automating-workflows-to-ai-coding-platform/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Tabnine Launches AI Agents for Automated DevOps Workflows
+author: Mike Vizard
+canonical_url: https://devops.com/tabnine-adds-agents-capable-of-automating-workflows-to-ai-coding-platform/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-05 14:00:03 +00:00
-permalink: "/2025-11-05-Tabnine-Launches-AI-Agents-for-Automated-DevOps-Workflows.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Compliance", "AI For DevOps", "AI Governance", "AI Tools", "Autonomous Coding", "Blogs", "Code Generation", "Code Intelligence", "Code Refactoring", "Coding", "Compliance", "Context Engine", "Debugging", "DevOps", "DevOps Automation", "Enterprise AI", "Flat Rate Pricing", "LLM Integration", "Refactoring", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Tabnine", "Technical Debt", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai compliance", "ai for devops", "ai governance", "ai tools", "autonomous coding", "blogs", "code generation", "code intelligence", "code refactoring", "coding", "compliance", "context engine", "debugging", "devops", "devops automation", "enterprise ai", "flat rate pricing", "llm integration", "refactoring", "social facebook", "social linkedin", "social x", "software development lifecycle", "tabnine", "technical debt", "workflow automation"]
+permalink: /ai/blogs/Tabnine-Launches-AI-Agents-for-Automated-DevOps-Workflows
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Compliance
+- AI For DevOps
+- AI Governance
+- AI Tools
+- Autonomous Coding
+- Blogs
+- Code Generation
+- Code Intelligence
+- Code Refactoring
+- Coding
+- Compliance
+- Context Engine
+- Debugging
+- DevOps
+- DevOps Automation
+- Enterprise AI
+- Flat Rate Pricing
+- LLM Integration
+- Refactoring
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development Lifecycle
+- Tabnine
+- Technical Debt
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Mike Vizard provides an in-depth look at Tabnine Agentic, highlighting how these new AI agents automate DevOps workflows like refactoring and debugging, with a strong focus on governance, compliance, and cost management.<!--excerpt_end-->
 
 # Tabnine Launches AI Agents for Automated DevOps Workflows

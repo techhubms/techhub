@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "Key Considerations for Modernizing and Migrating Custom Applications to Azure"
-description: "This comprehensive guide by srhulsus explores all major steps for successful application modernization and migration to Microsoft Azure. It covers assessment, migration approaches, database and application modernization, secure architecture, resilience, DevOps adoption, monitoring, cost/governance, testing, and the impact of AI and GitHub Copilot tools across the migration process. Guidance is rooted in practical experience and official Microsoft documentation."
-author: "srhulsus"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Key Considerations for Modernizing and Migrating Custom Applications to Azure
+author: srhulsus
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-12 18:04:26 +00:00
-permalink: "/2025-12-12-Key-Considerations-for-Modernizing-and-Migrating-Custom-Applications-to-Azure.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AKS", "App Modernization", "Application Gateway", "Application Insights", "ARM Templates", "Availability Zones", "Azure", "Azure Advisor", "Azure AI Studio", "Azure App Service", "Azure Cost Management", "Azure DevOps", "Azure Functions", "Azure Key Vault", "Azure Migrate", "Azure Monitor", "Azure Policy", "Azure Sentinel", "Azure SQL Database", "Bicep", "Cloud Migration", "Community", "Database Migration", "Defender For Cloud", "DevOps", "Event Grid", "Geo Replication", "GitHub Actions", "GitHub Copilot", "Log Analytics", "Managed Identities", "Network Security", "Security", "Service Bus", "Terraform"]
-tags_normalized: ["ai", "aks", "app modernization", "application gateway", "application insights", "arm templates", "availability zones", "azure", "azure advisor", "azure ai studio", "azure app service", "azure cost management", "azure devops", "azure functions", "azure key vault", "azure migrate", "azure monitor", "azure policy", "azure sentinel", "azure sql database", "bicep", "cloud migration", "community", "database migration", "defender for cloud", "devops", "event grid", "geo replication", "github actions", "github copilot", "log analytics", "managed identities", "network security", "security", "service bus", "terraform"]
+permalink: /github-copilot/community/Key-Considerations-for-Modernizing-and-Migrating-Custom-Applications-to-Azure
+tags:
+- AI
+- AKS
+- App Modernization
+- Application Gateway
+- Application Insights
+- ARM Templates
+- Availability Zones
+- Azure
+- Azure Advisor
+- Azure AI Studio
+- Azure App Service
+- Azure Cost Management
+- Azure DevOps
+- Azure Functions
+- Azure Key Vault
+- Azure Migrate
+- Azure Monitor
+- Azure Policy
+- Azure Sentinel
+- Azure SQL Database
+- Bicep
+- Cloud Migration
+- Community
+- Database Migration
+- Defender For Cloud
+- DevOps
+- Event Grid
+- Geo Replication
+- GitHub Actions
+- GitHub Copilot
+- Log Analytics
+- Managed Identities
+- Network Security
+- Security
+- Service Bus
+- Terraform
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 srhulsus presents a thorough guide to modernizing and migrating custom applications to Azure, detailing best practices for migration, modernization, security, DevOps, AI adoption, and ongoing operations.<!--excerpt_end-->
 
 # Key Considerations for Modernizing and Migrating Custom Applications to Azure

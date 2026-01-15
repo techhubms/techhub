@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models"
-description: "This news article introduces Dion, a distributed optimizer developed by Microsoft to address the scalability and efficiency challenges in training large AI models. Dion builds on orthonormal update techniques to enable faster and more effective model training while minimizing compute and communication costs. The article explains the concept of orthonormal updates, how Dion differs from predecessors like AdamW and Muon, empirical results highlighting Dion’s performance benefits at scale, and provides resources for further exploration, including the open-source Dion repository."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/dion-the-distributed-orthonormal-update-revolution-is-here/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/dion-the-distributed-orthonormal-update-revolution-is-here/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 15:28:24 +00:00
-permalink: "/2025-08-14-Microsoft-Releases-Dion-A-New-Scalable-Optimizer-for-Training-AI-Models.html"
-categories: ["AI"]
-tags: ["AdamW", "AI", "AI Model Training", "Company News", "Deep Learning", "Dion Optimizer", "Distributed Training", "FSDP", "Large Language Models", "LLaMA 3", "Machine Learning", "Microsoft Research", "Muon Optimizer", "News", "Optimization Algorithms", "Orthonormal Updates", "PyTorch", "Scale Efficiency", "Tensor Parallelism"]
-tags_normalized: ["adamw", "ai", "ai model training", "company news", "deep learning", "dion optimizer", "distributed training", "fsdp", "large language models", "llama 3", "machine learning", "microsoft research", "muon optimizer", "news", "optimization algorithms", "orthonormal updates", "pytorch", "scale efficiency", "tensor parallelism"]
+permalink: /ai/news/Microsoft-Releases-Dion-A-New-Scalable-Optimizer-for-Training-AI-Models
+tags:
+- AdamW
+- AI
+- AI Model Training
+- Company News
+- Deep Learning
+- Dion Optimizer
+- Distributed Training
+- FSDP
+- Large Language Models
+- LLaMA 3
+- Machine Learning
+- Microsoft Research
+- Muon Optimizer
+- News
+- Optimization Algorithms
+- Orthonormal Updates
+- PyTorch
+- Scale Efficiency
+- Tensor Parallelism
+section_names:
+- ai
 ---
-
 This update from Microsoft Research explains Dion, a new distributed optimizer for efficient large-scale AI model training, and credits the work of the Dion team and Microsoft collaborators.<!--excerpt_end-->
 
 # Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models

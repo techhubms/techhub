@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How to Host ChatGPT Apps on Azure Functions: Developer Guide"
-description: "This post introduces developers to ChatGPT apps, explains how MCP servers underpin these apps, and provides a step-by-step walkthrough for hosting a ChatGPT app using Azure Functions. It also covers code examples in Python, deployment instructions using Azure Developer CLI, UI integration, and testing in ChatGPT's developer mode. Guidance for app directory submission and upcoming authentication topics is included."
-author: "lily-ma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-chatgpt-apps-on-azure-functions/ba-p/4480696"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'How to Host ChatGPT Apps on Azure Functions: Developer Guide'
+author: lily-ma
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-chatgpt-apps-on-azure-functions/ba-p/4480696
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-23 19:14:38 +00:00
-permalink: "/2025-12-23-How-to-Host-ChatGPT-Apps-on-Azure-Functions-Developer-Guide.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "App Deployment", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "ChatGPT Apps", "Cloud Hosting", "Coding", "Community", "Developer Tools", "FastMCP", "MCP Server", "OpenAI", "Python", "REST API", "Serverless Infrastructure", "Streamable HTTP"]
-tags_normalized: ["ai", "app deployment", "authentication", "azure", "azure developer cli", "azure functions", "chatgpt apps", "cloud hosting", "coding", "community", "developer tools", "fastmcp", "mcp server", "openai", "python", "rest api", "serverless infrastructure", "streamable http"]
+permalink: /ai/community/How-to-Host-ChatGPT-Apps-on-Azure-Functions-Developer-Guide
+tags:
+- AI
+- App Deployment
+- Authentication
+- Azure
+- Azure Developer CLI
+- Azure Functions
+- ChatGPT Apps
+- Cloud Hosting
+- Coding
+- Community
+- Developer Tools
+- FastMCP
+- MCP Server
+- OpenAI
+- Python
+- REST API
+- Serverless Infrastructure
+- Streamable HTTP
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Lily Ma presents a comprehensive developer guide for building and hosting ChatGPT apps on Azure Functions, covering architecture, integration, and deployment tips.<!--excerpt_end-->
 
 # Host ChatGPT Apps on Azure Functions: Developer Guide

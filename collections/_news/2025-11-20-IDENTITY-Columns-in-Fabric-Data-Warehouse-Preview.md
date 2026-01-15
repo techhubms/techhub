@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "IDENTITY Columns in Fabric Data Warehouse (Preview)"
-description: "This article presents an in-depth look at the new IDENTITY column feature in Microsoft Fabric Data Warehouse, explaining how it automatically generates surrogate keys for new table rows at cloud scale. It details the technical underpinnings, including its distributed design, differences from traditional SQL Server implementations, and the practical implications for modern analytics workloads. Readers learn how IDENTITY columns enhance data integrity, support parallel ingestion, and streamline ETL and data modeling tasks."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/identity-columns-in-fabric-data-warehouse-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: IDENTITY Columns in Fabric Data Warehouse (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/identity-columns-in-fabric-data-warehouse-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 02:30:00 +00:00
-permalink: "/2025-11-20-IDENTITY-Columns-in-Fabric-Data-Warehouse-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "BIGINT", "Cloud Analytics", "Data Integrity", "Data Modeling", "Data Warehouse", "Distributed Architecture", "ETL", "Fabric Data Warehouse", "IDENTITY Column", "Ingestion Pipeline", "Microsoft Fabric", "ML", "News", "Parallel Ingestion", "Preview Features", "SQL Server", "Surrogate Key", "T SQL"]
-tags_normalized: ["azure", "bigint", "cloud analytics", "data integrity", "data modeling", "data warehouse", "distributed architecture", "etl", "fabric data warehouse", "identity column", "ingestion pipeline", "microsoft fabric", "ml", "news", "parallel ingestion", "preview features", "sql server", "surrogate key", "t sql"]
+permalink: /ml/news/IDENTITY-Columns-in-Fabric-Data-Warehouse-Preview
+tags:
+- Azure
+- BIGINT
+- Cloud Analytics
+- Data Integrity
+- Data Modeling
+- Data Warehouse
+- Distributed Architecture
+- ETL
+- Fabric Data Warehouse
+- IDENTITY Column
+- Ingestion Pipeline
+- Microsoft Fabric
+- ML
+- News
+- Parallel Ingestion
+- Preview Features
+- SQL Server
+- Surrogate Key
+- T SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains the technical implementation and benefits of IDENTITY columns in Fabric Data Warehouse, focusing on automatic surrogate key generation, scalability, and distributed data integrity for analytics workloads.<!--excerpt_end-->
 
 # IDENTITY Columns in Fabric Data Warehouse (Preview)

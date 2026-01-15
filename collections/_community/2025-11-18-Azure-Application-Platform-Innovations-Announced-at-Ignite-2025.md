@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Azure Application Platform Innovations Announced at Ignite 2025"
-description: "This article by NagaSurendran provides a comprehensive overview of new Azure app platform capabilities revealed at Microsoft Ignite 2025. It details advancements in AI app and agent lifecycle management with Microsoft Foundry, unified multi-agent orchestration, app modernization, Kubernetes enhancements, security integration, and scalable operations for mission-critical workloads. The article highlights the platform’s growing AI focus, modernization support, and governance features that empower organizations to innovate rapidly while maintaining security, compliance, and reliability."
-author: "NagaSurendran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Application Platform Innovations Announced at Ignite 2025
+author: NagaSurendran
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:13:48 +00:00
-permalink: "/2025-11-18-Azure-Application-Platform-Innovations-Announced-at-Ignite-2025.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET Modernization", "AI", "AI Gateway", "AKS", "AKS Automatic", "API Management", "App Modernization", "Azure", "Azure Application Platform", "Azure Functions", "Azure Red Hat OpenShift", "Community", "Confidential Containers", "DevOps", "Docker Compose", "Durable Functions", "GitHub Copilot", "Logic Apps", "MCP", "Microsoft Foundry", "Multi Agent Orchestration", "Security", "Semantic Kernel"]
-tags_normalized: ["dotnet modernization", "ai", "ai gateway", "aks", "aks automatic", "api management", "app modernization", "azure", "azure application platform", "azure functions", "azure red hat openshift", "community", "confidential containers", "devops", "docker compose", "durable functions", "github copilot", "logic apps", "mcp", "microsoft foundry", "multi agent orchestration", "security", "semantic kernel"]
+permalink: /github-copilot/community/Azure-Application-Platform-Innovations-Announced-at-Ignite-2025
+tags:
+- .NET Modernization
+- AI
+- AI Gateway
+- AKS
+- AKS Automatic
+- API Management
+- App Modernization
+- Azure
+- Azure Application Platform
+- Azure Functions
+- Azure Red Hat OpenShift
+- Community
+- Confidential Containers
+- DevOps
+- Docker Compose
+- Durable Functions
+- GitHub Copilot
+- Logic Apps
+- MCP
+- Microsoft Foundry
+- Multi Agent Orchestration
+- Security
+- Semantic Kernel
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 NagaSurendran introduces the latest Azure app platform features announced at Microsoft Ignite 2025, showcasing how organizations can leverage unified AI and app modernization capabilities to accelerate innovation while ensuring security and scalability.<!--excerpt_end-->
 
 # Azure Application Platform Innovations Announced at Ignite 2025

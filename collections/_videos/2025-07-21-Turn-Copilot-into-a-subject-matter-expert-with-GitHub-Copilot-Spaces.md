@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Turn Copilot into a subject matter expert with GitHub Copilot Spaces"
-description: "This video demonstrates how GitHub Copilot Spaces enables teams to ground Copilot in specific knowledge domains, such as company standards, providing targeted and relevant AI responses. It covers configuring Spaces with curated datasets and using Copilot to validate compliance and expertise in a shared context."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UtSAXb0M4Ek"
-viewing_mode: "internal"
-feed_name: "GitHub's Youtube channel"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Turn Copilot into a subject matter expert with GitHub Copilot Spaces
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=UtSAXb0M4Ek
+viewing_mode: internal
+feed_name: GitHub's Youtube channel
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-21 14:00:59 +00:00
-permalink: "/2025-07-21-Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Accessibility Standards", "AI", "AI Integration", "Code Compliance", "Contextual AI", "Copilot Spaces", "CopilotSpaces", "Custom Knowledge Base", "Developer Tools", "GitHub", "GitHub Copilot", "Software Development", "Team Collaboration", "Videos"]
-tags_normalized: ["accessibility standards", "ai", "ai integration", "code compliance", "contextual ai", "copilot spaces", "copilotspaces", "custom knowledge base", "developer tools", "github", "github copilot", "software development", "team collaboration", "videos"]
+permalink: /github-copilot/videos/Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces
+tags:
+- Accessibility Standards
+- AI
+- AI Integration
+- Code Compliance
+- Contextual AI
+- Copilot Spaces
+- CopilotSpaces
+- Custom Knowledge Base
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Software Development
+- Team Collaboration
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video, GitHub explains how organizations can use Copilot Spaces to tailor GitHub Copilot for specialized contexts, enhancing expertise and compliance checking capabilities.<!--excerpt_end-->
 
 {% youtube UtSAXb0M4Ek %}

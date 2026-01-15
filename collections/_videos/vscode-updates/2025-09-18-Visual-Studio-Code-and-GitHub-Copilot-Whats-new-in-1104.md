@@ -1,24 +1,36 @@
----
-layout: "post"
-title: "Visual Studio Code and GitHub Copilot - What's new in 1.104"
-description: "Fokko Veegens demonstrates VS Code 1.104 features including auto model selection, AGENTS.md support, prompt file suggestions, and improved chat sessions management."
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fwPFPJlw3w4"
-viewing_mode: "internal"
-youtube_id: "fwPFPJlw3w4"
+﻿---
+layout: post
+title: Visual Studio Code and GitHub Copilot - What's new in 1.104
+author: Fokko Veegens
+canonical_url: https://www.youtube.com/watch?v=fwPFPJlw3w4
+viewing_mode: internal
+youtube_id: fwPFPJlw3w4
 date: 2025-09-18 00:00:00 +00:00
-permalink: "/2025-09-18-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1104.html"
-categories: ["AI", "GitHub Copilot"]
-section: "github-copilot"
-alt-collection: "vscode-updates"
-tags: ["AGENTS.md", "AI", "Auto Model Selection", "Chat Sessions", "Coding Agent", "Custom Chat Modes", "Developer Tools", "GitHub Copilot", "Productivity", "Prompt Files", "Terminal", "Videos", "VS Code", "VS Code 1.104"]
-tags_normalized: ["agentsdotmd", "ai", "auto model selection", "chat sessions", "coding agent", "custom chat modes", "developer tools", "github copilot", "productivity", "prompt files", "terminal", "videos", "vs code", "vs code 1dot104"]
+permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1104
+section: github-copilot
+alt-collection: vscode-updates
+tags:
+- AGENTS.md
+- AI
+- Auto Model Selection
+- Chat Sessions
+- Coding Agent
+- Custom Chat Modes
+- Developer Tools
+- GitHub Copilot
+- Productivity
+- Prompt Files
+- Terminal
+- Videos
+- VS Code
+- VS Code 1.104
+section_names:
+- ai
+- github-copilot
 ---
+Fokko Veegens demonstrates VS Code 1.104 features including auto model selection, AGENTS.md support, prompt file suggestions, and improved chat sessions management.<!--excerpt_end-->
 
-{{ page.description }}<!--excerpt_end-->
-
-{% youtube page.youtube_id %}
+{% youtube fwPFPJlw3w4 %}
 
 ## Key Features in VS Code 1.104
 
@@ -56,4 +68,4 @@ The release includes several other productivity enhancements:
 
 Fokko provides in-depth demonstrations of each feature with practical examples, showing how they integrate into real development workflows. The video includes detailed timestamps for easy navigation to specific topics.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v={{ page.youtube_id }})
+[Watch the video on YouTube](https://www.youtube.com/watch?v=fwPFPJlw3w4)

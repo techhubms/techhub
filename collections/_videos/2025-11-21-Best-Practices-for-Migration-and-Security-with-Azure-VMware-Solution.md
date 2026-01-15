@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Best Practices for Migration and Security with Azure VMware Solution"
-description: "This session from Microsoft Ignite 2025 provides practical guidance for enterprises migrating VMware workloads to Azure using Azure VMware Solution (AVS). The presentation covers seamless migration strategies, detailed real-world success stories, live demonstrations, and in-depth enterprise security practices, including extended security for legacy environments. The focus is on enabling modernization while minimizing operational risks by leveraging Azure’s infrastructure and security capabilities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BsVzhAT-1YQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Best Practices for Migration and Security with Azure VMware Solution
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=BsVzhAT-1YQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:12:56 +00:00
-permalink: "/2025-11-21-Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution.html"
-categories: ["Azure", "Security"]
-tags: ["AVS", "Azure", "Azure Security Tools", "Azure VMware Solution", "Case Study", "Cloud Migration", "Data Center Migration", "Enterprise Security", "Extended Security Updates", "HCX", "Infrastructure Migration", "Microsoft Azure", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Networking", "Security", "SQL Server", "Videos", "VMware", "Windows Server"]
-tags_normalized: ["avs", "azure", "azure security tools", "azure vmware solution", "case study", "cloud migration", "data center migration", "enterprise security", "extended security updates", "hcx", "infrastructure migration", "microsoft azure", "migrateandmodernizeyourestate", "modernization", "msignite", "networking", "security", "sql server", "videos", "vmware", "windows server"]
+permalink: /azure/videos/Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution
+tags:
+- AVS
+- Azure
+- Azure Security Tools
+- Azure VMware Solution
+- Case Study
+- Cloud Migration
+- Data Center Migration
+- Enterprise Security
+- Extended Security Updates
+- HCX
+- Infrastructure Migration
+- Microsoft Azure
+- Migrateandmodernizeyourestate
+- Modernization
+- MSIgnite
+- Networking
+- Security
+- SQL Server
+- Videos
+- VMware
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events hosts a Microsoft Ignite session offering essential best practices for securely migrating VMware workloads to Azure using Azure VMware Solution, with live demos and case studies.<!--excerpt_end-->
 
 {% youtube BsVzhAT-1YQ %}

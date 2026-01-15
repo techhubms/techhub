@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Harness AI-Powered DevOps Platform Launches to Automate Software Delivery"
-description: "This article by Mike Vizard discusses the launch of Harness's new AI-powered DevOps platform. The platform leverages knowledge graph–driven AI agents to automate pipelines, testing, and operations across the software development lifecycle, aiming to reduce manual effort and optimize workflows for DevOps teams."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Harness AI-Powered DevOps Platform Launches to Automate Software Delivery
+author: Mike Vizard
+canonical_url: https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-26 14:00:07 +00:00
-permalink: "/2025-08-26-Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Platforms", "Blogs", "Business Of DevOps", "Chaos Engineering", "Cloud Cost Optimization", "Cloud Operations", "DevOps", "DevOps Automation", "DevOps Innovation", "Harness AI", "Knowledge Graph", "Pipeline Automation", "Pipelines", "Root Cause Analysis", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Testing Automation", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai agents", "ai platforms", "blogs", "business of devops", "chaos engineering", "cloud cost optimization", "cloud operations", "devops", "devops automation", "devops innovation", "harness ai", "knowledge graph", "pipeline automation", "pipelines", "root cause analysis", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "testing automation", "workflow orchestration"]
+permalink: /ai/blogs/Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery
+tags:
+- AI
+- AI Agents
+- AI Platforms
+- Blogs
+- Business Of DevOps
+- Chaos Engineering
+- Cloud Cost Optimization
+- Cloud Operations
+- DevOps
+- DevOps Automation
+- DevOps Innovation
+- Harness AI
+- Knowledge Graph
+- Pipeline Automation
+- Pipelines
+- Root Cause Analysis
+- Sdlc
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+- Testing Automation
+- Workflow Orchestration
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard covers how Harness has launched an AI-powered DevOps platform that uses knowledge graph–driven agents to automate a wide variety of tasks across the software delivery lifecycle, aimed at reducing manual effort and streamlining DevOps workflows.<!--excerpt_end-->
 
 # Harness AI-Powered DevOps Platform Launches to Automate Software Delivery

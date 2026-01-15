@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches"
-description: "This article by Shikher offers an in-depth exploration of Azure Migrate's latest capabilities for application-aware cloud migration. It covers holistic planning, dependency mapping, code-level integration (including GitHub Copilot assessment), security insights, wave planning, and unified tooling for migrating and modernizing multi-tiered applications to Microsoft Azure. The guide targets architects, IT admins, and developers aiming for predictable and secure cloud adoption."
-author: "Shikher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches'
+author: Shikher
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 16:03:15 +00:00
-permalink: "/2025-11-10-Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET Migration", "AI", "AKS", "App Service", "Application Assessment", "Application Modernization", "Azure", "Azure Database Migration Service", "Azure Migrate", "Azure Security", "Azure SQL Database", "Azure VM", "CAST Highlight", "Cloud Migration", "Coding", "Community", "Dependency Mapping", "DevOps", "DevOps Tools", "GitHub Copilot", "GitHub Copilot Assessment", "Microsoft Defender For Cloud", "Refactor", "Rehost", "Replatform", "Security", "Wave Planning"]
-tags_normalized: ["dotnet migration", "ai", "aks", "app service", "application assessment", "application modernization", "azure", "azure database migration service", "azure migrate", "azure security", "azure sql database", "azure vm", "cast highlight", "cloud migration", "coding", "community", "dependency mapping", "devops", "devops tools", "github copilot", "github copilot assessment", "microsoft defender for cloud", "refactor", "rehost", "replatform", "security", "wave planning"]
+permalink: /github-copilot/community/Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches
+tags:
+- .NET Migration
+- AI
+- AKS
+- App Service
+- Application Assessment
+- Application Modernization
+- Azure
+- Azure Database Migration Service
+- Azure Migrate
+- Azure Security
+- Azure SQL Database
+- Azure VM
+- CAST Highlight
+- Cloud Migration
+- Coding
+- Community
+- Dependency Mapping
+- DevOps
+- DevOps Tools
+- GitHub Copilot
+- GitHub Copilot Assessment
+- Microsoft Defender For Cloud
+- Refactor
+- Rehost
+- Replatform
+- Security
+- Wave Planning
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Shikher provides a comprehensive overview of Azure Migrate's new application-focused features, showing how architects and developers can leverage code insight tools like GitHub Copilot to drive secure, efficient modernization and migration projects to Azure.<!--excerpt_end-->
 
 # Enabling Migration or Modernization of Your Multi-Tiered Applications Using Azure Migrate

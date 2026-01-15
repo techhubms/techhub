@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Dynamic Thresholds for Log Search Alerts in Azure Monitor: Public Preview"
-description: "Microsoft introduces dynamic thresholds for log search alerts in Azure Monitor, extending intelligence from metric alerting to log-based monitoring. This preview leverages machine learning to automate threshold calculation, detect anomalies, and adapt to seasonal patterns in monitoring scenarios, such as Kubernetes pod restarts and resource inventory drift. Users benefit from simplified configuration and adaptive alerting with multi-dimensional support."
-author: "Efrat_Ben_Porat"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-announcing-public-preview-of-dynamic-thresholds/ba-p/4467363"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Dynamic Thresholds for Log Search Alerts in Azure Monitor: Public Preview'
+author: Efrat_Ben_Porat
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-announcing-public-preview-of-dynamic-thresholds/ba-p/4467363
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AKS", "AKS Monitoring", "Alerting Automation", "Anomaly Detection", "Azure", "Azure Monitor", "Cloud Operations", "Community", "DevOps", "DevOps Monitoring", "Dynamic Thresholds", "Kusto Query Language", "Log Search Alerts", "Machine Learning", "Metric Alerts", "Microsoft", "Resource Graph", "Subscription Based Alerting"]
-tags_normalized: ["ai", "aks", "aks monitoring", "alerting automation", "anomaly detection", "azure", "azure monitor", "cloud operations", "community", "devops", "devops monitoring", "dynamic thresholds", "kusto query language", "log search alerts", "machine learning", "metric alerts", "microsoft", "resource graph", "subscription based alerting"]
+permalink: /ai/community/Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview
+tags:
+- AI
+- AKS
+- AKS Monitoring
+- Alerting Automation
+- Anomaly Detection
+- Azure
+- Azure Monitor
+- Cloud Operations
+- Community
+- DevOps
+- DevOps Monitoring
+- Dynamic Thresholds
+- Kusto Query Language
+- Log Search Alerts
+- Machine Learning
+- Metric Alerts
+- Microsoft
+- Resource Graph
+- Subscription Based Alerting
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Efrat Ben-Porat presents the public preview of dynamic thresholds for log search alerts in Azure Monitor, showing how machine learning can simplify alerting and improve anomaly detection for cloud resources.<!--excerpt_end-->
 
 # Dynamic Thresholds for Log Search Alerts in Azure Monitor: Public Preview

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Fabric Mirroring for Azure SQL Managed Instance Now Generally Available"
-description: "This article introduces the general availability of Fabric Mirroring for Azure SQL Managed Instance, a feature that allows near real-time data replication from Azure SQL Managed Instance directly to Microsoft Fabric’s OneLake. It highlights the architecture, setup process, advanced analytics capabilities, seamless schema changes, integration with Power BI Direct Lake mode, and details on mirroring pricing and supported scenarios."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric Mirroring for Azure SQL Managed Instance Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 11:00:00 +00:00
-permalink: "/2025-09-29-Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL Managed Instance", "Data Engineering", "Data Platform", "Data Replication", "Data Science", "Data Warehouse", "ETL Free Data Integration", "Fabric Mirroring Pricing", "KQL Database", "Lakehouse", "Microsoft Fabric", "Mirroring", "ML", "News", "Notebooks", "OneLake", "Power BI Direct Lake", "Real Time Analytics", "Schema Changes"]
-tags_normalized: ["azure", "azure sql managed instance", "data engineering", "data platform", "data replication", "data science", "data warehouse", "etl free data integration", "fabric mirroring pricing", "kql database", "lakehouse", "microsoft fabric", "mirroring", "ml", "news", "notebooks", "onelake", "power bi direct lake", "real time analytics", "schema changes"]
+permalink: /ml/news/Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available
+tags:
+- Azure
+- Azure SQL Managed Instance
+- Data Engineering
+- Data Platform
+- Data Replication
+- Data Science
+- Data Warehouse
+- ETL Free Data Integration
+- Fabric Mirroring Pricing
+- KQL Database
+- Lakehouse
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- Notebooks
+- OneLake
+- Power BI Direct Lake
+- Real Time Analytics
+- Schema Changes
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team discusses the general availability of Fabric Mirroring for Azure SQL Managed Instance, guiding readers through setup, real-time analytics integration, and cost considerations.<!--excerpt_end-->
 
 # Fabric Mirroring for Azure SQL Managed Instance Now Generally Available

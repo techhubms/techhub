@@ -1,20 +1,31 @@
----
-layout: "post"
-title: ".NET Aspire – Start Resource on Service Bus Message"
-description: "The article by LeonardSpencer introduces a way to start a resource or workload in a .NET Aspire environment in response to a Service Bus message. Useful for developers working with messaging-driven architectures with .NET Aspire and Azure Service Bus."
-author: "LeonardSpencer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mflnuk/net_aspire_start_resource_on_servicebus_message/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: .NET Aspire – Start Resource on Service Bus Message
+author: LeonardSpencer
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mflnuk/net_aspire_start_resource_on_servicebus_message/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 08:40:47 +00:00
-permalink: "/2025-08-02-NET-Aspire-Start-Resource-on-Service-Bus-Message.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "Azure Service Bus", "Cloud Services", "Coding", "Community", "Event Driven", "Messaging", "Resource Management", "Service Bus", "Workloads"]
-tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "azure service bus", "cloud services", "coding", "community", "event driven", "messaging", "resource management", "service bus", "workloads"]
+permalink: /coding/community/NET-Aspire-Start-Resource-on-Service-Bus-Message
+tags:
+- .NET
+- .NET Aspire
+- Application Architecture
+- Azure
+- Azure Service Bus
+- Cloud Services
+- Coding
+- Community
+- Event Driven
+- Messaging
+- Resource Management
+- Service Bus
+- Workloads
+section_names:
+- azure
+- coding
 ---
-
 LeonardSpencer discusses how to trigger a resource in a .NET Aspire setup upon receiving messages from Azure Service Bus, providing insights for developers building event-driven applications.<!--excerpt_end-->
 
 ## Summary

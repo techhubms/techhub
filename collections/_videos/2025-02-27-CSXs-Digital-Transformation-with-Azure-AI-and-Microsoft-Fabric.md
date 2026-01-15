@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CSX's Digital Transformation with Azure, AI, and Microsoft Fabric"
-description: "This session features Dave Rich from CSX and highlights the company’s digital transformation journey using Microsoft Azure. It covers CSX’s rapid cloud migration, the role of Azure in improving rail safety, the use of AI and data analytics for enhanced customer service and predictive maintenance, the challenges faced during migration, and new innovations involving Microsoft Fabric and Copilot Studio. The discussion provides key lessons for other organizations considering similar modernization efforts."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=e86IqIkxVhU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: CSX's Digital Transformation with Azure, AI, and Microsoft Fabric
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=e86IqIkxVhU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-02-27 14:00:47 +00:00
-permalink: "/2025-02-27-CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Cloud Innovation", "Cloud Migration", "Copilot Studio", "CSX", "Customer Service", "Data Analytics", "Digital Transformation", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Microsoft Ignite", "Migration Challenges", "ML", "Operational Excellence", "Predictive Maintenance", "Rail Industry", "Safety", "Videos"]
-tags_normalized: ["ai", "azure", "cloud innovation", "cloud migration", "copilot studio", "csx", "customer service", "data analytics", "digital transformation", "microsoft", "microsoft azure", "microsoft fabric", "microsoft ignite", "migration challenges", "ml", "operational excellence", "predictive maintenance", "rail industry", "safety", "videos"]
+permalink: /ai/videos/CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric
+tags:
+- AI
+- Azure
+- Cloud Innovation
+- Cloud Migration
+- Copilot Studio
+- CSX
+- Customer Service
+- Data Analytics
+- Digital Transformation
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Ignite
+- Migration Challenges
+- ML
+- Operational Excellence
+- Predictive Maintenance
+- Rail Industry
+- Safety
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 In this Microsoft Ignite 2024 session, Dave Rich from CSX joins Microsoft Events to discuss CSX’s digital transformation powered by Azure, AI, and data analytics, revealing practical insights for tech-driven modernization.<!--excerpt_end-->
 
 {% youtube e86IqIkxVhU %}

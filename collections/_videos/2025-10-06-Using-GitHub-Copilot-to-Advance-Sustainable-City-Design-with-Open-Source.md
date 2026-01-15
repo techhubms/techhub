@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Using GitHub Copilot to Advance Sustainable City Design with Open Source"
-description: "This video highlights how open source projects, specifically the City Energy Analyst initiative on GitHub, are leveraging developer tools like GitHub Copilot to speed up the design and development of sustainable, energy-efficient cities. Viewers learn about the intersection of environmental challenges and software innovation, with a focus on how contributors can get involved in such impactful projects using advanced code-assistance tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/bxV3Fw8nh5M"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Using GitHub Copilot to Advance Sustainable City Design with Open Source
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/bxV3Fw8nh5M
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-06 18:15:16 +00:00
-permalink: "/2025-10-06-Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "City Energy Analyst", "Climate Change", "ClimateChange", "Collaboration", "Developer Tools", "Energy Efficiency", "Environmental Technology", "GitHub", "GitHub Copilot", "Open Source", "OpenSource", "Software Development", "Sustainable Cities", "Videos"]
-tags_normalized: ["ai", "city energy analyst", "climate change", "climatechange", "collaboration", "developer tools", "energy efficiency", "environmental technology", "github", "github copilot", "open source", "opensource", "software development", "sustainable cities", "videos"]
+permalink: /github-copilot/videos/Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source
+tags:
+- AI
+- City Energy Analyst
+- Climate Change
+- ClimateChange
+- Collaboration
+- Developer Tools
+- Energy Efficiency
+- Environmental Technology
+- GitHub
+- GitHub Copilot
+- Open Source
+- OpenSource
+- Software Development
+- Sustainable Cities
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video, GitHub demonstrates how the City Energy Analyst project is using GitHub Copilot to accelerate open source solutions for sustainable urban development. Presented by the GitHub team.<!--excerpt_end-->
 
 {% youtube bxV3Fw8nh5M %}

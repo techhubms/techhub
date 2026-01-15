@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Bringing Trust and Governance to AI-Driven DevOps"
-description: "This article, authored by Alan Shimel, provides insights from a panel at swampUP 2025 featuring leaders from ServiceNow, NVIDIA, and JFrog, discussing the intersection of AI integration and DevOps. It explores how AI is transforming practitioner productivity, security, and software delivery, as well as the critical role of trust and governance in successful AI adoption across development pipelines."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Bringing Trust and Governance to AI-Driven DevOps
+author: Alan Shimel
+canonical_url: https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-12 14:37:28 +00:00
-permalink: "/2025-09-12-Bringing-Trust-and-Governance-to-AI-Driven-DevOps.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Driven DevOps", "AI Governance", "AI Integration", "Blogs", "DevOps", "DevOps Tooling", "DevOps Transformation", "Governance", "ITSM", "JFrog", "JFrog Swampup", "NVIDIA", "Panel Discussion", "Productivity", "Resilience", "ServiceNow", "Software Supply Chain", "Traceability", "Video Interviews"]
-tags_normalized: ["ai", "ai agents", "ai driven devops", "ai governance", "ai integration", "blogs", "devops", "devops tooling", "devops transformation", "governance", "itsm", "jfrog", "jfrog swampup", "nvidia", "panel discussion", "productivity", "resilience", "servicenow", "software supply chain", "traceability", "video interviews"]
+permalink: /ai/blogs/Bringing-Trust-and-Governance-to-AI-Driven-DevOps
+tags:
+- AI
+- AI Agents
+- AI Driven DevOps
+- AI Governance
+- AI Integration
+- Blogs
+- DevOps
+- DevOps Tooling
+- DevOps Transformation
+- Governance
+- ITSM
+- JFrog
+- JFrog Swampup
+- NVIDIA
+- Panel Discussion
+- Productivity
+- Resilience
+- ServiceNow
+- Software Supply Chain
+- Traceability
+- Video Interviews
+section_names:
+- ai
+- devops
 ---
-
 Alan Shimel shares perspectives from industry leaders on how organizations are building trust and governance into AI-driven DevOps transformations, with a focus on productivity, security, and strategic alignment.<!--excerpt_end-->
 
 # Bringing Trust and Governance to AI-Driven DevOps

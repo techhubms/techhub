@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot Agent Mode - Transforming your development workflow"
-description: "Hidde de Smet introduces GitHub Copilot Agent Mode, explaining how this new feature enables interactive, context-aware AI assistance in the IDE. The article details its capabilities, best practices, practical applications, and its impact on coding productivity and learning."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/github-copilot-agent-mode"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: GitHub Copilot Agent Mode - Transforming your development workflow
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/github-copilot-agent-mode
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-07 07:00:00 +00:00
-permalink: "/2025-05-07-GitHub-Copilot-Agent-Mode-Transforming-your-development-workflow.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Blogs", "Code Completion", "Context Aware Assistance", "Debugging", "Development", "GitHub Copilot", "IDE", "Interactive Learning", "Natural Language Interaction", "Pair Programming", "Programming Assistant"]
-tags_normalized: ["agent mode", "ai", "blogs", "code completion", "context aware assistance", "debugging", "development", "github copilot", "ide", "interactive learning", "natural language interaction", "pair programming", "programming assistant"]
+permalink: /github-copilot/blogs/GitHub-Copilot-Agent-Mode-Transforming-your-development-workflow
+tags:
+- Agent Mode
+- AI
+- Blogs
+- Code Completion
+- Context Aware Assistance
+- Debugging
+- Development
+- GitHub Copilot
+- IDE
+- Interactive Learning
+- Natural Language Interaction
+- Pair Programming
+- Programming Assistant
+section_names:
+- ai
+- github-copilot
 ---
-
 Written by Hidde de Smet, this article explores GitHub Copilot's Agent Mode, highlighting how it transforms the coding workflow by supporting natural conversations, interactive problem-solving, and step-by-step guidance directly within your development environment.<!--excerpt_end-->
 
 # GitHub Copilot Agent Mode - Transforming your development workflow

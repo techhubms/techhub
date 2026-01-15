@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How AI Influences Programming Language Selection"
-description: "This video features Idan Gazit discussing how artificial intelligence is impacting developer choices regarding programming languages, with a focus on why statically typed languages like TypeScript are gaining popularity. The content explores how AI models interact with language features and the self-reinforcing trends that guide these developments."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/pzF4D7juXbM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How AI Influences Programming Language Selection
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/pzF4D7juXbM
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-02 15:01:42 +00:00
-permalink: "/2026-01-02-How-AI-Influences-Programming-Language-Selection.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Assisted Development", "Code Generation", "Coding", "Developer Experience", "GitHub", "Language Trends", "Programming", "Programming Languages", "Software Development", "Statically Typed Languages", "TypeScript", "Videos"]
-tags_normalized: ["ai", "ai assisted development", "code generation", "coding", "developer experience", "github", "language trends", "programming", "programming languages", "software development", "statically typed languages", "typescript", "videos"]
+permalink: /ai/videos/How-AI-Influences-Programming-Language-Selection
+tags:
+- AI
+- AI Assisted Development
+- Code Generation
+- Coding
+- Developer Experience
+- GitHub
+- Language Trends
+- Programming
+- Programming Languages
+- Software Development
+- Statically Typed Languages
+- TypeScript
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 GitHub's Idan Gazit explains how artificial intelligence is affecting programming language popularity, particularly highlighting TypeScript and the importance of static typing in AI-supported coding.<!--excerpt_end-->
 
 {% youtube pzF4D7juXbM %}

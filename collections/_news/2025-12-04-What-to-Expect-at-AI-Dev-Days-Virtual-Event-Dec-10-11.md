@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "What to Expect at AI Dev Days Virtual Event Dec. 10-11"
-description: "This preview covers the upcoming AI Dev Days, a two-day virtual event by Microsoft and GitHub on Dec. 10-11, 2025. The event will showcase the latest in AI development, including sessions on Microsoft Foundry, GitHub Copilot, MCP, Azure, agentic workflows, and hands-on workshops. Developers, DevOps professionals, and technical leaders can expect technical deep-dives, demos, and practical sessions covering AI tooling, coding agents, and integration workflows across Microsoft's ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://developer.microsoft.com/blog/join-us-for-ai-devdays"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: What to Expect at AI Dev Days Virtual Event Dec. 10-11
+author: stclarke
+canonical_url: https://developer.microsoft.com/blog/join-us-for-ai-devdays
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 19:05:59 +00:00
-permalink: "/2025-12-04-What-to-Expect-at-AI-Dev-Days-Virtual-Event-Dec-10-11.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI Dev Days", "AutoGen", "Azure", "Cloud Agent", "Coding", "Company News", "Developer Conference", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "MCP", "Microsoft", "Microsoft Foundry", "News", "Semantic Kernel", "VS Code"]
-tags_normalized: ["agentic workflows", "ai", "ai dev days", "autogen", "azure", "cloud agent", "coding", "company news", "developer conference", "developer productivity", "devops", "github", "github copilot", "mcp", "microsoft", "microsoft foundry", "news", "semantic kernel", "vs code"]
+permalink: /github-copilot/news/What-to-Expect-at-AI-Dev-Days-Virtual-Event-Dec-10-11
+tags:
+- Agentic Workflows
+- AI
+- AI Dev Days
+- AutoGen
+- Azure
+- Cloud Agent
+- Coding
+- Company News
+- Developer Conference
+- Developer Productivity
+- DevOps
+- GitHub
+- GitHub Copilot
+- MCP
+- Microsoft
+- Microsoft Foundry
+- News
+- Semantic Kernel
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 stclarke introduces the agenda and session highlights of AI Dev Days, Microsoft's flagship AI developer event streaming Dec. 10-11, 2025. Dive into sessions on GitHub Copilot, Microsoft Foundry, and the latest AI tools for developers.<!--excerpt_end-->
 
 # What to Expect at AI Dev Days Virtual Event Dec. 10-11

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Simplifying Parquet & JSON Data Ingestion with Microsoft Fabric Shortcut Transformations"
-description: "This article explores how Microsoft Fabric's Shortcut Transformations streamline the ingestion of Parquet and JSON data into Delta tables. It covers the platform's features such as automatic schema inference, handling of nested structures, broad file and compression format support, and robust error handling. Real-world applications across industries like retail, finance, healthcare, manufacturing, and energy are discussed, along with upcoming enhancements including Excel support and dynamic schema evolution."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Simplifying Parquet & JSON Data Ingestion with Microsoft Fabric Shortcut Transformations
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-16 10:00:00 +00:00
-permalink: "/2025-10-16-Simplifying-Parquet-and-JSON-Data-Ingestion-with-Microsoft-Fabric-Shortcut-Transformations.html"
-categories: ["Azure", "ML"]
-tags: ["ACID Transactions", "Azure", "Azure Data Lake", "Compression Formats", "Continuous Sync", "Data Engineering", "Data Ingestion", "Delta Lake", "ETL", "JSON", "Lakehouse", "Microsoft Fabric", "ML", "Nested Data", "News", "Parquet", "Schema Inference", "Shortcut Transformations"]
-tags_normalized: ["acid transactions", "azure", "azure data lake", "compression formats", "continuous sync", "data engineering", "data ingestion", "delta lake", "etl", "json", "lakehouse", "microsoft fabric", "ml", "nested data", "news", "parquet", "schema inference", "shortcut transformations"]
+permalink: /ml/news/Simplifying-Parquet-and-JSON-Data-Ingestion-with-Microsoft-Fabric-Shortcut-Transformations
+tags:
+- ACID Transactions
+- Azure
+- Azure Data Lake
+- Compression Formats
+- Continuous Sync
+- Data Engineering
+- Data Ingestion
+- Delta Lake
+- ETL
+- JSON
+- Lakehouse
+- Microsoft Fabric
+- ML
+- Nested Data
+- News
+- Parquet
+- Schema Inference
+- Shortcut Transformations
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces Shortcut Transformations, making Parquet and JSON data ingestion into Delta tables seamless and code-free. This article, authored by Microsoft Fabric Blog, details the technical features, workflow, and real-world business impact.<!--excerpt_end-->
 
 # Simplifying Parquet & JSON Data Ingestion with Microsoft Fabric Shortcut Transformations

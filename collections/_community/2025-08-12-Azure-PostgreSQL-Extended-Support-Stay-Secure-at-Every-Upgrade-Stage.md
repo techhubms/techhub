@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure PostgreSQL Extended Support: Stay Secure at Every Upgrade Stage"
-description: "This post outlines the new Extended Support offering for Azure Database for PostgreSQL, providing essential details on how Microsoft helps organizations stay secure and supported even after a PostgreSQL version reaches end-of-life. It covers automatic enrollment, support timelines, eligibility criteria, and actionable guidance for upgrade planning and risk reduction."
-author: "andreatapia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/azure-postgresql-extended-support-stay-secure-at-every-stage-of/ba-p/4442283"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Azure PostgreSQL Extended Support: Stay Secure at Every Upgrade Stage'
+author: andreatapia
+canonical_url: https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/azure-postgresql-extended-support-stay-secure-at-every-stage-of/ba-p/4442283
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 16:17:14 +00:00
-permalink: "/2025-08-12-Azure-PostgreSQL-Extended-Support-Stay-Secure-at-Every-Upgrade-Stage.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Database For PostgreSQL", "Business Continuity", "Cloud Database Management", "Community", "Critical Workloads", "Database Lifecycle", "Database Security", "Downtime Mitigation", "Enterprise Workloads", "Extended Support", "Microsoft Azure", "PostgreSQL Upgrades", "Regulatory Compliance", "Security", "Security Patches", "Technical Support", "Version Retirement"]
-tags_normalized: ["azure", "azure database for postgresql", "business continuity", "cloud database management", "community", "critical workloads", "database lifecycle", "database security", "downtime mitigation", "enterprise workloads", "extended support", "microsoft azure", "postgresql upgrades", "regulatory compliance", "security", "security patches", "technical support", "version retirement"]
+permalink: /azure/community/Azure-PostgreSQL-Extended-Support-Stay-Secure-at-Every-Upgrade-Stage
+tags:
+- Azure
+- Azure Database For PostgreSQL
+- Business Continuity
+- Cloud Database Management
+- Community
+- Critical Workloads
+- Database Lifecycle
+- Database Security
+- Downtime Mitigation
+- Enterprise Workloads
+- Extended Support
+- Microsoft Azure
+- PostgreSQL Upgrades
+- Regulatory Compliance
+- Security
+- Security Patches
+- Technical Support
+- Version Retirement
+section_names:
+- azure
+- security
 ---
-
 andreatapia presents a detailed breakdown of Azure Database for PostgreSQL Extended Support, explaining how organizations can keep databases secure when older PostgreSQL versions reach end-of-life.<!--excerpt_end-->
 
 # Azure PostgreSQL Extended Support: Stay Secure at Every Upgrade Stage

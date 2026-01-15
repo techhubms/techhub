@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Using the macOS 26 Image in GitHub Actions Workflows"
-description: "This news post announces the public preview of the macOS 26 image for GitHub Actions, enabling developers to build and test iOS applications with the latest Xcode on ARM-based macOS runners. The post explains new runner labels, limitations related to hardware support, and provides resources for further information."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-actions-macos-26-image-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Using the macOS 26 Image in GitHub Actions Workflows
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-11-actions-macos-26-image-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 20:10:13 +00:00
-permalink: "/2025-09-11-Using-the-macOS-26-Image-in-GitHub-Actions-Workflows.html"
-categories: ["DevOps"]
-tags: ["Actions", "ARM64", "CI/CD", "Continuous Integration", "DevOps", "GitHub Actions", "Ios Development", "Macos 26", "News", "Release Management", "Runner Images", "Workflow Automation", "Xcode"]
-tags_normalized: ["actions", "arm64", "cislashcd", "continuous integration", "devops", "github actions", "ios development", "macos 26", "news", "release management", "runner images", "workflow automation", "xcode"]
+permalink: /devops/news/Using-the-macOS-26-Image-in-GitHub-Actions-Workflows
+tags:
+- Actions
+- ARM64
+- CI/CD
+- Continuous Integration
+- DevOps
+- GitHub Actions
+- Ios Development
+- Macos 26
+- News
+- Release Management
+- Runner Images
+- Workflow Automation
+- Xcode
+section_names:
+- devops
 ---
-
 Allison discusses the public preview release of the macOS 26 image for GitHub Actions, detailing how developers can use the latest Xcode and workflow labels for iOS CI/CD tasks.<!--excerpt_end-->
 
 # Actions: macOS 26 Image Now in Public Preview

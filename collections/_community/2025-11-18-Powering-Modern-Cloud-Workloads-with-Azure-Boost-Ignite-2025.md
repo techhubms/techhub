@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Powering Modern Cloud Workloads with Azure Boost: Ignite 2025"
-description: "This post details the next generation of Azure Boost, unveiled at Ignite 2025. Azure Boost introduces hardware/software offloading for virtualization workloads, offering major performance gains, improved networking, and advanced security via confidential computing. The update covers features like ABCD (Azure Boost Confidential Device), support for up to 1M IOPS and 400Gbps networking, integration with attested hardware using PCIe encryption, and recommendations for optimal VM driver configurations to maximize reliability and scale for demanding workloads including AI, analytics, and enterprise apps."
-author: "Max_Uritsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/ba-p/4470793"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Powering Modern Cloud Workloads with Azure Boost: Ignite 2025'
+author: Max_Uritsky
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/ba-p/4470793
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Powering-Modern-Cloud-Workloads-with-Azure-Boost-Ignite-2025.html"
-categories: ["Azure", "Security"]
-tags: ["ABCD", "Active Active Resiliency", "Attestation", "Azure", "Azure Boost", "Azure Infrastructure", "Azure VM", "Cloud Infrastructure", "Community", "Confidential Computing", "Enterprise Workloads", "High Throughput", "Ignite", "IOPS", "MANA Drivers", "Networking", "PCIe Encryption", "Performance", "RDMA", "Security", "TDISP", "Virtualization"]
-tags_normalized: ["abcd", "active active resiliency", "attestation", "azure", "azure boost", "azure infrastructure", "azure vm", "cloud infrastructure", "community", "confidential computing", "enterprise workloads", "high throughput", "ignite", "iops", "mana drivers", "networking", "pcie encryption", "performance", "rdma", "security", "tdisp", "virtualization"]
+permalink: /azure/community/Powering-Modern-Cloud-Workloads-with-Azure-Boost-Ignite-2025
+tags:
+- ABCD
+- Active Active Resiliency
+- Attestation
+- Azure
+- Azure Boost
+- Azure Infrastructure
+- Azure VM
+- Cloud Infrastructure
+- Community
+- Confidential Computing
+- Enterprise Workloads
+- High Throughput
+- Ignite
+- IOPS
+- MANA Drivers
+- Networking
+- PCIe Encryption
+- Performance
+- RDMA
+- Security
+- TDISP
+- Virtualization
+section_names:
+- azure
+- security
 ---
-
 Max_Uritsky introduces Azure Boost at Ignite 2025—exploring new hardware-driven virtualization, enhanced networking, and advanced security with confidential computing for Azure VMs.<!--excerpt_end-->
 
 # Powering Modern Cloud Workloads with Azure Boost: Ignite 2025

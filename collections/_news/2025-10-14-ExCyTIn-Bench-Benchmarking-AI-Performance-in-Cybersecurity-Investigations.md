@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "ExCyTIn-Bench: Benchmarking AI Performance in Cybersecurity Investigations"
-description: "This news piece introduces ExCyTIn-Bench, an open-source benchmarking tool from Microsoft that evaluates how well AI models perform in realistic cybersecurity scenarios. The tool leverages data-rich, multistage investigations within Azure-based SOC environments, using Microsoft Sentinel log tables and integration with security products like Defender and Security Copilot. ExCyTIn-Bench provides actionable, fine-grained metrics beyond traditional benchmarks to drive better model selection and ongoing innovation for security teams."
-author: "Anand Mudgerikar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'ExCyTIn-Bench: Benchmarking AI Performance in Cybersecurity Investigations'
+author: Anand Mudgerikar
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-14 16:00:00 +00:00
-permalink: "/2025-10-14-ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Benchmarking", "AI Security", "Azure", "Cybersecurity", "Defender", "ExCyTIn Bench", "Incident Graphs", "LLM Evaluation", "Microsoft", "Microsoft Sentinel", "News", "Open Source", "Security", "Security Copilot", "Security Operations Center", "SOC", "Threat Investigation"]
-tags_normalized: ["ai", "ai benchmarking", "ai security", "azure", "cybersecurity", "defender", "excytin bench", "incident graphs", "llm evaluation", "microsoft", "microsoft sentinel", "news", "open source", "security", "security copilot", "security operations center", "soc", "threat investigation"]
+permalink: /ai/news/ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations
+tags:
+- AI
+- AI Benchmarking
+- AI Security
+- Azure
+- Cybersecurity
+- Defender
+- ExCyTIn Bench
+- Incident Graphs
+- LLM Evaluation
+- Microsoft
+- Microsoft Sentinel
+- News
+- Open Source
+- Security
+- Security Copilot
+- Security Operations Center
+- SOC
+- Threat Investigation
+section_names:
+- ai
+- azure
+- security
 ---
-
 Anand Mudgerikar presents ExCyTIn-Bench, Microsoft's open-source framework for evaluating AI systems in complex cybersecurity investigations, combining Azure SOC simulations and Sentinel logs for advanced, actionable model benchmarking.<!--excerpt_end-->
 
 # ExCyTIn-Bench: Benchmarking AI for Real-World Cybersecurity Investigations

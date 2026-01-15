@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Advanced Techniques for Documenting Code with GitHub Copilot"
-description: "This episode of Prompt Driven Development features Maxim Salnikov, AI Dev Tools Solution Engineer at Microsoft, demonstrating advanced documentation strategies using GitHub Copilot. The session covers generating polished READMEs, API documentation, and inline comments using prompt engineering, as well as exploring BYOK (Bring Your Own Key) for connecting custom AI model keys in Copilot and utilizing prompt files in Visual Studio Code to standardize code workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zRZLBiO4DYA"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Advanced Techniques for Documenting Code with GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=zRZLBiO4DYA
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-29 14:01:44 +00:00
-permalink: "/2025-09-29-Advanced-Techniques-for-Documenting-Code-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Dev Tools", "API Documentation", "APIKeys", "BYOK", "Code", "Code Comments", "Code Generation", "Coding", "Copilot", "Demo", "Developer Tools", "Documentation", "GitHub Copilot", "Microsoft", "Ppd", "Prompt Engineering", "Prompt Files", "Promptdrivendevelopment", "README", "Videos", "VS Code", "Workflows"]
-tags_normalized: ["ai", "ai dev tools", "api documentation", "apikeys", "byok", "code", "code comments", "code generation", "coding", "copilot", "demo", "developer tools", "documentation", "github copilot", "microsoft", "ppd", "prompt engineering", "prompt files", "promptdrivendevelopment", "readme", "videos", "vs code", "workflows"]
+permalink: /github-copilot/videos/Advanced-Techniques-for-Documenting-Code-with-GitHub-Copilot
+tags:
+- AI
+- AI Dev Tools
+- API Documentation
+- APIKeys
+- BYOK
+- Code
+- Code Comments
+- Code Generation
+- Coding
+- Copilot
+- Demo
+- Developer Tools
+- Documentation
+- GitHub Copilot
+- Microsoft
+- Ppd
+- Prompt Engineering
+- Prompt Files
+- Promptdrivendevelopment
+- README
+- Videos
+- VS Code
+- Workflows
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's team, led by Maxim Salnikov, showcases how to leverage GitHub Copilot for advanced code documentation, including README and API docs generation, prompt engineering techniques, and custom AI model integration.<!--excerpt_end-->
 
 {% youtube zRZLBiO4DYA %}

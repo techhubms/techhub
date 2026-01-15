@@ -1,20 +1,40 @@
----
-layout: "post"
-title: ".NET Day on Agentic Modernization"
-description: ".NET Day on Agentic Modernization demonstrates how developers can modernize legacy applications, improve reliability, and build advanced agentic applications using .NET. Topics include upgrading with GitHub Copilot in Visual Studio, migrating to Azure App Service Managed Instance, utilizing Azure SRE Agent, and building agentic solutions with Microsoft Agent Framework and Azure AI Foundry."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JLCl5lh-tw8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Day on Agentic Modernization
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=JLCl5lh-tw8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-23 03:55:17 +00:00
-permalink: "/2025-10-23-NET-Day-on-Agentic-Modernization.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agentic Applications", "AI", "AI Development", "App Modernization", "Azure", "Azure AI Foundry", "Azure App Service", "Azure MCP", "Azure Migration", "Azure SRE Agent", "Cloud Development", "Coding", "DevOps", "GitHub Copilot", "Managed Instance", "Microsoft Agent Framework", "Videos", "VS"]
-tags_normalized: ["dotnet", "agentic applications", "ai", "ai development", "app modernization", "azure", "azure ai foundry", "azure app service", "azure mcp", "azure migration", "azure sre agent", "cloud development", "coding", "devops", "github copilot", "managed instance", "microsoft agent framework", "videos", "vs"]
+permalink: /github-copilot/videos/NET-Day-on-Agentic-Modernization
+tags:
+- .NET
+- Agentic Applications
+- AI
+- AI Development
+- App Modernization
+- Azure
+- Azure AI Foundry
+- Azure App Service
+- Azure MCP
+- Azure Migration
+- Azure SRE Agent
+- Cloud Development
+- Coding
+- DevOps
+- GitHub Copilot
+- Managed Instance
+- Microsoft Agent Framework
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 dotnet presents .NET Day on Agentic Modernization, focusing on accelerating modernization, enabling agentic experiences, and automating Azure development with tools like GitHub Copilot and Microsoft Agent Framework.<!--excerpt_end-->
 
 {% youtube JLCl5lh-tw8 %}

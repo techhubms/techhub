@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Generative AI in Azure: A Practical Guide to Getting Started"
-description: "This comprehensive guide introduces developers and organizations to generative AI technologies available in Microsoft Azure. It covers essential Azure services such as Azure OpenAI Service, Azure Machine Learning, and Azure Cognitive Services, providing practical guidance on setup, integration, customization, and responsible AI usage, along with real-world use cases."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Generative AI in Azure: A Practical Guide to Getting Started'
+author: Dellenny
+canonical_url: https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-22 08:40:58 +00:00
-permalink: "/2025-09-22-Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Governance", "API Integration", "Azure", "Azure AI Studio", "Azure Cognitive Services", "Azure Machine Learning", "Azure OpenAI Service", "Blogs", "Cloud Development", "Computer Vision", "Content Generation", "DALL·E", "Enterprise AI", "GenAI", "Generative AI", "GPT", "Large Language Models", "Model Fine Tuning", "Prompt Engineering", "Python", "Responsible AI", "REST API", "Speech Services"]
-tags_normalized: ["ai", "ai governance", "api integration", "azure", "azure ai studio", "azure cognitive services", "azure machine learning", "azure openai service", "blogs", "cloud development", "computer vision", "content generation", "dalle", "enterprise ai", "genai", "generative ai", "gpt", "large language models", "model fine tuning", "prompt engineering", "python", "responsible ai", "rest api", "speech services"]
+permalink: /ai/blogs/Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started
+tags:
+- AI
+- AI Governance
+- API Integration
+- Azure
+- Azure AI Studio
+- Azure Cognitive Services
+- Azure Machine Learning
+- Azure OpenAI Service
+- Blogs
+- Cloud Development
+- Computer Vision
+- Content Generation
+- DALL·E
+- Enterprise AI
+- GenAI
+- Generative AI
+- GPT
+- Large Language Models
+- Model Fine Tuning
+- Prompt Engineering
+- Python
+- Responsible AI
+- REST API
+- Speech Services
+section_names:
+- ai
+- azure
 ---
-
 Dellenny presents a practical overview of using generative AI in Azure, outlining essential services and actionable steps for developers and organizations to harness powerful AI capabilities in their applications.<!--excerpt_end-->
 
 # Generative AI in Azure: A Practical Guide to Getting Started

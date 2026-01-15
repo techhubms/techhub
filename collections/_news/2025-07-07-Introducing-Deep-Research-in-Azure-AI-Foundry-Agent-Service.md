@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing Deep Research in Azure AI Foundry Agent Service"
-description: "Microsoft announces the public preview of Deep Research in Azure AI Foundry, an API and SDK-based agentic research capability built on OpenAI models. This tool automates enterprise-scale web research, offering programmable, composable, and auditable agents for advanced information synthesis and integration with Azure workflows."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Deep Research in Azure AI Foundry Agent Service
+author: Yina Arenas
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-07 17:00:00 +00:00
-permalink: "/2025-07-07-Introducing-Deep-Research-in-Azure-AI-Foundry-Agent-Service.html"
-categories: ["AI", "Azure"]
-tags: ["Agents", "AI", "AI + Machine Learning", "API", "Azure", "Azure AI Foundry", "Azure Functions", "Azure Logic Apps", "Bing Search", "Compliance", "Compute", "Containers", "Deep Research", "Enterprise Automation", "GPT 4", "Integration", "Internet Of Things", "News", "OpenAI", "Pricing", "SDK", "Web Research"]
-tags_normalized: ["agents", "ai", "ai plus machine learning", "api", "azure", "azure ai foundry", "azure functions", "azure logic apps", "bing search", "compliance", "compute", "containers", "deep research", "enterprise automation", "gpt 4", "integration", "internet of things", "news", "openai", "pricing", "sdk", "web research"]
+permalink: /ai/news/Introducing-Deep-Research-in-Azure-AI-Foundry-Agent-Service
+tags:
+- Agents
+- AI
+- AI + Machine Learning
+- API
+- Azure
+- Azure AI Foundry
+- Azure Functions
+- Azure Logic Apps
+- Bing Search
+- Compliance
+- Compute
+- Containers
+- Deep Research
+- Enterprise Automation
+- GPT 4
+- Integration
+- Internet Of Things
+- News
+- OpenAI
+- Pricing
+- SDK
+- Web Research
+section_names:
+- ai
+- azure
 ---
-
 Authored by Yina Arenas, this article introduces Deep Research in Azure AI Foundry Agent Service, detailing its features and benefits for enterprise AI-driven research automation using API and SDK integrations.<!--excerpt_end-->
 
 # Introducing Deep Research in Azure AI Foundry Agent Service

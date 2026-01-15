@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Deploying a Low-Light Image Enhancer (Python + OpenCV) on Azure App Service"
-description: "This article details the implementation of a lightweight, explainable Python image enhancement app using Flask and OpenCV. It walks through the core code pipeline (CLAHE, gamma correction, brightness, and saturation), shows how to deploy the solution to Azure App Service for Linux with Azure Developer CLI, and gives technical tuning tips. The app processes image uploads to instantly improve low-light photos directly in the browser."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying a Low-Light Image Enhancer (Python + OpenCV) on Azure App Service
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 07:33:04 +00:00
-permalink: "/2025-11-04-Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service.html"
-categories: ["Azure", "Coding"]
-tags: ["App Architecture", "Azure", "Azure App Service", "Azure Developer CLI", "Brightness Adjustment", "CLAHE", "Coding", "Community", "Deployment", "Flask", "Gamma Correction", "Image Processing", "Linux", "NumPy", "OpenCV", "Python", "Saturation Boost", "Web Application"]
-tags_normalized: ["app architecture", "azure", "azure app service", "azure developer cli", "brightness adjustment", "clahe", "coding", "community", "deployment", "flask", "gamma correction", "image processing", "linux", "numpy", "opencv", "python", "saturation boost", "web application"]
+permalink: /coding/community/Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service
+tags:
+- App Architecture
+- Azure
+- Azure App Service
+- Azure Developer CLI
+- Brightness Adjustment
+- CLAHE
+- Coding
+- Community
+- Deployment
+- Flask
+- Gamma Correction
+- Image Processing
+- Linux
+- NumPy
+- OpenCV
+- Python
+- Saturation Boost
+- Web Application
+section_names:
+- azure
+- coding
 ---
-
 TulikaC presents a Python and OpenCV-based web app for enhancing low-light images, with practical deployment instructions for Azure App Service. This guide covers the key steps in setting up the enhancement pipeline and deploying using Azure Developer CLI.<!--excerpt_end-->
 
 # Deploying a Low-Light Image Enhancer (Python + OpenCV) on Azure App Service

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools"
-description: "This news highlights recent improvements to the GitHub MCP Server, including the introduction of server instructions for guiding AI models and the consolidation of multiple tools into streamlined multifunctional ones. The update enhances workflow precision for tasks like pull request reviews, issue management, and offers easier server configuration through new keywords."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-29 09:07:43 +00:00
-permalink: "/2025-10-29-Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Assisted Development", "Code Security", "Copilot", "Default Toolset", "DevOps", "DevOps Automation", "GitHub MCP Server", "Issue Management", "MCP", "Multitool Workflows", "News", "Pull Request Review", "Repository Configuration", "Server Instructions", "Tool Consolidation"]
-tags_normalized: ["ai", "ai assisted development", "code security", "copilot", "default toolset", "devops", "devops automation", "github mcp server", "issue management", "mcp", "multitool workflows", "news", "pull request review", "repository configuration", "server instructions", "tool consolidation"]
+permalink: /ai/news/Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools
+tags:
+- AI
+- AI Assisted Development
+- Code Security
+- Copilot
+- Default Toolset
+- DevOps
+- DevOps Automation
+- GitHub MCP Server
+- Issue Management
+- MCP
+- Multitool Workflows
+- News
+- Pull Request Review
+- Repository Configuration
+- Server Instructions
+- Tool Consolidation
+section_names:
+- ai
+- devops
 ---
-
 Allison reports on the latest GitHub MCP Server update, detailing new server instructions for guiding models and the consolidation of tools to support more efficient developer workflows.<!--excerpt_end-->
 
 # Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools

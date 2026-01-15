@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "The Agentic AI-Driven Future of Telemetry"
-description: "This article explores how telemetry in IT operations is evolving from passive data collection to a new agentic AI-driven paradigm. It details the key challenges with traditional telemetry—such as context gaps, legacy architectures, and unsustainable growth—and presents AI-first architectures that enable contextual, actionable telemetry. The discussion highlights the importance of combining machine-generated and human-generated context, and how intelligent agents can automate incident investigation and remediation. Key architectural shifts, including schema-agnostic ingestion, federated data stores, and operator empowerment, are explained for practitioners planning AI-driven observability systems."
-author: "Perry Correll"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-agentic-ai-driven-future-of-telemetry/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: The Agentic AI-Driven Future of Telemetry
+author: Perry Correll
+canonical_url: https://devops.com/the-agentic-ai-driven-future-of-telemetry/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-23 08:11:28 +00:00
-permalink: "/2025-10-23-The-Agentic-AI-Driven-Future-of-Telemetry.html"
-categories: ["AI", "DevOps"]
-tags: ["10x Investigators", "Agentic Telemetry", "AI", "AI Driven Operations", "AI First Architecture", "AI Infrastructure", "AI Observability", "AI Reasoning", "AI Scalability", "Analytics", "Automation", "Autonomous Agents", "Blogs", "Business Of DevOps", "Cloud Operations", "Context Fusion", "Contextual Telemetry", "Contributed Content", "Data Enrichment", "DevOps", "Human in The Loop", "Incident Response", "KubeCon + CloudNativeCon Europe", "KubeCon + CNC NA", "MELT Stack", "Metrics Events Logs Traces", "Observability Platforms", "OCSF", "OpenTelemetry", "Schema Agnostic Architecture", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry Normalization"]
-tags_normalized: ["10x investigators", "agentic telemetry", "ai", "ai driven operations", "ai first architecture", "ai infrastructure", "ai observability", "ai reasoning", "ai scalability", "analytics", "automation", "autonomous agents", "blogs", "business of devops", "cloud operations", "context fusion", "contextual telemetry", "contributed content", "data enrichment", "devops", "human in the loop", "incident response", "kubecon plus cloudnativecon europe", "kubecon plus cnc na", "melt stack", "metrics events logs traces", "observability platforms", "ocsf", "opentelemetry", "schema agnostic architecture", "social facebook", "social linkedin", "social x", "telemetry normalization"]
+permalink: /ai/blogs/The-Agentic-AI-Driven-Future-of-Telemetry
+tags:
+- 10x Investigators
+- Agentic Telemetry
+- AI
+- AI Driven Operations
+- AI First Architecture
+- AI Infrastructure
+- AI Observability
+- AI Reasoning
+- AI Scalability
+- Analytics
+- Automation
+- Autonomous Agents
+- Blogs
+- Business Of DevOps
+- Cloud Operations
+- Context Fusion
+- Contextual Telemetry
+- Contributed Content
+- Data Enrichment
+- DevOps
+- Human in The Loop
+- Incident Response
+- KubeCon + CloudNativeCon Europe
+- KubeCon + CNC NA
+- MELT Stack
+- Metrics Events Logs Traces
+- Observability Platforms
+- OCSF
+- OpenTelemetry
+- Schema Agnostic Architecture
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry Normalization
+section_names:
+- ai
+- devops
 ---
-
 Perry Correll examines the shift to agentic AI-driven telemetry, explaining how combining machine and human context enables intelligent observability and self-healing IT systems.<!--excerpt_end-->
 
 # The Agentic AI-Driven Future of Telemetry

@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "Multi-Models"
-description: "Access multiple AI models for different coding tasks"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/EzEH3wg6GaI"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Multi-Models
+author: Randy Pagels
+canonical_url: https://youtu.be/EzEH3wg6GaI
 date: 2024-12-16 20:42:19 +00:00
-permalink: "/2024-12-16-Multi-Models.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "LLM", "Multi Feature", "Videos"]
-tags_normalized: ["ai", "github copilot", "llm", "multi feature", "videos"]
+permalink: /github-copilot/videos/Multi-Models
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- LLM
+- Multi Feature
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Multi-Models feature. Access multiple AI models through Copilot for different tasks.<!--excerpt_end-->
 
 {% youtube EzEH3wg6GaI %}

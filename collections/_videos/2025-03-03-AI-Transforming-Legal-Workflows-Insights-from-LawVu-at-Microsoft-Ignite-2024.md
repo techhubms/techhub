@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI Transforming Legal Workflows: Insights from LawVu at Microsoft Ignite 2024"
-description: "This interview features Sarah Webb of LawVu at Microsoft Ignite 2024, discussing practical ways AI is integrated into legal SaaS workflows. It explains how contextual AI applications solve legal sector challenges, with real-world examples such as contract summarization, key date extraction, and workflow integration. The conversation highlights how AI reduces administrative burden, enabling legal professionals to focus on strategic, value-added work in regulated industries."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zqllWICJ35s"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Transforming Legal Workflows: Insights from LawVu at Microsoft Ignite 2024'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=zqllWICJ35s
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-03 22:00:45 +00:00
-permalink: "/2025-03-03-AI-Transforming-Legal-Workflows-Insights-from-LawVu-at-Microsoft-Ignite-2024.html"
-categories: ["AI"]
-tags: ["AI", "AI in Legal", "AI Integration", "AI Solutions", "Contextual AI", "Contract Summarization", "Customer Insights", "Key Date Extraction", "LawVu", "Legal Industry", "Legal Workflows", "Microsoft", "Microsoft Ignite", "Regulated Industries", "SaaS", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai in legal", "ai integration", "ai solutions", "contextual ai", "contract summarization", "customer insights", "key date extraction", "lawvu", "legal industry", "legal workflows", "microsoft", "microsoft ignite", "regulated industries", "saas", "videos", "workflow automation"]
+permalink: /ai/videos/AI-Transforming-Legal-Workflows-Insights-from-LawVu-at-Microsoft-Ignite-2024
+tags:
+- AI
+- AI in Legal
+- AI Integration
+- AI Solutions
+- Contextual AI
+- Contract Summarization
+- Customer Insights
+- Key Date Extraction
+- LawVu
+- Legal Industry
+- Legal Workflows
+- Microsoft
+- Microsoft Ignite
+- Regulated Industries
+- SaaS
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Sarah Webb of LawVu joins Microsoft Ignite 2024 to share how her team is implementing AI in legal SaaS platforms, offering examples and real-world guidance on streamlining legal processes with contextual AI solutions.<!--excerpt_end-->
 
 {% youtube zqllWICJ35s %}

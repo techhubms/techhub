@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft GenAI for Energy Permitting Solution Accelerator"
-description: "This video introduces Microsoft's GenAI Solution Accelerator for energy permitting, leveraging Azure-based generative AI to address regulatory challenges. The presentation demonstrates agentic AI workflows that automate document creation and compliance checks, expediting approval processes and enhancing speed, accuracy, and scalability within the energy sector."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wCI6Oqiv4KQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: Microsoft GenAI for Energy Permitting Solution Accelerator
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=wCI6Oqiv4KQ
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-10-16 14:01:36 +00:00
-permalink: "/2025-10-16-Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Workflows", "Azure", "Compliance Checks", "Document Automation", "Energy", "Energy Permitting", "Energy Sector", "Energy Transition", "GenAI", "Generative AI", "Intelligent Automation", "Microsoft", "Microsoft Cloud", "MicrosoftCloud", "Permitting", "Regulatory Automation", "Solution Accelerator", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai workflows", "azure", "compliance checks", "document automation", "energy", "energy permitting", "energy sector", "energy transition", "genai", "generative ai", "intelligent automation", "microsoft", "microsoft cloud", "microsoftcloud", "permitting", "regulatory automation", "solution accelerator", "videos"]
+permalink: /ai/videos/Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator
+tags:
+- Agentic AI
+- AI
+- AI Workflows
+- Azure
+- Compliance Checks
+- Document Automation
+- Energy
+- Energy Permitting
+- Energy Sector
+- Energy Transition
+- GenAI
+- Generative AI
+- Intelligent Automation
+- Microsoft
+- Microsoft Cloud
+- MicrosoftCloud
+- Permitting
+- Regulatory Automation
+- Solution Accelerator
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Cloud presents a solution accelerator using generative AI on Azure to streamline energy permitting, automating document creation and compliance for faster regulatory approvals.<!--excerpt_end-->
 
 {% youtube wCI6Oqiv4KQ %}

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Optimize Savings with Microsoft Fabric Reservations"
-description: "This Azure Essentials Show episode explores how organizations can maximize cost savings and operational efficiency when adopting Microsoft Fabric, an end-to-end analytics platform. Hosts Thomas and Priyanshi break down Azure reservation strategies, demonstrate the purchasing process for Fabric capacity in the Azure Portal, and share best practices for estimating and managing reservations. The session offers actionable guidance and highlights key tools like the Fabric SKU estimator, Azure Advisor, and cost management resources. Viewers will learn practical steps to optimize Fabric deployments and streamline analytics operations in the Microsoft cloud ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=B7TUkcCDTOg"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Optimize Savings with Microsoft Fabric Reservations
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=B7TUkcCDTOg
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 07:00:09 +00:00
-permalink: "/2025-10-30-Optimize-Savings-with-Microsoft-Fabric-Reservations.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Marketplace", "Azure Portal", "Azure Reservations", "Capacity Planning", "Cloud Cost Optimization", "Cloud Purchasing", "Cost Management", "Data Analytics", "Microsoft Fabric", "Microsoft Fabric Capacity", "Videos", "Workload Management"]
-tags_normalized: ["azure", "azure advisor", "azure marketplace", "azure portal", "azure reservations", "capacity planning", "cloud cost optimization", "cloud purchasing", "cost management", "data analytics", "microsoft fabric", "microsoft fabric capacity", "videos", "workload management"]
+permalink: /azure/videos/Optimize-Savings-with-Microsoft-Fabric-Reservations
+tags:
+- Azure
+- Azure Advisor
+- Azure Marketplace
+- Azure Portal
+- Azure Reservations
+- Capacity Planning
+- Cloud Cost Optimization
+- Cloud Purchasing
+- Cost Management
+- Data Analytics
+- Microsoft Fabric
+- Microsoft Fabric Capacity
+- Videos
+- Workload Management
+section_names:
+- azure
 ---
-
 In this Azure Essentials Show episode, Microsoft Developer’s Thomas Maurer and Priyanshi Mittal explain how to reduce costs and simplify cloud resource management using Microsoft Fabric reservations and purchasing strategies.<!--excerpt_end-->
 
 {% youtube B7TUkcCDTOg %}

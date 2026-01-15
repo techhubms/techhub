@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Securing the Open Source Supply Chain: Impact of the GitHub Secure Open Source Fund"
-description: "This comprehensive report details how the GitHub Secure Open Source Fund enabled 71 high-impact open source projects to enhance their supply chain security. Through a combination of direct funding, expert mentorship, and actionable security tooling—in particular via CodeQL and GitHub Copilot—maintainers implemented best practices, vulnerability remediation, and long-term cultural changes. Microsoft's role as a supporting partner is noted, and lessons learned in the realm of AI/ML, web, DevOps, and security tooling are shared for the broader community."
-author: "Kevin Crosby"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Securing the Open Source Supply Chain: Impact of the GitHub Secure Open Source Fund'
+author: Kevin Crosby
+canonical_url: https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-11 16:00:00 +00:00
-permalink: "/2025-08-11-Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Security", "AutoGPT", "CodeQL", "Dependency Management", "DevOps", "DevOps Tooling", "Fuzz Testing", "GitHub Secure Open Source Fund", "GitHub Security Lab", "Incident Response", "Log4j", "Maintainers", "Microsoft", "News", "Ollama", "Open Source", "Open Source Security", "Secret Scanning", "Secure Development", "Security", "Security Best Practices", "Supply Chain Security", "Threat Modeling", "Vulnerability Remediation"]
-tags_normalized: ["ai", "ai security", "autogpt", "codeql", "dependency management", "devops", "devops tooling", "fuzz testing", "github secure open source fund", "github security lab", "incident response", "log4j", "maintainers", "microsoft", "news", "ollama", "open source", "open source security", "secret scanning", "secure development", "security", "security best practices", "supply chain security", "threat modeling", "vulnerability remediation"]
+permalink: /ai/news/Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund
+tags:
+- AI
+- AI Security
+- AutoGPT
+- CodeQL
+- Dependency Management
+- DevOps
+- DevOps Tooling
+- Fuzz Testing
+- GitHub Secure Open Source Fund
+- GitHub Security Lab
+- Incident Response
+- Log4j
+- Maintainers
+- Microsoft
+- News
+- Ollama
+- Open Source
+- Open Source Security
+- Secret Scanning
+- Secure Development
+- Security
+- Security Best Practices
+- Supply Chain Security
+- Threat Modeling
+- Vulnerability Remediation
+section_names:
+- ai
+- devops
+- security
 ---
-
 Authored by Kevin Crosby, this article highlights how 71 critical open source projects—supported by the GitHub Secure Open Source Fund and partners like Microsoft—improved their security posture with tangible results and shared strategies.<!--excerpt_end-->
 
 # Securing the Supply Chain at Scale: Insights from the GitHub Secure Open Source Fund

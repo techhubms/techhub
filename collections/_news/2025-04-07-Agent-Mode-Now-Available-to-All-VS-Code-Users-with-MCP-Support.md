@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agent Mode Now Available to All VS Code Users with MCP Support"
-description: "This article by Isidor Nikolic presents the general availability of Agent Mode in Visual Studio Code, providing developers with an autonomous coding assistant that automates multi-step programming tasks, integrates external tools via extensions or MCP servers, and enhances workflow customization. Agent Mode now empowers every user to leverage advanced AI features and workflow extensibility, making coding more productive and interactive."
-author: "Isidor Nikolic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/04/07/agentMode"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Agent Mode Now Available to All VS Code Users with MCP Support
+author: Isidor Nikolic
+canonical_url: https://code.visualstudio.com/blogs/2025/04/07/agentMode
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-04-07 00:00:00 +00:00
-permalink: "/2025-04-07-Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Mode", "AI", "AI Pair Programming", "AI Tools", "AI Workflows", "Autonomous Agents", "Chat UI", "Code Automation", "Code Editing", "Coding", "Developer Productivity", "Language Server Protocol", "LLM Integration", "MCP", "News", "Terminal Automation", "Tool Extensibility", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent mode", "ai", "ai pair programming", "ai tools", "ai workflows", "autonomous agents", "chat ui", "code automation", "code editing", "coding", "developer productivity", "language server protocol", "llm integration", "mcp", "news", "terminal automation", "tool extensibility", "vs code", "vs code extensions"]
+permalink: /ai/news/Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support
+tags:
+- Agent Mode
+- AI
+- AI Pair Programming
+- AI Tools
+- AI Workflows
+- Autonomous Agents
+- Chat UI
+- Code Automation
+- Code Editing
+- Coding
+- Developer Productivity
+- Language Server Protocol
+- LLM Integration
+- MCP
+- News
+- Terminal Automation
+- Tool Extensibility
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
 ---
-
 Isidor Nikolic from the VS Code team introduces Agent Mode, now accessible to all users. This update enables developers to automate coding tasks, customize workflows with MCP servers and extensions, and experience streamlined AI integration in Visual Studio Code.<!--excerpt_end-->
 
 # Agent Mode Now Available to All VS Code Users with MCP Support

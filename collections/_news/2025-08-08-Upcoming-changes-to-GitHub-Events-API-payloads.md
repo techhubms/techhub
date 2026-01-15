@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Upcoming changes to GitHub Events API payloads"
-description: "This update details key improvements to the GitHub Events API, including reduced payload sizes, faster event availability, and removal of certain fields for performance gains. The article outlines changes to event types, implications for integrators, rollout timelines, and guidance for developers relying on the affected fields."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-08-upcoming-changes-to-github-events-api-payloads"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Upcoming changes to GitHub Events API payloads
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-08-upcoming-changes-to-github-events-api-payloads
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-08 17:41:32 +00:00
-permalink: "/2025-08-08-Upcoming-changes-to-GitHub-Events-API-payloads.html"
-categories: ["DevOps"]
-tags: ["API Changes", "API Migration", "API Performance", "Community Announcements", "Developer Integrations", "DevOps", "Event Delivery", "Feature Rollout", "GitHub", "GitHub Events API", "News", "Payload Optimization", "Pull Request Events", "Push Events", "REST API", "Scalability", "Webhooks"]
-tags_normalized: ["api changes", "api migration", "api performance", "community announcements", "developer integrations", "devops", "event delivery", "feature rollout", "github", "github events api", "news", "payload optimization", "pull request events", "push events", "rest api", "scalability", "webhooks"]
+permalink: /devops/news/Upcoming-changes-to-GitHub-Events-API-payloads
+tags:
+- API Changes
+- API Migration
+- API Performance
+- Community Announcements
+- Developer Integrations
+- DevOps
+- Event Delivery
+- Feature Rollout
+- GitHub
+- GitHub Events API
+- News
+- Payload Optimization
+- Pull Request Events
+- Push Events
+- REST API
+- Scalability
+- Webhooks
+section_names:
+- devops
 ---
-
 Allison provides an overview of upcoming changes to the GitHub Events API, detailing improvements in performance and recommendations for developers who rely on this API.<!--excerpt_end-->
 
 # Upcoming changes to GitHub Events API payloads

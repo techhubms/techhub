@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen"
-description: "In this episode of Mr. Maeda's Cozy AI Kitchen, Sarah DeAtley from Microsoft introduces a new no-code tool that brings AI agents, powered by GPT-4.1 and Azure OpenAI, directly into spreadsheet workflows. The discussion covers natural language prompting, custom AI agent creation, and practical demos ranging from meal planning to data analysis. Designed for data scientists, product managers, and designers, the episode reveals how these innovations simplify handling complex text data, automate summaries, and boost productivity—all without writing code."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=koBGu8PNeds"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=koBGu8PNeds
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-09 15:19:04 +00:00
-permalink: "/2025-09-09-Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Automation", "Azure", "Azure OpenAI", "CalcLM", "Cloud Computing", "Data Analysis", "Data Science", "Dev", "Development", "Executive Summaries", "Foundry Labs", "GPT 4.1", "Machine Learning", "Microsoft", "Natural Language Processing", "No Code", "Product Management", "Spreadsheets", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai agents", "automation", "azure", "azure openai", "calclm", "cloud computing", "data analysis", "data science", "dev", "development", "executive summaries", "foundry labs", "gpt 4dot1", "machine learning", "microsoft", "natural language processing", "no code", "product management", "spreadsheets", "tech", "technology", "videos"]
+permalink: /ai/videos/Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen
+tags:
+- AI
+- AI Agents
+- Automation
+- Azure
+- Azure OpenAI
+- CalcLM
+- Cloud Computing
+- Data Analysis
+- Data Science
+- Dev
+- Development
+- Executive Summaries
+- Foundry Labs
+- GPT 4.1
+- Machine Learning
+- Microsoft
+- Natural Language Processing
+- No Code
+- Product Management
+- Spreadsheets
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft's Sarah DeAtley walks through how AI agents, leveraging GPT-4.1 and Azure OpenAI, can be integrated into spreadsheets with the no-code CalcLM tool, as featured in Mr. Maeda's Cozy AI Kitchen.<!--excerpt_end-->
 
 {% youtube koBGu8PNeds %}

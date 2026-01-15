@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows"
-description: "This article introduces Spec-Driven Development (SDD) and the GitHub Spec Kit, an open-source toolkit enabling developers to define requirements, plan technical architectures, and manage tasks through AI agents like GitHub Copilot. Learn how structured specifications lead to more maintainable software, facilitate collaboration, and streamline building with AI-powered tools in environments like Visual Studio Code."
-author: "Den Delimarsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows'
+author: Den Delimarsky
+canonical_url: https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-15 21:19:55 +00:00
-permalink: "/2025-09-15-Spec-Driven-Development-with-GitHub-Spec-Kit-Streamlining-AI-Assisted-Coding-Workflows.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "AI Assisted Coding", "Automation", "Coding", "Development Workflows", "GitHub", "GitHub Copilot", "GitHub Spec Kit", "News", "Open Source Tools", "Project Templates", "Python", "Requirements Engineering", "SDD", "Spec Driven Development", "Specify CLI", "VS Code"]
-tags_normalized: ["ai", "ai agents", "ai assisted coding", "automation", "coding", "development workflows", "github", "github copilot", "github spec kit", "news", "open source tools", "project templates", "python", "requirements engineering", "sdd", "spec driven development", "specify cli", "vs code"]
+permalink: /github-copilot/news/Spec-Driven-Development-with-GitHub-Spec-Kit-Streamlining-AI-Assisted-Coding-Workflows
+tags:
+- AI
+- AI Agents
+- AI Assisted Coding
+- Automation
+- Coding
+- Development Workflows
+- GitHub
+- GitHub Copilot
+- GitHub Spec Kit
+- News
+- Open Source Tools
+- Project Templates
+- Python
+- Requirements Engineering
+- SDD
+- Spec Driven Development
+- Specify CLI
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Den Delimarsky delves into how developers can use GitHub Spec Kit and Spec-Driven Development (SDD) practices to enhance AI-assisted software projects. The article explores practical workflows, specification management, and integration with GitHub Copilot to streamline development.<!--excerpt_end-->
 
 # Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows

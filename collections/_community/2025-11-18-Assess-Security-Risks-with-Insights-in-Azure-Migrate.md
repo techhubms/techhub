@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Assess Security Risks with Insights in Azure Migrate"
-description: "This guide introduces Security Insights in Azure Migrate, focusing on how organizations can proactively identify and mitigate security risks during cloud migration. It covers how Azure Migrate detects vulnerabilities, end-of-support software, unprotected servers, and integrates with Defender for Cloud and Update Manager to help build a secure Azure foundation."
-author: "Nikita_Bajaj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Assess Security Risks with Insights in Azure Migrate
+author: Nikita_Bajaj
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:22:12 +00:00
-permalink: "/2025-11-18-Assess-Security-Risks-with-Insights-in-Azure-Migrate.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Migrate", "Azure Update Manager", "Cloud Migration", "Community", "Compliance", "Datacenter Security", "Defender For Cloud", "End Of Support Software", "Microsoft Azure", "On Premises Migration", "Patch Management", "Risk Mitigation", "Security", "Security Dashboard", "Security Insights", "Server Discovery", "Vulnerability Assessment"]
-tags_normalized: ["azure", "azure migrate", "azure update manager", "cloud migration", "community", "compliance", "datacenter security", "defender for cloud", "end of support software", "microsoft azure", "on premises migration", "patch management", "risk mitigation", "security", "security dashboard", "security insights", "server discovery", "vulnerability assessment"]
+permalink: /azure/community/Assess-Security-Risks-with-Insights-in-Azure-Migrate
+tags:
+- Azure
+- Azure Migrate
+- Azure Update Manager
+- Cloud Migration
+- Community
+- Compliance
+- Datacenter Security
+- Defender For Cloud
+- End Of Support Software
+- Microsoft Azure
+- On Premises Migration
+- Patch Management
+- Risk Mitigation
+- Security
+- Security Dashboard
+- Security Insights
+- Server Discovery
+- Vulnerability Assessment
+section_names:
+- azure
+- security
 ---
-
 Nikita_Bajaj explains how Azure Migrate's Insights feature empowers organizations to identify and manage security risks as part of cloud migration, highlighting practical steps for a secure transition.<!--excerpt_end-->
 
 # Assess Security Risks with Insights in Azure Migrate

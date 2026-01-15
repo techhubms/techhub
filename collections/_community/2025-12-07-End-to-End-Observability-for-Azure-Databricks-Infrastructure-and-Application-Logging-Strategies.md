@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies"
-description: "This comprehensive guide curated by Amudha Palani, Peter Lo, and Rafia Aqil explores the essential strategies and mechanisms for achieving complete observability in Azure Databricks environments. Covering both infrastructure-level logging with Azure services and internal platform monitoring, it provides actionable steps for configuring, storing, and utilizing logs and metrics to ensure operational health, compliance, troubleshooting, and performance optimization for big data and analytics workloads."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies'
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-07 09:46:09 +00:00
-permalink: "/2025-12-07-End-to-End-Observability-for-Azure-Databricks-Infrastructure-and-Application-Logging-Strategies.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["Activity Logs", "Azure", "Azure Databricks", "Azure Monitor", "Community", "Compliance", "Compute Log Delivery", "Cost Attribution", "Custom Resource Tags", "Data Quality Monitoring", "DevOps", "Diagnostic Settings", "ETL", "Infrastructure Monitoring", "ML", "Observability", "Performance Tuning", "RBAC", "Spark Monitoring", "SQL Dashboards", "Streaming Pipelines", "System Tables", "Unity Catalog", "Virtual Network Flow Logs"]
-tags_normalized: ["activity logs", "azure", "azure databricks", "azure monitor", "community", "compliance", "compute log delivery", "cost attribution", "custom resource tags", "data quality monitoring", "devops", "diagnostic settings", "etl", "infrastructure monitoring", "ml", "observability", "performance tuning", "rbac", "spark monitoring", "sql dashboards", "streaming pipelines", "system tables", "unity catalog", "virtual network flow logs"]
+permalink: /ml/community/End-to-End-Observability-for-Azure-Databricks-Infrastructure-and-Application-Logging-Strategies
+tags:
+- Activity Logs
+- Azure
+- Azure Databricks
+- Azure Monitor
+- Community
+- Compliance
+- Compute Log Delivery
+- Cost Attribution
+- Custom Resource Tags
+- Data Quality Monitoring
+- DevOps
+- Diagnostic Settings
+- ETL
+- Infrastructure Monitoring
+- ML
+- Observability
+- Performance Tuning
+- RBAC
+- Spark Monitoring
+- SQL Dashboards
+- Streaming Pipelines
+- System Tables
+- Unity Catalog
+- Virtual Network Flow Logs
+section_names:
+- azure
+- devops
+- ml
 ---
-
 Rafia Aqil, along with co-authors Amudha Palani and Peter Lo, provides a deep dive into end-to-end observability practices for Azure Databricks. This guide covers best practices for infrastructure and application logging across cloud-scale analytics workloads.<!--excerpt_end-->
 
 # End-to-End Observability for Azure Databricks

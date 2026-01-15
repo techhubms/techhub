@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Preview of Item History Page in Microsoft Fabric Capacity Metrics App"
-description: "This announcement introduces the new Item History page, now in Preview, within the Microsoft Fabric Capacity Metrics App. The update provides a detailed 30-day analysis of compute usage, interactive visuals, and advanced filtering for deeper understanding of workspace and item-level metrics. It’s aimed at helping users optimize capacity, plan upgrades, and identify consumption trends."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/26307/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Preview of Item History Page in Microsoft Fabric Capacity Metrics App
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/26307/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 09:00:00 +00:00
-permalink: "/2025-08-21-Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Capacity Metrics App", "Capacity Planning", "Capacity Upgrade", "Compute Usage", "CU Consumption", "Data Platform", "Item Level Metrics", "Microsoft", "Microsoft Fabric", "ML", "Monitoring", "News", "Performance Analysis", "Power BI", "Resource Optimization", "Usage Trends", "Workspaces"]
-tags_normalized: ["analytics", "azure", "capacity metrics app", "capacity planning", "capacity upgrade", "compute usage", "cu consumption", "data platform", "item level metrics", "microsoft", "microsoft fabric", "ml", "monitoring", "news", "performance analysis", "power bi", "resource optimization", "usage trends", "workspaces"]
+permalink: /ml/news/Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App
+tags:
+- Analytics
+- Azure
+- Capacity Metrics App
+- Capacity Planning
+- Capacity Upgrade
+- Compute Usage
+- CU Consumption
+- Data Platform
+- Item Level Metrics
+- Microsoft
+- Microsoft Fabric
+- ML
+- Monitoring
+- News
+- Performance Analysis
+- Power BI
+- Resource Optimization
+- Usage Trends
+- Workspaces
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces a new Item History page in the Fabric Capacity Metrics App, offering detailed 30-day compute usage analytics for capacity management and optimization.<!--excerpt_end-->
 
 # Preview of Item History Page in Microsoft Fabric Capacity Metrics App

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introduction to Game Development with C# in Godot: Beginner Essentials"
-description: "This video training provides a beginner-friendly introduction to game development using C# and the Godot engine. Viewers learn to create controllable players, build scenes and levels, design simple crafting UIs, and structure their projects using best practices in Godot. Topics include working with scenes and nodes, interactive objects, and applying core C# programming skills to the context of game development. The tutorial includes hands-on challenges and uses a GitHub repository with starter and final projects to reinforce learning."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f0-ucs37ASQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Introduction to Game Development with C# in Godot: Beginner Essentials'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=f0-ucs37ASQ
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:13 +00:00
-permalink: "/2025-10-22-Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials.html"
-categories: ["Coding"]
-tags: [".NET", "Beginner Tutorial", "C#", "Coding", "Crafting UI", "Game Development", "GitHub", "Godot", "Godot Engine", "Indie Game Dev", "Interactive Objects", "Microsoft", "Player Control", "Programming", "Scenes And Nodes", "Videos", "VS"]
-tags_normalized: ["dotnet", "beginner tutorial", "csharp", "coding", "crafting ui", "game development", "github", "godot", "godot engine", "indie game dev", "interactive objects", "microsoft", "player control", "programming", "scenes and nodes", "videos", "vs"]
+permalink: /coding/videos/Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials
+tags:
+- .NET
+- Beginner Tutorial
+- C#
+- Coding
+- Crafting UI
+- Game Development
+- GitHub
+- Godot
+- Godot Engine
+- Indie Game Dev
+- Interactive Objects
+- Microsoft
+- Player Control
+- Programming
+- Scenes And Nodes
+- Videos
+- VS
+section_names:
+- coding
 ---
-
 dotnet introduces newcomers to the essentials of game development with Godot and C#, providing practical lessons that guide users through building interactive games from scratch.<!--excerpt_end-->
 
 {% youtube f0-ucs37ASQ %}

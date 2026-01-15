@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Going Passwordless: Implementing Passkeys in ASP.NET Core"
-description: "This session introduces developers to passwordless authentication in ASP.NET Core using passkeys and the WebAuthn protocol. It covers the fundamentals of public key cryptography, demonstrates integration of passkey authentication, and explores the use of OS management, password managers like 1Password, and hardware security keys such as Yubikey in real-world applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U4_KcjJOxOE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Going Passwordless: Implementing Passkeys in ASP.NET Core'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=U4_KcjJOxOE
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 09:00:06 +00:00
-permalink: "/2025-11-14-Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "1Password", "ASP.NET Core", "Authentication", "Coding", "Device Security", "Passkeys", "Passwordless Authentication", "Phishing Resistance", "Public Key Cryptography", "Security", "Security Key Integration", "Videos", "WebAuthn", "Yubikey"]
-tags_normalized: ["dotnet", "1password", "aspdotnet core", "authentication", "coding", "device security", "passkeys", "passwordless authentication", "phishing resistance", "public key cryptography", "security", "security key integration", "videos", "webauthn", "yubikey"]
+permalink: /coding/videos/Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core
+tags:
+- .NET
+- 1Password
+- ASP.NET Core
+- Authentication
+- Coding
+- Device Security
+- Passkeys
+- Passwordless Authentication
+- Phishing Resistance
+- Public Key Cryptography
+- Security
+- Security Key Integration
+- Videos
+- WebAuthn
+- Yubikey
+section_names:
+- coding
+- security
 ---
-
 dotnet provides a thorough and practical session on integrating passkey-based passwordless authentication using the WebAuthn protocol within ASP.NET Core applications, including support for hardware and software security keys.<!--excerpt_end-->
 
 {% youtube U4_KcjJOxOE %}

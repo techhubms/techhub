@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring"
-description: "This community update introduces the private preview of Azure Managed Prometheus support for Virtual Machines (VM) and Virtual Machine Scale Sets (VMSS). Previously available for containerized workloads, Prometheus can now monitor traditional IaaS assets, including capabilities tuned for AI and high-performance computing (HPC) scenarios using GPUs and InfiniBand networking. The update details key benefits, integration with Azure Monitor, access requirements, and how to get started."
-author: "Daramfon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring'
+author: Daramfon
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 22:01:17 +00:00
-permalink: "/2025-12-11-Private-Preview-Azure-Managed-Prometheus-for-VM-and-VMSS-Monitoring.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Alerting", "Azure", "Azure Arc", "Azure Managed Grafana", "Azure Monitor", "Community", "DevOps", "GPU Monitoring", "HPC", "IaaS", "InfiniBand", "Metric Collection", "Observability", "Private Preview", "Prometheus", "PromQL", "Virtual Machines", "VMSS"]
-tags_normalized: ["aks", "alerting", "azure", "azure arc", "azure managed grafana", "azure monitor", "community", "devops", "gpu monitoring", "hpc", "iaas", "infiniband", "metric collection", "observability", "private preview", "prometheus", "promql", "virtual machines", "vmss"]
+permalink: /azure/community/Private-Preview-Azure-Managed-Prometheus-for-VM-and-VMSS-Monitoring
+tags:
+- AKS
+- Alerting
+- Azure
+- Azure Arc
+- Azure Managed Grafana
+- Azure Monitor
+- Community
+- DevOps
+- GPU Monitoring
+- HPC
+- IaaS
+- InfiniBand
+- Metric Collection
+- Observability
+- Private Preview
+- Prometheus
+- PromQL
+- Virtual Machines
+- VMSS
+section_names:
+- azure
+- devops
 ---
-
 Daramfon presents an introduction to Azure Managed Prometheus support for VMs and VMSS, now in private preview, highlighting unified monitoring, integration with Azure Monitor, and specific benefits for HPC and AI workloads.<!--excerpt_end-->
 
 # Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring

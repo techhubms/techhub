@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "AI Security Challenges in GitHub's Secure Code Game Season 3"
-description: "This video from GitHub introduces the third season of the Secure Code Game, where developers face modern AI security challenges. Participants are invited to attempt prompt-based attacks on a large language model and then remediate vulnerabilities through secure code practices. The game leverages GitHub Codespaces and is designed to promote practical skills in AI and code security."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/MNrqRV3N2bY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: AI Security Challenges in GitHub's Secure Code Game Season 3
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/MNrqRV3N2bY
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-07 16:24:36 +00:00
-permalink: "/2025-08-07-AI-Security-Challenges-in-GitHubs-Secure-Code-Game-Season-3.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Challenges", "AI Security", "AI Vulnerabilities", "Application Security", "Code Patching", "Cybersecurity", "DevOps", "DevOps Security", "Ethical Hacking", "GitHub", "GitHub Codespaces", "Large Language Models", "Prompt Injection", "Secure Code Game", "Secure Coding", "Security", "Videos", "Vulnerability Mitigation"]
-tags_normalized: ["ai", "ai challenges", "ai security", "ai vulnerabilities", "application security", "code patching", "cybersecurity", "devops", "devops security", "ethical hacking", "github", "github codespaces", "large language models", "prompt injection", "secure code game", "secure coding", "security", "videos", "vulnerability mitigation"]
+permalink: /ai/videos/AI-Security-Challenges-in-GitHubs-Secure-Code-Game-Season-3
+tags:
+- AI
+- AI Challenges
+- AI Security
+- AI Vulnerabilities
+- Application Security
+- Code Patching
+- Cybersecurity
+- DevOps
+- DevOps Security
+- Ethical Hacking
+- GitHub
+- GitHub Codespaces
+- Large Language Models
+- Prompt Injection
+- Secure Code Game
+- Secure Coding
+- Security
+- Videos
+- Vulnerability Mitigation
+section_names:
+- ai
+- devops
+- security
 ---
-
 In this video, GitHub invites viewers to tackle AI security challenges in the Secure Code Game Season 3. Hosted by the GitHub team, it encourages ethical hacking against language models and secure code remediation.<!--excerpt_end-->
 
 {% youtube MNrqRV3N2bY %}

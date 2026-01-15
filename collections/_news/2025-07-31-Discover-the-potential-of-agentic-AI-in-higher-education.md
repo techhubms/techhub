@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Discover the Potential of Agentic AI in Higher Education"
-description: "This article explores how agentic AI technologies, as promoted by Microsoft, are transforming higher education. It discusses their applications, implications for personalized learning, efficiency, and the evolving landscape of academic innovation driven by Microsoft's AI solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/education/blog/2025/07/discover-the-potential-of-agentic-ai-in-higher-education/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Discover the Potential of Agentic AI in Higher Education
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/education/blog/2025/07/discover-the-potential-of-agentic-ai-in-higher-education/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 19:34:18 +00:00
-permalink: "/2025-07-31-Discover-the-potential-of-agentic-AI-in-higher-education.html"
-categories: ["AI"]
-tags: ["Academic Technology", "Agentic AI", "AI", "AI Applications", "AI in Education", "Company News", "Digital Transformation", "Education", "Education Innovation", "Future Of Learning", "Higher Education", "Microsoft", "News", "Personalized Learning"]
-tags_normalized: ["academic technology", "agentic ai", "ai", "ai applications", "ai in education", "company news", "digital transformation", "education", "education innovation", "future of learning", "higher education", "microsoft", "news", "personalized learning"]
+permalink: /ai/news/Discover-the-potential-of-agentic-AI-in-higher-education
+tags:
+- Academic Technology
+- Agentic AI
+- AI
+- AI Applications
+- AI in Education
+- Company News
+- Digital Transformation
+- Education
+- Education Innovation
+- Future Of Learning
+- Higher Education
+- Microsoft
+- News
+- Personalized Learning
+section_names:
+- ai
 ---
-
 Written by stclarke, this article investigates Microsoft's approach to agentic AI in higher education, assessing its impact and the advancements it could bring to academic environments.<!--excerpt_end-->
 
 # Discover the Potential of Agentic AI in Higher Education

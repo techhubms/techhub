@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Synapse Runtime for Apache Spark 3.5 Now Generally Available"
-description: "This announcement details the general availability of Azure Synapse Runtime for Apache Spark 3.5, enabling customers to adopt the latest Spark runtime with Delta Lake 3.2 support for their production workloads. It also covers considerations for migration to Microsoft Fabric Spark and highlights advanced features such as the Native Execution Engine, starter pools, unified security, and materialized views that await customers planning a future transition."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Azure Synapse Runtime for Apache Spark 3.5 Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 10:29:13 +00:00
-permalink: "/2025-10-14-Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark 3.5", "Azure", "Azure Synapse", "Data Engineering", "Delta Lake 3.2", "Lakehouse", "Materialized Views", "Microsoft Fabric", "Migration", "ML", "Native Execution Engine", "News", "Production Workloads", "Release Notes", "Spark Runtime", "Starter Pools"]
-tags_normalized: ["apache spark 3dot5", "azure", "azure synapse", "data engineering", "delta lake 3dot2", "lakehouse", "materialized views", "microsoft fabric", "migration", "ml", "native execution engine", "news", "production workloads", "release notes", "spark runtime", "starter pools"]
+permalink: /ml/news/Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available
+tags:
+- Apache Spark 3.5
+- Azure
+- Azure Synapse
+- Data Engineering
+- Delta Lake 3.2
+- Lakehouse
+- Materialized Views
+- Microsoft Fabric
+- Migration
+- ML
+- Native Execution Engine
+- News
+- Production Workloads
+- Release Notes
+- Spark Runtime
+- Starter Pools
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the general availability of Azure Synapse Runtime for Apache Spark 3.5, helping customers leverage updated Spark features before migrating to Microsoft Fabric Spark.<!--excerpt_end-->
 
 # Azure Synapse Runtime for Apache Spark 3.5 Now Generally Available

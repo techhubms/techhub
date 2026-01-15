@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing Public Preview of Kiota Dart Support"
-description: "This article introduces the new Dart language support in Kiota, an open-source tool by Microsoft that automates generating API clients from OpenAPI descriptions. It explains what Kiota is, why it enhances developer productivity, and provides step-by-step instructions for creating Dart API clients. The post highlights community contributions, demonstrates installation and usage workflows, discusses upcoming general availability, and encourages community involvement for further improvements."
-author: "Maisa Rissi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/openapi/kiota-dart-support/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/openapi/feed/"
+﻿---
+layout: post
+title: Announcing Public Preview of Kiota Dart Support
+author: Maisa Rissi
+canonical_url: https://devblogs.microsoft.com/openapi/kiota-dart-support/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2025-02-04 16:12:50 +00:00
-permalink: "/2025-02-04-Announcing-Public-Preview-of-Kiota-Dart-Support.html"
-categories: ["Coding"]
-tags: [".NET Tools", "API Automation", "API Client Generation", "API Integration", "Coding", "Community Contribution", "Dart", "Declarative Agents", "Kiota", "Microsoft", "Microsoft 365 Copilot", "News", "OAuth", "OpenAPI", "Strong Typing", "VS Code Extension"]
-tags_normalized: ["dotnet tools", "api automation", "api client generation", "api integration", "coding", "community contribution", "dart", "declarative agents", "kiota", "microsoft", "microsoft 365 copilot", "news", "oauth", "openapi", "strong typing", "vs code extension"]
+permalink: /coding/news/Announcing-Public-Preview-of-Kiota-Dart-Support
+tags:
+- .NET Tools
+- API Automation
+- API Client Generation
+- API Integration
+- Coding
+- Community Contribution
+- Dart
+- Declarative Agents
+- Kiota
+- Microsoft
+- Microsoft 365 Copilot
+- News
+- OAuth
+- OpenAPI
+- Strong Typing
+- VS Code Extension
+section_names:
+- coding
 ---
-
 Maisa Rissi introduces the public preview of Dart support in Kiota, detailing how developers can generate Dart API clients from OpenAPI specs and highlighting community-driven development.<!--excerpt_end-->
 
 # Announcing Public Preview of Kiota Dart Support

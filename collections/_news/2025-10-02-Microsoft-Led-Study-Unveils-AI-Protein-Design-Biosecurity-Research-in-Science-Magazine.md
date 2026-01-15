@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft-Led Study Unveils AI Protein Design Biosecurity Research in Science Magazine"
-description: "This news post highlights groundbreaking research led by Microsoft scientists and partners, published in Science Magazine, which examines potential misuse of AI-powered protein design. The study features unprecedented red teaming and proposes mitigation strategies to enhance biosecurity, emphasizing rapid response to emerging risks in the AI era."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft-Led Study Unveils AI Protein Design Biosecurity Research in Science Magazine
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-02 20:43:12 +00:00
-permalink: "/2025-10-02-Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Ethics", "AI Governance", "AI Protein Design", "AI Risks", "AI Safety", "Biosecurity", "Company News", "LinkedIn Post", "Microsoft Research", "Mitigation Strategies", "News", "Red Teaming", "Responsible AI", "Science Magazine", "Security", "Synthetic Biology"]
-tags_normalized: ["ai", "ai ethics", "ai governance", "ai protein design", "ai risks", "ai safety", "biosecurity", "company news", "linkedin post", "microsoft research", "mitigation strategies", "news", "red teaming", "responsible ai", "science magazine", "security", "synthetic biology"]
+permalink: /ai/news/Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine
+tags:
+- AI
+- AI Ethics
+- AI Governance
+- AI Protein Design
+- AI Risks
+- AI Safety
+- Biosecurity
+- Company News
+- LinkedIn Post
+- Microsoft Research
+- Mitigation Strategies
+- News
+- Red Teaming
+- Responsible AI
+- Science Magazine
+- Security
+- Synthetic Biology
+section_names:
+- ai
+- security
 ---
-
 stclarke summarizes a major Science Magazine publication led by Microsoft scientists, exploring how AI-driven protein design can be misused and proposing new security mitigations for safeguarding biosecurity.<!--excerpt_end-->
 
 # Microsoft-Led Study Unveils AI Protein Design Biosecurity Research in Science Magazine

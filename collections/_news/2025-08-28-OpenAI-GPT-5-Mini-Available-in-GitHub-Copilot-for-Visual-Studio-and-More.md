@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "OpenAI GPT-5 Mini Available in GitHub Copilot for Visual Studio and More"
-description: "This update announces that GPT-5 mini is now available in public preview for users of GitHub Copilot across several popular development environments, including Visual Studio, JetBrains IDEs, Xcode, and Eclipse. The new model can be accessed in Copilot Chat across platforms, and administrators can enable access via updated Copilot settings. Developers are encouraged to provide feedback and try out GPT-5 mini's capabilities within Copilot's supported interfaces."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: OpenAI GPT-5 Mini Available in GitHub Copilot for Visual Studio and More
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:40:59 +00:00
-permalink: "/2025-08-28-OpenAI-GPT-5-Mini-Available-in-GitHub-Copilot-for-Visual-Studio-and-More.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Eclipse", "GitHub Copilot", "GPT 5 Mini", "IDE Integration", "JetBrains", "News", "OpenAI", "Public Preview", "VS", "Xcode"]
-tags_normalized: ["ai", "ai models", "copilot business", "copilot chat", "copilot enterprise", "eclipse", "github copilot", "gpt 5 mini", "ide integration", "jetbrains", "news", "openai", "public preview", "vs", "xcode"]
+permalink: /github-copilot/news/OpenAI-GPT-5-Mini-Available-in-GitHub-Copilot-for-Visual-Studio-and-More
+tags:
+- AI
+- AI Models
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Eclipse
+- GitHub Copilot
+- GPT 5 Mini
+- IDE Integration
+- JetBrains
+- News
+- OpenAI
+- Public Preview
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details the public preview of GPT-5 mini within GitHub Copilot, allowing developers in Visual Studio, JetBrains IDEs, Xcode, and Eclipse to access advanced AI features and participate in community feedback.<!--excerpt_end-->
 
 # OpenAI GPT-5 Mini Available in GitHub Copilot for Visual Studio and More

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Deploying OpenAI's gpt-oss Models to Azure Container Apps Serverless GPUs with Ollama"
-description: "This detailed guide by Cary_Chai demonstrates how to deploy OpenAI's new open-weight gpt-oss-120b and gpt-oss-20b language models on Azure Container Apps serverless GPUs using Ollama. It covers the benefits of serverless GPUs, choosing the right model and GPU combination, step-by-step deployment instructions, and integration tips for scalable, cost-effective AI workloads on Azure."
-author: "Cary_Chai"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/open-ai-s-gpt-oss-models-on-azure-container-apps-serverless-gpus/ba-p/4440836"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying OpenAI's gpt-oss Models to Azure Container Apps Serverless GPUs with Ollama
+author: Cary_Chai
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/open-ai-s-gpt-oss-models-on-azure-container-apps-serverless-gpus/ba-p/4440836
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 20:23:51 +00:00
-permalink: "/2025-08-07-Deploying-OpenAIs-gpt-oss-Models-to-Azure-Container-Apps-Serverless-GPUs-with-Ollama.html"
-categories: ["AI", "Azure"]
-tags: ["A100 GPU", "AI", "API Integration", "Autoscaling", "Azure", "Azure Container Apps", "Cloud AI", "Community", "Containerization", "Cost Optimization", "Docker", "Gpt Oss 120b", "Gpt Oss 20b", "Inference", "LLM Deployment", "Microservices", "Ollama", "OpenAI", "Public Models", "Scalable AI", "Serverless GPU", "T4 GPU"]
-tags_normalized: ["a100 gpu", "ai", "api integration", "autoscaling", "azure", "azure container apps", "cloud ai", "community", "containerization", "cost optimization", "docker", "gpt oss 120b", "gpt oss 20b", "inference", "llm deployment", "microservices", "ollama", "openai", "public models", "scalable ai", "serverless gpu", "t4 gpu"]
+permalink: /ai/community/Deploying-OpenAIs-gpt-oss-Models-to-Azure-Container-Apps-Serverless-GPUs-with-Ollama
+tags:
+- A100 GPU
+- AI
+- API Integration
+- Autoscaling
+- Azure
+- Azure Container Apps
+- Cloud AI
+- Community
+- Containerization
+- Cost Optimization
+- Docker
+- Gpt Oss 120b
+- Gpt Oss 20b
+- Inference
+- LLM Deployment
+- Microservices
+- Ollama
+- OpenAI
+- Public Models
+- Scalable AI
+- Serverless GPU
+- T4 GPU
+section_names:
+- ai
+- azure
 ---
-
 Cary_Chai provides a clear walkthrough on deploying OpenAI's gpt-oss-120b and gpt-oss-20b models in Azure Container Apps with serverless GPU support via Ollama, outlining deployment steps, technical considerations, and tips for scalable AI workloads in the cloud.<!--excerpt_end-->
 
 # Deploying OpenAI's gpt-oss Models to Azure Container Apps Serverless GPUs with Ollama

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Dependabot Pull Request Comment Command Deprecations and Migration to GitHub Native Features"
-description: "This news update details the upcoming deprecation of several Dependabot pull request comment commands in favor of GitHub’s built-in pull request features. It provides guidance for developers on how to adapt workflows, recommending migration to GitHub UI, CLI, or REST API for managing pull requests."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Pull Request Comment Command Deprecations and Migration to GitHub Native Features
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-07 13:14:05 +00:00
-permalink: "/2025-10-07-Dependabot-Pull-Request-Comment-Command-Deprecations-and-Migration-to-GitHub-Native-Features.html"
-categories: ["DevOps"]
-tags: ["Automation", "CLI", "Dependabot", "Deprecation", "Developer Tools", "DevOps", "GitHub", "News", "PR Management", "Pull Requests", "REST API", "Retired", "Supply Chain Security", "Workflow Migration"]
-tags_normalized: ["automation", "cli", "dependabot", "deprecation", "developer tools", "devops", "github", "news", "pr management", "pull requests", "rest api", "retired", "supply chain security", "workflow migration"]
+permalink: /devops/news/Dependabot-Pull-Request-Comment-Command-Deprecations-and-Migration-to-GitHub-Native-Features
+tags:
+- Automation
+- CLI
+- Dependabot
+- Deprecation
+- Developer Tools
+- DevOps
+- GitHub
+- News
+- PR Management
+- Pull Requests
+- REST API
+- Retired
+- Supply Chain Security
+- Workflow Migration
+section_names:
+- devops
 ---
-
 Allison outlines the deprecation of certain Dependabot pull request commands and recommends using GitHub’s native pull request management tools, offering actionable migration guidance.<!--excerpt_end-->
 
 # Upcoming Deprecation of Dependabot Pull Request Comment Commands

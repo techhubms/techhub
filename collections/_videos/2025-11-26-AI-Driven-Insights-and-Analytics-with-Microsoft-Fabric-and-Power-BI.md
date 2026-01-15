@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI-Driven Insights and Analytics with Microsoft Fabric and Power BI"
-description: "This session explores how Microsoft Fabric integrates with Power BI and data agents to provide AI-powered analytics and insights for business teams. It focuses on enabling organizations to leverage unified data platforms for smarter decisions through trusted analytics, emphasizing the role of AI within the Microsoft ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=O4grrA_xqhc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Driven Insights and Analytics with Microsoft Fabric and Power BI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=O4grrA_xqhc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:48:16 +00:00
-permalink: "/2025-11-26-AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI.html"
-categories: ["AI", "ML"]
-tags: ["AI", "AI First Organization", "AI Powered Analytics", "Business Intelligence", "Data Agents", "Data Driven Decisions", "Digital Transformation", "Fabric AI", "Fabric Breakout", "Microsoft Ecosystem", "Microsoft Fabric", "ML", "MSIgnite", "Power BI", "Scalable Analytics", "Trusted Analytics", "Unified Data Platform", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "ai first organization", "ai powered analytics", "business intelligence", "data agents", "data driven decisions", "digital transformation", "fabric ai", "fabric breakout", "microsoft ecosystem", "microsoft fabric", "ml", "msignite", "power bi", "scalable analytics", "trusted analytics", "unified data platform", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI
+tags:
+- AI
+- AI First Organization
+- AI Powered Analytics
+- Business Intelligence
+- Data Agents
+- Data Driven Decisions
+- Digital Transformation
+- Fabric AI
+- Fabric Breakout
+- Microsoft Ecosystem
+- Microsoft Fabric
+- ML
+- MSIgnite
+- Power BI
+- Scalable Analytics
+- Trusted Analytics
+- Unified Data Platform
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Events showcases how Lada Hill, Amir Jafari, and Maya Shenhav explain leveraging Microsoft Fabric and Power BI to deliver AI-driven analytics and empower business teams with connected, trusted insights.<!--excerpt_end-->
 
 {% youtube O4grrA_xqhc %}

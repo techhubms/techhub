@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing Sponsorship on NuGet.org"
-description: "This news post introduces the Sponsorship feature on NuGet.org, enabling package maintainers to add sponsorship links to their NuGet packages. It provides step-by-step instructions for both publishers and consumers, outlines approved platforms, and answers common questions about how the new feature works and its role in sustaining the .NET and NuGet ecosystem."
-author: "Sean"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Announcing Sponsorship on NuGet.org
+author: Sean
+canonical_url: https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-23 22:18:00 +00:00
-permalink: "/2025-10-23-Announcing-Sponsorship-on-NuGetorg.html"
-categories: ["Coding"]
-tags: [".NET", "Coding", "Developer Tools", "GitHub Sponsors", "Ko Fi", "Liberapay", "News", "NuGet", "NuGet.org", "Open Collective", "Open Source", "Package Maintainers", "Package Management", "Patreon", "Software Ecosystem", "Sponsorship", "Tidelift"]
-tags_normalized: ["dotnet", "coding", "developer tools", "github sponsors", "ko fi", "liberapay", "news", "nuget", "nugetdotorg", "open collective", "open source", "package maintainers", "package management", "patreon", "software ecosystem", "sponsorship", "tidelift"]
+permalink: /coding/news/Announcing-Sponsorship-on-NuGetorg
+tags:
+- .NET
+- Coding
+- Developer Tools
+- GitHub Sponsors
+- Ko Fi
+- Liberapay
+- News
+- NuGet
+- NuGet.org
+- Open Collective
+- Open Source
+- Package Maintainers
+- Package Management
+- Patreon
+- Software Ecosystem
+- Sponsorship
+- Tidelift
+section_names:
+- coding
 ---
-
 Sean explains how NuGet.org's new Sponsorship feature allows .NET package maintainers to add sponsorship links, making it easier for users to support the open source packages they rely on.<!--excerpt_end-->
 
 # Announcing Sponsorship on NuGet.org

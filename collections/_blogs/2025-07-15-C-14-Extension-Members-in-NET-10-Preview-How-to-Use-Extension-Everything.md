@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "C# 14 Extension Members in .NET 10 Preview: How to Use Extension Everything"
-description: "Andrew Lock explores the upcoming C# 14 'extension members' feature available in the .NET 10 preview. This post covers the syntax changes, conversion from extension methods, new extension member types, and practical adoption in the NetEscapades.EnumGenerators NuGet package."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'C# 14 Extension Members in .NET 10 Preview: How to Use Extension Everything'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-15 10:00:00 +00:00
-permalink: "/2025-07-15-C-14-Extension-Members-in-NET-10-Preview-How-to-Use-Extension-Everything.html"
-categories: ["Coding"]
-tags: [".NET 10", "Blogs", "C#", "C# 14", "Coding", "Extension Members", "Extension Methods", "Extension Properties", "Instance Extension Properties", "Language Features", "NetEscapades.EnumGenerators", "Static Extension Methods", "Syntax Changes", "VS"]
-tags_normalized: ["dotnet 10", "blogs", "csharp", "csharp 14", "coding", "extension members", "extension methods", "extension properties", "instance extension properties", "language features", "netescapadesdotenumgenerators", "static extension methods", "syntax changes", "vs"]
+permalink: /coding/blogs/C-14-Extension-Members-in-NET-10-Preview-How-to-Use-Extension-Everything
+tags:
+- .NET 10
+- Blogs
+- C#
+- C# 14
+- Coding
+- Extension Members
+- Extension Methods
+- Extension Properties
+- Instance Extension Properties
+- Language Features
+- NetEscapades.EnumGenerators
+- Static Extension Methods
+- Syntax Changes
+- VS
+section_names:
+- coding
 ---
-
 In this post, Andrew Lock provides a detailed walkthrough of C# 14’s new extension members feature in .NET 10, including how to convert existing extension methods, the new syntax, and updates to his NetEscapades.EnumGenerators package.<!--excerpt_end-->
 
 ## C# 14 Extension Members: Extension Everything in .NET 10 Preview

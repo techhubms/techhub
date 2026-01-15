@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Debugging in Production: Leveraging Logs, Metrics and Traces"
-description: "This article by Neel Shah explores how modern DevOps teams can effectively debug issues in production environments by using observability data—logs, metrics, and traces. It provides practical best practices, recommended tools, and real-world workflow examples for ensuring application reliability and rapid root cause analysis."
-author: "Neel Shah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Debugging in Production: Leveraging Logs, Metrics and Traces'
+author: Neel Shah
+canonical_url: https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-20 06:00:17 +00:00
-permalink: "/2025-08-20-Debugging-in-Production-Leveraging-Logs-Metrics-and-Traces.html"
-categories: ["DevOps"]
-tags: ["Alerting", "Automation", "Blogs", "Business Of DevOps", "Cloud Native", "Contributed Content", "Correlation IDs", "Debugging", "DevOps", "DevOps Best Practices", "Distributed Tracing", "ELK Stack", "Grafana", "Jaeger", "Logs", "Metrics", "Microservices", "Monitoring", "Observability", "OpenTelemetry", "Production Debugging", "Prometheus", "Root Cause Analysis", "Social Facebook", "Social LinkedIn", "Social X", "Structured Logging", "Traces", "Zipkin"]
-tags_normalized: ["alerting", "automation", "blogs", "business of devops", "cloud native", "contributed content", "correlation ids", "debugging", "devops", "devops best practices", "distributed tracing", "elk stack", "grafana", "jaeger", "logs", "metrics", "microservices", "monitoring", "observability", "opentelemetry", "production debugging", "prometheus", "root cause analysis", "social facebook", "social linkedin", "social x", "structured logging", "traces", "zipkin"]
+permalink: /devops/blogs/Debugging-in-Production-Leveraging-Logs-Metrics-and-Traces
+tags:
+- Alerting
+- Automation
+- Blogs
+- Business Of DevOps
+- Cloud Native
+- Contributed Content
+- Correlation IDs
+- Debugging
+- DevOps
+- DevOps Best Practices
+- Distributed Tracing
+- ELK Stack
+- Grafana
+- Jaeger
+- Logs
+- Metrics
+- Microservices
+- Monitoring
+- Observability
+- OpenTelemetry
+- Production Debugging
+- Prometheus
+- Root Cause Analysis
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Structured Logging
+- Traces
+- Zipkin
+section_names:
+- devops
 ---
-
 Neel Shah examines the challenges of debugging in production and explains how DevOps teams can use logs, metrics, and traces—plus the right observability tools—to achieve rapid and reliable issue diagnosis.<!--excerpt_end-->
 
 # Debugging in Production: Leveraging Logs, Metrics and Traces

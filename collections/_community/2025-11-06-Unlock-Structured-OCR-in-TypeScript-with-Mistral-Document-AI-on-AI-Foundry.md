@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry"
-description: "This article by Julia Muiruri introduces Mistral Document AI, a vision-language model available as a serverless model in Azure AI Foundry. The post demonstrates how developers can use it from TypeScript to turn scanned documents—including handwritten recipes—into structured markdown and JSON, improving OCR fidelity for downstream AI, search, and automation workflows. Integration steps, sample code, and security considerations for Azure deployments are provided."
-author: "Julia_Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry
+author: Julia_Muiruri
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 14:15:35 +00:00
-permalink: "/2025-11-06-Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "API Integration", "Azure", "Azure AI Foundry", "Azure Security", "Coding", "Community", "Data Extraction", "Document Automation", "Document Understanding", "Handwriting Recognition", "JSON", "Markdown", "Mistral Document AI", "Multimodal AI", "OCR", "PDF Processing", "RAG Pipelines", "Responsible AI", "Serverless", "TypeScript"]
-tags_normalized: ["ai", "ai agents", "api integration", "azure", "azure ai foundry", "azure security", "coding", "community", "data extraction", "document automation", "document understanding", "handwriting recognition", "json", "markdown", "mistral document ai", "multimodal ai", "ocr", "pdf processing", "rag pipelines", "responsible ai", "serverless", "typescript"]
+permalink: /ai/community/Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry
+tags:
+- AI
+- AI Agents
+- API Integration
+- Azure
+- Azure AI Foundry
+- Azure Security
+- Coding
+- Community
+- Data Extraction
+- Document Automation
+- Document Understanding
+- Handwriting Recognition
+- JSON
+- Markdown
+- Mistral Document AI
+- Multimodal AI
+- OCR
+- PDF Processing
+- RAG Pipelines
+- Responsible AI
+- Serverless
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Julia Muiruri explores how to leverage Mistral Document AI on Azure AI Foundry to perform advanced OCR and convert scanned documents into structured data, with code samples and Azure-focused best practices.<!--excerpt_end-->
 
 # Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry

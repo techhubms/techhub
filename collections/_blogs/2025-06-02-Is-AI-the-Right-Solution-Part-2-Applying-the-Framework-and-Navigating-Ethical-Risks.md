@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks"
-description: "Part 2 of Hidde de Smet's AI project validation series applies a structured decision tree to common AI use cases and explores ethical risks such as bias, privacy, transparency, and workforce impact. Practical examples guide strategic alignment and emphasize the critical need for responsible AI practices."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/ai-project-validation-framework-part2"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/ai-project-validation-framework-part2
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-02 04:00:00 +00:00
-permalink: "/2025-06-02-Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks.html"
-categories: ["AI"]
-tags: ["AI", "AI Bias", "AI Project Validation", "AI Transparency", "AI Workforce Impact", "Automation", "Blogs", "Business Impact", "Customer Experience", "Data Governance", "Decision Frameworks", "Ethical AI", "Ethics", "EU AI Act", "IASA", "Privacy in AI", "Process Optimization", "Series"]
-tags_normalized: ["ai", "ai bias", "ai project validation", "ai transparency", "ai workforce impact", "automation", "blogs", "business impact", "customer experience", "data governance", "decision frameworks", "ethical ai", "ethics", "eu ai act", "iasa", "privacy in ai", "process optimization", "series"]
+permalink: /ai/blogs/Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks
+tags:
+- AI
+- AI Bias
+- AI Project Validation
+- AI Transparency
+- AI Workforce Impact
+- Automation
+- Blogs
+- Business Impact
+- Customer Experience
+- Data Governance
+- Decision Frameworks
+- Ethical AI
+- Ethics
+- EU AI Act
+- IASA
+- Privacy in AI
+- Process Optimization
+- Series
+section_names:
+- ai
 ---
-
 Hidde de Smet presents Part 2 of his series on validating AI projects. This installment demonstrates practical uses of an AI decision framework and examines essential ethical considerations—such as bias, transparency, and workforce impact—when evaluating AI initiatives.<!--excerpt_end-->
 
 # Is AI the Right Solution? Part 2: Examples and Ethical Risks

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "The Ultimate Beginner's Guide to GitHub in 2025"
-description: "This video compiles a comprehensive beginner’s guide to GitHub, covering everything from foundational Git concepts to advanced tips about repositories, pull requests, and professional profile management. It is structured in chapters for easy navigation and features practical demonstrations and resources for new developers."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NUELGzIHT-I"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: The Ultimate Beginner's Guide to GitHub in 2025
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=NUELGzIHT-I
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-22 17:00:35 +00:00
-permalink: "/2025-09-22-The-Ultimate-Beginners-Guide-to-GitHub-in-2025.html"
-categories: ["DevOps"]
-tags: ["Beginner Tutorial", "Collaboration", "Continuous Integration", "Developer Profile", "Developer Tools", "DevOps", "Git", "GitHub", "Merge", "Open Source Contribution", "Pull Requests", "Repositories", "Repository Management", "Source Control", "Tutorial", "Version Control", "Videos"]
-tags_normalized: ["beginner tutorial", "collaboration", "continuous integration", "developer profile", "developer tools", "devops", "git", "github", "merge", "open source contribution", "pull requests", "repositories", "repository management", "source control", "tutorial", "version control", "videos"]
+permalink: /devops/videos/The-Ultimate-Beginners-Guide-to-GitHub-in-2025
+tags:
+- Beginner Tutorial
+- Collaboration
+- Continuous Integration
+- Developer Profile
+- Developer Tools
+- DevOps
+- Git
+- GitHub
+- Merge
+- Open Source Contribution
+- Pull Requests
+- Repositories
+- Repository Management
+- Source Control
+- Tutorial
+- Version Control
+- Videos
+section_names:
+- devops
 ---
-
 GitHub presents a beginner-friendly guide to using Git and GitHub, with practical tips and demonstrations. Curated by the GitHub team, this video is ideal for those new to version control and collaborative coding.<!--excerpt_end-->
 
 {% youtube NUELGzIHT-I %}

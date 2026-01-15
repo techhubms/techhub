@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Production-Ready AI Agents with Microsoft Foundry: Ignite 2025 Session BRK113"
-description: "This session from Microsoft Ignite 2025 guides developers through creating and managing agentic applications with Microsoft Foundry. It covers deploying AI agents at scale, integrating real-time business context, policy governance, custom tools, and showcases KPMG's enterprise implementation. Highlights include code-based multi-agent workflows in Python, AI Gateway integration, and best practices for agent governance in enterprise systems."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b1F3lyWgbNk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Building Production-Ready AI Agents with Microsoft Foundry: Ignite 2025 Session BRK113'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=b1F3lyWgbNk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:20:43 +00:00
-permalink: "/2025-11-20-Building-Production-Ready-AI-Agents-with-Microsoft-Foundry-Ignite-2025-Session-BRK113.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic Applications", "AI", "AI Development", "AI Gateway", "Azure", "Azure AI", "Business Process Automation", "Code Based Workflows", "Coding", "Developer Tools", "Enterprise Integration", "Governance", "InnovatewithAzureAIappsandagents", "KPMG", "Microsoft Foundry", "MSIgnite", "Multi Agent Systems", "Policy Management", "Python", "Real Time Context", "Videos"]
-tags_normalized: ["agentic applications", "ai", "ai development", "ai gateway", "azure", "azure ai", "business process automation", "code based workflows", "coding", "developer tools", "enterprise integration", "governance", "innovatewithazureaiappsandagents", "kpmg", "microsoft foundry", "msignite", "multi agent systems", "policy management", "python", "real time context", "videos"]
+permalink: /ai/videos/Building-Production-Ready-AI-Agents-with-Microsoft-Foundry-Ignite-2025-Session-BRK113
+tags:
+- Agentic Applications
+- AI
+- AI Development
+- AI Gateway
+- Azure
+- Azure AI
+- Business Process Automation
+- Code Based Workflows
+- Coding
+- Developer Tools
+- Enterprise Integration
+- Governance
+- InnovatewithAzureAIappsandagents
+- KPMG
+- Microsoft Foundry
+- MSIgnite
+- Multi Agent Systems
+- Policy Management
+- Python
+- Real Time Context
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Events presents an Ignite 2025 session on building, deploying, and scaling AI agents with Microsoft Foundry, featuring technical demonstrations and implementation insights from KPMG.<!--excerpt_end-->
 
 {% youtube b1F3lyWgbNk %}

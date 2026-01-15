@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Implementing GPT-5 FreeForm Tool Calling with Azure AI Foundry"
-description: "This blog post by Julia Muiruri guides developers through building agentic analytic workflows using GPT-5’s FreeForm tool calling in an Azure AI Foundry environment. It explains how internal agents invoke custom tools with raw SQL and JavaScript payloads—eliminating schema friction—enabling seamless multi-step code execution, visualization, and streamlined integration for advanced data analysis tasks."
-author: "Julia_Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Implementing GPT-5 FreeForm Tool Calling with Azure AI Foundry
+author: Julia_Muiruri
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 18:29:45 +00:00
-permalink: "/2025-11-19-Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["Agentic Workflow", "AI", "API Integration", "Azure", "Azure AI Foundry", "Bar Chart", "Coding", "Community", "CSV", "Custom Tools", "Data Analysis", "FreeForm Tool Calling", "Function Calling", "GPT 5", "Iris Dataset", "JavaScript", "ML", "SQL", "TypeScript", "VM Sandbox"]
-tags_normalized: ["agentic workflow", "ai", "api integration", "azure", "azure ai foundry", "bar chart", "coding", "community", "csv", "custom tools", "data analysis", "freeform tool calling", "function calling", "gpt 5", "iris dataset", "javascript", "ml", "sql", "typescript", "vm sandbox"]
+permalink: /ai/community/Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry
+tags:
+- Agentic Workflow
+- AI
+- API Integration
+- Azure
+- Azure AI Foundry
+- Bar Chart
+- Coding
+- Community
+- CSV
+- Custom Tools
+- Data Analysis
+- FreeForm Tool Calling
+- Function Calling
+- GPT 5
+- Iris Dataset
+- JavaScript
+- ML
+- SQL
+- TypeScript
+- VM Sandbox
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 In this tutorial, Julia Muiruri illustrates how developers can leverage GPT-5’s FreeForm tool calling within Azure AI Foundry to execute SQL and JavaScript workflows for advanced analytic tasks, highlighting agentic automation and custom tool design.<!--excerpt_end-->
 
 # GPT-5 FreeForm Tool Calling in TypeScript on Azure AI Foundry

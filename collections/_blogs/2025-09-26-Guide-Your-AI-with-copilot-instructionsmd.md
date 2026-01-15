@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Guide Your AI with copilot-instructions.md"
-description: "This post explains how development teams can ensure consistent code style, documentation, and safe practices across their projects by using the copilot-instructions.md file. It covers how to guide GitHub Copilot's code suggestions with custom instructions, offering practical examples for naming conventions, documentation standards, and security policies. The article also provides actionable tips for effectively maintaining and applying these standards in repositories."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Guide Your AI with copilot-instructions.md
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-26 00:00:00 +00:00
-permalink: "/2025-09-26-Guide-Your-AI-with-copilot-instructionsmd.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async/await", "Blogs", "Code Consistency", "Coding", "Copilot Instructions.md", "Developer Productivity", "Documentation Standards", "GitHub Copilot", "JavaScript", "JSDoc", "Naming Conventions", "Project Style Guides", "React", "Repository Configuration", "Security Best Practices", "Style Automation", "Test Frameworks"]
-tags_normalized: ["ai", "asyncslashawait", "blogs", "code consistency", "coding", "copilot instructionsdotmd", "developer productivity", "documentation standards", "github copilot", "javascript", "jsdoc", "naming conventions", "project style guides", "react", "repository configuration", "security best practices", "style automation", "test frameworks"]
+permalink: /github-copilot/blogs/Guide-Your-AI-with-copilot-instructionsmd
+tags:
+- AI
+- Async/await
+- Blogs
+- Code Consistency
+- Coding
+- Copilot Instructions.md
+- Developer Productivity
+- Documentation Standards
+- GitHub Copilot
+- JavaScript
+- JSDoc
+- Naming Conventions
+- Project Style Guides
+- React
+- Repository Configuration
+- Security Best Practices
+- Style Automation
+- Test Frameworks
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels explains how to use the copilot-instructions.md file to set project-wide rules for GitHub Copilot, helping teams achieve consistency and safer code generation.<!--excerpt_end-->
 
 # Guide Your AI with copilot-instructions.md

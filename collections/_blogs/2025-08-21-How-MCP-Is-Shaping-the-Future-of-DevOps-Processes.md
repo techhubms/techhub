@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How MCP Is Shaping the Future of DevOps Processes"
-description: "This article explores how the Model Context Protocol (MCP), developed by Anthropic and discussed by CloudBees’ Loreli Cadapan, is poised to transform DevOps workflows. MCP bridges large language models with enterprise DevOps environments, automates CI/CD orchestration, and brings new AI-driven efficiencies and governance to the software delivery lifecycle."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How MCP Is Shaping the Future of DevOps Processes
+author: Mike Vizard
+canonical_url: https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-21 16:53:01 +00:00
-permalink: "/2025-08-21-How-MCP-Is-Shaping-the-Future-of-DevOps-Processes.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI in DevOps", "AI Integration", "Anthropic", "Blogs", "CI/CD", "Cloudbees", "DevOps", "DevOps Automation", "Large Language Models", "Loreli Cadapan", "MCP", "Pipeline Orchestration", "Sdlc", "Software Delivery Lifecycle", "Software Governance", "Video Interviews"]
-tags_normalized: ["ai", "ai agents", "ai in devops", "ai integration", "anthropic", "blogs", "cislashcd", "cloudbees", "devops", "devops automation", "large language models", "loreli cadapan", "mcp", "pipeline orchestration", "sdlc", "software delivery lifecycle", "software governance", "video interviews"]
+permalink: /ai/blogs/How-MCP-Is-Shaping-the-Future-of-DevOps-Processes
+tags:
+- AI
+- AI Agents
+- AI in DevOps
+- AI Integration
+- Anthropic
+- Blogs
+- CI/CD
+- Cloudbees
+- DevOps
+- DevOps Automation
+- Large Language Models
+- Loreli Cadapan
+- MCP
+- Pipeline Orchestration
+- Sdlc
+- Software Delivery Lifecycle
+- Software Governance
+- Video Interviews
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard interviews Loreli Cadapan to unpack how MCP, an AI-powered protocol, is redefining DevOps by integrating large language models into CI/CD and software delivery workflows.<!--excerpt_end-->
 
 # How MCP Is Shaping the Future of DevOps Processes

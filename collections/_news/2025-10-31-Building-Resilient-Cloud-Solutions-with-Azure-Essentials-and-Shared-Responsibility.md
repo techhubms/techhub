@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building Resilient Cloud Solutions with Azure Essentials and Shared Responsibility"
-description: "This news article explores best practices for achieving resilience and reliability in cloud environments using Azure Essentials. It covers the shared responsibility model between Microsoft and customers, design patterns like zone-redundant architectures, real-world customer examples, and practical tools such as Azure Monitor, Azure DevOps, and Microsoft Defender for Cloud. The content empowers technical stakeholders to architect always-on, fault-tolerant, and secure Azure solutions using actionable guidance and automation tools."
-author: "Cyril Belikoff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Building Resilient Cloud Solutions with Azure Essentials and Shared Responsibility
+author: Cyril Belikoff
+canonical_url: https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-31 16:00:00 +00:00
-permalink: "/2025-10-31-Building-Resilient-Cloud-Solutions-with-Azure-Essentials-and-Shared-Responsibility.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Resilience", "Automation", "Azure", "Azure Chaos Studio", "Azure DevOps", "Azure Essentials", "Azure Monitor", "Backup", "Cloud Resiliency", "Compute", "Developer Tools", "DevOps", "Disaster Recovery", "Governance", "High Availability", "Hybrid + Multicloud", "Management And Governance", "Microsoft Defender For Cloud", "News", "Reliability", "Security", "Shared Responsibility", "Zone Redundant Architecture"]
-tags_normalized: ["ai", "ai resilience", "automation", "azure", "azure chaos studio", "azure devops", "azure essentials", "azure monitor", "backup", "cloud resiliency", "compute", "developer tools", "devops", "disaster recovery", "governance", "high availability", "hybrid plus multicloud", "management and governance", "microsoft defender for cloud", "news", "reliability", "security", "shared responsibility", "zone redundant architecture"]
+permalink: /ai/news/Building-Resilient-Cloud-Solutions-with-Azure-Essentials-and-Shared-Responsibility
+tags:
+- AI
+- AI Resilience
+- Automation
+- Azure
+- Azure Chaos Studio
+- Azure DevOps
+- Azure Essentials
+- Azure Monitor
+- Backup
+- Cloud Resiliency
+- Compute
+- Developer Tools
+- DevOps
+- Disaster Recovery
+- Governance
+- High Availability
+- Hybrid + Multicloud
+- Management And Governance
+- Microsoft Defender For Cloud
+- News
+- Reliability
+- Security
+- Shared Responsibility
+- Zone Redundant Architecture
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Cyril Belikoff examines how organizations can leverage Azure Essentials and a shared responsibility model to architect resilient and always-on cloud solutions, highlighting Microsoft's tools, frameworks, and real-world examples.<!--excerpt_end-->
 
 # Building Resilient Cloud Solutions with Azure Essentials and Shared Responsibility

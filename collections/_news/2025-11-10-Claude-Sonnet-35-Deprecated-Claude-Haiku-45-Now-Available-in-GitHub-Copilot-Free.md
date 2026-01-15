@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Claude Sonnet 3.5 Deprecated, Claude Haiku 4.5 Now Available in GitHub Copilot Free"
-description: "This news update announces the deprecation of Claude Sonnet 3.5 in all GitHub Copilot experiences, with Claude Haiku 4.5 now available for Copilot Free users. Copilot administrators and users are advised to update workflows and model policies. Key instructions cover model selection, policy updates, and resource links for managing this transition."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Sonnet 3.5 Deprecated, Claude Haiku 4.5 Now Available in GitHub Copilot Free
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 17:19:46 +00:00
-permalink: "/2025-11-10-Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Anthropic", "Claude Haiku 4.5", "Claude Sonnet 3.5", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "GitHub Copilot", "Model Deprecation", "Model Policies", "News", "Retired", "VS Code"]
-tags_normalized: ["ai", "ai models", "anthropic", "claude haiku 4dot5", "claude sonnet 3dot5", "copilot", "copilot chat", "copilot enterprise", "copilot free", "github copilot", "model deprecation", "model policies", "news", "retired", "vs code"]
+permalink: /github-copilot/news/Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free
+tags:
+- AI
+- AI Models
+- Anthropic
+- Claude Haiku 4.5
+- Claude Sonnet 3.5
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Free
+- GitHub Copilot
+- Model Deprecation
+- Model Policies
+- News
+- Retired
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the deprecation of Claude Sonnet 3.5 in GitHub Copilot, with Claude Haiku 4.5 now available for Copilot Free. The update covers new model access, steps for administrators, and links to further information.<!--excerpt_end-->
 
 # Claude Sonnet 3.5 Deprecated—Claude Haiku 4.5 Now Available in Copilot Free

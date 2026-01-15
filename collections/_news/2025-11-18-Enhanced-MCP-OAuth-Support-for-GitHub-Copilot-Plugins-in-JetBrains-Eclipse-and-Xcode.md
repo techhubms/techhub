@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhanced MCP OAuth Support for GitHub Copilot Plugins in JetBrains, Eclipse, and Xcode"
-description: "This update introduces improved authentication in GitHub Copilot plugins for JetBrains, Eclipse, and Xcode by supporting more third-party OAuth identity providers through Dynamic Client Registration and fallback mechanisms. Developers now have greater flexibility and enhanced security for enterprise or custom identity provider integration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enhanced MCP OAuth Support for GitHub Copilot Plugins in JetBrains, Eclipse, and Xcode
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:57 +00:00
-permalink: "/2025-11-18-Enhanced-MCP-OAuth-Support-for-GitHub-Copilot-Plugins-in-JetBrains-Eclipse-and-Xcode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Authentication", "Copilot", "DCR", "Dynamic Client Registration", "Eclipse", "Enterprise Integration", "GitHub Copilot", "IDE Plugins", "Identity Provider", "Improvement", "JetBrains", "MCP", "News", "OAuth", "OAuth 2.0", "OAuth 2.1", "Plugin Development", "Xcode"]
-tags_normalized: ["ai", "authentication", "copilot", "dcr", "dynamic client registration", "eclipse", "enterprise integration", "github copilot", "ide plugins", "identity provider", "improvement", "jetbrains", "mcp", "news", "oauth", "oauth 2dot0", "oauth 2dot1", "plugin development", "xcode"]
+permalink: /github-copilot/news/Enhanced-MCP-OAuth-Support-for-GitHub-Copilot-Plugins-in-JetBrains-Eclipse-and-Xcode
+tags:
+- AI
+- Authentication
+- Copilot
+- DCR
+- Dynamic Client Registration
+- Eclipse
+- Enterprise Integration
+- GitHub Copilot
+- IDE Plugins
+- Identity Provider
+- Improvement
+- JetBrains
+- MCP
+- News
+- OAuth
+- OAuth 2.0
+- OAuth 2.1
+- Plugin Development
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains the new enhanced authentication options in GitHub Copilot plugins for JetBrains, Eclipse, and Xcode, helping developers adopt secure OAuth provider integration in their preferred IDEs.<!--excerpt_end-->
 
 # Enhanced MCP OAuth Support for GitHub Copilot Plugins in JetBrains, Eclipse, and Xcode

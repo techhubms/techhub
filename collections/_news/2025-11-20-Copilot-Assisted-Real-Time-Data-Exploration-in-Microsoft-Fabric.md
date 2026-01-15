@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric"
-description: "This article introduces Copilot-assisted data exploration in Microsoft Fabric, enabling users to interactively analyze real-time dashboard data and KQL tables using natural language queries. Users can ask direct questions, refine visualizations, and derive insights visually without writing query language, making advanced analytics accessible within Fabric's dashboards."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 09:00:00 +00:00
-permalink: "/2025-11-20-Copilot-Assisted-Real-Time-Data-Exploration-in-Microsoft-Fabric.html"
-categories: ["AI", "ML"]
-tags: ["AI", "Analytics", "Copilot", "Dashboard Tiles", "Data Analysis", "Data Exploration", "Data Insights", "Data Visualization", "KQL Tables", "Machine Learning", "Microsoft Fabric", "ML", "Natural Language Query", "News", "No Code Analytics", "Real Time Dashboard", "Realtime Data"]
-tags_normalized: ["ai", "analytics", "copilot", "dashboard tiles", "data analysis", "data exploration", "data insights", "data visualization", "kql tables", "machine learning", "microsoft fabric", "ml", "natural language query", "news", "no code analytics", "real time dashboard", "realtime data"]
+permalink: /ai/news/Copilot-Assisted-Real-Time-Data-Exploration-in-Microsoft-Fabric
+tags:
+- AI
+- Analytics
+- Copilot
+- Dashboard Tiles
+- Data Analysis
+- Data Exploration
+- Data Insights
+- Data Visualization
+- KQL Tables
+- Machine Learning
+- Microsoft Fabric
+- ML
+- Natural Language Query
+- News
+- No Code Analytics
+- Real Time Dashboard
+- Realtime Data
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Fabric Blog details how Copilot now enables interactive and intuitive real-time data exploration using natural language queries, helping users uncover insights visually and effortlessly.<!--excerpt_end-->
 
 # Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric

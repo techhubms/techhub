@@ -1,20 +1,56 @@
----
-layout: "post"
-title: "Scaling Generative AI with GPU-Powered Containers on Azure"
-description: "This video episode features Brian Benz demonstrating how GPUs make generative AI practical at production scale. By running Stable Diffusion with ONNX Runtime and Nvidia CUDA in Spring Boot containers—both locally and on Azure—Brian showcases efficient image generation, leveraging GPU acceleration for dramatic performance gains. Key concepts include containerized AI workflow architecture, model management, version compatibility, and hands-on development using GitHub Copilot and Claude Sonnet for agent-driven code generation. The session provides actionable guidance for integrating, optimizing, and scaling generative AI solutions using Microsoft technologies."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XhyTEgA_kBk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Scaling Generative AI with GPU-Powered Containers on Azure
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=XhyTEgA_kBk
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-05 01:00:52 +00:00
-permalink: "/2025-11-05-Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "ML"]
-tags: ["Agent Mode", "AI", "AI Development", "AIContainers", "Architecture", "Azure", "Azure Container Apps", "AzureContainerApps", "Claude Sonnet", "Coding", "CUDA", "Docker Containers", "DockerContainers", "Generative AI", "GenerativeAI", "GitHub Copilot", "GPU", "GPU Acceleration", "Hugging Face", "Image Generation", "ImageGeneration", "Java", "JavaAI", "ML", "Model Inference", "ONNX", "ONNX Runtime", "Performance Optimization", "SD4J", "Spring Boot", "SpringBoot", "Stable Diffusion", "StableDiffusion", "Version Compatibility", "Videos"]
-tags_normalized: ["agent mode", "ai", "ai development", "aicontainers", "architecture", "azure", "azure container apps", "azurecontainerapps", "claude sonnet", "coding", "cuda", "docker containers", "dockercontainers", "generative ai", "generativeai", "github copilot", "gpu", "gpu acceleration", "hugging face", "image generation", "imagegeneration", "java", "javaai", "ml", "model inference", "onnx", "onnx runtime", "performance optimization", "sd4j", "spring boot", "springboot", "stable diffusion", "stablediffusion", "version compatibility", "videos"]
+permalink: /github-copilot/videos/Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure
+tags:
+- Agent Mode
+- AI
+- AI Development
+- AIContainers
+- Architecture
+- Azure
+- Azure Container Apps
+- AzureContainerApps
+- Claude Sonnet
+- Coding
+- CUDA
+- Docker Containers
+- DockerContainers
+- Generative AI
+- GenerativeAI
+- GitHub Copilot
+- GPU
+- GPU Acceleration
+- Hugging Face
+- Image Generation
+- ImageGeneration
+- Java
+- JavaAI
+- ML
+- Model Inference
+- ONNX
+- ONNX Runtime
+- Performance Optimization
+- SD4J
+- Spring Boot
+- SpringBoot
+- Stable Diffusion
+- StableDiffusion
+- Version Compatibility
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- ml
 ---
-
 In this episode, Brian Benz—joined by Ayan Gupta—shows developers how to build a generative AI image solution using GPU containers in Azure. The session highlights code integration with GitHub Copilot and practical scaling techniques.<!--excerpt_end-->
 
 {% youtube XhyTEgA_kBk %}

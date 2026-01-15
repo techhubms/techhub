@@ -1,20 +1,37 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "GitHub's Remote MCP Update: General Availability and Key Integrations"
-description: "A quick overview of the remote GitHub MCP server's general availability, highlighting new integrations with Copilot coding agent, secret scanning, code scanning alerts, and robust security features. This update connects developers' favorite GitHub tools with large language models (LLMs) and elevates the developer experience through enhanced automation and security insights."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/ENFNweRg8SU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/ENFNweRg8SU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-10 14:00:32 +00:00
-permalink: "/2025-09-10-GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Integration", "Automation", "Code Scanning", "Copilot", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "GitHub MCP", "Large Language Models", "MCP", "Secret Scanning", "Security", "Security Advisories", "Security Alerts", "Videos"]
-tags_normalized: ["ai", "ai integration", "automation", "code scanning", "copilot", "developer tools", "devops", "github", "github copilot", "github mcp", "large language models", "mcp", "secret scanning", "security", "security advisories", "security alerts", "videos"]
+permalink: /github-copilot/videos/GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations
+tags:
+- AI
+- AI Integration
+- Automation
+- Code Scanning
+- Copilot
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub MCP
+- Large Language Models
+- MCP
+- Secret Scanning
+- Security
+- Security Advisories
+- Security Alerts
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 GitHub presents a concise update, narrated by the GitHub team, on the general availability of the remote MCP server and its integrations with Copilot, security features, and AI-powered development tools.<!--excerpt_end-->
 
 {% youtube ENFNweRg8SU %}

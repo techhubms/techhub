@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Startup Engineering Culture in Action"
-description: "Rene van Osnabrugge shares key insights from the LEAD podcast on developing engineering culture in startups. Through conversation with Atlas CTO Harald, he explores lean processes, prioritization, culture scaling, team empowerment, and trust-driven DevOps, offering practical advice for building sustainable engineering practices in evolving organizations."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Startup Engineering Culture in Action
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-06-18 07:18:00 +00:00
-permalink: "/2025-06-18-Startup-Engineering-Culture-in-Action.html"
-categories: ["DevOps"]
-tags: ["Architecture", "Atlas", "Blogs", "DevOps", "Engineering Culture", "Lead Podcast", "Lean Processes", "Ownership", "Prioritization", "Product Focus", "Scaling", "Software Development", "Startups", "Team Structure", "Trust"]
-tags_normalized: ["architecture", "atlas", "blogs", "devops", "engineering culture", "lead podcast", "lean processes", "ownership", "prioritization", "product focus", "scaling", "software development", "startups", "team structure", "trust"]
+permalink: /devops/blogs/Startup-Engineering-Culture-in-Action
+tags:
+- Architecture
+- Atlas
+- Blogs
+- DevOps
+- Engineering Culture
+- Lead Podcast
+- Lean Processes
+- Ownership
+- Prioritization
+- Product Focus
+- Scaling
+- Software Development
+- Startups
+- Team Structure
+- Trust
+section_names:
+- devops
 ---
-
 In this blog post, Rene van Osnabrugge distills lessons on startup engineering culture from the LEAD podcast, with a focus on lean processes, trust, and DevOps principles.<!--excerpt_end-->
 
 ## Startup Engineering Culture in Action

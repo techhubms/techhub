@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Introducing HTTP and MongoDB CDC Connectors for Fabric Eventstream"
-description: "This news update introduces two new connectors—HTTP and MongoDB CDC—for Microsoft Fabric Eventstream in Real-Time Intelligence (RTI). The HTTP connector allows no-code streaming from public APIs and diverse platforms using GET or POST requests, while the MongoDB CDC connector enables real-time data ingestion and snapshotting from MongoDB databases. Both features are shaped by direct user feedback and community engagement, further enhancing Fabric RTI’s capabilities for streaming, real-time analytics, and up-to-date dashboards."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing HTTP and MongoDB CDC Connectors for Fabric Eventstream
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 12:00:00 +00:00
-permalink: "/2025-11-21-Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Change Data Capture", "Community Feedback", "Dashboard", "Data Ingestion", "Data Pipeline", "Eventstream", "Fabric Ideas", "HTTP Connector", "Microsoft Fabric", "ML", "MongoDB Atlas", "MongoDB CDC", "News", "No Code Integration", "Public APIs", "Real Time Analytics", "Real Time Intelligence", "Snapshot Mode", "Streaming Data"]
-tags_normalized: ["azure", "change data capture", "community feedback", "dashboard", "data ingestion", "data pipeline", "eventstream", "fabric ideas", "http connector", "microsoft fabric", "ml", "mongodb atlas", "mongodb cdc", "news", "no code integration", "public apis", "real time analytics", "real time intelligence", "snapshot mode", "streaming data"]
+permalink: /ml/news/Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream
+tags:
+- Azure
+- Change Data Capture
+- Community Feedback
+- Dashboard
+- Data Ingestion
+- Data Pipeline
+- Eventstream
+- Fabric Ideas
+- HTTP Connector
+- Microsoft Fabric
+- ML
+- MongoDB Atlas
+- MongoDB CDC
+- News
+- No Code Integration
+- Public APIs
+- Real Time Analytics
+- Real Time Intelligence
+- Snapshot Mode
+- Streaming Data
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces new HTTP and MongoDB CDC connectors for Eventstream, enabling users to easily integrate and analyze real-time data within Fabric RTI.<!--excerpt_end-->
 
 # Introducing HTTP and MongoDB CDC Connectors for Fabric Eventstream

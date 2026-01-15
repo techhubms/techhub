@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow"
-description: "This video tutorial, led by April from Microsoft Developer, walks users through the steps for building a sequential multi-agent workflow in Microsoft Foundry. The guide covers the setup of the Foundry portal, project creation, model deployment, workflow configuration using templates, and testing with three agents. Viewers will gain hands-on experience with new Foundry features and learn practical approaches for orchestrating AI-powered agents on Azure AI Foundry."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AqM5WLq2VtY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=AqM5WLq2VtY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:00 +00:00
-permalink: "/2025-11-24-Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Orchestration", "AI", "AI Workflow", "Azure", "Azure AI Foundry", "Cloud Computing", "Dev", "Development", "Development Tools", "Microsoft", "Microsoft Foundry", "Model Deployment", "Multi Agent System", "Portal Setup", "Sequential Workflow", "Tech", "Technology", "Template Usage", "Videos", "Workflow Automation"]
-tags_normalized: ["agent orchestration", "ai", "ai workflow", "azure", "azure ai foundry", "cloud computing", "dev", "development", "development tools", "microsoft", "microsoft foundry", "model deployment", "multi agent system", "portal setup", "sequential workflow", "tech", "technology", "template usage", "videos", "workflow automation"]
+permalink: /ai/videos/Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow
+tags:
+- Agent Orchestration
+- AI
+- AI Workflow
+- Azure
+- Azure AI Foundry
+- Cloud Computing
+- Dev
+- Development
+- Development Tools
+- Microsoft
+- Microsoft Foundry
+- Model Deployment
+- Multi Agent System
+- Portal Setup
+- Sequential Workflow
+- Tech
+- Technology
+- Template Usage
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 April from Microsoft Developer presents a hands-on video tutorial introducing sequential multi-agent workflows in Microsoft Foundry, guiding viewers through portal setup, model deployment, and workflow configuration.<!--excerpt_end-->
 
 {% youtube AqM5WLq2VtY %}

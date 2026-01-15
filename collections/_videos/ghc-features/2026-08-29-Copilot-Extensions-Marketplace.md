@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Copilot Extensions Marketplace"
-description: "Install third-party extensions that extend Copilot's capabilities"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Copilot Extensions Marketplace
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: "/2026-08-29-Copilot-Extensions-Marketplace.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Copilot-Extensions-Marketplace
+viewing_mode: internal
+section: github-copilot
+ghes_support: false
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Copilot Extensions Marketplace feature. Install third-party extensions that extend Copilot's capabilities<!--excerpt_end-->
 
 ## Overview

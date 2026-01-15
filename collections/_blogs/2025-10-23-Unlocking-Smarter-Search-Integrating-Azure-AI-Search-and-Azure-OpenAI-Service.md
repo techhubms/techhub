@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Unlocking Smarter Search: Integrating Azure AI Search and Azure OpenAI Service"
-description: "This guide explores how to combine Azure AI Search and Azure OpenAI Service to deliver conversational, context-aware search experiences. It explains the architecture, implementation steps, and practical best practices for Retrieval-Augmented Generation (RAG) pipelines using Microsoft’s enterprise AI services. Real-world use cases and key configuration tips are included for practitioners."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Unlocking Smarter Search: Integrating Azure AI Search and Azure OpenAI Service'
+author: Dellenny
+canonical_url: https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-23 08:41:37 +00:00
-permalink: "/2025-10-23-Unlocking-Smarter-Search-Integrating-Azure-AI-Search-and-Azure-OpenAI-Service.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Search", "Azure OpenAI Service", "Blogs", "Cognitive Search", "Data Enrichment", "Embeddings", "Enterprise Search", "GPT 4", "Hybrid Search", "Indexing", "Keyword Search", "Natural Language Processing", "Prompt Engineering", "Retrieval Augmented Generation", "Vector Search"]
-tags_normalized: ["ai", "azure", "azure ai search", "azure openai service", "blogs", "cognitive search", "data enrichment", "embeddings", "enterprise search", "gpt 4", "hybrid search", "indexing", "keyword search", "natural language processing", "prompt engineering", "retrieval augmented generation", "vector search"]
+permalink: /ai/blogs/Unlocking-Smarter-Search-Integrating-Azure-AI-Search-and-Azure-OpenAI-Service
+tags:
+- AI
+- Azure
+- Azure AI Search
+- Azure OpenAI Service
+- Blogs
+- Cognitive Search
+- Data Enrichment
+- Embeddings
+- Enterprise Search
+- GPT 4
+- Hybrid Search
+- Indexing
+- Keyword Search
+- Natural Language Processing
+- Prompt Engineering
+- Retrieval Augmented Generation
+- Vector Search
+section_names:
+- ai
+- azure
 ---
-
 Dellenny presents a hands-on walkthrough of how to combine Azure AI Search and Azure OpenAI Service, showing developers and architects how to build smarter, context-aware search applications using Microsoft’s AI ecosystem.<!--excerpt_end-->
 
 # Unlocking Smarter Search: Integrating Azure AI Search & Azure OpenAI Service

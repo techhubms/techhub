@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Disciplined Guardrail Development in Enterprise Applications with GitHub Copilot"
-description: "This article by daisami explores a disciplined, guardrail-based approach to AI-assisted software development using GitHub Copilot. It details how to implement structured guidance through custom instructions and chat modes, helping maintain code quality, clarity, and architectural consistency in enterprise projects. The guide discusses best practices for configuration, documentation synchronization, handling schemas, and aligning requirements and design artifacts. Readers will gain actionable strategies for maximizing Copilot’s potential in large-scale .NET and Azure environments."
-author: "daisami"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Disciplined Guardrail Development in Enterprise Applications with GitHub Copilot
+author: daisami
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-19 20:06:44 +00:00
-permalink: "/2025-09-19-Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Assisted Development", "Application Architecture", "Chat Modes", "Code Quality", "Coding", "Community", "Custom Instructions", "Database Schema", "Design Documentation", "DevOps", "DevOps Practices", "Enterprise Software", "GitHub Copilot", "Guardrails", "LLM Integration", "Project Structure", "Requirements Definition"]
-tags_normalized: ["dotnet", "ai", "ai assisted development", "application architecture", "chat modes", "code quality", "coding", "community", "custom instructions", "database schema", "design documentation", "devops", "devops practices", "enterprise software", "github copilot", "guardrails", "llm integration", "project structure", "requirements definition"]
+permalink: /github-copilot/community/Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot
+tags:
+- .NET
+- AI
+- AI Assisted Development
+- Application Architecture
+- Chat Modes
+- Code Quality
+- Coding
+- Community
+- Custom Instructions
+- Database Schema
+- Design Documentation
+- DevOps
+- DevOps Practices
+- Enterprise Software
+- GitHub Copilot
+- Guardrails
+- LLM Integration
+- Project Structure
+- Requirements Definition
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 daisami explains disciplined guardrail-based development with GitHub Copilot, showing how structured rules, configuration, and documentation practices lead to higher quality and maintainable enterprise software projects.<!--excerpt_end-->
 
 # Disciplined Guardrail-Based Development in Enterprise Applications with GitHub Copilot

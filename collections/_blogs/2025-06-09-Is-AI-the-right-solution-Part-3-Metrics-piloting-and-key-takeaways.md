@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Is AI the right solution? Part 3: Metrics, piloting, and key takeaways"
-description: "This final part of the AI project validation series by Hidde de Smet discusses how to define comprehensive success metrics for AI projects, the benefits of pilot projects, key steps for iterative improvement, and essential takeaways for strategic, ethical, and business-aligned AI adoption within organizations."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/ai-project-validation-framework-part3"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'Is AI the right solution? Part 3: Metrics, piloting, and key takeaways'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/ai-project-validation-framework-part3
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-09 08:00:00 +00:00
-permalink: "/2025-06-09-Is-AI-the-right-solution-Part-3-Metrics-piloting-and-key-takeaways.html"
-categories: ["AI"]
-tags: ["AI", "Blogs", "Business Alignment", "Ethical AI", "IASA", "Iteration", "KPIs", "Metrics", "Pilot Projects", "Piloting", "Project Validation", "ROI", "Series", "Success Metrics"]
-tags_normalized: ["ai", "blogs", "business alignment", "ethical ai", "iasa", "iteration", "kpis", "metrics", "pilot projects", "piloting", "project validation", "roi", "series", "success metrics"]
+permalink: /ai/blogs/Is-AI-the-right-solution-Part-3-Metrics-piloting-and-key-takeaways
+tags:
+- AI
+- Blogs
+- Business Alignment
+- Ethical AI
+- IASA
+- Iteration
+- KPIs
+- Metrics
+- Pilot Projects
+- Piloting
+- Project Validation
+- ROI
+- Series
+- Success Metrics
+section_names:
+- ai
 ---
-
 In this concluding article, Hidde de Smet guides readers through defining success metrics, piloting, and essential learnings for effective and responsible AI project implementation.<!--excerpt_end-->
 
 # Is AI the right solution? Part 3: Metrics, piloting, and key takeaways

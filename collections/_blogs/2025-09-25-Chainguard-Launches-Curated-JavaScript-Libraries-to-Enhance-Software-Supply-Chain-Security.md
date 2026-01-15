@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Chainguard Launches Curated JavaScript Libraries to Enhance Software Supply Chain Security"
-description: "This article explores Chainguard's introduction of curated JavaScript libraries built on the SLSA framework, focusing on securing software supply chains and mitigating NPM malware risks. It reviews recent incidents like the Shai-Halud cyberattack, the challenges of securing open source dependencies, and the need for best DevSecOps practices. Integration with existing artifact managers and the importance of continuous library vetting for malware are emphasized, making this relevant to developers and security-focused DevOps teams."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Chainguard Launches Curated JavaScript Libraries to Enhance Software Supply Chain Security
+author: Mike Vizard
+canonical_url: https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-25 13:59:32 +00:00
-permalink: "/2025-09-25-Chainguard-Launches-Curated-JavaScript-Libraries-to-Enhance-Software-Supply-Chain-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Blogs", "Chainguard", "Curated JavaScript Libraries", "Curated Packages", "Cyberattack", "Dependency Management", "DevOps", "DevSecOps", "DevSecOps Practices", "JavaScript Dependency Security", "JavaScript Libraries", "JFrog Artifactory", "Malware in Open Source", "Malware Mitigation", "npm", "npm Security", "Open Source Security", "Open Source Software Security", "Secure Artifact Management", "Secure Software Supply Chain", "Security", "Shai Halud Cyberattack", "SLSA Framework", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Sonatype Nexus"]
-tags_normalized: ["application security", "blogs", "chainguard", "curated javascript libraries", "curated packages", "cyberattack", "dependency management", "devops", "devsecops", "devsecops practices", "javascript dependency security", "javascript libraries", "jfrog artifactory", "malware in open source", "malware mitigation", "npm", "npm security", "open source security", "open source software security", "secure artifact management", "secure software supply chain", "security", "shai halud cyberattack", "slsa framework", "social facebook", "social linkedin", "social x", "software supply chain", "sonatype nexus"]
+permalink: /devops/blogs/Chainguard-Launches-Curated-JavaScript-Libraries-to-Enhance-Software-Supply-Chain-Security
+tags:
+- Application Security
+- Blogs
+- Chainguard
+- Curated JavaScript Libraries
+- Curated Packages
+- Cyberattack
+- Dependency Management
+- DevOps
+- DevSecOps
+- DevSecOps Practices
+- JavaScript Dependency Security
+- JavaScript Libraries
+- JFrog Artifactory
+- Malware in Open Source
+- Malware Mitigation
+- npm
+- npm Security
+- Open Source Security
+- Open Source Software Security
+- Secure Artifact Management
+- Secure Software Supply Chain
+- Security
+- Shai Halud Cyberattack
+- SLSA Framework
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Sonatype Nexus
+section_names:
+- devops
+- security
 ---
-
 Mike Vizard examines how Chainguard's new curated JavaScript libraries leverage the SLSA framework to help DevSecOps teams secure software supply chains against threats like NPM malware.<!--excerpt_end-->
 
 # Chainguard Launches Curated JavaScript Libraries to Enhance Software Supply Chain Security

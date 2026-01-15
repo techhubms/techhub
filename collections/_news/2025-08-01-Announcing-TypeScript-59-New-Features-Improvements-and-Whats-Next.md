@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Announcing TypeScript 5.9: New Features, Improvements, and What’s Next"
-description: "Daniel Rosenwasser announces the release of TypeScript 5.9, highlighting updates such as minimal tsconfig initialization, support for 'import defer', a new 'node20' module option, expandable hovers in editors, performance optimizations, and notable changes in type-checking behavior. The post also outlines the roadmap for TypeScript 6.0 and 7.0."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript 5.9: New Features, Improvements, and What’s Next'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-08-01 16:19:25 +00:00
-permalink: "/2025-08-01-Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next.html"
-categories: ["Coding"]
-tags: ["Coding", "ECMAScript", "Expandable Hovers", "Import Defer", "JavaScript", "News", "Node.js", "Performance Optimization", "Tsconfig", "Type Checking", "Type Inference", "TypeScript", "TypeScript 5.9", "VS Code"]
-tags_normalized: ["coding", "ecmascript", "expandable hovers", "import defer", "javascript", "news", "nodedotjs", "performance optimization", "tsconfig", "type checking", "type inference", "typescript", "typescript 5dot9", "vs code"]
+permalink: /coding/news/Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next
+tags:
+- Coding
+- ECMAScript
+- Expandable Hovers
+- Import Defer
+- JavaScript
+- News
+- Node.js
+- Performance Optimization
+- Tsconfig
+- Type Checking
+- Type Inference
+- TypeScript
+- TypeScript 5.9
+- VS Code
+section_names:
+- coding
 ---
-
 Daniel Rosenwasser details the release of TypeScript 5.9, covering its new features, performance enhancements, and key behavior changes—essential reading for TypeScript developers.<!--excerpt_end-->
 
 # Announcing TypeScript 5.9: New Features, Improvements, and What’s Next

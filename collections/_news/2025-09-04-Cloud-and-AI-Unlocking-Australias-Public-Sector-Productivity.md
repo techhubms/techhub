@@ -1,20 +1,39 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Cloud and AI: Unlocking Australia's Public Sector Productivity"
-description: "This news overview summarizes a new Mandala report highlighting how accelerating cloud and AI adoption in Australia's government sector could drive billions in productivity savings, improve cybersecurity, and support sustainable service delivery. The article explores specific recommendations for reform, real-world examples, and the challenges faced in migrating from legacy systems to modern cloud and AI solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-04 14:32:28 +00:00
-permalink: "/2025-09-04-Cloud-and-AI-Unlocking-Australias-Public-Sector-Productivity.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Tools", "Azure", "Cloud", "Cloud Adoption", "Company News", "Cybersecurity", "Digital Government", "Digital Transformation", "Government IT", "IT Modernization", "Legacy System Modernization", "Microsoft Azure", "News", "Procurement Reform", "Productivity", "Public Sector Innovation", "Security", "Service Delivery", "Sustainability"]
-tags_normalized: ["ai", "ai tools", "azure", "cloud", "cloud adoption", "company news", "cybersecurity", "digital government", "digital transformation", "government it", "it modernization", "legacy system modernization", "microsoft azure", "news", "procurement reform", "productivity", "public sector innovation", "security", "service delivery", "sustainability"]
+permalink: /ai/news/Cloud-and-AI-Unlocking-Australias-Public-Sector-Productivity
+tags:
+- AI
+- AI Tools
+- Azure
+- Cloud
+- Cloud Adoption
+- Company News
+- Cybersecurity
+- Digital Government
+- Digital Transformation
+- Government IT
+- IT Modernization
+- Legacy System Modernization
+- Microsoft Azure
+- News
+- Procurement Reform
+- Productivity
+- Public Sector Innovation
+- Security
+- Service Delivery
+- Sustainability
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke examines Mandala's report on how cloud and AI can transform Australia's government sector, highlighting big savings, improved cybersecurity, and modernization opportunities.<!--excerpt_end-->
 
 # Cloud and AI: Unlocking Australia's Public Sector Productivity

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: ".NET Aspire – Adding Custom Commands to the Dashboard"
-description: "This video by Fritz demonstrates how to write custom commands in .NET Aspire, enabling you to streamline configuration tasks directly from the Aspire dashboard. Learn how to share and re-run scripts within development teams to improve workflow and collaboration using .NET technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=idXn50wKqhY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Aspire – Adding Custom Commands to the Dashboard
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=idXn50wKqhY
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-30 17:19:49 +00:00
-permalink: "/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Aspire", "Automation", "Coding", "Configuration", "Custom Commands", "Dashboard", "Developer Tools", "Development Environment", "Scripts", "Team Collaboration", "Videos"]
-tags_normalized: ["dotnet", "dotnet aspire", "automation", "coding", "configuration", "custom commands", "dashboard", "developer tools", "development environment", "scripts", "team collaboration", "videos"]
+permalink: /coding/videos/NET-Aspire-Adding-Custom-Commands-to-the-Dashboard
+tags:
+- .NET
+- .NET Aspire
+- Automation
+- Coding
+- Configuration
+- Custom Commands
+- Dashboard
+- Developer Tools
+- Development Environment
+- Scripts
+- Team Collaboration
+- Videos
+section_names:
+- coding
 ---
-
 In this video, Fritz guides viewers through the process of adding custom commands to the .NET Aspire dashboard, focusing on developer productivity and environment configuration tasks.<!--excerpt_end-->
 
 {% youtube idXn50wKqhY %}

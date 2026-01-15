@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications"
-description: "This spotlight introduces Steeltoe, a set of libraries and tools for .NET developers to build production-grade, cloud-native applications. Steeltoe enhances developer productivity, integrates with external configuration and service discovery, and supports distributed tracing and security for microservices and web applications, with contributions from Microsoft and VMware."
-author: ".NET Foundation News and Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe"
-viewing_mode: "external"
-feed_name: ".NET Foundation's Blog"
-feed_url: "https://dotnetfoundation.org/feeds/blog"
+﻿---
+layout: post
+title: 'Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications'
+author: .NET Foundation News and Blog
+canonical_url: https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe
+viewing_mode: external
+feed_name: .NET Foundation's Blog
+feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-11-29 13:46:22 +00:00
-permalink: "/2025-11-29-Project-Spotlight-Steeltoe-Building-Cloud-Native-NET-Applications.html"
-categories: ["Coding"]
-tags: [".NET", "Application Management", "Blogs", "Cloud Native", "Coding", "Distributed Tracing", "Enterprise Applications", "Externalized Configuration", "Microservices", "Productivity Tools", "Service Discovery", "Spring Cloud", "Steeltoe", "Web Applications"]
-tags_normalized: ["dotnet", "application management", "blogs", "cloud native", "coding", "distributed tracing", "enterprise applications", "externalized configuration", "microservices", "productivity tools", "service discovery", "spring cloud", "steeltoe", "web applications"]
+permalink: /coding/blogs/Project-Spotlight-Steeltoe-Building-Cloud-Native-NET-Applications
+tags:
+- .NET
+- Application Management
+- Blogs
+- Cloud Native
+- Coding
+- Distributed Tracing
+- Enterprise Applications
+- Externalized Configuration
+- Microservices
+- Productivity Tools
+- Service Discovery
+- Spring Cloud
+- Steeltoe
+- Web Applications
+section_names:
+- coding
 ---
-
 .NET Foundation News and Blog introduces Steeltoe, a robust toolkit for .NET developers focused on building secure, scalable, cloud-native applications and microservices.<!--excerpt_end-->
 
 # Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications

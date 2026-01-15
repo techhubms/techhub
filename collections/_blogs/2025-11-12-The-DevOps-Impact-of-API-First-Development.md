@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The DevOps Impact of API-First Development"
-description: "This interview summary explores findings from the Postman 7th Annual State of the API Report, highlighting how APIs are transforming development and DevOps practices. It covers the shift toward API-first strategies, increased focus on governance, lifecycle management, security, the integration of AI for automation and monitoring, and the evolving multi-cloud landscape. Developers, platform engineers, and security teams are encouraged to collaborate and adapt to the complexities of modern API ecosystems to drive digital transformation."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-devops-impact-of-api-first-development/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: The DevOps Impact of API-First Development
+author: Alan Shimel
+canonical_url: https://devops.com/the-devops-impact-of-api-first-development/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-12 20:06:30 +00:00
-permalink: "/2025-11-12-The-DevOps-Impact-of-API-First-Development.html"
-categories: ["DevOps"]
-tags: ["AI", "AI in APIs", "API", "API First", "API Lifecycle", "API Security", "API Strategy", "Automation", "Blogs", "Developer Experience", "DevOps", "Digital Transformation", "Governance", "Multi Cloud", "Observability", "Platform Engineering", "Postman", "Software Development", "Video Interviews"]
-tags_normalized: ["ai", "ai in apis", "api", "api first", "api lifecycle", "api security", "api strategy", "automation", "blogs", "developer experience", "devops", "digital transformation", "governance", "multi cloud", "observability", "platform engineering", "postman", "software development", "video interviews"]
+permalink: /devops/blogs/The-DevOps-Impact-of-API-First-Development
+tags:
+- AI
+- AI in APIs
+- API
+- API First
+- API Lifecycle
+- API Security
+- API Strategy
+- Automation
+- Blogs
+- Developer Experience
+- DevOps
+- Digital Transformation
+- Governance
+- Multi Cloud
+- Observability
+- Platform Engineering
+- Postman
+- Software Development
+- Video Interviews
+section_names:
+- devops
 ---
-
 Alan Shimel interviews Balaji Raghavan to discuss the State of the API Report, emphasizing the impact of API-first development on DevOps, software delivery, and team collaboration.<!--excerpt_end-->
 
 # The DevOps Impact of API-First Development

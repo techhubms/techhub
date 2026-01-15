@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit"
-description: "This video chapter guides developers through four hands-on labs leveraging the AI Toolkit extension and Model Context Protocol (MCP) in Visual Studio Code. Viewers learn to create AI agents with capabilities like web browsing and developer tool integration, advancing from model testing to custom MCP server development for real-world applications."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=r34Csn3rkeQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=r34Csn3rkeQ
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:31 +00:00
-permalink: "/2025-07-28-Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Toolkit", "Coding", "Custom Server Development", "Developer Tools", "MCP", "Practical Labs", "Prompt Engineering", "Videos", "VS Code", "Web Integration"]
-tags_normalized: ["ai", "ai agents", "ai toolkit", "coding", "custom server development", "developer tools", "mcp", "practical labs", "prompt engineering", "videos", "vs code", "web integration"]
+permalink: /ai/videos/Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit
+tags:
+- AI
+- AI Agents
+- AI Toolkit
+- Coding
+- Custom Server Development
+- Developer Tools
+- MCP
+- Practical Labs
+- Prompt Engineering
+- Videos
+- VS Code
+- Web Integration
+section_names:
+- ai
+- coding
 ---
-
 Microsoft Developer presents a practical video guide on building AI agents in Visual Studio Code using the AI Toolkit and Model Context Protocol. Discover how to extend your development workflow through four hands-on labs.<!--excerpt_end-->
 
 {% youtube r34Csn3rkeQ %}

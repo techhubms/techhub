@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Exploring Azure Portal, CLI, and PowerShell: Choosing the Right Azure Management Tool"
-description: "This article by John Edward offers a practical guide to selecting the right tool for managing Microsoft Azure resources, comparing the Azure Portal, Azure CLI, and Azure PowerShell. It breaks down the advantages and limitations of each tool, outlines scenarios where each is most effective, and provides actionable insights for developers, administrators, and DevOps engineers aiming to master cloud management and automation in Azure."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Exploring Azure Portal, CLI, and PowerShell: Choosing the Right Azure Management Tool'
+author: John Edward
+canonical_url: https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-19 10:14:24 +00:00
-permalink: "/2025-11-19-Exploring-Azure-Portal-CLI-and-PowerShell-Choosing-the-Right-Azure-Management-Tool.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure CLI", "Azure Portal", "Azure PowerShell", "Blogs", "CI/CD", "Cloud Management", "Cloud Shell", "Coding", "Cross Platform Deployment", "DevOps", "Monitoring", "PowerShell Cmdlets", "RBAC", "Resource Automation", "Resource Group", "Scripting", "Windows Automation"]
-tags_normalized: ["azure", "azure cli", "azure portal", "azure powershell", "blogs", "cislashcd", "cloud management", "cloud shell", "coding", "cross platform deployment", "devops", "monitoring", "powershell cmdlets", "rbac", "resource automation", "resource group", "scripting", "windows automation"]
+permalink: /coding/blogs/Exploring-Azure-Portal-CLI-and-PowerShell-Choosing-the-Right-Azure-Management-Tool
+tags:
+- Azure
+- Azure CLI
+- Azure Portal
+- Azure PowerShell
+- Blogs
+- CI/CD
+- Cloud Management
+- Cloud Shell
+- Coding
+- Cross Platform Deployment
+- DevOps
+- Monitoring
+- PowerShell Cmdlets
+- RBAC
+- Resource Automation
+- Resource Group
+- Scripting
+- Windows Automation
+section_names:
+- azure
+- coding
+- devops
 ---
-
 John Edward presents a comparative analysis of Azure Portal, Azure CLI, and Azure PowerShell, empowering practitioners to choose optimal tools for efficient cloud resource management and automation.<!--excerpt_end-->
 
 # Exploring Azure Portal, CLI, and PowerShell — Which One Should You Use?

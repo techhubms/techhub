@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Making Windows Terminal Awesome with GitHub Copilot CLI"
-description: "This guide explores personalizing and optimizing Windows Terminal for developer workflows using GitHub Copilot CLI. Kayla Cinnamon walks through detailed steps to customize terminal profiles, launch Copilot CLI efficiently, integrate Oh My Posh for enhanced prompts, and display GitHub Copilot stats right in the shell. Includes tips for PowerShell, pane management, restoring sessions, nerd fonts, retro terminal effects, and practical GitHub Copilot CLI usage for daily coding activities."
-author: "Kayla Cinnamon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Making Windows Terminal Awesome with GitHub Copilot CLI
+author: Kayla Cinnamon
+canonical_url: https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-11 17:00:28 +00:00
-permalink: "/2025-12-11-Making-Windows-Terminal-Awesome-with-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "CLI Development", "Coding", "Command Line Tools", "Customization", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft", "Microsoft For Developers", "Nerd Fonts", "News", "npm", "Oh My Posh", "PowerShell", "Profile Settings", "Prompt Customization", "Retro Terminal Effects", "Terminal Panes", "Terminal Profiles", "Windows Terminal"]
-tags_normalized: ["ai", "cli development", "coding", "command line tools", "customization", "github copilot", "github copilot cli", "microsoft", "microsoft for developers", "nerd fonts", "news", "npm", "oh my posh", "powershell", "profile settings", "prompt customization", "retro terminal effects", "terminal panes", "terminal profiles", "windows terminal"]
+permalink: /github-copilot/news/Making-Windows-Terminal-Awesome-with-GitHub-Copilot-CLI
+tags:
+- AI
+- CLI Development
+- Coding
+- Command Line Tools
+- Customization
+- GitHub Copilot
+- GitHub Copilot CLI
+- Microsoft
+- Microsoft For Developers
+- Nerd Fonts
+- News
+- npm
+- Oh My Posh
+- PowerShell
+- Profile Settings
+- Prompt Customization
+- Retro Terminal Effects
+- Terminal Panes
+- Terminal Profiles
+- Windows Terminal
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Kayla Cinnamon guides developers on making Windows Terminal highly personalized for coding, highlighting GitHub Copilot CLI setup, custom profiles, and integrating useful prompt features.<!--excerpt_end-->
 
 # Making Windows Terminal Awesome with GitHub Copilot CLI
@@ -82,7 +101,7 @@ npm install -g @github/copilot
 
 - In Oh My Posh v28.1.0+, add the Copilot segment to show premium and chat quota:
 
-{% raw %}
+
 
 ```json
 {
@@ -93,7 +112,7 @@ npm install -g @github/copilot
 }
 ```
 
-{% endraw %}
+
 
 - Authenticate with `oh-my-posh auth copilot` to enable stats.
 

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Best Practices for Architecting AI Agents in Enterprise Systems"
-description: "This episode of Armchair Architects features Uli, Eric, and David discussing the integration, governance, and security of AI agents within enterprise environments. The talk delves into agent identity management, key protocols such as Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication, architectural guardrails, business logic, and observability using tools like OpenTelemetry. Practical recommendations include scoping agents narrowly, employing least privilege, deploying ring releases, and monitoring agents for safety and performance. References to Azure solutions and Microsoft Entra highlight a Microsoft-focused approach to agent-based systems."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pwtY8O_YvSI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Best Practices for Architecting AI Agents in Enterprise Systems
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=pwtY8O_YvSI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-16 08:01:04 +00:00
-permalink: "/2025-12-16-Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["A2A Communication", "Agent Framework", "Agent Identity Management", "AI", "AI Agents", "Architecture Best Practices", "Azure", "Canary Deployment", "Enterprise Security", "Guardrails", "MCP", "Microsoft Entra", "Observability", "OpenTelemetry", "Security", "Videos"]
-tags_normalized: ["a2a communication", "agent framework", "agent identity management", "ai", "ai agents", "architecture best practices", "azure", "canary deployment", "enterprise security", "guardrails", "mcp", "microsoft entra", "observability", "opentelemetry", "security", "videos"]
+permalink: /ai/videos/Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems
+tags:
+- A2A Communication
+- Agent Framework
+- Agent Identity Management
+- AI
+- AI Agents
+- Architecture Best Practices
+- Azure
+- Canary Deployment
+- Enterprise Security
+- Guardrails
+- MCP
+- Microsoft Entra
+- Observability
+- OpenTelemetry
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Developer presents a discussion with Uli, Eric, and David on architecting AI agents in enterprise environments, covering identity, protocols, and secure deployment strategies.<!--excerpt_end-->
 
 {% youtube pwtY8O_YvSI %}

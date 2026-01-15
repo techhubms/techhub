@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Add a Property to the Top-level Statements Program Class"
-description: "Khalid Abuhakmeh explores how to extend C# top-level programs with static properties using a partial Program class. The article demonstrates implementing cleaner and more readable utility console apps by leveraging partial classes to add static members in top-level statement files."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Add a Property to the Top-level Statements Program Class
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-06 00:00:00 +00:00
-permalink: "/2024-08-06-Add-a-Property-to-the-Top-level-Statements-Program-Class.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Code Readability", "Coding", "Compiler", "Console Application", "Partial Class", "Program Class", "Program Structure", "Static Properties", "Top Level Statements"]
-tags_normalized: ["dotnet", "blogs", "csharp", "code readability", "coding", "compiler", "console application", "partial class", "program class", "program structure", "static properties", "top level statements"]
+permalink: /coding/blogs/Add-a-Property-to-the-Top-level-Statements-Program-Class
+tags:
+- .NET
+- Blogs
+- C#
+- Code Readability
+- Coding
+- Compiler
+- Console Application
+- Partial Class
+- Program Class
+- Program Structure
+- Static Properties
+- Top Level Statements
+section_names:
+- coding
 ---
-
 Khalid Abuhakmeh explains how to add static properties to a top-level statements Program class in C# using partial classes. This post guides readers on creating more readable console applications and delves into the compiler-generated code structure.<!--excerpt_end-->
 
 ## Summary

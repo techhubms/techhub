@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Streamlining Your Git Workflow with Visual Studio 2026"
-description: "This article, written by Mads Kristensen, guides .NET developers through a typical morning using Visual Studio 2026’s enhanced Git tools. It covers rapid branching, stashing, reviewing, and committing workflows, highlighting how built-in Copilot features and improved interfaces simplify day-to-day source control and collaboration with Azure DevOps."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Streamlining Your Git Workflow with Visual Studio 2026
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-10 15:00:47 +00:00
-permalink: "/2025-12-10-Streamlining-Your-Git-Workflow-with-Visual-Studio-2026.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "Async Programming", "Azure DevOps", "Branch Management", "Code Review", "Coding", "Commit Message Automation", "Copilot Chat", "Copilot Code Review", "DevOps", "Git", "Git Changes Window", "Git Repository Window", "GitHub Copilot", "News", "Pull Requests", "Source Control", "Stashing", "VS"]
-tags_normalized: ["dotnet", "ai", "async programming", "azure devops", "branch management", "code review", "coding", "commit message automation", "copilot chat", "copilot code review", "devops", "git", "git changes window", "git repository window", "github copilot", "news", "pull requests", "source control", "stashing", "vs"]
+permalink: /github-copilot/news/Streamlining-Your-Git-Workflow-with-Visual-Studio-2026
+tags:
+- .NET
+- AI
+- Async Programming
+- Azure DevOps
+- Branch Management
+- Code Review
+- Coding
+- Commit Message Automation
+- Copilot Chat
+- Copilot Code Review
+- DevOps
+- Git
+- Git Changes Window
+- Git Repository Window
+- GitHub Copilot
+- News
+- Pull Requests
+- Source Control
+- Stashing
+- VS
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Mads Kristensen walks .NET developers through a productive morning with Visual Studio 2026, showcasing streamlined Git workflows and AI-powered reviews for improved code quality.<!--excerpt_end-->
 
 # Streamlining Your Git Workflow with Visual Studio 2026

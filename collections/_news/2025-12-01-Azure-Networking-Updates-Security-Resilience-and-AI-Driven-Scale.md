@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Networking Updates: Security, Resilience, and AI-Driven Scale"
-description: "This article highlights recent advancements in Azure Networking, focusing on how Microsoft is enabling the next generation of cloud transformation powered by AI workloads. It covers updated features for resilience, security, networking scale, and cloud-native application support, emphasizing the critical role of Azure's infrastructure in delivering high-performance, secure, and scalable connectivity for modern enterprises."
-author: "Narayan Annamalai"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Azure Networking Updates: Security, Resilience, and AI-Driven Scale'
+author: Narayan Annamalai
+canonical_url: https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 17:00:00 +00:00
-permalink: "/2025-12-01-Azure-Networking-Updates-Security-Resilience-and-AI-Driven-Scale.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Advanced Container Networking", "AI", "AI Workloads", "AKS", "Application Gateway", "Azure", "Azure ExpressRoute", "Azure Networking", "Azure Private Link", "Cloud Transformation", "DNS Security Policy", "High Availability", "JWT Validation", "NAT Gateway", "Network Security", "Networking", "News", "Security", "Virtual WAN", "VPN Gateway", "Web Application Firewall"]
-tags_normalized: ["advanced container networking", "ai", "ai workloads", "aks", "application gateway", "azure", "azure expressroute", "azure networking", "azure private link", "cloud transformation", "dns security policy", "high availability", "jwt validation", "nat gateway", "network security", "networking", "news", "security", "virtual wan", "vpn gateway", "web application firewall"]
+permalink: /ai/news/Azure-Networking-Updates-Security-Resilience-and-AI-Driven-Scale
+tags:
+- Advanced Container Networking
+- AI
+- AI Workloads
+- AKS
+- Application Gateway
+- Azure
+- Azure ExpressRoute
+- Azure Networking
+- Azure Private Link
+- Cloud Transformation
+- DNS Security Policy
+- High Availability
+- JWT Validation
+- NAT Gateway
+- Network Security
+- Networking
+- News
+- Security
+- Virtual WAN
+- VPN Gateway
+- Web Application Firewall
+section_names:
+- ai
+- azure
+- security
 ---
-
 Narayan Annamalai explores recent advancements in Azure Networking, detailing new features for security, resilience, AI-driven performance, and cloud-native application support crucial for enterprise cloud success.<!--excerpt_end-->
 
 # Azure Networking Updates: Security, Resilience, and AI-Driven Scale

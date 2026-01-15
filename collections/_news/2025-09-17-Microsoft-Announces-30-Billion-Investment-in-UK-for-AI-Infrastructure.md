@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft Announces $30 Billion Investment in UK for AI Infrastructure"
-description: "This news article details Microsoft’s historic $30 billion investment in the United Kingdom, focused primarily on AI infrastructure and operations from 2025 through 2028. The investment includes building the largest UK supercomputer, expanding datacenter capacity, supporting AI research, and collaborating with various UK institutions. The announcement highlights the economic and technological partnership between the US and UK, touching on workforce training and support for developers, with examples such as GitHub Copilot and advances in AI skills."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Announces $30 Billion Investment in UK for AI Infrastructure
+author: sbaynes
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 16:50:37 +00:00
-permalink: "/2025-09-17-Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Development", "AI Infrastructure", "AI Skills", "Azure", "Cloud Computing", "Company News", "Datacenters", "Investment", "Microsoft", "Microsoft Copilot", "Microsoft Research", "News", "NVIDIA GPUs", "On The Issues", "Prime Minister Keir Starmer", "Supercomputer", "Transatlantic Partnership", "United Kingdom", "Windows 365", "Workforce Training"]
-tags_normalized: ["ai", "ai development", "ai infrastructure", "ai skills", "azure", "cloud computing", "company news", "datacenters", "investment", "microsoft", "microsoft copilot", "microsoft research", "news", "nvidia gpus", "on the issues", "prime minister keir starmer", "supercomputer", "transatlantic partnership", "united kingdom", "windows 365", "workforce training"]
+permalink: /ai/news/Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure
+tags:
+- AI
+- AI Development
+- AI Infrastructure
+- AI Skills
+- Azure
+- Cloud Computing
+- Company News
+- Datacenters
+- Investment
+- Microsoft
+- Microsoft Copilot
+- Microsoft Research
+- News
+- NVIDIA GPUs
+- On The Issues
+- Prime Minister Keir Starmer
+- Supercomputer
+- Transatlantic Partnership
+- United Kingdom
+- Windows 365
+- Workforce Training
+section_names:
+- ai
+- azure
 ---
-
 sbaynes reports on Microsoft’s $30 billion commitment to expand AI infrastructure and operations in the UK, including datacenter investment, supercomputer deployment, and advancements in AI skills and research.<!--excerpt_end-->
 
 # Microsoft Announces $30 Billion Investment in UK for AI Infrastructure

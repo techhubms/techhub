@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure"
-description: "Satya Nadella announces Microsoft's new Fairwater datacenter in Atlanta, interconnected with Wisconsin and the broader Azure footprint to create what is described as the world's first 'AI superfactory.' The news highlights innovations in datacenter design for large-scale AI workloads, focusing on high-density GPU infrastructure, elastic scaling, and integration with Azure’s existing cloud services. The announcement details platform capabilities for AI training and inference, emphasizes sustainability and efficiency, and sets a vision for planet-scale, fungible computational resources for developers and enterprises leveraging Microsoft’s AI and Azure platforms."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure'
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 17:41:13 +00:00
-permalink: "/2025-11-12-Microsoft-Announces-Fairwater-Datacenter-Building-an-AI-Superfactory-with-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Superfactory", "AI Workloads", "Azure", "Cloud Computing", "Company News", "Data Center Networking", "Datacenter Design", "Elastic Scaling", "Fairwater Datacenter", "GPUs", "Inference", "LinkedIn Post", "Liquid Cooling", "Microsoft", "News", "Performance Optimization", "Planet Scale AI", "Sustainability", "Training"]
-tags_normalized: ["ai", "ai infrastructure", "ai superfactory", "ai workloads", "azure", "cloud computing", "company news", "data center networking", "datacenter design", "elastic scaling", "fairwater datacenter", "gpus", "inference", "linkedin post", "liquid cooling", "microsoft", "news", "performance optimization", "planet scale ai", "sustainability", "training"]
+permalink: /ai/news/Microsoft-Announces-Fairwater-Datacenter-Building-an-AI-Superfactory-with-Azure
+tags:
+- AI
+- AI Infrastructure
+- AI Superfactory
+- AI Workloads
+- Azure
+- Cloud Computing
+- Company News
+- Data Center Networking
+- Datacenter Design
+- Elastic Scaling
+- Fairwater Datacenter
+- GPUs
+- Inference
+- LinkedIn Post
+- Liquid Cooling
+- Microsoft
+- News
+- Performance Optimization
+- Planet Scale AI
+- Sustainability
+- Training
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella shares news of the Fairwater datacenter launch, illustrating Microsoft's next phase in scalable, efficient AI infrastructure within Azure. The post explores architectural choices aimed at supporting developers and the future of global AI workloads.<!--excerpt_end-->
 
 # Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure

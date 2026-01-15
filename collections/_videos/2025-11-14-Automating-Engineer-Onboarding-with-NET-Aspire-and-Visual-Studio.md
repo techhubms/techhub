@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Automating Engineer Onboarding with .NET Aspire and Visual Studio"
-description: "This session showcases how organizations can automate and streamline new engineer onboarding processes by leveraging .NET Aspire, Winget configuration, and Visual Studio settings management. By reducing reliance on manual procedures and senior developer support, the solution brings onboarding time down from days to under an hour. Key tools, version updates, and integrated .NET ecosystem features are demonstrated to accelerate developer productivity and enable seamless cloud-native development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=etF5w3Aogh0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Automating Engineer Onboarding with .NET Aspire and Visual Studio
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=etF5w3Aogh0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:22 +00:00
-permalink: "/2025-11-14-Automating-Engineer-Onboarding-with-NET-Aspire-and-Visual-Studio.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "ASP.NET Core 10", "Automation", "C# 14", "Cloud Native Development", "Coding", "Developer Productivity", "DevOps", "Engineering Onboarding", "F# 10", "Software Setup", "Videos", "VS", "VS Settings", "Winget"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "aspdotnet core 10", "automation", "csharp 14", "cloud native development", "coding", "developer productivity", "devops", "engineering onboarding", "fsharp 10", "software setup", "videos", "vs", "vs settings", "winget"]
+permalink: /coding/videos/Automating-Engineer-Onboarding-with-NET-Aspire-and-Visual-Studio
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- ASP.NET Core 10
+- Automation
+- C# 14
+- Cloud Native Development
+- Coding
+- Developer Productivity
+- DevOps
+- Engineering Onboarding
+- F# 10
+- Software Setup
+- Videos
+- VS
+- VS Settings
+- Winget
+section_names:
+- coding
+- devops
 ---
-
 dotnet details how automating onboarding with .NET Aspire, Visual Studio settings, and Winget can dramatically speed up the new engineer setup process and streamline developer workflows.<!--excerpt_end-->
 
 {% youtube etF5w3Aogh0 %}

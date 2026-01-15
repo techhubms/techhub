@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency"
-description: "This article introduces the preview of Microsoft’s Signing Transparency – a cloud-managed service that brings tamper-evidence, auditability, and independent verification to software supply chains. The service records every code signature into an immutable, append-only log protected by confidential computing, advancing Zero Trust with verifiable software integrity. Details include architecture, cryptographic mechanisms, and benefits for developers and organizations aiming to secure releases, track provenance, and meet compliance requirements."
-author: "Mark Russinovich"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency
+author: Mark Russinovich
+canonical_url: https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 17:00:00 +00:00
-permalink: "/2025-11-03-Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency.html"
-categories: ["Azure", "Security"]
-tags: ["Auditing", "Azure", "Azure Built in Security", "Azure Confidential Computing", "Code Signing", "Compliance", "Confidential Computing", "Confidential Ledger", "COSE", "Cryptographic Ledger", "Merkle Tree", "Microsoft Azure", "News", "SCITT", "Security", "Signing Transparency", "Software Supply Chain Security", "Transparency Logs", "Trusted Execution Environments", "Zero Trust"]
-tags_normalized: ["auditing", "azure", "azure built in security", "azure confidential computing", "code signing", "compliance", "confidential computing", "confidential ledger", "cose", "cryptographic ledger", "merkle tree", "microsoft azure", "news", "scitt", "security", "signing transparency", "software supply chain security", "transparency logs", "trusted execution environments", "zero trust"]
+permalink: /azure/news/Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency
+tags:
+- Auditing
+- Azure
+- Azure Built in Security
+- Azure Confidential Computing
+- Code Signing
+- Compliance
+- Confidential Computing
+- Confidential Ledger
+- COSE
+- Cryptographic Ledger
+- Merkle Tree
+- Microsoft Azure
+- News
+- SCITT
+- Security
+- Signing Transparency
+- Software Supply Chain Security
+- Transparency Logs
+- Trusted Execution Environments
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Mark Russinovich presents Microsoft’s preview of Signing Transparency, a new Azure-based transparency log service designed to strengthen software supply chain security through immutable signature records and confidential computing.<!--excerpt_end-->
 
 # Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency

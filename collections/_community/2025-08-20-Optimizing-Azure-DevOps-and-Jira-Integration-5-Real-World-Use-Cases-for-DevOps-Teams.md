@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams"
-description: "This article by tejabhutada highlights common challenges faced by DevOps teams using both Azure DevOps and Jira, and uncovers five practical use cases for streamlining integration between the two platforms. The guide covers synchronization strategies for work items, epics, and tickets, offering actionable solutions for reducing manual effort, improving transparency, and ensuring alignment between technical and product teams."
-author: "tejabhutada"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams'
+author: tejabhutada
+canonical_url: https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-20 04:52:51 +00:00
-permalink: "/2025-08-20-Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-World-Use-Cases-for-DevOps-Teams.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agile Tools", "Automated Ticket Creation", "Azure", "Azure DevOps", "Community", "Cross Platform Workflow", "Development Teams", "DevOps", "DevOps Integration", "Epics", "Jira", "One Way Sync", "Portfolio Visibility", "Project Management", "Stakeholder Collaboration", "Two Way Sync", "Work Item Synchronization"]
-tags_normalized: ["agile tools", "automated ticket creation", "azure", "azure devops", "community", "cross platform workflow", "development teams", "devops", "devops integration", "epics", "jira", "one way sync", "portfolio visibility", "project management", "stakeholder collaboration", "two way sync", "work item synchronization"]
+permalink: /azure/community/Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-World-Use-Cases-for-DevOps-Teams
+tags:
+- Agile Tools
+- Automated Ticket Creation
+- Azure
+- Azure DevOps
+- Community
+- Cross Platform Workflow
+- Development Teams
+- DevOps
+- DevOps Integration
+- Epics
+- Jira
+- One Way Sync
+- Portfolio Visibility
+- Project Management
+- Stakeholder Collaboration
+- Two Way Sync
+- Work Item Synchronization
+section_names:
+- azure
+- devops
 ---
-
 tejabhutada shares practical strategies for integrating Azure DevOps and Jira, presenting five actionable use cases that help DevOps teams reduce friction, improve cross-tool visibility, and streamline workflows.<!--excerpt_end-->
 
 # Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams

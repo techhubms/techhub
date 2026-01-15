@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "6-Month Field Report: AI Agents in SDR & L1 Support—What Worked and What Broke"
-description: "This in-depth community post by Wednesday_Inu recounts a 6-month deployment of AI agents—using stacks featuring OpenAI, Slack, and Teams—for sales development representative (SDR) and Level 1 (L1) support in small/medium businesses. It covers what tools and orchestrators were used, quantifiable impact on handoff rates and throughput, lessons learned around reliability, memory, and technical guardrails, and advice for others attempting similar deployments. Emphasis is placed on strict function schema, real-world revenue impact, and process observability."
-author: "Wednesday_Inu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AI_Agents/comments/1mktrgm/from_hype_to_headcount_6month_field_report_ai/"
-viewing_mode: "external"
-feed_name: "Reddit AI Agents"
-feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
+﻿---
+layout: post
+title: '6-Month Field Report: AI Agents in SDR & L1 Support—What Worked and What Broke'
+author: Wednesday_Inu
+canonical_url: https://www.reddit.com/r/AI_Agents/comments/1mktrgm/from_hype_to_headcount_6month_field_report_ai/
+viewing_mode: external
+feed_name: Reddit AI Agents
+feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-08-08 12:24:02 +00:00
-permalink: "/2025-08-08-6-Month-Field-Report-AI-Agents-in-SDR-and-L1-SupportWhat-Worked-and-What-Broke.html"
-categories: ["AI"]
-tags: ["A/B Testing", "Agent Orchestration", "AI", "AI Agents", "Community", "CSAT", "HubSpot", "Human Handoff", "JSON Schema", "L1 Support", "LangChain", "Langfuse", "Langsmith", "Memory Management", "Microsoft Teams", "Observability", "OpenAI", "Pipedrive", "Process Automation", "SDR Automation", "Slack", "Twilio"]
-tags_normalized: ["aslashb testing", "agent orchestration", "ai", "ai agents", "community", "csat", "hubspot", "human handoff", "json schema", "l1 support", "langchain", "langfuse", "langsmith", "memory management", "microsoft teams", "observability", "openai", "pipedrive", "process automation", "sdr automation", "slack", "twilio"]
+permalink: /ai/community/6-Month-Field-Report-AI-Agents-in-SDR-and-L1-SupportWhat-Worked-and-What-Broke
+tags:
+- A/B Testing
+- Agent Orchestration
+- AI
+- AI Agents
+- Community
+- CSAT
+- HubSpot
+- Human Handoff
+- JSON Schema
+- L1 Support
+- LangChain
+- Langfuse
+- Langsmith
+- Memory Management
+- Microsoft Teams
+- Observability
+- OpenAI
+- Pipedrive
+- Process Automation
+- SDR Automation
+- Slack
+- Twilio
+section_names:
+- ai
 ---
-
 In this community report, Wednesday_Inu shares practical insights from six months deploying AI agents for sales and L1 support, highlighting key technology choices, business outcomes, and guardrails for reliability.<!--excerpt_end-->
 
 # 6-Month Field Report: AI Agents Replaced ~40% of SDR & L1 Support

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing Planning in Visual Studio: Copilot Agent Mode Public Preview"
-description: "This news update details the introduction of Planning in Copilot's Agent Mode within Visual Studio 2022 (17.14 public preview). It explains how Copilot now supports structured, step-by-step planning for complex tasks, offering increased predictability and transparency for developers. The feature leverages advanced planning techniques, integrates with project files, and supports developer workflows with actionable guidance and feedback options."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Introducing Planning in Visual Studio: Copilot Agent Mode Public Preview'
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-22 15:54:18 +00:00
-permalink: "/2025-10-22-Introducing-Planning-in-Visual-Studio-Copilot-Agent-Mode-Public-Preview.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Claude Sonnet 4", "Coding", "Copilot", "Copilot Chat", "Copilot Planning", "Developer Tools", "GitHub Copilot", "GPT 5", "News", "Planning", "Planning Mode", "Prompt Engineering", "Public Preview", "Software Engineering", "Spec Driven Development", "Structured Workflow", "Task Automation", "Transparent AI", "VS"]
-tags_normalized: ["agent mode", "ai", "claude sonnet 4", "coding", "copilot", "copilot chat", "copilot planning", "developer tools", "github copilot", "gpt 5", "news", "planning", "planning mode", "prompt engineering", "public preview", "software engineering", "spec driven development", "structured workflow", "task automation", "transparent ai", "vs"]
+permalink: /github-copilot/news/Introducing-Planning-in-Visual-Studio-Copilot-Agent-Mode-Public-Preview
+tags:
+- Agent Mode
+- AI
+- Claude Sonnet 4
+- Coding
+- Copilot
+- Copilot Chat
+- Copilot Planning
+- Developer Tools
+- GitHub Copilot
+- GPT 5
+- News
+- Planning
+- Planning Mode
+- Prompt Engineering
+- Public Preview
+- Software Engineering
+- Spec Driven Development
+- Structured Workflow
+- Task Automation
+- Transparent AI
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rhea Patel introduces the Planning feature in Visual Studio's Copilot Agent Mode, enabling developers to structure and track complex coding tasks for a more reliable, transparent workflow.<!--excerpt_end-->
 
 # Introducing Planning in Visual Studio: Copilot Agent Mode Public Preview

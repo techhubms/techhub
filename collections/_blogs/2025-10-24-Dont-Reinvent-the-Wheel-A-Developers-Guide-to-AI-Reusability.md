@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability"
-description: "This article by Daniel Helfand explores the challenges and opportunities of making AI workflows reusable within software engineering teams, emphasizing the importance of applying established software engineering principles such as modularization, versioning, and workflow cataloging. It offers actionable steps and considerations for organizations adopting AI to improve efficiency, consistency, and developer experience."
-author: "Daniel Helfand"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability'
+author: Daniel Helfand
+canonical_url: https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-24 08:02:18 +00:00
-permalink: "/2025-10-24-Dont-Reinvent-the-Wheel-A-Developers-Guide-to-AI-Reusability.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Driven Developer Productivity", "AI in Software Engineering", "AI Model Versioning", "AI Platform Engineering", "AI Reusability", "AI Reuse Framework", "AI Workflow Management", "AI Workflow Standardization", "AI Workflow Versioning", "AI Workflows", "Blogs", "Business Of DevOps", "CI/CD", "CI/CD AI", "Contributed Content", "Developer Productivity", "DevOps", "DevSecOps", "Devsecops Automation", "Platform Engineering", "Reusable AI Workflows", "Social Facebook", "Social LinkedIn", "Social X", "Software Catalog For AI", "Software Catalogs", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai driven developer productivity", "ai in software engineering", "ai model versioning", "ai platform engineering", "ai reusability", "ai reuse framework", "ai workflow management", "ai workflow standardization", "ai workflow versioning", "ai workflows", "blogs", "business of devops", "cislashcd", "cislashcd ai", "contributed content", "developer productivity", "devops", "devsecops", "devsecops automation", "platform engineering", "reusable ai workflows", "social facebook", "social linkedin", "social x", "software catalog for ai", "software catalogs", "workflow automation"]
+permalink: /ai/blogs/Dont-Reinvent-the-Wheel-A-Developers-Guide-to-AI-Reusability
+tags:
+- Agentic AI
+- AI
+- AI Driven Developer Productivity
+- AI in Software Engineering
+- AI Model Versioning
+- AI Platform Engineering
+- AI Reusability
+- AI Reuse Framework
+- AI Workflow Management
+- AI Workflow Standardization
+- AI Workflow Versioning
+- AI Workflows
+- Blogs
+- Business Of DevOps
+- CI/CD
+- CI/CD AI
+- Contributed Content
+- Developer Productivity
+- DevOps
+- DevSecOps
+- Devsecops Automation
+- Platform Engineering
+- Reusable AI Workflows
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Catalog For AI
+- Software Catalogs
+- Workflow Automation
+section_names:
+- ai
+- devops
 ---
-
 Daniel Helfand explains how applying reusability principles to AI workflows in DevOps can help developers and teams avoid inefficiency. The article presents strategies to standardize, version, and catalog AI assets for greater organizational value.<!--excerpt_end-->
 
 # Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability

@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "The Download: GitHub Copilot Agents, Actions Security, and Vite's npm Milestone"
-description: "This week's episode of The Download by GitHub highlights key updates in the developer ecosystem, including new GitHub Copilot agents panel, enhanced security features for GitHub Actions, an overview of Next.js 15.5, and Vite surpassing Webpack in weekly npm downloads. The session also touches on notable developer news like the 34th anniversary of the Linux kernel, upcoming speakers for GitHub Universe 2025, and the introduction of AIBI Pocket, a compact AI companion."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HqqzOZA8Hs0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=HqqzOZA8Hs0
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-29 14:00:30 +00:00
-permalink: "/2025-08-29-The-Download-GitHub-Copilot-Agents-Actions-Security-and-Vites-npm-Milestone.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AIBI Pocket", "Coding", "Continuous Integration", "Developer News", "DevOps", "DevOps Security", "GitHub Actions", "GitHub Copilot", "GitHub Universe", "JavaScript", "Linux Kernel", "Next.js 15.5", "npm", "Videos", "Vite", "Web Development", "Webpack"]
-tags_normalized: ["ai", "aibi pocket", "coding", "continuous integration", "developer news", "devops", "devops security", "github actions", "github copilot", "github universe", "javascript", "linux kernel", "nextdotjs 15dot5", "npm", "videos", "vite", "web development", "webpack"]
+permalink: /github-copilot/videos/The-Download-GitHub-Copilot-Agents-Actions-Security-and-Vites-npm-Milestone
+tags:
+- AI
+- AIBI Pocket
+- Coding
+- Continuous Integration
+- Developer News
+- DevOps
+- DevOps Security
+- GitHub Actions
+- GitHub Copilot
+- GitHub Universe
+- JavaScript
+- Linux Kernel
+- Next.js 15.5
+- npm
+- Videos
+- Vite
+- Web Development
+- Webpack
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 In this episode, GitHub shares major news for developers, with updates from AI-powered Copilot agents to strengthened security in GitHub Actions. Hosted by GitHub.<!--excerpt_end-->
 
 {% youtube HqqzOZA8Hs0 %}

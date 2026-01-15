@@ -1,20 +1,29 @@
----
-layout: "post"
-title: ".NET Aspire: Centralizing Project Names and Constants"
-description: "This video demonstrates how to manage and centralize service and project names within the .NET Aspire system. It covers replacing hard-coded 'magic strings' with shared constants and customizing naming conventions for improved maintainability and clarity in .NET Aspire managed solutions."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Jt39GzYCRgo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET Aspire: Centralizing Project Names and Constants'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=Jt39GzYCRgo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-22 18:49:25 +00:00
-permalink: "/2025-07-22-NET-Aspire-Centralizing-Project-Names-and-Constants.html"
-categories: ["Coding"]
-tags: [".NET", "AppHost", "Aspire", "Cloud Apps", "Coding", "Constants", "Magic Strings", "Microsoft", "Project Naming", "Service References", "Shared Libraries", "Videos"]
-tags_normalized: ["dotnet", "apphost", "aspire", "cloud apps", "coding", "constants", "magic strings", "microsoft", "project naming", "service references", "shared libraries", "videos"]
+permalink: /coding/videos/NET-Aspire-Centralizing-Project-Names-and-Constants
+tags:
+- .NET
+- AppHost
+- Aspire
+- Cloud Apps
+- Coding
+- Constants
+- Magic Strings
+- Microsoft
+- Project Naming
+- Service References
+- Shared Libraries
+- Videos
+section_names:
+- coding
 ---
-
 In this instructional video by dotnet, learn how to centralize and manage project and service names in .NET Aspire by using constants instead of magic strings—improving maintainability across your system.<!--excerpt_end-->
 
 {% youtube Jt39GzYCRgo %}

@@ -1,20 +1,60 @@
----
-layout: "post"
-title: "Visual Studio Copilot Gets Planning Mode for Complex Tasks"
-description: "This article introduces the new Planning feature in Visual Studio Copilot, available in public preview for Visual Studio 2022 17.14. The feature gives developers a structured way to manage multistep coding tasks via planning files. It offers transparency, improved performance, and workflow efficiency for complex software development, especially for DevOps teams handling interconnected workflows. The article explores how Planning works, its impact on benchmarks like SWE-bench, practical workflow considerations, current limitations, and Microsoft’s roadmap for further development."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/visual-studio-copilot-gets-planning-mode-for-complex-tasks/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Visual Studio Copilot Gets Planning Mode for Complex Tasks
+author: Tom Smith
+canonical_url: https://devops.com/visual-studio-copilot-gets-planning-mode-for-complex-tasks/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-27 09:14:43 +00:00
-permalink: "/2025-10-27-Visual-Studio-Copilot-Gets-Planning-Mode-for-Complex-Tasks.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Development", "AI", "AI Assisted Coding", "AI Assisted Development", "AI Coding Tools", "AI For Developers", "Benchmarking", "Blogs", "Business Of DevOps", "Claude Sonnet 4", "Coding", "Coding Productivity", "Copilot AI", "Copilot Planning", "Copilot Planning Benchmark", "Copilot Planning Feature", "Copilot Preview", "DevOps", "DevOps AI Tools", "DevOps Tools", "GitHub Copilot", "GPT 5", "GPT 5 Copilot", "Intent Driven Development", "Microsoft Copilot", "Microsoft Developer Tools", "Multistep Task Management", "Planning Driven Development", "Planning Feature", "Social Facebook", "Social LinkedIn", "Social X", "Software Automation", "Software Development Automation", "Structured Planning", "SWE Bench", "SWE Bench Results", "Visual Studio Copilot", "VS", "Workflow Efficiency"]
-tags_normalized: ["agentic development", "ai", "ai assisted coding", "ai assisted development", "ai coding tools", "ai for developers", "benchmarking", "blogs", "business of devops", "claude sonnet 4", "coding", "coding productivity", "copilot ai", "copilot planning", "copilot planning benchmark", "copilot planning feature", "copilot preview", "devops", "devops ai tools", "devops tools", "github copilot", "gpt 5", "gpt 5 copilot", "intent driven development", "microsoft copilot", "microsoft developer tools", "multistep task management", "planning driven development", "planning feature", "social facebook", "social linkedin", "social x", "software automation", "software development automation", "structured planning", "swe bench", "swe bench results", "visual studio copilot", "vs", "workflow efficiency"]
+permalink: /github-copilot/blogs/Visual-Studio-Copilot-Gets-Planning-Mode-for-Complex-Tasks
+tags:
+- Agentic Development
+- AI
+- AI Assisted Coding
+- AI Assisted Development
+- AI Coding Tools
+- AI For Developers
+- Benchmarking
+- Blogs
+- Business Of DevOps
+- Claude Sonnet 4
+- Coding
+- Coding Productivity
+- Copilot AI
+- Copilot Planning
+- Copilot Planning Benchmark
+- Copilot Planning Feature
+- Copilot Preview
+- DevOps
+- DevOps AI Tools
+- DevOps Tools
+- GitHub Copilot
+- GPT 5
+- GPT 5 Copilot
+- Intent Driven Development
+- Microsoft Copilot
+- Microsoft Developer Tools
+- Multistep Task Management
+- Planning Driven Development
+- Planning Feature
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Automation
+- Software Development Automation
+- Structured Planning
+- SWE Bench
+- SWE Bench Results
+- Visual Studio Copilot
+- VS
+- Workflow Efficiency
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Tom Smith introduces Microsoft’s new Planning feature for Visual Studio Copilot, highlighting how it improves AI-powered development workflows for complex, multistep tasks.<!--excerpt_end-->
 
 # Visual Studio Copilot Gets Planning Mode for Complex Tasks

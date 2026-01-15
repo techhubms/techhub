@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Visual Studio 2026 Released: GitHub Cloud Agent Preview and Copilot Features"
-description: "This update introduces Visual Studio 2026 with significant performance improvements, a refreshed interface, and enhanced AI-driven capabilities. Highlights include the GitHub Cloud Agent Preview for automating coding tasks and new Copilot integrations like context menu actions and intent detection in All-In-One Search. Developers can leverage these features to boost productivity and streamline common workflows directly within Visual Studio."
-author: "Simona Liao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-november-update-visual-studio-2026-cloud-agent-preview-and-more/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio 2026 Released: GitHub Cloud Agent Preview and Copilot Features'
+author: Simona Liao
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-november-update-visual-studio-2026-cloud-agent-preview-and-more/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-03 16:00:24 +00:00
-permalink: "/2025-12-03-Visual-Studio-2026-Released-GitHub-Cloud-Agent-Preview-and-Copilot-Features.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "C#", "Cloud Agent", "Code Automation", "Coding", "Context Menu", "Copilot Actions", "Developer Productivity", "GitHub Copilot", "GitHub Integration", "IDE Enhancement", "Intent Detection", "News", "Performance Improvements", "User Experience", "VS"]
-tags_normalized: ["ai", "ai powered development", "csharp", "cloud agent", "code automation", "coding", "context menu", "copilot actions", "developer productivity", "github copilot", "github integration", "ide enhancement", "intent detection", "news", "performance improvements", "user experience", "vs"]
+permalink: /github-copilot/news/Visual-Studio-2026-Released-GitHub-Cloud-Agent-Preview-and-Copilot-Features
+tags:
+- AI
+- AI Powered Development
+- C#
+- Cloud Agent
+- Code Automation
+- Coding
+- Context Menu
+- Copilot Actions
+- Developer Productivity
+- GitHub Copilot
+- GitHub Integration
+- IDE Enhancement
+- Intent Detection
+- News
+- Performance Improvements
+- User Experience
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Simona Liao details the latest Visual Studio 2026 release, highlighting new GitHub Cloud Agent Preview and Copilot features to enhance developer workflows with cutting-edge AI capabilities.<!--excerpt_end-->
 
 # Visual Studio 2026 Released: GitHub Cloud Agent Preview and Copilot Features

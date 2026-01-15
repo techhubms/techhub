@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Build an AI Image-Caption Generator on Azure App Service with Streamlit and GPT-4o-mini"
-description: "This detailed guide walks through building a Python-based AI app that generates natural-language image captions using Azure AI Vision for image analysis and Azure OpenAI (GPT-4o-mini) for language generation. Deployment uses Azure App Service and Managed Identity for secure, cloud-native operations, with infrastructure as code options and extension ideas."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-image-caption-generator-on-azure-app-service-with/ba-p/4450313"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Build an AI Image-Caption Generator on Azure App Service with Streamlit and GPT-4o-mini
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-image-caption-generator-on-azure-app-service-with/ba-p/4450313
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 10:08:03 +00:00
-permalink: "/2025-09-02-Build-an-AI-Image-Caption-Generator-on-Azure-App-Service-with-Streamlit-and-GPT-4o-mini.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "App Service Samples", "Azd", "Azure", "Azure AI Vision", "Azure App Service", "Azure OpenAI", "Bicep", "Cloud Deployment", "Coding", "Community", "Computer Vision", "GPT 4o Mini", "IaC", "Image Captioning", "Managed Identity", "Natural Language Generation", "Python", "RBAC", "REST API", "Streamlit"]
-tags_normalized: ["ai", "app service samples", "azd", "azure", "azure ai vision", "azure app service", "azure openai", "bicep", "cloud deployment", "coding", "community", "computer vision", "gpt 4o mini", "iac", "image captioning", "managed identity", "natural language generation", "python", "rbac", "rest api", "streamlit"]
+permalink: /ai/community/Build-an-AI-Image-Caption-Generator-on-Azure-App-Service-with-Streamlit-and-GPT-4o-mini
+tags:
+- AI
+- App Service Samples
+- Azd
+- Azure
+- Azure AI Vision
+- Azure App Service
+- Azure OpenAI
+- Bicep
+- Cloud Deployment
+- Coding
+- Community
+- Computer Vision
+- GPT 4o Mini
+- IaC
+- Image Captioning
+- Managed Identity
+- Natural Language Generation
+- Python
+- RBAC
+- REST API
+- Streamlit
+section_names:
+- ai
+- azure
+- coding
 ---
-
 TulikaC walks through building a Python app with Azure AI Vision and GPT-4o-mini to generate image captions, deployed securely to Azure App Service using Streamlit for the UI.<!--excerpt_end-->
 
 # Build an AI Image-Caption Generator on Azure App Service with Streamlit and GPT-4o-mini

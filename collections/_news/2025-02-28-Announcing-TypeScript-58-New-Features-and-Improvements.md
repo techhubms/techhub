@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Announcing TypeScript 5.8: New Features and Improvements"
-description: "TypeScript 5.8 introduces granular type checks in return expressions, enhanced ECMAScript module interop, new compiler flags, optimizations, and better declaration file generation. This detailed post by Daniel Rosenwasser highlights important changes for TypeScript developers working with Node.js, editor tools, and large projects."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript 5.8: New Features and Improvements'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-28 19:35:56 +00:00
-permalink: "/2025-02-28-Announcing-TypeScript-58-New-Features-and-Improvements.html"
-categories: ["Coding"]
-tags: ["Coding", "Compiler Options", "Declaration Files", "ECMAScript Modules", "JavaScript", "News", "Node.js", "Performance Optimization", "Return Type Checking", "Type System", "TypeScript", "VS Code"]
-tags_normalized: ["coding", "compiler options", "declaration files", "ecmascript modules", "javascript", "news", "nodedotjs", "performance optimization", "return type checking", "type system", "typescript", "vs code"]
+permalink: /coding/news/Announcing-TypeScript-58-New-Features-and-Improvements
+tags:
+- Coding
+- Compiler Options
+- Declaration Files
+- ECMAScript Modules
+- JavaScript
+- News
+- Node.js
+- Performance Optimization
+- Return Type Checking
+- Type System
+- TypeScript
+- VS Code
+section_names:
+- coding
 ---
-
 Daniel Rosenwasser announces TypeScript 5.8, detailing new type system features, improved Node.js module interop, and important optimizations. This post guides TypeScript users through the latest enhancements and key behavioral updates.<!--excerpt_end-->
 
 # Announcing TypeScript 5.8

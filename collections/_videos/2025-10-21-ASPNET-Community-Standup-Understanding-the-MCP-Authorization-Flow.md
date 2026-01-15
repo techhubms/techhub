@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "ASP.NET Community Standup: Understanding the MCP Authorization Flow"
-description: "This ASP.NET Community Standup session, hosted by Daniel Roth and Mike Kistler, delves into the MCP (Model Context Protocol) authorization process. The presenters walk through the MCP authorization sequence using the 2025-06-18 MCP specification, covering practical authentication to GitHub MCP servers with hands-on demos from a polyglot notebook. The video is aimed at .NET and ASP.NET Core developers interested in secure authorization flows and protocol-level insights."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=H0SGK1yPHD0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'ASP.NET Community Standup: Understanding the MCP Authorization Flow'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=H0SGK1yPHD0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-21 15:15:54 +00:00
-permalink: "/2025-10-21-ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "Asp.net", "ASP.NET Core", "Authentication", "Authorization", "C#", "Coding", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub", "HTTP Requests", "Mcp", "Microsoft", "Mike Kistler", "Open Specification", "Polyglot Notebook", "Security", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "authentication", "authorization", "csharp", "coding", "daniel roth", "demo", "developer", "developer community", "developer tools", "github", "http requests", "mcp", "microsoft", "mike kistler", "open specification", "polyglot notebook", "security", "software developer", "videos"]
+permalink: /coding/videos/ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow
+tags:
+- .NET
+- Asp.net
+- ASP.NET Core
+- Authentication
+- Authorization
+- C#
+- Coding
+- Daniel Roth
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub
+- HTTP Requests
+- Mcp
+- Microsoft
+- Mike Kistler
+- Open Specification
+- Polyglot Notebook
+- Security
+- Software Developer
+- Videos
+section_names:
+- coding
+- security
 ---
-
 Daniel Roth and Mike Kistler present a hands-on ASP.NET Community Standup covering the MCP (Model Context Protocol) authorization flow, demonstrating secure request authorization to GitHub MCP servers.<!--excerpt_end-->
 
 {% youtube H0SGK1yPHD0 %}

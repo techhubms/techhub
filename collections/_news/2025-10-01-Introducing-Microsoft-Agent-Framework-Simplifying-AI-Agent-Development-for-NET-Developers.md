@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Introducing Microsoft Agent Framework: Simplifying AI Agent Development for .NET Developers"
-description: "This post introduces the Microsoft Agent Framework (Preview), a new .NET-based library that streamlines the creation, orchestration, hosting, and monitoring of production-ready AI agents. Targeted at .NET developers, it details key building blocks like agents and workflows, illustrates simple and multi-agent setups, and demonstrates integration with existing .NET tools and telemetry platforms for robust deployment and observability."
-author: "Luis Quintanilla"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Introducing Microsoft Agent Framework: Simplifying AI Agent Development for .NET Developers'
+author: Luis Quintanilla
+canonical_url: https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-01 14:05:00 +00:00
-permalink: "/2025-10-01-Introducing-Microsoft-Agent-Framework-Simplifying-AI-Agent-Development-for-NET-Developers.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agent Orchestration", "Agents", "AI", "AI Agents", "Aspire", "AutoGen", "Azure Monitor", "C#", "ChatClientAgent", "Coding", "Evaluation", "GitHub Models", "Hosting", "MCP", "Microsoft Agent Framework", "Microsoft.Extensions.AI", "Microsoftagentframework", "News", "NuGet Packages", "Observability", "OpenTelemetry", "Semantic Kernel", "Testing", "Workflow Automation"]
-tags_normalized: ["dotnet", "agent orchestration", "agents", "ai", "ai agents", "aspire", "autogen", "azure monitor", "csharp", "chatclientagent", "coding", "evaluation", "github models", "hosting", "mcp", "microsoft agent framework", "microsoftdotextensionsdotai", "microsoftagentframework", "news", "nuget packages", "observability", "opentelemetry", "semantic kernel", "testing", "workflow automation"]
+permalink: /ai/news/Introducing-Microsoft-Agent-Framework-Simplifying-AI-Agent-Development-for-NET-Developers
+tags:
+- .NET
+- Agent Orchestration
+- Agents
+- AI
+- AI Agents
+- Aspire
+- AutoGen
+- Azure Monitor
+- C#
+- ChatClientAgent
+- Coding
+- Evaluation
+- GitHub Models
+- Hosting
+- MCP
+- Microsoft Agent Framework
+- Microsoft.Extensions.AI
+- Microsoftagentframework
+- News
+- NuGet Packages
+- Observability
+- OpenTelemetry
+- Semantic Kernel
+- Testing
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Luis Quintanilla introduces the Microsoft Agent Framework, guiding .NET developers in building, orchestrating, and deploying AI agents using familiar tools and robust abstractions.<!--excerpt_end-->
 
 # Introducing Microsoft Agent Framework: Making AI Agents Simple for Every Developer

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Multi-Turn Conversations and Context Management in Copilot Studio"
-description: "This post explores how to design and implement effective multi-turn conversations in Copilot Studio, focusing on context management using variables, topics, flows, and persistent storage. It covers challenges like token limits, ambiguity, and best practices for ensuring context continuity in agent interactions, with practical examples and future directions for the platform."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Multi-Turn Conversations and Context Management in Copilot Studio
+author: Dellenny
+canonical_url: https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:34:16 +00:00
-permalink: "/2025-09-15-Multi-Turn-Conversations-and-Context-Management-in-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["Agent Handoff", "AI", "Best Practices", "Blogs", "Context Management", "Context Windows", "Conversation Design", "Copilot", "Copilot Studio", "Dataverse", "Flows", "Generative AI", "Global Variables", "Microsoft", "Multi Turn Conversation", "Natural Language", "Prompt Engineering", "Session Memory", "Topics", "Variables"]
-tags_normalized: ["agent handoff", "ai", "best practices", "blogs", "context management", "context windows", "conversation design", "copilot", "copilot studio", "dataverse", "flows", "generative ai", "global variables", "microsoft", "multi turn conversation", "natural language", "prompt engineering", "session memory", "topics", "variables"]
+permalink: /ai/blogs/Multi-Turn-Conversations-and-Context-Management-in-Copilot-Studio
+tags:
+- Agent Handoff
+- AI
+- Best Practices
+- Blogs
+- Context Management
+- Context Windows
+- Conversation Design
+- Copilot
+- Copilot Studio
+- Dataverse
+- Flows
+- Generative AI
+- Global Variables
+- Microsoft
+- Multi Turn Conversation
+- Natural Language
+- Prompt Engineering
+- Session Memory
+- Topics
+- Variables
+section_names:
+- ai
 ---
-
 Dellenny explains how Copilot Studio handles multi-turn conversations and context management, outlining techniques for building more natural, efficient AI-powered agents.<!--excerpt_end-->
 
 # Multi-Turn Conversations and Context Management in Copilot Studio

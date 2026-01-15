@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Fast and Flexible Inference for Open-Source AI Models at Scale with Azure"
-description: "This session from Microsoft Ignite 2025 guides developers on running open-source AI models efficiently using Azure services. It covers deploying models from local setups to the cloud, leveraging Azure Container Apps and serverless GPUs for rapid inference. The presentation demonstrates how Azure Kubernetes Service (AKS) provides scalable, secure, and cost-optimized infrastructure for large language models and AI agents. Attendees gain insights into workload scheduling, GPU resource management, and real-world implementation strategies for enterprise-grade AI solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mFG2hiMsR34"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Fast and Flexible Inference for Open-Source AI Models at Scale with Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mFG2hiMsR34
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:55:32 +00:00
-permalink: "/2025-11-25-Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "AKS", "Azure", "Azure AI", "Azure Container Apps", "CI/CD Pipeline", "Cloud Inference", "Cloud Scalability", "Compliance", "Cost Optimization", "Data Boundary", "Gateway API", "GPU Workloads", "Hybrid Architecture", "InnovatewithAzureAIappsandagents", "LLM", "ML", "Model Deployment", "MSIgnite", "Open Source Models", "Serverless GPU", "Videos"]
-tags_normalized: ["ai", "ai agents", "aks", "azure", "azure ai", "azure container apps", "cislashcd pipeline", "cloud inference", "cloud scalability", "compliance", "cost optimization", "data boundary", "gateway api", "gpu workloads", "hybrid architecture", "innovatewithazureaiappsandagents", "llm", "ml", "model deployment", "msignite", "open source models", "serverless gpu", "videos"]
+permalink: /ai/videos/Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure
+tags:
+- AI
+- AI Agents
+- AKS
+- Azure
+- Azure AI
+- Azure Container Apps
+- CI/CD Pipeline
+- Cloud Inference
+- Cloud Scalability
+- Compliance
+- Cost Optimization
+- Data Boundary
+- Gateway API
+- GPU Workloads
+- Hybrid Architecture
+- InnovatewithAzureAIappsandagents
+- LLM
+- ML
+- Model Deployment
+- MSIgnite
+- Open Source Models
+- Serverless GPU
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events presents a detailed session from Ignite 2025 focused on deploying and scaling open-source AI models using Azure Container Apps and AKS. The speakers showcase robust strategies for running custom and OSS models efficiently.<!--excerpt_end-->
 
 {% youtube mFG2hiMsR34 %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite"
-description: "This session from Microsoft Ignite demonstrates how to quickly build enterprise-grade AI applications using C3 AI Studio by leveraging both low-code and full-code tools. The walkthrough covers data ontology modeling, agent orchestration, secure deployment, integrated versioning, observability, and hands-on demonstrations for workflow and dashboard creation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WbFivYJ7_Fo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=WbFivYJ7_Fo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:36:33 +00:00
-permalink: "/2025-11-24-Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite.html"
-categories: ["AI"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Agents", "Application Canvas", "C3 AI Studio", "Data APIs", "Enterprise AI", "Governance", "Low Code", "Microsoft Ignite", "MSIgnite", "Object Modeling", "Observability", "Ontology Modeling", "Orchestration Framework", "Versioning", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai agents", "application canvas", "c3 ai studio", "data apis", "enterprise ai", "governance", "low code", "microsoft ignite", "msignite", "object modeling", "observability", "ontology modeling", "orchestration framework", "versioning", "videos", "vs code", "workflow automation"]
+permalink: /ai/videos/Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI
+- AI Agents
+- Application Canvas
+- C3 AI Studio
+- Data APIs
+- Enterprise AI
+- Governance
+- Low Code
+- Microsoft Ignite
+- MSIgnite
+- Object Modeling
+- Observability
+- Ontology Modeling
+- Orchestration Framework
+- Versioning
+- Videos
+- VS Code
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Microsoft Events hosts Nikhil Krishnan and Joel Morgenstern for an Ignite session, showcasing the C3 AI Studio platform for rapid enterprise AI app development and deployment.<!--excerpt_end-->
 
 {% youtube WbFivYJ7_Fo %}

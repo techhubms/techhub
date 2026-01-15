@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Azure Update - 27th June 2025"
-description: "This video by John Savill's Technical Training delivers a rapid update on recent developments and enhancements in Microsoft Azure. Key topics include Azure Advisor VM right-sizing, latest VM types, managed certificates, security copilot integration with WAF, firewall improvements, NetApp migration, Azure SQL vector data support, ACM FOCUS updates, and Azure Monitor Workspace ingestion. The summary is aimed at Azure professionals seeking up-to-date knowledge on infrastructure, security, and cloud service advancements."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Grv7AmwTR10"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 27th June 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=Grv7AmwTR10
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-27 14:37:18 +00:00
-permalink: "/2025-06-27-Azure-Update-27th-June-2025.html"
-categories: ["Azure", "ML", "DevOps", "Security"]
-tags: ["ACM FOCUS", "AFD Managed Certificate", "AVNM IPAM", "Azure", "Azure Advisor", "Azure Cloud", "Azure Firewall", "Azure Monitor Workspace", "Azure SQL Database", "Azure Updates", "Cloud", "Cloud Infrastructure", "Cloud Security", "DevOps", "Draft & Deploy", "FXv2 VMs", "IaaS", "Infrastructure as A Service", "John Savill", "Managed Certificates", "Microsoft", "Microsoft Azure", "ML", "NetApp Migration", "Prem SSD V2", "Security", "Vector Data", "Videos", "WAF Security Copilot", "Workload Optimization"]
-tags_normalized: ["acm focus", "afd managed certificate", "avnm ipam", "azure", "azure advisor", "azure cloud", "azure firewall", "azure monitor workspace", "azure sql database", "azure updates", "cloud", "cloud infrastructure", "cloud security", "devops", "draft and deploy", "fxv2 vms", "iaas", "infrastructure as a service", "john savill", "managed certificates", "microsoft", "microsoft azure", "ml", "netapp migration", "prem ssd v2", "security", "vector data", "videos", "waf security copilot", "workload optimization"]
+permalink: /ml/videos/Azure-Update-27th-June-2025
+tags:
+- ACM FOCUS
+- AFD Managed Certificate
+- AVNM IPAM
+- Azure
+- Azure Advisor
+- Azure Cloud
+- Azure Firewall
+- Azure Monitor Workspace
+- Azure SQL Database
+- Azure Updates
+- Cloud
+- Cloud Infrastructure
+- Cloud Security
+- DevOps
+- Draft & Deploy
+- FXv2 VMs
+- IaaS
+- Infrastructure as A Service
+- John Savill
+- Managed Certificates
+- Microsoft
+- Microsoft Azure
+- ML
+- NetApp Migration
+- Prem SSD V2
+- Security
+- Vector Data
+- Videos
+- WAF Security Copilot
+- Workload Optimization
+section_names:
+- azure
+- ml
+- devops
+- security
 ---
-
 John Savill's Technical Training provides a concise Azure update covering new features such as VM right-sizing, enhanced security integrations like WAF security copilot, data services improvements including vector support for Azure SQL DB, and DevOps-related updates for Azure professionals.<!--excerpt_end-->
 
 {% youtube Grv7AmwTR10 %}

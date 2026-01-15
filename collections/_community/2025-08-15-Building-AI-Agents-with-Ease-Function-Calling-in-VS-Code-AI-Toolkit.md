@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building AI Agents with Ease: Function Calling in VS Code AI Toolkit"
-description: "This guide by shreyanfern explains how developers can leverage the VS Code AI Toolkit to create actionable AI agents using function calling. It covers the core technical process for enabling Large Language Models (LLMs) to interact with external APIs and data, specifically within Microsoft's AI Toolkit extension. The tutorial includes hands-on agent building steps, configuration tips, sample Python code using the Azure AI Inference SDK, and insights into extending agent capabilities through the Model Context Protocol (MCP). Suitable for developers aiming to apply advanced AI tooling in real-world applications."
-author: "shreyanfern"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Building AI Agents with Ease: Function Calling in VS Code AI Toolkit'
+author: shreyanfern
+canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 17:00:24 +00:00
-permalink: "/2025-08-15-Building-AI-Agents-with-Ease-Function-Calling-in-VS-Code-AI-Toolkit.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Development", "AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Inference SDK", "Coding", "Community", "Custom Tool Development", "Function Calling", "GitHub", "GPT", "Large Language Models", "LLM Integration", "MCP", "OpenWeather API", "Prompt Engineering", "Python", "Tool Calling", "VS Code"]
-tags_normalized: ["agent development", "ai", "ai toolkit", "api integration", "azure", "azure ai inference sdk", "coding", "community", "custom tool development", "function calling", "github", "gpt", "large language models", "llm integration", "mcp", "openweather api", "prompt engineering", "python", "tool calling", "vs code"]
+permalink: /ai/community/Building-AI-Agents-with-Ease-Function-Calling-in-VS-Code-AI-Toolkit
+tags:
+- Agent Development
+- AI
+- AI Toolkit
+- API Integration
+- Azure
+- Azure AI Inference SDK
+- Coding
+- Community
+- Custom Tool Development
+- Function Calling
+- GitHub
+- GPT
+- Large Language Models
+- LLM Integration
+- MCP
+- OpenWeather API
+- Prompt Engineering
+- Python
+- Tool Calling
+- VS Code
+section_names:
+- ai
+- azure
+- coding
 ---
-
 shreyanfern details how to build actionable AI agents using function calling in the VS Code AI Toolkit, including real examples and code for Azure integration.<!--excerpt_end-->
 
 # Building AI Agents with Ease: Function Calling in VS Code AI Toolkit

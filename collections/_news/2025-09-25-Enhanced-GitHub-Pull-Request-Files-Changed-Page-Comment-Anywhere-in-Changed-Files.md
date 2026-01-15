@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhanced GitHub Pull Request Files Changed Page: Comment Anywhere in Changed Files"
-description: "GitHub announces improvements to the pull request 'Files changed' page, now allowing users to comment on any line within changed files, not just near changes. The update introduces expanded commenting capability, refined single file mode navigation, and better keyboard shortcut support. API and UI considerations are outlined, with feedback channels open to users. The update aims to enhance collaboration and code review workflows for development teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Enhanced GitHub Pull Request Files Changed Page: Comment Anywhere in Changed Files'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 21:23:24 +00:00
-permalink: "/2025-09-25-Enhanced-GitHub-Pull-Request-Files-Changed-Page-Comment-Anywhere-in-Changed-Files.html"
-categories: ["DevOps"]
-tags: ["API", "Bug Fixes", "Change Comments", "Code Review", "Collaboration", "Collaboration Tools", "Developer Workflow", "DevOps", "Diff Viewer", "Feature Preview", "Files Changed", "GitHub", "Improvement", "Keyboard Shortcuts", "Navigation", "News", "Pull Requests", "Single File Mode", "UI Enhancement"]
-tags_normalized: ["api", "bug fixes", "change comments", "code review", "collaboration", "collaboration tools", "developer workflow", "devops", "diff viewer", "feature preview", "files changed", "github", "improvement", "keyboard shortcuts", "navigation", "news", "pull requests", "single file mode", "ui enhancement"]
+permalink: /devops/news/Enhanced-GitHub-Pull-Request-Files-Changed-Page-Comment-Anywhere-in-Changed-Files
+tags:
+- API
+- Bug Fixes
+- Change Comments
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Developer Workflow
+- DevOps
+- Diff Viewer
+- Feature Preview
+- Files Changed
+- GitHub
+- Improvement
+- Keyboard Shortcuts
+- Navigation
+- News
+- Pull Requests
+- Single File Mode
+- UI Enhancement
+section_names:
+- devops
 ---
-
 Allison discusses new GitHub features for pull request reviews, enabling comments on any line of changed files and improved single file navigation, benefiting developers and reviewers.<!--excerpt_end-->
 
 # Enhanced GitHub Pull Request Files Changed Page: Comment Anywhere in Changed Files

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Transforming Event Management with InEvent and Microsoft Azure"
-description: "This article explores the technical partnership between InEvent and Microsoft for Startups, detailing how integrations with Microsoft Azure, Teams, Outlook, Dynamics 365, and Azure OpenAI Service streamline event management workflows. Key topics include scalable infrastructure, AI-powered automation, single sign-on security, and the practical benefits for enterprise event professionals."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Transforming Event Management with InEvent and Microsoft Azure
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 16:42:33 +00:00
-permalink: "/2025-10-01-Transforming-Event-Management-with-InEvent-and-Microsoft-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Automation", "AKS", "Azure", "Azure Active Directory", "Azure OpenAI Service", "ChatGPT", "Company News", "Dynamics 365", "Enterprise Security", "Event Management", "Event Software", "InEvent", "Microsoft Azure", "Microsoft Teams", "News", "Outlook Integration", "Security", "Single Sign On", "Workflow Integration"]
-tags_normalized: ["ai", "ai automation", "aks", "azure", "azure active directory", "azure openai service", "chatgpt", "company news", "dynamics 365", "enterprise security", "event management", "event software", "inevent", "microsoft azure", "microsoft teams", "news", "outlook integration", "security", "single sign on", "workflow integration"]
+permalink: /ai/news/Transforming-Event-Management-with-InEvent-and-Microsoft-Azure
+tags:
+- AI
+- AI Automation
+- AKS
+- Azure
+- Azure Active Directory
+- Azure OpenAI Service
+- ChatGPT
+- Company News
+- Dynamics 365
+- Enterprise Security
+- Event Management
+- Event Software
+- InEvent
+- Microsoft Azure
+- Microsoft Teams
+- News
+- Outlook Integration
+- Security
+- Single Sign On
+- Workflow Integration
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke examines how InEvent leverages Microsoft Azure services—such as Azure Kubernetes Service, Azure Active Directory, Dynamics 365, and Azure OpenAI Service—to deliver scalable, secure, and AI-driven event management solutions.<!--excerpt_end-->
 
 # Transforming Event Management with InEvent and Microsoft Azure

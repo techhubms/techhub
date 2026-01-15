@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Securing Your MCP Server with JWT Authentication and Authorization"
-description: "This guide, authored by wassimchegham, walks through securing a Node.js-based Model Context Protocol (MCP) server using JSON Web Tokens (JWT) for authentication and role-based access control. It covers implementation steps, code examples, middleware integration, and best practices for robust, scalable security tailored for LLM tool integrations and AI agents. Practical advice is provided for establishing user roles, permissions, and centralized JWT management, with reference to an Azure-hosted MCP project."
-author: "wassimchegham"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Securing Your MCP Server with JWT Authentication and Authorization
+author: wassimchegham
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 07:00:00 +00:00
-permalink: "/2025-09-25-Securing-Your-MCP-Server-with-JWT-Authentication-and-Authorization.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["API Security", "Authentication", "Authorization", "Azure", "Azure Samples", "Coding", "Community", "Express.js", "JSON Web Tokens", "JWT", "LLM", "MCP", "Microservices", "Middleware", "Node.js", "RBAC", "Role Based Access Control", "Security", "Token Based Security"]
-tags_normalized: ["api security", "authentication", "authorization", "azure", "azure samples", "coding", "community", "expressdotjs", "json web tokens", "jwt", "llm", "mcp", "microservices", "middleware", "nodedotjs", "rbac", "role based access control", "security", "token based security"]
+permalink: /coding/community/Securing-Your-MCP-Server-with-JWT-Authentication-and-Authorization
+tags:
+- API Security
+- Authentication
+- Authorization
+- Azure
+- Azure Samples
+- Coding
+- Community
+- Express.js
+- JSON Web Tokens
+- JWT
+- LLM
+- MCP
+- Microservices
+- Middleware
+- Node.js
+- RBAC
+- Role Based Access Control
+- Security
+- Token Based Security
+section_names:
+- azure
+- coding
+- security
 ---
-
 wassimchegham provides a practical tutorial on securing Node.js-based MCP servers using JWT authentication and authorization, emphasizing scalable, role-based security controls for AI-enabled architectures.<!--excerpt_end-->
 
 # Securing Your MCP Server with JWT Authentication and Authorization

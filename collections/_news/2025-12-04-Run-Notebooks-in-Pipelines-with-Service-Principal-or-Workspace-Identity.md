@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Run Notebooks in Pipelines with Service Principal or Workspace Identity"
-description: "This announcement highlights the new capability in Microsoft Fabric Data Factory pipelines to configure Notebook activity authentication using Service Principal (SPN) or Workspace Identity (WI). This change improves production reliability, enterprise-grade security, and future-proof automation by using secure connection properties instead of user-based credentials."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/run-notebooks-in-pipelines-with-service-principal-or-workspace-identity/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Run Notebooks in Pipelines with Service Principal or Workspace Identity
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/run-notebooks-in-pipelines-with-service-principal-or-workspace-identity/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 11:00:00 +00:00
-permalink: "/2025-12-04-Run-Notebooks-in-Pipelines-with-Service-Principal-or-Workspace-Identity.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Connection Property", "Data Factory", "Enterprise Security", "Governance", "Identity Management", "Microsoft Fabric", "ML", "News", "Notebook Activity", "Operational Reliability", "Pipeline Automation", "Production Workloads", "Security", "Service Principal", "SPN", "WI", "Workspace Identity"]
-tags_normalized: ["azure", "connection property", "data factory", "enterprise security", "governance", "identity management", "microsoft fabric", "ml", "news", "notebook activity", "operational reliability", "pipeline automation", "production workloads", "security", "service principal", "spn", "wi", "workspace identity"]
+permalink: /ml/news/Run-Notebooks-in-Pipelines-with-Service-Principal-or-Workspace-Identity
+tags:
+- Azure
+- Connection Property
+- Data Factory
+- Enterprise Security
+- Governance
+- Identity Management
+- Microsoft Fabric
+- ML
+- News
+- Notebook Activity
+- Operational Reliability
+- Pipeline Automation
+- Production Workloads
+- Security
+- Service Principal
+- SPN
+- WI
+- Workspace Identity
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces secure authentication methods for running Notebook activities in Data Factory pipelines, focusing on Service Principal and Workspace Identity to help automate and secure production workflows.<!--excerpt_end-->
 
 # Run Notebooks in Pipelines with Service Principal or Workspace Identity

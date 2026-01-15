@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to Get the Most Out of Your AI with Vibe Coding"
-description: "This video from GitHub explores the concept of \"vibe coding\"—leveraging AI tools like GitHub Copilot to assist with software development by providing proper context. Viewers will learn why detailed Product Requirements Documents (PRDs) are essential for generating quality code and how even non-technical users can utilize AI coding assistants more effectively."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/Nj2c3qPJ1Ng"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Get the Most Out of Your AI with Vibe Coding
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/Nj2c3qPJ1Ng
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-02 14:00:38 +00:00
-permalink: "/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "AI Coding", "AI Productivity", "Context Engineering", "Developer Tools", "GitHub", "GitHub Copilot", "Non Technical Users", "PRD", "Product Requirements Document", "Software Development", "Vibe Coding", "VibeCoding", "Videos"]
-tags_normalized: ["ai", "ai assistant", "ai coding", "ai productivity", "context engineering", "developer tools", "github", "github copilot", "non technical users", "prd", "product requirements document", "software development", "vibe coding", "vibecoding", "videos"]
+permalink: /github-copilot/videos/How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding
+tags:
+- AI
+- AI Assistant
+- AI Coding
+- AI Productivity
+- Context Engineering
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Non Technical Users
+- PRD
+- Product Requirements Document
+- Software Development
+- Vibe Coding
+- VibeCoding
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a video exploring 'vibe coding' with AI, emphasizing how author GitHub recommends using clear PRDs with tools like GitHub Copilot to maximize development efficiency.<!--excerpt_end-->
 
 {% youtube Nj2c3qPJ1Ng %}

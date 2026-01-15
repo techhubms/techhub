@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Running ESXi on Azure VM Using Nested Virtualization: Lab Guide and Lessons"
-description: "This community post by delecoute shares a detailed lab experience running VMware ESXi on an Azure VM using nested virtualization. The guide covers the technical hurdles encountered, the limitations of this approach compared to Azure VMware Solution (AVS), and the lessons learned along the way. It highlights key differences between lab/testing and production scenarios, subscription requirements, and practical tips for those exploring hybrid cloud setups with Azure and VMware technologies."
-author: "delecoute"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mkatqa/esxi_on_azure_vm/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Running ESXi on Azure VM Using Nested Virtualization: Lab Guide and Lessons'
+author: delecoute
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mkatqa/esxi_on_azure_vm/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 20:18:01 +00:00
-permalink: "/2025-08-07-Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons.html"
-categories: ["Azure"]
-tags: ["AVS", "Azure", "Azure Migrate", "Azure VM", "Cloud Labs", "Community", "CSP", "EA", "ESXi", "High Availability", "Lab Environment", "Microsoft Azure", "Nested Virtualization", "Pay as You Go", "Student Subscription", "Subscription Models", "VMware"]
-tags_normalized: ["avs", "azure", "azure migrate", "azure vm", "cloud labs", "community", "csp", "ea", "esxi", "high availability", "lab environment", "microsoft azure", "nested virtualization", "pay as you go", "student subscription", "subscription models", "vmware"]
+permalink: /azure/community/Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons
+tags:
+- AVS
+- Azure
+- Azure Migrate
+- Azure VM
+- Cloud Labs
+- Community
+- CSP
+- EA
+- ESXi
+- High Availability
+- Lab Environment
+- Microsoft Azure
+- Nested Virtualization
+- Pay as You Go
+- Student Subscription
+- Subscription Models
+- VMware
+section_names:
+- azure
 ---
-
 delecoute documents their experience attempting to run ESXi on an Azure VM with nested virtualization, offering a transparent technical guide and thoughtful analysis for fellow cloud lab enthusiasts.<!--excerpt_end-->
 
 # Running ESXi on Azure VM Using Nested Virtualization: Lab Guide and Lessons

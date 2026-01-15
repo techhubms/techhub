@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "Azure Weekly Update: November 28, 2025 - New Features and Enhancements"
-description: "This week's Azure update by John Savill covers the latest technical improvements in Microsoft's cloud platform, including Azure Functions flex custom handler, Azure Bastion portal RDP Entra ID integration, Network Watcher MI support, Azure File Sync availability in New Zealand North, Azure SQL Database Regex in T-SQL, MCP Server MySQL support, AML VM retirement, Load Testing expansion, APIM and APIC MCP support, and Claude Opus 4.5 in Foundry. The video includes learning resources and certification links for technical practitioners."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HxO4aWyHmdE"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Weekly Update: November 28, 2025 - New Features and Enhancements'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=HxO4aWyHmdE
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-28 15:44:35 +00:00
-permalink: "/2025-11-28-Azure-Weekly-Update-November-28-2025-New-Features-and-Enhancements.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["API Management", "APIC", "APIM", "Azure", "Azure Bastion", "Azure Cloud", "Azure File Sync", "Azure Functions", "Azure Load Testing", "Azure Machine Learning", "Azure MCP Server", "Azure SQL Database", "Certification", "Claude Opus", "Cloud", "Coding", "DevOps", "DevOps Master Class", "Entra ID", "Foundry", "Italy North", "Managed Identities", "Microsoft", "Microsoft Azure", "ML", "MySQL Support", "Network Watcher", "New Zealand North", "PowerShell", "RDP Integration", "Regex", "T SQL", "Videos", "Virtual Machine Retirement"]
-tags_normalized: ["api management", "apic", "apim", "azure", "azure bastion", "azure cloud", "azure file sync", "azure functions", "azure load testing", "azure machine learning", "azure mcp server", "azure sql database", "certification", "claude opus", "cloud", "coding", "devops", "devops master class", "entra id", "foundry", "italy north", "managed identities", "microsoft", "microsoft azure", "ml", "mysql support", "network watcher", "new zealand north", "powershell", "rdp integration", "regex", "t sql", "videos", "virtual machine retirement"]
+permalink: /ml/videos/Azure-Weekly-Update-November-28-2025-New-Features-and-Enhancements
+tags:
+- API Management
+- APIC
+- APIM
+- Azure
+- Azure Bastion
+- Azure Cloud
+- Azure File Sync
+- Azure Functions
+- Azure Load Testing
+- Azure Machine Learning
+- Azure MCP Server
+- Azure SQL Database
+- Certification
+- Claude Opus
+- Cloud
+- Coding
+- DevOps
+- DevOps Master Class
+- Entra ID
+- Foundry
+- Italy North
+- Managed Identities
+- Microsoft
+- Microsoft Azure
+- ML
+- MySQL Support
+- Network Watcher
+- New Zealand North
+- PowerShell
+- RDP Integration
+- Regex
+- T SQL
+- Videos
+- Virtual Machine Retirement
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 John Savill delivers the Azure Weekly Update for November 28, 2025, sharing technical enhancements and new features across Azure services for cloud developers and administrators.<!--excerpt_end-->
 
 {% youtube HxO4aWyHmdE %}

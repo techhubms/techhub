@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Announcing the .NET Security Group"
-description: "This article introduces the .NET Security Group, an initiative by Microsoft to collaborate with trusted partners and organizations on distributing .NET security patches. Members gain early access to vulnerability information (CVEs) and source patches prior to public disclosure, enabling synchronized patch releases across all .NET distributions and improving ecosystem security."
-author: "Jamshed Damkewala"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-dotnet-security-group/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Announcing the .NET Security Group
+author: Jamshed Damkewala
+canonical_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-security-group/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-14 17:05:00 +00:00
-permalink: "/2025-10-14-Announcing-the-NET-Security-Group.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "Application Security", "Canonical", "Coding", "CVE", "Ecosystem", "IBM", "Lifecycle", "Linux Distributions", "Maintenance & Updates", "Microsoft", "News", "Open Source", "Partners", "Patch Tuesday", "Patching", "Red Hat", "Security", "Security Group", "Security Lifecycle", "Security Patching", "Support", "Upstream Projects", "Vulnerability Disclosure"]
-tags_normalized: ["dotnet", "application security", "canonical", "coding", "cve", "ecosystem", "ibm", "lifecycle", "linux distributions", "maintenance and updates", "microsoft", "news", "open source", "partners", "patch tuesday", "patching", "red hat", "security", "security group", "security lifecycle", "security patching", "support", "upstream projects", "vulnerability disclosure"]
+permalink: /coding/news/Announcing-the-NET-Security-Group
+tags:
+- .NET
+- Application Security
+- Canonical
+- Coding
+- CVE
+- Ecosystem
+- IBM
+- Lifecycle
+- Linux Distributions
+- Maintenance & Updates
+- Microsoft
+- News
+- Open Source
+- Partners
+- Patch Tuesday
+- Patching
+- Red Hat
+- Security
+- Security Group
+- Security Lifecycle
+- Security Patching
+- Support
+- Upstream Projects
+- Vulnerability Disclosure
+section_names:
+- coding
+- security
 ---
-
 Jamshed Damkewala details the launch of the .NET Security Group, where organizations can work directly with Microsoft to distribute .NET security patches and receive early CVE information.<!--excerpt_end-->
 
 # Announcing the .NET Security Group

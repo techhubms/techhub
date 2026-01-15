@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Support Plans Compared: Choosing the Right One for Your Organization"
-description: "This guide by John Edward thoroughly compares Microsoft Azure’s five support plans—Basic, Developer, Standard, Professional Direct, and Premier—helping organizations identify the right option for their cloud workloads. Coverage includes the features, limitations, and ideal use cases for each tier, plus actionable advice for aligning support plans with operational, architectural, and budgetary requirements."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-support-plans-compared-choosing-the-right-one-for-your-organization/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure Support Plans Compared: Choosing the Right One for Your Organization'
+author: John Edward
+canonical_url: https://dellenny.com/azure-support-plans-compared-choosing-the-right-one-for-your-organization/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-19 09:57:36 +00:00
-permalink: "/2025-11-19-Azure-Support-Plans-Compared-Choosing-the-Right-One-for-Your-Organization.html"
-categories: ["Azure"]
-tags: ["Azure", "Basic Support", "Blogs", "Cloud Architecture", "Cloud Migration", "Cloud Operations", "Cloud Support", "Developer Support", "Enterprise IT", "Incident Response", "Microsoft Azure", "Operational Best Practices", "Premier Support", "Production Workloads", "Professional Direct", "Service Levels", "Standard Support", "Support Plans", "Technical Guidance"]
-tags_normalized: ["azure", "basic support", "blogs", "cloud architecture", "cloud migration", "cloud operations", "cloud support", "developer support", "enterprise it", "incident response", "microsoft azure", "operational best practices", "premier support", "production workloads", "professional direct", "service levels", "standard support", "support plans", "technical guidance"]
+permalink: /azure/blogs/Azure-Support-Plans-Compared-Choosing-the-Right-One-for-Your-Organization
+tags:
+- Azure
+- Basic Support
+- Blogs
+- Cloud Architecture
+- Cloud Migration
+- Cloud Operations
+- Cloud Support
+- Developer Support
+- Enterprise IT
+- Incident Response
+- Microsoft Azure
+- Operational Best Practices
+- Premier Support
+- Production Workloads
+- Professional Direct
+- Service Levels
+- Standard Support
+- Support Plans
+- Technical Guidance
+section_names:
+- azure
 ---
-
 John Edward delivers a practical overview of Azure’s support plans, comparing features and suitability to help organizations select the right level of Microsoft’s cloud support.<!--excerpt_end-->
 
 # Azure Support Plans Compared: Choosing the Right One for Your Organization

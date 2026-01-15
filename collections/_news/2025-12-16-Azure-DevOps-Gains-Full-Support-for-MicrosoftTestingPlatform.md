@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure DevOps Gains Full Support for Microsoft.Testing.Platform"
-description: "This news post highlights the seamless integration of Microsoft.Testing.Platform in Azure DevOps, making it easier for developers to run, retry, and publish .NET test results in CI/CD pipelines. It explains updates to Azure DevOps tasks, migration steps, retry handling, and improved publishing of results with clear technical configuration guidance. Developers working with .NET frameworks can now take advantage of enhanced testing capabilities and automation within Azure DevOps."
-author: "Youssef Fahmy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Azure DevOps Gains Full Support for Microsoft.Testing.Platform
+author: Youssef Fahmy
+canonical_url: https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-16 18:05:00 +00:00
-permalink: "/2025-12-16-Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlatform.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10 SDK", "Azure", "Azure DevOps", "C#", "CI/CD Pipelines", "Coding", "DevOps", "DotNetCoreCLI", "F#", "Microsoft.Testing.Platform", "News", "PublishTestResults", "Retry Extension", "Test Automation", "Test Frameworks", "Test Results", "Testing", "TRX Files", "Unit Testing", "Visual Basic", "VSTest", "YAML Pipelines"]
-tags_normalized: ["dotnet", "dotnet 10 sdk", "azure", "azure devops", "csharp", "cislashcd pipelines", "coding", "devops", "dotnetcorecli", "fsharp", "microsoftdottestingdotplatform", "news", "publishtestresults", "retry extension", "test automation", "test frameworks", "test results", "testing", "trx files", "unit testing", "visual basic", "vstest", "yaml pipelines"]
+permalink: /coding/news/Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlatform
+tags:
+- .NET
+- .NET 10 SDK
+- Azure
+- Azure DevOps
+- C#
+- CI/CD Pipelines
+- Coding
+- DevOps
+- DotNetCoreCLI
+- F#
+- Microsoft.Testing.Platform
+- News
+- PublishTestResults
+- Retry Extension
+- Test Automation
+- Test Frameworks
+- Test Results
+- Testing
+- TRX Files
+- Unit Testing
+- Visual Basic
+- VSTest
+- YAML Pipelines
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Youssef Fahmy presents an in-depth look at Azure DevOps' new full support for Microsoft.Testing.Platform, outlining how developers can now run, retry, and publish .NET test results effortlessly.<!--excerpt_end-->
 
 # Azure DevOps Gains Full Support for Microsoft.Testing.Platform

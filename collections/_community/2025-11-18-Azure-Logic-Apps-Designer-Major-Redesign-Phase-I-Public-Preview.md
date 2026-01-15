@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Logic Apps Designer Major Redesign: Phase I Public Preview"
-description: "This post introduces the Phase I release of a redesigned Azure Logic Apps designer, now in Public Preview for Standard workflows. It highlights faster onboarding, unified workflow views, draft mode with auto-save, enhanced search, workflow documentation features, improved monitoring, and a new debugging timeline. The roadmap includes future improvements and encourages user feedback to shape upcoming development."
-author: "travisvu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Logic Apps Designer Major Redesign: Phase I Public Preview'
+author: travisvu
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:24:37 +00:00
-permalink: "/2025-11-18-Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Auto Save", "Azure", "Azure Integration", "Azure Logic Apps", "Coding", "Community", "Debugging", "Developer Tools", "Development Loop", "DevOps", "Draft Mode", "Logic Apps Designer", "Monitoring", "Public Preview", "Run History", "Standard Workflows", "Unified Canvas", "VS Code", "Workflow Automation"]
-tags_normalized: ["auto save", "azure", "azure integration", "azure logic apps", "coding", "community", "debugging", "developer tools", "development loop", "devops", "draft mode", "logic apps designer", "monitoring", "public preview", "run history", "standard workflows", "unified canvas", "vs code", "workflow automation"]
+permalink: /coding/community/Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview
+tags:
+- Auto Save
+- Azure
+- Azure Integration
+- Azure Logic Apps
+- Coding
+- Community
+- Debugging
+- Developer Tools
+- Development Loop
+- DevOps
+- Draft Mode
+- Logic Apps Designer
+- Monitoring
+- Public Preview
+- Run History
+- Standard Workflows
+- Unified Canvas
+- VS Code
+- Workflow Automation
+section_names:
+- azure
+- coding
+- devops
 ---
-
 travisvu details the Phase I public preview of the new Azure Logic Apps designer, covering key improvements such as draft mode, unified tool views, and developer-focused workflow enhancements.<!--excerpt_end-->
 
 # Azure Logic Apps Designer Major Redesign: Phase I Public Preview

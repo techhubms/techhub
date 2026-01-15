@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Connecting Azure Logic Apps MCP Server to Copilot Studio Securely"
-description: "This guide explains how to securely connect to a Logic Apps MCP Server from Copilot Studio, leveraging newly released MCP Server capabilities in Azure Logic Apps. The content covers configuration, recommended practices, and the required Azure services (Logic Apps Standard, API Center, Copilot Studio) to enable conversational agents that interact with enterprise data in a secure, scalable manner."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba-p/4456277"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Connecting Azure Logic Apps MCP Server to Copilot Studio Securely
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba-p/4456277
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 15:31:29 +00:00
-permalink: "/2025-09-23-Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "API Center", "Azure", "Azure Connectors", "Azure Logic Apps", "Azure Security", "Community", "Copilot Studio", "EasyAuth", "Enterprise Authentication", "Logic Apps Standard", "Managed Identity", "MCP Server", "Microsoft Entra ID", "Secure Integration", "Security", "Workflow Automation"]
-tags_normalized: ["ai", "api center", "azure", "azure connectors", "azure logic apps", "azure security", "community", "copilot studio", "easyauth", "enterprise authentication", "logic apps standard", "managed identity", "mcp server", "microsoft entra id", "secure integration", "security", "workflow automation"]
+permalink: /ai/community/Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely
+tags:
+- AI
+- API Center
+- Azure
+- Azure Connectors
+- Azure Logic Apps
+- Azure Security
+- Community
+- Copilot Studio
+- EasyAuth
+- Enterprise Authentication
+- Logic Apps Standard
+- Managed Identity
+- MCP Server
+- Microsoft Entra ID
+- Secure Integration
+- Security
+- Workflow Automation
+section_names:
+- ai
+- azure
+- security
 ---
-
 KentWeareMSFT demonstrates how to set up a secure connection from Copilot Studio to a Logic Apps MCP Server, using Azure Logic Apps and API Center to unlock enterprise data for conversational AI agents.<!--excerpt_end-->
 
 # Connecting Azure Logic Apps MCP Server to Copilot Studio Securely

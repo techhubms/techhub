@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "From Large Semi-Structured Documents to Actionable Data: Azure-Powered Intelligent Document Processing Pipelines"
-description: "This in-depth guide by anishganguli explains how to design and implement intelligent document processing pipelines for large semi-structured documents using Azure Document Intelligence, Azure AI Search, Azure OpenAI, and Microsoft Fabric. It covers real-world use cases across industries, discusses technical and data stewardship challenges, proposes a reusable architecture, and evaluates alternative Microsoft-based deployment models for robust document extraction and transformation workflows."
-author: "anishganguli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-reusable/ba-p/4474054"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'From Large Semi-Structured Documents to Actionable Data: Azure-Powered Intelligent Document Processing Pipelines'
+author: anishganguli
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-reusable/ba-p/4474054
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 07:35:03 +00:00
-permalink: "/2025-12-09-From-Large-Semi-Structured-Documents-to-Actionable-Data-Azure-Powered-Intelligent-Document-Processing-Pipelines.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Pipelines", "Analytics", "Azure", "Azure AI Search", "Azure Databricks", "Azure Document Intelligence", "Azure OpenAI", "Community", "Compliance", "Custom OCR", "Data Stewardship", "Document Automation", "Enterprise Data", "Entity Extraction", "Hybrid Search", "Intelligent Document Processing", "Machine Learning", "Microsoft Fabric", "ML", "ML Pipelines", "OCR", "RAG", "Semantic Search", "Structured Data"]
-tags_normalized: ["ai", "ai pipelines", "analytics", "azure", "azure ai search", "azure databricks", "azure document intelligence", "azure openai", "community", "compliance", "custom ocr", "data stewardship", "document automation", "enterprise data", "entity extraction", "hybrid search", "intelligent document processing", "machine learning", "microsoft fabric", "ml", "ml pipelines", "ocr", "rag", "semantic search", "structured data"]
+permalink: /ai/community/From-Large-Semi-Structured-Documents-to-Actionable-Data-Azure-Powered-Intelligent-Document-Processing-Pipelines
+tags:
+- AI
+- AI Pipelines
+- Analytics
+- Azure
+- Azure AI Search
+- Azure Databricks
+- Azure Document Intelligence
+- Azure OpenAI
+- Community
+- Compliance
+- Custom OCR
+- Data Stewardship
+- Document Automation
+- Enterprise Data
+- Entity Extraction
+- Hybrid Search
+- Intelligent Document Processing
+- Machine Learning
+- Microsoft Fabric
+- ML
+- ML Pipelines
+- OCR
+- RAG
+- Semantic Search
+- Structured Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 anishganguli presents a detailed blueprint for extracting actionable, trusted data from large semi-structured documents using Azure AI technologies, focusing on scalable, context-aware pipelines and real-world evaluation.<!--excerpt_end-->
 
 # From Large Semi-Structured Docs to Actionable Data: Reusable Pipelines with ADI, AI Search & OpenAI

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Designing Seamless AI Agents with C#: One Question, One Answer Approach"
-description: "This session by Mark Miller explores how to design effective, user-friendly AI agents using C#. It covers the benefits of the single-question, single-answer model over chat-based interfaces, feeding proper context to AI, UX/design principles applicable to AI-driven apps, and practical development patterns for building integrated AI agents in .NET environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=yKhaYLYK4Sg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Designing Seamless AI Agents with C#: One Question, One Answer Approach'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=yKhaYLYK4Sg
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 23:36:11 +00:00
-permalink: "/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Development", "AI", "AI Agents", "AI Integration", "AI UX Patterns", "AiGen", "C#", "CodeRush", "Coding", "Coding Assistants", "Design Principles", "DevExpress", "Pair Programming", "Single Response Model", "User Experience", "Videos"]
-tags_normalized: ["dotnet", "dotnet development", "ai", "ai agents", "ai integration", "ai ux patterns", "aigen", "csharp", "coderush", "coding", "coding assistants", "design principles", "devexpress", "pair programming", "single response model", "user experience", "videos"]
+permalink: /ai/videos/Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach
+tags:
+- .NET
+- .NET Development
+- AI
+- AI Agents
+- AI Integration
+- AI UX Patterns
+- AiGen
+- C#
+- CodeRush
+- Coding
+- Coding Assistants
+- Design Principles
+- DevExpress
+- Pair Programming
+- Single Response Model
+- User Experience
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Mark Miller delivers practical insights on building effective AI agents with C#, showing developers how a single-question, single-answer model can improve user experience and productivity.<!--excerpt_end-->
 
 {% youtube yKhaYLYK4Sg %}

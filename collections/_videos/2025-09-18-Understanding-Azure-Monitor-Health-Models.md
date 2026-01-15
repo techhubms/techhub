@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Understanding Azure Monitor Health Models"
-description: "This short explainer by Martin Simecek introduces Azure Monitor Health Models, a concept designed to help developers and IT professionals cut through the noise of logs, alerts, and metrics by providing a streamlined, actionable view of system health. The video highlights how Health Models can improve operational efficiency and enable more targeted incident response in environments where Azure Monitor is used for observability."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=I39PSkDmfHQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Understanding Azure Monitor Health Models
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=I39PSkDmfHQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-18 15:35:24 +00:00
-permalink: "/2025-09-18-Understanding-Azure-Monitor-Health-Models.html"
-categories: ["Azure"]
-tags: ["Alerts Management", "Azure", "Azure Monitor", "Cloud Operations", "Health Models", "Incident Response", "Metrics", "Microsoft", "Monitoring", "Observability", "OneDevQuestion", "System Health", "Videos"]
-tags_normalized: ["alerts management", "azure", "azure monitor", "cloud operations", "health models", "incident response", "metrics", "microsoft", "monitoring", "observability", "onedevquestion", "system health", "videos"]
+permalink: /azure/videos/Understanding-Azure-Monitor-Health-Models
+tags:
+- Alerts Management
+- Azure
+- Azure Monitor
+- Cloud Operations
+- Health Models
+- Incident Response
+- Metrics
+- Microsoft
+- Monitoring
+- Observability
+- OneDevQuestion
+- System Health
+- Videos
+section_names:
+- azure
 ---
-
 Martin Simecek from Microsoft Developer explains Azure Monitor Health Models—a new approach to unify noisy logs and alerts into clear, actionable health signals for Azure environments.<!--excerpt_end-->
 
 {% youtube I39PSkDmfHQ %}

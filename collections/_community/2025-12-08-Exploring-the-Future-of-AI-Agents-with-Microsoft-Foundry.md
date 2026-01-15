@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Exploring the Future of AI Agents with Microsoft Foundry"
-description: "This in-depth community post by Lee_Stott explores the emergence of agentic AI, highlighting how Microsoft Foundry enables developers to build next-generation autonomous AI agents. It covers platform capabilities, industry trends, practical implementation guidance, and real-world use cases from expense management to data analytics. Community resources for learning and support are also provided."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Exploring the Future of AI Agents with Microsoft Foundry
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 17:13:27 +00:00
-permalink: "/2025-12-08-Exploring-the-Future-of-AI-Agents-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Development", "AI Implementation", "Autonomous Systems", "Azure", "Azure AI", "Community", "Copilot Studio", "Developer Community", "Foundry Agent Service", "Foundry IQ", "Knowledge Grounding", "Large Language Models", "LLM", "Microsoft Foundry", "Model Catalogue", "OpenAI", "Platform as A Service", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai development", "ai implementation", "autonomous systems", "azure", "azure ai", "community", "copilot studio", "developer community", "foundry agent service", "foundry iq", "knowledge grounding", "large language models", "llm", "microsoft foundry", "model catalogue", "openai", "platform as a service", "workflow automation"]
+permalink: /ai/community/Exploring-the-Future-of-AI-Agents-with-Microsoft-Foundry
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- AI Development
+- AI Implementation
+- Autonomous Systems
+- Azure
+- Azure AI
+- Community
+- Copilot Studio
+- Developer Community
+- Foundry Agent Service
+- Foundry IQ
+- Knowledge Grounding
+- Large Language Models
+- LLM
+- Microsoft Foundry
+- Model Catalogue
+- OpenAI
+- Platform as A Service
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Lee_Stott presents a comprehensive overview of agentic AI and how Microsoft Foundry empowers developers to create advanced autonomous agents, including platform features, real-world applications, and step-by-step getting started advice.<!--excerpt_end-->
 
 # Exploring the Future of AI Agents with Microsoft Foundry

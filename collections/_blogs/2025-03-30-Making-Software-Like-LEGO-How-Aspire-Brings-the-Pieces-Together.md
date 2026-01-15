@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Making Software Like LEGO: How Aspire Brings the Pieces Together"
-description: "David Fowler explores the challenges of modern web app development, emphasizing integration and orchestration over traditional coding. He introduces Aspire, a composable, contract-based system designed to streamline application lifecycle management, promote extensibility, and enable both human and AI stakeholders to collaborate more effectively."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/making-software-like-lego-how-aspire-brings-the-pieces-together-d6a99c2c4cde?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+layout: post
+title: 'Making Software Like LEGO: How Aspire Brings the Pieces Together'
+author: David Fowler
+canonical_url: https://medium.com/@davidfowl/making-software-like-lego-how-aspire-brings-the-pieces-together-d6a99c2c4cde?source=rss-8163234c98f0------2
+viewing_mode: external
+feed_name: David Fowler's Blog
+feed_url: https://medium.com/feed/@davidfowl
 date: 2025-03-30 18:44:09 +00:00
-permalink: "/2025-03-30-Making-Software-Like-LEGO-How-Aspire-Brings-the-Pieces-Together.html"
-categories: ["Coding", "DevOps"]
-tags: ["AI", "AI Workflows", "Application Lifecycle", "Aspire", "Blogs", "CI/CD", "Cloud Computing", "Coding", "Composability", "Configuration", "Developer Experience", "DevOps", "Infrastructure", "Integration", "Orchestration", "Platform Engineering", "Software Development", "System Modeling", "Vertical Platforms", "Web Development"]
-tags_normalized: ["ai", "ai workflows", "application lifecycle", "aspire", "blogs", "cislashcd", "cloud computing", "coding", "composability", "configuration", "developer experience", "devops", "infrastructure", "integration", "orchestration", "platform engineering", "software development", "system modeling", "vertical platforms", "web development"]
+permalink: /coding/blogs/Making-Software-Like-LEGO-How-Aspire-Brings-the-Pieces-Together
+tags:
+- AI
+- AI Workflows
+- Application Lifecycle
+- Aspire
+- Blogs
+- CI/CD
+- Cloud Computing
+- Coding
+- Composability
+- Configuration
+- Developer Experience
+- DevOps
+- Infrastructure
+- Integration
+- Orchestration
+- Platform Engineering
+- Software Development
+- System Modeling
+- Vertical Platforms
+- Web Development
+section_names:
+- coding
+- devops
 ---
-
 In this post by David Fowler, the author discusses how Aspire transforms software development by making systems composable and robust, shifting focus from raw code to orchestration, resources, and extensible platform models for both developers and AI.<!--excerpt_end-->
 
 # Making Software Like LEGO: How Aspire Brings the Pieces Together

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Helps One Acre Fund Scale Farming Impact"
-description: "This video showcases how One Acre Fund, a nonprofit organization focused on empowering smallholder farmers, leverages GitHub Copilot to accelerate solution development. It explores the practical ways GitHub, open source collaboration, and Copilot enable the team to innovate faster, build technology-driven solutions, and expand their impact in agriculture."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ol_un2Nam2E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: GitHub Copilot Helps One Acre Fund Scale Farming Impact
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=ol_un2Nam2E
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-28 19:14:13 +00:00
-permalink: "/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agricultural Innovation", "AI", "AI in Development", "AI Productivity", "Code Collaboration", "Developer Tools", "Engineering Impact", "GitHub", "GitHub Copilot", "Nonprofit Technology", "One Acre Fund", "OneAcreFund", "Open Source", "OpenSource", "Software Acceleration", "Videos"]
-tags_normalized: ["agricultural innovation", "ai", "ai in development", "ai productivity", "code collaboration", "developer tools", "engineering impact", "github", "github copilot", "nonprofit technology", "one acre fund", "oneacrefund", "open source", "opensource", "software acceleration", "videos"]
+permalink: /github-copilot/videos/GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact
+tags:
+- Agricultural Innovation
+- AI
+- AI in Development
+- AI Productivity
+- Code Collaboration
+- Developer Tools
+- Engineering Impact
+- GitHub
+- GitHub Copilot
+- Nonprofit Technology
+- One Acre Fund
+- OneAcreFund
+- Open Source
+- OpenSource
+- Software Acceleration
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video, GitHub shares how One Acre Fund utilizes GitHub Copilot and open source to empower its developers, enhance productivity, and scale its mission to support millions of farmers.<!--excerpt_end-->
 
 {% youtube ol_un2Nam2E %}

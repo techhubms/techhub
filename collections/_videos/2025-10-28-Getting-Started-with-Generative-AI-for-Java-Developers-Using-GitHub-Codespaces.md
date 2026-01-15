@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Getting Started with Generative AI for Java Developers Using GitHub Codespaces"
-description: "This video tutorial, featuring Ayan Gupta and Rory from Microsoft, provides a step-by-step guide for Java developers looking to start their journey with generative AI. The session covers essential setup steps, including using GitHub Codespaces for a hassle-free development environment, accessing GitHub Models, and running your first AI demo project with OpenAI's GPT-4o mini model. Viewers learn how to configure their development container, create authentication tokens, and experiment with large language models—all utilizing Microsoft's cloud and AI tools. Ideal for beginners, the episode sets a solid foundation for future, deeper explorations into generative AI and responsible AI development."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=COPXh-unV8I"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Getting Started with Generative AI for Java Developers Using GitHub Codespaces
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=COPXh-unV8I
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-28 16:00:23 +00:00
-permalink: "/2025-10-28-Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Tutorial", "AIForBeginners", "Authentication", "Cloud Development", "CloudDevelopment", "Coding", "Dev Container", "DevContainers", "DevOps", "Generative AI", "GenerativeAI", "GitHub Codespaces", "GitHub Models", "GitHubCodespaces", "GitHubModels", "GPT 4o", "GPT4", "Java", "Java Development", "JavaDevelopment", "JavaTutorial", "Large Language Models", "OpenAI", "OpenAI SDK", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tutorial", "aiforbeginners", "authentication", "cloud development", "clouddevelopment", "coding", "dev container", "devcontainers", "devops", "generative ai", "generativeai", "github codespaces", "github models", "githubcodespaces", "githubmodels", "gpt 4o", "gpt4", "java", "java development", "javadevelopment", "javatutorial", "large language models", "openai", "openai sdk", "videos", "vs code"]
+permalink: /ai/videos/Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces
+tags:
+- AI
+- AI Tutorial
+- AIForBeginners
+- Authentication
+- Cloud Development
+- CloudDevelopment
+- Coding
+- Dev Container
+- DevContainers
+- DevOps
+- Generative AI
+- GenerativeAI
+- GitHub Codespaces
+- GitHub Models
+- GitHubCodespaces
+- GitHubModels
+- GPT 4o
+- GPT4
+- Java
+- Java Development
+- JavaDevelopment
+- JavaTutorial
+- Large Language Models
+- OpenAI
+- OpenAI SDK
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Microsoft Developer's tutorial with Ayan Gupta and Rory walks Java developers through the essentials of starting with generative AI using GitHub Codespaces and GitHub Models, providing practical steps guided by expert instructors.<!--excerpt_end-->
 
 {% youtube COPXh-unV8I %}

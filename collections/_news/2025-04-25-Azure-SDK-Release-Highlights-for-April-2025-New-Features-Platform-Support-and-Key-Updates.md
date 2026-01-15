@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure SDK Release Highlights for April 2025: New Features, Platform Support, and Key Updates"
-description: "This post by Hector Norzagaray summarizes the latest Azure SDK releases for April 2025, including notable new stable and beta libraries, Node.js 18 end-of-life advisory, and links to detailed release notes for multiple languages and platforms."
-author: "Hector Norzagaray"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure SDK Release Highlights for April 2025: New Features, Platform Support, and Key Updates'
+author: Hector Norzagaray
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-25 17:55:05 +00:00
-permalink: "/2025-04-25-Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Azure", "Azure SDK", "C++", "Coding", "Embedded C", "End Of Life", "Go", "Java", "JavaScript", "Management Libraries", "News", "Node.js", "Python", "Release Notes", "Rust", "SDK", "TypeScript"]
-tags_normalized: ["dotnet", "azure", "azure sdk", "cplusplus", "coding", "embedded c", "end of life", "go", "java", "javascript", "management libraries", "news", "nodedotjs", "python", "release notes", "rust", "sdk", "typescript"]
+permalink: /coding/news/Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates
+tags:
+- .NET
+- Azure
+- Azure SDK
+- C++
+- Coding
+- Embedded C
+- End Of Life
+- Go
+- Java
+- JavaScript
+- Management Libraries
+- News
+- Node.js
+- Python
+- Release Notes
+- Rust
+- SDK
+- TypeScript
+section_names:
+- azure
+- coding
 ---
-
 Hector Norzagaray presents the April 2025 Azure SDK release update, highlighting new stable and beta libraries, essential platform advisories, and resources for further reading.<!--excerpt_end-->
 
 # Azure SDK Release (April 2025)

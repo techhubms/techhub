@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Enhancements in Microsoft Fabric Data Factory Connectors for Enterprise-Scale Data Integration"
-description: "This article details the newest innovations in Microsoft Fabric Data Factory connectors, focusing on expanding connectivity, improving performance, and enhancing enterprise readiness. Coverage includes new connectors for diverse data sources, upsert support, advanced security with Microsoft Entra ID, improved governance, and operational enhancements for integration pipelines."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-seamless-data-integration-with-the-latest-fabric-data-factory-connector-innovations/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enhancements in Microsoft Fabric Data Factory Connectors for Enterprise-Scale Data Integration
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-seamless-data-integration-with-the-latest-fabric-data-factory-connector-innovations/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 09:00:00 +00:00
-permalink: "/2025-10-02-Enhancements-in-Microsoft-Fabric-Data-Factory-Connectors-for-Enterprise-Scale-Data-Integration.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Database For PostgreSQL", "Azure Databricks", "Connectors", "Data Factory", "Data Integration", "Dataflow Gen2", "Delta Lake", "Enterprise Security", "Governance", "Lakehouse", "Microsoft Entra ID", "Microsoft Fabric", "ML", "MongoDB", "News", "Pipeline Automation", "Security", "Snowflake", "TLS 1.3", "Upsert"]
-tags_normalized: ["azure", "azure database for postgresql", "azure databricks", "connectors", "data factory", "data integration", "dataflow gen2", "delta lake", "enterprise security", "governance", "lakehouse", "microsoft entra id", "microsoft fabric", "ml", "mongodb", "news", "pipeline automation", "security", "snowflake", "tls 1dot3", "upsert"]
+permalink: /ml/news/Enhancements-in-Microsoft-Fabric-Data-Factory-Connectors-for-Enterprise-Scale-Data-Integration
+tags:
+- Azure
+- Azure Database For PostgreSQL
+- Azure Databricks
+- Connectors
+- Data Factory
+- Data Integration
+- Dataflow Gen2
+- Delta Lake
+- Enterprise Security
+- Governance
+- Lakehouse
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- MongoDB
+- News
+- Pipeline Automation
+- Security
+- Snowflake
+- TLS 1.3
+- Upsert
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog presents an in-depth overview of the latest Fabric Data Factory connector updates, highlighting advancements in data integration, performance, governance, and security for enterprise analytics teams.<!--excerpt_end-->
 
 # Enhancements in Microsoft Fabric Data Factory Connectors for Enterprise-Scale Data Integration

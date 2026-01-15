@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Start New Files Faster with GitHub Copilot"
-description: "Discover how to streamline the process of creating new files in your software projects using GitHub Copilot. This guide breaks down practical methods for leveraging Copilot’s AI-driven code generation to quickly scaffold Python scripts, React components, config files, and more—eliminating repetitive setup and accelerating productivity."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Start New Files Faster with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-25 00:00:00 +00:00
-permalink: "/2025-04-25-Start-New-Files-Faster-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Generation", "Best Practices", "Blogs", "Boilerplate Code", "Code Templates", "Coding", "Copilot Chat", "Developer Productivity", "Dockerfile", "GitHub Actions", "GitHub Copilot", "HTML", "IDE", "Project Setup", "Python", "React", "YAML"]
-tags_normalized: ["ai", "ai code generation", "best practices", "blogs", "boilerplate code", "code templates", "coding", "copilot chat", "developer productivity", "dockerfile", "github actions", "github copilot", "html", "ide", "project setup", "python", "react", "yaml"]
+permalink: /github-copilot/blogs/Start-New-Files-Faster-with-GitHub-Copilot
+tags:
+- AI
+- AI Code Generation
+- Best Practices
+- Blogs
+- Boilerplate Code
+- Code Templates
+- Coding
+- Copilot Chat
+- Developer Productivity
+- Dockerfile
+- GitHub Actions
+- GitHub Copilot
+- HTML
+- IDE
+- Project Setup
+- Python
+- React
+- YAML
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels (@xebia.com) shares practical tips for using GitHub Copilot to instantly generate file templates, helping developers kickstart new projects and files with ease.<!--excerpt_end-->
 
 # Start New Files Faster with GitHub Copilot

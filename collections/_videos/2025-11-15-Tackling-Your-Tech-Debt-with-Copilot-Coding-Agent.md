@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Tackling Your Tech Debt with Copilot Coding Agent"
-description: "This session explores how developers can leverage AI agents, particularly the Copilot coding agent from GitHub, to modernize legacy software and manage technical debt. It covers practical workflows, demos, and strategies for improving codebases and streamlining code refactoring in everyday development."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LafpndhNC_E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Tackling Your Tech Debt with Copilot Coding Agent
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=LafpndhNC_E
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-15 14:12:13 +00:00
-permalink: "/2025-11-15-Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "Code Modernization", "Code Refactoring", "Coding", "Copilot Coding Agent", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Issue Assignment", "Legacy Modernization", "Programming Tools", "Software Engineering", "Tech Debt", "Videos", "WRAP Strategy"]
-tags_normalized: ["ai", "ai agent", "code modernization", "code refactoring", "coding", "copilot coding agent", "developer workflow", "github", "github copilot", "github universe", "githubuniverse", "issue assignment", "legacy modernization", "programming tools", "software engineering", "tech debt", "videos", "wrap strategy"]
+permalink: /github-copilot/videos/Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent
+tags:
+- AI
+- AI Agent
+- Code Modernization
+- Code Refactoring
+- Coding
+- Copilot Coding Agent
+- Developer Workflow
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Issue Assignment
+- Legacy Modernization
+- Programming Tools
+- Software Engineering
+- Tech Debt
+- Videos
+- WRAP Strategy
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub presents a session led by Brittany Ellich, examining how developers can utilize Copilot coding agent and AI workflows to tackle technical debt and keep codebases modern.<!--excerpt_end-->
 
 {% youtube LafpndhNC_E %}

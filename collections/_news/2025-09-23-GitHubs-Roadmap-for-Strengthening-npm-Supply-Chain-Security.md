@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub's Roadmap for Strengthening npm Supply Chain Security"
-description: "GitHub details a recent surge in npm registry attacks and unveils a comprehensive roadmap to secure the npm ecosystem. Measures include stricter authentication (mandatory 2FA), granular short-lived tokens, deprecating legacy authentication methods, and broader adoption of trusted publishing. The post highlights immediate incident response to major attacks, upcoming publishing policy changes, and practical recommendations for npm maintainers to proactively strengthen project security and resilience."
-author: "Xavier René-Corail"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: GitHub's Roadmap for Strengthening npm Supply Chain Security
+author: Xavier René-Corail
+canonical_url: https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-23 00:29:50 +00:00
-permalink: "/2025-09-23-GitHubs-Roadmap-for-Strengthening-npm-Supply-Chain-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["API Tokens", "Authentication", "CI/CD", "Cybersecurity", "DevOps", "GitHub", "GitHub Security Lab", "Malware", "News", "npm", "Open Source", "OpenSSF", "Package Registry", "Publishing Workflow", "Security", "Supply Chain Security", "Tokens", "Trusted Publishing", "Two Factor Authentication"]
-tags_normalized: ["api tokens", "authentication", "cislashcd", "cybersecurity", "devops", "github", "github security lab", "malware", "news", "npm", "open source", "openssf", "package registry", "publishing workflow", "security", "supply chain security", "tokens", "trusted publishing", "two factor authentication"]
+permalink: /devops/news/GitHubs-Roadmap-for-Strengthening-npm-Supply-Chain-Security
+tags:
+- API Tokens
+- Authentication
+- CI/CD
+- Cybersecurity
+- DevOps
+- GitHub
+- GitHub Security Lab
+- Malware
+- News
+- npm
+- Open Source
+- OpenSSF
+- Package Registry
+- Publishing Workflow
+- Security
+- Supply Chain Security
+- Tokens
+- Trusted Publishing
+- Two Factor Authentication
+section_names:
+- devops
+- security
 ---
-
 Xavier René-Corail outlines GitHub's response to recent npm supply chain attacks, including plans for stricter authentication, granular tokens, and trusted publishing to help maintainers and organizations secure their npm projects.<!--excerpt_end-->
 
 # GitHub's Roadmap for Strengthening npm Supply Chain Security

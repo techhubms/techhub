@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Preparing for Azure Relay IP Address and DNS Changes"
-description: "This community post explains the upcoming changes to Azure Relay's IP addresses and DNS naming conventions. It details the steps organizations need to take to update their network configurations and firewall rules, how to use a PowerShell script to automate namespace information retrieval, and what changes to expect throughout the transition."
-author: "ashish-chhabria"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Preparing for Azure Relay IP Address and DNS Changes
+author: ashish-chhabria
+canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 20:06:09 +00:00
-permalink: "/2025-10-22-Preparing-for-Azure-Relay-IP-Address-and-DNS-Changes.html"
-categories: ["Azure"]
-tags: ["Automation", "Azure", "Azure Relay", "Community", "DNS", "Firewall", "Hybrid Cloud", "Hybrid Connections", "IP Address Management", "Microsoft Azure", "Namespace", "Network Configuration", "PowerShell", "Service Bus", "WCF Relay"]
-tags_normalized: ["automation", "azure", "azure relay", "community", "dns", "firewall", "hybrid cloud", "hybrid connections", "ip address management", "microsoft azure", "namespace", "network configuration", "powershell", "service bus", "wcf relay"]
+permalink: /azure/community/Preparing-for-Azure-Relay-IP-Address-and-DNS-Changes
+tags:
+- Automation
+- Azure
+- Azure Relay
+- Community
+- DNS
+- Firewall
+- Hybrid Cloud
+- Hybrid Connections
+- IP Address Management
+- Microsoft Azure
+- Namespace
+- Network Configuration
+- PowerShell
+- Service Bus
+- WCF Relay
+section_names:
+- azure
 ---
-
 ashish-chhabria provides a practical overview of essential updates to Azure Relay's IP addressing and DNS naming. The post walks through required user actions—including updating allow lists and leveraging a provided PowerShell script—to ensure continued connectivity and security.<!--excerpt_end-->
 
 # Preparing for Azure Relay IP Address and DNS Changes

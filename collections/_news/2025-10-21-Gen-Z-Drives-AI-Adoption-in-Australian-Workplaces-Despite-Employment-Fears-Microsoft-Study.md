@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Gen Z Drives AI Adoption in Australian Workplaces Despite Employment Fears: Microsoft Study"
-description: "Microsoft Australia’s new study, based on a YouGov survey of 575 early-career professionals, reveals Gen Z is leading AI adoption in the workplace. While young employees express concerns about AI's impact on job security, they are using the technology to gain influence, foster innovation, and build critical skills—despite uneven access across sectors."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/gen-z-staff-lead-workplace-ai-adoption-despite-job-fears-microsoft-australia-study/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Gen Z Drives AI Adoption in Australian Workplaces Despite Employment Fears: Microsoft Study'
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/gen-z-staff-lead-workplace-ai-adoption-despite-job-fears-microsoft-australia-study/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-21 13:05:08 +00:00
-permalink: "/2025-10-21-Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Skills", "AI Strategy", "AI Tools", "Australia", "Automation", "Company News", "Critical Thinking", "Digital Divide", "Early Career Professionals", "Gen Z", "Microsoft Australia", "News", "Organizational Change", "Survey", "Technology Culture", "Workforce Development", "Workplace Innovation"]
-tags_normalized: ["ai", "ai adoption", "ai skills", "ai strategy", "ai tools", "australia", "automation", "company news", "critical thinking", "digital divide", "early career professionals", "gen z", "microsoft australia", "news", "organizational change", "survey", "technology culture", "workforce development", "workplace innovation"]
+permalink: /ai/news/Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study
+tags:
+- AI
+- AI Adoption
+- AI Skills
+- AI Strategy
+- AI Tools
+- Australia
+- Automation
+- Company News
+- Critical Thinking
+- Digital Divide
+- Early Career Professionals
+- Gen Z
+- Microsoft Australia
+- News
+- Organizational Change
+- Survey
+- Technology Culture
+- Workforce Development
+- Workplace Innovation
+section_names:
+- ai
 ---
-
 stclarke summarizes a Microsoft Australia study exploring how Gen Z professionals are embracing and shaping the adoption of AI in workplaces, balancing optimism and concern about its impact.<!--excerpt_end-->
 
 # Gen Z Drives AI Adoption in Australian Workplaces Despite Employment Fears: Microsoft Study

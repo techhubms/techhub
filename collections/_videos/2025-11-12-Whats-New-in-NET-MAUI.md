@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "What's New in .NET MAUI"
-description: "This session covers the latest advancements in .NET MAUI for .NET 10, focusing on performance optimizations, new controls and layouts, improved developer tooling in Visual Studio, and cross-platform capabilities. It highlights real-world production use, new features for building native experiences on iOS, Android, macOS, and Windows, and positions .NET MAUI as the future of unified app development. Industry professionals will benefit from learning how to leverage a single codebase for mobile and desktop applications with modern .NET tools."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6kz3XWCVij0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: What's New in .NET MAUI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=6kz3XWCVij0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/2025-11-12-Whats-New-in-NET-MAUI.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "App Tooling", "ASP.NET Core 10", "C# 14", "Coding", "Cross Platform Development", "Desktop Development", "F# 10", "MAUI", "Mobile Development", "Native Applications", "Performance Optimization", "Single Codebase", "User Interface", "Videos", "VS", "XAML"]
-tags_normalized: ["dotnet", "dotnet 10", "app tooling", "aspdotnet core 10", "csharp 14", "coding", "cross platform development", "desktop development", "fsharp 10", "maui", "mobile development", "native applications", "performance optimization", "single codebase", "user interface", "videos", "vs", "xaml"]
+permalink: /coding/videos/Whats-New-in-NET-MAUI
+tags:
+- .NET
+- .NET 10
+- App Tooling
+- ASP.NET Core 10
+- C# 14
+- Coding
+- Cross Platform Development
+- Desktop Development
+- F# 10
+- MAUI
+- Mobile Development
+- Native Applications
+- Performance Optimization
+- Single Codebase
+- User Interface
+- Videos
+- VS
+- XAML
+section_names:
+- coding
 ---
-
 dotnet presents an overview of the newest features in .NET MAUI for .NET 10, emphasizing performance, cross-platform development, and enhanced tooling for developers.<!--excerpt_end-->
 
 {% youtube 6kz3XWCVij0 %}

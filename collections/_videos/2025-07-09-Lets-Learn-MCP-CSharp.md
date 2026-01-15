@@ -1,20 +1,30 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Let's Learn MCP: C#"
-description: "A beginner-friendly workshop introducing the Model Context Protocol (MCP) framework for standardizing interactions between AI models and client applications, featuring Katie Savage and James Montemagno from the dotnet team."
-author: "Dotnet's Youtube channel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4zkIBMFdL2w"
-viewing_mode: "internal"
-categories: ["AI", "Coding"]
-feed_name: "dotnet"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+author: Dotnet's Youtube channel
+canonical_url: https://www.youtube.com/watch?v=4zkIBMFdL2w
+viewing_mode: internal
+feed_name: dotnet
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-09 17:53:52 +00:00
-permalink: "/2025-07-09-Lets-Learn-MCP-CSharp.html"
-tags: [".NET", "AI", "Beginner", "C#", "Coding", "Developer", "Developer Tools", "Dotnetdeveloper", "Mcp", "Microsoft", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "ai", "beginner", "csharp", "coding", "developer", "developer tools", "dotnetdeveloper", "mcp", "microsoft", "software developer", "videos"]
+permalink: /ai/videos/Lets-Learn-MCP-CSharp
+tags:
+- .NET
+- AI
+- Beginner
+- C#
+- Coding
+- Developer
+- Developer Tools
+- Dotnetdeveloper
+- Mcp
+- Microsoft
+- Software Developer
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this comprehensive workshop, Katie Savage and James Montemagno from the dotnet team introduce developers to the Model Context Protocol (MCP), a cutting-edge framework designed to standardize interactions between AI models and client applications. This beginner-friendly session guides participants through creating their first MCP server using C#, providing practical insights into this emerging technology that's shaping the future of AI development. <!--excerpt_end-->
 
 {% youtube 4zkIBMFdL2w %}

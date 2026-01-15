@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Microsoft Fabric Real-Time Intelligence: Setting the Standard for Streaming Data Platforms"
-description: "This article examines how Microsoft Fabric’s Real-Time Intelligence platform integrates AI, streaming analytics, unified data architecture, and operational dashboards to help enterprises make real-time, AI-driven decisions. It covers recognized product innovations, Forrester’s evaluation, end-to-end platform features, and the introduction of Fabric IQ for semantic reasoning and contextual analysis."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric Real-Time Intelligence: Setting the Standard for Streaming Data Platforms'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 14:31:51 +00:00
-permalink: "/2025-12-09-Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Anomaly Detection", "Azure", "Data Explorer", "Data Platforms", "Digital Twin", "Enterprise Data", "Event Hubs", "Eventstream", "Fabric IQ", "Forrester Wave", "Governance", "Graph Analytics", "Microsoft Fabric", "ML", "News", "OneLake", "Operational Dashboards", "Predictive Analytics", "Real Time Intelligence", "Semantic Models", "Stream Analytics", "Streaming Data"]
-tags_normalized: ["ai", "anomaly detection", "azure", "data explorer", "data platforms", "digital twin", "enterprise data", "event hubs", "eventstream", "fabric iq", "forrester wave", "governance", "graph analytics", "microsoft fabric", "ml", "news", "onelake", "operational dashboards", "predictive analytics", "real time intelligence", "semantic models", "stream analytics", "streaming data"]
+permalink: /ai/news/Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms
+tags:
+- AI
+- Anomaly Detection
+- Azure
+- Data Explorer
+- Data Platforms
+- Digital Twin
+- Enterprise Data
+- Event Hubs
+- Eventstream
+- Fabric IQ
+- Forrester Wave
+- Governance
+- Graph Analytics
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Operational Dashboards
+- Predictive Analytics
+- Real Time Intelligence
+- Semantic Models
+- Stream Analytics
+- Streaming Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explores how Real-Time Intelligence in Microsoft Fabric empowers enterprises with integrated streaming analytics, AI-driven decision-making, and unified data workflows for modern operational needs.<!--excerpt_end-->
 
 # Microsoft Fabric Real-Time Intelligence: Setting the Standard for Streaming Data Platforms

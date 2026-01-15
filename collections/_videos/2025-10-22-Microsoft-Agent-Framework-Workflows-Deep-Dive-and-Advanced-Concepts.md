@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts"
-description: "This video explores the intricacies of Microsoft Agent Framework Workflows, guiding developers through intelligent automation systems that integrate AI agents and business processes. It delves into agent abstractions, orchestration, web UI, and developer feedback, highlighting practical usage and type-safe architecture in real-world solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KQ09sMHeFQY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=KQ09sMHeFQY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 22:52:22 +00:00
-permalink: "/2025-10-22-Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "Automation Systems", "Azure", "Business Process Automation", "Cloud Computing", "Coding", "Debugging", "Dev", "Developer Feedback", "Development", "Graph Validation", "Hot Reload", "Input/Output", "Microsoft", "Microsoft Agent Framework", "Orchestration Patterns", "Tech", "Technology", "Type Safe Architecture", "Videos", "Web UI Demo", "Workflow Automation", "Workflow Web UI"]
-tags_normalized: ["ai", "ai agents", "automation systems", "azure", "business process automation", "cloud computing", "coding", "debugging", "dev", "developer feedback", "development", "graph validation", "hot reload", "inputslashoutput", "microsoft", "microsoft agent framework", "orchestration patterns", "tech", "technology", "type safe architecture", "videos", "web ui demo", "workflow automation", "workflow web ui"]
+permalink: /ai/videos/Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts
+tags:
+- AI
+- AI Agents
+- Automation Systems
+- Azure
+- Business Process Automation
+- Cloud Computing
+- Coding
+- Debugging
+- Dev
+- Developer Feedback
+- Development
+- Graph Validation
+- Hot Reload
+- Input/Output
+- Microsoft
+- Microsoft Agent Framework
+- Orchestration Patterns
+- Tech
+- Technology
+- Type Safe Architecture
+- Videos
+- Web UI Demo
+- Workflow Automation
+- Workflow Web UI
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer leads a comprehensive walkthrough of Microsoft Agent Framework Workflows, featuring insights from Evan Mattson and Victor Dibia on workflow orchestration, advanced features, and feedback from the developer community.<!--excerpt_end-->
 
 {% youtube KQ09sMHeFQY %}

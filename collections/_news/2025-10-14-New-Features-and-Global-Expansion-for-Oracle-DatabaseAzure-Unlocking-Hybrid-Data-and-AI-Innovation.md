@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "New Features and Global Expansion for Oracle Database@Azure: Unlocking Hybrid Data and AI Innovation"
-description: "This news post details major enhancements to Oracle Database@Azure, including new AI-ready features, regional expansion, deepened security integrations, and partnerships for migration and modernization. It highlights enterprise-grade data management, zero-ETL integrations with Microsoft Fabric and OneLake, advanced security with Microsoft Defender, and AI innovation using Power BI, Copilot Studio, and Azure AI Foundry. The update also outlines partner reseller programs, Azure Accelerate benefits for Oracle customers, and key customer migration stories, all reinforcing Microsoft and Oracle's push toward hybrid, secure, AI-powered enterprise platforms on Azure."
-author: "Brett Tanzer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'New Features and Global Expansion for Oracle Database@Azure: Unlocking Hybrid Data and AI Innovation'
+author: Brett Tanzer
+canonical_url: https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 18:00:00 +00:00
-permalink: "/2025-10-14-New-Features-and-Global-Expansion-for-Oracle-DatabaseAzure-Unlocking-Hybrid-Data-and-AI-Innovation.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Integration", "Azure", "Azure Accelerate", "Azure AI Foundry", "Azure Arc", "Copilot Studio", "Data Replication", "Data Security", "Enterprise Cloud", "Hybrid + Multicloud", "Hybrid Cloud", "Identity", "Identity Management", "Microsoft Azure", "Microsoft Defender", "Microsoft Fabric", "Microsoft Sentinel", "Migration", "ML", "News", "OneLake", "Oracle Database@Azure", "Oracle GoldenGate", "Power BI", "Real Time Analytics", "Security", "Zero ETL"]
-tags_normalized: ["ai", "ai plus machine learning", "ai integration", "azure", "azure accelerate", "azure ai foundry", "azure arc", "copilot studio", "data replication", "data security", "enterprise cloud", "hybrid plus multicloud", "hybrid cloud", "identity", "identity management", "microsoft azure", "microsoft defender", "microsoft fabric", "microsoft sentinel", "migration", "ml", "news", "onelake", "oracle databaseatazure", "oracle goldengate", "power bi", "real time analytics", "security", "zero etl"]
+permalink: /ai/news/New-Features-and-Global-Expansion-for-Oracle-DatabaseAzure-Unlocking-Hybrid-Data-and-AI-Innovation
+tags:
+- AI
+- AI + Machine Learning
+- AI Integration
+- Azure
+- Azure Accelerate
+- Azure AI Foundry
+- Azure Arc
+- Copilot Studio
+- Data Replication
+- Data Security
+- Enterprise Cloud
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Identity
+- Identity Management
+- Microsoft Azure
+- Microsoft Defender
+- Microsoft Fabric
+- Microsoft Sentinel
+- Migration
+- ML
+- News
+- OneLake
+- Oracle Database@Azure
+- Oracle GoldenGate
+- Power BI
+- Real Time Analytics
+- Security
+- Zero ETL
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Brett Tanzer explores the latest Oracle Database@Azure updates, featuring global region expansion, advanced AI-ready and security features, deep Microsoft integrations, and new migration resources for enterprise innovation.<!--excerpt_end-->
 
 # Oracle Database@Azure: New Features, Global Regions, and AI Innovation

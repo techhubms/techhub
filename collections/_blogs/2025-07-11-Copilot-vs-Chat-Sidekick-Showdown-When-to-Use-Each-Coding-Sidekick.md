@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick"
-description: "This article by Randy Pagels explores the practical differences between GitHub Copilot inline suggestions and chatbot-based coding assistants like Copilot Chat and ChatGPT, outlining optimal use cases and proposing an effective workflow that leverages both tools for efficient, creative coding."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-07-11 00:00:00 +00:00
-permalink: "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Tools", "Blogs", "ChatGPT", "Code Assistant", "Coding Productivity", "Coding Workflow", "Copilot Chat", "Gemini", "GitHub Copilot", "Inline Code Suggestions", "Software Development"]
-tags_normalized: ["ai", "ai coding tools", "blogs", "chatgpt", "code assistant", "coding productivity", "coding workflow", "copilot chat", "gemini", "github copilot", "inline code suggestions", "software development"]
+permalink: /github-copilot/blogs/Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick
+tags:
+- AI
+- AI Coding Tools
+- Blogs
+- ChatGPT
+- Code Assistant
+- Coding Productivity
+- Coding Workflow
+- Copilot Chat
+- Gemini
+- GitHub Copilot
+- Inline Code Suggestions
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels compares GitHub Copilot's inline code suggestions with chatbot-based tools like Copilot Chat and ChatGPT, providing practical guidance on how to get the most out of each for daily software development tasks.<!--excerpt_end-->
 
 # Copilot vs. Chat: Sidekick Showdown

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Cosmos DB Mirroring General Availability in Microsoft Fabric"
-description: "This news update announces the general availability of Cosmos DB in Microsoft Fabric, highlighting new capabilities that unify operational and analytical data. Users can now analyze live Cosmos DB data directly in Fabric using T-SQL, Python, and Spark Notebooks, with instant sync to OneLake. Major features include AI-optimized vector indexing with DiskANN, reverse ETL for real-time intelligence, and seamless integration with Power BI and User Data Functions to enable translytical task flows for direct write-back operations. The article covers performance, security, and ML-ready applications for developers and data engineers."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Cosmos DB Mirroring General Availability in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 09:30:00 +00:00
-permalink: "/2025-11-19-Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "BM25", "Cosmos DB", "Data Analytics", "Data Engineering", "DiskANN", "Enterprise Security", "General Availability", "High Velocity Data", "Microsoft Fabric", "ML", "News", "NoSQL Database", "OneLake", "Power BI Integration", "Python", "Real Time Analytics", "Reciprocal Rank Fusion", "Reverse ETL", "Spark Notebooks", "T SQL", "User Data Functions", "Vector Indexing"]
-tags_normalized: ["ai", "azure", "bm25", "cosmos db", "data analytics", "data engineering", "diskann", "enterprise security", "general availability", "high velocity data", "microsoft fabric", "ml", "news", "nosql database", "onelake", "power bi integration", "python", "real time analytics", "reciprocal rank fusion", "reverse etl", "spark notebooks", "t sql", "user data functions", "vector indexing"]
+permalink: /ai/news/Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric
+tags:
+- AI
+- Azure
+- BM25
+- Cosmos DB
+- Data Analytics
+- Data Engineering
+- DiskANN
+- Enterprise Security
+- General Availability
+- High Velocity Data
+- Microsoft Fabric
+- ML
+- News
+- NoSQL Database
+- OneLake
+- Power BI Integration
+- Python
+- Real Time Analytics
+- Reciprocal Rank Fusion
+- Reverse ETL
+- Spark Notebooks
+- T SQL
+- User Data Functions
+- Vector Indexing
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the GA of Cosmos DB Mirroring in Fabric, explained by the Fabric Blog team. The update details analytics, AI, and ML features—enabling live, unified data workflows for developers and data professionals.<!--excerpt_end-->
 
 # Cosmos DB Mirroring General Availability in Microsoft Fabric

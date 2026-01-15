@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Polling ASP.NET Core APIs with Alpine.js for Real-Time UI Updates"
-description: "This post by Khalid Abuhakmeh demonstrates integrating Alpine.js, a minimalist JavaScript framework, with ASP.NET Core APIs to create real-time updating UIs. It covers the basics of Alpine.js reactivity, step-by-step API creation in ASP.NET Core, and best practices for memory management."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/alpinejs-polling-aspnet-core-apis-for-updates"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Polling ASP.NET Core APIs with Alpine.js for Real-Time UI Updates
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/alpinejs-polling-aspnet-core-apis-for-updates
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-12-24 00:00:00 +00:00
-permalink: "/2024-12-24-Polling-ASPNET-Core-APIs-with-Alpinejs-for-Real-Time-UI-Updates.html"
-categories: ["Coding"]
-tags: ["Alpine.js", "API Integration", "ASP.NET Core", "Blogs", "C#", "Coding", "Front End Frameworks", "JavaScript", "Minimal JavaScript", "Reactivity", "UI Updates", "Web Development"]
-tags_normalized: ["alpinedotjs", "api integration", "aspdotnet core", "blogs", "csharp", "coding", "front end frameworks", "javascript", "minimal javascript", "reactivity", "ui updates", "web development"]
+permalink: /coding/blogs/Polling-ASPNET-Core-APIs-with-Alpinejs-for-Real-Time-UI-Updates
+tags:
+- Alpine.js
+- API Integration
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Front End Frameworks
+- JavaScript
+- Minimal JavaScript
+- Reactivity
+- UI Updates
+- Web Development
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh guides readers through building a real-time updating UI by combining Alpine.js and ASP.NET Core APIs. The article demonstrates effective API design, data polling, and integration best practices.<!--excerpt_end-->
 
 # Polling ASP.NET Core APIs with Alpine.js for Real-Time UI Updates

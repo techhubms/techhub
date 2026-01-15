@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough"
-description: "This live stream event offers a practical guide for developers and makers on designing, prototyping, and iterating multimodal AI agents using Microsoft Foundry and the AI Toolkit in Visual Studio Code. Participants will set up a project, process text and image inputs, craft effective system prompts, and learn to expand agents into full applications using workflow best practices."
-author: "April_Gittens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough'
+author: April_Gittens
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-28 09:48:39 +00:00
-permalink: "/2025-11-28-Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Development", "AI", "AI Agents", "AI Toolkit", "Azure", "Community", "Debugging Tools", "Developer Tools", "Function Definitions", "Live Coding", "Machine Learning", "Microsoft Foundry", "Model Integration", "Multimodal AI", "Prototype Workflow", "System Prompts", "VS Code"]
-tags_normalized: ["agent development", "ai", "ai agents", "ai toolkit", "azure", "community", "debugging tools", "developer tools", "function definitions", "live coding", "machine learning", "microsoft foundry", "model integration", "multimodal ai", "prototype workflow", "system prompts", "vs code"]
+permalink: /ai/community/Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough
+tags:
+- Agent Development
+- AI
+- AI Agents
+- AI Toolkit
+- Azure
+- Community
+- Debugging Tools
+- Developer Tools
+- Function Definitions
+- Live Coding
+- Machine Learning
+- Microsoft Foundry
+- Model Integration
+- Multimodal AI
+- Prototype Workflow
+- System Prompts
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 April Gittens leads a hands-on live stream guiding developers through building sophisticated AI agents with Microsoft Foundry and the AI Toolkit, focusing on multimodal input, system prompts, and iterative workflows.<!--excerpt_end-->
 
 # Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough

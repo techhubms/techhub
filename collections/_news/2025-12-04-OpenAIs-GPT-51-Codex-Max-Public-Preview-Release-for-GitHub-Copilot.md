@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "OpenAI’s GPT-5.1-Codex-Max Public Preview Release for GitHub Copilot"
-description: "This announcement details the rollout of OpenAI’s GPT-5.1-Codex-Max model in public preview for GitHub Copilot. The article covers its availability across Copilot subscription tiers, how to enable the model in various developer tools like Visual Studio Code and Copilot CLI, and guidance on accessing the feature for different organizational plans. It provides actionable steps for developers and administrators and links to additional resources for learning about Copilot-supported models."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: OpenAI’s GPT-5.1-Codex-Max Public Preview Release for GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-04 16:47:03 +00:00
-permalink: "/2025-12-04-OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model Release", "API Key Management", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Pro", "Enterprise", "GitHub Copilot", "GPT 5.1 Codex Max", "Model Picker", "News", "OpenAI", "Pro Plan", "VS Code"]
-tags_normalized: ["ai", "ai model release", "api key management", "copilot", "copilot chat", "copilot cli", "copilot pro", "enterprise", "github copilot", "gpt 5dot1 codex max", "model picker", "news", "openai", "pro plan", "vs code"]
+permalink: /github-copilot/news/OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot
+tags:
+- AI
+- AI Model Release
+- API Key Management
+- Copilot
+- Copilot Chat
+- Copilot CLI
+- Copilot Pro
+- Enterprise
+- GitHub Copilot
+- GPT 5.1 Codex Max
+- Model Picker
+- News
+- OpenAI
+- Pro Plan
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the rollout of OpenAI’s GPT-5.1-Codex-Max model in GitHub Copilot, providing information on availability, activation steps, and supported developer tools.<!--excerpt_end-->
 
 # OpenAI’s GPT-5.1-Codex-Max Public Preview Release for GitHub Copilot

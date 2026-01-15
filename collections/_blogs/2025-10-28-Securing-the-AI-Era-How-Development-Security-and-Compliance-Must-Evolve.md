@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Securing the AI Era: How Development, Security, and Compliance Must Evolve"
-description: "This article by Sumeet Singh analyzes the dramatic acceleration of software development enabled by AI copilots and automated agents, and examines the resulting challenges for security and compliance. It explores the shift from traditional maker/checker models to continuous risk management, the evolving roles of developers and security engineers, and the need for real-time guardrails and automation. The article discusses the transformation of product security and compliance from static policies to dynamic platforms, emphasizing practical approaches for building secure software in the age of rapid, AI-driven development."
-author: "Sumeet Singh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/securing-the-ai-era-how-development-security-and-compliance-must-evolve/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Securing the AI Era: How Development, Security, and Compliance Must Evolve'
+author: Sumeet Singh
+canonical_url: https://devops.com/securing-the-ai-era-how-development-security-and-compliance-must-evolve/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-28 18:29:14 +00:00
-permalink: "/2025-10-28-Securing-the-AI-Era-How-Development-Security-and-Compliance-Must-Evolve.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Copilots", "Automated Agents", "Blogs", "Compliance", "Compliance Frameworks", "Continuous Risk Loop", "DevOps", "DevSecOps", "DORA Metrics", "Guardrails", "Low Code Platforms", "Metrics", "NIST CSF 2.0", "NIST SSDF", "PCI DSS 4.0", "Platform Security", "Policy as Code", "Real Time Remediation", "Risk Driven Engineering", "Sdlc", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Techstrong Council"]
-tags_normalized: ["ai", "ai copilots", "automated agents", "blogs", "compliance", "compliance frameworks", "continuous risk loop", "devops", "devsecops", "dora metrics", "guardrails", "low code platforms", "metrics", "nist csf 2dot0", "nist ssdf", "pci dss 4dot0", "platform security", "policy as code", "real time remediation", "risk driven engineering", "sdlc", "security", "security automation", "social facebook", "social linkedin", "social x", "software development lifecycle", "techstrong council"]
+permalink: /ai/blogs/Securing-the-AI-Era-How-Development-Security-and-Compliance-Must-Evolve
+tags:
+- AI
+- AI Copilots
+- Automated Agents
+- Blogs
+- Compliance
+- Compliance Frameworks
+- Continuous Risk Loop
+- DevOps
+- DevSecOps
+- DORA Metrics
+- Guardrails
+- Low Code Platforms
+- Metrics
+- NIST CSF 2.0
+- NIST SSDF
+- PCI DSS 4.0
+- Platform Security
+- Policy as Code
+- Real Time Remediation
+- Risk Driven Engineering
+- Sdlc
+- Security
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development Lifecycle
+- Techstrong Council
+section_names:
+- ai
+- devops
+- security
 ---
-
 Sumeet Singh explores how AI is reshaping software development, security, and compliance, detailing new models for continuous risk management and automation in the SDLC.<!--excerpt_end-->
 
 # Securing the AI Era: How Development, Security, and Compliance Must Evolve

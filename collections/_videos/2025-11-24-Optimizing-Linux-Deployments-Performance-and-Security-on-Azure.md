@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Optimizing Linux Deployments: Performance and Security on Azure"
-description: "This advanced session from Microsoft Ignite 2025 presents techniques for deploying, securing, and optimizing Linux environments—Ubuntu, Red Hat, SLES, and Rocky—on Azure. It covers image creation, workload hardening, performance monitoring, and compliance using Azure-native solutions including Azure Monitor, Defender for Linux, and PostgreSQL. The session features demos on Red Hat-based image deployment, license integration, network inspection with eBPF, and system-level performance tuning. Speakers highlight open source partnerships and the value of Microsoft’s cloud for Linux workloads."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=scrkmm03K88"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Optimizing Linux Deployments: Performance and Security on Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=scrkmm03K88
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:01:44 +00:00
-permalink: "/2025-11-24-Optimizing-Linux-Deployments-Performance-and-Security-on-Azure.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Best Practices", "Azure Monitor", "Cloud Security", "Compliance", "Defender For Linux", "DevOps", "Ebpf", "Inspector Gadget", "Linux On Azure", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Open Source", "Performance Tuning", "PostgreSQL On Azure", "Red Hat", "Rocky Linux", "Security", "Security Hardened Images", "SLES", "Ubuntu", "Videos", "VM Deployment"]
-tags_normalized: ["azure", "azure best practices", "azure monitor", "cloud security", "compliance", "defender for linux", "devops", "ebpf", "inspector gadget", "linux on azure", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "open source", "performance tuning", "postgresql on azure", "red hat", "rocky linux", "security", "security hardened images", "sles", "ubuntu", "videos", "vm deployment"]
+permalink: /azure/videos/Optimizing-Linux-Deployments-Performance-and-Security-on-Azure
+tags:
+- Azure
+- Azure Best Practices
+- Azure Monitor
+- Cloud Security
+- Compliance
+- Defender For Linux
+- DevOps
+- Ebpf
+- Inspector Gadget
+- Linux On Azure
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Open Source
+- Performance Tuning
+- PostgreSQL On Azure
+- Red Hat
+- Rocky Linux
+- Security
+- Security Hardened Images
+- SLES
+- Ubuntu
+- Videos
+- VM Deployment
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Events' Ignite session with Karl Abbott and Lachlan Evenson explores deploying, securing, and optimizing Linux workloads on Azure using native tools and partner integrations.<!--excerpt_end-->
 
 {% youtube scrkmm03K88 %}

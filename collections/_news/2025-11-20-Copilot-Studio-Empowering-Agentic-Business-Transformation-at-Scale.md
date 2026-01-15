@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Copilot Studio: Empowering Agentic Business Transformation at Scale"
-description: "This article explores major new capabilities in Microsoft Copilot Studio, focusing on agent creation, governance, workflow automation, and integration with the wider Microsoft ecosystem. Readers will learn how Copilot Studio enables organizations to build, customize, and manage enterprise AI agents, automate business processes, ensure compliance, and measure ROI. The coverage includes updates relevant to IT developers, makers, and administrators, along with real-world business impact examples."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/why-microsoft-copilot-studio-is-the-foundation-for-agentic-business-transformation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Copilot Studio: Empowering Agentic Business Transformation at Scale'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/why-microsoft-copilot-studio-is-the-foundation-for-agentic-business-transformation/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 19:57:03 +00:00
-permalink: "/2025-11-20-Copilot-Studio-Empowering-Agentic-Business-Transformation-at-Scale.html"
-categories: ["AI"]
-tags: ["Agent 365", "Agentic Transformation", "AI", "AI Agents", "Analytics", "Automation", "Business Process Automation", "Cloud Computing", "Company News", "Copilot Studio", "Dynamics 365", "Enterprise IT", "Evaluation Tools", "Governance", "MCP", "Microsoft Defender", "Microsoft Entra", "Microsoft Graph", "News", "Power Platform", "Teams Integration", "Windows 365", "Workflow Automation"]
-tags_normalized: ["agent 365", "agentic transformation", "ai", "ai agents", "analytics", "automation", "business process automation", "cloud computing", "company news", "copilot studio", "dynamics 365", "enterprise it", "evaluation tools", "governance", "mcp", "microsoft defender", "microsoft entra", "microsoft graph", "news", "power platform", "teams integration", "windows 365", "workflow automation"]
+permalink: /ai/news/Copilot-Studio-Empowering-Agentic-Business-Transformation-at-Scale
+tags:
+- Agent 365
+- Agentic Transformation
+- AI
+- AI Agents
+- Analytics
+- Automation
+- Business Process Automation
+- Cloud Computing
+- Company News
+- Copilot Studio
+- Dynamics 365
+- Enterprise IT
+- Evaluation Tools
+- Governance
+- MCP
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Graph
+- News
+- Power Platform
+- Teams Integration
+- Windows 365
+- Workflow Automation
+section_names:
+- ai
 ---
-
 stclarke explains how Microsoft Copilot Studio unlocks agentic business transformation, offering tools for building, customizing, and governing AI-powered agents across enterprise workflows.<!--excerpt_end-->
 
 # Copilot Studio: Empowering Agentic Business Transformation at Scale

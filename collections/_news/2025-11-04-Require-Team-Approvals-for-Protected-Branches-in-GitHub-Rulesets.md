@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Require Team Approvals for Protected Branches in GitHub Rulesets"
-description: "GitHub has introduced a new feature that allows repository administrators to mandate approvals from specific teams before changes can be merged into protected branches. This enhancement gives organizations granular control over workflows, enabling stricter policies based on file paths or critical code areas. Unlike CODEOWNERS, which assigns code responsibility, rulesets focus on enforcing review policies, offering enterprise-wide consistency and scalability. This update is especially useful for enforcing higher review standards on sensitive branches and improving governance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Require Team Approvals for Protected Branches in GitHub Rulesets
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-04 00:47:20 +00:00
-permalink: "/2025-11-04-Require-Team-Approvals-for-Protected-Branches-in-GitHub-Rulesets.html"
-categories: ["DevOps"]
-tags: ["Branch Protection", "Code Review", "CODEOWNERS", "Collaboration Tools", "DevOps", "Enterprise Collaboration", "GitHub", "Improvement", "News", "Platform Governance", "Policy Enforcement", "Release Management", "Repository Governance", "Rulesets", "Team Approvals", "Version Control", "Workflow Automation"]
-tags_normalized: ["branch protection", "code review", "codeowners", "collaboration tools", "devops", "enterprise collaboration", "github", "improvement", "news", "platform governance", "policy enforcement", "release management", "repository governance", "rulesets", "team approvals", "version control", "workflow automation"]
+permalink: /devops/news/Require-Team-Approvals-for-Protected-Branches-in-GitHub-Rulesets
+tags:
+- Branch Protection
+- Code Review
+- CODEOWNERS
+- Collaboration Tools
+- DevOps
+- Enterprise Collaboration
+- GitHub
+- Improvement
+- News
+- Platform Governance
+- Policy Enforcement
+- Release Management
+- Repository Governance
+- Rulesets
+- Team Approvals
+- Version Control
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison details GitHub's new ruleset feature requiring team approvals for protected branches, providing organizations with more control over code review and release workflows.<!--excerpt_end-->
 
 # Require Team Approvals for Protected Branches in GitHub Rulesets

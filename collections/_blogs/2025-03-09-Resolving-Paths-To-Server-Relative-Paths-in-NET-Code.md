@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Resolving Paths to Server-Relative Paths in .NET Code"
-description: "Rick Strahl explores URL resolution in ASP.NET Core beyond controllers and Razor Pages by providing flexible helper methods. These helpers enable resolving URLs to site-relative paths from middleware or business logic, facilitating consistent link management, especially in sites running from virtual folders or dynamic documentation systems."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Mar/08/Resolving-Paths-To-Server-Relative-Paths-in-NET-Code"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Resolving Paths to Server-Relative Paths in .NET Code
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Mar/08/Resolving-Paths-To-Server-Relative-Paths-in-NET-Code
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-03-09 06:39:18 +00:00
-permalink: "/2025-03-09-Resolving-Paths-To-Server-Relative-Paths-in-NET-Code.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET", "ASP.NET Core", "Blogs", "Business Logic", "Coding", "Controllers", "Extension Methods", "Helpers", "HttpContext", "Middleware", "PathBase", "Razor Pages", "URL Resolution", "Virtual Paths", "Web Development"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "blogs", "business logic", "coding", "controllers", "extension methods", "helpers", "httpcontext", "middleware", "pathbase", "razor pages", "url resolution", "virtual paths", "web development"]
+permalink: /coding/blogs/Resolving-Paths-To-Server-Relative-Paths-in-NET-Code
+tags:
+- .NET
+- ASP.NET
+- ASP.NET Core
+- Blogs
+- Business Logic
+- Coding
+- Controllers
+- Extension Methods
+- Helpers
+- HttpContext
+- Middleware
+- PathBase
+- Razor Pages
+- URL Resolution
+- Virtual Paths
+- Web Development
+section_names:
+- coding
 ---
-
 In this post, Rick Strahl describes strategies and provides helper methods for resolving URLs to server-relative paths in .NET code, extending beyond default ASP.NET Core mechanisms.<!--excerpt_end-->
 
 # Resolving Paths to Server-Relative Paths in .NET Code

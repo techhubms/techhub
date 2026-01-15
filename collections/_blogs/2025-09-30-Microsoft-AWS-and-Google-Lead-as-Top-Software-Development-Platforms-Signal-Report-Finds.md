@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Microsoft, AWS, and Google Lead as Top Software Development Platforms, Signal Report Finds"
-description: "This article summarizes The Futurum Group's recent Signal report assessing software development platform providers. Microsoft, AWS, and Google are recognized as the Elite leaders, each praised for innovation, vision, and ecosystem strengths. The report explores competitive dynamics in the DevOps landscape, highlighting Microsoft's focus on developers and growing AI integration. Other notable competitors include Oracle, IBM, Red Hat, GitHub, Atlassian, and Salesforce."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Microsoft, AWS, and Google Lead as Top Software Development Platforms, Signal Report Finds
+author: Mike Vizard
+canonical_url: https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-30 11:19:09 +00:00
-permalink: "/2025-09-30-Microsoft-AWS-and-Google-Lead-as-Top-Software-Development-Platforms-Signal-Report-Finds.html"
-categories: ["DevOps"]
-tags: ["AI", "AI in Development", "AI in Software Development", "Application Development", "Atlassian", "AWS", "Blogs", "Business Value", "Competition in Developer Platforms", "Developer Ecosystem", "Developer Tools", "DevOps", "DevOps Workflows", "Ecosystem", "GitHub", "Go To Market Execution", "Google Cloud", "IBM", "Microsoft", "Platform Innovation", "Red Hat", "Salesforce", "Signal Report", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Platforms", "Spotlight", "Strategic Vision", "The Futurum Group"]
-tags_normalized: ["ai", "ai in development", "ai in software development", "application development", "atlassian", "aws", "blogs", "business value", "competition in developer platforms", "developer ecosystem", "developer tools", "devops", "devops workflows", "ecosystem", "github", "go to market execution", "google cloud", "ibm", "microsoft", "platform innovation", "red hat", "salesforce", "signal report", "social facebook", "social linkedin", "social x", "software development platforms", "spotlight", "strategic vision", "the futurum group"]
+permalink: /devops/blogs/Microsoft-AWS-and-Google-Lead-as-Top-Software-Development-Platforms-Signal-Report-Finds
+tags:
+- AI
+- AI in Development
+- AI in Software Development
+- Application Development
+- Atlassian
+- AWS
+- Blogs
+- Business Value
+- Competition in Developer Platforms
+- Developer Ecosystem
+- Developer Tools
+- DevOps
+- DevOps Workflows
+- Ecosystem
+- GitHub
+- Go To Market Execution
+- Google Cloud
+- IBM
+- Microsoft
+- Platform Innovation
+- Red Hat
+- Salesforce
+- Signal Report
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development Platforms
+- Spotlight
+- Strategic Vision
+- The Futurum Group
+section_names:
+- devops
 ---
-
 Mike Vizard reviews The Futurum Group’s latest Signal report, which ranks Microsoft, AWS, and Google as leading providers of software development and DevOps platforms, emphasizing their innovation and developer focus.<!--excerpt_end-->
 
 # Report: Microsoft, AWS and Google Atop Software Development Platform Heap

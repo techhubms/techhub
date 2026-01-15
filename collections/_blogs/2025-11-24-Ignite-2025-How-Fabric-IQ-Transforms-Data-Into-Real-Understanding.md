@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding"
-description: "This blog by Henri Vuorenpää reviews Microsoft Ignite 2025's introduction of Fabric IQ and Agent 365, illustrating how Fabric IQ shifts data platforms from mere collection to true operational understanding. The post uses manufacturing as an example to explain semantic intelligence, unified KPIs, AI agent governance, and the value of turning data into actionable insights."
-author: "henri.vuorenpaa@zure.com (Henri Vuorenpää)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: 'Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding'
+author: henri.vuorenpaa@zure.com (Henri Vuorenpää)
+canonical_url: https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-11-24 07:26:49 +00:00
-permalink: "/2025-11-24-Ignite-2025-How-Fabric-IQ-Transforms-Data-Into-Real-Understanding.html"
-categories: ["AI", "ML"]
-tags: ["Agent 365", "AI", "AI Agents", "Blogs", "Business Process Optimization", "Data Governance", "Enterprise Data", "Fabric IQ", "KPIs", "Manufacturing Analytics", "Microsoft AI", "Microsoft Fabric", "Microsoft Ignite", "ML", "Operational Intelligence", "Reasoning Graph", "Semantic Layer"]
-tags_normalized: ["agent 365", "ai", "ai agents", "blogs", "business process optimization", "data governance", "enterprise data", "fabric iq", "kpis", "manufacturing analytics", "microsoft ai", "microsoft fabric", "microsoft ignite", "ml", "operational intelligence", "reasoning graph", "semantic layer"]
+permalink: /ai/blogs/Ignite-2025-How-Fabric-IQ-Transforms-Data-Into-Real-Understanding
+tags:
+- Agent 365
+- AI
+- AI Agents
+- Blogs
+- Business Process Optimization
+- Data Governance
+- Enterprise Data
+- Fabric IQ
+- KPIs
+- Manufacturing Analytics
+- Microsoft AI
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- Operational Intelligence
+- Reasoning Graph
+- Semantic Layer
+section_names:
+- ai
+- ml
 ---
-
 Henri Vuorenpää explores Microsoft Ignite 2025's unveiling of Fabric IQ and Agent 365, describing how these innovations help organizations gain true operational understanding and actionable insights from data.<!--excerpt_end-->
 
 # Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding

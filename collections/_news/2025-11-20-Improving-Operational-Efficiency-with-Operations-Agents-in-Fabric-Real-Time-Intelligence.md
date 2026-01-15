@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Improving Operational Efficiency with Operations Agents in Fabric Real-Time Intelligence"
-description: "This article explores how Microsoft Fabric Real-Time Intelligence enables the creation of agentic systems—AI-powered agents that monitor, infer, and act upon business data in real time. It highlights recent Ignite updates, explains the configuration and workflow of operations agents, and provides guidance for setting up autonomous decision-making processes using Fabric, Eventhouse, and Power Automate. Real-world usage examples underscore how these agents can drive operational efficiency, reduce risk, and support human-in-the-loop automation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/improving-operational-efficiency-with-operations-agents-in-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Improving Operational Efficiency with Operations Agents in Fabric Real-Time Intelligence
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/improving-operational-efficiency-with-operations-agents-in-real-time-intelligence/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 08:00:00 +00:00
-permalink: "/2025-11-20-Improving-Operational-Efficiency-with-Operations-Agents-in-Fabric-Real-Time-Intelligence.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agent Configuration", "Agentic Systems", "AI", "AI Powered Agents", "Azure", "Business Automation", "Business Goals", "Continuous Feedback", "Data Monitoring", "Eventhouse", "Human in The Loop", "LLM Tools", "Machine Learning", "Microsoft Fabric", "ML", "News", "Operational Efficiency", "Operations Agent", "Power Automate", "Real Time Intelligence", "Teams Integration"]
-tags_normalized: ["agent configuration", "agentic systems", "ai", "ai powered agents", "azure", "business automation", "business goals", "continuous feedback", "data monitoring", "eventhouse", "human in the loop", "llm tools", "machine learning", "microsoft fabric", "ml", "news", "operational efficiency", "operations agent", "power automate", "real time intelligence", "teams integration"]
+permalink: /ai/news/Improving-Operational-Efficiency-with-Operations-Agents-in-Fabric-Real-Time-Intelligence
+tags:
+- Agent Configuration
+- Agentic Systems
+- AI
+- AI Powered Agents
+- Azure
+- Business Automation
+- Business Goals
+- Continuous Feedback
+- Data Monitoring
+- Eventhouse
+- Human in The Loop
+- LLM Tools
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- Operational Efficiency
+- Operations Agent
+- Power Automate
+- Real Time Intelligence
+- Teams Integration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how operations agents in Real-Time Intelligence use AI and ML to automate business monitoring, inference, and action, enabling teams to enhance operational efficiency.<!--excerpt_end-->
 
 # Improving Operational Efficiency with Operations Agents in Fabric Real-Time Intelligence

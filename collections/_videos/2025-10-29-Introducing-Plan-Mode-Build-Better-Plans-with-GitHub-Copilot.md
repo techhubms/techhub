@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Introducing Plan Mode: Build Better Plans with GitHub Copilot"
-description: "Discover Plan Mode, a new feature in GitHub Copilot for Visual Studio Code. Plan Mode asks clarifying questions before you write code, helping developers create structured, step-by-step plans, spot issues early, and produce better code more efficiently. This video provides an overview of how Plan Mode streamlines the coding process and enhances your development workflow."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/rxIjBKM-XvU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Introducing Plan Mode: Build Better Plans with GitHub Copilot'
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/rxIjBKM-XvU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-29 18:40:44 +00:00
-permalink: "/2025-10-29-Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Clarifying Questions", "Code Quality", "Coding Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Plan Mode", "PlanMode", "Software Development", "Step By Step Planning", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai assistant", "clarifying questions", "code quality", "coding productivity", "developer tools", "github", "github copilot", "plan mode", "planmode", "software development", "step by step planning", "videos", "vs code"]
+permalink: /github-copilot/videos/Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot
+tags:
+- AI
+- AI Assistant
+- Clarifying Questions
+- Code Quality
+- Coding Productivity
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Plan Mode
+- PlanMode
+- Software Development
+- Step By Step Planning
+- Videos
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub introduces Plan Mode for GitHub Copilot in VS Code, showcasing how developers can build step-by-step plans and write better code efficiently. Presented by the GitHub team.<!--excerpt_end-->
 
 {% youtube rxIjBKM-XvU %}

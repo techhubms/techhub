@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The new Dependabot NuGet updater: 65% faster with native .NET"
-description: "This article details the major update to Dependabot’s NuGet updater, now leveraging native .NET tooling for improved performance, reliability, and accuracy. It explains key architectural changes, enhanced dependency analysis, better support for .NET project features, and benefits for developer productivity and security."
-author: "Jamie Magee, Brett Forsgren"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'The new Dependabot NuGet updater: 65% faster with native .NET'
+author: Jamie Magee, Brett Forsgren
+canonical_url: https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-04 15:00:00 +00:00
-permalink: "/2025-08-04-The-new-Dependabot-NuGet-updater-65-faster-with-native-NET.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: [".NET", "Azure Artifacts", "Central Package Management", "Coding", "Conflict Resolution", "Dependabot", "Dependency Update", "DevOps", "GitHub Packages", "Global.json", "MSBuild", "News", "NuGet", "Package Management", "Performance", "Security", "Transitive Dependencies"]
-tags_normalized: ["dotnet", "azure artifacts", "central package management", "coding", "conflict resolution", "dependabot", "dependency update", "devops", "github packages", "globaldotjson", "msbuild", "news", "nuget", "package management", "performance", "security", "transitive dependencies"]
+permalink: /coding/news/The-new-Dependabot-NuGet-updater-65-faster-with-native-NET
+tags:
+- .NET
+- Azure Artifacts
+- Central Package Management
+- Coding
+- Conflict Resolution
+- Dependabot
+- Dependency Update
+- DevOps
+- GitHub Packages
+- Global.json
+- MSBuild
+- News
+- NuGet
+- Package Management
+- Performance
+- Security
+- Transitive Dependencies
+section_names:
+- coding
+- devops
+- security
 ---
-
 Jamie Magee and Brett Forsgren share how Dependabot’s revamped NuGet updater uses .NET’s own tooling to bring faster, more reliable, and more secure dependency updates to developers.<!--excerpt_end-->
 
 # The new Dependabot NuGet updater: 65% faster with native .NET

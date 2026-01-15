@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "The Future of Semantic Kernel: Microsoft’s Strategic Vision for Enterprise AI Orchestration"
-description: "This article examines Microsoft's ongoing commitment to Semantic Kernel as the core framework for enterprise AI orchestration, with a focus on innovation, collaboration, deep Azure integration, multi-agent capabilities, and a roadmap toward seamless developer experience and ecosystem growth."
-author: "Evan Mattson, Mark Wallace, Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/semantic-kernel-commitment-ai-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'The Future of Semantic Kernel: Microsoft’s Strategic Vision for Enterprise AI Orchestration'
+author: Evan Mattson, Mark Wallace, Nick Brady
+canonical_url: https://devblogs.microsoft.com/foundry/semantic-kernel-commitment-ai-innovation/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-30 13:15:06 +00:00
-permalink: "/2025-05-30-The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Orchestration", "AutoGen", "Azure", "Azure AI", "Azure AI Foundry", "Coding", "Enterprise AI", "Foundry", "MCP", "Microsoft", "Multi Agent", "News", "Open Source", "Process Automation", "Semantic Kernel", "Vector Data"]
-tags_normalized: ["dotnet", "ai", "ai orchestration", "autogen", "azure", "azure ai", "azure ai foundry", "coding", "enterprise ai", "foundry", "mcp", "microsoft", "multi agent", "news", "open source", "process automation", "semantic kernel", "vector data"]
+permalink: /ai/news/The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration
+tags:
+- .NET
+- AI
+- AI Orchestration
+- AutoGen
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Coding
+- Enterprise AI
+- Foundry
+- MCP
+- Microsoft
+- Multi Agent
+- News
+- Open Source
+- Process Automation
+- Semantic Kernel
+- Vector Data
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Written by Evan Mattson, Mark Wallace, and Nick Brady, this article explores the evolution and strategic trajectory of Semantic Kernel, Microsoft's open-source AI orchestration framework powering enterprise-scale solutions, and outlines the innovation and collaboration shaping its future.<!--excerpt_end-->
 
 # The Future of Semantic Kernel: A Commitment to Innovation and Collaboration

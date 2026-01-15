@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Claude Opus 4.1 Now Generally Available in GitHub Copilot"
-description: "This news article announces the general availability of the Claude Opus 4.1 model in GitHub Copilot, specifically for Copilot Pro+ and Copilot Enterprise customers. It details how users and administrators can access and enable the new model across various supported IDEs, including Visual Studio Code, Visual Studio, JetBrains IDEs, and more. The article also provides links to official documentation for further information and encourages user feedback through the GitHub Community."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Opus 4.1 Now Generally Available in GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 20:42:15 +00:00
-permalink: "/2025-09-23-Claude-Opus-41-Now-Generally-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Claude Opus 4.1", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro+", "Eclipse", "GitHub Copilot", "GitHub Mobile", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai models", "claude opus 4dot1", "copilot", "copilot chat", "copilot enterprise", "copilot proplus", "eclipse", "github copilot", "github mobile", "ide integration", "jetbrains ides", "model picker", "news", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/Claude-Opus-41-Now-Generally-Available-in-GitHub-Copilot
+tags:
+- AI
+- AI Models
+- Claude Opus 4.1
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro+
+- Eclipse
+- GitHub Copilot
+- GitHub Mobile
+- IDE Integration
+- JetBrains IDEs
+- Model Picker
+- News
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details the release of Claude Opus 4.1 in GitHub Copilot, explaining how Pro+ and Enterprise users can access and enable the new AI model across supported IDEs.<!--excerpt_end-->
 
 # Claude Opus 4.1 Now Generally Available in GitHub Copilot

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Dow Uses Microsoft Security Copilot and AI to Transform Cybersecurity Operations"
-description: "This article details how Dow, a leading materials science company, leverages AI—including Microsoft Security Copilot—to innovate and mature its global security operations. The piece features insights from Dow’s Chief Information Security Officer, Mario Ferket, on responsible AI strategy, practical automation, and the real-world impact of AI-powered security tools to streamline investigation, threat response, and apprenticeship. Key lessons for security teams adopting AI are discussed, alongside future directions in anomaly detection and alert management."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/12/dows-125-year-legacy-innovating-with-ai-to-secure-a-long-future/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How Dow Uses Microsoft Security Copilot and AI to Transform Cybersecurity Operations
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/12/dows-125-year-legacy-innovating-with-ai-to-secure-a-long-future/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-12 16:31:43 +00:00
-permalink: "/2025-08-12-How-Dow-Uses-Microsoft-Security-Copilot-and-AI-to-Transform-Cybersecurity-Operations.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI in Security", "Alert Prioritization", "Apprenticeship", "Automation", "Compliance", "Cybersecurity Operations", "Data Privacy", "Dow", "Generative AI", "Identity And Access Management", "Incident Response", "Machine Learning", "Microsoft", "Microsoft Security Copilot", "News", "Responsible AI", "Security", "Security Governance", "Security Operations Center", "Threat Hunting"]
-tags_normalized: ["ai", "ai in security", "alert prioritization", "apprenticeship", "automation", "compliance", "cybersecurity operations", "data privacy", "dow", "generative ai", "identity and access management", "incident response", "machine learning", "microsoft", "microsoft security copilot", "news", "responsible ai", "security", "security governance", "security operations center", "threat hunting"]
+permalink: /ai/news/How-Dow-Uses-Microsoft-Security-Copilot-and-AI-to-Transform-Cybersecurity-Operations
+tags:
+- AI
+- AI in Security
+- Alert Prioritization
+- Apprenticeship
+- Automation
+- Compliance
+- Cybersecurity Operations
+- Data Privacy
+- Dow
+- Generative AI
+- Identity And Access Management
+- Incident Response
+- Machine Learning
+- Microsoft
+- Microsoft Security Copilot
+- News
+- Responsible AI
+- Security
+- Security Governance
+- Security Operations Center
+- Threat Hunting
+section_names:
+- ai
+- security
 ---
-
 stclarke explores how Mario Ferket and Dow have integrated Microsoft Security Copilot and AI into their cybersecurity operations, improving automation, threat detection, and analyst mentorship.<!--excerpt_end-->
 
 # How Dow Uses Microsoft Security Copilot and AI to Transform Cybersecurity Operations

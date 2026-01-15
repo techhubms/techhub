@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools"
-description: "Chris Harris explains how Azure MCP (Model Context Protocol) leverages built-in best-practice tools and system-prompt instructions to help large language models like GitHub Copilot in VS Code generate secure, production-grade Azure solutions. The article details how MCP's instruction mechanism guides LLM behavior, enforces coding and deployment best practices, and provides automatic access to code/linter tools for infrastructure and application code in Azure environments."
-author: "Chris Harris"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: 'Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools'
+author: Chris Harris
+canonical_url: https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-09-23 23:02:30 +00:00
-permalink: "/2025-09-23-Teaching-the-LLM-Good-Habits-How-Azure-MCP-Uses-Best-Practice-Tools.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "All Things Azure", "Azure", "Azure Best Practices", "Azure MCP", "Bicep", "CI/CD", "Cloud Governance", "Coding", "DefaultAzureCredential", "DevOps", "IaC", "LLM", "MCP", "MCP (model Context Protocol)", "News", "SDK", "Terraform", "Thought Leadership", "VS Code"]
-tags_normalized: ["ai", "all things azure", "azure", "azure best practices", "azure mcp", "bicep", "cislashcd", "cloud governance", "coding", "defaultazurecredential", "devops", "iac", "llm", "mcp", "mcp model context protocol", "news", "sdk", "terraform", "thought leadership", "vs code"]
+permalink: /ai/news/Teaching-the-LLM-Good-Habits-How-Azure-MCP-Uses-Best-Practice-Tools
+tags:
+- AI
+- All Things Azure
+- Azure
+- Azure Best Practices
+- Azure MCP
+- Bicep
+- CI/CD
+- Cloud Governance
+- Coding
+- DefaultAzureCredential
+- DevOps
+- IaC
+- LLM
+- MCP
+- MCP (model Context Protocol)
+- News
+- SDK
+- Terraform
+- Thought Leadership
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Chris Harris discusses how Azure MCP integrates best-practice guidance for application and infrastructure code, showing how Azure MCP uses system prompt instructions to keep LLMs like GitHub Copilot in VS Code aligned with secure, production-ready Azure solutions.<!--excerpt_end-->
 
 # Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools

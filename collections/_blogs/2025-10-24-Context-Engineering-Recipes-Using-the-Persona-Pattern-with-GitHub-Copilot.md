@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Context Engineering Recipes: Using the Persona Pattern with GitHub Copilot"
-description: "This guide explains how developers can fine-tune GitHub Copilot's responses by applying the Persona Pattern—a technique that assigns Copilot a specific role, such as developer, tester, reviewer, or technical writer. It provides clear prompt examples and use cases for shaping Copilot's tone and problem-solving focus within development workflows."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'Context Engineering Recipes: Using the Persona Pattern with GitHub Copilot'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-24 00:00:00 +00:00
-permalink: "/2025-10-24-Context-Engineering-Recipes-Using-the-Persona-Pattern-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Blogs", "Code Review", "Context Engineering", "Developer Tools", "Development Workflow", "Documentation", "GitHub Copilot", "Persona Pattern", "Programming Productivity", "Prompt Engineering", "Testing"]
-tags_normalized: ["ai", "ai assistant", "blogs", "code review", "context engineering", "developer tools", "development workflow", "documentation", "github copilot", "persona pattern", "programming productivity", "prompt engineering", "testing"]
+permalink: /github-copilot/blogs/Context-Engineering-Recipes-Using-the-Persona-Pattern-with-GitHub-Copilot
+tags:
+- AI
+- AI Assistant
+- Blogs
+- Code Review
+- Context Engineering
+- Developer Tools
+- Development Workflow
+- Documentation
+- GitHub Copilot
+- Persona Pattern
+- Programming Productivity
+- Prompt Engineering
+- Testing
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels shares actionable strategies for guiding GitHub Copilot using the Persona Pattern, helping developers customize Copilot's role and improve answer quality.<!--excerpt_end-->
 
 # Context Engineering Recipes: The Persona Pattern

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Cloud Forensics: Implementing Security Baselines for Forensic Readiness in Microsoft Azure"
-description: "This guide, authored by Mary_Asaolu, explores best practices for forensic readiness in the Microsoft Azure cloud. It details the challenges security teams face around monitoring, incident response, and evidence collection, highlighting common misconfigurations that impede forensic investigations. Concrete recommendations and practical steps—spanning identity management, logging, monitoring, incident response, and policy development—are provided to help organizations prepare their Azure environments for effective security incident detection, investigation, and remediation."
-author: "Mary_Asaolu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/cloud-forensics-prepare-for-the-worst-implement-security/ba-p/4440310"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Cloud Forensics: Implementing Security Baselines for Forensic Readiness in Microsoft Azure'
+author: Mary_Asaolu
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/cloud-forensics-prepare-for-the-worst-implement-security/ba-p/4440310
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 07:00:00 +00:00
-permalink: "/2025-08-11-Cloud-Forensics-Implementing-Security-Baselines-for-Forensic-Readiness-in-Microsoft-Azure.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure AD", "Azure Monitor", "Azure Security", "Azure VM", "Community", "Conditional Access", "DDoS Protection", "Defender For Cloud", "Diagnostic Logging", "Forensic Readiness", "Immutable Backups", "Incident Response", "Key Vault", "Kusto Query Language", "Log Analytics", "Microsoft Sentinel", "NSG Flow Logs", "OS Disk Snapshots", "Privileged Identity Management", "RBAC", "Security"]
-tags_normalized: ["azure", "azure ad", "azure monitor", "azure security", "azure vm", "community", "conditional access", "ddos protection", "defender for cloud", "diagnostic logging", "forensic readiness", "immutable backups", "incident response", "key vault", "kusto query language", "log analytics", "microsoft sentinel", "nsg flow logs", "os disk snapshots", "privileged identity management", "rbac", "security"]
+permalink: /azure/community/Cloud-Forensics-Implementing-Security-Baselines-for-Forensic-Readiness-in-Microsoft-Azure
+tags:
+- Azure
+- Azure AD
+- Azure Monitor
+- Azure Security
+- Azure VM
+- Community
+- Conditional Access
+- DDoS Protection
+- Defender For Cloud
+- Diagnostic Logging
+- Forensic Readiness
+- Immutable Backups
+- Incident Response
+- Key Vault
+- Kusto Query Language
+- Log Analytics
+- Microsoft Sentinel
+- NSG Flow Logs
+- OS Disk Snapshots
+- Privileged Identity Management
+- RBAC
+- Security
+section_names:
+- azure
+- security
 ---
-
 Mary_Asaolu delivers practical guidance on establishing forensic readiness in Azure, sharing real-world lessons and technical configurations to help security teams improve detection, investigation, and response capabilities.<!--excerpt_end-->
 
 # Cloud Forensics: Implementing Security Baselines for Forensic Readiness in Microsoft Azure

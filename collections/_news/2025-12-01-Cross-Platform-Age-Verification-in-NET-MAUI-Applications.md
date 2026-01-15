@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Cross-Platform Age Verification in .NET MAUI Applications"
-description: "This article explains how to implement age verification features in cross-platform .NET MAUI apps to meet new compliance laws in Texas, Utah, and Louisiana. It provides details on using Google Play Age Signals for Android, Apple Declared Age Range for iOS, and Windows Age Consent for Windows, with a sample repository demonstrating platform-specific code integration and important legal deadlines."
-author: "Gerald Versluis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Cross-Platform Age Verification in .NET MAUI Applications
+author: Gerald Versluis
+canonical_url: https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-01 18:05:00 +00:00
-permalink: "/2025-12-01-Cross-Platform-Age-Verification-in-NET-MAUI-Applications.html"
-categories: ["Coding"]
-tags: [".NET", "Age Verification", "Android", "API Integration", "Apple Declared Age Range", "Coding", "Compliance", "Cross Platform", "Family Sharing", "Google Play Age Signals", "IAgeSignalService", "Ios", "MAUI", "News", "NuGet", "Platform Specific Code", "Sample App", "Swift Interop", "UserAccountInformation", "Windows", "Windows Age Consent"]
-tags_normalized: ["dotnet", "age verification", "android", "api integration", "apple declared age range", "coding", "compliance", "cross platform", "family sharing", "google play age signals", "iagesignalservice", "ios", "maui", "news", "nuget", "platform specific code", "sample app", "swift interop", "useraccountinformation", "windows", "windows age consent"]
+permalink: /coding/news/Cross-Platform-Age-Verification-in-NET-MAUI-Applications
+tags:
+- .NET
+- Age Verification
+- Android
+- API Integration
+- Apple Declared Age Range
+- Coding
+- Compliance
+- Cross Platform
+- Family Sharing
+- Google Play Age Signals
+- IAgeSignalService
+- Ios
+- MAUI
+- News
+- NuGet
+- Platform Specific Code
+- Sample App
+- Swift Interop
+- UserAccountInformation
+- Windows
+- Windows Age Consent
+section_names:
+- coding
 ---
-
 Gerald Versluis presents a comprehensive guide to implementing age verification across Android, iOS, and Windows in .NET MAUI apps, with details on meeting upcoming legal compliance requirements.<!--excerpt_end-->
 
 # Cross-Platform Age Verification in .NET MAUI Applications

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Common Annotated Security Keys: Enhancing Token Format Security with CASK at Microsoft and GitHub"
-description: "Michael C. Fanning explores improvements in security token formats by GitHub and Microsoft through the Common Annotated Security Standard (CASK). The post details fixed signatures, checksums, high-entropy BASE62 keys, standardized detection, and Microsoft's open approach to safer secret management across cloud providers."
-author: "Michael C. Fanning"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+layout: post
+title: 'Common Annotated Security Keys: Enhancing Token Format Security with CASK at Microsoft and GitHub'
+author: Michael C. Fanning
+canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2024-09-25 18:50:15 +00:00
-permalink: "/2024-09-25-Common-Annotated-Security-Keys-Enhancing-Token-Format-Security-with-CASK-at-Microsoft-and-GitHub.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["1ES", "ADO Azure DevOps GHAS", "Azure", "Azure DevOps", "BASE62", "CASK", "Checksum", "DevOps", "Engineering@Microsoft", "Entropy", "Fixed Signatures", "GitHub Advanced Security", "Identity Management", "Metadata", "News", "Open Standard", "Sdl", "Secret Management", "Security", "Security Tokens", "Static Analysis", "Test Keys", "Token Detection"]
-tags_normalized: ["1es", "ado azure devops ghas", "azure", "azure devops", "base62", "cask", "checksum", "devops", "engineeringatmicrosoft", "entropy", "fixed signatures", "github advanced security", "identity management", "metadata", "news", "open standard", "sdl", "secret management", "security", "security tokens", "static analysis", "test keys", "token detection"]
+permalink: /azure/news/Common-Annotated-Security-Keys-Enhancing-Token-Format-Security-with-CASK-at-Microsoft-and-GitHub
+tags:
+- 1ES
+- ADO Azure DevOps GHAS
+- Azure
+- Azure DevOps
+- BASE62
+- CASK
+- Checksum
+- DevOps
+- Engineering@Microsoft
+- Entropy
+- Fixed Signatures
+- GitHub Advanced Security
+- Identity Management
+- Metadata
+- News
+- Open Standard
+- Sdl
+- Secret Management
+- Security
+- Security Tokens
+- Static Analysis
+- Test Keys
+- Token Detection
+section_names:
+- azure
+- devops
+- security
 ---
-
 In this article, Michael C. Fanning details how GitHub and Microsoft are advancing secure secret management through the Common Annotated Security Standard (CASK), outlining its technical features and its role in strengthening engineering and DevOps security.<!--excerpt_end-->
 
 ## Common Annotated Security Keys: Advancing Secret Management in the Cloud

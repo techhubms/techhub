@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer"
-description: "This article explores how Azure Application Gateway empowers enterprises to deploy, secure, and scale AI and machine learning workloads on Azure. It details Application Gateway’s intelligent routing, WAF security for AI-specific threats, real-world integration patterns, and Microsoft’s roadmap for adaptive, AI-aware traffic management."
-author: "reyjordi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer'
+author: reyjordi
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-22 14:18:34 +00:00
-permalink: "/2025-08-22-Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Security", "API Security", "Application Gateway Integrations", "Azure", "Azure AI", "Azure Application Gateway", "Azure Cognitive Services", "Azure Machine Learning", "Community", "Endpoint Protection", "Load Balancing", "Rate Limiting", "Real Time Streaming", "Reverse Proxy", "Security", "Server Sent Events", "Traffic Management", "Web Application Firewall"]
-tags_normalized: ["ai", "ai security", "api security", "application gateway integrations", "azure", "azure ai", "azure application gateway", "azure cognitive services", "azure machine learning", "community", "endpoint protection", "load balancing", "rate limiting", "real time streaming", "reverse proxy", "security", "server sent events", "traffic management", "web application firewall"]
+permalink: /ai/community/Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer
+tags:
+- AI
+- AI Security
+- API Security
+- Application Gateway Integrations
+- Azure
+- Azure AI
+- Azure Application Gateway
+- Azure Cognitive Services
+- Azure Machine Learning
+- Community
+- Endpoint Protection
+- Load Balancing
+- Rate Limiting
+- Real Time Streaming
+- Reverse Proxy
+- Security
+- Server Sent Events
+- Traffic Management
+- Web Application Firewall
+section_names:
+- ai
+- azure
+- security
 ---
-
 reyjordi explores how Azure Application Gateway serves as a critical component for scaling and securing enterprise AI and ML workloads, providing intelligent routing, security enforcement, and integration options for Microsoft Azure-based solutions.<!--excerpt_end-->
 
 # Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer

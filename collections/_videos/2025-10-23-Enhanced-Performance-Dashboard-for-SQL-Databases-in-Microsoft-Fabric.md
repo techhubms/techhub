@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric"
-description: "This video explores the new memory consumption monitoring feature in the performance dashboard for SQL databases within Microsoft Fabric. The session demonstrates how to track and optimize workload efficiency with practical examples, aiming to help database administrators and developers manage resources effectively and keep workloads at peak performance."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UAIic-vzcac"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=UAIic-vzcac
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-23 19:06:55 +00:00
-permalink: "/2025-10-23-Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cloud Computing", "Cloud Data Platform", "Data Analytics", "Database Insights", "Database Performance", "Dev", "Development", "Memory Monitoring", "Microsoft", "Microsoft Fabric", "ML", "Performance Dashboard", "Performance Tuning", "Resource Management", "SQL", "SQL Database", "Tech", "Technology", "Videos", "Workload Optimization"]
-tags_normalized: ["azure", "cloud computing", "cloud data platform", "data analytics", "database insights", "database performance", "dev", "development", "memory monitoring", "microsoft", "microsoft fabric", "ml", "performance dashboard", "performance tuning", "resource management", "sql", "sql database", "tech", "technology", "videos", "workload optimization"]
+permalink: /ml/videos/Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric
+tags:
+- Azure
+- Cloud Computing
+- Cloud Data Platform
+- Data Analytics
+- Database Insights
+- Database Performance
+- Dev
+- Development
+- Memory Monitoring
+- Microsoft
+- Microsoft Fabric
+- ML
+- Performance Dashboard
+- Performance Tuning
+- Resource Management
+- SQL
+- SQL Database
+- Tech
+- Technology
+- Videos
+- Workload Optimization
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Developer presents a walkthrough of the enhanced performance dashboard for SQL databases in Microsoft Fabric, highlighting memory monitoring and workload optimization techniques.<!--excerpt_end-->
 
 {% youtube UAIic-vzcac %}

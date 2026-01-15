@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Restricting PAT Creation in Azure DevOps Preview: New Granular Controls for Administrators"
-description: "Azure DevOps introduces a public preview policy allowing administrators to restrict personal access token (PAT) creation. This feature helps organizations reduce unnecessary PAT usage, enforce tighter security controls, and manage exceptions efficiently, supporting stronger security posture and modern IAM practices."
-author: "Angel Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/restricting-pat-creation-in-azure-devops-is-now-in-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Restricting PAT Creation in Azure DevOps Preview: New Granular Controls for Administrators'
+author: Angel Wong
+canonical_url: https://devblogs.microsoft.com/devops/restricting-pat-creation-in-azure-devops-is-now-in-preview/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-05 17:08:48 +00:00
-permalink: "/2025-06-05-Restricting-PAT-Creation-in-Azure-DevOps-Preview-New-Granular-Controls-for-Administrators.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Controls", "Azure", "Azure & Cloud", "Azure DevOps", "DevOps", "IAM", "Identity And Access Management", "Microsoft Entra ID", "News", "Organizational Policies", "Packaging Scopes", "PAT Policy", "Personal Access Tokens", "Project Collection Administrators", "Security", "Token Management"]
-tags_normalized: ["access controls", "azure", "azure and cloud", "azure devops", "devops", "iam", "identity and access management", "microsoft entra id", "news", "organizational policies", "packaging scopes", "pat policy", "personal access tokens", "project collection administrators", "security", "token management"]
+permalink: /azure/news/Restricting-PAT-Creation-in-Azure-DevOps-Preview-New-Granular-Controls-for-Administrators
+tags:
+- Access Controls
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- DevOps
+- IAM
+- Identity And Access Management
+- Microsoft Entra ID
+- News
+- Organizational Policies
+- Packaging Scopes
+- PAT Policy
+- Personal Access Tokens
+- Project Collection Administrators
+- Security
+- Token Management
+section_names:
+- azure
+- devops
+- security
 ---
-
 Written by Angel Wong, this article explores the new preview policy in Azure DevOps to restrict personal access token creation. It details how organizations can reduce PAT usage and strengthen their security measures.<!--excerpt_end-->
 
 ## Restricting PAT Creation in Azure DevOps Is Now in Preview

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Is SRE Just DevOps in New Packaging?"
-description: "Rene van Osnabrugge reflects on discussions from the LEAD podcast about the evolving role of Site Reliability Engineers (SREs) versus DevOps. He highlights engineering culture, the origins and intent of SRE, important distinctions like SLAs, SLOs, and SLIs, and practical approaches to reliability."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: Is SRE Just DevOps in New Packaging?
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-06-11 08:33:40 +00:00
-permalink: "/2025-06-11-Is-SRE-just-DevOps-in-new-packaging.html"
-categories: ["DevOps"]
-tags: ["Blogs", "DevOps", "Engineering Culture", "Incident Management", "Lead Podcast", "Operations", "Podcast", "Site Reliability Engineering", "SLAs", "SLIs", "SLOs", "Software Reliability", "SRE", "Team Structure", "Xebia"]
-tags_normalized: ["blogs", "devops", "engineering culture", "incident management", "lead podcast", "operations", "podcast", "site reliability engineering", "slas", "slis", "slos", "software reliability", "sre", "team structure", "xebia"]
+permalink: /devops/blogs/Is-SRE-just-DevOps-in-new-packaging
+tags:
+- Blogs
+- DevOps
+- Engineering Culture
+- Incident Management
+- Lead Podcast
+- Operations
+- Podcast
+- Site Reliability Engineering
+- SLAs
+- SLIs
+- SLOs
+- Software Reliability
+- SRE
+- Team Structure
+- Xebia
+section_names:
+- devops
 ---
-
 Rene van Osnabrugge shares insights from the LEAD podcast, co-hosted with Geert van der Cruijsen, examining the real meaning of SRE and its interplay with DevOps in engineering organizations.<!--excerpt_end-->
 
 ## Is SRE Just DevOps in New Packaging?

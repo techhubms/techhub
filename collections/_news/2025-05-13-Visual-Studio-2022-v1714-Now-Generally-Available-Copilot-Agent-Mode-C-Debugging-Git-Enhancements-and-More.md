@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Visual Studio 2022 v17.14 Now Generally Available: Copilot Agent Mode, C++ Debugging, Git Enhancements & More"
-description: "The release of Visual Studio 2022 v17.14 delivers major updates for developers, including the preview of GitHub Copilot Agent Mode for AI-assisted coding, enhancements to debugging, diagnostics, C++ tooling, and Git integration. Monthly release cadence for feature updates is also introduced."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-14-is-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: 'Visual Studio 2022 v17.14 Now Generally Available: Copilot Agent Mode, C++ Debugging, Git Enhancements & More'
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-14-is-now-generally-available/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-05-13 17:24:25 +00:00
-permalink: "/2025-05-13-Visual-Studio-2022-v1714-Now-Generally-Available-Copilot-Agent-Mode-C-Debugging-Git-Enhancements-and-More.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Mode", "AI", "AI Assisted Development", "C++23", "Coding", "Debug", "Debugging", "Debugging And Diagnostics", "DevOps", "Diagnostics", "Git", "Git Tooling", "GitHub Copilot", "LINQ Debugging", "Live Preview", "MAUI", "MCP Support", "News", "Next Edit Suggestion", "Next Edits Suggestion", "Performance", "Productivity", "Release Party", "V17.14", "VS", "Zero Length Array Allocation"]
-tags_normalized: ["accessibility", "agent mode", "ai", "ai assisted development", "cplusplus23", "coding", "debug", "debugging", "debugging and diagnostics", "devops", "diagnostics", "git", "git tooling", "github copilot", "linq debugging", "live preview", "maui", "mcp support", "news", "next edit suggestion", "next edits suggestion", "performance", "productivity", "release party", "v17dot14", "vs", "zero length array allocation"]
+permalink: /github-copilot/news/Visual-Studio-2022-v1714-Now-Generally-Available-Copilot-Agent-Mode-C-Debugging-Git-Enhancements-and-More
+tags:
+- Accessibility
+- Agent Mode
+- AI
+- AI Assisted Development
+- C++23
+- Coding
+- Debug
+- Debugging
+- Debugging And Diagnostics
+- DevOps
+- Diagnostics
+- Git
+- Git Tooling
+- GitHub Copilot
+- LINQ Debugging
+- Live Preview
+- MAUI
+- MCP Support
+- News
+- Next Edit Suggestion
+- Next Edits Suggestion
+- Performance
+- Productivity
+- Release Party
+- V17.14
+- VS
+- Zero Length Array Allocation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Mads Kristensen introduces the general availability of Visual Studio 2022 v17.14, highlighting GitHub Copilot Agent Mode, C++ enhancements, advanced debugging, and Git improvements for developers.<!--excerpt_end-->
 
 ## Visual Studio 2022 v17.14 Now Generally Available

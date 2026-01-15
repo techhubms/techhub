@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "WhiteCobra’s Malicious VSCode Extensions Pose Major Security Risk for Developers"
-description: "This article explores how the WhiteCobra threat group has been deploying dozens of malicious extensions through the VSCode and Open VSX marketplaces, targeting software developers with the aim of stealing cryptocurrency and sensitive credentials. It covers their campaign sophistication, exploitation techniques, and the impact on the engineering community, as well as the challenges in detecting such threats given current marketplace verification systems."
-author: "Jeff Burt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: WhiteCobra’s Malicious VSCode Extensions Pose Major Security Risk for Developers
+author: Jeff Burt
+canonical_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-15 16:56:48 +00:00
-permalink: "/2025-09-15-WhiteCobras-Malicious-VSCode-Extensions-Pose-Major-Security-Risk-for-Developers.html"
-categories: ["DevOps", "Security"]
-tags: ["Attack Chain", "Blogs", "C2 Server", "Cloud Infrastructure", "Cryptocurrency", "Cryptocurrency Theft", "Cybersecurity", "Developer Security", "DevOps", "DevOps And Open Technologies", "DevOps Security", "Extension.js", "LummaStealer", "Malicious Extensions", "Malware", "Marketplace Threat", "Open VSX", "PowerShell", "Python Script", "Secure Software Development", "Security", "Social Engineering", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "VS Code", "WhiteCobra", "Windows Security"]
-tags_normalized: ["attack chain", "blogs", "c2 server", "cloud infrastructure", "cryptocurrency", "cryptocurrency theft", "cybersecurity", "developer security", "devops", "devops and open technologies", "devops security", "extensiondotjs", "lummastealer", "malicious extensions", "malware", "marketplace threat", "open vsx", "powershell", "python script", "secure software development", "security", "social engineering", "social facebook", "social linkedin", "social x", "software supply chain", "vs code", "whitecobra", "windows security"]
+permalink: /devops/blogs/WhiteCobras-Malicious-VSCode-Extensions-Pose-Major-Security-Risk-for-Developers
+tags:
+- Attack Chain
+- Blogs
+- C2 Server
+- Cloud Infrastructure
+- Cryptocurrency
+- Cryptocurrency Theft
+- Cybersecurity
+- Developer Security
+- DevOps
+- DevOps And Open Technologies
+- DevOps Security
+- Extension.js
+- LummaStealer
+- Malicious Extensions
+- Malware
+- Marketplace Threat
+- Open VSX
+- PowerShell
+- Python Script
+- Secure Software Development
+- Security
+- Social Engineering
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- VS Code
+- WhiteCobra
+- Windows Security
+section_names:
+- devops
+- security
 ---
-
 Jeff Burt analyzes how the WhiteCobra group is targeting developers through malicious VSCode and Open VSX extensions, unveiling sophisticated techniques for cryptocurrency and credential theft.<!--excerpt_end-->
 
 # WhiteCobra’s Malicious VSCode Extensions Pose Major Security Risk for Developers

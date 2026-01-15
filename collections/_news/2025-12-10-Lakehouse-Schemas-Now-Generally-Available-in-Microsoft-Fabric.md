@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Lakehouse Schemas Now Generally Available in Microsoft Fabric"
-description: "This article details the general availability of schema-enabled lakehouses in Microsoft Fabric. It explains how schemas enhance organization, accessibility, and interoperability for tables in lakehouses. The article also covers new features such as schema shortcuts, Spark multi-workspace queries, security improvements, and discusses current limitations and future enhancements planned for schema lakehouses."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Lakehouse Schemas Now Generally Available in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 09:00:00 +00:00
-permalink: "/2025-12-10-Lakehouse-Schemas-Now-Generally-Available-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["ADLS Gen2", "Azure", "Data Engineering", "Data Lake", "Data Management", "Fabric Notebooks", "Feature Parity", "Lakehouse", "Materialized Views", "Microsoft Fabric", "Migration Tools", "ML", "News", "OneLake Security", "Schema Lakehouse", "Spark", "Table Organization", "Workspace Private Links"]
-tags_normalized: ["adls gen2", "azure", "data engineering", "data lake", "data management", "fabric notebooks", "feature parity", "lakehouse", "materialized views", "microsoft fabric", "migration tools", "ml", "news", "onelake security", "schema lakehouse", "spark", "table organization", "workspace private links"]
+permalink: /ml/news/Lakehouse-Schemas-Now-Generally-Available-in-Microsoft-Fabric
+tags:
+- ADLS Gen2
+- Azure
+- Data Engineering
+- Data Lake
+- Data Management
+- Fabric Notebooks
+- Feature Parity
+- Lakehouse
+- Materialized Views
+- Microsoft Fabric
+- Migration Tools
+- ML
+- News
+- OneLake Security
+- Schema Lakehouse
+- Spark
+- Table Organization
+- Workspace Private Links
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains the launch of schema-enabled lakehouses, outlining new organizational options, Spark compatibility, security features, and ongoing plans for improvements.<!--excerpt_end-->
 
 # Lakehouse Schemas Now Generally Available in Microsoft Fabric

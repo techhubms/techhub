@@ -1,20 +1,43 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Visual Studio Code October 2024 (v1.95): Copilot, Extensions & Productivity"
-description: "This release note details major updates in Visual Studio Code 1.95, including extensive improvements and experimental features for GitHub Copilot, AI-powered development tools, extensibility APIs, chat features, Python and TypeScript enhancements, and security updates for key extensions. Learn about new collaborative tools, Copilot-powered reviews and edits, extension authoring APIs for LLMs, workspace indexing, and contributions from the open source community. Discover how these advancements can boost your development workflow with AI and modern cloud tools."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_95"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_95
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-10-29 17:00:00 +00:00
-permalink: "/2024-10-29-Whats-New-in-Visual-Studio-Code-October-2024-v195-Copilot-Extensions-and-Productivity.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Coding", "Copilot Chat", "Copilot Edits", "Copilot Extensions", "Data Analysis", "DevOps", "Electron 32", "ESLint 9", "GitHub Copilot", "Mermaid Diagrams", "News", "Open Source", "Pull Requests", "Pylance", "Python", "Semantic Search", "TypeScript 5.7", "V1.95", "VS Code", "VS Code Extensions", "Workspace Indexing"]
-tags_normalized: ["ai", "ai development", "coding", "copilot chat", "copilot edits", "copilot extensions", "data analysis", "devops", "electron 32", "eslint 9", "github copilot", "mermaid diagrams", "news", "open source", "pull requests", "pylance", "python", "semantic search", "typescript 5dot7", "v1dot95", "vs code", "vs code extensions", "workspace indexing"]
+permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-October-2024-v195-Copilot-Extensions-and-Productivity
+tags:
+- AI
+- AI Development
+- Coding
+- Copilot Chat
+- Copilot Edits
+- Copilot Extensions
+- Data Analysis
+- DevOps
+- Electron 32
+- ESLint 9
+- GitHub Copilot
+- Mermaid Diagrams
+- News
+- Open Source
+- Pull Requests
+- Pylance
+- Python
+- Semantic Search
+- TypeScript 5.7
+- V1.95
+- VS Code
+- VS Code Extensions
+- Workspace Indexing
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team unveils version 1.95, packed with Copilot improvements, AI-driven code review, extension APIs for LLMs, productivity upgrades, Python tools, and new ways to collaborate through open source contributions.<!--excerpt_end-->
 
 # Visual Studio Code October 2024 (v1.95) Release Notes

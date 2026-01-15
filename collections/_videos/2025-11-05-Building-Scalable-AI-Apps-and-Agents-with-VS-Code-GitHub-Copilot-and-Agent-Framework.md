@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework"
-description: "This session from GitHub Universe 2025 demonstrates how to use VS Code and the AI Toolkit to extend GitHub Copilot as an AI development workbench. It covers building apps from specs with Spec Kit, creating multi-agent workflows using the open-source Agent Framework, and deploying to Azure AI Foundry, including operational aspects like observability and security, throughout the software development life cycle."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ob-TOPfQmbk"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=ob-TOPfQmbk
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-05 15:01:39 +00:00
-permalink: "/2025-11-05-Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Framework", "AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Coding", "Demo", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Incident Response", "Microsoft", "Multi Agent Workflows", "Observability", "Scalable Applications", "Spec Driven Development", "Spec Kit", "Tracing", "Videos", "VS Code"]
-tags_normalized: ["agent framework", "ai", "ai toolkit", "azure", "azure ai foundry", "coding", "demo", "devops", "github", "github copilot", "github universe", "githubuniverse", "incident response", "microsoft", "multi agent workflows", "observability", "scalable applications", "spec driven development", "spec kit", "tracing", "videos", "vs code"]
+permalink: /github-copilot/videos/Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework
+tags:
+- Agent Framework
+- AI
+- AI Toolkit
+- Azure
+- Azure AI Foundry
+- Coding
+- Demo
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Incident Response
+- Microsoft
+- Multi Agent Workflows
+- Observability
+- Scalable Applications
+- Spec Driven Development
+- Spec Kit
+- Tracing
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 GitHub presents a demo-driven walkthrough from Amanda Silver, Rong Lu, and Shayne Boyer, exploring how developers can build scalable intelligent apps and multi-agent workflows using VS Code, GitHub Copilot, Agent Framework, and Azure AI Foundry.<!--excerpt_end-->
 
 {% youtube ob-TOPfQmbk %}

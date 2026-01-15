@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Agent 365: Managing AI Agents with Enterprise Controls"
-description: "This session introduces Microsoft Agent 365, a control plane designed to oversee AI-powered digital labor within organizations. It discusses the capabilities for hiring, onboarding, and governing autonomous AI agents via intuitive tooling and robust built-in controls. Covered topics include integrating agents into Microsoft 365 environments, agent management and ownership, admin center views for enterprise oversight, Manus integration across the Microsoft ecosystem, and key aspects of compliance, authorization, and data access governance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=-LSrJtikrh8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Agent 365: Managing AI Agents with Enterprise Controls'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=-LSrJtikrh8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:08:08 +00:00
-permalink: "/2025-11-21-Microsoft-Agent-365-Managing-AI-Agents-with-Enterprise-Controls.html"
-categories: ["AI", "Security"]
-tags: ["Agent Control Plane", "Agent Governance", "AI", "AI Agents", "Authorization", "Autonomous Agents", "Compliance", "Data Access Policies", "Developer Collaboration", "Digital Labor", "Enterprise Security", "Innovatewithlow", "IT Management", "Manus Integration", "Microsoft 365 Integration", "Microsoft Agent 365", "MSIgnite", "Security", "Videos"]
-tags_normalized: ["agent control plane", "agent governance", "ai", "ai agents", "authorization", "autonomous agents", "compliance", "data access policies", "developer collaboration", "digital labor", "enterprise security", "innovatewithlow", "it management", "manus integration", "microsoft 365 integration", "microsoft agent 365", "msignite", "security", "videos"]
+permalink: /ai/videos/Microsoft-Agent-365-Managing-AI-Agents-with-Enterprise-Controls
+tags:
+- Agent Control Plane
+- Agent Governance
+- AI
+- AI Agents
+- Authorization
+- Autonomous Agents
+- Compliance
+- Data Access Policies
+- Developer Collaboration
+- Digital Labor
+- Enterprise Security
+- Innovatewithlow
+- IT Management
+- Manus Integration
+- Microsoft 365 Integration
+- Microsoft Agent 365
+- MSIgnite
+- Security
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an innovation session exploring how Agent 365 serves as a control plane for AI-powered agents, focusing on secure management, integration, and enterprise oversight.<!--excerpt_end-->
 
 {% youtube -LSrJtikrh8 %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing TypeScript 5.9 Beta: New Features, Improvements, and Optimizations"
-description: "Daniel Rosenwasser announces the release of TypeScript 5.9 Beta, detailing enhancements such as a minimal tsc --init, import defer support, the node20 module option, expanded hovers, configurable tooltip lengths, and performance improvements. The post encourages early use and feedback from the developer community."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-beta/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript 5.9 Beta: New Features, Improvements, and Optimizations'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-beta/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-07-08 17:38:54 +00:00
-permalink: "/2025-07-08-Announcing-TypeScript-59-Beta-New-Features-Improvements-and-Optimizations.html"
-categories: ["Coding"]
-tags: ["Coding", "Compiler", "Developer Tools", "ECMAScript", "Import Defer", "JavaScript", "Language Server", "News", "Node.js", "Open Source", "Performance Optimization", "Quick Info", "Tsconfig.json", "TypeScript", "TypeScript 5.9", "VS Code"]
-tags_normalized: ["coding", "compiler", "developer tools", "ecmascript", "import defer", "javascript", "language server", "news", "nodedotjs", "open source", "performance optimization", "quick info", "tsconfigdotjson", "typescript", "typescript 5dot9", "vs code"]
+permalink: /coding/news/Announcing-TypeScript-59-Beta-New-Features-Improvements-and-Optimizations
+tags:
+- Coding
+- Compiler
+- Developer Tools
+- ECMAScript
+- Import Defer
+- JavaScript
+- Language Server
+- News
+- Node.js
+- Open Source
+- Performance Optimization
+- Quick Info
+- Tsconfig.json
+- TypeScript
+- TypeScript 5.9
+- VS Code
+section_names:
+- coding
 ---
-
 In this post, Daniel Rosenwasser introduces TypeScript 5.9 Beta, highlighting important compiler and tooling updates. Developers are invited to try out new features and contribute feedback as TypeScript continues to evolve.<!--excerpt_end-->
 
 # Announcing TypeScript 5.9 Beta

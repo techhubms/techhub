@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry"
-description: "This session covers strategies for building multi-agent systems using Microsoft Foundry. It demonstrates how developers can transition from simple, single-agent prototypes to sophisticated, orchestrated fleets utilizing Microsoft's Agent Framework, including Semantic Kernel, AutoGen, shared state, human-in-the-loop, OpenTel, and MCP toolchains. The session also highlights leveraging popular frameworks like LangGraph and OpenAI Agents SDK, as well as best practices for deploying containerized, governed, and observable agents with Foundry."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=v1Q7rEE3StM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=v1Q7rEE3StM
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["A2A", "Activity Protocol", "Agent Framework", "AI", "AI Orchestration", "AutoGen", "Azure", "Cloud Computing", "Containerization", "Dev", "Developer", "Development", "Human in The Loop", "LangGraph", "MCP Toolchain", "Microsoft", "Microsoft Foundry", "Multi Agent Systems", "OpenAI Agents SDK", "OpenTel", "Semantic Kernel", "Tech", "Technology", "Videos"]
-tags_normalized: ["a2a", "activity protocol", "agent framework", "ai", "ai orchestration", "autogen", "azure", "cloud computing", "containerization", "dev", "developer", "development", "human in the loop", "langgraph", "mcp toolchain", "microsoft", "microsoft foundry", "multi agent systems", "openai agents sdk", "opentel", "semantic kernel", "tech", "technology", "videos"]
+permalink: /ai/videos/Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry
+tags:
+- A2A
+- Activity Protocol
+- Agent Framework
+- AI
+- AI Orchestration
+- AutoGen
+- Azure
+- Cloud Computing
+- Containerization
+- Dev
+- Developer
+- Development
+- Human in The Loop
+- LangGraph
+- MCP Toolchain
+- Microsoft
+- Microsoft Foundry
+- Multi Agent Systems
+- OpenAI Agents SDK
+- OpenTel
+- Semantic Kernel
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents an in-depth exploration of building and orchestrating AI-powered multi-agent systems with Microsoft Foundry, highlighting advanced frameworks and deployment practices for scalable solutions.<!--excerpt_end-->
 
 {% youtube v1Q7rEE3StM %}

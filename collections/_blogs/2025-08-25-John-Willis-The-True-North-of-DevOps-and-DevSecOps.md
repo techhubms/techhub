@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "John Willis: The True North of DevOps and DevSecOps"
-description: "Alan Shimel reflects on John Willis’s influential role in shaping the DevOps and DevSecOps movements. The article discusses foundational concepts such as CAMS (Culture, Automation, Measurement, Sharing), the intertwining of culture and tooling, the importance of shared security ownership through DevSecOps, and the impact of DASP (DevSecOps Automated Security Patterns)."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'John Willis: The True North of DevOps and DevSecOps'
+author: Alan Shimel
+canonical_url: https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-25 15:19:02 +00:00
-permalink: "/2025-08-25-John-Willis-The-True-North-of-DevOps-and-DevSecOps.html"
-categories: ["DevOps", "Security"]
-tags: ["Automation", "Behavioral Change", "Blogs", "CAMS", "Continuous Improvement", "Culture", "DASP", "DevOps", "DevSecOps", "John Willis", "Measurement", "Security", "Security Ownership", "Security Patterns", "Sharing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development"]
-tags_normalized: ["automation", "behavioral change", "blogs", "cams", "continuous improvement", "culture", "dasp", "devops", "devsecops", "john willis", "measurement", "security", "security ownership", "security patterns", "sharing", "social facebook", "social linkedin", "social x", "software development"]
+permalink: /devops/blogs/John-Willis-The-True-North-of-DevOps-and-DevSecOps
+tags:
+- Automation
+- Behavioral Change
+- Blogs
+- CAMS
+- Continuous Improvement
+- Culture
+- DASP
+- DevOps
+- DevSecOps
+- John Willis
+- Measurement
+- Security
+- Security Ownership
+- Security Patterns
+- Sharing
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+section_names:
+- devops
+- security
 ---
-
 Alan Shimel highlights the impact of John Willis on the DevOps and DevSecOps communities, focusing on foundational frameworks and the cultural shift required for security and collaboration.<!--excerpt_end-->
 
 # John Willis: The True North of DevOps and DevSecOps

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Verifying Tricky Git Rebases with git range-diff"
-description: "Andrew Lock explores the 'git range-diff' command, demonstrating its use in verifying Git rebases. The post explains the tool's output, guides readers through a practical example with a sample .NET minimal API project, and discusses tips and limitations for interpreting range-diff results."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Verifying Tricky Git Rebases with git range-diff
+author: Andrew Lock
+canonical_url: https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-08 09:00:00 +00:00
-permalink: "/2025-04-08-Verifying-Tricky-Git-Rebases-with-git-range-diff.html"
-categories: ["DevOps", "Coding"]
-tags: ["Blogs", "Branch Management", "Coding", "Commit Comparison", "Continuous Integration", "Development Workflow", "DevOps", "Git", "Git Rebase", "Merge Conflicts", "Minimal API", "Range Diff", "Version Control"]
-tags_normalized: ["blogs", "branch management", "coding", "commit comparison", "continuous integration", "development workflow", "devops", "git", "git rebase", "merge conflicts", "minimal api", "range diff", "version control"]
+permalink: /coding/blogs/Verifying-Tricky-Git-Rebases-with-git-range-diff
+tags:
+- Blogs
+- Branch Management
+- Coding
+- Commit Comparison
+- Continuous Integration
+- Development Workflow
+- DevOps
+- Git
+- Git Rebase
+- Merge Conflicts
+- Minimal API
+- Range Diff
+- Version Control
+section_names:
+- devops
+- coding
 ---
-
 In this thorough post, Andrew Lock introduces the git range-diff feature for verifying and understanding tricky git rebases. He uses a practical .NET minimal API example to walk readers through the tool’s capabilities, output, and its potential challenges.<!--excerpt_end-->
 
 # Verifying Tricky Git Rebases with git range-diff

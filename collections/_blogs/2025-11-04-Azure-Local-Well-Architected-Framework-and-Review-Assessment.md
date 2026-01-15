@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Local Well-Architected Framework and Review Assessment"
-description: "This guide by Thomas Maurer details the Azure Local Well-Architected Review Assessment, a Microsoft tool that helps organizations evaluate and enhance their Azure Local deployments. It covers the assessment's core principles, process, and the value of aligning hybrid and edge architectures with the Azure Well-Architected Framework, including resources and practical recommendations."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: Azure Local Well-Architected Framework and Review Assessment
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-04 08:00:25 +00:00
-permalink: "/2025-11-04-Azure-Local-Well-Architected-Framework-and-Review-Assessment.html"
-categories: ["Azure"]
-tags: ["AKS Arc", "Assesement", "Assessment", "Azure", "Azure Arc", "Azure Local", "Azure Well Architected Framework", "Blogs", "Cloud", "Cloud Architecture", "Cost Optimization", "Edge Computing", "Hybrid Cloud", "Hyper V", "Microsoft", "Microsoft Azure", "Operational Excellence", "Performance Efficiency", "Reference Architecture", "Reliability", "Sovereign Cloud", "Virtualization", "Well Architected", "Well Architected Framework"]
-tags_normalized: ["aks arc", "assesement", "assessment", "azure", "azure arc", "azure local", "azure well architected framework", "blogs", "cloud", "cloud architecture", "cost optimization", "edge computing", "hybrid cloud", "hyper v", "microsoft", "microsoft azure", "operational excellence", "performance efficiency", "reference architecture", "reliability", "sovereign cloud", "virtualization", "well architected", "well architected framework"]
+permalink: /azure/blogs/Azure-Local-Well-Architected-Framework-and-Review-Assessment
+tags:
+- AKS Arc
+- Assesement
+- Assessment
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Well Architected Framework
+- Blogs
+- Cloud
+- Cloud Architecture
+- Cost Optimization
+- Edge Computing
+- Hybrid Cloud
+- Hyper V
+- Microsoft
+- Microsoft Azure
+- Operational Excellence
+- Performance Efficiency
+- Reference Architecture
+- Reliability
+- Sovereign Cloud
+- Virtualization
+- Well Architected
+- Well Architected Framework
+section_names:
+- azure
 ---
-
 Thomas Maurer explains the Azure Local Well-Architected Review Assessment, offering practical advice for organizations to optimize Azure Local deployments through Microsoft's structured architectural framework.<!--excerpt_end-->
 
 # Azure Local Well-Architected Framework and Review Assessment

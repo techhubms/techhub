@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Pricing Calculator: Estimate Smarter, Plan Confidently"
-description: "This video episode from the Azure Essentials Show, presented by Thomas Maurer and Britt Henderson, offers a hands-on exploration of the Azure Pricing Calculator. The episode covers how to navigate the tool, interpret real-time pricing data, perform scenario modeling, and leverage detailed cost breakdowns to estimate and manage cloud costs for Azure. Viewers will also gain insight into collaborative features and personalized cost planning functions suited for various organizational roles. Additional resources and tutorials are highlighted for those seeking to deepen their understanding of Azure cost management best practices."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7b84OrcATUQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Azure Pricing Calculator: Estimate Smarter, Plan Confidently'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=7b84OrcATUQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-07 07:00:05 +00:00
-permalink: "/2025-10-07-Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Cost Management", "Azure Essentials Show", "Azure Pricing Calculator", "AzureEssentialsShow", "AzurePricingCalculator", "Billing", "Cloud Collaboration", "Cloud Cost Estimation", "Cloud Pricing", "Cost Planning", "Microsoft Azure", "Personalized Pricing", "Real Time Pricing", "Resource Optimization", "Scenario Modeling", "Videos", "Workload Management"]
-tags_normalized: ["azure", "azure cost management", "azure essentials show", "azure pricing calculator", "azureessentialsshow", "azurepricingcalculator", "billing", "cloud collaboration", "cloud cost estimation", "cloud pricing", "cost planning", "microsoft azure", "personalized pricing", "real time pricing", "resource optimization", "scenario modeling", "videos", "workload management"]
+permalink: /azure/videos/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently
+tags:
+- Azure
+- Azure Cost Management
+- Azure Essentials Show
+- Azure Pricing Calculator
+- AzureEssentialsShow
+- AzurePricingCalculator
+- Billing
+- Cloud Collaboration
+- Cloud Cost Estimation
+- Cloud Pricing
+- Cost Planning
+- Microsoft Azure
+- Personalized Pricing
+- Real Time Pricing
+- Resource Optimization
+- Scenario Modeling
+- Videos
+- Workload Management
+section_names:
+- azure
 ---
-
 In this Azure Essentials Show episode, Microsoft Developer hosts Thomas Maurer and Britt Henderson discuss the Azure Pricing Calculator's key features for estimating cloud costs and planning Azure workloads with confidence.<!--excerpt_end-->
 
 {% youtube 7b84OrcATUQ %}

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates"
-description: "This post announces the February 2025 release (v1.12.0) of the Azure Developer CLI (azd), detailing new features, bug fixes, updated templates—many focused on AI and Azure integration—and community resources. It highlights key CLI enhancements, improved Bicep support, expanded secret management, and new tools for deploying AI solutions."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-07 20:43:29 +00:00
-permalink: "/2025-02-07-Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI App Deployment", "AI Templates", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Bicep", "CLI Tools", "Cloud Development", "Codespaces", "Coding", "DevOps", "Docker", "GitHub Codespaces", "Java", "JavaScript", "Key Vault", "Kubernetes", "News", "OpenAI", "Python", "Semantic Kernel", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai app deployment", "ai templates", "azd", "azure", "azure developer cli", "azure sdk", "bicep", "cli tools", "cloud development", "codespaces", "coding", "devops", "docker", "github codespaces", "java", "javascript", "key vault", "kubernetes", "news", "openai", "python", "semantic kernel", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates
+tags:
+- .NET
+- AI
+- AI App Deployment
+- AI Templates
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- CLI Tools
+- Cloud Development
+- Codespaces
+- Coding
+- DevOps
+- Docker
+- GitHub Codespaces
+- Java
+- JavaScript
+- Key Vault
+- Kubernetes
+- News
+- OpenAI
+- Python
+- Semantic Kernel
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Authored by Kristen Womack, this post summarizes the Azure Developer CLI (azd) February 2025 update, featuring new CLI capabilities, bug fixes, expanded Bicep and secret management, and an array of new AI-integrated application templates to accelerate cloud app development on Azure.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates

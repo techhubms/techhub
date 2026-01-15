@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Revolutionizing Learning with Immersive AI: Avatar-Powered Education on Azure"
-description: "This article demonstrates how immersive AI, powered by services like Azure Speech Studio and neural voice avatars, is transforming education by making learning more engaging and accessible. It details an end-to-end Azure-based solution for creating personalized, avatar-driven audio and video content, plus essential security practices, data flow architecture, and responsible AI use in real-world education scenarios."
-author: "Matt_Kazanowsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Revolutionizing Learning with Immersive AI: Avatar-Powered Education on Azure'
+author: Matt_Kazanowsky
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-12 20:31:23 +00:00
-permalink: "/2025-09-12-Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Avatar Engine", "Azure", "Azure Data Lake Storage", "Azure Key Vault", "Azure Speech Studio", "CI/CD", "Community", "Data Loss Prevention", "Defender For Storage", "Identity Management", "Low Code Solutions", "Microsoft Entra ID", "Neural Voice", "Private Link", "Security", "Security Best Practices", "SSML", "Text To Speech"]
-tags_normalized: ["ai", "avatar engine", "azure", "azure data lake storage", "azure key vault", "azure speech studio", "cislashcd", "community", "data loss prevention", "defender for storage", "identity management", "low code solutions", "microsoft entra id", "neural voice", "private link", "security", "security best practices", "ssml", "text to speech"]
+permalink: /ai/community/Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure
+tags:
+- AI
+- Avatar Engine
+- Azure
+- Azure Data Lake Storage
+- Azure Key Vault
+- Azure Speech Studio
+- CI/CD
+- Community
+- Data Loss Prevention
+- Defender For Storage
+- Identity Management
+- Low Code Solutions
+- Microsoft Entra ID
+- Neural Voice
+- Private Link
+- Security
+- Security Best Practices
+- SSML
+- Text To Speech
+section_names:
+- ai
+- azure
+- security
 ---
-
 Matt Kazanowsky and contributors explore how Azure-powered immersive AI—combining neural voice, avatars, and robust security—reinvents education and content creation. This guide covers architecture and practical steps for secure, scalable, and responsible implementation.<!--excerpt_end-->
 
 # Revolutionizing Learning with Immersive AI

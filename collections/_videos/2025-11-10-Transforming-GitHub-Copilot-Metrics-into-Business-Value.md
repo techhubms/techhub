@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Transforming GitHub Copilot Metrics into Business Value"
-description: "This session from GitHub Universe 2025 explores how engineering leaders can harness GitHub Copilot Metrics to drive AI adoption and deliver tangible business outcomes. It introduces the updated Copilot Metrics dashboard, demonstrates how to interpret usage data, outlines strategies to boost adoption, and explains how to link metrics to ROI and ongoing AI investment."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FWsAQpP6_kw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Transforming GitHub Copilot Metrics into Business Value
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=FWsAQpP6_kw
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-10 15:00:34 +00:00
-permalink: "/2025-11-10-Transforming-GitHub-Copilot-Metrics-into-Business-Value.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Adoption", "Analytics", "Business Value", "Copilot Metrics", "Dashboard", "Data Driven Decision Making", "Developer Productivity", "Engineering Leadership", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Metrics", "ROI", "SDLC", "Usage Insights", "Videos"]
-tags_normalized: ["ai", "ai adoption", "analytics", "business value", "copilot metrics", "dashboard", "data driven decision making", "developer productivity", "engineering leadership", "github", "github copilot", "github universe", "githubuniverse", "metrics", "roi", "sdlc", "usage insights", "videos"]
+permalink: /github-copilot/videos/Transforming-GitHub-Copilot-Metrics-into-Business-Value
+tags:
+- AI
+- AI Adoption
+- Analytics
+- Business Value
+- Copilot Metrics
+- Dashboard
+- Data Driven Decision Making
+- Developer Productivity
+- Engineering Leadership
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- GitHubUniverse
+- Metrics
+- ROI
+- SDLC
+- Usage Insights
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a session with Sharanya Doddapaneni and Shruti Corbett at GitHub Universe 2025, demonstrating how leaders can leverage GitHub Copilot Metrics to drive adoption, measure impact, and demonstrate AI’s business value.<!--excerpt_end-->
 
 {% youtube FWsAQpP6_kw %}

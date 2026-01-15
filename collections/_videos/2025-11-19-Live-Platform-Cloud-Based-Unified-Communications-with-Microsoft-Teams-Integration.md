@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Live Platform: Cloud-Based Unified Communications with Microsoft Teams Integration"
-description: "This session from Microsoft Ignite 2025 introduces AudioCodes Live Platform, a cloud-based services delivery framework designed for unified communications and contact centers. The platform leverages AI and Microsoft Teams, offering seamless PSTN connectivity, automated onboarding, centralized management, compliance tools, and AI-powered voice applications. It focuses on improving employee and customer experiences with easy provisioning and foundational service offerings, all delivered through a Microsoft-focused architecture."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=P1BLUYik7SM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Live Platform: Cloud-Based Unified Communications with Microsoft Teams Integration'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=P1BLUYik7SM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:23:59 +00:00
-permalink: "/2025-11-19-Live-Platform-Cloud-Based-Unified-Communications-with-Microsoft-Teams-Integration.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Powered Voice Apps", "AudioCodes Live Platform", "Automated Onboarding", "Azure", "Azure AI", "Centralized Platform", "Cloud Services", "Compliance Management", "Contact Center Solutions", "Customer Experience", "Employee Experience", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Teams", "MSIgnite", "PSTN Connectivity", "Service Provisioning", "Unified Communications", "Videos"]
-tags_normalized: ["ai", "ai powered voice apps", "audiocodes live platform", "automated onboarding", "azure", "azure ai", "centralized platform", "cloud services", "compliance management", "contact center solutions", "customer experience", "employee experience", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft teams", "msignite", "pstn connectivity", "service provisioning", "unified communications", "videos"]
+permalink: /ai/videos/Live-Platform-Cloud-Based-Unified-Communications-with-Microsoft-Teams-Integration
+tags:
+- AI
+- AI Powered Voice Apps
+- AudioCodes Live Platform
+- Automated Onboarding
+- Azure
+- Azure AI
+- Centralized Platform
+- Cloud Services
+- Compliance Management
+- Contact Center Solutions
+- Customer Experience
+- Employee Experience
+- InnovatewithAzureAIappsandagents
+- Microsoft Ignite
+- Microsoft Teams
+- MSIgnite
+- PSTN Connectivity
+- Service Provisioning
+- Unified Communications
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a foundational overview of AudioCodes Live Platform, highlighting its Microsoft Teams integration, AI-enhanced voice capabilities, and centralized management for unified communications.<!--excerpt_end-->
 
 {% youtube P1BLUYik7SM %}

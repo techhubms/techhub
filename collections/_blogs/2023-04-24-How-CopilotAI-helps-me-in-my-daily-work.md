@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "How Copilot/AI helps me in my daily work"
-description: "Rob Bos explores using AI tools, especially GitHub Copilot, to streamline GitHub Actions deployment protection and Node.js OAuth app setup, emphasizing security considerations."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2023/04/24/how-Copilot-helps-me-in-my-daily-work"
-viewing_mode: "external"
-categories: ["AI", "Azure", "GitHub Copilot", "Coding"]
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: How Copilot/AI helps me in my daily work
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2023/04/24/how-Copilot-helps-me-in-my-daily-work
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-04-24 00:00:00 +00:00
-permalink: "/2023-04-24-How-CopilotAI-helps-me-in-my-daily-work.html"
-tags: ["AI", "AI Code Generation", "Automation", "Azure", "Azure Functions", "Blogs", "Coding", "Deployment Protection Rules", "GitHub Actions", "GitHub Copilot", "Node.js", "OAuth"]
-tags_normalized: ["ai", "ai code generation", "automation", "azure", "azure functions", "blogs", "coding", "deployment protection rules", "github actions", "github copilot", "nodedotjs", "oauth"]
+permalink: /github-copilot/blogs/How-CopilotAI-helps-me-in-my-daily-work
+tags:
+- AI
+- AI Code Generation
+- Automation
+- Azure
+- Azure Functions
+- Blogs
+- Coding
+- Deployment Protection Rules
+- GitHub Actions
+- GitHub Copilot
+- Node.js
+- OAuth
+section_names:
+- ai
+- azure
+- github-copilot
+- coding
 ---
-
 In this article, Rob Bos shares insights into leveraging AI tools, especially GitHub Copilot, to accelerate application and code generation workflows, focusing on GitHub Actions deployment protection and app setup. <!--excerpt_end-->
 
 ## Introduction

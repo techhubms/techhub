@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Supercharge Your SQL Development with Modern .NET | On .NET Live"
-description: "This session explores using .NET across platforms to enhance SQL Server development with build validation, static code analysis, and advanced tooling. Featuring demos, expert insights, and tooling overviews, it's a practical guide to integrating .NET capabilities and NuGet packages into your SQL development workflow."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AHgVlvPnpyk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Supercharge Your SQL Development with Modern .NET | On .NET Live
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=AHgVlvPnpyk
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-04 17:33:57 +00:00
-permalink: "/2025-08-04-Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live.html"
-categories: ["Coding", "ML"]
-tags: [".NET", "Build Validation", "CI/CD", "Coding", "Cross Platform Development", "Database Tooling", "Developer Tooling", "Erik Ejlskov Jensen", "Global Tool", "ML", "NuGet", "SQL Server", "Sqlpackage", "Static Code Analysis", "Videos"]
-tags_normalized: ["dotnet", "build validation", "cislashcd", "coding", "cross platform development", "database tooling", "developer tooling", "erik ejlskov jensen", "global tool", "ml", "nuget", "sql server", "sqlpackage", "static code analysis", "videos"]
+permalink: /ml/videos/Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live
+tags:
+- .NET
+- Build Validation
+- CI/CD
+- Coding
+- Cross Platform Development
+- Database Tooling
+- Developer Tooling
+- Erik Ejlskov Jensen
+- Global Tool
+- ML
+- NuGet
+- SQL Server
+- Sqlpackage
+- Static Code Analysis
+- Videos
+section_names:
+- coding
+- ml
 ---
-
 Hosted by dotnet and featuring Erik Ejlskov Jensen, this On .NET Live episode demonstrates how to boost SQL Server development using modern .NET tools, NuGet packages, and static analysis.<!--excerpt_end-->
 
 {% youtube AHgVlvPnpyk %}

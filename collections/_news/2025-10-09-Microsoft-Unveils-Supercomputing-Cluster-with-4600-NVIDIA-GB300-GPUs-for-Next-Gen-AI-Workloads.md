@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Unveils Supercomputing Cluster with 4600+ NVIDIA GB300 GPUs for Next-Gen AI Workloads"
-description: "Satya Nadella announces a major leap for Microsoft’s AI infrastructure, revealing a supercomputing cluster built on over 4600 NVIDIA GB300 GPUs and next-gen InfiniBand. This marks the first wave in scaling to hundreds of thousands of GB300 chips across Microsoft’s datacenters and signals a deep rethinking of silicon, systems, and software to power future AI workloads."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Unveils Supercomputing Cluster with 4600+ NVIDIA GB300 GPUs for Next-Gen AI Workloads
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-09 17:57:56 +00:00
-permalink: "/2025-10-09-Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Acceleration", "AI Infrastructure", "AI Scale", "AI Workloads", "Azure", "Cloud Computing", "Company News", "Datacenter", "GPUs", "High Performance Computing", "InfiniBand", "LinkedIn Post", "Microsoft", "Microsoft Azure", "News", "NVIDIA GB300", "Silicon Design", "Supercomputing Cluster", "System Architecture"]
-tags_normalized: ["ai", "ai acceleration", "ai infrastructure", "ai scale", "ai workloads", "azure", "cloud computing", "company news", "datacenter", "gpus", "high performance computing", "infiniband", "linkedin post", "microsoft", "microsoft azure", "news", "nvidia gb300", "silicon design", "supercomputing cluster", "system architecture"]
+permalink: /ai/news/Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads
+tags:
+- AI
+- AI Acceleration
+- AI Infrastructure
+- AI Scale
+- AI Workloads
+- Azure
+- Cloud Computing
+- Company News
+- Datacenter
+- GPUs
+- High Performance Computing
+- InfiniBand
+- LinkedIn Post
+- Microsoft
+- Microsoft Azure
+- News
+- NVIDIA GB300
+- Silicon Design
+- Supercomputing Cluster
+- System Architecture
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella shares details on Microsoft's latest supercomputing milestone, featuring a massive AI-focused cluster with over 4600 NVIDIA GB300 GPUs. This investment in AI infrastructure paves the way for scaling next-generation workloads. Authored by Satya Nadella.<!--excerpt_end-->
 
 # Microsoft Unveils Supercomputing Cluster with 4600+ NVIDIA GB300 GPUs for Next-Gen AI Workloads

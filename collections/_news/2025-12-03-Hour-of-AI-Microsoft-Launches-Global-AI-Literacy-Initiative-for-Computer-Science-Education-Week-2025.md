@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025"
-description: "This article introduces Microsoft's Hour of AI initiative—a global program designed to make AI literacy accessible during Computer Science Education Week 2025. It provides free activities, lesson plans, and resources for educators and students, featuring coding experiences in Minecraft, MakeCode, and Visual Studio Code for Education. Hour of AI aims to empower learners to explore AI concepts through hands-on projects, building foundational skills and curiosity about artificial intelligence."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-03 15:06:57 +00:00
-permalink: "/2025-12-03-Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Coding", "AI Literacy", "AI Prompts", "AI Skills", "Algorithm Design", "Classroom Resources", "Code.org", "Coding", "Company News", "Computer Science Education Week", "CSforALL", "Education", "Game Based Learning", "Hour Of AI", "K 12 Education", "MakeCode", "Microsoft Education", "Minecraft Education", "News", "Visual Studio Code For Education"]
-tags_normalized: ["ai", "ai coding", "ai literacy", "ai prompts", "ai skills", "algorithm design", "classroom resources", "codedotorg", "coding", "company news", "computer science education week", "csforall", "education", "game based learning", "hour of ai", "k 12 education", "makecode", "microsoft education", "minecraft education", "news", "visual studio code for education"]
+permalink: /ai/news/Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025
+tags:
+- AI
+- AI Coding
+- AI Literacy
+- AI Prompts
+- AI Skills
+- Algorithm Design
+- Classroom Resources
+- Code.org
+- Coding
+- Company News
+- Computer Science Education Week
+- CSforALL
+- Education
+- Game Based Learning
+- Hour Of AI
+- K 12 Education
+- MakeCode
+- Microsoft Education
+- Minecraft Education
+- News
+- Visual Studio Code For Education
+section_names:
+- ai
+- coding
 ---
-
 stclarke presents an overview of Microsoft's Hour of AI initiative, highlighting resources and activities that help educators and students engage with AI coding concepts during Computer Science Education Week 2025.<!--excerpt_end-->
 
 # Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025

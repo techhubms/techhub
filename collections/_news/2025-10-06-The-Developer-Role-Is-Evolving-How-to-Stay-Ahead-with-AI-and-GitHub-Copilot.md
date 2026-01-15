@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "The Developer Role Is Evolving: How to Stay Ahead with AI and GitHub Copilot"
-description: "This article explores the shifting landscape of software development as AI-powered tools, particularly GitHub Copilot and Copilot Spaces, transform coding, collaboration, and developer skill requirements. It covers new emerging roles for developers, best practices for leveraging AI effectively, practical guidance on Copilot features, and insights for continuous learning in an AI-driven environment. The piece also highlights upcoming sessions from GitHub Universe related to AI strategy, development orchestration, and collaboration."
-author: "Gwen Davis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/the-developer-role-is-evolving-heres-how-to-stay-ahead/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'The Developer Role Is Evolving: How to Stay Ahead with AI and GitHub Copilot'
+author: Gwen Davis
+canonical_url: https://github.blog/ai-and-ml/the-developer-role-is-evolving-heres-how-to-stay-ahead/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-06 20:12:49 +00:00
-permalink: "/2025-10-06-The-Developer-Role-Is-Evolving-How-to-Stay-Ahead-with-AI-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Development", "AI Productivity Tools", "Coding", "Collaborative Development", "Company News", "Continuous Learning", "Copilot Code Review", "Developer Collaboration", "Developer Orchestration", "Developer Skills", "GitHub Copilot", "GitHub Copilot Code Review", "GitHub Copilot Spaces", "GitHub Universe", "Machine Learning", "News", "News & Insights", "Open Source", "Python", "Software Automation", "Software Strategy"]
-tags_normalized: ["ai", "ai and ml", "ai development", "ai productivity tools", "coding", "collaborative development", "company news", "continuous learning", "copilot code review", "developer collaboration", "developer orchestration", "developer skills", "github copilot", "github copilot code review", "github copilot spaces", "github universe", "machine learning", "news", "news and insights", "open source", "python", "software automation", "software strategy"]
+permalink: /github-copilot/news/The-Developer-Role-Is-Evolving-How-to-Stay-Ahead-with-AI-and-GitHub-Copilot
+tags:
+- AI
+- AI & ML
+- AI Development
+- AI Productivity Tools
+- Coding
+- Collaborative Development
+- Company News
+- Continuous Learning
+- Copilot Code Review
+- Developer Collaboration
+- Developer Orchestration
+- Developer Skills
+- GitHub Copilot
+- GitHub Copilot Code Review
+- GitHub Copilot Spaces
+- GitHub Universe
+- Machine Learning
+- News
+- News & Insights
+- Open Source
+- Python
+- Software Automation
+- Software Strategy
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Gwen Davis presents an in-depth guide to the evolving role of developers in the age of AI, sharing actionable skills and techniques for effectively leveraging GitHub Copilot and other AI tools in modern software workflows.<!--excerpt_end-->
 
 # The Developer Role Is Evolving: How to Stay Ahead with AI and GitHub Copilot

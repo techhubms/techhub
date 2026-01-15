@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Partners Accelerate Media Innovation with AI Agents and Microsoft Cloud"
-description: "This Microsoft Ignite 2025 session explores how Microsoft and leading media partners leverage Azure, Microsoft Fabric, and generative AI to transform media production, distribution, and audience engagement. With practical examples from organizations such as Dentsu, La Liga, Le Monde, NBA, and Universal Studios, the session highlights AI-driven workflow improvements, data quality strategies, and secure cloud architectures for media innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_4DACLSHtFg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Partners Accelerate Media Innovation with AI Agents and Microsoft Cloud
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_4DACLSHtFg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:29:35 +00:00
-permalink: "/2025-11-24-Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Audience Engagement", "Azure", "Content Creation", "Data Foundations", "Data Quality", "Distribution", "Generative AI", "Intellectual Property", "Media & Entertainment", "Media Innovation", "Microsoft Fabric", "MicrosoftAICloudPartnerProgram", "ML", "MSIgnite", "Privacy", "Secure Cloud", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "audience engagement", "azure", "content creation", "data foundations", "data quality", "distribution", "generative ai", "intellectual property", "media and entertainment", "media innovation", "microsoft fabric", "microsoftaicloudpartnerprogram", "ml", "msignite", "privacy", "secure cloud", "videos", "workflow automation"]
+permalink: /ai/videos/Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud
+tags:
+- AI
+- AI Agents
+- Audience Engagement
+- Azure
+- Content Creation
+- Data Foundations
+- Data Quality
+- Distribution
+- Generative AI
+- Intellectual Property
+- Media & Entertainment
+- Media Innovation
+- Microsoft Fabric
+- MicrosoftAICloudPartnerProgram
+- ML
+- MSIgnite
+- Privacy
+- Secure Cloud
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events brings top media partners to Ignite 2025, showcasing real-world applications of Azure, Fabric, and generative AI in media innovation, featuring speakers Alessandra Antonelli, Tanya Khaiyanun, and Erik Ramberg.<!--excerpt_end-->
 
 {% youtube _4DACLSHtFg %}

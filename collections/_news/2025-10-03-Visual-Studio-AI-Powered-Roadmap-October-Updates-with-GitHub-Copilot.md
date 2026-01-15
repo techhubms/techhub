@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Visual Studio AI-Powered Roadmap: October Updates with GitHub Copilot"
-description: "This news update outlines the latest developments in bringing AI-powered agentic experiences to Visual Studio, including integration with GitHub Copilot, new debugging and modernization agents, improvements to Agent Mode and Chat, expanded model support, and governance enhancements via the Model Context Protocol. The roadmap emphasizes making AI tools seamlessly available throughout the development workflow."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio AI-Powered Roadmap: October Updates with GitHub Copilot'
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-03 19:29:09 +00:00
-permalink: "/2025-10-03-Visual-Studio-AI-Powered-Roadmap-October-Updates-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Experiences", "AI", "AI Integration", "Chat", "Coding", "Coding Agent", "Coding Productivity", "Copilot", "Copilot Chat", "Debugger Agent", "Developer Tools", "Dynamic Tool Calling", "GitHub Copilot", "IDE", "MCP", "Modernize Agent", "News", "Performance Optimization", "VS"]
-tags_normalized: ["agentic experiences", "ai", "ai integration", "chat", "coding", "coding agent", "coding productivity", "copilot", "copilot chat", "debugger agent", "developer tools", "dynamic tool calling", "github copilot", "ide", "mcp", "modernize agent", "news", "performance optimization", "vs"]
+permalink: /github-copilot/news/Visual-Studio-AI-Powered-Roadmap-October-Updates-with-GitHub-Copilot
+tags:
+- Agentic Experiences
+- AI
+- AI Integration
+- Chat
+- Coding
+- Coding Agent
+- Coding Productivity
+- Copilot
+- Copilot Chat
+- Debugger Agent
+- Developer Tools
+- Dynamic Tool Calling
+- GitHub Copilot
+- IDE
+- MCP
+- Modernize Agent
+- News
+- Performance Optimization
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rhea Patel presents the official Visual Studio roadmap for October, highlighting new AI integrations such as GitHub Copilot agents, improvements to Agent Mode and Chat, and enhanced developer governance.<!--excerpt_end-->
 
 # Visual Studio AI-Powered Roadmap: October Updates with GitHub Copilot

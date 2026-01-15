@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Securing Azure Networks with Network Security Perimeter"
-description: "This blog post by Jere Haavisto explains Microsoft's new Network Security Perimeter (NSP) for Azure, describing its advantages over traditional network security approaches like NSGs, Private Endpoints, and virtual networks. The article provides demonstrations securing PaaS resources, managing inbound and outbound rules, and details supported Azure services."
-author: "jere.haavisto@zure.com (Jere Haavisto)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/securing-azure-networks-with-network-security-perimeter"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: Securing Azure Networks with Network Security Perimeter
+author: jere.haavisto@zure.com (Jere Haavisto)
+canonical_url: https://zure.com/blog/securing-azure-networks-with-network-security-perimeter
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-04-10 04:40:00 +00:00
-permalink: "/2025-04-10-Securing-Azure-Networks-with-Network-Security-Perimeter.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Key Vault", "Azure Network Security Perimeter", "Azure SQL", "Azure Storage", "Blog", "Blogs", "Cloud Security", "Cosmos DB", "Event Hubs", "Inbound Rules", "Network Security", "Network Security Groups", "NSP", "Outbound Rules", "PaaS Security", "Private Endpoints", "Security", "Security Posture", "Virtual Networks"]
-tags_normalized: ["azure", "azure key vault", "azure network security perimeter", "azure sql", "azure storage", "blog", "blogs", "cloud security", "cosmos db", "event hubs", "inbound rules", "network security", "network security groups", "nsp", "outbound rules", "paas security", "private endpoints", "security", "security posture", "virtual networks"]
+permalink: /azure/blogs/Securing-Azure-Networks-with-Network-Security-Perimeter
+tags:
+- Azure
+- Azure Key Vault
+- Azure Network Security Perimeter
+- Azure SQL
+- Azure Storage
+- Blog
+- Blogs
+- Cloud Security
+- Cosmos DB
+- Event Hubs
+- Inbound Rules
+- Network Security
+- Network Security Groups
+- NSP
+- Outbound Rules
+- PaaS Security
+- Private Endpoints
+- Security
+- Security Posture
+- Virtual Networks
+section_names:
+- azure
+- security
 ---
-
 Jere Haavisto presents a hands-on guide to enhancing Azure network security using the Network Security Perimeter, with practical demos, supported resource lists, and configuration tips.<!--excerpt_end-->
 
 # Securing Azure Networks with Network Security Perimeter

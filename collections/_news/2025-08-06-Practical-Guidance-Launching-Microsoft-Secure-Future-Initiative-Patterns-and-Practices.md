@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Practical Guidance: Launching Microsoft Secure Future Initiative Patterns and Practices"
-description: "Microsoft announces the launch of Secure Future Initiative (SFI) patterns and practices—a comprehensive library of actionable guidance aimed at helping organizations implement security at scale. The initial release covers core security challenges, offers modular solutions, and provides practical, reusable security strategies derived from Microsoft’s experience."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/06/sharing-practical-guidance-launching-microsoft-secure-future-initiative-sfi-patterns-and-practices/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Practical Guidance: Launching Microsoft Secure Future Initiative Patterns and Practices'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/06/sharing-practical-guidance-launching-microsoft-secure-future-initiative-sfi-patterns-and-practices/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 17:17:57 +00:00
-permalink: "/2025-08-06-Practical-Guidance-Launching-Microsoft-Secure-Future-Initiative-Patterns-and-Practices.html"
-categories: ["Security"]
-tags: ["CI/CD Security", "Engineering Practices", "Identity Management", "Incident Response", "Log Retention", "Microsoft Security", "News", "Operational Security", "Phishing Resistant MFA", "Risk Management", "Secure Future Initiative", "Security", "Security Patterns", "SFI Pillars", "Threat Detection", "Vulnerability Mitigation", "Zero Trust"]
-tags_normalized: ["cislashcd security", "engineering practices", "identity management", "incident response", "log retention", "microsoft security", "news", "operational security", "phishing resistant mfa", "risk management", "secure future initiative", "security", "security patterns", "sfi pillars", "threat detection", "vulnerability mitigation", "zero trust"]
+permalink: /security/news/Practical-Guidance-Launching-Microsoft-Secure-Future-Initiative-Patterns-and-Practices
+tags:
+- CI/CD Security
+- Engineering Practices
+- Identity Management
+- Incident Response
+- Log Retention
+- Microsoft Security
+- News
+- Operational Security
+- Phishing Resistant MFA
+- Risk Management
+- Secure Future Initiative
+- Security
+- Security Patterns
+- SFI Pillars
+- Threat Detection
+- Vulnerability Mitigation
+- Zero Trust
+section_names:
+- security
 ---
-
 In this post, stclarke introduces the Microsoft Secure Future Initiative (SFI) patterns and practices—a library of practical security solutions aimed at helping organizations enhance security at scale, informed by Microsoft’s operational experiences.<!--excerpt_end-->
 
 # Practical Guidance: Launching Microsoft Secure Future Initiative Patterns and Practices

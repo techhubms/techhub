@@ -1,20 +1,29 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Login Prompts and Access Restrictions on GitHub: Privacy Concerns From a User's Perspective"
-description: "Mabymaster shares recent struggles accessing public GitHub repositories on mobile devices, experiencing login prompts and 'too many requests' errors despite using different browsers, VPN, and Tor. The author raises concerns about user privacy and data collection, questioning GitHub's increasing barriers to anonymous browsing."
-author: "Mabymaster"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mgvust/promting_to_login_circumventing_that_leaves_me/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+author: Mabymaster
+canonical_url: https://www.reddit.com/r/github/comments/1mgvust/promting_to_login_circumventing_that_leaves_me/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 21:58:23 +00:00
-permalink: "/2025-08-03-Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective.html"
-categories: ["DevOps"]
-tags: ["Browser Fingerprinting", "Community", "DevOps", "GitHub", "Login Issues", "Mobile Browsing", "Privacy", "Repository Access", "Too Many Requests", "Tor", "User Experience", "VPN"]
-tags_normalized: ["browser fingerprinting", "community", "devops", "github", "login issues", "mobile browsing", "privacy", "repository access", "too many requests", "tor", "user experience", "vpn"]
+permalink: /devops/community/Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective
+tags:
+- Browser Fingerprinting
+- Community
+- DevOps
+- GitHub
+- Login Issues
+- Mobile Browsing
+- Privacy
+- Repository Access
+- Too Many Requests
+- Tor
+- User Experience
+- VPN
+section_names:
+- devops
 ---
-
 In this community post, Mabymaster describes repeated difficulties accessing public GitHub repositories without logging in, raising questions about privacy and GitHub's practices.<!--excerpt_end-->
 
 ## Login Prompts and Access Barriers on GitHub: User Experience and Privacy Concerns

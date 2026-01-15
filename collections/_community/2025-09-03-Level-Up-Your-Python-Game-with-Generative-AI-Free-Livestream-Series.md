@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Level Up Your Python Game with Generative AI: Free Livestream Series"
-description: "This announcement covers a free livestream series in October, led by Pamela Fox and Gwyneth Peña-Siguenza, focusing on Python development and generative AI techniques. The sessions will delve into building AI-powered applications, leveraging Agents and the Model Context Protocol (MCP), and will include live coding, real-world demos, and community participation via GitHub Codespaces and Discord."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Level Up Your Python Game with Generative AI: Free Livestream Series'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 23:03:37 +00:00
-permalink: "/2025-09-03-Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series.html"
-categories: ["AI", "Coding"]
-tags: ["Agents", "AI", "AI Discord", "Coding", "Community", "Community Event", "Generative AI", "GitHub Codespaces", "Learning Series", "Live Coding", "LLMs", "MCP", "Microsoft", "Multi Agent Workflows", "Python", "VS Code"]
-tags_normalized: ["agents", "ai", "ai discord", "coding", "community", "community event", "generative ai", "github codespaces", "learning series", "live coding", "llms", "mcp", "microsoft", "multi agent workflows", "python", "vs code"]
+permalink: /ai/community/Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series
+tags:
+- Agents
+- AI
+- AI Discord
+- Coding
+- Community
+- Community Event
+- Generative AI
+- GitHub Codespaces
+- Learning Series
+- Live Coding
+- LLMs
+- MCP
+- Microsoft
+- Multi Agent Workflows
+- Python
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 Lee_Stott announces a free October livestream series hosted by Pamela Fox and Gwyneth Peña-Siguenza, designed to help developers advance their Python and generative AI skills through interactive sessions.<!--excerpt_end-->
 
 # Level Up Your Python Game with Generative AI: Free Livestream Series

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Enhancing Htmx Confirmation Dialogs with SweetAlert for Better UX"
-description: "This post by Khalid Abuhakmeh demonstrates how to intercept Htmx confirmation events and replace browser-native confirm dialogs with SweetAlert modals. The technique can increase user confidence and improve experience around destructive operations in modern ASP.NET web apps."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Enhancing Htmx Confirmation Dialogs with SweetAlert for Better UX
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-20 00:00:00 +00:00
-permalink: "/2024-08-20-Enhancing-Htmx-Confirmation-Dialogs-with-SweetAlert-for-Better-UX.html"
-categories: ["Coding"]
-tags: ["ASP.NET", "Blogs", "Client Side Scripting", "Coding", "Confirmation Dialog", "Event Handling", "Evt.preventdefault", "Htmx", "JavaScript", "SweetAlert", "User Interaction", "Web UX"]
-tags_normalized: ["aspdotnet", "blogs", "client side scripting", "coding", "confirmation dialog", "event handling", "evtdotpreventdefault", "htmx", "javascript", "sweetalert", "user interaction", "web ux"]
+permalink: /coding/blogs/Enhancing-Htmx-Confirmation-Dialogs-with-SweetAlert-for-Better-UX
+tags:
+- ASP.NET
+- Blogs
+- Client Side Scripting
+- Coding
+- Confirmation Dialog
+- Event Handling
+- Evt.preventdefault
+- Htmx
+- JavaScript
+- SweetAlert
+- User Interaction
+- Web UX
+section_names:
+- coding
 ---
-
 Khalid Abuhakmeh explains how to enhance destructive operation confirmations in web apps by intercepting Htmx events and displaying user-friendly SweetAlert dialogs instead of native browser confirms.<!--excerpt_end-->
 
 # Confirmation Dialogs with Htmx and SweetAlert

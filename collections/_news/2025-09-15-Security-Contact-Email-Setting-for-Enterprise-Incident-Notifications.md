@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Security Contact Email Setting for Enterprise Incident Notifications"
-description: "This short announcement details a new feature for GitHub enterprise admins: the ability to specify a dedicated contact email for security-related notifications. By setting this optional field in the profile settings, organizations can better direct incident alerts and improve internal incident response processes."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-14-security-contact-for-security-notification-emails-is-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Security Contact Email Setting for Enterprise Incident Notifications
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-14-security-contact-for-security-notification-emails-is-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-15 13:00:02 +00:00
-permalink: "/2025-09-15-Security-Contact-Email-Setting-for-Enterprise-Incident-Notifications.html"
-categories: ["Security"]
-tags: ["Admin Tools", "Enterprise Administration", "Enterprise Management Tools", "GitHub", "Improvement", "Incident Response", "News", "Notification Management", "Platform Governance", "Profile Settings", "Security", "Security Alerts", "Security Notifications", "Security Practices"]
-tags_normalized: ["admin tools", "enterprise administration", "enterprise management tools", "github", "improvement", "incident response", "news", "notification management", "platform governance", "profile settings", "security", "security alerts", "security notifications", "security practices"]
+permalink: /security/news/Security-Contact-Email-Setting-for-Enterprise-Incident-Notifications
+tags:
+- Admin Tools
+- Enterprise Administration
+- Enterprise Management Tools
+- GitHub
+- Improvement
+- Incident Response
+- News
+- Notification Management
+- Platform Governance
+- Profile Settings
+- Security
+- Security Alerts
+- Security Notifications
+- Security Practices
+section_names:
+- security
 ---
-
 Allison shares that GitHub enterprise admins can now configure a dedicated contact email for security incident notifications, helping organizations streamline their response workflows.<!--excerpt_end-->
 
 # Security Contact Email Setting for Enterprise Incident Notifications

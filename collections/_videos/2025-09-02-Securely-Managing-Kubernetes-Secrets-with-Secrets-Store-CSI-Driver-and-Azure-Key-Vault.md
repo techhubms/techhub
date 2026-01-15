@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault"
-description: "This episode introduces the Secrets Store CSI Driver for Kubernetes and demonstrates how to securely externalize secrets management using solutions like Azure Key Vault. The walkthrough covers reasons for moving beyond native Kubernetes Secret objects, best practices for secret consumption by workloads, real-world developer scenarios, and the advantages of runtime secret injection. The presenters also highlight zero-touch rotation and modern compliance, with demos showing practical usage in Kubernetes and links to further resources."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=O1nx8mve5RY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=O1nx8mve5RY
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-02 16:39:25 +00:00
-permalink: "/2025-09-02-Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Key Vault", "Cloud Computing", "Cloud Security", "Compliance", "Container Security", "Dev", "Development", "DevOps", "External Secrets", "Kubernetes", "Kubernetes SIG Auth", "Microsoft", "Microsoft Azure", "Secret Management", "Secrets Rotation", "Secrets Store CSI Driver", "Security", "Tech", "Technology", "Videos"]
-tags_normalized: ["azure", "azure key vault", "cloud computing", "cloud security", "compliance", "container security", "dev", "development", "devops", "external secrets", "kubernetes", "kubernetes sig auth", "microsoft", "microsoft azure", "secret management", "secrets rotation", "secrets store csi driver", "security", "tech", "technology", "videos"]
+permalink: /azure/videos/Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault
+tags:
+- Azure
+- Azure Key Vault
+- Cloud Computing
+- Cloud Security
+- Compliance
+- Container Security
+- Dev
+- Development
+- DevOps
+- External Secrets
+- Kubernetes
+- Kubernetes SIG Auth
+- Microsoft
+- Microsoft Azure
+- Secret Management
+- Secrets Rotation
+- Secrets Store CSI Driver
+- Security
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Developer presents a walkthrough on securely managing Kubernetes secrets with the Secrets Store CSI Driver, featuring Anish and Ben discussing Azure Key Vault integrations and real-world DevOps security scenarios.<!--excerpt_end-->
 
 {% youtube O1nx8mve5RY %}

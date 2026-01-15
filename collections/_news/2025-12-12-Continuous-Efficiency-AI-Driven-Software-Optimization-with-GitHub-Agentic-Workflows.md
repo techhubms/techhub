@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows"
-description: "This in-depth article explores the emerging practice of Continuous Efficiency, where AI-enabled tools like agentic workflows and LLM-powered automation optimize software for sustainability and performance. It covers how GitHub Next and GitHub Sustainability teams are piloting open-source solutions for automated code improvements, natural language rule authoring, and green software standards, with practical case studies and technical implementation details relevant for developers and engineering teams."
-author: "Paull Young"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows'
+author: Paull Young
+canonical_url: https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-12 20:43:37 +00:00
-permalink: "/2025-12-12-Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI Automation", "CI/CD", "Code Optimization", "Code Quality", "Coding", "Continuous Efficiency", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Next", "Green Software", "LLM", "Natural Language Programming", "News", "News & Insights", "Open Source", "Performance Engineering", "Policy", "Proactive Engineering", "Software Sustainability", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai automation", "cislashcd", "code optimization", "code quality", "coding", "continuous efficiency", "devops", "devops automation", "github actions", "github next", "green software", "llm", "natural language programming", "news", "news and insights", "open source", "performance engineering", "policy", "proactive engineering", "software sustainability", "workflow automation"]
+permalink: /ai/news/Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows
+tags:
+- Agentic Workflows
+- AI
+- AI Automation
+- CI/CD
+- Code Optimization
+- Code Quality
+- Coding
+- Continuous Efficiency
+- DevOps
+- DevOps Automation
+- GitHub Actions
+- GitHub Next
+- Green Software
+- LLM
+- Natural Language Programming
+- News
+- News & Insights
+- Open Source
+- Performance Engineering
+- Policy
+- Proactive Engineering
+- Software Sustainability
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Paull Young examines how the GitHub Next and Sustainability teams are shaping the future of software optimization through AI-driven Continuous Efficiency, detailing the use of agentic workflows and collaborative automation for greener, higher-performing codebases.<!--excerpt_end-->
 
 # Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows

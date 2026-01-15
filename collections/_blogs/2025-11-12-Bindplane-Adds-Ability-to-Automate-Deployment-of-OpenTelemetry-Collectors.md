@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Bindplane Adds Ability to Automate Deployment of OpenTelemetry Collectors"
-description: "This article, authored by Mike Vizard, discusses Bindplane’s new capabilities for orchestrating and automating large-scale deployments of OpenTelemetry collectors via Blueprints and Fleets. The platform upgrades aim to help DevOps teams streamline telemetry pipeline management and enhance observability. The piece explores challenges in observability, the shift from legacy monitoring, and anticipates future integration of AI in IT monitoring."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Bindplane Adds Ability to Automate Deployment of OpenTelemetry Collectors
+author: Mike Vizard
+canonical_url: https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-12 13:21:21 +00:00
-permalink: "/2025-11-12-Bindplane-Adds-Ability-to-Automate-Deployment-of-OpenTelemetry-Collectors.html"
-categories: ["DevOps"]
-tags: ["AI", "AI in Observability", "AI Powered Monitoring", "Application Instrumentation", "Automation", "Bindplane", "Blogs", "Blueprints", "DevOps", "DevOps Automation", "Fleets", "IT Monitoring", "Large Scale Telemetry", "LLM Observability", "Monitoring", "Observability", "Observability Convergence", "Observability Platform", "OpenTelemetry", "OpenTelemetry Management", "Pipeline Management", "Scalability", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry At Scale", "Telemetry Automation", "Telemetry Management", "Telemetry Orchestration"]
-tags_normalized: ["ai", "ai in observability", "ai powered monitoring", "application instrumentation", "automation", "bindplane", "blogs", "blueprints", "devops", "devops automation", "fleets", "it monitoring", "large scale telemetry", "llm observability", "monitoring", "observability", "observability convergence", "observability platform", "opentelemetry", "opentelemetry management", "pipeline management", "scalability", "social facebook", "social linkedin", "social x", "telemetry at scale", "telemetry automation", "telemetry management", "telemetry orchestration"]
+permalink: /devops/blogs/Bindplane-Adds-Ability-to-Automate-Deployment-of-OpenTelemetry-Collectors
+tags:
+- AI
+- AI in Observability
+- AI Powered Monitoring
+- Application Instrumentation
+- Automation
+- Bindplane
+- Blogs
+- Blueprints
+- DevOps
+- DevOps Automation
+- Fleets
+- IT Monitoring
+- Large Scale Telemetry
+- LLM Observability
+- Monitoring
+- Observability
+- Observability Convergence
+- Observability Platform
+- OpenTelemetry
+- OpenTelemetry Management
+- Pipeline Management
+- Scalability
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry At Scale
+- Telemetry Automation
+- Telemetry Management
+- Telemetry Orchestration
+section_names:
+- devops
 ---
-
 Mike Vizard explains how Bindplane's new Blueprints and Fleets features enable DevOps teams to streamline large-scale OpenTelemetry collector deployments, improving telemetry pipeline management and observability.<!--excerpt_end-->
 
 # Bindplane Adds Ability to Automate Deployment of OpenTelemetry Collectors

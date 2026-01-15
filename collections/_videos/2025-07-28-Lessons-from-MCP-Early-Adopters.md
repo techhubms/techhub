@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Lessons from MCP Early Adopters"
-description: "This episode explores real-world applications of the Model Context Protocol (MCP) in diverse sectors like enterprise support, healthcare, finance, and browser automation. It highlights hands-on case studies, practical projects, and insights about building MCP servers in Python, Java, and C# to enhance reliability, security, and efficiency."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jds7dSmNptE"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Lessons from MCP Early Adopters
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=jds7dSmNptE
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:14 +00:00
-permalink: "/2025-07-28-Lessons-from-MCP-Early-Adopters.html"
-categories: ["AI"]
-tags: ["AI", "Browser Automation", "C#", "Dev Days", "Enterprise Support", "Finance", "Healthcare", "Java", "MCP", "MCP Servers", "Multi Model Orchestration", "Production Systems", "Prompt Management", "Python", "Videos"]
-tags_normalized: ["ai", "browser automation", "csharp", "dev days", "enterprise support", "finance", "healthcare", "java", "mcp", "mcp servers", "multi model orchestration", "production systems", "prompt management", "python", "videos"]
+permalink: /ai/videos/Lessons-from-MCP-Early-Adopters
+tags:
+- AI
+- Browser Automation
+- C#
+- Dev Days
+- Enterprise Support
+- Finance
+- Healthcare
+- Java
+- MCP
+- MCP Servers
+- Multi Model Orchestration
+- Production Systems
+- Prompt Management
+- Python
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Microsoft Developer, this episode examines lessons from early MCP adopters, offering practical case studies and hands-on projects highlighting how the Model Context Protocol is being implemented across multiple industries.<!--excerpt_end-->
 
 {% youtube jds7dSmNptE %}

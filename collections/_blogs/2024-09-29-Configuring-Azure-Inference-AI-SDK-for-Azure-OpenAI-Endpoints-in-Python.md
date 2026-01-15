@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Configuring Azure Inference AI SDK for Azure OpenAI Endpoints in Python"
-description: "This concise technical tip by Rob Bos demonstrates how to configure the Azure Inference AI SDK in Python to use Azure OpenAI endpoints instead of the GitHub Models endpoint. The post addresses differences in authentication, highlights code configuration details, and provides a working code sample for connecting to both GitHub and Azure OpenAI endpoints using environment variables for credentials."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/09/29/GitHub-Models-API"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: Configuring Azure Inference AI SDK for Azure OpenAI Endpoints in Python
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2024/09/29/GitHub-Models-API
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-09-29 00:00:00 +00:00
-permalink: "/2024-09-29-Configuring-Azure-Inference-AI-SDK-for-Azure-OpenAI-Endpoints-in-Python.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Integration", "Authentication", "Azure", "Azure Inference AI SDK", "Azure OpenAI", "AzureKeyCredential", "Blogs", "ChatCompletionsClient", "Cloud Development", "Coding", "Environment Variables", "GitHub Models", "GPT 4o", "Python"]
-tags_normalized: ["ai", "api integration", "authentication", "azure", "azure inference ai sdk", "azure openai", "azurekeycredential", "blogs", "chatcompletionsclient", "cloud development", "coding", "environment variables", "github models", "gpt 4o", "python"]
+permalink: /ai/blogs/Configuring-Azure-Inference-AI-SDK-for-Azure-OpenAI-Endpoints-in-Python
+tags:
+- AI
+- API Integration
+- Authentication
+- Azure
+- Azure Inference AI SDK
+- Azure OpenAI
+- AzureKeyCredential
+- Blogs
+- ChatCompletionsClient
+- Cloud Development
+- Coding
+- Environment Variables
+- GitHub Models
+- GPT 4o
+- Python
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Rob Bos provides a helpful guide on using the Azure Inference AI SDK in Python to connect to Azure OpenAI endpoints, including code examples for credential configuration.<!--excerpt_end-->
 
 # Configuring the Azure Inference AI SDK for Azure OpenAI Endpoints in Python

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management"
-description: "This comprehensive piece by dbandaru explores the rapid evolution and integration of Azure SRE Agent with leading observability platforms like Datadog, New Relic, and Dynatrace via Model Context Protocol (MCP) Servers. It delves into technical partnerships, showcases use cases for operational excellence, and highlights future plans for agent-to-agent collaboration with PagerDuty and NeuBird—pushing the boundaries of automated remediation and multi-cloud reliability across hybrid environments."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management'
+author: dbandaru
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-24 23:34:13 +00:00
-permalink: "/2025-11-24-Azure-SRE-Agent-Enhancing-Observability-and-Multi-Cloud-Incident-Management.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Azure Monitor", "Azure SRE Agent", "Community", "Cross Platform", "Datadog", "DevOps", "Diagnostics", "Dynatrace", "Hybrid Cloud", "Incident Management", "MCP", "MCP Server", "Multi Cloud", "NeuBird", "New Relic", "Observability", "Operational Excellence", "PagerDuty", "Remediation"]
-tags_normalized: ["automation", "azure", "azure monitor", "azure sre agent", "community", "cross platform", "datadog", "devops", "diagnostics", "dynatrace", "hybrid cloud", "incident management", "mcp", "mcp server", "multi cloud", "neubird", "new relic", "observability", "operational excellence", "pagerduty", "remediation"]
+permalink: /azure/community/Azure-SRE-Agent-Enhancing-Observability-and-Multi-Cloud-Incident-Management
+tags:
+- Automation
+- Azure
+- Azure Monitor
+- Azure SRE Agent
+- Community
+- Cross Platform
+- Datadog
+- DevOps
+- Diagnostics
+- Dynatrace
+- Hybrid Cloud
+- Incident Management
+- MCP
+- MCP Server
+- Multi Cloud
+- NeuBird
+- New Relic
+- Observability
+- Operational Excellence
+- PagerDuty
+- Remediation
+section_names:
+- azure
+- devops
 ---
-
 dbandaru presents an in-depth look at Azure SRE Agent, detailing its integrations with Datadog, New Relic, Dynatrace, and plans for multi-agent collaboration to strengthen observability and incident management across hybrid and multi-cloud environments.<!--excerpt_end-->
 
 # Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management

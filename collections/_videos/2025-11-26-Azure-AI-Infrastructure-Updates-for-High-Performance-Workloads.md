@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure AI Infrastructure Updates for High-Performance Workloads"
-description: "This session from Microsoft Ignite 2025 focuses on recent advancements in Azure's AI infrastructure that enable both frontier and enterprise workloads. Covering silicon-to-systems optimization, hardware-software codesign, datacenter technologies, and security improvements, it highlights platforms like NVIDIA Grace Blackwell Superchips and Quantum-2 InfiniBand for cutting-edge AI performance. The session also discusses ND GB200/GB300 and NC H100/NC RTX Blackwell VM families, demonstrating exascale throughput and specialized enterprise inferencing capabilities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MWid8VX6PZ4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Azure AI Infrastructure Updates for High-Performance Workloads
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=MWid8VX6PZ4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 21:27:24 +00:00
-permalink: "/2025-11-26-Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Mode", "AI", "Anthropic Models", "Azure", "Azure AI Infra", "Azure AI Infra Updates To Power Frontier And Enterprise Workloads | BRK179", "BRK179", "Datacenter Cooling", "English (us)", "Enterprise Inferencing", "F5n1", "Hardware Software Codesign", "Ignite", "LLAMA 70B", "Microsoft", "Microsoft Ignite", "Migrate And Modernize Your Estate", "Ms Ignite", "Msft Ignite", "NC H100 VMs", "NC RTX Blackwell", "ND GB200 VMs", "ND GB300 VMs", "NVIDIA Grace Blackwell", "Power Optimization", "Quantum 2 InfiniBand", "Technical", "Videos"]
-tags_normalized: ["agent mode", "ai", "anthropic models", "azure", "azure ai infra", "azure ai infra updates to power frontier and enterprise workloads pipe brk179", "brk179", "datacenter cooling", "english us", "enterprise inferencing", "f5n1", "hardware software codesign", "ignite", "llama 70b", "microsoft", "microsoft ignite", "migrate and modernize your estate", "ms ignite", "msft ignite", "nc h100 vms", "nc rtx blackwell", "nd gb200 vms", "nd gb300 vms", "nvidia grace blackwell", "power optimization", "quantum 2 infiniband", "technical", "videos"]
+permalink: /ai/videos/Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads
+tags:
+- Agent Mode
+- AI
+- Anthropic Models
+- Azure
+- Azure AI Infra
+- Azure AI Infra Updates To Power Frontier And Enterprise Workloads | BRK179
+- BRK179
+- Datacenter Cooling
+- English (us)
+- Enterprise Inferencing
+- F5n1
+- Hardware Software Codesign
+- Ignite
+- LLAMA 70B
+- Microsoft
+- Microsoft Ignite
+- Migrate And Modernize Your Estate
+- Ms Ignite
+- Msft Ignite
+- NC H100 VMs
+- NC RTX Blackwell
+- ND GB200 VMs
+- ND GB300 VMs
+- NVIDIA Grace Blackwell
+- Power Optimization
+- Quantum 2 InfiniBand
+- Technical
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a breakdown of Azure's latest AI infrastructure at Ignite 2025, detailing performance improvements and new hardware platforms for high-scale workloads.<!--excerpt_end-->
 
 {% youtube MWid8VX6PZ4 %}

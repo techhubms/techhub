@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Announcing AI Shell Preview 2: Enhanced Azure PowerShell Integration and More"
-description: "The PowerShell Team introduces AI Shell Preview 2 with improved Azure PowerShell support, third-party OpenAI model compatibility, enhanced error handling, a Bicep template for rapid Azure OpenAI deployment, and various bug fixes. The update focuses on streamlined AI-powered CLI experiences for developers and IT professionals."
-author: "Steven Bucher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/ai-shell-preview-2/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: 'Announcing AI Shell Preview 2: Enhanced Azure PowerShell Integration and More'
+author: Steven Bucher
+canonical_url: https://devblogs.microsoft.com/powershell/ai-shell-preview-2/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-28 20:49:30 +00:00
-permalink: "/2025-02-28-Announcing-AI-Shell-Preview-2-Enhanced-Azure-PowerShell-Integration-and-More.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Shell", "Automation", "Azure", "Azure OpenAI", "Azure PowerShell", "Bicep", "CLI Tools", "Coding", "Copilot in Azure", "Deployment", "Developer Tools", "DevOps", "Error Handling", "Microsoft", "News", "OllamaSharp", "OpenAI Compatible Models", "PowerShell", "Windows Terminal"]
-tags_normalized: ["ai", "ai shell", "automation", "azure", "azure openai", "azure powershell", "bicep", "cli tools", "coding", "copilot in azure", "deployment", "developer tools", "devops", "error handling", "microsoft", "news", "ollamasharp", "openai compatible models", "powershell", "windows terminal"]
+permalink: /ai/news/Announcing-AI-Shell-Preview-2-Enhanced-Azure-PowerShell-Integration-and-More
+tags:
+- AI
+- AI Shell
+- Automation
+- Azure
+- Azure OpenAI
+- Azure PowerShell
+- Bicep
+- CLI Tools
+- Coding
+- Copilot in Azure
+- Deployment
+- Developer Tools
+- DevOps
+- Error Handling
+- Microsoft
+- News
+- OllamaSharp
+- OpenAI Compatible Models
+- PowerShell
+- Windows Terminal
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 In this update, Steven Bucher and the AI Shell Team share details on AI Shell Preview 2, including enhanced Azure PowerShell support, improved third-party AI model integrations, deployment tools, and native error handling.<!--excerpt_end-->
 
 ## Announcing AI Shell Preview 2

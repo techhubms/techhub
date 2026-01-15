@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads"
-description: "This article, written by Goutham_Bandapati, explains how Azure Capacity Reservations and Reserved Instances work together to ensure compute availability for mission-critical workloads. It covers the distinction between these two Azure features, the scenarios where each is appropriate, and how combining both can deliver both resilience and cost efficiency in cloud architecture."
-author: "Goutham_Bandapati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads'
+author: Goutham_Bandapati
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-25 15:04:26 +00:00
-permalink: "/2025-08-25-Designing-for-Certainty-How-Azure-Capacity-Reservations-Safeguard-MissionCritical-Workloads.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Capacity Reservations", "Azure VM", "Capacity Planning", "Cloud Architecture", "Community", "Compute Availability", "DevOps", "FinOps", "High Availability", "Pay as You Go", "Reserved Instances", "Resilient Design", "Scale Sets", "SLA", "VM SKU", "Workload Placement", "Zonal Reservations"]
-tags_normalized: ["azure", "azure capacity reservations", "azure vm", "capacity planning", "cloud architecture", "community", "compute availability", "devops", "finops", "high availability", "pay as you go", "reserved instances", "resilient design", "scale sets", "sla", "vm sku", "workload placement", "zonal reservations"]
+permalink: /azure/community/Designing-for-Certainty-How-Azure-Capacity-Reservations-Safeguard-MissionCritical-Workloads
+tags:
+- Azure
+- Azure Capacity Reservations
+- Azure VM
+- Capacity Planning
+- Cloud Architecture
+- Community
+- Compute Availability
+- DevOps
+- FinOps
+- High Availability
+- Pay as You Go
+- Reserved Instances
+- Resilient Design
+- Scale Sets
+- SLA
+- VM SKU
+- Workload Placement
+- Zonal Reservations
+section_names:
+- azure
+- devops
 ---
-
 Goutham_Bandapati explores strategic use of Azure Capacity Reservations and Reserved Instances, detailing how they can be combined to reliably support mission-critical workloads while optimizing costs.<!--excerpt_end-->
 
 # Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads

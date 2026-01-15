@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building a Real-Time Voice-Powered AI Sales Coach Using Azure Voice Live API"
-description: "This article details how Azure's Voice Live API enables developers to create advanced, real-time voice and avatar AI applications, illustrated by the AI Sales Coach demo. It provides actionable technical guidance for configuring audio, avatars, and agent intelligence, and shares architecture and feedback strategies for production-grade voice AI solutions."
-author: "Aymen Furter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/from-lab-to-live-a-blueprint-for-a-voice-powered-ai-sales-coach/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Building a Real-Time Voice-Powered AI Sales Coach Using Azure Voice Live API
+author: Aymen Furter
+canonical_url: https://devblogs.microsoft.com/all-things-azure/from-lab-to-live-a-blueprint-for-a-voice-powered-ai-sales-coach/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-10-03 06:47:00 +00:00
-permalink: "/2025-10-03-Building-a-Real-Time-Voice-Powered-AI-Sales-Coach-Using-Azure-Voice-Live-API.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Sales Coach", "All Things Azure", "Audio Processing", "Avatar Simulation", "Azure", "Azure AI", "Azure Developer CLI", "Azure Voice Live API", "C#", "Coding", "Feedback System", "LLM as Judge", "Model Integration", "News", "Prompt Engineering", "Real Time Speech", "Session Configuration", "Speech To Speech", "Voice AI"]
-tags_normalized: ["ai", "ai sales coach", "all things azure", "audio processing", "avatar simulation", "azure", "azure ai", "azure developer cli", "azure voice live api", "csharp", "coding", "feedback system", "llm as judge", "model integration", "news", "prompt engineering", "real time speech", "session configuration", "speech to speech", "voice ai"]
+permalink: /ai/news/Building-a-Real-Time-Voice-Powered-AI-Sales-Coach-Using-Azure-Voice-Live-API
+tags:
+- AI
+- AI Sales Coach
+- All Things Azure
+- Audio Processing
+- Avatar Simulation
+- Azure
+- Azure AI
+- Azure Developer CLI
+- Azure Voice Live API
+- C#
+- Coding
+- Feedback System
+- LLM as Judge
+- Model Integration
+- News
+- Prompt Engineering
+- Real Time Speech
+- Session Configuration
+- Speech To Speech
+- Voice AI
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Aymen Furter introduces a robust blueprint for a voice-powered AI Sales Coach using Azure's new Voice Live API, explaining the technical architecture and how developers can implement a real-time, avatar-driven training solution.<!--excerpt_end-->
 
 # Building a Real-Time Voice-Powered AI Sales Coach Using Azure Voice Live API

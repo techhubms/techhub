@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration"
-description: "This news article explores the release of SQL Server Integration Services (SSIS) 2025, focusing on its modernized security, integration with the SQL Server 2025 engine, and enhanced connectivity with Microsoft Fabric. Key topics include enterprise-grade security improvements, authentication via Microsoft Entra ID, integration workflows targeting Fabric Data Warehouse, migration paths for existing SSIS investments, support for Oracle databases, and advanced change data capture capabilities in Data Factory within Microsoft Fabric. The piece is highly technical and extends beyond simple product updates, providing actionable insight for practitioners managing data integration pipelines, hybrid analytics, and cloud migration."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 13:32:43 +00:00
-permalink: "/2025-12-10-The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Data Factory", "Change Data Capture", "Copy Job", "Data Factory", "Data Integration", "Data Migration", "ETL", "Fabric Data Warehouse", "Hybrid Cloud", "Lakehouse", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Oracle Connector", "Private Preview", "Security", "SQL Server", "SQL Server Integration Services", "SSIS", "T SQL COPY INTO"]
-tags_normalized: ["azure", "azure data factory", "change data capture", "copy job", "data factory", "data integration", "data migration", "etl", "fabric data warehouse", "hybrid cloud", "lakehouse", "microsoft entra id", "microsoft fabric", "ml", "news", "oracle connector", "private preview", "security", "sql server", "sql server integration services", "ssis", "t sql copy into"]
+permalink: /ml/news/The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration
+tags:
+- Azure
+- Azure Data Factory
+- Change Data Capture
+- Copy Job
+- Data Factory
+- Data Integration
+- Data Migration
+- ETL
+- Fabric Data Warehouse
+- Hybrid Cloud
+- Lakehouse
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- Oracle Connector
+- Private Preview
+- Security
+- SQL Server
+- SQL Server Integration Services
+- SSIS
+- T SQL COPY INTO
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog details the major advancements and integration features of SSIS 2025 as it becomes generally available, authored by the official product team. The article covers data security, connections to Microsoft Fabric, and technical migration strategies for enterprise users.<!--excerpt_end-->
 
 # The Evolution of SQL Server Integration Services (SSIS): SSIS 2025 (Generally Available)

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enterprise Pull Request Metrics Now Included in GitHub Copilot Usage Metrics API"
-description: "This update introduces enterprise-level activity metrics for pull requests, including creation and review activity for both users and GitHub Copilot, available via the Copilot Usage Metrics API. It explains how to enable the metrics, access permissions, and previews future enhancements to Copilot reporting."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-18-enterprise-level-pull-request-activity-metrics-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enterprise Pull Request Metrics Now Included in GitHub Copilot Usage Metrics API
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-18-enterprise-level-pull-request-activity-metrics-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 09:20:59 +00:00
-permalink: "/2025-12-18-Enterprise-Pull-Request-Metrics-Now-Included-in-GitHub-Copilot-Usage-Metrics-API.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Controls", "API Reporting", "Copilot", "Copilot API", "Copilot Usage Metrics", "Developer Productivity", "DevOps", "DevOps Metrics", "Enterprise Metrics", "GitHub Copilot", "GitHub Enterprise", "News", "Pull Request Analytics", "Pull Request Review"]
-tags_normalized: ["ai", "ai controls", "api reporting", "copilot", "copilot api", "copilot usage metrics", "developer productivity", "devops", "devops metrics", "enterprise metrics", "github copilot", "github enterprise", "news", "pull request analytics", "pull request review"]
+permalink: /github-copilot/news/Enterprise-Pull-Request-Metrics-Now-Included-in-GitHub-Copilot-Usage-Metrics-API
+tags:
+- AI
+- AI Controls
+- API Reporting
+- Copilot
+- Copilot API
+- Copilot Usage Metrics
+- Developer Productivity
+- DevOps
+- DevOps Metrics
+- Enterprise Metrics
+- GitHub Copilot
+- GitHub Enterprise
+- News
+- Pull Request Analytics
+- Pull Request Review
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison announces the addition of enterprise-level pull request activity metrics to the GitHub Copilot Usage Metrics API, providing new insights on Copilot's role in the development workflow.<!--excerpt_end-->
 
 # Enterprise Pull Request Metrics in Copilot Usage Metrics API (Public Preview)

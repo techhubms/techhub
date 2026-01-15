@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure DevOps with GitHub Repositories – Your path to Agentic AI"
-description: "Aaron Hallberg discusses how GitHub Copilot is evolving into an AI-powered teammate, transforming tasks like pull request feedback, bug fixing, and feature implementation. The article explores integration between Azure DevOps and GitHub Repositories to harness Copilot's agentic AI capabilities throughout the software development lifecycle."
-author: "Aaron Hallberg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Azure DevOps with GitHub Repositories – Your path to Agentic AI
+author: Aaron Hallberg
+canonical_url: https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-05-27 19:38:19 +00:00
-permalink: "/2025-05-27-Azure-DevOps-with-GitHub-Repositories-Your-path-to-Agentic-AI.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Assistant", "Azure", "Azure & Cloud", "Azure DevOps", "Bug Fixing", "DevOps", "DevOps Integration", "Feature Implementation", "GitHub Copilot", "GitHub Repositories", "News", "Pull Requests", "Software Development Lifecycle"]
-tags_normalized: ["agentic ai", "ai", "ai assistant", "azure", "azure and cloud", "azure devops", "bug fixing", "devops", "devops integration", "feature implementation", "github copilot", "github repositories", "news", "pull requests", "software development lifecycle"]
+permalink: /github-copilot/news/Azure-DevOps-with-GitHub-Repositories-Your-path-to-Agentic-AI
+tags:
+- Agentic AI
+- AI
+- AI Assistant
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- Bug Fixing
+- DevOps
+- DevOps Integration
+- Feature Implementation
+- GitHub Copilot
+- GitHub Repositories
+- News
+- Pull Requests
+- Software Development Lifecycle
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Aaron Hallberg outlines how GitHub Copilot’s agentic AI features, when integrated with Azure DevOps and GitHub Repositories, are reshaping key aspects of software development.<!--excerpt_end-->
 
 ## Overview

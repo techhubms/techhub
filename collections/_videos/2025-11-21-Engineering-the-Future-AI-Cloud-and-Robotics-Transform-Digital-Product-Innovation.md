@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Engineering the Future: AI, Cloud, and Robotics Transform Digital Product Innovation"
-description: "This Microsoft Ignite 2025 session explores how AI, cloud technologies, and robotics are fueling industrial engineering transformation. It details how Microsoft and partners like Autodesk leverage Azure, GitHub, and AI agents to accelerate design processes, optimize simulation, and automate digital workflows. Concrete use cases—including PLM modernization, autonomous systems, and ERP integration—illustrate scalable modernization strategies in manufacturing and engineering."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_kkIFY0G9FE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Engineering the Future: AI, Cloud, and Robotics Transform Digital Product Innovation'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_kkIFY0G9FE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:47:07 +00:00
-permalink: "/2025-11-21-Engineering-the-Future-AI-Cloud-and-Robotics-Transform-Digital-Product-Innovation.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "Autodesk", "Automation", "Azure", "Cloud Engineering", "Data Automation", "DevOps", "Digital Workflows", "Enterprise Modernization", "ERP Integration", "GitHub", "Industrial Innovation", "Manufacturing", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "PLM Modernization", "Product Lifecycle Management", "Robotics", "Simulation", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "autodesk", "automation", "azure", "cloud engineering", "data automation", "devops", "digital workflows", "enterprise modernization", "erp integration", "github", "industrial innovation", "manufacturing", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "plm modernization", "product lifecycle management", "robotics", "simulation", "videos"]
+permalink: /ai/videos/Engineering-the-Future-AI-Cloud-and-Robotics-Transform-Digital-Product-Innovation
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- Autodesk
+- Automation
+- Azure
+- Cloud Engineering
+- Data Automation
+- DevOps
+- Digital Workflows
+- Enterprise Modernization
+- ERP Integration
+- GitHub
+- Industrial Innovation
+- Manufacturing
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- PLM Modernization
+- Product Lifecycle Management
+- Robotics
+- Simulation
+- Videos
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Microsoft Events bring together experts including Simon Floyd, Dennis Goetting, Heather Kerrick, and Alfonso Rodriguez to showcase how AI, cloud, and robotics are driving digital engineering innovation at Microsoft Ignite 2025.<!--excerpt_end-->
 
 {% youtube _kkIFY0G9FE %}

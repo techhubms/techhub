@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Cross-Cloud Data Movement with Best-in-Class Connectivity in Fabric Data Factory"
-description: "This post showcases the latest innovations in Microsoft Fabric Data Factory, focusing on cross-cloud data movement, enterprise-grade connectivity, and secure, scalable data integration for modern analytics. It details new features such as Copy Job, VNet Gateway support, incremental copy reset, and enhanced integration with pipelines, designed to help organizations unify and govern their data estates efficiently across diverse environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/cross-cloud-data-movement-with-best-in-class-connectivity-whats-new-and-whats-next/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Cross-Cloud Data Movement with Best-in-Class Connectivity in Fabric Data Factory
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/cross-cloud-data-movement-with-best-in-class-connectivity-whats-new-and-whats-next/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 09:00:00 +00:00
-permalink: "/2025-09-29-Cross-Cloud-Data-Movement-with-Best-in-Class-Connectivity-in-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Change Data Capture", "Cloud Data Migration", "Connectors", "Copy Job", "Cross Cloud Integration", "Data Governance", "Data Integration", "Data Lakehouse", "Data Movement", "Data Pipelines", "Enterprise Connectivity", "ETL", "Fabric Data Factory", "Incremental Copy", "Microsoft Fabric", "ML", "News", "On Premises Integration", "OneLake", "SQL Database", "VNet Gateway"]
-tags_normalized: ["azure", "change data capture", "cloud data migration", "connectors", "copy job", "cross cloud integration", "data governance", "data integration", "data lakehouse", "data movement", "data pipelines", "enterprise connectivity", "etl", "fabric data factory", "incremental copy", "microsoft fabric", "ml", "news", "on premises integration", "onelake", "sql database", "vnet gateway"]
+permalink: /ml/news/Cross-Cloud-Data-Movement-with-Best-in-Class-Connectivity-in-Fabric-Data-Factory
+tags:
+- Azure
+- Change Data Capture
+- Cloud Data Migration
+- Connectors
+- Copy Job
+- Cross Cloud Integration
+- Data Governance
+- Data Integration
+- Data Lakehouse
+- Data Movement
+- Data Pipelines
+- Enterprise Connectivity
+- ETL
+- Fabric Data Factory
+- Incremental Copy
+- Microsoft Fabric
+- ML
+- News
+- On Premises Integration
+- OneLake
+- SQL Database
+- VNet Gateway
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog introduces major updates to Fabric Data Factory, highlighting new cross-cloud data movement and integration features. Learn from Microsoft's team how these advancements strengthen enterprise data strategies.<!--excerpt_end-->
 
 # Cross-Cloud Data Movement with Best-in-Class Connectivity in Fabric Data Factory

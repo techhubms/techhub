@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio"
-description: "This article introduces new GitHub Copilot-powered diagnostics features for .NET developers in Visual Studio. It covers enhancements in debugging, profiling, and performance analysis using AI-driven tools like context-aware breakpoint recommendations, LINQ analysis, exception resolution, and parallel stack summaries. Developers learn how Copilot seamlessly integrates with Visual Studio to streamline code troubleshooting and accelerate development."
-author: "Harshada Hole"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio
+author: Harshada Hole
+canonical_url: https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-20 17:05:00 +00:00
-permalink: "/2025-08-20-Copilot-Diagnostics-Toolset-Enhances-NET-Debugging-in-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Fundamentals", "AI", "AI Development", "Breakpoint Suggestions", "C#", "Coding", "Copilot", "CPU Usage", "Debugging", "Developer Productivity", "Diagnostics", "Exception Assistance", "GitHub Copilot", "IEnumerable Visualizer", "Instrumentation Tool", "LINQ", "Memory Allocation", "News", "Parallel Stacks", "Performance Analysis", "Profiling", "VS"]
-tags_normalized: ["dotnet", "dotnet fundamentals", "ai", "ai development", "breakpoint suggestions", "csharp", "coding", "copilot", "cpu usage", "debugging", "developer productivity", "diagnostics", "exception assistance", "github copilot", "ienumerable visualizer", "instrumentation tool", "linq", "memory allocation", "news", "parallel stacks", "performance analysis", "profiling", "vs"]
+permalink: /github-copilot/news/Copilot-Diagnostics-Toolset-Enhances-NET-Debugging-in-Visual-Studio
+tags:
+- .NET
+- .NET Fundamentals
+- AI
+- AI Development
+- Breakpoint Suggestions
+- C#
+- Coding
+- Copilot
+- CPU Usage
+- Debugging
+- Developer Productivity
+- Diagnostics
+- Exception Assistance
+- GitHub Copilot
+- IEnumerable Visualizer
+- Instrumentation Tool
+- LINQ
+- Memory Allocation
+- News
+- Parallel Stacks
+- Performance Analysis
+- Profiling
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Harshada Hole showcases the Copilot Diagnostics toolset, which leverages GitHub Copilot within Visual Studio to assist .NET developers with smarter debugging, profiling, and code analysis.<!--excerpt_end-->
 
 # Copilot Diagnostics Toolset for .NET in Visual Studio

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Introducing Support for Workspace Identity Authentication in Fabric Connectors"
-description: "This announcement highlights new and expanded support for workspace identity authentication within Microsoft Fabric connectors, enabling modern, secure, and centralized credential management for data pipelines, semantic models, and Dataflows Gen2. It explains the underlying use of Microsoft Entra ID, details which connectors are supported, and provides step-by-step instructions on configuring access for Azure Blob Storage. The update improves security by removing default contributor roles and supports enterprise-grade data access controls."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Support for Workspace Identity Authentication in Fabric Connectors
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 10:00:00 +00:00
-permalink: "/2025-08-11-Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Authentication", "Azure", "Azure Active Directory", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Synapse Analytics", "Credential Management", "Data Governance", "Data Pipeline", "Data Security", "Dataflows Gen2", "Fabric Connectors", "Identity Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Role Based Access Control", "Secure Data Access", "Security", "Semantic Models", "Service Principal", "Workspace Identity"]
-tags_normalized: ["authentication", "azure", "azure active directory", "azure blob storage", "azure data lake storage", "azure synapse analytics", "credential management", "data governance", "data pipeline", "data security", "dataflows gen2", "fabric connectors", "identity management", "microsoft entra id", "microsoft fabric", "ml", "news", "role based access control", "secure data access", "security", "semantic models", "service principal", "workspace identity"]
+permalink: /ml/news/Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors
+tags:
+- Authentication
+- Azure
+- Azure Active Directory
+- Azure Blob Storage
+- Azure Data Lake Storage
+- Azure Synapse Analytics
+- Credential Management
+- Data Governance
+- Data Pipeline
+- Data Security
+- Dataflows Gen2
+- Fabric Connectors
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- Role Based Access Control
+- Secure Data Access
+- Security
+- Semantic Models
+- Service Principal
+- Workspace Identity
+section_names:
+- azure
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog team, including co-author Meenal Srivastva, announces expanded workspace identity authentication support in Microsoft Fabric connectors, detailing security improvements and implementation steps.<!--excerpt_end-->
 
 # Introducing Support for Workspace Identity Authentication in Fabric Connectors

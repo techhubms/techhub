@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automate Your Project with GitHub Models in Actions: AI Integration for Workflows"
-description: "This article by Kevin Lewis details how to integrate AI features using GitHub Models directly in GitHub Actions workflows. It explains permissions setup and provides three practical workflow examples: automating bug report triage, generating release notes, and weekly issue summarization and prioritization, all leveraging AI models for enhanced automation."
-author: "Kevin Lewis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/automate-your-project-with-github-models-in-actions/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Automate Your Project with GitHub Models in Actions: AI Integration for Workflows'
+author: Kevin Lewis
+canonical_url: https://github.blog/ai-and-ml/generative-ai/automate-your-project-with-github-models-in-actions/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-04 16:00:00 +00:00
-permalink: "/2025-08-04-Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Inference Action", "AI Integration", "Automation", "CLI", "DevOps", "Generative AI", "Gh Models Extension", "GitHub Actions", "GitHub Copilot", "GitHub Models", "Issue Triage", "News", "Permissions", "Prompt Engineering", "Pull Requests", "Release Notes Automation", "Summarization", "Workflow Automation"]
-tags_normalized: ["ai", "ai and ml", "ai inference action", "ai integration", "automation", "cli", "devops", "generative ai", "gh models extension", "github actions", "github copilot", "github models", "issue triage", "news", "permissions", "prompt engineering", "pull requests", "release notes automation", "summarization", "workflow automation"]
+permalink: /github-copilot/news/Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows
+tags:
+- AI
+- AI & ML
+- AI Inference Action
+- AI Integration
+- Automation
+- CLI
+- DevOps
+- Generative AI
+- Gh Models Extension
+- GitHub Actions
+- GitHub Copilot
+- GitHub Models
+- Issue Triage
+- News
+- Permissions
+- Prompt Engineering
+- Pull Requests
+- Release Notes Automation
+- Summarization
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Authored by Kevin Lewis, this article explores practical ways to automate your GitHub Actions workflows using GitHub Models. It guides readers through permissions and shows AI-powered automation for triaging issues, summarizing pull requests, and more.<!--excerpt_end-->
 
 # Automate Your Project with GitHub Models in Actions
@@ -95,8 +114,8 @@ jobs:
     system-prompt: |
       Given a bug report title and text for an application, return 'pass' if there is enough information to reliably reproduce the issue...
     prompt: |
-      Title: {% raw %}${{ steps.issue.outputs.title }}{% endraw %}
-      Body: {% raw %}${{ steps.issue.outputs.body }}{% endraw %}
+      Title: ${{ steps.issue.outputs.title }}
+      Body: ${{ steps.issue.outputs.body }}
 ```
 
 1. If the AI response is not 'pass', post a comment asking for missing details.
@@ -158,13 +177,13 @@ jobs:
 - name: Install gh-models extension
   run: gh extension install https://github.com/github/gh-models
   env:
-    GH_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 1. Summarize the PR using an AI model and append summary to release issue:
 
 ```bash
-PR_NUMBER="{% raw %}${{ github.event.pull_request.number }}{% endraw %}"
+PR_NUMBER="${{ github.event.pull_request.number }}"
 
 # Fetch PR data
 
@@ -221,14 +240,14 @@ jobs:
       - name: Install gh-models extension
         run: gh extension install https://github.com/github/gh-models
         env:
-          GH_TOKEN: {% raw %}${{ github.token }}{% endraw %}
+          GH_TOKEN: ${{ github.token }}
 ```
 
 1. Gather open issues from the past week and summarize them with a prompt file:
 
 ```bash
 LAST_WEEK=$(date -d "7 days ago" +"%Y-%m-%d")
-gh search issues "created:>$LAST_WEEK" --state=open --json title,body,url --repo {% raw %}${{ github.repository }}{% endraw %} > issues.json
+gh search issues "created:>$LAST_WEEK" --state=open --json title,body,url --repo ${{ github.repository }} > issues.json
 cat issues.json | gh models run --file prompts/issue-summary.prompt.yml > summary.md
 ```
 
@@ -236,7 +255,6 @@ The prompt file (`prompts/issue-summary.prompt.yml`):
 
 ```yaml
 name: Issue summarizer
-description: Summarizes weekly issues
 model: openai/gpt-4.1
 messages:
   - role: system

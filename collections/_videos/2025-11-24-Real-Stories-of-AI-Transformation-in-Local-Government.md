@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Real Stories of AI Transformation in Local Government"
-description: "This Microsoft Ignite 2025 session presents firsthand accounts from city leaders detailing their digital transformation journeys with Microsoft technologies. The video highlights practical AI adoption, data modernization, citizen service improvements, security, and equitable access issues in government. Attendees gain technical perspectives, lessons learned, and strategies for responsible and scalable AI implementation in public sector infrastructure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WgBC8M3ixt8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Real Stories of AI Transformation in Local Government
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=WgBC8M3ixt8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:27:45 +00:00
-permalink: "/2025-11-24-Real-Stories-of-AI-Transformation-in-Local-Government.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Adoption", "Azure", "Citizen Services", "City Infrastructure", "Copilotandagentsatwork", "Cybersecurity", "Data Modernization", "Data Sovereignty", "Digital Transformation", "Equitable Access", "Government Technology", "Microsoft Ignite", "MSIgnite", "Public Sector", "Responsible AI", "Scalable AI", "Security", "Videos", "Workforce Optimization"]
-tags_normalized: ["ai", "ai adoption", "azure", "citizen services", "city infrastructure", "copilotandagentsatwork", "cybersecurity", "data modernization", "data sovereignty", "digital transformation", "equitable access", "government technology", "microsoft ignite", "msignite", "public sector", "responsible ai", "scalable ai", "security", "videos", "workforce optimization"]
+permalink: /ai/videos/Real-Stories-of-AI-Transformation-in-Local-Government
+tags:
+- AI
+- AI Adoption
+- Azure
+- Citizen Services
+- City Infrastructure
+- Copilotandagentsatwork
+- Cybersecurity
+- Data Modernization
+- Data Sovereignty
+- Digital Transformation
+- Equitable Access
+- Government Technology
+- Microsoft Ignite
+- MSIgnite
+- Public Sector
+- Responsible AI
+- Scalable AI
+- Security
+- Videos
+- Workforce Optimization
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events brings together government and city leaders to share real-life experiences of digital transformation, focusing on AI, data, and citizen services. Speakers include Brett Howard, Michael Makstman, and Angel Smith.<!--excerpt_end-->
 
 {% youtube WgBC8M3ixt8 %}

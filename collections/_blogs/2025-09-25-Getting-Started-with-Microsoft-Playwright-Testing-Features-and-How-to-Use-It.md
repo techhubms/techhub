@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Getting Started with Microsoft Playwright Testing Features and How to Use It"
-description: "This post introduces Microsoft Playwright Testing, an open-source end-to-end web application testing framework. It covers Playwright’s key features—including cross-browser compatibility, parallel execution, and cross-language APIs—as well as detailed instructions for installing, running, and debugging tests. The article also explains how Playwright integrates with Azure and Azure DevOps for cloud-scale, managed, and parallel test execution in CI/CD pipelines, along with details about the Azure Playwright Testing Service, enabling organizations to run tests at scale with minimal overhead."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Getting Started with Microsoft Playwright Testing Features and How to Use It
+author: Dellenny
+canonical_url: https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-25 08:31:29 +00:00
-permalink: "/2025-09-25-Getting-Started-with-Microsoft-Playwright-Testing-Features-and-How-to-Use-It.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Playwright Testing Service", "Blogs", "CI/CD", "Cloud Testing", "Coding", "Continuous Integration", "Cross Browser Testing", "DevOps", "End To End Testing", "JavaScript", "Microsoft Playwright", "Node.js", "Parallel Testing", "Playwright Inspector", "Test Infrastructure", "Testing", "Testing Automation", "TypeScript"]
-tags_normalized: ["dotnet", "application insights", "automation", "azure", "azure devops", "azure playwright testing service", "blogs", "cislashcd", "cloud testing", "coding", "continuous integration", "cross browser testing", "devops", "end to end testing", "javascript", "microsoft playwright", "nodedotjs", "parallel testing", "playwright inspector", "test infrastructure", "testing", "testing automation", "typescript"]
+permalink: /coding/blogs/Getting-Started-with-Microsoft-Playwright-Testing-Features-and-How-to-Use-It
+tags:
+- .NET
+- Application Insights
+- Automation
+- Azure
+- Azure DevOps
+- Azure Playwright Testing Service
+- Blogs
+- CI/CD
+- Cloud Testing
+- Coding
+- Continuous Integration
+- Cross Browser Testing
+- DevOps
+- End To End Testing
+- JavaScript
+- Microsoft Playwright
+- Node.js
+- Parallel Testing
+- Playwright Inspector
+- Test Infrastructure
+- Testing
+- Testing Automation
+- TypeScript
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Dellenny provides a practical guide to Microsoft Playwright Testing, detailing its key features and how to use it for cross-browser testing, plus guidance on Azure and DevOps integrations.<!--excerpt_end-->
 
 # Getting Started with Microsoft Playwright Testing Features and How to Use It

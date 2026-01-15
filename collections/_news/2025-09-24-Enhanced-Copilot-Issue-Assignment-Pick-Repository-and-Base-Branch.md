@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhanced Copilot Issue Assignment: Pick Repository and Base Branch"
-description: "This news highlights new capabilities in GitHub Copilot, allowing developers to assign Copilot coding agents to issues with greater flexibility. The update introduces options for selecting the target repository, choosing a starting branch, and adding additional instructions, streamlining project and code management workflows for developers using Copilot."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Enhanced Copilot Issue Assignment: Pick Repository and Base Branch'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 09:30:06 +00:00
-permalink: "/2025-09-24-Enhanced-Copilot-Issue-Assignment-Pick-Repository-and-Base-Branch.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Branch Selection", "Coding Assistant", "Copilot", "Copilot Agent", "Developer Tools", "Development Process", "GitHub", "GitHub Copilot", "Improvement", "Issue Assignment", "News", "Project Management", "Projects & Issues", "Public Preview", "Repository", "Workflow Enhancement"]
-tags_normalized: ["ai", "automation", "branch selection", "coding assistant", "copilot", "copilot agent", "developer tools", "development process", "github", "github copilot", "improvement", "issue assignment", "news", "project management", "projects and issues", "public preview", "repository", "workflow enhancement"]
+permalink: /github-copilot/news/Enhanced-Copilot-Issue-Assignment-Pick-Repository-and-Base-Branch
+tags:
+- AI
+- Automation
+- Branch Selection
+- Coding Assistant
+- Copilot
+- Copilot Agent
+- Developer Tools
+- Development Process
+- GitHub
+- GitHub Copilot
+- Improvement
+- Issue Assignment
+- News
+- Project Management
+- Projects & Issues
+- Public Preview
+- Repository
+- Workflow Enhancement
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces new options for enhancing GitHub Copilot assignments. Developers can now specify the repository, select the starting branch, and provide extra instructions when assigning issues to Copilot coding agents.<!--excerpt_end-->
 
 # Enhanced Copilot Issue Assignment: Pick Repository and Base Branch

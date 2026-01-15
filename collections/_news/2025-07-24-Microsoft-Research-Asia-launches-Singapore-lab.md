@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Microsoft Research Asia launches Singapore lab"
-description: "Microsoft Research Asia has opened a new laboratory in Singapore aimed at accelerating AI innovation, advancing industrial transformation, and nurturing talent in the region. The facility is part of Microsoft's strategic emphasis on research, technology development, and collaboration with local institutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/07/24/microsoft-research-asia-launches-singapore-lab-to-drive-ai-innovation-industrial-transformation-and-talent-development/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Research Asia launches Singapore lab
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/2025/07/24/microsoft-research-asia-launches-singapore-lab-to-drive-ai-innovation-industrial-transformation-and-talent-development/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 13:03:35 +00:00
-permalink: "/2025-07-24-Microsoft-Research-Asia-launches-Singapore-lab.html"
-categories: ["AI"]
-tags: ["AI", "AI Innovation", "Asia Pacific", "Collaboration", "Company News", "Industrial Transformation", "Microsoft", "Microsoft Research Asia", "News", "Research Institution", "Singapore Lab", "Talent Development", "Technology", "Technology Research"]
-tags_normalized: ["ai", "ai innovation", "asia pacific", "collaboration", "company news", "industrial transformation", "microsoft", "microsoft research asia", "news", "research institution", "singapore lab", "talent development", "technology", "technology research"]
+permalink: /ai/news/Microsoft-Research-Asia-launches-Singapore-lab
+tags:
+- AI
+- AI Innovation
+- Asia Pacific
+- Collaboration
+- Company News
+- Industrial Transformation
+- Microsoft
+- Microsoft Research Asia
+- News
+- Research Institution
+- Singapore Lab
+- Talent Development
+- Technology
+- Technology Research
+section_names:
+- ai
 ---
-
 In this update, stclarke reports on the launch of Microsoft Research Asia's new Singapore lab, aimed at strengthening AI innovation and talent development in the Asia-Pacific region.<!--excerpt_end-->
 
 Microsoft Research Asia has inaugurated a new laboratory in Singapore, highlighting the company's ongoing commitment to advancing artificial intelligence research and fostering technological development across the Asia-Pacific region. This newly established lab is set to function as a hub for AI innovation, supporting both industrial transformation and local talent development.

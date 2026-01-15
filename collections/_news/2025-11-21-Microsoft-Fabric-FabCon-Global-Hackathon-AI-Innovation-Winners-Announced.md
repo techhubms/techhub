@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Microsoft Fabric FabCon Global Hackathon: AI Innovation Winners Announced"
-description: "A detailed roundup of the Microsoft Fabric FabCon Global Hackathon, spotlighting winning teams driving AI, analytics, and data modernization. Discover impactful implementations across Microsoft Fabric, Azure OpenAI, Power BI, and real-time intelligence, with deep dives into award-winning solutions and honorable mentions that showcase the next wave of enterprise data and AI development."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-winners-of-the-microsoft-fabric-fabcon-global-hack/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric FabCon Global Hackathon: AI Innovation Winners Announced'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-winners-of-the-microsoft-fabric-fabcon-global-hack/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 09:00:00 +00:00
-permalink: "/2025-11-21-Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Applications", "Azure", "Azure Databases", "Azure OpenAI", "Copilot Studio", "Data Agents", "Data Analytics", "Enterprise Migration", "Eventstream", "Governance", "Hackathon", "IoT", "Machine Learning", "Microsoft Fabric", "ML", "News", "Open Mirroring", "Power BI", "Prompt Engineering", "Python", "RAG", "Real Time Intelligence"]
-tags_normalized: ["ai", "ai applications", "azure", "azure databases", "azure openai", "copilot studio", "data agents", "data analytics", "enterprise migration", "eventstream", "governance", "hackathon", "iot", "machine learning", "microsoft fabric", "ml", "news", "open mirroring", "power bi", "prompt engineering", "python", "rag", "real time intelligence"]
+permalink: /ai/news/Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced
+tags:
+- AI
+- AI Applications
+- Azure
+- Azure Databases
+- Azure OpenAI
+- Copilot Studio
+- Data Agents
+- Data Analytics
+- Enterprise Migration
+- Eventstream
+- Governance
+- Hackathon
+- IoT
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- Open Mirroring
+- Power BI
+- Prompt Engineering
+- Python
+- RAG
+- Real Time Intelligence
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents the highlights from the global FabCon Hackathon, showcasing winning projects where developers leveraged Microsoft Fabric, Azure OpenAI, and cutting-edge AI for real-world innovation.<!--excerpt_end-->
 
 # Microsoft Fabric FabCon Global Hackathon: AI Innovation Winners Announced

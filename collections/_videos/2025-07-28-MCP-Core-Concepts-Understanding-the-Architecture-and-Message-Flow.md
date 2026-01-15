@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "MCP Core Concepts: Understanding the Architecture and Message Flow"
-description: "This video by Microsoft Developer explains the fundamental architecture of the Model Context Protocol (MCP). It covers the client-server structure, introduces essential components, and details how messages interact between agents, tools, and models within MCP."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=earDzWGtE84"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'MCP Core Concepts: Understanding the Architecture and Message Flow'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=earDzWGtE84
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:06 +00:00
-permalink: "/2025-07-28-MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow.html"
-categories: ["AI"]
-tags: ["Agents", "AI", "AI Development", "Client Server Architecture", "MCP", "Message Flow", "Microsoft Developer", "Models", "Protocol Architecture", "Tools", "Videos"]
-tags_normalized: ["agents", "ai", "ai development", "client server architecture", "mcp", "message flow", "microsoft developer", "models", "protocol architecture", "tools", "videos"]
+permalink: /ai/videos/MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow
+tags:
+- Agents
+- AI
+- AI Development
+- Client Server Architecture
+- MCP
+- Message Flow
+- Microsoft Developer
+- Models
+- Protocol Architecture
+- Tools
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer presents an overview of MCP (Model Context Protocol), breaking down its core architectural concepts for viewers looking to understand message interactions and system components.<!--excerpt_end-->
 
 {% youtube earDzWGtE84 %}

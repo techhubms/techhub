@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Linux: Security-Focused Cloud Innovation at Ignite 2025"
-description: "Explore Azure Linux security advancements announced at Ignite 2025, including the public preview of OS Guard and the general availability of pod sandboxing in AKS. Learn how Microsoft is strengthening workload isolation and compliance for containerized applications, detailing features like FIPS enforcement, dm-verity, SELinux in audit mode, VM-level pod isolation via Kata Containers, and deep integration with Azure Kubernetes Service."
-author: "Sudhanva"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-driving-security-in-the-era-of-ai-innovation/ba-p/4471034"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Linux: Security-Focused Cloud Innovation at Ignite 2025'
+author: Sudhanva
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-driving-security-in-the-era-of-ai-innovation/ba-p/4471034
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:49:02 +00:00
-permalink: "/2025-11-18-Azure-Linux-Security-Focused-Cloud-Innovation-at-Ignite-2025.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Linux", "Azure Red Hat OpenShift", "Cloud Security", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS Compliance", "Immutable Host", "Kata Containers", "Linux On Azure", "Microsoft Ignite", "OS Guard", "Pod Sandboxing", "Security", "SELinux", "Trusted Launch", "Upstream Transparency", "VM Level Isolation", "Vtpm", "Workload Isolation"]
-tags_normalized: ["aks", "azure", "azure linux", "azure red hat openshift", "cloud security", "community", "container security", "dm verity", "fedramp", "fips compliance", "immutable host", "kata containers", "linux on azure", "microsoft ignite", "os guard", "pod sandboxing", "security", "selinux", "trusted launch", "upstream transparency", "vm level isolation", "vtpm", "workload isolation"]
+permalink: /azure/community/Azure-Linux-Security-Focused-Cloud-Innovation-at-Ignite-2025
+tags:
+- AKS
+- Azure
+- Azure Linux
+- Azure Red Hat OpenShift
+- Cloud Security
+- Community
+- Container Security
+- Dm Verity
+- FedRAMP
+- FIPS Compliance
+- Immutable Host
+- Kata Containers
+- Linux On Azure
+- Microsoft Ignite
+- OS Guard
+- Pod Sandboxing
+- Security
+- SELinux
+- Trusted Launch
+- Upstream Transparency
+- VM Level Isolation
+- Vtpm
+- Workload Isolation
+section_names:
+- azure
+- security
 ---
-
 Sudhanva details Azure Linux security innovations introduced at Ignite 2025, including OS Guard and pod sandboxing in AKS, offering cloud practitioners stronger workload isolation and compliance capabilities.<!--excerpt_end-->
 
 # Azure Linux: Security-Focused Cloud Innovation at Ignite 2025

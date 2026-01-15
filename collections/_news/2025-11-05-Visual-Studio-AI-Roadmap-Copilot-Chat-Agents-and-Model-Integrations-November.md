@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)"
-description: "This article outlines the November roadmap for bringing advanced AI-powered agentic experiences and integrations into Visual Studio. Key updates include the enhancement of Copilot Chat, the introduction of new test and debugger agents, expanded support for custom user agents, improvements in Model Context Protocol (MCP), and deeper integration with the latest AI coding models. Readers will learn about ongoing initiatives to streamline developer workflows with smarter, faster, and more intuitive coding tools backed by Microsoft’s trusted governance and security standards."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)'
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-05 19:32:56 +00:00
-permalink: "/2025-11-05-Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "AI Models", "Coding", "Copilot", "Copilot Chat", "Custom Agents", "Debugger Agent", "Developer Experience", "Development Workflow", "Dynamic Tool Calling", "GitHub", "GitHub Copilot", "GPT 5 Codex", "IDE", "MCP", "Model Integrations", "News", "Programming Tools", "Roadmap", "Slash Commands", "Test Agent", "Unit Testing", "VS"]
-tags_normalized: ["ai", "ai agents", "ai models", "coding", "copilot", "copilot chat", "custom agents", "debugger agent", "developer experience", "development workflow", "dynamic tool calling", "github", "github copilot", "gpt 5 codex", "ide", "mcp", "model integrations", "news", "programming tools", "roadmap", "slash commands", "test agent", "unit testing", "vs"]
+permalink: /github-copilot/news/Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November
+tags:
+- AI
+- AI Agents
+- AI Models
+- Coding
+- Copilot
+- Copilot Chat
+- Custom Agents
+- Debugger Agent
+- Developer Experience
+- Development Workflow
+- Dynamic Tool Calling
+- GitHub
+- GitHub Copilot
+- GPT 5 Codex
+- IDE
+- MCP
+- Model Integrations
+- News
+- Programming Tools
+- Roadmap
+- Slash Commands
+- Test Agent
+- Unit Testing
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rhea Patel details the November roadmap for integrating advanced AI and GitHub Copilot capabilities in Visual Studio, including new agents, Copilot Chat enhancements, and updates to the Model Context Protocol.<!--excerpt_end-->
 
 # Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)

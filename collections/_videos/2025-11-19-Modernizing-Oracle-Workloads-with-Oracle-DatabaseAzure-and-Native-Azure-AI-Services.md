@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Modernizing Oracle Workloads with Oracle Database@Azure and Native Azure AI Services"
-description: "This Microsoft Ignite 2025 session explores how organizations can modernize mission-critical Oracle workloads by running Oracle Database@Azure on Microsoft Azure infrastructure. Key topics include building high-availability architectures, long-term data storage, leveraging Azure-native AI services, and future innovations such as the Autonomous AI Lakehouse. Real-world examples and case studies showcase AI-driven insights, integration strategies, and how enterprises unlock new business opportunities by bridging Oracle’s enterprise-grade database strengths with Microsoft’s cloud and AI capabilities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LPbKU_rs-P0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing Oracle Workloads with Oracle Database@Azure and Native Azure AI Services
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=LPbKU_rs-P0
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:21:00 +00:00
-permalink: "/2025-11-19-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Driven Analytics", "Autonomous Database", "Azure", "Azure AI", "Cloud Migration", "Data Lakehouse", "Database Modernization", "Enterprise Architecture", "High Availability", "Ignite", "InnovatewithAzureAIappsandagents", "Microsoft Azure", "MSIgnite", "OCI", "Operational Insights", "Oracle Database@Azure", "Oracle Exadata", "Videos"]
-tags_normalized: ["ai", "ai driven analytics", "autonomous database", "azure", "azure ai", "cloud migration", "data lakehouse", "database modernization", "enterprise architecture", "high availability", "ignite", "innovatewithazureaiappsandagents", "microsoft azure", "msignite", "oci", "operational insights", "oracle databaseatazure", "oracle exadata", "videos"]
+permalink: /ai/videos/Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services
+tags:
+- AI
+- AI Driven Analytics
+- Autonomous Database
+- Azure
+- Azure AI
+- Cloud Migration
+- Data Lakehouse
+- Database Modernization
+- Enterprise Architecture
+- High Availability
+- Ignite
+- InnovatewithAzureAIappsandagents
+- Microsoft Azure
+- MSIgnite
+- OCI
+- Operational Insights
+- Oracle Database@Azure
+- Oracle Exadata
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events and Muneer Mirza present a Microsoft Ignite 2025 session showing how enterprises can modernize Oracle workloads on Azure, leveraging both Oracle and native Azure AI technologies for business transformation.<!--excerpt_end-->
 
 {% youtube LPbKU_rs-P0 %}

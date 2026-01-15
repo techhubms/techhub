@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Linter Integration Arrives in Copilot Code Review Public Preview"
-description: "Discover how the latest Copilot code review update integrates static analysis tools such as ESLint, PMD, and CodeQL, providing actionable feedback directly in your pull requests. This guide explains how to customize which linters run via repository rulesets and walks you through getting started with configuration for enhanced code quality in GitHub projects."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Linter Integration Arrives in Copilot Code Review Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 19:29:29 +00:00
-permalink: "/2025-11-20-Linter-Integration-Arrives-in-Copilot-Code-Review-Public-Preview.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Code Quality", "CodeQL", "Configuration", "Copilot", "Copilot Code Review", "DevOps", "Enterprise", "ESLint", "GitHub", "GitHub Copilot", "Linters", "News", "PMD", "Pull Requests", "Repository Rulesets", "Static Analysis"]
-tags_normalized: ["ai", "automation", "code quality", "codeql", "configuration", "copilot", "copilot code review", "devops", "enterprise", "eslint", "github", "github copilot", "linters", "news", "pmd", "pull requests", "repository rulesets", "static analysis"]
+permalink: /github-copilot/news/Linter-Integration-Arrives-in-Copilot-Code-Review-Public-Preview
+tags:
+- AI
+- Automation
+- Code Quality
+- CodeQL
+- Configuration
+- Copilot
+- Copilot Code Review
+- DevOps
+- Enterprise
+- ESLint
+- GitHub
+- GitHub Copilot
+- Linters
+- News
+- PMD
+- Pull Requests
+- Repository Rulesets
+- Static Analysis
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details the new GitHub Copilot code review integration with linters, showing how static analysis tools like ESLint, PMD, and CodeQL provide actionable feedback and explaining repository-level configuration.<!--excerpt_end-->
 
 # Linter Integration with Copilot Code Review: Public Preview

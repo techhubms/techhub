@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Comparing GPT-5 and Opus 4.1 Model Capabilities and Economics in GitHub Copilot"
-description: "This community post discusses the performance and pricing improvements of GPT-5 compared to Opus 4.1 (and Sonnet 4) in the context of GitHub Copilot Pro, focusing on coding capabilities, token costs, and technical paper evaluation methods. Analysis also touches on potential impacts if Copilot Pro replaces its current model with GPT-5 for unlimited requests, with commentary on technical benchmarks and cost efficiency."
-author: "fishchar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Comparing GPT-5 and Opus 4.1 Model Capabilities and Economics in GitHub Copilot
+author: fishchar
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:46:10 +00:00
-permalink: "/2025-08-07-Comparing-GPT-5-and-Opus-41-Model-Capabilities-and-Economics-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Evaluation", "AI Model Comparison", "Code Generation", "Coding AI", "Community", "GitHub Copilot", "GPT 5", "Model Pricing", "Opus 4.1", "Pass@1", "Software Engineering Evaluation", "Sonnet 4", "SWE Bench", "Technical Benchmarks", "Token Cost"]
-tags_normalized: ["ai", "ai evaluation", "ai model comparison", "code generation", "coding ai", "community", "github copilot", "gpt 5", "model pricing", "opus 4dot1", "passat1", "software engineering evaluation", "sonnet 4", "swe bench", "technical benchmarks", "token cost"]
+permalink: /github-copilot/community/Comparing-GPT-5-and-Opus-41-Model-Capabilities-and-Economics-in-GitHub-Copilot
+tags:
+- AI
+- AI Evaluation
+- AI Model Comparison
+- Code Generation
+- Coding AI
+- Community
+- GitHub Copilot
+- GPT 5
+- Model Pricing
+- Opus 4.1
+- Pass@1
+- Software Engineering Evaluation
+- Sonnet 4
+- SWE Bench
+- Technical Benchmarks
+- Token Cost
+section_names:
+- ai
+- github-copilot
 ---
-
 fishchar explores how GPT-5 fares against Opus 4.1 and Sonnet 4 in GitHub Copilot, analyzing technical evaluation details, token economics, and the significance of future Copilot model changes.<!--excerpt_end-->
 
 # Comparing GPT-5 and Opus 4.1 in GitHub Copilot

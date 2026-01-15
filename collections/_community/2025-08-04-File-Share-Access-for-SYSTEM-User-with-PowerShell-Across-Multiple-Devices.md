@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "File Share Access for SYSTEM User with PowerShell Across Multiple Devices"
-description: "The author asks for guidance on setting up a file share accessible to the Windows SYSTEM user, to be triggered by scheduled tasks on both domain-joined and home network devices. The process involves uploading small files from roughly 3000 devices during boot and logon events using PowerShell."
-author: "LordLoss01"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhnybo/file_share_that_the_system_user_can_access/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: File Share Access for SYSTEM User with PowerShell Across Multiple Devices
+author: LordLoss01
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mhnybo/file_share_that_the_system_user_can_access/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 19:57:43 +00:00
-permalink: "/2025-08-04-File-Share-Access-for-SYSTEM-User-with-PowerShell-Across-Multiple-Devices.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Community", "Domain", "File Permissions", "File Share", "Network", "PowerShell", "Scheduled Tasks", "Security", "SYSTEM User", "Windows"]
-tags_normalized: ["automation", "azure", "community", "domain", "file permissions", "file share", "network", "powershell", "scheduled tasks", "security", "system user", "windows"]
+permalink: /azure/community/File-Share-Access-for-SYSTEM-User-with-PowerShell-Across-Multiple-Devices
+tags:
+- Automation
+- Azure
+- Community
+- Domain
+- File Permissions
+- File Share
+- Network
+- PowerShell
+- Scheduled Tasks
+- Security
+- SYSTEM User
+- Windows
+section_names:
+- azure
+- security
 ---
-
 LordLoss01 seeks advice on creating a file share that allows Windows SYSTEM user access for PowerShell-automated data transfer across thousands of devices.<!--excerpt_end-->
 
 ## File Share That the System User Can Access

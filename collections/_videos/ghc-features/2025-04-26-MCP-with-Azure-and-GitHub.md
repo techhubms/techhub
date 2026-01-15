@@ -1,22 +1,29 @@
----
-layout: "post"
-title: "MCP with Azure and GitHub"
-description: "Supercharge Agent Mode with Azure and GitHub context"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/m6XBVRXfFN8"
-categories: ["AI", "Azure", "GitHub Copilot"]
+﻿---
+layout: post
+title: MCP with Azure and GitHub
+author: Rob Bos
+canonical_url: https://youtu.be/m6XBVRXfFN8
 date: 2025-04-26 20:44:28 +00:00
-permalink: "/2025-04-26-MCP-with-Azure-and-GitHub.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["Agent Mode", "AI", "Azure", "GitHub", "GitHub Copilot", "MCP", "Videos"]
-tags_normalized: ["agent mode", "ai", "azure", "github", "github copilot", "mcp", "videos"]
+permalink: /github-copilot/videos/MCP-with-Azure-and-GitHub
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- Agent Mode
+- AI
+- Azure
+- GitHub
+- GitHub Copilot
+- MCP
+- Videos
+section_names:
+- ai
+- azure
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's MCP with Azure and GitHub feature. Empower Agent Mode with extra context and capabilities by supercharging it with MCP servers. See how you can bring in extra information from Azure resources to add extra information to creating GitHub issues.<!--excerpt_end-->
 
 {% youtube m6XBVRXfFN8 %}

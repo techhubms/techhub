@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Adjusting Cloud Infrastructure for the AI Era: AI WAN Expansion at Microsoft"
-description: "Satya Nadella shares insights into the rapid expansion of Microsoft’s AI-driven wide area network (AI WAN), detailing how their North American optical fiber footprint grew by 40% and network capacity increases allow months of progress that previously took years. The post explores the implications of AI and cloud infrastructure advancements."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_fridayevening-reflectionadjusting-my-cloud-activity-7380046678944522240-d6O4"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Adjusting Cloud Infrastructure for the AI Era: AI WAN Expansion at Microsoft'
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_fridayevening-reflectionadjusting-my-cloud-activity-7380046678944522240-d6O4
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-04 02:01:00 +00:00
-permalink: "/2025-10-04-Adjusting-Cloud-Infrastructure-for-the-AI-Era-AI-WAN-Expansion-at-Microsoft.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Era", "AI WAN", "Azure", "Cloud Infrastructure", "Cloud Networking", "Company News", "Digital Transformation", "Infrastructure Automation", "Infrastructure Scaling", "LinkedIn Post", "Microsoft", "Microsoft Azure", "Network Capacity", "Networking Technology", "News", "Optical Fiber Expansion"]
-tags_normalized: ["ai", "ai era", "ai wan", "azure", "cloud infrastructure", "cloud networking", "company news", "digital transformation", "infrastructure automation", "infrastructure scaling", "linkedin post", "microsoft", "microsoft azure", "network capacity", "networking technology", "news", "optical fiber expansion"]
+permalink: /ai/news/Adjusting-Cloud-Infrastructure-for-the-AI-Era-AI-WAN-Expansion-at-Microsoft
+tags:
+- AI
+- AI Era
+- AI WAN
+- Azure
+- Cloud Infrastructure
+- Cloud Networking
+- Company News
+- Digital Transformation
+- Infrastructure Automation
+- Infrastructure Scaling
+- LinkedIn Post
+- Microsoft
+- Microsoft Azure
+- Network Capacity
+- Networking Technology
+- News
+- Optical Fiber Expansion
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella’s reflection, summarized by stclarke, explores how Microsoft is scaling its cloud infrastructure in the AI era—expanding optical fiber and deploying AI WAN to accelerate network capacity gains.<!--excerpt_end-->
 
 # Adjusting Cloud Infrastructure for the AI Era: Satya Nadella’s Insights

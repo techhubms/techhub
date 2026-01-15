@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Integrating GraphQL APIs with Fabric SQL Databases"
-description: "This video demonstrates how developers can expose Microsoft Fabric SQL Databases through GraphQL APIs. Topics include initial setup, schema generation, authentication, and executing queries, as well as integration points for building data-driven apps with Fabric. The session provides practical insights for applying GraphQL to simplify data access, featuring demo scenarios and links to additional Microsoft learning resources."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uRL3_PMFM7Q"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Integrating GraphQL APIs with Fabric SQL Databases
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=uRL3_PMFM7Q
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-25 17:20:49 +00:00
-permalink: "/2025-11-25-Integrating-GraphQL-APIs-with-Fabric-SQL-Databases.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["API Integration", "Authentication", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Data Driven Applications", "Data Engineering", "Data Platform", "Dev", "Development", "Fabric SQL Database", "GraphQL", "Microsoft", "Microsoft Fabric", "Microsoft MVP", "ML", "Power BI", "Query Execution", "Schema Generation", "SQL Server", "Tech", "Technology", "Videos"]
-tags_normalized: ["api integration", "authentication", "azure", "azure sql", "cloud computing", "coding", "data driven applications", "data engineering", "data platform", "dev", "development", "fabric sql database", "graphql", "microsoft", "microsoft fabric", "microsoft mvp", "ml", "power bi", "query execution", "schema generation", "sql server", "tech", "technology", "videos"]
+permalink: /ml/videos/Integrating-GraphQL-APIs-with-Fabric-SQL-Databases
+tags:
+- API Integration
+- Authentication
+- Azure
+- Azure SQL
+- Cloud Computing
+- Coding
+- Data Driven Applications
+- Data Engineering
+- Data Platform
+- Dev
+- Development
+- Fabric SQL Database
+- GraphQL
+- Microsoft
+- Microsoft Fabric
+- Microsoft MVP
+- ML
+- Power BI
+- Query Execution
+- Schema Generation
+- SQL Server
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
+- coding
+- ml
 ---
-
 Presented by Microsoft Developer and MVP Nicky van Vroenhoven, this episode guides viewers through exposing Fabric SQL Databases via GraphQL APIs, covering integration setup and schema design for modern data-driven applications.<!--excerpt_end-->
 
 {% youtube uRL3_PMFM7Q %}

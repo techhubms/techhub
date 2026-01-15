@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Upcoming Changes to GitHub Dependabot Alerts REST API Pagination"
-description: "This announcement details the deprecation of offset-based pagination parameters (`page`, `first`, and `last`) in all GitHub Dependabot alerts REST API endpoints, transitioning to a standardized cursor-based approach (`before`, `after`, and `per_page`). Developers and integrators must update their scripts to ensure continued functionality. The change aims for improved consistency, reliability, and performance across GitHub’s security APIs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Upcoming Changes to GitHub Dependabot Alerts REST API Pagination
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 15:35:24 +00:00
-permalink: "/2025-09-23-Upcoming-Changes-to-GitHub-Dependabot-Alerts-REST-API-Pagination.html"
-categories: ["DevOps", "Security"]
-tags: ["API Changes", "API Documentation", "Automation", "Cursor Based Pagination", "DevOps", "GitHub Dependabot", "Integration", "News", "Offset Based Pagination", "Pagination", "REST API", "Retired", "Security", "Security API", "Supply Chain Security"]
-tags_normalized: ["api changes", "api documentation", "automation", "cursor based pagination", "devops", "github dependabot", "integration", "news", "offset based pagination", "pagination", "rest api", "retired", "security", "security api", "supply chain security"]
+permalink: /devops/news/Upcoming-Changes-to-GitHub-Dependabot-Alerts-REST-API-Pagination
+tags:
+- API Changes
+- API Documentation
+- Automation
+- Cursor Based Pagination
+- DevOps
+- GitHub Dependabot
+- Integration
+- News
+- Offset Based Pagination
+- Pagination
+- REST API
+- Retired
+- Security
+- Security API
+- Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Allison announces the upcoming removal of offset-based pagination from GitHub Dependabot alerts REST API, guiding developers on migrating to cursor-based pagination methods for enhanced performance and consistency.<!--excerpt_end-->
 
 # Upcoming Changes to GitHub Dependabot Alerts REST API Pagination

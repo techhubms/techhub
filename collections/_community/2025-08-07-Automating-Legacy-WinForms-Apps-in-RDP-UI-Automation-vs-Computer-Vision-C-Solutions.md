@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)"
-description: "This community discussion explores strategies for automating a legacy Windows Forms application running within a Remote Desktop (RDP) session, where standard UI automation tools fail. The thread delves into the trade-offs between computer vision approaches (like OpenCV, ML.NET, and OCR APIs) and classic automation techniques in C#, along with practical advice on database access, reverse engineering, and platform limitations. Alternative ideas such as leveraging PowerShell remoting and file synchronization are considered, alongside hands-on technical tools for Windows automation and reverse engineering."
-author: "Grifone87"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)'
+author: Grifone87
+canonical_url: https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-07 06:50:03 +00:00
-permalink: "/2025-08-07-Automating-Legacy-WinForms-Apps-in-RDP-UI-Automation-vs-Computer-Vision-C-Solutions.html"
-categories: ["Coding"]
-tags: [".NET 6", ".NET 7", "API Monitor", "AutoHotkey", "C#", "Coding", "Community", "Computer Vision", "Database Access", "FlaUI", "Microsoft Access", "ML.NET", "OCR", "OpenCV", "PE Explorer", "PInvoke", "PowerShell Remoting", "Process Monitor", "RDP Automation", "Remote Desktop", "Reverse Engineering", "SendKeys", "Template Matching", "UI Automation API", "WinAutomation", "Windows Forms", "Windows Server", "YOLO"]
-tags_normalized: ["dotnet 6", "dotnet 7", "api monitor", "autohotkey", "csharp", "coding", "community", "computer vision", "database access", "flaui", "microsoft access", "mldotnet", "ocr", "opencv", "pe explorer", "pinvoke", "powershell remoting", "process monitor", "rdp automation", "remote desktop", "reverse engineering", "sendkeys", "template matching", "ui automation api", "winautomation", "windows forms", "windows server", "yolo"]
+permalink: /coding/community/Automating-Legacy-WinForms-Apps-in-RDP-UI-Automation-vs-Computer-Vision-C-Solutions
+tags:
+- .NET 6
+- .NET 7
+- API Monitor
+- AutoHotkey
+- C#
+- Coding
+- Community
+- Computer Vision
+- Database Access
+- FlaUI
+- Microsoft Access
+- ML.NET
+- OCR
+- OpenCV
+- PE Explorer
+- PInvoke
+- PowerShell Remoting
+- Process Monitor
+- RDP Automation
+- Remote Desktop
+- Reverse Engineering
+- SendKeys
+- Template Matching
+- UI Automation API
+- WinAutomation
+- Windows Forms
+- Windows Server
+- YOLO
+section_names:
+- coding
 ---
-
 Grifone87 and the r/csharp community discuss complexities of automating a WinForms insurance system inside an RDP session with C#, weighing UI automation versus computer vision approaches with useful insights and reverse engineering tips.<!--excerpt_end-->
 
 # Automating Windows Forms Apps in Remote Desktop: UI Automation vs. Computer Vision

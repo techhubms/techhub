@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC"
-description: "This announcement details the general availability of Azure CNI Overlay support for Application Gateway for Containers and Application Gateway Ingress Controller (AGIC) within Azure Kubernetes Service (AKS). The update addresses IP scalability, networking performance, and the transition from kubenet, enabling improved pod addressing and high-performance L7 ingress on Azure."
-author: "jonw"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC'
+author: jonw
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-29 16:12:02 +00:00
-permalink: "/2025-08-29-General-Availability-Azure-CNI-Overlay-for-Application-Gateway-for-Containers-and-AGIC.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Application Gateway For Containers", "Application Gateway Ingress Controller", "Azure", "Azure CNI Overlay", "Azure Networking", "Azure VNet", "Community", "Container Networking", "DevOps", "Ingress Controller", "IPAM", "Kubenet", "L7 Load Balancing", "Pod Routing", "Scalability"]
-tags_normalized: ["aks", "application gateway for containers", "application gateway ingress controller", "azure", "azure cni overlay", "azure networking", "azure vnet", "community", "container networking", "devops", "ingress controller", "ipam", "kubenet", "l7 load balancing", "pod routing", "scalability"]
+permalink: /azure/community/General-Availability-Azure-CNI-Overlay-for-Application-Gateway-for-Containers-and-AGIC
+tags:
+- AKS
+- Application Gateway For Containers
+- Application Gateway Ingress Controller
+- Azure
+- Azure CNI Overlay
+- Azure Networking
+- Azure VNet
+- Community
+- Container Networking
+- DevOps
+- Ingress Controller
+- IPAM
+- Kubenet
+- L7 Load Balancing
+- Pod Routing
+- Scalability
+section_names:
+- azure
+- devops
 ---
-
 jonw announces the general availability of Azure CNI Overlay support for Application Gateway for Containers and AGIC, explaining how this benefits AKS users through enhanced IP scalability and high-performance ingress.<!--excerpt_end-->
 
 # General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC

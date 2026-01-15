@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Why We Open Sourced Our MCP Server and What It Means for Developers"
-description: "This news article introduces GitHub's open-sourced MCP (Model Context Protocol) server, explaining its architecture and real-world applications. Readers will learn how MCP enables AI tools, like Copilot and VS Code, to connect seamlessly with GitHub for real-time data and workflow automation, and how to set up and use the GitHub MCP server."
-author: "Kedasha Kerr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/why-we-open-sourced-our-mcp-server-and-what-it-means-for-you/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Why We Open Sourced Our MCP Server and What It Means for Developers
+author: Kedasha Kerr
+canonical_url: https://github.blog/open-source/maintainers/why-we-open-sourced-our-mcp-server-and-what-it-means-for-you/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-12 13:52:49 +00:00
-permalink: "/2025-08-12-Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Integration", "APIs", "Architecture", "Automation", "Chatbots", "Coding", "Copilot", "DevOps", "DevOps Tools", "GitHub Actions", "GitHub MCP Server", "GitHub Podcast", "LLMs", "Maintainers", "MCP", "Natural Language Processing", "News", "Open Source", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai integration", "apis", "architecture", "automation", "chatbots", "coding", "copilot", "devops", "devops tools", "github actions", "github mcp server", "github podcast", "llms", "maintainers", "mcp", "natural language processing", "news", "open source", "vs code", "vs code extensions"]
+permalink: /ai/news/Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers
+tags:
+- AI
+- AI Integration
+- APIs
+- Architecture
+- Automation
+- Chatbots
+- Coding
+- Copilot
+- DevOps
+- DevOps Tools
+- GitHub Actions
+- GitHub MCP Server
+- GitHub Podcast
+- LLMs
+- Maintainers
+- MCP
+- Natural Language Processing
+- News
+- Open Source
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Kedasha Kerr explains how GitHub’s newly open-sourced MCP server bridges AI tools and GitHub, enabling rich, automated workflows and natural-language interactions for developers.<!--excerpt_end-->
 
 # Why We Open Sourced Our MCP Server and What It Means for Developers

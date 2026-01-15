@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights"
-description: "A detailed preview of Microsoft's presence at KubeCon + CloudNativeCon North America 2025 in Atlanta, GA, including Azure Day with Kubernetes, deep-dive sessions, featured AI and cloud native demos, and a full agenda of technical talks. Learn how Microsoft is advancing AI, Kubernetes, multicluster operations, and secure cloud-native development through hands-on demos and expert-led sessions."
-author: "coryskimming"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights'
+author: coryskimming
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 18:00:00 +00:00
-permalink: "/2025-10-27-Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "AI Workloads", "AKS", "Azure", "Cloud Native", "Community", "Container Security", "DevOps", "GitHub Actions", "Hybrid Deployments", "IaC", "KAITO", "KubeFleet", "Kubernetes", "LLMs", "Microsoft Azure", "Multicluster", "Open Source", "Security", "Supply Chain Security"]
-tags_normalized: ["agentic ai", "ai", "ai workloads", "aks", "azure", "cloud native", "community", "container security", "devops", "github actions", "hybrid deployments", "iac", "kaito", "kubefleet", "kubernetes", "llms", "microsoft azure", "multicluster", "open source", "security", "supply chain security"]
+permalink: /ai/community/Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights
+tags:
+- Agentic AI
+- AI
+- AI Workloads
+- AKS
+- Azure
+- Cloud Native
+- Community
+- Container Security
+- DevOps
+- GitHub Actions
+- Hybrid Deployments
+- IaC
+- KAITO
+- KubeFleet
+- Kubernetes
+- LLMs
+- Microsoft Azure
+- Multicluster
+- Open Source
+- Security
+- Supply Chain Security
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Cory Skimming previews Microsoft's participation at KubeCon North America 2025, spotlighting AI-powered Kubernetes innovation, multicluster strategies, security advancements, and a comprehensive agenda for Azure cloud-native developers and operators.<!--excerpt_end-->
 
 # Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights

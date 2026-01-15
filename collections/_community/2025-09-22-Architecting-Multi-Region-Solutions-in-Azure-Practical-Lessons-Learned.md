@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Architecting Multi-Region Solutions in Azure: Practical Lessons Learned"
-description: "This guide explores how to architect resilient, high-performing, and scalable solutions using Azure's global regions. It explains the benefits of multi-region strategies, key considerations for both new and existing (greenfield and brownfield) Azure environments, and practical steps for adopting a region-agnostic approach. The article offers actionable advice on scalability, compliance, cost optimization, networking, governance, and disaster recovery to help organizations fully leverage Azure’s cloud capabilities."
-author: "prjelesi-msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba-p/4415554"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Architecting Multi-Region Solutions in Azure: Practical Lessons Learned'
+author: prjelesi-msft
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba-p/4415554
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-22 11:00:00 +00:00
-permalink: "/2025-09-22-Architecting-Multi-Region-Solutions-in-Azure-Practical-Lessons-Learned.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Active Directory", "Azure", "Azure Governance", "Azure Policy", "BCDR", "Cloud Adoption Framework", "Cloud Infrastructure", "Cloud Monitoring", "Cloud Networking", "Community", "Compliance", "Cost Optimization", "Data Residency", "DevOps", "Disaster Recovery", "Landing Zones", "Microsoft Entra ID", "Multi Region Architecture", "Performance Optimization", "Resilience", "Scalability", "Security", "Virtual Networks"]
-tags_normalized: ["active directory", "azure", "azure governance", "azure policy", "bcdr", "cloud adoption framework", "cloud infrastructure", "cloud monitoring", "cloud networking", "community", "compliance", "cost optimization", "data residency", "devops", "disaster recovery", "landing zones", "microsoft entra id", "multi region architecture", "performance optimization", "resilience", "scalability", "security", "virtual networks"]
+permalink: /azure/community/Architecting-Multi-Region-Solutions-in-Azure-Practical-Lessons-Learned
+tags:
+- Active Directory
+- Azure
+- Azure Governance
+- Azure Policy
+- BCDR
+- Cloud Adoption Framework
+- Cloud Infrastructure
+- Cloud Monitoring
+- Cloud Networking
+- Community
+- Compliance
+- Cost Optimization
+- Data Residency
+- DevOps
+- Disaster Recovery
+- Landing Zones
+- Microsoft Entra ID
+- Multi Region Architecture
+- Performance Optimization
+- Resilience
+- Scalability
+- Security
+- Virtual Networks
+section_names:
+- azure
+- devops
+- security
 ---
-
 prjelesi-msft shares in-depth guidance and field experience on building multi-region solutions in Azure, highlighting key strategies for architects and engineers to enable scalable, resilient, and compliant cloud applications.<!--excerpt_end-->
 
 # Architecting Multi-Region Solutions in Azure: Lessons Learned

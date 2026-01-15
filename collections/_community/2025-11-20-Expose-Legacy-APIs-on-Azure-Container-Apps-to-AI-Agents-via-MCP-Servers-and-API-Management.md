@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Expose Legacy APIs on Azure Container Apps to AI Agents via MCP Servers and API Management"
-description: "This comprehensive guide by DeepGanguly details how to expose legacy REST APIs hosted on Azure Container Apps to AI agents using Model Context Protocol (MCP) servers and Azure API Management. The article demonstrates deploying a sample e-commerce API, creating an API Management instance, importing specifications, configuring MCP servers, and connecting everything in VS Code for modern, secure API access. Centralized management of authentication, authorization, and monitoring is achieved without rewriting backend logic, facilitating AI agent discovery and invocation of existing business functionality."
-author: "DeepGanguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exposing-legacy-apis-hosted-on-azure-container-apps-to-ai-agents/ba-p/4470476"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Expose Legacy APIs on Azure Container Apps to AI Agents via MCP Servers and API Management
+author: DeepGanguly
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exposing-legacy-apis-hosted-on-azure-container-apps-to-ai-agents/ba-p/4470476
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 09:37:41 +00:00
-permalink: "/2025-11-20-Expose-Legacy-APIs-on-Azure-Container-Apps-to-AI-Agents-via-MCP-Servers-and-API-Management.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Tooling", "AI", "API Gateway", "API Key", "API Proxy", "Authentication", "Authorization", "Azure", "Azure API Management", "Azure Container Apps", "Centralized Security", "Community", "DevOps", "E Commerce", "Governance", "Legacy API", "MCP", "MCP Server", "Observability", "OpenAPI", "REST API", "Throttling", "VS Code"]
-tags_normalized: ["agent tooling", "ai", "api gateway", "api key", "api proxy", "authentication", "authorization", "azure", "azure api management", "azure container apps", "centralized security", "community", "devops", "e commerce", "governance", "legacy api", "mcp", "mcp server", "observability", "openapi", "rest api", "throttling", "vs code"]
+permalink: /ai/community/Expose-Legacy-APIs-on-Azure-Container-Apps-to-AI-Agents-via-MCP-Servers-and-API-Management
+tags:
+- Agent Tooling
+- AI
+- API Gateway
+- API Key
+- API Proxy
+- Authentication
+- Authorization
+- Azure
+- Azure API Management
+- Azure Container Apps
+- Centralized Security
+- Community
+- DevOps
+- E Commerce
+- Governance
+- Legacy API
+- MCP
+- MCP Server
+- Observability
+- OpenAPI
+- REST API
+- Throttling
+- VS Code
+section_names:
+- ai
+- azure
+- devops
 ---
-
 DeepGanguly demonstrates a step-by-step process for exposing legacy APIs hosted on Azure Container Apps to AI agents using MCP Servers and Azure API Management, enabling secure, tool-based API access for modern applications.<!--excerpt_end-->
 
 # Exposing Legacy APIs Hosted on Azure Container Apps to AI Agents via MCP Servers

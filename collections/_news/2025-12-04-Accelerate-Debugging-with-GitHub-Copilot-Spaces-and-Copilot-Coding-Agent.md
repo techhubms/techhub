@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerate Debugging with GitHub Copilot Spaces and Copilot Coding Agent"
-description: "This step-by-step guide by Andrea Griffiths demonstrates how developers can leverage GitHub Copilot Spaces and the Copilot coding agent to debug issues faster and more effectively. It covers creating contextual spaces for your project, setting up instructions for Copilot, using the agent to propose pull requests, and sharing project knowledge with your team. The article also highlights integration with IDEs and previews upcoming features."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Accelerate Debugging with GitHub Copilot Spaces and Copilot Coding Agent
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-12-04 20:35:36 +00:00
-permalink: "/2025-12-04-Accelerate-Debugging-with-GitHub-Copilot-Spaces-and-Copilot-Coding-Agent.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Assistant", "Code Review", "Coding", "Copilot Coding Agent", "Copilot Spaces", "Debugging", "GitHub Checkout", "GitHub Copilot", "GitHub Copilot Spaces", "GitHub Enterprise", "IDE Integration", "Knowledge Sharing", "MCP Server", "News", "Onboarding", "Project Contextualization", "Pull Request Automation", "Security Guidelines", "Technical Planning"]
-tags_normalized: ["ai", "ai and ml", "ai coding assistant", "code review", "coding", "copilot coding agent", "copilot spaces", "debugging", "github checkout", "github copilot", "github copilot spaces", "github enterprise", "ide integration", "knowledge sharing", "mcp server", "news", "onboarding", "project contextualization", "pull request automation", "security guidelines", "technical planning"]
+permalink: /github-copilot/news/Accelerate-Debugging-with-GitHub-Copilot-Spaces-and-Copilot-Coding-Agent
+tags:
+- AI
+- AI & ML
+- AI Coding Assistant
+- Code Review
+- Coding
+- Copilot Coding Agent
+- Copilot Spaces
+- Debugging
+- GitHub Checkout
+- GitHub Copilot
+- GitHub Copilot Spaces
+- GitHub Enterprise
+- IDE Integration
+- Knowledge Sharing
+- MCP Server
+- News
+- Onboarding
+- Project Contextualization
+- Pull Request Automation
+- Security Guidelines
+- Technical Planning
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Andrea Griffiths shows how developers can use GitHub Copilot Spaces and the Copilot coding agent to streamline debugging processes, automate code changes, and enhance team knowledge sharing.<!--excerpt_end-->
 
 # Accelerate Debugging with GitHub Copilot Spaces and Copilot Coding Agent

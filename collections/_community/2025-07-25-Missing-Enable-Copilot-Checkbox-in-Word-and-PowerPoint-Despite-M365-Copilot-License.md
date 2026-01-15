@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Missing 'Enable Copilot' Checkbox in Word and PowerPoint Despite M365 Copilot License"
-description: "A user with an active M365 Copilot license finds the 'Enable Copilot' checkbox in Excel but not in Word or PowerPoint. They reference official Microsoft documentation suggesting it should be available in all apps and recount conflicting guidance from Microsoft Support. The article seeks clarification on which source is correct."
-author: "LynxV1"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/microsoft/comments/1m9a3lz/do_you_have_the_enable_copilot_checkbox_in_your/"
-viewing_mode: "external"
-feed_name: "Reddit Microsoft"
-feed_url: "https://www.reddit.com/r/microsoft/.rss"
+﻿---
+layout: post
+title: Missing 'Enable Copilot' Checkbox in Word and PowerPoint Despite M365 Copilot License
+author: LynxV1
+canonical_url: https://www.reddit.com/r/microsoft/comments/1m9a3lz/do_you_have_the_enable_copilot_checkbox_in_your/
+viewing_mode: external
+feed_name: Reddit Microsoft
+feed_url: https://www.reddit.com/r/microsoft/.rss
 date: 2025-07-25 20:33:09 +00:00
-permalink: "/2025-07-25-Missing-Enable-Copilot-Checkbox-in-Word-and-PowerPoint-Despite-M365-Copilot-License.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Checkbox", "Community", "Excel", "Feature Availability", "GitHub Copilot", "Microsoft", "Microsoft 365 Copilot", "Microsoft Documentation", "Microsoft Support", "Office Apps", "PowerPoint", "User Experience", "Word"]
-tags_normalized: ["ai", "checkbox", "community", "excel", "feature availability", "github copilot", "microsoft", "microsoft 365 copilot", "microsoft documentation", "microsoft support", "office apps", "powerpoint", "user experience", "word"]
+permalink: /github-copilot/community/Missing-Enable-Copilot-Checkbox-in-Word-and-PowerPoint-Despite-M365-Copilot-License
+tags:
+- AI
+- Checkbox
+- Community
+- Excel
+- Feature Availability
+- GitHub Copilot
+- Microsoft
+- Microsoft 365 Copilot
+- Microsoft Documentation
+- Microsoft Support
+- Office Apps
+- PowerPoint
+- User Experience
+- Word
+section_names:
+- ai
+- github-copilot
 ---
-
 LynxV1 discusses a missing 'Enable Copilot' checkbox in Word and PowerPoint, despite holding the correct license, and highlights conflicting information from Microsoft’s documentation and support.<!--excerpt_end-->
 
 ## Issue Summary

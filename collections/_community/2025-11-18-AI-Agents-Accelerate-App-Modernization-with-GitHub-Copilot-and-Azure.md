@@ -1,20 +1,61 @@
----
-layout: "post"
-title: "AI Agents Accelerate App Modernization with GitHub Copilot and Azure"
-description: "This article summarizes new agentic AI features in GitHub Copilot and Azure announced at Microsoft Ignite, focusing on how automation, expanded language and framework support, containerization, database modernization, and custom enterprise logic simplify legacy application upgrades for developers and IT teams. It highlights practical advancements such as AI-assisted migrations (.NET, Java, Python), automated containerization, customized modernization tasks, database upgrades, and unified modernization visibility via portfolio assessment integrations, providing actionable information for technical teams navigating legacy app modernization."
-author: "Scott Hunter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI Agents Accelerate App Modernization with GitHub Copilot and Azure
+author: Scott Hunter
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 14:41:47 +00:00
-permalink: "/2025-11-18-AI-Agents-Accelerate-App-Modernization-with-GitHub-Copilot-and-Azure.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET Framework", "Agent Framework", "Agentic AI", "AI", "AKS", "AKS Automatic", "Application Modernization", "Azure", "Azure App Service", "Azure Container Apps", "Azure Database Migration Service", "Azure Migrate", "CAST Highlight", "Cloud Migration", "Coding", "Coding Agents", "Community", "Compliance Automation", "Containerization Assist", "Copilot CLI", "DevOps", "Docker", "Dr. Migrate", "GA", "GitHub Copilot", "IaC", "IntelliJ", "JakartaEE", "Java", "Migration", "Modern DevOps", "Portfolio Assessment", "PostgreSQL", "Public Preview", "Python", "Semantic Kernel", "SQL Server", "VS", "VS Code"]
-tags_normalized: ["dotnet", "dotnet framework", "agent framework", "agentic ai", "ai", "aks", "aks automatic", "application modernization", "azure", "azure app service", "azure container apps", "azure database migration service", "azure migrate", "cast highlight", "cloud migration", "coding", "coding agents", "community", "compliance automation", "containerization assist", "copilot cli", "devops", "docker", "drdot migrate", "ga", "github copilot", "iac", "intellij", "jakartaee", "java", "migration", "modern devops", "portfolio assessment", "postgresql", "public preview", "python", "semantic kernel", "sql server", "vs", "vs code"]
+permalink: /github-copilot/community/AI-Agents-Accelerate-App-Modernization-with-GitHub-Copilot-and-Azure
+tags:
+- .NET
+- .NET Framework
+- Agent Framework
+- Agentic AI
+- AI
+- AKS
+- AKS Automatic
+- Application Modernization
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Azure Database Migration Service
+- Azure Migrate
+- CAST Highlight
+- Cloud Migration
+- Coding
+- Coding Agents
+- Community
+- Compliance Automation
+- Containerization Assist
+- Copilot CLI
+- DevOps
+- Docker
+- Dr. Migrate
+- GA
+- GitHub Copilot
+- IaC
+- IntelliJ
+- JakartaEE
+- Java
+- Migration
+- Modern DevOps
+- Portfolio Assessment
+- PostgreSQL
+- Public Preview
+- Python
+- Semantic Kernel
+- SQL Server
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Scott Hunter explains how AI agents, GitHub Copilot, and Azure unlock rapid, automated modernization for legacy applications, announcing new features and technical integrations at Ignite.<!--excerpt_end-->
 
 # AI Agents Accelerate App Modernization with GitHub Copilot and Azure

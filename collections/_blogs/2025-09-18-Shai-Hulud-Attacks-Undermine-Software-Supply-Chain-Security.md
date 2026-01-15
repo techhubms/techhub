@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Shai-Hulud Attacks Undermine Software Supply Chain Security"
-description: "This article by Alan Shimel provides an in-depth look into the Shai-Hulud NPM worm attack and its significant impact on software supply chain security within modern DevOps practices. The piece explores the mechanisms of the supply chain attack, the erosion of trust in open-source environments, and actionable strategies for defending against similar threats. Expert perspectives are included, highlighting the urgent need for SBOMs, secure CI/CD workflows, and a zero-trust mindset in software development."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Shai-Hulud Attacks Undermine Software Supply Chain Security
+author: Alan Shimel
+canonical_url: https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-18 16:41:29 +00:00
-permalink: "/2025-09-18-Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "CI/CD", "Credential Theft", "CrowdStrike", "Dependency Management", "DevOps", "DevOps Security", "JavaScript Security", "Multi Factor Authentication", "npm", "Open Source Security", "Package Signing", "SBOM", "Secure Software Development", "Security", "Shai Hulud", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Supply Chain", "Supply Chain Attack", "Worm Attack"]
-tags_normalized: ["blogs", "cislashcd", "credential theft", "crowdstrike", "dependency management", "devops", "devops security", "javascript security", "multi factor authentication", "npm", "open source security", "package signing", "sbom", "secure software development", "security", "shai hulud", "social facebook", "social linkedin", "social x", "software bill of materials", "software supply chain", "supply chain attack", "worm attack"]
+permalink: /devops/blogs/Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security
+tags:
+- Blogs
+- CI/CD
+- Credential Theft
+- CrowdStrike
+- Dependency Management
+- DevOps
+- DevOps Security
+- JavaScript Security
+- Multi Factor Authentication
+- npm
+- Open Source Security
+- Package Signing
+- SBOM
+- Secure Software Development
+- Security
+- Shai Hulud
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials
+- Software Supply Chain
+- Supply Chain Attack
+- Worm Attack
+section_names:
+- devops
+- security
 ---
-
 Alan Shimel analyzes the Shai-Hulud NPM attacks and their impact on software supply chain security, offering practical advice for DevOps practitioners to enhance trust and resilience.<!--excerpt_end-->
 
 # Shai-Hulud Attacks Undermine Software Supply Chain Security

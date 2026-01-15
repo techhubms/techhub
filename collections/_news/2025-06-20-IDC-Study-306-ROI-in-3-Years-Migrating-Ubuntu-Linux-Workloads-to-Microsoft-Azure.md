@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "IDC Study: 306% ROI in 3 Years Migrating Ubuntu Linux Workloads to Microsoft Azure"
-description: "Omar Khan summarizes IDC’s research on the business value of migrating Ubuntu Linux workloads to Microsoft Azure. The study reports significant benefits, including a 306% three-year ROI, cost reductions, improved agility, stronger security, support for AI readiness, and enhanced operational efficiency. The findings are based on interviews with organizations that leveraged Azure for mission-critical Ubuntu environments."
-author: "Omar Khan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/idc-business-value-study-a-306-roi-within-3-years-using-ubuntu-linux-on-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'IDC Study: 306% ROI in 3 Years Migrating Ubuntu Linux Workloads to Microsoft Azure'
+author: Omar Khan
+canonical_url: https://azure.microsoft.com/en-us/blog/idc-business-value-study-a-306-roi-within-3-years-using-ubuntu-linux-on-azure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-20 15:00:00 +00:00
-permalink: "/2025-06-20-IDC-Study-306-ROI-in-3-Years-Migrating-Ubuntu-Linux-Workloads-to-Microsoft-Azure.html"
-categories: ["Azure", "AI", "Security"]
-tags: ["AI", "AI Readiness", "Azure", "Cloud Migration", "Compute", "Cost Reduction", "IDC Study", "Linux Virtual Machines", "Microsoft Azure", "News", "Operational Efficiency", "ROI", "Scalability", "Security", "Ubuntu"]
-tags_normalized: ["ai", "ai readiness", "azure", "cloud migration", "compute", "cost reduction", "idc study", "linux virtual machines", "microsoft azure", "news", "operational efficiency", "roi", "scalability", "security", "ubuntu"]
+permalink: /ai/news/IDC-Study-306-ROI-in-3-Years-Migrating-Ubuntu-Linux-Workloads-to-Microsoft-Azure
+tags:
+- AI
+- AI Readiness
+- Azure
+- Cloud Migration
+- Compute
+- Cost Reduction
+- IDC Study
+- Linux Virtual Machines
+- Microsoft Azure
+- News
+- Operational Efficiency
+- ROI
+- Scalability
+- Security
+- Ubuntu
+section_names:
+- azure
+- ai
+- security
 ---
-
 Omar Khan reviews IDC’s findings on the impact of running Ubuntu workloads on Microsoft Azure, detailing ROI, cost savings, and productivity.<!--excerpt_end-->
 
 ## Summary

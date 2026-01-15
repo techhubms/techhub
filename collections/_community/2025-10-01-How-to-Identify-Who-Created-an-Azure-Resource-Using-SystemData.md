@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How to Identify Who Created an Azure Resource Using SystemData"
-description: "This guide by Bruno Borges details the process of discovering who created any resource within Azure by leveraging metadata available through Azure Resource Manager. It explains how to access and interpret the 'systemData' object found in the resource's JSON view, covering key attributes like 'createdBy', 'createdByType', 'createdAt', 'lastModifiedBy', and their relevance for governance, troubleshooting, and compliance efforts. Readers will understand how to use Azure's built-in tracking features for effective cloud resource management."
-author: "Bruno Borges"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba-p/4458470"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Identify Who Created an Azure Resource Using SystemData
+author: Bruno Borges
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba-p/4458470
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 20:52:54 +00:00
-permalink: "/2025-10-01-How-to-Identify-Who-Created-an-Azure-Resource-Using-SystemData.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Resource Manager", "Cloud Auditing", "Community", "Compliance", "Createdby", "DevOps", "Governance", "JSON View", "Metadata", "Resource Group", "Resource Lifecycle", "Resource Ownership", "Resource Provisioning", "Security", "Subscription Management", "Systemdata", "Troubleshooting", "User Identity"]
-tags_normalized: ["azure", "azure resource manager", "cloud auditing", "community", "compliance", "createdby", "devops", "governance", "json view", "metadata", "resource group", "resource lifecycle", "resource ownership", "resource provisioning", "security", "subscription management", "systemdata", "troubleshooting", "user identity"]
+permalink: /azure/community/How-to-Identify-Who-Created-an-Azure-Resource-Using-SystemData
+tags:
+- Azure
+- Azure Resource Manager
+- Cloud Auditing
+- Community
+- Compliance
+- Createdby
+- DevOps
+- Governance
+- JSON View
+- Metadata
+- Resource Group
+- Resource Lifecycle
+- Resource Ownership
+- Resource Provisioning
+- Security
+- Subscription Management
+- Systemdata
+- Troubleshooting
+- User Identity
+section_names:
+- azure
+- devops
+- security
 ---
-
 Bruno Borges walks Azure administrators through finding out who created a resource by using the systemData metadata, helping improve governance, compliance, and troubleshooting.<!--excerpt_end-->
 
 # How to Identify Who Created an Azure Resource Using SystemData

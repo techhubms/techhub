@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Obfuscated Phishing Campaign Detection by Microsoft Threat Intelligence"
-description: "This article provides a deep dive into how Microsoft Threat Intelligence detected and blocked a credential phishing campaign that leveraged AI-generated code for sophisticated obfuscation. It explores the technical tactics used by attackers, details on AI’s role in both offense and defense, and highlights Microsoft Defender and Security Copilot’s detection capabilities, offering guidance to security professionals on mitigating future AI-enhanced threats."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: AI-Obfuscated Phishing Campaign Detection by Microsoft Threat Intelligence
+author: Microsoft Threat Intelligence
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-24 12:00:00 +00:00
-permalink: "/2025-09-24-AI-Obfuscated-Phishing-Campaign-Detection-by-Microsoft-Threat-Intelligence.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Generated Code", "Browser Fingerprinting", "CAPTCHA", "Credential Theft", "Cybersecurity", "Defender XDR", "Incident Response", "Microsoft Defender", "Microsoft Sentinel", "News", "Obfuscation", "Office 365", "Phishing", "Security", "Security Copilot", "SVG Payload", "Threat Intelligence"]
-tags_normalized: ["ai", "ai generated code", "browser fingerprinting", "captcha", "credential theft", "cybersecurity", "defender xdr", "incident response", "microsoft defender", "microsoft sentinel", "news", "obfuscation", "office 365", "phishing", "security", "security copilot", "svg payload", "threat intelligence"]
+permalink: /ai/news/AI-Obfuscated-Phishing-Campaign-Detection-by-Microsoft-Threat-Intelligence
+tags:
+- AI
+- AI Generated Code
+- Browser Fingerprinting
+- CAPTCHA
+- Credential Theft
+- Cybersecurity
+- Defender XDR
+- Incident Response
+- Microsoft Defender
+- Microsoft Sentinel
+- News
+- Obfuscation
+- Office 365
+- Phishing
+- Security
+- Security Copilot
+- SVG Payload
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 Microsoft Threat Intelligence, led by the original post's authors, reveals how AI-generated code was utilized in a credential phishing campaign and explains detection and defense approaches to combat these advanced threats.<!--excerpt_end-->
 
 # AI-Obfuscated Phishing Campaign Detection by Microsoft Threat Intelligence

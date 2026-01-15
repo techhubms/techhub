@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Developer Experience: More Than a Buzzword"
-description: "Rene van Osnabrugge discusses insights from the LEAD podcast, focusing on practical aspects of developer experience (DevX) beyond productivity. He explores topics such as tooling, discoverability, measurement, the role of documentation, generative AI, and strategies to enhance engineering culture at different organization sizes."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: 'Developer Experience: More Than a Buzzword'
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-06-05 08:31:00 +00:00
-permalink: "/2025-06-05-Developer-Experience-More-Than-a-Buzzword.html"
-categories: ["DevOps"]
-tags: ["AI", "Blogs", "Developer Experience", "Developer Portal", "Developer Productivity", "DevOps", "DevX", "Discoverability", "Documentation", "Engineering Culture", "Generative AI", "Lead Podcast", "Measurement", "Team Topologies", "Tooling", "Uncategorized"]
-tags_normalized: ["ai", "blogs", "developer experience", "developer portal", "developer productivity", "devops", "devx", "discoverability", "documentation", "engineering culture", "generative ai", "lead podcast", "measurement", "team topologies", "tooling", "uncategorized"]
+permalink: /devops/blogs/Developer-Experience-More-Than-a-Buzzword
+tags:
+- AI
+- Blogs
+- Developer Experience
+- Developer Portal
+- Developer Productivity
+- DevOps
+- DevX
+- Discoverability
+- Documentation
+- Engineering Culture
+- Generative AI
+- Lead Podcast
+- Measurement
+- Team Topologies
+- Tooling
+- Uncategorized
+section_names:
+- devops
 ---
-
 In this post, Rene van Osnabrugge shares stories and lessons from the LEAD podcast, delving into the realities and evolving practices of developer experience and engineering culture.<!--excerpt_end-->
 
 # Developer Experience: More Than a Buzzword

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Modernizing Java Applications with GitHub Copilot and Azure Deployment"
-description: "This video by Microsoft Developer demonstrates how GitHub Copilot can accelerate modernization of Java applications, including automated code upgrades, security fixes, and migration of databases to Azure. Viewers learn about assessment, upgrade processes, dependency updates, and deploying modernized Java apps to the cloud using native Microsoft tooling."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=r3iTEqujO1s"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Modernizing Java Applications with GitHub Copilot and Azure Deployment
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=r3iTEqujO1s
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-23 13:01:50 +00:00
-permalink: "/2025-09-23-Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "App Modernization", "Automated Assessment", "Azure", "Cloud Computing", "Cloud Deployment", "Code To Cloud", "Code Upgrade", "Coding", "Continuous Deployment", "Dependency Management", "Dev", "Development", "DevOps", "Enterprise Security", "GitHub Copilot", "Java", "Java 21", "Microsoft", "Microsoft Developer", "Migration", "PostgreSQL Migration", "Security Compliance", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "app modernization", "automated assessment", "azure", "cloud computing", "cloud deployment", "code to cloud", "code upgrade", "coding", "continuous deployment", "dependency management", "dev", "development", "devops", "enterprise security", "github copilot", "java", "java 21", "microsoft", "microsoft developer", "migration", "postgresql migration", "security compliance", "tech", "technology", "videos"]
+permalink: /github-copilot/videos/Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment
+tags:
+- AI
+- App Modernization
+- Automated Assessment
+- Azure
+- Cloud Computing
+- Cloud Deployment
+- Code To Cloud
+- Code Upgrade
+- Coding
+- Continuous Deployment
+- Dependency Management
+- Dev
+- Development
+- DevOps
+- Enterprise Security
+- GitHub Copilot
+- Java
+- Java 21
+- Microsoft
+- Microsoft Developer
+- Migration
+- PostgreSQL Migration
+- Security Compliance
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Developer guides viewers through using GitHub Copilot to streamline Java app modernization, including code upgrades, database migration to Azure, and automated deployment—all with enterprise security and compliance in mind.<!--excerpt_end-->
 
 {% youtube r3iTEqujO1s %}

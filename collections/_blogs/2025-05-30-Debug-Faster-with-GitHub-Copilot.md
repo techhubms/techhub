@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Debug Faster with GitHub Copilot"
-description: "This guide explores practical ways developers can use GitHub Copilot to streamline the debugging process. It demonstrates how GitHub Copilot interprets errors, detects logic bugs, generates helpful debug code, and even creates test cases in multiple languages, helping you spend less time on bugs and more time building solutions."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Debug Faster with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-30 00:00:00 +00:00
-permalink: "/2025-05-30-Debug-Faster-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Tools", "Blogs", "Bug Detection", "Code Quality", "Code Review", "Coding", "Debugging", "Developer Productivity", "Error Handling", "GitHub Copilot", "IDE Integration", "JavaScript", "Python", "Test Generation", "TypeScript", "Unit Testing"]
-tags_normalized: ["ai", "ai powered tools", "blogs", "bug detection", "code quality", "code review", "coding", "debugging", "developer productivity", "error handling", "github copilot", "ide integration", "javascript", "python", "test generation", "typescript", "unit testing"]
+permalink: /github-copilot/blogs/Debug-Faster-with-GitHub-Copilot
+tags:
+- AI
+- AI Powered Tools
+- Blogs
+- Bug Detection
+- Code Quality
+- Code Review
+- Coding
+- Debugging
+- Developer Productivity
+- Error Handling
+- GitHub Copilot
+- IDE Integration
+- JavaScript
+- Python
+- Test Generation
+- TypeScript
+- Unit Testing
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shows how developers can use GitHub Copilot to diagnose errors, find bugs, and generate tests, transforming how debugging is done.<!--excerpt_end-->
 
 # Debug Faster with GitHub Copilot

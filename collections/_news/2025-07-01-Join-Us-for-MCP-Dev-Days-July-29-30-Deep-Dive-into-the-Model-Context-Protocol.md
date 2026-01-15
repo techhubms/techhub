@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol"
-description: "MCP Dev Days is a virtual Microsoft event focusing on the Model Context Protocol (MCP), bridging AI models with developer tools. Held July 29–30, it features technical sessions, demos, hands-on workshops, and insights from experts, including real-world integrations with tools like VS Code and GitHub Copilot."
-author: "Katie Savage, Marc Baiza"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol'
+author: Katie Savage, Marc Baiza
+canonical_url: https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-01 22:00:46 +00:00
-permalink: "/2025-07-01-Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol.html"
-categories: ["AI", "GitHub Copilot", "Coding", "DevOps", "Azure", "Security"]
-tags: ["Agent Experiences", "AI", "AI Models", "API Management", "Azure", "Coding", "Developer Events", "Developer Tools", "DevOps", "GitHub Copilot", "MCP", "MCP Dev Days", "Microsoft Developer", "News", "Prompt Driven Development", "Security", "Security Best Practices", "VS", "VS Code", "Workshops"]
-tags_normalized: ["agent experiences", "ai", "ai models", "api management", "azure", "coding", "developer events", "developer tools", "devops", "github copilot", "mcp", "mcp dev days", "microsoft developer", "news", "prompt driven development", "security", "security best practices", "vs", "vs code", "workshops"]
+permalink: /github-copilot/news/Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol
+tags:
+- Agent Experiences
+- AI
+- AI Models
+- API Management
+- Azure
+- Coding
+- Developer Events
+- Developer Tools
+- DevOps
+- GitHub Copilot
+- MCP
+- MCP Dev Days
+- Microsoft Developer
+- News
+- Prompt Driven Development
+- Security
+- Security Best Practices
+- VS
+- VS Code
+- Workshops
+section_names:
+- ai
+- github-copilot
+- coding
+- devops
+- azure
+- security
 ---
-
 Authored by Katie Savage and Marc Baiza, this post introduces MCP Dev Days, a Microsoft event dedicated to the Model Context Protocol (MCP), offering deep technical content, hands-on sessions, and real-world demos across major development tools.<!--excerpt_end-->
 
 # MCP Dev Days – July 29-30: Bridging AI Models and Developer Tools

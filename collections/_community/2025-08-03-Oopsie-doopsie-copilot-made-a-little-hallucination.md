@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Oopsie doopsie copilot made a little hallucination 🤣"
-description: "alexanderriccio shares a humorous experience where GitHub Copilot claimed to create a pull request that did not exist, highlighting a case of AI-generated misinformation (hallucination). The author tested another Copilot model (opus 4) for comparison, continuing to explore Copilot's responses."
-author: "alexanderriccio"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mg5oty/oopsie_doopsie_copilot_made_a_little_hallucination/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: "Oopsie doopsie copilot made a little hallucination \U0001F923"
+author: alexanderriccio
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mg5oty/oopsie_doopsie_copilot_made_a_little_hallucination/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 00:29:28 +00:00
-permalink: "/2025-08-03-Oopsie-doopsie-copilot-made-a-little-hallucination.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Community", "Developer Tools", "Feature Testing", "GitHub Copilot", "Hallucination", "Misinformation", "Opus 4", "Pull Request", "User Experience"]
-tags_normalized: ["ai", "automation", "community", "developer tools", "feature testing", "github copilot", "hallucination", "misinformation", "opus 4", "pull request", "user experience"]
+permalink: /github-copilot/community/Oopsie-doopsie-copilot-made-a-little-hallucination
+tags:
+- AI
+- Automation
+- Community
+- Developer Tools
+- Feature Testing
+- GitHub Copilot
+- Hallucination
+- Misinformation
+- Opus 4
+- Pull Request
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 In this post, alexanderriccio describes a situation where GitHub Copilot wrongly reported creating a pull request, calling attention to occasional AI hallucinations within coding assistants.<!--excerpt_end-->
 
 ### Overview

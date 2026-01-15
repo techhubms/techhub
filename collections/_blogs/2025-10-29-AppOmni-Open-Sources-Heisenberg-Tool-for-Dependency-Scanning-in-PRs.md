@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AppOmni Open Sources Heisenberg Tool for Dependency Scanning in PRs"
-description: "This article introduces Heisenberg, an open source tool by AppOmni designed to automatically scan pull requests (PRs) for risky or new dependencies. Heisenberg integrates into CI/CD workflows such as GitHub Actions and supports real-time software bill of materials (SBOM) creation, helping DevSecOps teams and developers enforce secure coding practices by easily identifying problematic dependencies before code merges."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: AppOmni Open Sources Heisenberg Tool for Dependency Scanning in PRs
+author: Mike Vizard
+canonical_url: https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-29 16:08:25 +00:00
-permalink: "/2025-10-29-AppOmni-Open-Sources-Heisenberg-Tool-for-Dependency-Scanning-in-PRs.html"
-categories: ["DevOps", "Security"]
-tags: ["AppOmni", "Blogs", "CI/CD", "CLI Tools", "Dependency Scanning", "Development Best Practices", "DevOps", "DevSecOps", "GitHub Actions", "Go Workflows", "Heisenberg", "JavaScript Workflows", "Open Source Security", "Pull Request Security", "Python Workflows", "SBoM", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Supply Chain Security"]
-tags_normalized: ["appomni", "blogs", "cislashcd", "cli tools", "dependency scanning", "development best practices", "devops", "devsecops", "github actions", "go workflows", "heisenberg", "javascript workflows", "open source security", "pull request security", "python workflows", "sbom", "secure coding", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "supply chain security"]
+permalink: /devops/blogs/AppOmni-Open-Sources-Heisenberg-Tool-for-Dependency-Scanning-in-PRs
+tags:
+- AppOmni
+- Blogs
+- CI/CD
+- CLI Tools
+- Dependency Scanning
+- Development Best Practices
+- DevOps
+- DevSecOps
+- GitHub Actions
+- Go Workflows
+- Heisenberg
+- JavaScript Workflows
+- Open Source Security
+- Pull Request Security
+- Python Workflows
+- SBoM
+- Secure Coding
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials
+- Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Mike Vizard discusses AppOmni's Heisenberg, an open source tool that automatically scans pull requests for risky dependencies and generates real-time SBOMs, supporting better security practices for developers and DevSecOps teams.<!--excerpt_end-->
 
 # AppOmni Open Sources Heisenberg Tool for Dependency Scanning in PRs

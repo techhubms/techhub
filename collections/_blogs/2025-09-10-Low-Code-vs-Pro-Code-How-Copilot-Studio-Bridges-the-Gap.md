@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap"
-description: "This article explores the intersection of low-code and pro-code development, and examines how Copilot Studio enables both citizen developers and professional engineers to collaborate and accelerate application development. By leveraging AI-powered assistance, Copilot Studio blurs the lines between rapid prototyping and enterprise-grade software engineering, fostering a hybrid development approach."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap'
+author: Dellenny
+canonical_url: https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-10 08:06:11 +00:00
-permalink: "/2025-09-10-Low-Code-vs-Pro-Code-How-Copilot-Studio-Bridges-the-Gap.html"
-categories: ["AI"]
-tags: ["AI", "AI Assistance", "Application Development", "Automation", "Blogs", "Citizen Developers", "Copilot", "Copilot Studio", "Developer Productivity", "Hybrid Development", "Low Code Development", "Natural Language To Code", "Pro Code Development", "Professional Developers", "Software Engineering"]
-tags_normalized: ["ai", "ai assistance", "application development", "automation", "blogs", "citizen developers", "copilot", "copilot studio", "developer productivity", "hybrid development", "low code development", "natural language to code", "pro code development", "professional developers", "software engineering"]
+permalink: /ai/blogs/Low-Code-vs-Pro-Code-How-Copilot-Studio-Bridges-the-Gap
+tags:
+- AI
+- AI Assistance
+- Application Development
+- Automation
+- Blogs
+- Citizen Developers
+- Copilot
+- Copilot Studio
+- Developer Productivity
+- Hybrid Development
+- Low Code Development
+- Natural Language To Code
+- Pro Code Development
+- Professional Developers
+- Software Engineering
+section_names:
+- ai
 ---
-
 Dellenny reviews how Copilot Studio helps bridge the gap between low-code and pro-code development, empowering users of varying skill levels through AI-driven features.<!--excerpt_end-->
 
 # Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap

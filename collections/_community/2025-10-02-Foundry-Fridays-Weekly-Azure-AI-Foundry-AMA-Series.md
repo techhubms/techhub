@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Foundry Fridays: Weekly Azure AI Foundry AMA Series"
-description: "Foundry Fridays is a recurring live AMA session hosted by the Azure AI Foundry team, designed for developers, researchers, and AI enthusiasts to engage directly with Microsoft experts. Each session covers emerging Azure AI technologies, practical use cases, and cutting-edge tooling in the Azure ecosystem through open conversations on Discord. Attendees can ask questions on topics like AI model fine-tuning, MCP registries, agentic workflows, open-source tools, and security within Azure AI. The series aims to foster community knowledge-sharing and direct access to those building Microsoft’s AI platform."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Foundry Fridays: Weekly Azure AI Foundry AMA Series'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 07:00:00 +00:00
-permalink: "/2025-10-02-Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "AI Agent Security", "AI Community", "AI Developer", "AI Tools", "AMA", "Ask Me Anything", "Azure", "Azure AI", "Azure AI Foundry", "Community", "Discord Events", "Foundry Fridays", "MCP Registries", "Microsoft Azure", "Model Fine Tuning", "Open Source AI"]
-tags_normalized: ["agentic workflows", "ai", "ai agent security", "ai community", "ai developer", "ai tools", "ama", "ask me anything", "azure", "azure ai", "azure ai foundry", "community", "discord events", "foundry fridays", "mcp registries", "microsoft azure", "model fine tuning", "open source ai"]
+permalink: /ai/community/Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series
+tags:
+- Agentic Workflows
+- AI
+- AI Agent Security
+- AI Community
+- AI Developer
+- AI Tools
+- AMA
+- Ask Me Anything
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Community
+- Discord Events
+- Foundry Fridays
+- MCP Registries
+- Microsoft Azure
+- Model Fine Tuning
+- Open Source AI
+section_names:
+- ai
+- azure
 ---
-
 Lee_Stott invites the community to Foundry Fridays—a weekly live AMA event on Discord where developers and AI enthusiasts connect directly with Microsoft’s Azure AI Foundry team to explore the latest in Azure AI technologies.<!--excerpt_end-->
 
 # Foundry Fridays: Weekly Azure AI Foundry AMA Series

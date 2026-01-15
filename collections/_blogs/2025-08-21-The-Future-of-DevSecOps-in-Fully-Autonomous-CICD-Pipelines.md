@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "The Future of DevSecOps in Fully Autonomous CI/CD Pipelines"
-description: "This white paper by Ravi Shanker Sharma explores the integration of artificial intelligence (AI) and machine learning (ML) in DevSecOps, specifically focusing on the potential for fully autonomous CI/CD pipelines. The document discusses challenges in traditional DevSecOps, benefits and practical implementation of AI/ML automation, and outlines how organizations can achieve real-time, continuous security within modern software development lifecycles."
-author: "Ravi Shanker Sharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: The Future of DevSecOps in Fully Autonomous CI/CD Pipelines
+author: Ravi Shanker Sharma
+canonical_url: https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-21 17:12:05 +00:00
-permalink: "/2025-08-21-The-Future-of-DevSecOps-in-Fully-Autonomous-CICD-Pipelines.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "Autonomous Pipeline", "Blogs", "CI/CD", "Continuous Deployment", "Continuous Integration", "Contributed Content", "DevOps", "DevSecOps", "Machine Learning", "Pipeline Automation", "Security", "Security Automation", "Security Monitoring", "Social Facebook", "Social LinkedIn", "Social X", "Threat Detection", "Vulnerability Management", "Zero Trust Architecture"]
-tags_normalized: ["ai", "autonomous pipeline", "blogs", "cislashcd", "continuous deployment", "continuous integration", "contributed content", "devops", "devsecops", "machine learning", "pipeline automation", "security", "security automation", "security monitoring", "social facebook", "social linkedin", "social x", "threat detection", "vulnerability management", "zero trust architecture"]
+permalink: /ai/blogs/The-Future-of-DevSecOps-in-Fully-Autonomous-CICD-Pipelines
+tags:
+- AI
+- Autonomous Pipeline
+- Blogs
+- CI/CD
+- Continuous Deployment
+- Continuous Integration
+- Contributed Content
+- DevOps
+- DevSecOps
+- Machine Learning
+- Pipeline Automation
+- Security
+- Security Automation
+- Security Monitoring
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Threat Detection
+- Vulnerability Management
+- Zero Trust Architecture
+section_names:
+- ai
+- devops
+- security
 ---
-
 Ravi Shanker Sharma’s white paper examines how AI and ML are transforming DevSecOps, enabling fully autonomous CI/CD pipelines with real-time, continuous security automation.<!--excerpt_end-->
 
 # The Future of DevSecOps in a Fully Autonomous CI/CD Pipeline

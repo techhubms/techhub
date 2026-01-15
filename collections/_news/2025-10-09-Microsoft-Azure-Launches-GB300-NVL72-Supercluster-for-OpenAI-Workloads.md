@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads"
-description: "Microsoft Azure has unveiled the first at-scale production cluster featuring over 4,600 NVIDIA GB300 NVL72 GPUs, driven by NVIDIA Blackwell Ultra architecture. The infrastructure is engineered to support next-generation OpenAI workloads and enables training and deployment of multitrillion-parameter models with unprecedented performance and scale. The article details the cluster’s technical specifications, networking architecture, cooling innovations, and the implications for frontier AI development."
-author: "Rani Borkar and Nidhi Chappell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads
+author: Rani Borkar and Nidhi Chappell
+canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 16:00:00 +00:00
-permalink: "/2025-10-09-Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Datacenter", "AI Infrastructure", "Azure", "Blackwell Ultra GPUs", "Collective Operations", "Compute", "Data Center Cooling", "Datacenter", "FP4 Performance", "Frontier AI", "Grace CPU", "InfiniBand", "Microsoft Azure", "ND GB300 V6", "News", "NVIDIA GB300", "NVIDIA Quantum X800", "NVL72", "OpenAI", "Performance Benchmarking", "Supercomputing", "Tensor Core", "Virtual Machines"]
-tags_normalized: ["ai", "ai datacenter", "ai infrastructure", "azure", "blackwell ultra gpus", "collective operations", "compute", "data center cooling", "datacenter", "fp4 performance", "frontier ai", "grace cpu", "infiniband", "microsoft azure", "nd gb300 v6", "news", "nvidia gb300", "nvidia quantum x800", "nvl72", "openai", "performance benchmarking", "supercomputing", "tensor core", "virtual machines"]
+permalink: /ai/news/Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads
+tags:
+- AI
+- AI Datacenter
+- AI Infrastructure
+- Azure
+- Blackwell Ultra GPUs
+- Collective Operations
+- Compute
+- Data Center Cooling
+- Datacenter
+- FP4 Performance
+- Frontier AI
+- Grace CPU
+- InfiniBand
+- Microsoft Azure
+- ND GB300 V6
+- News
+- NVIDIA GB300
+- NVIDIA Quantum X800
+- NVL72
+- OpenAI
+- Performance Benchmarking
+- Supercomputing
+- Tensor Core
+- Virtual Machines
+section_names:
+- ai
+- azure
 ---
-
 Rani Borkar and Nidhi Chappell introduce the Azure GB300 NVL72 cluster, detailing how a partnership with NVIDIA delivers a supercomputing platform that sets new standards for large-scale AI workloads and model training.<!--excerpt_end-->
 
 # Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads

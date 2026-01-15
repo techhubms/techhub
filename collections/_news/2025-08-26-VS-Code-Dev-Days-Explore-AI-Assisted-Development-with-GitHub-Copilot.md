@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot"
-description: "This article introduces VS Code Dev Days, a global series of community and Microsoft-led events focused on AI-assisted development with Visual Studio Code. The events feature sessions on using GitHub Copilot, practical coding workshops, and opportunities to connect with other developers while upskilling on the latest AI-powered features in VS Code."
-author: "Katie Savage, Cynthia Zanoni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot'
+author: Katie Savage, Cynthia Zanoni
+canonical_url: https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-08-26 00:00:00 +00:00
-permalink: "/2025-08-26-VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Assisted Development", "AI Productivity", "Coding", "Coding Workshop", "Developer Community", "Developer Events", "Developer Tools", "GitHub Copilot", "MCP", "Microsoft", "News", "Next Edit Suggestions", "VS Code", "VS Code Dev Days"]
-tags_normalized: ["agent mode", "ai", "ai assisted development", "ai productivity", "coding", "coding workshop", "developer community", "developer events", "developer tools", "github copilot", "mcp", "microsoft", "news", "next edit suggestions", "vs code", "vs code dev days"]
+permalink: /github-copilot/news/VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot
+tags:
+- Agent Mode
+- AI
+- AI Assisted Development
+- AI Productivity
+- Coding
+- Coding Workshop
+- Developer Community
+- Developer Events
+- Developer Tools
+- GitHub Copilot
+- MCP
+- Microsoft
+- News
+- Next Edit Suggestions
+- VS Code
+- VS Code Dev Days
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Katie Savage and Cynthia Zanoni highlight the upcoming VS Code Dev Days, where developers can learn about AI-assisted coding, GitHub Copilot integration, and the newest productivity features in Visual Studio Code through hands-on sessions and community events.<!--excerpt_end-->
 
 # VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot

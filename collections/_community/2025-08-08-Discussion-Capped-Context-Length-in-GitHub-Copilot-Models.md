@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Discussion: Capped Context Length in GitHub Copilot Models"
-description: "This community post discusses user experiences with context length limitations in GitHub Copilot, where various models (such as GPT-5, Sonnet-4, gemini-2.5-pro, and GPT-4.1) are reported as being capped at around 128k tokens despite official claims of higher capacities. The user expresses frustration about premature summarization and request waste, seeking input from others and transparency from the Copilot team."
-author: "EfficientApartment52"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mkne30/capped_context_length_issues_in_copilot_anyone/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: 'Discussion: Capped Context Length in GitHub Copilot Models'
+author: EfficientApartment52
+canonical_url: https://www.reddit.com/r/github/comments/1mkne30/capped_context_length_issues_in_copilot_anyone/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-08 06:02:15 +00:00
-permalink: "/2025-08-08-Discussion-Capped-Context-Length-in-GitHub-Copilot-Models.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Context", "AI", "AI Models", "Community", "Context Length", "Conversation Continuity", "Copilot Premium", "Copilot Settings", "Debugging", "Gemini 2.5 Pro", "GitHub", "GitHub Copilot", "GPT 4.1", "GPT 5", "Sonnet 4", "Token Limits", "Transparency", "User Experience"]
-tags_normalized: ["agent context", "ai", "ai models", "community", "context length", "conversation continuity", "copilot premium", "copilot settings", "debugging", "gemini 2dot5 pro", "github", "github copilot", "gpt 4dot1", "gpt 5", "sonnet 4", "token limits", "transparency", "user experience"]
+permalink: /github-copilot/community/Discussion-Capped-Context-Length-in-GitHub-Copilot-Models
+tags:
+- Agent Context
+- AI
+- AI Models
+- Community
+- Context Length
+- Conversation Continuity
+- Copilot Premium
+- Copilot Settings
+- Debugging
+- Gemini 2.5 Pro
+- GitHub
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Sonnet 4
+- Token Limits
+- Transparency
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 EfficientApartment52 shares their experience and concerns about GitHub Copilot models being limited to 128k context length, inviting other users and the Copilot team to discuss the impact and potential solutions.<!--excerpt_end-->
 
 # Capped Context Length Issues in Copilot - Anyone Else Experiencing This?

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing Memory Consumption Metrics for SQL Database in Microsoft Fabric"
-description: "This article covers the new memory consumption monitoring capabilities of SQL Database within Microsoft Fabric. You'll learn how the updated performance dashboard now allows real-time tracking of memory usage at the query level, visualizes historical data, displays tempdb spillover events, and provides interactive tools for query analysis, helping administrators optimize database performance and resource use."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Memory Consumption Metrics for SQL Database in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 15:00:00 +00:00
-permalink: "/2025-10-01-Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Automatic Index", "Azure", "CPU Usage", "Dashboard Metrics", "Data Engineering", "Data Workloads", "Database Administration", "Database Metrics", "Database Optimization", "Memory Consumption", "Metrics Tracking", "Microsoft Fabric", "ML", "News", "Performance Dashboard", "Performance Monitoring", "Query Analysis", "Query Performance", "Resource Utilization", "SQL Database", "Tempdb Spillover", "Visualization"]
-tags_normalized: ["automatic index", "azure", "cpu usage", "dashboard metrics", "data engineering", "data workloads", "database administration", "database metrics", "database optimization", "memory consumption", "metrics tracking", "microsoft fabric", "ml", "news", "performance dashboard", "performance monitoring", "query analysis", "query performance", "resource utilization", "sql database", "tempdb spillover", "visualization"]
+permalink: /ml/news/Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric
+tags:
+- Automatic Index
+- Azure
+- CPU Usage
+- Dashboard Metrics
+- Data Engineering
+- Data Workloads
+- Database Administration
+- Database Metrics
+- Database Optimization
+- Memory Consumption
+- Metrics Tracking
+- Microsoft Fabric
+- ML
+- News
+- Performance Dashboard
+- Performance Monitoring
+- Query Analysis
+- Query Performance
+- Resource Utilization
+- SQL Database
+- Tempdb Spillover
+- Visualization
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces real-time memory consumption metrics for SQL Database in Fabric, helping administrators monitor, analyze, and optimize query resource usage more effectively.<!--excerpt_end-->
 
 # Memory Consumption Metrics in Fabric SQL Database

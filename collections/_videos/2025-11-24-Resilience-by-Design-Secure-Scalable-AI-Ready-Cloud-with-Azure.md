@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure"
-description: "This advanced session from Microsoft Ignite 2025 explores how building resiliency into Azure cloud architectures enhances trust, security, and scalability for AI-ready solutions. The content covers key strategies such as setting resilience goals, simulating failures, orchestrating recovery, and understanding shared responsibility models. Live demonstrations illustrate practical approaches to achieving resilient outcomes, with a focus on Azure infrastructure and AI application scenarios."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EmbrmSr40CA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=EmbrmSr40CA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:20:54 +00:00
-permalink: "/2025-11-24-Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Ready", "Azure", "Azure Resiliency", "Azure SQL", "Cloud Architecture", "Failure Simulation", "Infrastructure Resilience", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "MSIgnite", "Recovery Orchestration", "Recovery Services", "Resilience Goals", "Security", "Shared Responsibility", "Threat Detection", "Videos", "VM Backup"]
-tags_normalized: ["ai", "ai ready", "azure", "azure resiliency", "azure sql", "cloud architecture", "failure simulation", "infrastructure resilience", "innovatewithazureaiappsandagents", "microsoft ignite", "msignite", "recovery orchestration", "recovery services", "resilience goals", "security", "shared responsibility", "threat detection", "videos", "vm backup"]
+permalink: /ai/videos/Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure
+tags:
+- AI
+- AI Ready
+- Azure
+- Azure Resiliency
+- Azure SQL
+- Cloud Architecture
+- Failure Simulation
+- Infrastructure Resilience
+- InnovatewithAzureAIappsandagents
+- Microsoft Ignite
+- MSIgnite
+- Recovery Orchestration
+- Recovery Services
+- Resilience Goals
+- Security
+- Shared Responsibility
+- Threat Detection
+- Videos
+- VM Backup
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an Ignite session led by Gargi Banerjee and Molina Sharma, focusing on designing resilient, secure, and AI-ready cloud solutions with Azure through practical strategies and live demos.<!--excerpt_end-->
 
 {% youtube EmbrmSr40CA %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "WhiteCobra Targets Developers with Malicious VSCode Marketplace Extensions"
-description: "This article by Jeff Burt investigates a string of targeted attacks by the WhiteCobra group, which has placed malicious extensions in the VSCode and Open VSX marketplaces. The targeted attacks are designed to steal cryptocurrency wallets and other sensitive information from developers using VSCode, Cursor, and Windsurf editors. The article highlights the rapid, industrialized nature of these attacks, the sophistication of the malware chain, and the escalating risks for developer teams. It also breaks down the technical details of the attack vectors and the limitations of current marketplace defenses."
-author: "Jeff Burt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: WhiteCobra Targets Developers with Malicious VSCode Marketplace Extensions
+author: Jeff Burt
+canonical_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-15 16:56:48 +00:00
-permalink: "/2025-09-15-WhiteCobra-Targets-Developers-with-Malicious-VSCode-Marketplace-Extensions.html"
-categories: ["DevOps", "Security"]
-tags: ["Attack Chain", "Blogs", "C2 Servers", "Cloud Infrastructure", "Cryptocurrency", "Cryptocurrency Theft", "Cybersecurity", "Developer Security", "DevOps", "DevOps And Open Technologies", "Extension.js", "Infostealer", "Koi Security", "LummaStealer", "Malicious Extensions", "Malware", "Marketplace Trust", "Open VSX", "PowerShell", "Prompt.js", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "VS Code", "WhiteCobra"]
-tags_normalized: ["attack chain", "blogs", "c2 servers", "cloud infrastructure", "cryptocurrency", "cryptocurrency theft", "cybersecurity", "developer security", "devops", "devops and open technologies", "extensiondotjs", "infostealer", "koi security", "lummastealer", "malicious extensions", "malware", "marketplace trust", "open vsx", "powershell", "promptdotjs", "security", "social facebook", "social linkedin", "social x", "software supply chain", "vs code", "whitecobra"]
+permalink: /devops/blogs/WhiteCobra-Targets-Developers-with-Malicious-VSCode-Marketplace-Extensions
+tags:
+- Attack Chain
+- Blogs
+- C2 Servers
+- Cloud Infrastructure
+- Cryptocurrency
+- Cryptocurrency Theft
+- Cybersecurity
+- Developer Security
+- DevOps
+- DevOps And Open Technologies
+- Extension.js
+- Infostealer
+- Koi Security
+- LummaStealer
+- Malicious Extensions
+- Malware
+- Marketplace Trust
+- Open VSX
+- PowerShell
+- Prompt.js
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- VS Code
+- WhiteCobra
+section_names:
+- devops
+- security
 ---
-
 Jeff Burt’s article exposes how the WhiteCobra group exploits VSCode marketplace trust, detailing malware delivery tactics targeting developer environments. Essential background for development teams on supply chain security.<!--excerpt_end-->
 
 # WhiteCobra Targets Developers with Malicious VSCode Marketplace Extensions

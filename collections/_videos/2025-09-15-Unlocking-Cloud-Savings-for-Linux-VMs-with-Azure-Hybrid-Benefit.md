@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit"
-description: "This episode of the Azure Essentials Show features Thomas Maurer and Shreya Bahati discussing how organizations can leverage the Azure Hybrid Benefit for Linux to migrate existing Red Hat and SUSE Linux subscriptions to Azure. The discussion covers migration strategies, licensing options (including BYOS and PAYG models), cost-saving tactics, seamless migration processes, and using the Azure Pricing Calculator to estimate savings. Viewers will learn actionable steps to optimize cloud expenditure and discover detailed documentation and resources to enable the Azure Hybrid Benefit for Linux."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Y46PRzzqsMw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=Y46PRzzqsMw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-15 07:00:26 +00:00
-permalink: "/2025-09-15-Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Cloud", "Azure Hybrid Benefit", "Azure Pricing Calculator", "Azure VM", "BYOS", "Cloud Migration", "Cost Savings", "Infrastructure Modernization", "Licensing", "Linux", "Migration", "PAYG", "Red Hat", "SUSE", "Videos"]
-tags_normalized: ["azure", "azure cloud", "azure hybrid benefit", "azure pricing calculator", "azure vm", "byos", "cloud migration", "cost savings", "infrastructure modernization", "licensing", "linux", "migration", "payg", "red hat", "suse", "videos"]
+permalink: /azure/videos/Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit
+tags:
+- Azure
+- Azure Cloud
+- Azure Hybrid Benefit
+- Azure Pricing Calculator
+- Azure VM
+- BYOS
+- Cloud Migration
+- Cost Savings
+- Infrastructure Modernization
+- Licensing
+- Linux
+- Migration
+- PAYG
+- Red Hat
+- SUSE
+- Videos
+section_names:
+- azure
 ---
-
 In this Azure Essentials episode, hosts Thomas Maurer and Shreya Bahati explain how to save on cloud costs and modernize infrastructure by migrating Linux VMs to Azure, highlighting practical strategies for licensing, migration, and maximizing savings.<!--excerpt_end-->
 
 {% youtube Y46PRzzqsMw %}

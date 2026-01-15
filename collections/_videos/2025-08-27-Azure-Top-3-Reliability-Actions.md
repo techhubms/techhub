@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Top 3 Reliability Actions"
-description: "This video discusses the top three recommended reliability actions for Azure architectures, focusing on practical steps for building resilient Microsoft cloud solutions. John Savill highlights the use of availability zones, optimal network gateway SKUs, and proper network connectivity practices, referencing official Microsoft documentation and best practices. The content is aimed at cloud architects, administrators, and practitioners who want to improve service availability and disaster recovery for their Azure workloads."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UDrjP8sBI94"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Top 3 Reliability Actions
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=UDrjP8sBI94
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-27 21:22:32 +00:00
-permalink: "/2025-08-27-Azure-Top-3-Reliability-Actions.html"
-categories: ["Azure"]
-tags: ["Availability Zones", "Azure", "Azure Architect", "Azure Availability Zones", "Azure Networking", "Azure Regions", "Azure Resilience", "Cloud", "Cloud Reliability", "Disaster Recovery", "Microsoft Cloud", "Network Connectivity", "Network Gateway SKUs", "Regions", "Reliability", "Resilience", "Videos"]
-tags_normalized: ["availability zones", "azure", "azure architect", "azure availability zones", "azure networking", "azure regions", "azure resilience", "cloud", "cloud reliability", "disaster recovery", "microsoft cloud", "network connectivity", "network gateway skus", "regions", "reliability", "resilience", "videos"]
+permalink: /azure/videos/Azure-Top-3-Reliability-Actions
+tags:
+- Availability Zones
+- Azure
+- Azure Architect
+- Azure Availability Zones
+- Azure Networking
+- Azure Regions
+- Azure Resilience
+- Cloud
+- Cloud Reliability
+- Disaster Recovery
+- Microsoft Cloud
+- Network Connectivity
+- Network Gateway SKUs
+- Regions
+- Reliability
+- Resilience
+- Videos
+section_names:
+- azure
 ---
-
 John Savill presents the top three reliability actions for Azure, providing architects and cloud practitioners with actionable strategies and links to key Microsoft documentation.<!--excerpt_end-->
 
 {% youtube UDrjP8sBI94 %}

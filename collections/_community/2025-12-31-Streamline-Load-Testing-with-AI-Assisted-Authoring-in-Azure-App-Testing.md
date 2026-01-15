@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Streamline Load Testing with AI-Assisted Authoring in Azure App Testing"
-description: "This guide introduces the AI-assisted load test authoring feature in Azure App Testing, enabling developers to quickly convert browser recordings into production-ready JMeter scripts. It highlights how AI accelerates load test creation, improves script quality, and integrates seamlessly with Azure Load Testing for scalable, realistic performance testing."
-author: "Nikita_Nallamothu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Streamline Load Testing with AI-Assisted Authoring in Azure App Testing
+author: Nikita_Nallamothu
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-31 08:06:57 +00:00
-permalink: "/2025-12-31-Streamline-Load-Testing-with-AI-Assisted-Authoring-in-Azure-App-Testing.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Assisted Testing", "Azure", "Azure Load Testing", "Browser Extension", "Chrome", "Community", "DevOps", "Edge", "JMeter", "Load Testing", "Microsoft Azure", "Parameterization", "Performance Testing", "Script Generation", "Smart Labels", "Test Automation", "User Journey Recording"]
-tags_normalized: ["ai", "ai assisted testing", "azure", "azure load testing", "browser extension", "chrome", "community", "devops", "edge", "jmeter", "load testing", "microsoft azure", "parameterization", "performance testing", "script generation", "smart labels", "test automation", "user journey recording"]
+permalink: /ai/community/Streamline-Load-Testing-with-AI-Assisted-Authoring-in-Azure-App-Testing
+tags:
+- AI
+- AI Assisted Testing
+- Azure
+- Azure Load Testing
+- Browser Extension
+- Chrome
+- Community
+- DevOps
+- Edge
+- JMeter
+- Load Testing
+- Microsoft Azure
+- Parameterization
+- Performance Testing
+- Script Generation
+- Smart Labels
+- Test Automation
+- User Journey Recording
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Nikita_Nallamothu showcases how Azure App Testing leverages AI to simplify load test authoring, transforming browser recordings into robust JMeter scripts and streamlining large-scale performance validation.<!--excerpt_end-->
 
 # Streamline Load Testing with AI-Assisted Authoring in Azure App Testing

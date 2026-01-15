@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How GitHub Copilot Can Boost Your Microsoft Certification Prep"
-description: "This article explores how GitHub Copilot can support IT professionals preparing for Microsoft Azure, Microsoft 365, and Power Platform certifications. It covers practical ways to use Copilot as a study companion, including scripting, real-world scenario practice, flashcard generation, and hands-on labs. Copilot’s AI-assisted capabilities help learners study smarter, reinforce knowledge, and gain real-world skills essential for certification exams."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot Can Boost Your Microsoft Certification Prep
+author: Dellenny
+canonical_url: https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-11 13:22:14 +00:00
-permalink: "/2025-09-11-How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Study Tools", "AZ 500", "Azure Active Directory", "Azure CLI", "Blogs", "Certification Prep", "Copilot", "Exam Practice", "Flashcards", "GitHub Copilot", "Hands On Labs", "M365 Copilot", "Microsoft 365", "Microsoft Azure", "Power Platform", "PowerShell", "Python", "SC 200", "Scripting"]
-tags_normalized: ["ai", "ai study tools", "az 500", "azure active directory", "azure cli", "blogs", "certification prep", "copilot", "exam practice", "flashcards", "github copilot", "hands on labs", "m365 copilot", "microsoft 365", "microsoft azure", "power platform", "powershell", "python", "sc 200", "scripting"]
+permalink: /github-copilot/blogs/How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep
+tags:
+- AI
+- AI Study Tools
+- AZ 500
+- Azure Active Directory
+- Azure CLI
+- Blogs
+- Certification Prep
+- Copilot
+- Exam Practice
+- Flashcards
+- GitHub Copilot
+- Hands On Labs
+- M365 Copilot
+- Microsoft 365
+- Microsoft Azure
+- Power Platform
+- PowerShell
+- Python
+- SC 200
+- Scripting
+section_names:
+- ai
+- github-copilot
 ---
-
 Dellenny demonstrates how IT professionals can use GitHub Copilot as an AI-powered study partner to prepare more effectively for Microsoft certifications.<!--excerpt_end-->
 
 # How GitHub Copilot Can Boost Your Microsoft Certification Prep

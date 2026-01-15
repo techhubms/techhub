@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) July 2025 Release: New Features, Enhancements, and Community Updates"
-description: "This post by Kristen Womack details the July 2025 release (versions 1.17.1 and 1.18.0) of the Azure Developer CLI (azd). It covers new features, reliability improvements, bug fixes, workflow enhancements, new documentation, and contributions from the developer community."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-july-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) July 2025 Release: New Features, Enhancements, and Community Updates'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-july-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-07-28 20:07:42 +00:00
-permalink: "/2025-07-28-Azure-Developer-CLI-azd-July-2025-Release-New-Features-Enhancements-and-Community-Updates.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET Aspire", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure Functions", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Deployment Packaging", "DevOps", "Docker", "Environment Management", "Event Driven Architecture", "Extension Framework", "GitHub Codespaces", "Java", "JavaScript", "Kubernetes", "News", "OIDC Authentication", "Project Validation", "Python", "Remote Build", "Template Gallery", "Terraform", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "dotnet aspire", "azd", "azure", "azure container apps", "azure developer cli", "azure functions", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "deployment packaging", "devops", "docker", "environment management", "event driven architecture", "extension framework", "github codespaces", "java", "javascript", "kubernetes", "news", "oidc authentication", "project validation", "python", "remote build", "template gallery", "terraform", "typescript", "vs code"]
+permalink: /coding/news/Azure-Developer-CLI-azd-July-2025-Release-New-Features-Enhancements-and-Community-Updates
+tags:
+- .NET
+- .NET Aspire
+- Azd
+- Azure
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Functions
+- Azure SDK
+- Bicep
+- CI/CD
+- Codespaces
+- Coding
+- Deployment Packaging
+- DevOps
+- Docker
+- Environment Management
+- Event Driven Architecture
+- Extension Framework
+- GitHub Codespaces
+- Java
+- JavaScript
+- Kubernetes
+- News
+- OIDC Authentication
+- Project Validation
+- Python
+- Remote Build
+- Template Gallery
+- Terraform
+- Typescript
+- VS Code
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Kristen Womack presents an in-depth overview of the Azure Developer CLI (azd) July 2025 release, highlighting major new features, key improvements, bug fixes, updated documentation, and community-driven templates for Azure developers.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) July 2025 Release

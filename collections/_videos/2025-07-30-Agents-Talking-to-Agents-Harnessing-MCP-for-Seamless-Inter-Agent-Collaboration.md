@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration"
-description: "This lightning session from Microsoft Developer explores how the Model Context Protocol (MCP) enables multiple AI agents to coordinate efficiently by acting as a universal handshake for context sharing, task delegation, and result merging. Learn how MCP’s schema, tool catalog, and registry empower agents to communicate as remote servers and integrate capabilities without custom code. The video demonstrates practical resources, integration in Visual Studio Code, and links to MCP and Azure AI Foundry Agent Service documentation."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ovB8FZ7LAAk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=ovB8FZ7LAAk
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:33:04 +00:00
-permalink: "/2025-07-30-Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Collaboration", "Agent Integration", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Cloud Computing", "Context Sharing", "Delegation", "Dev", "Development", "Foundry Agent Service", "Inter Agent Communication", "MCP", "Microsoft", "Remote Servers", "Result Merging", "Schema Registry", "Tech", "Technology", "Tool Catalog", "Videos", "VS Code"]
-tags_normalized: ["agent collaboration", "agent integration", "ai", "ai agents", "azure", "azure ai foundry", "cloud computing", "context sharing", "delegation", "dev", "development", "foundry agent service", "inter agent communication", "mcp", "microsoft", "remote servers", "result merging", "schema registry", "tech", "technology", "tool catalog", "videos", "vs code"]
+permalink: /ai/videos/Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration
+tags:
+- Agent Collaboration
+- Agent Integration
+- AI
+- AI Agents
+- Azure
+- Azure AI Foundry
+- Cloud Computing
+- Context Sharing
+- Delegation
+- Dev
+- Development
+- Foundry Agent Service
+- Inter Agent Communication
+- MCP
+- Microsoft
+- Remote Servers
+- Result Merging
+- Schema Registry
+- Tech
+- Technology
+- Tool Catalog
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents a lightning session on how agents can coordinate using the Model Context Protocol (MCP), highlighting practical integration and resource links for hands-on exploration.<!--excerpt_end-->
 
 {% youtube ovB8FZ7LAAk %}

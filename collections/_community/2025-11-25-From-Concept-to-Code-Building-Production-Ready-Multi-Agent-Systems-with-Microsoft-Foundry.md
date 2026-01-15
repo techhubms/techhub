@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry"
-description: "This post by kinfey provides a detailed walkthrough for developers aiming to build production-ready multi-agent AI systems using Microsoft Foundry. It covers end-to-end orchestration through Foundry Workflows, integration with the Agent Framework, and seamless transitions from visual design to code in VSCode. The practical scenario demonstrates how agentic business logic can be modeled, validated, and deployed using Microsoft's latest ecosystem tools."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry'
+author: kinfey
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 08:00:00 +00:00
-permalink: "/2025-11-25-From-Concept-to-Code-Building-Production-Ready-Multi-Agent-Systems-with-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Framework", "Agent V2 SDK", "AI", "AI Orchestration", "Azure", "Azure AI Foundry", "Coding", "Community", "Declarative Workflows", "Enterprise AI", "Foundry Workflows", "Low Code Development", "Microsoft Foundry", "Multi Agent Systems", "Process Automation", "Recruitment Automation", "Task Orchestration", "VS Code", "VS Code Extension", "YAML Configuration"]
-tags_normalized: ["agent framework", "agent v2 sdk", "ai", "ai orchestration", "azure", "azure ai foundry", "coding", "community", "declarative workflows", "enterprise ai", "foundry workflows", "low code development", "microsoft foundry", "multi agent systems", "process automation", "recruitment automation", "task orchestration", "vs code", "vs code extension", "yaml configuration"]
+permalink: /ai/community/From-Concept-to-Code-Building-Production-Ready-Multi-Agent-Systems-with-Microsoft-Foundry
+tags:
+- Agent Framework
+- Agent V2 SDK
+- AI
+- AI Orchestration
+- Azure
+- Azure AI Foundry
+- Coding
+- Community
+- Declarative Workflows
+- Enterprise AI
+- Foundry Workflows
+- Low Code Development
+- Microsoft Foundry
+- Multi Agent Systems
+- Process Automation
+- Recruitment Automation
+- Task Orchestration
+- VS Code
+- VS Code Extension
+- YAML Configuration
+section_names:
+- ai
+- azure
+- coding
 ---
-
 kinfey explains how to leverage Microsoft Foundry, Agent Framework, and VSCode for building powerful multi-agent AI solutions, detailing each step from visual design to code deployment.<!--excerpt_end-->
 
 # From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry

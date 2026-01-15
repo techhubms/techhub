@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GitHub Spark Public Preview Now Available for Copilot Enterprise Subscribers"
-description: "This news post introduces GitHub Spark, now in public preview for Copilot Enterprise subscribers. Spark integrates with the GitHub platform to let teams turn ideas into working software rapidly, leveraging AI-assisted app generation, one-click deployments, Copilot agent integration, and frictionless collaboration. The article details its main features, explains how organizations can enable Spark for their teams, and provides links to documentation and discussions. Spark aims to empower developers, product managers, and designers to prototype and ship software more efficiently while keeping code and workflows within GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-github-spark-in-public-preview-for-copilot-enterprise-subscribers"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Spark Public Preview Now Available for Copilot Enterprise Subscribers
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-github-spark-in-public-preview-for-copilot-enterprise-subscribers
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 16:15:02 +00:00
-permalink: "/2025-09-30-GitHub-Spark-Public-Preview-Now-Available-for-Copilot-Enterprise-Subscribers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Development", "App Deployment", "Codespaces", "Copilot", "Copilot Agent", "Copilot Enterprise", "Developer Tools", "DevOps", "Enterprise Administration", "GitHub", "GitHub Copilot", "GitHub Spark", "LLM", "Natural Language Programming", "News", "No Code", "Prototyping", "Rapid Application Development", "Team Collaboration"]
-tags_normalized: ["ai", "ai development", "app deployment", "codespaces", "copilot", "copilot agent", "copilot enterprise", "developer tools", "devops", "enterprise administration", "github", "github copilot", "github spark", "llm", "natural language programming", "news", "no code", "prototyping", "rapid application development", "team collaboration"]
+permalink: /github-copilot/news/GitHub-Spark-Public-Preview-Now-Available-for-Copilot-Enterprise-Subscribers
+tags:
+- AI
+- AI Development
+- App Deployment
+- Codespaces
+- Copilot
+- Copilot Agent
+- Copilot Enterprise
+- Developer Tools
+- DevOps
+- Enterprise Administration
+- GitHub
+- GitHub Copilot
+- GitHub Spark
+- LLM
+- Natural Language Programming
+- News
+- No Code
+- Prototyping
+- Rapid Application Development
+- Team Collaboration
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces GitHub Spark, a new GitHub platform feature now in public preview for Copilot Enterprise subscribers, highlighting AI-driven rapid prototyping and team collaboration.<!--excerpt_end-->
 
 # GitHub Spark Public Preview for Copilot Enterprise Subscribers

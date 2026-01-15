@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Managed Redis Deep Dive"
-description: "This video by John Savill provides an in-depth exploration of Redis, its fundamental concepts, common application architectures, and a comprehensive walkthrough of Azure Managed Redis. Viewers will learn about Redis data types, integration scenarios including AI inferencing, deployment options, high availability, scaling, sharding, networking, authentication, and management. The session also covers SLA details and Microsoft’s implementation for multi-region, robust environments."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jIpJplSaFQM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Managed Redis Deep Dive
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=jIpJplSaFQM
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-20 12:00:52 +00:00
-permalink: "/2025-10-20-Azure-Managed-Redis-Deep-Dive.html"
-categories: ["Azure"]
-tags: ["Authentication", "Azure", "Azure Cloud", "Azure Managed Redis", "Cloud", "Cloud Architecture", "Cluster Policy", "Data Durability", "Deployment Strategies", "High Availability", "in Memory", "in Memory Databases", "Microsoft", "Microsoft Azure", "Networking", "Redis", "Replication", "Scaling", "Sharding", "Videos"]
-tags_normalized: ["authentication", "azure", "azure cloud", "azure managed redis", "cloud", "cloud architecture", "cluster policy", "data durability", "deployment strategies", "high availability", "in memory", "in memory databases", "microsoft", "microsoft azure", "networking", "redis", "replication", "scaling", "sharding", "videos"]
+permalink: /azure/videos/Azure-Managed-Redis-Deep-Dive
+tags:
+- Authentication
+- Azure
+- Azure Cloud
+- Azure Managed Redis
+- Cloud
+- Cloud Architecture
+- Cluster Policy
+- Data Durability
+- Deployment Strategies
+- High Availability
+- in Memory
+- in Memory Databases
+- Microsoft
+- Microsoft Azure
+- Networking
+- Redis
+- Replication
+- Scaling
+- Sharding
+- Videos
+section_names:
+- azure
 ---
-
 John Savill delivers a comprehensive deep dive into Redis and Azure Managed Redis, covering core Redis concepts, architectural patterns, deployment modes, and advanced Azure integration strategies.<!--excerpt_end-->
 
 {% youtube jIpJplSaFQM %}

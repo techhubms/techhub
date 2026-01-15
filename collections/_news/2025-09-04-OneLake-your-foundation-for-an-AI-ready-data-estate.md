@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "OneLake: your foundation for an AI-ready data estate"
-description: "This in-depth article from the Microsoft Fabric Blog explores how Microsoft OneLake serves as a unified, enterprise-grade data lake designed to eliminate data silos, simplify data governance, enable secure data sharing, and provide seamless integration with AI and analytics platforms such as Azure AI Foundry and Microsoft Fabric workloads. It describes key features like shortcuts, mirroring, open data formats, granular security, and cataloging—all of which enable organizations to build modern, AI-driven data estates ready for both analytics and generative AI applications. Real-world customer stories illustrate the operational and strategic benefits of adopting OneLake for data management and AI enablement across diverse environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'OneLake: your foundation for an AI-ready data estate'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 09:00:00 +00:00
-permalink: "/2025-09-04-OneLake-your-foundation-for-an-AI-ready-data-estate.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "Apache Iceberg", "Azure", "Azure AI Foundry", "Data Agents", "Data Catalog", "Data Estate", "Data Governance", "Data Integration", "Data Lake", "Data Mesh", "Data Sharing", "Delta Parquet", "Generative AI", "Microsoft Fabric", "Microsoft OneLake", "Mirroring", "ML", "News", "Power BI", "Purview", "Security", "Shortcuts"]
-tags_normalized: ["ai", "apache iceberg", "azure", "azure ai foundry", "data agents", "data catalog", "data estate", "data governance", "data integration", "data lake", "data mesh", "data sharing", "delta parquet", "generative ai", "microsoft fabric", "microsoft onelake", "mirroring", "ml", "news", "power bi", "purview", "security", "shortcuts"]
+permalink: /ai/news/OneLake-your-foundation-for-an-AI-ready-data-estate
+tags:
+- AI
+- Apache Iceberg
+- Azure
+- Azure AI Foundry
+- Data Agents
+- Data Catalog
+- Data Estate
+- Data Governance
+- Data Integration
+- Data Lake
+- Data Mesh
+- Data Sharing
+- Delta Parquet
+- Generative AI
+- Microsoft Fabric
+- Microsoft OneLake
+- Mirroring
+- ML
+- News
+- Power BI
+- Purview
+- Security
+- Shortcuts
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog team details how OneLake unifies organizational data for AI and analytics. Drawing on real enterprise deployments, this post covers security, data integration, governance, and AI-ready architecture—all authored by Microsoft Fabric experts.<!--excerpt_end-->
 
 # OneLake: Your Foundation for an AI-Ready Data Estate

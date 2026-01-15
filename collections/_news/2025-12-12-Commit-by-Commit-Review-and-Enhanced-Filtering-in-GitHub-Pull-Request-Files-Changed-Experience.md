@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience"
-description: "This update to GitHub’s pull request 'Files changed' page introduces the long-awaited ability to review commits individually or in groups, streamlined commit filtering, and UI improvements. Developers benefit from enhanced performance, new keyboard shortcuts, a clearer file filter experience, and several stability fixes, streamlining code review workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-12 02:59:42 +00:00
-permalink: "/2025-12-12-Commit-by-Commit-Review-and-Enhanced-Filtering-in-GitHub-Pull-Request-Files-Changed-Experience.html"
-categories: ["DevOps"]
-tags: ["Code Review", "Collaboration", "Collaboration Tools", "Commit Filtering", "Developer Tools", "DevOps", "Files Changed", "GitHub", "Improvement", "News", "Performance Enhancements", "Pull Requests", "Shortcuts", "UI Improvements", "Version Control", "Workflow"]
-tags_normalized: ["code review", "collaboration", "collaboration tools", "commit filtering", "developer tools", "devops", "files changed", "github", "improvement", "news", "performance enhancements", "pull requests", "shortcuts", "ui improvements", "version control", "workflow"]
+permalink: /devops/news/Commit-by-Commit-Review-and-Enhanced-Filtering-in-GitHub-Pull-Request-Files-Changed-Experience
+tags:
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Commit Filtering
+- Developer Tools
+- DevOps
+- Files Changed
+- GitHub
+- Improvement
+- News
+- Performance Enhancements
+- Pull Requests
+- Shortcuts
+- UI Improvements
+- Version Control
+- Workflow
+section_names:
+- devops
 ---
-
 Allison reports on GitHub's improved pull request 'Files changed' view, delivering commit-by-commit review, advanced filtering, and productivity enhancements for developers.<!--excerpt_end-->
 
 # Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience

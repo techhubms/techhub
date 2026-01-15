@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth"
-description: "This GitHub Podcast episode with Jason Lengstorf explores reframing developer learning as a joyful process rather than a stressful necessity. Jason shares insights on AI as a tool for acceleration (not replacement), the critical role of open source maintainers, evolving standards like MCP in the AI tooling ecosystem, and the responsibilities developers have to support sustainable infrastructure. Real-world stories and analogies illustrate how embracing curiosity and supporting the open source community empower lasting, resilient innovation."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth'
+author: Andrea Griffiths
+canonical_url: https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-26 16:10:14 +00:00
-permalink: "/2025-08-26-Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth.html"
-categories: ["AI"]
-tags: ["AI", "AI in Development", "Autonomous Agents", "Career Growth", "CodeTV", "Developer Education", "Developer Skills", "GitHub Podcast", "Jason Lengstorf", "JavaScript Ecosystem", "Learning Strategies", "MCP", "Modern Web", "News", "Nuxt", "Open Source", "Open Source Sustainability", "React", "ShadCN/UI", "Tailwind", "TypeScript", "Vue", "Web Innovation", "Zod"]
-tags_normalized: ["ai", "ai in development", "autonomous agents", "career growth", "codetv", "developer education", "developer skills", "github podcast", "jason lengstorf", "javascript ecosystem", "learning strategies", "mcp", "modern web", "news", "nuxt", "open source", "open source sustainability", "react", "shadcnslashui", "tailwind", "typescript", "vue", "web innovation", "zod"]
+permalink: /ai/news/Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth
+tags:
+- AI
+- AI in Development
+- Autonomous Agents
+- Career Growth
+- CodeTV
+- Developer Education
+- Developer Skills
+- GitHub Podcast
+- Jason Lengstorf
+- JavaScript Ecosystem
+- Learning Strategies
+- MCP
+- Modern Web
+- News
+- Nuxt
+- Open Source
+- Open Source Sustainability
+- React
+- ShadCN/UI
+- Tailwind
+- TypeScript
+- Vue
+- Web Innovation
+- Zod
+section_names:
+- ai
 ---
-
 Andrea Griffiths interviews Jason Lengstorf on the GitHub Podcast, where he discusses joyful learning, AI's impact on developers, and the importance of supporting open source maintainers.<!--excerpt_end-->
 
 # Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth

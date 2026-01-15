@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Enhancing Productivity with AI and Remote Development in VS Code"
-description: "This article explores how developers can elevate productivity by integrating AI—specifically GitHub Copilot—into Visual Studio Code remote development workflows. It covers custom instructions, chat participants, agent mode, and configuration tips for dev containers, making the AI experience seamless whether developing locally or remotely."
-author: "Brigit Murtaugh, Christof Marti, Josh Spicer, Olivia Guzzardo McVicker"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/05/27/ai-and-remote"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Enhancing Productivity with AI and Remote Development in VS Code
+author: Brigit Murtaugh, Christof Marti, Josh Spicer, Olivia Guzzardo McVicker
+canonical_url: https://code.visualstudio.com/blogs/2025/05/27/ai-and-remote
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-27 00:00:00 +00:00
-permalink: "/2025-05-27-Enhancing-Productivity-with-AI-and-Remote-Development-in-VS-Code.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Integration", "Codespaces", "Coding", "Copilot Chat", "Custom Instructions", "Dev Containers", "Developer Productivity", "DevOps", "Feature Configuration", "GitHub Copilot", "News", "Python", "Remote Development", "Remote Tunnels", "SSH", "VS Code", "VS Code Extensions", "WSL"]
-tags_normalized: ["agent mode", "ai", "ai integration", "codespaces", "coding", "copilot chat", "custom instructions", "dev containers", "developer productivity", "devops", "feature configuration", "github copilot", "news", "python", "remote development", "remote tunnels", "ssh", "vs code", "vs code extensions", "wsl"]
+permalink: /github-copilot/news/Enhancing-Productivity-with-AI-and-Remote-Development-in-VS-Code
+tags:
+- Agent Mode
+- AI
+- AI Integration
+- Codespaces
+- Coding
+- Copilot Chat
+- Custom Instructions
+- Dev Containers
+- Developer Productivity
+- DevOps
+- Feature Configuration
+- GitHub Copilot
+- News
+- Python
+- Remote Development
+- Remote Tunnels
+- SSH
+- VS Code
+- VS Code Extensions
+- WSL
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Brigit Murtaugh, Christof Marti, Josh Spicer, and Olivia Guzzardo McVicker detail how AI—highlighting GitHub Copilot—supercharges remote development in VS Code, including tips for setup, custom instructions, and leveraging agent mode.<!--excerpt_end-->
 
 # Enhance Productivity with AI and Remote Development in VS Code

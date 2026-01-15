@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud"
-description: "This post explores Microsoft’s public preview integration of GitHub Advanced Security with Microsoft Defender for Cloud. It details how runtime context and agentic remediation, powered by AI (Copilot Autofix and Copilot agent), enable DevSecOps teams to triage, prioritize, and remediate vulnerabilities in cloud-native applications more efficiently. Covering workflows from code to runtime, artifact metadata, alert reduction, and collaborative security, it shows practitioners how to modernize application security by connecting development and operations."
-author: "AndrewMFlick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud'
+author: AndrewMFlick
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:04:11 +00:00
-permalink: "/2025-11-18-Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Remediation", "AI", "AI Suggested Fix", "Alert Fatigue", "Application Security", "Artifact Metadata", "Azure", "Azure Portal", "Cloud Native Apps", "Code Scanning", "Community", "Copilot Autofix", "Dependabot", "DevOps", "DevSecOps", "GitHub Advanced Security", "GitHub Copilot", "Microsoft Defender For Cloud", "PR Automation", "Pull Request Automation", "Runtime Security", "Security", "Security Campaigns", "Security Integration", "Virtual Registry", "Vulnerability Prioritization"]
-tags_normalized: ["agentic remediation", "ai", "ai suggested fix", "alert fatigue", "application security", "artifact metadata", "azure", "azure portal", "cloud native apps", "code scanning", "community", "copilot autofix", "dependabot", "devops", "devsecops", "github advanced security", "github copilot", "microsoft defender for cloud", "pr automation", "pull request automation", "runtime security", "security", "security campaigns", "security integration", "virtual registry", "vulnerability prioritization"]
+permalink: /github-copilot/community/Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud
+tags:
+- Agentic Remediation
+- AI
+- AI Suggested Fix
+- Alert Fatigue
+- Application Security
+- Artifact Metadata
+- Azure
+- Azure Portal
+- Cloud Native Apps
+- Code Scanning
+- Community
+- Copilot Autofix
+- Dependabot
+- DevOps
+- DevSecOps
+- GitHub Advanced Security
+- GitHub Copilot
+- Microsoft Defender For Cloud
+- PR Automation
+- Pull Request Automation
+- Runtime Security
+- Security
+- Security Campaigns
+- Security Integration
+- Virtual Registry
+- Vulnerability Prioritization
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 AndrewMFlick introduces Microsoft’s integration of GitHub Advanced Security with Defender for Cloud, helping DevSecOps teams accelerate vulnerability remediation using runtime context, AI-suggested fixes, and code-to-cloud security integration.<!--excerpt_end-->
 
 # Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud

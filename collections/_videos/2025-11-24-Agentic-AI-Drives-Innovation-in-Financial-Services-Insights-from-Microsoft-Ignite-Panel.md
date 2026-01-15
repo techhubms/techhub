@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Agentic AI Drives Innovation in Financial Services: Insights from Microsoft Ignite Panel"
-description: "This session from Microsoft Ignite 2025 explores how agentic and generative AI are being leveraged by leading financial institutions to transform customer experiences, improve operational resilience, and strengthen risk intelligence. Industry experts share lessons learned, discuss strategies like cloud migration and technical debt reduction, and highlight the crucial role of Microsoft tools like Copilot in large-scale AI transformations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jxHVy6y82pI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Agentic AI Drives Innovation in Financial Services: Insights from Microsoft Ignite Panel'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=jxHVy6y82pI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:52:25 +00:00
-permalink: "/2025-11-24-Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Transformation", "Banking Innovation", "Change Management", "Cloud Migration", "Copilot", "Copilotandagentsatwork", "Financial Services", "Generative AI", "Microsoft Ignite", "Microsoft Tools", "MSIgnite", "Operational Resilience", "Panel Discussion", "Risk Intelligence", "Technical Debt", "Unified Experience Strategy", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai transformation", "banking innovation", "change management", "cloud migration", "copilot", "copilotandagentsatwork", "financial services", "generative ai", "microsoft ignite", "microsoft tools", "msignite", "operational resilience", "panel discussion", "risk intelligence", "technical debt", "unified experience strategy", "videos"]
+permalink: /ai/videos/Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel
+tags:
+- Agentic AI
+- AI
+- AI Transformation
+- Banking Innovation
+- Change Management
+- Cloud Migration
+- Copilot
+- Copilotandagentsatwork
+- Financial Services
+- Generative AI
+- Microsoft Ignite
+- Microsoft Tools
+- MSIgnite
+- Operational Resilience
+- Panel Discussion
+- Risk Intelligence
+- Technical Debt
+- Unified Experience Strategy
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events brings together financial industry leaders at Ignite 2025 to discuss the real-world impact of agentic AI, including customer experience enhancements, cloud migration strategies, and the deployment of Microsoft Copilot.<!--excerpt_end-->
 
 {% youtube jxHVy6y82pI %}

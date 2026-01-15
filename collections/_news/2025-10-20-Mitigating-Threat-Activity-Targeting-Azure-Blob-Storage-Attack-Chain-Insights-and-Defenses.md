@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Mitigating Threat Activity Targeting Azure Blob Storage: Attack Chain Insights and Defenses"
-description: "This article, authored by Microsoft Threat Intelligence, provides a comprehensive deep dive into how Azure Blob Storage is targeted by threat actors, examining the full attack chain, including reconnaissance, initial access, persistence, and exfiltration techniques. It details Azure-native defense mechanisms, actionable security recommendations, Defender for Cloud features, and relevant MITRE ATT&CK mappings. The content is geared toward security professionals, architects, and administrators responsible for safeguarding data and workloads on Microsoft Azure."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Mitigating Threat Activity Targeting Azure Blob Storage: Attack Chain Insights and Defenses'
+author: Microsoft Threat Intelligence
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-20 16:00:00 +00:00
-permalink: "/2025-10-20-Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses.html"
-categories: ["Azure", "Security"]
-tags: ["Attack Chain", "Azure", "Azure Blob Storage", "Cloud Monitoring", "Cloud Security", "Credential Access", "Data Exfiltration", "Data Protection", "Immutability", "Incident Response", "Lateral Movement", "Malware Scanning", "Microsoft Defender For Cloud", "Microsoft Entra ID", "MITRE ATT&CK", "News", "Role Based Access Control", "SAS Tokens", "Security", "Security Recommendations", "Threat Detection", "Zero Trust"]
-tags_normalized: ["attack chain", "azure", "azure blob storage", "cloud monitoring", "cloud security", "credential access", "data exfiltration", "data protection", "immutability", "incident response", "lateral movement", "malware scanning", "microsoft defender for cloud", "microsoft entra id", "mitre attandck", "news", "role based access control", "sas tokens", "security", "security recommendations", "threat detection", "zero trust"]
+permalink: /azure/news/Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses
+tags:
+- Attack Chain
+- Azure
+- Azure Blob Storage
+- Cloud Monitoring
+- Cloud Security
+- Credential Access
+- Data Exfiltration
+- Data Protection
+- Immutability
+- Incident Response
+- Lateral Movement
+- Malware Scanning
+- Microsoft Defender For Cloud
+- Microsoft Entra ID
+- MITRE ATT&CK
+- News
+- Role Based Access Control
+- SAS Tokens
+- Security
+- Security Recommendations
+- Threat Detection
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Microsoft Threat Intelligence outlines the evolving threat activity targeting Azure Blob Storage, mapping the full attack chain and providing actionable defense strategies for cloud security teams.<!--excerpt_end-->
 
 # Mitigating Threat Activity Targeting Azure Blob Storage: Attack Chain Insights and Defenses

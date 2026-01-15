@@ -1,20 +1,39 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Quantum-safe Security: Microsoft's Progress Toward Next-generation Cryptography"
-description: "This in-depth news feature, authored by Mark Russinovich and Michal Braverman-Blumenstyk, details Microsoft's strategy and practical steps toward quantum-safe security. It explores advances in post-quantum cryptography (PQC), contributions to global standards, development of cryptographic accelerators, product updates across Microsoft platforms, and the Quantum Safe Program's multi-phase roadmap. The article guides organizations on transitioning their infrastructures to resist future quantum threats."
-author: "Mark Russinovich and Michal Braverman-Blumenstyk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+author: Mark Russinovich and Michal Braverman-Blumenstyk
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-20 16:00:00 +00:00
-permalink: "/2025-08-20-Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography.html"
-categories: ["Azure", "Security"]
-tags: ["Adams Bridge Accelerator", "Azure", "Caliptra", "Cryptographic Standards", "Cybersecurity", "Hybrid Key Exchange", "Linux", "Microsoft Entra", "Microsoft Quantum Safe Program", "ML DSA", "ML KEM", "News", "NIST", "Open Quantum Safe Project", "Post Quantum Cryptography", "PQC", "Quantum Computing", "Security", "SymCrypt", "TLS 1.3", "Windows Insiders"]
-tags_normalized: ["adams bridge accelerator", "azure", "caliptra", "cryptographic standards", "cybersecurity", "hybrid key exchange", "linux", "microsoft entra", "microsoft quantum safe program", "ml dsa", "ml kem", "news", "nist", "open quantum safe project", "post quantum cryptography", "pqc", "quantum computing", "security", "symcrypt", "tls 1dot3", "windows insiders"]
+permalink: /azure/news/Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography
+tags:
+- Adams Bridge Accelerator
+- Azure
+- Caliptra
+- Cryptographic Standards
+- Cybersecurity
+- Hybrid Key Exchange
+- Linux
+- Microsoft Entra
+- Microsoft Quantum Safe Program
+- ML DSA
+- ML KEM
+- News
+- NIST
+- Open Quantum Safe Project
+- Post Quantum Cryptography
+- PQC
+- Quantum Computing
+- Security
+- SymCrypt
+- TLS 1.3
+- Windows Insiders
+section_names:
+- azure
+- security
 ---
-
 Mark Russinovich and Michal Braverman-Blumenstyk present an authoritative overview of Microsoft's quantum-safe security strategy, covering cryptography advances, standards collaboration, and practical steps for resilience against quantum-era threats.<!--excerpt_end-->
 
 # Quantum-safe Security: Microsoft's Progress Toward Next-generation Cryptography

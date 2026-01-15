@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Charting the Future of SOC: Human and AI Collaboration for Better Security"
-description: "This article explores how Microsoft Defender Experts are pioneering the use of autonomous AI agents within Security Operations Centers (SOCs). By integrating advanced GenAI capabilities, Defender Experts aim to transform SOC workflows, reduce manual toil, and promote seamless collaboration between human analysts and AI agents. The post describes the engineering, development processes, and practical skills required to establish trustworthy, efficient, and resilient security operations using Microsoft security platforms."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Charting the Future of SOC: Human and AI Collaboration for Better Security'
+author: stclarke
+canonical_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 18:53:09 +00:00
-permalink: "/2025-11-25-Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Engineering", "Autonomous AI Agents", "Case Management", "Company News", "Compliance", "GenAI", "Guardrails", "Human AI Collaboration", "Incident Response", "Malware", "MDR Operations", "Microsoft Defender Experts", "Microsoft Security", "News", "Phishing", "Prompt Engineering", "Remediation", "Security", "Security Automation", "Security Operations Center", "SOC", "Threat Detection"]
-tags_normalized: ["ai", "ai engineering", "autonomous ai agents", "case management", "company news", "compliance", "genai", "guardrails", "human ai collaboration", "incident response", "malware", "mdr operations", "microsoft defender experts", "microsoft security", "news", "phishing", "prompt engineering", "remediation", "security", "security automation", "security operations center", "soc", "threat detection"]
+permalink: /ai/news/Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security
+tags:
+- AI
+- AI Engineering
+- Autonomous AI Agents
+- Case Management
+- Company News
+- Compliance
+- GenAI
+- Guardrails
+- Human AI Collaboration
+- Incident Response
+- Malware
+- MDR Operations
+- Microsoft Defender Experts
+- Microsoft Security
+- News
+- Phishing
+- Prompt Engineering
+- Remediation
+- Security
+- Security Automation
+- Security Operations Center
+- SOC
+- Threat Detection
+section_names:
+- ai
+- security
 ---
-
 stclarke summarizes the journey of Microsoft Defender Experts in transforming SOC operations through autonomous AI agents, focusing on collaboration, trust, and efficiency for modern security teams.<!--excerpt_end-->
 
 # Charting the Future of SOC: Human and AI Collaboration for Better Security

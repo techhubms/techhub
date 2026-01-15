@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Accelerate Development with VS Code for the Web – Azure Integration"
-description: "This article presents a hands-on look at VS Code for the Web – Azure, a browser-based development environment that streamlines the coding process for cloud applications. The platform offers instant workspaces with pre-configured runtimes, direct GitHub access, and multiple entry points via Microsoft Foundry and Azure Copilot, making it easier to go from AI-generated code to live deployments on Azure quickly. Developers benefit from seamless integration with GitHub Copilot, native Azure tools, and rapid transitions between online and desktop development environments."
-author: "Meera Haridasa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/get-started-with-vs-code-for-the-web/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Accelerate Development with VS Code for the Web – Azure Integration
+author: Meera Haridasa
+canonical_url: https://devblogs.microsoft.com/all-things-azure/get-started-with-vs-code-for-the-web/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-20 16:40:49 +00:00
-permalink: "/2025-11-20-Accelerate-Development-with-VS-Code-for-the-Web-Azure-Integration.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "All Things Azure", "Application Development", "Azure", "Azure Copilot", "Azure Developer CLI", "Azure Portal", "Browser Based Development", "C#", "Cloud Deployment", "Code Editing", "Coding", "DevOps", "DevOps Workflow", "Git Integration", "GitHub Copilot", "Java", "Microsoft Foundry", "News", "Node.js", "Pre Configured Workspaces", "Python", "Rapid Onboarding", "VS Code For The Web"]
-tags_normalized: ["ai", "ai assisted coding", "all things azure", "application development", "azure", "azure copilot", "azure developer cli", "azure portal", "browser based development", "csharp", "cloud deployment", "code editing", "coding", "devops", "devops workflow", "git integration", "github copilot", "java", "microsoft foundry", "news", "nodedotjs", "pre configured workspaces", "python", "rapid onboarding", "vs code for the web"]
+permalink: /github-copilot/news/Accelerate-Development-with-VS-Code-for-the-Web-Azure-Integration
+tags:
+- AI
+- AI Assisted Coding
+- All Things Azure
+- Application Development
+- Azure
+- Azure Copilot
+- Azure Developer CLI
+- Azure Portal
+- Browser Based Development
+- C#
+- Cloud Deployment
+- Code Editing
+- Coding
+- DevOps
+- DevOps Workflow
+- Git Integration
+- GitHub Copilot
+- Java
+- Microsoft Foundry
+- News
+- Node.js
+- Pre Configured Workspaces
+- Python
+- Rapid Onboarding
+- VS Code For The Web
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Meera Haridasa introduces VS Code for the Web – Azure and highlights how developers can build, edit, and deploy cloud applications rapidly with pre-integrated runtimes, AI-assisted tools, and direct GitHub and Azure connections.<!--excerpt_end-->
 
 # Accelerate Development with VS Code for the Web – Azure Integration

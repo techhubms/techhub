@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Zone Redundancy Now Default for Azure Container Registry in Availability Zone Regions"
-description: "This announcement details a key Azure Container Registry improvement: zone redundancy is now enabled by default and at no extra cost for all ACR SKUs in regions supporting Availability Zones. All new and existing registries automatically benefit from enhanced resilience without configuration changes required. The update applies to Basic, Standard, and Premium SKUs and strengthens fault tolerance for container artifacts by replicating data across multiple physical zones. The Azure portal and CLI may not yet surface the new property, but redundancy is already in place. For details on supported regions, see the official Microsoft Learn documentation."
-author: "YiZha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/zone-redundancy-is-now-enabled-by-default-in-azure-container/ba-p/4450618"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Zone Redundancy Now Default for Azure Container Registry in Availability Zone Regions
+author: YiZha
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/zone-redundancy-is-now-enabled-by-default-in-azure-container/ba-p/4450618
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 07:00:00 +00:00
-permalink: "/2025-09-08-Zone-Redundancy-Now-Default-for-Azure-Container-Registry-in-Availability-Zone-Regions.html"
-categories: ["Azure"]
-tags: ["ACR", "Availability Zones", "Azure", "Azure Container Registry", "Cloud Infrastructure", "Cloud Resilience", "Community", "Container Registry", "Disaster Recovery", "High Availability", "Microsoft Azure", "Zone Redundancy"]
-tags_normalized: ["acr", "availability zones", "azure", "azure container registry", "cloud infrastructure", "cloud resilience", "community", "container registry", "disaster recovery", "high availability", "microsoft azure", "zone redundancy"]
+permalink: /azure/community/Zone-Redundancy-Now-Default-for-Azure-Container-Registry-in-Availability-Zone-Regions
+tags:
+- ACR
+- Availability Zones
+- Azure
+- Azure Container Registry
+- Cloud Infrastructure
+- Cloud Resilience
+- Community
+- Container Registry
+- Disaster Recovery
+- High Availability
+- Microsoft Azure
+- Zone Redundancy
+section_names:
+- azure
 ---
-
 YiZha announces a major resiliency update to Azure Container Registry: zone redundancy is now enabled by default and at no extra cost on all ACR SKUs in supported regions.<!--excerpt_end-->
 
 # Zone Redundancy Now Default for Azure Container Registry

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Assessing Your Azure Data Factory for Migration to Fabric Data Factory"
-description: "This news article guides organizations through the evaluation and migration process from Azure Data Factory (ADF) to Fabric Data Factory. It explains the importance of assessing pipeline compatibility, utilizing the built-in assessment tool, and understanding migration readiness statuses. Readers will learn how to use assessment reports to plan their migration strategy, address unsupported activities, and leverage available resources for a smoother transition."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Assessing Your Azure Data Factory for Migration to Fabric Data Factory
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 16:30:00 +00:00
-permalink: "/2025-12-10-Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Factory", "Cloud Data Platform", "Data Compatibility", "Data Engineering", "Data Integration", "Data Pipelines", "Data Workflow", "ETL", "Fabric Data Factory", "Microsoft Azure", "Microsoft Fabric", "Migration Assessment", "Migration Tools", "ML", "News", "Pipeline Migration", "PowerShell"]
-tags_normalized: ["azure", "azure data factory", "cloud data platform", "data compatibility", "data engineering", "data integration", "data pipelines", "data workflow", "etl", "fabric data factory", "microsoft azure", "microsoft fabric", "migration assessment", "migration tools", "ml", "news", "pipeline migration", "powershell"]
+permalink: /ml/news/Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory
+tags:
+- Azure
+- Azure Data Factory
+- Cloud Data Platform
+- Data Compatibility
+- Data Engineering
+- Data Integration
+- Data Pipelines
+- Data Workflow
+- ETL
+- Fabric Data Factory
+- Microsoft Azure
+- Microsoft Fabric
+- Migration Assessment
+- Migration Tools
+- ML
+- News
+- Pipeline Migration
+- PowerShell
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how to assess and prepare your Azure Data Factory pipelines for migration to Fabric Data Factory, highlighting built-in assessment tools and best migration practices.<!--excerpt_end-->
 
 # Assessing Your Azure Data Factory for Migration to Fabric Data Factory

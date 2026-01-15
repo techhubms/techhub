@@ -1,20 +1,50 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Microsoft Foundry: Agents, Models, and Enterprise-Grade AI (October–November 2025)"
-description: "This comprehensive update from Jenn Cockrell covers major announcements across the Microsoft Foundry platform, including the introduction of the Microsoft Agent Framework, enhanced hosted agent services, expanded model support (Anthropic Claude, OpenAI Sora 2), robust multi-agent orchestration, fine-tuning innovations, new governance controls, rebranded Foundry Tools, advanced observability, strengthened enterprise security, and developer-focused features. Learn how Foundry enables rapid prototyping, enterprise deployment, and seamless integration for AI agent solutions in the Microsoft ecosystem."
-author: "Jenn Cockrell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+author: Jenn Cockrell
+canonical_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-19 04:55:08 +00:00
-permalink: "/2025-12-19-Whats-New-in-Microsoft-Foundry-Agents-Models-and-Enterprise-Grade-AI-OctoberNovember-2025.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["AI", "AI Agents", "AI Tools", "Anthropic", "Anthropic Claude", "Azure", "Azure AI Search", "BYO Models", "Coding", "Enterprise AI", "Foundry Agent Framework", "Foundry Tools", "Guardrails", "Hosted Agents", "Identity And Governance", "MCP Integration", "Microsoft Foundry", "ML", "Model Fine Tuning", "Multi Agent System", "News", "Observability", "OpenAI Sora", "Persistent Memory", "Reinforcement Learning", "Security", "Sora", "VNET", "Zero Trust"]
-tags_normalized: ["ai", "ai agents", "ai tools", "anthropic", "anthropic claude", "azure", "azure ai search", "byo models", "coding", "enterprise ai", "foundry agent framework", "foundry tools", "guardrails", "hosted agents", "identity and governance", "mcp integration", "microsoft foundry", "ml", "model fine tuning", "multi agent system", "news", "observability", "openai sora", "persistent memory", "reinforcement learning", "security", "sora", "vnet", "zero trust"]
+permalink: /ai/news/Whats-New-in-Microsoft-Foundry-Agents-Models-and-Enterprise-Grade-AI-OctoberNovember-2025
+tags:
+- AI
+- AI Agents
+- AI Tools
+- Anthropic
+- Anthropic Claude
+- Azure
+- Azure AI Search
+- BYO Models
+- Coding
+- Enterprise AI
+- Foundry Agent Framework
+- Foundry Tools
+- Guardrails
+- Hosted Agents
+- Identity And Governance
+- MCP Integration
+- Microsoft Foundry
+- ML
+- Model Fine Tuning
+- Multi Agent System
+- News
+- Observability
+- OpenAI Sora
+- Persistent Memory
+- Reinforcement Learning
+- Security
+- Sora
+- VNET
+- Zero Trust
+section_names:
+- ai
+- azure
+- coding
+- ml
+- security
 ---
-
 Jenn Cockrell outlines the latest Microsoft Foundry enhancements, introducing powerful agent frameworks, model support, developer tools, and enterprise security features—all designed to accelerate AI innovation in the enterprise.<!--excerpt_end-->
 
 # What's New in Microsoft Foundry: October–November 2025

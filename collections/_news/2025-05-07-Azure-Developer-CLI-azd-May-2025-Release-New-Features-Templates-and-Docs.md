@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) May 2025 Release: New Features, Templates, and Docs"
-description: "This blog post from Kristen Womack outlines the May 2025 release (v1.15.0) of the Azure Developer CLI (azd), highlighting new features such as enhanced CI/CD support, expanded App Service deployment, new documentation, and a rich set of new starter templates across .NET, Python, Node.js, and AI-powered solutions."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd) May 2025 Release: New Features, Templates, and Docs'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-05-07 17:30:53 +00:00
-permalink: "/2025-05-07-Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "App Service", "Azd", "Azure", "Azure API Management", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Azure SQL", "Blazor", "CI/CD", "Codespaces", "Coding", "DevOps", "Docker", "GitHub Actions", "GitHub Codespaces", "Java", "JavaScript", "Kubernetes", "News", "Node.js", "OpenAI", "Python", "Semantic Kernel", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "app service", "azd", "azure", "azure api management", "azure container apps", "azure developer cli", "azure sdk", "azure sql", "blazor", "cislashcd", "codespaces", "coding", "devops", "docker", "github actions", "github codespaces", "java", "javascript", "kubernetes", "news", "nodedotjs", "openai", "python", "semantic kernel", "templates", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs
+tags:
+- .NET
+- AI
+- App Service
+- Azd
+- Azure
+- Azure API Management
+- Azure Container Apps
+- Azure Developer CLI
+- Azure SDK
+- Azure SQL
+- Blazor
+- CI/CD
+- Codespaces
+- Coding
+- DevOps
+- Docker
+- GitHub Actions
+- GitHub Codespaces
+- Java
+- JavaScript
+- Kubernetes
+- News
+- Node.js
+- OpenAI
+- Python
+- Semantic Kernel
+- Templates
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 In this post, Kristen Womack presents the May 2025 release of Azure Developer CLI (azd), covering new features, updated templates, and improved documentation for enhanced Azure application development.<!--excerpt_end-->
 
 ## Azure Developer CLI (azd) – May 2025 Release Overview

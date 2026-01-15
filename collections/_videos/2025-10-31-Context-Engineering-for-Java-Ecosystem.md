@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Context Engineering for Java Ecosystem"
-description: "In this episode, Ayan Gupta and Bruno Borges explore how context engineering can transform Java development workflows with GitHub Copilot in Visual Studio Code. The session demonstrates using custom instructions, chat modes, and prompt files to control AI code assistance, enabling project-wide standards and reducing repetitive prompting. Bruno covers how to set context for frameworks (including Spring and Hibernate), set up reusable prompts, and leverage 'planner' chat modes for architecture planning. Developers will learn practical strategies to fully harness Copilot's capabilities in large Java projects."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kSElHY8MWwc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Context Engineering for Java Ecosystem
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=kSElHY8MWwc
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 16:01:27 +00:00
-permalink: "/2025-10-31-Context-Engineering-for-Java-Ecosystem.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "AIAssisted", "Bad Practice Analysis", "Chat Modes", "ChatModes", "Coding", "Context Engineering", "ContextEngineering", "Copilot Chat", "Custom Instructions", "CustomInstructions", "Developer Productivity", "DeveloperProductivity", "GitHub Copilot", "Hibernate", "Java", "Java 25", "Java25", "JavaDevelopment", "Planner Mode", "Prompt Engineering", "PromptEngineering", "Spring Framework", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai assisted development", "aiassisted", "bad practice analysis", "chat modes", "chatmodes", "coding", "context engineering", "contextengineering", "copilot chat", "custom instructions", "custominstructions", "developer productivity", "developerproductivity", "github copilot", "hibernate", "java", "java 25", "java25", "javadevelopment", "planner mode", "prompt engineering", "promptengineering", "spring framework", "videos", "vs code"]
+permalink: /github-copilot/videos/Context-Engineering-for-Java-Ecosystem
+tags:
+- AI
+- AI Assisted Development
+- AIAssisted
+- Bad Practice Analysis
+- Chat Modes
+- ChatModes
+- Coding
+- Context Engineering
+- ContextEngineering
+- Copilot Chat
+- Custom Instructions
+- CustomInstructions
+- Developer Productivity
+- DeveloperProductivity
+- GitHub Copilot
+- Hibernate
+- Java
+- Java 25
+- Java25
+- JavaDevelopment
+- Planner Mode
+- Prompt Engineering
+- PromptEngineering
+- Spring Framework
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer, featuring Ayan Gupta and Bruno Borges, showcases advanced context engineering techniques in Java using GitHub Copilot and Visual Studio Code to streamline developer workflows and AI interactions.<!--excerpt_end-->
 
 {% youtube kSElHY8MWwc %}

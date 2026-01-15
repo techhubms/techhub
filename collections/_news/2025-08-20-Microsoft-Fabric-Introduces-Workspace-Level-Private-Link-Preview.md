@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Fabric Introduces Workspace-Level Private Link (Preview)"
-description: "This announcement details the preview release of workspace-level Private Link support in Microsoft Fabric, allowing organizations to implement granular, secure, and private network access controls for individual Fabric workspaces. It covers the benefits, security enhancements, step-by-step setup process, and current limitations, aimed at IT and data professionals managing enterprise data and compliance."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Fabric Introduces Workspace-Level Private Link (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 16:11:57 +00:00
-permalink: "/2025-08-20-Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Portal", "Azure Private Link", "Cloud Security", "Data Privacy", "Enterprise Security", "Fabric Administration", "Fabric Workspace", "Granular Access Control", "Microsoft Fabric", "Network Security", "News", "Private Endpoint", "Regulatory Compliance", "Security", "Virtual Networks"]
-tags_normalized: ["azure", "azure portal", "azure private link", "cloud security", "data privacy", "enterprise security", "fabric administration", "fabric workspace", "granular access control", "microsoft fabric", "network security", "news", "private endpoint", "regulatory compliance", "security", "virtual networks"]
+permalink: /azure/news/Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview
+tags:
+- Azure
+- Azure Portal
+- Azure Private Link
+- Cloud Security
+- Data Privacy
+- Enterprise Security
+- Fabric Administration
+- Fabric Workspace
+- Granular Access Control
+- Microsoft Fabric
+- Network Security
+- News
+- Private Endpoint
+- Regulatory Compliance
+- Security
+- Virtual Networks
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog announces the preview of workspace-level Private Link, a new security feature enabling more granular private network access to individual Fabric workspaces. This post by the Microsoft Fabric Blog team guides IT professionals through setup and highlights key security benefits.<!--excerpt_end-->
 
 # Fabric workspace-level Private Link (Preview)

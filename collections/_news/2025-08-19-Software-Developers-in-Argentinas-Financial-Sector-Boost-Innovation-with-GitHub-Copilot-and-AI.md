@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI"
-description: "This article highlights how software developers in Argentina’s financial sector, particularly at major banks like Galicia, are leveraging AI-powered tools such as GitHub Copilot to speed up development cycles and improve coding productivity. The story outlines the critical role these technologies play in responding to regulatory changes and fostering innovation within the financial services industry."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI
+author: sbaynes
+canonical_url: https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-19 14:24:43 +00:00
-permalink: "/2025-08-19-Software-Developers-in-Argentinas-Financial-Sector-Boost-Innovation-with-GitHub-Copilot-and-AI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Developer Tools", "Application Development", "Argentina Financial Sector", "Banking Technology", "Code Assistants", "Coding", "Coding Lifecycle", "Copilot Chat Modes", "Feature Delivery", "Galicia Bank", "GitHub Copilot", "News", "Productivity Tools", "Secure Coding", "Software Development", "Software Innovation"]
-tags_normalized: ["ai", "ai developer tools", "application development", "argentina financial sector", "banking technology", "code assistants", "coding", "coding lifecycle", "copilot chat modes", "feature delivery", "galicia bank", "github copilot", "news", "productivity tools", "secure coding", "software development", "software innovation"]
+permalink: /github-copilot/news/Software-Developers-in-Argentinas-Financial-Sector-Boost-Innovation-with-GitHub-Copilot-and-AI
+tags:
+- AI
+- AI Developer Tools
+- Application Development
+- Argentina Financial Sector
+- Banking Technology
+- Code Assistants
+- Coding
+- Coding Lifecycle
+- Copilot Chat Modes
+- Feature Delivery
+- Galicia Bank
+- GitHub Copilot
+- News
+- Productivity Tools
+- Secure Coding
+- Software Development
+- Software Innovation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 sbaynes examines how developers at Galicia and other banks in Argentina are using GitHub Copilot and AI tools to speed up development, improve productivity, and innovate in a rapidly changing financial sector.<!--excerpt_end-->
 
 # Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI

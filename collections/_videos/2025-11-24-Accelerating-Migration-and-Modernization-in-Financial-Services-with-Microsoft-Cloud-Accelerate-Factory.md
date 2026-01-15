@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory"
-description: "This session from Microsoft Ignite 2025 explores how financial services organizations are driving cloud transformation using Microsoft’s Cloud Accelerate Factory (CAF). The discussion covers streamlined migration strategies, application modernization, and the integration of scalable technologies like Azure Arc and AI-powered monitoring. Key topics include the future of innovation and agility in financial services, the benefits of CAF's two-part focus—innovation and implementation support—and the expanding roles of agentic AI in business modernization."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nV0UF_wyJN8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=nV0UF_wyJN8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:25:12 +00:00
-permalink: "/2025-11-24-Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Powered Monitoring", "Application Modernization", "Automation", "Azure", "Azure Arc", "Business Agility", "CAF Framework", "Cloud Migration", "Cloud Transformation", "Financial Services", "Microsoft Cloud Accelerate Factory", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Strategies", "Modernization Economics", "MSIgnite", "Resilience", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai powered monitoring", "application modernization", "automation", "azure", "azure arc", "business agility", "caf framework", "cloud migration", "cloud transformation", "financial services", "microsoft cloud accelerate factory", "microsoft ignite", "migrateandmodernizeyourestate", "migration strategies", "modernization economics", "msignite", "resilience", "videos"]
+permalink: /ai/videos/Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory
+tags:
+- Agentic AI
+- AI
+- AI Powered Monitoring
+- Application Modernization
+- Automation
+- Azure
+- Azure Arc
+- Business Agility
+- CAF Framework
+- Cloud Migration
+- Cloud Transformation
+- Financial Services
+- Microsoft Cloud Accelerate Factory
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration Strategies
+- Modernization Economics
+- MSIgnite
+- Resilience
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an intermediate-level Microsoft Ignite 2025 session detailing how financial services organizations accelerate cloud transformation and modernization through the Cloud Accelerate Factory, led by Pradeep Raman and Jesse Sheldon.<!--excerpt_end-->
 
 {% youtube nV0UF_wyJN8 %}

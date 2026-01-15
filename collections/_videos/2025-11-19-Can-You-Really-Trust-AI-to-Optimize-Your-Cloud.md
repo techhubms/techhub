@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Can You Really Trust AI to Optimize Your Cloud?"
-description: "This session from Microsoft Ignite 2025, led by Sedai CEO Suresh Mathew, explores the role of AI in cloud operations for enterprise environments. Topics include autonomous systems, causes of inaccuracy in automation, reliability improvements via AI, and the critical benefits and risks of entrusting cloud optimization to intelligent automation. The presentation discusses rightsizing resources, availability management, productivity boosts for engineers, and the concept of fully autonomous execution ('Autopilot') using AI-powered platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XY4na9h5dEY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Can You Really Trust AI to Optimize Your Cloud?
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=XY4na9h5dEY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:34:17 +00:00
-permalink: "/2025-11-19-Can-You-Really-Trust-AI-to-Optimize-Your-Cloud.html"
-categories: ["AI"]
-tags: ["Agentic Business Applications", "Agenticbusinessapplications", "AI", "AI Automation", "AI Reliability", "Autonomous Systems", "Autopilot", "Availability Management", "Cloud Operations", "Cloud Optimization", "Engineering Leadership", "Enterprise Cloud", "Intelligent Automation", "Microsoft Ignite", "MSIgnite", "Productivity", "Rightsizing", "Session ODSP1433", "Suresh Mathew", "Videos"]
-tags_normalized: ["agentic business applications", "agenticbusinessapplications", "ai", "ai automation", "ai reliability", "autonomous systems", "autopilot", "availability management", "cloud operations", "cloud optimization", "engineering leadership", "enterprise cloud", "intelligent automation", "microsoft ignite", "msignite", "productivity", "rightsizing", "session odsp1433", "suresh mathew", "videos"]
+permalink: /ai/videos/Can-You-Really-Trust-AI-to-Optimize-Your-Cloud
+tags:
+- Agentic Business Applications
+- Agenticbusinessapplications
+- AI
+- AI Automation
+- AI Reliability
+- Autonomous Systems
+- Autopilot
+- Availability Management
+- Cloud Operations
+- Cloud Optimization
+- Engineering Leadership
+- Enterprise Cloud
+- Intelligent Automation
+- Microsoft Ignite
+- MSIgnite
+- Productivity
+- Rightsizing
+- Session ODSP1433
+- Suresh Mathew
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents CEO Suresh Mathew discussing the benefits and risks of leveraging AI to automate enterprise cloud operations at Microsoft Ignite 2025.<!--excerpt_end-->
 
 {% youtube XY4na9h5dEY %}

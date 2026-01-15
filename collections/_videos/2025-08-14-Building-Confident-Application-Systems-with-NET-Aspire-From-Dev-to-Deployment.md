@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Confident Application Systems with .NET Aspire: From Dev to Deployment"
-description: ".NET Aspire aims to simplify the development of distributed application systems for developers of all sizes, from solo practitioners to teams. This session introduces Aspire’s stack and demonstrates how to scaffold, structure, and deploy distributed .NET applications. The content covers deploying to Azure, containerization, CI/CD integration with GitHub Actions, and implementing observability with custom metrics, offering practical guidance suitable for introductory and intermediate audiences."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=S022Q6oAftE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Building Confident Application Systems with .NET Aspire: From Dev to Deployment'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=S022Q6oAftE
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-14 14:24:36 +00:00
-permalink: "/2025-08-14-Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "CI/CD", "Coding", "Containerization", "Custom Metrics", "Deployment", "DevOps", "Distributed Systems", "GitHub Actions", "Instrumentation", "Metrics", "Observability", "Software Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "cislashcd", "coding", "containerization", "custom metrics", "deployment", "devops", "distributed systems", "github actions", "instrumentation", "metrics", "observability", "software development", "videos", "vs"]
+permalink: /coding/videos/Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment
+tags:
+- .NET
+- .NET Aspire
+- Application Architecture
+- Azure
+- CI/CD
+- Coding
+- Containerization
+- Custom Metrics
+- Deployment
+- DevOps
+- Distributed Systems
+- GitHub Actions
+- Instrumentation
+- Metrics
+- Observability
+- Software Development
+- Videos
+- VS
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this session by the dotnet team, you'll discover practical techniques for architecting, deploying, and monitoring distributed .NET Aspire applications, from development through to deployment and observability.<!--excerpt_end-->
 
 {% youtube S022Q6oAftE %}

@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "How GitHub Plans to Secure npm After Recent Supply Chain Attacks"
-description: "This article explains GitHub's response to the recent Shai-Hulud worm attack on the npm registry. It covers new security measures including mandatory two-factor authentication, granular short-lived tokens, deprecation of legacy authentication, and the rollout of trusted publishing for npm and other package registries. The implications for software supply chain security and actionable recommendations for maintainers are discussed."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How GitHub Plans to Secure npm After Recent Supply Chain Attacks
+author: Tom Smith
+canonical_url: https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-26 07:58:54 +00:00
-permalink: "/2025-09-26-How-GitHub-Plans-to-Secure-npm-After-Recent-Supply-Chain-Attacks.html"
-categories: ["DevOps", "Security"]
-tags: ["API Token Deprecation", "Blogs", "Business Of DevOps", "CI/CD Authentication", "CI/CD Pipelines", "Crates.io", "Crates.io Security", "DevOps", "DevSecOps", "GitHub", "npm", "npm 2FA", "npm Registry Attack", "npm Token Theft", "NuGet", "Open Source Security", "Package Registry", "Package Registry Malware", "PyPI", "PyPI Trusted Publishing", "RubyGems", "Security", "Shai Hulud Worm", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Software Supply Chain Security", "Supply Chain Security", "Token Deprecation", "Trusted Publishing", "WebAuthn"]
-tags_normalized: ["api token deprecation", "blogs", "business of devops", "cislashcd authentication", "cislashcd pipelines", "cratesdotio", "cratesdotio security", "devops", "devsecops", "github", "npm", "npm 2fa", "npm registry attack", "npm token theft", "nuget", "open source security", "package registry", "package registry malware", "pypi", "pypi trusted publishing", "rubygems", "security", "shai hulud worm", "social facebook", "social linkedin", "social x", "software supply chain", "software supply chain security", "supply chain security", "token deprecation", "trusted publishing", "webauthn"]
+permalink: /devops/blogs/How-GitHub-Plans-to-Secure-npm-After-Recent-Supply-Chain-Attacks
+tags:
+- API Token Deprecation
+- Blogs
+- Business Of DevOps
+- CI/CD Authentication
+- CI/CD Pipelines
+- Crates.io
+- Crates.io Security
+- DevOps
+- DevSecOps
+- GitHub
+- npm
+- npm 2FA
+- npm Registry Attack
+- npm Token Theft
+- NuGet
+- Open Source Security
+- Package Registry
+- Package Registry Malware
+- PyPI
+- PyPI Trusted Publishing
+- RubyGems
+- Security
+- Shai Hulud Worm
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Software Supply Chain Security
+- Supply Chain Security
+- Token Deprecation
+- Trusted Publishing
+- WebAuthn
+section_names:
+- devops
+- security
 ---
-
 Tom Smith discusses how GitHub is overhauling npm security after the Shai-Hulud worm attack, describing new authentication requirements and trusted publishing to defend the software supply chain.<!--excerpt_end-->
 
 # How GitHub Plans to Secure npm After Recent Supply Chain Attacks

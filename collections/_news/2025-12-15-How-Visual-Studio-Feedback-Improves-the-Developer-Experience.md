@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How Visual Studio Feedback Improves the Developer Experience"
-description: "This article provides an inside look at how the Visual Studio team manages, prioritizes, and acts upon user-submitted feedback and bug reports. Readers will learn how tickets traverse from public reporting to internal triage via Azure DevOps, how community engagement influences prioritization, and practical tips for writing effective reports. The piece also highlights the team's commitment to addressing regressions, performance, and accessibility issues quickly, as well as the collaborative relationship between Microsoft engineers and the developer community."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: How Visual Studio Feedback Improves the Developer Experience
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-15 15:00:33 +00:00
-permalink: "/2025-12-15-How-Visual-Studio-Feedback-Improves-the-Developer-Experience.html"
-categories: ["Coding", "DevOps"]
-tags: ["Accessibility", "Azure DevOps", "Bug Reporting", "Coding", "Developer Community", "Developer Experience", "DevOps", "Feature Requests", "Feedback", "Feedback System", "IDE", "Issue Tracking", "News", "Performance Issues", "Regression Analysis", "Ticket Triage", "VS"]
-tags_normalized: ["accessibility", "azure devops", "bug reporting", "coding", "developer community", "developer experience", "devops", "feature requests", "feedback", "feedback system", "ide", "issue tracking", "news", "performance issues", "regression analysis", "ticket triage", "vs"]
+permalink: /coding/news/How-Visual-Studio-Feedback-Improves-the-Developer-Experience
+tags:
+- Accessibility
+- Azure DevOps
+- Bug Reporting
+- Coding
+- Developer Community
+- Developer Experience
+- DevOps
+- Feature Requests
+- Feedback
+- Feedback System
+- IDE
+- Issue Tracking
+- News
+- Performance Issues
+- Regression Analysis
+- Ticket Triage
+- VS
+section_names:
+- coding
+- devops
 ---
-
 Mads Kristensen explains how the Visual Studio team turns user feedback into actionable improvements, detailing the internal workflow and tips for developers to enhance their bug reports.<!--excerpt_end-->
 
 # How Visual Studio Feedback Improves the Developer Experience

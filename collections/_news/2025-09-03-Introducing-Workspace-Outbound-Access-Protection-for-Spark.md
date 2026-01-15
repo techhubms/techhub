@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing Workspace Outbound Access Protection for Spark"
-description: "This article introduces the public preview of Workspace Outbound Access Protection (OAP) for Spark in Microsoft Fabric. It explains how OAP enables organizations to govern and restrict outbound connectivity from Fabric workspaces, enhancing data exfiltration protection. Learn about features like managed private endpoints, granular per-workspace controls, compliance benefits, setup guidance, and integration with existing inbound protection mechanisms. The blog targets administrators and security professionals managing data engineering artifacts and security boundaries in Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Workspace Outbound Access Protection for Spark
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 10:04:16 +00:00
-permalink: "/2025-09-03-Introducing-Workspace-Outbound-Access-Protection-for-Spark.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Compliance", "Data Engineering", "Data Exfiltration", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Security", "News", "OAP", "Private Links", "Security", "Spark", "Trusted Workspace Access", "Workspace Outbound Access Protection"]
-tags_normalized: ["azure", "compliance", "data engineering", "data exfiltration", "managed private endpoints", "microsoft fabric", "ml", "network security", "news", "oap", "private links", "security", "spark", "trusted workspace access", "workspace outbound access protection"]
+permalink: /ml/news/Introducing-Workspace-Outbound-Access-Protection-for-Spark
+tags:
+- Azure
+- Compliance
+- Data Engineering
+- Data Exfiltration
+- Managed Private Endpoints
+- Microsoft Fabric
+- ML
+- Network Security
+- News
+- OAP
+- Private Links
+- Security
+- Spark
+- Trusted Workspace Access
+- Workspace Outbound Access Protection
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog introduces Workspace Outbound Access Protection (OAP) for Spark, empowering admins to restrict outbound connectivity and prevent data exfiltration in managed workspaces.<!--excerpt_end-->
 
 # Introducing Workspace Outbound Access Protection (OAP) for Spark in Microsoft Fabric

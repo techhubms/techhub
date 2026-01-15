@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing MCP Server Support for Logic Apps Agent Loop"
-description: "This announcement details how Azure Logic Apps Standard now incorporates Model Context Protocol (MCP) support within Agent Loop, enabling agents to securely discover and use enterprise tools through connector-driven MCP servers. Key features include custom and managed MCP connectors, OpenAPI-based extensibility, and secure on-behalf-of authentication for intelligent workflow tool integration."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-mcp-server-support-for-logic-apps-agent-loop/ba-p/4470778"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing MCP Server Support for Logic Apps Agent Loop
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-mcp-server-support-for-logic-apps-agent-loop/ba-p/4470778
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:35:43 +00:00
-permalink: "/2025-11-18-Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Loop", "AI", "Azure", "Azure Logic Apps Standard", "Community", "Connector Driven Architecture", "Custom Connectors", "Enterprise Integration", "Intelligent Workflows", "Managed Connectors", "MCP", "MCP Server", "On Behalf Of Authentication", "OpenAPI", "Secure Authentication", "Tool Extensibility"]
-tags_normalized: ["agent loop", "ai", "azure", "azure logic apps standard", "community", "connector driven architecture", "custom connectors", "enterprise integration", "intelligent workflows", "managed connectors", "mcp", "mcp server", "on behalf of authentication", "openapi", "secure authentication", "tool extensibility"]
+permalink: /ai/community/Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop
+tags:
+- Agent Loop
+- AI
+- Azure
+- Azure Logic Apps Standard
+- Community
+- Connector Driven Architecture
+- Custom Connectors
+- Enterprise Integration
+- Intelligent Workflows
+- Managed Connectors
+- MCP
+- MCP Server
+- On Behalf Of Authentication
+- OpenAPI
+- Secure Authentication
+- Tool Extensibility
+section_names:
+- ai
+- azure
 ---
-
 KentWeareMSFT introduces MCP support for Agent Loop in Azure Logic Apps Standard, explaining how agents can securely interact with enterprise tools using managed and custom MCP connectors.<!--excerpt_end-->
 
 # Announcing MCP Server Support for Logic Apps Agent Loop

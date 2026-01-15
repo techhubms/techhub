@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Dependabot Adds Support for OpenTofu Dependency Updates"
-description: "This update announces that Dependabot now supports automated version updates for OpenTofu dependencies. Developers managing projects with OpenTofu can use Dependabot to keep dependencies current, improving supply chain security and simplifying dependency management. The announcement enhances the versatility of Dependabot and encourages engagement with the open source community around OpenTofu integration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Adds Support for OpenTofu Dependency Updates
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:44:18 +00:00
-permalink: "/2025-12-16-Dependabot-Adds-Support-for-OpenTofu-Dependency-Updates.html"
-categories: ["DevOps"]
-tags: ["Automation", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "IaC", "News", "Open Source", "OpenTofu", "Supply Chain Security", "Version Updates"]
-tags_normalized: ["automation", "continuous integration", "dependabot", "dependency management", "devops", "github", "iac", "news", "open source", "opentofu", "supply chain security", "version updates"]
+permalink: /devops/news/Dependabot-Adds-Support-for-OpenTofu-Dependency-Updates
+tags:
+- Automation
+- Continuous Integration
+- Dependabot
+- Dependency Management
+- DevOps
+- GitHub
+- IaC
+- News
+- Open Source
+- OpenTofu
+- Supply Chain Security
+- Version Updates
+section_names:
+- devops
 ---
-
 Allison highlights the new capability for Dependabot to automatically update OpenTofu dependencies, enabling developers to maintain secure and up-to-date project environments.<!--excerpt_end-->
 
 # Dependabot Adds Support for OpenTofu Dependency Updates

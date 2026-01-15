@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "CodeQL 2.22.4 Adds Go 1.25 Support and Security Enhancements"
-description: "This update details the release of CodeQL 2.22.4, the engine driving GitHub code scanning. Notable additions include support for Go 1.25, an improved Rust security query, and enhanced analysis for a range of programming languages. The release also includes fixes and improvements to language frameworks and queries."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-02-codeql-2-22-4-adds-support-for-go-1-25-and-accuracy-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL 2.22.4 Adds Go 1.25 Support and Security Enhancements
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-02-codeql-2-22-4-adds-support-for-go-1-25-and-accuracy-improvements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-03 08:41:54 +00:00
-permalink: "/2025-09-03-CodeQL-2224-Adds-Go-125-Support-and-Security-Enhancements.html"
-categories: ["DevOps", "Security"]
-tags: ["C++", "Code Scanning", "CodeQL", "DevOps", "GitHub", "Go", "Java", "JavaScript", "Kotlin", "News", "Rust", "Secure Development", "Security", "SQL Injection", "Static Analysis", "TypeScript", "Vulnerability Detection"]
-tags_normalized: ["cplusplus", "code scanning", "codeql", "devops", "github", "go", "java", "javascript", "kotlin", "news", "rust", "secure development", "security", "sql injection", "static analysis", "typescript", "vulnerability detection"]
+permalink: /devops/news/CodeQL-2224-Adds-Go-125-Support-and-Security-Enhancements
+tags:
+- C++
+- Code Scanning
+- CodeQL
+- DevOps
+- GitHub
+- Go
+- Java
+- JavaScript
+- Kotlin
+- News
+- Rust
+- Secure Development
+- Security
+- SQL Injection
+- Static Analysis
+- TypeScript
+- Vulnerability Detection
+section_names:
+- devops
+- security
 ---
-
 Allison introduces CodeQL 2.22.4, describing new language support, advanced security queries, and accuracy improvements for developers leveraging GitHub code scanning.<!--excerpt_end-->
 
 # CodeQL 2.22.4 Adds Go 1.25 Support and Accuracy Improvements

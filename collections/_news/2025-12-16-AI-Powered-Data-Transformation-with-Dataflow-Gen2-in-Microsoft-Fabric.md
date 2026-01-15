@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI-Powered Data Transformation with Dataflow Gen2 in Microsoft Fabric"
-description: "This news article introduces Dataflow Gen2, a new Microsoft Fabric feature that leverages AI and natural language prompts for data transformation and workflow automation. It previews how organizations can use AI Prompt within the Power Query editor to automate tasks like summarization, classification, and sentiment analysis without coding. The article covers integration with Microsoft Fabric, personalized workflow capabilities, and upcoming availability dates."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: AI-Powered Data Transformation with Dataflow Gen2 in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 09:00:00 +00:00
-permalink: "/2025-12-16-AI-Powered-Data-Transformation-with-Dataflow-Gen2-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Prompt", "Analytics", "Automation", "Azure", "Classification", "Data Integration", "Data Transformation", "Dataflow Gen2", "Enterprise Data", "Microsoft Fabric", "ML", "Natural Language Processing", "News", "No Code", "Power Query", "Preview Release", "Prompt Engineering", "Sentiment Analysis", "Translation", "Workflow Automation"]
-tags_normalized: ["ai", "ai prompt", "analytics", "automation", "azure", "classification", "data integration", "data transformation", "dataflow gen2", "enterprise data", "microsoft fabric", "ml", "natural language processing", "news", "no code", "power query", "preview release", "prompt engineering", "sentiment analysis", "translation", "workflow automation"]
+permalink: /ai/news/AI-Powered-Data-Transformation-with-Dataflow-Gen2-in-Microsoft-Fabric
+tags:
+- AI
+- AI Prompt
+- Analytics
+- Automation
+- Azure
+- Classification
+- Data Integration
+- Data Transformation
+- Dataflow Gen2
+- Enterprise Data
+- Microsoft Fabric
+- ML
+- Natural Language Processing
+- News
+- No Code
+- Power Query
+- Preview Release
+- Prompt Engineering
+- Sentiment Analysis
+- Translation
+- Workflow Automation
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines how Dataflow Gen2 integrates AI-powered prompts into data transformation, enabling users to automate complex analytics workflows without coding.<!--excerpt_end-->
 
 # AI-Powered Data Transformation with Dataflow Gen2 in Microsoft Fabric

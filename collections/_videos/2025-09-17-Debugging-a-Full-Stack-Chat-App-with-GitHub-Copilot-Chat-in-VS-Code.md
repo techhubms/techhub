@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code"
-description: "This video demonstrates how to leverage GitHub Copilot Chat within Visual Studio Code to debug and enhance a full-stack chat application. The walkthrough covers both Ask and Agent modes, explores customization of chat modes with MCP servers, and illustrates practical development benefits for web app projects. Viewers will learn actionable techniques for prompt-driven development and AI-assisted debugging in the Microsoft ecosystem."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QLAIww-Vhqo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=QLAIww-Vhqo
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-17 14:00:51 +00:00
-permalink: "/2025-09-17-Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Pair Programming", "AI Search", "Ask Mode", "Azure OpenAI", "Chatapp", "Coding", "Copilot", "Copilot Chat", "Custom Chat Modes", "Debugging", "Developer", "Developer Tools", "Full Stack Development", "GitHub Copilot", "MCP Servers", "Microsoft", "Prompt Driven Development", "Promptdrivendevelopment", "Software Developer", "Videos", "VS Code", "Web Applications"]
-tags_normalized: ["agent mode", "ai", "ai pair programming", "ai search", "ask mode", "azure openai", "chatapp", "coding", "copilot", "copilot chat", "custom chat modes", "debugging", "developer", "developer tools", "full stack development", "github copilot", "mcp servers", "microsoft", "prompt driven development", "promptdrivendevelopment", "software developer", "videos", "vs code", "web applications"]
+permalink: /github-copilot/videos/Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code
+tags:
+- Agent Mode
+- AI
+- AI Pair Programming
+- AI Search
+- Ask Mode
+- Azure OpenAI
+- Chatapp
+- Coding
+- Copilot
+- Copilot Chat
+- Custom Chat Modes
+- Debugging
+- Developer
+- Developer Tools
+- Full Stack Development
+- GitHub Copilot
+- MCP Servers
+- Microsoft
+- Prompt Driven Development
+- Promptdrivendevelopment
+- Software Developer
+- Videos
+- VS Code
+- Web Applications
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this video, Visual Studio Code (with Pamela Fox) shows how to debug and improve a full-stack chat app using GitHub Copilot Chat, exploring advanced chat modes, agentic development, and AI-driven web app troubleshooting.<!--excerpt_end-->
 
 {% youtube QLAIww-Vhqo %}

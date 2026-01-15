@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration"
-description: "This video features Abigail Cabunoc Mayes, Lead Open Source Maintainer Programs at GitHub, as she delves into the 2025 Octoverse report. Abby explores developer growth, discusses the integration of AI in open source projects, global trends in software development, collaborative standards, and practical advice for new contributors in the GitHub community."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jV570EFcC9o"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=jV570EFcC9o
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-08 17:12:15 +00:00
-permalink: "/2025-12-08-The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "Code Standards", "Community Growth", "Contributor Advice", "Developer Collaboration", "DevOps", "GitHub", "Global Trends", "Maintainers", "Octoverse", "Open Source", "Open Source Ecosystem", "Software Development", "Videos"]
-tags_normalized: ["ai", "code standards", "community growth", "contributor advice", "developer collaboration", "devops", "github", "global trends", "maintainers", "octoverse", "open source", "open source ecosystem", "software development", "videos"]
+permalink: /ai/videos/The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration
+tags:
+- AI
+- Code Standards
+- Community Growth
+- Contributor Advice
+- Developer Collaboration
+- DevOps
+- GitHub
+- Global Trends
+- Maintainers
+- Octoverse
+- Open Source
+- Open Source Ecosystem
+- Software Development
+- Videos
+section_names:
+- ai
+- devops
 ---
-
 GitHub's Abigail Cabunoc Mayes discusses the Octoverse 2025 report, highlighting developer growth, AI’s evolving role in open source, and advice for first-time contributors, offering insights into the human and technological factors shaping the community.<!--excerpt_end-->
 
 {% youtube jV570EFcC9o %}

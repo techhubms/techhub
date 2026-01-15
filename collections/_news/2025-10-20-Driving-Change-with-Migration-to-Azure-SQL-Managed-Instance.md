@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Driving Change with Migration to Azure SQL Managed Instance"
-description: "This article explores how organizations leverage Microsoft Azure SQL Managed Instance to move from legacy systems to modern, secure, and scalable cloud infrastructure. Highlighting real-world customer scenarios, it discusses the advantages of migrating to an AI-ready SQL platform in Azure."
-author: "Debbi Lyons"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Driving Change with Migration to Azure SQL Managed Instance
+author: Debbi Lyons
+canonical_url: https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 16:00:00 +00:00
-permalink: "/2025-10-20-Driving-Change-with-Migration-to-Azure-SQL-Managed-Instance.html"
-categories: ["Azure"]
-tags: ["AI", "AI Ready Infrastructure", "Azure", "Azure SQL Managed Instance", "Cloud Databases", "Database Modernization", "Databases", "Hybrid + Multicloud", "Hybrid Cloud", "Microsoft Azure", "Multicloud", "News", "Scalability", "SQL Server", "SQL Server Migration"]
-tags_normalized: ["ai", "ai ready infrastructure", "azure", "azure sql managed instance", "cloud databases", "database modernization", "databases", "hybrid plus multicloud", "hybrid cloud", "microsoft azure", "multicloud", "news", "scalability", "sql server", "sql server migration"]
+permalink: /azure/news/Driving-Change-with-Migration-to-Azure-SQL-Managed-Instance
+tags:
+- AI
+- AI Ready Infrastructure
+- Azure
+- Azure SQL Managed Instance
+- Cloud Databases
+- Database Modernization
+- Databases
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Microsoft Azure
+- Multicloud
+- News
+- Scalability
+- SQL Server
+- SQL Server Migration
+section_names:
+- azure
 ---
-
 Debbi Lyons examines how organizations are transforming by migrating legacy data systems to Azure SQL Managed Instance, focusing on scalability, security, and the shift to cloud-based AI-ready platforms.<!--excerpt_end-->
 
 # Driving Change with Migration to Azure SQL Managed Instance

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "National 4-H Council and Microsoft Extend Partnership to Expand AI Education for Rural Youth"
-description: "This news article details an expansion of the collaboration between the National 4-H Council and Microsoft, focusing on closing the digital divide and equipping rural youth with AI skills. The partnership harnesses initiatives like 4-H Tech Changemakers and Minecraft Education's AI curriculum to deliver hands-on AI learning, educator training, and youth challenges, ensuring responsible and creative AI use in rural communities. It highlights the impact of AI-driven agricultural projects such as DeGLS and outlines Microsoft’s commitment to broad, responsible AI access in education."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/12/01/national-4-h-council-and-microsoft-extend-10m-partnership-to-expand-ai-education-for-rural-youth-and-educators/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: National 4-H Council and Microsoft Extend Partnership to Expand AI Education for Rural Youth
+author: sbaynes
+canonical_url: https://news.microsoft.com/source/2025/12/01/national-4-h-council-and-microsoft-extend-10m-partnership-to-expand-ai-education-for-rural-youth-and-educators/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-01 14:30:17 +00:00
-permalink: "/2025-12-01-National-4-H-Council-and-Microsoft-Extend-Partnership-to-Expand-AI-Education-for-Rural-Youth.html"
-categories: ["AI"]
-tags: ["4 H Tech Changemakers", "Agriculture Technology", "AI", "AI Education", "AI Ethics", "AI Foundations Curriculum", "Company News", "DeGLS", "Digital Skills", "Gray Leaf Spot", "Land Grant Universities", "Microsoft", "Minecraft Education", "News", "Presidential AI Challenge", "Rural Communities", "STEM", "Train The Trainer", "Youth Development"]
-tags_normalized: ["4 h tech changemakers", "agriculture technology", "ai", "ai education", "ai ethics", "ai foundations curriculum", "company news", "degls", "digital skills", "gray leaf spot", "land grant universities", "microsoft", "minecraft education", "news", "presidential ai challenge", "rural communities", "stem", "train the trainer", "youth development"]
+permalink: /ai/news/National-4-H-Council-and-Microsoft-Extend-Partnership-to-Expand-AI-Education-for-Rural-Youth
+tags:
+- 4 H Tech Changemakers
+- Agriculture Technology
+- AI
+- AI Education
+- AI Ethics
+- AI Foundations Curriculum
+- Company News
+- DeGLS
+- Digital Skills
+- Gray Leaf Spot
+- Land Grant Universities
+- Microsoft
+- Minecraft Education
+- News
+- Presidential AI Challenge
+- Rural Communities
+- STEM
+- Train The Trainer
+- Youth Development
+section_names:
+- ai
 ---
-
 sbaynes reports on the expanded partnership between National 4-H Council and Microsoft, highlighting their joint efforts to scale AI education initiatives to rural youth and educators across the United States.<!--excerpt_end-->
 
 # National 4-H Council and Microsoft Extend $10M Partnership to Expand AI Education for Rural Youth and Educators

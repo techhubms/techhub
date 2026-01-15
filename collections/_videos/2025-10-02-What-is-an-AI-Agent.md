@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "What is an AI Agent?"
-description: "This video features Seth Juarez, who explains the concept of an AI agent, providing clarity on its meaning and role in modern development. Juarez describes AI agents as control structures that translate natural language into code execution, making it easier for developers to automate and extend software functionality using AI."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/5ms4A7NELtw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: What is an AI Agent?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/5ms4A7NELtw
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-02 17:35:52 +00:00
-permalink: "/2025-10-02-What-is-an-AI-Agent.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "AI Development", "Code Execution", "Control Structures", "Developer Tools", "Microsoft AI", "Natural Language Processing", "OneDevQuestion", "Seth Juarez", "Shorts", "Software Automation", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai development", "code execution", "control structures", "developer tools", "microsoft ai", "natural language processing", "onedevquestion", "seth juarez", "shorts", "software automation", "videos"]
+permalink: /ai/videos/What-is-an-AI-Agent
+tags:
+- AI
+- AI Agent
+- AI Development
+- Code Execution
+- Control Structures
+- Developer Tools
+- Microsoft AI
+- Natural Language Processing
+- OneDevQuestion
+- Seth Juarez
+- Shorts
+- Software Automation
+- Videos
+section_names:
+- ai
 ---
-
 In this video, Seth Juarez explains what an AI agent is, detailing how it translates plain language into executable code—a valuable insight for developers interested in AI integration.<!--excerpt_end-->
 
 {% youtube 5ms4A7NELtw %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Intelligent Apps with .NET"
-description: "This session explores integrating artificial intelligence into .NET applications using unified AI abstractions like Microsoft.Extensions.AI. Attendees will learn how to work with large language models, semantic search, and other intelligent features while leveraging both cloud-hosted and local AI models. The talk demonstrates practical development patterns using modern .NET frameworks, languages, and tooling for smarter and more responsive applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=N0DzWMkEnzk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Intelligent Apps with .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=N0DzWMkEnzk
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-Building-Intelligent-Apps-with-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Aspire", "AI", "AI Development", "AI Integration", "AI Powered Assistants", "App Development", "ASP.NET Core 10", "C# 14", "Classification", "Cloud Hosted AI", "Coding", "F# 10", "Large Language Models", "Local AI Models", "MAUI", "Microsoft.Extensions.AI", "Semantic Search", "Summarization", "Unified AI Abstractions", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "ai", "ai development", "ai integration", "ai powered assistants", "app development", "aspdotnet core 10", "csharp 14", "classification", "cloud hosted ai", "coding", "fsharp 10", "large language models", "local ai models", "maui", "microsoftdotextensionsdotai", "semantic search", "summarization", "unified ai abstractions", "videos", "vs"]
+permalink: /ai/videos/Building-Intelligent-Apps-with-NET
+tags:
+- .NET
+- .NET Aspire
+- AI
+- AI Development
+- AI Integration
+- AI Powered Assistants
+- App Development
+- ASP.NET Core 10
+- C# 14
+- Classification
+- Cloud Hosted AI
+- Coding
+- F# 10
+- Large Language Models
+- Local AI Models
+- MAUI
+- Microsoft.Extensions.AI
+- Semantic Search
+- Summarization
+- Unified AI Abstractions
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 Hosted by dotnet, this session guides developers on building intelligent apps with .NET, leveraging Microsoft.Extensions.AI and unified AI abstractions for features like semantic search and large language model integration.<!--excerpt_end-->
 
 {% youtube N0DzWMkEnzk %}

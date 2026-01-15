@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "BitUnlocker: Leveraging Windows Recovery to Extract BitLocker Secrets"
-description: "This blog post, co-authored by Netanel Ben Simon and Alon Leviev from Microsoft's STORM security research team, explores a detailed security analysis of BitLocker and the Windows Recovery Environment (WinRE). It describes multiple newly discovered attack surfaces within WinRE that risk BitLocker bypass, provides technical explanations of the vulnerabilities, outlines the exploitation chains, and offers actionable countermeasures. The research led to four CVEs remediated in July 2025, demonstrating practical risk to encrypted systems and improvements needed for comprehensive volume encryption security."
-author: "alon-leviev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-security-community/bitunlocker-leveraging-windows-recovery-to-extract-bitlocker/ba-p/4442806"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'BitUnlocker: Leveraging Windows Recovery to Extract BitLocker Secrets'
+author: alon-leviev
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/bitunlocker-leveraging-windows-recovery-to-extract-bitlocker/ba-p/4442806
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 17:04:05 +00:00
-permalink: "/2025-08-13-BitUnlocker-Leveraging-Windows-Recovery-to-Extract-BitLocker-Secrets.html"
-categories: ["Security"]
-tags: ["BCD Store", "BitLocker", "Boot.sdi", "Community", "CVE 48003", "CVE 48800", "CVE 48804", "CVE 48818", "Exploit", "Microsoft STORM", "Offline Scanning", "Patch Tuesday", "ReAgent.xml", "Recovery OS", "REVISE Mitigation", "Security", "Security Testing", "SetupPlatform.exe", "TPM+PIN", "Trusted WIM Boot", "Vulnerability Research", "Windows Recovery Environment", "WinRE"]
-tags_normalized: ["bcd store", "bitlocker", "bootdotsdi", "community", "cve 48003", "cve 48800", "cve 48804", "cve 48818", "exploit", "microsoft storm", "offline scanning", "patch tuesday", "reagentdotxml", "recovery os", "revise mitigation", "security", "security testing", "setupplatformdotexe", "tpmpluspin", "trusted wim boot", "vulnerability research", "windows recovery environment", "winre"]
+permalink: /security/community/BitUnlocker-Leveraging-Windows-Recovery-to-Extract-BitLocker-Secrets
+tags:
+- BCD Store
+- BitLocker
+- Boot.sdi
+- Community
+- CVE 48003
+- CVE 48800
+- CVE 48804
+- CVE 48818
+- Exploit
+- Microsoft STORM
+- Offline Scanning
+- Patch Tuesday
+- ReAgent.xml
+- Recovery OS
+- REVISE Mitigation
+- Security
+- Security Testing
+- SetupPlatform.exe
+- TPM+PIN
+- Trusted WIM Boot
+- Vulnerability Research
+- Windows Recovery Environment
+- WinRE
+section_names:
+- security
 ---
-
 Alon Leviev, along with Netanel Ben Simon from Microsoft's STORM research team, details their investigation into newly discovered attack surfaces in Windows Recovery Environment impacting BitLocker. The post guides readers through research findings, exploitation techniques, and recommended mitigations.<!--excerpt_end-->
 
 # BitUnlocker: Leveraging Windows Recovery to Extract BitLocker Secrets

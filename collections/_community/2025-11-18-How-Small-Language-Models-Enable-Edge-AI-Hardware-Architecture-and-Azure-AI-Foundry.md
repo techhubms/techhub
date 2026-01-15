@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry"
-description: "This article presents an in-depth look at how Small Language Models (SLMs) transform edge AI. It details the unique hardware requirements for running AI at the edge, the design optimizations behind SLMs, and the role of Microsoft's Azure AI Foundry in deploying efficient models on devices with limited resources. Key architectural techniques, hardware accelerators, and model families (including Microsoft’s Phi) are discussed for developers seeking practical AI solutions beyond the cloud."
-author: "Sherrylist"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry'
+author: Sherrylist
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:23:25 +00:00
-permalink: "/2025-11-18-How-Small-Language-Models-Enable-Edge-AI-Hardware-Architecture-and-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Model Deployment", "Azure", "Azure AI Foundry", "Community", "CPU", "Edge AI", "GPU", "IoT", "MCU", "Microsoft Phi", "Model Quantization", "Neural Processing Unit", "NPU", "ONNX Runtime", "SLM", "Small Language Models", "Transformer Architecture"]
-tags_normalized: ["ai", "ai model deployment", "azure", "azure ai foundry", "community", "cpu", "edge ai", "gpu", "iot", "mcu", "microsoft phi", "model quantization", "neural processing unit", "npu", "onnx runtime", "slm", "small language models", "transformer architecture"]
+permalink: /ai/community/How-Small-Language-Models-Enable-Edge-AI-Hardware-Architecture-and-Azure-AI-Foundry
+tags:
+- AI
+- AI Model Deployment
+- Azure
+- Azure AI Foundry
+- Community
+- CPU
+- Edge AI
+- GPU
+- IoT
+- MCU
+- Microsoft Phi
+- Model Quantization
+- Neural Processing Unit
+- NPU
+- ONNX Runtime
+- SLM
+- Small Language Models
+- Transformer Architecture
+section_names:
+- ai
+- azure
 ---
-
 Sherrylist explores the technical principles behind Small Language Models (SLMs) for edge AI, highlighting hardware acceleration, model architecture, and how Azure AI Foundry supports on-device intelligence.<!--excerpt_end-->
 
 # How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Transform Sensitive Text into AI-Ready Data on Microsoft Fabric"
-description: "This guide introduces Tonic Textual’s integration with Microsoft Fabric, enabling the automated detection, redaction, and synthesis of sensitive information within unstructured text. It outlines workflows for preparing Office documents, PDFs, and images for AI and ML development while meeting privacy and compliance requirements, making previously restricted datasets accessible and secure for advanced analytics."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/transform-sensitive-text-into-ai-ready-data-on-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Transform Sensitive Text into AI-Ready Data on Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/transform-sensitive-text-into-ai-ready-data-on-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 10:00:00 +00:00
-permalink: "/2025-11-21-Transform-Sensitive-Text-into-AI-Ready-Data-on-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Development", "Anonymization", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Machine Learning", "Compliance", "Data Governance", "Data Privacy", "Data Synthesis", "Entity Detection", "GDPR", "HIPAA", "Lakehouse", "Machine Learning", "Microsoft Fabric", "ML", "News", "Redaction", "Sensitive Data", "Tonic Textual", "Unstructured Data"]
-tags_normalized: ["ai", "ai development", "anonymization", "azure", "azure ai foundry", "azure ai search", "azure machine learning", "compliance", "data governance", "data privacy", "data synthesis", "entity detection", "gdpr", "hipaa", "lakehouse", "machine learning", "microsoft fabric", "ml", "news", "redaction", "sensitive data", "tonic textual", "unstructured data"]
+permalink: /ai/news/Transform-Sensitive-Text-into-AI-Ready-Data-on-Microsoft-Fabric
+tags:
+- AI
+- AI Development
+- Anonymization
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Machine Learning
+- Compliance
+- Data Governance
+- Data Privacy
+- Data Synthesis
+- Entity Detection
+- GDPR
+- HIPAA
+- Lakehouse
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- Redaction
+- Sensitive Data
+- Tonic Textual
+- Unstructured Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how to leverage Tonic Textual for secure AI/ML development by automatically preparing sensitive unstructured text within Fabric, maintaining privacy and compliance throughout the workflow.<!--excerpt_end-->
 
 # Transform Sensitive Text into AI-Ready Data on Microsoft Fabric

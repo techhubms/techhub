@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Introducing the Azure Maps Geocode Autocomplete API"
-description: "This post introduces the Azure Maps Geocode Autocomplete API, a new REST service designed for fast, structured, and intelligent location autocomplete in web and enterprise applications. It explains technical capabilities, integration methods, supported entity types, API usage examples, pricing, and practical use cases for developers building modern mapping features."
-author: "sinnypan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455784"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing the Azure Maps Geocode Autocomplete API
+author: sinnypan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455784
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 09:26:24 +00:00
-permalink: "/2025-09-23-Introducing-the-Azure-Maps-Geocode-Autocomplete-API.html"
-categories: ["Azure", "Coding"]
-tags: ["Address Autocomplete", "API Integration", "Autocomplete", "Azure", "Azure Maps", "Billing", "Coding", "Community", "Developer Tools", "Endpoint", "Entity Suggestions", "Geocode Autocomplete API", "Location Intelligence", "Mapping", "Microsoft Azure", "Multilingual Support", "Place Suggestions", "REST API", "Web Application Development"]
-tags_normalized: ["address autocomplete", "api integration", "autocomplete", "azure", "azure maps", "billing", "coding", "community", "developer tools", "endpoint", "entity suggestions", "geocode autocomplete api", "location intelligence", "mapping", "microsoft azure", "multilingual support", "place suggestions", "rest api", "web application development"]
+permalink: /coding/community/Introducing-the-Azure-Maps-Geocode-Autocomplete-API
+tags:
+- Address Autocomplete
+- API Integration
+- Autocomplete
+- Azure
+- Azure Maps
+- Billing
+- Coding
+- Community
+- Developer Tools
+- Endpoint
+- Entity Suggestions
+- Geocode Autocomplete API
+- Location Intelligence
+- Mapping
+- Microsoft Azure
+- Multilingual Support
+- Place Suggestions
+- REST API
+- Web Application Development
+section_names:
+- azure
+- coding
 ---
-
 sinnypan details the launch and features of the Azure Maps Geocode Autocomplete API, showing developers how to integrate real-time, structured address and place suggestions into mapping platforms and web applications.<!--excerpt_end-->
 
 # Introducing the Azure Maps Geocode Autocomplete API

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Update proxyAddresses for a Cloud-Only Entra ID User"
-description: "A practical discussion on the limitations and potential workarounds when attempting to update the proxyAddresses attribute of a cloud-only Microsoft Entra ID user (formerly Azure AD) without an Exchange Online mailbox, using Microsoft Graph Explorer and considering Graph API versus Exchange Online modules."
-author: "JMSHW0420"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How to Update proxyAddresses for a Cloud-Only Entra ID User
+author: JMSHW0420
+canonical_url: https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 12:42:16 +00:00
-permalink: "/2025-09-17-How-to-Update-proxyAddresses-for-a-Cloud-Only-Entra-ID-User.html"
-categories: ["Security"]
-tags: ["Azure Active Directory", "Cloud Identity", "Community", "Directory Synchronization", "Exchange Online", "Graph API", "Mailbox Provisioning", "Microsoft Entra ID", "Microsoft Graph Explorer", "PATCH Request", "Permissions", "Proxyaddresses", "Security", "User Management"]
-tags_normalized: ["azure active directory", "cloud identity", "community", "directory synchronization", "exchange online", "graph api", "mailbox provisioning", "microsoft entra id", "microsoft graph explorer", "patch request", "permissions", "proxyaddresses", "security", "user management"]
+permalink: /security/community/How-to-Update-proxyAddresses-for-a-Cloud-Only-Entra-ID-User
+tags:
+- Azure Active Directory
+- Cloud Identity
+- Community
+- Directory Synchronization
+- Exchange Online
+- Graph API
+- Mailbox Provisioning
+- Microsoft Entra ID
+- Microsoft Graph Explorer
+- PATCH Request
+- Permissions
+- Proxyaddresses
+- Security
+- User Management
+section_names:
+- security
 ---
-
 JMSHW0420 shares challenges with updating proxyAddresses for a cloud-only Entra ID user using Microsoft Graph Explorer, exploring alternatives to Exchange Online PowerShell.<!--excerpt_end-->
 
 # How to Update proxyAddresses for a Cloud-Only Entra ID User

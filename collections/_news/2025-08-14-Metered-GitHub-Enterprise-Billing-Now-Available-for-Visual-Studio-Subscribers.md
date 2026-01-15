@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Metered GitHub Enterprise Billing Now Available for Visual Studio Subscribers"
-description: "This news update details the introduction of pay-as-you-go, usage-based billing for organizations using GitHub Enterprise through the Visual Studio subscriptions with GitHub Enterprise bundle. The announcement highlights enhanced administrative controls, new automation APIs, and simplified compliance auditing features. The rollout aims to provide greater flexibility for enterprise customers managing GitHub Enterprise licenses, including new tooling for automated license assignments and visibility into usage metrics."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-14-introducing-metered-github-enterprise-billing-for-visual-studio-subscriptions-with-github-enterprise"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Metered GitHub Enterprise Billing Now Available for Visual Studio Subscribers
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-14-introducing-metered-github-enterprise-billing-for-visual-studio-subscriptions-with-github-enterprise
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 16:54:53 +00:00
-permalink: "/2025-08-14-Metered-GitHub-Enterprise-Billing-Now-Available-for-Visual-Studio-Subscribers.html"
-categories: ["DevOps"]
-tags: ["API Automation", "Compliance Auditing", "DevOps", "DevOps Administration", "Enterprise Cloud", "GitHub Enterprise", "License Assignment", "License Management", "Metered Billing", "News", "Subscription Management", "Usage Based Billing", "User Management", "Visual Studio Subscriptions"]
-tags_normalized: ["api automation", "compliance auditing", "devops", "devops administration", "enterprise cloud", "github enterprise", "license assignment", "license management", "metered billing", "news", "subscription management", "usage based billing", "user management", "visual studio subscriptions"]
+permalink: /devops/news/Metered-GitHub-Enterprise-Billing-Now-Available-for-Visual-Studio-Subscribers
+tags:
+- API Automation
+- Compliance Auditing
+- DevOps
+- DevOps Administration
+- Enterprise Cloud
+- GitHub Enterprise
+- License Assignment
+- License Management
+- Metered Billing
+- News
+- Subscription Management
+- Usage Based Billing
+- User Management
+- Visual Studio Subscriptions
+section_names:
+- devops
 ---
-
 Allison announces support for metered, usage-based billing for GitHub Enterprise through Visual Studio subscriptions, offering administrators new automation APIs and improved compliance tools.<!--excerpt_end-->
 
 # Metered GitHub Enterprise Billing Now Available for Visual Studio Subscribers

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Configure internet access for Copilot coding agent"
-description: "GitHub Copilot's public preview updates its internet access controls to enhance data protection and mitigate security risks."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent"
-categories: ["AI", "GitHub Copilot", "Security"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Configure internet access for Copilot coding agent
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-16 12:00:38 +00:00
-permalink: "/2025-07-16-Configure-internet-access-for-Copilot-coding-agent.html"
-viewing_mode: "external"
-tags: ["AI", "Coding Assistant", "Data Protection", "Developer Tools", "GitHub Copilot", "Internet Access", "News", "Privacy", "Public Preview", "Risk Mitigation", "Security", "Software Development"]
-tags_normalized: ["ai", "coding assistant", "data protection", "developer tools", "github copilot", "internet access", "news", "privacy", "public preview", "risk mitigation", "security", "software development"]
+permalink: /github-copilot/news/Configure-internet-access-for-Copilot-coding-agent
+viewing_mode: external
+tags:
+- AI
+- Coding Assistant
+- Data Protection
+- Developer Tools
+- GitHub Copilot
+- Internet Access
+- News
+- Privacy
+- Public Preview
+- Risk Mitigation
+- Security
+- Software Development
+section_names:
+- ai
+- github-copilot
+- security
 ---
-
 In this article, Allison discusses new updates to GitHub Copilot, specifically focusing on changes to its internet access during the public preview phase. The updates aim to better protect user data and address potential security concerns, offering developers a safer and more secure experience while using Copilot.<!--excerpt_end-->
 
 ## Summary of Article

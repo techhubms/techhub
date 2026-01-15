@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Claude Opus 4.1 Rolls Out for GitHub Copilot Users in Popular IDEs"
-description: "This news article announces the public preview release of Claude Opus 4.1 for GitHub Copilot users, detailing availability for Copilot Enterprise and Pro+ customers across Visual Studio, JetBrains IDEs, Xcode, and Eclipse. It covers activation steps, organizational settings for administrators, and provides official documentation links for further information on compatible AI models."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Opus 4.1 Rolls Out for GitHub Copilot Users in Popular IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 16:57:42 +00:00
-permalink: "/2025-09-16-Claude-Opus-41-Rolls-Out-for-GitHub-Copilot-Users-in-Popular-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model", "Anthropic", "Claude Opus 4.1", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro+", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Integration", "JetBrains", "Model Picker", "News", "Product Release", "VS", "Xcode"]
-tags_normalized: ["ai", "ai model", "anthropic", "claude opus 4dot1", "copilot", "copilot chat", "copilot enterprise", "copilot proplus", "developer tools", "eclipse", "github copilot", "ide integration", "jetbrains", "model picker", "news", "product release", "vs", "xcode"]
+permalink: /github-copilot/news/Claude-Opus-41-Rolls-Out-for-GitHub-Copilot-Users-in-Popular-IDEs
+tags:
+- AI
+- AI Model
+- Anthropic
+- Claude Opus 4.1
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro+
+- Developer Tools
+- Eclipse
+- GitHub Copilot
+- IDE Integration
+- JetBrains
+- Model Picker
+- News
+- Product Release
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares details about the public preview of Claude Opus 4.1 in GitHub Copilot, highlighting availability for users across multiple IDEs and instructions for enabling access.<!--excerpt_end-->
 
 # Claude Opus 4.1 Rolls Out for GitHub Copilot Users in Popular IDEs

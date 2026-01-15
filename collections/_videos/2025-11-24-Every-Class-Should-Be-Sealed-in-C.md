@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Every Class Should Be Sealed in C#"
-description: "Nick Chapsas explores the engineering practice of sealing every class in C# applications. The video discusses why sealing classes can be beneficial, touching on aspects like code safety, maintainability, and performance within the .NET framework. Viewers will learn the technical reasoning behind this pattern and practical guidance for its adoption."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=u79quQu4t_s"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+layout: post
+title: Every Class Should Be Sealed in C#
+author: Nick Chapsas
+canonical_url: https://www.youtube.com/watch?v=u79quQu4t_s
+viewing_mode: internal
+feed_name: Nick Chapsas YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-11-24 12:01:57 +00:00
-permalink: "/2025-11-24-Every-Class-Should-Be-Sealed-in-C.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Class Design", "Code Safety", "Coding", "Development Practices", "Maintainability", "Object Oriented Programming", "OOP Principles", "Performance", "Sealed Classes", "Software Engineering", "Videos"]
-tags_normalized: ["dotnet", "csharp", "class design", "code safety", "coding", "development practices", "maintainability", "object oriented programming", "oop principles", "performance", "sealed classes", "software engineering", "videos"]
+permalink: /coding/videos/Every-Class-Should-Be-Sealed-in-C
+tags:
+- .NET
+- C#
+- Class Design
+- Code Safety
+- Coding
+- Development Practices
+- Maintainability
+- Object Oriented Programming
+- OOP Principles
+- Performance
+- Sealed Classes
+- Software Engineering
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas explains the rationale behind sealing every class in C#, covering benefits, potential drawbacks, and its impact on code safety and maintainability.<!--excerpt_end-->
 
 {% youtube u79quQu4t_s %}

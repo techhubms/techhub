@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Developers Are Leading AI Transformation Across the Enterprise"
-description: "This news article explores how developers are at the forefront of AI-driven transformation within enterprises, leveraging tools like copilots and AI agents to automate processes, modernize applications, and enhance customer experiences. The piece discusses Microsoft’s unique AI ecosystem—including GitHub Copilot, Azure AI Foundry, and advanced DevOps practices—and how these technologies enable developer innovation, rapid modernization, and effective operational scaling with enterprise-grade security."
-author: "Toby Bowers"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How Developers Are Leading AI Transformation Across the Enterprise
+author: Toby Bowers
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 15:10:00 +00:00
-permalink: "/2025-10-13-How-Developers-Are-Leading-AI-Transformation-Across-the-Enterprise.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agent Factory", "Agentic DevOps", "AI", "AI + Machine Learning", "AI Agents", "Application Lifecycle", "Automation", "Azure", "Azure AI Foundry", "CI/CD", "Copilots", "Developer Experience", "DevOps", "Enterprise Integration", "Generative AI", "GitHub Copilot", "MCP", "Microsoft Cloud", "News", "Productivity Tools", "Software Modernization"]
-tags_normalized: ["agent factory", "agentic devops", "ai", "ai plus machine learning", "ai agents", "application lifecycle", "automation", "azure", "azure ai foundry", "cislashcd", "copilots", "developer experience", "devops", "enterprise integration", "generative ai", "github copilot", "mcp", "microsoft cloud", "news", "productivity tools", "software modernization"]
+permalink: /github-copilot/news/How-Developers-Are-Leading-AI-Transformation-Across-the-Enterprise
+tags:
+- Agent Factory
+- Agentic DevOps
+- AI
+- AI + Machine Learning
+- AI Agents
+- Application Lifecycle
+- Automation
+- Azure
+- Azure AI Foundry
+- CI/CD
+- Copilots
+- Developer Experience
+- DevOps
+- Enterprise Integration
+- Generative AI
+- GitHub Copilot
+- MCP
+- Microsoft Cloud
+- News
+- Productivity Tools
+- Software Modernization
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Toby Bowers highlights how developers are leveraging AI agents and copilots, such as GitHub Copilot and Azure AI Foundry, to accelerate enterprise transformation and streamline software delivery in modern organizations.<!--excerpt_end-->
 
 # How Developers Are Leading AI Transformation Across the Enterprise

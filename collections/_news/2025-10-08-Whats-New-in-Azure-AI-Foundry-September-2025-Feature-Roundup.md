@@ -1,20 +1,63 @@
----
-layout: "post"
-title: "What’s New in Azure AI Foundry: September 2025 Feature Roundup"
-description: "This in-depth news post by Nick Brady covers the September 2025 updates to Azure AI Foundry, including the general availability of GPT‑5‑Codex, new Sora video-to-video capabilities, Grok 4 Fast models, enhanced browser automation tools, major updates to Azure AI Search, secure Key Vault integrations, Voice Live improvements, SDK changelogs across Python, .NET, Java, and JavaScript/TypeScript, and extensive documentation changes for agents, evaluation, and security features."
-author: "Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-september-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'What’s New in Azure AI Foundry: September 2025 Feature Roundup'
+author: Nick Brady
+canonical_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-september-2025/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-08 00:58:44 +00:00
-permalink: "/2025-10-08-Whats-New-in-Azure-AI-Foundry-September-2025-Feature-Roundup.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: [".NET SDK", "AI", "AI Agents", "Avatar 4K", "Azure", "Azure AI Evaluation", "Azure AI Foundry", "Azure AI Search", "BCDR", "Browser Automation", "Coding", "Data Services", "DevOps", "Evaluations", "Foundry Local", "Function Calling", "Gpt 5 Codex", "Grok 4 Fast", "Identity SDK", "Java SDK", "JavaScript SDK", "Key Vault", "Knowledge Sources", "Microsoft Agent Framework", "ML", "Model ORchestration", "News", "O4 Mini", "OpenAI", "Python SDK", "Red Teaming", "Reinforcement Fine Tuning", "SDK Changelog", "Security", "Sora", "Speech To Speech", "Structured Output", "Telemetry", "Translator API", "Voice Live", "Voicelive"]
-tags_normalized: ["dotnet sdk", "ai", "ai agents", "avatar 4k", "azure", "azure ai evaluation", "azure ai foundry", "azure ai search", "bcdr", "browser automation", "coding", "data services", "devops", "evaluations", "foundry local", "function calling", "gpt 5 codex", "grok 4 fast", "identity sdk", "java sdk", "javascript sdk", "key vault", "knowledge sources", "microsoft agent framework", "ml", "model orchestration", "news", "o4 mini", "openai", "python sdk", "red teaming", "reinforcement fine tuning", "sdk changelog", "security", "sora", "speech to speech", "structured output", "telemetry", "translator api", "voice live", "voicelive"]
+permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-September-2025-Feature-Roundup
+tags:
+- .NET SDK
+- AI
+- AI Agents
+- Avatar 4K
+- Azure
+- Azure AI Evaluation
+- Azure AI Foundry
+- Azure AI Search
+- BCDR
+- Browser Automation
+- Coding
+- Data Services
+- DevOps
+- Evaluations
+- Foundry Local
+- Function Calling
+- Gpt 5 Codex
+- Grok 4 Fast
+- Identity SDK
+- Java SDK
+- JavaScript SDK
+- Key Vault
+- Knowledge Sources
+- Microsoft Agent Framework
+- ML
+- Model ORchestration
+- News
+- O4 Mini
+- OpenAI
+- Python SDK
+- Red Teaming
+- Reinforcement Fine Tuning
+- SDK Changelog
+- Security
+- Sora
+- Speech To Speech
+- Structured Output
+- Telemetry
+- Translator API
+- Voice Live
+- Voicelive
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
+- security
 ---
-
 Nick Brady summarizes the latest Azure AI Foundry updates for September 2025, highlighting sweeping improvements in models, agents, security, search, developer tools, and SDKs.<!--excerpt_end-->
 
 # What’s New in Azure AI Foundry | September 2025

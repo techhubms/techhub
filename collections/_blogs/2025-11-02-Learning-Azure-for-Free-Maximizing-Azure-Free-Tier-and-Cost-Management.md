@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Learning Azure for Free: Maximizing Azure Free Tier and Cost Management"
-description: "This guide explains how to build practical Azure cloud skills without incurring costs, covering everything from signing up for the Azure Free Tier to using cost management tools, setting budgets and alerts, and following a one-month learning roadmap. It provides best practices for avoiding unexpected charges, leveraging always-free services, and learning core Azure concepts in a risk-free environment."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Learning Azure for Free: Maximizing Azure Free Tier and Cost Management'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-02 09:06:01 +00:00
-permalink: "/2025-11-02-Learning-Azure-for-Free-Maximizing-Azure-Free-Tier-and-Cost-Management.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Account", "Azure Cost Management", "Azure Free Tier", "Azure Functions", "Blob Storage", "Blogs", "Budgeting", "Cloud Learning", "Cloud Skills", "Cost Optimization", "Financial Governance", "Pricing Calculator", "Resource Group", "Spending Alerts", "Virtual Machine"]
-tags_normalized: ["azure", "azure account", "azure cost management", "azure free tier", "azure functions", "blob storage", "blogs", "budgeting", "cloud learning", "cloud skills", "cost optimization", "financial governance", "pricing calculator", "resource group", "spending alerts", "virtual machine"]
+permalink: /azure/blogs/Learning-Azure-for-Free-Maximizing-Azure-Free-Tier-and-Cost-Management
+tags:
+- Azure
+- Azure Account
+- Azure Cost Management
+- Azure Free Tier
+- Azure Functions
+- Blob Storage
+- Blogs
+- Budgeting
+- Cloud Learning
+- Cloud Skills
+- Cost Optimization
+- Financial Governance
+- Pricing Calculator
+- Resource Group
+- Spending Alerts
+- Virtual Machine
+section_names:
+- azure
 ---
-
 Dellenny guides readers through effective strategies for learning Azure cloud skills without spending money, utilizing the Azure Free Tier and built-in cost management features.<!--excerpt_end-->
 
 # Learning Azure for Free: Maximizing Azure Free Tier and Cost Management

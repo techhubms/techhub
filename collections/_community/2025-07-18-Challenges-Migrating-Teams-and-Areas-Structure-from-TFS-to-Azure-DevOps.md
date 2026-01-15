@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Challenges Migrating Teams and Areas Structure from TFS to Azure DevOps"
-description: "The author discusses issues encountered when migrating from on-prem TFS to Azure DevOps, focusing on differences in how Teams and Areas are structured. They face challenges as Azure DevOps expects areas to be under specific teams, conflicting with their module-based workflow. The article seeks advice on potential workarounds."
-author: "theguru1974"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+layout: post
+title: Challenges Migrating Teams and Areas Structure from TFS to Azure DevOps
+author: theguru1974
+canonical_url: https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/
+viewing_mode: external
+feed_name: Reddit Azure DevOps
+feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-18 13:45:18 +00:00
-permalink: "/2025-07-18-Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps.html"
-categories: ["Azure", "DevOps"]
-tags: ["Areas", "Azure", "Azure DevOps", "Community", "DevOps", "Migration", "Modules", "Organizational Structure", "Process Template", "Sprints", "Teams", "TFS", "Work Item Tracking"]
-tags_normalized: ["areas", "azure", "azure devops", "community", "devops", "migration", "modules", "organizational structure", "process template", "sprints", "teams", "tfs", "work item tracking"]
+permalink: /azure/community/Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps
+tags:
+- Areas
+- Azure
+- Azure DevOps
+- Community
+- DevOps
+- Migration
+- Modules
+- Organizational Structure
+- Process Template
+- Sprints
+- Teams
+- TFS
+- Work Item Tracking
+section_names:
+- azure
+- devops
 ---
-
 Author theguru1974 shares their experiences and concerns when migrating from TFS to Azure DevOps, particularly around how Teams and Areas are handled within the work tracking system.<!--excerpt_end-->
 
 ## Overview

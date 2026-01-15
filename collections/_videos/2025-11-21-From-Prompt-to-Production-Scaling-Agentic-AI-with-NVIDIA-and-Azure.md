@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "From Prompt to Production: Scaling Agentic AI with NVIDIA and Azure"
-description: "This session from Microsoft Ignite 2025 explores how NVIDIA and Azure are joining forces to accelerate development, deployment, and orchestration of agentic AI applications at enterprise scale. Attendees will learn about NVIDIA’s AI platforms—including Nemotron models, NVIDIA NIM, and NeMo Agent Toolkit—integrated on Azure AI to automate and enhance complex enterprise workflows. Key topics include large-scale AI agent integration, model benchmarking, content safety, and best practices for agentic AI orchestration in real-world business scenarios."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=roRh0p1HsYg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'From Prompt to Production: Scaling Agentic AI with NVIDIA and Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=roRh0p1HsYg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:20:19 +00:00
-permalink: "/2025-11-21-From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-and-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Agents", "AI Deployment", "Azure", "Azure AI", "Business Innovation", "Cloud Computing", "Content Safety", "Custom AI Models", "Enterprise Automation", "Microsoft Ignite", "Model Benchmarking", "MSIgnite", "NeMo Agent Toolkit", "NVIDIA Nemotron", "NVIDIA NIM", "Videos", "Workflow Orchestration"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai agents", "ai deployment", "azure", "azure ai", "business innovation", "cloud computing", "content safety", "custom ai models", "enterprise automation", "microsoft ignite", "model benchmarking", "msignite", "nemo agent toolkit", "nvidia nemotron", "nvidia nim", "videos", "workflow orchestration"]
+permalink: /ai/videos/From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-and-Azure
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI
+- AI Agents
+- AI Deployment
+- Azure
+- Azure AI
+- Business Innovation
+- Cloud Computing
+- Content Safety
+- Custom AI Models
+- Enterprise Automation
+- Microsoft Ignite
+- Model Benchmarking
+- MSIgnite
+- NeMo Agent Toolkit
+- NVIDIA Nemotron
+- NVIDIA NIM
+- Videos
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a session on scaling agentic AI in enterprises, featuring Matheen Raza. Attendees will learn how NVIDIA’s AI tools on Azure empower organizations to automate workflows and deploy advanced AI agents.<!--excerpt_end-->
 
 {% youtube roRh0p1HsYg %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate"
-description: "This guide, based on Thomas Maurer's Azure Essentials Show episode, explores using Azure Migrate in tandem with agentic platform landing zones for modern cloud migrations. It details why migration projects risk failure, how shared landing zones deliver governance and consistency, and the agents/tools enabling secure, compliant, and scalable cloud deployment. Key considerations for readiness, hybrid connectivity, and organizational coordination are included."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-01 13:31:20 +00:00
-permalink: "/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentic", "Agentic Approach", "Automation", "Azure", "Azure Essentials Show", "Azure Landing Zone", "Azure Migrate", "Blogs", "Cloud", "Cloud Governance", "Cloud Migration", "Compliance", "DevOps", "Hybrid Connectivity", "IaC", "Identity Management", "Landing Zone", "Log Analytics", "Microsoft", "Microsoft Azure", "Platform Landing Zone", "Policy Enforcement", "Scalability", "Security", "Subscription Management", "Workload Assessment"]
-tags_normalized: ["agentic", "agentic approach", "automation", "azure", "azure essentials show", "azure landing zone", "azure migrate", "blogs", "cloud", "cloud governance", "cloud migration", "compliance", "devops", "hybrid connectivity", "iac", "identity management", "landing zone", "log analytics", "microsoft", "microsoft azure", "platform landing zone", "policy enforcement", "scalability", "security", "subscription management", "workload assessment"]
+permalink: /azure/blogs/Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate
+tags:
+- Agentic
+- Agentic Approach
+- Automation
+- Azure
+- Azure Essentials Show
+- Azure Landing Zone
+- Azure Migrate
+- Blogs
+- Cloud
+- Cloud Governance
+- Cloud Migration
+- Compliance
+- DevOps
+- Hybrid Connectivity
+- IaC
+- Identity Management
+- Landing Zone
+- Log Analytics
+- Microsoft
+- Microsoft Azure
+- Platform Landing Zone
+- Policy Enforcement
+- Scalability
+- Security
+- Subscription Management
+- Workload Assessment
+section_names:
+- azure
+- devops
+- security
 ---
-
 Thomas Maurer breaks down the agentic approach to cloud migration using Azure Migrate and platform landing zones, providing practical insights for secure, consistent, and scalable Azure deployments.<!--excerpt_end-->
 
 # Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate

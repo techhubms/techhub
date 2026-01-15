@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis of GitHub, Azure DevOps, and Jira Disruptions"
-description: "This article reviews findings from GitProtect.io’s Mid-Year 2025 DevOps Threats Unwrapped report, highlighting significant increases in disruptions, outages, and security incidents across key DevOps platforms including GitHub, Azure DevOps, GitLab, and Jira. It discusses the operational, security, and resilience challenges faced by engineering teams as platform uptime becomes a critical business and technical risk."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis of GitHub, Azure DevOps, and Jira Disruptions'
+author: Alan Shimel
+canonical_url: https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-29 07:24:23 +00:00
-permalink: "/2025-08-29-Surge-in-DevOps-Platform-Incidents-2025-Mid-Year-Analysis-of-GitHub-Azure-DevOps-and-Jira-Disruptions.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Artifactory", "Atlassian Outages", "Azure", "Azure DevOps", "Azure DevOps Incidents", "Blogs", "Boards", "Business Of DevOps", "CI/CD", "CI/CD Disruptions", "Cybersecurity", "Developer Productivity", "Developer Productivity Risks", "DevOps", "DevOps Platform Downtime", "DevOps Platforms", "DevOps Resilience", "GitHub", "GitHub Outages", "GitLab", "GitLab Data Breach Europcar", "GitProtect.io DevOps Threats Report", "Incident Management", "Jira", "Jira Ransomware Attacks", "Pipelines", "Platform Downtime", "Ransomware", "Security", "Service Disruption", "Social Facebook", "Social LinkedIn", "Social X", "Source Code Theft", "Test Plans"]
-tags_normalized: ["artifactory", "atlassian outages", "azure", "azure devops", "azure devops incidents", "blogs", "boards", "business of devops", "cislashcd", "cislashcd disruptions", "cybersecurity", "developer productivity", "developer productivity risks", "devops", "devops platform downtime", "devops platforms", "devops resilience", "github", "github outages", "gitlab", "gitlab data breach europcar", "gitprotectdotio devops threats report", "incident management", "jira", "jira ransomware attacks", "pipelines", "platform downtime", "ransomware", "security", "service disruption", "social facebook", "social linkedin", "social x", "source code theft", "test plans"]
+permalink: /azure/blogs/Surge-in-DevOps-Platform-Incidents-2025-Mid-Year-Analysis-of-GitHub-Azure-DevOps-and-Jira-Disruptions
+tags:
+- Artifactory
+- Atlassian Outages
+- Azure
+- Azure DevOps
+- Azure DevOps Incidents
+- Blogs
+- Boards
+- Business Of DevOps
+- CI/CD
+- CI/CD Disruptions
+- Cybersecurity
+- Developer Productivity
+- Developer Productivity Risks
+- DevOps
+- DevOps Platform Downtime
+- DevOps Platforms
+- DevOps Resilience
+- GitHub
+- GitHub Outages
+- GitLab
+- GitLab Data Breach Europcar
+- GitProtect.io DevOps Threats Report
+- Incident Management
+- Jira
+- Jira Ransomware Attacks
+- Pipelines
+- Platform Downtime
+- Ransomware
+- Security
+- Service Disruption
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Source Code Theft
+- Test Plans
+section_names:
+- azure
+- devops
+- security
 ---
-
 Alan Shimel analyzes the 2025 surge in disruptions and security incidents across DevOps platforms such as GitHub and Azure DevOps, summarizing impacts on resilience, uptime, and developer productivity.<!--excerpt_end-->
 
 # Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis

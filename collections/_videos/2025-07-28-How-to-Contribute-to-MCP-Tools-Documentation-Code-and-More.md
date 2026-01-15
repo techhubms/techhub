@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "How to Contribute to MCP: Tools, Documentation, Code & More"
-description: "This video by Microsoft Developer provides a practical guide for joining and contributing to the Model Context Protocol (MCP) community. It covers contribution methods including code, documentation, and tools, discusses best practices for collaboration, and highlights real-world examples across .NET, Java, and Python."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=v1pvCYAWpRE"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'How to Contribute to MCP: Tools, Documentation, Code & More'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=v1pvCYAWpRE
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:33 +00:00
-permalink: "/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html"
-categories: ["Coding"]
-tags: [".NET", "Best Practices", "Coding", "Contribution", "Documentation", "GitHub", "Java", "MCP", "Open Source", "Python", "Tools", "Videos"]
-tags_normalized: ["dotnet", "best practices", "coding", "contribution", "documentation", "github", "java", "mcp", "open source", "python", "tools", "videos"]
+permalink: /coding/videos/How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More
+tags:
+- .NET
+- Best Practices
+- Coding
+- Contribution
+- Documentation
+- GitHub
+- Java
+- MCP
+- Open Source
+- Python
+- Tools
+- Videos
+section_names:
+- coding
 ---
-
 Microsoft Developer shares how developers can actively contribute to the MCP (Model Context Protocol) community via code, documentation, and tools. This overview will help developers identify ways to participate and collaborate.<!--excerpt_end-->
 
 {% youtube v1pvCYAWpRE %}

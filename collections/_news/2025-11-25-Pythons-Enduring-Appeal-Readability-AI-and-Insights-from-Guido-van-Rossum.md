@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Python’s Enduring Appeal: Readability, AI, and Insights from Guido van Rossum"
-description: "This article features an interview with Guido van Rossum, Python’s creator, highlighting Python’s developer-focused design, its role in AI and data science, and practical engineering choices shaping its evolution. The content explores why Python remains a top language for developers and the impact of AI tools like GitHub Copilot on the ecosystem."
-author: "Natalie Guevara"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Python’s Enduring Appeal: Readability, AI, and Insights from Guido van Rossum'
+author: Natalie Guevara
+canonical_url: https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-25 17:00:00 +00:00
-permalink: "/2025-11-25-Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Development", "Code Clarity", "Coding", "Data Science", "Developer Experience", "Developer Skills", "Education", "Guido Van Rossum", "Hugging Face", "LLM Agents", "Machine Learning", "News", "News & Insights", "NumPy", "Octoverse", "Open Source", "Programming Languages", "Programming Languages & Frameworks", "Python", "PyTorch", "Readability", "Software Engineering", "Static Typing", "TypeScript"]
-tags_normalized: ["ai", "ai development", "code clarity", "coding", "data science", "developer experience", "developer skills", "education", "guido van rossum", "hugging face", "llm agents", "machine learning", "news", "news and insights", "numpy", "octoverse", "open source", "programming languages", "programming languages and frameworks", "python", "pytorch", "readability", "software engineering", "static typing", "typescript"]
+permalink: /ai/news/Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum
+tags:
+- AI
+- AI Development
+- Code Clarity
+- Coding
+- Data Science
+- Developer Experience
+- Developer Skills
+- Education
+- Guido Van Rossum
+- Hugging Face
+- LLM Agents
+- Machine Learning
+- News
+- News & Insights
+- NumPy
+- Octoverse
+- Open Source
+- Programming Languages
+- Programming Languages & Frameworks
+- Python
+- PyTorch
+- Readability
+- Software Engineering
+- Static Typing
+- TypeScript
+section_names:
+- ai
+- coding
 ---
-
 Natalie Guevara interviews Guido van Rossum about Python’s growth, developer-first philosophy, and its centrality in AI and education, including impacts from tools like GitHub Copilot.<!--excerpt_end-->
 
 # Python’s Enduring Appeal: Readability, AI, and Insights from Guido van Rossum

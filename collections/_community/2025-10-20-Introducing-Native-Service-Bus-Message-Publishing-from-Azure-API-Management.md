@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Introducing Native Service Bus Message Publishing from Azure API Management"
-description: "This announcement introduces a new feature in Azure API Management (APIM) allowing direct message publishing to Azure Service Bus via a built-in policy. The integration simplifies event-driven application design, improves scalability, and provides secure, policy-based API-to-Service Bus connectivity with managed identities—all without the need for custom code or extra middleware."
-author: "anishta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing Native Service Bus Message Publishing from Azure API Management
+author: anishta
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 01:22:49 +00:00
-permalink: "/2025-10-20-Introducing-Native-Service-Bus-Message-Publishing-from-Azure-API-Management.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Gateway", "APIM", "Asynchronous Systems", "Azure", "Azure API Management", "Azure Functions", "Azure Service Bus", "Community", "DevOps", "Enterprise Integration", "Event Driven Architecture", "Event Processing", "Integration", "Logging", "Logic Apps", "Managed Identity", "Messaging", "Microservices", "Policy", "RBAC", "Secure API", "Security", "Service Bus", "Throttling"]
-tags_normalized: ["api gateway", "apim", "asynchronous systems", "azure", "azure api management", "azure functions", "azure service bus", "community", "devops", "enterprise integration", "event driven architecture", "event processing", "integration", "logging", "logic apps", "managed identity", "messaging", "microservices", "policy", "rbac", "secure api", "security", "service bus", "throttling"]
+permalink: /azure/community/Introducing-Native-Service-Bus-Message-Publishing-from-Azure-API-Management
+tags:
+- API Gateway
+- APIM
+- Asynchronous Systems
+- Azure
+- Azure API Management
+- Azure Functions
+- Azure Service Bus
+- Community
+- DevOps
+- Enterprise Integration
+- Event Driven Architecture
+- Event Processing
+- Integration
+- Logging
+- Logic Apps
+- Managed Identity
+- Messaging
+- Microservices
+- Policy
+- RBAC
+- Secure API
+- Security
+- Service Bus
+- Throttling
+section_names:
+- azure
+- devops
+- security
 ---
-
 anishta introduces a native integration in Azure API Management, enabling direct, secure message publishing to Azure Service Bus using built-in policies and managed identities. This enhancement streamlines event-driven architectures and centralizes API governance.<!--excerpt_end-->
 
 # Native Service Bus Message Publishing from Azure API Management

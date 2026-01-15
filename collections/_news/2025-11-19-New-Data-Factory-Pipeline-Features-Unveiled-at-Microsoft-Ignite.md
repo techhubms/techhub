@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "New Data Factory Pipeline Features Unveiled at Microsoft Ignite"
-description: "This article presents the latest enhancements and upcoming features for data orchestration in Microsoft Fabric's Data Factory, unveiled at Microsoft Ignite. Covering both no-code pipelines and code-first Airflow Jobs, it highlights observability improvements, the new pipeline expression builder powered by Copilot for Data Factory, expanded scheduling options, and efficient lakehouse maintenance activities. These updates support a wide range of data integration and pipeline automation scenarios for developers and data engineers working within Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/igniting-your-pipelines-new-data-factory-features-announced-at-ignite/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: New Data Factory Pipeline Features Unveiled at Microsoft Ignite
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/igniting-your-pipelines-new-data-factory-features-announced-at-ignite/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 11:30:00 +00:00
-permalink: "/2025-11-19-New-Data-Factory-Pipeline-Features-Unveiled-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Apache Airflow", "Azure", "Copilot For Data Factory", "Data Factory", "Data Integration", "Data Orchestration", "Delta Tables", "Interval Based Scheduling", "Lakehouse Maintenance", "Microsoft Fabric", "Microsoft Ignite", "ML", "Monitor Hub", "News", "Observability", "Optimize Activity", "Parquet", "Pipeline Automation", "Pipeline Expression Builder", "Pipeline Expressions", "Vacuum Activity"]
-tags_normalized: ["ai", "apache airflow", "azure", "copilot for data factory", "data factory", "data integration", "data orchestration", "delta tables", "interval based scheduling", "lakehouse maintenance", "microsoft fabric", "microsoft ignite", "ml", "monitor hub", "news", "observability", "optimize activity", "parquet", "pipeline automation", "pipeline expression builder", "pipeline expressions", "vacuum activity"]
+permalink: /ai/news/New-Data-Factory-Pipeline-Features-Unveiled-at-Microsoft-Ignite
+tags:
+- AI
+- Apache Airflow
+- Azure
+- Copilot For Data Factory
+- Data Factory
+- Data Integration
+- Data Orchestration
+- Delta Tables
+- Interval Based Scheduling
+- Lakehouse Maintenance
+- Microsoft Fabric
+- Microsoft Ignite
+- ML
+- Monitor Hub
+- News
+- Observability
+- Optimize Activity
+- Parquet
+- Pipeline Automation
+- Pipeline Expression Builder
+- Pipeline Expressions
+- Vacuum Activity
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces new Data Factory pipeline features launched at Microsoft Ignite, covering code-free orchestration, Airflow DAGs, Copilot-powered expression builder, and advanced scheduling and lakehouse maintenance tools.<!--excerpt_end-->
 
 # New Data Factory Pipeline Features Unveiled at Microsoft Ignite

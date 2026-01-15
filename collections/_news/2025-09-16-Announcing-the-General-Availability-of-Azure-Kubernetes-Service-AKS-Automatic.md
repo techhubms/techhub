@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic"
-description: "This announcement introduces Azure Kubernetes Service (AKS) Automatic, a new managed mode for AKS offering one-click production clusters, automated scaling, built-in security, and deep integration with Azure’s developer and monitoring tools. AKS Automatic is designed to simplify Kubernetes operations for both startups and enterprises alike, reducing operational overhead and accelerating delivery of AI and cloud-native applications. The platform offers an opinionated, developer-friendly experience built on open-source Kubernetes, with out-of-the-box support for AI and cloud-native workloads. The post includes details on how to get started, integration with CI/CD and Azure services, and community resources for ongoing feedback and improvement."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic
+author: sbaynes
+canonical_url: https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 18:00:02 +00:00
-permalink: "/2025-09-16-Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AKS", "AKS Automatic", "Automation", "Autoscaling", "Azure", "Azure Linux", "Azure Monitor", "CI/CD", "Cloud Infrastructure", "Cloud Native", "Company News", "Container Orchestration", "Developer Tools", "DevOps", "Enterprise IT", "GitHub Actions", "Karpenter", "KEDA", "Kubernetes", "Microsoft Entra ID", "News", "Production Clusters", "Scale", "Technology"]
-tags_normalized: ["ai", "aks", "aks automatic", "automation", "autoscaling", "azure", "azure linux", "azure monitor", "cislashcd", "cloud infrastructure", "cloud native", "company news", "container orchestration", "developer tools", "devops", "enterprise it", "github actions", "karpenter", "keda", "kubernetes", "microsoft entra id", "news", "production clusters", "scale", "technology"]
+permalink: /ai/news/Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic
+tags:
+- AI
+- AKS
+- AKS Automatic
+- Automation
+- Autoscaling
+- Azure
+- Azure Linux
+- Azure Monitor
+- CI/CD
+- Cloud Infrastructure
+- Cloud Native
+- Company News
+- Container Orchestration
+- Developer Tools
+- DevOps
+- Enterprise IT
+- GitHub Actions
+- Karpenter
+- KEDA
+- Kubernetes
+- Microsoft Entra ID
+- News
+- Production Clusters
+- Scale
+- Technology
+section_names:
+- ai
+- azure
+- devops
 ---
-
 sbaynes announces the general availability of Azure Kubernetes Service (AKS) Automatic, detailing how this managed offering simplifies Kubernetes for developers and enterprises.<!--excerpt_end-->
 
 # Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic

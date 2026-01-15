@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Compose for Agents on Azure Container Apps: Serverless GPU and Agentic AI Workloads"
-description: "This article introduces the public preview of 'Compose for Agents' on Azure Container Apps (ACA), enabling developers to run complex agentic AI workloads, including large language models, with serverless GPUs and Docker Compose workflows. It covers core features such as secure sandboxing for tools, dynamic scaling, integrated model runners, and framework-agnostic architecture. Readers will learn how ACA simplifies building, deploying, and scaling intelligent, multi-service AI applications using familiar Docker tooling."
-author: "simonjj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/compose-for-agents-on-azure-container-apps-and-serverless-gpu/ba-p/4471061"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Compose for Agents on Azure Container Apps: Serverless GPU and Agentic AI Workloads'
+author: simonjj
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/compose-for-agents-on-azure-container-apps-and-serverless-gpu/ba-p/4471061
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:27:09 +00:00
-permalink: "/2025-11-18-Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic Applications", "AI", "AI Frameworks", "Azure", "Azure Container Apps", "Cloud Deployment", "Community", "Containerization", "CrewAI", "DevOps", "DevOps Automation", "Docker Compose", "Dynamic Scaling", "LangGraph", "LLM Orchestration", "MCP", "MCP Gateway", "Microservices", "Model Runner", "Retrieval Augmented Generation", "Serverless GPU", "Spring AI", "Vector Database"]
-tags_normalized: ["agentic applications", "ai", "ai frameworks", "azure", "azure container apps", "cloud deployment", "community", "containerization", "crewai", "devops", "devops automation", "docker compose", "dynamic scaling", "langgraph", "llm orchestration", "mcp", "mcp gateway", "microservices", "model runner", "retrieval augmented generation", "serverless gpu", "spring ai", "vector database"]
+permalink: /ai/community/Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads
+tags:
+- Agentic Applications
+- AI
+- AI Frameworks
+- Azure
+- Azure Container Apps
+- Cloud Deployment
+- Community
+- Containerization
+- CrewAI
+- DevOps
+- DevOps Automation
+- Docker Compose
+- Dynamic Scaling
+- LangGraph
+- LLM Orchestration
+- MCP
+- MCP Gateway
+- Microservices
+- Model Runner
+- Retrieval Augmented Generation
+- Serverless GPU
+- Spring AI
+- Vector Database
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Simonjj explores the public preview of Compose for Agents on Azure Container Apps, showing how developers can leverage serverless GPUs, Docker Compose, and a wide selection of AI frameworks to build and scale agentic applications on Azure.<!--excerpt_end-->
 
 # Compose for Agents on Azure Container Apps and Serverless GPU (Public Preview)

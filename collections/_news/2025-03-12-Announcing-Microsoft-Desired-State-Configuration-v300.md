@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing Microsoft Desired State Configuration v3.0.0"
-description: "Microsoft announces the general availability of Desired State Configuration (DSC) v3.0.0, a major update in cloud-native, cross-platform configuration management. This post highlights DSC v3’s new features, its differences from classic PowerShell DSC, and key integration enhancements for managing applications and infrastructure."
-author: "Jason Helmick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/announcing-dsc-v3/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: Announcing Microsoft Desired State Configuration v3.0.0
+author: Jason Helmick
+canonical_url: https://devblogs.microsoft.com/powershell/announcing-dsc-v3/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-03-12 17:58:25 +00:00
-permalink: "/2025-03-12-Announcing-Microsoft-Desired-State-Configuration-v300.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azure", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "IaC", "JSON", "News", "PowerShell", "PowerShell DSC", "PSDSC", "Resource Authoring", "System Orchestration", "YAML"]
-tags_normalized: ["automation", "azure", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "iac", "json", "news", "powershell", "powershell dsc", "psdsc", "resource authoring", "system orchestration", "yaml"]
+permalink: /coding/news/Announcing-Microsoft-Desired-State-Configuration-v300
+tags:
+- Automation
+- Azure
+- Coding
+- Configuration Management
+- Cross Platform
+- Desired State Configuration
+- DevOps
+- DSC
+- IaC
+- JSON
+- News
+- PowerShell
+- PowerShell DSC
+- PSDSC
+- Resource Authoring
+- System Orchestration
+- YAML
+section_names:
+- azure
+- coding
+- devops
 ---
-
 In this detailed announcement, Jason Helmick introduces Microsoft Desired State Configuration v3.0.0, highlighting its cross-platform capabilities, integration improvements, and significant differences from classic PowerShell DSC.<!--excerpt_end-->
 
 # Announcing Microsoft Desired State Configuration v3.0.0

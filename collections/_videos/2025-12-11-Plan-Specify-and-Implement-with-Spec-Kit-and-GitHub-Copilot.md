@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Plan, Specify, and Implement with Spec Kit and GitHub Copilot"
-description: "This video introduces Spec Kit, an open-source toolkit designed to help developers specify and implement software with a focus on product scenarios and predictable outcomes. Presented by Microsoft Developer, it covers setup, getting started, and how Spec Kit integrates with spec-driven development, particularly using GitHub Copilot for enhanced development productivity within the Microsoft ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VfBLlAN5zdQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Plan, Specify, and Implement with Spec Kit and GitHub Copilot
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=VfBLlAN5zdQ
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 21:53:48 +00:00
-permalink: "/2025-12-11-Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Cloud Computing", "Coding", "Dev", "Developer", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Developer", "Open Source", "Product Scenarios", "Software Engineering", "Spec Driven Development", "Spec Kit", "Tech", "Technology", "Toolkit", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai development", "cloud computing", "coding", "dev", "developer", "developer tools", "development", "github copilot", "microsoft", "microsoft developer", "open source", "product scenarios", "software engineering", "spec driven development", "spec kit", "tech", "technology", "toolkit", "videos", "vs code"]
+permalink: /github-copilot/videos/Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot
+tags:
+- AI
+- AI Development
+- Cloud Computing
+- Coding
+- Dev
+- Developer
+- Developer Tools
+- Development
+- GitHub Copilot
+- Microsoft
+- Microsoft Developer
+- Open Source
+- Product Scenarios
+- Software Engineering
+- Spec Driven Development
+- Spec Kit
+- Tech
+- Technology
+- Toolkit
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer demonstrates how Spec Kit enables spec-driven development, showcasing its features and integration with GitHub Copilot to streamline software creation.<!--excerpt_end-->
 
 {% youtube VfBLlAN5zdQ %}

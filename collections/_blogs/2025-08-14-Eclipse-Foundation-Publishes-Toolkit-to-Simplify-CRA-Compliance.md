@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Eclipse Foundation Publishes Toolkit to Simplify CRA Compliance"
-description: "An overview of the Eclipse Foundation's newly launched OCCTET project, which provides open-source compliance tools to help organizations comply with the European Union's Cyber Resilience Act (CRA). The toolkit features checklists, automated assessment tools, and guidance designed to make CRA compliance more accessible, especially for smaller companies. Microsoft, GitHub, and other prominent organizations support the initiative within the Open Regulatory Compliance Working Group."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance/?utm_source=rss&utm_medium=rss&utm_campaign=eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Eclipse Foundation Publishes Toolkit to Simplify CRA Compliance
+author: Mike Vizard
+canonical_url: https://devops.com/eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance/?utm_source=rss&utm_medium=rss&utm_campaign=eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-14 10:00:21 +00:00
-permalink: "/2025-08-14-Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Business Of DevOps", "Compliance", "Compliance Toolkit", "Conformity Assessment", "CRA", "CRA Compliance", "Cyber Resilience Act", "Dependency Analysis", "DevOps", "Eclipse Foundation", "EU", "EU Regulations", "Europe", "GitHub", "Microsoft", "OCCTET", "Open Regulatory Compliance", "Open Source", "ORC", "Red Hat", "Regulations", "Regulatory Compliance", "Security", "Security Requirements", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security"]
-tags_normalized: ["blogs", "business of devops", "compliance", "compliance toolkit", "conformity assessment", "cra", "cra compliance", "cyber resilience act", "dependency analysis", "devops", "eclipse foundation", "eu", "eu regulations", "europe", "github", "microsoft", "occtet", "open regulatory compliance", "open source", "orc", "red hat", "regulations", "regulatory compliance", "security", "security requirements", "social facebook", "social linkedin", "social x", "software supply chain security"]
+permalink: /devops/blogs/Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance
+tags:
+- Blogs
+- Business Of DevOps
+- Compliance
+- Compliance Toolkit
+- Conformity Assessment
+- CRA
+- CRA Compliance
+- Cyber Resilience Act
+- Dependency Analysis
+- DevOps
+- Eclipse Foundation
+- EU
+- EU Regulations
+- Europe
+- GitHub
+- Microsoft
+- OCCTET
+- Open Regulatory Compliance
+- Open Source
+- ORC
+- Red Hat
+- Regulations
+- Regulatory Compliance
+- Security
+- Security Requirements
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Mike Vizard examines how the Eclipse Foundation's OCCTET project enables organizations to address EU Cyber Resilience Act compliance, highlighting input from Microsoft and GitHub.<!--excerpt_end-->
 
 # Eclipse Foundation Publishes Toolkit to Simplify CRA Compliance

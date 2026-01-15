@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Slash Commands"
-description: "Enhance workflow with powerful slash commands"
-author: "TBD"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: ""
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Slash Commands
+author: TBD
+canonical_url: ''
 date: 2026-08-29 09:39:31 +00:00
-permalink: "/2026-08-29-Slash-Commands.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "github copilot", "videos"]
+permalink: /github-copilot/videos/Slash-Commands
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This content demonstrates GitHub Copilot's Slash Commands feature. Enhance workflow with powerful slash commands<!--excerpt_end-->
 
 ## Overview

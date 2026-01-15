@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "The Hybrid Cloud Playbook: Mastering Azure Stack"
-description: "This blog post by Dellenny offers a practical playbook for organizations looking to master hybrid cloud architectures using Azure Stack. It explains core Azure Stack concepts, outlines strategies for workload placement, governance, and DevOps, and highlights best practices for security, monitoring, and hybrid operations. Readers will gain actionable insights on unifying development and operations, ensuring compliance, and building resilient, scalable environments by leveraging Azure Stack within their IT landscape."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'The Hybrid Cloud Playbook: Mastering Azure Stack'
+author: Dellenny
+canonical_url: https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-04 09:14:50 +00:00
-permalink: "/2025-10-04-The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure Blueprints", "Azure DevOps", "Azure Monitor", "Azure Policy", "Azure Resource Manager", "Azure Stack", "Azure Stack Edge", "Azure Stack HCI", "Backup", "Bicep", "Blogs", "Coding", "Containers", "DevOps", "Disaster Recovery", "Edge Computing", "ExpressRoute", "Hybrid Cloud", "Kubernetes", "Log Analytics", "Security", "Terraform", "Virtual Machines", "Zero Trust"]
-tags_normalized: ["azure", "azure active directory", "azure blueprints", "azure devops", "azure monitor", "azure policy", "azure resource manager", "azure stack", "azure stack edge", "azure stack hci", "backup", "bicep", "blogs", "coding", "containers", "devops", "disaster recovery", "edge computing", "expressroute", "hybrid cloud", "kubernetes", "log analytics", "security", "terraform", "virtual machines", "zero trust"]
+permalink: /coding/blogs/The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack
+tags:
+- Azure
+- Azure Active Directory
+- Azure Blueprints
+- Azure DevOps
+- Azure Monitor
+- Azure Policy
+- Azure Resource Manager
+- Azure Stack
+- Azure Stack Edge
+- Azure Stack HCI
+- Backup
+- Bicep
+- Blogs
+- Coding
+- Containers
+- DevOps
+- Disaster Recovery
+- Edge Computing
+- ExpressRoute
+- Hybrid Cloud
+- Kubernetes
+- Log Analytics
+- Security
+- Terraform
+- Virtual Machines
+- Zero Trust
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Dellenny shares actionable strategies and best practices for mastering hybrid cloud environments with Azure Stack, highlighting governance, DevOps, security, and workload management.<!--excerpt_end-->
 
 # The Hybrid Cloud Playbook: Mastering Azure Stack

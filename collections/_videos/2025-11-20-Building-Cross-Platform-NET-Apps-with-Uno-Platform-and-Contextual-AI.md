@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building Cross-Platform .NET Apps with Uno Platform and Contextual AI"
-description: "This video highlights how developers can leverage Uno Platform to build cross-platform .NET applications for mobile, desktop, web, and embedded systems. It explores Uno Platform Studio, productivity tools like Hot Design and Hot Reload, Figma plugins for design-to-code workflows, and introduces contextual AI integrations using MCP Servers and custom AI Agents, enabling enhanced design and iterative development with human-in-the-loop workflows. The discussion features expert insights from Bruno Capuano, Sam Basu, and Jérôme Laban."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=R7p_lGtNvMw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Cross-Platform .NET Apps with Uno Platform and Contextual AI
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=R7p_lGtNvMw
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-20 17:46:59 +00:00
-permalink: "/2025-11-20-Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agentic Workflows", "AI", "AI Agents", "Bruno Capuano", "Coding", "Contextual AI", "Cross Platform Development", "Figma Plugins", "Hot Design", "Hot Reload", "Human in The Loop", "IDE", "Jérôme Laban", "Linux", "Macos", "MCP", "MCP Servers", "Mobile Development", "Sam Basu", "Uno Platform", "Uno Platform Studio", "UnoPlatform", "Videos", "WebAssembly", "Windows"]
-tags_normalized: ["dotnet", "agentic workflows", "ai", "ai agents", "bruno capuano", "coding", "contextual ai", "cross platform development", "figma plugins", "hot design", "hot reload", "human in the loop", "ide", "jrme laban", "linux", "macos", "mcp", "mcp servers", "mobile development", "sam basu", "uno platform", "uno platform studio", "unoplatform", "videos", "webassembly", "windows"]
+permalink: /ai/videos/Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI
+tags:
+- .NET
+- Agentic Workflows
+- AI
+- AI Agents
+- Bruno Capuano
+- Coding
+- Contextual AI
+- Cross Platform Development
+- Figma Plugins
+- Hot Design
+- Hot Reload
+- Human in The Loop
+- IDE
+- Jérôme Laban
+- Linux
+- Macos
+- MCP
+- MCP Servers
+- Mobile Development
+- Sam Basu
+- Uno Platform
+- Uno Platform Studio
+- UnoPlatform
+- Videos
+- WebAssembly
+- Windows
+section_names:
+- ai
+- coding
 ---
-
 dotnet presents a community standup featuring Bruno Capuano, Sam Basu, and Jérôme Laban, demonstrating how Uno Platform and contextual AI can streamline cross-platform .NET app development.<!--excerpt_end-->
 
 {% youtube R7p_lGtNvMw %}

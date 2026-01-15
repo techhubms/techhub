@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "The Ultimate AI Agent Directory: 100+ Tools Beyond ChatGPT Agent"
-description: "This comprehensive directory by NickNaskida covers over 100 specialized AI agent tools, grouped by use case. Readers will discover productivity, creative, marketing, automation, development, and orchestration platforms, including those from Microsoft such as Copilot Studio, Semantic Kernel, and AutoGen. The post compares leading solutions, highlights enterprise and open-source frameworks, and encourages discussion on user favorites and overlooked options."
-author: "NickNaskida"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AI_Agents/comments/1mjwc82/the_ultimate_ai_agent_directory_100_tools_beyond/"
-viewing_mode: "external"
-feed_name: "Reddit AI Agents"
-feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
+﻿---
+layout: post
+title: 'The Ultimate AI Agent Directory: 100+ Tools Beyond ChatGPT Agent'
+author: NickNaskida
+canonical_url: https://www.reddit.com/r/AI_Agents/comments/1mjwc82/the_ultimate_ai_agent_directory_100_tools_beyond/
+viewing_mode: external
+feed_name: Reddit AI Agents
+feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-08-07 10:21:50 +00:00
-permalink: "/2025-08-07-The-Ultimate-AI-Agent-Directory-100-Tools-Beyond-ChatGPT-Agent.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Frameworks", "Agent Orchestration", "AI", "AI Agents", "AI Frameworks", "AutoGen", "Automation", "Business Automation", "Code Generation", "Coding", "Community", "Conversational AI", "Development Tools", "Enterprise AI", "GitHub Copilot", "LangChain", "Microsoft Copilot", "Microsoft Copilot Studio", "No Code AI", "Open Source AI", "Productivity Tools", "Robotic Process Automation", "Semantic Kernel"]
-tags_normalized: ["agent frameworks", "agent orchestration", "ai", "ai agents", "ai frameworks", "autogen", "automation", "business automation", "code generation", "coding", "community", "conversational ai", "development tools", "enterprise ai", "github copilot", "langchain", "microsoft copilot", "microsoft copilot studio", "no code ai", "open source ai", "productivity tools", "robotic process automation", "semantic kernel"]
+permalink: /github-copilot/community/The-Ultimate-AI-Agent-Directory-100-Tools-Beyond-ChatGPT-Agent
+tags:
+- Agent Frameworks
+- Agent Orchestration
+- AI
+- AI Agents
+- AI Frameworks
+- AutoGen
+- Automation
+- Business Automation
+- Code Generation
+- Coding
+- Community
+- Conversational AI
+- Development Tools
+- Enterprise AI
+- GitHub Copilot
+- LangChain
+- Microsoft Copilot
+- Microsoft Copilot Studio
+- No Code AI
+- Open Source AI
+- Productivity Tools
+- Robotic Process Automation
+- Semantic Kernel
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 NickNaskida presents a curated directory of over 100 AI agent tools, including Microsoft Copilot Studio, Semantic Kernel, GitHub Copilot, and more, helping professionals discover the latest options for automation and intelligent development.<!--excerpt_end-->
 
 # The Ultimate AI Agent Directory: 100+ Tools Beyond ChatGPT Agent

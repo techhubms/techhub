@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Update - 20th June 2025"
-description: "John Savill's latest video covers key Azure updates, including Linux VM diagnostics, Azure Red Hat OpenShift 4.17, App Service .NET 9 support end, new AKS features, Azure SQL enhancements, regional expansions, and new backup capabilities. The update summarizes notable feature changes and service announcements across Azure."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2L4cSig9Y4Y"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Update - 20th June 2025
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=2L4cSig9Y4Y
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-20 14:50:36 +00:00
-permalink: "/2025-06-20-Azure-Update-20th-June-2025.html"
-categories: ["Azure", "ML"]
-tags: [".NET 9", "AKS", "App Service", "ASR Ultra Disk", "Azure", "Azure Backup", "Azure Cloud", "Azure Functions", "Azure Red Hat OpenShift", "Azure Region", "Azure SQL Managed Instance", "Cloud", "Cloud Updates", "Kubernetes", "Linux VM Diagnostics", "Microsoft", "Microsoft Azure", "ML", "OpenTelemetry", "PostgreSQL", "Videos", "VNET"]
-tags_normalized: ["dotnet 9", "aks", "app service", "asr ultra disk", "azure", "azure backup", "azure cloud", "azure functions", "azure red hat openshift", "azure region", "azure sql managed instance", "cloud", "cloud updates", "kubernetes", "linux vm diagnostics", "microsoft", "microsoft azure", "ml", "opentelemetry", "postgresql", "videos", "vnet"]
+permalink: /ml/videos/Azure-Update-20th-June-2025
+tags:
+- .NET 9
+- AKS
+- App Service
+- ASR Ultra Disk
+- Azure
+- Azure Backup
+- Azure Cloud
+- Azure Functions
+- Azure Red Hat OpenShift
+- Azure Region
+- Azure SQL Managed Instance
+- Cloud
+- Cloud Updates
+- Kubernetes
+- Linux VM Diagnostics
+- Microsoft
+- Microsoft Azure
+- ML
+- OpenTelemetry
+- PostgreSQL
+- Videos
+- VNET
+section_names:
+- azure
+- ml
 ---
-
 In this update, John Savill summarizes key Microsoft Azure changes around services, feature deprecations, and enhancements announced on June 20, 2025.<!--excerpt_end-->
 
 {% youtube 2L4cSig9Y4Y %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "More Type Union Proposals Adopted by the C# Language Design Team"
-description: "The C# language design team has adopted several new type union proposals, indicating a push towards enhanced type flexibility in future C# releases. Linked documentation and discussions provide further details about these language changes and the meeting where decisions were made."
-author: "DayYam"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mf2ylu/more_type_union_proposals_adopted_by_the_c/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: More Type Union Proposals Adopted by the C# Language Design Team
+author: DayYam
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mf2ylu/more_type_union_proposals_adopted_by_the_c/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-01 17:39:07 +00:00
-permalink: "/2025-08-01-More-Type-Union-Proposals-Adopted-by-the-C-Language-Design-Team.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "C# Features", "C# Language", "Coding", "Community", "Language Design", "Language Proposals", "LDM", "Type System", "Type Unions"]
-tags_normalized: ["dotnet", "csharp", "csharp features", "csharp language", "coding", "community", "language design", "language proposals", "ldm", "type system", "type unions"]
+permalink: /coding/community/More-Type-Union-Proposals-Adopted-by-the-C-Language-Design-Team
+tags:
+- .NET
+- C#
+- C# Features
+- C# Language
+- Coding
+- Community
+- Language Design
+- Language Proposals
+- LDM
+- Type System
+- Type Unions
+section_names:
+- coding
 ---
-
 DayYam reports on new type union proposals being adopted by the C# language design team, highlighting upcoming changes for C# developers.<!--excerpt_end-->
 
 ## Summary

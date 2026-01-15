@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Why do I need to specify the .Net version in global.json"
-description: "The author explores challenges encountered when creating an EF Core migration due to mismatched .NET SDK versions. They ask why global.json is needed to specify the .NET version, despite target frameworks being defined in .csproj files, and why compilation can succeed without the intended SDK installed."
-author: "LondonPilot"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhhye8/why_do_i_need_to_specify_the_net_version_in/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: Why do I need to specify the .Net version in global.json
+author: LondonPilot
+canonical_url: https://www.reddit.com/r/csharp/comments/1mhhye8/why_do_i_need_to_specify_the_net_version_in/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 16:19:57 +00:00
-permalink: "/2025-08-04-Why-do-I-need-to-specify-the-Net-version-in-globaljson.html"
-categories: ["Coding"]
-tags: [".NET", ".NET CLI", "C#", "Coding", "Community", "Csproj", "Debugging", "EF Core", "Global.json", "Project Configuration", "SDK Version", "Target Framework"]
-tags_normalized: ["dotnet", "dotnet cli", "csharp", "coding", "community", "csproj", "debugging", "ef core", "globaldotjson", "project configuration", "sdk version", "target framework"]
+permalink: /coding/community/Why-do-I-need-to-specify-the-Net-version-in-globaljson
+tags:
+- .NET
+- .NET CLI
+- C#
+- Coding
+- Community
+- Csproj
+- Debugging
+- EF Core
+- Global.json
+- Project Configuration
+- SDK Version
+- Target Framework
+section_names:
+- coding
 ---
-
 In this post, LondonPilot discusses issues with EF Core migrations caused by .NET SDK version mismatches, seeking clarification on the roles of global.json and .csproj target frameworks.<!--excerpt_end-->
 
 ## Understanding the Need for `global.json` in .NET Projects

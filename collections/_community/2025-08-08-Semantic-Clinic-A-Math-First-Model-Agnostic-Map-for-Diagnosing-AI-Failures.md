@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Semantic Clinic: A Math-First, Model-Agnostic Map for Diagnosing AI Failures"
-description: "The Semantic Clinic is an open-source, MIT-licensed, model-agnostic toolset developed to systematically diagnose, classify, and repair complex AI and LLM pipeline failures. It introduces a reproducible framework using mathematical instruments and repair operators to address failure families in production AI/ML systems. The tool supports various models (including GPT, Claude, Gemini, and local LLMs) and offers field-tested diagnostic procedures, sandboxes, and clearly defined acceptance criteria for remediation."
-author: "wfgy_engine"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mktxxc/semantic_clinic_a_reproducible_map_of_ai_failures/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: 'Semantic Clinic: A Math-First, Model-Agnostic Map for Diagnosing AI Failures'
+author: wfgy_engine
+canonical_url: https://www.reddit.com/r/devops/comments/1mktxxc/semantic_clinic_a_reproducible_map_of_ai_failures/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-08 12:32:38 +00:00
-permalink: "/2025-08-08-Semantic-Clinic-A-Math-First-Model-Agnostic-Map-for-Diagnosing-AI-Failures.html"
-categories: ["AI", "ML", "DevOps"]
-tags: ["AI", "AI Diagnostics", "AI Failures", "Attention Variance", "BBAM", "BBCR", "BBMC", "BBPF", "Community", "DevOps", "Embedding Geometry", "LLM", "Machine Learning", "Math First AI Tools", "MIT Licensed", "ML", "Model Agnostic", "Multi Agent Systems", "Open Source", "Pipeline Debugging", "Problem Map", "RAG Drift", "Reproducibility", "Semantic Clinic", "System Observability", "Vector Store"]
-tags_normalized: ["ai", "ai diagnostics", "ai failures", "attention variance", "bbam", "bbcr", "bbmc", "bbpf", "community", "devops", "embedding geometry", "llm", "machine learning", "math first ai tools", "mit licensed", "ml", "model agnostic", "multi agent systems", "open source", "pipeline debugging", "problem map", "rag drift", "reproducibility", "semantic clinic", "system observability", "vector store"]
+permalink: /ai/community/Semantic-Clinic-A-Math-First-Model-Agnostic-Map-for-Diagnosing-AI-Failures
+tags:
+- AI
+- AI Diagnostics
+- AI Failures
+- Attention Variance
+- BBAM
+- BBCR
+- BBMC
+- BBPF
+- Community
+- DevOps
+- Embedding Geometry
+- LLM
+- Machine Learning
+- Math First AI Tools
+- MIT Licensed
+- ML
+- Model Agnostic
+- Multi Agent Systems
+- Open Source
+- Pipeline Debugging
+- Problem Map
+- RAG Drift
+- Reproducibility
+- Semantic Clinic
+- System Observability
+- Vector Store
+section_names:
+- ai
+- ml
+- devops
 ---
-
 wfgy_engine presents the Semantic Clinic, an MIT-licensed, math-first guide for diagnosing and repairing AI system failures, with reproducible methods and model-agnostic applicability.<!--excerpt_end-->
 
 # Semantic Clinic: A Math-First, Model-Agnostic AI Failure Diagnostic Map

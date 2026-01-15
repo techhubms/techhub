@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot"
-description: "This guide by Dellenny explores the art and practice of crafting effective prompts for AI developer tools, focusing on GitHub Copilot. It details the significance of prompt specificity, practical strategies for developers, advanced prompting techniques, and common mistakes to avoid to maximize productivity and code quality using Copilot."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot'
+author: Dellenny
+canonical_url: https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-01 08:08:59 +00:00
-permalink: "/2025-11-01-Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Best Practices", "AI Prompts", "Blogs", "Code Completion", "Code Generation", "Coding Standards", "Copilot Usage", "Developer Productivity", "FastAPI", "GitHub Copilot", "M365 Copilot", "Programming Tools", "Prompt Engineering", "Prompt Examples", "Prompt Strategy", "Python"]
-tags_normalized: ["ai", "ai best practices", "ai prompts", "blogs", "code completion", "code generation", "coding standards", "copilot usage", "developer productivity", "fastapi", "github copilot", "m365 copilot", "programming tools", "prompt engineering", "prompt examples", "prompt strategy", "python"]
+permalink: /github-copilot/blogs/Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot
+tags:
+- AI
+- AI Best Practices
+- AI Prompts
+- Blogs
+- Code Completion
+- Code Generation
+- Coding Standards
+- Copilot Usage
+- Developer Productivity
+- FastAPI
+- GitHub Copilot
+- M365 Copilot
+- Programming Tools
+- Prompt Engineering
+- Prompt Examples
+- Prompt Strategy
+- Python
+section_names:
+- ai
+- github-copilot
 ---
-
 Dellenny shares practical insights on improving results with GitHub Copilot by mastering prompt writing. This guide covers strategies, advanced techniques, and common pitfalls for developers seeking to get more accurate and useful code suggestions.<!--excerpt_end-->
 
 # Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot

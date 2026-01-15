@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "GPT-5.1-Codex-Max Now Available in GitHub Copilot Across Platforms"
-description: "This announcement details the general availability of the GPT-5.1-Codex-Max model for users of GitHub Copilot, including its integration with multiple IDEs, enabling procedures for enterprise and individual users, and where to find more documentation and community discussions for feedback. The guide covers steps for administrators and individuals to enable the model and offers links to official documentation and the GitHub Community for support and feedback opportunities."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GPT-5.1-Codex-Max Now Available in GitHub Copilot Across Platforms
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 17:28:26 +00:00
-permalink: "/2025-12-17-GPT-51-Codex-Max-Now-Available-in-GitHub-Copilot-Across-Platforms.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model", "Business", "Chat Model Picker", "Copilot", "Copilot Chat", "Copilot Settings", "Eclipse", "Enterprise", "GitHub Copilot", "GPT 5.1 Codex Max", "IDE Integration", "JetBrains", "Model Release", "News", "Pro", "Pro+", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai model", "business", "chat model picker", "copilot", "copilot chat", "copilot settings", "eclipse", "enterprise", "github copilot", "gpt 5dot1 codex max", "ide integration", "jetbrains", "model release", "news", "pro", "proplus", "vs", "vs code", "xcode"]
+permalink: /github-copilot/news/GPT-51-Codex-Max-Now-Available-in-GitHub-Copilot-Across-Platforms
+tags:
+- AI
+- AI Model
+- Business
+- Chat Model Picker
+- Copilot
+- Copilot Chat
+- Copilot Settings
+- Eclipse
+- Enterprise
+- GitHub Copilot
+- GPT 5.1 Codex Max
+- IDE Integration
+- JetBrains
+- Model Release
+- News
+- Pro
+- Pro+
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the general availability of GPT-5.1-Codex-Max in GitHub Copilot, highlighting its rollout across major IDEs and providing guidance for administrators and individual users on enabling access.<!--excerpt_end-->
 
 # GPT-5.1-Codex-Max Now Available in GitHub Copilot

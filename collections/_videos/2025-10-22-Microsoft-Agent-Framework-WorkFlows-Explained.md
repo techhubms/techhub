@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft Agent Framework WorkFlows Explained"
-description: "This video presents an in-depth exploration of Microsoft Agent Framework Workflows, demonstrating how developers can design intelligent automation systems by combining AI agents and business process orchestration. Using type-safe architecture and user-friendly tools, the session covers both foundational and advanced topics, with practical demos from Evan Mattson and Victor Dibia highlighting the Workflow Web UI and developer feedback. It provides direct guidance and resources for building and managing automated workflows with Microsoft's latest AI framework."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/QCHxTtHmtkU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Microsoft Agent Framework WorkFlows Explained
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/QCHxTtHmtkU
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 22:55:56 +00:00
-permalink: "/2025-10-22-Microsoft-Agent-Framework-WorkFlows-Explained.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Framework Demo", "Agent Framework Workflows", "AI", "AI Agents", "Automation Framework", "Azure", "Business Process Orchestration", "Cloud Automation", "Cloud Computing", "Coding", "Dev", "Developer Tools", "Development", "Evan Mattson", "Intelligent Automation", "Microsoft", "Microsoft Agent Framework", "Microsoft AI", "Tech", "Technology", "Type Safe Architecture", "Victor Dibia", "Videos", "Web UI", "Workflow Automation"]
-tags_normalized: ["agent framework demo", "agent framework workflows", "ai", "ai agents", "automation framework", "azure", "business process orchestration", "cloud automation", "cloud computing", "coding", "dev", "developer tools", "development", "evan mattson", "intelligent automation", "microsoft", "microsoft agent framework", "microsoft ai", "tech", "technology", "type safe architecture", "victor dibia", "videos", "web ui", "workflow automation"]
+permalink: /ai/videos/Microsoft-Agent-Framework-WorkFlows-Explained
+tags:
+- Agent Framework Demo
+- Agent Framework Workflows
+- AI
+- AI Agents
+- Automation Framework
+- Azure
+- Business Process Orchestration
+- Cloud Automation
+- Cloud Computing
+- Coding
+- Dev
+- Developer Tools
+- Development
+- Evan Mattson
+- Intelligent Automation
+- Microsoft
+- Microsoft Agent Framework
+- Microsoft AI
+- Tech
+- Technology
+- Type Safe Architecture
+- Victor Dibia
+- Videos
+- Web UI
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer delivers a comprehensive video guide to Microsoft Agent Framework Workflows, featuring demos and expert insights from Evan Mattson and Victor Dibia on building intelligent AI-driven automation.<!--excerpt_end-->
 
 {% youtube QCHxTtHmtkU %}

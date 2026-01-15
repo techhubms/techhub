@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry"
-description: "This article introduces foundational patterns for building and deploying agentic AI systems in enterprise settings, focusing on real-world automation beyond chatbots. It outlines tool use, reflection, planning, multi-agent collaboration, and adaptive reasoning patterns, and demonstrates how Azure AI Foundry delivers a unified, scalable platform to orchestrate secure, interoperable, and modular AI agents. Developers and architects will learn actionable practices for designing resilient agent workflows in production and see how Microsoft’s AI stack enables rapid innovation and enterprise-grade controls."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry'
+author: Yina Arenas
+canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-13 15:00:00 +00:00
-permalink: "/2025-08-13-Agent-Factory-Enterprise-Patterns-and-Best-Practices-for-Agentic-AI-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Factory", "Agent Orchestration", "Agentic AI", "AI", "AI + Machine Learning", "AI Design Patterns", "Azure", "Azure AI Foundry", "Azure OpenAI", "Compliance", "Enterprise AI Security", "Enterprise Automation", "Large Language Models (llms)", "LLMs", "MCP Protocol", "Microsoft Azure", "Modular AI Architecture", "Multi Agent Systems", "News", "Observability", "Planning Pattern", "RBAC", "ReAct Pattern", "Reflection Pattern", "Retrieval Augmented Generation", "Tool Use Pattern"]
-tags_normalized: ["agent factory", "agent orchestration", "agentic ai", "ai", "ai plus machine learning", "ai design patterns", "azure", "azure ai foundry", "azure openai", "compliance", "enterprise ai security", "enterprise automation", "large language models llms", "llms", "mcp protocol", "microsoft azure", "modular ai architecture", "multi agent systems", "news", "observability", "planning pattern", "rbac", "react pattern", "reflection pattern", "retrieval augmented generation", "tool use pattern"]
+permalink: /ai/news/Agent-Factory-Enterprise-Patterns-and-Best-Practices-for-Agentic-AI-with-Azure-AI-Foundry
+tags:
+- Agent Factory
+- Agent Orchestration
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Design Patterns
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Compliance
+- Enterprise AI Security
+- Enterprise Automation
+- Large Language Models (llms)
+- LLMs
+- MCP Protocol
+- Microsoft Azure
+- Modular AI Architecture
+- Multi Agent Systems
+- News
+- Observability
+- Planning Pattern
+- RBAC
+- ReAct Pattern
+- Reflection Pattern
+- Retrieval Augmented Generation
+- Tool Use Pattern
+section_names:
+- ai
+- azure
 ---
-
 Yina Arenas presents essential design patterns and best practices for building agentic AI systems with Azure AI Foundry, explaining how organizations can drive automation beyond conventional chatbots and copilots.<!--excerpt_end-->
 
 # Agent Factory: The New Era of Agentic AI—Common Use Cases and Design Patterns

@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd): Highlights and Updates for June 2025 Release"
-description: "This post details the latest updates to the Azure Developer CLI, including new alpha and beta features, CI/CD improvements, breaking changes, bug fixes, fresh templates, and new documentation. The June 2025 release emphasizes extensibility, improved workflow support, and enhanced support for AI and DevOps integrations."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-june-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI (azd): Highlights and Updates for June 2025 Release'
+author: Kristen Womack
+canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-june-2025/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-05 20:20:50 +00:00
-permalink: "/2025-06-05-Azure-Developer-CLI-azd-Highlights-and-Updates-for-June-2025-Release.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Agents", "Aspire", "Azd", "Azure", "Azure AI Foundry", "Azure Developer CLI", "Azure DevOps", "Azure Functions", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Cosmos DB", "DevOps", "Docker", "Extensions", "GenAI", "GitHub Actions", "Java", "JavaScript", "Kubernetes", "Managed Identities", "MCP", "News", "Pipeline Configuration", "Python", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai agents", "aspire", "azd", "azure", "azure ai foundry", "azure developer cli", "azure devops", "azure functions", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "cosmos db", "devops", "docker", "extensions", "genai", "github actions", "java", "javascript", "kubernetes", "managed identities", "mcp", "news", "pipeline configuration", "python", "templates", "typescript", "vs code"]
+permalink: /ai/news/Azure-Developer-CLI-azd-Highlights-and-Updates-for-June-2025-Release
+tags:
+- .NET
+- AI
+- AI Agents
+- Aspire
+- Azd
+- Azure
+- Azure AI Foundry
+- Azure Developer CLI
+- Azure DevOps
+- Azure Functions
+- Azure SDK
+- Bicep
+- CI/CD
+- Codespaces
+- Coding
+- Cosmos DB
+- DevOps
+- Docker
+- Extensions
+- GenAI
+- GitHub Actions
+- Java
+- JavaScript
+- Kubernetes
+- Managed Identities
+- MCP
+- News
+- Pipeline Configuration
+- Python
+- Templates
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 In this detailed release post, Kristen Womack explores the June 2025 updates for the Azure Developer CLI (`azd`). Learn about new features, infrastructure changes, extension support, AI-powered templates, DevOps integrations, and enhanced developer experiences.<!--excerpt_end-->
 
 ## Azure Developer CLI (azd): June 2025 Release Summary

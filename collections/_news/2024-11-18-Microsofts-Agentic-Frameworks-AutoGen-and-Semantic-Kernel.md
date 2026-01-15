@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel"
-description: "This article discusses the collaboration between Microsoft's Semantic Kernel and AutoGen frameworks for agentic AI applications, detailing their alignment, differences, and future convergence. Guidance is provided for selecting the right tool, understanding current and upcoming features, and available resources to help developers leverage these technologies."
-author: "Friederike Niedtner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/autogen/feed/"
+﻿---
+layout: post
+title: 'Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel'
+author: Friederike Niedtner
+canonical_url: https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/autogen/feed/
 date: 2024-11-18 15:50:54 +00:00
-permalink: "/2024-11-18-Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: ["Agentic Frameworks", "AI", "AI Agents", "AutoGen", "C#", "Coding", "Dapr", "Enterprise AI", "Event Driven Architecture", "GenAI", "Java", "LLMs", "Microsoft", "Microsoft Orleans", "Multi Agent Applications", "News", "Python", "Semantic Kernel"]
-tags_normalized: ["agentic frameworks", "ai", "ai agents", "autogen", "csharp", "coding", "dapr", "enterprise ai", "event driven architecture", "genai", "java", "llms", "microsoft", "microsoft orleans", "multi agent applications", "news", "python", "semantic kernel"]
+permalink: /ai/news/Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel
+tags:
+- Agentic Frameworks
+- AI
+- AI Agents
+- AutoGen
+- C#
+- Coding
+- Dapr
+- Enterprise AI
+- Event Driven Architecture
+- GenAI
+- Java
+- LLMs
+- Microsoft
+- Microsoft Orleans
+- Multi Agent Applications
+- News
+- Python
+- Semantic Kernel
+section_names:
+- ai
+- coding
 ---
-
 Authored by Friederike Niedtner, this article explores the collaboration between Microsoft's Semantic Kernel and AutoGen agentic AI frameworks, detailing their capabilities, integration roadmap, and resources to help developers choose and leverage these powerful tools.<!--excerpt_end-->
 
 # Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel

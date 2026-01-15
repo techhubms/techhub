@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Local AI + .NET: Generate AltText with C# Scripts and Ollama"
-description: "Bruno Capuano details how to generate accessible AltText for images using .NET 10's scriptable C# feature combined with local AI models such as those run by Ollama. The guide covers setting up the environment, using the OllamaSharp library, running the code with dotnet run, and enhancing accessibility while exploring offline AI capabilities."
-author: "Bruno Capuano"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Local AI + .NET: Generate AltText with C# Scripts and Ollama'
+author: Bruno Capuano
+canonical_url: https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-02 20:00:00 +00:00
-permalink: "/2025-07-02-Local-AI-NET-Generate-AltText-with-C-Scripts-and-Ollama.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", "Accessibility", "AI", "AI Foundry Local", "Alttext", "C#", "Coding", "Generative AI", "Image Processing", "Local AI Models", "Local Models", "News", "Ollama", "OllamaSharp", "Script Execution", "Vision Models"]
-tags_normalized: ["dotnet", "dotnet 10", "accessibility", "ai", "ai foundry local", "alttext", "csharp", "coding", "generative ai", "image processing", "local ai models", "local models", "news", "ollama", "ollamasharp", "script execution", "vision models"]
+permalink: /ai/news/Local-AI-NET-Generate-AltText-with-C-Scripts-and-Ollama
+tags:
+- .NET
+- .NET 10
+- Accessibility
+- AI
+- AI Foundry Local
+- Alttext
+- C#
+- Coding
+- Generative AI
+- Image Processing
+- Local AI Models
+- Local Models
+- News
+- Ollama
+- OllamaSharp
+- Script Execution
+- Vision Models
+section_names:
+- ai
+- coding
 ---
-
 Bruno Capuano demonstrates how to use .NET 10 and local AI models to automatically generate AltText for images using a C# script. The article provides a hands-on example and practical tips.<!--excerpt_end-->
 
 ## Summary

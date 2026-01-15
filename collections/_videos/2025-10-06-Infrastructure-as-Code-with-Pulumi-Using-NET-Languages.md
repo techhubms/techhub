@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Infrastructure as Code with Pulumi Using .NET Languages"
-description: "This episode of On .NET Live explores how developers can define, deploy, and manage cloud infrastructure using Pulumi and familiar programming languages such as C# and F#. Cam Soper demonstrates the core concepts of Infrastructure as Code (IaC) and how Pulumi integrates with the .NET ecosystem, making it possible to use existing developer workflows and tools for cloud infrastructure management."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4ljqB21s5L8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Infrastructure as Code with Pulumi Using .NET Languages
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=4ljqB21s5L8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-06 22:41:41 +00:00
-permalink: "/2025-10-06-Infrastructure-as-Code-with-Pulumi-Using-NET-Languages.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Beginner", "C#", "Cloud Infrastructure", "Code", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "DevOps", "Dotnetdeveloper", "F#", "IaC", "Microsoft", "Open Source", "Programming Languages", "Pulumi", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "beginner", "csharp", "cloud infrastructure", "code", "coding", "demo", "developer", "developer community", "developer tools", "devops", "dotnetdeveloper", "fsharp", "iac", "microsoft", "open source", "programming languages", "pulumi", "software developer", "videos"]
+permalink: /coding/videos/Infrastructure-as-Code-with-Pulumi-Using-NET-Languages
+tags:
+- .NET
+- Beginner
+- C#
+- Cloud Infrastructure
+- Code
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- DevOps
+- Dotnetdeveloper
+- F#
+- IaC
+- Microsoft
+- Open Source
+- Programming Languages
+- Pulumi
+- Software Developer
+- Videos
+section_names:
+- coding
+- devops
 ---
-
 Co-host Cam Soper demonstrates Pulumi on On .NET Live, showing developers how to use C# and F# for cloud infrastructure as code, leveraging familiar .NET tools and workflows.<!--excerpt_end-->
 
 {% youtube 4ljqB21s5L8 %}

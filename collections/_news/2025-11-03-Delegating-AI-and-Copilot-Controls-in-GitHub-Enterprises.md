@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Delegating AI and Copilot Controls in GitHub Enterprises"
-description: "This announcement details new features for GitHub Enterprise owners, allowing them to delegate AI and Copilot policy and setup administration using fine-grained permissions. The update provides governance enhancements by enabling enterprise members and teams to manage AI controls without requiring full enterprise ownership, with granular controls outlined for policy administration and audit logging."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Delegating AI and Copilot Controls in GitHub Enterprises
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 20:55:24 +00:00
-permalink: "/2025-11-03-Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Control Plane", "AI", "AI Governance", "AI Policy Management", "Audit Logging", "Copilot", "Copilot Management", "Custom Roles", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Roles", "Fine Grained Permissions", "GitHub Copilot", "GitHub Enterprise", "News", "Policy Delegation"]
-tags_normalized: ["agent control plane", "ai", "ai governance", "ai policy management", "audit logging", "copilot", "copilot management", "custom roles", "enterprise administration", "enterprise management tools", "enterprise roles", "fine grained permissions", "github copilot", "github enterprise", "news", "policy delegation"]
+permalink: /github-copilot/news/Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises
+tags:
+- Agent Control Plane
+- AI
+- AI Governance
+- AI Policy Management
+- Audit Logging
+- Copilot
+- Copilot Management
+- Custom Roles
+- Enterprise Administration
+- Enterprise Management Tools
+- Enterprise Roles
+- Fine Grained Permissions
+- GitHub Copilot
+- GitHub Enterprise
+- News
+- Policy Delegation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison discusses new GitHub Enterprise capabilities enabling owners to delegate setup and administration of AI and Copilot policies to specific members and teams using fine-grained permissions.<!--excerpt_end-->
 
 # Delegating AI and Copilot Controls in GitHub Enterprises

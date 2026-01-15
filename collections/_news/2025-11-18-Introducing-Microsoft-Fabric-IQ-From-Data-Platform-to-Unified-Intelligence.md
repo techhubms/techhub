@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Introducing Microsoft Fabric IQ: From Data Platform to Unified Intelligence"
-description: "This announcement from Microsoft Ignite 2025 introduces Microsoft Fabric IQ, evolving Microsoft Fabric from a unified data platform into a unified intelligence platform. Fabric IQ leverages semantic understanding, agentic AI, and a democratized ontology to transform business data into actionable insights and autonomous decision-making. The update showcases integration with Power BI, Real-Time Intelligence, the new Ontology model, and operations agents, enabling real-time, semantically-grounded intelligence and decisions across business operations."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/from-data-platform-to-intelligence-platform-introducing-microsoft-fabric-iq/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Microsoft Fabric IQ: From Data Platform to Unified Intelligence'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/from-data-platform-to-intelligence-platform-introducing-microsoft-fabric-iq/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Introducing-Microsoft-Fabric-IQ-From-Data-Platform-to-Unified-Intelligence.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "Azure", "Business Intelligence", "Data Agent", "Data Platform", "Digital Twin", "Enterprise AI", "Fabric Real Time Intelligence", "Foundry IQ", "Governance", "Graph Analytics", "Microsoft Fabric IQ", "Microsoft Ignite", "ML", "News", "No Code Modeling", "OneLake", "Ontology", "Operations Agent", "Power BI", "Real Time Analytics", "Semantic Model"]
-tags_normalized: ["agentic ai", "ai", "azure", "business intelligence", "data agent", "data platform", "digital twin", "enterprise ai", "fabric real time intelligence", "foundry iq", "governance", "graph analytics", "microsoft fabric iq", "microsoft ignite", "ml", "news", "no code modeling", "onelake", "ontology", "operations agent", "power bi", "real time analytics", "semantic model"]
+permalink: /ai/news/Introducing-Microsoft-Fabric-IQ-From-Data-Platform-to-Unified-Intelligence
+tags:
+- Agentic AI
+- AI
+- Azure
+- Business Intelligence
+- Data Agent
+- Data Platform
+- Digital Twin
+- Enterprise AI
+- Fabric Real Time Intelligence
+- Foundry IQ
+- Governance
+- Graph Analytics
+- Microsoft Fabric IQ
+- Microsoft Ignite
+- ML
+- News
+- No Code Modeling
+- OneLake
+- Ontology
+- Operations Agent
+- Power BI
+- Real Time Analytics
+- Semantic Model
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the release of Fabric IQ at Ignite 2025, an advanced intelligence platform unifying data, semantic modeling, and agentic AI to power real-time decisions and business optimization.<!--excerpt_end-->
 
 # Introducing Microsoft Fabric IQ: From Data Platform to Unified Intelligence

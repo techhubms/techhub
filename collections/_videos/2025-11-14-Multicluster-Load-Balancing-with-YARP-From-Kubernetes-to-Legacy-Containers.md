@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers"
-description: "This video tutorial explores building a robust, production-grade load balancer using YARP to efficiently route traffic across distributed Kubernetes clusters and VM-hosted legacy Windows Containers. It covers architecture decisions, routing strategies, integration challenges, and how YARP enables unified traffic flow for both modern and legacy containerized workloads."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VIroNVbY0qI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=VIroNVbY0qI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:20:50 +00:00
-permalink: "/2025-11-14-Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Architecture", "Cloud Native", "Coding", "Container Orchestration", "DevOps", "Integration", "Kubernetes", "Legacy Modernization", "Load Balancing", "Microservices", "Production Infrastructure", "Routing", "Traffic Management", "Videos", "Windows Containers", "YARP"]
-tags_normalized: ["dotnet", "architecture", "cloud native", "coding", "container orchestration", "devops", "integration", "kubernetes", "legacy modernization", "load balancing", "microservices", "production infrastructure", "routing", "traffic management", "videos", "windows containers", "yarp"]
+permalink: /coding/videos/Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers
+tags:
+- .NET
+- Architecture
+- Cloud Native
+- Coding
+- Container Orchestration
+- DevOps
+- Integration
+- Kubernetes
+- Legacy Modernization
+- Load Balancing
+- Microservices
+- Production Infrastructure
+- Routing
+- Traffic Management
+- Videos
+- Windows Containers
+- YARP
+section_names:
+- coding
+- devops
 ---
-
 In this session, dotnet demonstrates how to architect a load balancer using YARP to streamline traffic management across multiple Kubernetes clusters and VM-hosted Windows Containers, offering practical insights on scaling, routing, and integrating legacy systems.<!--excerpt_end-->
 
 {% youtube VIroNVbY0qI %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments"
-description: "This guide walks Azure and data infrastructure architects through deploying Microsoft Fabric as a private-only analytics platform inside enterprise-grade, Zero-Trust hub–spoke networks. It details practical implementation and governance, leveraging managed private endpoints, VNet gateways, and DNS controls, and includes Terraform provisioning tips for advanced automation."
-author: "mohit-kanojia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments
+author: mohit-kanojia
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 03:49:00 +00:00
-permalink: "/2025-11-19-Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trust-Azure-Environments.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["ADLS", "AzAPI Provider", "Azure", "CI/CD Validation", "Community", "Data Pipeline", "DNS Security", "Firewall Logs", "Governance", "Hub Spoke Architecture", "Isolation", "Lakehouse", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Inspection", "Private Endpoints", "Production Ready", "Security", "Spark", "Terraform", "VNet Data Gateway", "Warehouse", "Zero Trust"]
-tags_normalized: ["adls", "azapi provider", "azure", "cislashcd validation", "community", "data pipeline", "dns security", "firewall logs", "governance", "hub spoke architecture", "isolation", "lakehouse", "managed private endpoints", "microsoft fabric", "ml", "network inspection", "private endpoints", "production ready", "security", "spark", "terraform", "vnet data gateway", "warehouse", "zero trust"]
+permalink: /ml/community/Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trust-Azure-Environments
+tags:
+- ADLS
+- AzAPI Provider
+- Azure
+- CI/CD Validation
+- Community
+- Data Pipeline
+- DNS Security
+- Firewall Logs
+- Governance
+- Hub Spoke Architecture
+- Isolation
+- Lakehouse
+- Managed Private Endpoints
+- Microsoft Fabric
+- ML
+- Network Inspection
+- Private Endpoints
+- Production Ready
+- Security
+- Spark
+- Terraform
+- VNet Data Gateway
+- Warehouse
+- Zero Trust
+section_names:
+- azure
+- ml
+- security
 ---
-
 Mohit Kanojia shares his field-tested approach for deploying Microsoft Fabric as a private-only SaaS platform within highly regulated Azure enterprise networks, tackling analytics, governance, and security integration.<!--excerpt_end-->
 
 # Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments

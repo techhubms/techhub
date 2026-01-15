@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design"
-description: "This post explores Lacuna, a conversational AI agent developed using Copilot Studio and Azure AI Foundry. Designed by a UX Engineer at Microsoft, Lacuna uncovers hidden assumptions in product artifacts. The article walks through its design, underlying technologies, and purpose in surfacing cognitive biases in team product development."
-author: "skeske"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: 'The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design'
+author: skeske
+canonical_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-21 19:08:20 +00:00
-permalink: "/2025-08-21-The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Powered Tools", "Assumption Analysis", "Azure", "Azure AI Foundry", "Community", "Conversational Agents", "Copilot Studio", "Design Risk", "Generative AI", "Human AI Collaboration", "Large Language Models", "LLM", "Microsoft Teams", "Product Design", "Prompt Engineering", "Risk Assessment", "UX Engineering"]
-tags_normalized: ["ai", "ai powered tools", "assumption analysis", "azure", "azure ai foundry", "community", "conversational agents", "copilot studio", "design risk", "generative ai", "human ai collaboration", "large language models", "llm", "microsoft teams", "product design", "prompt engineering", "risk assessment", "ux engineering"]
+permalink: /ai/community/The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design
+tags:
+- AI
+- AI Powered Tools
+- Assumption Analysis
+- Azure
+- Azure AI Foundry
+- Community
+- Conversational Agents
+- Copilot Studio
+- Design Risk
+- Generative AI
+- Human AI Collaboration
+- Large Language Models
+- LLM
+- Microsoft Teams
+- Product Design
+- Prompt Engineering
+- Risk Assessment
+- UX Engineering
+section_names:
+- ai
+- azure
 ---
-
 skeske shares insights into creating Lacuna—an agent built with Copilot Studio and Azure AI Foundry—designed to surface hidden assumptions in product decisions and foster reflection within engineering teams.<!--excerpt_end-->
 
 # The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design

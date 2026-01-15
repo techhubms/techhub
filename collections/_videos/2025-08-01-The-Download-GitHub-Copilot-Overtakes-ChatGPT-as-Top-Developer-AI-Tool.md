@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool"
-description: "This episode of The Download, hosted by GitHub, covers the rising adoption of GitHub Copilot as the most used AI tool among developers, surpassing ChatGPT. Other major developer news includes the announcement of the \"For the love of code\" hackathon, release of the official GitHub Podcast, Netflix leveraging generative AI for visual effects, updates on AI tool developments like Astro's MCP server, new ChatGPT agent capabilities, and Google's AI-driven security breakthrough."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=X2QmaEkiyZA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=X2QmaEkiyZA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-01 16:31:47 +00:00
-permalink: "/2025-08-01-The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI News", "AI Security", "AI Tools", "Astro MCP", "ChatGPT", "Developer Tools", "Generative AI", "GitHub", "GitHub Copilot", "Google AI", "Hackathon", "Netflix", "Open Source", "Podcast", "Software Development", "TheDownload", "Videos"]
-tags_normalized: ["ai", "ai news", "ai security", "ai tools", "astro mcp", "chatgpt", "developer tools", "generative ai", "github", "github copilot", "google ai", "hackathon", "netflix", "open source", "podcast", "software development", "thedownload", "videos"]
+permalink: /github-copilot/videos/The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool
+tags:
+- AI
+- AI News
+- AI Security
+- AI Tools
+- Astro MCP
+- ChatGPT
+- Developer Tools
+- Generative AI
+- GitHub
+- GitHub Copilot
+- Google AI
+- Hackathon
+- Netflix
+- Open Source
+- Podcast
+- Software Development
+- TheDownload
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub's The Download, featuring news from author GitHub, highlights GitHub Copilot's rise as the top AI tool for developers, along with developer-focused announcements and AI innovations.<!--excerpt_end-->
 
 {% youtube X2QmaEkiyZA %}

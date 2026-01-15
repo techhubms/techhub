@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2"
-description: "This post introduces a Microsoft Global Blackbelt-led video series guiding users through configuring prerequisites, deploying, and migrating on-premises VMware workloads to Azure VMware Solution Gen 2. The series also demonstrates integrating VMware workloads with Azure native services to enhance value, making it valuable for organizations modernizing infrastructure."
-author: "tredavis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2
+author: tredavis
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 19:17:51 +00:00
-permalink: "/2025-11-06-Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Migrate", "Azure Native Integration", "Azure VMware Solution", "Cloud Infrastructure", "Community", "Deployment", "Hybrid Cloud", "Migration Strategy", "On Premises To Cloud", "VMware Migration", "Workload Migration"]
-tags_normalized: ["azure", "azure migrate", "azure native integration", "azure vmware solution", "cloud infrastructure", "community", "deployment", "hybrid cloud", "migration strategy", "on premises to cloud", "vmware migration", "workload migration"]
+permalink: /azure/community/Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2
+tags:
+- Azure
+- Azure Migrate
+- Azure Native Integration
+- Azure VMware Solution
+- Cloud Infrastructure
+- Community
+- Deployment
+- Hybrid Cloud
+- Migration Strategy
+- On Premises To Cloud
+- VMware Migration
+- Workload Migration
+section_names:
+- azure
 ---
-
 Trevor Davis and Carlos Villuendas present a video series helping users migrate and modernize on-premises VMware workloads using Azure VMware Solution Gen 2, providing practical deployment and integration guidance.<!--excerpt_end-->
 
 # Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure"
-description: "This detailed guide by PuiChee (PC) Chan explains how to achieve 'build once, deploy everywhere' using Azure Container Apps and the latest features in Azure Developer CLI v1.20.0. The walkthrough covers deploying containerized applications across multiple environments, leveraging layered infrastructure and workflow enhancements for seamless dev-to-prod deployments. Real-world configuration, infrastructure layering, and integrated CI/CD guidance are included."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure'
+author: PuiChee (PC) Chan
+canonical_url: https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/
+viewing_mode: external
+feed_name: Microsoft DevOps Blog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-11-04 22:45:46 +00:00
-permalink: "/2025-11-04-Azure-Developer-CLI-Azure-Container-Apps-Dev-to-Prod-Deployment-with-Layered-Infrastructure.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["#azure", "#devops", "Application Insights", "Azd", "Azure", "Azure & Cloud", "Azure App Service", "Azure Container Apps", "Azure Container Registry", "Azure Developer CLI", "Azure Developer CLI (azd)", "CI/CD", "Coding", "Container Deployment", "DevOps", "Flask", "GitHub", "GitHub Actions", "IaC", "Key Vault", "Layered Infrastructure", "Managed Identity", "News", "Python", "VNET"]
-tags_normalized: ["sharpazure", "sharpdevops", "application insights", "azd", "azure", "azure and cloud", "azure app service", "azure container apps", "azure container registry", "azure developer cli", "azure developer cli azd", "cislashcd", "coding", "container deployment", "devops", "flask", "github", "github actions", "iac", "key vault", "layered infrastructure", "managed identity", "news", "python", "vnet"]
+permalink: /coding/news/Azure-Developer-CLI-Azure-Container-Apps-Dev-to-Prod-Deployment-with-Layered-Infrastructure
+tags:
+- '#azure'
+- '#devops'
+- Application Insights
+- Azd
+- Azure
+- Azure & Cloud
+- Azure App Service
+- Azure Container Apps
+- Azure Container Registry
+- Azure Developer CLI
+- Azure Developer CLI (azd)
+- CI/CD
+- Coding
+- Container Deployment
+- DevOps
+- Flask
+- GitHub
+- GitHub Actions
+- IaC
+- Key Vault
+- Layered Infrastructure
+- Managed Identity
+- News
+- Python
+- VNET
+section_names:
+- azure
+- coding
+- devops
 ---
-
 PuiChee (PC) Chan shares a practical guide on using Azure Developer CLI v1.20.0 and Azure Container Apps to enable build-once, deploy-everywhere patterns with layered infrastructure and robust CI/CD pipelines.<!--excerpt_end-->
 
 # Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework"
-description: "This session explains how the Durable Task Extension enhances the Microsoft Agent Framework to create robust, scalable, and production-ready AI agents on Azure. It covers durability, distributed execution, determinism, and debuggability, alongside real-world agentic patterns like multi-agent workflows and human-in-the-loop scenarios, all leveraging Azure's serverless architecture."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_UhRNW6HL6Y"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=_UhRNW6HL6Y
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:52 +00:00
-permalink: "/2025-12-10-Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic Workflows", "AI", "AI Agents", "Azure", "Azure Functions", "Coding", "Debugging", "Determinism", "Distributed Systems", "Durable Task Extension", "Microsoft Agent Framework", "Observability", "Production Ready AI", "Scaling", "Serverless Architecture", "Session Management", "Stateful Agents", "Videos"]
-tags_normalized: ["dotnet", "agentic workflows", "ai", "ai agents", "azure", "azure functions", "coding", "debugging", "determinism", "distributed systems", "durable task extension", "microsoft agent framework", "observability", "production ready ai", "scaling", "serverless architecture", "session management", "stateful agents", "videos"]
+permalink: /ai/videos/Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
+tags:
+- .NET
+- Agentic Workflows
+- AI
+- AI Agents
+- Azure
+- Azure Functions
+- Coding
+- Debugging
+- Determinism
+- Distributed Systems
+- Durable Task Extension
+- Microsoft Agent Framework
+- Observability
+- Production Ready AI
+- Scaling
+- Serverless Architecture
+- Session Management
+- Stateful Agents
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet presents an in-depth session on building resilient and scalable AI agents using the Durable Task Extension for Microsoft Agent Framework, focusing on durability, distributed operation, determinism, and observability.<!--excerpt_end-->
 
 {% youtube _UhRNW6HL6Y %}

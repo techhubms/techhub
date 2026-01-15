@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft Security Experts can increase the efficiency and resilience of Security Operations Centers (SOCs). It covers managed detection and response (Defender Experts for XDR), proactive incident response, real-world threat case studies, and how Microsoft's experts collaborate with organizations to reduce risk and rapidly contain cyber threats."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IB9U8dfyF1w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=IB9U8dfyF1w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 05:12:55 +00:00
-permalink: "/2025-11-24-Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response.html"
-categories: ["Security"]
-tags: ["Cybersecurity", "DART", "Defender Experts For XDR", "Incident Response", "Managed XDR", "Microsoft Defender", "Microsoft Ignite", "Microsoft Security Experts", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Proactive Incident Response", "Ransomware", "Security", "Security Operations", "SharePoint Vulnerability", "SOC", "Threat Hunting", "Threat Intelligence", "Videos"]
-tags_normalized: ["cybersecurity", "dart", "defender experts for xdr", "incident response", "managed xdr", "microsoft defender", "microsoft ignite", "microsoft security experts", "modernizesecopswithaunifiedplatform", "msignite", "proactive incident response", "ransomware", "security", "security operations", "sharepoint vulnerability", "soc", "threat hunting", "threat intelligence", "videos"]
+permalink: /security/videos/Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response
+tags:
+- Cybersecurity
+- DART
+- Defender Experts For XDR
+- Incident Response
+- Managed XDR
+- Microsoft Defender
+- Microsoft Ignite
+- Microsoft Security Experts
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Proactive Incident Response
+- Ransomware
+- Security
+- Security Operations
+- SharePoint Vulnerability
+- SOC
+- Threat Hunting
+- Threat Intelligence
+- Videos
+section_names:
+- security
 ---
-
 Hosted by Microsoft Events, this Ignite 2025 session features Brian Hooper and Andrew Rapp discussing how Microsoft Security Experts support SOCs with managed XDR, real-world threat intelligence, and incident response strategies.<!--excerpt_end-->
 
 {% youtube IB9U8dfyF1w %}

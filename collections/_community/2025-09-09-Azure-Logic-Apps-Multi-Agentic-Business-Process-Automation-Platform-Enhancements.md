@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements"
-description: "This article highlights significant new features in Azure Logic Apps that empower developers to build highly intelligent, multiagent business process automation solutions. It introduces agentic workflows, enhanced AI integration, multiagent orchestration, Python code interpreter tools, and new security capabilities. Readers will learn how Logic Apps now allows for agent collaboration, conversational AI, comprehensive observability, and extensible developer options — all on a fully managed cloud platform designed for secure and scalable enterprise automation."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements'
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 18:11:58 +00:00
-permalink: "/2025-09-09-Azure-Logic-Apps-Multi-Agentic-Business-Process-Automation-Platform-Enhancements.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["A2A Standard", "Agent Based Architecture", "Agent Loop", "AI", "AI Integration", "Automation Workflows", "Azure", "Azure Logic Apps", "Coding", "Community", "Conversational Agents", "Enterprise Security", "Foundry Agent Service", "Microsoft Entra ID", "Multiagent Automation", "Observability", "On Behalf Of Authentication", "Python Code Interpreter", "Security", "State Machine Orchestration"]
-tags_normalized: ["a2a standard", "agent based architecture", "agent loop", "ai", "ai integration", "automation workflows", "azure", "azure logic apps", "coding", "community", "conversational agents", "enterprise security", "foundry agent service", "microsoft entra id", "multiagent automation", "observability", "on behalf of authentication", "python code interpreter", "security", "state machine orchestration"]
+permalink: /ai/community/Azure-Logic-Apps-Multi-Agentic-Business-Process-Automation-Platform-Enhancements
+tags:
+- A2A Standard
+- Agent Based Architecture
+- Agent Loop
+- AI
+- AI Integration
+- Automation Workflows
+- Azure
+- Azure Logic Apps
+- Coding
+- Community
+- Conversational Agents
+- Enterprise Security
+- Foundry Agent Service
+- Microsoft Entra ID
+- Multiagent Automation
+- Observability
+- On Behalf Of Authentication
+- Python Code Interpreter
+- Security
+- State Machine Orchestration
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 DivSwa details the evolution of Azure Logic Apps into a platform for building intelligent, multiagent workflows with advanced AI, security, and extensibility. Discover how these enhancements enable collaborative automation for developers.<!--excerpt_end-->
 
 # Azure Logic Apps: Ushering in the Era of Multi-Agentic Business Process Automation

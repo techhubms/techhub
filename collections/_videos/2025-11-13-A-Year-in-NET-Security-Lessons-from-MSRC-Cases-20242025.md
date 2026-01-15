@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "A Year in .NET Security: Lessons from MSRC Cases (2024–2025)"
-description: "This session offers developers an insider’s look at .NET security cases investigated by the Microsoft Security Response Center. Discover common coding mistakes, design flaws, and recurring vulnerability patterns in .NET applications, and learn actionable strategies to improve security across APIs, libraries, and cloud-native services. Includes updates on the latest .NET, C#, F#, and Visual Studio releases."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8lFm4wI1bPo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'A Year in .NET Security: Lessons from MSRC Cases (2024–2025)'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=8lFm4wI1bPo
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", "API Security", "ASP.NET Core", "C# 14", "Cloud Native", "Coding", "Coding Pitfalls", "Design Oversights", "Developer Strategies", "F# 10", "MAUI", "Microsoft Security Response Center", "MSRC", "Secure Coding", "Security", "Security Best Practices", "Security Patterns", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "api security", "aspdotnet core", "csharp 14", "cloud native", "coding", "coding pitfalls", "design oversights", "developer strategies", "fsharp 10", "maui", "microsoft security response center", "msrc", "secure coding", "security", "security best practices", "security patterns", "videos", "vs"]
+permalink: /coding/videos/A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- API Security
+- ASP.NET Core
+- C# 14
+- Cloud Native
+- Coding
+- Coding Pitfalls
+- Design Oversights
+- Developer Strategies
+- F# 10
+- MAUI
+- Microsoft Security Response Center
+- MSRC
+- Secure Coding
+- Security
+- Security Best Practices
+- Security Patterns
+- Videos
+- VS
+section_names:
+- coding
+- security
 ---
-
 dotnet presents a behind-the-scenes review of recent .NET security investigations by MSRC, highlighting coding pitfalls, design oversights, and practical strategies for secure .NET development.<!--excerpt_end-->
 
 {% youtube 8lFm4wI1bPo %}

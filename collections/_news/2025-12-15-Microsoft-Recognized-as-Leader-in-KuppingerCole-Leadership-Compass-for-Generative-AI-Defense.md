@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Microsoft Recognized as Leader in KuppingerCole Leadership Compass for Generative AI Defense"
-description: "Microsoft has been named the overall leader in the KuppingerCole Leadership Compass for Generative AI Defense, reflecting the company's enterprise-grade AI security and governance capabilities. This announcement spotlights integrated protection across Microsoft Entra, Purview, and Defender for securing AI applications, agents, and platforms at scale. The post offers essential guidance for CISOs and security leaders on building secure, governed, and scalable generative AI foundations in the enterprise, and explains Microsoft's layered approach to address agent identity, data loss prevention, compliance, and threat protection in the evolving AI security landscape."
-author: "Herain Oberoi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-named-an-overall-leader-in-kuppingercole-leadership-compass-for-genera/4478093"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Recognized as Leader in KuppingerCole Leadership Compass for Generative AI Defense
+author: Herain Oberoi
+canonical_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-named-an-overall-leader-in-kuppingercole-leadership-compass-for-genera/4478093
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-15 18:05:00 +00:00
-permalink: "/2025-12-15-Microsoft-Recognized-as-Leader-in-KuppingerCole-Leadership-Compass-for-Generative-AI-Defense.html"
-categories: ["AI", "Security"]
-tags: ["Agent365", "AI", "AI Governance", "AI Protection", "CISO", "Compliance", "Copilot Studio", "Data Loss Prevention", "Enterprise AI", "EU AI Act", "Foundry Control Plane", "Generative AI Defense", "Identity Management", "ISO 42001", "KuppingerCole", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "Microsoft Security", "News", "NIST AI RMF", "Security", "Security Architecture", "Threat Intelligence"]
-tags_normalized: ["agent365", "ai", "ai governance", "ai protection", "ciso", "compliance", "copilot studio", "data loss prevention", "enterprise ai", "eu ai act", "foundry control plane", "generative ai defense", "identity management", "iso 42001", "kuppingercole", "microsoft defender", "microsoft entra", "microsoft purview", "microsoft security", "news", "nist ai rmf", "security", "security architecture", "threat intelligence"]
+permalink: /ai/news/Microsoft-Recognized-as-Leader-in-KuppingerCole-Leadership-Compass-for-Generative-AI-Defense
+tags:
+- Agent365
+- AI
+- AI Governance
+- AI Protection
+- CISO
+- Compliance
+- Copilot Studio
+- Data Loss Prevention
+- Enterprise AI
+- EU AI Act
+- Foundry Control Plane
+- Generative AI Defense
+- Identity Management
+- ISO 42001
+- KuppingerCole
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- Microsoft Security
+- News
+- NIST AI RMF
+- Security
+- Security Architecture
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 Herain Oberoi details Microsoft's recognition as the overall leader in generative AI defense, highlighting integrated security, governance, and compliance solutions that help protect and govern enterprise AI at scale.<!--excerpt_end-->
 
 # Microsoft Recognized as Leader in KuppingerCole Leadership Compass for Generative AI Defense

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Inside GitHub Copilot: The AI Models Behind Your Coding Assistant"
-description: "This article provides a detailed look at the evolution of GitHub Copilot’s underlying AI models and its infrastructure, focusing on how recent advancements enable developers to choose from a range of large language models (LLMs) for specific tasks, agentic workflows, and improved productivity. It covers the shift from Codex to a multi-model architecture, integration with the latest frontier models like OpenAI’s GPT-4.1, Anthropic’s Claude series, and Google’s Gemini, and how these options empower developers to tailor Copilot to their needs. The piece also discusses Copilot’s features—such as agent mode and chat—model selection mechanisms, and real-world developer impact through enhanced context, speed, and flexibility."
-author: "Alexandra Lietzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/under-the-hood-exploring-the-ai-models-powering-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Inside GitHub Copilot: The AI Models Behind Your Coding Assistant'
+author: Alexandra Lietzke
+canonical_url: https://github.blog/ai-and-ml/github-copilot/under-the-hood-exploring-the-ai-models-powering-github-copilot/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-29 16:14:42 +00:00
-permalink: "/2025-08-29-Inside-GitHub-Copilot-The-AI-Models-Behind-Your-Coding-Assistant.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Models", "Anthropic Claude", "Code Completion", "Code Review", "Coding Agent", "Copilot Chat", "Developer Experience", "Generative AI", "GitHub Copilot", "Google Gemini", "GPT 4.1", "IDE Integration", "LLM", "Model Selection", "News", "OpenAI", "Productivity Tools"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai models", "anthropic claude", "code completion", "code review", "coding agent", "copilot chat", "developer experience", "generative ai", "github copilot", "google gemini", "gpt 4dot1", "ide integration", "llm", "model selection", "news", "openai", "productivity tools"]
+permalink: /github-copilot/news/Inside-GitHub-Copilot-The-AI-Models-Behind-Your-Coding-Assistant
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Models
+- Anthropic Claude
+- Code Completion
+- Code Review
+- Coding Agent
+- Copilot Chat
+- Developer Experience
+- Generative AI
+- GitHub Copilot
+- Google Gemini
+- GPT 4.1
+- IDE Integration
+- LLM
+- Model Selection
+- News
+- OpenAI
+- Productivity Tools
+section_names:
+- ai
+- github-copilot
 ---
-
 Alexandra Lietzke explores the advanced AI models and infrastructure that power GitHub Copilot, highlighting how evolving model options and agentic workflows are enhancing developer productivity and choice.<!--excerpt_end-->
 
 # Inside GitHub Copilot: The AI Models Behind Your Coding Assistant

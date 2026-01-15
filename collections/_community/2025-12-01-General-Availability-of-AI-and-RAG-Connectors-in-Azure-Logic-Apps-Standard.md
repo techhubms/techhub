@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "General Availability of AI and RAG Connectors in Azure Logic Apps Standard"
-description: "This announcement details the general availability of AI and Retrieval-Augmented Generation (RAG) capabilities in Azure Logic Apps Standard. It outlines new built-in connectors for Azure OpenAI, AI Search, Document Intelligence, and advanced operations, enabling native integration of AI-powered document processing, semantic search, and agentic workflows directly into enterprise automation pipelines."
-author: "shahparth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of AI and RAG Connectors in Azure Logic Apps Standard
+author: shahparth
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-01 23:35:11 +00:00
-permalink: "/2025-12-01-General-Availability-of-AI-and-RAG-Connectors-in-Azure-Logic-Apps-Standard.html"
-categories: ["AI", "Azure"]
-tags: ["AgentLoop", "AI", "AI Connectors", "AI Search", "Azure", "Azure Logic Apps", "Azure OpenAI", "Chunking", "Community", "Document Intelligence", "Document Processing", "Embeddings", "Enterprise Integration", "Integration Pipelines", "Metadata Extraction", "Natural Language Processing", "Retrieval Augmented Generation", "Semantic Search", "Workflow Automation"]
-tags_normalized: ["agentloop", "ai", "ai connectors", "ai search", "azure", "azure logic apps", "azure openai", "chunking", "community", "document intelligence", "document processing", "embeddings", "enterprise integration", "integration pipelines", "metadata extraction", "natural language processing", "retrieval augmented generation", "semantic search", "workflow automation"]
+permalink: /ai/community/General-Availability-of-AI-and-RAG-Connectors-in-Azure-Logic-Apps-Standard
+tags:
+- AgentLoop
+- AI
+- AI Connectors
+- AI Search
+- Azure
+- Azure Logic Apps
+- Azure OpenAI
+- Chunking
+- Community
+- Document Intelligence
+- Document Processing
+- Embeddings
+- Enterprise Integration
+- Integration Pipelines
+- Metadata Extraction
+- Natural Language Processing
+- Retrieval Augmented Generation
+- Semantic Search
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 shahparth announces the general availability of integrated AI and RAG connectors in Azure Logic Apps Standard, enabling native support for advanced document processing and semantic search within enterprise automation workflows.<!--excerpt_end-->
 
 # General Availability of AI and RAG Connectors in Azure Logic Apps Standard

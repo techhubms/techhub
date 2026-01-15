@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Protect Azure Storage Accounts with Network Security Perimeter: General Availability"
-description: "This in-depth guide announces and explains the general availability of network security perimeter support for Azure Storage accounts. It describes how organizations can use network security perimeters to isolate resources, centralize management, and prevent data exfiltration. The article includes practical scenarios implementing secure boundaries, controlling inbound and outbound access, and streamlining compliance operations through centralized logging. Administrators and architects will learn strategies for grouping PaaS resources, leveraging profiles, and combining existing security features like private endpoints and firewalls to protect sensitive data at scale."
-author: "Vishnu Charan TJ"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Protect Azure Storage Accounts with Network Security Perimeter: General Availability'
+author: Vishnu Charan TJ
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 19:29:51 +00:00
-permalink: "/2025-09-08-Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability.html"
-categories: ["Azure", "Security"]
-tags: ["Access Management", "Azure", "Azure Key Vault", "Azure Monitor", "Azure Storage", "Centralized Logging", "Community", "Compliance", "Data Exfiltration Prevention", "Enforced Mode", "Firewall Rules", "Network Security Perimeter", "PaaS Security", "Private Endpoints", "Resource Profiles", "Security", "Transition Mode", "Virtual Network"]
-tags_normalized: ["access management", "azure", "azure key vault", "azure monitor", "azure storage", "centralized logging", "community", "compliance", "data exfiltration prevention", "enforced mode", "firewall rules", "network security perimeter", "paas security", "private endpoints", "resource profiles", "security", "transition mode", "virtual network"]
+permalink: /azure/community/Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability
+tags:
+- Access Management
+- Azure
+- Azure Key Vault
+- Azure Monitor
+- Azure Storage
+- Centralized Logging
+- Community
+- Compliance
+- Data Exfiltration Prevention
+- Enforced Mode
+- Firewall Rules
+- Network Security Perimeter
+- PaaS Security
+- Private Endpoints
+- Resource Profiles
+- Security
+- Transition Mode
+- Virtual Network
+section_names:
+- azure
+- security
 ---
-
 Vishnu Charan TJ details the general availability of network security perimeters for Azure Storage, showing how centralized network controls can secure PaaS resources and prevent data exfiltration.<!--excerpt_end-->
 
 # Protect Azure Storage Accounts with Network Security Perimeter: General Availability

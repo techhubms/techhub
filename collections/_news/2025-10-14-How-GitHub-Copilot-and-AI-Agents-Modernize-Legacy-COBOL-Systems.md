@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How GitHub Copilot and AI Agents Modernize Legacy COBOL Systems"
-description: "This article explores how developers can use GitHub Copilot, AI agents, and Microsoft's Semantic Kernel platform to tackle legacy modernization projects, specifically for COBOL mainframe systems. It presents a systematic AI-powered approach, shares real-world insights from Microsoft’s Julia Kordick, and offers practical steps and frameworks for modernizing critical legacy applications while keeping human expertise central to the process."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot and AI Agents Modernize Legacy COBOL Systems
+author: Andrea Griffiths
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-14 16:00:00 +00:00
-permalink: "/2025-10-14-How-GitHub-Copilot-and-AI-Agents-Modernize-Legacy-COBOL-Systems.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Agents", "Azure", "Azure OpenAI", "Business Logic Extraction", "COBOL", "Code Analysis", "Coding", "Enterprise Development", "GitHub Copilot", "Java Migration", "Legacy Modernization", "Mainframe Migration", "Mainframe Modernization", "Markdown Documentation", "Mermaid Diagrams", "Microsoft Global Black Belt", "News", "Prompt Engineering", "Semantic Kernel", "Test Automation"]
-tags_normalized: ["ai", "ai and ml", "ai agents", "azure", "azure openai", "business logic extraction", "cobol", "code analysis", "coding", "enterprise development", "github copilot", "java migration", "legacy modernization", "mainframe migration", "mainframe modernization", "markdown documentation", "mermaid diagrams", "microsoft global black belt", "news", "prompt engineering", "semantic kernel", "test automation"]
+permalink: /github-copilot/news/How-GitHub-Copilot-and-AI-Agents-Modernize-Legacy-COBOL-Systems
+tags:
+- AI
+- AI & ML
+- AI Agents
+- Azure
+- Azure OpenAI
+- Business Logic Extraction
+- COBOL
+- Code Analysis
+- Coding
+- Enterprise Development
+- GitHub Copilot
+- Java Migration
+- Legacy Modernization
+- Mainframe Migration
+- Mainframe Modernization
+- Markdown Documentation
+- Mermaid Diagrams
+- Microsoft Global Black Belt
+- News
+- Prompt Engineering
+- Semantic Kernel
+- Test Automation
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Andrea Griffiths outlines how Julia Kordick and Microsoft’s team leverage GitHub Copilot, AI agents, and Semantic Kernel to modernize COBOL mainframe systems, with a practical, developer-focused framework.<!--excerpt_end-->
 
 # How GitHub Copilot and AI Agents Modernize Legacy COBOL Systems

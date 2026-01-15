@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft and Beazley Collaborate to Enhance Cyber Incident Response"
-description: "This article discusses Microsoft's new partnership with Beazley, a specialist insurer, to improve cyber resilience for organizations. The collaboration aims to provide customers with seamless incident response and reimbursement processes, supported by technical, insurance, and legal expertise. The content covers how integrated ecosystems strengthen cybersecurity efforts and streamline responses to cyber incidents using Microsoft Incident Response services."
-author: "Aarti Borkar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft and Beazley Collaborate to Enhance Cyber Incident Response
+author: Aarti Borkar
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-08 17:00:00 +00:00
-permalink: "/2025-12-08-Microsoft-and-Beazley-Collaborate-to-Enhance-Cyber-Incident-Response.html"
-categories: ["Security"]
-tags: ["Beazley", "Claims Process", "Cyber Insurance", "Cyber Resilience", "Cyber Risk Management", "Cyberthreat Landscape", "Financial Recovery", "Incident Response", "Insurance Partnership", "Legal Compliance", "Microsoft Incident Response", "Microsoft Security", "News", "Security", "Security Operations", "Security Services", "Threat Intelligence"]
-tags_normalized: ["beazley", "claims process", "cyber insurance", "cyber resilience", "cyber risk management", "cyberthreat landscape", "financial recovery", "incident response", "insurance partnership", "legal compliance", "microsoft incident response", "microsoft security", "news", "security", "security operations", "security services", "threat intelligence"]
+permalink: /security/news/Microsoft-and-Beazley-Collaborate-to-Enhance-Cyber-Incident-Response
+tags:
+- Beazley
+- Claims Process
+- Cyber Insurance
+- Cyber Resilience
+- Cyber Risk Management
+- Cyberthreat Landscape
+- Financial Recovery
+- Incident Response
+- Insurance Partnership
+- Legal Compliance
+- Microsoft Incident Response
+- Microsoft Security
+- News
+- Security
+- Security Operations
+- Security Services
+- Threat Intelligence
+section_names:
+- security
 ---
-
 Aarti Borkar presents an overview of Microsoft's collaboration with Beazley to streamline cyber incident response, highlighting how technical, insurance, and legal partnerships help organizations recover from cyberattacks more effectively.<!--excerpt_end-->
 
 # Microsoft and Beazley Collaborate to Enhance Cyber Incident Response

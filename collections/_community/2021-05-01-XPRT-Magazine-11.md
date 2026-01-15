@@ -1,17 +1,44 @@
----
-layout: "post"
-title: "XPRT Magazine 11"
-description: "A practical edition focused on secure DevOps, cloud-native transformation, developer productivity, and resilient architectures. Features real-world security, compliance, and innovation stories from the Microsoft ecosystem."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security", "GitHub Copilot"]
+﻿---
+layout: post
+title: XPRT Magazine 11
 date: 2021-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2021-05-01-XPRT-Magazine-11.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Community", "Compliance", "Developer Productivity", "DevOps", "Digital Transformation", "GitHub Actions", "GitHub Copilot", "Innovation", "Magazines", "Managed Services", "Maritime Education", "Open Source", "Platform Engineering", "Remote Work", "Resilience", "Security", "SPACE Framework", "Team Learning", "UI Modernization", "Xpirit"]
-tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "community", "compliance", "developer productivity", "devops", "digital transformation", "github actions", "github copilot", "innovation", "magazines", "managed services", "maritime education", "open source", "platform engineering", "remote work", "resilience", "security", "space framework", "team learning", "ui modernization", "xpirit"]
+author: Xebia
+viewing_mode: external
+permalink: /github-copilot/community/XPRT-Magazine-11
+tags:
+- AI
+- Automation
+- Azure
+- Cloud Native
+- Coding
+- Community
+- Compliance
+- Developer Productivity
+- DevOps
+- Digital Transformation
+- GitHub Actions
+- GitHub Copilot
+- Innovation
+- Magazines
+- Managed Services
+- Maritime Education
+- Open Source
+- Platform Engineering
+- Remote Work
+- Resilience
+- Security
+- SPACE Framework
+- Team Learning
+- UI Modernization
+- Xpirit
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
+- github-copilot
 ---
-
 This edition of XPRT Magazine delivers hands-on guidance for secure DevOps, cloud-native transformation, and developer productivity. Explore real-world stories on security, compliance, automation, and innovation, with practical advice for building resilient, modern software in the Microsoft ecosystem.
 <!--excerpt_end-->
 

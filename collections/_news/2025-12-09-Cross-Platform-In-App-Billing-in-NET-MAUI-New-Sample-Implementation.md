@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Cross-Platform In-App Billing in .NET MAUI: New Sample Implementation"
-description: "This news article presents a new cross-platform billing sample for .NET MAUI, enabling developers to implement in-app purchases for Android, iOS, Mac Catalyst, and Windows. It walks through the architecture, platform-specific integrations, and best practices including dependency injection and MVVM for maintainable code. Current StoreKit deprecation and future-proofing considerations are covered, with links to complete source code and detailed documentation for configuration across Google Play, App Store, and Microsoft Store. This resource equips .NET MAUI developers with a production-ready foundation for client-side in-app billing integration."
-author: "Gerald Versluis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/cross-platform-billing-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Cross-Platform In-App Billing in .NET MAUI: New Sample Implementation'
+author: Gerald Versluis
+canonical_url: https://devblogs.microsoft.com/dotnet/cross-platform-billing-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-09 18:05:00 +00:00
-permalink: "/2025-12-09-Cross-Platform-In-App-Billing-in-NET-MAUI-New-Sample-Implementation.html"
-categories: ["Coding"]
-tags: [".NET", "Android", "App Monetization", "Billing", "BillingService", "C#", "Coding", "Conditional Compilation", "Cross Platform", "Dependency Injection", "Google Play Billing", "in App Purchases", "Ios", "Mac Catalyst", "MAUI", "Microsoft Store", "MVVM", "News", "Sample Code", "StoreKit", "StoreKit 1", "StoreKit 2", "Windows"]
-tags_normalized: ["dotnet", "android", "app monetization", "billing", "billingservice", "csharp", "coding", "conditional compilation", "cross platform", "dependency injection", "google play billing", "in app purchases", "ios", "mac catalyst", "maui", "microsoft store", "mvvm", "news", "sample code", "storekit", "storekit 1", "storekit 2", "windows"]
+permalink: /coding/news/Cross-Platform-In-App-Billing-in-NET-MAUI-New-Sample-Implementation
+tags:
+- .NET
+- Android
+- App Monetization
+- Billing
+- BillingService
+- C#
+- Coding
+- Conditional Compilation
+- Cross Platform
+- Dependency Injection
+- Google Play Billing
+- in App Purchases
+- Ios
+- Mac Catalyst
+- MAUI
+- Microsoft Store
+- MVVM
+- News
+- Sample Code
+- StoreKit
+- StoreKit 1
+- StoreKit 2
+- Windows
+section_names:
+- coding
 ---
-
 Gerald Versluis introduces a new .NET MAUI sample for integrating cross-platform in-app billing, guiding developers through platform-specific APIs and architectural best practices.<!--excerpt_end-->
 
 # Implementing Cross-Platform In-App Billing in .NET MAUI Applications

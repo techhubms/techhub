@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Visual Studio 2026 Insiders: Using Podman for Container Development"
-description: "This announcement details the new integration of Podman, an open-source, rootless container engine, into Visual Studio 2026 Insiders. It explores the benefits of daemonless and secure container workflows, compares Podman to Docker, and provides step-by-step guidance on using Podman for containerized application development directly within Visual Studio."
-author: "Matt Hernandez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Visual Studio 2026 Insiders: Using Podman for Container Development'
+author: Matt Hernandez
+canonical_url: https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development
+viewing_mode: external
+feed_name: Microsoft Blog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-24 17:30:30 +00:00
-permalink: "/2025-09-24-Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development.html"
-categories: ["Coding", "DevOps"]
-tags: ["Cloud Native", "Coding", "Container Development", "Container Engine", "Container Runtime", "Debugging", "Developer Tools", "DevOps", "Docker Alternative", "IDE", "Image Management", "Integrated Terminal", "News", "Open Source", "Podman", "Uncategorized", "VS", "Windows Development"]
-tags_normalized: ["cloud native", "coding", "container development", "container engine", "container runtime", "debugging", "developer tools", "devops", "docker alternative", "ide", "image management", "integrated terminal", "news", "open source", "podman", "uncategorized", "vs", "windows development"]
+permalink: /coding/news/Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development
+tags:
+- Cloud Native
+- Coding
+- Container Development
+- Container Engine
+- Container Runtime
+- Debugging
+- Developer Tools
+- DevOps
+- Docker Alternative
+- IDE
+- Image Management
+- Integrated Terminal
+- News
+- Open Source
+- Podman
+- Uncategorized
+- VS
+- Windows Development
+section_names:
+- coding
+- devops
 ---
-
 Matt Hernandez introduces Podman integration in Visual Studio 2026 Insiders, showing how developers can create, run, and debug containers securely within the Visual Studio environment.<!--excerpt_end-->
 
 # Visual Studio 2026 Insiders: Using Podman for Container Development

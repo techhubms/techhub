@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025"
-description: "This advanced session from Microsoft Ignite 2025 explores how enterprise platform teams leverage GitHub’s governance and security features to streamline developer onboarding, enforce security policies, and maintain compliance across thousands of repositories. The talk covers practical strategies for policy enforcement, organizational configuration, dev containers, secure build verification, and artifact attestations to optimize developer productivity while staying secure and compliant."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eXwqw2RSen8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=eXwqw2RSen8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:27:37 +00:00
-permalink: "/2025-11-24-Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025.html"
-categories: ["DevOps", "Security"]
-tags: ["Artifact Attestation", "Build Validation", "Compliance", "Dev Containers", "Developer Productivity", "DevOps", "Enterprise Security", "GitHub", "Governance", "InnovatewithAzureAIappsandagents", "MSIgnite", "Onboarding", "Pull Requests", "Repository Management", "Rule Enforcement", "Security", "Security Policy", "Videos"]
-tags_normalized: ["artifact attestation", "build validation", "compliance", "dev containers", "developer productivity", "devops", "enterprise security", "github", "governance", "innovatewithazureaiappsandagents", "msignite", "onboarding", "pull requests", "repository management", "rule enforcement", "security", "security policy", "videos"]
+permalink: /devops/videos/Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025
+tags:
+- Artifact Attestation
+- Build Validation
+- Compliance
+- Dev Containers
+- Developer Productivity
+- DevOps
+- Enterprise Security
+- GitHub
+- Governance
+- InnovatewithAzureAIappsandagents
+- MSIgnite
+- Onboarding
+- Pull Requests
+- Repository Management
+- Rule Enforcement
+- Security
+- Security Policy
+- Videos
+section_names:
+- devops
+- security
 ---
-
 Microsoft Events presents a session led by Collin McNeese and April Yoho at Ignite 2025, detailing how platform teams use GitHub governance and security practices to accelerate onboarding and enforce policies at scale.<!--excerpt_end-->
 
 {% youtube eXwqw2RSen8 %}

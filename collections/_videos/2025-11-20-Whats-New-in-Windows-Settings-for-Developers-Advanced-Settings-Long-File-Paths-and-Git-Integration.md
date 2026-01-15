@@ -1,20 +1,30 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Windows Settings for Developers: Advanced Settings, Long File Paths, and Git Integration"
-description: "This video features Kayla Cinnamon introducing the latest Windows Settings updates tailored for developers. Key enhancements include a redesigned Advanced Settings page, built-in support for long file paths to ease working with large projects, and native Git integration directly within File Explorer. All features are now generally available (GA), streamlining the developer workflow on Windows."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/QRY2ydmHBYE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/QRY2ydmHBYE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-20 22:37:53 +00:00
-permalink: "/2025-11-20-Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-File-Paths-and-Git-Integration.html"
-categories: ["Coding"]
-tags: ["Advanced Settings", "Coding", "Developer Tools", "File Explorer", "General Availability", "Git Integration", "Long File Paths", "Microsoft Developer", "Productivity", "Videos", "Windows Development", "Windows Settings", "Windows Updates"]
-tags_normalized: ["advanced settings", "coding", "developer tools", "file explorer", "general availability", "git integration", "long file paths", "microsoft developer", "productivity", "videos", "windows development", "windows settings", "windows updates"]
+permalink: /coding/videos/Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-File-Paths-and-Git-Integration
+tags:
+- Advanced Settings
+- Coding
+- Developer Tools
+- File Explorer
+- General Availability
+- Git Integration
+- Long File Paths
+- Microsoft Developer
+- Productivity
+- Videos
+- Windows Development
+- Windows Settings
+- Windows Updates
+section_names:
+- coding
 ---
-
 Microsoft Developer's Kayla Cinnamon highlights new features in Windows Settings aimed at enhancing the developer experience, such as improved advanced options, long file path support, and Git integration.<!--excerpt_end-->
 
 {% youtube QRY2ydmHBYE %}

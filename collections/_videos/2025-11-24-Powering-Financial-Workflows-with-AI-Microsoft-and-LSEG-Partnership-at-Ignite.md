@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite"
-description: "This session from Microsoft Ignite 2025 details how Microsoft and LSEG are leveraging AI to enhance financial workflows through data interoperability, custom Copilot agents, and productivity tools. Developers and technical leaders will see demonstrations of Copilot Studio agent creation, semantic search integration, and strategies for building AI-driven solutions for financial markets."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XDab1_fVntU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=XDab1_fVntU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:40:28 +00:00
-permalink: "/2025-11-24-Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Collaboration", "Copilot Agents", "Custom Agents", "Data Interoperability", "Excel", "Financial Workflows", "LSEG", "M365 Copilot", "Microsoft Copilot Studio", "Microsoft Fabric", "Microsoft Ignite", "MSIgnite", "No Code Development", "Open Directory", "PowerPoint", "Researcher Agent", "Semantic Search", "Teams", "Unifyyourdataplatform", "Videos", "Workspace"]
-tags_normalized: ["ai", "ai integration", "collaboration", "copilot agents", "custom agents", "data interoperability", "excel", "financial workflows", "lseg", "m365 copilot", "microsoft copilot studio", "microsoft fabric", "microsoft ignite", "msignite", "no code development", "open directory", "powerpoint", "researcher agent", "semantic search", "teams", "unifyyourdataplatform", "videos", "workspace"]
+permalink: /ai/videos/Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite
+tags:
+- AI
+- AI Integration
+- Collaboration
+- Copilot Agents
+- Custom Agents
+- Data Interoperability
+- Excel
+- Financial Workflows
+- LSEG
+- M365 Copilot
+- Microsoft Copilot Studio
+- Microsoft Fabric
+- Microsoft Ignite
+- MSIgnite
+- No Code Development
+- Open Directory
+- PowerPoint
+- Researcher Agent
+- Semantic Search
+- Teams
+- Unifyyourdataplatform
+- Videos
+- Workspace
+section_names:
+- ai
 ---
-
 Microsoft Events presents an Ignite session where speakers Matthew Kerner, Nej D'Jelal, and Max Grigoryev showcase how AI and Copilot Studio enable custom financial workflow agents built on LSEG data.<!--excerpt_end-->
 
 {% youtube XDab1_fVntU %}

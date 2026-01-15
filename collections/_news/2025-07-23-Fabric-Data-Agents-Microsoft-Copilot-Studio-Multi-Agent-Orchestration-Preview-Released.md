@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Fabric Data Agents + Microsoft Copilot Studio: Multi-Agent Orchestration Preview Released"
-description: "Microsoft announces the preview of Fabric data agents integrated with Microsoft Copilot Studio, enabling seamless multi-agent orchestration. This integration aims to streamline the development, deployment, and scaling of intelligent agents, enhancing automation and extensibility for enterprise data environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agents-microsoft-copilot-studio-a-new-era-of-multi-agent-orchestration/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Data Agents + Microsoft Copilot Studio: Multi-Agent Orchestration Preview Released'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agents-microsoft-copilot-studio-a-new-era-of-multi-agent-orchestration/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-23 10:00:00 +00:00
-permalink: "/2025-07-23-Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released.html"
-categories: ["AI", "ML"]
-tags: ["Agent Interoperability", "AI", "Automation", "Data Environments", "Enterprise Automation", "Extensibility", "Fabric Data Agents", "Intelligent Agents", "Microsoft Copilot Studio", "Microsoft Fabric", "ML", "Multi Agent Orchestration", "News"]
-tags_normalized: ["agent interoperability", "ai", "automation", "data environments", "enterprise automation", "extensibility", "fabric data agents", "intelligent agents", "microsoft copilot studio", "microsoft fabric", "ml", "multi agent orchestration", "news"]
+permalink: /ai/news/Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released
+tags:
+- Agent Interoperability
+- AI
+- Automation
+- Data Environments
+- Enterprise Automation
+- Extensibility
+- Fabric Data Agents
+- Intelligent Agents
+- Microsoft Copilot Studio
+- Microsoft Fabric
+- ML
+- Multi Agent Orchestration
+- News
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Fabric Blog and Joanne Wong announce a preview integration between Fabric data agents and Microsoft Copilot Studio, offering new capabilities for enterprise-grade intelligent agent orchestration.<!--excerpt_end-->
 
 ## Summary

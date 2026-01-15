@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "AIOps for SRE: Leveraging AI to Combat On-Call Fatigue and Boost Reliability"
-description: "This article by Ankur Mahida explores how AIOps (artificial intelligence for IT operations) empowers site reliability engineering (SRE) teams to reduce on-call fatigue and enhance system reliability. It discusses the challenges SREs face from alert fatigue and incident complexity and demonstrates practical AI/ML applications—such as anomaly detection, event correlation, predictive incident management, root cause analysis acceleration, and automated runbooks—to address these issues. Real-world case studies from Walmart and Cambia Health Solutions offer empirical insights. The article also examines challenges in adoption, such as data quality, trust, integration complexity, and cultural resistance, with strategies for incremental implementation and human-in-the-loop validation."
-author: "Ankur Mahida"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'AIOps for SRE: Leveraging AI to Combat On-Call Fatigue and Boost Reliability'
+author: Ankur Mahida
+canonical_url: https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-07 11:48:23 +00:00
-permalink: "/2025-11-07-AIOps-for-SRE-Leveraging-AI-to-Combat-On-Call-Fatigue-and-Boost-Reliability.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Driven Operations", "AI For IT Operations", "AI Operations", "AIOps", "Alert Fatigue", "Anomaly Detection", "Automated Remediation", "Blogs", "Business Of DevOps", "Cloud Operations", "Contributed Content", "DevOps", "DevOps Automation", "Event Correlation", "Incident Management", "IT Observability", "Machine Learning in IT", "Machine Learning Operations", "Noise Reduction", "Predictive Maintenance", "Reliability Engineering", "Root Cause Analysis", "Self Healing Systems", "Site Reliability Engineering", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "SRE Automation"]
-tags_normalized: ["ai", "ai driven operations", "ai for it operations", "ai operations", "aiops", "alert fatigue", "anomaly detection", "automated remediation", "blogs", "business of devops", "cloud operations", "contributed content", "devops", "devops automation", "event correlation", "incident management", "it observability", "machine learning in it", "machine learning operations", "noise reduction", "predictive maintenance", "reliability engineering", "root cause analysis", "self healing systems", "site reliability engineering", "social facebook", "social linkedin", "social x", "sre", "sre automation"]
+permalink: /ai/blogs/AIOps-for-SRE-Leveraging-AI-to-Combat-On-Call-Fatigue-and-Boost-Reliability
+tags:
+- AI
+- AI Driven Operations
+- AI For IT Operations
+- AI Operations
+- AIOps
+- Alert Fatigue
+- Anomaly Detection
+- Automated Remediation
+- Blogs
+- Business Of DevOps
+- Cloud Operations
+- Contributed Content
+- DevOps
+- DevOps Automation
+- Event Correlation
+- Incident Management
+- IT Observability
+- Machine Learning in IT
+- Machine Learning Operations
+- Noise Reduction
+- Predictive Maintenance
+- Reliability Engineering
+- Root Cause Analysis
+- Self Healing Systems
+- Site Reliability Engineering
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE
+- SRE Automation
+section_names:
+- ai
+- devops
 ---
-
 Ankur Mahida details how AI-powered operations—AIOps—can help SRE teams reduce on-call exhaustion, mitigate alert fatigue, and foster higher reliability through intelligent automation, with real-world examples and actionable practices.<!--excerpt_end-->
 
 # AIOps for SRE: Using AI to Reduce On-Call Fatigue and Improve Reliability

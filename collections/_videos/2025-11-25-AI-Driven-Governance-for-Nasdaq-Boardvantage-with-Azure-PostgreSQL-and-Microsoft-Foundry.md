@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "AI-Driven Governance for Nasdaq Boardvantage with Azure PostgreSQL and Microsoft Foundry"
-description: "This session from Microsoft Ignite showcases how Nasdaq Boardvantage leverages Azure Database for PostgreSQL, Microsoft Foundry, Azure Kubernetes Service, and API Management to deliver secure, AI-powered board governance. The presentation details practical architecture involving open-source databases, modern orchestration patterns, and agentic AI capabilities—like smart document summarization and automated meeting minutes—backed by deep Azure integration. Topics include data security, regulatory compliance, use of PG Vector for hybrid search, fan-in fan-out orchestration with Azure Functions, and strategies for mitigating AI determinism and hallucinations using Prompt Flow."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=23KQPPkRruc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: AI-Driven Governance for Nasdaq Boardvantage with Azure PostgreSQL and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=23KQPPkRruc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:19:01 +00:00
-permalink: "/2025-11-25-AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["Agentic AI", "AI", "AI Governance", "AKS", "API Management", "Azure", "Azure AI Foundry", "Azure Functions", "Azure PostgreSQL", "Chat Assistant Architecture", "Coding", "Compliance", "Data Security", "Fan in Fan Out Orchestration", "Hybrid Search", "Meeting Minutes Automation", "Microservices", "Microsoft Foundry", "ML", "MSIgnite", "PG Vector", "Prompt Flow", "Smart Document Summarization", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai governance", "aks", "api management", "azure", "azure ai foundry", "azure functions", "azure postgresql", "chat assistant architecture", "coding", "compliance", "data security", "fan in fan out orchestration", "hybrid search", "meeting minutes automation", "microservices", "microsoft foundry", "ml", "msignite", "pg vector", "prompt flow", "smart document summarization", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry
+tags:
+- Agentic AI
+- AI
+- AI Governance
+- AKS
+- API Management
+- Azure
+- Azure AI Foundry
+- Azure Functions
+- Azure PostgreSQL
+- Chat Assistant Architecture
+- Coding
+- Compliance
+- Data Security
+- Fan in Fan Out Orchestration
+- Hybrid Search
+- Meeting Minutes Automation
+- Microservices
+- Microsoft Foundry
+- ML
+- MSIgnite
+- PG Vector
+- Prompt Flow
+- Smart Document Summarization
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Events' presentation at Ignite explores Nasdaq Boardvantage's secure, AI-driven board operations using Azure PostgreSQL, Microsoft Foundry, and modern cloud architecture.<!--excerpt_end-->
 
 {% youtube 23KQPPkRruc %}

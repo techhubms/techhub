@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon"
-description: "The Azure Dev Summit 2025, held in Lisbon from October 13-16, brings together developers, architects, and tech leaders to explore cutting-edge topics in Azure, .NET, Microsoft AI, DevOps, and cloud-native development. The event features over 60 technical sessions, workshops, and keynotes from industry pioneers and Microsoft experts."
-author: "Mike Hulme"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/join-us-at-azure-dev-summit-2025"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon'
+author: Mike Hulme
+canonical_url: https://devblogs.microsoft.com/blog/join-us-at-azure-dev-summit-2025
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-31 18:49:52 +00:00
-permalink: "/2025-07-31-Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Powered Apps", "Architects", "Azure", "Azure Dev Summit", "Blazor", "C#", "Cloud Native", "Coding", "Community Event", "Developer Conference", "Developer Events", "Developer Productivity", "DevOps", "Generative AI", "Microsoft AI", "News", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai powered apps", "architects", "azure", "azure dev summit", "blazor", "csharp", "cloud native", "coding", "community event", "developer conference", "developer events", "developer productivity", "devops", "generative ai", "microsoft ai", "news", "vs code"]
+permalink: /ai/news/Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon
+tags:
+- .NET
+- AI
+- AI Powered Apps
+- Architects
+- Azure
+- Azure Dev Summit
+- Blazor
+- C#
+- Cloud Native
+- Coding
+- Community Event
+- Developer Conference
+- Developer Events
+- Developer Productivity
+- DevOps
+- Generative AI
+- Microsoft AI
+- News
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Written by Mike Hulme, this article announces Azure Dev Summit 2025—a major Microsoft event for developers focused on AI, Azure, DevOps, .NET, and innovative software design. Explore event highlights, speaker lineups, and session topics in this comprehensive overview.<!--excerpt_end-->
 
 # Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon

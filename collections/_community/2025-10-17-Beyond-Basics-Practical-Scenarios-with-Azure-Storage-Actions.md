@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Beyond Basics: Practical Scenarios with Azure Storage Actions"
-description: "This article provides a hands-on look at how Azure Storage Actions can automate data governance, optimize costs, and improve compliance in real-world cloud deployments. Through three detailed scenarios—content lifecycle automation, audit-proof model training with immutability, and efficient management of AI-generated embeddings—readers will learn how to use Storage Actions to replace manual scripts and error-prone workflows with policy-driven automation in Azure. The post also shares step-by-step operational patterns, practical policy definitions, and links to further resources for getting started."
-author: "ShashankKumarShankar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Beyond Basics: Practical Scenarios with Azure Storage Actions'
+author: ShashankKumarShankar
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 17:00:29 +00:00
-permalink: "/2025-10-17-Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Workflows", "Audit Readiness", "Azure", "Azure Blob Storage", "Azure Storage Actions", "Blob Tags", "Blob Tiering", "Cloud Automation", "Community", "Compliance", "Content Archiving", "Cost Management", "Data Governance", "Data Lifecycle", "Data Retention", "Immutability", "ML", "ML Data Pipelines", "Operational Optimization", "Policy Based Management", "Retrieval Augmented Generation"]
-tags_normalized: ["ai", "ai workflows", "audit readiness", "azure", "azure blob storage", "azure storage actions", "blob tags", "blob tiering", "cloud automation", "community", "compliance", "content archiving", "cost management", "data governance", "data lifecycle", "data retention", "immutability", "ml", "ml data pipelines", "operational optimization", "policy based management", "retrieval augmented generation"]
+permalink: /ai/community/Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions
+tags:
+- AI
+- AI Workflows
+- Audit Readiness
+- Azure
+- Azure Blob Storage
+- Azure Storage Actions
+- Blob Tags
+- Blob Tiering
+- Cloud Automation
+- Community
+- Compliance
+- Content Archiving
+- Cost Management
+- Data Governance
+- Data Lifecycle
+- Data Retention
+- Immutability
+- ML
+- ML Data Pipelines
+- Operational Optimization
+- Policy Based Management
+- Retrieval Augmented Generation
+section_names:
+- ai
+- azure
+- ml
 ---
-
 ShashankKumarShankar walks through three practical scenarios using Azure Storage Actions—content lifecycle automation, audit-proof ML dataset immutability, and AI embedding management—highlighting automation strategies to optimize data governance in Azure.<!--excerpt_end-->
 
 # Beyond Basics: Practical Scenarios with Azure Storage Actions

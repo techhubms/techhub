@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Bug Bounty: Enhanced Incentives for Cybersecurity Awareness Month 2025"
-description: "This post from GitHub highlights new incentives for security researchers participating in the Bug Bounty program during Cybersecurity Awareness Month 2025. It features a 10% bonus for vulnerability submissions related to Copilot Coding Agent, GitHub Spark, and Copilot Spaces, details a conference supporting women in cybersecurity, and spotlights outstanding researchers. The article aims to foster collaboration and recognize the essential role of security research in safeguarding the developer ecosystem."
-author: "Shilpa Kumari"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Bug Bounty: Enhanced Incentives for Cybersecurity Awareness Month 2025'
+author: Shilpa Kumari
+canonical_url: https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-26 15:00:00 +00:00
-permalink: "/2025-09-26-GitHub-Bug-Bounty-Enhanced-Incentives-for-Cybersecurity-Awareness-Month-2025.html"
-categories: ["GitHub Copilot", "Security"]
-tags: ["Bug Bounty", "Bug Bounty Program", "Copilot Coding Agent", "Copilot Spaces", "Cybersecurity", "Cybersecurity Awareness Month", "Diversity in Security", "Ethical Hacking", "GitHub Bug Bounty", "GitHub Copilot", "GitHub Security", "GitHub Spark", "Glass Firewall Conference", "News", "Researcher Spotlight", "Security", "Security Community", "Security Incentives", "Security Research", "Shilpa Kumari", "Vulnerability Disclosure", "Vulnerability Research"]
-tags_normalized: ["bug bounty", "bug bounty program", "copilot coding agent", "copilot spaces", "cybersecurity", "cybersecurity awareness month", "diversity in security", "ethical hacking", "github bug bounty", "github copilot", "github security", "github spark", "glass firewall conference", "news", "researcher spotlight", "security", "security community", "security incentives", "security research", "shilpa kumari", "vulnerability disclosure", "vulnerability research"]
+permalink: /github-copilot/news/GitHub-Bug-Bounty-Enhanced-Incentives-for-Cybersecurity-Awareness-Month-2025
+tags:
+- Bug Bounty
+- Bug Bounty Program
+- Copilot Coding Agent
+- Copilot Spaces
+- Cybersecurity
+- Cybersecurity Awareness Month
+- Diversity in Security
+- Ethical Hacking
+- GitHub Bug Bounty
+- GitHub Copilot
+- GitHub Security
+- GitHub Spark
+- Glass Firewall Conference
+- News
+- Researcher Spotlight
+- Security
+- Security Community
+- Security Incentives
+- Security Research
+- Shilpa Kumari
+- Vulnerability Disclosure
+- Vulnerability Research
+section_names:
+- github-copilot
+- security
 ---
-
 Shilpa Kumari showcases GitHub’s expanded Bug Bounty incentives for Cybersecurity Awareness Month 2025, including bonuses for Copilot-related features and recognition of top security researchers.<!--excerpt_end-->
 
 # GitHub Bug Bounty: Enhanced Incentives for Cybersecurity Awareness Month 2025

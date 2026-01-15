@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Avoiding Cloud Cost Traps: Optimize Workloads Before Negotiating Discounts"
-description: "This article by Andrew Hillier explains how organizations frequently fall into the trap of securing cloud discounts before optimizing workloads such as Kubernetes clusters. It details why this approach can lock in wasted resources, discusses the specific dangers involved, and provides actionable strategies for engineering and finance teams to collaborate and improve long-term cloud efficiency. The piece highlights the importance of right-sizing workloads and leveraging usage data before committing to reserved capacity agreements, emphasizing FinOps best practices and the technical role of Kubernetes resource management."
-author: "Andrew Hillier"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Avoiding Cloud Cost Traps: Optimize Workloads Before Negotiating Discounts'
+author: Andrew Hillier
+canonical_url: https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-06 14:43:11 +00:00
-permalink: "/2025-11-06-Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts.html"
-categories: ["DevOps"]
-tags: ["Autoscaling", "Blogs", "Cloud", "Cloud Cost", "Cloud Discounts", "Cloud Economics", "Cloud Infrastructure", "Cloud Optimization", "Containerization", "Contributed Content", "CPU Usage", "DevOps", "DevOps Practices", "Financial Commitment", "FinOps", "Infrastructure Management", "Kubernetes", "Memory Management", "Reserved Capacity", "Resource Allocation", "Right Sizing", "Social Facebook", "Social LinkedIn", "Social X", "Workload Analysis"]
-tags_normalized: ["autoscaling", "blogs", "cloud", "cloud cost", "cloud discounts", "cloud economics", "cloud infrastructure", "cloud optimization", "containerization", "contributed content", "cpu usage", "devops", "devops practices", "financial commitment", "finops", "infrastructure management", "kubernetes", "memory management", "reserved capacity", "resource allocation", "right sizing", "social facebook", "social linkedin", "social x", "workload analysis"]
+permalink: /devops/blogs/Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts
+tags:
+- Autoscaling
+- Blogs
+- Cloud
+- Cloud Cost
+- Cloud Discounts
+- Cloud Economics
+- Cloud Infrastructure
+- Cloud Optimization
+- Containerization
+- Contributed Content
+- CPU Usage
+- DevOps
+- DevOps Practices
+- Financial Commitment
+- FinOps
+- Infrastructure Management
+- Kubernetes
+- Memory Management
+- Reserved Capacity
+- Resource Allocation
+- Right Sizing
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Workload Analysis
+section_names:
+- devops
 ---
-
 Andrew Hillier reveals why securing cloud discounts before optimizing workloads can lock in inefficiency, especially in Kubernetes environments, and shares actionable collaboration strategies for engineering and finance teams.<!--excerpt_end-->
 
 # Avoiding Cloud Cost Traps: Optimize Workloads Before Negotiating Discounts

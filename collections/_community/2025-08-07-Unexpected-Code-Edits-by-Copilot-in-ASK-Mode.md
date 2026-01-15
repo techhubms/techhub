@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Unexpected Code Edits by Copilot in ASK Mode"
-description: "A community post by Nomadic_Dev discussing observations of GitHub Copilot making minor, unauthorized code edits in ASK mode, which is typically expected to only provide suggestions, not modify files. The user seeks clarification on whether Copilot's ASK mode should be editing files and raises concerns about changes appearing in Git due to Copilot's unintended actions."
-author: "Nomadic_Dev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Unexpected Code Edits by Copilot in ASK Mode
+author: Nomadic_Dev
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:00:25 +00:00
-permalink: "/2025-08-07-Unexpected-Code-Edits-by-Copilot-in-ASK-Mode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered IDE", "Automated Code Edits", "Code Review", "Codebase Management", "Community", "Copilot Agent Mode", "Copilot ASK Mode", "Developer Tools", "Git Changes", "GitHub Copilot", "Software Development", "Source Control", "VS Code"]
-tags_normalized: ["ai", "ai powered ide", "automated code edits", "code review", "codebase management", "community", "copilot agent mode", "copilot ask mode", "developer tools", "git changes", "github copilot", "software development", "source control", "vs code"]
+permalink: /github-copilot/community/Unexpected-Code-Edits-by-Copilot-in-ASK-Mode
+tags:
+- AI
+- AI Powered IDE
+- Automated Code Edits
+- Code Review
+- Codebase Management
+- Community
+- Copilot Agent Mode
+- Copilot ASK Mode
+- Developer Tools
+- Git Changes
+- GitHub Copilot
+- Software Development
+- Source Control
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Nomadic_Dev shares findings on GitHub Copilot's ASK mode unexpectedly making direct edits to a production codebase, prompting discussion about Copilot's expected behavior and reliability.<!--excerpt_end-->
 
 # Copilot making edits when in ASK mode? NOT in AGENT mode.

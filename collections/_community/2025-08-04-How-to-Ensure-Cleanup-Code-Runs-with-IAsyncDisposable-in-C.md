@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "How to Ensure Cleanup Code Runs with IAsyncDisposable in C#"
-description: "The author discusses the challenges of reliably running cleanup code in C#, especially when using IAsyncDisposable for asynchronous operations. The article highlights the limitations of relying on IDisposable, the lack of compiler warnings for missed disposals, and explores options for making cleanup more robust."
-author: "detroitmatt"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhq5bl/how_to_make_sure_cleanup_code_gets_run/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: How to Ensure Cleanup Code Runs with IAsyncDisposable in C#
+author: detroitmatt
+canonical_url: https://www.reddit.com/r/csharp/comments/1mhq5bl/how_to_make_sure_cleanup_code_gets_run/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 21:20:25 +00:00
-permalink: "/2025-08-04-How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C.html"
-categories: ["Coding"]
-tags: ["Async", "Best Practices", "C#", "Cleanup", "Coding", "Community", "Finalizer", "IAsyncDisposable", "IDisposable", "Memory Management", "Resource Management", "Using Statement"]
-tags_normalized: ["async", "best practices", "csharp", "cleanup", "coding", "community", "finalizer", "iasyncdisposable", "idisposable", "memory management", "resource management", "using statement"]
+permalink: /coding/community/How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C
+tags:
+- Async
+- Best Practices
+- C#
+- Cleanup
+- Coding
+- Community
+- Finalizer
+- IAsyncDisposable
+- IDisposable
+- Memory Management
+- Resource Management
+- Using Statement
+section_names:
+- coding
 ---
-
 In this community post, detroitmatt explores how to make cleanup code reliably run in C# with IAsyncDisposable, highlighting pitfalls with disposable patterns.<!--excerpt_end-->
 
 ## Introduction

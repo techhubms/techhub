@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Windows Development for Secure, Scalable, & AI-powered Enterprise Solutions"
-description: "This Microsoft Ignite 2025 session walks IT decision-makers and developers through new Windows developer platform features for building intelligent, secure, and scalable enterprise applications. Topics include local AI development, agentic workflows with MCP (Microsoft Cloud Platform), and hands-on demos of Windows APIs, semantic search, LoRA adapter integration, and developer environment setup using Winget. Practical coverage includes privacy, performance, offline capabilities, and cost benefits for enterprise scenarios."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zOy-tA1Zb0g"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Windows Development for Secure, Scalable, & AI-powered Enterprise Solutions
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=zOy-tA1Zb0g
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 06:32:50 +00:00
-permalink: "/2025-11-21-Windows-Development-for-Secure-Scalable-and-AI-powered-Enterprise-Solutions.html"
-categories: ["AI", "Coding", "Security"]
-tags: ["Agent Connectors", "Agent ID", "Agent Workspace", "AI", "AI Development", "Coding", "Developer Environment", "Enterprise Security", "Foundry Local", "Local AI", "LoRA Adapter", "MCP", "Microsoft Cloud Platform", "MSIgnite", "Performance", "Privacy", "Scalability", "ScalewithcloudandAIendpoints", "Security", "Semantic Search", "Videos", "Windows APIs", "Windows Developer Platform", "Winget"]
-tags_normalized: ["agent connectors", "agent id", "agent workspace", "ai", "ai development", "coding", "developer environment", "enterprise security", "foundry local", "local ai", "lora adapter", "mcp", "microsoft cloud platform", "msignite", "performance", "privacy", "scalability", "scalewithcloudandaiendpoints", "security", "semantic search", "videos", "windows apis", "windows developer platform", "winget"]
+permalink: /ai/videos/Windows-Development-for-Secure-Scalable-and-AI-powered-Enterprise-Solutions
+tags:
+- Agent Connectors
+- Agent ID
+- Agent Workspace
+- AI
+- AI Development
+- Coding
+- Developer Environment
+- Enterprise Security
+- Foundry Local
+- Local AI
+- LoRA Adapter
+- MCP
+- Microsoft Cloud Platform
+- MSIgnite
+- Performance
+- Privacy
+- Scalability
+- ScalewithcloudandAIendpoints
+- Security
+- Semantic Search
+- Videos
+- Windows APIs
+- Windows Developer Platform
+- Winget
+section_names:
+- ai
+- coding
+- security
 ---
-
 Microsoft Events delivers an Ignite session on building secure, scalable, and AI-ready solutions on the Windows developer platform, emphasizing agentic workflows, privacy, and practical Windows API integration.<!--excerpt_end-->
 
 {% youtube zOy-tA1Zb0g %}

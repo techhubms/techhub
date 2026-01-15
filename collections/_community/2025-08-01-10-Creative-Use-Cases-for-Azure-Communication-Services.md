@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "10 Creative Use Cases for Azure Communication Services"
-description: "Sean Keegan explores innovative scenarios for Azure Communication Services (ACS), showing how to combine ACS with other Azure offerings like OpenAI, Event Grid, and Bot Framework. The article covers voice assistants, real-time messaging, natural-language scheduling, omnichannel messaging, and integrating with Teams and Dynamics—illustrating real-world, developer-tested solutions."
-author: "seankeegan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 10 Creative Use Cases for Azure Communication Services
+author: seankeegan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-01 13:06:56 +00:00
-permalink: "/2025-08-01-10-Creative-Use-Cases-for-Azure-Communication-Services.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["AI", "Azure", "Azure Communication Services", "Azure OpenAI", "Bot Framework", "Coding", "Community", "Cost Estimation", "Developer Workflow", "Dynamics 365", "Event Grid", "HIPAA Compliance", "Natural Language Processing", "Real Time Messaging", "Security", "SMS Scheduling", "Teams Interop", "Video Calling", "Voice Assistant", "WhatsApp Integration", "Zammo.ai"]
-tags_normalized: ["ai", "azure", "azure communication services", "azure openai", "bot framework", "coding", "community", "cost estimation", "developer workflow", "dynamics 365", "event grid", "hipaa compliance", "natural language processing", "real time messaging", "security", "sms scheduling", "teams interop", "video calling", "voice assistant", "whatsapp integration", "zammodotai"]
+permalink: /ai/community/10-Creative-Use-Cases-for-Azure-Communication-Services
+tags:
+- AI
+- Azure
+- Azure Communication Services
+- Azure OpenAI
+- Bot Framework
+- Coding
+- Community
+- Cost Estimation
+- Developer Workflow
+- Dynamics 365
+- Event Grid
+- HIPAA Compliance
+- Natural Language Processing
+- Real Time Messaging
+- Security
+- SMS Scheduling
+- Teams Interop
+- Video Calling
+- Voice Assistant
+- WhatsApp Integration
+- Zammo.ai
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 In this article, Sean Keegan shares ten innovative ways to leverage Azure Communication Services, combining ACS with tools like Azure OpenAI and Event Grid to build intelligent, real-time, and secure communication solutions.<!--excerpt_end-->
 
 ## Overview

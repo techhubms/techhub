@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Security and Trust in Visual Studio Marketplace: Safeguarding Extensions for Developers"
-description: "This article by Sean details the security mechanisms, trust-building initiatives, and future improvements being implemented in the Visual Studio Marketplace to protect both extension publishers and users. It outlines malware detection, community reporting, publisher verification, and best practices for safely managing and consuming extensions."
-author: "Sean"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/security-and-trust-in-visual-studio-marketplace"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Security and Trust in Visual Studio Marketplace: Safeguarding Extensions for Developers'
+author: Sean
+canonical_url: https://devblogs.microsoft.com/blog/security-and-trust-in-visual-studio-marketplace
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-06-11 22:00:21 +00:00
-permalink: "/2025-06-11-Security-and-Trust-in-Visual-Studio-Marketplace-Safeguarding-Extensions-for-Developers.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Coding", "DevOps", "Extension Development", "Extension Validation", "Extensions", "Impersonation Prevention", "Malware Prevention", "News", "Package Management", "Publisher Best Practices", "Publisher Verification", "Secret Scanning", "Security", "Supply Chain Security", "Trust Signals", "Visual Studio Marketplace", "VS", "VS Code"]
-tags_normalized: ["coding", "devops", "extension development", "extension validation", "extensions", "impersonation prevention", "malware prevention", "news", "package management", "publisher best practices", "publisher verification", "secret scanning", "security", "supply chain security", "trust signals", "visual studio marketplace", "vs", "vs code"]
+permalink: /coding/news/Security-and-Trust-in-Visual-Studio-Marketplace-Safeguarding-Extensions-for-Developers
+tags:
+- Coding
+- DevOps
+- Extension Development
+- Extension Validation
+- Extensions
+- Impersonation Prevention
+- Malware Prevention
+- News
+- Package Management
+- Publisher Best Practices
+- Publisher Verification
+- Secret Scanning
+- Security
+- Supply Chain Security
+- Trust Signals
+- Visual Studio Marketplace
+- VS
+- VS Code
+section_names:
+- coding
+- devops
+- security
 ---
-
 Authored by Sean, this article delivers a comprehensive overview of efforts to ensure extension security and developer trust in the Visual Studio Marketplace, outlining both current safeguards and planned investments.<!--excerpt_end-->
 
 ## Security and Trust in Visual Studio Marketplace

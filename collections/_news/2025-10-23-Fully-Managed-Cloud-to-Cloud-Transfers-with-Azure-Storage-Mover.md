@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover"
-description: "This announcement details the general availability of Azure Storage Mover's new capability for seamless cloud-to-cloud migration from AWS S3 to Azure Blob Storage. The update highlights how organizations can leverage the service for secure, automated, and high-performance data transfers, enabling advanced analytics and AI workloads on Azure. Additional product updates include expanded support for on-premises SMB and NFS shares, integration with Azure Monitor and Log Analytics, and pending availability in Azure US Government regions. Case studies illustrate real-world impacts and benefits, including immediate access to Azure’s analytics and AI tools post-migration."
-author: "Aung Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover
+author: Aung Oo
+canonical_url: https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-23 16:00:00 +00:00
-permalink: "/2025-10-23-Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Workloads", "AWS S3", "Azure", "Azure Active Directory", "Azure Blob Storage", "Azure Monitor", "Azure Portal", "Azure Storage Mover", "Cloud Migration", "Cloud To Cloud", "Data Analytics", "Data Transfer", "Incremental Sync", "Log Analytics", "Multicloud", "News", "NFS", "RBAC", "SMB", "Storage", "Storage Migration"]
-tags_normalized: ["ai", "ai workloads", "aws s3", "azure", "azure active directory", "azure blob storage", "azure monitor", "azure portal", "azure storage mover", "cloud migration", "cloud to cloud", "data analytics", "data transfer", "incremental sync", "log analytics", "multicloud", "news", "nfs", "rbac", "smb", "storage", "storage migration"]
+permalink: /ai/news/Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover
+tags:
+- AI
+- AI Workloads
+- AWS S3
+- Azure
+- Azure Active Directory
+- Azure Blob Storage
+- Azure Monitor
+- Azure Portal
+- Azure Storage Mover
+- Cloud Migration
+- Cloud To Cloud
+- Data Analytics
+- Data Transfer
+- Incremental Sync
+- Log Analytics
+- Multicloud
+- News
+- NFS
+- RBAC
+- SMB
+- Storage
+- Storage Migration
+section_names:
+- ai
+- azure
 ---
-
 Aung Oo outlines the newly available cloud-to-cloud migration support in Azure Storage Mover, enabling effortless transfers from AWS S3 to Azure Blob Storage and unlocking Azure’s analytics and AI features.<!--excerpt_end-->
 
 # Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover

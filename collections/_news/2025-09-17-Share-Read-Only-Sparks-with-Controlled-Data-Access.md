@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Share Read-Only Sparks with Controlled Data Access"
-description: "This GitHub update introduces the ability to publish Sparks as read-only, giving developers and organizations more control over how others interact with their apps. The release covers step-by-step sharing settings, improved JSON handling, editor synchronization, and enhanced loading state management to optimize the developer workflow in Spark."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Share Read-Only Sparks with Controlled Data Access
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-17 20:00:28 +00:00
-permalink: "/2025-09-17-Share-Read-Only-Sparks-with-Controlled-Data-Access.html"
-categories: ["DevOps"]
-tags: ["Access Control", "App Sharing", "Bug Fixes", "Code Editor", "Collaboration", "Copilot", "Developer Tools", "DevOps", "GitHub", "JSON", "News", "Read Only Mode", "Release Notes", "Sparks", "Workflow Improvements"]
-tags_normalized: ["access control", "app sharing", "bug fixes", "code editor", "collaboration", "copilot", "developer tools", "devops", "github", "json", "news", "read only mode", "release notes", "sparks", "workflow improvements"]
+permalink: /devops/news/Share-Read-Only-Sparks-with-Controlled-Data-Access
+tags:
+- Access Control
+- App Sharing
+- Bug Fixes
+- Code Editor
+- Collaboration
+- Copilot
+- Developer Tools
+- DevOps
+- GitHub
+- JSON
+- News
+- Read Only Mode
+- Release Notes
+- Sparks
+- Workflow Improvements
+section_names:
+- devops
 ---
-
 Allison details the new read-only sharing feature for Sparks on GitHub, offering developers greater data control and outlining related workflow improvements.<!--excerpt_end-->
 
 # Share Read-Only Sparks with Controlled Data Access

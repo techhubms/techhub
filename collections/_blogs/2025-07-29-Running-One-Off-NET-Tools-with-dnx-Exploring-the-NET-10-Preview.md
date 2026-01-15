@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Running One-Off .NET Tools with dnx: Exploring the .NET 10 Preview"
-description: "Andrew Lock introduces the new 'dnx' command in .NET 10, enabling developers to run .NET tools on the fly without permanent installation. He demonstrates usage, details the underlying mechanics, and compares it to traditional 'dotnet tool install', providing both practical and behind-the-scenes insights."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-5-running-one-off-dotnet-tools-with-dnx/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Running One-Off .NET Tools with dnx: Exploring the .NET 10 Preview'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-5-running-one-off-dotnet-tools-with-dnx/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-29 10:00:00 +00:00
-permalink: "/2025-07-29-Running-One-Off-NET-Tools-with-dnx-Exploring-the-NET-10-Preview.html"
-categories: ["Coding"]
-tags: [".NET 10", ".NET Core", ".NET SDK", ".NET Tool", "ASP.NET Core", "Blogs", "Coding", "Command Line", "Dnx", "Global Tools", "Local Tools", "NuGet", "Tool Execution"]
-tags_normalized: ["dotnet 10", "dotnet core", "dotnet sdk", "dotnet tool", "aspdotnet core", "blogs", "coding", "command line", "dnx", "global tools", "local tools", "nuget", "tool execution"]
+permalink: /coding/blogs/Running-One-Off-NET-Tools-with-dnx-Exploring-the-NET-10-Preview
+tags:
+- .NET 10
+- .NET Core
+- .NET SDK
+- .NET Tool
+- ASP.NET Core
+- Blogs
+- Coding
+- Command Line
+- Dnx
+- Global Tools
+- Local Tools
+- NuGet
+- Tool Execution
+section_names:
+- coding
 ---
-
 In this post, Andrew Lock explores the new 'dnx' command in .NET 10, demonstrating how developers can run .NET tools without installing them. He provides both practical usage examples and an under-the-hood look at the SDK implementation.<!--excerpt_end-->
 
 ## Running One-Off .NET Tools with dnx in .NET 10

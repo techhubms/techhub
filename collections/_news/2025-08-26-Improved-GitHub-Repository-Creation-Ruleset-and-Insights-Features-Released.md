@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Improved GitHub Repository Creation, Ruleset, and Insights Features Released"
-description: "GitHub has rolled out an enhanced repository creation workflow, introducing a more intuitive experience with clearer setup guidance and better alignment to organization policies. Additional updates include merge queue bot improvements for branch rulesets and more accessible repository commit insights."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-improved-repository-creation-generally-available-plus-ruleset-insights-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved GitHub Repository Creation, Ruleset, and Insights Features Released
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-improved-repository-creation-generally-available-plus-ruleset-insights-improvements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 20:02:38 +00:00
-permalink: "/2025-08-26-Improved-GitHub-Repository-Creation-Ruleset-and-Insights-Features-Released.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "Branch Rulesets", "Commit Insights", "Developer Tools", "DevOps", "GitHub", "Merge Queue", "News", "Organization Policies", "Repository Creation", "Repository Management", "Workflow Improvements"]
-tags_normalized: ["accessibility", "branch rulesets", "commit insights", "developer tools", "devops", "github", "merge queue", "news", "organization policies", "repository creation", "repository management", "workflow improvements"]
+permalink: /devops/news/Improved-GitHub-Repository-Creation-Ruleset-and-Insights-Features-Released
+tags:
+- Accessibility
+- Branch Rulesets
+- Commit Insights
+- Developer Tools
+- DevOps
+- GitHub
+- Merge Queue
+- News
+- Organization Policies
+- Repository Creation
+- Repository Management
+- Workflow Improvements
+section_names:
+- devops
 ---
-
 Allison highlights several GitHub improvements: a faster, more guided repository creation workflow, new options for merge queue bots in branch rulesets, and more accessible repository commit insights.<!--excerpt_end-->
 
 # Improved GitHub Repository Creation, Ruleset, and Insights Features Released

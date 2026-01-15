@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365"
-description: "This session from Microsoft Ignite 2025 explores how to use Copilot Studio’s advanced, industry-driven AI capabilities to create agents that work seamlessly across Microsoft 365 Copilot and beyond. The session covers agent types, integration with Model Context Protocol (MCP), human-in-the-loop workflows, and practical demonstrations using low-code AI tools for enterprise solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BLQ8XZ5PXF4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=BLQ8XZ5PXF4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:48:25 +00:00
-permalink: "/2025-11-25-Deep-Dive-into-AI-Tools-in-Copilot-Studio-Building-Agents-for-Microsoft-365.html"
-categories: ["AI"]
-tags: ["Agent Demo", "AI", "AI Agents", "AI Decision Making", "Autonomous Agents", "Business Solutions", "Connectors", "Copilot Studio", "Human in The Loop", "Innovatewithlow", "Low Code Development", "MCP", "Microsoft 365", "Microsoft Ignite", "MSIgnite", "Retrieval Agents", "RFI (request For Information)", "Task Agents", "Videos", "Workflow Automation"]
-tags_normalized: ["agent demo", "ai", "ai agents", "ai decision making", "autonomous agents", "business solutions", "connectors", "copilot studio", "human in the loop", "innovatewithlow", "low code development", "mcp", "microsoft 365", "microsoft ignite", "msignite", "retrieval agents", "rfi request for information", "task agents", "videos", "workflow automation"]
+permalink: /ai/videos/Deep-Dive-into-AI-Tools-in-Copilot-Studio-Building-Agents-for-Microsoft-365
+tags:
+- Agent Demo
+- AI
+- AI Agents
+- AI Decision Making
+- Autonomous Agents
+- Business Solutions
+- Connectors
+- Copilot Studio
+- Human in The Loop
+- Innovatewithlow
+- Low Code Development
+- MCP
+- Microsoft 365
+- Microsoft Ignite
+- MSIgnite
+- Retrieval Agents
+- RFI (request For Information)
+- Task Agents
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 In this Microsoft Ignite 2025 session, Derah Onuorah and Wassim Wehbi share practical insights on building advanced AI agents using Copilot Studio. The video guides intermediate users through agent types, integration with Model Context Protocol, and demos of human-in-the-loop workflows.<!--excerpt_end-->
 
 {% youtube BLQ8XZ5PXF4 %}

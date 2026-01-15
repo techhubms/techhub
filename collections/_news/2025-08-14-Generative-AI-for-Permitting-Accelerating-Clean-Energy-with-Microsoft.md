@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Generative AI for Permitting: Accelerating Clean Energy with Microsoft"
-description: "This news article details Microsoft's 'Generative AI for Permitting' initiative, which leverages Azure OpenAI, Semantic Kernel, and advanced agentic AI workflows to optimize and accelerate the permitting process for clean energy projects such as nuclear, wind, and mining. Built as a Microsoft Garage hackathon project, the system now delivers tangible productivity gains, supports data privacy, and is actively shaping energy sector policy and technology strategy worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Generative AI for Permitting: Accelerating Clean Energy with Microsoft'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 14:25:12 +00:00
-permalink: "/2025-08-14-Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI Workflows", "AI", "AI in Government", "Azure", "Azure OpenAI Service", "Clean Energy", "Company News", "Copilot For Engineering", "Document Automation", "Energy Industry", "Generative AI", "Hackathon", "Innovation", "Kernel Memory", "Machine Learning", "MCAPS Energy", "Microsoft AI Solutions", "Microsoft Garage", "News", "Nuclear Licensing", "Permitting Automation", "Productivity Gains", "Regulatory Compliance", "Semantic Kernel"]
-tags_normalized: ["agentic ai workflows", "ai", "ai in government", "azure", "azure openai service", "clean energy", "company news", "copilot for engineering", "document automation", "energy industry", "generative ai", "hackathon", "innovation", "kernel memory", "machine learning", "mcaps energy", "microsoft ai solutions", "microsoft garage", "news", "nuclear licensing", "permitting automation", "productivity gains", "regulatory compliance", "semantic kernel"]
+permalink: /ai/news/Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft
+tags:
+- Agentic AI Workflows
+- AI
+- AI in Government
+- Azure
+- Azure OpenAI Service
+- Clean Energy
+- Company News
+- Copilot For Engineering
+- Document Automation
+- Energy Industry
+- Generative AI
+- Hackathon
+- Innovation
+- Kernel Memory
+- Machine Learning
+- MCAPS Energy
+- Microsoft AI Solutions
+- Microsoft Garage
+- News
+- Nuclear Licensing
+- Permitting Automation
+- Productivity Gains
+- Regulatory Compliance
+- Semantic Kernel
+section_names:
+- ai
+- azure
 ---
-
 stclarke explores how Microsoft's Generative AI for Permitting project uses Azure OpenAI and advanced AI tooling to revolutionize permitting for clean energy, delivering real-world results in the nuclear and renewable sectors.<!--excerpt_end-->
 
 # Generative AI for Permitting: Accelerating Clean Energy with Microsoft

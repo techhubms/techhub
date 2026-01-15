@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Incremental Security Analysis with CodeQL Now Available Across All Languages"
-description: "This news update details the rollout of incremental CodeQL analysis on GitHub pull requests for Go, C#, C/C++, and Swift. Incremental analysis now applies to all CodeQL languages, increasing scan speed and efficiency by analyzing only changed code. This feature is enabled by default on github.com and will be available for CodeQL CLI and GitHub Enterprise Server soon."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-23-incremental-security-analysis-with-codeql-is-now-available-for-all-languages"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Incremental Security Analysis with CodeQL Now Available Across All Languages
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-23-incremental-security-analysis-with-codeql-is-now-available-for-all-languages
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 15:21:27 +00:00
-permalink: "/2025-09-23-Incremental-Security-Analysis-with-CodeQL-Now-Available-Across-All-Languages.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Application Security", "C/C++", "C#", "CodeQL", "CodeQL CLI", "Coding", "DevOps", "GitHub", "GitHub Enterprise Server", "Go", "Incremental Analysis", "News", "Pull Requests", "Security", "Security Scanning", "Static Analysis", "Swift"]
-tags_normalized: ["application security", "cslashcplusplus", "csharp", "codeql", "codeql cli", "coding", "devops", "github", "github enterprise server", "go", "incremental analysis", "news", "pull requests", "security", "security scanning", "static analysis", "swift"]
+permalink: /coding/news/Incremental-Security-Analysis-with-CodeQL-Now-Available-Across-All-Languages
+tags:
+- Application Security
+- C/C++
+- C#
+- CodeQL
+- CodeQL CLI
+- Coding
+- DevOps
+- GitHub
+- GitHub Enterprise Server
+- Go
+- Incremental Analysis
+- News
+- Pull Requests
+- Security
+- Security Scanning
+- Static Analysis
+- Swift
+section_names:
+- coding
+- devops
+- security
 ---
-
 Allison explains GitHub's new incremental analysis for CodeQL, enabling faster and more efficient security scans across all supported languages, including C#, in pull requests.<!--excerpt_end-->
 
 # Incremental Security Analysis with CodeQL Now Available Across All Languages

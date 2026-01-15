@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Beyond the Firewall - Achieving True Observability in Hybrid Infrastructure"
-description: "Gerardo Dada explores the need for comprehensive observability in hybrid infrastructures. The article highlights the challenges of monitoring across complex, internet-dependent environments and emphasizes the importance of advanced observability tools, such as Internet Performance Monitoring (IPM), RUM, and synthetic monitoring, in modern DevOps practices."
-author: "Gerardo Dada"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Beyond the Firewall - Achieving True Observability in Hybrid Infrastructure
+author: Gerardo Dada
+canonical_url: https://devops.com/beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-07-31 05:00:01 +00:00
-permalink: "/2025-07-31-Beyond-the-Firewall-Achieving-True-Observability-in-Hybrid-Infrastructure.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Business Of DevOps", "Contributed Content", "Data Collection", "DevOps", "DevSecOps", "Hybrid Infrastructure", "Internet Performance Monitoring", "Internet Performance Monitoring (ipm)", "IPM", "Monitoring Tools", "Observability", "RUM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Monitoring"]
-tags_normalized: ["blogs", "business of devops", "contributed content", "data collection", "devops", "devsecops", "hybrid infrastructure", "internet performance monitoring", "internet performance monitoring ipm", "ipm", "monitoring tools", "observability", "rum", "security", "social facebook", "social linkedin", "social x", "synthetic monitoring"]
+permalink: /devops/blogs/Beyond-the-Firewall-Achieving-True-Observability-in-Hybrid-Infrastructure
+tags:
+- Blogs
+- Business Of DevOps
+- Contributed Content
+- Data Collection
+- DevOps
+- DevSecOps
+- Hybrid Infrastructure
+- Internet Performance Monitoring
+- Internet Performance Monitoring (ipm)
+- IPM
+- Monitoring Tools
+- Observability
+- RUM
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Synthetic Monitoring
+section_names:
+- devops
+- security
 ---
-
 In this article, Gerardo Dada outlines why true observability is vital in today's hybrid infrastructures. He examines tools and practices enabling DevOps teams to monitor complex environments.<!--excerpt_end-->
 
 ## Summary

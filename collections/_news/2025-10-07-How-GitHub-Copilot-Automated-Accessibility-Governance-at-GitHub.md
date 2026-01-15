@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How GitHub Copilot Automated Accessibility Governance at GitHub"
-description: "This article details how GitHub Copilot accelerated the development of an automated accessibility remediation workflow at GitHub, enabling rapid prototyping, accountability, and visibility in accessibility compliance. It describes the technical approach to integrating automation with GitHub Actions, GitHub Issues, and cross-functional collaboration for sustainable accessibility governance."
-author: "Janice Rimmer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot Automated Accessibility Governance at GitHub
+author: Janice Rimmer
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-10-07 17:00:00 +00:00
-permalink: "/2025-10-07-How-GitHub-Copilot-Automated-Accessibility-Governance-at-GitHub.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "AI & ML", "AI Assisted Development", "Automation", "Collaboration", "Compliance", "Developer Experience", "Developer Workflow", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Issues", "Governance", "Idempotent Logic", "News", "Project Management", "Remediation Workflow", "Stakeholder Visibility"]
-tags_normalized: ["accessibility", "ai", "ai and ml", "ai assisted development", "automation", "collaboration", "compliance", "developer experience", "developer workflow", "devops", "devops automation", "github actions", "github copilot", "github issues", "governance", "idempotent logic", "news", "project management", "remediation workflow", "stakeholder visibility"]
+permalink: /github-copilot/news/How-GitHub-Copilot-Automated-Accessibility-Governance-at-GitHub
+tags:
+- Accessibility
+- AI
+- AI & ML
+- AI Assisted Development
+- Automation
+- Collaboration
+- Compliance
+- Developer Experience
+- Developer Workflow
+- DevOps
+- DevOps Automation
+- GitHub Actions
+- GitHub Copilot
+- GitHub Issues
+- Governance
+- Idempotent Logic
+- News
+- Project Management
+- Remediation Workflow
+- Stakeholder Visibility
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Janice Rimmer explains how GitHub Copilot enabled rapid automation of accessibility governance workflows at GitHub, highlighting the impact on program management and cross-functional accountability.<!--excerpt_end-->
 
 # How GitHub Copilot Automated Accessibility Governance at GitHub

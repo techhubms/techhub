@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates"
-description: "This guide offers a practical, step-by-step approach to using the Azure Pricing Calculator for estimating cloud costs before moving workloads to Microsoft Azure. It covers essential topics including configuring services, selecting regions and licensing models, saving and sharing estimates, and offers real-world tips and common mistakes to avoid for better budgeting and planning."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates
+author: Dellenny
+canonical_url: https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-12 16:05:06 +00:00
-permalink: "/2025-11-12-Using-the-Azure-Pricing-Calculator-for-Accurate-Cloud-Cost-Estimates.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Pricing Calculator", "Azure Regions", "Azure Services", "Blogs", "Budget Planning", "Cloud Cost Estimation", "Cloud Licensing", "Cloud Migration", "Cost Optimization", "IT Finance", "Reserved Instances", "Savings Plans", "SQL Database", "Storage", "Technical Planning", "Virtual Machines"]
-tags_normalized: ["azure", "azure pricing calculator", "azure regions", "azure services", "blogs", "budget planning", "cloud cost estimation", "cloud licensing", "cloud migration", "cost optimization", "it finance", "reserved instances", "savings plans", "sql database", "storage", "technical planning", "virtual machines"]
+permalink: /azure/blogs/Using-the-Azure-Pricing-Calculator-for-Accurate-Cloud-Cost-Estimates
+tags:
+- Azure
+- Azure Pricing Calculator
+- Azure Regions
+- Azure Services
+- Blogs
+- Budget Planning
+- Cloud Cost Estimation
+- Cloud Licensing
+- Cloud Migration
+- Cost Optimization
+- IT Finance
+- Reserved Instances
+- Savings Plans
+- SQL Database
+- Storage
+- Technical Planning
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Dellenny provides a clear guide on effectively using the Azure Pricing Calculator, helping developers, IT managers, and finance professionals estimate and plan cloud costs with confidence.<!--excerpt_end-->
 
 # Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates

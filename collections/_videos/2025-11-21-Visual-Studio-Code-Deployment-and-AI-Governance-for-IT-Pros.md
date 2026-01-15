@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Visual Studio Code Deployment and AI Governance for IT Pros"
-description: "This session from Microsoft Ignite 2025 targets IT professionals managing Visual Studio Code (VS Code) at enterprise scale. It covers deploying VS Code efficiently, enforcing compliance and security through extension policies, managing updates and telemetry, and safeguarding developer environments. The session also addresses scaling AI in organizations by using prompt templates, extension governance, and maximizing GitHub Copilot effectiveness within policy and compliance boundaries."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3K9kKLMU9rs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Visual Studio Code Deployment and AI Governance for IT Pros
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=3K9kKLMU9rs
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:48:24 +00:00
-permalink: "/2025-11-21-Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Tools", "Compliance", "Developer Productivity", "DevOps", "Enterprise Deployment", "Entra ID", "Extension Marketplace", "InnovatewithAzureAIappsandagents", "IT Governance", "MCP", "Microsoft Ignite", "MSIgnite", "Policy Enforcement", "Prompt Engineering", "Telemetry Management", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "compliance", "developer productivity", "devops", "enterprise deployment", "entra id", "extension marketplace", "innovatewithazureaiappsandagents", "it governance", "mcp", "microsoft ignite", "msignite", "policy enforcement", "prompt engineering", "telemetry management", "videos", "vs code"]
+permalink: /ai/videos/Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros
+tags:
+- AI
+- AI Tools
+- Compliance
+- Developer Productivity
+- DevOps
+- Enterprise Deployment
+- Entra ID
+- Extension Marketplace
+- InnovatewithAzureAIappsandagents
+- IT Governance
+- MCP
+- Microsoft Ignite
+- MSIgnite
+- Policy Enforcement
+- Prompt Engineering
+- Telemetry Management
+- Videos
+- VS Code
+section_names:
+- ai
+- devops
 ---
-
 Microsoft Events presents a session for IT pros focused on deploying and governing VS Code in enterprise environments, improving AI adoption—including Copilot—while maintaining compliance and developer productivity.<!--excerpt_end-->
 
 {% youtube 3K9kKLMU9rs %}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "npm Classic Tokens Revoked: Session-Based Authentication and CLI Token Management Now Available"
-description: "This update outlines major changes to npm's authentication and token management. Classic tokens are permanently revoked in favor of time-limited session tokens and a new CLI-based granular token management tool. It details session-based authentication, stricter 2FA enforcement, legacy endpoint transition, and guidance for updating CI/CD workflows and development setups to comply with new security standards."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'npm Classic Tokens Revoked: Session-Based Authentication and CLI Token Management Now Available'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-09 16:21:59 +00:00
-permalink: "/2025-12-09-npm-Classic-Tokens-Revoked-Session-Based-Authentication-and-CLI-Token-Management-Now-Available.html"
-categories: ["DevOps", "Security"]
-tags: ["Authentication", "CI/CD", "CLI", "DevOps", "Granular Tokens", "Legacy API Endpoint", "News", "npm", "OIDC Trusted Publishing", "Retired", "Secure Publishing", "Security", "Security Hardening", "Session Tokens", "Supply Chain Security", "Token Management", "Yarn V1", "Yarn V2"]
-tags_normalized: ["authentication", "cislashcd", "cli", "devops", "granular tokens", "legacy api endpoint", "news", "npm", "oidc trusted publishing", "retired", "secure publishing", "security", "security hardening", "session tokens", "supply chain security", "token management", "yarn v1", "yarn v2"]
+permalink: /devops/news/npm-Classic-Tokens-Revoked-Session-Based-Authentication-and-CLI-Token-Management-Now-Available
+tags:
+- Authentication
+- CI/CD
+- CLI
+- DevOps
+- Granular Tokens
+- Legacy API Endpoint
+- News
+- npm
+- OIDC Trusted Publishing
+- Retired
+- Secure Publishing
+- Security
+- Security Hardening
+- Session Tokens
+- Supply Chain Security
+- Token Management
+- Yarn V1
+- Yarn V2
+section_names:
+- devops
+- security
 ---
-
 Allison announces the permanent revocation of npm classic tokens, the shift to session-based authentication, and new CLI tools for granular token management, emphasizing heightened security in development and deployment workflows.<!--excerpt_end-->
 
 # npm Classic Tokens Revoked: Session-Based Authentication and CLI Token Management Now Available

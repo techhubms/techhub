@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "How to Write a Great agents.md: Lessons from 2,500 GitHub Repositories"
-description: "This guide provides practical, research-backed advice for creating effective custom agent definitions for GitHub Copilot using agents.md files. Drawing from analysis of over 2,500 public repositories, it explains how technical teams can define agent personas, executable commands, boundaries, and code style to improve automation. Includes actionable templates, best practices, and breakdowns of common pitfalls for developers building Copilot-powered workflows."
-author: "Matt Nigh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'How to Write a Great agents.md: Lessons from 2,500 GitHub Repositories'
+author: Matt Nigh
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-19 17:00:00 +00:00
-permalink: "/2025-11-19-How-to-Write-a-Great-agentsmd-Lessons-from-2500-GitHub-Repositories.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic AI", "Agents.md", "AI", "AI & ML", "AI Development", "Coding", "Copilot Agents", "Devops Workflow", "Generative AI", "GitHub Copilot", "Linting", "Markdownlint", "News", "Persona Definition", "Quality Assurance", "React 18", "Security Analysis", "Software Engineering", "Tailwind CSS", "Technical Writing", "TypeScript", "Unit Testing", "Vite"]
-tags_normalized: ["agentic ai", "agentsdotmd", "ai", "ai and ml", "ai development", "coding", "copilot agents", "devops workflow", "generative ai", "github copilot", "linting", "markdownlint", "news", "persona definition", "quality assurance", "react 18", "security analysis", "software engineering", "tailwind css", "technical writing", "typescript", "unit testing", "vite"]
+permalink: /github-copilot/news/How-to-Write-a-Great-agentsmd-Lessons-from-2500-GitHub-Repositories
+tags:
+- Agentic AI
+- Agents.md
+- AI
+- AI & ML
+- AI Development
+- Coding
+- Copilot Agents
+- Devops Workflow
+- Generative AI
+- GitHub Copilot
+- Linting
+- Markdownlint
+- News
+- Persona Definition
+- Quality Assurance
+- React 18
+- Security Analysis
+- Software Engineering
+- Tailwind CSS
+- Technical Writing
+- TypeScript
+- Unit Testing
+- Vite
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Matt Nigh analyzes over 2,500 repositories to share practical strategies for writing effective agents.md files for GitHub Copilot, guiding developers on agent persona design, clear instructions, and reproducible DevOps workflows.<!--excerpt_end-->
 
 # How to Write a Great agents.md: Lessons from 2,500 GitHub Repositories
@@ -43,7 +65,7 @@ Here is an excerpt of a high-quality documentation agent profile:
 ```md
 ---
 name: docs_agent
-description: Expert technical writer for this project
+
 ---
 
 You are an expert technical writer for this project.

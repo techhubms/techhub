@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Full Demo: Mastering GitHub Copilot CLI for Terminal-Based Development"
-description: "This video, presented by GitHub Product Manager Ryan Hecht, provides a comprehensive walkthrough of the GitHub Copilot CLI. Viewers will learn how to install and leverage the CLI for codebase exploration, debugging, and active contribution within the developer terminal. The session highlights the agentic AI capabilities of Copilot CLI and demonstrates practical tasks developers can perform without leaving the command line. It also touches on GitHub integration and hands-on problem solving directly from the terminal."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VkOibxsQ1oU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Full Demo: Mastering GitHub Copilot CLI for Terminal-Based Development'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=VkOibxsQ1oU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-02 14:01:01 +00:00
-permalink: "/2025-10-02-Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "AI Collaboration", "Automation", "Codebase Exploration", "Coding", "Command Line", "Debugging", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Integration", "GitHubCopilotCLI", "Installation", "Product Demo", "Productivity", "Ryan Hecht", "Terminal", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai collaboration", "automation", "codebase exploration", "coding", "command line", "debugging", "developer tools", "github copilot", "github copilot cli", "github integration", "githubcopilotcli", "installation", "product demo", "productivity", "ryan hecht", "terminal", "videos"]
+permalink: /github-copilot/videos/Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development
+tags:
+- AI
+- AI Agent
+- AI Collaboration
+- Automation
+- Codebase Exploration
+- Coding
+- Command Line
+- Debugging
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHub Integration
+- GitHubCopilotCLI
+- Installation
+- Product Demo
+- Productivity
+- Ryan Hecht
+- Terminal
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this full demo, Ryan Hecht from GitHub showcases the new GitHub Copilot CLI, guiding developers through installation, codebase navigation, and AI-powered workflows—all from the command line.<!--excerpt_end-->
 
 {% youtube VkOibxsQ1oU %}

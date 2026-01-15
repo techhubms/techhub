@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence"
-description: "This post by seankeegan demonstrates a solution for transforming raw customer call transcripts into actionable CRM data using Azure Communication Services, Azure OpenAI, and a Node.js backend. The approach features AI-powered extraction, human-in-the-loop review, and schema-driven outputs for seamless integration. Technologies, workflows, and integration tips are explained clearly."
-author: "seankeegan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence'
+author: seankeegan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-24 18:12:34 +00:00
-permalink: "/2025-09-24-From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Workflow", "API Integration", "Azure", "Azure Communication Services", "Azure OpenAI", "Business Intelligence", "Call Transcripts", "Community", "CRM Integration", "Human in The Loop", "JavaScript", "JSON Schema", "Microsoft Teams", "Node.js", "Post Call Analysis", "Sentiment Analysis", "Structured Output"]
-tags_normalized: ["ai", "ai workflow", "api integration", "azure", "azure communication services", "azure openai", "business intelligence", "call transcripts", "community", "crm integration", "human in the loop", "javascript", "json schema", "microsoft teams", "nodedotjs", "post call analysis", "sentiment analysis", "structured output"]
+permalink: /ai/community/From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence
+tags:
+- AI
+- AI Workflow
+- API Integration
+- Azure
+- Azure Communication Services
+- Azure OpenAI
+- Business Intelligence
+- Call Transcripts
+- Community
+- CRM Integration
+- Human in The Loop
+- JavaScript
+- JSON Schema
+- Microsoft Teams
+- Node.js
+- Post Call Analysis
+- Sentiment Analysis
+- Structured Output
+section_names:
+- ai
+- azure
 ---
-
 seankeegan explains how to automate post-call intelligence by extracting business insights from call transcripts with Azure OpenAI and Azure Communication Services, combining AI analysis with human oversight for reliable CRM integration.<!--excerpt_end-->
 
 # From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence

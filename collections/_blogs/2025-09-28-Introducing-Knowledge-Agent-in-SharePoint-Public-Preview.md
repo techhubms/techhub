@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing Knowledge Agent in SharePoint (Public Preview)"
-description: "This guide introduces the Knowledge Agent feature brought by Microsoft to SharePoint as part of its Copilot and AI advancements. It explains how Knowledge Agent enriches, organizes, and manages SharePoint content using AI, details setup requirements and commands, and offers strategies for early adopters to leverage these intelligent content management tools effectively."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Introducing Knowledge Agent in SharePoint (Public Preview)
+author: Dellenny
+canonical_url: https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-28 12:33:12 +00:00
-permalink: "/2025-09-28-Introducing-Knowledge-Agent-in-SharePoint-Public-Preview.html"
-categories: ["AI"]
-tags: ["AI", "AI in SharePoint", "Automation Rules", "Blogs", "Content Automation", "Copilot", "Document Summarization", "Knowledge Agent", "M365 Copilot", "Metadata Management", "Microsoft 365", "Natural Language Query", "PowerShell", "Public Preview", "Set SPOTenant", "SharePoint", "Site Governance"]
-tags_normalized: ["ai", "ai in sharepoint", "automation rules", "blogs", "content automation", "copilot", "document summarization", "knowledge agent", "m365 copilot", "metadata management", "microsoft 365", "natural language query", "powershell", "public preview", "set spotenant", "sharepoint", "site governance"]
+permalink: /ai/blogs/Introducing-Knowledge-Agent-in-SharePoint-Public-Preview
+tags:
+- AI
+- AI in SharePoint
+- Automation Rules
+- Blogs
+- Content Automation
+- Copilot
+- Document Summarization
+- Knowledge Agent
+- M365 Copilot
+- Metadata Management
+- Microsoft 365
+- Natural Language Query
+- PowerShell
+- Public Preview
+- Set SPOTenant
+- SharePoint
+- Site Governance
+section_names:
+- ai
 ---
-
 Dellenny introduces Microsoft's Knowledge Agent for SharePoint, detailing its AI content organization features, setup steps, and strategies for maximizing the intelligent capabilities within modern SharePoint environments.<!--excerpt_end-->
 
 # Introducing Knowledge Agent in SharePoint (Public Preview)

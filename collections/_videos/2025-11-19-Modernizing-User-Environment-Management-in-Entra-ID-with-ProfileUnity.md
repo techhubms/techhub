@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modernizing User Environment Management in Entra ID with ProfileUnity"
-description: "This session from Microsoft Ignite 2025 explores strategies for organizations transitioning to Entra ID–joined or hybrid environments by replacing traditional Group Policy Preferences (GPP) with ProfileUnity. It covers the limitations of GPP in cloud-centric setups, introduces ProfileUnity's scalable policy-driven features, demonstrates its interface, discusses integration with Azure Blob Storage and FlexApp, and compares ProfileUnity with Intune for application and policy delivery. The session also outlines best practices for managing and synchronizing user data, ensuring consistency and an improved user experience in modern Microsoft cloud workspaces."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=p-0ikIK3-l8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernizing User Environment Management in Entra ID with ProfileUnity
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=p-0ikIK3-l8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 07:57:38 +00:00
-permalink: "/2025-11-19-Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Blob Storage", "Cloud Workspace", "Configuration Reports", "Entra ID", "FlexApp", "Group Policy Preferences", "Hybrid Management", "Intune", "Microsoft Azure", "Migrateandmodernizeyourestate", "MS Ignite", "MSIgnite", "Offline Capabilities", "Policy Delivery", "ProfileUnity", "Security", "User Data Synchronization", "Videos", "Zero Trust"]
-tags_normalized: ["azure", "azure blob storage", "cloud workspace", "configuration reports", "entra id", "flexapp", "group policy preferences", "hybrid management", "intune", "microsoft azure", "migrateandmodernizeyourestate", "ms ignite", "msignite", "offline capabilities", "policy delivery", "profileunity", "security", "user data synchronization", "videos", "zero trust"]
+permalink: /azure/videos/Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity
+tags:
+- Azure
+- Azure Blob Storage
+- Cloud Workspace
+- Configuration Reports
+- Entra ID
+- FlexApp
+- Group Policy Preferences
+- Hybrid Management
+- Intune
+- Microsoft Azure
+- Migrateandmodernizeyourestate
+- MS Ignite
+- MSIgnite
+- Offline Capabilities
+- Policy Delivery
+- ProfileUnity
+- Security
+- User Data Synchronization
+- Videos
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events presents a detailed session by Jason Smith at MS Ignite 2025, diving into modern user environment management for Entra ID–joined organizations, focusing on ProfileUnity and policy-driven cloud workspace solutions.<!--excerpt_end-->
 
 {% youtube p-0ikIK3-l8 %}

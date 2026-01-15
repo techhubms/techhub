@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows"
-description: "This news post introduces Azure MCP Server 1.0, a major new open-source platform that bridges AI agents and Azure cloud resources via the Model Context Protocol (MCP). The release supports 47+ Azure services, powers natural language and code-based automation, and integrates with leading developer tools. Platform security, extensibility, and DevOps support are major highlights."
-author: "Sandeep Sen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows
+author: Sandeep Sen
+canonical_url: https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/
+viewing_mode: external
+feed_name: Microsoft Azure SDK Blog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-28 18:00:57 +00:00
-permalink: "/2025-10-28-Announcing-Azure-MCP-Server-100-Stable-Release-A-New-Era-for-Agentic-Workflows.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET AOT", "Agentic Automation", "Agents", "AI", "AI Agents", "App Configuration", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Developer CLI", "Azure Functions", "Azure MCP Server", "Azure Postgres", "Azure SDK", "Cloud Workflows", "Coding", "DevOps", "Docker", "Event Hubs", "IntelliJ", "Kusto", "Log Analytics", "MCP", "News", "Open Source", "Resource Groups", "Service Bus", "VS", "VS Code"]
-tags_normalized: ["dotnet aot", "agentic automation", "agents", "ai", "ai agents", "app configuration", "azure", "azure ai foundry", "azure ai search", "azure developer cli", "azure functions", "azure mcp server", "azure postgres", "azure sdk", "cloud workflows", "coding", "devops", "docker", "event hubs", "intellij", "kusto", "log analytics", "mcp", "news", "open source", "resource groups", "service bus", "vs", "vs code"]
+permalink: /ai/news/Announcing-Azure-MCP-Server-100-Stable-Release-A-New-Era-for-Agentic-Workflows
+tags:
+- .NET AOT
+- Agentic Automation
+- Agents
+- AI
+- AI Agents
+- App Configuration
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Developer CLI
+- Azure Functions
+- Azure MCP Server
+- Azure Postgres
+- Azure SDK
+- Cloud Workflows
+- Coding
+- DevOps
+- Docker
+- Event Hubs
+- IntelliJ
+- Kusto
+- Log Analytics
+- MCP
+- News
+- Open Source
+- Resource Groups
+- Service Bus
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Sandeep Sen announces Azure MCP Server 1.0, a stable and open-source release empowering developers to connect AI agents with Azure services through the Model Context Protocol. The update offers extensive integration, agentic workflow support, and robust DevOps compatibility.<!--excerpt_end-->
 
 # Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows

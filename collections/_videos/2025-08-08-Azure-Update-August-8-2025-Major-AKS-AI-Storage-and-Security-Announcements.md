@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "Azure Update - August 8, 2025: Major AKS, AI, Storage, and Security Announcements"
-description: "This weekly Azure video update, hosted by John Savill, delivers comprehensive coverage of the latest Azure news as of August 8, 2025. Key highlights include a significant round of Azure Kubernetes Service (AKS) improvements, the introduction of powerful new vCPU options, enhancements around DNSSEC for AzureDNS, advanced network security features, updates to Azure File Sync and Data Box, regional expansions for Azure Storage features, and the latest news on GPT-5's cloud availability. The video also touches on new developments in the AI shell and Azure Backup. This update is ideal for Microsoft cloud professionals looking to stay current on Azure infrastructure, security, storage, and AI capabilities."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=cZoOmcbsX-4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update - August 8, 2025: Major AKS, AI, Storage, and Security Announcements'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=cZoOmcbsX-4
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-08 12:09:46 +00:00
-permalink: "/2025-08-08-Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Shell", "AKS", "Application Gateway WAF", "AVNM", "Azure", "Azure Arc", "Azure Backup", "Azure Cloud", "Azure Data Box", "Azure File Sync", "Azure Infrastructure", "Azure Storage", "Azure Updates", "AzureDNS", "Cloud", "Cloud Networking", "Cloud Security", "Data Protection", "DNSSEC", "GPT 5", "GPT Image 1", "GPT Oss 120/20", "Microsoft", "Microsoft Azure", "ML", "Multi Disk Backup", "Network Security Perimeter", "Security", "Vcpu Options", "Videos", "Virtual Network Mesh"]
-tags_normalized: ["ai", "ai shell", "aks", "application gateway waf", "avnm", "azure", "azure arc", "azure backup", "azure cloud", "azure data box", "azure file sync", "azure infrastructure", "azure storage", "azure updates", "azuredns", "cloud", "cloud networking", "cloud security", "data protection", "dnssec", "gpt 5", "gpt image 1", "gpt oss 120slash20", "microsoft", "microsoft azure", "ml", "multi disk backup", "network security perimeter", "security", "vcpu options", "videos", "virtual network mesh"]
+permalink: /ai/videos/Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements
+tags:
+- AI
+- AI Shell
+- AKS
+- Application Gateway WAF
+- AVNM
+- Azure
+- Azure Arc
+- Azure Backup
+- Azure Cloud
+- Azure Data Box
+- Azure File Sync
+- Azure Infrastructure
+- Azure Storage
+- Azure Updates
+- AzureDNS
+- Cloud
+- Cloud Networking
+- Cloud Security
+- Data Protection
+- DNSSEC
+- GPT 5
+- GPT Image 1
+- GPT Oss 120/20
+- Microsoft
+- Microsoft Azure
+- ML
+- Multi Disk Backup
+- Network Security Perimeter
+- Security
+- Vcpu Options
+- Videos
+- Virtual Network Mesh
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 John Savill presents the August 8, 2025 Azure Update, sharing key advancements in cloud infrastructure, security, AI, and data solutions for Microsoft Azure professionals.<!--excerpt_end-->
 
 {% youtube cZoOmcbsX-4 %}

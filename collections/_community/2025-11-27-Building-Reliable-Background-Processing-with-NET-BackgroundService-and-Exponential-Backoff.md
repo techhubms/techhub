@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Reliable Background Processing with .NET BackgroundService and Exponential Backoff"
-description: "This article, authored by riturajjana, provides an in-depth guide to implementing background processing in .NET applications using BackgroundService and exponential backoff. It addresses the challenge of unreliable downstream APIs by architecting a non-blocking, resilient system. Complete with use case, architecture, reasoning for backoff, and robust example code, it is ideal for developers building enterprise-grade backend solutions."
-author: "riturajjana"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building Reliable Background Processing with .NET BackgroundService and Exponential Backoff
+author: riturajjana
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-27 08:00:00 +00:00
-permalink: "/2025-11-27-Building-Reliable-Background-Processing-with-NET-BackgroundService-and-Exponential-Backoff.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "API Reliability", "ASP.NET Core", "Azure", "Backend Development", "BackgroundService", "C#", "Cloud Architecture", "Coding", "Community", "Dependency Resilience", "Exponential Backoff", "Hosted Services", "in Memory Store", "Microservices", "REST API", "Retry Logic"]
-tags_normalized: ["dotnet", "api reliability", "aspdotnet core", "azure", "backend development", "backgroundservice", "csharp", "cloud architecture", "coding", "community", "dependency resilience", "exponential backoff", "hosted services", "in memory store", "microservices", "rest api", "retry logic"]
+permalink: /coding/community/Building-Reliable-Background-Processing-with-NET-BackgroundService-and-Exponential-Backoff
+tags:
+- .NET
+- API Reliability
+- ASP.NET Core
+- Azure
+- Backend Development
+- BackgroundService
+- C#
+- Cloud Architecture
+- Coding
+- Community
+- Dependency Resilience
+- Exponential Backoff
+- Hosted Services
+- in Memory Store
+- Microservices
+- REST API
+- Retry Logic
+section_names:
+- azure
+- coding
 ---
-
 riturajjana explores .NET background processing with BackgroundService and exponential backoff, guiding developers through a resilient architecture for handling unreliable APIs, and providing complete, production-ready code samples.<!--excerpt_end-->
 
 # Building Reliable Background Processing in .NET

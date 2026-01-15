@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development"
-description: ".NET 10 introduces significant advancements across the Microsoft developer ecosystem, including updates to C# 14, ASP.NET Core, MAUI, AI, F#, and developer tooling. This news covers performance, security, AI integration, and new features in libraries, frameworks, and language tooling, offering practical guidance for modern app development."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development'
+author: .NET Team
+canonical_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-11 15:38:00 +00:00
-permalink: "/2025-11-11-Announcing-NET-10-A-Major-Release-for-Modern-Productive-and-AI-Powered-Development.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", "AI", "AI Integration", "AppHost", "ASP.NET Core", "Azure", "Azure SQL", "Blazor", "C#", "C# 14", "Coding", "Cosmos DB", "DevOps", "Entity Framework Core 10", "F#", "F# 10", "Featured", "Featured Post", "MAUI", "MCP", "Microsoft Agent Framework", "Minimal APIs", "NativeAOT", "News", "NuGet", "OpenAPI", "Performance", "Post Quantum Cryptography", "SLNX", "VS", "VS Code", "WinForms", "WPF"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "apphost", "aspdotnet core", "azure", "azure sql", "blazor", "csharp", "csharp 14", "coding", "cosmos db", "devops", "entity framework core 10", "fsharp", "fsharp 10", "featured", "featured post", "maui", "mcp", "microsoft agent framework", "minimal apis", "nativeaot", "news", "nuget", "openapi", "performance", "post quantum cryptography", "slnx", "vs", "vs code", "winforms", "wpf"]
+permalink: /ai/news/Announcing-NET-10-A-Major-Release-for-Modern-Productive-and-AI-Powered-Development
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Integration
+- AppHost
+- ASP.NET Core
+- Azure
+- Azure SQL
+- Blazor
+- C#
+- C# 14
+- Coding
+- Cosmos DB
+- DevOps
+- Entity Framework Core 10
+- F#
+- F# 10
+- Featured
+- Featured Post
+- MAUI
+- MCP
+- Microsoft Agent Framework
+- Minimal APIs
+- NativeAOT
+- News
+- NuGet
+- OpenAPI
+- Performance
+- Post Quantum Cryptography
+- SLNX
+- VS
+- VS Code
+- WinForms
+- WPF
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 .NET Team announces .NET 10, highlighting key advancements in AI, coding, and development tooling. This release provides developers with improved performance, enhanced language features, and new AI integration options across the Microsoft stack.<!--excerpt_end-->
 
 # Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects"
-description: "This video, led by April from Microsoft Developer, is the first part of a series focusing on using the AI Toolkit alongside GitHub Copilot to create agent-based solutions with Microsoft Foundry models. The video demonstrates how to set up a local development environment in Visual Studio Code, install essential extensions, create a Microsoft Foundry project, and ensure proper configuration for leveraging GitHub Copilot as an AI-powered development assistant within the Microsoft ecosystem."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4KcpgQlFa58"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=4KcpgQlFa58
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:12 +00:00
-permalink: "/2025-12-01-Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Development", "AI", "AI Toolkit", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Developer Tools", "Development", "Environment Setup", "GitHub Copilot", "Microsoft", "Microsoft Azure", "Microsoft Foundry", "Model Management", "Tech", "Technology", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent development", "ai", "ai toolkit", "azure", "cloud computing", "cloud development", "coding", "dev", "developer tools", "development", "environment setup", "github copilot", "microsoft", "microsoft azure", "microsoft foundry", "model management", "tech", "technology", "videos", "vs code", "vs code extensions"]
+permalink: /github-copilot/videos/Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects
+tags:
+- Agent Development
+- AI
+- AI Toolkit
+- Azure
+- Cloud Computing
+- Cloud Development
+- Coding
+- Dev
+- Developer Tools
+- Development
+- Environment Setup
+- GitHub Copilot
+- Microsoft
+- Microsoft Azure
+- Microsoft Foundry
+- Model Management
+- Tech
+- Technology
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 April from Microsoft Developer guides viewers through setting up the AI Toolkit and GitHub Copilot within Visual Studio Code, focusing on environment preparation for developing agents using Microsoft Foundry models.<!--excerpt_end-->
 
 {% youtube 4KcpgQlFa58 %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure Migrate: AI Insights for Strategic Cloud Transformations"
-description: "This session from Microsoft Ignite 2025 demonstrates how IT teams can leverage Azure Migrate's latest AI-powered capabilities to assess, plan, and execute migrations and modernizations for various workloads, including Windows Server, SQL Server, .NET, Linux, PostgreSQL, and Java. It covers workload inventory, dependency mapping, goal setting, and business case development using automated tools, featuring the new Azure Copilot Migration Agent preview and practical strategies for cost savings, modernization benefits, and wave planning."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=plDH468Keeg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Azure Migrate: AI Insights for Strategic Cloud Transformations'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=plDH468Keeg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:57:03 +00:00
-permalink: "/2025-11-20-Azure-Migrate-AI-Insights-for-Strategic-Cloud-Transformations.html"
-categories: ["AI", "Azure"]
-tags: [".NET", "AI", "AI Insights", "Azure", "Azure Copilot Migration Agent", "Azure Migrate", "Business Case", "Cloud Migration", "Cloud Modernization", "Cost Savings", "Dependency Mapping", "IT Infrastructure", "Java", "Landing Zone Automation", "Linux", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "PostgreSQL", "ROI Analysis", "SQL Server", "TCO Insights", "Videos", "Wave Planning", "Windows Server"]
-tags_normalized: ["dotnet", "ai", "ai insights", "azure", "azure copilot migration agent", "azure migrate", "business case", "cloud migration", "cloud modernization", "cost savings", "dependency mapping", "it infrastructure", "java", "landing zone automation", "linux", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "postgresql", "roi analysis", "sql server", "tco insights", "videos", "wave planning", "windows server"]
+permalink: /ai/videos/Azure-Migrate-AI-Insights-for-Strategic-Cloud-Transformations
+tags:
+- .NET
+- AI
+- AI Insights
+- Azure
+- Azure Copilot Migration Agent
+- Azure Migrate
+- Business Case
+- Cloud Migration
+- Cloud Modernization
+- Cost Savings
+- Dependency Mapping
+- IT Infrastructure
+- Java
+- Landing Zone Automation
+- Linux
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- PostgreSQL
+- ROI Analysis
+- SQL Server
+- TCO Insights
+- Videos
+- Wave Planning
+- Windows Server
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a detailed walkthrough on using Azure Migrate’s AI-powered features for cloud migrations and modernizations, guided by Shashank Bansal, Vishal Jain, and Anant Raigaga.<!--excerpt_end-->
 
 {% youtube plDH468Keeg %}

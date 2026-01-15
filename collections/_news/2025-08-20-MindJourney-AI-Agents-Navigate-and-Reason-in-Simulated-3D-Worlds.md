@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds"
-description: "This article introduces MindJourney, a Microsoft Research framework that enables AI agents to imaginatively explore 3D spaces and answer spatial reasoning questions. By combining world models with vision-language models, MindJourney helps agents 'imagine' different viewpoints, improving spatial interpretation and paving the way for smarter, more autonomous systems."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds'
+author: sbaynes
+canonical_url: https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 21:00:30 +00:00
-permalink: "/2025-08-20-MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds.html"
-categories: ["AI"]
-tags: ["3D Simulation", "AI", "AI Agents", "AI Evaluation", "Autonomous Systems", "Company News", "Computer Vision", "Microsoft Research", "MindJourney", "News", "Simulation", "Spatial Beam Search", "Spatial Reasoning", "Vision Language Models", "VLM", "World Models"]
-tags_normalized: ["3d simulation", "ai", "ai agents", "ai evaluation", "autonomous systems", "company news", "computer vision", "microsoft research", "mindjourney", "news", "simulation", "spatial beam search", "spatial reasoning", "vision language models", "vlm", "world models"]
+permalink: /ai/news/MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds
+tags:
+- 3D Simulation
+- AI
+- AI Agents
+- AI Evaluation
+- Autonomous Systems
+- Company News
+- Computer Vision
+- Microsoft Research
+- MindJourney
+- News
+- Simulation
+- Spatial Beam Search
+- Spatial Reasoning
+- Vision Language Models
+- VLM
+- World Models
+section_names:
+- ai
 ---
-
 Authored by sbaynes, this news feature explains how MindJourney—a research framework from Microsoft—enables AI agents to navigate simulated 3D worlds and enhances their ability to answer spatial questions.<!--excerpt_end-->
 
 # MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds

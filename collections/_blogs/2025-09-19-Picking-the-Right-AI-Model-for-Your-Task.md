@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Picking the Right AI Model for Your Task"
-description: "This post provides a practical guide for developers using GitHub Copilot, helping them choose the optimal AI model for their coding needs. It explains the differences between lightweight, fast models and those capable of deeper reasoning, outlines how plan tiers impact model availability, and gives actionable steps for comparing outputs to maximize productivity."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Picking the Right AI Model for Your Task
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-19 00:00:00 +00:00
-permalink: "/2025-09-19-Picking-the-Right-AI-Model-for-Your-Task.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Blogs", "Claude 3.5 Sonnet", "Claude Sonnet 4", "Code Generation", "Developer Tools", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Selection", "O1 Preview", "O3 Mini", "Plan Management", "Productivity", "Prompt Engineering"]
-tags_normalized: ["ai", "ai models", "blogs", "claude 3dot5 sonnet", "claude sonnet 4", "code generation", "developer tools", "github copilot", "gpt 4dot1", "gpt 5", "model selection", "o1 preview", "o3 mini", "plan management", "productivity", "prompt engineering"]
+permalink: /github-copilot/blogs/Picking-the-Right-AI-Model-for-Your-Task
+tags:
+- AI
+- AI Models
+- Blogs
+- Claude 3.5 Sonnet
+- Claude Sonnet 4
+- Code Generation
+- Developer Tools
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Model Selection
+- O1 Preview
+- O3 Mini
+- Plan Management
+- Productivity
+- Prompt Engineering
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels delivers a developer-focused guide on how to select the right AI model in GitHub Copilot, helping users weigh speed versus reasoning to improve coding efficiency.<!--excerpt_end-->
 
 # Picking the Right AI Model for Your Task

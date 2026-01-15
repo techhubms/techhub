@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modernize on-premises VMware environments with Azure VMware Solution"
-description: "This session from Microsoft Ignite 2025 demonstrates how organizations can extend VMware workloads to Azure using Azure VMware Solution (AVS) without refactoring applications. Viewers will learn to leverage Azure platform services, AI capabilities, and integrated cloud tools for scalable modernization at their own pace. Key topics include migration strategies, integration with Azure storage and AI services, real-world customer stories, and practical demos such as a banking chatbot using Azure OpenAI and managed identities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=i4hvn_Ns9kU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernize on-premises VMware environments with Azure VMware Solution
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=i4hvn_Ns9kU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:22:23 +00:00
-permalink: "/2025-11-24-Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AVS", "Azure", "Azure Arc", "Azure NetApp Files", "Azure VMware Solution", "Banking Chatbot", "Cloud Modernization", "Customer Adoption", "Elastic SAN", "Managed Identities", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Strategy", "MSIgnite", "OpenAI", "Platform Services", "Videos", "VMware Migration", "Vsphere"]
-tags_normalized: ["ai", "avs", "azure", "azure arc", "azure netapp files", "azure vmware solution", "banking chatbot", "cloud modernization", "customer adoption", "elastic san", "managed identities", "microsoft ignite", "migrateandmodernizeyourestate", "migration strategy", "msignite", "openai", "platform services", "videos", "vmware migration", "vsphere"]
+permalink: /ai/videos/Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution
+tags:
+- AI
+- AVS
+- Azure
+- Azure Arc
+- Azure NetApp Files
+- Azure VMware Solution
+- Banking Chatbot
+- Cloud Modernization
+- Customer Adoption
+- Elastic SAN
+- Managed Identities
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration Strategy
+- MSIgnite
+- OpenAI
+- Platform Services
+- Videos
+- VMware Migration
+- Vsphere
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events showcase how AVS enables seamless migration and modernization of VMware environments to Azure, featuring practical demos and deep integration with Azure's cloud and AI services.<!--excerpt_end-->
 
 {% youtube i4hvn_Ns9kU %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Migrate: Connected Experiences for Efficient Cloud Modernization"
-description: "This article by Shiva Shastri introduces new features in Azure Migrate, outlining how the platform accelerates cloud migration and modernization with AI-driven assessment, Infrastructure as Code, tight security integration, and interoperability with tools like GitHub Copilot and Database Migration Service. The piece also details Azure Migrate’s approach to hybrid and secure migration, sustainability, and application-aware modernization strategies."
-author: "SShastri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Migrate: Connected Experiences for Efficient Cloud Modernization'
+author: SShastri
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-20 22:15:06 +00:00
-permalink: "/2025-09-20-Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["6R Analysis", "AI", "AI Assistance", "Arc Enabled", "Azure", "Azure Key Vault", "Azure Migrate", "Cloud Migration", "Community", "Database Migration Service", "DevOps", "Hybrid Cloud", "IaC", "Microsoft Defender For Cloud", "Modernization", "PostgreSQL", "Private Link", "Security", "Security By Design", "Sustainability"]
-tags_normalized: ["6r analysis", "ai", "ai assistance", "arc enabled", "azure", "azure key vault", "azure migrate", "cloud migration", "community", "database migration service", "devops", "hybrid cloud", "iac", "microsoft defender for cloud", "modernization", "postgresql", "private link", "security", "security by design", "sustainability"]
+permalink: /ai/community/Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization
+tags:
+- 6R Analysis
+- AI
+- AI Assistance
+- Arc Enabled
+- Azure
+- Azure Key Vault
+- Azure Migrate
+- Cloud Migration
+- Community
+- Database Migration Service
+- DevOps
+- Hybrid Cloud
+- IaC
+- Microsoft Defender For Cloud
+- Modernization
+- PostgreSQL
+- Private Link
+- Security
+- Security By Design
+- Sustainability
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Shiva Shastri presents the latest Azure Migrate capabilities, focusing on AI-powered assessment, Infrastructure as Code, security enhancements, and integration with GitHub Copilot to streamline safe and efficient cloud migrations.<!--excerpt_end-->
 
 # Azure Migrate: Connected Experiences for Efficient Cloud Modernization

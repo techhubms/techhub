@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Cloud Innovation and Efficiency with Arm-Based Azure Cobalt 100 VMs"
-description: "This session from Microsoft Ignite 2025 explores how enterprises are leveraging Azure Cobalt 100 Arm-based VMs to achieve better efficiency, performance, and scalability across critical workloads. It includes customer stories, technical highlights on performance gains, collaboration with software (such as GitHub runners), and integration of platforms like Databricks for AI and data workloads. The session also provides resources for migration and modernization using Arm-powered Azure infrastructure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tyavPF0DUrE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Cloud Innovation and Efficiency with Arm-Based Azure Cobalt 100 VMs
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=tyavPF0DUrE
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:00:33 +00:00
-permalink: "/2025-11-19-Cloud-Innovation-and-Efficiency-with-Arm-Based-Azure-Cobalt-100-VMs.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Workloads", "ARM Based VMs", "Azure", "Azure Cobalt 100", "Cloud Infrastructure", "Cloud Migration", "Coding", "Databricks", "GitHub Runners", "Machine Learning", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Modernization", "MSIgnite", "NGINX", "One Trust", "Performance Optimization", "Postgres", "Redis", "Scalability", "SPECjbb", "Tutorials", "Videos", "Windows Performance", "Workload Deployment"]
-tags_normalized: ["ai", "ai workloads", "arm based vms", "azure", "azure cobalt 100", "cloud infrastructure", "cloud migration", "coding", "databricks", "github runners", "machine learning", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "modernization", "msignite", "nginx", "one trust", "performance optimization", "postgres", "redis", "scalability", "specjbb", "tutorials", "videos", "windows performance", "workload deployment"]
+permalink: /ai/videos/Cloud-Innovation-and-Efficiency-with-Arm-Based-Azure-Cobalt-100-VMs
+tags:
+- AI
+- AI Workloads
+- ARM Based VMs
+- Azure
+- Azure Cobalt 100
+- Cloud Infrastructure
+- Cloud Migration
+- Coding
+- Databricks
+- GitHub Runners
+- Machine Learning
+- Microsoft Azure
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- Modernization
+- MSIgnite
+- NGINX
+- One Trust
+- Performance Optimization
+- Postgres
+- Redis
+- Scalability
+- SPECjbb
+- Tutorials
+- Videos
+- Windows Performance
+- Workload Deployment
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Events presents insights on how businesses benefit from Arm-based Azure Cobalt 100 VMs, featuring customer stories and technical highlights for developers and IT pros.<!--excerpt_end-->
 
 {% youtube tyavPF0DUrE %}

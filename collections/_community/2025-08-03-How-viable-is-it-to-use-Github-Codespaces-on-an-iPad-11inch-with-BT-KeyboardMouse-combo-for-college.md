@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How viable is it to use Github Codespaces on an iPad 11inch with BT Keyboard/Mouse combo for college?"
-description: "A Reddit user asks about the practicality of using GitHub Codespaces on an iPad with Bluetooth peripherals for university programming lectures. The post seeks advice on pros and cons, setup challenges, and considerations when choosing Codespaces as a primary development environment on mobile hardware."
-author: "AalbatrossGuy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mgg60v/how_viable_is_it_to_use_github_codespaces_on_an/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: How viable is it to use Github Codespaces on an iPad 11inch with BT Keyboard/Mouse combo for college?
+author: AalbatrossGuy
+canonical_url: https://www.reddit.com/r/github/comments/1mgg60v/how_viable_is_it_to_use_github_codespaces_on_an/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 10:42:27 +00:00
-permalink: "/2025-08-03-How-viable-is-it-to-use-Github-Codespaces-on-an-iPad-11inch-with-BT-KeyboardMouse-combo-for-college.html"
-categories: ["DevOps"]
-tags: ["Bluetooth Keyboard", "Bluetooth Mouse", "Coding Environment", "Community", "Device Compatibility", "DevOps", "GitHub", "GitHub Codespaces", "Ipad", "Programming Lectures", "Remote Development", "University", "Web Based IDE"]
-tags_normalized: ["bluetooth keyboard", "bluetooth mouse", "coding environment", "community", "device compatibility", "devops", "github", "github codespaces", "ipad", "programming lectures", "remote development", "university", "web based ide"]
+permalink: /devops/community/How-viable-is-it-to-use-Github-Codespaces-on-an-iPad-11inch-with-BT-KeyboardMouse-combo-for-college
+tags:
+- Bluetooth Keyboard
+- Bluetooth Mouse
+- Coding Environment
+- Community
+- Device Compatibility
+- DevOps
+- GitHub
+- GitHub Codespaces
+- Ipad
+- Programming Lectures
+- Remote Development
+- University
+- Web Based IDE
+section_names:
+- devops
 ---
-
 AalbatrossGuy inquires about the feasibility of using GitHub Codespaces on an iPad with Bluetooth keyboard and mouse for college programming lectures, exploring the pros, cons, and necessary considerations.<!--excerpt_end-->
 
 ## Overview

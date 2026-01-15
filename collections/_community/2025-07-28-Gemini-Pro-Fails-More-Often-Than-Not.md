@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Gemini Pro Fails More Often Than Not"
-description: "A user shares their negative experiences with the Gemini Pro model in GitHub Copilot and VSCode, detailing lag, errors, and usability issues. The post compares the reliability of Gemini Pro to other models and highlights concerns over premium feature value, with specific issues in agent mode and pull request handling."
-author: "ChomsGP"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Gemini Pro Fails More Often Than Not
+author: ChomsGP
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 12:55:30 +00:00
-permalink: "/2025-07-28-Gemini-Pro-Fails-More-Often-Than-Not.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Community", "Gemini Pro", "GitHub Copilot", "Lag", "Long Context", "Model Errors", "Model Reliability", "Premium Requests", "Pull Request", "VS Code"]
-tags_normalized: ["agent mode", "ai", "community", "gemini pro", "github copilot", "lag", "long context", "model errors", "model reliability", "premium requests", "pull request", "vs code"]
+permalink: /github-copilot/community/Gemini-Pro-Fails-More-Often-Than-Not
+tags:
+- Agent Mode
+- AI
+- Community
+- Gemini Pro
+- GitHub Copilot
+- Lag
+- Long Context
+- Model Errors
+- Model Reliability
+- Premium Requests
+- Pull Request
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 ChomsGP describes recurrent problems with the Gemini Pro model in GitHub Copilot, contrasting it with more stable alternatives, and raises concerns about its reliability and value.<!--excerpt_end-->
 
 ### Summary

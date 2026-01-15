@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Visual Studio Code May 2025 Update: v1.101 Release Highlights"
-description: "This update from the Visual Studio Code Team details the major new features, improvements, and fixes released in May 2025 (version 1.101). Key topics include advances in MCP servers, agent mode, GitHub Copilot Coding Agent enhancements, Python environment tooling, chat and AI experiences, accessibility, and platform engineering updates."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_101"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Visual Studio Code May 2025 Update: v1.101 Release Highlights'
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_101
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-12 17:00:00 +00:00
-permalink: "/2025-06-12-Visual-Studio-Code-May-2025-Update-v1101-Release-Highlights.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Mode", "AI", "Authentication", "Chat AI", "Coding", "DevOps", "Electron 35", "Extension Authoring", "GitHub Copilot", "Jupyter", "MCP", "MCP Servers", "News", "Notebook", "Pull Requests", "Python", "Remote Development", "Semantic Search", "Source Control", "V1.101", "VS Code", "VSCE"]
-tags_normalized: ["accessibility", "agent mode", "ai", "authentication", "chat ai", "coding", "devops", "electron 35", "extension authoring", "github copilot", "jupyter", "mcp", "mcp servers", "news", "notebook", "pull requests", "python", "remote development", "semantic search", "source control", "v1dot101", "vs code", "vsce"]
+permalink: /github-copilot/news/Visual-Studio-Code-May-2025-Update-v1101-Release-Highlights
+tags:
+- Accessibility
+- Agent Mode
+- AI
+- Authentication
+- Chat AI
+- Coding
+- DevOps
+- Electron 35
+- Extension Authoring
+- GitHub Copilot
+- Jupyter
+- MCP
+- MCP Servers
+- News
+- Notebook
+- Pull Requests
+- Python
+- Remote Development
+- Semantic Search
+- Source Control
+- V1.101
+- VS Code
+- VSCE
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team shares the May 2025 v1.101 release, introducing MCP advances, agent coding flow upgrades, enhanced GitHub Copilot Coding Agent integration, new Python developer tools, and more impactful improvements.<!--excerpt_end-->
 
 # Visual Studio Code May 2025 (v1.101) Release Notes

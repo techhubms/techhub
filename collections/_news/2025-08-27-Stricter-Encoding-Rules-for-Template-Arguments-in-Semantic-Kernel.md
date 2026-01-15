@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Stricter Encoding Rules for Template Arguments in Semantic Kernel"
-description: "This news post details a significant update to Semantic Kernel, introducing stricter encoding rules for template arguments. Developers must now manually encode properties of complex types and adjust configuration to ensure secure template rendering when working with .NET and Python Semantic Kernel SDKs, thus minimizing security risks."
-author: "Dmytro Struk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: Stricter Encoding Rules for Template Arguments in Semantic Kernel
+author: Dmytro Struk
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/
+viewing_mode: external
+feed_name: Microsoft Semantic Kernel Blog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-08-27 05:17:18 +00:00
-permalink: "/2025-08-27-Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AllowDangerouslySetContent", "Automatic Encoding", "Coding", "Exception Handling", "Handlebars", "HttpUtility.HtmlEncode", "Liquid", "Manual Encoding", "News", "Prompt Templates", "Python", "SDK Update", "Semantic Kernel", "Template Encoding", "Template Injection"]
-tags_normalized: ["dotnet", "ai", "allowdangerouslysetcontent", "automatic encoding", "coding", "exception handling", "handlebars", "httputilitydothtmlencode", "liquid", "manual encoding", "news", "prompt templates", "python", "sdk update", "semantic kernel", "template encoding", "template injection"]
+permalink: /ai/news/Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel
+tags:
+- .NET
+- AI
+- AllowDangerouslySetContent
+- Automatic Encoding
+- Coding
+- Exception Handling
+- Handlebars
+- HttpUtility.HtmlEncode
+- Liquid
+- Manual Encoding
+- News
+- Prompt Templates
+- Python
+- SDK Update
+- Semantic Kernel
+- Template Encoding
+- Template Injection
+section_names:
+- ai
+- coding
 ---
-
 Dmytro Struk explains recent encoding changes in Semantic Kernel, showing developers how to securely handle template arguments in .NET and Python. The article includes practical guidance and code examples.<!--excerpt_end-->
 
 # Stricter Encoding Rules for Template Arguments in Semantic Kernel

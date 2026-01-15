@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "New Organization Sharing and Local Development Improvements in GitHub Spark"
-description: "This update introduces new sharing options in GitHub Spark, allowing users to securely share sparks within their GitHub organizations. The release also enhances the local development workflow, provides deployment visibility, improves link previews for Discord, adds IME language support, and addresses common user-reported bugs for a smoother building experience."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: New Organization Sharing and Local Development Improvements in GitHub Spark
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-05 18:14:35 +00:00
-permalink: "/2025-09-05-New-Organization-Sharing-and-Local-Development-Improvements-in-GitHub-Spark.html"
-categories: ["Coding", "DevOps"]
-tags: ["App Deployment", "Bug Fixes", "Codespaces", "Coding", "Collaboration", "Developer Tools", "DevOps", "Discord Integration", "GitHub Spark", "IME Support", "Iteration Panel", "Local Development", "News", "npm", "Organization Sharing", "Version Control", "Workflow Improvement"]
-tags_normalized: ["app deployment", "bug fixes", "codespaces", "coding", "collaboration", "developer tools", "devops", "discord integration", "github spark", "ime support", "iteration panel", "local development", "news", "npm", "organization sharing", "version control", "workflow improvement"]
+permalink: /coding/news/New-Organization-Sharing-and-Local-Development-Improvements-in-GitHub-Spark
+tags:
+- App Deployment
+- Bug Fixes
+- Codespaces
+- Coding
+- Collaboration
+- Developer Tools
+- DevOps
+- Discord Integration
+- GitHub Spark
+- IME Support
+- Iteration Panel
+- Local Development
+- News
+- npm
+- Organization Sharing
+- Version Control
+- Workflow Improvement
+section_names:
+- coding
+- devops
 ---
-
 Allison details recent updates to GitHub Spark that enhance organizational sharing, local development, and workflow visibility, delivering a more seamless developer experience.<!--excerpt_end-->
 
 # New Organization Sharing and Local Development Improvements in GitHub Spark

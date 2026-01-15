@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "ZaString: A Zero-Allocation Span-Based String Builder for .NET"
-description: "This community post by typicalyume introduces ZaString, a newly released .NET library that focuses on building strings with zero heap allocations by leveraging Span, ReadOnlySpan, and ISpanFormattable. The author outlines the library's API, performance goals, practical usage scenarios, and its differentiation from other libraries like ZString and StringBuilder. Discussion covers technical design choices, API ergonomics, memory safety, interop opportunities, and performance considerations for garbage collection avoidance. Community feedback explores trade-offs, limitations (such as stackalloc size), and scenarios for high-performance .NET applications."
-author: "typicalyume"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'ZaString: A Zero-Allocation Span-Based String Builder for .NET'
+author: typicalyume
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-08 09:05:50 +00:00
-permalink: "/2025-08-08-ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET.html"
-categories: ["Coding"]
-tags: [".NET", "API Design", "ArrayPool", "Benchmarks", "Buffer Management", "C#", "Coding", "Community", "Garbage Collection", "ISpanFormattable", "Logging", "NuGet", "Performance", "ReadOnlySpan", "Serialization", "Span", "Stackalloc", "StringBuilder", "ZaString", "Zero Allocation", "ZString"]
-tags_normalized: ["dotnet", "api design", "arraypool", "benchmarks", "buffer management", "csharp", "coding", "community", "garbage collection", "ispanformattable", "logging", "nuget", "performance", "readonlyspan", "serialization", "span", "stackalloc", "stringbuilder", "zastring", "zero allocation", "zstring"]
+permalink: /coding/community/ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET
+tags:
+- .NET
+- API Design
+- ArrayPool
+- Benchmarks
+- Buffer Management
+- C#
+- Coding
+- Community
+- Garbage Collection
+- ISpanFormattable
+- Logging
+- NuGet
+- Performance
+- ReadOnlySpan
+- Serialization
+- Span
+- Stackalloc
+- StringBuilder
+- ZaString
+- Zero Allocation
+- ZString
+section_names:
+- coding
 ---
-
 typicalyume presents ZaString, a Span-powered zero-allocation string helper for .NET, and invites detailed feedback from the developer community on its API, safety, and performance.<!--excerpt_end-->
 
 # ZaString: A Zero-Allocation Span-Based String Builder for .NET

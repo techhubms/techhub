@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite"
-description: "This session from Microsoft Ignite features Talhah Mir and the Microsoft Purview team discussing newly announced data security and governance capabilities. The discussion emphasizes the importance of strong data protection as a foundation for responsible AI adoption, showcasing how Microsoft Purview aims to help organizations innovate confidently while maintaining robust security and governance standards."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MGQegwNKRS4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=MGQegwNKRS4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-10-03 17:00:26 +00:00
-permalink: "/2025-10-03-Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite.html"
-categories: ["Security"]
-tags: ["AI", "Compliance", "Data Governance", "Data Security", "Governance Tools", "Information Protection", "Microsoft", "Microsoft Ignite", "Microsoft Purview", "Microsoft Security", "Responsible AI", "Security", "Security Announcements", "Talhah Mir", "Videos"]
-tags_normalized: ["ai", "compliance", "data governance", "data security", "governance tools", "information protection", "microsoft", "microsoft ignite", "microsoft purview", "microsoft security", "responsible ai", "security", "security announcements", "talhah mir", "videos"]
+permalink: /security/videos/Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite
+tags:
+- AI
+- Compliance
+- Data Governance
+- Data Security
+- Governance Tools
+- Information Protection
+- Microsoft
+- Microsoft Ignite
+- Microsoft Purview
+- Microsoft Security
+- Responsible AI
+- Security
+- Security Announcements
+- Talhah Mir
+- Videos
+section_names:
+- security
 ---
-
 Microsoft Events spotlights Talhah Mir and the Microsoft Purview team at Ignite as they unveil new data security and governance capabilities, essential for responsible AI adoption.<!--excerpt_end-->
 
 {% youtube MGQegwNKRS4 %}

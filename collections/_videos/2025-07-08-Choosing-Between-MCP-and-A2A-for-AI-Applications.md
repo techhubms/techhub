@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Choosing Between MCP and A2A for AI Applications"
-description: "This video by John Savill explores whether to use the Microsoft Cloud Platform (MCP), the Agent-to-Agent (A2A) protocol, or both when building AI and generative AI applications with large language models (LLMs). It discusses the differences between the platforms, practical applications, and integration strategies, helping developers and architects understand the best fit for their scenarios."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IMcDEvXRBkY"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Choosing Between MCP and A2A for AI Applications
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=IMcDEvXRBkY
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-08 15:19:43 +00:00
-permalink: "/2025-07-08-Choosing-Between-MCP-and-A2A-for-AI-Applications.html"
-categories: ["AI", "Azure"]
-tags: ["A2A", "Agent Card", "AI", "AI Agents", "AI Application Architecture", "Artifacts", "Azure", "Generative AI", "Integration", "Large Language Models", "LLM", "MCP", "Messaging", "Microsoft AI", "Microsoft Cloud Platform", "Protocols", "Tasks", "Videos"]
-tags_normalized: ["a2a", "agent card", "ai", "ai agents", "ai application architecture", "artifacts", "azure", "generative ai", "integration", "large language models", "llm", "mcp", "messaging", "microsoft ai", "microsoft cloud platform", "protocols", "tasks", "videos"]
+permalink: /ai/videos/Choosing-Between-MCP-and-A2A-for-AI-Applications
+tags:
+- A2A
+- Agent Card
+- AI
+- AI Agents
+- AI Application Architecture
+- Artifacts
+- Azure
+- Generative AI
+- Integration
+- Large Language Models
+- LLM
+- MCP
+- Messaging
+- Microsoft AI
+- Microsoft Cloud Platform
+- Protocols
+- Tasks
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 John Savill examines the trade-offs between Microsoft Cloud Platform (MCP) and the Agent-to-Agent (A2A) protocol in the context of AI applications, offering developers practical insights for decision-making.<!--excerpt_end-->
 
 {% youtube IMcDEvXRBkY %}

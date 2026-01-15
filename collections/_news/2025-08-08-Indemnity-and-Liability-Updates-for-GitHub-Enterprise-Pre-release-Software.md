@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Indemnity and Liability Updates for GitHub Enterprise Pre-release Software"
-description: "This announcement details changes to GitHub's Pre-release License Terms, specifically for enterprise and volume licensing customers. The new terms introduce indemnity coverage and remove previous liability limitations, making it easier for organizations under a GitHub Customer Agreement or Microsoft volume licensing agreement to test GitHub's pre-release features with greater legal protection. Individual and non-enterprise users are unaffected by these updates."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Indemnity and Liability Updates for GitHub Enterprise Pre-release Software
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-08 16:05:36 +00:00
-permalink: "/2025-08-08-Indemnity-and-Liability-Updates-for-GitHub-Enterprise-Pre-release-Software.html"
-categories: ["DevOps"]
-tags: ["DevOps", "Enterprise Licensing", "GitHub", "Indemnity", "Legal Update", "License Terms", "Microsoft Volume Licensing", "News", "Pre Release Software", "Risk Management", "Software Agreements", "Volume Licensing"]
-tags_normalized: ["devops", "enterprise licensing", "github", "indemnity", "legal update", "license terms", "microsoft volume licensing", "news", "pre release software", "risk management", "software agreements", "volume licensing"]
+permalink: /devops/news/Indemnity-and-Liability-Updates-for-GitHub-Enterprise-Pre-release-Software
+tags:
+- DevOps
+- Enterprise Licensing
+- GitHub
+- Indemnity
+- Legal Update
+- License Terms
+- Microsoft Volume Licensing
+- News
+- Pre Release Software
+- Risk Management
+- Software Agreements
+- Volume Licensing
+section_names:
+- devops
 ---
-
 Allison explains recent changes to GitHub's pre-release license terms, highlighting added indemnity and changes to liability for enterprise volume licensing customers.<!--excerpt_end-->
 
 # Indemnity and Liability Updates for GitHub Enterprise Pre-release Software

@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Kong Adds Model Context Protocol Support to Insomnia API Tool"
-description: "This article covers Kong Inc.'s integration of Model Context Protocol (MCP) support into Insomnia 12, their open source API design and testing tool. The update enables DevOps teams to build, test, validate, and secure MCP clients and servers for AI-based APIs. The piece explores new features including direct MCP server connectivity, mock server creation, Git Sync for version control, and automation around commit management. The context and implications for security, compliance, and future developments in DevOps and AI API management are discussed."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/kong-adds-mcp-support-to-tool-for-designing-and-testing-apis/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Kong Adds Model Context Protocol Support to Insomnia API Tool
+author: Mike Vizard
+canonical_url: https://devops.com/kong-adds-mcp-support-to-tool-for-designing-and-testing-apis/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-04 14:00:36 +00:00
-permalink: "/2025-11-04-Kong-Adds-Model-Context-Protocol-Support-to-Insomnia-API-Tool.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI APIs", "AI Security", "Anthropic", "API Debugging", "API Design", "API Management", "API Observability", "API Testing", "Automation", "Blogs", "Business Of DevOps", "Compliance", "DevOps", "Git Sync", "Insomnia", "Insomnia 12", "Insomnia MCP Support", "Kong Inc", "Large Language Models", "LLM Integration", "Marco Palladino", "MCP", "MCP Clients", "MCP Servers", "Mock Servers", "Open Source Tools", "RBAC", "Role Based Access Control", "Social Facebook", "Social LinkedIn", "Social X", "Version Control"]
-tags_normalized: ["ai", "ai apis", "ai security", "anthropic", "api debugging", "api design", "api management", "api observability", "api testing", "automation", "blogs", "business of devops", "compliance", "devops", "git sync", "insomnia", "insomnia 12", "insomnia mcp support", "kong inc", "large language models", "llm integration", "marco palladino", "mcp", "mcp clients", "mcp servers", "mock servers", "open source tools", "rbac", "role based access control", "social facebook", "social linkedin", "social x", "version control"]
+permalink: /ai/blogs/Kong-Adds-Model-Context-Protocol-Support-to-Insomnia-API-Tool
+tags:
+- AI
+- AI APIs
+- AI Security
+- Anthropic
+- API Debugging
+- API Design
+- API Management
+- API Observability
+- API Testing
+- Automation
+- Blogs
+- Business Of DevOps
+- Compliance
+- DevOps
+- Git Sync
+- Insomnia
+- Insomnia 12
+- Insomnia MCP Support
+- Kong Inc
+- Large Language Models
+- LLM Integration
+- Marco Palladino
+- MCP
+- MCP Clients
+- MCP Servers
+- Mock Servers
+- Open Source Tools
+- RBAC
+- Role Based Access Control
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Version Control
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard details how Kong's integration of Model Context Protocol (MCP) into Insomnia 12 enhances support for AI-driven APIs by improving API testing, configuration, and security for DevOps teams.<!--excerpt_end-->
 
 # Kong Adds Model Context Protocol Support to Insomnia API Tool

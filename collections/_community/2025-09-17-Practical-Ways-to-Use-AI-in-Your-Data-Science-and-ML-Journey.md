@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Practical Ways to Use AI in Your Data Science and ML Journey"
-description: "This announcement details a series of interactive Discord events aimed at guiding learners in applying AI to their studies in data science and machine learning. The events combine open-source Microsoft curriculums, practical Copilot showcases, and hands-on activities for skill development in a community setting."
-author: "bethanyjep"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Practical Ways to Use AI in Your Data Science and ML Journey
+author: bethanyjep
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 12:52:18 +00:00
-permalink: "/2025-09-17-Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey.html"
-categories: ["AI", "GitHub Copilot", "ML"]
-tags: ["AI", "AI Agents", "Azure AI Foundry", "Community", "Curriculum", "Data Science", "Data Wrangler", "GitHub Copilot", "Hands On Workshop", "Jupyter Notebooks", "Learning Community", "Machine Learning", "Microsoft", "ML", "Practical AI", "Python", "Study Plans", "VS Code"]
-tags_normalized: ["ai", "ai agents", "azure ai foundry", "community", "curriculum", "data science", "data wrangler", "github copilot", "hands on workshop", "jupyter notebooks", "learning community", "machine learning", "microsoft", "ml", "practical ai", "python", "study plans", "vs code"]
+permalink: /github-copilot/community/Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey
+tags:
+- AI
+- AI Agents
+- Azure AI Foundry
+- Community
+- Curriculum
+- Data Science
+- Data Wrangler
+- GitHub Copilot
+- Hands On Workshop
+- Jupyter Notebooks
+- Learning Community
+- Machine Learning
+- Microsoft
+- ML
+- Practical AI
+- Python
+- Study Plans
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
 ---
-
 Bethanyjep introduces a community event series focused on applying AI in practical ways to data science and machine learning learning paths, featuring GitHub Copilot demos and Microsoft-led curriculums.<!--excerpt_end-->
 
 # Practical Ways to Use AI in Your Data Science and ML Journey

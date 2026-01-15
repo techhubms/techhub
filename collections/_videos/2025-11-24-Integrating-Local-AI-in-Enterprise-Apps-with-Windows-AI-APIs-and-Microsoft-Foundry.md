@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Integrating Local AI in Enterprise Apps with Windows AI APIs and Microsoft Foundry"
-description: "This session from Microsoft Ignite 2025 guides developers through building and customizing AI features directly into enterprise applications using Windows AI APIs and Microsoft Foundry on Copilot+ PCs. Explore how to leverage built-in models like Phi Silica for language and vision capabilities, enable turnkey features such as summarization and image understanding with minimal code, and adapt models using LoRA fine-tuning and app content search—with no cloud hosting or ML expertise needed. Includes demonstrations of RAG (Retrieval Augmented Generation), model customization, and enterprise-grade administrative controls."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0r-ZypiCtFk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Integrating Local AI in Enterprise Apps with Windows AI APIs and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=0r-ZypiCtFk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:06:23 +00:00
-permalink: "/2025-11-24-Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry.html"
-categories: ["AI", "Coding"]
-tags: ["Administrative Controls", "AI", "App Content Search", "Coding", "Copilot+ PCs", "Enterprise Apps", "Image Understanding", "Language Models", "LoRA Fine Tuning", "Microsoft Foundry", "MSIgnite", "On Device AI", "Performance Optimization", "Phi Silica", "Retrieval Augmented Generation", "ScalewithcloudandAIendpoints", "Summarization", "Videos", "Vision Models", "Windows AI APIs"]
-tags_normalized: ["administrative controls", "ai", "app content search", "coding", "copilotplus pcs", "enterprise apps", "image understanding", "language models", "lora fine tuning", "microsoft foundry", "msignite", "on device ai", "performance optimization", "phi silica", "retrieval augmented generation", "scalewithcloudandaiendpoints", "summarization", "videos", "vision models", "windows ai apis"]
+permalink: /ai/videos/Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry
+tags:
+- Administrative Controls
+- AI
+- App Content Search
+- Coding
+- Copilot+ PCs
+- Enterprise Apps
+- Image Understanding
+- Language Models
+- LoRA Fine Tuning
+- Microsoft Foundry
+- MSIgnite
+- On Device AI
+- Performance Optimization
+- Phi Silica
+- Retrieval Augmented Generation
+- ScalewithcloudandAIendpoints
+- Summarization
+- Videos
+- Vision Models
+- Windows AI APIs
+section_names:
+- ai
+- coding
 ---
-
 Microsoft Events presents an in-depth session on building and customizing local AI within enterprise apps using Windows AI APIs and Foundry, featuring speakers Connor Al-Joundi and Ivan Razumenic.<!--excerpt_end-->
 
 {% youtube 0r-ZypiCtFk %}

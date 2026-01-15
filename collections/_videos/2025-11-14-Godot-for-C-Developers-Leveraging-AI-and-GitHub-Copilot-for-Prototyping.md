@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping"
-description: "This session guides C# developers new to Godot through creating a working game prototype. It highlights the use of AI tools to shorten the learning curve and demonstrates how to effectively use GitHub Copilot for coding, learning, and debugging in .NET development. Participants will also get an overview of the latest advancements in .NET, C#, F#, and Visual Studio, with practical guidance on orchestrating cloud-native apps, building cross-platform solutions, and using modern coding practices."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=utOalOGsRXc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=utOalOGsRXc
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:50 +00:00
-permalink: "/2025-11-14-Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "AI", "AI Tools", "ASP.NET Core 10", "C#", "Coding", "Debugging", "Developer Productivity", "F# 10", "Game Development", "GitHub Copilot", "Godot", "Prototyping", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "ai", "ai tools", "aspdotnet core 10", "csharp", "coding", "debugging", "developer productivity", "fsharp 10", "game development", "github copilot", "godot", "prototyping", "videos", "vs"]
+permalink: /github-copilot/videos/Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- AI
+- AI Tools
+- ASP.NET Core 10
+- C#
+- Coding
+- Debugging
+- Developer Productivity
+- F# 10
+- Game Development
+- GitHub Copilot
+- Godot
+- Prototyping
+- Videos
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this video, dotnet walks C# developers through building playable prototypes in Godot, emphasizing how AI and GitHub Copilot make learning and development faster and smoother.<!--excerpt_end-->
 
 {% youtube utOalOGsRXc %}

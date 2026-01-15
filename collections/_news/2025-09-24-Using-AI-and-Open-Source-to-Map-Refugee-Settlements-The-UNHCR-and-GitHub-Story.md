@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Using AI and Open Source to Map Refugee Settlements: The UNHCR and GitHub Story"
-description: "This article explores how the UNHCR, supported by GitHub and Microsoft AI for Good Lab, leveraged drones, artificial intelligence, and open collaboration to map refugee settlements in Kenya. By integrating hand-annotated drone imagery and open-source machine learning models, the project offers reusable tools for humanitarian aid and sustainable urban planning."
-author: "Sidney Espinosa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Using AI and Open Source to Map Refugee Settlements: The UNHCR and GitHub Story'
+author: Sidney Espinosa
+canonical_url: https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-09-24 16:12:47 +00:00
-permalink: "/2025-09-24-Using-AI-and-Open-Source-to-Map-Refugee-Settlements-The-UNHCR-and-GitHub-Story.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Collaboration", "Community Development", "Data Science", "Drone Imagery", "GitHub", "GitHub Copilot", "Humanitarian Mapping", "Machine Learning", "Microsoft AI For Good Lab", "News", "Open Source", "OpenStreetMap", "Refugee Support", "Social Impact", "Sustainable Planning", "UNHCR"]
-tags_normalized: ["ai", "collaboration", "community development", "data science", "drone imagery", "github", "github copilot", "humanitarian mapping", "machine learning", "microsoft ai for good lab", "news", "open source", "openstreetmap", "refugee support", "social impact", "sustainable planning", "unhcr"]
+permalink: /github-copilot/news/Using-AI-and-Open-Source-to-Map-Refugee-Settlements-The-UNHCR-and-GitHub-Story
+tags:
+- AI
+- Collaboration
+- Community Development
+- Data Science
+- Drone Imagery
+- GitHub
+- GitHub Copilot
+- Humanitarian Mapping
+- Machine Learning
+- Microsoft AI For Good Lab
+- News
+- Open Source
+- OpenStreetMap
+- Refugee Support
+- Social Impact
+- Sustainable Planning
+- UNHCR
+section_names:
+- ai
+- github-copilot
 ---
-
 Sidney Espinosa details how UNHCR, in partnership with GitHub and Microsoft AI for Good Lab, used drone imagery, AI, and open source tools—including GitHub Copilot—to empower refugees in Kenya through intelligent mapping solutions.<!--excerpt_end-->
 
 # Using AI and Open Source to Map Refugee Settlements: The UNHCR and GitHub Story

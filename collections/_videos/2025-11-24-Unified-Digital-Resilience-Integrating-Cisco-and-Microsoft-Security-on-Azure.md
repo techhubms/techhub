@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure"
-description: "This session from Microsoft Ignite 2025 examines how Cisco and Microsoft combine their technologies to deliver unified digital resilience, focusing on the integration of security, automation, and AI-driven insights within Microsoft Azure. The presentation covers collaborative threat modeling, building a proactive security matrix, and real-world customer examples demonstrating accelerated threat detection and operational efficiencies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OLKCfSNivXc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=OLKCfSNivXc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:37:38 +00:00
-permalink: "/2025-11-24-Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Security", "Automation", "Azure", "Azure Security", "Business Continuity", "Cisco", "Cloud Security", "Collaborative Security", "Digital Resilience", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Partners", "Security", "Security Matrix", "Security Operations", "Security Response", "Threat Modeling", "Unified Threat Detection", "Videos"]
-tags_normalized: ["ai", "ai security", "automation", "azure", "azure security", "business continuity", "cisco", "cloud security", "collaborative security", "digital resilience", "microsoft ignite", "msignite", "operational efficiency", "partners", "security", "security matrix", "security operations", "security response", "threat modeling", "unified threat detection", "videos"]
+permalink: /ai/videos/Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure
+tags:
+- AI
+- AI Security
+- Automation
+- Azure
+- Azure Security
+- Business Continuity
+- Cisco
+- Cloud Security
+- Collaborative Security
+- Digital Resilience
+- Microsoft Ignite
+- MSIgnite
+- Operational Efficiency
+- Partners
+- Security
+- Security Matrix
+- Security Operations
+- Security Response
+- Threat Modeling
+- Unified Threat Detection
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a Microsoft Ignite session with speakers Richard Diver and Anthony Pierce, highlighting how Cisco and Microsoft integrate security, automation, and AI-driven insights on Azure for unified digital resilience.<!--excerpt_end-->
 
 {% youtube OLKCfSNivXc %}

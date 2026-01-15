@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Build Smarter LLMs with Local MCP Servers in .NET"
-description: "HassanRezkHabib presents a YouTube tutorial on building a local MCP server in .NET that communicates directly with a locally-run LLM. The video covers server setup, function exposure, structured prompt integration, and triggering code without relying on cloud APIs, helping to create more deterministic offline LLM solutions."
-author: "HassanRezkHabib"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mgbojy/build_smarter_llms_with_local_mcp_servers_in_net/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Build Smarter LLMs with Local MCP Servers in .NET
+author: HassanRezkHabib
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mgbojy/build_smarter_llms_with_local_mcp_servers_in_net/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-03 05:51:52 +00:00
-permalink: "/2025-08-03-Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "C#", "Code Samples", "Coding", "Community", "Deterministic AI", "Function Triggering", "LLM", "Local Deployment", "MCP Server", "Offline AI", "Structured Prompts"]
-tags_normalized: ["dotnet", "ai", "csharp", "code samples", "coding", "community", "deterministic ai", "function triggering", "llm", "local deployment", "mcp server", "offline ai", "structured prompts"]
+permalink: /ai/community/Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET
+tags:
+- .NET
+- AI
+- C#
+- Code Samples
+- Coding
+- Community
+- Deterministic AI
+- Function Triggering
+- LLM
+- Local Deployment
+- MCP Server
+- Offline AI
+- Structured Prompts
+section_names:
+- ai
+- coding
 ---
-
 In this community tutorial, HassanRezkHabib explains how to build a local MCP server in .NET to connect with local LLMs. The video provides practical guidance for developers aiming for more deterministic and offline LLM workflows.<!--excerpt_end-->
 
 # Build Smarter LLMs with Local MCP Servers in .NET

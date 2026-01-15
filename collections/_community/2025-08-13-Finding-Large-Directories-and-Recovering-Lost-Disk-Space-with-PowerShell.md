@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
-author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Finding Large Directories and Recovering Lost Disk Space with PowerShell
+author: LainRobertson
+canonical_url: https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 12:30:08 +00:00
-permalink: "/2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
-categories: ["Coding"]
-tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
-tags_normalized: ["dotnet", "automation", "coding", "community", "directory size", "disk space management", "filesystem analysis", "get directorysize", "get directorytreesize", "module development", "powershell", "reparse points", "scripting", "systemdotiodotdirectory", "windows"]
+permalink: /coding/community/Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell
+tags:
+- .NET
+- Automation
+- Coding
+- Community
+- Directory Size
+- Disk Space Management
+- Filesystem Analysis
+- Get DirectorySize
+- Get DirectoryTreeSize
+- Module Development
+- PowerShell
+- Reparse Points
+- Scripting
+- System.IO.Directory
+- Windows
+section_names:
+- coding
 ---
-
 LainRobertson shares a PowerShell module and examples for analyzing large directories and recovering lost disk space, offering practical insights for Windows administrators and developers.<!--excerpt_end-->
 
 # Finding Large Directories and Recovering Lost Disk Space with PowerShell
@@ -47,14 +59,13 @@ function Get-DirectorySize {
         [System.IO.FileInfo]::new(---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -71,14 +82,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
             $Summary.Size += ---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -110,14 +120,13 @@ function Get-DirectoryTreeSize {
         if (0 -eq (([System.IO.DirectoryInfo]::new(---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -133,14 +142,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
             Get-DirectoryTreeSize -Path ---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -156,14 +164,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
                 $Summary.TotalCount += ---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -179,14 +186,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
                 $Summary.TotalSize += ---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
@@ -202,14 +208,13 @@ This post appeared first on "Microsoft Tech Community". [Read the entire article
                 ---
 layout: "post"
 title: "Finding Large Directories and Recovering Lost Disk Space with PowerShell"
-description: "This practical guide by LainRobertson demonstrates how to identify large directories and analyze disk space usage using a custom PowerShell module. The post explains the reasoning behind the approach, shares complete code examples, and walks through real-world use cases for filesystem analysis and troubleshooting in Windows environments."
 author: "LainRobertson"
-excerpt_separator: <!--excerpt_end-->
+excerpt_separator: "<!--excerpt_end-->"
 canonical_url: "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
-date: 2025-08-13 12:30:08 +00:00
+date: "2025-08-13 12:30:08 +00:00"
 permalink: "2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]

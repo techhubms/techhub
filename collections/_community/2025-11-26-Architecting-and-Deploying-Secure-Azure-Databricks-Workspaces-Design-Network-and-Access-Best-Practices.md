@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices"
-description: "This guide offers step-by-step instructions and architectural recommendations for designing, securing, and deploying Azure Databricks environments. Covering workspace organization, network isolation, access controls, and best practices for data integration and migration, it emphasizes robust governance, least privilege, and scalable architectures built on Microsoft Azure using Unity Catalog, VNets, private endpoints, and resource group management."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices'
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 22:54:24 +00:00
-permalink: "/2025-11-26-Architecting-and-Deploying-Secure-Azure-Databricks-Workspaces-Design-Network-and-Access-Best-Practices.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Connector", "Azure", "Azure Databricks", "Azure Firewall", "CIDR Planning", "Cluster Policy", "Community", "Data Migration", "Databricks Workspace", "ETL Pipeline", "ExpressRoute", "Least Privilege", "Machine Learning", "Managed Identity", "ML", "Network Security", "Private Endpoint", "Private Link", "Security", "Serverless Compute", "Storage Account", "Unity Catalog", "User Defined Routes", "Virtual Network", "VNet Injection"]
-tags_normalized: ["access connector", "azure", "azure databricks", "azure firewall", "cidr planning", "cluster policy", "community", "data migration", "databricks workspace", "etl pipeline", "expressroute", "least privilege", "machine learning", "managed identity", "ml", "network security", "private endpoint", "private link", "security", "serverless compute", "storage account", "unity catalog", "user defined routes", "virtual network", "vnet injection"]
+permalink: /ml/community/Architecting-and-Deploying-Secure-Azure-Databricks-Workspaces-Design-Network-and-Access-Best-Practices
+tags:
+- Access Connector
+- Azure
+- Azure Databricks
+- Azure Firewall
+- CIDR Planning
+- Cluster Policy
+- Community
+- Data Migration
+- Databricks Workspace
+- ETL Pipeline
+- ExpressRoute
+- Least Privilege
+- Machine Learning
+- Managed Identity
+- ML
+- Network Security
+- Private Endpoint
+- Private Link
+- Security
+- Serverless Compute
+- Storage Account
+- Unity Catalog
+- User Defined Routes
+- Virtual Network
+- VNet Injection
+section_names:
+- azure
+- ml
+- security
 ---
-
 Rafia Aqil and a team of Microsoft experts deliver a comprehensive technical guide to designing, securing, and deploying Azure Databricks environments, spotlighting best practices for robust architecture and effective governance.<!--excerpt_end-->
 
 # Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices

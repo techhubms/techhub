@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Practical PostgreSQL and LLM Observability on Azure"
-description: "This session from Microsoft Ignite 2025 explores strategies for monitoring and optimizing PostgresSQL performance within Azure, focusing on workloads that leverage GenAI applications, vector representations, and large language models. It demonstrates how Datadog's monitoring tools offer insights into Azure-based deployments, including metric tracking, dashboard creation, alerting, and troubleshooting misconfigurations. Real-world scenarios such as code scalability challenges, blind spots in testing, and troubleshooting database issues are addressed, providing actionable recommendations for developers and DevOps engineers working with advanced AI and database workloads in the Microsoft cloud ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EjdRRROAiUI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Practical PostgreSQL and LLM Observability on Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=EjdRRROAiUI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:00:54 +00:00
-permalink: "/2025-11-19-Practical-PostgreSQL-and-LLM-Observability-on-Azure.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azure", "Cloud Deployment", "Code Testing", "Dashboards", "Database Misconfiguration", "Database Performance", "Datadog", "DevOps", "GenAI", "LLM", "Microsoft Ignite", "Monitoring", "MSIgnite", "Observability", "Operational Analytics", "Performance Metrics", "PostgresSQL", "SQL Query Debugging", "Unifyyourdataplatform", "Vector Representation", "Videos"]
-tags_normalized: ["ai", "azure", "cloud deployment", "code testing", "dashboards", "database misconfiguration", "database performance", "datadog", "devops", "genai", "llm", "microsoft ignite", "monitoring", "msignite", "observability", "operational analytics", "performance metrics", "postgressql", "sql query debugging", "unifyyourdataplatform", "vector representation", "videos"]
+permalink: /ai/videos/Practical-PostgreSQL-and-LLM-Observability-on-Azure
+tags:
+- AI
+- Azure
+- Cloud Deployment
+- Code Testing
+- Dashboards
+- Database Misconfiguration
+- Database Performance
+- Datadog
+- DevOps
+- GenAI
+- LLM
+- Microsoft Ignite
+- Monitoring
+- MSIgnite
+- Observability
+- Operational Analytics
+- Performance Metrics
+- PostgresSQL
+- SQL Query Debugging
+- Unifyyourdataplatform
+- Vector Representation
+- Videos
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Microsoft Events presents a practical guide to monitoring PostgresSQL and LLM workloads on Azure, featuring Datadog’s tooling and real-world troubleshooting tips for GenAI applications, led by Ryan MacLean.<!--excerpt_end-->
 
 {% youtube EjdRRROAiUI %}

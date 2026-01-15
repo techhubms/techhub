@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building Finance Apps in VS Code with Agent Mode, Copilot Vision, and MCP"
-description: "This tutorial video demonstrates how to create a finance and budgeting app using Visual Studio Code's Agent Mode. It features deep dives into Copilot Vision, multi-agent collaboration, custom agents, and MCP server integration, highlighting a rapid development workflow from spreadsheets to app deployment and GitHub issue tracking. Viewers will learn how to use advanced AI-powered developer tools, manage models, and leverage real-time collaboration to streamline application creation inside VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5NxGqnTazR8"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Building Finance Apps in VS Code with Agent Mode, Copilot Vision, and MCP
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=5NxGqnTazR8
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-26 15:00:12 +00:00
-permalink: "/2025-11-26-Building-Finance-Apps-in-VS-Code-with-Agent-Mode-Copilot-Vision-and-MCP.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentmode", "AI", "AI Development", "App Debugging", "BYOK", "Coding", "Copilot Vision", "Custom Agents", "Customvision", "Demo", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Issue Tracking", "Mcp", "Microsoft", "Model Management", "Multi Agent Collaboration", "Software Developer", "Source Control", "Tutorial", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agent mode", "agentmode", "ai", "ai development", "app debugging", "byok", "coding", "copilot vision", "custom agents", "customvision", "demo", "developer", "developer tools", "github", "github copilot", "issue tracking", "mcp", "microsoft", "model management", "multi agent collaboration", "software developer", "source control", "tutorial", "videos", "vs code", "workflow automation"]
+permalink: /github-copilot/videos/Building-Finance-Apps-in-VS-Code-with-Agent-Mode-Copilot-Vision-and-MCP
+tags:
+- Agent Mode
+- Agentmode
+- AI
+- AI Development
+- App Debugging
+- BYOK
+- Coding
+- Copilot Vision
+- Custom Agents
+- Customvision
+- Demo
+- Developer
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Issue Tracking
+- Mcp
+- Microsoft
+- Model Management
+- Multi Agent Collaboration
+- Software Developer
+- Source Control
+- Tutorial
+- Videos
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's Reynald Adolphe explores building a budgeting app using Agent Mode, Copilot Vision, custom agents, and MCP server integration, showcasing VS Code's AI-enhanced developer features.<!--excerpt_end-->
 
 {% youtube 5NxGqnTazR8 %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Postgres as a Distributed Cache Unlocks Speed and Simplicity for Modern .NET Workloads"
-description: "This article explores how .NET developers can leverage the Microsoft.Extensions.Caching.Postgres library to use Postgres databases as distributed caches. It explains performance trade-offs, configuration approaches, and integration with HybridCache, offering a practical perspective for building fast, scalable, and reliable caching solutions within modern .NET workloads."
-author: "JaredMeade"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/postgres-as-a-distributed-cache-unlocks-speed-and-simplicity-for/ba-p/4462139"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Postgres as a Distributed Cache Unlocks Speed and Simplicity for Modern .NET Workloads
+author: JaredMeade
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/postgres-as-a-distributed-cache-unlocks-speed-and-simplicity-for/ba-p/4462139
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-21 07:00:00 +00:00
-permalink: "/2025-10-21-Postgres-as-a-Distributed-Cache-Unlocks-Speed-and-Simplicity-for-Modern-NET-Workloads.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Cache Expiration", "Caching", "Coding", "Community", "Database", "Distributed Cache", "HybridCache", "Microsoft.Extensions.Caching.Postgres", "NuGet Packages", "Performance Optimization", "Postgres", "Redis", "SQL Server", "UNLOGGED Tables", "Write Ahead Logging"]
-tags_normalized: ["dotnet", "aspdotnet core", "cache expiration", "caching", "coding", "community", "database", "distributed cache", "hybridcache", "microsoftdotextensionsdotcachingdotpostgres", "nuget packages", "performance optimization", "postgres", "redis", "sql server", "unlogged tables", "write ahead logging"]
+permalink: /coding/community/Postgres-as-a-Distributed-Cache-Unlocks-Speed-and-Simplicity-for-Modern-NET-Workloads
+tags:
+- .NET
+- ASP.NET Core
+- Cache Expiration
+- Caching
+- Coding
+- Community
+- Database
+- Distributed Cache
+- HybridCache
+- Microsoft.Extensions.Caching.Postgres
+- NuGet Packages
+- Performance Optimization
+- Postgres
+- Redis
+- SQL Server
+- UNLOGGED Tables
+- Write Ahead Logging
+section_names:
+- coding
 ---
-
 JaredMeade demonstrates how .NET developers can use Microsoft.Extensions.Caching.Postgres to implement distributed caching with Postgres, highlighting performance, configuration flexibility, and seamless integration.<!--excerpt_end-->
 
 # Postgres as a Distributed Cache Unlocks Speed and Simplicity for Modern .NET Workloads

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Creating your first sample game with MonoGame"
-description: "This article introduces MonoGame, an open-source implementation of the Microsoft XNA 4.0 API, covering its evolution from Microsoft's XNA framework, how to set up the development environment with .NET 8 and MonoGame templates, and step-by-step instructions to create a basic cross-platform game sample. Readers will learn about project setup, core code structure, essential NuGet packages, and MonoGame tooling such as the Content Builder. The piece is aimed at .NET developers interested in game development or porting legacy XNA projects."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-your-first-sample-game-with-monogame/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: Creating your first sample game with MonoGame
+author: Andrew Lock
+canonical_url: https://andrewlock.net/creating-your-first-sample-game-with-monogame/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-03 09:00:00 +00:00
-permalink: "/2025-06-03-Creating-your-first-sample-game-with-MonoGame.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8", ".NET CLI", "Blogs", "C#", "Coding", "Content Pipeline", "Cross Platform", "DesktopGL", "Game Development", "JetBrains Rider", "MGCB", "Microsoft XNA", "MonoGame", "MonoGame Templates", "MSBuild", "NuGet", "OpenGL", "Project Setup", "Sample Application", "VS", "XNA 4.0 API"]
-tags_normalized: ["dotnet", "dotnet 8", "dotnet cli", "blogs", "csharp", "coding", "content pipeline", "cross platform", "desktopgl", "game development", "jetbrains rider", "mgcb", "microsoft xna", "monogame", "monogame templates", "msbuild", "nuget", "opengl", "project setup", "sample application", "vs", "xna 4dot0 api"]
+permalink: /coding/blogs/Creating-your-first-sample-game-with-MonoGame
+tags:
+- .NET
+- .NET 8
+- .NET CLI
+- Blogs
+- C#
+- Coding
+- Content Pipeline
+- Cross Platform
+- DesktopGL
+- Game Development
+- JetBrains Rider
+- MGCB
+- Microsoft XNA
+- MonoGame
+- MonoGame Templates
+- MSBuild
+- NuGet
+- OpenGL
+- Project Setup
+- Sample Application
+- VS
+- XNA 4.0 API
+section_names:
+- coding
 ---
-
 Andrew Lock offers a step-by-step introduction to MonoGame, explaining its XNA roots, .NET-based setup, essential tools, and sample project structure for modern cross-platform game development.<!--excerpt_end-->
 
 # Creating your first sample game with MonoGame

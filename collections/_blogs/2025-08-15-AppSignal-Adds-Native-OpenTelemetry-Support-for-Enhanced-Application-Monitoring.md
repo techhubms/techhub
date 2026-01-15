@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AppSignal Adds Native OpenTelemetry Support for Enhanced Application Monitoring"
-description: "This article discusses how AppSignal has integrated OpenTelemetry into its application performance monitoring platform. The update streamlines collecting telemetry data across a variety of programming languages, making observability more accessible to DevOps teams. The piece also addresses the implications of increased code generation driven by AI and why scalable monitoring is crucial."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: AppSignal Adds Native OpenTelemetry Support for Enhanced Application Monitoring
+author: Mike Vizard
+canonical_url: https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-15 15:57:54 +00:00
-permalink: "/2025-08-15-AppSignal-Adds-Native-OpenTelemetry-Support-for-Enhanced-Application-Monitoring.html"
-categories: ["DevOps"]
-tags: ["AI", "AI in Software Development", "Application Monitoring", "AppSignal", "Blogs", "CNCF", "DevOps", "Elixir", "Go", "Instrumentation", "Java", "Monitoring And Analytics", "Node.js", "Observability", "OpenTelemetry", "Performance Metrics", "PHP", "Ruby", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry Data", "Zero Configuration"]
-tags_normalized: ["ai", "ai in software development", "application monitoring", "appsignal", "blogs", "cncf", "devops", "elixir", "go", "instrumentation", "java", "monitoring and analytics", "nodedotjs", "observability", "opentelemetry", "performance metrics", "php", "ruby", "social facebook", "social linkedin", "social x", "telemetry data", "zero configuration"]
+permalink: /devops/blogs/AppSignal-Adds-Native-OpenTelemetry-Support-for-Enhanced-Application-Monitoring
+tags:
+- AI
+- AI in Software Development
+- Application Monitoring
+- AppSignal
+- Blogs
+- CNCF
+- DevOps
+- Elixir
+- Go
+- Instrumentation
+- Java
+- Monitoring And Analytics
+- Node.js
+- Observability
+- OpenTelemetry
+- Performance Metrics
+- PHP
+- Ruby
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry Data
+- Zero Configuration
+section_names:
+- devops
 ---
-
 Mike Vizard covers AppSignal’s new OpenTelemetry integration, explaining how the improved instrumentation benefits DevOps teams and why observability is increasingly vital in modern, AI-driven development environments.<!--excerpt_end-->
 
 # AppSignal Adds Native OpenTelemetry Support for Enhanced Application Monitoring

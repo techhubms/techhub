@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Unlocking AI Practice Scale for Partners with Azure: Insights from MS Ignite"
-description: "This intermediate-level session from Microsoft Ignite targets partners seeking to drive scalable AI transformation for customers. It explores strategies for building AI Centers of Excellence, deploying Azure’s end-to-end AI stack, and leveraging innovative solutions such as multi-agent architectures and landing zones. The session highlights Microsoft and partner learnings, tools for tracking success, and actionable frameworks for measurable AI adoption."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RQAUF-cLEBI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Unlocking AI Practice Scale for Partners with Azure: Insights from MS Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=RQAUF-cLEBI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 16:00:20 +00:00
-permalink: "/2025-11-25-Unlocking-AI-Practice-Scale-for-Partners-with-Azure-Insights-from-MS-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Centers Of Excellence", "AI Deployment", "AI Landing Zone", "AI Transformation", "Azure", "Azure Accelerate", "Azure AI", "Business Impact", "Identity AI Factory", "KPI Tracking", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Multi Agent Models", "Packaged Learnings", "Partner Enablement", "User Adoption", "Videos"]
-tags_normalized: ["ai", "ai centers of excellence", "ai deployment", "ai landing zone", "ai transformation", "azure", "azure accelerate", "azure ai", "business impact", "identity ai factory", "kpi tracking", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "multi agent models", "packaged learnings", "partner enablement", "user adoption", "videos"]
+permalink: /ai/videos/Unlocking-AI-Practice-Scale-for-Partners-with-Azure-Insights-from-MS-Ignite
+tags:
+- AI
+- AI Centers Of Excellence
+- AI Deployment
+- AI Landing Zone
+- AI Transformation
+- Azure
+- Azure Accelerate
+- Azure AI
+- Business Impact
+- Identity AI Factory
+- KPI Tracking
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Multi Agent Models
+- Packaged Learnings
+- Partner Enablement
+- User Adoption
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events shares proven partner strategies for scaling AI practices, featuring Azure’s AI stack and actionable frameworks. Speakers Charlie Doubek, Swapnil Khopkar, and Kirill Kotlyarenko offer guidance from Microsoft Ignite.<!--excerpt_end-->
 
 {% youtube RQAUF-cLEBI %}

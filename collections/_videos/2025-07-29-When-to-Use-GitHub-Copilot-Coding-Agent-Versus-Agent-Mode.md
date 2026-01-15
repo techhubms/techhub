@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "When to Use GitHub Copilot Coding Agent Versus Agent Mode"
-description: "This video by GitHub explores the differences between GitHub Copilot’s coding agent and agent mode, illustrating when to use each for autonomous versus interactive development. Learn how to delegate tasks like testing migration while focusing on building more engaging projects."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=a1BR6K3E4zs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: When to Use GitHub Copilot Coding Agent Versus Agent Mode
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=a1BR6K3E4zs
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-29 14:00:00 +00:00
-permalink: "/2025-07-29-When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Autonomous Development", "Coding", "Coding Agent", "CodingAgent", "Copilot Agent Mode", "CopilotCodingAgent", "Developer Productivity", "Game Development", "GitHub", "GitHub Copilot", "Interactive Development", "Software Automation", "Testing Migration", "Videos"]
-tags_normalized: ["ai", "autonomous development", "coding", "coding agent", "codingagent", "copilot agent mode", "copilotcodingagent", "developer productivity", "game development", "github", "github copilot", "interactive development", "software automation", "testing migration", "videos"]
+permalink: /github-copilot/videos/When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode
+tags:
+- AI
+- Autonomous Development
+- Coding
+- Coding Agent
+- CodingAgent
+- Copilot Agent Mode
+- CopilotCodingAgent
+- Developer Productivity
+- Game Development
+- GitHub
+- GitHub Copilot
+- Interactive Development
+- Software Automation
+- Testing Migration
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this video, GitHub demonstrates the practical differences between Copilot coding agent and agent mode. Presented by GitHub, it guides viewers on choosing the right Copilot feature for automating tasks or enhancing interactive software development.<!--excerpt_end-->
 
 {% youtube a1BR6K3E4zs %}

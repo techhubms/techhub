@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Beyond Chat: Building Smarter AI Agents in .NET with AiGen"
-description: "In this session, Mark Miller, Frank Boucher, and David Pine discuss the development of AiGen, an AI-powered coding assistant for Visual Studio that departs from the traditional chat-based interface. The team shares technical challenges, C# implementation strategies, UX design choices, and practical lessons for integrating AI into .NET applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nKN4QxPcFlA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Beyond Chat: Building Smarter AI Agents in .NET with AiGen'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=nKN4QxPcFlA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-05 20:28:35 +00:00
-permalink: "/2025-11-05-Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agents", "AI", "AI Agents", "AI Integration", "AiGen", "C#", "Code Assistant", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Pair Programming", "Software Developer", "Software Development", "User Experience", "Videos", "VS"]
-tags_normalized: ["dotnet", "agents", "ai", "ai agents", "ai integration", "aigen", "csharp", "code assistant", "coding", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "microsoft", "pair programming", "software developer", "software development", "user experience", "videos", "vs"]
+permalink: /ai/videos/Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen
+tags:
+- .NET
+- Agents
+- AI
+- AI Agents
+- AI Integration
+- AiGen
+- C#
+- Code Assistant
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- Microsoft
+- Pair Programming
+- Software Developer
+- Software Development
+- User Experience
+- Videos
+- VS
+section_names:
+- ai
+- coding
 ---
-
 dotnet hosts Mark Miller, Frank Boucher, and David Pine as they explore the development of AiGen, an AI-driven coding assistant for Visual Studio, and the key insights for .NET developers.<!--excerpt_end-->
 
 {% youtube nKN4QxPcFlA %}

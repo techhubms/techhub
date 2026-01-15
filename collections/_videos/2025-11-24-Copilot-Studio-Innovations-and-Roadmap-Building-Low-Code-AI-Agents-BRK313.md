@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)"
-description: "This session from Microsoft Ignite 2025 dives into Copilot Studio, spotlighting advancements in agent development, generative orchestration, and enterprise-grade capabilities. The event covers new testing and debugging tools, governance features, and upcoming enhancements, providing actionable insights for developers and makers using Copilot Studio for low-code AI solutions."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KbsotdOgr5c"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=KbsotdOgr5c
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:26:53 +00:00
-permalink: "/2025-11-24-Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313.html"
-categories: ["AI"]
-tags: ["Agent Builder", "Agent Creation", "Agent Identity", "AI", "Automation", "Copilot Agents", "Copilot Studio", "Cost Management", "Debugging", "Enterprise AI", "Erez Altus", "Evaluation", "Generative Orchestration", "Governance", "Innovatewithlow", "Knowledge Capabilities", "Low Code Development", "Microsoft Ignite", "MSIgnite", "Omar Aftab", "Platform Governance", "Scoring Methods", "Testing Tools", "Videos", "Zac Cadi"]
-tags_normalized: ["agent builder", "agent creation", "agent identity", "ai", "automation", "copilot agents", "copilot studio", "cost management", "debugging", "enterprise ai", "erez altus", "evaluation", "generative orchestration", "governance", "innovatewithlow", "knowledge capabilities", "low code development", "microsoft ignite", "msignite", "omar aftab", "platform governance", "scoring methods", "testing tools", "videos", "zac cadi"]
+permalink: /ai/videos/Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313
+tags:
+- Agent Builder
+- Agent Creation
+- Agent Identity
+- AI
+- Automation
+- Copilot Agents
+- Copilot Studio
+- Cost Management
+- Debugging
+- Enterprise AI
+- Erez Altus
+- Evaluation
+- Generative Orchestration
+- Governance
+- Innovatewithlow
+- Knowledge Capabilities
+- Low Code Development
+- Microsoft Ignite
+- MSIgnite
+- Omar Aftab
+- Platform Governance
+- Scoring Methods
+- Testing Tools
+- Videos
+- Zac Cadi
+section_names:
+- ai
 ---
-
 Microsoft Events presents a hands-on session about the latest innovations in Copilot Studio—led by Omar Aftab, Erez Altus, and Zac Cadi—exploring building robust AI agents and platform enhancements.<!--excerpt_end-->
 
 {% youtube KbsotdOgr5c %}

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Public Preview: Enhanced Home Dashboard with My Work and Feed Tabs"
-description: "This news update introduces improvements to the home dashboard interface, featuring new 'My Work' and 'Feed' tabs. Users can now access a focused, customizable list of their pull requests and issues directly from the dashboard, streamlining workflow navigation and status tracking. These changes, available in public preview for select users, are designed to help developers quickly understand and act on their most important work items."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Public Preview: Enhanced Home Dashboard with My Work and Feed Tabs'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:50:18 +00:00
-permalink: "/2025-08-28-Public-Preview-Enhanced-Home-Dashboard-with-My-Work-and-Feed-Tabs.html"
-categories: ["DevOps"]
-tags: ["Dashboard", "Developer Productivity", "DevOps", "Feed Tab", "GitHub", "Issues", "My Work Tab", "News", "Public Preview", "Pull Requests", "Repository Management", "UI Improvements", "Workflow"]
-tags_normalized: ["dashboard", "developer productivity", "devops", "feed tab", "github", "issues", "my work tab", "news", "public preview", "pull requests", "repository management", "ui improvements", "workflow"]
+permalink: /devops/news/Public-Preview-Enhanced-Home-Dashboard-with-My-Work-and-Feed-Tabs
+tags:
+- Dashboard
+- Developer Productivity
+- DevOps
+- Feed Tab
+- GitHub
+- Issues
+- My Work Tab
+- News
+- Public Preview
+- Pull Requests
+- Repository Management
+- UI Improvements
+- Workflow
+section_names:
+- devops
 ---
-
 Allison reports on UI improvements to the GitHub home dashboard now available in public preview, highlighting new features that streamline how developers track and access their pull requests and issues.<!--excerpt_end-->
 
 # Public Preview: Enhanced Home Dashboard with My Work and Feed Tabs

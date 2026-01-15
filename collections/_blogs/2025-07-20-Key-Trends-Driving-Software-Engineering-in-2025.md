@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Key Trends Driving Software Engineering in 2025"
-description: "This post surveys the top trends shaping software engineering in 2025, including AI-assisted and LLM-native development, cloud- and edge-native architectures, DevSecOps and Zero Trust adoption, quantum computing experimentation, and responsible engineering. The article highlights how engineers must adapt by upskilling, focusing on prompt engineering, ethical frameworks, sustainable practices, and leveraging modular cloud-native technologies, with actionable suggestions for practitioners."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/key-trends-driving-software-engineering-in-2025/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Key Trends Driving Software Engineering in 2025
+author: Dellenny
+canonical_url: https://dellenny.com/key-trends-driving-software-engineering-in-2025/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-20 18:32:49 +00:00
-permalink: "/2025-07-20-Key-Trends-Driving-Software-Engineering-in-2025.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Powered Development", "Architecture", "Blogs", "Cloud Native", "Coding", "Composable Architecture", "Containerization", "Developer Experience", "DevOps", "DevSecOps", "Edge Computing", "ESG", "Ethical AI", "Kubernetes", "LLM Applications", "Low Code", "Microservices", "No Code", "Power Apps", "Prompt Engineering", "Quantum Software Engineering", "Security", "Serverless", "Software Engineering", "Sustainable Software", "Zero Trust"]
-tags_normalized: ["ai", "ai powered development", "architecture", "blogs", "cloud native", "coding", "composable architecture", "containerization", "developer experience", "devops", "devsecops", "edge computing", "esg", "ethical ai", "kubernetes", "llm applications", "low code", "microservices", "no code", "power apps", "prompt engineering", "quantum software engineering", "security", "serverless", "software engineering", "sustainable software", "zero trust"]
+permalink: /ai/blogs/Key-Trends-Driving-Software-Engineering-in-2025
+tags:
+- AI
+- AI Powered Development
+- Architecture
+- Blogs
+- Cloud Native
+- Coding
+- Composable Architecture
+- Containerization
+- Developer Experience
+- DevOps
+- DevSecOps
+- Edge Computing
+- ESG
+- Ethical AI
+- Kubernetes
+- LLM Applications
+- Low Code
+- Microservices
+- No Code
+- Power Apps
+- Prompt Engineering
+- Quantum Software Engineering
+- Security
+- Serverless
+- Software Engineering
+- Sustainable Software
+- Zero Trust
+section_names:
+- ai
+- coding
+- devops
+- security
 ---
-
 Dellenny outlines core trends for software engineers in 2025—from AI-powered development and DevSecOps to ethical and sustainable engineering—providing practitioners with the strategies and skills they should prioritize.<!--excerpt_end-->
 
 # Key Trends Driving Software Engineering in 2025

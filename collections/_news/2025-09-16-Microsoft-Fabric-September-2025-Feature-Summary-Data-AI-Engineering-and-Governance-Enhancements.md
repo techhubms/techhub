@@ -1,20 +1,57 @@
----
-layout: "post"
-title: "Microsoft Fabric September 2025 Feature Summary: Data, AI, Engineering and Governance Enhancements"
-description: "This comprehensive September 2025 update from the Microsoft Fabric team covers significant new features across the platform. Key highlights include upgrades to data engineering workflows, expanded AI-driven capabilities, enhancements in data security and governance, innovative developer tooling, and improvements to integration and automation. Deep dives cover Fabric CLI, Data Wrangler AI, mirroring, pipelines, CI/CD, and much more."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/september-2025-fabric-feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fabric September 2025 Feature Summary: Data, AI, Engineering and Governance Enhancements'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/september-2025-fabric-feature-summary/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:00:00 +00:00
-permalink: "/2025-09-16-Microsoft-Fabric-September-2025-Feature-Summary-Data-AI-Engineering-and-Governance-Enhancements.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["AI", "Apache Airflow", "Azure", "CI/CD", "CLI", "Coding", "Copilot", "Data Agent", "Data Engineering", "Data Governance", "Data Loss Prevention", "Data Wrangler", "Databricks", "Dataflow Gen2", "DevOps", "Entra ID", "Extensibility Toolkit", "Governance APIs", "Lakehouse", "Materialized Lake Views", "Microsoft Fabric", "Mirroring", "ML", "News", "Notebook", "OneLake", "Open Source", "Pipelines", "Purview", "Python", "Security", "Spark", "Terraform", "VS Code Extension", "Workload Assignment"]
-tags_normalized: ["ai", "apache airflow", "azure", "cislashcd", "cli", "coding", "copilot", "data agent", "data engineering", "data governance", "data loss prevention", "data wrangler", "databricks", "dataflow gen2", "devops", "entra id", "extensibility toolkit", "governance apis", "lakehouse", "materialized lake views", "microsoft fabric", "mirroring", "ml", "news", "notebook", "onelake", "open source", "pipelines", "purview", "python", "security", "spark", "terraform", "vs code extension", "workload assignment"]
+permalink: /ai/news/Microsoft-Fabric-September-2025-Feature-Summary-Data-AI-Engineering-and-Governance-Enhancements
+tags:
+- AI
+- Apache Airflow
+- Azure
+- CI/CD
+- CLI
+- Coding
+- Copilot
+- Data Agent
+- Data Engineering
+- Data Governance
+- Data Loss Prevention
+- Data Wrangler
+- Databricks
+- Dataflow Gen2
+- DevOps
+- Entra ID
+- Extensibility Toolkit
+- Governance APIs
+- Lakehouse
+- Materialized Lake Views
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- Notebook
+- OneLake
+- Open Source
+- Pipelines
+- Purview
+- Python
+- Security
+- Spark
+- Terraform
+- VS Code Extension
+- Workload Assignment
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
+- security
 ---
-
 Compiled by the Microsoft Fabric Blog team, this detailed feature summary explores September 2025 advancements, including new AI, ML, security, and developer capabilities to empower data professionals.<!--excerpt_end-->
 
 # Microsoft Fabric September 2025 Feature Summary

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "What is Model Context Protocol (MCP) in GitHub Copilot?"
-description: "This short video from Visual Studio Code introduces Model Context Protocol (MCP), a feature that enables AI models, specifically GitHub Copilot, to connect with external tools and data sources. The video explains how MCP works within GitHub Copilot integrations, allowing developers to enhance productivity by leveraging external context in their workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/pqXzK8MjH2c"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: What is Model Context Protocol (MCP) in GitHub Copilot?
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/shorts/pqXzK8MjH2c
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-24 18:20:31 +00:00
-permalink: "/2025-10-24-What-is-Model-Context-Protocol-MCP-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Contextual AI", "Copilot", "Copilot Integrations", "Data Integration", "Developer Productivity", "External Tool Integration", "GitHub", "GitHub Copilot", "Mcp", "Shorts", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai models", "contextual ai", "copilot", "copilot integrations", "data integration", "developer productivity", "external tool integration", "github", "github copilot", "mcp", "shorts", "videos", "vs code"]
+permalink: /github-copilot/videos/What-is-Model-Context-Protocol-MCP-in-GitHub-Copilot
+tags:
+- AI
+- AI Models
+- Contextual AI
+- Copilot
+- Copilot Integrations
+- Data Integration
+- Developer Productivity
+- External Tool Integration
+- GitHub
+- GitHub Copilot
+- Mcp
+- Shorts
+- Videos
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Visual Studio Code shares a concise overview of Model Context Protocol (MCP), demonstrating how Reynald Adolphe explains its role in enabling GitHub Copilot to connect with external tools and data sources.<!--excerpt_end-->
 
 {% youtube pqXzK8MjH2c %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Deploying MCP Server to Azure and Connecting with Semantic Kernel: A Step-by-Step Tutorial"
-description: "This video tutorial provides a comprehensive walkthrough on deploying a Model Context Protocol (MCP) server to Microsoft Azure and connecting to it using Semantic Kernel. Viewers will learn the deployment process, configuration steps, and best practices to leverage modern AI orchestration tools for building scalable, intelligent applications. Whether you are new to Semantic Kernel or looking to enhance your AI app development workflow, this guide covers practical steps and useful tips tailored for developers and AI enthusiasts working in the Microsoft ecosystem."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NiZTe2l6LMU"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: 'Deploying MCP Server to Azure and Connecting with Semantic Kernel: A Step-by-Step Tutorial'
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=NiZTe2l6LMU
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-04 11:17:38 +00:00
-permalink: "/2025-06-04-Deploying-MCP-Server-to-Azure-and-Connecting-with-Semantic-Kernel-A-Step-by-Step-Tutorial.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Development", "AI Orchestration", "AI Tools", "Azure", "Azure Deployment", "Azure Services", "Cloud Deployment", "Coding", "Intelligent Apps", "MCP", "MCP Server", "Microsoft AI", "Microsoft Azure", "Scalable Applications", "Semantic Kernel", "Step By Step Guide", "Tutorial", "Videos"]
-tags_normalized: ["ai", "ai development", "ai orchestration", "ai tools", "azure", "azure deployment", "azure services", "cloud deployment", "coding", "intelligent apps", "mcp", "mcp server", "microsoft ai", "microsoft azure", "scalable applications", "semantic kernel", "step by step guide", "tutorial", "videos"]
+permalink: /ai/videos/Deploying-MCP-Server-to-Azure-and-Connecting-with-Semantic-Kernel-A-Step-by-Step-Tutorial
+tags:
+- AI
+- AI Development
+- AI Orchestration
+- AI Tools
+- Azure
+- Azure Deployment
+- Azure Services
+- Cloud Deployment
+- Coding
+- Intelligent Apps
+- MCP
+- MCP Server
+- Microsoft AI
+- Microsoft Azure
+- Scalable Applications
+- Semantic Kernel
+- Step By Step Guide
+- Tutorial
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Learn Microsoft AI's video guides you through deploying an MCP Server to Microsoft Azure and integrating it with Semantic Kernel, with actionable steps tailored for developers and AI enthusiasts.<!--excerpt_end-->
 
 {% youtube NiZTe2l6LMU %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Armchair Architects: Defining AI Agents and Their Core Traits"
-description: "In the kickoff episode of season six of Azure Essentials Show's Armchair Architects, host David Blank-Edelman, Uli Homann (Microsoft CVP), and Eric Charran (Intuit) examine the foundational concepts behind AI agents from a cloud solution architect's perspective. The panel distinguishes AI agents from chatbots, explains their architectural layers, explores whether they require LLMs, and discusses the growing impact of AI agents in cloud solutions. The episode also highlights where AI agents fit into cloud architectures and provides actionable resources for architects and developers interested in building or integrating AI agents on Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=S6zKiJSwgjE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Armchair Architects: Defining AI Agents and Their Core Traits'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=S6zKiJSwgjE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 08:00:39 +00:00
-permalink: "/2025-11-04-Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Web Stack", "AI", "AI Agents", "AI Architects", "AI Architecture", "AI Development", "Azure", "Azure Architecture", "Chatbots", "Cloud Solutions", "David Blank Edelman", "Eric Charran", "LLMs", "Microsoft Azure", "Solution Architecture", "Uli Homann", "Videos"]
-tags_normalized: ["agentic web stack", "ai", "ai agents", "ai architects", "ai architecture", "ai development", "azure", "azure architecture", "chatbots", "cloud solutions", "david blank edelman", "eric charran", "llms", "microsoft azure", "solution architecture", "uli homann", "videos"]
+permalink: /ai/videos/Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits
+tags:
+- Agentic Web Stack
+- AI
+- AI Agents
+- AI Architects
+- AI Architecture
+- AI Development
+- Azure
+- Azure Architecture
+- Chatbots
+- Cloud Solutions
+- David Blank Edelman
+- Eric Charran
+- LLMs
+- Microsoft Azure
+- Solution Architecture
+- Uli Homann
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents a roundtable with David Blank-Edelman, Uli Homann, and Eric Charran, defining the core traits of AI agents and their architectural importance for cloud solution architects.<!--excerpt_end-->
 
 {% youtube S6zKiJSwgjE %}

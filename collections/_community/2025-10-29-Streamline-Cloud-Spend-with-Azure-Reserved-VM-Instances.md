@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Streamline Cloud Spend with Azure Reserved VM Instances"
-description: "This guide explores how organizations running AI workloads can optimize cloud costs with Azure Reserved Virtual Machine Instances. Using a scenario based on Contoso, it details practical steps to leverage Azure Advisor, choose appropriate reservation scopes, and monitor usage to achieve significant savings and cost predictability for GPU-intensive operations in Azure."
-author: "kyleikeda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Streamline Cloud Spend with Azure Reserved VM Instances
+author: kyleikeda
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-29 17:26:23 +00:00
-permalink: "/2025-10-29-Streamline-Cloud-Spend-with-Azure-Reserved-VM-Instances.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Azure Advisor", "Azure Compute", "Azure Reserved VM Instances", "Batch Processing", "Cloud Cost Optimization", "Cloud Financial Management", "Community", "Cost Monitoring", "Deep Learning", "Generative AI", "GPU Workloads", "Instance Size Flexibility", "Microsoft Cost Management", "NC64as T4 V3", "Virtual Machines"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "azure advisor", "azure compute", "azure reserved vm instances", "batch processing", "cloud cost optimization", "cloud financial management", "community", "cost monitoring", "deep learning", "generative ai", "gpu workloads", "instance size flexibility", "microsoft cost management", "nc64as t4 v3", "virtual machines"]
+permalink: /ai/community/Streamline-Cloud-Spend-with-Azure-Reserved-VM-Instances
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Azure Advisor
+- Azure Compute
+- Azure Reserved VM Instances
+- Batch Processing
+- Cloud Cost Optimization
+- Cloud Financial Management
+- Community
+- Cost Monitoring
+- Deep Learning
+- Generative AI
+- GPU Workloads
+- Instance Size Flexibility
+- Microsoft Cost Management
+- NC64as T4 V3
+- Virtual Machines
+section_names:
+- ai
+- azure
 ---
-
 Kyle Ikeda presents a practical overview of optimizing GPU-driven AI workloads on Azure by leveraging Reserved VM Instances, with a step-by-step scenario focused on reducing costs while maintaining performance.<!--excerpt_end-->
 
 # Streamline Cloud Spend with Azure Reserved VM Instances

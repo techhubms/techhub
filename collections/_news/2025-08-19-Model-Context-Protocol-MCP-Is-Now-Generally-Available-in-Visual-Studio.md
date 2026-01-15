@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Model Context Protocol (MCP) Is Now Generally Available in Visual Studio"
-description: "This news post announces the general availability of Model Context Protocol (MCP) support in Visual Studio. MCP is an open standard enabling AI agents, such as Copilot, to integrate with external tools and services for developer workflows. Visual Studio now adds first-class support for connecting, configuring, and authenticating with MCP servers, simplifying automation, enterprise governance, and integrating custom knowledge or services into development environments."
-author: "Allie Barry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+﻿---
+layout: post
+title: Model Context Protocol (MCP) Is Now Generally Available in Visual Studio
+author: Allie Barry
+canonical_url: https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-08-19 18:23:21 +00:00
-permalink: "/2025-08-19-Model-Context-Protocol-MCP-Is-Now-Generally-Available-in-Visual-Studio.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Mode", "Agents", "AI", "AI Agents", "Authentication", "Code", "Coding", "Copilot", "Copilot Chat", "Developer Workflow Automation", "DevOps", "Enterprise Integration", "External Tools", "GitHub", "GitHub Copilot", "GitHub Policy", "IDE", "LLM", "MCP", "Microsoft", "News", "Secure Endpoints", "Security", "Server Integration", "Servers", "VS"]
-tags_normalized: ["agent mode", "agents", "ai", "ai agents", "authentication", "code", "coding", "copilot", "copilot chat", "developer workflow automation", "devops", "enterprise integration", "external tools", "github", "github copilot", "github policy", "ide", "llm", "mcp", "microsoft", "news", "secure endpoints", "security", "server integration", "servers", "vs"]
+permalink: /github-copilot/news/Model-Context-Protocol-MCP-Is-Now-Generally-Available-in-Visual-Studio
+tags:
+- Agent Mode
+- Agents
+- AI
+- AI Agents
+- Authentication
+- Code
+- Coding
+- Copilot
+- Copilot Chat
+- Developer Workflow Automation
+- DevOps
+- Enterprise Integration
+- External Tools
+- GitHub
+- GitHub Copilot
+- GitHub Policy
+- IDE
+- LLM
+- MCP
+- Microsoft
+- News
+- Secure Endpoints
+- Security
+- Server Integration
+- Servers
+- VS
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Allie Barry introduces the general availability of Model Context Protocol (MCP) in Visual Studio, highlighting how developers can integrate AI agents, like Copilot, for richer automation and secure connections to tools and services.<!--excerpt_end-->
 
 # Model Context Protocol (MCP) Is Now Generally Available in Visual Studio

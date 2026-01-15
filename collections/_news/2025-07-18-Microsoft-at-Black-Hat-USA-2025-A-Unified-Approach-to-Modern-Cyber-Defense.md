@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense"
-description: "Microsoft announces its presence at Black Hat USA 2025, where it will highlight its AI-first, end-to-end security platform. The announcement covers how to engage with Microsoft at the event and outlines the company’s approach to unified cyber defense."
-author: "Elliot Volkman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense'
+author: Elliot Volkman
+canonical_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-18 16:00:00 +00:00
-permalink: "/2025-07-18-Microsoft-at-Black-Hat-USA-2025-A-Unified-Approach-to-Modern-Cyber-Defense.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI First Security", "Black Hat USA", "Cyber Defense", "Cybersecurity", "End To End Security", "Microsoft Security", "Modern Cyber Threats", "News", "Security", "Security Event", "Security Platform", "Threat Intelligence"]
-tags_normalized: ["ai", "ai first security", "black hat usa", "cyber defense", "cybersecurity", "end to end security", "microsoft security", "modern cyber threats", "news", "security", "security event", "security platform", "threat intelligence"]
+permalink: /ai/news/Microsoft-at-Black-Hat-USA-2025-A-Unified-Approach-to-Modern-Cyber-Defense
+tags:
+- AI
+- AI First Security
+- Black Hat USA
+- Cyber Defense
+- Cybersecurity
+- End To End Security
+- Microsoft Security
+- Modern Cyber Threats
+- News
+- Security
+- Security Event
+- Security Platform
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 In this announcement, author Elliot Volkman shares Microsoft’s plans for Black Hat USA 2025, focusing on AI-driven, unified security solutions. Learn what to expect and how to connect with Microsoft at this major cybersecurity event.<!--excerpt_end-->
 
 ## Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense

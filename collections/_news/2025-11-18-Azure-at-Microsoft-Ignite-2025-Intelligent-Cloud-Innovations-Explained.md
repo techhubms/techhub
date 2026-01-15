@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Azure at Microsoft Ignite 2025: Intelligent Cloud Innovations Explained"
-description: "This article summarizes all major Azure announcements from Microsoft Ignite 2025, including new AI, data, agent, and infrastructure capabilities. Readers will learn about updates to Azure AI, Microsoft Fabric, Foundry, new database services, integrated security, DevSecOps tools, and next-generation cloud infrastructure designed to accelerate enterprise innovation and deliver intelligent applications at scale."
-author: "Jessica Hawk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Azure at Microsoft Ignite 2025: Intelligent Cloud Innovations Explained'
+author: Jessica Hawk
+canonical_url: https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Azure-at-Microsoft-Ignite-2025-Intelligent-Cloud-Innovations-Explained.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["Agent Factory", "AI", "AI + Machine Learning", "AI Agents", "Azure", "Azure Boost", "Azure Built in Security", "Azure Copilot", "Azure DocumentDB", "Azure Open Source", "Cobalt 200", "Compute", "Copilot", "Data Intelligence", "Databases", "Defender For Cloud", "DevOps", "DevSecOps", "Entra Agent ID", "GitHub Advanced Security", "HorizonDB", "Infrastructure", "Management And Governance", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Ignite", "ML", "News", "OneLake", "Purview", "Security", "SQL Server"]
-tags_normalized: ["agent factory", "ai", "ai plus machine learning", "ai agents", "azure", "azure boost", "azure built in security", "azure copilot", "azure documentdb", "azure open source", "cobalt 200", "compute", "copilot", "data intelligence", "databases", "defender for cloud", "devops", "devsecops", "entra agent id", "github advanced security", "horizondb", "infrastructure", "management and governance", "microsoft fabric", "microsoft foundry", "microsoft ignite", "ml", "news", "onelake", "purview", "security", "sql server"]
+permalink: /ai/news/Azure-at-Microsoft-Ignite-2025-Intelligent-Cloud-Innovations-Explained
+tags:
+- Agent Factory
+- AI
+- AI + Machine Learning
+- AI Agents
+- Azure
+- Azure Boost
+- Azure Built in Security
+- Azure Copilot
+- Azure DocumentDB
+- Azure Open Source
+- Cobalt 200
+- Compute
+- Copilot
+- Data Intelligence
+- Databases
+- Defender For Cloud
+- DevOps
+- DevSecOps
+- Entra Agent ID
+- GitHub Advanced Security
+- HorizonDB
+- Infrastructure
+- Management And Governance
+- Microsoft Fabric
+- Microsoft Foundry
+- Microsoft Ignite
+- ML
+- News
+- OneLake
+- Purview
+- Security
+- SQL Server
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Jessica Hawk delivers a complete breakdown of all Azure announcements from Microsoft Ignite 2025, covering AI, data, security, and infrastructure advances set to redefine the intelligent cloud landscape.<!--excerpt_end-->
 
 # Azure at Microsoft Ignite 2025: All the Intelligent Cloud News Explained

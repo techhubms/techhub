@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Error Insights Copilot for Fabric Data Factory Pipeline Troubleshooting"
-description: "This article introduces Error Insights Copilot within Microsoft Fabric Data Factory, detailing how its AI-powered capabilities help developers rapidly troubleshoot and resolve pipeline failures. It explains Copilot’s summarized error grouping, root cause analysis, and actionable recommendations for failed pipeline runs or single activity errors, aiming to save developers time and provide clear guidance."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-troubleshooting-for-fabric-data-pipeline-error-messages/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: AI-Powered Error Insights Copilot for Fabric Data Factory Pipeline Troubleshooting
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-troubleshooting-for-fabric-data-pipeline-error-messages/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 11:00:00 +00:00
-permalink: "/2025-11-21-AI-Powered-Error-Insights-Copilot-for-Fabric-Data-Factory-Pipeline-Troubleshooting.html"
-categories: ["AI", "ML"]
-tags: ["Actionable Recommendations", "Activity Error Analysis", "AI", "AI Powered Development", "Automation", "Copilot", "Data Engineering", "Data Factory Workload", "Data Pipelines", "Error Categorization", "Error Insights Copilot", "Fabric Data Factory", "Microsoft Fabric", "ML", "News", "Pipeline Monitoring", "Pipeline Troubleshooting", "Root Cause Analysis"]
-tags_normalized: ["actionable recommendations", "activity error analysis", "ai", "ai powered development", "automation", "copilot", "data engineering", "data factory workload", "data pipelines", "error categorization", "error insights copilot", "fabric data factory", "microsoft fabric", "ml", "news", "pipeline monitoring", "pipeline troubleshooting", "root cause analysis"]
+permalink: /ai/news/AI-Powered-Error-Insights-Copilot-for-Fabric-Data-Factory-Pipeline-Troubleshooting
+tags:
+- Actionable Recommendations
+- Activity Error Analysis
+- AI
+- AI Powered Development
+- Automation
+- Copilot
+- Data Engineering
+- Data Factory Workload
+- Data Pipelines
+- Error Categorization
+- Error Insights Copilot
+- Fabric Data Factory
+- Microsoft Fabric
+- ML
+- News
+- Pipeline Monitoring
+- Pipeline Troubleshooting
+- Root Cause Analysis
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Fabric Blog reveals how Error Insights Copilot leverages AI to streamline troubleshooting in Data Factory pipeline runs, offering developers detailed analysis and rapid resolution suggestions.<!--excerpt_end-->
 
 # AI-Powered Error Insights Copilot for Fabric Pipeline Troubleshooting

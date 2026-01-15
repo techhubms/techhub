@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Billing API Updates: Programmatic Budget Management and Usage Tracking"
-description: "This news post details recent updates to GitHub’s billing APIs, introducing programmatic capabilities for managing budgets, tracking account usage, and accessing cost center information. Users can now create, modify, and monitor budgets via API, retrieve usage summaries for account resources, and take advantage of improvements to cost center and usage report API endpoints. These features are available for GitHub Enterprise, Team, and personal account holders."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Billing API Updates: Programmatic Budget Management and Usage Tracking'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 18:24:44 +00:00
-permalink: "/2025-11-03-GitHub-Billing-API-Updates-Programmatic-Budget-Management-and-Usage-Tracking.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Account Usage", "API Integration", "Billing API", "Budget Management", "Cost Center", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub", "News", "Programmatic Access", "REST API", "Usage Tracking"]
-tags_normalized: ["account management", "account usage", "api integration", "billing api", "budget management", "cost center", "devops", "enterprise management", "enterprise management tools", "github", "news", "programmatic access", "rest api", "usage tracking"]
+permalink: /devops/news/GitHub-Billing-API-Updates-Programmatic-Budget-Management-and-Usage-Tracking
+tags:
+- Account Management
+- Account Usage
+- API Integration
+- Billing API
+- Budget Management
+- Cost Center
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub
+- News
+- Programmatic Access
+- REST API
+- Usage Tracking
+section_names:
+- devops
 ---
-
 Allison covers GitHub’s latest billing API enhancements, showing how programmatic budget management and usage tracking open new possibilities for enterprise, team, and personal plan users.<!--excerpt_end-->
 
 # GitHub Billing API Updates: Programmatic Budget Management and Usage Tracking

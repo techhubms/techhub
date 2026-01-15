@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Transforming Customer Interactions with Blip: AI and Microsoft Solutions at Microsoft Ignite 2024"
-description: "This interview hosted by Rick Claus at Microsoft Ignite 2024 features Sergio Passos, Co-founder and CTO of Blip. The discussion centers on how Blip leverages Microsoft technologies—including Azure OpenAI Service and migration to .NET 8—to build advanced, AI-powered conversational interfaces. Sergio shares Blip’s journey from basic SMS messaging to orchestrating multimodal, AI-driven customer experiences across diverse messaging platforms. The conversation offers insights into technical challenges, the strategic role of data streams, and advice for product teams seeking to innovate using Microsoft’s AI and cloud tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bIagcv0Ohz4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Transforming Customer Interactions with Blip: AI and Microsoft Solutions at Microsoft Ignite 2024'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=bIagcv0Ohz4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-02-25 14:00:41 +00:00
-permalink: "/2025-02-25-Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET 8", "AI", "AI Powered Customer Experience", "Azure", "Azure OpenAI Service", "Blip", "Cloud Innovation", "Coding", "Conversational AI", "Data Streams", "Messaging Platforms", "Microsoft", "Microsoft Ignite", "Microsoft Technologies", "Multimodal Interfaces", "Videos"]
-tags_normalized: ["dotnet 8", "ai", "ai powered customer experience", "azure", "azure openai service", "blip", "cloud innovation", "coding", "conversational ai", "data streams", "messaging platforms", "microsoft", "microsoft ignite", "microsoft technologies", "multimodal interfaces", "videos"]
+permalink: /ai/videos/Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024
+tags:
+- .NET 8
+- AI
+- AI Powered Customer Experience
+- Azure
+- Azure OpenAI Service
+- Blip
+- Cloud Innovation
+- Coding
+- Conversational AI
+- Data Streams
+- Messaging Platforms
+- Microsoft
+- Microsoft Ignite
+- Microsoft Technologies
+- Multimodal Interfaces
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 In this Microsoft Ignite 2024 video interview, Rick Claus speaks with Sergio Passos of Blip about how his team employs Microsoft technologies and AI—including Azure OpenAI Service and .NET 8 migration—to create next-generation conversational interfaces. Insights from Sergio Passos inform developers and product teams interested in data-driven, AI-powered customer engagement.<!--excerpt_end-->
 
 {% youtube bIagcv0Ohz4 %}

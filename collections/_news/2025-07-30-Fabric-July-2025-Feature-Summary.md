@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Fabric July 2025 Feature Summary"
-description: "The July 2025 Fabric update details enhancements across Microsoft Fabric, including Fabric Data Agent integration with Copilot Studio, expanded Power BI capabilities, new data connectors, improved real-time intelligence features, and the preview of Cosmos DB (NoSQL) in Fabric. Major community events and platform governance updates are also covered."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric July 2025 Feature Summary
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-30 09:05:00 +00:00
-permalink: "/2025-07-30-Fabric-July-2025-Feature-Summary.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Activator", "AI", "Azure", "Azure SQL Database", "Connectors", "Copilot Studio", "Cosmos DB", "Data Factory", "Data Governance", "Data Mesh", "Fabric Data Agent", "Microsoft Fabric", "Mirroring", "ML", "News", "NoSQL", "OneLake Catalog", "Pipelines", "Power BI", "Real Time Intelligence", "Security"]
-tags_normalized: ["activator", "ai", "azure", "azure sql database", "connectors", "copilot studio", "cosmos db", "data factory", "data governance", "data mesh", "fabric data agent", "microsoft fabric", "mirroring", "ml", "news", "nosql", "onelake catalog", "pipelines", "power bi", "real time intelligence", "security"]
+permalink: /ai/news/Fabric-July-2025-Feature-Summary
+tags:
+- Activator
+- AI
+- Azure
+- Azure SQL Database
+- Connectors
+- Copilot Studio
+- Cosmos DB
+- Data Factory
+- Data Governance
+- Data Mesh
+- Fabric Data Agent
+- Microsoft Fabric
+- Mirroring
+- ML
+- News
+- NoSQL
+- OneLake Catalog
+- Pipelines
+- Power BI
+- Real Time Intelligence
+- Security
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 This article by Microsoft Fabric Blog offers a comprehensive summary of July 2025's new features in Microsoft Fabric, authored by Patrick LeBlanc. Key updates span data science, governance, Power BI, data connectors, and AI-driven integrations with Copilot Studio.<!--excerpt_end-->
 
 # Fabric July 2025 Feature Summary

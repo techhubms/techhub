@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Building a Full-Stack App with React and Aspire: Step-by-Step Integration with ASP.NET Core Web API"
-description: "This comprehensive guide by Sayed Ibrahim Hashimi details the creation of a full-stack TODO application using React for the front-end, ASP.NET Core Web API for the back-end, and Aspire for orchestration, including database persistence with SQLite and integration in the Aspire Dashboard."
-author: "Sayed Ibrahim Hashimi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/new-aspire-app-with-react/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Building a Full-Stack App with React and Aspire: Step-by-Step Integration with ASP.NET Core Web API'
+author: Sayed Ibrahim Hashimi
+canonical_url: https://devblogs.microsoft.com/dotnet/new-aspire-app-with-react/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-30 17:00:00 +00:00
-permalink: "/2025-07-30-Building-a-Full-Stack-App-with-React-and-Aspire-Step-by-Step-Integration-with-ASPNET-Core-Web-API.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Aspire", ".NET CLI", "ASP.NET Core", "Aspire", "C#", "Coding", "EF Core", "Full Stack Development", "JavaScript", "News", "React", "REST API", "SQLite", "Vite", "VS Code"]
-tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspdotnet core", "aspire", "csharp", "coding", "ef core", "full stack development", "javascript", "news", "react", "rest api", "sqlite", "vite", "vs code"]
+permalink: /coding/news/Building-a-Full-Stack-App-with-React-and-Aspire-Step-by-Step-Integration-with-ASPNET-Core-Web-API
+tags:
+- .NET
+- .NET Aspire
+- .NET CLI
+- ASP.NET Core
+- Aspire
+- C#
+- Coding
+- EF Core
+- Full Stack Development
+- JavaScript
+- News
+- React
+- REST API
+- SQLite
+- Vite
+- VS Code
+section_names:
+- coding
 ---
-
 In this guide, Sayed Ibrahim Hashimi demonstrates how to construct a full-stack TODO application using React and Aspire, coupling a modern front-end with an ASP.NET Core Web API and persistent SQLite storage.<!--excerpt_end-->
 
 # Building a Full-Stack App with React and Aspire: Step-by-Step Integration with ASP.NET Core Web API

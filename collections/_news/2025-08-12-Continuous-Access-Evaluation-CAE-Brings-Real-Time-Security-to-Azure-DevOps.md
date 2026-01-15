@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Continuous Access Evaluation (CAE) Brings Real-Time Security to Azure DevOps"
-description: "This news release announces the integration of Continuous Access Evaluation (CAE) with Azure DevOps. CAE, provided by Microsoft Entra ID, enables near real-time enforcement of Conditional Access policies, minimizing the exposure window after critical security events. Developers using the .NET client library should update their apps to handle CAE-specific token rejections by implementing claims challenge logic. Additional support for Python and Go is forthcoming."
-author: "Angel Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/real-time-security-with-continuous-access-evaluation-cae-comes-to-azure-devops/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: Continuous Access Evaluation (CAE) Brings Real-Time Security to Azure DevOps
+author: Angel Wong
+canonical_url: https://devblogs.microsoft.com/devops/real-time-security-with-continuous-access-evaluation-cae-comes-to-azure-devops/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-12 14:39:05 +00:00
-permalink: "/2025-08-12-Continuous-Access-Evaluation-CAE-Brings-Real-Time-Security-to-Azure-DevOps.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET Client Library", "Azure", "Azure & Cloud", "Azure DevOps", "Claims Challenge", "Coding", "Conditional Access", "Continuous Access Evaluation", "DevOps", "Identity Management", "Incident Response", "MFA", "Microsoft Entra ID", "News", "Real Time Security", "Security", "Security Enforcement", "Token Revocation"]
-tags_normalized: ["dotnet client library", "azure", "azure and cloud", "azure devops", "claims challenge", "coding", "conditional access", "continuous access evaluation", "devops", "identity management", "incident response", "mfa", "microsoft entra id", "news", "real time security", "security", "security enforcement", "token revocation"]
+permalink: /coding/news/Continuous-Access-Evaluation-CAE-Brings-Real-Time-Security-to-Azure-DevOps
+tags:
+- .NET Client Library
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- Claims Challenge
+- Coding
+- Conditional Access
+- Continuous Access Evaluation
+- DevOps
+- Identity Management
+- Incident Response
+- MFA
+- Microsoft Entra ID
+- News
+- Real Time Security
+- Security
+- Security Enforcement
+- Token Revocation
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Angel Wong introduces support for Continuous Access Evaluation (CAE) on Azure DevOps, discussing its impact on real-time security and the implications for developers using Microsoft Entra ID.<!--excerpt_end-->
 
 # Real-Time Security with Continuous Access Evaluation (CAE) comes to Azure DevOps

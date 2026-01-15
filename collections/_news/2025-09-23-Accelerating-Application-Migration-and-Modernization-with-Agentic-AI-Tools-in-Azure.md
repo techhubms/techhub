@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Accelerating Application Migration and Modernization with Agentic AI Tools in Azure"
-description: "This article from the Migrate and Modernize Summit outlines the latest agentic AI-powered solutions and developer tools from Microsoft—including GitHub Copilot’s modernization agents for Java and .NET, new AI features in Azure Migrate, and Azure Accelerate. The content explores how these innovations streamline cloud adoption, upgrade legacy applications, simplify database migration, and empower technical teams to modernize at scale on the Microsoft Azure platform."
-author: "Amanda Silver and Ashish Babbar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Accelerating Application Migration and Modernization with Agentic AI Tools in Azure
+author: Amanda Silver and Ashish Babbar
+canonical_url: https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/2025-09-23-Accelerating-Application-Migration-and-Modernization-with-Agentic-AI-Tools-in-Azure.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agentic AI", "AI", "AI + Machine Learning", "AI Powered Tools", "App Modernization Agents", "Application Assessment", "Application Modernization", "Azure", "Azure Accelerate", "Azure Migrate", "CI/CD", "Cloud Migration", "Coding", "Copilot", "Database Migration", "Databases", "DevOps", "Generative AI", "GitHub Copilot", "Hybrid + Multicloud", "Java", "Legacy Systems", "Management And Governance", "Microsoft Azure", "Migration", "News", "PostgreSQL", "SQL Server"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "ai plus machine learning", "ai powered tools", "app modernization agents", "application assessment", "application modernization", "azure", "azure accelerate", "azure migrate", "cislashcd", "cloud migration", "coding", "copilot", "database migration", "databases", "devops", "generative ai", "github copilot", "hybrid plus multicloud", "java", "legacy systems", "management and governance", "microsoft azure", "migration", "news", "postgresql", "sql server"]
+permalink: /github-copilot/news/Accelerating-Application-Migration-and-Modernization-with-Agentic-AI-Tools-in-Azure
+tags:
+- .NET
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Powered Tools
+- App Modernization Agents
+- Application Assessment
+- Application Modernization
+- Azure
+- Azure Accelerate
+- Azure Migrate
+- CI/CD
+- Cloud Migration
+- Coding
+- Copilot
+- Database Migration
+- Databases
+- DevOps
+- Generative AI
+- GitHub Copilot
+- Hybrid + Multicloud
+- Java
+- Legacy Systems
+- Management And Governance
+- Microsoft Azure
+- Migration
+- News
+- PostgreSQL
+- SQL Server
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Amanda Silver and Ashish Babbar introduce groundbreaking agentic AI tools, such as GitHub Copilot modernization agents and Azure Migrate AI features, to empower developers and IT teams in rapidly modernizing and migrating applications and databases with Microsoft Azure.<!--excerpt_end-->
 
 # Accelerating Application Migration and Modernization with Agentic AI Tools in Azure

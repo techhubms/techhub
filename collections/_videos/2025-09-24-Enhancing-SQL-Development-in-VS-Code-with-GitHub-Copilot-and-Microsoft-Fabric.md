@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric"
-description: "This episode of Data Exposed covers the integration of GitHub Copilot with the MSSQL extension in Visual Studio Code, demonstrating Ask and Agent modes for AI-assisted SQL coding. It also explores new deployment features, including provisioning SQL Server containers and deploying databases in Microsoft Fabric, to improve efficiency and modernize database workflows."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jj9O5FR7v3A"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=jj9O5FR7v3A
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 16:01:28 +00:00
-permalink: "/2025-09-24-Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Tools", "AI", "AI Assisted Coding", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Data Exposed", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Fabric", "MSSQL Extension", "Productivity", "Slash Commands", "SQL Automation", "SQL Development", "SQL Server Containers", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["agent tools", "ai", "ai assisted coding", "azure", "azure sql", "cloud computing", "coding", "data exposed", "dev", "developer tools", "development", "github copilot", "microsoft", "microsoft fabric", "mssql extension", "productivity", "slash commands", "sql automation", "sql development", "sql server containers", "tech", "technology", "videos", "vs code"]
+permalink: /github-copilot/videos/Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric
+tags:
+- Agent Tools
+- AI
+- AI Assisted Coding
+- Azure
+- Azure SQL
+- Cloud Computing
+- Coding
+- Data Exposed
+- Dev
+- Developer Tools
+- Development
+- GitHub Copilot
+- Microsoft
+- Microsoft Fabric
+- MSSQL Extension
+- Productivity
+- Slash Commands
+- SQL Automation
+- SQL Development
+- SQL Server Containers
+- Tech
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Microsoft Developer presents a Data Exposed episode featuring Anna Hoffman and Carlos Robles, highlighting the new GitHub Copilot integration in the MSSQL extension for VS Code and showcasing how AI, containers, and Microsoft Fabric modernize SQL development.<!--excerpt_end-->
 
 {% youtube jj9O5FR7v3A %}

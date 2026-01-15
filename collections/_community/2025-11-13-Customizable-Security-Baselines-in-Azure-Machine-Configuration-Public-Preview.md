@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Customizable Security Baselines in Azure Machine Configuration: Public Preview"
-description: "This community post by mutemwamasheke introduces customizable security baseline policies in Azure Machine Configuration, highlighting new capabilities for auditing, monitoring, and tailoring server compliance using Azure Policy. It covers how organizations can adapt CIS and Azure Compute Security Baselines for Windows and Linux, automate compliance through policy-as-code, and integrate these processes into DevOps pipelines and CI/CD workflows. Guidance is provided on prerequisites, implementation steps, and availability across public Azure regions."
-author: "mutemwamasheke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-introducing-customizable-security-baseline/ba-p/4469678"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Customizable Security Baselines in Azure Machine Configuration: Public Preview'
+author: mutemwamasheke
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-introducing-customizable-security-baseline/ba-p/4469678
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 17:20:06 +00:00
-permalink: "/2025-11-13-Customizable-Security-Baselines-in-Azure-Machine-Configuration-Public-Preview.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ARM Templates", "Audit Policy", "Azure", "Azure Arc", "Azure CLI", "Azure Machine Configuration", "Azure Policy", "Bicep", "CI/CD", "CIS Benchmark", "Community", "Compliance", "Configuration Management", "DevOps", "Governance", "Linux Server", "Policy as Code", "Security", "Security Baseline", "Windows Server"]
-tags_normalized: ["arm templates", "audit policy", "azure", "azure arc", "azure cli", "azure machine configuration", "azure policy", "bicep", "cislashcd", "cis benchmark", "community", "compliance", "configuration management", "devops", "governance", "linux server", "policy as code", "security", "security baseline", "windows server"]
+permalink: /azure/community/Customizable-Security-Baselines-in-Azure-Machine-Configuration-Public-Preview
+tags:
+- ARM Templates
+- Audit Policy
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Machine Configuration
+- Azure Policy
+- Bicep
+- CI/CD
+- CIS Benchmark
+- Community
+- Compliance
+- Configuration Management
+- DevOps
+- Governance
+- Linux Server
+- Policy as Code
+- Security
+- Security Baseline
+- Windows Server
+section_names:
+- azure
+- devops
+- security
 ---
-
 mutemwamasheke presents a detailed overview of customizable security baselines in Azure Machine Configuration, explaining how to tailor industry security standards and automate server compliance workflows.<!--excerpt_end-->
 
 # Customizable Security Baselines in Azure Machine Configuration

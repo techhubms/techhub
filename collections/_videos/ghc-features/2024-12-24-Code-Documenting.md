@@ -1,22 +1,26 @@
----
-layout: "post"
-title: "Code Docs"
-description: "Generate comprehensive documentation for your codebase"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/66epMMY-YUc"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Code Docs
+author: Fokko Veegens
+canonical_url: https://youtu.be/66epMMY-YUc
 date: 2024-12-24 07:37:44 +00:00
-permalink: "/2024-12-24-Code-Documenting.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "Documentation", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "code", "documentation", "github copilot", "videos"]
+permalink: /github-copilot/videos/Code-Documenting
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Code
+- Documentation
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Code Documenting feature. Generate comprehensive documentation for your codebase with Copilot.<!--excerpt_end-->
 
 {% youtube 66epMMY-YUc %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5"
-description: "Join Robert Green and Leslie Richardson for a full day of live sessions from Microsoft HQ, covering Visual Studio, Azure, GitHub Copilot, .NET, and more. The event features live demos, interviews, and backstage insights, with on-demand content available post-event."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5'
+author: stclarke
+canonical_url: https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 17:54:07 +00:00
-permalink: "/2025-07-31-Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Apps", "Azure", "Cloud Native Development", "Code Quality", "Coding", "Company News", "Cross Platform Apps", "Debugging", "Engineering Tips", "GitHub Copilot", "Live Event", "MAUI", "Microsoft", "News", "Productivity Tools", "VS"]
-tags_normalized: ["dotnet", "ai", "ai apps", "azure", "cloud native development", "code quality", "coding", "company news", "cross platform apps", "debugging", "engineering tips", "github copilot", "live event", "maui", "microsoft", "news", "productivity tools", "vs"]
+permalink: /github-copilot/news/Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5
+tags:
+- .NET
+- AI
+- AI Apps
+- Azure
+- Cloud Native Development
+- Code Quality
+- Coding
+- Company News
+- Cross Platform Apps
+- Debugging
+- Engineering Tips
+- GitHub Copilot
+- Live Event
+- MAUI
+- Microsoft
+- News
+- Productivity Tools
+- VS
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Authored by stclarke, this post announces a special live edition of Visual Studio Toolbox with Microsoft experts, covering topics from .NET and AI to GitHub Copilot and Azure. Join for live demos, commentary, and behind-the-scenes access.<!--excerpt_end-->
 
 # Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5

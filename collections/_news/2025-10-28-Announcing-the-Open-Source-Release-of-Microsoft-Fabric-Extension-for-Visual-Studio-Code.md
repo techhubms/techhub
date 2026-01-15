@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code"
-description: "This announcement introduces the newly open-sourced Fabric Core extension for Visual Studio Code, a foundational tool for developers working with Microsoft Fabric. The extension streamlines authentication, workspace management, Git integration, and supports work through its extensible API model, reinforcing open collaboration and community engagement in Microsoft’s ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-28 10:00:00 +00:00
-permalink: "/2025-10-28-Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Coding", "Community Collaboration", "CRUD Operations", "Developer Tools", "DevOps", "Extension API", "Git Integration", "Microsoft Fabric", "News", "Open Source", "Tenant Management", "VS Code", "VS Code Extension", "Workspace Management"]
-tags_normalized: ["azure", "coding", "community collaboration", "crud operations", "developer tools", "devops", "extension api", "git integration", "microsoft fabric", "news", "open source", "tenant management", "vs code", "vs code extension", "workspace management"]
+permalink: /coding/news/Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code
+tags:
+- Azure
+- Coding
+- Community Collaboration
+- CRUD Operations
+- Developer Tools
+- DevOps
+- Extension API
+- Git Integration
+- Microsoft Fabric
+- News
+- Open Source
+- Tenant Management
+- VS Code
+- VS Code Extension
+- Workspace Management
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Microsoft Fabric Blog presents the open-sourcing of the Fabric Core Visual Studio Code extension, enabling developers to better manage and customize Fabric resources while encouraging community contributions.<!--excerpt_end-->
 
 # Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code

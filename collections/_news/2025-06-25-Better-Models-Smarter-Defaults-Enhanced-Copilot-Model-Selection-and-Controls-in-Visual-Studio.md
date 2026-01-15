@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Better Models, Smarter Defaults: Enhanced Copilot Model Selection and Controls in Visual Studio"
-description: "This post by Rhea Patel highlights new improvements to the GitHub Copilot experience in Visual Studio, including the adoption of GPT-4.1 as the default model, expanded model choices such as Claude and Gemini, improved usage management, and updates to the billing system. The update introduces an easier workflow, visibility into Copilot consumptions, and streamlined model selection."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/better-models-smarter-defaults-claude-sonnet-4-gpt-4-1-and-more-control-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+layout: post
+title: 'Better Models, Smarter Defaults: Enhanced Copilot Model Selection and Controls in Visual Studio'
+author: Rhea Patel
+canonical_url: https://devblogs.microsoft.com/visualstudio/better-models-smarter-defaults-claude-sonnet-4-gpt-4-1-and-more-control-in-visual-studio/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-25 23:24:03 +00:00
-permalink: "/2025-06-25-Better-Models-Smarter-Defaults-Enhanced-Copilot-Model-Selection-and-Controls-in-Visual-Studio.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Billing Updates", "Claude Sonnet 4", "Copilot", "Developer Tools", "Gemini Pro", "GitHub Copilot", "GPT 4.1", "Inline Suggestions", "Model Selection", "Models", "News", "Premium Requests", "Productivity", "Usage Management", "VS"]
-tags_normalized: ["ai", "ai models", "billing updates", "claude sonnet 4", "copilot", "developer tools", "gemini pro", "github copilot", "gpt 4dot1", "inline suggestions", "model selection", "models", "news", "premium requests", "productivity", "usage management", "vs"]
+permalink: /github-copilot/news/Better-Models-Smarter-Defaults-Enhanced-Copilot-Model-Selection-and-Controls-in-Visual-Studio
+tags:
+- AI
+- AI Models
+- Billing Updates
+- Claude Sonnet 4
+- Copilot
+- Developer Tools
+- Gemini Pro
+- GitHub Copilot
+- GPT 4.1
+- Inline Suggestions
+- Model Selection
+- Models
+- News
+- Premium Requests
+- Productivity
+- Usage Management
+- VS
+section_names:
+- ai
+- github-copilot
 ---
-
 Rhea Patel presents substantial updates to GitHub Copilot in Visual Studio, including smarter default AI models, more options for model customization, and tools to monitor and manage usage, making the Copilot experience more responsive and transparent for developers.<!--excerpt_end-->
 
 ## Major Improvements to Copilot in Visual Studio

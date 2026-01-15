@@ -222,12 +222,11 @@ public class FrontMatterParserTests
             title: "GitHub Copilot: New Features"
             date: 2026-01-01 10:30:00 +0100
             author: Microsoft
-            categories: GitHub Copilot
+            section_names: GitHub Copilot
             tags:
               - Features
               - Updates
               - AI
-            excerpt: "Latest updates to GitHub Copilot"
             ---
             # New Features
             
@@ -242,10 +241,10 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: All fields extracted, content separated after frontmatter
-        Assert.Equal(6, frontMatter.Count);
+        Assert.Equal(5, frontMatter.Count); // title, date, author, section_names, tags
         Assert.Equal("GitHub Copilot: New Features", frontMatter["title"]);
         Assert.Equal("Microsoft", frontMatter["author"]); // Preserves original casing from YAML
-        Assert.Equal("GitHub Copilot", frontMatter["categories"]); // Preserves title case from YAML (mapper converts to lowercase)
+        Assert.Equal("GitHub Copilot", frontMatter["section_names"]); // Preserves title case from YAML (mapper converts to lowercase)
         Assert.StartsWith("# New Features", content);
         Assert.Contains("<!--excerpt_end-->", content);
     }

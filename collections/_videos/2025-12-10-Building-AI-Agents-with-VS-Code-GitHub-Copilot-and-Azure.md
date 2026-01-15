@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building AI Agents with VS Code, GitHub Copilot, and Azure"
-description: "This session walks developers through building and deploying an AI agent by leveraging the AI Toolkit and GitHub Copilot features within Visual Studio Code. Participants prototype, trace, and deploy agents to Azure using a modern end-to-end workflow that highlights code instrumentation, trace viewing, and cloud deployment. The interactive approach emphasizes integration between local tooling and cloud services."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OE8waNlgeAk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building AI Agents with VS Code, GitHub Copilot, and Azure
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=OE8waNlgeAk
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Deployment", "AI", "AI Agents", "AI Toolkit", "Azure", "Azure Free Trial", "Cloud Computing", "Cloud Deployment", "Code Tracing", "Coding", "Dev", "Developer", "Developer Workflow", "Development", "GitHub Copilot", "Instrumenting Code", "MCP", "MCP Lab", "Microsoft", "Microsoft Foundry", "Model Playground", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["agent deployment", "ai", "ai agents", "ai toolkit", "azure", "azure free trial", "cloud computing", "cloud deployment", "code tracing", "coding", "dev", "developer", "developer workflow", "development", "github copilot", "instrumenting code", "mcp", "mcp lab", "microsoft", "microsoft foundry", "model playground", "tech", "technology", "videos", "vs code"]
+permalink: /github-copilot/videos/Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure
+tags:
+- Agent Deployment
+- AI
+- AI Agents
+- AI Toolkit
+- Azure
+- Azure Free Trial
+- Cloud Computing
+- Cloud Deployment
+- Code Tracing
+- Coding
+- Dev
+- Developer
+- Developer Workflow
+- Development
+- GitHub Copilot
+- Instrumenting Code
+- MCP
+- MCP Lab
+- Microsoft
+- Microsoft Foundry
+- Model Playground
+- Tech
+- Technology
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Microsoft Developer demonstrates how to use VS Code, GitHub Copilot, and the AI Toolkit to build, trace, and deploy AI agents to Azure with a workflow suitable for developers.<!--excerpt_end-->
 
 {% youtube OE8waNlgeAk %}

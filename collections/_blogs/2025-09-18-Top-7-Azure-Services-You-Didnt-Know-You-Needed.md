@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Top 7 Azure Services You Didn’t Know You Needed"
-description: "This article by Dellenny introduces developers and IT professionals to seven lesser-known Microsoft Azure services that can streamline operations, boost security, and automate tasks. Readers will discover how tools like Azure Cognitive Search, App Configuration, Sentinel, and others can unlock new value and enhance application resilience, observability, and productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Top 7 Azure Services You Didn’t Know You Needed
+author: Dellenny
+canonical_url: https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-18 10:55:59 +00:00
-permalink: "/2025-09-18-Top-7-Azure-Services-You-Didnt-Know-You-Needed.html"
-categories: ["Azure", "Security"]
-tags: ["Application Insights", "Azure", "Azure App Configuration", "Azure Bastion", "Azure Chaos Studio", "Azure Cognitive Search", "Azure Logic Apps", "Azure Monitor", "Azure Sentinel", "Blogs", "Chaos Engineering", "Cloud Automation", "Cloud Security", "DevOps Tools", "Feature Flags", "Microsoft Azure", "Observability", "RDP", "Resilience Testing", "Security", "SIEM", "Workflow Automation"]
-tags_normalized: ["application insights", "azure", "azure app configuration", "azure bastion", "azure chaos studio", "azure cognitive search", "azure logic apps", "azure monitor", "azure sentinel", "blogs", "chaos engineering", "cloud automation", "cloud security", "devops tools", "feature flags", "microsoft azure", "observability", "rdp", "resilience testing", "security", "siem", "workflow automation"]
+permalink: /azure/blogs/Top-7-Azure-Services-You-Didnt-Know-You-Needed
+tags:
+- Application Insights
+- Azure
+- Azure App Configuration
+- Azure Bastion
+- Azure Chaos Studio
+- Azure Cognitive Search
+- Azure Logic Apps
+- Azure Monitor
+- Azure Sentinel
+- Blogs
+- Chaos Engineering
+- Cloud Automation
+- Cloud Security
+- DevOps Tools
+- Feature Flags
+- Microsoft Azure
+- Observability
+- RDP
+- Resilience Testing
+- Security
+- SIEM
+- Workflow Automation
+section_names:
+- azure
+- security
 ---
-
 Dellenny highlights seven under-the-radar Azure services that can transform your cloud strategy, from enhanced security with Sentinel to automation with Logic Apps.<!--excerpt_end-->
 
 # Top 7 Azure Services You Didn’t Know You Needed

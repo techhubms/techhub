@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure DNS Security Policy with Threat Intelligence Feed Now Generally Available"
-description: "This announcement outlines the general availability of Azure DNS security policy with Threat Intelligence feed, detailing its capabilities to protect Azure environments against DNS-based threats. It explains policy features such as managed domain lists, real-time monitoring, integration with Azure networking, and developer-friendly deployment options. Key use cases include early detection and prevention of attacks, cost reduction, and seamless DevOps integration using common IaC tools."
-author: "Sergio Figueiredo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure DNS Security Policy with Threat Intelligence Feed Now Generally Available
+author: Sergio Figueiredo
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 20:22:48 +00:00
-permalink: "/2025-11-20-Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ARM", "Azure", "Azure DNS", "Azure Private DNS Zones", "Bicep", "Community", "DevOps", "DevOps Integration", "DNS Filtering", "DNS Security Policy", "DNS Traffic Monitoring", "Event Hubs", "High Availability", "IaaS Alternatives", "Log Analytics", "Microsoft Security Response Center", "Private Resolver", "Security", "SOC", "Terraform", "Threat Intelligence", "Virtual Network", "Zero Day Threats", "Zone Redundancy"]
-tags_normalized: ["arm", "azure", "azure dns", "azure private dns zones", "bicep", "community", "devops", "devops integration", "dns filtering", "dns security policy", "dns traffic monitoring", "event hubs", "high availability", "iaas alternatives", "log analytics", "microsoft security response center", "private resolver", "security", "soc", "terraform", "threat intelligence", "virtual network", "zero day threats", "zone redundancy"]
+permalink: /azure/community/Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available
+tags:
+- ARM
+- Azure
+- Azure DNS
+- Azure Private DNS Zones
+- Bicep
+- Community
+- DevOps
+- DevOps Integration
+- DNS Filtering
+- DNS Security Policy
+- DNS Traffic Monitoring
+- Event Hubs
+- High Availability
+- IaaS Alternatives
+- Log Analytics
+- Microsoft Security Response Center
+- Private Resolver
+- Security
+- SOC
+- Terraform
+- Threat Intelligence
+- Virtual Network
+- Zero Day Threats
+- Zone Redundancy
+section_names:
+- azure
+- devops
+- security
 ---
-
 Sergio Figueiredo announces the general availability of Azure DNS security policy with Threat Intelligence feed, highlighting its impact on DNS threat mitigation, logging, and integration for Azure environments.<!--excerpt_end-->
 
 # Azure DNS Security Policy with Threat Intelligence Feed GA Announcement

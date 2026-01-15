@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Why Did the Cost of My AI Agent Exceed the Set Budget?"
-description: "This video, presented by Microsoft Developer, addresses a common question from the Azure AI Foundry community: understanding why the costs associated with an Azure AI Agent might surpass the set budget. The discussion highlights key factors influencing cost overruns, how to monitor and optimize usage, and encourages viewers to join the Azure AI Foundry community for more resources and discussions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/ZW-cO0Tj7LE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Why Did the Cost of My AI Agent Exceed the Set Budget?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/shorts/ZW-cO0Tj7LE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-25 14:01:01 +00:00
-permalink: "/2025-08-25-Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "AI Deployment", "AI Operations", "Azure", "Azure AI", "Azure AI Foundry", "Budgeting", "Cloud Computing", "Cloud Spending", "Cost Management", "Dev", "Development", "Microsoft", "Microsoft Azure", "Resource Allocation", "Tech", "Tech Community", "Technology", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai deployment", "ai operations", "azure", "azure ai", "azure ai foundry", "budgeting", "cloud computing", "cloud spending", "cost management", "dev", "development", "microsoft", "microsoft azure", "resource allocation", "tech", "tech community", "technology", "videos"]
+permalink: /ai/videos/Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget
+tags:
+- AI
+- AI Agent
+- AI Deployment
+- AI Operations
+- Azure
+- Azure AI
+- Azure AI Foundry
+- Budgeting
+- Cloud Computing
+- Cloud Spending
+- Cost Management
+- Dev
+- Development
+- Microsoft
+- Microsoft Azure
+- Resource Allocation
+- Tech
+- Tech Community
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer discusses why Azure AI Agent costs can exceed budgets, sharing tips from the Azure AI Foundry community on monitoring and optimizing spending.<!--excerpt_end-->
 
 {% youtube ZW-cO0Tj7LE %}

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel"
-description: "This news post introduces major innovations in Microsoft Sentinel, Microsoft's cloud-native SIEM platform, as it evolves to support agentic AI-driven security. It details new features like the Sentinel data lake, graph-powered context, and Security Copilot agents, emphasizing unified security data, automation, and extensibility for defenders. The article also covers enhancements in AI security governance, highlighting integrations across Microsoft Defender, Microsoft Purview, Azure AI Foundry, and Microsoft Entra for secure AI deployments. The post serves as both an announcement of new capabilities and an overview of the vision for future-proofed, intelligent security operations in the Microsoft ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-30 14:18:32 +00:00
-permalink: "/2025-09-30-Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic AI", "AI", "Automation", "Azure", "Azure AI Foundry", "Cloud Security", "Company News", "Entra ID", "Graph Powered Security", "Incident Response", "MCP Server", "Microsoft Defender", "Microsoft Purview", "Microsoft Sentinel", "Multicloud", "News", "Security", "Security Agents", "Security Copilot", "Security Copilot Agents", "Security Data Lake", "Security Governance", "Security Operations Center", "Security Platform", "SIEM"]
-tags_normalized: ["agentic ai", "ai", "automation", "azure", "azure ai foundry", "cloud security", "company news", "entra id", "graph powered security", "incident response", "mcp server", "microsoft defender", "microsoft purview", "microsoft sentinel", "multicloud", "news", "security", "security agents", "security copilot", "security copilot agents", "security data lake", "security governance", "security operations center", "security platform", "siem"]
+permalink: /ai/news/Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel
+tags:
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Azure AI Foundry
+- Cloud Security
+- Company News
+- Entra ID
+- Graph Powered Security
+- Incident Response
+- MCP Server
+- Microsoft Defender
+- Microsoft Purview
+- Microsoft Sentinel
+- Multicloud
+- News
+- Security
+- Security Agents
+- Security Copilot
+- Security Copilot Agents
+- Security Data Lake
+- Security Governance
+- Security Operations Center
+- Security Platform
+- SIEM
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke explores Microsoft's latest security innovation, showcasing how Microsoft Sentinel uses agentic AI and Security Copilot to empower defenders and streamline threat detection, investigation, and response.<!--excerpt_end-->
 
 # Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel

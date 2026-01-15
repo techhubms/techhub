@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing Optimized Compaction in Fabric Spark"
-description: "This article presents new features for managing Delta Lake table compaction in Microsoft Fabric Spark, focusing on reducing write amplification and automating table maintenance. It covers Fast Optimize, File Level Compaction Target, and Auto Compaction, each designed to improve efficiency, minimize manual intervention, and ensure predictable performance and costs for data engineers working with Lakehouse architectures."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing Optimized Compaction in Fabric Spark
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 11:00:00 +00:00
-permalink: "/2025-10-06-Introducing-Optimized-Compaction-in-Fabric-Spark.html"
-categories: ["Azure", "ML"]
-tags: ["Auto Compaction", "Azure", "Blob Storage", "Compaction", "Data Engineering", "Delta Lake", "Delta Table", "ELT", "Fast Optimize", "File Level Compaction Target", "Lakehouse Architecture", "Microsoft Fabric Spark", "ML", "News", "Performance Optimization", "Spark SQL", "Table Maintenance", "Write Amplification"]
-tags_normalized: ["auto compaction", "azure", "blob storage", "compaction", "data engineering", "delta lake", "delta table", "elt", "fast optimize", "file level compaction target", "lakehouse architecture", "microsoft fabric spark", "ml", "news", "performance optimization", "spark sql", "table maintenance", "write amplification"]
+permalink: /ml/news/Introducing-Optimized-Compaction-in-Fabric-Spark
+tags:
+- Auto Compaction
+- Azure
+- Blob Storage
+- Compaction
+- Data Engineering
+- Delta Lake
+- Delta Table
+- ELT
+- Fast Optimize
+- File Level Compaction Target
+- Lakehouse Architecture
+- Microsoft Fabric Spark
+- ML
+- News
+- Performance Optimization
+- Spark SQL
+- Table Maintenance
+- Write Amplification
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explores advanced compaction strategies for Delta tables in Fabric Spark, helping data engineers reduce manual maintenance, control costs, and keep Lakehouse performance consistent.<!--excerpt_end-->
 
 # Introducing Optimized Compaction in Fabric Spark

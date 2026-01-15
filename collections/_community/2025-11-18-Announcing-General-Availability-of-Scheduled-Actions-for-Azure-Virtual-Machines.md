@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Announcing General Availability of Scheduled Actions for Azure Virtual Machines"
-description: "This article introduces Scheduled Actions, a resource provider for Azure Virtual Machines designed to simplify large-scale VM management. It explains how Scheduled Actions automates scheduling, scaling, and retrying power state operations across thousands of VMs, reducing manual overhead and improving operational reliability in Azure. Example scenarios and core benefits are detailed for cloud administrators."
-author: "TravisCragg_MSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing General Availability of Scheduled Actions for Azure Virtual Machines
+author: TravisCragg_MSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:35:21 +00:00
-permalink: "/2025-11-18-Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines.html"
-categories: ["Azure"]
-tags: ["API Automation", "Azure", "Azure Compute", "Azure REST API", "Azure Virtual Machines", "Batch Operations", "Community", "Concurrent Operations", "Contoso Use Case", "Scheduled Actions", "Subscription Throttling", "VM Management"]
-tags_normalized: ["api automation", "azure", "azure compute", "azure rest api", "azure virtual machines", "batch operations", "community", "concurrent operations", "contoso use case", "scheduled actions", "subscription throttling", "vm management"]
+permalink: /azure/community/Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines
+tags:
+- API Automation
+- Azure
+- Azure Compute
+- Azure REST API
+- Azure Virtual Machines
+- Batch Operations
+- Community
+- Concurrent Operations
+- Contoso Use Case
+- Scheduled Actions
+- Subscription Throttling
+- VM Management
+section_names:
+- azure
 ---
-
 TravisCragg_MSFT presents Scheduled Actions for Azure Virtual Machines, outlining how this feature allows administrators to automate and scale VM power operations with simplified scheduling and retry logic.<!--excerpt_end-->
 
 # Announcing General Availability of Scheduled Actions for Azure Virtual Machines

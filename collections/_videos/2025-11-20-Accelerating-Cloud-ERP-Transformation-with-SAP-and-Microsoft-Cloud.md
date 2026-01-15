@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Accelerating Cloud-ERP Transformation with SAP and Microsoft Cloud"
-description: "This session from Microsoft Ignite explores how SAP and Microsoft Cloud empower enterprises to transform their Cloud-ERP strategy. It features demos and use cases illustrating Business Data Cloud (BDC), SAP Business Technology Platform (BTP), secure integration via Private Link, architecture validation, data accessibility enhancements, AI-enabled agents, and business context integration. Presented by Anirban Majumdar and Sivakumar N, the talk highlights collaborative innovation and practical approaches for connecting data platforms to unlock advanced business AI capabilities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kNKmYwlN9rQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Accelerating Cloud-ERP Transformation with SAP and Microsoft Cloud
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=kNKmYwlN9rQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:04:20 +00:00
-permalink: "/2025-11-20-Accelerating-Cloud-ERP-Transformation-with-SAP-and-Microsoft-Cloud.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Architecture", "AI", "Azure", "BTP", "Business Context Integration", "Business Data Cloud", "Cloud ERP", "Data Architecture", "Delta Sharing", "Enterprise Transformation", "Invoice Processing", "Joule Agents", "Knowledge Graphs", "Microsoft Cloud", "Microsoft Ignite", "MSIgnite", "Private Link", "S4 HANA", "SAP", "SAP Business Technology Platform", "Teams Integration", "Unifyyourdataplatform", "Videos", "Zero Copy Access"]
-tags_normalized: ["agent architecture", "ai", "azure", "btp", "business context integration", "business data cloud", "cloud erp", "data architecture", "delta sharing", "enterprise transformation", "invoice processing", "joule agents", "knowledge graphs", "microsoft cloud", "microsoft ignite", "msignite", "private link", "s4 hana", "sap", "sap business technology platform", "teams integration", "unifyyourdataplatform", "videos", "zero copy access"]
+permalink: /ai/videos/Accelerating-Cloud-ERP-Transformation-with-SAP-and-Microsoft-Cloud
+tags:
+- Agent Architecture
+- AI
+- Azure
+- BTP
+- Business Context Integration
+- Business Data Cloud
+- Cloud ERP
+- Data Architecture
+- Delta Sharing
+- Enterprise Transformation
+- Invoice Processing
+- Joule Agents
+- Knowledge Graphs
+- Microsoft Cloud
+- Microsoft Ignite
+- MSIgnite
+- Private Link
+- S4 HANA
+- SAP
+- SAP Business Technology Platform
+- Teams Integration
+- Unifyyourdataplatform
+- Videos
+- Zero Copy Access
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events speakers Anirban Majumdar and Sivakumar N showcase at Ignite how SAP and Microsoft Cloud collectively enable secure, AI-enhanced Cloud-ERP transformation for enterprises, with demos and real use cases.<!--excerpt_end-->
 
 {% youtube kNKmYwlN9rQ %}

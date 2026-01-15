@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite"
-description: "This session from Microsoft Ignite showcases how agentic AI—powered by Microsoft Foundry and Azure’s databases—can transform creative industries. Attendees learn about real-world applications from companies like Pantone, TomTom, and Kantar, including semantic search, generative design, and intelligent agent collaboration. The session details feature architecture patterns, demos, and new Azure integrations in Microsoft Fabric, aiming to help technical professionals integrate advanced AI and database capabilities into creative workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=38ZPYhN5N8E"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=38ZPYhN5N8E
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:10:15 +00:00
-permalink: "/2025-11-25-Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "Azure", "Azure Cosmos DB", "Azure SQL", "Creative Pipeline", "Data Architecture", "EV Charging Finder", "Generative Design", "InnovatewithAzureAIappsandagents", "Integration Patterns", "Intelligent Agents", "Kantar", "Microsoft Fabric", "Microsoft Foundry", "MSIgnite", "Palette Generator", "Pantone", "Semantic Search", "Technical Demo", "TomTom", "Videos"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure cosmos db", "azure sql", "creative pipeline", "data architecture", "ev charging finder", "generative design", "innovatewithazureaiappsandagents", "integration patterns", "intelligent agents", "kantar", "microsoft fabric", "microsoft foundry", "msignite", "palette generator", "pantone", "semantic search", "technical demo", "tomtom", "videos"]
+permalink: /ai/videos/Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure Cosmos DB
+- Azure SQL
+- Creative Pipeline
+- Data Architecture
+- EV Charging Finder
+- Generative Design
+- InnovatewithAzureAIappsandagents
+- Integration Patterns
+- Intelligent Agents
+- Kantar
+- Microsoft Fabric
+- Microsoft Foundry
+- MSIgnite
+- Palette Generator
+- Pantone
+- Semantic Search
+- Technical Demo
+- TomTom
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents an Ignite session featuring Marco Casalaina and other speakers on agentic AI for creative industries. The session covers integration of AI with Azure services, practical demos, and case studies with Pantone, TomTom, and Kantar.<!--excerpt_end-->
 
 {% youtube 38ZPYhN5N8E %}

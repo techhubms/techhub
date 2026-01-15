@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads"
-description: "This session from Microsoft Ignite 2025 explores how Azure API Management, including AI Gateway and MCP support, helps enterprises scale AI securely. Presenters demonstrate strategies for centralizing access, enforcing policies, and governing data for multi-model AI workloads and copilots. Real-world examples and demos show how IT leaders can ensure safe and scalable AI adoption."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=TG4ZULpS81w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=TG4ZULpS81w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:08:59 +00:00
-permalink: "/2025-11-24-Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Governance", "AI", "AI Gateway", "API Center", "API Integration", "API Monitoring", "Azure", "Azure API Management", "Azure Foundry", "Content Safety", "Copilot Governance", "InnovatewithAzureAIappsandagents", "IT Security", "MCP Support", "Microsoft Ignite", "Model Governance", "MSIgnite", "Multi Model AI", "Policy Enforcement", "Security", "Semantic Caching", "Token Limit", "Videos"]
-tags_normalized: ["agent governance", "ai", "ai gateway", "api center", "api integration", "api monitoring", "azure", "azure api management", "azure foundry", "content safety", "copilot governance", "innovatewithazureaiappsandagents", "it security", "mcp support", "microsoft ignite", "model governance", "msignite", "multi model ai", "policy enforcement", "security", "semantic caching", "token limit", "videos"]
+permalink: /ai/videos/Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads
+tags:
+- Agent Governance
+- AI
+- AI Gateway
+- API Center
+- API Integration
+- API Monitoring
+- Azure
+- Azure API Management
+- Azure Foundry
+- Content Safety
+- Copilot Governance
+- InnovatewithAzureAIappsandagents
+- IT Security
+- MCP Support
+- Microsoft Ignite
+- Model Governance
+- MSIgnite
+- Multi Model AI
+- Policy Enforcement
+- Security
+- Semantic Caching
+- Token Limit
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events hosts a session featuring Mike Budzynski and Anish Tallapureddy, focusing on how Azure API Management and AI Gateway helps IT leaders govern and secure multi-model AI workloads at scale.<!--excerpt_end-->
 
 {% youtube TG4ZULpS81w %}

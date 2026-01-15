@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Integrating Model Context Protocol (MCP) in VS Code Agent Mode"
-description: "This article, authored by Harald Kirschner, details the addition of Model Context Protocol (MCP) support in Visual Studio Code's agent mode. It explores how MCP enables VS Code to connect AI agents to external tools and services securely, improving extensibility, user control, and ecosystem collaboration."
-author: "Harald Kirschner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Integrating Model Context Protocol (MCP) in VS Code Agent Mode
+author: Harald Kirschner
+canonical_url: https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-14 00:00:00 +00:00
-permalink: "/2025-05-14-Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "Coding", "Developer Tools", "Dynamic Tool Discovery", "Extension Development", "GitHub MCP Server", "MCP", "News", "Playwright MCP Server", "Secrets Management", "Tool Server", "User Control", "VS Code", "Workspace Integration"]
-tags_normalized: ["ai", "ai agents", "coding", "developer tools", "dynamic tool discovery", "extension development", "github mcp server", "mcp", "news", "playwright mcp server", "secrets management", "tool server", "user control", "vs code", "workspace integration"]
+permalink: /ai/news/Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode
+tags:
+- AI
+- AI Agents
+- Coding
+- Developer Tools
+- Dynamic Tool Discovery
+- Extension Development
+- GitHub MCP Server
+- MCP
+- News
+- Playwright MCP Server
+- Secrets Management
+- Tool Server
+- User Control
+- VS Code
+- Workspace Integration
+section_names:
+- ai
+- coding
 ---
-
 Harald Kirschner explains how integrating Model Context Protocol (MCP) in VS Code empowers AI agents to use external tools, enhancing flexibility and control for developers.<!--excerpt_end-->
 
 # Integrating Model Context Protocol (MCP) in VS Code Agent Mode

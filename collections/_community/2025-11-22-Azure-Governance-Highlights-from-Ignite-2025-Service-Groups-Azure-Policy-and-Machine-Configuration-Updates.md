@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Governance Highlights from Ignite 2025: Service Groups, Azure Policy, and Machine Configuration Updates"
-description: "This blog by jodiboone recaps the latest Azure governance announcements from Ignite 2025, featuring Service Groups in public preview, major updates to Azure Policy including Identity Based Exemptions, and advancements in machine configuration customizable baselines for compliance. Readers get actionable insights into new features, integrations, and best practices for securing and managing Azure environments."
-author: "jodiboone"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-governance-ignite-2025/ba-p/4471112"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Governance Highlights from Ignite 2025: Service Groups, Azure Policy, and Machine Configuration Updates'
+author: jodiboone
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-governance-ignite-2025/ba-p/4471112
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-22 01:24:16 +00:00
-permalink: "/2025-11-22-Azure-Governance-Highlights-from-Ignite-2025-Service-Groups-Azure-Policy-and-Machine-Configuration-Updates.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Governance", "Azure Monitoring", "Azure Policy", "Azure Resiliency", "CIS Compliance", "Cloud Compliance", "Community", "Custom Baselines", "Extensibility Framework", "Identity Based Exemptions", "Linux Baselines", "Machine Configuration", "Policy Lifecycle", "Public Preview", "Remediations", "Resource Management", "Role Based Access Control", "Security", "Service Groups", "Tech Community", "UX Improvements", "Windows Baselines"]
-tags_normalized: ["azure", "azure governance", "azure monitoring", "azure policy", "azure resiliency", "cis compliance", "cloud compliance", "community", "custom baselines", "extensibility framework", "identity based exemptions", "linux baselines", "machine configuration", "policy lifecycle", "public preview", "remediations", "resource management", "role based access control", "security", "service groups", "tech community", "ux improvements", "windows baselines"]
+permalink: /azure/community/Azure-Governance-Highlights-from-Ignite-2025-Service-Groups-Azure-Policy-and-Machine-Configuration-Updates
+tags:
+- Azure
+- Azure Governance
+- Azure Monitoring
+- Azure Policy
+- Azure Resiliency
+- CIS Compliance
+- Cloud Compliance
+- Community
+- Custom Baselines
+- Extensibility Framework
+- Identity Based Exemptions
+- Linux Baselines
+- Machine Configuration
+- Policy Lifecycle
+- Public Preview
+- Remediations
+- Resource Management
+- Role Based Access Control
+- Security
+- Service Groups
+- Tech Community
+- UX Improvements
+- Windows Baselines
+section_names:
+- azure
+- security
 ---
-
 jodiboone reviews the key Azure governance updates from Ignite 2025, covering new features in Service Groups, Azure Policy enhancements, and machine configuration baselines.<!--excerpt_end-->
 
 # Azure Governance @ Ignite 2025: Key Announcements and New Features

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "From Timeouts to Triumph: Optimizing GPT-4o-mini for Speed, Efficiency, and Reliability"
-description: "This case study details how large-scale GPT-4o-mini deployments on Azure OpenAI were optimized for speed, reliability, and cost. It explores diagnosing production issues with timeouts and throttling, using Kusto and APIM telemetry, and implementing engineering solutions like token budgeting, spillover routing, and API policy governance. The article offers lessons for building resilient, scalable AI architectures using Azure services."
-author: "psundars"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-timeouts-to-triumph-optimizing-gpt-4o-mini-for-speed/ba-p/4461531"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'From Timeouts to Triumph: Optimizing GPT-4o-mini for Speed, Efficiency, and Reliability'
+author: psundars
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-timeouts-to-triumph-optimizing-gpt-4o-mini-for-speed/ba-p/4461531
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 17:26:18 +00:00
-permalink: "/2025-10-14-From-Timeouts-to-Triumph-Optimizing-GPT-4o-mini-for-Speed-Efficiency-and-Reliability.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Management", "APIM", "Azure", "Azure Front Door", "Azure OpenAI Service", "Community", "Cost Efficiency", "GPT 4o Mini", "High Throughput AI", "Kusto", "Multi Region Routing", "Provisioned Throughput Units", "Scalability", "Streaming", "Telemetry", "Throttling", "Timeout Handling", "Token Optimization"]
-tags_normalized: ["ai", "api management", "apim", "azure", "azure front door", "azure openai service", "community", "cost efficiency", "gpt 4o mini", "high throughput ai", "kusto", "multi region routing", "provisioned throughput units", "scalability", "streaming", "telemetry", "throttling", "timeout handling", "token optimization"]
+permalink: /ai/community/From-Timeouts-to-Triumph-Optimizing-GPT-4o-mini-for-Speed-Efficiency-and-Reliability
+tags:
+- AI
+- API Management
+- APIM
+- Azure
+- Azure Front Door
+- Azure OpenAI Service
+- Community
+- Cost Efficiency
+- GPT 4o Mini
+- High Throughput AI
+- Kusto
+- Multi Region Routing
+- Provisioned Throughput Units
+- Scalability
+- Streaming
+- Telemetry
+- Throttling
+- Timeout Handling
+- Token Optimization
+section_names:
+- ai
+- azure
 ---
-
 psundars presents a practical breakdown of optimizing GPT-4o-mini deployments on Azure OpenAI—addressing performance bottlenecks and enhancing reliability through data-driven engineering and architectural best practices.<!--excerpt_end-->
 
 # Improving Performance and Reliability in Large-Scale Azure OpenAI Workloads

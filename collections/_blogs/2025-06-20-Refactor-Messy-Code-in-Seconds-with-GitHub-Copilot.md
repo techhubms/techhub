@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Refactor Messy Code in Seconds with GitHub Copilot"
-description: "This post demonstrates how GitHub Copilot can rapidly refactor messy code into clean, maintainable solutions with minimal effort. It provides an actionable workflow—highlighting code, adding a natural language comment, and leveraging Copilot Chat to generate optimized code—complete with a Python example, making it highly relevant for developers aiming to improve productivity."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Refactor Messy Code in Seconds with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-20 00:00:00 +00:00
-permalink: "/2025-06-20-Refactor-Messy-Code-in-Seconds-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Automation", "Blogs", "Clean Code", "Code Refactoring", "Coding", "Coding Best Practices", "Copilot Chat", "Developer Tools", "GitHub Copilot", "IDE Extensions", "Productivity", "Programming Tips", "Python", "Software Engineering"]
-tags_normalized: ["ai", "ai assisted development", "automation", "blogs", "clean code", "code refactoring", "coding", "coding best practices", "copilot chat", "developer tools", "github copilot", "ide extensions", "productivity", "programming tips", "python", "software engineering"]
+permalink: /github-copilot/blogs/Refactor-Messy-Code-in-Seconds-with-GitHub-Copilot
+tags:
+- AI
+- AI Assisted Development
+- Automation
+- Blogs
+- Clean Code
+- Code Refactoring
+- Coding
+- Coding Best Practices
+- Copilot Chat
+- Developer Tools
+- GitHub Copilot
+- IDE Extensions
+- Productivity
+- Programming Tips
+- Python
+- Software Engineering
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shows how to quickly refactor messy code with GitHub Copilot by leveraging comments and Copilot Chat, making code cleaner and more efficient.<!--excerpt_end-->
 
 # Refactor Messy Code in Seconds with GitHub Copilot

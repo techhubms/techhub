@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Smart Tiering for Azure Blob and Data Lake Storage: Automated Cost Optimization"
-description: "This article introduces the public preview of Smart Tier in Azure Blob Storage and Azure Data Lake Storage. It explains how Smart Tier automatically manages and optimizes storage costs by intelligently moving data between hot, cool, and cold capacity tiers based on object access patterns. The guide covers configuration, object management rules, cost savings, and billing considerations, providing practical steps for enabling Smart Tier on both new and existing storage accounts."
-author: "BenedictBerger"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Smart Tiering for Azure Blob and Data Lake Storage: Automated Cost Optimization'
+author: BenedictBerger
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:53:55 +00:00
-permalink: "/2025-11-18-Smart-Tiering-for-Azure-Blob-and-Data-Lake-Storage-Automated-Cost-Optimization.html"
-categories: ["Azure"]
-tags: ["API Configuration", "Automated Tiering", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Portal", "Billing Model", "Block Blob", "Capacity Management", "Cloud Storage", "Cold Tier", "Community", "Cool Tier", "Cost Savings", "Data Tiering", "Hot Tier", "Lifecycle Management", "Qumulo", "Smart Tier", "Storage Optimization", "Zonal Redundancy"]
-tags_normalized: ["api configuration", "automated tiering", "azure", "azure blob storage", "azure data lake storage", "azure portal", "billing model", "block blob", "capacity management", "cloud storage", "cold tier", "community", "cool tier", "cost savings", "data tiering", "hot tier", "lifecycle management", "qumulo", "smart tier", "storage optimization", "zonal redundancy"]
+permalink: /azure/community/Smart-Tiering-for-Azure-Blob-and-Data-Lake-Storage-Automated-Cost-Optimization
+tags:
+- API Configuration
+- Automated Tiering
+- Azure
+- Azure Blob Storage
+- Azure Data Lake Storage
+- Azure Portal
+- Billing Model
+- Block Blob
+- Capacity Management
+- Cloud Storage
+- Cold Tier
+- Community
+- Cool Tier
+- Cost Savings
+- Data Tiering
+- Hot Tier
+- Lifecycle Management
+- Qumulo
+- Smart Tier
+- Storage Optimization
+- Zonal Redundancy
+section_names:
+- azure
 ---
-
 BenedictBerger outlines Smart Tier, a new automated tiering solution for Azure Blob and Data Lake storage, detailing its benefits, setup, and cost-saving features for cloud storage management.<!--excerpt_end-->
 
 # Smart Tiering for Azure Blob and Data Lake Storage: Automated Cost Optimization

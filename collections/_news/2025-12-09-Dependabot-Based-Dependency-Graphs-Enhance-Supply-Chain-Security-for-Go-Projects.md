@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Dependabot-Based Dependency Graphs Enhance Supply Chain Security for Go Projects"
-description: "This update introduces Dependabot-based dependency graph enhancements for Go projects on GitHub, providing more complete and accurate transitive dependency trees and Software Bill of Materials (SBOMs). The system dynamically resolves Go dependencies, leverages new job types for dependency snapshots, and supports private registry configurations. These improvements bolster supply chain security and offer better ecosystem support for organizations managing Go projects."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot-Based Dependency Graphs Enhance Supply Chain Security for Go Projects
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-09 15:54:48 +00:00
-permalink: "/2025-12-09-Dependabot-Based-Dependency-Graphs-Enhance-Supply-Chain-Security-for-Go-Projects.html"
-categories: ["DevOps", "Security"]
-tags: ["Configuration", "Dependabot", "Dependency Graph", "Dependency Submission API", "Dependency Trees", "DevOps", "DevOps Tools", "GitHub", "Go", "Improvement", "News", "Package Management", "Private Registry", "Project Ecosystem", "SBOM", "Security", "Software Bill Of Materials", "Supply Chain Security", "Transitive Dependencies"]
-tags_normalized: ["configuration", "dependabot", "dependency graph", "dependency submission api", "dependency trees", "devops", "devops tools", "github", "go", "improvement", "news", "package management", "private registry", "project ecosystem", "sbom", "security", "software bill of materials", "supply chain security", "transitive dependencies"]
+permalink: /devops/news/Dependabot-Based-Dependency-Graphs-Enhance-Supply-Chain-Security-for-Go-Projects
+tags:
+- Configuration
+- Dependabot
+- Dependency Graph
+- Dependency Submission API
+- Dependency Trees
+- DevOps
+- DevOps Tools
+- GitHub
+- Go
+- Improvement
+- News
+- Package Management
+- Private Registry
+- Project Ecosystem
+- SBOM
+- Security
+- Software Bill Of Materials
+- Supply Chain Security
+- Transitive Dependencies
+section_names:
+- devops
+- security
 ---
-
 Allison summarizes GitHub's updates for Dependabot-based dependency graphs, highlighting enhanced supply chain security and better dependency tracking for Go projects.<!--excerpt_end-->
 
 # Dependabot-Based Dependency Graphs Enhance Supply Chain Security for Go Projects

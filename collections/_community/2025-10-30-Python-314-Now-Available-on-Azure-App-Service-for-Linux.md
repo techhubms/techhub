@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Python 3.14 Now Available on Azure App Service for Linux"
-description: "This announcement details the release of Python 3.14 as a supported runtime on Azure App Service for Linux. It covers new Python 3.14 features such as improved concurrency and developer tooling, and provides practical guidance for testing and adopting the new version in web applications and APIs hosted on Azure."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/python-3-14-is-now-available-on-azure-app-service-for-linux/ba-p/4465404"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Python 3.14 Now Available on Azure App Service for Linux
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/python-3-14-is-now-available-on-azure-app-service-for-linux/ba-p/4465404
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 03:47:54 +00:00
-permalink: "/2025-10-30-Python-314-Now-Available-on-Azure-App-Service-for-Linux.html"
-categories: ["Azure", "Coding"]
-tags: ["App Service Deployment", "ARM Templates", "Azure", "Azure App Service", "Azure CLI", "Azure Platform", "Bicep Templates", "Coding", "Community", "Developer Experience", "Interpreter Enhancements", "Linux Hosting", "Multi Core Concurrency", "Patching", "Performance Optimization", "Python 3.14", "Runtime Upgrades", "Web Apps"]
-tags_normalized: ["app service deployment", "arm templates", "azure", "azure app service", "azure cli", "azure platform", "bicep templates", "coding", "community", "developer experience", "interpreter enhancements", "linux hosting", "multi core concurrency", "patching", "performance optimization", "python 3dot14", "runtime upgrades", "web apps"]
+permalink: /coding/community/Python-314-Now-Available-on-Azure-App-Service-for-Linux
+tags:
+- App Service Deployment
+- ARM Templates
+- Azure
+- Azure App Service
+- Azure CLI
+- Azure Platform
+- Bicep Templates
+- Coding
+- Community
+- Developer Experience
+- Interpreter Enhancements
+- Linux Hosting
+- Multi Core Concurrency
+- Patching
+- Performance Optimization
+- Python 3.14
+- Runtime Upgrades
+- Web Apps
+section_names:
+- azure
+- coding
 ---
-
 TulikaC introduces support for Python 3.14 on Azure App Service for Linux, explaining performance improvements and offering migration steps for developers to upgrade and test their web applications.<!--excerpt_end-->
 
 # Python 3.14 Now Available on Azure App Service for Linux

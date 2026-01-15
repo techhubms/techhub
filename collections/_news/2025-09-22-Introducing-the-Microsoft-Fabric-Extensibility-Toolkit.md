@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Introducing the Microsoft Fabric Extensibility Toolkit"
-description: "This announcement presents the Microsoft Fabric Extensibility Toolkit, a successor to the Workload Development Kit. The toolkit enables developers and organizations to rapidly create, integrate, and publish data applications into Microsoft Fabric workspaces. It streamlines authentication, state management, OneLake integration, and leverages Copilot-ready starter kits to accelerate development. Key capabilities include integrated authentication with Microsoft Entra ID, scalable metadata storage, OneLake data access, and samples for quick onboarding. Practical examples include the Package Installer and OneLake Item Explorer, both of which demonstrate extensibility and integration potential within Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Introducing the Microsoft Fabric Extensibility Toolkit
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 15:30:00 +00:00
-permalink: "/2025-09-22-Introducing-the-Microsoft-Fabric-Extensibility-Toolkit.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "API Integration", "Authentication", "Azure", "Coding", "Copilot", "Custom Data Applications", "Data Integration", "Developer Tools", "Fabric Extensibility Toolkit", "Fabric Workspace", "Front End Development", "Item Explorer", "Metadata Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "OneLake", "Package Installer", "Power BI", "SaaS", "Spark", "Starter Kit", "Workload Development Kit"]
-tags_normalized: ["ai", "api integration", "authentication", "azure", "coding", "copilot", "custom data applications", "data integration", "developer tools", "fabric extensibility toolkit", "fabric workspace", "front end development", "item explorer", "metadata management", "microsoft entra id", "microsoft fabric", "ml", "news", "onelake", "package installer", "power bi", "saas", "spark", "starter kit", "workload development kit"]
+permalink: /ai/news/Introducing-the-Microsoft-Fabric-Extensibility-Toolkit
+tags:
+- AI
+- API Integration
+- Authentication
+- Azure
+- Coding
+- Copilot
+- Custom Data Applications
+- Data Integration
+- Developer Tools
+- Fabric Extensibility Toolkit
+- Fabric Workspace
+- Front End Development
+- Item Explorer
+- Metadata Management
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Package Installer
+- Power BI
+- SaaS
+- Spark
+- Starter Kit
+- Workload Development Kit
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Fabric Extensibility Toolkit, showcasing how developers can build, integrate, and publish custom data applications directly within Microsoft Fabric, using streamlined APIs and Copilot-powered starter kits.<!--excerpt_end-->
 
 # Introducing the Microsoft Fabric Extensibility Toolkit

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing GA of Bicep Templates for Microsoft Entra ID Resources"
-description: "Microsoft announces general availability of Bicep templates for Microsoft Entra ID resources, enabling unified infrastructure as code with Bicep and Microsoft Graph. The release includes a dedicated VS Code extension, supports deployment via familiar tools, and features a practical scenario with GitHub Actions and federated identity credentials."
-author: "Dan_Kershaw"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing GA of Bicep Templates for Microsoft Entra ID Resources
+author: Dan_Kershaw
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-29 15:00:00 +00:00
-permalink: "/2025-07-29-Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Azure", "Azure Resource Manager", "Bicep", "Coding", "Community", "Deployment Automation", "DevOps", "Federated Identity", "GitHub Actions", "IaC", "Managed Identity", "Microsoft Entra ID", "Microsoft Graph", "Resource Orchestration", "Security", "VS Code Extension"]
-tags_normalized: ["azure", "azure resource manager", "bicep", "coding", "community", "deployment automation", "devops", "federated identity", "github actions", "iac", "managed identity", "microsoft entra id", "microsoft graph", "resource orchestration", "security", "vs code extension"]
+permalink: /coding/community/Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources
+tags:
+- Azure
+- Azure Resource Manager
+- Bicep
+- Coding
+- Community
+- Deployment Automation
+- DevOps
+- Federated Identity
+- GitHub Actions
+- IaC
+- Managed Identity
+- Microsoft Entra ID
+- Microsoft Graph
+- Resource Orchestration
+- Security
+- VS Code Extension
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 Dan_Kershaw introduces the general availability of Bicep templates for Microsoft Entra ID, highlighting improved IaC workflows and new deployment integrations.<!--excerpt_end-->
 
 ## Overview

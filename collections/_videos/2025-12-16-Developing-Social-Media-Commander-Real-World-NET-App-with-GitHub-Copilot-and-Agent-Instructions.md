@@ -1,20 +1,51 @@
+﻿---
+layout: post
+title: 'Developing Social Media Commander: Real-World .NET App with GitHub Copilot and Agent Instructions'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=2EJR1xhTtBs
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
+date: 2025-12-16 17:00:10 +00:00
+permalink: /github-copilot/videos/Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions
+tags:
+- .NET
+- Agent Instructions
+- AI
+- AI Powered Development
+- Avalonia
+- Azure
+- Blue Sky Integration
+- CI/CD Automation
+- Cloud
+- Cloud Computing
+- Coding
+- Copilot Integration
+- Cross Platform App
+- Dev
+- Developer Workflow
+- Development
+- DevOps
+- GitHub Copilot
+- GitHub Spark
+- Live Coding
+- MCP Server
+- Microsoft
+- Microsoft Azure
+- Microsoft Learn
+- OpenAI
+- Prompt Engineering
+- Tech
+- Technology
+- Videos
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-layout: "post"
-title: "Developing Social Media Commander: Real-World .NET App with GitHub Copilot and Agent Instructions"
-description: "This video episode from MVP Unplugged showcases how Microsoft MVP Jeremy Sinclair leverages GitHub Copilot, Agent Instructions, and .NET technologies (including Avalonia and GitHub Spark) to rapidly build and enhance a cross-platform application called Social Media Commander. The hosts explore practical AI integration for developer workflows, best practices for agent-based code guidance, and live demonstrations of feature additions, CI/CD automation, and integrating Microsoft Learn docs to augment development context. Key insights include the nuances of Copilot's AI assistance, error handling, architectural decisions for cross-platform .NET, and actionable tips for developers embracing AI-powered tools."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2EJR1xhTtBs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
-date: "2025-12-16 17:00:10 +00:00"
-permalink: "/2025-12-16-Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agent Instructions", "AI", "AI Powered Development", "Avalonia", "Azure", "Blue Sky Integration", "CI/CD Automation", "Cloud", "Cloud Computing", "Coding", "Copilot Integration", "Cross Platform App", "Dev", "Developer Workflow", "Development", "DevOps", "GitHub Copilot", "GitHub Spark", "Live Coding", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Learn", "OpenAI", "Prompt Engineering", "Tech", "Technology", "Videos", "VS"]
-tags_normalized: ["dotnet", "agent instructions", "ai", "ai powered development", "avalonia", "azure", "blue sky integration", "cislashcd automation", "cloud", "cloud computing", "coding", "copilot integration", "cross platform app", "dev", "developer workflow", "development", "devops", "github copilot", "github spark", "live coding", "mcp server", "microsoft", "microsoft azure", "microsoft learn", "openai", "prompt engineering", "tech", "technology", "videos", "vs"]
----
-
 Microsoft Developer and MVP Jeremy Sinclair, joined by Justin Garrett, reveal how they built the Social Media Commander app using GitHub Copilot and latest AI features, demonstrating real-world coding, agent instructions, and CI/CD automation.<!--excerpt_end-->
 
 {% youtube 2EJR1xhTtBs %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "GitHub Copilot CLI: Faster, More Concise, Streamlined Developer Experience"
-description: "This update highlights recent improvements to GitHub Copilot CLI, focused on performance, usability, and interface enhancements, especially based on community feedback. It details reductions in completion time and token usage, refinements in the timeline and input experience, expanded Windows support (notably for PowerShell), and a variety of bugfixes. Developers benefit from improved file editing workflows, better terminal compatibility, and ongoing daily quality-of-life upgrades."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot CLI: Faster, More Concise, Streamlined Developer Experience'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-10 20:41:42 +00:00
-permalink: "/2025-10-10-GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Bugfixes", "CLI", "Client Apps", "Coding", "Copilot", "Copilot Updates", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Copilot CLI", "Improvement", "Kitty Protocol", "Linux", "MacOS", "Markdown Rendering", "News", "Node.js", "Performance", "PowerShell", "Prompt Engineering", "Terminal", "Usability", "Windows Support"]
-tags_normalized: ["ai", "ai coding assistant", "bugfixes", "cli", "client apps", "coding", "copilot", "copilot updates", "developer tools", "devops", "github copilot", "github copilot cli", "improvement", "kitty protocol", "linux", "macos", "markdown rendering", "news", "nodedotjs", "performance", "powershell", "prompt engineering", "terminal", "usability", "windows support"]
+permalink: /github-copilot/news/GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience
+tags:
+- AI
+- AI Coding Assistant
+- Bugfixes
+- CLI
+- Client Apps
+- Coding
+- Copilot
+- Copilot Updates
+- Developer Tools
+- DevOps
+- GitHub Copilot
+- GitHub Copilot CLI
+- Improvement
+- Kitty Protocol
+- Linux
+- MacOS
+- Markdown Rendering
+- News
+- Node.js
+- Performance
+- PowerShell
+- Prompt Engineering
+- Terminal
+- Usability
+- Windows Support
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Allison discusses the latest updates to GitHub Copilot CLI, emphasizing enhanced speed, improved terminal usability, and expanded Windows support for developers leveraging AI-powered coding assistance.<!--excerpt_end-->
 
 # GitHub Copilot CLI: Faster, More Concise, and Prettier

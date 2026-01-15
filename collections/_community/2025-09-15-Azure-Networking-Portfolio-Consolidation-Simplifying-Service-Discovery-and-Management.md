@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management"
-description: "This in-depth community post by Sudha_Mahajan explores Microsoft's recent consolidation of the Azure Networking portfolio. The update centers around organizing networking services into four core scenarios—network foundations, hybrid connectivity, load balancing and content delivery, and network security—making it easier for users to find, evaluate, and manage Azure networking solutions. The post details changes to the Azure portal, Azure.com, and documentation, covering service sunsetting, feature hubs, and scenario-based navigation, with extensive links to official Microsoft documentation."
-author: "Sudha_Mahajan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management'
+author: Sudha_Mahajan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 20:02:36 +00:00
-permalink: "/2025-09-15-Azure-Networking-Portfolio-Consolidation-Simplifying-Service-Discovery-and-Management.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure DDoS Protection", "Azure Documentation", "Azure ExpressRoute", "Azure Firewall", "Azure Front Door", "Azure Networking", "Azure Portal", "Azure Virtual Network", "Cloud Infrastructure", "Community", "Content Delivery", "DNS", "Hybrid Connectivity", "Load Balancer", "Network Foundations", "Network Security", "Private Link", "Security", "Service Consolidation", "Web Application Firewall"]
-tags_normalized: ["azure", "azure ddos protection", "azure documentation", "azure expressroute", "azure firewall", "azure front door", "azure networking", "azure portal", "azure virtual network", "cloud infrastructure", "community", "content delivery", "dns", "hybrid connectivity", "load balancer", "network foundations", "network security", "private link", "security", "service consolidation", "web application firewall"]
+permalink: /azure/community/Azure-Networking-Portfolio-Consolidation-Simplifying-Service-Discovery-and-Management
+tags:
+- Azure
+- Azure DDoS Protection
+- Azure Documentation
+- Azure ExpressRoute
+- Azure Firewall
+- Azure Front Door
+- Azure Networking
+- Azure Portal
+- Azure Virtual Network
+- Cloud Infrastructure
+- Community
+- Content Delivery
+- DNS
+- Hybrid Connectivity
+- Load Balancer
+- Network Foundations
+- Network Security
+- Private Link
+- Security
+- Service Consolidation
+- Web Application Firewall
+section_names:
+- azure
+- security
 ---
-
 Sudha_Mahajan breaks down the Azure Networking portfolio consolidation, highlighting how the new scenario-based organization makes Microsoft cloud network tools easier to navigate and more efficient for technical users.<!--excerpt_end-->
 
 # Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Resiliency and Recovery with Azure Backup and Site Recovery"
-description: "This advanced session from Microsoft Ignite 2025 illustrates strategies for protecting, detecting, and recovering critical workloads in Azure, including VMs, databases, file shares, and AKS clusters. It covers modern backup solutions with secure-by-default protection, immutable storage, threat-aware and container-aware backups, integration with Microsoft Defender, as well as disaster recovery orchestration to meet RPO/RTO and compliance requirements."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IJDL7c2dHXc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Resiliency and Recovery with Azure Backup and Site Recovery
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=IJDL7c2dHXc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:32:15 +00:00
-permalink: "/2025-11-24-Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Backup", "Azure Site Recovery", "Backup Orchestration", "Cloud Security", "Compliance", "Data Resiliency", "Disaster Recovery", "Immutable Storage", "Microsoft Defender Integration", "Migrateandmodernizeyourestate", "MSIgnite", "Replication", "Resiliency", "RPO", "RTO", "Security", "SLA", "Threat Aware Backups", "Two Tier Architecture", "Unstructured Data", "Videos", "Virtual Machines", "Workload Protection"]
-tags_normalized: ["aks", "azure", "azure backup", "azure site recovery", "backup orchestration", "cloud security", "compliance", "data resiliency", "disaster recovery", "immutable storage", "microsoft defender integration", "migrateandmodernizeyourestate", "msignite", "replication", "resiliency", "rpo", "rto", "security", "sla", "threat aware backups", "two tier architecture", "unstructured data", "videos", "virtual machines", "workload protection"]
+permalink: /azure/videos/Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery
+tags:
+- AKS
+- Azure
+- Azure Backup
+- Azure Site Recovery
+- Backup Orchestration
+- Cloud Security
+- Compliance
+- Data Resiliency
+- Disaster Recovery
+- Immutable Storage
+- Microsoft Defender Integration
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Replication
+- Resiliency
+- RPO
+- RTO
+- Security
+- SLA
+- Threat Aware Backups
+- Two Tier Architecture
+- Unstructured Data
+- Videos
+- Virtual Machines
+- Workload Protection
+section_names:
+- azure
+- security
 ---
-
 In this Microsoft Ignite session, speakers Rochak Mittal and Rohan Sahini provide a comprehensive overview of Azure Backup and Site Recovery, focusing on data resiliency, cyber recovery, and secure workload protection.<!--excerpt_end-->
 
 {% youtube IJDL7c2dHXc %}

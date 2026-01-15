@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Protecting Azure Infrastructure: Defense-in-Depth from Silicon to Systems"
-description: "This in-depth Microsoft Azure Blog post explores the multilayered security architecture underpinning Azure, including hardware innovations, confidential computing, hardware roots of trust, and supply chain transparency. The article details Azure’s defense-in-depth approach—spanning secure silicon, specialized modules, systematic reviews, and transparency services—for building trustworthy cloud infrastructure."
-author: "Mark Russinovich, Omar Khan and Bryan Kelly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Protecting Azure Infrastructure: Defense-in-Depth from Silicon to Systems'
+author: Mark Russinovich, Omar Khan and Bryan Kelly
+canonical_url: https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-25 15:00:00 +00:00
-permalink: "/2025-08-25-Protecting-Azure-Infrastructure-Defense-in-Depth-from-Silicon-to-Systems.html"
-categories: ["Azure", "Security"]
-tags: ["AI", "AI Infrastructure Security", "Azure", "Azure Boost", "Azure Integrated HSM", "Caliptra", "Code Transparency Services", "Confidential Computing", "Confidential Virtual Machines", "FIPS 140 3", "Hardware Security", "Microsoft Azure", "News", "OCP SAFE", "Root Of Trust", "SCITT", "Secure Cloud", "Secure Future Initiative", "Security", "Supply Chain Integrity", "Trusted Execution Environments", "Uncategorized"]
-tags_normalized: ["ai", "ai infrastructure security", "azure", "azure boost", "azure integrated hsm", "caliptra", "code transparency services", "confidential computing", "confidential virtual machines", "fips 140 3", "hardware security", "microsoft azure", "news", "ocp safe", "root of trust", "scitt", "secure cloud", "secure future initiative", "security", "supply chain integrity", "trusted execution environments", "uncategorized"]
+permalink: /azure/news/Protecting-Azure-Infrastructure-Defense-in-Depth-from-Silicon-to-Systems
+tags:
+- AI
+- AI Infrastructure Security
+- Azure
+- Azure Boost
+- Azure Integrated HSM
+- Caliptra
+- Code Transparency Services
+- Confidential Computing
+- Confidential Virtual Machines
+- FIPS 140 3
+- Hardware Security
+- Microsoft Azure
+- News
+- OCP SAFE
+- Root Of Trust
+- SCITT
+- Secure Cloud
+- Secure Future Initiative
+- Security
+- Supply Chain Integrity
+- Trusted Execution Environments
+- Uncategorized
+section_names:
+- azure
+- security
 ---
-
 Authored by Mark Russinovich, Omar Khan, and Bryan Kelly, this article examines Microsoft’s holistic approach to securing Azure, covering innovations like Azure Boost, confidential computing, and root-of-trust hardware for end-to-end infrastructure protection.<!--excerpt_end-->
 
 # Protecting Azure Infrastructure: Defense-in-Depth from Silicon to Systems

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Copilot Chat Unlocks Powerful Repository Management Skills in GitHub"
-description: "This article details how Copilot Chat on GitHub.com now enables more advanced repository workflows directly within chat, allowing users to create, update, push files, branch, and merge pull requests, significantly streamlining development processes within the GitHub interface."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-31-copilot-chat-unlocks-new-repository-management-skills"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: Copilot Chat Unlocks Powerful Repository Management Skills in GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-07-31-copilot-chat-unlocks-new-repository-management-skills
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-31 20:38:46 +00:00
-permalink: "/2025-07-31-Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Branching", "Chat Driven Development", "Copilot Chat", "Developer Productivity", "DevOps", "File Creation", "File Updates", "GitHub", "GitHub Copilot", "News", "Pull Requests", "Repository Workflows"]
-tags_normalized: ["ai", "automation", "branching", "chat driven development", "copilot chat", "developer productivity", "devops", "file creation", "file updates", "github", "github copilot", "news", "pull requests", "repository workflows"]
+permalink: /github-copilot/news/Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub
+tags:
+- AI
+- Automation
+- Branching
+- Chat Driven Development
+- Copilot Chat
+- Developer Productivity
+- DevOps
+- File Creation
+- File Updates
+- GitHub
+- GitHub Copilot
+- News
+- Pull Requests
+- Repository Workflows
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this news update by Allison, discover how Copilot Chat on GitHub.com dramatically enhances repository management by enabling direct file and branch operations as well as pull request handling—all within chat.<!--excerpt_end-->
 
 ## Copilot Chat Unlocks Powerful Repository Management Skills in GitHub

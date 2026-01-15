@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Arc Server Forum: 2026 Schedule and Participation Updates"
-description: "This announcement provides details about the 2026 Azure Arc Server Forum, a monthly community event for customers, partners, and experts working with Azure Arc. The forum offers live demos, product roadmap discussions, and hybrid/multicloud server management content, accompanied by a regular newsletter and recordings via YouTube."
-author: "Aurnov_Chattopadhyay"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Arc Server Forum: 2026 Schedule and Participation Updates'
+author: Aurnov_Chattopadhyay
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 22:58:42 +00:00
-permalink: "/2025-12-08-Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Cloud Operations", "Community", "Community Forum", "Edge Computing", "Hybrid Cloud", "Linux Server", "Live Demos", "Microsoft", "Multicloud", "Product Updates", "Server Management", "SQL Server", "Windows Server"]
-tags_normalized: ["azure", "azure arc", "cloud operations", "community", "community forum", "edge computing", "hybrid cloud", "linux server", "live demos", "microsoft", "multicloud", "product updates", "server management", "sql server", "windows server"]
+permalink: /azure/community/Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates
+tags:
+- Azure
+- Azure Arc
+- Cloud Operations
+- Community
+- Community Forum
+- Edge Computing
+- Hybrid Cloud
+- Linux Server
+- Live Demos
+- Microsoft
+- Multicloud
+- Product Updates
+- Server Management
+- SQL Server
+- Windows Server
+section_names:
+- azure
 ---
-
 Aurnov_Chattopadhyay announces the 2026 updates for the Azure Arc Server Forum, detailing the event schedule, topics covered, and ways for practitioners to engage with the Azure Arc community.<!--excerpt_end-->
 
 # Azure Arc Server Forum: 2026 Schedule and Participation Updates

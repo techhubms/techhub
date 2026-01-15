@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Announcing Resource-Scope Query for Azure Monitor Workspaces"
-description: "This post introduces the public preview of resource-scope query for Azure Monitor Workspaces, providing simplified and more granular observability in Azure. It emphasizes improvements to access control, user experience, and RBAC, highlights new endpoints for metric queries, explains workspace access control modes, and outlines the benefits for DevOps, application teams, and central monitoring. Step-by-step guidance is offered for programmatic and dashboard-based querying methods."
-author: "Tyler_Kight"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Announcing Resource-Scope Query for Azure Monitor Workspaces
+author: Tyler_Kight
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-10 01:32:21 +00:00
-permalink: "/2025-10-10-Announcing-Resource-Scope-Query-for-Azure-Monitor-Workspaces.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Control", "Application Insights", "Azure", "Azure Monitor Agent", "Azure Monitor Workspaces", "Azure Portal", "Azure RBAC", "Centralized Monitoring", "Community", "Container Insights", "DevOps", "Grafana", "Log Analytics Workspaces", "Metrics", "Observability", "OpenTelemetry", "Prometheus", "Query Endpoint", "RBAC", "Resource Permissions", "Resource Scope Query", "Security", "Workspace Permissions"]
-tags_normalized: ["access control", "application insights", "azure", "azure monitor agent", "azure monitor workspaces", "azure portal", "azure rbac", "centralized monitoring", "community", "container insights", "devops", "grafana", "log analytics workspaces", "metrics", "observability", "opentelemetry", "prometheus", "query endpoint", "rbac", "resource permissions", "resource scope query", "security", "workspace permissions"]
+permalink: /azure/community/Announcing-Resource-Scope-Query-for-Azure-Monitor-Workspaces
+tags:
+- Access Control
+- Application Insights
+- Azure
+- Azure Monitor Agent
+- Azure Monitor Workspaces
+- Azure Portal
+- Azure RBAC
+- Centralized Monitoring
+- Community
+- Container Insights
+- DevOps
+- Grafana
+- Log Analytics Workspaces
+- Metrics
+- Observability
+- OpenTelemetry
+- Prometheus
+- Query Endpoint
+- RBAC
+- Resource Permissions
+- Resource Scope Query
+- Security
+- Workspace Permissions
+section_names:
+- azure
+- devops
+- security
 ---
-
 Tyler_Kight announces the public preview of resource-scope query for Azure Monitor Workspaces, detailing how it streamlines observability, access controls, and aligns metric querying with Azure-native experiences.<!--excerpt_end-->
 
 # Announcing Resource-Scope Query for Azure Monitor Workspaces

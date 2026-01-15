@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Report: ChatGPT-5 Coding Gains Come at a Higher Cost"
-description: "Mike Vizard summarizes Sonar's independent analysis of ChatGPT-5's coding capabilities, showing that while code quality and reasoning have improved, using higher reasoning models results in increased costs and new maintenance challenges for DevOps teams. The report examines how advanced AI coding tools from OpenAI handle security vulnerabilities, bug types, productivity, and the tradeoffs that come with different reasoning levels."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Report: ChatGPT-5 Coding Gains Come at a Higher Cost'
+author: Mike Vizard
+canonical_url: https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-04 17:51:34 +00:00
-permalink: "/2025-09-04-Report-ChatGPT-5-Coding-Gains-Come-at-a-Higher-Cost.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Coding Tools", "Blogs", "ChatGPT", "ChatGPT 5", "Code Generation", "Coding", "Concurrency Bugs", "Control Flow Bugs", "Cost Analysis", "DevOps", "Java Tasks", "LLM Evaluation", "Maintenance Challenges", "OpenAI", "Productivity Tradeoffs", "Reasoning Capabilities", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "Sonar Report"]
-tags_normalized: ["ai", "ai coding tools", "blogs", "chatgpt", "chatgpt 5", "code generation", "coding", "concurrency bugs", "control flow bugs", "cost analysis", "devops", "java tasks", "llm evaluation", "maintenance challenges", "openai", "productivity tradeoffs", "reasoning capabilities", "security vulnerabilities", "social facebook", "social linkedin", "social x", "sonar report"]
+permalink: /ai/blogs/Report-ChatGPT-5-Coding-Gains-Come-at-a-Higher-Cost
+tags:
+- AI
+- AI Coding Tools
+- Blogs
+- ChatGPT
+- ChatGPT 5
+- Code Generation
+- Coding
+- Concurrency Bugs
+- Control Flow Bugs
+- Cost Analysis
+- DevOps
+- Java Tasks
+- LLM Evaluation
+- Maintenance Challenges
+- OpenAI
+- Productivity Tradeoffs
+- Reasoning Capabilities
+- Security Vulnerabilities
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Sonar Report
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Mike Vizard explores Sonar's findings on ChatGPT-5, describing how improvements in AI-powered code generation affect cost, vulnerability profiles, and developer maintenance in modern software teams.<!--excerpt_end-->
 
 # Report: ChatGPT-5 Coding Gains Come at a Higher Cost

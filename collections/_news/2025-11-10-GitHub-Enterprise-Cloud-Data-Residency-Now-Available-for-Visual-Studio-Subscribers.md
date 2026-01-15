@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Enterprise Cloud Data Residency Now Available for Visual Studio Subscribers"
-description: "This announcement explains that Visual Studio subscriptions, both subscription-based and usage-based, now support data residency for GitHub Enterprise Cloud. Developers and organizations using Visual Studio subscriptions can access GitHub Enterprise Cloud features while ensuring compliance with regional data requirements, improving enterprise governance and regulatory alignment for software projects managed on GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-10-github-enterprise-cloud-with-data-residency-now-supports-visual-studio-subscriptions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Enterprise Cloud Data Residency Now Available for Visual Studio Subscribers
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-10-github-enterprise-cloud-with-data-residency-now-supports-visual-studio-subscriptions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 17:04:15 +00:00
-permalink: "/2025-11-10-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-for-Visual-Studio-Subscribers.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Cloud Governance", "Cloud Services", "Data Residency", "DevOps", "Enterprise Compliance", "Enterprise Management Tools", "GitHub Enterprise Cloud", "News", "Regional Data Compliance", "Software Development", "Subscription Management", "Visual Studio Subscriptions"]
-tags_normalized: ["account management", "cloud governance", "cloud services", "data residency", "devops", "enterprise compliance", "enterprise management tools", "github enterprise cloud", "news", "regional data compliance", "software development", "subscription management", "visual studio subscriptions"]
+permalink: /devops/news/GitHub-Enterprise-Cloud-Data-Residency-Now-Available-for-Visual-Studio-Subscribers
+tags:
+- Account Management
+- Cloud Governance
+- Cloud Services
+- Data Residency
+- DevOps
+- Enterprise Compliance
+- Enterprise Management Tools
+- GitHub Enterprise Cloud
+- News
+- Regional Data Compliance
+- Software Development
+- Subscription Management
+- Visual Studio Subscriptions
+section_names:
+- devops
 ---
-
 Allison highlights how Visual Studio subscriptions now include support for data residency when accessing GitHub Enterprise Cloud, enabling better compliance with regional data regulations for enterprise software development.<!--excerpt_end-->
 
 # GitHub Enterprise Cloud Data Residency Now Available for Visual Studio Subscribers

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Learning From the Past: What Automation Mistakes Can Teach Us About AI"
-description: "This article explores recurring mistakes in enterprise automation—such as siloed adoption, lack of orchestration, and rigid process modeling—and relates them to today’s rapid integration of AI technologies. It highlights lessons learned from BPM and RPA failures, urging organizations to adopt orchestrated, flexible, and governable approaches when embedding AI into business operations."
-author: "Kurt Petersen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/learning-from-the-past-what-automation-mistakes-can-teach-us-about-ai/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Learning From the Past: What Automation Mistakes Can Teach Us About AI'
+author: Kurt Petersen
+canonical_url: https://devops.com/learning-from-the-past-what-automation-mistakes-can-teach-us-about-ai/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-10 23:59:47 +00:00
-permalink: "/2025-11-10-Learning-From-the-Past-What-Automation-Mistakes-Can-Teach-Us-About-AI.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Orchestration", "Automation", "Automation Architecture", "Automation Governance", "Blogs", "Business Process Management", "DevOps", "Enterprise AI", "IT Governance", "Operational Efficiency", "Orchestration Layer", "Process Automation", "Process Modeling", "Regulatory Compliance", "Robotic Process Automation", "RPA", "Social Facebook", "Social LinkedIn", "Social X", "Technology Adoption", "Techstrong Council"]
-tags_normalized: ["ai", "ai agents", "ai orchestration", "automation", "automation architecture", "automation governance", "blogs", "business process management", "devops", "enterprise ai", "it governance", "operational efficiency", "orchestration layer", "process automation", "process modeling", "regulatory compliance", "robotic process automation", "rpa", "social facebook", "social linkedin", "social x", "technology adoption", "techstrong council"]
+permalink: /ai/blogs/Learning-From-the-Past-What-Automation-Mistakes-Can-Teach-Us-About-AI
+tags:
+- AI
+- AI Agents
+- AI Orchestration
+- Automation
+- Automation Architecture
+- Automation Governance
+- Blogs
+- Business Process Management
+- DevOps
+- Enterprise AI
+- IT Governance
+- Operational Efficiency
+- Orchestration Layer
+- Process Automation
+- Process Modeling
+- Regulatory Compliance
+- Robotic Process Automation
+- RPA
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Technology Adoption
+- Techstrong Council
+section_names:
+- ai
+- devops
 ---
-
 Kurt Petersen discusses how past automation mistakes such as silos and lack of orchestration are resurfacing as enterprises adopt AI, and outlines key strategies to avoid repeating these errors.<!--excerpt_end-->
 
 # Learning From the Past: What Automation Mistakes Can Teach Us About AI

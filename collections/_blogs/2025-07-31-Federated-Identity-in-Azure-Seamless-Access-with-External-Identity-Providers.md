@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Federated Identity in Azure: Seamless Access with External Identity Providers"
-description: "This article details how the Federated Identity pattern works in Microsoft Azure, explaining integration with external identity providers using protocols like OAuth, SAML, and OpenID Connect. It covers architectural flow, supported providers, protocols, security benefits, practical use cases, and best practices, focusing on Azure Active Directory (now Microsoft Entra ID) and enabling secure, scalable Single Sign-On in hybrid and multi-cloud scenarios."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/federated-identity-in-azure-seamless-access-with-external-identity-providers/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Federated Identity in Azure: Seamless Access with External Identity Providers'
+author: Dellenny
+canonical_url: https://dellenny.com/federated-identity-in-azure-seamless-access-with-external-identity-providers/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-07-31 08:28:57 +00:00
-permalink: "/2025-07-31-Federated-Identity-in-Azure-Seamless-Access-with-External-Identity-Providers.html"
-categories: ["Azure", "Security"]
-tags: ["AD FS", "Architecture", "Authentication Protocols", "Azure", "Azure Active Directory", "Azure AD B2C", "Blogs", "Conditional Access", "Enterprise Applications", "External Authentication", "Federated Identity", "Hybrid Cloud", "Identity Provider", "MFA", "Microsoft Entra ID", "Multi Cloud", "OAuth 2.0", "Okta", "OpenID Connect", "SAML 2.0", "Security", "Single Sign On", "Solution Architecture"]
-tags_normalized: ["ad fs", "architecture", "authentication protocols", "azure", "azure active directory", "azure ad b2c", "blogs", "conditional access", "enterprise applications", "external authentication", "federated identity", "hybrid cloud", "identity provider", "mfa", "microsoft entra id", "multi cloud", "oauth 2dot0", "okta", "openid connect", "saml 2dot0", "security", "single sign on", "solution architecture"]
+permalink: /azure/blogs/Federated-Identity-in-Azure-Seamless-Access-with-External-Identity-Providers
+tags:
+- AD FS
+- Architecture
+- Authentication Protocols
+- Azure
+- Azure Active Directory
+- Azure AD B2C
+- Blogs
+- Conditional Access
+- Enterprise Applications
+- External Authentication
+- Federated Identity
+- Hybrid Cloud
+- Identity Provider
+- MFA
+- Microsoft Entra ID
+- Multi Cloud
+- OAuth 2.0
+- Okta
+- OpenID Connect
+- SAML 2.0
+- Security
+- Single Sign On
+- Solution Architecture
+section_names:
+- azure
+- security
 ---
-
 Dellenny explains how Federated Identity is implemented on Microsoft Azure, focusing on secure authentication with external identity providers and the architectural benefits for organizations adopting hybrid and multi-cloud solutions.<!--excerpt_end-->
 
 # Federated Identity in Azure: Seamless Access with External Identity Providers

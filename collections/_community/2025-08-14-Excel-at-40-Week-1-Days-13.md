@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Excel at 40 Week 1: Days 1–3"
-description: "This post celebrates Excel’s 40-year journey, highlighting its evolution in finance, analytics, and data modeling. Covering the first three days in a 40-day series, it shares milestones in Excel’s growth from paper ledger replacement to a programmable, AI-powered platform. Included are practical tips, a brief on formula-based conditional formatting, and nods to integrations with Microsoft Fabric and Power BI."
-author: "OlufemiO"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Excel at 40 Week 1: Days 1–3'
+author: OlufemiO
+canonical_url: https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 20:57:21 +00:00
-permalink: "/2025-08-14-Excel-at-40-Week-1-Days-13.html"
-categories: ["ML"]
-tags: ["Analytics", "Audit Automation", "Community", "Conditional Formatting", "Data Analysis", "Excel Formulas", "Financial Modeling", "Macros", "Microsoft Excel", "Microsoft Fabric", "ML", "PivotTables", "Power BI", "Python in Excel", "Timeline"]
-tags_normalized: ["analytics", "audit automation", "community", "conditional formatting", "data analysis", "excel formulas", "financial modeling", "macros", "microsoft excel", "microsoft fabric", "ml", "pivottables", "power bi", "python in excel", "timeline"]
+permalink: /ml/community/Excel-at-40-Week-1-Days-13
+tags:
+- Analytics
+- Audit Automation
+- Community
+- Conditional Formatting
+- Data Analysis
+- Excel Formulas
+- Financial Modeling
+- Macros
+- Microsoft Excel
+- Microsoft Fabric
+- ML
+- PivotTables
+- Power BI
+- Python in Excel
+- Timeline
+section_names:
+- ml
 ---
-
 OlufemiO looks back on four decades of Excel, sharing technical lessons and practical tips from its early days through modern analytics and data integration with Microsoft Fabric and Power BI.<!--excerpt_end-->
 
 # Excel at 40 Week 1: Days 1–3

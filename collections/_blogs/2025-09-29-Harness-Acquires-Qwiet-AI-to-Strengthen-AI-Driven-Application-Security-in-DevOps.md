@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Harness Acquires Qwiet AI to Strengthen AI-Driven Application Security in DevOps"
-description: "Harness has acquired Qwiet AI, formerly known as ShiftLeft, to embed AI-powered application security capabilities into its DevOps platform. By integrating Qwiet AI's Code Property Graph and AI agents with Traceable's API security, Harness aims to automate and enhance DevSecOps workflows, helping teams address code vulnerabilities directly within the SDLC."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/harness-acquires-qwiet-ai-to-gain-code-testing-tool/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Harness Acquires Qwiet AI to Strengthen AI-Driven Application Security in DevOps
+author: Mike Vizard
+canonical_url: https://devops.com/harness-acquires-qwiet-ai-to-gain-code-testing-tool/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-29 15:00:18 +00:00
-permalink: "/2025-09-29-Harness-Acquires-Qwiet-AI-to-Strengthen-AI-Driven-Application-Security-in-DevOps.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Agents", "API Security", "Application Security", "Blogs", "Code Analysis", "Code Property Graph", "DevOps", "DevSecOps", "Harness", "Qwiet AI", "SDLC", "Security", "Security Automation", "Security Testing", "ShiftLeft", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Traceable", "Vulnerability Remediation"]
-tags_normalized: ["ai", "ai agents", "api security", "application security", "blogs", "code analysis", "code property graph", "devops", "devsecops", "harness", "qwiet ai", "sdlc", "security", "security automation", "security testing", "shiftleft", "social facebook", "social linkedin", "social x", "software supply chain", "traceable", "vulnerability remediation"]
+permalink: /ai/blogs/Harness-Acquires-Qwiet-AI-to-Strengthen-AI-Driven-Application-Security-in-DevOps
+tags:
+- AI
+- AI Agents
+- API Security
+- Application Security
+- Blogs
+- Code Analysis
+- Code Property Graph
+- DevOps
+- DevSecOps
+- Harness
+- Qwiet AI
+- SDLC
+- Security
+- Security Automation
+- Security Testing
+- ShiftLeft
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Supply Chain
+- Traceable
+- Vulnerability Remediation
+section_names:
+- ai
+- devops
+- security
 ---
-
 Mike Vizard details how Harness’s acquisition of Qwiet AI brings AI-powered code testing and native security automation to the DevOps platform, enhancing application security for development teams.<!--excerpt_end-->
 
 # Harness Acquires Qwiet AI to Strengthen AI-Driven Application Security in DevOps

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Shared Capacity Reservations in Azure"
-description: "This video by John Savill's Technical Training explains Azure's new capability for sharing capacity reservations, discusses the scenarios it enables, and walks through how capacity guarantees, resource sharing across subscriptions, and related Azure features work. The video explores practical steps, compatibility issues, and new opportunities for managing Azure virtual machine resources efficiently."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vxBpbNCLANM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Understanding Shared Capacity Reservations in Azure
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=vxBpbNCLANM
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-27 14:02:29 +00:00
-permalink: "/2025-10-27-Understanding-Shared-Capacity-Reservations-in-Azure.html"
-categories: ["Azure"]
-tags: ["Availability Zone", "Availability Zones", "Azure", "Azure Cloud", "Azure SLA", "Azure Virtual Machines", "Capacity", "Capacity Reservation", "Cloud", "Cloud Architecture", "Microsoft", "Microsoft Azure", "Reservation Sharing", "Resource Management", "Savings Plans", "Subscription Management", "Videos"]
-tags_normalized: ["availability zone", "availability zones", "azure", "azure cloud", "azure sla", "azure virtual machines", "capacity", "capacity reservation", "cloud", "cloud architecture", "microsoft", "microsoft azure", "reservation sharing", "resource management", "savings plans", "subscription management", "videos"]
+permalink: /azure/videos/Understanding-Shared-Capacity-Reservations-in-Azure
+tags:
+- Availability Zone
+- Availability Zones
+- Azure
+- Azure Cloud
+- Azure SLA
+- Azure Virtual Machines
+- Capacity
+- Capacity Reservation
+- Cloud
+- Cloud Architecture
+- Microsoft
+- Microsoft Azure
+- Reservation Sharing
+- Resource Management
+- Savings Plans
+- Subscription Management
+- Videos
+section_names:
+- azure
 ---
-
 John Savill provides an in-depth walkthrough of Azure's shared capacity reservations, outlining new scenarios for efficiently using reserved VM capacity across subscriptions.<!--excerpt_end-->
 
 {% youtube vxBpbNCLANM %}

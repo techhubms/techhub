@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The New Era of Azure Ultra Disk: Next-Gen Mission-Critical Block Storage"
-description: "This news article introduces significant updates to Azure Ultra Disk, Microsoft's highest-performance block storage service. It highlights reduced latency, granular cost controls, instant access snapshots, and compatibility with Azure Boost VMs. Real-world customer stories, especially BlackRock, showcase how Ultra Disk supports demanding enterprise workloads. The content offers technical details for optimizing mission-critical applications, cost savings insights, and new backup and recovery features to ensure business continuity on Azure."
-author: "Aung Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/the-new-era-of-azure-ultra-disk-experience-the-next-generation-of-mission-critical-block-storage/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'The New Era of Azure Ultra Disk: Next-Gen Mission-Critical Block Storage'
+author: Aung Oo
+canonical_url: https://azure.microsoft.com/en-us/blog/the-new-era-of-azure-ultra-disk-experience-the-next-generation-of-mission-critical-block-storage/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-06 17:00:00 +00:00
-permalink: "/2025-11-06-The-New-Era-of-Azure-Ultra-Disk-Next-Gen-Mission-Critical-Block-Storage.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Ultra Disk", "Backup And Recovery", "Block Storage", "Capacity Management", "Cloud Storage", "Cost Efficiency", "Encryption", "IOPS", "Latency", "Managed Disks", "Mission Critical Workloads", "News", "Performance Optimization", "Snapshot Recovery", "Storage", "Virtual Machines"]
-tags_normalized: ["azure", "azure boost", "azure ultra disk", "backup and recovery", "block storage", "capacity management", "cloud storage", "cost efficiency", "encryption", "iops", "latency", "managed disks", "mission critical workloads", "news", "performance optimization", "snapshot recovery", "storage", "virtual machines"]
+permalink: /azure/news/The-New-Era-of-Azure-Ultra-Disk-Next-Gen-Mission-Critical-Block-Storage
+tags:
+- Azure
+- Azure Boost
+- Azure Ultra Disk
+- Backup And Recovery
+- Block Storage
+- Capacity Management
+- Cloud Storage
+- Cost Efficiency
+- Encryption
+- IOPS
+- Latency
+- Managed Disks
+- Mission Critical Workloads
+- News
+- Performance Optimization
+- Snapshot Recovery
+- Storage
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Aung Oo reviews the latest advancements in Azure Ultra Disk, focusing on performance, flexibility, instant access snapshots, and customer success stories for mission-critical business applications.<!--excerpt_end-->
 
 # The New Era of Azure Ultra Disk: Next-Gen Mission-Critical Block Storage

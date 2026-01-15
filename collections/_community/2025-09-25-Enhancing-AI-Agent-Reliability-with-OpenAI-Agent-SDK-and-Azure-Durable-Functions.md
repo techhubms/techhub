@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhancing AI Agent Reliability with OpenAI Agent SDK and Azure Durable Functions"
-description: "This guide explores the integration of the OpenAI Agent SDK with Azure Durable Functions, offering AI practitioners a practical approach to increasing agent reliability in production environments. It covers common failure scenarios, core benefits, integration components, and code examples for building resilient, stateful agent workflows using durable orchestration, including patterns for human-in-the-loop and scalable, distributed AI applications."
-author: "greenie-msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enhancing AI Agent Reliability with OpenAI Agent SDK and Azure Durable Functions
+author: greenie-msft
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 12:00:00 +00:00
-permalink: "/2025-09-25-Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "Application Scalability", "Azure", "Azure Durable Functions", "Azure Functions", "Cloud Automation", "Coding", "Community", "Durable Orchestration", "LLM Orchestration", "Observability", "OpenAI Agent SDK", "Python", "Resilient Systems", "Retry Policies", "Serverless", "State Persistence", "Stateful Workflows", "Workflow Reliability"]
-tags_normalized: ["ai", "ai agents", "application scalability", "azure", "azure durable functions", "azure functions", "cloud automation", "coding", "community", "durable orchestration", "llm orchestration", "observability", "openai agent sdk", "python", "resilient systems", "retry policies", "serverless", "state persistence", "stateful workflows", "workflow reliability"]
+permalink: /ai/community/Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions
+tags:
+- AI
+- AI Agents
+- Application Scalability
+- Azure
+- Azure Durable Functions
+- Azure Functions
+- Cloud Automation
+- Coding
+- Community
+- Durable Orchestration
+- LLM Orchestration
+- Observability
+- OpenAI Agent SDK
+- Python
+- Resilient Systems
+- Retry Policies
+- Serverless
+- State Persistence
+- Stateful Workflows
+- Workflow Reliability
+section_names:
+- ai
+- azure
+- coding
 ---
-
 greenie-msft details strategies for making AI agents more reliable in production using the OpenAI Agent SDK with Azure Durable Functions, showing how automatic state management and durable orchestration reduce failures and lost progress.<!--excerpt_end-->
 
 # Enhancing AI Agent Reliability with OpenAI Agent SDK and Azure Durable Functions

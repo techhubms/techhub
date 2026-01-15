@@ -1,20 +1,55 @@
----
-layout: "post"
-title: "Establishing Visibility and Governance for Your Software Supply Chain"
-description: "This post by Parth Patel addresses the challenges and best practices for securing software supply chains, emphasizing the importance of visibility, governance, and risk prioritization. Key topics include the need for Software Bills of Materials (SBOMs), vulnerability tracking, runtime analysis with eBPF, policy enforcement, and provenance attestation. While Microsoft technologies are not the exclusive focus, industry-standard practices like Kubernetes Gatekeeper and SLSA are highlighted, providing guidance for organizations seeking a comprehensive approach to supply chain security."
-author: "Parth Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/establishing-visibility-and-governance-for-your-software-supply-chain/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Establishing Visibility and Governance for Your Software Supply Chain
+author: Parth Patel
+canonical_url: https://devops.com/establishing-visibility-and-governance-for-your-software-supply-chain/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-14 12:27:14 +00:00
-permalink: "/2025-10-14-Establishing-Visibility-and-Governance-for-Your-Software-Supply-Chain.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Appsec", "Asset Visibility", "Attack Surface Management", "Blogs", "Build Time Security", "Business Of DevOps", "Cloud Governance", "Context Aware Security", "Contributed Content", "Cybersecurity Governance", "Dependency Tracking", "DevOps", "Ebpf Runtime Analysis", "Kubernetes Gatekeeper", "Log4Shell", "Open Source Security", "Provenance Attestation", "Risk Reduction", "Runtime Analysis", "SBoM", "SBOM Automation", "Secure Software Development", "Security", "SLSA", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Provenance", "Software Supply Chain", "Software Supply Chain Security", "Supply Chain Risk", "Third Party Dependencies", "VEX", "Vulnerability Management", "Vulnerability Prioritization"]
-tags_normalized: ["application security", "appsec", "asset visibility", "attack surface management", "blogs", "build time security", "business of devops", "cloud governance", "context aware security", "contributed content", "cybersecurity governance", "dependency tracking", "devops", "ebpf runtime analysis", "kubernetes gatekeeper", "log4shell", "open source security", "provenance attestation", "risk reduction", "runtime analysis", "sbom", "sbom automation", "secure software development", "security", "slsa", "social facebook", "social linkedin", "social x", "software bill of materials", "software provenance", "software supply chain", "software supply chain security", "supply chain risk", "third party dependencies", "vex", "vulnerability management", "vulnerability prioritization"]
+permalink: /devops/blogs/Establishing-Visibility-and-Governance-for-Your-Software-Supply-Chain
+tags:
+- Application Security
+- Appsec
+- Asset Visibility
+- Attack Surface Management
+- Blogs
+- Build Time Security
+- Business Of DevOps
+- Cloud Governance
+- Context Aware Security
+- Contributed Content
+- Cybersecurity Governance
+- Dependency Tracking
+- DevOps
+- Ebpf Runtime Analysis
+- Kubernetes Gatekeeper
+- Log4Shell
+- Open Source Security
+- Provenance Attestation
+- Risk Reduction
+- Runtime Analysis
+- SBoM
+- SBOM Automation
+- Secure Software Development
+- Security
+- SLSA
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials
+- Software Provenance
+- Software Supply Chain
+- Software Supply Chain Security
+- Supply Chain Risk
+- Third Party Dependencies
+- VEX
+- Vulnerability Management
+- Vulnerability Prioritization
+section_names:
+- devops
+- security
 ---
-
 Parth Patel explores modern strategies to secure software supply chains through asset visibility, governance practices, and automation, highlighting best practices such as using SBOMs, enforcing policies, and leveraging runtime analysis.<!--excerpt_end-->
 
 # Establishing Visibility and Governance for Your Software Supply Chain

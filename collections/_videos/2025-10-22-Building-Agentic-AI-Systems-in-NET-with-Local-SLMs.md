@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Building Agentic AI Systems in .NET with Local SLMs"
-description: "This session explores agentic AI architecture within .NET workflows using Semantic Kernel and local-first Small Language Models (SLMs). Developers learn how to set up agents for autonomous or human-in-the-loop automation, utilizing in-process and server-hosted SLMs, integrating Retrieval-Augmented Generation, output evaluation, and detailed observability through Microsoft tools."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mwwAz0F4r1E"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Building Agentic AI Systems in .NET with Local SLMs
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=mwwAz0F4r1E
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 23:08:25 +00:00
-permalink: "/2025-10-22-Building-Agentic-AI-Systems-in-NET-with-Local-SLMs.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agentic AI", "Agents", "AI", "Autonomous Agents", "C#", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Edge Deployment", "Embeddings", "Human in The Loop", "in Memory Vector Store", "LLamaSharp", "Microsoft", "Microsoft.Extensions.AI.Evaluation", "Observability", "OllamaSharp", "On Prem Deployment", "Retrieval Augmented Generation", "Semantic Kernel", "SLM", "Small Language Models", "Smalllanguagemodels", "Software Developer", "State Management", "Videos"]
-tags_normalized: ["dotnet", "agentic ai", "agents", "ai", "autonomous agents", "csharp", "coding", "demo", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "edge deployment", "embeddings", "human in the loop", "in memory vector store", "llamasharp", "microsoft", "microsoftdotextensionsdotaidotevaluation", "observability", "ollamasharp", "on prem deployment", "retrieval augmented generation", "semantic kernel", "slm", "small language models", "smalllanguagemodels", "software developer", "state management", "videos"]
+permalink: /ai/videos/Building-Agentic-AI-Systems-in-NET-with-Local-SLMs
+tags:
+- .NET
+- Agentic AI
+- Agents
+- AI
+- Autonomous Agents
+- C#
+- Coding
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnet10
+- Dotnetdeveloper
+- Edge Deployment
+- Embeddings
+- Human in The Loop
+- in Memory Vector Store
+- LLamaSharp
+- Microsoft
+- Microsoft.Extensions.AI.Evaluation
+- Observability
+- OllamaSharp
+- On Prem Deployment
+- Retrieval Augmented Generation
+- Semantic Kernel
+- SLM
+- Small Language Models
+- Smalllanguagemodels
+- Software Developer
+- State Management
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this .NET Live session, Daniel Costea, Cam Soper, Frank Boucher, and Maria Wenzel guide developers through building agentic AI systems with local SLMs, enhanced by Semantic Kernel, in the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube mwwAz0F4r1E %}

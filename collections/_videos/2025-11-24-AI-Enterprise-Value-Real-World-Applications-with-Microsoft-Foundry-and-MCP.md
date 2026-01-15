@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP"
-description: "This advanced Microsoft Ignite 2025 session explores real-world enterprise applications of AI using Microsoft Foundry and Model Context Protocol (MCP) on Windows. Speakers from Microsoft and partners discuss practical approaches for developers and organizations to integrate AI, accelerate workflows, and drive measurable business value. Key topics include global AI adoption, tech strategies for integrators, actionable implementation steps, and AI-powered solutions for end-user experiences."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=E7JJ8JLqlf8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=E7JJ8JLqlf8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:08:44 +00:00
-permalink: "/2025-11-24-AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP.html"
-categories: ["AI"]
-tags: ["Advanced AI Applications", "Agentic AI", "AI", "AI For Traders", "AI Integration", "Business Value", "Enterprise AI", "Intelligent Solutions", "Local AI", "MCP", "Microsoft Foundry", "MSIgnite", "ScalewithcloudandAIendpoints", "Speech To Form Technology", "Videos", "Windows", "Workflow Automation"]
-tags_normalized: ["advanced ai applications", "agentic ai", "ai", "ai for traders", "ai integration", "business value", "enterprise ai", "intelligent solutions", "local ai", "mcp", "microsoft foundry", "msignite", "scalewithcloudandaiendpoints", "speech to form technology", "videos", "windows", "workflow automation"]
+permalink: /ai/videos/AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP
+tags:
+- Advanced AI Applications
+- Agentic AI
+- AI
+- AI For Traders
+- AI Integration
+- Business Value
+- Enterprise AI
+- Intelligent Solutions
+- Local AI
+- MCP
+- Microsoft Foundry
+- MSIgnite
+- ScalewithcloudandAIendpoints
+- Speech To Form Technology
+- Videos
+- Windows
+- Workflow Automation
+section_names:
+- ai
 ---
-
 Microsoft Events presents this Ignite 2025 session featuring Mikhail Chernomordikov, Apoorv Iyer, Diana Kattan, and Tao Zhang, exploring enterprise AI deployments using Microsoft Foundry and Model Context Protocol (MCP) on Windows.<!--excerpt_end-->
 
 {% youtube E7JJ8JLqlf8 %}

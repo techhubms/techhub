@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Challenges with Azure Resource Naming Convention Maintenance in Bicep and Infrastructure as Code"
-description: "This community discussion, led by d2peak, dives into the issues developers face when trying to maintain consistent Azure resource naming conventions using Bicep and the Azure Developer CLI. While Microsoft provides some tools and guidelines, many resources remain out of date, leading to fragmented practices. Contributors explore various workarounds, from custom modules in Bicep and Terraform to manual lookups, and debate the effectiveness of Azure Policy, user-defined functions, and third-party tools. The conversation highlights the importance of maintainable and automatable naming strategies for large-scale Azure projects."
-author: "d2peak"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mjcixd/azure_resource_naming_conventions_not_maintained/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Challenges with Azure Resource Naming Convention Maintenance in Bicep and Infrastructure as Code
+author: d2peak
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mjcixd/azure_resource_naming_conventions_not_maintained/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-06 18:27:00 +00:00
-permalink: "/2025-08-06-Challenges-with-Azure-Resource-Naming-Convention-Maintenance-in-Bicep-and-Infrastructure-as-Code.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "AVM Naming Module", "Azd", "Azure", "Azure Developer CLI", "Azure Naming Tool", "Azure Policy", "Azure Resource Naming", "Best Practices", "Bicep", "Coding", "Community", "DevOps", "IaC", "Module Development", "OpenAPI Spec", "Resource Abbreviations", "Resource Management", "Terraform", "User Defined Functions"]
-tags_normalized: ["automation", "avm naming module", "azd", "azure", "azure developer cli", "azure naming tool", "azure policy", "azure resource naming", "best practices", "bicep", "coding", "community", "devops", "iac", "module development", "openapi spec", "resource abbreviations", "resource management", "terraform", "user defined functions"]
+permalink: /coding/community/Challenges-with-Azure-Resource-Naming-Convention-Maintenance-in-Bicep-and-Infrastructure-as-Code
+tags:
+- Automation
+- AVM Naming Module
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure Naming Tool
+- Azure Policy
+- Azure Resource Naming
+- Best Practices
+- Bicep
+- Coding
+- Community
+- DevOps
+- IaC
+- Module Development
+- OpenAPI Spec
+- Resource Abbreviations
+- Resource Management
+- Terraform
+- User Defined Functions
+section_names:
+- azure
+- coding
+- devops
 ---
-
 d2peak and the community discuss the challenges of maintaining Azure resource naming conventions in Bicep and azd workflows, weighing Microsoft's outdated tools against custom solutions and automation.<!--excerpt_end-->
 
 # Challenges with Azure Resource Naming Convention Maintenance in Bicep and Infrastructure as Code

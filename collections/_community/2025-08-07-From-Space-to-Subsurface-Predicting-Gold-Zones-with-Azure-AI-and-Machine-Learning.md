@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning"
-description: "This case study by MeysamRouhnavaz shows how Azure AI and Microsoft machine learning services transformed mineral exploration. The team built an end-to-end automated pipeline using Azure Machine Learning, Satellite imagery, and AutoML to identify and validate gold-rich zones, accelerating discovery and reducing risk. The project details data preprocessing with notebooks, unsupervised clustering, scalable model training, and field validation, illustrating the impact of Microsoft AI and cloud technologies on geoscience and mining."
-author: "MeysamRouhnavaz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+﻿---
+layout: post
+title: 'From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning'
+author: MeysamRouhnavaz
+canonical_url: https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-07 15:26:36 +00:00
-permalink: "/2025-08-07-From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AutoML", "Azure", "Azure AI", "Azure Machine Learning", "Azure Notebooks", "Azure Storage", "Classification Models", "Community", "Compute Cluster", "Data Processing", "Geoscience", "Geospatial Data", "Gold Exploration", "KMeans", "Microsoft Azure", "Mining", "ML", "Model Registry", "Model Validation", "Python", "Satellite Imagery", "Unsupervised Learning"]
-tags_normalized: ["ai", "automl", "azure", "azure ai", "azure machine learning", "azure notebooks", "azure storage", "classification models", "community", "compute cluster", "data processing", "geoscience", "geospatial data", "gold exploration", "kmeans", "microsoft azure", "mining", "ml", "model registry", "model validation", "python", "satellite imagery", "unsupervised learning"]
+permalink: /ai/community/From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning
+tags:
+- AI
+- AutoML
+- Azure
+- Azure AI
+- Azure Machine Learning
+- Azure Notebooks
+- Azure Storage
+- Classification Models
+- Community
+- Compute Cluster
+- Data Processing
+- Geoscience
+- Geospatial Data
+- Gold Exploration
+- KMeans
+- Microsoft Azure
+- Mining
+- ML
+- Model Registry
+- Model Validation
+- Python
+- Satellite Imagery
+- Unsupervised Learning
+section_names:
+- ai
+- azure
+- ml
 ---
-
 MeysamRouhnavaz presents a hands-on case study using Azure AI and Machine Learning to predict gold-rich zones from satellite data, demonstrating the full data science workflow from preprocessing to production in mineral exploration.<!--excerpt_end-->
 
 # From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning

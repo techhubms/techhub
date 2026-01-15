@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Meet the Performance-Enhanced Next Gen Azure SQL Managed Instance"
-description: "This session from Microsoft Ignite 2025 introduces the next-generation General Purpose tier for Azure SQL Managed Instance, showcasing up to 2X performance improvements and 5X greater database capacity. It details AI-assisted migration tooling, real-world modernization journeys with Azure SQL and Azure App Service, and hands-on demonstrations featuring Hexure's successful estate modernization. Attendees will learn about technical innovations, SQL Server 2025 being AI-ready, and seamless migration validation and execution using Copilot assistance."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AAkFNigV7OM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Meet the Performance-Enhanced Next Gen Azure SQL Managed Instance
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=AAkFNigV7OM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:16:24 +00:00
-permalink: "/2025-11-21-Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Assisted Migration", "Azure", "Azure App Service", "Azure SQL Managed Instance", "Capacity Planning", "Cloud Database", "Copilot", "Database Modernization", "Enterprise Migration", "Managed Database", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Validation", "MSIgnite", "Performance Scaling", "SQL Migration", "SQL Server", "Videos"]
-tags_normalized: ["ai", "ai assisted migration", "azure", "azure app service", "azure sql managed instance", "capacity planning", "cloud database", "copilot", "database modernization", "enterprise migration", "managed database", "microsoft ignite", "migrateandmodernizeyourestate", "migration validation", "msignite", "performance scaling", "sql migration", "sql server", "videos"]
+permalink: /ai/videos/Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance
+tags:
+- AI
+- AI Assisted Migration
+- Azure
+- Azure App Service
+- Azure SQL Managed Instance
+- Capacity Planning
+- Cloud Database
+- Copilot
+- Database Modernization
+- Enterprise Migration
+- Managed Database
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration Validation
+- MSIgnite
+- Performance Scaling
+- SQL Migration
+- SQL Server
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events hosts a deep dive into the next-gen Azure SQL Managed Instance, exploring performance improvements, AI-powered migration, and real-world modernization with speakers Anitha Adusumilli, Aditya Badramraju, Troy Brovold, and Craig Henninger.<!--excerpt_end-->
 
 {% youtube AAkFNigV7OM %}

@@ -1,20 +1,38 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Introducing Crescent: Microsoft's Cryptographic Library for Privacy-Preserving Digital Identity"
-description: "This post introduces Crescent, a cryptographic library from Microsoft Research that enhances privacy in digital identity systems. The article explains how Crescent enables unlinkability and selective disclosure for common identity credentials such as JSON Web Tokens and mobile driver’s licenses, using advanced zero-knowledge proofs that allow users to prove facts about their identity without exposing unnecessary personal information. Technical details on Crescent's architecture, its use of the Groth16 SNARK system, and a practical implementation example are provided, illustrating how it can be deployed without requiring existing issuers to upgrade infrastructure."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/crescent-library-brings-privacy-to-digital-identity-systems/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/crescent-library-brings-privacy-to-digital-identity-systems/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-26 18:56:40 +00:00
-permalink: "/2025-08-26-Introducing-Crescent-Microsofts-Cryptographic-Library-for-Privacy-Preserving-Digital-Identity.html"
-categories: ["AI", "Security"]
-tags: ["AI", "Authentication", "Azure AI Foundry", "Company News", "Credential Unlinkability", "Crescent", "Cryptography", "Digital Identity", "Groth16", "Identity Verification", "JSON Web Token", "Microsoft Research", "Mobile Driver’s License", "News", "Privacy", "Rust", "Security", "Selective Disclosure", "SNARK", "Zero Knowledge Proofs"]
-tags_normalized: ["ai", "authentication", "azure ai foundry", "company news", "credential unlinkability", "crescent", "cryptography", "digital identity", "groth16", "identity verification", "json web token", "microsoft research", "mobile drivers license", "news", "privacy", "rust", "security", "selective disclosure", "snark", "zero knowledge proofs"]
+permalink: /ai/news/Introducing-Crescent-Microsofts-Cryptographic-Library-for-Privacy-Preserving-Digital-Identity
+tags:
+- AI
+- Authentication
+- Azure AI Foundry
+- Company News
+- Credential Unlinkability
+- Crescent
+- Cryptography
+- Digital Identity
+- Groth16
+- Identity Verification
+- JSON Web Token
+- Microsoft Research
+- Mobile Driver’s License
+- News
+- Privacy
+- Rust
+- Security
+- Selective Disclosure
+- SNARK
+- Zero Knowledge Proofs
+section_names:
+- ai
+- security
 ---
-
 stclarke explains how Crescent, a cryptographic library from Microsoft Research, provides privacy-preserving features for digital identity systems, preventing tracking and protecting user data with advanced cryptography.<!--excerpt_end-->
 
 # Crescent: Bringing Privacy to Digital Identity Systems

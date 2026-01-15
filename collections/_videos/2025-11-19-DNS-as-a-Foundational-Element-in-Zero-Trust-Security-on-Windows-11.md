@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "DNS as a Foundational Element in Zero Trust Security on Windows 11"
-description: "This session from Microsoft Ignite 2025 delves into the critical role of DNS within a Zero Trust security architecture. Participants learn how DNS monitoring and enforcement contributes to containment strategies, granular access control, and protection against network threats such as data exfiltration and DNS tunneling on Windows 11 devices. Topics include consistent security across hybrid and multi-cloud environments, limitations of traditional security models, device-level DNS enforcement, and operational implementation details of Zero Trust DNS (ZT-DNS) within Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=o847EwaNhgQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: DNS as a Foundational Element in Zero Trust Security on Windows 11
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=o847EwaNhgQ
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 17:05:24 +00:00
-permalink: "/2025-11-19-DNS-as-a-Foundational-Element-in-Zero-Trust-Security-on-Windows-11.html"
-categories: ["Security"]
-tags: ["Assume Breach", "Containment Strategies", "Continuous Monitoring", "Data Exfiltration", "Device Level Enforcement", "DNS Security", "DNS Tunneling", "Hybrid Cloud", "Microsoft Ignite", "Microsoft Security", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Multi Cloud Security", "Network Segmentation", "Security", "Security Architecture", "Videos", "Windows 11", "Zero Trust", "ZT DNS"]
-tags_normalized: ["assume breach", "containment strategies", "continuous monitoring", "data exfiltration", "device level enforcement", "dns security", "dns tunneling", "hybrid cloud", "microsoft ignite", "microsoft security", "modernizesecopswithaunifiedplatform", "msignite", "multi cloud security", "network segmentation", "security", "security architecture", "videos", "windows 11", "zero trust", "zt dns"]
+permalink: /security/videos/DNS-as-a-Foundational-Element-in-Zero-Trust-Security-on-Windows-11
+tags:
+- Assume Breach
+- Containment Strategies
+- Continuous Monitoring
+- Data Exfiltration
+- Device Level Enforcement
+- DNS Security
+- DNS Tunneling
+- Hybrid Cloud
+- Microsoft Ignite
+- Microsoft Security
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Multi Cloud Security
+- Network Segmentation
+- Security
+- Security Architecture
+- Videos
+- Windows 11
+- Zero Trust
+- ZT DNS
+section_names:
+- security
 ---
-
 Microsoft Events reveals how DNS enforcement strengthens Zero Trust security on Windows 11, offering technical insight into threat containment, granular access controls, and real-world implementation within Microsoft environments.<!--excerpt_end-->
 
 {% youtube o847EwaNhgQ %}

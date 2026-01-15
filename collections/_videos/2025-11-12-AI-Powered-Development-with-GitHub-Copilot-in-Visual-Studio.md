@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI-Powered Development with GitHub Copilot in Visual Studio"
-description: "This session explores advanced GitHub Copilot features integrated in Visual Studio, demonstrating how AI-driven code suggestions, context-aware completions, and intelligent refactoring can enhance your development workflow. Attendees will gain insights on best practices for prompting Copilot, leveraging inline chat, generating tests, and integrating AI into daily coding routines with the latest .NET and Visual Studio technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=imTARwNQuA4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: AI-Powered Development with GitHub Copilot in Visual Studio
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=imTARwNQuA4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET MAUI 10", "AI", "ASP.NET Core 10", "C#", "C# 14", "Code Suggestions", "Coding", "Documentation Assistance", "GitHub Copilot", "Inline Chat", "Productivity Tools", "Prompt Engineering", "Refactoring", "Slash Commands", "Test Generation", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet maui 10", "ai", "aspdotnet core 10", "csharp", "csharp 14", "code suggestions", "coding", "documentation assistance", "github copilot", "inline chat", "productivity tools", "prompt engineering", "refactoring", "slash commands", "test generation", "videos", "vs"]
+permalink: /github-copilot/videos/AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio
+tags:
+- .NET
+- .NET MAUI 10
+- AI
+- ASP.NET Core 10
+- C#
+- C# 14
+- Code Suggestions
+- Coding
+- Documentation Assistance
+- GitHub Copilot
+- Inline Chat
+- Productivity Tools
+- Prompt Engineering
+- Refactoring
+- Slash Commands
+- Test Generation
+- Videos
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Presented by dotnet, this video session demonstrates how developers can leverage GitHub Copilot’s AI-powered features in Visual Studio to write better code, refactor intelligently, and boost productivity using advanced prompting and practical integration techniques.<!--excerpt_end-->
 
 {% youtube imTARwNQuA4 %}

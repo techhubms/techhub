@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Taming AI Assisted Coding Models with Eleanor Berger"
-description: "This session explores practical approaches to AI-assisted coding using GitHub Copilot and agentic models. Pamela and Eleanor share hands-on tactics for delegating tasks to background agents, writing effective specifications for AI models, and steering different large language model (LLM) personalities. The discussion covers integrating Copilot with GitHub Actions, developing CLI-first workflows in VS Code, and the agents.md standard, alongside a walkthrough of Eleanor’s open-source Ruler project for centralized rule management. Listeners will learn how to create richer prompts, perform sandboxed evaluations, and interact with models using voice and command-line interfaces."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0x1Y9e6Vh7I"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Taming AI Assisted Coding Models with Eleanor Berger
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=0x1Y9e6Vh7I
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-24 08:00:01 +00:00
-permalink: "/2025-11-24-Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Models", "Agents.md Standard", "AI", "AI Assisted Coding", "CLI Workflows", "Coding", "GitHub Actions", "GitHub Copilot", "LLM Personalities", "Model Guardrails", "Open Source Tools", "Prompt Engineering", "Ruler Project", "Sandboxed Evaluations", "Spec Writing", "Videos", "VS Code"]
-tags_normalized: ["agentic models", "agentsdotmd standard", "ai", "ai assisted coding", "cli workflows", "coding", "github actions", "github copilot", "llm personalities", "model guardrails", "open source tools", "prompt engineering", "ruler project", "sandboxed evaluations", "spec writing", "videos", "vs code"]
+permalink: /github-copilot/videos/Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger
+tags:
+- Agentic Models
+- Agents.md Standard
+- AI
+- AI Assisted Coding
+- CLI Workflows
+- Coding
+- GitHub Actions
+- GitHub Copilot
+- LLM Personalities
+- Model Guardrails
+- Open Source Tools
+- Prompt Engineering
+- Ruler Project
+- Sandboxed Evaluations
+- Spec Writing
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code hosts Pamela and Eleanor Berger as they discuss advanced tactics for AI-assisted coding with Copilot, agentic workflows, and open-source tools, providing practical advice for developers.<!--excerpt_end-->
 
 {% youtube 0x1Y9e6Vh7I %}

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland"
-description: "This episode explores the open-sourcing of the VS Code Copilot Extension with special guest Burke Holland from the Visual Studio Advocacy Team. The discussion covers Copilot Custom Modes, strategies for optimizing AI behavior and costs, integration of 'Beast Mode' in VS Code Insiders, and how contributors can get involved. Listeners will learn about customizing Copilot instructions, the future roadmap, and direct resources/articles for further hands-on guidance around Microsoft’s open-source developer tooling."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GfVnJO8fwwk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=GfVnJO8fwwk
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-09 13:00:35 +00:00
-permalink: "/2025-09-09-VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistance", "Beast Mode", "Burke Holland", "Chat Modes", "Cloud Computing", "Code Optimization", "Coding", "Community Contribution", "Copilot Chat", "Copilot Custom Modes", "Dev", "Developer Tools", "Development", "Extension Development", "GitHub Copilot", "Microsoft", "Open Source", "OpenAI", "Prompt Engineering", "Tech", "Technology", "Videos", "VS Code", "VS Code Copilot Extension", "VS Code Insiders"]
-tags_normalized: ["ai", "ai assistance", "beast mode", "burke holland", "chat modes", "cloud computing", "code optimization", "coding", "community contribution", "copilot chat", "copilot custom modes", "dev", "developer tools", "development", "extension development", "github copilot", "microsoft", "open source", "openai", "prompt engineering", "tech", "technology", "videos", "vs code", "vs code copilot extension", "vs code insiders"]
+permalink: /github-copilot/videos/VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland
+tags:
+- AI
+- AI Assistance
+- Beast Mode
+- Burke Holland
+- Chat Modes
+- Cloud Computing
+- Code Optimization
+- Coding
+- Community Contribution
+- Copilot Chat
+- Copilot Custom Modes
+- Dev
+- Developer Tools
+- Development
+- Extension Development
+- GitHub Copilot
+- Microsoft
+- Open Source
+- OpenAI
+- Prompt Engineering
+- Tech
+- Technology
+- Videos
+- VS Code
+- VS Code Copilot Extension
+- VS Code Insiders
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Microsoft Developer presents an in-depth episode featuring Burke Holland discussing the open-sourced VS Code Copilot Extension. Explore advanced Copilot customization, new features, and community contribution pathways.<!--excerpt_end-->
 
 {% youtube GfVnJO8fwwk %}

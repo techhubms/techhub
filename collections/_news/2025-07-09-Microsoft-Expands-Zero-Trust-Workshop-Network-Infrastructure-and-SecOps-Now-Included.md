@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Expands Zero Trust Workshop: Network, Infrastructure, and SecOps Now Included"
-description: "Microsoft has broadened its Zero Trust workshop to now include pillars covering network security, infrastructure, and SecOps, alongside the original focus on identity, devices, and data. The update delivers comprehensive, actionable guidance and practical scenarios for organizations to adopt a robust, end-to-end Zero Trust security posture."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/07/09/microsoft-expands-zero-trust-workshop-to-cover-network-secops-and-more/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Expands Zero Trust Workshop: Network, Infrastructure, and SecOps Now Included'
+author: Rob Lefferts
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/09/microsoft-expands-zero-trust-workshop-to-cover-network-secops-and-more/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-09 16:00:00 +00:00
-permalink: "/2025-07-09-Microsoft-Expands-Zero-Trust-Workshop-Network-Infrastructure-and-SecOps-Now-Included.html"
-categories: ["Security"]
-tags: ["Access Control", "Data Protection", "Defender For Identity", "Identity Management", "Infrastructure Security", "Micro Segmentation", "Microsoft Security", "Microsoft Sentinel", "Network Security", "News", "SecOps", "Security", "Security Operations", "Security Posture", "Security Workshop", "Threat Detection", "Zero Trust"]
-tags_normalized: ["access control", "data protection", "defender for identity", "identity management", "infrastructure security", "micro segmentation", "microsoft security", "microsoft sentinel", "network security", "news", "secops", "security", "security operations", "security posture", "security workshop", "threat detection", "zero trust"]
+permalink: /security/news/Microsoft-Expands-Zero-Trust-Workshop-Network-Infrastructure-and-SecOps-Now-Included
+tags:
+- Access Control
+- Data Protection
+- Defender For Identity
+- Identity Management
+- Infrastructure Security
+- Micro Segmentation
+- Microsoft Security
+- Microsoft Sentinel
+- Network Security
+- News
+- SecOps
+- Security
+- Security Operations
+- Security Posture
+- Security Workshop
+- Threat Detection
+- Zero Trust
+section_names:
+- security
 ---
-
 In this article, Rob Lefferts explains Microsoft’s expanded Zero Trust workshop, now featuring guidance on network, infrastructure, and SecOps pillars to help organizations enhance their security posture and operational workflows.<!--excerpt_end-->
 
 ## Overview

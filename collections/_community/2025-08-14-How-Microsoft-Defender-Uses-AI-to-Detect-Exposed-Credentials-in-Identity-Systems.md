@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How Microsoft Defender Uses AI to Detect Exposed Credentials in Identity Systems"
-description: "This article by Tal_Guetta explains how Microsoft Defender for Identity employs an AI-powered posture alert to identify credentials stored insecurely in free text fields within Active Directory and Microsoft Entra ID. The piece outlines the risks, the technology's AI-driven detection approach, and practical steps for organizations to mitigate exposed credential vulnerabilities."
-author: "Tal_Guetta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/leaving-the-key-under-the-doormat-how-microsoft-defender-uses-ai/ba-p/4439870"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: How Microsoft Defender Uses AI to Detect Exposed Credentials in Identity Systems
+author: Tal_Guetta
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/leaving-the-key-under-the-doormat-how-microsoft-defender-uses-ai/ba-p/4439870
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 14:42:00 +00:00
-permalink: "/2025-08-14-How-Microsoft-Defender-Uses-AI-to-Detect-Exposed-Credentials-in-Identity-Systems.html"
-categories: ["AI", "Security"]
-tags: ["Active Directory", "AI", "AI Powered Detection", "AI Security", "Attack Surface Reduction", "Community", "Credential Exposure", "Cybersecurity", "Exposed Credentials", "Identity Management", "Identity Security", "Layered Intelligence", "Microsoft Defender", "Microsoft Defender For Identity", "Microsoft Entra ID", "Non Human Identities", "Posture Management", "Security", "Security Best Practices"]
-tags_normalized: ["active directory", "ai", "ai powered detection", "ai security", "attack surface reduction", "community", "credential exposure", "cybersecurity", "exposed credentials", "identity management", "identity security", "layered intelligence", "microsoft defender", "microsoft defender for identity", "microsoft entra id", "non human identities", "posture management", "security", "security best practices"]
+permalink: /ai/community/How-Microsoft-Defender-Uses-AI-to-Detect-Exposed-Credentials-in-Identity-Systems
+tags:
+- Active Directory
+- AI
+- AI Powered Detection
+- AI Security
+- Attack Surface Reduction
+- Community
+- Credential Exposure
+- Cybersecurity
+- Exposed Credentials
+- Identity Management
+- Identity Security
+- Layered Intelligence
+- Microsoft Defender
+- Microsoft Defender For Identity
+- Microsoft Entra ID
+- Non Human Identities
+- Posture Management
+- Security
+- Security Best Practices
+section_names:
+- ai
+- security
 ---
-
 Tal_Guetta explores how Microsoft Defender for Identity leverages AI-driven intelligence to detect and mitigate exposed credentials in Active Directory, offering proactive security posture management for organizations.<!--excerpt_end-->
 
 # How Microsoft Defender Uses AI to Detect Exposed Credentials in Identity Systems

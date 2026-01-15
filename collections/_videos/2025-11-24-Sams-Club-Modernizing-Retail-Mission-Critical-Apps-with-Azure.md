@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure"
-description: "This session from Microsoft Ignite 2025 showcases how Sam's Club transformed legacy, mission-critical applications by modernizing them on Azure. Developers and cloud practitioners are guided through technical strategies for fault tolerance, high availability, and resilience using Azure Kubernetes Service (AKS), Azure SQL, and Cosmos DB. The talk details cloud-native microservices migration, platform modernization, multi-region deployments, and hands-on demonstrations of resilience patterns and data consistency implementations, empowering attendees to operationalize and scale applications on Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NDdYyolB-PA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=NDdYyolB-PA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:15:09 +00:00
-permalink: "/2025-11-24-Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["AKS", "Azure", "Azure SQL", "Cloud Native", "Coding", "Cosmos DB", "Data Consistency", "Demo", "DevOps", "E Commerce", "Fault Tolerance", "High Availability", "Hyperscale", "Microservices", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "ML", "MSIgnite", "Multi Region Deployment", "Platform Modernization", "Resilience Patterns", "Retail Apps", "Saga Pattern", "Sam's Club", "Service Architecture", "Videos"]
-tags_normalized: ["aks", "azure", "azure sql", "cloud native", "coding", "cosmos db", "data consistency", "demo", "devops", "e commerce", "fault tolerance", "high availability", "hyperscale", "microservices", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "ml", "msignite", "multi region deployment", "platform modernization", "resilience patterns", "retail apps", "saga pattern", "sams club", "service architecture", "videos"]
+permalink: /ml/videos/Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure
+tags:
+- AKS
+- Azure
+- Azure SQL
+- Cloud Native
+- Coding
+- Cosmos DB
+- Data Consistency
+- Demo
+- DevOps
+- E Commerce
+- Fault Tolerance
+- High Availability
+- Hyperscale
+- Microservices
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration
+- ML
+- MSIgnite
+- Multi Region Deployment
+- Platform Modernization
+- Resilience Patterns
+- Retail Apps
+- Saga Pattern
+- Sam's Club
+- Service Architecture
+- Videos
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 In this Microsoft Ignite session, Microsoft Events presents technical guidance from Sam’s Club’s modernization of retail apps on Azure, featuring resilience strategies and platform transformation techniques.<!--excerpt_end-->
 
 {% youtube NDdYyolB-PA %}

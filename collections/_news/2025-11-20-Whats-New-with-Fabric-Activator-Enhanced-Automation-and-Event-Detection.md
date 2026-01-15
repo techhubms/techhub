@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "What’s New with Fabric Activator: Enhanced Automation and Event Detection"
-description: "This update details the latest features introduced to Fabric Activator, Microsoft's no-code event detection and automation tool within Microsoft Fabric. Learn how new integrations enable user data functions, Spark job automation, advanced parameterization, and custom Power Automate actions for real-time workflows, empowering rapid and efficient business process automation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-with-fabric-activator/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'What’s New with Fabric Activator: Enhanced Automation and Event Detection'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-with-fabric-activator/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 11:30:00 +00:00
-permalink: "/2025-11-20-Whats-New-with-Fabric-Activator-Enhanced-Automation-and-Event-Detection.html"
-categories: ["Azure", "ML"]
-tags: ["Automation", "Azure", "Business Process Automation", "Data Engineering", "Event Detection", "Fabric Activator", "KQL Queryset", "Microsoft Fabric", "ML", "News", "No Code", "Power Automate", "Real Time Hub", "Real Time Intelligence", "Spark Jobs", "Teams Integration", "User Data Functions", "Workflows"]
-tags_normalized: ["automation", "azure", "business process automation", "data engineering", "event detection", "fabric activator", "kql queryset", "microsoft fabric", "ml", "news", "no code", "power automate", "real time hub", "real time intelligence", "spark jobs", "teams integration", "user data functions", "workflows"]
+permalink: /ml/news/Whats-New-with-Fabric-Activator-Enhanced-Automation-and-Event-Detection
+tags:
+- Automation
+- Azure
+- Business Process Automation
+- Data Engineering
+- Event Detection
+- Fabric Activator
+- KQL Queryset
+- Microsoft Fabric
+- ML
+- News
+- No Code
+- Power Automate
+- Real Time Hub
+- Real Time Intelligence
+- Spark Jobs
+- Teams Integration
+- User Data Functions
+- Workflows
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines recent enhancements in Fabric Activator, demonstrating how users can automate data-driven business processes, trigger advanced workflows, and integrate actions using no-code solutions within Microsoft Fabric.<!--excerpt_end-->
 
 # What’s New with Fabric Activator: Enhanced Automation and Event Detection

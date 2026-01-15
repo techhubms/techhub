@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Copilot App Modernization Now Available for Java and .NET Projects"
-description: "This update announces the general availability of GitHub Copilot's app modernization capabilities for Java and .NET projects. Developers can now use Copilot to generate assessment reports, automate code transformations, patch builds, update dependencies, and containerize applications for cloud deployment. The new features help teams accelerate upgrades and migrations, streamlining the modernization of existing enterprise applications. Step-by-step guides and introductory videos for both Java and .NET are provided to help users get started quickly."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Copilot App Modernization Now Available for Java and .NET Projects
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 13:00:35 +00:00
-permalink: "/2025-09-23-GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "App Modernization", "Application Assessment", "Build Patching", "Cloud Deployment", "Code Transformation", "Coding", "Containerization", "Continuous Integration", "Copilot", "Dependency Management", "DevOps", "GitHub", "GitHub Copilot", "Improvement", "Java", "Modernization Tools", "News", "Software Migration"]
-tags_normalized: ["dotnet", "ai", "app modernization", "application assessment", "build patching", "cloud deployment", "code transformation", "coding", "containerization", "continuous integration", "copilot", "dependency management", "devops", "github", "github copilot", "improvement", "java", "modernization tools", "news", "software migration"]
+permalink: /github-copilot/news/GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects
+tags:
+- .NET
+- AI
+- App Modernization
+- Application Assessment
+- Build Patching
+- Cloud Deployment
+- Code Transformation
+- Coding
+- Containerization
+- Continuous Integration
+- Copilot
+- Dependency Management
+- DevOps
+- GitHub
+- GitHub Copilot
+- Improvement
+- Java
+- Modernization Tools
+- News
+- Software Migration
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Allison introduces the general availability of GitHub Copilot's app modernization features for Java and .NET projects, enabling developers to automate upgrades, code transformations, and deployment tasks.<!--excerpt_end-->
 
 # GitHub Copilot App Modernization Now Available for Java and .NET Projects

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enterprise Governance and Policy Improvements for GitHub Secret Scanning"
-description: "This news update details recent enhancements to GitHub's secret scanning features that improve enterprise-level governance and security. The article covers expanded permissions for alert management, updates for custom pattern controls, and new options for managing push protection bypasses across enterprise teams, roles, and GitHub Apps."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-enterprise-governance-and-policy-improvements-for-secret-scanning-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enterprise Governance and Policy Improvements for GitHub Secret Scanning
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-enterprise-governance-and-policy-improvements-for-secret-scanning-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 20:46:09 +00:00
-permalink: "/2025-12-16-Enterprise-Governance-and-Policy-Improvements-for-GitHub-Secret-Scanning.html"
-categories: ["DevOps", "Security"]
-tags: ["Alert Management", "Application Security", "Custom Patterns", "DevOps", "DevOps Security", "Enterprise Security", "GitHub", "GitHub Apps", "Improvement", "News", "Permissions", "Policy Management", "Push Protection", "Secret Scanning", "Security", "Security Governance", "Security Manager Role"]
-tags_normalized: ["alert management", "application security", "custom patterns", "devops", "devops security", "enterprise security", "github", "github apps", "improvement", "news", "permissions", "policy management", "push protection", "secret scanning", "security", "security governance", "security manager role"]
+permalink: /devops/news/Enterprise-Governance-and-Policy-Improvements-for-GitHub-Secret-Scanning
+tags:
+- Alert Management
+- Application Security
+- Custom Patterns
+- DevOps
+- DevOps Security
+- Enterprise Security
+- GitHub
+- GitHub Apps
+- Improvement
+- News
+- Permissions
+- Policy Management
+- Push Protection
+- Secret Scanning
+- Security
+- Security Governance
+- Security Manager Role
+section_names:
+- devops
+- security
 ---
-
 Allison summarizes significant improvements to GitHub's secret scanning for enterprises, including expanded alert permissions and more flexible policy management across teams and roles.<!--excerpt_end-->
 
 # Enterprise Governance and Policy Improvements for GitHub Secret Scanning

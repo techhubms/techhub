@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Azure Developer CLI: Dev to Production with Azure DevOps Pipelines"
-description: "A detailed guide for developers on implementing the 'build once, deploy everywhere' CI/CD pattern using Azure Developer CLI (azd) and Azure DevOps YAML pipelines. The article walks through multi-stage pipeline setup, artifact management, environment-specific deployments, and the use of GitHub Copilot for Azure to enhance and optimize the pipeline process."
-author: "PuiChee (PC) Chan, Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure Developer CLI: Dev to Production with Azure DevOps Pipelines'
+author: PuiChee (PC) Chan, Kristen Womack
+canonical_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-13 18:29:24 +00:00
-permalink: "/2025-08-13-Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Artifact Management", "Azd", "Azure", "Azure & Cloud", "Azure Developer CLI", "Azure Developer CLI (azd)", "Azure DevOps", "Azure DevOps Pipelines", "Azure Subscription", "Bicep", "CI/CD", "Cloud Deployment", "Coding", "DevOps", "Environment Variables", "GitHub Copilot", "GitHub Copilot For Azure", "IaC", "Multi Stage Pipeline", "News", "Pipeline Automation", "Pipeline Validation", "VS Code", "YAML"]
-tags_normalized: ["ai", "ai assisted development", "artifact management", "azd", "azure", "azure and cloud", "azure developer cli", "azure developer cli azd", "azure devops", "azure devops pipelines", "azure subscription", "bicep", "cislashcd", "cloud deployment", "coding", "devops", "environment variables", "github copilot", "github copilot for azure", "iac", "multi stage pipeline", "news", "pipeline automation", "pipeline validation", "vs code", "yaml"]
+permalink: /github-copilot/news/Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines
+tags:
+- AI
+- AI Assisted Development
+- Artifact Management
+- Azd
+- Azure
+- Azure & Cloud
+- Azure Developer CLI
+- Azure Developer CLI (azd)
+- Azure DevOps
+- Azure DevOps Pipelines
+- Azure Subscription
+- Bicep
+- CI/CD
+- Cloud Deployment
+- Coding
+- DevOps
+- Environment Variables
+- GitHub Copilot
+- GitHub Copilot For Azure
+- IaC
+- Multi Stage Pipeline
+- News
+- Pipeline Automation
+- Pipeline Validation
+- VS Code
+- YAML
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 PuiChee (PC) Chan and Kristen Womack deliver an in-depth walkthrough of using Azure Developer CLI and Azure DevOps Pipelines for reliable, automated CI/CD—from development to production—while exploring how GitHub Copilot for Azure can streamline pipeline improvements.<!--excerpt_end-->
 
 # Azure Developer CLI: Dev to Production with Azure DevOps Pipelines

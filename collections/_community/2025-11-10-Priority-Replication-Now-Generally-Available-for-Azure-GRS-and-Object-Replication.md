@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Priority Replication Now Generally Available for Azure GRS and Object Replication"
-description: "This announcement covers the general availability of priority replication for Azure Geo Redundant Storage (GRS) and Object Replication (OR). Priority replication provides guaranteed 15-minute synchronization between Azure regions, SLA-backed metrics, and new Azure Portal monitoring capabilities. The feature supports accelerated and more predictable cross-region data replication for Block Blob data."
-author: "imanihall"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Priority Replication Now Generally Available for Azure GRS and Object Replication
+author: imanihall
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 20:21:17 +00:00
-permalink: "/2025-11-10-Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Portal", "Azure Storage", "Blob Storage", "Block Blob", "Community", "Data Durability", "Disaster Recovery", "Geo Priority Replication", "Geo Redundant Storage", "GRS", "GZRS", "Object Replication", "Replication Metrics", "SLA"]
-tags_normalized: ["azure", "azure portal", "azure storage", "blob storage", "block blob", "community", "data durability", "disaster recovery", "geo priority replication", "geo redundant storage", "grs", "gzrs", "object replication", "replication metrics", "sla"]
+permalink: /azure/community/Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication
+tags:
+- Azure
+- Azure Portal
+- Azure Storage
+- Blob Storage
+- Block Blob
+- Community
+- Data Durability
+- Disaster Recovery
+- Geo Priority Replication
+- Geo Redundant Storage
+- GRS
+- GZRS
+- Object Replication
+- Replication Metrics
+- SLA
+section_names:
+- azure
 ---
-
 imanihall announces general availability of priority replication for Azure GRS and Object Replication, detailing SLA guarantees and new monitoring tools for accelerated and reliable cross-region replication.<!--excerpt_end-->
 
 # Priority Replication for Geo Redundant Storage and Object Replication is Generally Available

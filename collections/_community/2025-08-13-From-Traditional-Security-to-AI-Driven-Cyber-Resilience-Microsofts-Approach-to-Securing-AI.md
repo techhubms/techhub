@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "From Traditional Security to AI-Driven Cyber Resilience: Microsoft’s Approach to Securing AI"
-description: "This blog post by LouAdesida summarizes how Microsoft is evolving its security portfolio to address the distinct challenges posed by AI adoption in modern organizations. It highlights new approaches to AI risk mitigation, cyber resilience, and the integration of Defender, Entra, and Purview to protect AI workloads, data, and identities in the enterprise environment."
-author: "LouAdesida"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'From Traditional Security to AI-Driven Cyber Resilience: Microsoft’s Approach to Securing AI'
+author: LouAdesida
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:54:16 +00:00
-permalink: "/2025-08-13-From-Traditional-Security-to-AI-Driven-Cyber-Resilience-Microsofts-Approach-to-Securing-AI.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "AI Workloads", "Azure AI Foundry", "Community", "Compliance", "Conditional Access", "Content Safety", "Copilot Security", "Cyber Resilience", "Data Loss Prevention", "Identity And Access Management", "Insider Risk Management", "Microsoft Defender", "Microsoft Defender For Cloud", "Microsoft Defender For Cloud Apps", "Microsoft Entra", "Microsoft Purview", "Non Human Identities", "Privileged Identity Management", "Red Teaming", "Security"]
-tags_normalized: ["ai", "ai security", "ai workloads", "azure ai foundry", "community", "compliance", "conditional access", "content safety", "copilot security", "cyber resilience", "data loss prevention", "identity and access management", "insider risk management", "microsoft defender", "microsoft defender for cloud", "microsoft defender for cloud apps", "microsoft entra", "microsoft purview", "non human identities", "privileged identity management", "red teaming", "security"]
+permalink: /ai/community/From-Traditional-Security-to-AI-Driven-Cyber-Resilience-Microsofts-Approach-to-Securing-AI
+tags:
+- AI
+- AI Security
+- AI Workloads
+- Azure AI Foundry
+- Community
+- Compliance
+- Conditional Access
+- Content Safety
+- Copilot Security
+- Cyber Resilience
+- Data Loss Prevention
+- Identity And Access Management
+- Insider Risk Management
+- Microsoft Defender
+- Microsoft Defender For Cloud
+- Microsoft Defender For Cloud Apps
+- Microsoft Entra
+- Microsoft Purview
+- Non Human Identities
+- Privileged Identity Management
+- Red Teaming
+- Security
+section_names:
+- ai
+- security
 ---
-
 LouAdesida reviews Microsoft’s expanded security approach for AI, explaining how tools like Defender, Entra, and Purview are used to protect AI systems, data, and identities across modern organizations.<!--excerpt_end-->
 
 # From Traditional Security to AI-Driven Cyber Resilience: Microsoft’s Approach to Securing AI

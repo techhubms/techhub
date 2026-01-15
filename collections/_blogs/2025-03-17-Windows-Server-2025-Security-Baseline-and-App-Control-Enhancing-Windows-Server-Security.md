@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Windows Server 2025 Security Baseline and App Control: Enhancing Windows Server Security"
-description: "Thomas Maurer interviews Carlos Mayol Berral from Microsoft about the Security Baseline and App Control in Windows Server 2025. This article explores new security capabilities, implementation demos, best practices for IT administrators, and how Azure Arc and PowerShell streamline policy management."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Windows Server 2025 Security Baseline and App Control: Enhancing Windows Server Security'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-17 10:33:20 +00:00
-permalink: "/2025-03-17-Windows-Server-2025-Security-Baseline-and-App-Control-Enhancing-Windows-Server-Security.html"
-categories: ["Azure", "Security"]
-tags: ["App Control", "Azure", "Azure Arc", "Blogs", "Cloud", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Policy Management", "PowerShell", "Security", "Security Baseline", "Server Security", "Windows Admin Center", "Windows Server"]
-tags_normalized: ["app control", "azure", "azure arc", "blogs", "cloud", "hybrid cloud", "microsoft", "microsoft azure", "policy management", "powershell", "security", "security baseline", "server security", "windows admin center", "windows server"]
+permalink: /azure/blogs/Windows-Server-2025-Security-Baseline-and-App-Control-Enhancing-Windows-Server-Security
+tags:
+- App Control
+- Azure
+- Azure Arc
+- Blogs
+- Cloud
+- Hybrid Cloud
+- Microsoft
+- Microsoft Azure
+- Policy Management
+- PowerShell
+- Security
+- Security Baseline
+- Server Security
+- Windows Admin Center
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 In this article, Thomas Maurer interviews Carlos Mayol Berral of Microsoft to showcase Windows Server 2025 Security Baseline and App Control, offering insights and demos for IT administrators and security professionals.<!--excerpt_end-->
 
 # Windows Server 2025 Security Baseline and App Control

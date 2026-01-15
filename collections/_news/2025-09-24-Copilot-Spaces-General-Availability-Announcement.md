@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copilot Spaces: General Availability Announcement"
-description: "This news article announces the general availability of GitHub Copilot Spaces, a new feature that lets developers provide Copilot with enhanced project context. By incorporating files, pull requests, issues, and repositories, Copilot Spaces enables more accurate, context-aware code generation and explanations tailored to team-specific standards and workflows. The release includes integration with IDEs, support for collaborative knowledge sharing across organizations, and examples of improved onboarding and project planning. Resources and links for trying, learning, and providing feedback on Copilot Spaces are provided."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Copilot Spaces: General Availability Announcement'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 17:49:12 +00:00
-permalink: "/2025-09-24-Copilot-Spaces-General-Availability-Announcement.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Explanation", "Code Generation", "Context Management", "Copilot", "Copilot Spaces", "Dev Tooling", "GitHub", "GitHub Copilot", "IDE Integration", "Knowledge Sharing", "News", "Project Collaboration", "Project Onboarding", "Software Development", "Team Standards"]
-tags_normalized: ["ai", "code explanation", "code generation", "context management", "copilot", "copilot spaces", "dev tooling", "github", "github copilot", "ide integration", "knowledge sharing", "news", "project collaboration", "project onboarding", "software development", "team standards"]
+permalink: /github-copilot/news/Copilot-Spaces-General-Availability-Announcement
+tags:
+- AI
+- Code Explanation
+- Code Generation
+- Context Management
+- Copilot
+- Copilot Spaces
+- Dev Tooling
+- GitHub
+- GitHub Copilot
+- IDE Integration
+- Knowledge Sharing
+- News
+- Project Collaboration
+- Project Onboarding
+- Software Development
+- Team Standards
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison covers the launch of Copilot Spaces, enabling teams to make GitHub Copilot a project expert by providing deep contextual knowledge, fostering collaboration, and improving developer onboarding.<!--excerpt_end-->
 
 # Copilot Spaces is Now Generally Available

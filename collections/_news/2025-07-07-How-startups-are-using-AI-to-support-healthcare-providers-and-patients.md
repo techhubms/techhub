@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "How startups are using AI to support healthcare providers and patients"
-description: "Exploring how startups leverage AI to enhance healthcare delivery for providers and patients, focusing on innovative applications and industry impact."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/catalysts-revolutionizing-healthcare-with-pangaea-data-microsoft-azure-and-nvidia/"
-viewing_mode: "external"
-categories: ["AI"]
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: How startups are using AI to support healthcare providers and patients
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/catalysts-revolutionizing-healthcare-with-pangaea-data-microsoft-azure-and-nvidia/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-07 14:27:02 +00:00
-permalink: "/2025-07-07-How-startups-are-using-AI-to-support-healthcare-providers-and-patients.html"
-tags: ["AI", "Company News", "Health", "Healthcare", "Medical Technology", "News", "Patient Care", "Startups"]
-tags_normalized: ["ai", "company news", "health", "healthcare", "medical technology", "news", "patient care", "startups"]
+permalink: /ai/news/How-startups-are-using-AI-to-support-healthcare-providers-and-patients
+tags:
+- AI
+- Company News
+- Health
+- Healthcare
+- Medical Technology
+- News
+- Patient Care
+- Startups
+section_names:
+- ai
 ---
-
 This article, written by stclarke, delves into the innovative ways startups are harnessing artificial intelligence (AI) to benefit healthcare providers and patients. The focus is on leveraging technology to address key challenges and improve outcomes for both professionals and recipients of healthcare services.
 <!--excerpt_end-->
 

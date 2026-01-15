@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Morgan Stanley Open Sources CALM: Architecture as Code for Enterprise DevOps"
-description: "This article details Morgan Stanley's release of CALM (Common Architecture Language Model), an open-source Architecture-as-Code solution aimed at automating architectural governance, compliance, and design validation in enterprise DevOps. The piece explains CALM's structure, DevOps integration, impact on deployment cycles, and its potential benefits for organizations beyond financial services."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops/?utm_source=rss&utm_medium=rss&utm_campaign=morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Morgan Stanley Open Sources CALM: Architecture as Code for Enterprise DevOps'
+author: Tom Smith
+canonical_url: https://devops.com/morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops/?utm_source=rss&utm_medium=rss&utm_campaign=morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-25 22:03:46 +00:00
-permalink: "/2025-08-25-Morgan-Stanley-Open-Sources-CALM-Architecture-as-Code-for-Enterprise-DevOps.html"
-categories: ["DevOps"]
-tags: ["Architectural Compliance", "Architecture as Code", "Automation", "Blogs", "CALM", "CI/CD", "Configuration as Code", "DevOps", "Enterprise", "Enterprise Software", "FINOS", "JSON Meta Schema", "Machine Readable Architecture", "Morgan Stanley", "Open Source", "Security Approvals", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery"]
-tags_normalized: ["architectural compliance", "architecture as code", "automation", "blogs", "calm", "cislashcd", "configuration as code", "devops", "enterprise", "enterprise software", "finos", "json meta schema", "machine readable architecture", "morgan stanley", "open source", "security approvals", "social facebook", "social linkedin", "social x", "software delivery"]
+permalink: /devops/blogs/Morgan-Stanley-Open-Sources-CALM-Architecture-as-Code-for-Enterprise-DevOps
+tags:
+- Architectural Compliance
+- Architecture as Code
+- Automation
+- Blogs
+- CALM
+- CI/CD
+- Configuration as Code
+- DevOps
+- Enterprise
+- Enterprise Software
+- FINOS
+- JSON Meta Schema
+- Machine Readable Architecture
+- Morgan Stanley
+- Open Source
+- Security Approvals
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+section_names:
+- devops
 ---
-
 Authored by Tom Smith, this article introduces CALM, Morgan Stanley's open-source Architecture-as-Code tool, and explores how it streamlines enterprise DevOps through automation, compliance, and architectural validation.<!--excerpt_end-->
 
 # Morgan Stanley Open Sources CALM: Architecture as Code for Enterprise DevOps

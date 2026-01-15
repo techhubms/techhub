@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights"
-description: "This news article covers the highlights of the recent VS Live! event at Microsoft HQ. It features key sessions on Visual Studio productivity, AI-assisted development with GitHub Copilot, building next-generation AI apps using .NET and Azure, and more. On-demand recordings are available, and the piece outlines what to expect at upcoming VS Live! events."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights'
+author: stclarke
+canonical_url: https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 17:05:34 +00:00
-permalink: "/2025-08-14-VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Assisted Debugging", "AI Development", "Azure", "Azure AI", "Coding", "Company News", "Demo", "Developer Conference", "Git Integration", "GitHub Copilot", "Inner Loop Productivity", "Microsoft HQ", "News", "Productivity Tools", "Session Highlights", "VS", "VS Live"]
-tags_normalized: ["dotnet", "ai", "ai assisted debugging", "ai development", "azure", "azure ai", "coding", "company news", "demo", "developer conference", "git integration", "github copilot", "inner loop productivity", "microsoft hq", "news", "productivity tools", "session highlights", "vs", "vs live"]
+permalink: /github-copilot/news/VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights
+tags:
+- .NET
+- AI
+- AI Assisted Debugging
+- AI Development
+- Azure
+- Azure AI
+- Coding
+- Company News
+- Demo
+- Developer Conference
+- Git Integration
+- GitHub Copilot
+- Inner Loop Productivity
+- Microsoft HQ
+- News
+- Productivity Tools
+- Session Highlights
+- VS
+- VS Live
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 stclarke reports on the highlights from VS Live! at Microsoft HQ, emphasizing sessions on Visual Studio, Azure, and GitHub Copilot, and providing on-demand resources for developers interested in AI-assisted productivity and .NET development.<!--excerpt_end-->
 
 # VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights

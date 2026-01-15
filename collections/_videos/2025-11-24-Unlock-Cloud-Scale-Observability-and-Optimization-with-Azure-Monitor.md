@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unlock Cloud-Scale Observability and Optimization with Azure Monitor"
-description: "This session from Microsoft Ignite 2025 explores how Azure Monitor enables comprehensive observability across both cloud and hybrid environments. It highlights AI-driven features, including the new Copilot in Azure agents, which offer actionable insights for cost optimization, carbon efficiency, and resource performance tuning. Attendees learn about integrations with tools like Grafana, the use of Prompt QL for advanced visualizations and alerts, OpenTelemetry integration, auditing enhancements, AKS monitoring, and demos showcasing automated troubleshooting and optimization workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=-IZ-PLSvDgU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Unlock Cloud-Scale Observability and Optimization with Azure Monitor
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=-IZ-PLSvDgU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:42:13 +00:00
-permalink: "/2025-11-24-Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Operations", "AKS", "Audit Logging", "Azure", "Azure Monitor", "Carbon Efficiency", "CLI Automation", "Cloud Monitoring", "Copilot in Azure", "Cost Optimization", "DevOps", "Grafana", "Hybrid Cloud", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Observability", "OpenTelemetry", "Performance Troubleshooting", "Prompt QL", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai operations", "aks", "audit logging", "azure", "azure monitor", "carbon efficiency", "cli automation", "cloud monitoring", "copilot in azure", "cost optimization", "devops", "grafana", "hybrid cloud", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "observability", "opentelemetry", "performance troubleshooting", "prompt ql", "videos"]
+permalink: /ai/videos/Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor
+tags:
+- Agentic AI
+- AI
+- AI Operations
+- AKS
+- Audit Logging
+- Azure
+- Azure Monitor
+- Carbon Efficiency
+- CLI Automation
+- Cloud Monitoring
+- Copilot in Azure
+- Cost Optimization
+- DevOps
+- Grafana
+- Hybrid Cloud
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Observability
+- OpenTelemetry
+- Performance Troubleshooting
+- Prompt QL
+- Videos
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Microsoft Events presenters Rahul Bagaria, Ritesh Kini, and Farzana Rahman deliver an advanced Ignite 2025 session on using Azure Monitor for AI-driven observability, cost optimization, and streamlined operations across cloud and hybrid environments.<!--excerpt_end-->
 
 {% youtube -IZ-PLSvDgU %}

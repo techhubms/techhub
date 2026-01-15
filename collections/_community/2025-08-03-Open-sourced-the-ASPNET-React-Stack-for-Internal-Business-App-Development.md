@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Open-sourced the ASP.NET + React Stack for Internal Business App Development"
-description: "The author introduces Xams, an open-source full-stack framework combining ASP.NET Core and React, tailored for rapid development of business applications with common requirements like user management and CRUD operations. Xams automates repetitive tasks and has already seen production use in enterprise settings."
-author: "blabmight"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mgk8cw/opensourced_the_aspnet_react_stack_we_use_to/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Open-sourced the ASP.NET + React Stack for Internal Business App Development
+author: blabmight
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mgk8cw/opensourced_the_aspnet_react_stack_we_use_to/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-03 14:10:53 +00:00
-permalink: "/2025-08-03-Open-sourced-the-ASPNET-React-Stack-for-Internal-Business-App-Development.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Business Apps", "Coding", "Community", "CRUD Automation", "Framework", "Full Stack", "Open Source", "React", "Software Development", "User Management", "Xams"]
-tags_normalized: ["dotnet", "aspdotnet core", "business apps", "coding", "community", "crud automation", "framework", "full stack", "open source", "react", "software development", "user management", "xams"]
+permalink: /coding/community/Open-sourced-the-ASPNET-React-Stack-for-Internal-Business-App-Development
+tags:
+- .NET
+- ASP.NET Core
+- Business Apps
+- Coding
+- Community
+- CRUD Automation
+- Framework
+- Full Stack
+- Open Source
+- React
+- Software Development
+- User Management
+- Xams
+section_names:
+- coding
 ---
-
 blabmight shares the release of Xams, an open-source ASP.NET Core and React framework designed for streamlined business app development.<!--excerpt_end-->
 
 ## Overview

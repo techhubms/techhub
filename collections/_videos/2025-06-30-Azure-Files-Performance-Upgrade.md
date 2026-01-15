@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Files Performance Upgrade"
-description: "This video explores the latest performance improvements to Azure Files. John Savill discusses key enhancements such as metadata caching, SMB interaction types, directory lease, and SMB multi-channel support for Linux. The session also highlights requirements, considerations, handles, and Microsoft's plans for the future of file storage in Azure. Viewers gain insights into boosting performance for metadata-intensive workloads and understand practical, real-world usage scenarios that help maximize Azure Files efficiency for enterprise-scale deployments."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fYs8Nh8KpeM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Files Performance Upgrade
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=fYs8Nh8KpeM
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-30 12:49:42 +00:00
-permalink: "/2025-06-30-Azure-Files-Performance-Upgrade.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Cloud", "Azure Files", "Azure Storage", "Cloud", "Cloud Storage", "Directory Lease", "File Shares", "Files", "Handles", "Linux", "Metadata Cache", "Microsoft", "Microsoft Azure", "Performance Optimization", "Roadmap", "Scalability", "SMB", "SMB Multi Channel", "Storage", "Storage Limits", "Videos", "Workload Interaction"]
-tags_normalized: ["azure", "azure cloud", "azure files", "azure storage", "cloud", "cloud storage", "directory lease", "file shares", "files", "handles", "linux", "metadata cache", "microsoft", "microsoft azure", "performance optimization", "roadmap", "scalability", "smb", "smb multi channel", "storage", "storage limits", "videos", "workload interaction"]
+permalink: /azure/videos/Azure-Files-Performance-Upgrade
+tags:
+- Azure
+- Azure Cloud
+- Azure Files
+- Azure Storage
+- Cloud
+- Cloud Storage
+- Directory Lease
+- File Shares
+- Files
+- Handles
+- Linux
+- Metadata Cache
+- Microsoft
+- Microsoft Azure
+- Performance Optimization
+- Roadmap
+- Scalability
+- SMB
+- SMB Multi Channel
+- Storage
+- Storage Limits
+- Videos
+- Workload Interaction
+section_names:
+- azure
 ---
-
 John Savill presents an in-depth walkthrough of recent Azure Files performance upgrades, covering workload interaction, metadata caching, directory leasing, Linux SMB multi-channel, and future roadmap details.<!--excerpt_end-->
 
 {% youtube fYs8Nh8KpeM %}

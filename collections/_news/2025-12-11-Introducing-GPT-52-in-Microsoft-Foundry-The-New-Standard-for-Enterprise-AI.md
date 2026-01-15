@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Introducing GPT-5.2 in Microsoft Foundry: The New Standard for Enterprise AI"
-description: "This article introduces GPT-5.2, the latest large language model available in Microsoft Foundry on Azure. It details major improvements in reasoning, agentic execution, and enterprise governance that set a new benchmark for building reliable, compliant AI solutions. Developers and technical leaders will learn about key features, technical upgrades over previous models, real-world use cases (such as multi-agent workflows and code generation), and deployment/pricing options."
-author: "Naomi Moneypenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing GPT-5.2 in Microsoft Foundry: The New Standard for Enterprise AI'
+author: Naomi Moneypenny
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 18:18:05 +00:00
-permalink: "/2025-12-11-Introducing-GPT-52-in-Microsoft-Foundry-The-New-Standard-for-Enterprise-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Execution", "AI", "AI + Machine Learning", "AI Agents", "AI Model Deployment", "Analytics", "Application Modernization", "Azure", "Coding Automation", "Compliance", "Context Aware Planning", "Enterprise AI", "Governance", "GPT 5.2", "Large Language Model", "Microsoft Foundry", "Model Pricing", "News", "Reasoning", "Technical Leadership"]
-tags_normalized: ["agentic execution", "ai", "ai plus machine learning", "ai agents", "ai model deployment", "analytics", "application modernization", "azure", "coding automation", "compliance", "context aware planning", "enterprise ai", "governance", "gpt 5dot2", "large language model", "microsoft foundry", "model pricing", "news", "reasoning", "technical leadership"]
+permalink: /ai/news/Introducing-GPT-52-in-Microsoft-Foundry-The-New-Standard-for-Enterprise-AI
+tags:
+- Agentic Execution
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Model Deployment
+- Analytics
+- Application Modernization
+- Azure
+- Coding Automation
+- Compliance
+- Context Aware Planning
+- Enterprise AI
+- Governance
+- GPT 5.2
+- Large Language Model
+- Microsoft Foundry
+- Model Pricing
+- News
+- Reasoning
+- Technical Leadership
+section_names:
+- ai
+- azure
 ---
-
 Naomi Moneypenny introduces GPT-5.2 in Microsoft Foundry, outlining new capabilities in reasoning, agentic execution, and compliance for enterprise AI development on Azure. This piece details features important to developers and technical leaders.<!--excerpt_end-->
 
 # Introducing GPT-5.2 in Microsoft Foundry: The New Standard for Enterprise AI

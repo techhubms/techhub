@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Understanding the Model Context Protocol (MCP)"
-description: "This article by Hidde de Smet explores the Model Context Protocol (MCP), an open-source standard revolutionizing AI integration by enabling efficient, secure interactions between AI models and external data sources. MCP’s client-server architecture is supported by JSON-RPC 2.0 and is increasingly adopted by major companies, including Microsoft."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/model-context-protocol-mcp"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: Understanding the Model Context Protocol (MCP)
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/model-context-protocol-mcp
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-08 07:00:00 +00:00
-permalink: "/2025-05-08-Understanding-the-Model-Context-Protocol-MCP.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Integration", "API Integrations", "Blogs", "JSON RPC", "Knowledge Graph Management", "MCP", "Microsoft", "Open Source Standard", "Scalability"]
-tags_normalized: ["agentic ai", "ai", "ai integration", "api integrations", "blogs", "json rpc", "knowledge graph management", "mcp", "microsoft", "open source standard", "scalability"]
+permalink: /ai/blogs/Understanding-the-Model-Context-Protocol-MCP
+tags:
+- Agentic AI
+- AI
+- AI Integration
+- API Integrations
+- Blogs
+- JSON RPC
+- Knowledge Graph Management
+- MCP
+- Microsoft
+- Open Source Standard
+- Scalability
+section_names:
+- ai
 ---
-
 Written by Hidde de Smet, this article delves into the Model Context Protocol (MCP), highlighting its design, features, and transformative impact on AI integration for organizations such as Microsoft.<!--excerpt_end-->
 
 # Understanding the Model Context Protocol (MCP)

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Embedding AI in Oracle Workloads with Oracle Database@Azure and Microsoft Fabric"
-description: "This session explores practical approaches for integrating AI capabilities into Oracle workloads hosted on Azure, using Microsoft Foundry, Copilot Studio, and Microsoft Fabric. It features blueprints for vectorizing Oracle data, developing task-specific copilots and agents, and operationalizing analytics. Customer-tested integration patterns, cost considerations, and reliability strategies are discussed, providing attendees with actionable insights and a roadmap for successful adoption."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nHVwGyxP_Fg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Embedding AI in Oracle Workloads with Oracle Database@Azure and Microsoft Fabric
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=nHVwGyxP_Fg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:54:01 +00:00
-permalink: "/2025-11-24-Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Agents", "AI Integration", "Azure", "Azure AI Search", "Coding", "Copilot Studio", "Custom Copilots", "Data Analytics", "Data Governance", "Database Mirroring", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Purview", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Operational Analytics", "Oracle Database@Azure", "Vectorization", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai integration", "azure", "azure ai search", "coding", "copilot studio", "custom copilots", "data analytics", "data governance", "database mirroring", "microsoft fabric", "microsoft foundry", "microsoft purview", "migrateandmodernizeyourestate", "ml", "msignite", "operational analytics", "oracle databaseatazure", "vectorization", "videos"]
+permalink: /ai/videos/Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric
+tags:
+- AI
+- AI Agents
+- AI Integration
+- Azure
+- Azure AI Search
+- Coding
+- Copilot Studio
+- Custom Copilots
+- Data Analytics
+- Data Governance
+- Database Mirroring
+- Microsoft Fabric
+- Microsoft Foundry
+- Microsoft Purview
+- Migrateandmodernizeyourestate
+- ML
+- MSIgnite
+- Operational Analytics
+- Oracle Database@Azure
+- Vectorization
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 In this Microsoft Ignite session, Sudhakar Dalavi, Venkataraman Ramakrishnan, and Rajya Laxmi Yellajosyula present concrete strategies for embedding AI into Oracle workloads using Azure services and Microsoft Fabric.<!--excerpt_end-->
 
 {% youtube nHVwGyxP_Fg %}

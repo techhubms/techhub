@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing TypeScript Native Previews: A Faster, Native Compiler and Toolset"
-description: "Daniel Rosenwasser introduces TypeScript Native Previews, a native-port of the TypeScript compiler written in Go, achieving over 10x speed-ups. The post details new npm and VS Code extension previews, features such as JSX and JS type-checking, editor/LSP improvements, APIs, differences from current versions, and the project roadmap."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: 'Announcing TypeScript Native Previews: A Faster, Native Compiler and Toolset'
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-05-22 15:04:21 +00:00
-permalink: "/2025-05-22-Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset.html"
-categories: ["Coding"]
-tags: ["API", "Coding", "Go", "JavaScript Type Checking", "JSX", "Language Server", "LSP", "Native Compiler", "News", "Node.js", "Open Source", "Performance", "Project Corsa", "Project Strada", "TypeScript", "TypeScript Native", "VS Code Extension"]
-tags_normalized: ["api", "coding", "go", "javascript type checking", "jsx", "language server", "lsp", "native compiler", "news", "nodedotjs", "open source", "performance", "project corsa", "project strada", "typescript", "typescript native", "vs code extension"]
+permalink: /coding/news/Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset
+tags:
+- API
+- Coding
+- Go
+- JavaScript Type Checking
+- JSX
+- Language Server
+- LSP
+- Native Compiler
+- News
+- Node.js
+- Open Source
+- Performance
+- Project Corsa
+- Project Strada
+- TypeScript
+- TypeScript Native
+- VS Code Extension
+section_names:
+- coding
 ---
-
 In this detailed announcement, Daniel Rosenwasser unveils the TypeScript Native Previews—offering a natively compiled TypeScript compiler and toolset in Go. The article covers installation, new features, ongoing limitations, and an active roadmap for developers.<!--excerpt_end-->
 
 ## Announcing TypeScript Native Previews

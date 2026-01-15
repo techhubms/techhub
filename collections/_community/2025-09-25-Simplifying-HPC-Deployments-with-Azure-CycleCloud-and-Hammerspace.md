@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Simplifying HPC Deployments with Azure CycleCloud and Hammerspace"
-description: "This blog post by anhoward offers a practical walkthrough for deploying SLURM clusters using Azure CycleCloud and integrating the Hammerspace Data Platform for high-performance, scalable file access. The content covers the full deployment process, including use of Azure Marketplace templates, NFS file sharing, and how CycleCloud’s Scheduled Events can automate resource cleanup, thereby reducing operational overhead and costs."
-author: "anhoward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba-p/4457043"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Simplifying HPC Deployments with Azure CycleCloud and Hammerspace
+author: anhoward
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba-p/4457043
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 19:01:20 +00:00
-permalink: "/2025-09-25-Simplifying-HPC-Deployments-with-Azure-CycleCloud-and-Hammerspace.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azure", "Azure CycleCloud", "Azure Marketplace", "Cloud Infrastructure", "Cluster Deployment", "Coding", "Community", "Data Platform", "DevOps", "File System", "Hammerspace", "High Performance Computing", "HPC", "Job Scheduling", "Linux", "NFS", "Operational Efficiency", "Scheduled Events", "SLURM"]
-tags_normalized: ["automation", "azure", "azure cyclecloud", "azure marketplace", "cloud infrastructure", "cluster deployment", "coding", "community", "data platform", "devops", "file system", "hammerspace", "high performance computing", "hpc", "job scheduling", "linux", "nfs", "operational efficiency", "scheduled events", "slurm"]
+permalink: /coding/community/Simplifying-HPC-Deployments-with-Azure-CycleCloud-and-Hammerspace
+tags:
+- Automation
+- Azure
+- Azure CycleCloud
+- Azure Marketplace
+- Cloud Infrastructure
+- Cluster Deployment
+- Coding
+- Community
+- Data Platform
+- DevOps
+- File System
+- Hammerspace
+- High Performance Computing
+- HPC
+- Job Scheduling
+- Linux
+- NFS
+- Operational Efficiency
+- Scheduled Events
+- SLURM
+section_names:
+- azure
+- coding
+- devops
 ---
-
 anhoward demonstrates how to simplify high performance computing on Azure by integrating CycleCloud, SLURM, and Hammerspace. The post guides through cluster setup, data management, and automated cleanup for practitioners seeking operational efficiency.<!--excerpt_end-->
 
 # Simplifying HPC Deployments with Azure CycleCloud and Hammerspace

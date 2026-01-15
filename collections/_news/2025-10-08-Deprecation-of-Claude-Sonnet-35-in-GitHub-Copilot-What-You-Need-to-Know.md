@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Deprecation of Claude Sonnet 3.5 in GitHub Copilot: What You Need to Know"
-description: "This announcement covers the deprecation of the Claude Sonnet 3.5 model across all GitHub Copilot experiences, affecting Copilot Chat, inline edits, agent modes, and code completions by November 6th, 2025. It outlines transition steps for Copilot users and administrators, and provides resources for further information and feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-07-upcoming-deprecation-of-claude-sonnet-3-5"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Deprecation of Claude Sonnet 3.5 in GitHub Copilot: What You Need to Know'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-07-upcoming-deprecation-of-claude-sonnet-3-5
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-08 00:34:21 +00:00
-permalink: "/2025-10-08-Deprecation-of-Claude-Sonnet-35-in-GitHub-Copilot-What-You-Need-to-Know.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Administrator Guide", "AI", "AI Models", "Claude Sonnet 3.5", "Code Completions", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "GitHub Copilot", "Model Deprecation", "Model Policies", "News", "Retired", "VS Code"]
-tags_normalized: ["administrator guide", "ai", "ai models", "claude sonnet 3dot5", "code completions", "copilot", "copilot chat", "copilot enterprise", "copilot free", "github copilot", "model deprecation", "model policies", "news", "retired", "vs code"]
+permalink: /github-copilot/news/Deprecation-of-Claude-Sonnet-35-in-GitHub-Copilot-What-You-Need-to-Know
+tags:
+- Administrator Guide
+- AI
+- AI Models
+- Claude Sonnet 3.5
+- Code Completions
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Free
+- GitHub Copilot
+- Model Deprecation
+- Model Policies
+- News
+- Retired
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains the upcoming deprecation of Claude Sonnet 3.5 across all GitHub Copilot experiences and provides essential information for developers and administrators.<!--excerpt_end-->
 
 # Deprecation of Claude Sonnet 3.5 in GitHub Copilot

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "End-to-End Azure App Testing with Playwright Workspaces: Local and Cloud Workflows"
-description: "This community guide by varghesejoji provides a detailed walkthrough on using Azure App Testing with Playwright Workspaces for scalable browser-based app testing. It covers local setup, integration with Azure Web Apps, scripting, troubleshooting, and leveraging cloud-hosted browsers for parallel test execution. Emphasis is placed on configuration, practical NPM scripts, and workflows to optimize functional and performance testing in development and CI pipelines."
-author: "varghesejoji"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-testing-playwright-workspaces-for-local-to-cloud-test/ba-p/4442711"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'End-to-End Azure App Testing with Playwright Workspaces: Local and Cloud Workflows'
+author: varghesejoji
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-testing-playwright-workspaces-for-local-to-cloud-test/ba-p/4442711
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 03:43:11 +00:00
-permalink: "/2025-08-13-End-to-End-Azure-App-Testing-with-Playwright-Workspaces-Local-and-Cloud-Workflows.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["App Deployment", "Automated Testing", "Azure", "Azure App Testing", "Azure Portal", "Azure Web App", "Browser Automation", "CI/CD", "Cloud Testing", "Coding", "Community", "Continuous Integration", "DevOps", "Express", "Functional Testing", "JavaScript", "Microsoft Azure", "Node.js", "npm Scripts", "Performance Testing", "Playwright", "Playwright Workspaces", "Test Parallelism", "Test Reporting", "Testing Configuration"]
-tags_normalized: ["app deployment", "automated testing", "azure", "azure app testing", "azure portal", "azure web app", "browser automation", "cislashcd", "cloud testing", "coding", "community", "continuous integration", "devops", "express", "functional testing", "javascript", "microsoft azure", "nodedotjs", "npm scripts", "performance testing", "playwright", "playwright workspaces", "test parallelism", "test reporting", "testing configuration"]
+permalink: /coding/community/End-to-End-Azure-App-Testing-with-Playwright-Workspaces-Local-and-Cloud-Workflows
+tags:
+- App Deployment
+- Automated Testing
+- Azure
+- Azure App Testing
+- Azure Portal
+- Azure Web App
+- Browser Automation
+- CI/CD
+- Cloud Testing
+- Coding
+- Community
+- Continuous Integration
+- DevOps
+- Express
+- Functional Testing
+- JavaScript
+- Microsoft Azure
+- Node.js
+- npm Scripts
+- Performance Testing
+- Playwright
+- Playwright Workspaces
+- Test Parallelism
+- Test Reporting
+- Testing Configuration
+section_names:
+- azure
+- coding
+- devops
 ---
-
 varghesejoji demonstrates how to use Azure App Testing and Playwright Workspaces for browser-based functional and performance testing, guiding users from local development to cloud-scale parallel test execution with shared reporting.<!--excerpt_end-->
 
 # End-to-End Azure App Testing with Playwright Workspaces: Local and Cloud Workflows

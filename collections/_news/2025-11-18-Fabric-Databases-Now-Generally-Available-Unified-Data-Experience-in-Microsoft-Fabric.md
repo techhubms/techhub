@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Fabric Databases Now Generally Available: Unified Data Experience in Microsoft Fabric"
-description: "This announcement introduces Fabric databases—now generally available on Microsoft Fabric—that unify SQL database and Cosmos DB capabilities. The update details how these autonomous, SaaS-native databases are optimized for AI and modern applications, enabling seamless operational and analytical data management, real-time insights, and native integration with Microsoft developer tools and cloud services."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Databases Now Generally Available: Unified Data Experience in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure OpenAI Service", "Cosmos DB", "Enterprise Security", "Fabric Databases", "GraphQL API", "Microsoft Fabric", "ML", "News", "OneLake", "Operational Analytics", "Power BI", "Real Time Data", "Serverless Architecture", "SQL Database", "Unified Data Platform", "Vector Search", "VS Code Integration"]
-tags_normalized: ["ai", "ai integration", "azure", "azure openai service", "cosmos db", "enterprise security", "fabric databases", "graphql api", "microsoft fabric", "ml", "news", "onelake", "operational analytics", "power bi", "real time data", "serverless architecture", "sql database", "unified data platform", "vector search", "vs code integration"]
+permalink: /ai/news/Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure OpenAI Service
+- Cosmos DB
+- Enterprise Security
+- Fabric Databases
+- GraphQL API
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Operational Analytics
+- Power BI
+- Real Time Data
+- Serverless Architecture
+- SQL Database
+- Unified Data Platform
+- Vector Search
+- VS Code Integration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the general availability of Fabric databases, combining SQL and Cosmos DB features to deliver a unified, AI-optimized data platform for modern apps and analytics.<!--excerpt_end-->
 
 # Fabric Databases—A Unified, SaaS-Native Experience for Modern Data Workloads

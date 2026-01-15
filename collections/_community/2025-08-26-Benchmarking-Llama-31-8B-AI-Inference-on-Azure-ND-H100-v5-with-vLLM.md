@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM"
-description: "This detailed technical analysis by Cormac Garvey investigates the performance of the Llama 3.1 8B large language model (LLM) running on Azure ND-H100-v5 infrastructure using the vLLM inference engine. Covering AI inference architecture, optimization strategies, benchmarking methods, and practical deployment recommendations, the article provides actionable insights for AI engineers deploying efficient LLM solutions on Azure GPU environments."
-author: "CormacGarvey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-of-llama-3-1-8b-ai-inference-using-vllm-on-nd-h100/ba-p/4448355"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM
+author: CormacGarvey
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-of-llama-3-1-8b-ai-inference-using-vllm-on-nd-h100/ba-p/4448355
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 17:02:48 +00:00
-permalink: "/2025-08-26-Benchmarking-Llama-31-8B-AI-Inference-on-Azure-ND-H100-v5-with-vLLM.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Inference", "Azure", "Azure ND H100 V5", "Community", "Dynamo Inference Framework", "FP8 Quantization", "GPU Deployment", "HuggingFace", "KV Cache", "Large Language Models", "Llama 3.1 8B", "ML", "PagedAttention", "Performance Benchmarking", "Python", "Tensor Parallelism", "Token Throughput", "Vllm"]
-tags_normalized: ["ai", "ai inference", "azure", "azure nd h100 v5", "community", "dynamo inference framework", "fp8 quantization", "gpu deployment", "huggingface", "kv cache", "large language models", "llama 3dot1 8b", "ml", "pagedattention", "performance benchmarking", "python", "tensor parallelism", "token throughput", "vllm"]
+permalink: /ai/community/Benchmarking-Llama-31-8B-AI-Inference-on-Azure-ND-H100-v5-with-vLLM
+tags:
+- AI
+- AI Inference
+- Azure
+- Azure ND H100 V5
+- Community
+- Dynamo Inference Framework
+- FP8 Quantization
+- GPU Deployment
+- HuggingFace
+- KV Cache
+- Large Language Models
+- Llama 3.1 8B
+- ML
+- PagedAttention
+- Performance Benchmarking
+- Python
+- Tensor Parallelism
+- Token Throughput
+- Vllm
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Cormac Garvey offers an in-depth benchmarking study of Llama 3.1 8B model inference using vLLM on Azure ND-H100-v5 GPUs. The article explains AI inference stages, optimization techniques, and reports on throughput, latency, and deployment tips for enterprise AI practitioners.<!--excerpt_end-->
 
 # Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM

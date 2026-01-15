@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "7 Essential Git Concepts Every Beginner Needs to Know"
-description: "This introductory video by GitHub explains the core fundamentals of version control using Git and GitHub. It covers critical concepts such as the working directory, staging area, local and remote repositories, branches, pull requests, and merging—providing newcomers with a solid foundation for collaborative software development."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/0F8tFJncsxQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 7 Essential Git Concepts Every Beginner Needs to Know
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/0F8tFJncsxQ
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-11 14:00:01 +00:00
-permalink: "/2025-09-11-7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know.html"
-categories: ["DevOps"]
-tags: ["Branches", "Collaboration", "DevOps", "Git", "Gitcommands", "GitHub", "Local Repository", "Merging", "Pull Requests", "Remote Repository", "Software Development", "Staging Area", "Version Control", "Videos"]
-tags_normalized: ["branches", "collaboration", "devops", "git", "gitcommands", "github", "local repository", "merging", "pull requests", "remote repository", "software development", "staging area", "version control", "videos"]
+permalink: /devops/videos/7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know
+tags:
+- Branches
+- Collaboration
+- DevOps
+- Git
+- Gitcommands
+- GitHub
+- Local Repository
+- Merging
+- Pull Requests
+- Remote Repository
+- Software Development
+- Staging Area
+- Version Control
+- Videos
+section_names:
+- devops
 ---
-
 GitHub presents an accessible introduction to version control with Git, outlining key concepts for beginners. Authored by GitHub, this video demystifies foundational workflows essential for software collaboration.<!--excerpt_end-->
 
 {% youtube 0F8tFJncsxQ %}

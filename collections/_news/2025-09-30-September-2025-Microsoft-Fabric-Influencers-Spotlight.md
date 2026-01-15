@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "September 2025 Microsoft Fabric Influencers Spotlight"
-description: "This post summarizes highlights from the September 2025 Fabric Influencers Spotlight, showcasing blogs and tutorials from Microsoft MVPs and Fabric Super Users. Covered topics include Power BI write-back solutions, scalable data pipelines, model evaluation in data science, Microsoft Fabric platform changes, and CI/CD challenges. The spotlight serves as a curated roundup for Fabric practitioners."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: September 2025 Microsoft Fabric Influencers Spotlight
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 14:00:00 +00:00
-permalink: "/2025-09-30-September-2025-Microsoft-Fabric-Influencers-Spotlight.html"
-categories: ["Azure", "ML"]
-tags: ["Administration", "Azure", "CI/CD", "Data Engineering", "Data Integration", "Data Pipeline", "Data Science", "Data Warehousing", "Fabric Community", "Fabric Platform", "Governance", "Microsoft Fabric", "ML", "Model Metrics", "MVP", "News", "Power BI", "Python", "Scikit Learn", "Semantic Models", "Super User"]
-tags_normalized: ["administration", "azure", "cislashcd", "data engineering", "data integration", "data pipeline", "data science", "data warehousing", "fabric community", "fabric platform", "governance", "microsoft fabric", "ml", "model metrics", "mvp", "news", "power bi", "python", "scikit learn", "semantic models", "super user"]
+permalink: /ml/news/September-2025-Microsoft-Fabric-Influencers-Spotlight
+tags:
+- Administration
+- Azure
+- CI/CD
+- Data Engineering
+- Data Integration
+- Data Pipeline
+- Data Science
+- Data Warehousing
+- Fabric Community
+- Fabric Platform
+- Governance
+- Microsoft Fabric
+- ML
+- Model Metrics
+- MVP
+- News
+- Power BI
+- Python
+- Scikit Learn
+- Semantic Models
+- Super User
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog compiles expert community contributions for September 2025, with MVPs and Super Users sharing practical solutions in Power BI, scalable data engineering, model evaluation, and Fabric platform governance.<!--excerpt_end-->
 
 # September 2025 Microsoft Fabric Influencers Spotlight

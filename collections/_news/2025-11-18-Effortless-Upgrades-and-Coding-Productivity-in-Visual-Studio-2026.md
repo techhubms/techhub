@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Effortless Upgrades and Coding Productivity in Visual Studio 2026"
-description: "This news article breaks down the seamless upgrade experience introduced in Visual Studio 2026, covering automatic migration of settings, dependency management via Setup Assistant, Copilot-powered modernization, and monthly update delivery. Developers will learn how to efficiently maintain their coding environments, modernize projects, and leverage integrated GitHub Copilot features for upgrading to newer SDKs and migrating to Azure—all while minimizing disruption."
-author: "Jason Chlus"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Effortless Upgrades and Coding Productivity in Visual Studio 2026
+author: Jason Chlus
+canonical_url: https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-18 17:00:27 +00:00
-permalink: "/2025-11-18-Effortless-Upgrades-and-Coding-Productivity-in-Visual-Studio-2026.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Development", ".vsconfig", ".vssettings", "AI", "Azure", "Azure Migration", "C++ Development", "Coding", "Copilot", "Dependency Management", "DevOps", "GitHub Copilot", "Global.json", "IDE Updates", "Installation And Updates", "Modernization", "Modernization Agent", "Monthly Releases", "MSVC Build Tools", "News", "Productivity", "Repair", "Rollback", "Setup", "Setup Assistant", "Side By Side Installation", "Update On Close", "Visual Studio Installer", "VS", "Windows SDK"]
-tags_normalized: ["dotnet development", "dotvsconfig", "dotvssettings", "ai", "azure", "azure migration", "cplusplus development", "coding", "copilot", "dependency management", "devops", "github copilot", "globaldotjson", "ide updates", "installation and updates", "modernization", "modernization agent", "monthly releases", "msvc build tools", "news", "productivity", "repair", "rollback", "setup", "setup assistant", "side by side installation", "update on close", "visual studio installer", "vs", "windows sdk"]
+permalink: /github-copilot/news/Effortless-Upgrades-and-Coding-Productivity-in-Visual-Studio-2026
+tags:
+- .NET Development
+- .vsconfig
+- .vssettings
+- AI
+- Azure
+- Azure Migration
+- C++ Development
+- Coding
+- Copilot
+- Dependency Management
+- DevOps
+- GitHub Copilot
+- Global.json
+- IDE Updates
+- Installation And Updates
+- Modernization
+- Modernization Agent
+- Monthly Releases
+- MSVC Build Tools
+- News
+- Productivity
+- Repair
+- Rollback
+- Setup
+- Setup Assistant
+- Side By Side Installation
+- Update On Close
+- Visual Studio Installer
+- VS
+- Windows SDK
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Jason Chlus explains how Visual Studio 2026 streamlines upgrades, project modernization, and dependency management. Learn how integrated Copilot modernization and Azure migration help developers stay productive.<!--excerpt_end-->
 
 # Spend Less Time Upgrading, More Time Coding in Visual Studio 2026

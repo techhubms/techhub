@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Simplifying Cloud-Native Development with .NET Aspire"
-description: ".NET Aspire offers a streamlined, opinionated framework for building cloud-native, production-ready distributed applications. This session explores how Aspire facilitates development with features like automatic service discovery, built-in telemetry, and seamless integrations with major cloud services and databases. Developers will also learn about enhanced local development workflows and monitoring dashboards. Whether for newcomers or experienced professionals, this content demonstrates how Aspire and the latest .NET ecosystem advancements help build scalable applications efficiently."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aXouOsBh4ro"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Simplifying Cloud-Native Development with .NET Aspire
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=aXouOsBh4ro
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 22:51:40 +00:00
-permalink: "/2025-11-12-Simplifying-Cloud-Native-Development-with-NET-Aspire.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "Application Monitoring", "ASP.NET Core 10", "Azure", "C# 14", "Cloud Integration", "Cloud Native", "Coding", "Dashboard", "DevOps", "Distributed Applications", "F# 10", "Modern Web Development", "Production Readiness", "Service Discovery", "Telemetry", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "application monitoring", "aspdotnet core 10", "azure", "csharp 14", "cloud integration", "cloud native", "coding", "dashboard", "devops", "distributed applications", "fsharp 10", "modern web development", "production readiness", "service discovery", "telemetry", "videos", "vs"]
+permalink: /coding/videos/Simplifying-Cloud-Native-Development-with-NET-Aspire
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- .NET MAUI 10
+- Application Monitoring
+- ASP.NET Core 10
+- Azure
+- C# 14
+- Cloud Integration
+- Cloud Native
+- Coding
+- Dashboard
+- DevOps
+- Distributed Applications
+- F# 10
+- Modern Web Development
+- Production Readiness
+- Service Discovery
+- Telemetry
+- Videos
+- VS
+section_names:
+- azure
+- coding
+- devops
 ---
-
 dotnet presents an overview of .NET Aspire, highlighting how it simplifies the development and monitoring of cloud-native distributed applications for modern .NET developers.<!--excerpt_end-->
 
 {% youtube aXouOsBh4ro %}

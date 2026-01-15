@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration"
-description: "This post explains how Microsoft is rethinking observability for generative AI applications through the integration of Azure Monitor and AI Foundry. It details new features like AI-specific dashboards, trace visualization, and OpenTelemetry-based innovations for unified monitoring of GenAI agents and infrastructure."
-author: "Hong Gao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration'
+author: Hong Gao
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 18:35:59 +00:00
-permalink: "/2025-11-26-End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Monitoring", "AI", "Application Insights", "Azure", "Azure AI Foundry", "Azure Monitor", "Azure Monitor Workbooks", "Cloud Monitoring", "Community", "Compliance", "Cost Governance", "DevOps", "Generative AI", "Grafana", "LLM", "Multi Agent Orchestration", "Observability", "OpenTelemetry", "Telemetry"]
-tags_normalized: ["agent monitoring", "ai", "application insights", "azure", "azure ai foundry", "azure monitor", "azure monitor workbooks", "cloud monitoring", "community", "compliance", "cost governance", "devops", "generative ai", "grafana", "llm", "multi agent orchestration", "observability", "opentelemetry", "telemetry"]
+permalink: /ai/community/End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration
+tags:
+- Agent Monitoring
+- AI
+- Application Insights
+- Azure
+- Azure AI Foundry
+- Azure Monitor
+- Azure Monitor Workbooks
+- Cloud Monitoring
+- Community
+- Compliance
+- Cost Governance
+- DevOps
+- Generative AI
+- Grafana
+- LLM
+- Multi Agent Orchestration
+- Observability
+- OpenTelemetry
+- Telemetry
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Hong Gao introduces new Azure Monitor and AI Foundry integration, providing enterprise-grade observability for generative AI systems. The post highlights unified dashboards, AI telemetry, and OpenTelemetry-powered insights.<!--excerpt_end-->
 
 # End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration

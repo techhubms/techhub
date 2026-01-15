@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How GitHub Copilot Uses Embedding-Guided Tool Routing in VS Code"
-description: "This article explores how GitHub Copilot Chat in VS Code leverages embedding-guided tool routing, adaptive tool clustering, and a streamlined tool set via the Model Context Protocol (MCP) to improve agent efficiency and response times. It covers technical details on tool selection, clustering algorithms, and benchmark results, providing actionable insights for developers interested in AI-driven developer tooling and the evolution of intelligent coding assistants."
-author: "Anisha Agarwal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-were-making-github-copilot-smarter-with-fewer-tools/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: How GitHub Copilot Uses Embedding-Guided Tool Routing in VS Code
+author: Anisha Agarwal
+canonical_url: https://github.blog/ai-and-ml/github-copilot/how-were-making-github-copilot-smarter-with-fewer-tools/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-19 20:00:00 +00:00
-permalink: "/2025-11-19-How-GitHub-Copilot-Uses-Embedding-Guided-Tool-Routing-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Adaptive Tool Clustering", "Agentic Workflows", "AI", "AI & ML", "AI Driven Tooling", "Codebase Analysis", "Coding", "Copilot Embedding Model", "Developer Tools", "Embedding Guided Routing", "GitHub Copilot", "LLM", "MCP", "News", "Performance Optimization", "Semantic Similarity", "SWE Lancer", "SWEbench Verified", "Tool Selection", "Virtual Tools", "VS Code"]
-tags_normalized: ["adaptive tool clustering", "agentic workflows", "ai", "ai and ml", "ai driven tooling", "codebase analysis", "coding", "copilot embedding model", "developer tools", "embedding guided routing", "github copilot", "llm", "mcp", "news", "performance optimization", "semantic similarity", "swe lancer", "swebench verified", "tool selection", "virtual tools", "vs code"]
+permalink: /github-copilot/news/How-GitHub-Copilot-Uses-Embedding-Guided-Tool-Routing-in-VS-Code
+tags:
+- Adaptive Tool Clustering
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Driven Tooling
+- Codebase Analysis
+- Coding
+- Copilot Embedding Model
+- Developer Tools
+- Embedding Guided Routing
+- GitHub Copilot
+- LLM
+- MCP
+- News
+- Performance Optimization
+- Semantic Similarity
+- SWE Lancer
+- SWEbench Verified
+- Tool Selection
+- Virtual Tools
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Anisha Agarwal delves into engineering advances in GitHub Copilot Chat for VS Code, showing how embedding-guided tool routing and adaptive clustering improve tool selection and efficiency for developers.<!--excerpt_end-->
 
 # How GitHub Copilot Uses Embedding-Guided Tool Routing in VS Code

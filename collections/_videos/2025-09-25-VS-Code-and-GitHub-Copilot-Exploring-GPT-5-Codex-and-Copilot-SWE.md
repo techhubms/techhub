@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE"
-description: "This video features James and Pierce as they discuss the integration of the latest AI models, GPT-5-Codex and Copilot-SWE, within Visual Studio Code and GitHub Copilot. The presenters offer insights into new capabilities, improvements, and practical demos showing how these AI advancements can enhance developer productivity in coding environments."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Rz3ucRzuUHc"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=Rz3ucRzuUHc
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-25 17:48:26 +00:00
-permalink: "/2025-09-25-VS-Code-and-GitHub-Copilot-Exploring-GPT-5-Codex-and-Copilot-SWE.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Integration", "AI Models", "Code", "Code Completion", "Codex", "Coding", "Copilot SWE", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "Gpt", "GPT 5 Codex", "Gpt5", "James Montemagno", "Microsoft", "Pierce Boggan", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai coding assistant", "ai integration", "ai models", "code", "code completion", "codex", "coding", "copilot swe", "demo", "developer", "developer community", "developer tools", "github copilot", "gpt", "gpt 5 codex", "gpt5", "james montemagno", "microsoft", "pierce boggan", "software developer", "videos", "vs code"]
+permalink: /github-copilot/videos/VS-Code-and-GitHub-Copilot-Exploring-GPT-5-Codex-and-Copilot-SWE
+tags:
+- AI
+- AI Coding Assistant
+- AI Integration
+- AI Models
+- Code
+- Code Completion
+- Codex
+- Coding
+- Copilot SWE
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub Copilot
+- Gpt
+- GPT 5 Codex
+- Gpt5
+- James Montemagno
+- Microsoft
+- Pierce Boggan
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code's team, led by James Montemagno and Pierce Boggan, dives into the latest developments in AI-powered coding with GPT-5-Codex and Copilot-SWE. They showcase what's new for developers in VS Code.<!--excerpt_end-->
 
 {% youtube Rz3ucRzuUHc %}

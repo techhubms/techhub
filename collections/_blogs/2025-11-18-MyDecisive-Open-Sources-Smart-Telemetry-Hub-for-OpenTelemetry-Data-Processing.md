@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "MyDecisive Open Sources Smart Telemetry Hub for OpenTelemetry Data Processing"
-description: "This article covers MyDecisive's initiative to open source its Smart Telemetry Hub, a Kubernetes-based OpenTelemetry data processor. The enhanced filtering mechanism helps DevOps teams reduce telemetry volumes, lower observability costs, and improve mean time to remediation (MTTR). The platform leverages memory-based telemetry filtering and aims to evolve OpenTelemetry standards within CNCF."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: MyDecisive Open Sources Smart Telemetry Hub for OpenTelemetry Data Processing
+author: Mike Vizard
+canonical_url: https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-18 14:00:32 +00:00
-permalink: "/2025-11-18-MyDecisive-Open-Sources-Smart-Telemetry-Hub-for-OpenTelemetry-Data-Processing.html"
-categories: ["DevOps"]
-tags: ["Alerting", "Backend Analysis", "Blogs", "Business Of DevOps", "CNCF", "Data Filtering", "DevOps", "DevOps Observability Costs", "Golden Signals", "Instrumentation", "Kubernetes", "Kubernetes Telemetry", "Memory Based Filtering", "MTTR Reduction", "Observability", "Open Source", "Open Source Observability", "OpenTelemetry", "OTel Collectors", "Proactive Monitoring.", "Smart Telemetry Hub", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry Data", "Telemetry Filtering", "Telemetry Monitoring", "Telemetry Overload"]
-tags_normalized: ["alerting", "backend analysis", "blogs", "business of devops", "cncf", "data filtering", "devops", "devops observability costs", "golden signals", "instrumentation", "kubernetes", "kubernetes telemetry", "memory based filtering", "mttr reduction", "observability", "open source", "open source observability", "opentelemetry", "otel collectors", "proactive monitoringdot", "smart telemetry hub", "social facebook", "social linkedin", "social x", "telemetry data", "telemetry filtering", "telemetry monitoring", "telemetry overload"]
+permalink: /devops/blogs/MyDecisive-Open-Sources-Smart-Telemetry-Hub-for-OpenTelemetry-Data-Processing
+tags:
+- Alerting
+- Backend Analysis
+- Blogs
+- Business Of DevOps
+- CNCF
+- Data Filtering
+- DevOps
+- DevOps Observability Costs
+- Golden Signals
+- Instrumentation
+- Kubernetes
+- Kubernetes Telemetry
+- Memory Based Filtering
+- MTTR Reduction
+- Observability
+- Open Source
+- Open Source Observability
+- OpenTelemetry
+- OTel Collectors
+- Proactive Monitoring.
+- Smart Telemetry Hub
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry Data
+- Telemetry Filtering
+- Telemetry Monitoring
+- Telemetry Overload
+section_names:
+- devops
 ---
-
 Mike Vizard explores how MyDecisive's open-sourced Smart Telemetry Hub brings advanced telemetry filtering to DevOps teams, supporting efficient observability and lower costs.<!--excerpt_end-->
 
 # MyDecisive Open Sources Smart Telemetry Hub for OpenTelemetry Data Processing

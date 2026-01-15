@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Gemini 3 Pro Model Launches for GitHub Copilot in Popular IDEs"
-description: "This news update announces the public preview release of Gemini 3 Pro within GitHub Copilot, now accessible across major development environments. The availability spans Visual Studio, JetBrains IDEs, Xcode, and Eclipse for business, enterprise, and pro users of Copilot, with admin configuration required for access. User feedback is invited via the GitHub Community."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Gemini 3 Pro Model Launches for GitHub Copilot in Popular IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-12 20:22:35 +00:00
-permalink: "/2025-12-12-Gemini-3-Pro-Model-Launches-for-GitHub-Copilot-in-Popular-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Policy", "AI", "AI Development", "AI Model", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Copilot Pro+", "Eclipse", "Gemini 3 Pro", "GitHub Copilot", "IDE Integration", "JetBrains IDEs", "Model Management", "News", "Software Development Tools", "VS", "Xcode"]
-tags_normalized: ["admin policy", "ai", "ai development", "ai model", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "copilot proplus", "eclipse", "gemini 3 pro", "github copilot", "ide integration", "jetbrains ides", "model management", "news", "software development tools", "vs", "xcode"]
+permalink: /github-copilot/news/Gemini-3-Pro-Model-Launches-for-GitHub-Copilot-in-Popular-IDEs
+tags:
+- Admin Policy
+- AI
+- AI Development
+- AI Model
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro
+- Copilot Pro+
+- Eclipse
+- Gemini 3 Pro
+- GitHub Copilot
+- IDE Integration
+- JetBrains IDEs
+- Model Management
+- News
+- Software Development Tools
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares details on the Gemini 3 Pro public preview for GitHub Copilot, now available for developers using Visual Studio, JetBrains, Xcode, and Eclipse.<!--excerpt_end-->
 
 # Gemini 3 Pro Model Launches for GitHub Copilot in Popular IDEs

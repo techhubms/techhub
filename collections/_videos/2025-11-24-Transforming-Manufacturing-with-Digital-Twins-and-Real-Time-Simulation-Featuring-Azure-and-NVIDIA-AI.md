@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI"
-description: "This session from Microsoft Ignite 2025 highlights how manufacturing organizations can leverage digital twins, real-time simulation, and AI-powered cloud solutions. Experts from NVIDIA, Microsoft, and Ansys share practical insights into using Microsoft Azure, NVIDIA Omniverse, and OpenUSD libraries to accelerate process optimization and drive better operational outcomes in manufacturing."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vVZvVpS0KMk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=vVZvVpS0KMk
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:31:52 +00:00
-permalink: "/2025-11-24-Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Models", "Ansys", "Azure", "Cloud Computing", "Digital Twins", "Emergency Response", "Industry 4.0", "Manufacturing Optimization", "Microsoft Azure", "MSIgnite", "NVIDIA AI", "Omniverse", "OpenUSD", "Process Automation", "Real Time Simulation", "Simulation Platforms", "Traffic Data Analytics", "Videos"]
-tags_normalized: ["ai", "ai models", "ansys", "azure", "cloud computing", "digital twins", "emergency response", "industry 4dot0", "manufacturing optimization", "microsoft azure", "msignite", "nvidia ai", "omniverse", "openusd", "process automation", "real time simulation", "simulation platforms", "traffic data analytics", "videos"]
+permalink: /ai/videos/Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI
+tags:
+- AI
+- AI Models
+- Ansys
+- Azure
+- Cloud Computing
+- Digital Twins
+- Emergency Response
+- Industry 4.0
+- Manufacturing Optimization
+- Microsoft Azure
+- MSIgnite
+- NVIDIA AI
+- Omniverse
+- OpenUSD
+- Process Automation
+- Real Time Simulation
+- Simulation Platforms
+- Traffic Data Analytics
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a panel featuring Teresa Conceicao and Ganesh Sivaraman who discuss the use of Azure, NVIDIA AI, and Omniverse technologies to empower manufacturers with digital twins and real-time simulation.<!--excerpt_end-->
 
 {% youtube vVZvVpS0KMk %}

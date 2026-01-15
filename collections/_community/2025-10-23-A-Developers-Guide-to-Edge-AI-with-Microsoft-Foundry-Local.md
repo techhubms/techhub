@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "A Developer’s Guide to Edge AI with Microsoft Foundry Local"
-description: "This guide by Lee_Stott explores Edge AI deployment using Microsoft’s Foundry Local. It addresses developers and AI engineers seeking to run large language models (LLMs) locally for reduced costs, improved data privacy, offline capability, and enterprise-grade acceleration. The post covers automatic hardware optimization, multi-framework SDK integration, ONNX Runtime acceleration, OpenAI API compatibility, real-world implementation patterns, and the technical and business impact of local LLM deployment. Multiple resources and hands-on curriculum links support teams ready to adopt edge AI."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: A Developer’s Guide to Edge AI with Microsoft Foundry Local
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-23 07:00:00 +00:00
-permalink: "/2025-10-23-A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Cost Optimization", "AI Engineering", "Azure", "Coding", "Community", "Compliance", "Edge AI", "Edge Computing", "Enterprise AI", "Hardware Optimization", "Intel NPU", "JavaScript", "LLM", "Local LLM Deployment", "Microsoft Foundry Local", "NVIDIA GPU", "ONNX Runtime", "OpenAI API", "Private AI", "Python", "Real Time AI", "Rust", "TypeScript"]
-tags_normalized: ["dotnet", "ai", "ai cost optimization", "ai engineering", "azure", "coding", "community", "compliance", "edge ai", "edge computing", "enterprise ai", "hardware optimization", "intel npu", "javascript", "llm", "local llm deployment", "microsoft foundry local", "nvidia gpu", "onnx runtime", "openai api", "private ai", "python", "real time ai", "rust", "typescript"]
+permalink: /ai/community/A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local
+tags:
+- .NET
+- AI
+- AI Cost Optimization
+- AI Engineering
+- Azure
+- Coding
+- Community
+- Compliance
+- Edge AI
+- Edge Computing
+- Enterprise AI
+- Hardware Optimization
+- Intel NPU
+- JavaScript
+- LLM
+- Local LLM Deployment
+- Microsoft Foundry Local
+- NVIDIA GPU
+- ONNX Runtime
+- OpenAI API
+- Private AI
+- Python
+- Real Time AI
+- Rust
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Lee_Stott delivers an in-depth guide for developers and AI engineers on deploying LLMs locally with Microsoft's Foundry Local, highlighting solutions for privacy, cost, and performance.<!--excerpt_end-->
 
 # A Developer's Guide to Edge AI and Foundry Local

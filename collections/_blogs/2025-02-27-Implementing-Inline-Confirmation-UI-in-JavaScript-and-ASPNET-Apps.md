@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Implementing Inline Confirmation UI in JavaScript and ASP.NET Apps"
-description: "Rick Strahl demonstrates a practical approach to replacing modal confirmation dialogs with inline confirmation UI for deletion operations in web applications. This guide uses JavaScript (with and without frameworks like Vue.js) and shows the technique within an ASP.NET context, focusing on enhancing user experience, simplicity of implementation, and maintainability. Sample code and UI design patterns are provided to help developers modernize confirmation prompts in their HTML and ASP.NET web projects."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Feb/26/Inline-Confirmations-in-JavaScript-UI"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Implementing Inline Confirmation UI in JavaScript and ASP.NET Apps
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Feb/26/Inline-Confirmations-in-JavaScript-UI
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-02-27 09:02:10 +00:00
-permalink: "/2025-02-27-Implementing-Inline-Confirmation-UI-in-JavaScript-and-ASPNET-Apps.html"
-categories: ["Coding"]
-tags: ["ASP.NET", "ASP.NET MVC", "Blogs", "Button State Management", "Client Side Scripting", "CodePen", "Coding", "Dynamic UI", "Event Handling", "Front End Design", "HTML", "Inline Confirmation", "JavaScript", "Reactive Frameworks", "UI/UX Patterns", "Vue.js", "Web Development"]
-tags_normalized: ["aspdotnet", "aspdotnet mvc", "blogs", "button state management", "client side scripting", "codepen", "coding", "dynamic ui", "event handling", "front end design", "html", "inline confirmation", "javascript", "reactive frameworks", "uislashux patterns", "vuedotjs", "web development"]
+permalink: /coding/blogs/Implementing-Inline-Confirmation-UI-in-JavaScript-and-ASPNET-Apps
+tags:
+- ASP.NET
+- ASP.NET MVC
+- Blogs
+- Button State Management
+- Client Side Scripting
+- CodePen
+- Coding
+- Dynamic UI
+- Event Handling
+- Front End Design
+- HTML
+- Inline Confirmation
+- JavaScript
+- Reactive Frameworks
+- UI/UX Patterns
+- Vue.js
+- Web Development
+section_names:
+- coding
 ---
-
 Rick Strahl shares a simple and effective technique for handling confirmation prompts inline in JavaScript and ASP.NET web applications, providing code examples and UI best practices.<!--excerpt_end-->
 
 # Implementing Inline Confirmation UI in JavaScript and ASP.NET Apps

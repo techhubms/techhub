@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Server-Sent Events in ASP.NET Core Minimal APIs with .NET 10"
-description: "Khalid Abuhakmeh explores the new support for Server-Sent Events (SSE) in .NET 10's ASP.NET Core Minimal APIs. The post compares SSE to SignalR, demonstrates a full working example of a real-time food ordering feed, and provides key C# and JavaScript implementations."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/server-sent-events-in-aspnet-core-and-dotnet-10"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Server-Sent Events in ASP.NET Core Minimal APIs with .NET 10
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/server-sent-events-in-aspnet-core-and-dotnet-10
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-04-22 00:00:00 +00:00
-permalink: "/2025-04-22-Server-Sent-Events-in-ASPNET-Core-Minimal-APIs-with-NET-10.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "ASP.NET", "ASP.NET Core", "BackgroundService", "Blogs", "C# 14", "Coding", "EventSource", "IAsyncEnumerable", "INotifyPropertyChanged", "JavaScript", "Minimal APIs", "Real Time", "Server Sent Events", "SignalR", "SSE", "WebSockets"]
-tags_normalized: ["dotnet", "dotnet 10", "aspdotnet", "aspdotnet core", "backgroundservice", "blogs", "csharp 14", "coding", "eventsource", "iasyncenumerable", "inotifypropertychanged", "javascript", "minimal apis", "real time", "server sent events", "signalr", "sse", "websockets"]
+permalink: /coding/blogs/Server-Sent-Events-in-ASPNET-Core-Minimal-APIs-with-NET-10
+tags:
+- .NET
+- .NET 10
+- ASP.NET
+- ASP.NET Core
+- BackgroundService
+- Blogs
+- C# 14
+- Coding
+- EventSource
+- IAsyncEnumerable
+- INotifyPropertyChanged
+- JavaScript
+- Minimal APIs
+- Real Time
+- Server Sent Events
+- SignalR
+- SSE
+- WebSockets
+section_names:
+- coding
 ---
-
 In this post, Khalid Abuhakmeh showcases how to implement Server-Sent Events with ASP.NET Core Minimal APIs in .NET 10, highlighting practical differences with SignalR and providing sample C# and JavaScript code for real-time feeds.<!--excerpt_end-->
 
 # Server-Sent Events in ASP.NET Core and .NET 10

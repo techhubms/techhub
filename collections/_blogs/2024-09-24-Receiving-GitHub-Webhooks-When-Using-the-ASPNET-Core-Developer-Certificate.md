@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Receiving GitHub Webhooks When Using the ASP.NET Core Developer Certificate"
-description: "Steve Gordon explores how to receive and locally test GitHub webhooks in an ASP.NET Core application using the developer certificate and smee.io, covering the certificate trust hurdle and end-to-end webhook forwarding. Practical guidance is given for integrating GitHub Apps with .NET and handling HTTPS in development."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/receiving-github-webhooks-when-using-the-aspnetcore-developer-certificate"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+layout: post
+title: Receiving GitHub Webhooks When Using the ASP.NET Core Developer Certificate
+author: Steve Gordon
+canonical_url: https://www.stevejgordon.co.uk/receiving-github-webhooks-when-using-the-aspnetcore-developer-certificate
+viewing_mode: external
+feed_name: Steve Gordon's Blog
+feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-09-24 09:46:37 +00:00
-permalink: "/2024-09-24-Receiving-GitHub-Webhooks-When-Using-the-ASPNET-Core-Developer-Certificate.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "ASP.NET Core", "Blogs", "Certificate Management", "Coding", "Developer Certificate", "DevOps", "GitHub", "GitHub App", "HTTPS", "Integration Testing", "Middleware", "Node.js", "OpenTelemetry", "Smee.io", "Webhooks"]
-tags_normalized: ["dotnet", "aspdotnet core", "blogs", "certificate management", "coding", "developer certificate", "devops", "github", "github app", "https", "integration testing", "middleware", "nodedotjs", "opentelemetry", "smeedotio", "webhooks"]
+permalink: /coding/blogs/Receiving-GitHub-Webhooks-When-Using-the-ASPNET-Core-Developer-Certificate
+tags:
+- .NET
+- ASP.NET Core
+- Blogs
+- Certificate Management
+- Coding
+- Developer Certificate
+- DevOps
+- GitHub
+- GitHub App
+- HTTPS
+- Integration Testing
+- Middleware
+- Node.js
+- OpenTelemetry
+- Smee.io
+- Webhooks
+section_names:
+- coding
+- devops
 ---
-
 In this detailed post, Steve Gordon shares practical steps for developing and testing GitHub webhooks locally within an ASP.NET Core app, detailing webhook setup, certificate management, and smee.io usage.<!--excerpt_end-->
 
 # Receiving GitHub Webhooks When Using the ASP.NET Core Developer Certificate

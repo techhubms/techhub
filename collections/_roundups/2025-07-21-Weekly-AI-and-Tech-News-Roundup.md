@@ -1,17 +1,38 @@
----
-layout: "post"
-title: "AI Developer Tools and Automation Advances"
-description: "This week's roundup spotlights major advancements in AI-powered developer tooling, with GitHub Copilot debuting smarter code reviews, expanded agent support, and real-time workflow automation across IDEs. There's a continued focus on robust AI ecosystems, enterprise adoption strategies, security automation, and platform innovation in Azure, .NET, and the broader developer landscape. Updates also reveal evolving best practices in DevOps, increased transparency in benchmarking, and strengthened endpoint protection."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: AI Developer Tools and Automation Advances
+author: Tech Hub Team
+viewing_mode: internal
 date: 2025-07-21 09:00:00 +00:00
-permalink: "/2025-07-21-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET 10", "Agentic AI", "AI", "Automation", "Azure", "Cloud", "Coding", "Coding Agents", "Compliance", "DevOps", "GitHub Copilot", "Machine Learning", "MCP", "ML", "Roundups", "Security", "VS", "VS Code"]
-tags_normalized: ["dotnet 10", "agentic ai", "ai", "automation", "azure", "cloud", "coding", "coding agents", "compliance", "devops", "github copilot", "machine learning", "mcp", "ml", "roundups", "security", "vs", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- .NET 10
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Cloud
+- Coding
+- Coding Agents
+- Compliance
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- MCP
+- ML
+- Roundups
+- Security
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s Tech Roundup, where automation and AI innovation are reshaping the developer experience from code inception to deployment and security. Major updates to GitHub Copilot drive the conversation, with new AI-assisted code review features, cross-IDE coding agents, and enhanced contextual intelligence transforming how teams collaborate and maintain code quality. The Model Context Protocol’s wider adoption and real-time extensibility signal a new era of hands-on workflow automation, backed by deeper analytics and operational transparency.
 
 AI continues to weave through every layer of software engineering, from strategic trendsetting to practical agentic architectures that connect tools, data, and cloud resources in real time. Enterprise adoption strategies, collaborative learning frameworks, and robust compliance features—particularly through Azure’s comprehensive updates—demonstrate an industry committed to secure, scalable transformation. Advancements in .NET, developer tooling, and DevOps workflows provide fertile ground for productivity while new security platforms and benchmarks keep pace with rapidly evolving threats. Dive in to explore how these interconnected stories shape the future of software engineering and cloud-powered innovation.<!--excerpt_end-->
@@ -69,16 +90,16 @@ Copilot coding agents are now generally available not only in VS Code but also J
 - [Agent mode for JetBrains, Eclipse, and Xcode is now generally available](https://github.blog/changelog/2025-07-16-agent-mode-for-jetbrains-eclipse-and-xcode-is-now-generally-available)
 - [Configure internet access for Copilot coding agent](https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent)
 - [From chaos to clarity - Using GitHub Copilot agents to improve developer workflows](https://github.blog/ai-and-ml/github-copilot/from-chaos-to-clarity-using-github-copilot-agents-to-improve-developer-workflows/)
-- [Finish your work without touching any code]({{ "/videos/2025-07-18-Finish-your-work-without-touching-any-code.html" | relative_url }})
+- [Finish your work without touching any code](/videos/2025-07-18-Finish-your-work-without-touching-any-code.html)
 
 ### Model Context Protocol (MCP) and Extensibility
 
 Copilot’s Model Context Protocol (MCP) is now fully live in VS Code, enabling real-time integration with external tools and data sources. This brings contextually aware AI support, automating tasks using live project data, APIs, and databases, and supporting hands-on workflow automation. VS Code’s v1.102 release leverages MCP for cross-environment collaboration, with tutorials guiding effective team adoption.
 
 - [Model Context Protocol (MCP) support in VS Code is generally available](https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available)
-- [VS Code Live - Exploring v1.102 Release Features—AI Chat, MCP, Coding Agent & More]({{ "/videos/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html" | relative_url }})
-- [Model selection]({{ "/2025-07-16-GitHub-Copilot-Features-Model-selection.html" | relative_url }})
-- [Automating Developer Tasks with GitHub Copilot Agent Mode and MCP Servers in VS Code]({{ "/videos/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html" | relative_url }})
+- [VS Code Live - Exploring v1.102 Release Features—AI Chat, MCP, Coding Agent & More](/videos/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html)
+- [Model selection](/2025-07-16-GitHub-Copilot-Features-Model-selection.html)
+- [Automating Developer Tasks with GitHub Copilot Agent Mode and MCP Servers in VS Code](/videos/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html)
 
 ### Productivity and Reporting Enhancements
 
@@ -111,8 +132,8 @@ Agentic AI—autonomous, adaptive agents—powers workflow management and orches
 
 - [Agentic AI: The Next Evolution Beyond Generative AI for Solution Architects](https://dellenny.com/agentic-ai-the-next-evolution-beyond-generative-ai-for-solution-architects/)
 - [10 Microsoft MCP Servers to Accelerate Your Development Workflow](https://devblogs.microsoft.com/blog/10-microsoft-mcp-servers-to-accelerate-your-development-workflow)
-- [Let's Learn MCP: Python]({{ "/videos/2025-07-16-Lets-Learn-MCP-Python.html" | relative_url }})
-- [Let's Learn MCP: Java]({{ "/videos/2025-07-15-Lets-Learn-MCP-Java.html" | relative_url }})
+- [Let's Learn MCP: Python](/videos/2025-07-16-Lets-Learn-MCP-Python.html)
+- [Let's Learn MCP: Java](/videos/2025-07-15-Lets-Learn-MCP-Java.html)
 
 ### Enterprise AI Adoption and Center of Excellence Strategies
 
@@ -125,15 +146,15 @@ Centers of Excellence are central to enterprise AI adoption: they align strategy
 Microsoft’s collaboration framework aligns LLM outputs with user intention, emphasizing practical and easy human-AI integration. Adecco’s AI-first recruitment uses Azure to automate HR, embedding upskilling for developers and applicants. In education, Minecraft delivers gamified, interactive programming and AI lessons, making complex topics engaging for students and teachers.
 
 - [Microsoft introduces new training framework that enhances human-LLM collaboration](https://www.microsoft.com/en-us/research/blog/collabllm-teaching-llms-to-collaborate-with-users/)
-- [Adecco's AI-First Approach to Recruitment with Microsoft Cloud]({{ "/videos/2025-07-18-Adeccos-AI-First-Approach-to-Recruitment-with-Microsoft-Cloud.html" | relative_url }})
+- [Adecco's AI-First Approach to Recruitment with Microsoft Cloud](/videos/2025-07-18-Adeccos-AI-First-Approach-to-Recruitment-with-Microsoft-Cloud.html)
 - [Integrating interactivity with Minecraft Education - A fun approach to learning coding and AI](https://news.microsoft.com/source/asia/2025/07/15/integrating-interactive-and-collaborative-learning-solutions-with-minecraft-education-a-fun-approach-to-learn-coding-and-ai/)
 
 ### Foundational AI and Community Knowledge Exchange
 
 Structured education and peer learning continue to grow. John Savill’s AI/ML primer and Xebia’s Knowledge Exchange events provide foundational training, professional networking, and practical application, supporting entry and progression in the AI field.
 
-- [Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!]({{ "/videos/2025-07-16-Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone.html" | relative_url }})
-- [Xebia Knowledge Exchange]({{ "/2025-07-14-XKE-Coming-Soon.html" | relative_url }})
+- [Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!](/videos/2025-07-16-Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone.html)
+- [Xebia Knowledge Exchange](/2025-07-14-XKE-Coming-Soon.html)
 
 ## Azure
 
@@ -155,7 +176,7 @@ Azure AI Foundry Models and Security Copilot are ISO/IEC 42001:2023 certified, s
 
 The July Azure platform update introduces PowerShell Durable Functions (stateful orchestration), Functions with Kafka triggers, AKS auto-provisioning, improved NFS, geo-replication, security, and backup policies. The AI Speaker Recognition retirement signals workflow updates. These combine to enhance scalability, reliability, and automation.
 
-- [Azure Update – 18th July 2025: New Services, Features & Retirements]({{ "/videos/2025-07-18-Azure-Update-18th-July-2025-New-Services-Features-and-Retirements.html" | relative_url }})
+- [Azure Update – 18th July 2025: New Services, Features & Retirements](/videos/2025-07-18-Azure-Update-18th-July-2025-New-Services-Features-and-Retirements.html)
 
 ### DevOps and Migration Pain Points
 
@@ -175,15 +196,15 @@ A host of releases and community solutions empower .NET, VS Code, and Visual Stu
 
 - [C# 14 Extension Members in .NET 10 Preview: How to Use Extension Everything](https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/)
 - [.NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More](https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/)
-- [.NET 10 Preview 6 Unboxed - Blazor State Persistence, Passkey, & What is DNX?]({{ "/videos/2025-07-15-NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX.html" | relative_url }})
+- [.NET 10 Preview 6 Unboxed - Blazor State Persistence, Passkey, & What is DNX?](/videos/2025-07-15-NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX.html)
 
 ### AI Tooling, MCP, and .NET Interoperability
 
 New templates and workflows make creating MCP servers in .NET 10 and publishing on NuGet simple, seamlessly blending AI extension and modern extensibility. Python.NET enables embedding Python in C#, expanding .NET’s reach into data science.
 
 - [Building Your First MCP Server with .NET 10 and Publishing to NuGet](https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/)
-- [MCP C# SDK: What’s New and Upcoming for .NET Developers]({{ "/videos/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html" | relative_url }})
-- [Writing and Running Python in .NET]({{ "/videos/2025-07-16-Writing-and-Running-Python-in-NET.html" | relative_url }})
+- [MCP C# SDK: What’s New and Upcoming for .NET Developers](/videos/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html)
+- [Writing and Running Python in .NET](/videos/2025-07-16-Writing-and-Running-Python-in-NET.html)
 
 ### Developer Tools, Documentation, and Community Solutions
 
@@ -191,11 +212,11 @@ VS Code’s Markdown Mermaid Viewer solves diagram previewing; a Visual Studio e
 
 - [VS Code Extension: Preview Mermaid Diagrams in Markdown for Azure DevOps](https://www.reddit.com/r/azuredevops/comments/1m42lmi/vs_code_extension_preview_mermaid_diagrams_in/)
 - [Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It](https://www.reddit.com/r/VisualStudio/comments/1m1l1lc/visual_studio_has_most_git_features_i_need_except/)
-- [Build-Time OpenAPI Documentation in .NET 9: A OneDevQuestion with Mike Kistler]({{ "/videos/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html" | relative_url }})
-- [.NET Data Community Standup: Couchbase EF Core Provider Discussion]({{ "/videos/2025-07-18-NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion.html" | relative_url }})
-- [ASP.NET Community Standup - Why Aren't You Using Minimal APIs?]({{ "/videos/2025-07-15-ASPNET-Community-Standup-Why-arent-you-using-Minimal-APIs.html" | relative_url }})
+- [Build-Time OpenAPI Documentation in .NET 9: A OneDevQuestion with Mike Kistler](/videos/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html)
+- [.NET Data Community Standup: Couchbase EF Core Provider Discussion](/videos/2025-07-18-NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion.html)
+- [ASP.NET Community Standup - Why Aren't You Using Minimal APIs?](/videos/2025-07-15-ASPNET-Community-Standup-Why-arent-you-using-Minimal-APIs.html)
 - [Centering a WPF TreeViewItem in the TreeView ScrollViewer](https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer)
-- [Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform]({{ "/videos/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html" | relative_url }})
+- [Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform](/videos/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html)
 
 ## DevOps
 
@@ -228,7 +249,7 @@ Security updates this week highlighted deeper AI integration, product benchmarki
 Security Copilot’s general availability in Intune and Entra automates threat detection, remediation, and incident response, merging AI with identity and compliance workflows for proactive security operations and rapid recovery. Conditional access, new natural language, and graph integrations expand transparency and customizability.
 
 - [Security Copilot capabilities in Microsoft Intune and Entra now generally available](https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/)
-- [Microsoft Security Copilot Entra Update and Conditional Access Agent]({{ "/videos/2025-07-14-Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent.html" | relative_url }})
+- [Microsoft Security Copilot Entra Update and Conditional Access Agent](/videos/2025-07-14-Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent.html)
 
 ### Security Benchmarking and Real-Time Transparency
 

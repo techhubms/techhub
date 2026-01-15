@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More"
-description: "This video highlights recent updates in Visual Studio Code, focusing on enhancements such as agent mode, background agent task delegation, and improved Git integration. James Montemagno demonstrates new features, including model flexibility, extensions API improvements, and multi-branch management with Git Worktrees, providing practical tips for developers."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9qAkd2mGYCo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=9qAkd2mGYCo
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-12 16:22:57 +00:00
-permalink: "/2025-09-12-Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agent Mode", "AI", "AI Features", "Background Agent Tasks", "Coding", "Development Tools", "DevOps", "Extensions API", "Git Worktrees", "Model Flexibility", "Terminal Automation", "Videos", "VS Code", "VS Code Agents"]
-tags_normalized: ["agent mode", "ai", "ai features", "background agent tasks", "coding", "development tools", "devops", "extensions api", "git worktrees", "model flexibility", "terminal automation", "videos", "vs code", "vs code agents"]
+permalink: /ai/videos/Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More
+tags:
+- Agent Mode
+- AI
+- AI Features
+- Background Agent Tasks
+- Coding
+- Development Tools
+- DevOps
+- Extensions API
+- Git Worktrees
+- Model Flexibility
+- Terminal Automation
+- Videos
+- VS Code
+- VS Code Agents
+section_names:
+- ai
+- coding
+- devops
 ---
-
 James Montemagno showcases the top new features in Visual Studio Code, introducing agent mode, enhanced Git workflows, and AI-powered improvements for developer productivity.<!--excerpt_end-->
 
 {% youtube 9qAkd2mGYCo %}

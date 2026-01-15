@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Introducing langchain-azure-storage: Azure Storage Integration with LangChain"
-description: "This post introduces langchain-azure-storage, the official Microsoft package for integrating Azure Storage with LangChain 1.0. It explains how the new AzureBlobStorageLoader simplifies document retrieval for RAG (Retrieval-Augmented Generation) pipelines, details migration from older community loaders, and covers features like secure OAuth authentication and support for custom file parsing in LangChain-based workflows using Python."
-author: "kyleknapp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Introducing langchain-azure-storage: Azure Storage Integration with LangChain'
+author: kyleknapp
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 16:00:00 +00:00
-permalink: "/2025-10-30-Introducing-langchain-azure-storage-Azure-Storage-Integration-with-LangChain.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Authentication", "Azure", "Azure AI Search", "Azure Storage", "AzureBlobStorageLoader", "Blob Storage", "Coding", "Community", "Container Access", "DefaultAzureCredential", "Document Loader", "Langchain", "LLM", "Memory Efficiency", "Microsoft Entra ID", "Migration", "OAuth 2.0", "PyPDFLoader", "Python", "RAG", "UnstructuredLoader", "Vector Store"]
-tags_normalized: ["ai", "authentication", "azure", "azure ai search", "azure storage", "azureblobstorageloader", "blob storage", "coding", "community", "container access", "defaultazurecredential", "document loader", "langchain", "llm", "memory efficiency", "microsoft entra id", "migration", "oauth 2dot0", "pypdfloader", "python", "rag", "unstructuredloader", "vector store"]
+permalink: /ai/community/Introducing-langchain-azure-storage-Azure-Storage-Integration-with-LangChain
+tags:
+- AI
+- Authentication
+- Azure
+- Azure AI Search
+- Azure Storage
+- AzureBlobStorageLoader
+- Blob Storage
+- Coding
+- Community
+- Container Access
+- DefaultAzureCredential
+- Document Loader
+- Langchain
+- LLM
+- Memory Efficiency
+- Microsoft Entra ID
+- Migration
+- OAuth 2.0
+- PyPDFLoader
+- Python
+- RAG
+- UnstructuredLoader
+- Vector Store
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Kyle Knapp presents langchain-azure-storage, detailing how Microsoft’s official Azure Storage integration enhances LangChain RAG pipelines with secure, scalable, and customizable document loading capabilities.<!--excerpt_end-->
 
 # Introducing langchain-azure-storage: Azure Storage Integrations for LangChain

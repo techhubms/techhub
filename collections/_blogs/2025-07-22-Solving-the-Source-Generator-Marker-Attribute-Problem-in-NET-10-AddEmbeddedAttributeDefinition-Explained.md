@@ -1,20 +1,32 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Solving the Source Generator 'Marker Attribute' Problem in .NET 10: AddEmbeddedAttributeDefinition() Explained"
-description: "Andrew Lock explores the new AddEmbeddedAttributeDefinition() API in .NET 10, which addresses issues with source generator marker attributes. The article compares this new method with earlier approaches, discusses trade-offs, and provides practical guidance for developers working with source generators and Roslyn."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/exploring-dotnet-10-preview-features-4-solving-the-source-generator-marker-attribute-problem-in-dotnet-10/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+author: Andrew Lock
+canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-4-solving-the-source-generator-marker-attribute-problem-in-dotnet-10/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-22 10:00:00 +00:00
-permalink: "/2025-07-22-Solving-the-Source-Generator-Marker-Attribute-Problem-in-NET-10-AddEmbeddedAttributeDefinition-Explained.html"
-categories: ["Coding"]
-tags: [".NET 10", "AddEmbeddedAttributeDefinition", "Analyzer Development", "Blogs", "Coding", "CS0436 Warning", "EmbeddedAttribute", "Incremental Generators", "Marker Attributes", "Microsoft.CodeAnalysis", "NuGet Packages", "RegisterPostInitializationOutput", "Roslyn", "Source Generators", "VS"]
-tags_normalized: ["dotnet 10", "addembeddedattributedefinition", "analyzer development", "blogs", "coding", "cs0436 warning", "embeddedattribute", "incremental generators", "marker attributes", "microsoftdotcodeanalysis", "nuget packages", "registerpostinitializationoutput", "roslyn", "source generators", "vs"]
+permalink: /coding/blogs/Solving-the-Source-Generator-Marker-Attribute-Problem-in-NET-10-AddEmbeddedAttributeDefinition-Explained
+tags:
+- .NET 10
+- AddEmbeddedAttributeDefinition
+- Analyzer Development
+- Blogs
+- Coding
+- CS0436 Warning
+- EmbeddedAttribute
+- Incremental Generators
+- Marker Attributes
+- Microsoft.CodeAnalysis
+- NuGet Packages
+- RegisterPostInitializationOutput
+- Roslyn
+- Source Generators
+- VS
+section_names:
+- coding
 ---
-
 In this article, Andrew Lock delves into addressing the longstanding marker attribute issue in source generators for .NET 10, unveiling the new AddEmbeddedAttributeDefinition() API and its impact on Roslyn-based development.<!--excerpt_end-->
 
 # Solving the Source Generator 'Marker Attribute' Problem in .NET 10: AddEmbeddedAttributeDefinition() Explained

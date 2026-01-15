@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Integrating Windows.Media SpeechRecognition in WPF Applications Using .NET"
-description: "This blog post by Rick Strahl explores how to integrate the Windows.Media SpeechRecognition engine into WPF applications using .NET and the Windows SDK. It covers setup, implementation strategies, handling dependencies, pitfalls, and practical code examples, especially around managing WinSDK/WinRT complexities."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Mar/24/Using-WindowsMedia-SpeechRecognition-in-WPF"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Integrating Windows.Media SpeechRecognition in WPF Applications Using .NET
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Mar/24/Using-WindowsMedia-SpeechRecognition-in-WPF
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-03-25 04:33:00 +00:00
-permalink: "/2025-03-25-Integrating-WindowsMedia-SpeechRecognition-in-WPF-Applications-Using-NET.html"
-categories: ["Coding"]
-tags: [".NET", "Asynchronous Programming", "Blogs", "Coding", "Dependency Management", "Input Handling", "Language Support", "Markdown Monster", "NuGet", "Reflection", "Speech Recognition", "Windows", "Windows SDK", "Windows.media.speechrecognition", "Winrt", "Winsdk", "WPF"]
-tags_normalized: ["dotnet", "asynchronous programming", "blogs", "coding", "dependency management", "input handling", "language support", "markdown monster", "nuget", "reflection", "speech recognition", "windows", "windows sdk", "windowsdotmediadotspeechrecognition", "winrt", "winsdk", "wpf"]
+permalink: /coding/blogs/Integrating-WindowsMedia-SpeechRecognition-in-WPF-Applications-Using-NET
+tags:
+- .NET
+- Asynchronous Programming
+- Blogs
+- Coding
+- Dependency Management
+- Input Handling
+- Language Support
+- Markdown Monster
+- NuGet
+- Reflection
+- Speech Recognition
+- Windows
+- Windows SDK
+- Windows.media.speechrecognition
+- Winrt
+- Winsdk
+- WPF
+section_names:
+- coding
 ---
-
 Rick Strahl discusses the practical integration of Windows.Media SpeechRecognition within WPF applications using .NET. The post highlights code samples, SDK dependencies, workarounds for WinRT/.NET issues, and language management.<!--excerpt_end-->
 
 # Integrating Windows.Media SpeechRecognition in WPF Applications Using .NET

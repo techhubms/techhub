@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Spark Resilience Improvements Enhance Reliability and Iteration Experience"
-description: "An overview of recent enhancements made to the Spark project on GitHub. The improvements focus on the Iteration panel and data store reliability, making the development process more robust and user-friendly for those building applications with Spark. Practical changes include improved file filtering during iterations and increased data store resilience."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-13-spark-resilience-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Spark Resilience Improvements Enhance Reliability and Iteration Experience
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-13-spark-resilience-improvements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 20:53:55 +00:00
-permalink: "/2025-08-13-Spark-Resilience-Improvements-Enhance-Reliability-and-Iteration-Experience.html"
-categories: ["Coding", "DevOps"]
-tags: ["API Failover", "Application Development", "Coding", "Continuous Improvement", "Data Store", "Developer Experience", "DevOps", "File Filtering", "GitHub", "Iteration Panel", "News", "Open Source", "Reliability", "Spark", "Version Control"]
-tags_normalized: ["api failover", "application development", "coding", "continuous improvement", "data store", "developer experience", "devops", "file filtering", "github", "iteration panel", "news", "open source", "reliability", "spark", "version control"]
+permalink: /coding/news/Spark-Resilience-Improvements-Enhance-Reliability-and-Iteration-Experience
+tags:
+- API Failover
+- Application Development
+- Coding
+- Continuous Improvement
+- Data Store
+- Developer Experience
+- DevOps
+- File Filtering
+- GitHub
+- Iteration Panel
+- News
+- Open Source
+- Reliability
+- Spark
+- Version Control
+section_names:
+- coding
+- devops
 ---
-
 Allison shares news about recent resilience improvements to Spark on GitHub, highlighting changes that enhance reliability and simplify the iterative development process for application builders.<!--excerpt_end-->
 
 # Spark Resilience Improvements

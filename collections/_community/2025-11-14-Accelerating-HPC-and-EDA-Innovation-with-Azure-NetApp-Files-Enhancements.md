@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements"
-description: "This article discusses the latest features in Azure NetApp Files designed to support high-performance computing (HPC) and electronic design automation (EDA). It covers improvements in storage scalability, security, hybrid cloud mobility, backup and restore, cost-efficiency, and AI/data readiness, with clear focus on practical benefits for engineering and scientific workloads."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements
+author: GeertVanTeylingen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 16:52:12 +00:00
-permalink: "/2025-11-14-Accelerating-HPC-and-EDA-Innovation-with-Azure-NetApp-Files-Enhancements.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Integration", "Azure", "Azure NetApp Files", "Backup And Restore", "Cloud Storage", "Community", "Compliance", "Cost Optimization", "Data Management", "Data Migration", "HPC", "Hybrid Cloud", "Machine Learning", "Object Storage", "Performance Optimization", "Quota Reporting", "S3 Compatible", "Security", "Volume Scalability", "Well Architected"]
-tags_normalized: ["ai", "ai integration", "azure", "azure netapp files", "backup and restore", "cloud storage", "community", "compliance", "cost optimization", "data management", "data migration", "hpc", "hybrid cloud", "machine learning", "object storage", "performance optimization", "quota reporting", "s3 compatible", "security", "volume scalability", "well architected"]
+permalink: /ai/community/Accelerating-HPC-and-EDA-Innovation-with-Azure-NetApp-Files-Enhancements
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure NetApp Files
+- Backup And Restore
+- Cloud Storage
+- Community
+- Compliance
+- Cost Optimization
+- Data Management
+- Data Migration
+- HPC
+- Hybrid Cloud
+- Machine Learning
+- Object Storage
+- Performance Optimization
+- Quota Reporting
+- S3 Compatible
+- Security
+- Volume Scalability
+- Well Architected
+section_names:
+- ai
+- azure
+- security
 ---
-
 GeertVanTeylingen and co-authors present a detailed overview of new Azure NetApp Files features for HPC and EDA, highlighting advancements in storage performance, hybrid mobility, security, and AI readiness that support demanding engineering workloads.<!--excerpt_end-->
 
 # Accelerating HPC and EDA with Powerful Azure NetApp Files Enhancements

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Beyond the Chat Window: How Change-Driven Architecture Enables Ambient AI Agents"
-description: "This article explores the emerging paradigm of 'ambient agents'—AI systems that operate in the background to monitor and respond to real-world changes in real time. Focusing on the technical architecture needed, it introduces Drasi as a change detection engine and its integration with LangChain for building AI agents that transcend the traditional chat interface. Detailed examples include game AI and DevOps automation, emphasizing reactive intelligence and event-driven workflows."
-author: "CollinBrian"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Beyond the Chat Window: How Change-Driven Architecture Enables Ambient AI Agents'
+author: CollinBrian
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 23:09:40 +00:00
-permalink: "/2025-12-03-Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "Ambient Agents", "Change Driven Architecture", "Community", "Continuous Queries", "Cosmos DB", "DevOps Automation", "Drasi", "Event Driven AI", "EventHub", "Infrastructure Monitoring", "Kubernetes", "LangChain", "PostgreSQL", "Python", "Real Time Monitoring"]
-tags_normalized: ["ai", "ai agents", "ambient agents", "change driven architecture", "community", "continuous queries", "cosmos db", "devops automation", "drasi", "event driven ai", "eventhub", "infrastructure monitoring", "kubernetes", "langchain", "postgresql", "python", "real time monitoring"]
+permalink: /ai/community/Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents
+tags:
+- AI
+- AI Agents
+- Ambient Agents
+- Change Driven Architecture
+- Community
+- Continuous Queries
+- Cosmos DB
+- DevOps Automation
+- Drasi
+- Event Driven AI
+- EventHub
+- Infrastructure Monitoring
+- Kubernetes
+- LangChain
+- PostgreSQL
+- Python
+- Real Time Monitoring
+section_names:
+- ai
 ---
-
 CollinBrian explores how ambient AI agents—powered by change-driven architecture and tools like Drasi—can move beyond traditional chat interfaces to deliver real-time, reactive intelligence directly into workflows.<!--excerpt_end-->
 
 # Beyond the Chat Window: How Change-Driven Architecture Enables Ambient AI Agents

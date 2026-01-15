@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Running High-Performance PostgreSQL on Azure Kubernetes Service"
-description: "This article by Qi Ke explores strategies for deploying high-performance PostgreSQL workloads on Azure Kubernetes Service (AKS), focusing on advanced storage options like Azure Container Storage with local NVMe and Premium SSD v2, as well as leveraging CloudNativePG for high availability and operational efficiency."
-author: "Qi Ke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Running High-Performance PostgreSQL on Azure Kubernetes Service
+author: Qi Ke
+canonical_url: https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-02 15:00:00 +00:00
-permalink: "/2025-07-02-Running-high-performance-PostgreSQL-on-Azure-Kubernetes-Service.html"
-categories: ["Azure", "ML"]
-tags: ["AKS", "Azure", "Azure Blob Storage", "Azure Container Storage", "CloudNativePG", "Compute", "Containers", "Data Durability", "Database Performance", "High Availability", "Kubernetes", "ML", "News", "NVMe", "Persistent Storage", "PostgreSQL", "Premium SSD V2", "SQL", "Storage", "Storage Benchmarking"]
-tags_normalized: ["aks", "azure", "azure blob storage", "azure container storage", "cloudnativepg", "compute", "containers", "data durability", "database performance", "high availability", "kubernetes", "ml", "news", "nvme", "persistent storage", "postgresql", "premium ssd v2", "sql", "storage", "storage benchmarking"]
+permalink: /ml/news/Running-high-performance-PostgreSQL-on-Azure-Kubernetes-Service
+tags:
+- AKS
+- Azure
+- Azure Blob Storage
+- Azure Container Storage
+- CloudNativePG
+- Compute
+- Containers
+- Data Durability
+- Database Performance
+- High Availability
+- Kubernetes
+- ML
+- News
+- NVMe
+- Persistent Storage
+- PostgreSQL
+- Premium SSD V2
+- SQL
+- Storage
+- Storage Benchmarking
+section_names:
+- azure
+- ml
 ---
-
 Qi Ke examines the deployment of high-performance PostgreSQL databases on Azure Kubernetes Service, detailing solutions for optimizing performance, availability, and cost-efficiency using Azure-native storage technologies and operators.<!--excerpt_end-->
 
 ## Introduction

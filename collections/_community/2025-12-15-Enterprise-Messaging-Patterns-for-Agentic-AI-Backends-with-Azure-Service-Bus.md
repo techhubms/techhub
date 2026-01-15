@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus"
-description: "This post by Eldert Grootenboer examines how the evolution of agentic AI systems is driving a need for robust enterprise messaging infrastructure. It details the challenges of scaling dynamic, unpredictable agentic workloads and how Azure Service Bus can provide critical orchestration features such as ordered delivery, dead letter queues, and message scheduling. The article explains key messaging patterns—Scatter/Gather, Request/Proposal/Refinement, Saga coordination, and load shaping—and offers practical insights for architects building next-generation distributed AI solutions."
-author: "EldertGrootenboer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus
+author: EldertGrootenboer
+canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 19:00:00 +00:00
-permalink: "/2025-12-15-Enterprise-Messaging-Patterns-for-Agentic-AI-Backends-with-Azure-Service-Bus.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "Azure", "Azure Service Bus", "Backpressure", "Cloud Architecture", "Community", "Cost Optimization", "Dead Letter Queue", "Distributed Systems", "Enterprise Messaging", "Failure Isolation", "Load Shaping", "MCP Services", "Messaging Pattern", "Orchestration", "Ordered Delivery", "Queues And Topics", "Retry Logic", "Scalable AI", "Session State", "Token Management", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure service bus", "backpressure", "cloud architecture", "community", "cost optimization", "dead letter queue", "distributed systems", "enterprise messaging", "failure isolation", "load shaping", "mcp services", "messaging pattern", "orchestration", "ordered delivery", "queues and topics", "retry logic", "scalable ai", "session state", "token management", "workflow automation"]
+permalink: /ai/community/Enterprise-Messaging-Patterns-for-Agentic-AI-Backends-with-Azure-Service-Bus
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure Service Bus
+- Backpressure
+- Cloud Architecture
+- Community
+- Cost Optimization
+- Dead Letter Queue
+- Distributed Systems
+- Enterprise Messaging
+- Failure Isolation
+- Load Shaping
+- MCP Services
+- Messaging Pattern
+- Orchestration
+- Ordered Delivery
+- Queues And Topics
+- Retry Logic
+- Scalable AI
+- Session State
+- Token Management
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Eldert Grootenboer explores why agentic AI systems require advanced messaging capabilities. He outlines how Azure Service Bus helps orchestrate distributed workloads, manage unpredictability, and reduce operational waste at scale.<!--excerpt_end-->
 
 # Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus

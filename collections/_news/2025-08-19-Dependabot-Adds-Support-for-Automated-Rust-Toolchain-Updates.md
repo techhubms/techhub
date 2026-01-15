@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Dependabot Adds Support for Automated Rust Toolchain Updates"
-description: "This announcement details Dependabot's new capability to automatically update Rust toolchain versions specified in rust-toolchain.toml and rust-toolchain files. The update streamlines keeping Rust projects current with stable, beta, or nightly releases by creating pull requests for new toolchain versions according to configuration in .github/dependabot.yml. Practical configuration steps and community resources are also highlighted."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Dependabot Adds Support for Automated Rust Toolchain Updates
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-19 15:56:42 +00:00
-permalink: "/2025-08-19-Dependabot-Adds-Support-for-Automated-Rust-Toolchain-Updates.html"
-categories: ["DevOps"]
-tags: [".github/dependabot.yml", "Automation", "CI", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "News", "Rust", "Rust Toolchain", "Rust Toolchain.toml", "Rustup", "Toolchain Management", "Version Updates"]
-tags_normalized: ["dotgithubslashdependabotdotyml", "automation", "ci", "continuous integration", "dependabot", "dependency management", "devops", "github", "news", "rust", "rust toolchain", "rust toolchaindottoml", "rustup", "toolchain management", "version updates"]
+permalink: /devops/news/Dependabot-Adds-Support-for-Automated-Rust-Toolchain-Updates
+tags:
+- .github/dependabot.yml
+- Automation
+- CI
+- Continuous Integration
+- Dependabot
+- Dependency Management
+- DevOps
+- GitHub
+- News
+- Rust
+- Rust Toolchain
+- Rust Toolchain.toml
+- Rustup
+- Toolchain Management
+- Version Updates
+section_names:
+- devops
 ---
-
 Allison introduces Dependabot's new feature that automates updates for Rust toolchain versions, making it easier for Rust developers to maintain up-to-date CI environments across teams.<!--excerpt_end-->
 
 # Dependabot Adds Support for Automated Rust Toolchain Updates

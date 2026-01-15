@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode"
-description: "This announcement details the public preview of Bring Your Own Key (BYOK) support for GitHub Copilot Chat in JetBrains IDEs and Xcode. Developers can now connect their own API keys from providers such as Azure, OpenAI, and others to leverage additional models and gain greater control within JetBrains and Xcode environments. The post outlines setup instructions, supported providers, and the benefits of BYOK—including increased flexibility, access to new models, and more experimentation possibilities. Feedback channels are included for users wishing to share their experiences."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-12 00:20:55 +00:00
-permalink: "/2025-09-12-Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Anthropic", "API Key", "BYOK", "Copilot", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Google Gemini", "Groq", "IDE Integration", "Improvement", "JetBrains", "Model Flexibility", "News", "OpenAI", "OpenRouter", "Plugin", "Productivity", "Xcode"]
-tags_normalized: ["ai", "anthropic", "api key", "byok", "copilot", "copilot chat", "developer tools", "github copilot", "google gemini", "groq", "ide integration", "improvement", "jetbrains", "model flexibility", "news", "openai", "openrouter", "plugin", "productivity", "xcode"]
+permalink: /github-copilot/news/Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode
+tags:
+- AI
+- Anthropic
+- API Key
+- BYOK
+- Copilot
+- Copilot Chat
+- Developer Tools
+- GitHub Copilot
+- Google Gemini
+- Groq
+- IDE Integration
+- Improvement
+- JetBrains
+- Model Flexibility
+- News
+- OpenAI
+- OpenRouter
+- Plugin
+- Productivity
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison discusses the new BYOK feature for GitHub Copilot Chat in JetBrains IDEs and Xcode, explaining how developers can connect their own API keys from various providers for increased model flexibility.<!--excerpt_end-->
 
 # Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode

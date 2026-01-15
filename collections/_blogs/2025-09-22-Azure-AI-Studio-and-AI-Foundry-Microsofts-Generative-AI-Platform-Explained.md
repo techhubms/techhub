@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure AI Studio and AI Foundry: Microsoft’s Generative AI Platform Explained"
-description: "This article provides a technical overview of Microsoft Azure AI Studio (now part of Azure AI Foundry), outlining its unified environment for building, customizing, deploying, and monitoring AI and LLM-powered applications. It covers the platform’s features, strengths, key use cases, current limitations, and practical steps for developers and teams aiming to leverage Microsoft’s enterprise-grade AI services."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-ai-studio-azure-ai-foundry-a-powerful-platform-for-generative-ai/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure AI Studio and AI Foundry: Microsoft’s Generative AI Platform Explained'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-ai-studio-azure-ai-foundry-a-powerful-platform-for-generative-ai/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-22 09:11:05 +00:00
-permalink: "/2025-09-22-Azure-AI-Studio-and-AI-Foundry-Microsofts-Generative-AI-Platform-Explained.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Platform", "Azure", "Azure AI Foundry", "Azure AI Studio", "Blogs", "Compliance", "Enterprise AI", "Fine Tuning", "Generative AI", "GPT 4o", "Large Language Models", "LLM", "Microsoft Azure", "Model Catalog", "Model Deployment", "Monitoring", "Multimodal Models", "Phi 3", "Prompt Engineering", "RAG", "Responsible AI"]
-tags_normalized: ["ai", "ai platform", "azure", "azure ai foundry", "azure ai studio", "blogs", "compliance", "enterprise ai", "fine tuning", "generative ai", "gpt 4o", "large language models", "llm", "microsoft azure", "model catalog", "model deployment", "monitoring", "multimodal models", "phi 3", "prompt engineering", "rag", "responsible ai"]
+permalink: /ai/blogs/Azure-AI-Studio-and-AI-Foundry-Microsofts-Generative-AI-Platform-Explained
+tags:
+- AI
+- AI Platform
+- Azure
+- Azure AI Foundry
+- Azure AI Studio
+- Blogs
+- Compliance
+- Enterprise AI
+- Fine Tuning
+- Generative AI
+- GPT 4o
+- Large Language Models
+- LLM
+- Microsoft Azure
+- Model Catalog
+- Model Deployment
+- Monitoring
+- Multimodal Models
+- Phi 3
+- Prompt Engineering
+- RAG
+- Responsible AI
+section_names:
+- ai
+- azure
 ---
-
 Dellenny explores Microsoft’s Azure AI Studio and AI Foundry, detailing how these platforms empower developers and organizations to create, customize, and scale enterprise-grade generative AI solutions with security and flexibility.<!--excerpt_end-->
 
 # Azure AI Studio / Azure AI Foundry: A Powerful Platform for Generative AI

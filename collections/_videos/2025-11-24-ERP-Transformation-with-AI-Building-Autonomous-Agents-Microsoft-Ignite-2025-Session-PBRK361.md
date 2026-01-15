@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)"
-description: "This Microsoft Ignite 2025 session explores the evolution of ERP solutions as companies shift from copilots to autonomous agents running core business processes. Microsoft demonstrates its agentic ERP framework, including adaptive experiences, pre-built agents, and support for partners to develop custom AI-powered agents. The session covers technical implementation of agents, integration with ERP (Dynamics 365), LLM-enhanced business automation, applied customer and partner practices, and strategies for innovation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MUC0nVbeLKM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=MUC0nVbeLKM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:44:32 +00:00
-permalink: "/2025-11-24-ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361.html"
-categories: ["AI"]
-tags: ["Adaptive Experiences", "Agent Framework", "AI", "AI Applications", "Autonomous Agents", "Business Process Automation", "Customer Engagement", "Dynamics 365", "ERP Transformation", "Industry Agents", "LLMs", "MCP Server", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Practices", "Structured Data", "Unstructured Data", "Videos"]
-tags_normalized: ["adaptive experiences", "agent framework", "ai", "ai applications", "autonomous agents", "business process automation", "customer engagement", "dynamics 365", "erp transformation", "industry agents", "llms", "mcp server", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner practices", "structured data", "unstructured data", "videos"]
+permalink: /ai/videos/ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361
+tags:
+- Adaptive Experiences
+- Agent Framework
+- AI
+- AI Applications
+- Autonomous Agents
+- Business Process Automation
+- Customer Engagement
+- Dynamics 365
+- ERP Transformation
+- Industry Agents
+- LLMs
+- MCP Server
+- Microsoft AI Cloud Partner Program
+- Microsoft Ignite
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Practices
+- Structured Data
+- Unstructured Data
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents a session led by Jim Bretschneider, Jared Hall, Niels Jensen, Sameer Verma, and Ben Vollmer, highlighting ERP transformation through AI-driven autonomous agents and Microsoft's agentic ERP innovations.<!--excerpt_end-->
 
 {% youtube MUC0nVbeLKM %}

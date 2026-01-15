@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Whisper Leak: Novel Side-Channel Attack on Remote Language Models Uncovered by Microsoft"
-description: "Microsoft Defender Security Research Team discloses Whisper Leak, a novel side-channel attack targeting remote language models that exposes conversation topics via encrypted network traffic analysis. This article explains the attack's mechanisms, implications for AI-powered chatbot privacy, research methodology, mitigation strategies by industry vendors, and best practices for users."
-author: "Microsoft Defender Security Research Team, Jonathan Bar Or and Geoff McDonald"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/07/whisper-leak-a-novel-side-channel-cyberattack-on-remote-language-models/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Whisper Leak: Novel Side-Channel Attack on Remote Language Models Uncovered by Microsoft'
+author: Microsoft Defender Security Research Team, Jonathan Bar Or and Geoff McDonald
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/07/whisper-leak-a-novel-side-channel-cyberattack-on-remote-language-models/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-07 17:00:00 +00:00
-permalink: "/2025-11-07-Whisper-Leak-Novel-Side-Channel-Attack-on-Remote-Language-Models-Uncovered-by-Microsoft.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "BERT", "Cyberattack Mitigation", "Data Confidentiality", "Defender Security Research", "Encryption", "Language Models", "LightGBM", "LSTM", "Machine Learning", "Microsoft Azure", "Network Security", "News", "Obfuscation", "OpenAI", "Packet Size Analysis", "Privacy", "Security", "Side Channel Attack", "Streaming Model", "TLS", "Whisper Leak"]
-tags_normalized: ["ai", "ai security", "bert", "cyberattack mitigation", "data confidentiality", "defender security research", "encryption", "language models", "lightgbm", "lstm", "machine learning", "microsoft azure", "network security", "news", "obfuscation", "openai", "packet size analysis", "privacy", "security", "side channel attack", "streaming model", "tls", "whisper leak"]
+permalink: /ai/news/Whisper-Leak-Novel-Side-Channel-Attack-on-Remote-Language-Models-Uncovered-by-Microsoft
+tags:
+- AI
+- AI Security
+- BERT
+- Cyberattack Mitigation
+- Data Confidentiality
+- Defender Security Research
+- Encryption
+- Language Models
+- LightGBM
+- LSTM
+- Machine Learning
+- Microsoft Azure
+- Network Security
+- News
+- Obfuscation
+- OpenAI
+- Packet Size Analysis
+- Privacy
+- Security
+- Side Channel Attack
+- Streaming Model
+- TLS
+- Whisper Leak
+section_names:
+- ai
+- security
 ---
-
 Microsoft Defender Security Research Team, with Jonathan Bar Or and Geoff McDonald, unveils Whisper Leak: a side-channel attack that reveals AI language model conversation topics by analyzing encrypted traffic, and covers new mitigation measures in response.<!--excerpt_end-->
 
 # Whisper Leak: Novel Side-Channel Attack on Remote Language Models Uncovered by Microsoft

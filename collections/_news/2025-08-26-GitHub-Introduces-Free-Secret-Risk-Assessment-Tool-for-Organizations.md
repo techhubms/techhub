@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Introduces Free Secret Risk Assessment Tool for Organizations"
-description: "GitHub has launched a free secret risk assessment feature for organizational security. This tool allows security admins to scan for secret leaks across all repositories, provides aggregate insights into exposures, and offers actionable steps to strengthen code security. Designed for GitHub Team and Enterprise plan users, the tool helps organizations address secret leaks and improve security posture."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Introduces Free Secret Risk Assessment Tool for Organizations
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:21:48 +00:00
-permalink: "/2025-08-26-GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations.html"
-categories: ["DevOps", "Security"]
-tags: ["Continuous Monitoring", "DevOps", "GitHub", "GitHub Enterprise", "Incident Management", "News", "Organization Security", "Risk Assessment", "Secret Scanning", "Security", "Security Tools", "Token Exposure"]
-tags_normalized: ["continuous monitoring", "devops", "github", "github enterprise", "incident management", "news", "organization security", "risk assessment", "secret scanning", "security", "security tools", "token exposure"]
+permalink: /devops/news/GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations
+tags:
+- Continuous Monitoring
+- DevOps
+- GitHub
+- GitHub Enterprise
+- Incident Management
+- News
+- Organization Security
+- Risk Assessment
+- Secret Scanning
+- Security
+- Security Tools
+- Token Exposure
+section_names:
+- devops
+- security
 ---
-
 Allison presents GitHub's new secret risk assessment tool, enabling organizational admins to detect and analyze secret leaks across their repositories. This feature enhances security practices and supports actionable improvements.<!--excerpt_end-->
 
 # GitHub Introduces Free Secret Risk Assessment Tool for Organizations

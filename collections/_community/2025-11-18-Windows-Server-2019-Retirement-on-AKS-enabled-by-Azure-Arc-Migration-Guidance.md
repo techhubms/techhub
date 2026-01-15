@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Windows Server 2019 Retirement on AKS enabled by Azure Arc: Migration Guidance"
-description: "This technical community announcement by ssarwa details Microsoft's retirement of Windows Server 2019 support for AKS enabled by Azure Arc (formerly AKS Hybrid) after April 1, 2026. It provides a comprehensive overview of required migration steps to Windows Server 2022, highlights major milestones and deadlines, addresses upgrade limitations, and offers practical instructions and resource links for a smooth transition."
-author: "ssarwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/windows-server-2019-retirement-on-aks-enabled-by-azure-arc/ba-p/4470184"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Windows Server 2019 Retirement on AKS enabled by Azure Arc: Migration Guidance'
+author: ssarwa
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/windows-server-2019-retirement-on-aks-enabled-by-azure-arc/ba-p/4470184
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 05:18:55 +00:00
-permalink: "/2025-11-18-Windows-Server-2019-Retirement-on-AKS-enabled-by-Azure-Arc-Migration-Guidance.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Azure Arc", "Cloud Operations", "Cluster Management", "Community", "Container Migration", "DevOps", "Kubernetes", "Microsoft Azure", "Node Pools", "OS Upgrade", "Support Lifecycle", "Windows Server", "Workload Migration"]
-tags_normalized: ["aks", "azure", "azure arc", "cloud operations", "cluster management", "community", "container migration", "devops", "kubernetes", "microsoft azure", "node pools", "os upgrade", "support lifecycle", "windows server", "workload migration"]
+permalink: /azure/community/Windows-Server-2019-Retirement-on-AKS-enabled-by-Azure-Arc-Migration-Guidance
+tags:
+- AKS
+- Azure
+- Azure Arc
+- Cloud Operations
+- Cluster Management
+- Community
+- Container Migration
+- DevOps
+- Kubernetes
+- Microsoft Azure
+- Node Pools
+- OS Upgrade
+- Support Lifecycle
+- Windows Server
+- Workload Migration
+section_names:
+- azure
+- devops
 ---
-
 ssarwa highlights the required migration from Windows Server 2019 to Windows Server 2022 for AKS enabled by Azure Arc, outlining timelines, migration steps, and operational impacts of the upcoming retirement.<!--excerpt_end-->
 
 # Action Required: Migrate to Windows Server 2022 by April 2026

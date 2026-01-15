@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Bridging the Gap: The Future of Aspire"
-description: "David Fowler explores the vision behind Aspire, a developer-focused abstraction platform designed to connect application development with infrastructure management. He explains Aspire’s role in simplifying cloud-native development, enhancing the developer experience, and providing extensibility for platform engineers and DevOps teams."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+layout: post
+title: 'Bridging the Gap: The Future of Aspire'
+author: David Fowler
+canonical_url: https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2
+viewing_mode: external
+feed_name: David Fowler's Blog
+feed_url: https://medium.com/feed/@davidfowl
 date: 2025-03-28 01:13:30 +00:00
-permalink: "/2025-03-28-Bridging-the-Gap-The-Future-of-Aspire.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Application Modeling", "Aspire", "Azure", "Bicep", "Blogs", "Cloud Native", "Coding", "Developer Experience", "DevOps", "Distributed Systems", "IaC", "Platform Engineering", "Pulumi", "Service Discovery", "Terraform"]
-tags_normalized: ["application modeling", "aspire", "azure", "bicep", "blogs", "cloud native", "coding", "developer experience", "devops", "distributed systems", "iac", "platform engineering", "pulumi", "service discovery", "terraform"]
+permalink: /coding/blogs/Bridging-the-Gap-The-Future-of-Aspire
+tags:
+- Application Modeling
+- Aspire
+- Azure
+- Bicep
+- Blogs
+- Cloud Native
+- Coding
+- Developer Experience
+- DevOps
+- Distributed Systems
+- IaC
+- Platform Engineering
+- Pulumi
+- Service Discovery
+- Terraform
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Written by David Fowler, this post discusses the future direction of Aspire, focusing on how it bridges the gap between application development and cloud infrastructure for both developers and platform engineers.<!--excerpt_end-->
 
 # Bridging the Gap: The Future of Aspire

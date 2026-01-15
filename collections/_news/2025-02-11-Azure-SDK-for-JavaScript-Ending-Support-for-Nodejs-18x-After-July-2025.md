@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Azure SDK for JavaScript Ending Support for Node.js 18.x After July 2025"
-description: "Microsoft has announced that the Azure SDK for JavaScript will end support for Node.js 18.x after July 10, 2025. Developers are advised to upgrade to an Active Node.js LTS version to maintain library security, receive updates, and avoid compatibility issues."
-author: "Maor Leger"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-18-x-in-the-azure-sdk-for-javascript/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+layout: post
+title: Azure SDK for JavaScript Ending Support for Node.js 18.x After July 2025
+author: Maor Leger
+canonical_url: https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-18-x-in-the-azure-sdk-for-javascript/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-11 22:10:32 +00:00
-permalink: "/2025-02-11-Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure SDK", "Coding", "JavaScript", "LTS", "News", "Node.js", "Node.js 18.x", "Node.js 20.x", "Nodejs", "npm Engines", "SDK Support Policy", "Typescript"]
-tags_normalized: ["azure", "azure sdk", "coding", "javascript", "lts", "news", "nodedotjs", "nodedotjs 18dotx", "nodedotjs 20dotx", "nodejs", "npm engines", "sdk support policy", "typescript"]
+permalink: /coding/news/Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025
+tags:
+- Azure
+- Azure SDK
+- Coding
+- JavaScript
+- LTS
+- News
+- Node.js
+- Node.js 18.x
+- Node.js 20.x
+- Nodejs
+- npm Engines
+- SDK Support Policy
+- Typescript
+section_names:
+- azure
+- coding
 ---
-
 Authored by Maor Leger, this article details the timeline and implications of ending Node.js 18.x support in the Azure SDK for JavaScript, providing guidance on upgrading and support policies.<!--excerpt_end-->
 
 ## Azure SDK for JavaScript Ending Support for Node.js 18.x

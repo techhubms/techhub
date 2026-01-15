@@ -1,20 +1,60 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "What's New in Azure Container Apps: Ignite 2025 Feature Updates"
-description: "This community blog delivers a thorough overview of the latest enhancements in Azure Container Apps (ACA), emphasizing its role in hosting AI workloads, intelligent agents, and modernizing legacy applications. Key topics include serverless GPU capabilities, AI integration, security improvements, flexible workload profiles, and developer tools like GitHub Copilot. Readers will learn how ACA simplifies infrastructure management, empowers scalable app deployment, streamlines secure AI compute, and supports cloud-native best practices across microservices and polyglot environments."
-author: "vyomnagrani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-container-apps-at-ignite-25/ba-p/4470391"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: vyomnagrani
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-container-apps-at-ignite-25/ba-p/4470391
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:18:11 +00:00
-permalink: "/2025-11-18-Whats-New-in-Azure-Container-Apps-Ignite-2025-Feature-Updates.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
-tags: [".NET", "A/B Testing", "Agent Frameworks", "AI", "AI Workloads", "Azure", "Azure Container Apps", "Azure Functions", "Blue Green Deployment", "Cloud Native", "Coding", "Community", "Confidential Computing", "Data Isolation", "Deployment Labels", "DevOps", "Distributed Application Runtime", "Docker Compose", "Durable Task Scheduler", "Flexible Workload Profile", "GitHub Copilot", "Goose AI Agent", "GPU Acceleration", "Java", "LangChain", "MCP", "Microservices", "ML", "N8n", "Networking", "Open Telemetry", "Premium Ingress", "Rule Based Routing", "Security", "Serverless GPUs", "Spring AI", "Workflow Automation"]
-tags_normalized: ["dotnet", "aslashb testing", "agent frameworks", "ai", "ai workloads", "azure", "azure container apps", "azure functions", "blue green deployment", "cloud native", "coding", "community", "confidential computing", "data isolation", "deployment labels", "devops", "distributed application runtime", "docker compose", "durable task scheduler", "flexible workload profile", "github copilot", "goose ai agent", "gpu acceleration", "java", "langchain", "mcp", "microservices", "ml", "n8n", "networking", "open telemetry", "premium ingress", "rule based routing", "security", "serverless gpus", "spring ai", "workflow automation"]
+permalink: /github-copilot/community/Whats-New-in-Azure-Container-Apps-Ignite-2025-Feature-Updates
+tags:
+- .NET
+- A/B Testing
+- Agent Frameworks
+- AI
+- AI Workloads
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Blue Green Deployment
+- Cloud Native
+- Coding
+- Community
+- Confidential Computing
+- Data Isolation
+- Deployment Labels
+- DevOps
+- Distributed Application Runtime
+- Docker Compose
+- Durable Task Scheduler
+- Flexible Workload Profile
+- GitHub Copilot
+- Goose AI Agent
+- GPU Acceleration
+- Java
+- LangChain
+- MCP
+- Microservices
+- ML
+- N8n
+- Networking
+- Open Telemetry
+- Premium Ingress
+- Rule Based Routing
+- Security
+- Serverless GPUs
+- Spring AI
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- ml
+- security
 ---
-
 vyomnagrani details major Azure Container Apps updates from Ignite 2025, outlining new features for AI hosting, agent frameworks, security, DevOps, and workflow modernization in Microsoft's cloud-native ecosystem.<!--excerpt_end-->
 
 # What's New in Azure Container Apps: Ignite 2025 Feature Updates

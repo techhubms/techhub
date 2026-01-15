@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance"
-description: "This session explores implementing a professional UI testing strategy for Avalonia applications, focusing on headless testing to achieve fast and reliable results. It demonstrates how GitHub Copilot can be leveraged as an AI pair programmer to speed up test writing and maintenance, providing practical guidance for developers aiming to enhance application quality."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0Z1plDp_rvI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=0Z1plDp_rvI
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 06:30:06 +00:00
-permalink: "/2025-11-14-Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Pair Programming", "Application Quality", "Avalonia", "Coding", "Continuous Integration", "Developer Productivity", "DevOps", "GitHub Copilot", "Headless Testing", "Test Automation", "Testing Strategy", "UI Automation", "UI Testing", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai pair programming", "application quality", "avalonia", "coding", "continuous integration", "developer productivity", "devops", "github copilot", "headless testing", "test automation", "testing strategy", "ui automation", "ui testing", "videos"]
+permalink: /github-copilot/videos/Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance
+tags:
+- .NET
+- AI
+- AI Pair Programming
+- Application Quality
+- Avalonia
+- Coding
+- Continuous Integration
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- Headless Testing
+- Test Automation
+- Testing Strategy
+- UI Automation
+- UI Testing
+- Videos
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 dotnet presents a session on implementing headless UI testing for Avalonia apps, demonstrating how to accelerate development with GitHub Copilot as an AI pair programmer.<!--excerpt_end-->
 
 {% youtube 0Z1plDp_rvI %}

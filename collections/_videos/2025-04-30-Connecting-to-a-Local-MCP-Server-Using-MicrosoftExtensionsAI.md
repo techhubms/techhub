@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Connecting to a Local MCP Server Using Microsoft.Extensions.AI"
-description: "This video guide demonstrates how to connect to a Model Context Protocol (MCP) Server using Microsoft.Extensions.AI with a local setup. Viewers will learn about configuring the MCP client, integrating it into existing applications, and enabling real-time model context processing, all within the Microsoft AI ecosystem."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iYHh5n-6ez4"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+layout: post
+title: Connecting to a Local MCP Server Using Microsoft.Extensions.AI
+author: Learn Microsoft AI
+canonical_url: https://www.youtube.com/watch?v=iYHh5n-6ez4
+viewing_mode: internal
+feed_name: Learn Microsoft AI Youtube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-04-30 02:30:13 +00:00
-permalink: "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Application Integration", "Client Configuration", "MCP", "Microsoft AI", "Microsoft.Extensions.AI", "Model Context", "Real Time Processing", "Semantic Kernel", "Videos"]
-tags_normalized: ["ai", "ai integration", "application integration", "client configuration", "mcp", "microsoft ai", "microsoftdotextensionsdotai", "model context", "real time processing", "semantic kernel", "videos"]
+permalink: /ai/videos/Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI
+tags:
+- AI
+- AI Integration
+- Application Integration
+- Client Configuration
+- MCP
+- Microsoft AI
+- Microsoft.Extensions.AI
+- Model Context
+- Real Time Processing
+- Semantic Kernel
+- Videos
+section_names:
+- ai
 ---
-
 Learn Microsoft AI walks through the process of connecting to a local Model Context Protocol (MCP) Server using Microsoft.Extensions.AI, covering setup and real-time model context integration.<!--excerpt_end-->
 
 {% youtube iYHh5n-6ez4 %}

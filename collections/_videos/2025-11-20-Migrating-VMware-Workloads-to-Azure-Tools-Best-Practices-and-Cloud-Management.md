@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Migrating VMware Workloads to Azure: Tools, Best Practices, and Cloud Management"
-description: "This session from Microsoft Ignite 2025 is tailored for VMware administrators. It covers best practices and tools for migrating VMware environments to Azure, focusing on the use of Azure Migrate for workload discovery, assessment, and migration. The session compares operational activities between vSphere and Azure, including VM provisioning, high availability, and health monitoring. It also discusses hybrid cloud strategies, network architecture, application boundary tagging, and secure management with Windows Admin Center, concluding with modernization paths for integrating VMware migrations into Azure's ecosystem."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fHha3U_EDkM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Migrating VMware Workloads to Azure: Tools, Best Practices, and Cloud Management'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=fHha3U_EDkM
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:58:45 +00:00
-permalink: "/2025-11-20-Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Tagging", "Azure", "Azure Arc", "Azure Migrate", "Azure VMware Solution", "Cloud Management", "Cloud Security", "DevOps", "High Availability", "Hybrid Cloud", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Network Architecture", "Operational Monitoring", "Security", "Videos", "Virtual Machines", "VM Provisioning", "VMware", "Windows Admin Center", "Workload Migration"]
-tags_normalized: ["application tagging", "azure", "azure arc", "azure migrate", "azure vmware solution", "cloud management", "cloud security", "devops", "high availability", "hybrid cloud", "migrateandmodernizeyourestate", "modernization", "msignite", "network architecture", "operational monitoring", "security", "videos", "virtual machines", "vm provisioning", "vmware", "windows admin center", "workload migration"]
+permalink: /azure/videos/Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management
+tags:
+- Application Tagging
+- Azure
+- Azure Arc
+- Azure Migrate
+- Azure VMware Solution
+- Cloud Management
+- Cloud Security
+- DevOps
+- High Availability
+- Hybrid Cloud
+- Migrateandmodernizeyourestate
+- Modernization
+- MSIgnite
+- Network Architecture
+- Operational Monitoring
+- Security
+- Videos
+- Virtual Machines
+- VM Provisioning
+- VMware
+- Windows Admin Center
+- Workload Migration
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Events and speakers Vikram Bansal and Jeff Woolsey provide VMware administrators with expert guidance on migrating, securing, and managing VMware workloads in Azure, focusing on operational best practices.<!--excerpt_end-->
 
 {% youtube fHha3U_EDkM %}

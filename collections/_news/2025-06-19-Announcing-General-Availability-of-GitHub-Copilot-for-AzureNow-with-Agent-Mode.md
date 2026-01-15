@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Announcing General Availability of GitHub Copilot for Azure—Now with Agent Mode"
-description: "GitHub Copilot for Azure is now generally available, introducing Agent Mode to empower developers, IT operators, and DevOps practitioners. This release integrates advanced AI capabilities for resource provisioning, infrastructure management, and DevOps workflows in Azure environments, supporting Visual Studio Code and enterprise security requirements."
-author: "Yun Jung Choi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/announcing-general-availability-of-github-copilot-for-azure-now-with-agent-mode/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Announcing General Availability of GitHub Copilot for Azure—Now with Agent Mode
+author: Yun Jung Choi
+canonical_url: https://devblogs.microsoft.com/all-things-azure/announcing-general-availability-of-github-copilot-for-azure-now-with-agent-mode/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-06-19 21:19:28 +00:00
-permalink: "/2025-06-19-Announcing-General-Availability-of-GitHub-Copilot-for-AzureNow-with-Agent-Mode.html"
-categories: ["AI", "GitHub Copilot", "Azure", "DevOps", "Coding", "Security"]
-tags: ["Agent Mode", "AI", "AI Agent", "AI Powered Development", "All Things Azure", "App Development", "Appdev", "Application Deployment", "Azure", "Azure Bicep", "Azure Developer CLI", "Cloud Automation", "Coding", "Copilot Chat", "DevOps", "Enterprise Security", "GitHub Copilot", "IaC", "Infrastructure Management", "News", "Security", "VS", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai agent", "ai powered development", "all things azure", "app development", "appdev", "application deployment", "azure", "azure bicep", "azure developer cli", "cloud automation", "coding", "copilot chat", "devops", "enterprise security", "github copilot", "iac", "infrastructure management", "news", "security", "vs", "vs code"]
+permalink: /github-copilot/news/Announcing-General-Availability-of-GitHub-Copilot-for-AzureNow-with-Agent-Mode
+tags:
+- Agent Mode
+- AI
+- AI Agent
+- AI Powered Development
+- All Things Azure
+- App Development
+- Appdev
+- Application Deployment
+- Azure
+- Azure Bicep
+- Azure Developer CLI
+- Cloud Automation
+- Coding
+- Copilot Chat
+- DevOps
+- Enterprise Security
+- GitHub Copilot
+- IaC
+- Infrastructure Management
+- News
+- Security
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
+- azure
+- devops
+- coding
+- security
 ---
-
 Yun Jung Choi introduces the general availability of GitHub Copilot for Azure, highlighting its new Agent Mode that transforms DevOps workflows with integrated AI, enhanced security, and rich Azure support.<!--excerpt_end-->
 
 ## Unlocking a New DevOps Era

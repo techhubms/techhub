@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "What’s New for Fabric Data Agents: AI Interoperability and Enterprise Data Insights at Ignite 2025"
-description: "This news update reveals major advances in Microsoft Fabric data agents at Ignite 2025, introducing upgraded support for unstructured data, ontology integration, and seamless interoperability with Azure AI Search, Microsoft 365 Copilot, MCP server endpoints, and the broader agentic ecosystem. Readers learn how to harness these modular agents for secure, context-rich analytics and intelligent enterprise data insights."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-for-fabric-data-agents-at-ignite-2025-unlocking-deeper-data-reasoning-and-seamless-ai-interoperability/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'What’s New for Fabric Data Agents: AI Interoperability and Enterprise Data Insights at Ignite 2025'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-for-fabric-data-agents-at-ignite-2025-unlocking-deeper-data-reasoning-and-seamless-ai-interoperability/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Whats-New-for-Fabric-Data-Agents-AI-Interoperability-and-Enterprise-Data-Insights-at-Ignite-2025.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Web", "AI", "AI Integration", "Azure", "Azure AI Search", "Context Aware Analytics", "Data Reasoning", "Enterprise Data", "Enterprise Knowledge", "Fabric Data Agents", "Interoperability", "MCP Server", "Microsoft Fabric", "ML", "Modular Agents", "News", "OneLake", "Ontology", "Teams Integration", "Unstructured Data", "VS Code"]
-tags_normalized: ["agentic web", "ai", "ai integration", "azure", "azure ai search", "context aware analytics", "data reasoning", "enterprise data", "enterprise knowledge", "fabric data agents", "interoperability", "mcp server", "microsoft fabric", "ml", "modular agents", "news", "onelake", "ontology", "teams integration", "unstructured data", "vs code"]
+permalink: /ai/news/Whats-New-for-Fabric-Data-Agents-AI-Interoperability-and-Enterprise-Data-Insights-at-Ignite-2025
+tags:
+- Agentic Web
+- AI
+- AI Integration
+- Azure
+- Azure AI Search
+- Context Aware Analytics
+- Data Reasoning
+- Enterprise Data
+- Enterprise Knowledge
+- Fabric Data Agents
+- Interoperability
+- MCP Server
+- Microsoft Fabric
+- ML
+- Modular Agents
+- News
+- OneLake
+- Ontology
+- Teams Integration
+- Unstructured Data
+- VS Code
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog authors Nellie Gustafsson, Joanne Wong, Amir Jafari, Misha Desai, and Shreyas Canchi present new capabilities for Fabric data agents unveiled at Ignite 2025, emphasizing AI interoperability and modular enterprise data analytics.<!--excerpt_end-->
 
 # What’s New for Fabric Data Agents at Ignite 2025: Unlocking Deeper Data Reasoning and Seamless AI Interoperability

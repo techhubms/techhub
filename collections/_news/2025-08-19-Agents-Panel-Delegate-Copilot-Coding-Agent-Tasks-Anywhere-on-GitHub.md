@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub"
-description: "This article introduces the new Agents panel for GitHub, allowing developers to delegate coding tasks to the Copilot coding agent from any page. The update details how Copilot automates coding workflows, integrates with various GitHub tools, and tracks task progress in real-time."
-author: "Tim Rogers"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub'
+author: Tim Rogers
+canonical_url: https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-08-19 19:53:14 +00:00
-permalink: "/2025-08-19-Agents-Panel-Delegate-Copilot-Coding-Agent-Tasks-Anywhere-on-GitHub.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Workflows", "Agents Panel", "AI", "AI Agents", "Autonomous Developer Agent", "Background Coding Tasks", "Copilot Coding Agent", "Generative AI", "GitHub Copilot", "GitHub Mobile", "MCP", "MCP Server", "News", "News & Insights", "Product", "Pull Requests", "Task Delegation", "VS Code Integration", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "agents panel", "ai", "ai agents", "autonomous developer agent", "background coding tasks", "copilot coding agent", "generative ai", "github copilot", "github mobile", "mcp", "mcp server", "news", "news and insights", "product", "pull requests", "task delegation", "vs code integration", "workflow automation"]
+permalink: /github-copilot/news/Agents-Panel-Delegate-Copilot-Coding-Agent-Tasks-Anywhere-on-GitHub
+tags:
+- Agentic Workflows
+- Agents Panel
+- AI
+- AI Agents
+- Autonomous Developer Agent
+- Background Coding Tasks
+- Copilot Coding Agent
+- Generative AI
+- GitHub Copilot
+- GitHub Mobile
+- MCP
+- MCP Server
+- News
+- News & Insights
+- Product
+- Pull Requests
+- Task Delegation
+- VS Code Integration
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Tim Rogers explains how the new Agents panel lets developers assign and track Copilot coding agent tasks from anywhere on GitHub, making code automation and review more seamless.<!--excerpt_end-->
 
 # Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub

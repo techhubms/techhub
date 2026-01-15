@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Secure Code Game: Empowering Safer LLM-Based Applications"
-description: "This Open Source Friday episode features Bartosz Gałek and jkcso, contributors to Secure Code Game, sharing insights on teaching developers and students how to build secure applications powered by Large Language Models (LLMs). The discussion covers engineering choices, secure coding practices for modern AI applications, and lessons learned from the open source community experience."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EXEtRc8oQ7E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Secure Code Game: Empowering Safer LLM-Based Applications'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=EXEtRc8oQ7E
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-28 17:57:02 +00:00
-permalink: "/2025-11-28-Secure-Code-Game-Empowering-Safer-LLM-Based-Applications.html"
-categories: ["AI", "Coding", "Security"]
-tags: ["AI", "AI Application Development", "Application Security", "Coding", "Developer Education", "Engineering Decisions", "GitHub", "Large Language Models", "LLM Security", "Open Source", "Secure Code Game", "Secure Coding", "Security", "Videos"]
-tags_normalized: ["ai", "ai application development", "application security", "coding", "developer education", "engineering decisions", "github", "large language models", "llm security", "open source", "secure code game", "secure coding", "security", "videos"]
+permalink: /ai/videos/Secure-Code-Game-Empowering-Safer-LLM-Based-Applications
+tags:
+- AI
+- AI Application Development
+- Application Security
+- Coding
+- Developer Education
+- Engineering Decisions
+- GitHub
+- Large Language Models
+- LLM Security
+- Open Source
+- Secure Code Game
+- Secure Coding
+- Security
+- Videos
+section_names:
+- ai
+- coding
+- security
 ---
-
 GitHub hosts Bartosz Gałek and jkcso discussing Secure Code Game Season 3, focusing on helping developers build safer LLM-based applications and sharing open source engineering insights.<!--excerpt_end-->
 
 {% youtube EXEtRc8oQ7E %}

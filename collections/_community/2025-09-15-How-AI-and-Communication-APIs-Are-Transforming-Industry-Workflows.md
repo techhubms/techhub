@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How AI and Communication APIs Are Transforming Industry Workflows"
-description: "This article explores how organizations in healthcare, finance, recruiting, retail, sales, and education are using Microsoft’s AI tools, Azure Communication Services, and Copilot Studio to build resilient, industry-specific communication workflows. It explains practical use cases, offers a framework for evaluating where to apply AI, and links to Microsoft documentation and demos."
-author: "seankeegan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/how-ai-communication-apis-are-transforming-work-across/ba-p/4454224"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: How AI and Communication APIs Are Transforming Industry Workflows
+author: seankeegan
+canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/how-ai-communication-apis-are-transforming-work-across/ba-p/4454224
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 17:29:56 +00:00
-permalink: "/2025-09-15-How-AI-and-Communication-APIs-Are-Transforming-Industry-Workflows.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Routing", "Appointment Scheduling", "Azure", "Azure AI Foundry", "Azure Communication Services", "Communication Workflows", "Community", "Compliance Automation", "Conversational AI", "Copilot Studio", "Customer Service Automation", "Education Technology", "Financial Services Automation", "HIPAA Compliance", "Industry Solutions", "Personalization", "Sales Automation", "Sentiment Analysis"]
-tags_normalized: ["ai", "ai routing", "appointment scheduling", "azure", "azure ai foundry", "azure communication services", "communication workflows", "community", "compliance automation", "conversational ai", "copilot studio", "customer service automation", "education technology", "financial services automation", "hipaa compliance", "industry solutions", "personalization", "sales automation", "sentiment analysis"]
+permalink: /ai/community/How-AI-and-Communication-APIs-Are-Transforming-Industry-Workflows
+tags:
+- AI
+- AI Routing
+- Appointment Scheduling
+- Azure
+- Azure AI Foundry
+- Azure Communication Services
+- Communication Workflows
+- Community
+- Compliance Automation
+- Conversational AI
+- Copilot Studio
+- Customer Service Automation
+- Education Technology
+- Financial Services Automation
+- HIPAA Compliance
+- Industry Solutions
+- Personalization
+- Sales Automation
+- Sentiment Analysis
+section_names:
+- ai
+- azure
 ---
-
 seankeegan demonstrates practical ways Microsoft AI and Azure Communication Services are transforming communication workflows in healthcare, finance, recruiting, retail, and more.<!--excerpt_end-->
 
 # How AI and Communication APIs Are Transforming Industry Workflows

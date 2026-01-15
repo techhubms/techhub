@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration"
-description: "This advanced session covers techniques for developing enterprise-grade agents for Microsoft 365 using Microsoft Agent Framework and Agent 365 SDK, with a focus on AI stack compatibility. The presentation includes governance and security insights, agent observability, hands-on demos, partner showcases, and integration examples featuring Microsoft Defender. Attendees learn best practices for deploying, monitoring, and registering agent instances in tenant environments, plus interoperability with MCP servers and collaborative workflows."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gdi95CKeQL4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=gdi95CKeQL4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:30:30 +00:00
-permalink: "/2025-11-24-Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent 365 SDK", "Agent Registration", "AI", "AI Agents", "Azure", "Collaborative Workflows", "Compliance", "Defender Integration", "Governance", "Innovatewithlow", "Low Code", "MCP Servers", "Microsoft 365", "Microsoft Agent Framework", "MSIgnite", "Observability", "Onboarding Automation", "Security", "Security Monitoring", "Tenant Environment", "Videos"]
-tags_normalized: ["agent 365 sdk", "agent registration", "ai", "ai agents", "azure", "collaborative workflows", "compliance", "defender integration", "governance", "innovatewithlow", "low code", "mcp servers", "microsoft 365", "microsoft agent framework", "msignite", "observability", "onboarding automation", "security", "security monitoring", "tenant environment", "videos"]
+permalink: /ai/videos/Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration
+tags:
+- Agent 365 SDK
+- Agent Registration
+- AI
+- AI Agents
+- Azure
+- Collaborative Workflows
+- Compliance
+- Defender Integration
+- Governance
+- Innovatewithlow
+- Low Code
+- MCP Servers
+- Microsoft 365
+- Microsoft Agent Framework
+- MSIgnite
+- Observability
+- Onboarding Automation
+- Security
+- Security Monitoring
+- Tenant Environment
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Presented by Microsoft Events, this session guides advanced enterprise developers through building and securing AI-powered agents for Microsoft 365 with the Microsoft Agent Framework and Agent 365 SDK.<!--excerpt_end-->
 
 {% youtube gdi95CKeQL4 %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Copilot Coding Agent Now Remembers Context Within Pull Requests"
-description: "This news update highlights an improvement to the Copilot coding agent, a GitHub tool that automates coding tasks in the background via draft pull requests. The new feature enables the agent to retain context between sessions within the same pull request, improving speed and reliability for developers delegating iterative tasks to Copilot. Details on availability, administrative setup, and further documentation are included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Coding Agent Now Remembers Context Within Pull Requests
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 16:50:47 +00:00
-permalink: "/2025-09-30-Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Automation", "Code Collaboration", "Code Review", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Developer Tools", "GitHub", "GitHub Copilot", "Improvement", "News", "Pro+", "Pull Request", "Session Context", "Workflow Automation"]
-tags_normalized: ["ai", "ai automation", "code collaboration", "code review", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "developer tools", "github", "github copilot", "improvement", "news", "proplus", "pull request", "session context", "workflow automation"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests
+tags:
+- AI
+- AI Automation
+- Code Collaboration
+- Code Review
+- Copilot
+- Copilot Business
+- Copilot Coding Agent
+- Copilot Enterprise
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Improvement
+- News
+- Pro+
+- Pull Request
+- Session Context
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces a key enhancement to the GitHub Copilot coding agent: it now retains context between sessions in the same pull request, streamlining developer workflows and making automated coding support more efficient.<!--excerpt_end-->
 
 # Copilot Coding Agent Now Remembers Context Within Pull Requests

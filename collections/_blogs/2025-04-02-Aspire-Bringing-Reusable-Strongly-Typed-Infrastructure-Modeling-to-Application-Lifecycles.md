@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Aspire: Bringing Reusable, Strongly-Typed Infrastructure Modeling to Application Lifecycles"
-description: "David Fowler discusses how Aspire revolutionizes infrastructure and application lifecycle modeling by introducing reusable, strongly-typed resources and hosting integrations. He explains how Aspire applies software engineering principles—like encapsulation, composition, and typing—to infrastructure, making deployment knowledge reusable, composable, and easier to scale across teams and organizations."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/aspire-a-platform-for-reusable-infrastructure-3a15582f8a5a?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+layout: post
+title: 'Aspire: Bringing Reusable, Strongly-Typed Infrastructure Modeling to Application Lifecycles'
+author: David Fowler
+canonical_url: https://medium.com/@davidfowl/aspire-a-platform-for-reusable-infrastructure-3a15582f8a5a?source=rss-8163234c98f0------2
+viewing_mode: external
+feed_name: David Fowler's Blog
+feed_url: https://medium.com/feed/@davidfowl
 date: 2025-04-02 15:02:15 +00:00
-permalink: "/2025-04-02-Aspire-Bringing-Reusable-Strongly-Typed-Infrastructure-Modeling-to-Application-Lifecycles.html"
-categories: ["Coding", "DevOps"]
-tags: ["Application Lifecycle", "Aspire", "Automation", "Blogs", "CI/CD", "Cloud Computing", "Cloud Services", "Coding", "Deployment", "DevOps", "Encapsulation", "Hosting Integrations", "IaC", "Resources", "Reusability", "Software Development", "Software Engineering", "Strong Typing"]
-tags_normalized: ["application lifecycle", "aspire", "automation", "blogs", "cislashcd", "cloud computing", "cloud services", "coding", "deployment", "devops", "encapsulation", "hosting integrations", "iac", "resources", "reusability", "software development", "software engineering", "strong typing"]
+permalink: /coding/blogs/Aspire-Bringing-Reusable-Strongly-Typed-Infrastructure-Modeling-to-Application-Lifecycles
+tags:
+- Application Lifecycle
+- Aspire
+- Automation
+- Blogs
+- CI/CD
+- Cloud Computing
+- Cloud Services
+- Coding
+- Deployment
+- DevOps
+- Encapsulation
+- Hosting Integrations
+- IaC
+- Resources
+- Reusability
+- Software Development
+- Software Engineering
+- Strong Typing
+section_names:
+- coding
+- devops
 ---
-
 In this insightful post, David Fowler shares how Aspire brings the discipline and reusability of software engineering to infrastructure, enabling scalable and composable deployment with strongly-typed resources and hosting integrations.<!--excerpt_end-->
 
 # Aspire: Bringing Reusable, Strongly-Typed Infrastructure Modeling to Application Lifecycles

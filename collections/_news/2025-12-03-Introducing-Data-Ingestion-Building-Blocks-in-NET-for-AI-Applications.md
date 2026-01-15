@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Introducing Data Ingestion Building Blocks in .NET for AI Applications"
-description: "This announcement introduces the preview release of data ingestion building blocks for .NET, designed to help developers build robust, scalable, and extensible data pipelines for AI and ML scenarios such as Retrieval-Augmented Generation (RAG). It explains the unified abstractions for document representation, enrichment, chunking, storage, integration with AI services, and observability, with code examples and guidance for getting started in the .NET ecosystem."
-author: "Luis Quintanilla, Adam Sitnik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Introducing Data Ingestion Building Blocks in .NET for AI Applications
+author: Luis Quintanilla, Adam Sitnik
+canonical_url: https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-03 18:05:00 +00:00
-permalink: "/2025-12-03-Introducing-Data-Ingestion-Building-Blocks-in-NET-for-AI-Applications.html"
-categories: ["AI", "Coding", "ML"]
-tags: [".NET", "AI", "AI Applications", "Aspire", "Coding", "CosmosDB", "Data", "Data Ingestion", "Dataingestion", "Document Chunking", "ElasticSearch", "Embedding Generation", "ETL", "MarkDownReader", "Microsoft.Extensions.DataIngestion", "Microsoft.ML.Tokenizers", "ML", "MongoDB", "News", "Observability", "OpenAI", "OpenTelemetry", "Qdrant", "Rag", "Semantic Kernel", "SummaryEnricher", "Vector Databases"]
-tags_normalized: ["dotnet", "ai", "ai applications", "aspire", "coding", "cosmosdb", "data", "data ingestion", "dataingestion", "document chunking", "elasticsearch", "embedding generation", "etl", "markdownreader", "microsoftdotextensionsdotdataingestion", "microsoftdotmldottokenizers", "ml", "mongodb", "news", "observability", "openai", "opentelemetry", "qdrant", "rag", "semantic kernel", "summaryenricher", "vector databases"]
+permalink: /ai/news/Introducing-Data-Ingestion-Building-Blocks-in-NET-for-AI-Applications
+tags:
+- .NET
+- AI
+- AI Applications
+- Aspire
+- Coding
+- CosmosDB
+- Data
+- Data Ingestion
+- Dataingestion
+- Document Chunking
+- ElasticSearch
+- Embedding Generation
+- ETL
+- MarkDownReader
+- Microsoft.Extensions.DataIngestion
+- Microsoft.ML.Tokenizers
+- ML
+- MongoDB
+- News
+- Observability
+- OpenAI
+- OpenTelemetry
+- Qdrant
+- Rag
+- Semantic Kernel
+- SummaryEnricher
+- Vector Databases
+section_names:
+- ai
+- coding
+- ml
 ---
-
 Luis Quintanilla and Adam Sitnik announce a preview of modular .NET building blocks for data ingestion, detailing how developers can build scalable, flexible AI pipelines for intelligent applications.<!--excerpt_end-->
 
 # Introducing Data Ingestion Building Blocks in .NET for AI Applications

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership"
-description: "A news update detailing the strategic partnership among Microsoft, Anthropic, and NVIDIA to deliver hyperscale AI capabilities. The announcement covers joint infrastructure, Azure's expanded support for Anthropic's models, engineering co-optimization with NVIDIA hardware, and a focus on providing enterprise customers with broader AI model choice, performance, and scalability. The partnership highlights integration of Anthropic models into Azure AI Foundry and the Copilot ecosystem, as well as collaborative innovation in AI infrastructure, model optimization, and cloud compute."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:53:27 +00:00
-permalink: "/2025-11-18-Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Capacity", "AI Infrastructure", "AI Partnership", "AI Super Factory", "Anthropic", "Azure", "Azure AI", "Azure Foundry", "Claude Model", "Cloud AI", "Co Designed Silicon", "Company News", "Copilot", "Enterprise AI", "Enterprise Customers", "Frontier Models", "Grace Blackwell", "Hyperscale Compute", "LinkedIn Post", "MCP", "Microsoft", "Model Optimization", "News", "NVIDIA", "Token Economics", "Vera Rubin"]
-tags_normalized: ["ai", "ai capacity", "ai infrastructure", "ai partnership", "ai super factory", "anthropic", "azure", "azure ai", "azure foundry", "claude model", "cloud ai", "co designed silicon", "company news", "copilot", "enterprise ai", "enterprise customers", "frontier models", "grace blackwell", "hyperscale compute", "linkedin post", "mcp", "microsoft", "model optimization", "news", "nvidia", "token economics", "vera rubin"]
+permalink: /ai/news/Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership
+tags:
+- AI
+- AI Capacity
+- AI Infrastructure
+- AI Partnership
+- AI Super Factory
+- Anthropic
+- Azure
+- Azure AI
+- Azure Foundry
+- Claude Model
+- Cloud AI
+- Co Designed Silicon
+- Company News
+- Copilot
+- Enterprise AI
+- Enterprise Customers
+- Frontier Models
+- Grace Blackwell
+- Hyperscale Compute
+- LinkedIn Post
+- MCP
+- Microsoft
+- Model Optimization
+- News
+- NVIDIA
+- Token Economics
+- Vera Rubin
+section_names:
+- ai
+- azure
 ---
-
 stclarke summarizes how Microsoft, Anthropic, and NVIDIA have joined forces to accelerate enterprise-ready AI: integrating Anthropic models into Azure and Copilot, deepening infrastructure co-design, and expanding hyperscale compute partnerships.<!--excerpt_end-->
 
 # Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership

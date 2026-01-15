@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop"
-description: "This technical guide explores how to build secure, permission-aware AI agents using the new Security Filters capability in Azure Logic Apps Agent Loop. It covers document-level authorization in Retrieval-Augmented Generation (RAG) workflows by integrating Azure AI Search's ACL support. The article demonstrates permission-aware indexing, filtered retrieval for both users and groups, and configuring Logic Apps workflows to enforce access controls without custom code. Practical examples and links to detailed tutorials are provided for implementation."
-author: "harimehta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop
+author: harimehta
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:25:53 +00:00
-permalink: "/2025-11-18-Secure-AI-Agent-Knowledge-Retrieval-with-Security-Filters-in-Agent-Loop.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Access Control", "ACL Support", "ADLS Gen2", "Agent Loop", "AI", "AI Agent", "Azure", "Azure AI Search", "Azure Logic Apps", "Community", "Document Level Authorization", "Group Based Filtering", "Indexing", "Microsoft Entra", "RAG Workflows", "REST API", "Retrieval Augmented Generation", "Security", "Security Filters", "User Permissions", "Vector Search"]
-tags_normalized: ["access control", "acl support", "adls gen2", "agent loop", "ai", "ai agent", "azure", "azure ai search", "azure logic apps", "community", "document level authorization", "group based filtering", "indexing", "microsoft entra", "rag workflows", "rest api", "retrieval augmented generation", "security", "security filters", "user permissions", "vector search"]
+permalink: /ai/community/Secure-AI-Agent-Knowledge-Retrieval-with-Security-Filters-in-Agent-Loop
+tags:
+- Access Control
+- ACL Support
+- ADLS Gen2
+- Agent Loop
+- AI
+- AI Agent
+- Azure
+- Azure AI Search
+- Azure Logic Apps
+- Community
+- Document Level Authorization
+- Group Based Filtering
+- Indexing
+- Microsoft Entra
+- RAG Workflows
+- REST API
+- Retrieval Augmented Generation
+- Security
+- Security Filters
+- User Permissions
+- Vector Search
+section_names:
+- ai
+- azure
+- security
 ---
-
 harimehta explains how to create secure, permission-aware AI agents within Azure Logic Apps by leveraging Agent Loop and Azure AI Search to enforce document-level access controls for Retrieval-Augmented Generation workflows.<!--excerpt_end-->
 
 # Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop

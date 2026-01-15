@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform"
-description: "This session from Microsoft Ignite 2025 explores how to build highly available, resilient, and scalable AI agents to support critical workloads using Copilot Studio, Power Platform, and Dataverse. It addresses business risks of outages, the importance of continuous operation, resilient deployment, scaling, monitoring considerations, API automation, compliance drills, and human oversight involved in failover scenarios. Real-world lessons are drawn from Power Platform’s response during the Norway Azure outage."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_rCws3fowj8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_rCws3fowj8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:32:17 +00:00
-permalink: "/2025-11-24-Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "Always On Agents", "API Automation", "Automation", "Compliance", "Continuous Operations", "Copilot Studio", "Dataverse", "Deployment Practices", "Failover", "High Availability", "Innovatewithlow", "Low Code AI", "Microsoft Events", "Microsoft Ignite", "Monitoring", "MSIgnite", "Observability", "Power Platform", "Resilience", "SSDR", "Videos"]
-tags_normalized: ["ai", "ai agents", "always on agents", "api automation", "automation", "compliance", "continuous operations", "copilot studio", "dataverse", "deployment practices", "failover", "high availability", "innovatewithlow", "low code ai", "microsoft events", "microsoft ignite", "monitoring", "msignite", "observability", "power platform", "resilience", "ssdr", "videos"]
+permalink: /ai/videos/Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform
+tags:
+- AI
+- AI Agents
+- Always On Agents
+- API Automation
+- Automation
+- Compliance
+- Continuous Operations
+- Copilot Studio
+- Dataverse
+- Deployment Practices
+- Failover
+- High Availability
+- Innovatewithlow
+- Low Code AI
+- Microsoft Events
+- Microsoft Ignite
+- Monitoring
+- MSIgnite
+- Observability
+- Power Platform
+- Resilience
+- SSDR
+- Videos
+section_names:
+- ai
 ---
-
 Presented by Shivani Pradhan at Microsoft Ignite 2025, this session delivers practical insights on architecting always-on AI agents with Copilot Studio and Power Platform to ensure business continuity and scalability for critical workloads.<!--excerpt_end-->
 
 {% youtube _rCws3fowj8 %}

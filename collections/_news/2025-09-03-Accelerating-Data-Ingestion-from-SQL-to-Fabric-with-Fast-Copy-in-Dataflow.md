@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow"
-description: "This article from the Microsoft Fabric Blog explains how to leverage the Fast Copy feature in Dataflow Gen2 to significantly improve data ingestion speed and efficiency when importing large volumes of data from SQL databases into Fabric environments. It provides a practical walkthrough, from enabling Fast Copy to monitoring its usage, highlighting bulk loading, parallelism, and operational best practices for modern analytics workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 09:00:00 +00:00
-permalink: "/2025-09-03-Accelerating-Data-Ingestion-from-SQL-to-Fabric-with-Fast-Copy-in-Dataflow.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Bulk Loading", "Data Ingestion", "Data Integration", "Data Movement", "Data Pipelines", "Dataflow Gen2", "ETL", "Fast Copy", "Microsoft Fabric", "ML", "News", "OneLake", "Parallel Processing", "Performance Optimization", "SQL Database"]
-tags_normalized: ["analytics", "azure", "bulk loading", "data ingestion", "data integration", "data movement", "data pipelines", "dataflow gen2", "etl", "fast copy", "microsoft fabric", "ml", "news", "onelake", "parallel processing", "performance optimization", "sql database"]
+permalink: /ml/news/Accelerating-Data-Ingestion-from-SQL-to-Fabric-with-Fast-Copy-in-Dataflow
+tags:
+- Analytics
+- Azure
+- Bulk Loading
+- Data Ingestion
+- Data Integration
+- Data Movement
+- Data Pipelines
+- Dataflow Gen2
+- ETL
+- Fast Copy
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Parallel Processing
+- Performance Optimization
+- SQL Database
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines practical steps to use Fast Copy in Dataflow for faster data ingestion from SQL databases. The guide, authored by the Microsoft Fabric Blog team, covers feature activation, configuration, and performance checks, empowering organizations to streamline data integration workflows.<!--excerpt_end-->
 
 # Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow

@@ -1,20 +1,51 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Why 'Shift Left' Alone Isn't Enough: Embedding Security Across Software Delivery"
-description: "This article by Julian Browne challenges the prevailing notion that 'shifting left' fully addresses software security. Instead, it explains why continuous, zone-appropriate security must be integrated throughout all phases of software delivery, including production. Key concepts include DevOps security, secure-by-design principles, and the pitfalls of linear security thinking."
-author: "Julian Browne"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/secure-by-design-secure-by-default/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+author: Julian Browne
+canonical_url: https://devops.com/secure-by-design-secure-by-default/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-14 11:31:30 +00:00
-permalink: "/2025-10-14-Why-Shift-Left-Alone-Isnt-Enough-Embedding-Security-Across-Software-Delivery.html"
-categories: ["DevOps", "Security"]
-tags: ["Adaptive Security", "Blogs", "Continuous Improvement", "Continuous Security", "Contributed Content", "Cyber Resilience", "DevOps", "DevOps Best Practices", "Devsecops", "Dynamic Systems", "Embedded Security", "Enterprise Compliance", "Enterprise Security", "Incident Response", "Modern Software Delivery", "Production Monitoring", "Real Time Security", "Secure By Default", "Secure By Design", "Secure Coding", "Security", "Security Compliance", "Security Governance", "Security in Production", "Security Strategy", "Security Theatre", "Shift Left Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Security", "Static Analysis", "Threat Modeling"]
-tags_normalized: ["adaptive security", "blogs", "continuous improvement", "continuous security", "contributed content", "cyber resilience", "devops", "devops best practices", "devsecops", "dynamic systems", "embedded security", "enterprise compliance", "enterprise security", "incident response", "modern software delivery", "production monitoring", "real time security", "secure by default", "secure by design", "secure coding", "security", "security compliance", "security governance", "security in production", "security strategy", "security theatre", "shift left security", "social facebook", "social linkedin", "social x", "software security", "static analysis", "threat modeling"]
+permalink: /devops/blogs/Why-Shift-Left-Alone-Isnt-Enough-Embedding-Security-Across-Software-Delivery
+tags:
+- Adaptive Security
+- Blogs
+- Continuous Improvement
+- Continuous Security
+- Contributed Content
+- Cyber Resilience
+- DevOps
+- DevOps Best Practices
+- Devsecops
+- Dynamic Systems
+- Embedded Security
+- Enterprise Compliance
+- Enterprise Security
+- Incident Response
+- Modern Software Delivery
+- Production Monitoring
+- Real Time Security
+- Secure By Default
+- Secure By Design
+- Secure Coding
+- Security
+- Security Compliance
+- Security Governance
+- Security in Production
+- Security Strategy
+- Security Theatre
+- Shift Left Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Security
+- Static Analysis
+- Threat Modeling
+section_names:
+- devops
+- security
 ---
-
 Julian Browne examines the limitations of 'shift left' as a security mantra, advocating instead for embedding security continuously across the software delivery lifecycle for real-world resilience.<!--excerpt_end-->
 
 # Why 'Shift Left' Alone Isn't Enough: Embedding Security Across Software Delivery

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Loading configurations for integration tests"
-description: "The post discusses an issue with .NET 8 Web API integration tests failing to load the appsettings.json configuration file after OS patching on specific server nodes. The problem is resolved by restarting the containers. The discussion centers on configuration loading within .NET microservices and potential causes."
-author: "LazyChief_117"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Loading configurations for integration tests
+author: LazyChief_117
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 19:14:27 +00:00
-permalink: "/2025-08-04-Loading-configurations-for-integration-tests.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8", "Appsettings.json", "C#", "Coding", "Community", "Configuration", "Container", "Integration Tests", "Microservices", "Microsoft.Extensions.Configuration", "OS Patching", "Web API"]
-tags_normalized: ["dotnet", "dotnet 8", "appsettingsdotjson", "csharp", "coding", "community", "configuration", "container", "integration tests", "microservices", "microsoftdotextensionsdotconfiguration", "os patching", "web api"]
+permalink: /coding/community/Loading-configurations-for-integration-tests
+tags:
+- .NET
+- .NET 8
+- Appsettings.json
+- C#
+- Coding
+- Community
+- Configuration
+- Container
+- Integration Tests
+- Microservices
+- Microsoft.Extensions.Configuration
+- OS Patching
+- Web API
+section_names:
+- coding
 ---
-
 Authored by LazyChief_117, this post highlights an integration testing issue in .NET 8 Web APIs, where configuration files intermittently fail to load after certain server updates.<!--excerpt_end-->
 
 ## Loading Configurations for Integration Tests

@@ -1,20 +1,35 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Securing Critical Infrastructure: Microsoft Insights on Europe's Risk-Based Cybersecurity Regulations"
-description: "Freddy Dezeure, Deputy CISO for Europe at Microsoft, explores the impact of new European cybersecurity regulations, NIS2 and DORA, on securing critical infrastructure. The article analyzes cyberthreat trends, actionable security controls, and Microsoft's approach to compliance, resilience, and technological risk mitigation for CISOs and directors."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 18:09:51 +00:00
-permalink: "/2025-11-05-Securing-Critical-Infrastructure-Microsoft-Insights-on-Europes-Risk-Based-Cybersecurity-Regulations.html"
-categories: ["Security"]
-tags: ["CISO", "Company News", "Compliance", "Critical Infrastructure", "Cybersecurity", "Digital Defense Report", "DORA", "EU Regulations", "Governance", "Incident Response", "Microsoft Security", "Multifactor Authentication", "News", "NIS2", "Operational Technology", "Risk Management", "Security", "Threat Intelligence"]
-tags_normalized: ["ciso", "company news", "compliance", "critical infrastructure", "cybersecurity", "digital defense report", "dora", "eu regulations", "governance", "incident response", "microsoft security", "multifactor authentication", "news", "nis2", "operational technology", "risk management", "security", "threat intelligence"]
+permalink: /security/news/Securing-Critical-Infrastructure-Microsoft-Insights-on-Europes-Risk-Based-Cybersecurity-Regulations
+tags:
+- CISO
+- Company News
+- Compliance
+- Critical Infrastructure
+- Cybersecurity
+- Digital Defense Report
+- DORA
+- EU Regulations
+- Governance
+- Incident Response
+- Microsoft Security
+- Multifactor Authentication
+- News
+- NIS2
+- Operational Technology
+- Risk Management
+- Security
+- Threat Intelligence
+section_names:
+- security
 ---
-
 Freddy Dezeure, Deputy CISO for Europe at Microsoft, discusses how NIS2 and DORA are reshaping critical infrastructure security, offering actionable advice and risk-based strategies for cybersecurity leaders.<!--excerpt_end-->
 
 # Securing Critical Infrastructure: Microsoft Insights on Europe's Risk-Based Cybersecurity Regulations

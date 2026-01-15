@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "Your Next Secrets Leak is Hiding in AI Coding Tools"
-description: "This article explores how AI-powered coding tools are amplifying the risk of secrets leakage in DevOps pipelines, with a focus on Kubernetes and GitOps practices. Asaolu Elijah explains where exposures occur, the mechanics of AI-driven secret sprawl, and practical defense strategies for platform teams working at the intersection of AI, security, and DevOps."
-author: "Asaolu Elijah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/your-next-secrets-leak-is-hiding-in-ai-coding-tools/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Your Next Secrets Leak is Hiding in AI Coding Tools
+author: Asaolu Elijah
+canonical_url: https://devops.com/your-next-secrets-leak-is-hiding-in-ai-coding-tools/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-04 09:30:08 +00:00
-permalink: "/2025-11-04-Your-Next-Secrets-Leak-is-Hiding-in-AI-Coding-Tools.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "Automation", "Blogs", "Business Of DevOps", "CI/CD Security", "Conftest", "Contributed Content", "Credential Leakage", "DevOps", "Dynamic Secrets", "GitGuardian", "GitHub", "Gitleaks", "GitOps", "KubeCon + CloudNativeCon", "KubeCon + CloudNativeCon Europe", "KubeCon + CNC NA", "Kubernetes", "Kyverno", "MCP", "OPA", "Policy Enforcement", "Prompt Injection", "Secret Scanners", "Secret Sprawl", "Secrets", "Secrets Management", "Security", "Social Facebook", "Social LinkedIn", "Social X", "TruffleHog", "Zero Trust"]
-tags_normalized: ["ai", "ai coding tools", "automation", "blogs", "business of devops", "cislashcd security", "conftest", "contributed content", "credential leakage", "devops", "dynamic secrets", "gitguardian", "github", "gitleaks", "gitops", "kubecon plus cloudnativecon", "kubecon plus cloudnativecon europe", "kubecon plus cnc na", "kubernetes", "kyverno", "mcp", "opa", "policy enforcement", "prompt injection", "secret scanners", "secret sprawl", "secrets", "secrets management", "security", "social facebook", "social linkedin", "social x", "trufflehog", "zero trust"]
+permalink: /ai/blogs/Your-Next-Secrets-Leak-is-Hiding-in-AI-Coding-Tools
+tags:
+- AI
+- AI Coding Tools
+- Automation
+- Blogs
+- Business Of DevOps
+- CI/CD Security
+- Conftest
+- Contributed Content
+- Credential Leakage
+- DevOps
+- Dynamic Secrets
+- GitGuardian
+- GitHub
+- Gitleaks
+- GitOps
+- KubeCon + CloudNativeCon
+- KubeCon + CloudNativeCon Europe
+- KubeCon + CNC NA
+- Kubernetes
+- Kyverno
+- MCP
+- OPA
+- Policy Enforcement
+- Prompt Injection
+- Secret Scanners
+- Secret Sprawl
+- Secrets
+- Secrets Management
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- TruffleHog
+- Zero Trust
+section_names:
+- ai
+- devops
+- security
 ---
-
 Asaolu Elijah examines the surge in secrets leakage fueled by AI coding tools within DevOps workflows, outlining the primary vulnerabilities and offering actionable guidance for platform and security teams.<!--excerpt_end-->
 
 # Your Next Secrets Leak is Hiding in AI Coding Tools

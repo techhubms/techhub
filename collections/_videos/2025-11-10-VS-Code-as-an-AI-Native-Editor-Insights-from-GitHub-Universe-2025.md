@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code as an AI-Native Editor: Insights from GitHub Universe 2025"
-description: "This video delves into how Visual Studio Code is transforming into an AI-native editor, with features like local and cloud-based coding agents, advanced Copilot integrations, and updates unveiled during GitHub Universe 2025. The host explores the evolving role of agents in development workflows, highlights new tools like Mission Control, and explains how a unified agent experience reshapes coding in VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=TaTPDLl0I-Q"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code as an AI-Native Editor: Insights from GitHub Universe 2025'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=TaTPDLl0I-Q
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-10 08:00:41 +00:00
-permalink: "/2025-11-10-VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Sessions", "AI", "AI Agents", "AI Native Editor", "Cloud Development", "Coding", "Coding Workflow", "Copilot Upgrades", "Developer Tooling", "Editor Extensions", "GitHub Copilot", "GitHub Universe", "Mission Control", "Open Platform", "Videos", "VS Code"]
-tags_normalized: ["agent sessions", "ai", "ai agents", "ai native editor", "cloud development", "coding", "coding workflow", "copilot upgrades", "developer tooling", "editor extensions", "github copilot", "github universe", "mission control", "open platform", "videos", "vs code"]
+permalink: /github-copilot/videos/VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025
+tags:
+- Agent Sessions
+- AI
+- AI Agents
+- AI Native Editor
+- Cloud Development
+- Coding
+- Coding Workflow
+- Copilot Upgrades
+- Developer Tooling
+- Editor Extensions
+- GitHub Copilot
+- GitHub Universe
+- Mission Control
+- Open Platform
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code’s team, led by Pierce, explores how VS Code is evolving into an AI-native editor—highlighting new Copilot upgrades, agent APIs, and behind-the-scenes developments at GitHub Universe 2025.<!--excerpt_end-->
 
 {% youtube TaTPDLl0I-Q %}

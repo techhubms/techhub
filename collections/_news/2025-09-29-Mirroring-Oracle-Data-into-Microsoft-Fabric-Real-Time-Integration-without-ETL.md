@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL"
-description: "This news article introduces Mirroring for Oracle in Microsoft Fabric, a capability that enables organizations to continuously replicate Oracle data—on-premises or in the cloud—directly into OneLake, Fabric’s unified data lake, without ETL. It highlights technical details including supported Oracle versions, configuration requirements, real-time query integration, cross-cloud analytics, and the impact on predictive analytics and machine learning using Power BI and other Fabric tools."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 17:00:00 +00:00
-permalink: "/2025-09-29-Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cross Cloud Analytics", "Data Integration", "Data Lake", "Data Mirroring", "Data Modernization", "Data Warehouse", "ETL Replacement", "Exadata", "Google BigQuery", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Oracle Cloud Infrastructure", "Oracle Database", "Power BI", "Predictive Analytics", "Real Time Data", "Replication", "Semantic Models", "Snowflake", "SQL Server"]
-tags_normalized: ["azure", "cross cloud analytics", "data integration", "data lake", "data mirroring", "data modernization", "data warehouse", "etl replacement", "exadata", "google bigquery", "machine learning", "microsoft fabric", "ml", "news", "onelake", "oracle cloud infrastructure", "oracle database", "power bi", "predictive analytics", "real time data", "replication", "semantic models", "snowflake", "sql server"]
+permalink: /ml/news/Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL
+tags:
+- Azure
+- Cross Cloud Analytics
+- Data Integration
+- Data Lake
+- Data Mirroring
+- Data Modernization
+- Data Warehouse
+- ETL Replacement
+- Exadata
+- Google BigQuery
+- Machine Learning
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Oracle Cloud Infrastructure
+- Oracle Database
+- Power BI
+- Predictive Analytics
+- Real Time Data
+- Replication
+- Semantic Models
+- Snowflake
+- SQL Server
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog outlines how Mirroring for Oracle empowers enterprises to replicate and integrate Oracle data directly into OneLake for immediate analytics, reporting, and machine learning. This article by the Microsoft Fabric Blog emphasizes configuration details, supported scenarios, and business benefits.<!--excerpt_end-->
 
 # Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL

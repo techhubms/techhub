@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Fabric Spark Monitoring APIs Now Generally Available"
-description: "This announcement covers the production-ready release of Fabric Spark Monitoring APIs in Microsoft Fabric, introducing comprehensive observability and automation for Spark workloads. Highlights include new APIs for performance recommendations, granular resource usage metrics, filtering by application state and submitter, and new application-level configuration data for deep diagnostics and operational insight."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric Spark Monitoring APIs Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 09:00:00 +00:00
-permalink: "/2025-09-24-Fabric-Spark-Monitoring-APIs-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["APIs", "Application Diagnostics", "Automation", "Azure", "Data Engineering", "Dynamic Allocation", "Microsoft Fabric", "ML", "Monitoring", "News", "Observability", "Performance Tuning", "Resource Usage API", "Scalable Workloads", "Spark", "Spark Advisor API", "Spark Monitoring APIs", "Vcore Usage"]
-tags_normalized: ["apis", "application diagnostics", "automation", "azure", "data engineering", "dynamic allocation", "microsoft fabric", "ml", "monitoring", "news", "observability", "performance tuning", "resource usage api", "scalable workloads", "spark", "spark advisor api", "spark monitoring apis", "vcore usage"]
+permalink: /ml/news/Fabric-Spark-Monitoring-APIs-Now-Generally-Available
+tags:
+- APIs
+- Application Diagnostics
+- Automation
+- Azure
+- Data Engineering
+- Dynamic Allocation
+- Microsoft Fabric
+- ML
+- Monitoring
+- News
+- Observability
+- Performance Tuning
+- Resource Usage API
+- Scalable Workloads
+- Spark
+- Spark Advisor API
+- Spark Monitoring APIs
+- Vcore Usage
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces the Generally Available Fabric Spark Monitoring APIs, enabling granular insight, resource optimization, and advanced observability for Spark workloads on Microsoft Fabric.<!--excerpt_end-->
 
 # Fabric Spark Monitoring APIs Now Generally Available

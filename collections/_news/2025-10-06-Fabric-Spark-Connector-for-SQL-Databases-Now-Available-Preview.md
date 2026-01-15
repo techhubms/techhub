@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Fabric Spark Connector for SQL Databases Now Available (Preview)"
-description: "This article announces the availability of the Fabric Spark connector for SQL databases, enabling Spark developers and data scientists to efficiently access and work with Azure SQL Database, Azure SQL Managed Instance, Fabric SQL databases, and SQL Server in Azure VM directly from the Fabric runtime. The connector simplifies integration via a unified Spark API, supports both PySpark and Scala, and enforces advanced SQL engine security features. Authentication flexibility and seamless inclusion within the Fabric Runtime further enhance usability."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric Spark Connector for SQL Databases Now Available (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 10:12:54 +00:00
-permalink: "/2025-10-06-Fabric-Spark-Connector-for-SQL-Databases-Now-Available-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Authentication", "Azure", "Azure SQL Database", "Azure SQL Managed Instance", "Big Data", "Data Engineering", "Data Science", "Fabric Runtime", "Fabric SQL Database", "Microsoft Fabric", "ML", "News", "PySpark", "Scala", "Spark Connector", "SQL Security", "SQL Server On Azure VM"]
-tags_normalized: ["authentication", "azure", "azure sql database", "azure sql managed instance", "big data", "data engineering", "data science", "fabric runtime", "fabric sql database", "microsoft fabric", "ml", "news", "pyspark", "scala", "spark connector", "sql security", "sql server on azure vm"]
+permalink: /ml/news/Fabric-Spark-Connector-for-SQL-Databases-Now-Available-Preview
+tags:
+- Authentication
+- Azure
+- Azure SQL Database
+- Azure SQL Managed Instance
+- Big Data
+- Data Engineering
+- Data Science
+- Fabric Runtime
+- Fabric SQL Database
+- Microsoft Fabric
+- ML
+- News
+- PySpark
+- Scala
+- Spark Connector
+- SQL Security
+- SQL Server On Azure VM
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the new Fabric Spark connector for SQL databases, explaining how Spark developers and data scientists can natively access and secure data across multiple Microsoft SQL platforms.<!--excerpt_end-->
 
 # Fabric Spark Connector for SQL Databases (Preview)

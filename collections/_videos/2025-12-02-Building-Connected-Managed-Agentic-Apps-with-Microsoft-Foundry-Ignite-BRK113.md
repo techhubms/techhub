@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)"
-description: "This Microsoft Ignite session explores Microsoft Foundry, a unified platform designed for building, deploying, and managing production-ready agentic AI applications. Speakers demonstrate how Foundry enables developers to create scalable AI agents with real-time business context, code-based workflows, custom tools integration, business process automation, and robust governance features. Key demonstrations include code-based agent creation using Python, AI Gateway policy management, and practical client implementations by KPMG."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ThGXQlnS8Lo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ThGXQlnS8Lo
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-02 20:30:27 +00:00
-permalink: "/2025-12-02-Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Applications", "AI", "AI Agents", "AI Gateway", "AI Governance", "AI Platform", "Azure", "Azure AI", "BRK113", "Business Process Automation", "Code Based Workflows", "Connected Managed And Complete Agentic Apps With Microsoft Foundry | BRK113", "English (us)", "Enterprise AI", "F5n1", "Ignite", "Innovate With Azure AI Apps And Agents", "Innovate With Azure AI Apps And Agents:microsoft Foundry", "KPMG", "Microsoft", "Microsoft Foundry", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Python", "Real Time Business Context", "Videos"]
-tags_normalized: ["agentic applications", "ai", "ai agents", "ai gateway", "ai governance", "ai platform", "azure", "azure ai", "brk113", "business process automation", "code based workflows", "connected managed and complete agentic apps with microsoft foundry pipe brk113", "english us", "enterprise ai", "f5n1", "ignite", "innovate with azure ai apps and agents", "innovate with azure ai apps and agentsmicrosoft foundry", "kpmg", "microsoft", "microsoft foundry", "microsoft ignite", "ms ignite", "msft ignite", "python", "real time business context", "videos"]
+permalink: /ai/videos/Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113
+tags:
+- Agentic Applications
+- AI
+- AI Agents
+- AI Gateway
+- AI Governance
+- AI Platform
+- Azure
+- Azure AI
+- BRK113
+- Business Process Automation
+- Code Based Workflows
+- Connected Managed And Complete Agentic Apps With Microsoft Foundry | BRK113
+- English (us)
+- Enterprise AI
+- F5n1
+- Ignite
+- Innovate With Azure AI Apps And Agents
+- Innovate With Azure AI Apps And Agents:microsoft Foundry
+- KPMG
+- Microsoft
+- Microsoft Foundry
+- Microsoft Ignite
+- Ms Ignite
+- Msft Ignite
+- Python
+- Real Time Business Context
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Presented by Microsoft Events, this Ignite session, featuring Robert Finlayson, Shawn Henry, Mike Hulme, and Balan Subramanian, demonstrates how Microsoft Foundry empowers developers to build, integrate, and govern scalable agentic AI applications.<!--excerpt_end-->
 
 {% youtube ThGXQlnS8Lo %}

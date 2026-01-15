@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Azure Functions on Azure Container Apps: The Unified Platform for Event-Driven and Finite Workloads"
-description: "This article by DeepGanguly offers a deep dive into the integration of Azure Functions with Azure Container Apps, examining the architecture, deployment models, and key scenarios such as scheduled tasks, batch processing, event-driven workloads, machine learning inference, and CI/CD runners. It covers advanced features including GPU workloads, stateful workflows with Durable Functions, scalable web API endpoints, and microservices patterns using Dapr. The guide is aimed at developers and architects seeking to leverage Microsoft’s serverless and containerization capabilities for sophisticated cloud-native solutions."
-author: "DeepGanguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4467698"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Functions on Azure Container Apps: The Unified Platform for Event-Driven and Finite Workloads'
+author: DeepGanguly
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4467698
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 05:04:27 +00:00
-permalink: "/2025-11-26-Azure-Functions-on-Azure-Container-Apps-The-Unified-Platform-for-Event-Driven-and-Finite-Workloads.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
-tags: ["AI", "Azure", "Azure Container Apps", "Azure Functions", "Batch Processing", "Blob Trigger", "Blue/Green Deployment", "CI/CD", "Coding", "Community", "Dapr", "DevOps", "Durable Functions", "Event Driven Architecture", "Event Hubs", "FaaS", "GPU Workloads", "HTTP Trigger", "Ingress", "Machine Learning Inference", "Microservices", "ML", "Queue Trigger", "Serverless", "Service Bus", "Timer Trigger", "Traffic Splitting"]
-tags_normalized: ["ai", "azure", "azure container apps", "azure functions", "batch processing", "blob trigger", "blueslashgreen deployment", "cislashcd", "coding", "community", "dapr", "devops", "durable functions", "event driven architecture", "event hubs", "faas", "gpu workloads", "http trigger", "ingress", "machine learning inference", "microservices", "ml", "queue trigger", "serverless", "service bus", "timer trigger", "traffic splitting"]
+permalink: /ai/community/Azure-Functions-on-Azure-Container-Apps-The-Unified-Platform-for-Event-Driven-and-Finite-Workloads
+tags:
+- AI
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Batch Processing
+- Blob Trigger
+- Blue/Green Deployment
+- CI/CD
+- Coding
+- Community
+- Dapr
+- DevOps
+- Durable Functions
+- Event Driven Architecture
+- Event Hubs
+- FaaS
+- GPU Workloads
+- HTTP Trigger
+- Ingress
+- Machine Learning Inference
+- Microservices
+- ML
+- Queue Trigger
+- Serverless
+- Service Bus
+- Timer Trigger
+- Traffic Splitting
+section_names:
+- ai
+- azure
+- coding
+- devops
+- ml
 ---
-
 DeepGanguly explores how developers can reliably deploy Azure Functions on Azure Container Apps for event-driven and finite workloads, highlighting advanced scenarios from batch processing to machine learning and CI/CD automation.<!--excerpt_end-->
 
 # Azure Functions on Azure Container Apps: The Unified Platform for Event-Driven and Finite Workloads

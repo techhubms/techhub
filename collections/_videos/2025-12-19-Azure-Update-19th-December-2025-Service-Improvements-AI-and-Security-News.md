@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Update - 19th December 2025: Service Improvements, AI, and Security News"
-description: "This episode of John Savill's Technical Training delivers a roundup of notable Azure updates, including Service Bus trigger improvements, advanced ransomware protection, ASM storage features, Azure SQL DB enhancements, and highlights in Cosmos DB reliability. The update also covers the latest in Azure AI models and service reliability engineering, with a festive twist."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mk6vwol-Za0"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update - 19th December 2025: Service Improvements, AI, and Security News'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=mk6vwol-Za0
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-19 15:51:48 +00:00
-permalink: "/2025-12-19-Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "ASM Blob Storage", "Azure", "Azure AI", "Azure Cloud", "Azure NetApp Files", "Azure SQL Database", "Azure Updates", "Cloud", "Cloud Security", "Cosmos DB", "Foundry", "GPT 4 Vision", "Microsoft", "Microsoft Azure", "Ransomware Protection", "Security", "Serverless", "Service Bus Trigger", "SRE", "Videos", "Voice Models"]
-tags_normalized: ["ai", "asm blob storage", "azure", "azure ai", "azure cloud", "azure netapp files", "azure sql database", "azure updates", "cloud", "cloud security", "cosmos db", "foundry", "gpt 4 vision", "microsoft", "microsoft azure", "ransomware protection", "security", "serverless", "service bus trigger", "sre", "videos", "voice models"]
+permalink: /ai/videos/Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News
+tags:
+- AI
+- ASM Blob Storage
+- Azure
+- Azure AI
+- Azure Cloud
+- Azure NetApp Files
+- Azure SQL Database
+- Azure Updates
+- Cloud
+- Cloud Security
+- Cosmos DB
+- Foundry
+- GPT 4 Vision
+- Microsoft
+- Microsoft Azure
+- Ransomware Protection
+- Security
+- Serverless
+- Service Bus Trigger
+- SRE
+- Videos
+- Voice Models
+section_names:
+- ai
+- azure
+- security
 ---
-
 John Savill presents the Azure Update for December 19th, 2025, covering recent Azure features, security enhancements, and new AI developments. This video, infused with holiday spirit, guides you through key improvements and what's new in the Azure ecosystem.<!--excerpt_end-->
 
 {% youtube mk6vwol-Za0 %}

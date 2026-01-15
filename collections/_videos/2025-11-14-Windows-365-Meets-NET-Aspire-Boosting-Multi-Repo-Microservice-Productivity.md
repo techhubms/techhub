@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity"
-description: "This session demonstrates how Windows 365 engineering teams leverage .NET Aspire to streamline multi-repository microservices development. It covers the AddMicroservice and RunAsEmulator extensions, approaches to local testing, and showcases productivity improvements through practical demonstrations relevant to cloud-native engineering teams."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=p_zslgBi06k"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=p_zslgBi06k
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 05:00:06 +00:00
-permalink: "/2025-11-14-Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET Aspire", "AddMicroservice Extension", "Cloud Native", "Coding", "DevOps", "Engineering Productivity", "F5 Development", "HTTP File Templates", "Local Testing", "Microservice Emulator", "Microservices", "Multi Repository", "Onboarding", "RunAsEmulator Extension", "Seed Data", "Videos", "Windows 365"]
-tags_normalized: ["dotnet aspire", "addmicroservice extension", "cloud native", "coding", "devops", "engineering productivity", "f5 development", "http file templates", "local testing", "microservice emulator", "microservices", "multi repository", "onboarding", "runasemulator extension", "seed data", "videos", "windows 365"]
+permalink: /coding/videos/Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity
+tags:
+- .NET Aspire
+- AddMicroservice Extension
+- Cloud Native
+- Coding
+- DevOps
+- Engineering Productivity
+- F5 Development
+- HTTP File Templates
+- Local Testing
+- Microservice Emulator
+- Microservices
+- Multi Repository
+- Onboarding
+- RunAsEmulator Extension
+- Seed Data
+- Videos
+- Windows 365
+section_names:
+- coding
+- devops
 ---
-
 dotnet presents a .NET Conf 2025 session on how Windows 365 uses .NET Aspire and supporting extensions to enhance productivity and collaboration in multi-repo microservice engineering environments.<!--excerpt_end-->
 
 {% youtube p_zslgBi06k %}

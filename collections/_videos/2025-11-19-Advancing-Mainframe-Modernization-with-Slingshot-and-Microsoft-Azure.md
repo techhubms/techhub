@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Advancing Mainframe Modernization with Slingshot and Microsoft Azure"
-description: "This session from Microsoft Ignite 2025 explores an AI-powered modernization project for a major US health company. The initiative combined Sapient Slingshot, AI-driven tools, and Microsoft's Azure platform to migrate legacy COBOL systems to cloud infrastructure. Key aspects include a two-step modernization process, new system architecture leveraging FastAPIs, and significant efficiency improvements—achieving migrations three times faster than traditional methods."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8An3LobkPxI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Advancing Mainframe Modernization with Slingshot and Microsoft Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=8An3LobkPxI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:17:27 +00:00
-permalink: "/2025-11-19-Advancing-Mainframe-Modernization-with-Slingshot-and-Microsoft-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Powered Migration", "Azure", "Azure Infrastructure", "Cloud Transformation", "COBOL Migration", "Efficiency Gains", "FastAPI", "Healthcare Technology", "Legacy Systems", "Mainframe Modernization", "Microsoft Azure", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Modernization Process", "MSIgnite", "Sapient Slingshot", "Slingshot", "System Architecture", "Technical Specification", "Videos"]
-tags_normalized: ["ai", "ai powered migration", "azure", "azure infrastructure", "cloud transformation", "cobol migration", "efficiency gains", "fastapi", "healthcare technology", "legacy systems", "mainframe modernization", "microsoft azure", "microsoft ignite", "migrateandmodernizeyourestate", "modernization process", "msignite", "sapient slingshot", "slingshot", "system architecture", "technical specification", "videos"]
+permalink: /ai/videos/Advancing-Mainframe-Modernization-with-Slingshot-and-Microsoft-Azure
+tags:
+- AI
+- AI Powered Migration
+- Azure
+- Azure Infrastructure
+- Cloud Transformation
+- COBOL Migration
+- Efficiency Gains
+- FastAPI
+- Healthcare Technology
+- Legacy Systems
+- Mainframe Modernization
+- Microsoft Azure
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Modernization Process
+- MSIgnite
+- Sapient Slingshot
+- Slingshot
+- System Architecture
+- Technical Specification
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a session highlighting how Thanumoorthy Sundaresan and John Weston leveraged AI, Sapient Slingshot, and Azure to transform legacy mainframe systems for a US health company.<!--excerpt_end-->
 
 {% youtube 8An3LobkPxI %}

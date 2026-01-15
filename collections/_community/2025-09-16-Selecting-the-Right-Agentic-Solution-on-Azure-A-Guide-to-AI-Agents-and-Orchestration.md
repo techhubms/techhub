@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Selecting the Right Agentic Solution on Azure: A Guide to AI Agents and Orchestration"
-description: "This detailed community guide by pranabpaul helps consultants, architects, and developers understand the available Azure-native tools and frameworks for building and orchestrating agentic (AI-driven) solutions. It presents options such as Azure AI Agent Service, Azure Logic Apps, and open-source orchestrators, comparing their features, deployment models, and key considerations for integrating agents using Microsoft’s rapidly evolving AI ecosystem."
-author: "pranabpaul"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Selecting the Right Agentic Solution on Azure: A Guide to AI Agents and Orchestration'
+author: pranabpaul
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 00:07:04 +00:00
-permalink: "/2025-09-16-Selecting-the-Right-Agentic-Solution-on-Azure-A-Guide-to-AI-Agents-and-Orchestration.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Infrastructure", "Agent Orchestration", "AI", "AI Workflow", "AKS", "App Service", "AutoGen", "Azure", "Azure AI Agent Service", "Azure AI Foundry", "Azure Logic Apps", "Azure OpenAI Service", "C#", "CI/CD", "Community", "Java", "Knowledge Base Integration", "MS Entra ID", "Python", "Role Based Access Control", "Semantic Kernel"]
-tags_normalized: ["agent infrastructure", "agent orchestration", "ai", "ai workflow", "aks", "app service", "autogen", "azure", "azure ai agent service", "azure ai foundry", "azure logic apps", "azure openai service", "csharp", "cislashcd", "community", "java", "knowledge base integration", "ms entra id", "python", "role based access control", "semantic kernel"]
+permalink: /ai/community/Selecting-the-Right-Agentic-Solution-on-Azure-A-Guide-to-AI-Agents-and-Orchestration
+tags:
+- Agent Infrastructure
+- Agent Orchestration
+- AI
+- AI Workflow
+- AKS
+- App Service
+- AutoGen
+- Azure
+- Azure AI Agent Service
+- Azure AI Foundry
+- Azure Logic Apps
+- Azure OpenAI Service
+- C#
+- CI/CD
+- Community
+- Java
+- Knowledge Base Integration
+- MS Entra ID
+- Python
+- Role Based Access Control
+- Semantic Kernel
+section_names:
+- ai
+- azure
 ---
-
 pranabpaul explores Azure-focused approaches for building, deploying, and orchestrating AI agentic solutions, comparing Azure AI Agent Service, Logic Apps, and developer-oriented agent orchestration frameworks.<!--excerpt_end-->
 
 # Selecting the Right Agentic Solution on Azure: A Guide to AI Agents and Orchestration

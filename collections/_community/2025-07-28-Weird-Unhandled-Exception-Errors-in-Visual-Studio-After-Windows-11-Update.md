@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Weird Unhandled Exception Errors in Visual Studio After Windows 11 Update"
-description: "An author describes persistent unhandled exception errors when running a project from Visual Studio after updating to Windows 11. Build succeeds and running from the terminal works, but errors appear only when using Visual Studio. The author tried various updates and extensions with no lasting fix."
-author: "Quiet_Equivalent_569"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1mb6app/weird_unhandled_exception_errors_after_windows_11/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+layout: post
+title: Weird Unhandled Exception Errors in Visual Studio After Windows 11 Update
+author: Quiet_Equivalent_569
+canonical_url: https://www.reddit.com/r/VisualStudio/comments/1mb6app/weird_unhandled_exception_errors_after_windows_11/
+viewing_mode: external
+feed_name: Reddit Visual Studio
+feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-28 03:59:23 +00:00
-permalink: "/2025-07-28-Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update.html"
-categories: ["Coding"]
-tags: [".NET", "Build Error", "Coding", "Community", "Debugging", "Development Environment", "Framework", "Project Upgrade", "SDK", "Unhandled Exception", "VS", "Windows 11"]
-tags_normalized: ["dotnet", "build error", "coding", "community", "debugging", "development environment", "framework", "project upgrade", "sdk", "unhandled exception", "vs", "windows 11"]
+permalink: /coding/community/Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update
+tags:
+- .NET
+- Build Error
+- Coding
+- Community
+- Debugging
+- Development Environment
+- Framework
+- Project Upgrade
+- SDK
+- Unhandled Exception
+- VS
+- Windows 11
+section_names:
+- coding
 ---
-
 Quiet_Equivalent_569 details an issue with unhandled exceptions in Visual Studio after a Windows 11 update, looking for troubleshooting advice.<!--excerpt_end-->
 
 ## Overview

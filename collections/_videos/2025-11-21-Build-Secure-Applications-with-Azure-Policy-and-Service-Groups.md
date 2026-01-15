@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Build Secure Applications with Azure Policy and Service Groups"
-description: "This session from Microsoft Ignite 2025 covers building secure applications in the cloud using Azure Policy and Service Groups. Attendees learn how to enforce organizational standards, remediate non-compliant resources, and maintain compliance at scale in Azure environments. The content includes an explanation of Service Groups for simplifying policy management across diverse workloads (Windows, Linux, databases), introduces intelligent governance with LLM-assisted Azure Policy creation, showcases Copilot's automation for tagging and membership, and covers security best practices adopted internally at Microsoft. The session is aimed at practitioners seeking practical ways to automate and strengthen security governance in Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hLBiJZT194A"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Build Secure Applications with Azure Policy and Service Groups
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=hLBiJZT194A
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:19:24 +00:00
-permalink: "/2025-11-21-Build-Secure-Applications-with-Azure-Policy-and-Service-Groups.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Azure Policy", "Cloud Security", "Compliance", "Copilot Automation", "Database Security", "Linux", "LLM Assisted Policy Creation", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Resource Management", "Secure By Default", "Security", "Security Governance", "Service Groups", "Videos", "Windows Workloads"]
-tags_normalized: ["ai", "azure", "azure policy", "cloud security", "compliance", "copilot automation", "database security", "linux", "llm assisted policy creation", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "resource management", "secure by default", "security", "security governance", "service groups", "videos", "windows workloads"]
+permalink: /ai/videos/Build-Secure-Applications-with-Azure-Policy-and-Service-Groups
+tags:
+- AI
+- Azure
+- Azure Policy
+- Cloud Security
+- Compliance
+- Copilot Automation
+- Database Security
+- Linux
+- LLM Assisted Policy Creation
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Resource Management
+- Secure By Default
+- Security
+- Security Governance
+- Service Groups
+- Videos
+- Windows Workloads
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an Ignite 2025 session featuring Jodi Boone and Kemley Nieva, exploring how Azure Policy and Service Groups can automate security governance and compliance across cloud applications.<!--excerpt_end-->
 
 {% youtube hLBiJZT194A %}

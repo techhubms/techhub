@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Supercharge TM Forum Open API Development with GitHub Copilot"
-description: "This in-depth community post demonstrates how GitHub Copilot can accelerate development of TM Forum (TMF) Open API-based applications. It covers prerequisites, setup steps, integrating Copilot in Visual Studio Code, workflow examples for building REST APIs using TMF specifications, and productivity best practices. Real-world telco productivity gains and advanced Copilot capabilities like Agent Mode and Copilot Chat are highlighted, equipping telecom developers to rapidly implement industry-standard solutions with AI assistance while maintaining code quality and compliance."
-author: "6192751"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Supercharge TM Forum Open API Development with GitHub Copilot
+author: 6192751
+canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 13:42:07 +00:00
-permalink: "/2025-09-09-Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Coding Assistant", "API Development", "Coding", "Community", "Copilot Chat", "Developer Productivity", "Express", "GitHub Copilot", "Node.js", "OpenAPI Specification", "REST API", "Software Engineering Best Practices", "Telecommunications", "Test Automation", "TM Forum Open API", "TMF629", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai coding assistant", "api development", "coding", "community", "copilot chat", "developer productivity", "express", "github copilot", "nodedotjs", "openapi specification", "rest api", "software engineering best practices", "telecommunications", "test automation", "tm forum open api", "tmf629", "vs code"]
+permalink: /github-copilot/community/Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot
+tags:
+- Agent Mode
+- AI
+- AI Coding Assistant
+- API Development
+- Coding
+- Community
+- Copilot Chat
+- Developer Productivity
+- Express
+- GitHub Copilot
+- Node.js
+- OpenAPI Specification
+- REST API
+- Software Engineering Best Practices
+- Telecommunications
+- Test Automation
+- TM Forum Open API
+- TMF629
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 6192751 explains how telecom developers can use GitHub Copilot to quickly create TM Forum Open API-compliant applications, from setup to real-world workflow and testing guidance.<!--excerpt_end-->
 
 # Supercharge TM Forum Open API Development with GitHub Copilot

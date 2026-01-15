@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Semantic Kernel and Microsoft Agent Framework: Evolution and Future Support"
-description: "This announcement explains the launch of Microsoft Agent Framework, its position as the successor to Semantic Kernel, and guidance for developers regarding migration, ongoing support, and future plans for both Semantic Kernel and Microsoft Agent Framework. It clarifies Microsoft's roadmap for agentic AI development within the Azure and broader Microsoft ecosystems, including platform support and migration resources."
-author: "Shawn Henry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: 'Semantic Kernel and Microsoft Agent Framework: Evolution and Future Support'
+author: Shawn Henry
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/
+viewing_mode: external
+feed_name: Microsoft Semantic Kernel Blog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-10-08 06:51:06 +00:00
-permalink: "/2025-10-08-Semantic-Kernel-and-Microsoft-Agent-Framework-Evolution-and-Future-Support.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic AI", "AI", "AI Agents", "AI Application Development", "AI Framework", "AutoGen", "Azure", "Azure AI", "C#", "Coding", "Community Support", "Enterprise AI", "Microsoft Agent Framework", "Migration", "News", "Open Source", "Python", "Semantic Kernel"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "ai agents", "ai application development", "ai framework", "autogen", "azure", "azure ai", "csharp", "coding", "community support", "enterprise ai", "microsoft agent framework", "migration", "news", "open source", "python", "semantic kernel"]
+permalink: /ai/news/Semantic-Kernel-and-Microsoft-Agent-Framework-Evolution-and-Future-Support
+tags:
+- .NET
+- Agentic AI
+- AI
+- AI Agents
+- AI Application Development
+- AI Framework
+- AutoGen
+- Azure
+- Azure AI
+- C#
+- Coding
+- Community Support
+- Enterprise AI
+- Microsoft Agent Framework
+- Migration
+- News
+- Open Source
+- Python
+- Semantic Kernel
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Shawn Henry outlines the launch of Microsoft Agent Framework as the new foundation for building AI agents, describes its relationship to Semantic Kernel, and provides support and migration guidance for developers.<!--excerpt_end-->
 
 # Semantic Kernel and Microsoft Agent Framework

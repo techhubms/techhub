@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Secure the Modern Enterprise with Varonis and Microsoft Integration"
-description: "This Microsoft Ignite session, presented by Brian Vecci and Microsoft Events, demonstrates how Varonis integrates with Microsoft technologies to enhance enterprise data security. The session focuses on protecting sensitive information, mitigating risk, and supporting AI-driven outcomes, showcasing a live demo and real-world strategies for monitoring data, managing permissions, and enabling security across diverse environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QF3AmEpEabc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Secure the Modern Enterprise with Varonis and Microsoft Integration
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=QF3AmEpEabc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:51:47 +00:00
-permalink: "/2025-11-21-Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Asset Explorer", "Cloud Integration", "Data Governance", "Data Monitoring", "Data Permissions", "Data Security Demo", "Enterprise Security", "Identity Management", "Microsoft Ignite", "MSIgnite", "Observability", "Risk Management", "Salesforce", "Security", "Sensitive Data Protection", "Varonis", "Videos"]
-tags_normalized: ["ai", "ai security", "asset explorer", "cloud integration", "data governance", "data monitoring", "data permissions", "data security demo", "enterprise security", "identity management", "microsoft ignite", "msignite", "observability", "risk management", "salesforce", "security", "sensitive data protection", "varonis", "videos"]
+permalink: /ai/videos/Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration
+tags:
+- AI
+- AI Security
+- Asset Explorer
+- Cloud Integration
+- Data Governance
+- Data Monitoring
+- Data Permissions
+- Data Security Demo
+- Enterprise Security
+- Identity Management
+- Microsoft Ignite
+- MSIgnite
+- Observability
+- Risk Management
+- Salesforce
+- Security
+- Sensitive Data Protection
+- Varonis
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events, featuring Brian Vecci, delivers a practical demo at Microsoft Ignite showing how Varonis and Microsoft collaborate to secure enterprise data, manage risk, and support AI-powered solutions.<!--excerpt_end-->
 
 {% youtube QF3AmEpEabc %}

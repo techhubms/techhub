@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Apache Airflow Job File Management APIs for Fabric Data Factory"
-description: "This news post introduces the Apache Airflow Job File Management APIs, detailing how they enable programmatic control over Airflow DAG files within Microsoft Fabric Data Factory environments. It highlights new endpoints for uploading, updating, listing, and securing job files, supporting dynamic workflow updates, compliance, and error recovery for data engineering teams."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-apache-airflow-job-file-management-apis/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Apache Airflow Job File Management APIs for Fabric Data Factory
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-apache-airflow-job-file-management-apis/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 09:30:00 +00:00
-permalink: "/2025-11-20-Apache-Airflow-Job-File-Management-APIs-for-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Airflow", "API Endpoints", "Audit Trails", "Automation", "Azure", "DAG Management", "Data Engineering", "Error Recovery", "Fabric Data Factory", "Job File Management", "Microsoft Fabric", "ML", "News", "Observability", "Role Based Access Control", "Service Oriented Architecture", "Task Execution", "Workflow Orchestration"]
-tags_normalized: ["apache airflow", "api endpoints", "audit trails", "automation", "azure", "dag management", "data engineering", "error recovery", "fabric data factory", "job file management", "microsoft fabric", "ml", "news", "observability", "role based access control", "service oriented architecture", "task execution", "workflow orchestration"]
+permalink: /ml/news/Apache-Airflow-Job-File-Management-APIs-for-Fabric-Data-Factory
+tags:
+- Apache Airflow
+- API Endpoints
+- Audit Trails
+- Automation
+- Azure
+- DAG Management
+- Data Engineering
+- Error Recovery
+- Fabric Data Factory
+- Job File Management
+- Microsoft Fabric
+- ML
+- News
+- Observability
+- Role Based Access Control
+- Service Oriented Architecture
+- Task Execution
+- Workflow Orchestration
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces new File Management APIs for Apache Airflow Jobs, enabling developers to programmatically manage DAG files and automate data workflows within the Fabric Data Factory platform.<!--excerpt_end-->
 
 # Apache Airflow Job File Management APIs for Fabric Data Factory

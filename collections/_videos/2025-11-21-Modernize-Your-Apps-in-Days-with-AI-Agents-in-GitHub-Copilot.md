@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Modernize Your Apps in Days with AI Agents in GitHub Copilot"
-description: "This session from Microsoft Ignite 2025 explores how AI agents within GitHub Copilot, combined with Azure services, streamline the modernization of legacy apps. The presentation covers .NET support, containerization, migration processes, developer workflows, code upgrade automation, integration with Azure Migrate, and leveraging Azure OpenAI to accelerate app transformation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=j8tOnA7GcZw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Modernize Your Apps in Days with AI Agents in GitHub Copilot
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=j8tOnA7GcZw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:07:34 +00:00
-permalink: "/2025-11-21-Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Framework", "AI", "AI Agents", "Application Upgrade", "Azure", "Azure Migrate", "Azure OpenAI", "Cloud Migration", "Coding", "Containerization", "Database Migration", "Developer Workflows", "DevOps", "GitHub Copilot", "IntelliJ", "Legacy Apps", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Oracle To PostgreSQL", "Pull Request Automation", "Videos"]
-tags_normalized: ["dotnet framework", "ai", "ai agents", "application upgrade", "azure", "azure migrate", "azure openai", "cloud migration", "coding", "containerization", "database migration", "developer workflows", "devops", "github copilot", "intellij", "legacy apps", "migrateandmodernizeyourestate", "modernization", "msignite", "oracle to postgresql", "pull request automation", "videos"]
+permalink: /github-copilot/videos/Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot
+tags:
+- .NET Framework
+- AI
+- AI Agents
+- Application Upgrade
+- Azure
+- Azure Migrate
+- Azure OpenAI
+- Cloud Migration
+- Coding
+- Containerization
+- Database Migration
+- Developer Workflows
+- DevOps
+- GitHub Copilot
+- IntelliJ
+- Legacy Apps
+- Migrateandmodernizeyourestate
+- Modernization
+- MSIgnite
+- Oracle To PostgreSQL
+- Pull Request Automation
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Events presents a Microsoft Ignite 2025 session with Scott Hunter, Timothy Ng, and Kalpesh Sharma, focusing on rapid app modernization using AI agents in GitHub Copilot and Azure services.<!--excerpt_end-->
 
 {% youtube j8tOnA7GcZw %}

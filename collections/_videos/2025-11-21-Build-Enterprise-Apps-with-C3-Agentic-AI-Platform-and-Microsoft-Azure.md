@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Build Enterprise Apps with C3 Agentic AI Platform and Microsoft Azure"
-description: "This session, led by Adrian Rami at C3 AI during Microsoft Ignite 2025, demonstrates how to rapidly create enterprise AI apps on the C3 Agentic AI Platform, which is built on Microsoft Azure and integrates with Microsoft Fabric. The demo covers both low-code (Application Canvas) and full-code (Visual Studio Code) approaches, showcasing the full lifecycle: defining goals in natural language, instant app generation, code refinement, secure deployment, workflow building, agent integration, dashboard creation, and robust governance with versioning and observability. The presentation highlights how Microsoft technologies underpin the platform’s unified data architecture, while also touching on integrated agent builders and Copilot-style collaboration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xRApEkWYsq4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Build Enterprise Apps with C3 Agentic AI Platform and Microsoft Azure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=xRApEkWYsq4
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:49:52 +00:00
-permalink: "/2025-11-21-Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "App Deployment", "Application Canvas", "Azure", "C3 Agentic AI Platform", "Coding", "Copilot Collaboration", "Dashboarding", "Enterprise AI", "Governance", "Low Code Development", "Microsoft Fabric", "Microsoft Ignite", "MSIgnite", "Observability", "Versioning", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "app deployment", "application canvas", "azure", "c3 agentic ai platform", "coding", "copilot collaboration", "dashboarding", "enterprise ai", "governance", "low code development", "microsoft fabric", "microsoft ignite", "msignite", "observability", "versioning", "videos", "vs code", "workflow automation"]
+permalink: /ai/videos/Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure
+tags:
+- AI
+- AI Agents
+- App Deployment
+- Application Canvas
+- Azure
+- C3 Agentic AI Platform
+- Coding
+- Copilot Collaboration
+- Dashboarding
+- Enterprise AI
+- Governance
+- Low Code Development
+- Microsoft Fabric
+- Microsoft Ignite
+- MSIgnite
+- Observability
+- Versioning
+- Videos
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Events presents Adrian Rami’s demo at Ignite, showcasing how to build enterprise AI applications on the C3 Agentic AI Platform with Microsoft Azure and Fabric, using both low-code and full-code workflows.<!--excerpt_end-->
 
 {% youtube xRApEkWYsq4 %}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Introducing the Awesome GitHub Copilot Customizations Repo"
-description: "Microsoft announces the community-driven Awesome GitHub Copilot Customizations repo, featuring custom instructions, reusable prompts, and custom chat modes. The resource enables developers to tailor GitHub Copilot for improved productivity across editors and encourages community contributions for continuous growth and sharing of best practices."
-author: "Matt Soucoup, Aaron Powell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/introducing-awesome-github-copilot-customizations-repo"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: Introducing the Awesome GitHub Copilot Customizations Repo
+author: Matt Soucoup, Aaron Powell
+canonical_url: https://devblogs.microsoft.com/blog/introducing-awesome-github-copilot-customizations-repo
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-02 17:30:59 +00:00
-permalink: "/2025-07-02-Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Code Review", "Coding", "Community Driven", "Custom Chat Modes", "Custom Instructions", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP Server", "Microsoft", "News", "Next.js", "PostgreSQL", "Prompt Engineering", "Reusable Prompts", "Tailwind CSS", "VS Code", "Workflow Customization"]
-tags_normalized: ["agent mode", "ai", "code review", "coding", "community driven", "custom chat modes", "custom instructions", "developer productivity", "devops", "github copilot", "mcp server", "microsoft", "news", "nextdotjs", "postgresql", "prompt engineering", "reusable prompts", "tailwind css", "vs code", "workflow customization"]
+permalink: /github-copilot/news/Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo
+tags:
+- Agent Mode
+- AI
+- Code Review
+- Coding
+- Community Driven
+- Custom Chat Modes
+- Custom Instructions
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- MCP Server
+- Microsoft
+- News
+- Next.js
+- PostgreSQL
+- Prompt Engineering
+- Reusable Prompts
+- Tailwind CSS
+- VS Code
+- Workflow Customization
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Matt Soucoup and Aaron Powell present the Awesome GitHub Copilot Customizations repo, empowering developers to extend Copilot through reusable prompts, custom instructions, and chat modes for personalized AI-powered coding workflows.<!--excerpt_end-->
 
 # Introducing the Awesome GitHub Copilot Customizations Repo
@@ -129,23 +149,6 @@ Reusable prompts enable you or your team to:
 ```markdown
 --- mode: agent
 tools: ['githubRepo', ...]
-description: "List my pull requests in the current repository" ---
-
-Search the current repo ... list any pull requests assigned to me. ...
-Describe the purpose and details ...
-Highlight if a PR is pending review ...
-Suggest fixes for any check failures ...
-Offer to request Copilot review if not done.
-```
-
-**Usage:**
-
-- Run with a slash command: `/my-pull-requests`
-- In Visual Studio: `#prompt:my-pull-requests`
-
-**Note:** The [GitHub MCP server](https://docs.github.com/en/copilot/how-tos/context/model-context-protocol/using-the-github-mcp-server) is required for certain prompt functionalities, but most reusable prompts work without it.
-
-[See available prompts](https://github.com/github/awesome-copilot?tab=readme-ov-file#-reusable-prompts).
 
 ---
 

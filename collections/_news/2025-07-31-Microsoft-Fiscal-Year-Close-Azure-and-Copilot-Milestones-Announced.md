@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced"
-description: "This news post highlights Microsoft's strong close to its fiscal year, as shared by Satya Nadella. Major takeaways include Azure surpassing $75 billion in annual revenue, rapid growth in Copilot adoption with over 100 million monthly active users, key updates to M365 Copilot, expansion of GitHub Copilot for developers, and significant momentum with Azure Foundry and AI platform diffusion."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced'
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 01:44:00 +00:00
-permalink: "/2025-07-31-Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI", "Azure Foundry", "Cloud Adoption", "Cloud Revenue", "Company News", "Enterprise AI", "LinkedIn Post", "M365 Copilot", "Microsoft", "Microsoft Copilot", "News", "Platform Diffusion", "Project Red Dog", "Satya Nadella"]
-tags_normalized: ["ai", "azure", "azure ai", "azure foundry", "cloud adoption", "cloud revenue", "company news", "enterprise ai", "linkedin post", "m365 copilot", "microsoft", "microsoft copilot", "news", "platform diffusion", "project red dog", "satya nadella"]
+permalink: /ai/news/Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced
+tags:
+- AI
+- Azure
+- Azure AI
+- Azure Foundry
+- Cloud Adoption
+- Cloud Revenue
+- Company News
+- Enterprise AI
+- LinkedIn Post
+- M365 Copilot
+- Microsoft
+- Microsoft Copilot
+- News
+- Platform Diffusion
+- Project Red Dog
+- Satya Nadella
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella shares key Microsoft fiscal year achievements, highlighting Azure's record revenue and major growth in Copilot AI usage across the Microsoft ecosystem.<!--excerpt_end-->
 
 # Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced

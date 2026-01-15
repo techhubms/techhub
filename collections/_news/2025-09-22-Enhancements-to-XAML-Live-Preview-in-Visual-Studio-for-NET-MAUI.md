@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhancements to XAML Live Preview in Visual Studio for .NET MAUI"
-description: "This article highlights the latest improvements to the XAML Live Preview feature in Visual Studio 2022 version 17.14, specifically for .NET MAUI developers. Design-time access to Live Preview now streamlines XAML UI development, supporting real-time editing with Hot Reload, element navigation, and tools for layout inspection. Integration with GitHub Copilot and Copilot Vision further accelerates manual and AI-assisted XAML authoring, with support for Android emulators and multiple Visual Studio releases."
-author: "Rachel Kang (SHE/HER)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Enhancements to XAML Live Preview in Visual Studio for .NET MAUI
+author: Rachel Kang (SHE/HER)
+canonical_url: https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-22 17:26:51 +00:00
-permalink: "/2025-09-22-Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Android Emulator Support", "Coding", "Copilot Vision", "Cross Platform UI", "Design Time", "Element Inspection", "GitHub Copilot", "Hot Reload", "IDE Tools", "Live Preview", "MAUI", "News", "UI Prototyping", "VS", "XAML"]
-tags_normalized: ["ai", "ai assisted coding", "android emulator support", "coding", "copilot vision", "cross platform ui", "design time", "element inspection", "github copilot", "hot reload", "ide tools", "live preview", "maui", "news", "ui prototyping", "vs", "xaml"]
+permalink: /github-copilot/news/Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI
+tags:
+- AI
+- AI Assisted Coding
+- Android Emulator Support
+- Coding
+- Copilot Vision
+- Cross Platform UI
+- Design Time
+- Element Inspection
+- GitHub Copilot
+- Hot Reload
+- IDE Tools
+- Live Preview
+- MAUI
+- News
+- UI Prototyping
+- VS
+- XAML
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Rachel Kang details enhancements to Visual Studio’s XAML Live Preview feature for .NET MAUI, including design-time support, GitHub Copilot integration, and real-time UI prototyping tools.<!--excerpt_end-->
 
 # Enhancements to XAML Live Preview in Visual Studio for .NET MAUI

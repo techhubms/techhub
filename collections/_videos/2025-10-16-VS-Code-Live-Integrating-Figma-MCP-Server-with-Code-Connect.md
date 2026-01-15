@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "VS Code Live: Integrating Figma MCP Server with Code Connect"
-description: "This live session explores how developers can use the Figma MCP server and the latest Code Connect updates to seamlessly bring design and codebase context into Visual Studio Code. You'll learn how to align development with your design system, generate production-ready code, and utilize new integration features using Microsoft's developer ecosystem. Key resources and developer documentation are also provided."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1DwXS__CVzg"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'VS Code Live: Integrating Figma MCP Server with Code Connect'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=1DwXS__CVzg
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-16 18:04:49 +00:00
-permalink: "/2025-10-16-VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect.html"
-categories: ["Coding"]
-tags: ["Code", "Code Connect", "Code Generation", "Coding", "Design Systems", "Design To Code", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Development Workflow", "Figma", "Figma Integration", "Figma MCP Server", "Mcp", "Mcpserver", "Microsoft", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["code", "code connect", "code generation", "coding", "design systems", "design to code", "developer", "developer community", "developer productivity", "developer tools", "development workflow", "figma", "figma integration", "figma mcp server", "mcp", "mcpserver", "microsoft", "software developer", "videos", "vs code"]
+permalink: /coding/videos/VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect
+tags:
+- Code
+- Code Connect
+- Code Generation
+- Coding
+- Design Systems
+- Design To Code
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- Development Workflow
+- Figma
+- Figma Integration
+- Figma MCP Server
+- Mcp
+- Mcpserver
+- Microsoft
+- Software Developer
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 Visual Studio Code presents a session featuring Reynald Adolphe and Akbar Mirza on how to connect Figma MCP Server and Code Connect in VS Code to streamline design-to-code workflows.<!--excerpt_end-->
 
 {% youtube 1DwXS__CVzg %}

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies"
-description: "This article by Chris Romp explores the core challenges faced by AI coding agents—such as GitHub Copilot—when working with domain-specific languages (DSLs). It details why LLMs perform poorly on DSLs, demonstrates mitigation strategies including schema injection, custom agents, and curated examples, and highlights practical steps using tools like Azure Bicep and Model Context Protocol (MCP)."
-author: "Chris Romp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: 'AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies'
+author: Chris Romp
+canonical_url: https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-12-18 18:36:17 +00:00
-permalink: "/2025-12-18-AI-Coding-Agents-and-Domain-Specific-Languages-Challenges-and-Practical-Mitigation-Strategies.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistants", "Azure", "Azure Bicep", "Code Validation", "Coding", "Copilot Custom Agents", "Copilot Instructions.md", "Developer Productivity", "Developer Tools", "Domain Specific Languages", "DSL", "GitHub", "GitHub Copilot", "LLM", "LSP", "MCP", "MCP Server", "News", "Software Engineering", "VS Code Extensions"]
-tags_normalized: ["ai", "ai coding assistants", "azure", "azure bicep", "code validation", "coding", "copilot custom agents", "copilot instructionsdotmd", "developer productivity", "developer tools", "domain specific languages", "dsl", "github", "github copilot", "llm", "lsp", "mcp", "mcp server", "news", "software engineering", "vs code extensions"]
+permalink: /github-copilot/news/AI-Coding-Agents-and-Domain-Specific-Languages-Challenges-and-Practical-Mitigation-Strategies
+tags:
+- AI
+- AI Coding Assistants
+- Azure
+- Azure Bicep
+- Code Validation
+- Coding
+- Copilot Custom Agents
+- Copilot Instructions.md
+- Developer Productivity
+- Developer Tools
+- Domain Specific Languages
+- DSL
+- GitHub
+- GitHub Copilot
+- LLM
+- LSP
+- MCP
+- MCP Server
+- News
+- Software Engineering
+- VS Code Extensions
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 Chris Romp examines the limitations of AI coding agents like GitHub Copilot with DSLs, outlining why these tools struggle and offering actionable mitigation strategies informed by research and Microsoft’s extensibility tools such as MCP and Azure Bicep.<!--excerpt_end-->
 
 # AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies

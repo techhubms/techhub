@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Copilot Coding Agent Adds AGENTS.md Custom Instruction Support"
-description: "This article introduces new features for the GitHub Copilot coding agent, specifically support for AGENTS.md custom instruction files. Developers can now fine-tune how Copilot's autonomous agent interprets their projects and manages build, test, and validation workflows, using both repository-wide and nested instruction files for finer control. The update also maintains compatibility with existing instruction formats, providing flexibility for different project structures. The post links to in-depth documentation and best practices for using Copilot custom instructions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-28-copilot-coding-agent-now-supports-agents-md-custom-instructions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Coding Agent Adds AGENTS.md Custom Instruction Support
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-28-copilot-coding-agent-now-supports-agents-md-custom-instructions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 18:00:58 +00:00
-permalink: "/2025-08-28-Copilot-Coding-Agent-Adds-AGENTSmd-Custom-Instruction-Support.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AGENTS.md", "AI", "AI Development", "Automation", "Coding Best Practices", "Copilot Coding Agent", "Custom Instructions", "Developer Tools", "GitHub", "GitHub Copilot", "Instructions File", "News", "Project Configuration", "Workflow"]
-tags_normalized: ["agentsdotmd", "ai", "ai development", "automation", "coding best practices", "copilot coding agent", "custom instructions", "developer tools", "github", "github copilot", "instructions file", "news", "project configuration", "workflow"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Adds-AGENTSmd-Custom-Instruction-Support
+tags:
+- AGENTS.md
+- AI
+- AI Development
+- Automation
+- Coding Best Practices
+- Copilot Coding Agent
+- Custom Instructions
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Instructions File
+- News
+- Project Configuration
+- Workflow
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces that GitHub Copilot coding agent now supports AGENTS.md custom instructions, making it easier for developers to control automated workflows and agent behavior.<!--excerpt_end-->
 
 # Copilot Coding Agent Adds AGENTS.md Custom Instruction Support

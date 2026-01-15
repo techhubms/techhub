@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire"
-description: "In this ASP.NET Community Standup, Daniel Roth and Maddy Montaquila give an in-depth look at Aspire and explore how it transforms building, testing, and deploying cloud-native ASP.NET Core applications. The session covers integration tips, debunks common misconceptions, and provides actionable advice for developers aiming to adopt Aspire without disrupting their existing setups."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aHqw6mPpJSc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=aHqw6mPpJSc
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-08 23:12:24 +00:00
-permalink: "/2025-08-08-ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", "Application Deployment", "ASP.NET", "ASP.NET Core", "Aspire", "Cloud Native Development", "Coding", "Community Standup", "Continuous Integration", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "Developer Workflow", "DevOps", "Dotnetaspire", "Maddy Montaquila", "Microsoft", "Modernization", "Software Developer", "Software Engineering", "Testing", "Videos"]
-tags_normalized: ["dotnet", "application deployment", "aspdotnet", "aspdotnet core", "aspire", "cloud native development", "coding", "community standup", "continuous integration", "daniel roth", "demo", "developer", "developer community", "developer tools", "developer workflow", "devops", "dotnetaspire", "maddy montaquila", "microsoft", "modernization", "software developer", "software engineering", "testing", "videos"]
+permalink: /coding/videos/ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire
+tags:
+- .NET
+- Application Deployment
+- ASP.NET
+- ASP.NET Core
+- Aspire
+- Cloud Native Development
+- Coding
+- Community Standup
+- Continuous Integration
+- Daniel Roth
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Developer Workflow
+- DevOps
+- Dotnetaspire
+- Maddy Montaquila
+- Microsoft
+- Modernization
+- Software Developer
+- Software Engineering
+- Testing
+- Videos
+section_names:
+- coding
+- devops
 ---
-
 In this video, Daniel Roth and Maddy Montaquila guide ASP.NET Core developers through Aspire, covering its benefits, practical integration, and real-world tips, as shared on AspiriFridays.<!--excerpt_end-->
 
 {% youtube aHqw6mPpJSc %}

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Initialize ASP.NET Core TagHelpers with Shared Data"
-description: "This post by Khalid Abuhakmeh demonstrates how to globally initialize ASP.NET Core TagHelpers using the ITagHelperInitializer interface. It walks through creating a custom TagHelper, initializing shared data, and leveraging the Razor engine to optimize performance and maintainability across your application's UI components."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/initialize-aspnet-core-taghelpers-with-shared-data"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+layout: post
+title: Initialize ASP.NET Core TagHelpers with Shared Data
+author: Khalid Abuhakmeh
+canonical_url: https://khalidabuhakmeh.com/initialize-aspnet-core-taghelpers-with-shared-data
+viewing_mode: external
+feed_name: Khalid Abuhakmeh's Blog
+feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-01-14 00:00:00 +00:00
-permalink: "/2025-01-14-Initialize-ASPNET-Core-TagHelpers-with-Shared-Data.html"
-categories: ["Coding"]
-tags: ["ASP.NET", "ASP.NET Core", "Blogs", "C#", "Coding", "Dependency Injection", "HtmlAttributeNotBound", "ITagHelperInitializer", "Razor", "Singleton", "TagHelpers", "ViewContext", "Web Development"]
-tags_normalized: ["aspdotnet", "aspdotnet core", "blogs", "csharp", "coding", "dependency injection", "htmlattributenotbound", "itaghelperinitializer", "razor", "singleton", "taghelpers", "viewcontext", "web development"]
+permalink: /coding/blogs/Initialize-ASPNET-Core-TagHelpers-with-Shared-Data
+tags:
+- ASP.NET
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Dependency Injection
+- HtmlAttributeNotBound
+- ITagHelperInitializer
+- Razor
+- Singleton
+- TagHelpers
+- ViewContext
+- Web Development
+section_names:
+- coding
 ---
-
 In this blog post, Khalid Abuhakmeh explores how to leverage the ITagHelperInitializer interface in ASP.NET Core to provide shared data to TagHelpers, offering practical tips for efficient and maintainable Razor development.<!--excerpt_end-->
 
 ![Initialize ASP.NET Core TagHelpers with Shared Data](https://res.cloudinary.com/abuhakmeh/image/fetch/c_limit,f_auto,q_auto,w_800/https://khalidabuhakmeh.com/assets/images/posts/misc/aspnet-core-shared-data-tag-helpers-initialize.jpg)

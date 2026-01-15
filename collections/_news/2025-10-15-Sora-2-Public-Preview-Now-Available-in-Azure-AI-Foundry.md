@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Sora 2 Public Preview Now Available in Azure AI Foundry"
-description: "This announcement covers the release of OpenAI's Sora 2 video generation model in Azure AI Foundry. It details how developers and organizations can access Sora 2 alongside other generative media models through a unified, secure platform, and describes key features such as realistic world simulation, audio synchronization, multiple input modalities, enterprise security, and content filtering. Practical use cases for marketing, retail, creative work, and education are highlighted, as well as technical details about integration and API-based access."
-author: "Steve Sweetman and Naomi Moneypenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Sora 2 Public Preview Now Available in Azure AI Foundry
+author: Steve Sweetman and Naomi Moneypenny
+canonical_url: https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 18:00:00 +00:00
-permalink: "/2025-10-15-Sora-2-Public-Preview-Now-Available-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "API", "Azure", "Azure AI Foundry", "Content Filtering", "Creative AI", "Enterprise Security", "Generative AI", "Microsoft Azure", "Multimodal Models", "News", "OpenAI", "Pricing", "Responsible AI", "Sora 2", "Video Generation"]
-tags_normalized: ["ai", "ai plus machine learning", "api", "azure", "azure ai foundry", "content filtering", "creative ai", "enterprise security", "generative ai", "microsoft azure", "multimodal models", "news", "openai", "pricing", "responsible ai", "sora 2", "video generation"]
+permalink: /ai/news/Sora-2-Public-Preview-Now-Available-in-Azure-AI-Foundry
+tags:
+- AI
+- AI + Machine Learning
+- API
+- Azure
+- Azure AI Foundry
+- Content Filtering
+- Creative AI
+- Enterprise Security
+- Generative AI
+- Microsoft Azure
+- Multimodal Models
+- News
+- OpenAI
+- Pricing
+- Responsible AI
+- Sora 2
+- Video Generation
+section_names:
+- ai
+- azure
 ---
-
 Steve Sweetman and Naomi Moneypenny announce the public preview of OpenAI’s Sora 2 in Azure AI Foundry, explaining its advanced video generation features and secure integration options for developers and creators.<!--excerpt_end-->
 
 # Sora 2 Public Preview Now Available in Azure AI Foundry

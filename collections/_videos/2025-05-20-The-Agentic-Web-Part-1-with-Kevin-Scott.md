@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "The Agentic Web [Part 1] with Kevin Scott"
-description: "Kevin Scott, Microsoft’s CTO, discusses the evolving landscape of artificial intelligence, highlighting recent breakthroughs and the increasing importance of helpful AI agents for developers and end-users. This first segment of a pre-Microsoft Build conversation explores fundamental changes shaping how AI is integrated, deployed, and used, with a focus on practical opportunities and challenges."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gnLLC4mQl4s"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: The Agentic Web [Part 1] with Kevin Scott
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=gnLLC4mQl4s
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-05-20 20:01:23 +00:00
-permalink: "/2025-05-20-The-Agentic-Web-Part-1-with-Kevin-Scott.html"
-categories: ["AI"]
-tags: ["Agentic Web", "AI", "AI Agents", "AI Integration", "AI Strategy", "Developer Productivity", "Future Of AI", "Kevin Scott", "Microsoft", "Microsoft Build", "Microsoft Ignite", "Technology Trends", "Videos"]
-tags_normalized: ["agentic web", "ai", "ai agents", "ai integration", "ai strategy", "developer productivity", "future of ai", "kevin scott", "microsoft", "microsoft build", "microsoft ignite", "technology trends", "videos"]
+permalink: /ai/videos/The-Agentic-Web-Part-1-with-Kevin-Scott
+tags:
+- Agentic Web
+- AI
+- AI Agents
+- AI Integration
+- AI Strategy
+- Developer Productivity
+- Future Of AI
+- Kevin Scott
+- Microsoft
+- Microsoft Build
+- Microsoft Ignite
+- Technology Trends
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Events presents Kevin Scott sharing perspectives on the current AI landscape and the rise of agentic systems, setting the stage for deeper exploration in this two-part pre-Build conversation.<!--excerpt_end-->
 
 {% youtube gnLLC4mQl4s %}

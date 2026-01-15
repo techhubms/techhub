@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Container Storage v2 Overview"
-description: "This video by John Savill's Technical Training provides a comprehensive overview of Azure Container Storage (ACStor) v2, focusing on new features, architectural updates, performance improvements, and practical guidance for Azure Kubernetes Service (AKS) environments. It covers the use of local NVMe storage, VM SKUs, local disks, durability, and workloads best suited for ACStor v2. The content also addresses migration, cost considerations, and technical prerequisites for deploying and managing container storage in the cloud."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=v6j0lJYdPU4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Container Storage v2 Overview
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=v6j0lJYdPU4
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-29 13:13:51 +00:00
-permalink: "/2025-09-29-Azure-Container-Storage-v2-Overview.html"
-categories: ["Azure"]
-tags: ["ACStor", "AKS", "Azure", "Azure Cloud", "Azure Container Storage", "Cloud", "Cloud Storage", "Container Storage Interface", "Containers", "CSI", "Durability", "Kubernetes", "Local", "Local Disks", "Microsoft", "Microsoft Azure", "NVMe", "Performance", "Storage Architecture", "Videos", "VM SKUs"]
-tags_normalized: ["acstor", "aks", "azure", "azure cloud", "azure container storage", "cloud", "cloud storage", "container storage interface", "containers", "csi", "durability", "kubernetes", "local", "local disks", "microsoft", "microsoft azure", "nvme", "performance", "storage architecture", "videos", "vm skus"]
+permalink: /azure/videos/Azure-Container-Storage-v2-Overview
+tags:
+- ACStor
+- AKS
+- Azure
+- Azure Cloud
+- Azure Container Storage
+- Cloud
+- Cloud Storage
+- Container Storage Interface
+- Containers
+- CSI
+- Durability
+- Kubernetes
+- Local
+- Local Disks
+- Microsoft
+- Microsoft Azure
+- NVMe
+- Performance
+- Storage Architecture
+- Videos
+- VM SKUs
+section_names:
+- azure
 ---
-
 John Savill's Technical Training presents an in-depth look at Azure Container Storage v2, highlighting new features and best practices for AKS and Kubernetes environments.<!--excerpt_end-->
 
 {% youtube v6j0lJYdPU4 %}

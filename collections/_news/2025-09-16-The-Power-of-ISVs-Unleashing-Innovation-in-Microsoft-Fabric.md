@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "The Power of ISVs: Unleashing Innovation in Microsoft Fabric"
-description: "This news post highlights major Independent Software Vendor (ISV) announcements at FabCon Europe related to Microsoft Fabric. It showcases new integrations and workloads—ranging from graph analytics and geospatial tools to AI-driven data engineering and master data management—underscoring how ISVs are driving innovation in data analytics, AI, and automation within the Microsoft Fabric ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'The Power of ISVs: Unleashing Innovation in Microsoft Fabric'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 09:27:34 +00:00
-permalink: "/2025-09-16-The-Power-of-ISVs-Unleashing-Innovation-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agent Mart Studio", "AI", "AI Agents", "Apache Spark", "Azure", "CluedIn", "Data Analytics", "Data Engineering", "Entity Resolution", "Esri ArcGIS", "ETL Pipelines", "Fusion Data Hub", "GeoAnalytics", "ISV", "Lucid Data Hub", "Lumel", "Master Data Management", "Microsoft Fabric", "ML", "Neo4j AuraDB", "News", "OneLake", "Osmos AI Data Engineer", "Product Experimentation", "Quantexa Unify", "Real Time Intelligence", "Statsig"]
-tags_normalized: ["agent mart studio", "ai", "ai agents", "apache spark", "azure", "cluedin", "data analytics", "data engineering", "entity resolution", "esri arcgis", "etl pipelines", "fusion data hub", "geoanalytics", "isv", "lucid data hub", "lumel", "master data management", "microsoft fabric", "ml", "neo4j auradb", "news", "onelake", "osmos ai data engineer", "product experimentation", "quantexa unify", "real time intelligence", "statsig"]
+permalink: /ai/news/The-Power-of-ISVs-Unleashing-Innovation-in-Microsoft-Fabric
+tags:
+- Agent Mart Studio
+- AI
+- AI Agents
+- Apache Spark
+- Azure
+- CluedIn
+- Data Analytics
+- Data Engineering
+- Entity Resolution
+- Esri ArcGIS
+- ETL Pipelines
+- Fusion Data Hub
+- GeoAnalytics
+- ISV
+- Lucid Data Hub
+- Lumel
+- Master Data Management
+- Microsoft Fabric
+- ML
+- Neo4j AuraDB
+- News
+- OneLake
+- Osmos AI Data Engineer
+- Product Experimentation
+- Quantexa Unify
+- Real Time Intelligence
+- Statsig
+section_names:
+- ai
+- azure
+- ml
 ---
-
 This news article from the Microsoft Fabric Blog details ISV-driven innovations and new integrations in Microsoft Fabric, providing insights into AI, data engineering, and analytics, authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Key ISV Announcements Transforming Microsoft Fabric

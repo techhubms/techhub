@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast"
-description: "This episode of the VS Code Insiders Podcast features Brigit and Josh discussing the latest advancements in coding agents within Visual Studio Code. The conversation covers the purpose and use cases of coding agents (also referred to as background agents), their technical implementation, connections to GitHub Copilot, and what's coming next for developers. Listeners will gain practical insights into leveraging coding agents, new extensions, and tips for improving developer workflows using VS Code's evolving ecosystem."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hPKDV5N99GU"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=hPKDV5N99GU
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-22 07:00:47 +00:00
-permalink: "/2025-09-22-The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Powered Development", "Background Agents", "Background Tasks", "Coding", "Coding Agents", "Developer Tools", "GitHub Pull Requests", "IDE Enhancements", "Software Development", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai powered development", "background agents", "background tasks", "coding", "coding agents", "developer tools", "github pull requests", "ide enhancements", "software development", "videos", "vs code", "vs code extensions"]
+permalink: /ai/videos/The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast
+tags:
+- AI
+- AI Powered Development
+- Background Agents
+- Background Tasks
+- Coding
+- Coding Agents
+- Developer Tools
+- GitHub Pull Requests
+- IDE Enhancements
+- Software Development
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
 ---
-
 Brigit and Josh from the VS Code team discuss the future of coding agents in Visual Studio Code, sharing insights and updates for developers in this VS Code Insiders Podcast episode.<!--excerpt_end-->
 
 {% youtube hPKDV5N99GU %}

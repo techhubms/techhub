@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Accelerate Secure AI: Microsoft’s Security Advantage for Partners"
-description: "An insightful Microsoft Ignite 2025 breakout exploring the comprehensive Microsoft Security Solutions portfolio. This session highlights how integrated Microsoft security and AI solutions empower partners to enhance enterprise, corporate, and SMB security posture. Key topics include AI’s transformative impact on security, building resilient systems, Microsoft’s scale and unified approach, strategic commercial opportunities, and major product announcements such as Agent 365, Security Copilot, and Sentinel Graph."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ph-zrJNhl_M"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Accelerate Secure AI: Microsoft’s Security Advantage for Partners'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Ph-zrJNhl_M
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:33:32 +00:00
-permalink: "/2025-11-24-Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners.html"
-categories: ["AI", "Security"]
-tags: ["Agent 365", "AI", "AI Governance", "AI Security", "Data Protection", "Enterprise Security", "Ignite Announcements", "Microsoft Entra ID", "Microsoft Security Solutions", "Microsoft Sentinel", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Enablement", "Resilient Systems", "Security", "Security AI Synergies", "Security Copilot", "SMB Security", "Threat Protection", "Unified Security", "Videos"]
-tags_normalized: ["agent 365", "ai", "ai governance", "ai security", "data protection", "enterprise security", "ignite announcements", "microsoft entra id", "microsoft security solutions", "microsoft sentinel", "microsoftaicloudpartnerprogram", "msignite", "partner enablement", "resilient systems", "security", "security ai synergies", "security copilot", "smb security", "threat protection", "unified security", "videos"]
+permalink: /ai/videos/Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners
+tags:
+- Agent 365
+- AI
+- AI Governance
+- AI Security
+- Data Protection
+- Enterprise Security
+- Ignite Announcements
+- Microsoft Entra ID
+- Microsoft Security Solutions
+- Microsoft Sentinel
+- MicrosoftAICloudPartnerProgram
+- MSIgnite
+- Partner Enablement
+- Resilient Systems
+- Security
+- Security AI Synergies
+- Security Copilot
+- SMB Security
+- Threat Protection
+- Unified Security
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents this foundational Ignite session featuring speakers Steve Dispensa and Ann Choi, delving into Microsoft’s security and AI portfolio for partners.<!--excerpt_end-->
 
 {% youtube Ph-zrJNhl_M %}

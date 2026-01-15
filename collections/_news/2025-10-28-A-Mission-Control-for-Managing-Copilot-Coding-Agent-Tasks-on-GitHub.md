@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "A Mission Control for Managing Copilot Coding Agent Tasks on GitHub"
-description: "This news update covers GitHub's redesign of Copilot coding agent task management. The new centralized view allows developers to assign, steer, and track Copilot coding agent tasks in real time without navigating across multiple GitHub pages. The update includes features for direct feedback, real-time steering, task switching, creation options from multiple entry points, and seamless integration with Codespaces, VS Code Insiders, and the GitHub CLI."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: A Mission Control for Managing Copilot Coding Agent Tasks on GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:29:08 +00:00
-permalink: "/2025-10-28-A-Mission-Control-for-Managing-Copilot-Coding-Agent-Tasks-on-GitHub.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Tasks", "AI", "Centralized Dashboard", "Codespaces", "Coding", "Copilot", "Copilot Coding Agent", "Developer Experience", "DevOps", "GitHub CLI", "GitHub Copilot", "News", "Pull Requests", "Real Time Steering", "Repository Management", "Task Management", "Universe25", "VS Code Insiders"]
-tags_normalized: ["agent tasks", "ai", "centralized dashboard", "codespaces", "coding", "copilot", "copilot coding agent", "developer experience", "devops", "github cli", "github copilot", "news", "pull requests", "real time steering", "repository management", "task management", "universe25", "vs code insiders"]
+permalink: /github-copilot/news/A-Mission-Control-for-Managing-Copilot-Coding-Agent-Tasks-on-GitHub
+tags:
+- Agent Tasks
+- AI
+- Centralized Dashboard
+- Codespaces
+- Coding
+- Copilot
+- Copilot Coding Agent
+- Developer Experience
+- DevOps
+- GitHub CLI
+- GitHub Copilot
+- News
+- Pull Requests
+- Real Time Steering
+- Repository Management
+- Task Management
+- Universe25
+- VS Code Insiders
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Allison announces GitHub's new centralized mission control for Copilot coding agent tasks, enabling developers to assign, monitor, and guide Copilot-powered coding sessions more efficiently.<!--excerpt_end-->
 
 # A Mission Control for Managing Copilot Coding Agent Tasks on GitHub

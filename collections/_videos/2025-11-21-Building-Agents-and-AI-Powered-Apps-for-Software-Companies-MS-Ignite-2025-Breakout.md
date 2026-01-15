@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Building Agents and AI-Powered Apps for Software Companies (MS Ignite 2025 Breakout)"
-description: "This intermediate breakout session from MS Ignite 2025 explores practical strategies for software companies to build and accelerate growth using Microsoft AI-powered agents, apps, and developer tools. Topics include graph analytics, AI infrastructure, partner ecosystem, open source, Defender integration with GitHub, Azure Logic Apps, and large-scale AI adoption. The session highlights partnerships, showcases solutions via live demos, and announces new Microsoft AI offerings."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DBrfh0vOBxY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Building Agents and AI-Powered Apps for Software Companies (MS Ignite 2025 Breakout)
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=DBrfh0vOBxY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:27:10 +00:00
-permalink: "/2025-11-21-Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Agents", "AI Infrastructure", "AI Kit", "AI Powered Apps", "Azure", "Azure AI", "Azure Logic Apps", "Coding", "DevOps", "GitHub", "GitHub Copilot", "Graph Analytics", "Industrial AI Stack", "InnovatewithAzureAIappsandagents", "Local Development", "Microsoft Defender", "Microsoft Marketplace", "MSIgnite", "Open Source", "Pair Programming", "Partner Ecosystem", "Rapid Development", "Security", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai infrastructure", "ai kit", "ai powered apps", "azure", "azure ai", "azure logic apps", "coding", "devops", "github", "github copilot", "graph analytics", "industrial ai stack", "innovatewithazureaiappsandagents", "local development", "microsoft defender", "microsoft marketplace", "msignite", "open source", "pair programming", "partner ecosystem", "rapid development", "security", "videos"]
+permalink: /github-copilot/videos/Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout
+tags:
+- AI
+- AI Agents
+- AI Infrastructure
+- AI Kit
+- AI Powered Apps
+- Azure
+- Azure AI
+- Azure Logic Apps
+- Coding
+- DevOps
+- GitHub
+- GitHub Copilot
+- Graph Analytics
+- Industrial AI Stack
+- InnovatewithAzureAIappsandagents
+- Local Development
+- Microsoft Defender
+- Microsoft Marketplace
+- MSIgnite
+- Open Source
+- Pair Programming
+- Partner Ecosystem
+- Rapid Development
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Microsoft Events brings together experts Cyril Belikoff, Rob Ferguson, and Jonathan Sobel to discuss how software companies can leverage Microsoft’s AI and developer ecosystem for accelerated growth.<!--excerpt_end-->
 
 {% youtube DBrfh0vOBxY %}

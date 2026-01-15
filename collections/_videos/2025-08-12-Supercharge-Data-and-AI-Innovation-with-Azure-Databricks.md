@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Supercharge Data and AI Innovation with Azure Databricks"
-description: "This episode of the Azure Essentials Show explores how Azure Databricks brings together fragmented data estates into a unified environment for analytics and AI workflows. It covers how Azure Databricks supports data preparation, pipeline management, model building, and integrates deeply with the Azure ecosystem. The show also highlights available resources and skilling paths for data professionals to progress from foundational to advanced expertise in Azure Databricks, including governance and security considerations. Viewers will also be directed to official Microsoft documentation and related Azure learning opportunities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wktreLtv_5w"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Supercharge Data and AI Innovation with Azure Databricks
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=wktreLtv_5w
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-12 07:00:58 +00:00
-permalink: "/2025-08-12-Supercharge-Data-and-AI-Innovation-with-Azure-Databricks.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Analytics Platform", "Azure", "Azure AI Foundry", "Azure Databricks", "Azure Essentials Show", "AzureDatabricks", "AzureEssentialsShow", "Data Analytics", "Data Governance", "Data Preparation", "Machine Learning", "Microsoft Entra", "Microsoft Fabric", "ML", "Model Development", "Pipeline Management", "Skilling Resources", "Videos"]
-tags_normalized: ["ai", "analytics platform", "azure", "azure ai foundry", "azure databricks", "azure essentials show", "azuredatabricks", "azureessentialsshow", "data analytics", "data governance", "data preparation", "machine learning", "microsoft entra", "microsoft fabric", "ml", "model development", "pipeline management", "skilling resources", "videos"]
+permalink: /ai/videos/Supercharge-Data-and-AI-Innovation-with-Azure-Databricks
+tags:
+- AI
+- Analytics Platform
+- Azure
+- Azure AI Foundry
+- Azure Databricks
+- Azure Essentials Show
+- AzureDatabricks
+- AzureEssentialsShow
+- Data Analytics
+- Data Governance
+- Data Preparation
+- Machine Learning
+- Microsoft Entra
+- Microsoft Fabric
+- ML
+- Model Development
+- Pipeline Management
+- Skilling Resources
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Developer presents an episode of the Azure Essentials Show highlighting how Azure Databricks streamlines analytics and AI innovation, with guidance on pipelines, data preparation, and upskilling opportunities.<!--excerpt_end-->
 
 {% youtube wktreLtv_5w %}

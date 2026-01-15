@@ -1,20 +1,34 @@
----
-layout: "post"
-title: ".NET Data Community Standup: Couchbase EF Core Provider Discussion"
-description: "This video features a conversation with the Couchbase team and .NET experts discussing the new Couchbase provider for Entity Framework Core (EF Core). The discussion covers challenges in mapping Couchbase concepts into EF Core, what's new in EF Core 9 Preview 6, an overview of Couchbase for developers, key differences between EF Core versions, and an introduction to Linq2Couchbase. The session is designed for .NET developers interested in data access patterns and integrations involving both traditional relational and NoSQL data stores."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0UDFJvMg5Wc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET Data Community Standup: Couchbase EF Core Provider Discussion'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=0UDFJvMg5Wc
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-18 06:11:11 +00:00
-permalink: "/2025-07-18-NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion.html"
-categories: ["Coding", "ML"]
-tags: [".NET", ".NET Data Community", "Coding", "Couchbase", "Data Access", "Data Integration", "EF Core", "EF Core 9 Preview 6", "Jeff Morris", "Jiri Cincura", "Linq2Couchbase", "ML", "NoSQL", "Provider Development", "Relational Databases", "Videos"]
-tags_normalized: ["dotnet", "dotnet data community", "coding", "couchbase", "data access", "data integration", "ef core", "ef core 9 preview 6", "jeff morris", "jiri cincura", "linq2couchbase", "ml", "nosql", "provider development", "relational databases", "videos"]
+permalink: /ml/videos/NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion
+tags:
+- .NET
+- .NET Data Community
+- Coding
+- Couchbase
+- Data Access
+- Data Integration
+- EF Core
+- EF Core 9 Preview 6
+- Jeff Morris
+- Jiri Cincura
+- Linq2Couchbase
+- ML
+- NoSQL
+- Provider Development
+- Relational Databases
+- Videos
+section_names:
+- coding
+- ml
 ---
-
 Hosted by dotnet, this video standup brings together Jiri Cincura and Jeff Morris to discuss the new Couchbase provider for EF Core, highlighting developer challenges and innovations in .NET data access.<!--excerpt_end-->
 
 {% youtube 0UDFJvMg5Wc %}

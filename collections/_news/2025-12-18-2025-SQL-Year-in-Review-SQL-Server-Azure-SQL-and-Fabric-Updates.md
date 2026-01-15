@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "2025 SQL Year in Review: SQL Server, Azure SQL, and Fabric Updates"
-description: "This detailed year-in-review post from the Microsoft Fabric Blog recaps major 2025 developments across SQL Server, Azure SQL, and SQL database in Fabric. It highlights new features, general availability releases, previews, AI integration, Copilot advancements, migrations, tooling improvements, and developer experiences, offering insights for SQL professionals working across Microsoft's data platforms."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/2025-year-in-review-whats-new-across-sql-server-azure-sql-and-sql-database-in-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: '2025 SQL Year in Review: SQL Server, Azure SQL, and Fabric Updates'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/2025-year-in-review-whats-new-across-sql-server-azure-sql-and-sql-database-in-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 07:00:00 +00:00
-permalink: "/2025-12-18-2025-SQL-Year-in-Review-SQL-Server-Azure-SQL-and-Fabric-Updates.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure SQL", "Coding", "Copilot", "Data Migration", "Database Security", "Fabric CLI", "JSON Support", "Microsoft Fabric", "ML", "News", "Python Notebooks", "SQL Database", "SQL Development", "SQL Management Studio", "SQL Server", "Vector Data", "VS Code"]
-tags_normalized: ["ai", "ai integration", "azure", "azure sql", "coding", "copilot", "data migration", "database security", "fabric cli", "json support", "microsoft fabric", "ml", "news", "python notebooks", "sql database", "sql development", "sql management studio", "sql server", "vector data", "vs code"]
+permalink: /ai/news/2025-SQL-Year-in-Review-SQL-Server-Azure-SQL-and-Fabric-Updates
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure SQL
+- Coding
+- Copilot
+- Data Migration
+- Database Security
+- Fabric CLI
+- JSON Support
+- Microsoft Fabric
+- ML
+- News
+- Python Notebooks
+- SQL Database
+- SQL Development
+- SQL Management Studio
+- SQL Server
+- Vector Data
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Microsoft Fabric Blog authors Anna and Marisa look back at a transformative year for SQL technologies, summarizing advancements across SQL Server, Azure SQL, Fabric SQL database, and related tooling, including Copilot and AI integration.<!--excerpt_end-->
 
 # 2025 SQL Year in Review: What's New Across SQL Server, Azure SQL, and SQL Database in Fabric

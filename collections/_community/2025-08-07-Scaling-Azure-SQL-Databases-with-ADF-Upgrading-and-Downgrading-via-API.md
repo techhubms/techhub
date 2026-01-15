@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API"
-description: "This community thread provides practical guidance on using Azure Data Factory (ADF) pipelines to scale Azure SQL Databases up and down by calling Azure REST APIs. It covers validating existing approaches, recommended API versions, the nature of asynchronous scaling, autoscale limitations, and best practices to avoid unnecessary cost and delays."
-author: "Relative_Wear2650"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API'
+author: Relative_Wear2650
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 07:35:40 +00:00
-permalink: "/2025-08-07-Scaling-Azure-SQL-Databases-with-ADF-Upgrading-and-Downgrading-via-API.html"
-categories: ["Azure"]
-tags: ["ADF Pipelines", "API Versioning", "Automation", "Azure", "Azure Data Factory", "Azure REST API", "Azure SQL Database", "Cloud Cost Optimization", "Community", "Database SKU Scaling", "PaaS", "Resource Management", "SQL Serverless", "Transparent Data Encryption"]
-tags_normalized: ["adf pipelines", "api versioning", "automation", "azure", "azure data factory", "azure rest api", "azure sql database", "cloud cost optimization", "community", "database sku scaling", "paas", "resource management", "sql serverless", "transparent data encryption"]
+permalink: /azure/community/Scaling-Azure-SQL-Databases-with-ADF-Upgrading-and-Downgrading-via-API
+tags:
+- ADF Pipelines
+- API Versioning
+- Automation
+- Azure
+- Azure Data Factory
+- Azure REST API
+- Azure SQL Database
+- Cloud Cost Optimization
+- Community
+- Database SKU Scaling
+- PaaS
+- Resource Management
+- SQL Serverless
+- Transparent Data Encryption
+section_names:
+- azure
 ---
-
 Relative_Wear2650 and the community discuss how to use Azure Data Factory to programmatically scale Azure SQL Databases by changing their service tier via API, including API selection and automation best practices.<!--excerpt_end-->
 
 # Scaling Azure SQL Databases with ADF: Automating Upgrades and Downgrades

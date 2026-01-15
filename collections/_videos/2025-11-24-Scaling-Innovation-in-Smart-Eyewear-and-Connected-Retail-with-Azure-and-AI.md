@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI"
-description: "This session from Microsoft Ignite 2025 explores how AI-powered smart eyewear and connected retail are transforming industries. It details the partnership between TeamViewer, EssilorLuxottica, and Nuance Audio, focusing on Azure-driven device management, real-time connectivity, secure remote operations, and customer experience improvements. Key topics include AI-driven hearing enhancement, remote management of thousands of devices, and how cloud platforms boost enterprise efficiency and growth in retail environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_kYXkZxSTHc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_kYXkZxSTHc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:47:53 +00:00
-permalink: "/2025-11-24-Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Beamforming", "Cloud Connectivity", "Connected Retail", "Customer Experience", "Device Management", "EssilorLuxottica", "Global Innovation", "Hearing Enhancement", "Microsoft Ignite", "MSIgnite", "Nuance Audio", "Remote Operations", "Retail Technology", "ScalewithcloudandAIendpoints", "Smart Eyewear", "TeamViewer", "Videos"]
-tags_normalized: ["ai", "azure", "beamforming", "cloud connectivity", "connected retail", "customer experience", "device management", "essilorluxottica", "global innovation", "hearing enhancement", "microsoft ignite", "msignite", "nuance audio", "remote operations", "retail technology", "scalewithcloudandaiendpoints", "smart eyewear", "teamviewer", "videos"]
+permalink: /ai/videos/Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI
+tags:
+- AI
+- Azure
+- Beamforming
+- Cloud Connectivity
+- Connected Retail
+- Customer Experience
+- Device Management
+- EssilorLuxottica
+- Global Innovation
+- Hearing Enhancement
+- Microsoft Ignite
+- MSIgnite
+- Nuance Audio
+- Remote Operations
+- Retail Technology
+- ScalewithcloudandAIendpoints
+- Smart Eyewear
+- TeamViewer
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents how John Luna and Alfredo Patron showcase the impact of AI and Azure in scaling smart eyewear and connected retail. Learn about secure, real-time device management and technology partnership strategies.<!--excerpt_end-->
 
 {% youtube _kYXkZxSTHc %}

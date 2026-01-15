@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Kubernetes Center (Preview) Launches on Azure Portal for Unified Cluster Management"
-description: "This article introduces the public preview of Kubernetes Center in the Azure Portal, a centralized experience designed to simplify management and monitoring of Azure Kubernetes Service (AKS) environments. It highlights unified resource views, actionable security insights, and seamless integration with Azure tools like Fleet Manager. Readers will learn how this tool enhances operational efficiency and streamlines Kubernetes workflows on Azure."
-author: "Harsha_Nair"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Kubernetes Center (Preview) Launches on Azure Portal for Unified Cluster Management
+author: Harsha_Nair
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 20:45:45 +00:00
-permalink: "/2025-11-18-Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Azure Portal", "Cloud Monitoring", "Cluster Management", "Community", "Compliance", "Container Security", "DevOps", "Fleet Manager", "Kubernetes Center", "Managed Namespaces", "Microsoft Defender For Containers", "Multi Cluster Management", "Operational Insights", "Platform Engineering", "Security", "Streamlined Workflows"]
-tags_normalized: ["aks", "azure", "azure portal", "cloud monitoring", "cluster management", "community", "compliance", "container security", "devops", "fleet manager", "kubernetes center", "managed namespaces", "microsoft defender for containers", "multi cluster management", "operational insights", "platform engineering", "security", "streamlined workflows"]
+permalink: /azure/community/Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management
+tags:
+- AKS
+- Azure
+- Azure Portal
+- Cloud Monitoring
+- Cluster Management
+- Community
+- Compliance
+- Container Security
+- DevOps
+- Fleet Manager
+- Kubernetes Center
+- Managed Namespaces
+- Microsoft Defender For Containers
+- Multi Cluster Management
+- Operational Insights
+- Platform Engineering
+- Security
+- Streamlined Workflows
+section_names:
+- azure
+- devops
+- security
 ---
-
 Harsha_Nair introduces Kubernetes Center on Azure Portal, outlining how it unifies management, security, and monitoring for Kubernetes clusters, bringing actionable insights and streamlined workflows to Azure users.<!--excerpt_end-->
 
 # Announcing Kubernetes Center (Preview) On Azure Portal

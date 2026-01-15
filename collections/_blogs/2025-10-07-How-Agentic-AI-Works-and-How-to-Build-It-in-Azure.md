@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How Agentic AI Works and How to Build It in Azure"
-description: "This guide demystifies agentic AI, showcasing how to build autonomous, goal-driven systems on Microsoft Azure. You’ll learn about agentic AI principles (perception, reasoning, action, learning), required architectural components, challenges, and a step-by-step roadmap for deploying agentic AI using Azure technologies such as Azure OpenAI Service, Functions, Logic Apps, Cosmos DB, and Semantic Kernel."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How Agentic AI Works and How to Build It in Azure
+author: Dellenny
+canonical_url: https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-07 09:45:12 +00:00
-permalink: "/2025-10-07-How-Agentic-AI-Works-and-How-to-Build-It-in-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Architecture", "AI Orchestration", "API Integration", "Application Insights", "Autonomous Agents", "Azure", "Azure Cognitive Search", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Blogs", "Cosmos DB", "Event Grid", "Large Language Models", "Logic Apps", "Machine Learning", "Responsible AI", "Semantic Kernel"]
-tags_normalized: ["agentic ai", "ai", "ai architecture", "ai orchestration", "api integration", "application insights", "autonomous agents", "azure", "azure cognitive search", "azure functions", "azure monitor", "azure openai service", "blogs", "cosmos db", "event grid", "large language models", "logic apps", "machine learning", "responsible ai", "semantic kernel"]
+permalink: /ai/blogs/How-Agentic-AI-Works-and-How-to-Build-It-in-Azure
+tags:
+- Agentic AI
+- AI
+- AI Architecture
+- AI Orchestration
+- API Integration
+- Application Insights
+- Autonomous Agents
+- Azure
+- Azure Cognitive Search
+- Azure Functions
+- Azure Monitor
+- Azure OpenAI Service
+- Blogs
+- Cosmos DB
+- Event Grid
+- Large Language Models
+- Logic Apps
+- Machine Learning
+- Responsible AI
+- Semantic Kernel
+section_names:
+- ai
+- azure
 ---
-
 Dellenny explains the core concepts of agentic AI and provides Azure-centric guidance for building autonomous, adaptive agents using Microsoft's AI ecosystem.<!--excerpt_end-->
 
 # How Agentic AI Works and How to Build It in Azure

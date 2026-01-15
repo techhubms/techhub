@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Understanding GitHub Environments and Deployments: A Practical Overview"
-description: "The article by NatoBoram clarifies the role of GitHub Environments and Deployments, describing environments as collections of Action secrets with associated conditions, and deployments as workflow runs using specified environments. The author presents practical scenarios for using multiple environments and explains their UI benefits."
-author: "NatoBoram"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: 'Understanding GitHub Environments and Deployments: A Practical Overview'
+author: NatoBoram
+canonical_url: https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-07-27 04:47:10 +00:00
-permalink: "/2025-07-27-Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview.html"
-categories: ["DevOps"]
-tags: ["Action Secrets", "Automation", "CI/CD", "Community", "Deployment Workflow", "DevOps", "GitHub", "GitHub Actions", "GitHub Deployments", "GitHub Environments", "GitHub Package Registry", "npm", "Workflow"]
-tags_normalized: ["action secrets", "automation", "cislashcd", "community", "deployment workflow", "devops", "github", "github actions", "github deployments", "github environments", "github package registry", "npm", "workflow"]
+permalink: /devops/community/Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview
+tags:
+- Action Secrets
+- Automation
+- CI/CD
+- Community
+- Deployment Workflow
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Deployments
+- GitHub Environments
+- GitHub Package Registry
+- npm
+- Workflow
+section_names:
+- devops
 ---
-
 In this article, NatoBoram demystifies GitHub Environments and Deployments, describing what they are, how they work, and practical ways developers can use them for organizing secrets and deployment workflows.<!--excerpt_end-->
 
 ## Understanding GitHub Environments and Deployments

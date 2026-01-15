@@ -1,20 +1,62 @@
----
-layout: "post"
-title: "AI-Driven Performance Testing: Redefining Software Quality and Engineering Roles"
-description: "This in-depth article by Akash Thakur explores how AI—particularly large language models (LLMs)—is transforming performance testing in software engineering. It discusses the evolution from traditional, late-stage load testing to an AI-augmented approach focused on prediction, prevention, and continuous assurance, highlighting implications for engineers and testing methodologies."
-author: "Akash Thakur"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/ai-driven-performance-testing-a-new-era-for-software-quality/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'AI-Driven Performance Testing: Redefining Software Quality and Engineering Roles'
+author: Akash Thakur
+canonical_url: https://devops.com/ai-driven-performance-testing-a-new-era-for-software-quality/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-13 12:19:02 +00:00
-permalink: "/2025-11-13-AI-Driven-Performance-Testing-Redefining-Software-Quality-and-Engineering-Roles.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Defect Detection", "AI Driven Testing", "AI in DevOps", "AI Load Testing", "AI Observability", "AI Performance Testing", "AI Testing Tools", "Automation", "Blogs", "Business Of DevOps", "CI/CD Pipelines", "Continuous Assurance", "Continuous Testing", "Contributed Content", "DevOps", "Intelligent Agents", "Intelligent Performance Systems", "Large Language Models", "LLMs", "LLMs in Testing", "ML Driven QA", "ML Powered QA", "Next Gen Performance Testing", "Performance Automation", "Performance Engineering", "Performance Engineers", "Performance Lifecycle", "Performance Monitoring", "Performance Optimization", "Performance Testing", "Predictive Performance Analysis", "Predictive Testing", "Requirements as Code", "Self Healing Systems", "Site Reliability Engineering", "Social Facebook", "Social LinkedIn", "Social X", "Software Reliability", "SRE Automation", "Testing Lifecycle", "Testing Transformation"]
-tags_normalized: ["ai", "ai agents", "ai defect detection", "ai driven testing", "ai in devops", "ai load testing", "ai observability", "ai performance testing", "ai testing tools", "automation", "blogs", "business of devops", "cislashcd pipelines", "continuous assurance", "continuous testing", "contributed content", "devops", "intelligent agents", "intelligent performance systems", "large language models", "llms", "llms in testing", "ml driven qa", "ml powered qa", "next gen performance testing", "performance automation", "performance engineering", "performance engineers", "performance lifecycle", "performance monitoring", "performance optimization", "performance testing", "predictive performance analysis", "predictive testing", "requirements as code", "self healing systems", "site reliability engineering", "social facebook", "social linkedin", "social x", "software reliability", "sre automation", "testing lifecycle", "testing transformation"]
+permalink: /ai/blogs/AI-Driven-Performance-Testing-Redefining-Software-Quality-and-Engineering-Roles
+tags:
+- AI
+- AI Agents
+- AI Defect Detection
+- AI Driven Testing
+- AI in DevOps
+- AI Load Testing
+- AI Observability
+- AI Performance Testing
+- AI Testing Tools
+- Automation
+- Blogs
+- Business Of DevOps
+- CI/CD Pipelines
+- Continuous Assurance
+- Continuous Testing
+- Contributed Content
+- DevOps
+- Intelligent Agents
+- Intelligent Performance Systems
+- Large Language Models
+- LLMs
+- LLMs in Testing
+- ML Driven QA
+- ML Powered QA
+- Next Gen Performance Testing
+- Performance Automation
+- Performance Engineering
+- Performance Engineers
+- Performance Lifecycle
+- Performance Monitoring
+- Performance Optimization
+- Performance Testing
+- Predictive Performance Analysis
+- Predictive Testing
+- Requirements as Code
+- Self Healing Systems
+- Site Reliability Engineering
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Reliability
+- SRE Automation
+- Testing Lifecycle
+- Testing Transformation
+section_names:
+- ai
+- devops
 ---
-
 Akash Thakur presents an insightful look at how AI and LLMs are reshaping performance testing, moving away from traditional methods and empowering DevOps teams through predictive analytics, automation, and new engineering responsibilities.<!--excerpt_end-->
 
 # AI-Driven Performance Testing: A New Era for Software Quality

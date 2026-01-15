@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "2025 Accessibility Innovations in Windows: Year in Review"
-description: "This recap highlights major accessibility improvements in Windows during 2025, including AI-powered dictation, enhanced Voice Access, more expressive voices for screen reading, improved Narrator features, accessibility in Microsoft Word, and the impact of community feedback. Key advancements leverage on-device AI and are available on Copilot+ PCs."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: '2025 Accessibility Innovations in Windows: Year in Review'
+author: stclarke
+canonical_url: https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-03 14:23:49 +00:00
-permalink: "/2025-12-03-2025-Accessibility-Innovations-in-Windows-Year-in-Review.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Accessibility", "AI", "Azure", "Chinese Language Support", "Coding", "Company News", "Copilot+ PC", "Custom Vocabulary", "Fluid Dictation", "HD Voices", "Image Description", "Japanese Language Support", "Magnifier", "Microsoft Azure", "Microsoft Word Accessibility", "Narrator", "Natural Voices", "News", "On Device AI", "Screen Curtain", "Speech Recap", "Voice Access", "Voice Typing", "Windows Accessibility", "Windows Insider"]
-tags_normalized: ["accessibility", "ai", "azure", "chinese language support", "coding", "company news", "copilotplus pc", "custom vocabulary", "fluid dictation", "hd voices", "image description", "japanese language support", "magnifier", "microsoft azure", "microsoft word accessibility", "narrator", "natural voices", "news", "on device ai", "screen curtain", "speech recap", "voice access", "voice typing", "windows accessibility", "windows insider"]
+permalink: /ai/news/2025-Accessibility-Innovations-in-Windows-Year-in-Review
+tags:
+- Accessibility
+- AI
+- Azure
+- Chinese Language Support
+- Coding
+- Company News
+- Copilot+ PC
+- Custom Vocabulary
+- Fluid Dictation
+- HD Voices
+- Image Description
+- Japanese Language Support
+- Magnifier
+- Microsoft Azure
+- Microsoft Word Accessibility
+- Narrator
+- Natural Voices
+- News
+- On Device AI
+- Screen Curtain
+- Speech Recap
+- Voice Access
+- Voice Typing
+- Windows Accessibility
+- Windows Insider
+section_names:
+- ai
+- azure
+- coding
 ---
-
 stclarke presents a comprehensive overview of Windows accessibility innovations from 2025, emphasizing AI-powered dictation and Voice Access improvements that benefit users with disabilities.<!--excerpt_end-->
 
 # 2025 Accessibility Innovations in Windows: Year in Review

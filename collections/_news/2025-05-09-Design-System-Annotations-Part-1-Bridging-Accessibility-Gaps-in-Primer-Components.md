@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Design System Annotations, Part 1: Bridging Accessibility Gaps in Primer Components"
-description: "This article by Jan Maarten explores the limitations of relying on design system components for accessibility. It introduces GitHub’s annotation toolkit and Primer A11y Preset annotations, which aim to close accessibility gaps in digital product development by streamlining the annotation process within Figma and enhancing component usability for all users."
-author: "Jan Maarten"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+layout: post
+title: 'Design System Annotations, Part 1: Bridging Accessibility Gaps in Primer Components'
+author: Jan Maarten
+canonical_url: https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components/
+viewing_mode: external
+feed_name: GitHub Engineering Blog
+feed_url: https://github.blog/engineering/feed/
 date: 2025-05-09 16:56:41 +00:00
-permalink: "/2025-05-09-Design-System-Annotations-Part-1-Bridging-Accessibility-Gaps-in-Primer-Components.html"
-categories: ["DevOps"]
-tags: ["A11y", "Accessibility", "Annotations", "ARIA", "Components", "Design", "Design Systems", "DevOps", "Engineering", "Figma", "GitHub", "News", "Primer", "User Experience", "Web Standards"]
-tags_normalized: ["a11y", "accessibility", "annotations", "aria", "components", "design", "design systems", "devops", "engineering", "figma", "github", "news", "primer", "user experience", "web standards"]
+permalink: /devops/news/Design-System-Annotations-Part-1-Bridging-Accessibility-Gaps-in-Primer-Components
+tags:
+- A11y
+- Accessibility
+- Annotations
+- ARIA
+- Components
+- Design
+- Design Systems
+- DevOps
+- Engineering
+- Figma
+- GitHub
+- News
+- Primer
+- User Experience
+- Web Standards
+section_names:
+- devops
 ---
-
 Authored by Jan Maarten, this article discusses how GitHub’s Accessibility Design team developed a new system of annotations to address persistent accessibility challenges in design system components and streamline the collaborative product development process.<!--excerpt_end-->
 
 # Design System Annotations, Part 1: Bridging Accessibility Gaps in Primer Components

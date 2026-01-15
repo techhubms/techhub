@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating Playwright MCP for AI-Driven Test Automation in VS Code"
-description: "This guide provides a step-by-step walkthrough for developers to integrate the Model Context Protocol (MCP) with Playwright in Visual Studio Code. Readers learn how to enable AI-powered test generation, dynamic context adaptation, smarter debugging, and natural language test prompts using Playwright MCP, including installation steps, setup, and a practical AI-assisted scenario."
-author: "LeenaShaw"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Integrating Playwright MCP for AI-Driven Test Automation in VS Code
+author: LeenaShaw
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 17:15:13 +00:00
-permalink: "/2025-11-17-Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code.html"
-categories: ["AI", "Coding"]
-tags: ["Adaptive Testing", "AI", "AI Assisted Testing", "Automation Framework", "Browser Testing", "Coding", "Community", "Copilot Chat", "Dynamic Debugging", "JavaScript", "MCP", "Microsoft", "Node.js", "Playwright", "Test Automation", "Test Generation", "VS Code"]
-tags_normalized: ["adaptive testing", "ai", "ai assisted testing", "automation framework", "browser testing", "coding", "community", "copilot chat", "dynamic debugging", "javascript", "mcp", "microsoft", "nodedotjs", "playwright", "test automation", "test generation", "vs code"]
+permalink: /ai/community/Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code
+tags:
+- Adaptive Testing
+- AI
+- AI Assisted Testing
+- Automation Framework
+- Browser Testing
+- Coding
+- Community
+- Copilot Chat
+- Dynamic Debugging
+- JavaScript
+- MCP
+- Microsoft
+- Node.js
+- Playwright
+- Test Automation
+- Test Generation
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 LeenaShaw demonstrates how to integrate Playwright with the Model Context Protocol (MCP) in VS Code, empowering developers to automate tests using AI-powered workflows and natural language prompts.<!--excerpt_end-->
 
 # Integrating Playwright MCP for AI-Driven Test Automation in VS Code

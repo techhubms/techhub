@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Creating a Custom Chat Mode in VS Code for Smarter AI Assistance"
-description: "This video tutorial demonstrates how to build a personalized Custom Chat Mode in Visual Studio Code, using features like codebase access, search, fetch capabilities, and GitHub repo integration. The walkthrough highlights how to set up various specialized chat modes, enabling developers to leverage an intelligent AI coding assistant tailored to their projects and workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rE6svXzyhg0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Creating a Custom Chat Mode in VS Code for Smarter AI Assistance
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=rE6svXzyhg0
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-02 06:32:44 +00:00
-permalink: "/2025-08-02-Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Coding Assistant", "Blog Mode", "Codebase Tools", "Coding", "Custom Chat Mode", "Developer Productivity", "GitHub Repo", "Personalized AI", "Research Mode", "Search Integration", "SQL Optimizer", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai coding assistant", "blog mode", "codebase tools", "coding", "custom chat mode", "developer productivity", "github repo", "personalized ai", "research mode", "search integration", "sql optimizer", "videos", "vs code", "vs code extensions"]
+permalink: /ai/videos/Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance
+tags:
+- AI
+- AI Coding Assistant
+- Blog Mode
+- Codebase Tools
+- Coding
+- Custom Chat Mode
+- Developer Productivity
+- GitHub Repo
+- Personalized AI
+- Research Mode
+- Search Integration
+- SQL Optimizer
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
 ---
-
 Reynald Adolphe from Visual Studio Code explains how to build a Custom Chat Mode in VS Code, allowing developers to enhance their AI-powered coding environment with features like codebase analysis and GitHub integration.<!--excerpt_end-->
 
 {% youtube rE6svXzyhg0 %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Unlocking LLM-Powered Analytics with Fabric Data Agent and Mirrored Databases"
-description: "This news update explores how Microsoft Fabric's Data Agent now supports direct integration with mirrored databases, enabling organizations to utilize operational data for LLM-powered analytics. The article details the mirroring process, lists supported database types, and highlights the use of natural language queries (NL2SQL) to derive AI-based insights within the Microsoft Fabric ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Unlocking LLM-Powered Analytics with Fabric Data Agent and Mirrored Databases
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 17:00:00 +00:00
-permalink: "/2025-09-24-Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure Cosmos DB", "Azure SQL Database", "Cloud Data", "Data Agent", "Data Analytics", "Data Pipeline", "Database Mirroring", "Delta Parquet", "LLM", "Microsoft Fabric", "Mirrored Database", "ML", "Natural Language Queries", "News", "NL2SQL", "Operational Data"]
-tags_normalized: ["ai", "ai integration", "azure", "azure cosmos db", "azure sql database", "cloud data", "data agent", "data analytics", "data pipeline", "database mirroring", "delta parquet", "llm", "microsoft fabric", "mirrored database", "ml", "natural language queries", "news", "nl2sql", "operational data"]
+permalink: /ai/news/Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure Cosmos DB
+- Azure SQL Database
+- Cloud Data
+- Data Agent
+- Data Analytics
+- Data Pipeline
+- Database Mirroring
+- Delta Parquet
+- LLM
+- Microsoft Fabric
+- Mirrored Database
+- ML
+- Natural Language Queries
+- News
+- NL2SQL
+- Operational Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog showcases how the new Data Agent feature supports mirrored databases, allowing LLM-powered analytics and instant natural language insights across various operational data sources.<!--excerpt_end-->
 
 # Unlocking LLM-Powered Analytics with Fabric Data Agent and Mirrored Databases

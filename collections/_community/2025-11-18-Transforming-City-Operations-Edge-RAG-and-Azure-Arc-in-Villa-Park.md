@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Transforming City Operations: Edge RAG and Azure Arc in Villa Park"
-description: "This in-depth case study details how Villa Park, California, partnered with DataON and Microsoft to deploy Edge Retrieval-Augmented Generation (RAG) powered by Azure Arc. The solution leverages adaptive cloud with Edge AI and Foundry models to enable resilient, contextual conversational AI and automated workflows. It includes technical highlights such as agentic workflow orchestration, advanced document parsing, multimodal search, offline support, SharePoint integration, and compliance-ready features. The article reviews practical experiences, performance improvements, security architecture, and broader applicability for smart city operations."
-author: "moran_assaf"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/transforming-city-operations-how-villa-park-and-dataon-deliver/ba-p/4470360"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Transforming City Operations: Edge RAG and Azure Arc in Villa Park'
+author: moran_assaf
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/transforming-city-operations-how-villa-park-and-dataon-deliver/ba-p/4470360
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:44 +00:00
-permalink: "/2025-11-18-Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-Villa-Park.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adaptive Cloud", "Agentic Workflow", "AI", "Azure", "Azure Arc", "Community", "Compliance", "Conversational AI", "DataON", "Document Parsing", "Edge AI", "Edge RAG", "Foundry", "Foundry Local", "GPU Optimization", "LazyGraph RAG", "Microsoft", "Multimodal Search", "Municipal AI", "OCR", "Offline Support", "Security", "SharePoint Integration", "Smart Cities", "Zero Trust"]
-tags_normalized: ["adaptive cloud", "agentic workflow", "ai", "azure", "azure arc", "community", "compliance", "conversational ai", "dataon", "document parsing", "edge ai", "edge rag", "foundry", "foundry local", "gpu optimization", "lazygraph rag", "microsoft", "multimodal search", "municipal ai", "ocr", "offline support", "security", "sharepoint integration", "smart cities", "zero trust"]
+permalink: /ai/community/Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-Villa-Park
+tags:
+- Adaptive Cloud
+- Agentic Workflow
+- AI
+- Azure
+- Azure Arc
+- Community
+- Compliance
+- Conversational AI
+- DataON
+- Document Parsing
+- Edge AI
+- Edge RAG
+- Foundry
+- Foundry Local
+- GPU Optimization
+- LazyGraph RAG
+- Microsoft
+- Multimodal Search
+- Municipal AI
+- OCR
+- Offline Support
+- Security
+- SharePoint Integration
+- Smart Cities
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Moran Assaf offers insights into Villa Park's smart city transformation with Edge RAG on Azure Arc, highlighting advanced AI deployment, resilient edge computing, security integration, and practical adoption strategies in partnership with DataON.<!--excerpt_end-->
 
 # Transforming City Operations: Edge RAG and Azure Arc in Villa Park

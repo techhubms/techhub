@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Seeking Guidance: Effectively Using GitHub Copilot with VS Code and Docker"
-description: "The author, new to GitHub and programming beyond HTML/CSS/WordPress, shares their workflow using GitHub Copilot with VS Code and Docker for Angular/Node projects. They ask for advice on best practices for project storage (local vs. GitHub), Docker usage, and general workflow improvements."
-author: "MaxellVideocassette"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mg6uu8/am_i_using_it_wrong/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: 'Seeking Guidance: Effectively Using GitHub Copilot with VS Code and Docker'
+author: MaxellVideocassette
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mg6uu8/am_i_using_it_wrong/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 01:29:08 +00:00
-permalink: "/2025-08-03-Seeking-Guidance-Effectively-Using-GitHub-Copilot-with-VS-Code-and-Docker.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Angular", "Beginner Questions", "Community", "DevOps", "Docker", "Git", "GitHub", "GitHub Copilot", "Node.js", "Project Workflow", "Restore Points", "VS Code", "Web Development", "Workspace Management"]
-tags_normalized: ["ai", "angular", "beginner questions", "community", "devops", "docker", "git", "github", "github copilot", "nodedotjs", "project workflow", "restore points", "vs code", "web development", "workspace management"]
+permalink: /github-copilot/community/Seeking-Guidance-Effectively-Using-GitHub-Copilot-with-VS-Code-and-Docker
+tags:
+- AI
+- Angular
+- Beginner Questions
+- Community
+- DevOps
+- Docker
+- Git
+- GitHub
+- GitHub Copilot
+- Node.js
+- Project Workflow
+- Restore Points
+- VS Code
+- Web Development
+- Workspace Management
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 MaxellVideocassette, new to GitHub Copilot and development practices, seeks advice on workflows with VS Code, Docker, and source control.<!--excerpt_end-->
 
 ## Background

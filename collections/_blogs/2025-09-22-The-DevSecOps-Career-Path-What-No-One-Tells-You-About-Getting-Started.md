@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "The DevSecOps Career Path: What No One Tells You About Getting Started"
-description: "This in-depth article by Philip Piletic explores the practical realities and skills required for DevOps professionals transitioning into DevSecOps roles. Covering technical and soft skills, the article highlights the importance of integrating security into modern development workflows, common pitfalls in the transition, and actionable steps for bridging the gap between rapid deployment and robust security."
-author: "Philip Piletic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'The DevSecOps Career Path: What No One Tells You About Getting Started'
+author: Philip Piletic
+canonical_url: https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-22 10:26:16 +00:00
-permalink: "/2025-09-22-The-DevSecOps-Career-Path-What-No-One-Tells-You-About-Getting-Started.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Business Of DevOps", "CI/CD", "CI/CD Security", "Cloud Security", "Compliance", "Container Security", "Contributed Content", "DAST", "Developer Security Skills", "DevOps", "DevOps Security", "DevOps To DevSecOps", "Devsecops", "DevSecOps Career Transition", "DevSecOps Certifications", "DevSecOps Roadmap", "DevSecOps Skills", "IaC", "IAM", "Infrastructure as Code Security", "Kubernetes Security", "OWASP Top 10", "Risk Communication", "SAST", "SCA Tools", "Secure Software Delivery", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Stakeholder Management", "Supply Chain Security", "Threat Modeling", "Vulnerability Management"]
-tags_normalized: ["blogs", "business of devops", "cislashcd", "cislashcd security", "cloud security", "compliance", "container security", "contributed content", "dast", "developer security skills", "devops", "devops security", "devops to devsecops", "devsecops", "devsecops career transition", "devsecops certifications", "devsecops roadmap", "devsecops skills", "iac", "iam", "infrastructure as code security", "kubernetes security", "owasp top 10", "risk communication", "sast", "sca tools", "secure software delivery", "security", "social facebook", "social linkedin", "social x", "stakeholder management", "supply chain security", "threat modeling", "vulnerability management"]
+permalink: /devops/blogs/The-DevSecOps-Career-Path-What-No-One-Tells-You-About-Getting-Started
+tags:
+- Blogs
+- Business Of DevOps
+- CI/CD
+- CI/CD Security
+- Cloud Security
+- Compliance
+- Container Security
+- Contributed Content
+- DAST
+- Developer Security Skills
+- DevOps
+- DevOps Security
+- DevOps To DevSecOps
+- Devsecops
+- DevSecOps Career Transition
+- DevSecOps Certifications
+- DevSecOps Roadmap
+- DevSecOps Skills
+- IaC
+- IAM
+- Infrastructure as Code Security
+- Kubernetes Security
+- OWASP Top 10
+- Risk Communication
+- SAST
+- SCA Tools
+- Secure Software Delivery
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Stakeholder Management
+- Supply Chain Security
+- Threat Modeling
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Philip Piletic guides DevOps professionals through the complex journey into DevSecOps, outlining the technical, soft skills, and mindset shifts critical to integrating security seamlessly into modern software delivery.<!--excerpt_end-->
 
 # The DevSecOps Career Path: What No One Tells You About Getting Started

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Model Context Protocol: From Concept to Linux Foundation Agentic AI"
-description: "This video covers the journey of the Model Context Protocol (MCP) from its origin as a small idea for open AI model integration to its adoption by the Linux Foundation under the Agentic AI Foundation. Engineers and maintainers from Anthropic, GitHub, Microsoft, and OpenAI discuss the importance of openness in AI standards, MCP's rapid growth, and its future for developers building agents and AI-powered tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DBaFFYyUSl8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Model Context Protocol: From Concept to Linux Foundation Agentic AI'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=DBaFFYyUSl8
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-09 21:00:03 +00:00
-permalink: "/2025-12-09-Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI.html"
-categories: ["AI"]
-tags: ["Agentic AI Foundation", "AI", "AI Agents", "AI Integration", "AI Standards", "Anthropic", "Developer Tools", "GitHub", "Linux Foundation", "MCP", "Microsoft", "Open Source", "OpenAI", "OpenSource", "Videos"]
-tags_normalized: ["agentic ai foundation", "ai", "ai agents", "ai integration", "ai standards", "anthropic", "developer tools", "github", "linux foundation", "mcp", "microsoft", "open source", "openai", "opensource", "videos"]
+permalink: /ai/videos/Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI
+tags:
+- Agentic AI Foundation
+- AI
+- AI Agents
+- AI Integration
+- AI Standards
+- Anthropic
+- Developer Tools
+- GitHub
+- Linux Foundation
+- MCP
+- Microsoft
+- Open Source
+- OpenAI
+- OpenSource
+- Videos
+section_names:
+- ai
 ---
-
 GitHub presents a video featuring engineers from Anthropic, GitHub, Microsoft, and OpenAI as they discuss MCP’s evolution to a critical open standard in AI. The author shares insights into MCP's move to the Linux Foundation and its significance for developers.<!--excerpt_end-->
 
 {% youtube DBaFFYyUSl8 %}

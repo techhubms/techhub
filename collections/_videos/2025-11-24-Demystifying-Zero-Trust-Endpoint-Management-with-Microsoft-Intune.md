@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Demystifying Zero Trust Endpoint Management with Microsoft Intune"
-description: "This session from Microsoft Ignite 2025 explores how Microsoft Intune enables Zero Trust principles for endpoint management in the cloud. It covers device and app management, compliance, security features, and the foundation for secure AI adoption across Windows, macOS, iOS, and Android. Practical guidance for IT teams is provided, including new features, breach prevention tactics, and scalable, cloud-connected security strategies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UsATAOnBmmY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Demystifying Zero Trust Endpoint Management with Microsoft Intune
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=UsATAOnBmmY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 04:50:49 +00:00
-permalink: "/2025-11-24-Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune.html"
-categories: ["Security"]
-tags: ["AI", "AI Security", "Android", "App Management", "Cloud Security", "Compliance", "Device Management", "Endpoint Management", "Ios", "Macos", "Microsoft Ignite", "Microsoft Intune", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Threat Protection", "Videos", "Windows 365", "Zero Trust"]
-tags_normalized: ["ai", "ai security", "android", "app management", "cloud security", "compliance", "device management", "endpoint management", "ios", "macos", "microsoft ignite", "microsoft intune", "msignite", "scalewithcloudandaiendpoints", "security", "threat protection", "videos", "windows 365", "zero trust"]
+permalink: /security/videos/Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune
+tags:
+- AI
+- AI Security
+- Android
+- App Management
+- Cloud Security
+- Compliance
+- Device Management
+- Endpoint Management
+- Ios
+- Macos
+- Microsoft Ignite
+- Microsoft Intune
+- MSIgnite
+- ScalewithcloudandAIendpoints
+- Security
+- Threat Protection
+- Videos
+- Windows 365
+- Zero Trust
+section_names:
+- security
 ---
-
 Presented by Lior Bela and Sangeetha Visweswaran at Microsoft Ignite 2025, this session guides IT professionals through implementing Zero Trust endpoint management using Microsoft Intune, with strategies for secure, cloud-connected, and AI-ready workplaces.<!--excerpt_end-->
 
 {% youtube UsATAOnBmmY %}

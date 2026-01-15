@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Group Source of Authority Conversion: Shifting from AD to Entra ID"
-description: "JohnSavill outlines the process and considerations for converting the source of authority for groups from Active Directory (AD) to Entra ID. The guide covers planning, execution via tools like Graph Explorer, mail-enabled group concerns, writeback scenarios, and next steps to fully leverage Entra’s cloud identity features."
-author: "JohnSavill"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhees0/group_source_of_authority_conversion/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: 'Group Source of Authority Conversion: Shifting from AD to Entra ID'
+author: JohnSavill
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mhees0/group_source_of_authority_conversion/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 14:06:29 +00:00
-permalink: "/2025-08-04-Group-Source-of-Authority-Conversion-Shifting-from-AD-to-Entra-ID.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Azure", "Cloud Identity", "Community", "Entra Capabilities", "Entra ID", "Graph Explorer", "Group Management", "Group Writeback", "Hybrid Identity", "Identity Governance", "Mail Enabled Groups", "Security", "SOA Conversion"]
-tags_normalized: ["active directory", "azure", "cloud identity", "community", "entra capabilities", "entra id", "graph explorer", "group management", "group writeback", "hybrid identity", "identity governance", "mail enabled groups", "security", "soa conversion"]
+permalink: /azure/community/Group-Source-of-Authority-Conversion-Shifting-from-AD-to-Entra-ID
+tags:
+- Active Directory
+- Azure
+- Cloud Identity
+- Community
+- Entra Capabilities
+- Entra ID
+- Graph Explorer
+- Group Management
+- Group Writeback
+- Hybrid Identity
+- Identity Governance
+- Mail Enabled Groups
+- Security
+- SOA Conversion
+section_names:
+- azure
+- security
 ---
-
 In this community contribution, JohnSavill discusses group source of authority conversion from Active Directory to Entra ID, offering practical steps and critical considerations for a successful identity shift.<!--excerpt_end-->
 
 # Group Source of Authority Conversion: Shifting from AD to Entra ID

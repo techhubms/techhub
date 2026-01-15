@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Actions Pricing Update: Lower Runner Costs, Platform Enhancements Coming in 2026"
-description: "This news post details updates to GitHub Actions pricing effective in 2026, including a reduction in GitHub-hosted runner costs, new charges for self-hosted runner usage, and a deeper investment in the self-hosted runner platform. It includes links to official resources, FAQ, and migration guides for users impacted by these changes, with a focus on developer and DevOps workflows on GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Actions Pricing Update: Lower Runner Costs, Platform Enhancements Coming in 2026'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:41:43 +00:00
-permalink: "/2025-12-16-GitHub-Actions-Pricing-Update-Lower-Runner-Costs-Platform-Enhancements-Coming-in-2026.html"
-categories: ["DevOps"]
-tags: ["Actions", "Autoscaling", "Billing", "Cloud Platform Charge", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Hosted Runners", "Linux Containers", "Migration Guide", "News", "Pipeline Automation", "Pricing", "Roadmap", "Runners", "Self Hosted Runners", "Windows Support"]
-tags_normalized: ["actions", "autoscaling", "billing", "cloud platform charge", "developer tools", "devops", "github actions", "github hosted runners", "linux containers", "migration guide", "news", "pipeline automation", "pricing", "roadmap", "runners", "self hosted runners", "windows support"]
+permalink: /devops/news/GitHub-Actions-Pricing-Update-Lower-Runner-Costs-Platform-Enhancements-Coming-in-2026
+tags:
+- Actions
+- Autoscaling
+- Billing
+- Cloud Platform Charge
+- Developer Tools
+- DevOps
+- GitHub Actions
+- GitHub Hosted Runners
+- Linux Containers
+- Migration Guide
+- News
+- Pipeline Automation
+- Pricing
+- Roadmap
+- Runners
+- Self Hosted Runners
+- Windows Support
+section_names:
+- devops
 ---
-
 Allison summarizes upcoming GitHub Actions pricing changes taking effect in 2026, including reduced hosted runner costs and new charges for self-hosted usage, along with product investment highlights for developers.<!--excerpt_end-->
 
 # GitHub Actions Pricing Update for 2026

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Argus and Azure AI: Inclusive Assistive Tech Triumphs at Imagine Cup"
-description: "This article showcases how Argus, an award-winning wearable assistive device developed by Stanford students, uses Azure AI Foundry and Azure AI Speech to empower people with low vision. The story highlights the team's journey through startup competitions and the technical innovations behind Argus, offering inspiration and insights for future innovators leveraging Microsoft AI technologies."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Argus and Azure AI: Inclusive Assistive Tech Triumphs at Imagine Cup'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-02 17:04:06 +00:00
-permalink: "/2025-09-02-Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup.html"
-categories: ["AI", "Azure"]
-tags: ["Accessibility", "AI", "AI Development", "Argus Panoptes", "Assistive Technology", "Azure", "Azure AI Foundry", "Azure AI Speech", "Cloud Inference", "Company News", "Edge Processing", "Education", "Inclusion", "Microsoft For Startups", "Microsoft Imagine Cup", "News", "Startups", "Student Innovation", "Wearable Tech", "Wi R Protocol"]
-tags_normalized: ["accessibility", "ai", "ai development", "argus panoptes", "assistive technology", "azure", "azure ai foundry", "azure ai speech", "cloud inference", "company news", "edge processing", "education", "inclusion", "microsoft for startups", "microsoft imagine cup", "news", "startups", "student innovation", "wearable tech", "wi r protocol"]
+permalink: /ai/news/Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup
+tags:
+- Accessibility
+- AI
+- AI Development
+- Argus Panoptes
+- Assistive Technology
+- Azure
+- Azure AI Foundry
+- Azure AI Speech
+- Cloud Inference
+- Company News
+- Edge Processing
+- Education
+- Inclusion
+- Microsoft For Startups
+- Microsoft Imagine Cup
+- News
+- Startups
+- Student Innovation
+- Wearable Tech
+- Wi R Protocol
+section_names:
+- ai
+- azure
 ---
-
 Written by stclarke, this piece details how Daniel Kim and Arjun Oberoi’s Argus device, powered by Azure AI, won the 2025 Microsoft Imagine Cup and advances inclusive tech for people with low vision.<!--excerpt_end-->
 
 # Argus and Azure AI: A Winning Vision for Inclusive Tech at Imagine Cup

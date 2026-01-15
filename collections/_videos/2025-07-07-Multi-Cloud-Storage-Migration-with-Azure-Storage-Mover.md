@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Multi-Cloud Storage Migration with Azure Storage Mover"
-description: "This video, presented by John Savill's Technical Training, provides a practical walkthrough of migrating cloud storage from AWS S3 to Azure using Azure Storage Mover. It covers migration scenarios, required components, cost considerations, limitations, step-by-step job setup, and monitoring, with special focus on real-world implementation for organizations moving workloads to Microsoft Azure."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fBjk4CQG6Hw"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Multi-Cloud Storage Migration with Azure Storage Mover
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=fBjk4CQG6Hw
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-07 13:45:44 +00:00
-permalink: "/2025-07-07-Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover.html"
-categories: ["Azure"]
-tags: ["AWS", "AWS S3", "Azure", "Azure Arc", "Azure Cloud", "Azure Costs", "Azure Portal", "Azure Storage", "Azure Storage Mover", "Cloud", "Cloud Migration", "Cloud Storage", "Data Migration", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Migration Project", "Monitoring", "Multi Cloud", "S3", "SMB", "Storage", "Videos"]
-tags_normalized: ["aws", "aws s3", "azure", "azure arc", "azure cloud", "azure costs", "azure portal", "azure storage", "azure storage mover", "cloud", "cloud migration", "cloud storage", "data migration", "hybrid cloud", "microsoft", "microsoft azure", "migration project", "monitoring", "multi cloud", "s3", "smb", "storage", "videos"]
+permalink: /azure/videos/Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover
+tags:
+- AWS
+- AWS S3
+- Azure
+- Azure Arc
+- Azure Cloud
+- Azure Costs
+- Azure Portal
+- Azure Storage
+- Azure Storage Mover
+- Cloud
+- Cloud Migration
+- Cloud Storage
+- Data Migration
+- Hybrid Cloud
+- Microsoft
+- Microsoft Azure
+- Migration Project
+- Monitoring
+- Multi Cloud
+- S3
+- SMB
+- Storage
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training demonstrates how to migrate storage from AWS S3 to Azure using Azure Storage Mover, offering guidance on setup, required solutions, and monitoring migration jobs.<!--excerpt_end-->
 
 {% youtube fBjk4CQG6Hw %}

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Shared Responsibility Model in Cloud Computing Simplified"
-description: "This article by Dellenny offers a clear, practical overview of the Shared Responsibility Model as it applies to Microsoft Azure. It explains the division of security tasks between Microsoft and cloud customers, discusses differences across IaaS, PaaS, and SaaS, and provides actionable best practices for keeping workloads secure in Azure."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Shared Responsibility Model in Cloud Computing Simplified
+author: Dellenny
+canonical_url: https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-27 06:41:21 +00:00
-permalink: "/2025-10-27-Shared-Responsibility-Model-in-Cloud-Computing-Simplified.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure App Service", "Azure Key Vault", "Azure Security", "Azure Security Center", "Azure SQL Database", "Blogs", "Cloud Security", "Compliance", "Data Encryption", "Defender For Cloud", "GDPR", "HIPAA", "IaaS", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Microsoft Azure", "PaaS", "RBAC", "Role Based Access Control", "SaaS", "Security", "Security Best Practices", "Shared Responsibility Model"]
-tags_normalized: ["azure", "azure app service", "azure key vault", "azure security", "azure security center", "azure sql database", "blogs", "cloud security", "compliance", "data encryption", "defender for cloud", "gdpr", "hipaa", "iaas", "microsoft 365", "microsoft 365 certified fundamentals", "microsoft azure", "paas", "rbac", "role based access control", "saas", "security", "security best practices", "shared responsibility model"]
+permalink: /azure/blogs/Shared-Responsibility-Model-in-Cloud-Computing-Simplified
+tags:
+- Azure
+- Azure App Service
+- Azure Key Vault
+- Azure Security
+- Azure Security Center
+- Azure SQL Database
+- Blogs
+- Cloud Security
+- Compliance
+- Data Encryption
+- Defender For Cloud
+- GDPR
+- HIPAA
+- IaaS
+- Microsoft 365
+- 'Microsoft 365 Certified: Fundamentals'
+- Microsoft Azure
+- PaaS
+- RBAC
+- Role Based Access Control
+- SaaS
+- Security
+- Security Best Practices
+- Shared Responsibility Model
+section_names:
+- azure
+- security
 ---
-
 Dellenny offers a straightforward breakdown of the Shared Responsibility Model in Microsoft Azure, clarifying which security tasks belong to Microsoft and which to cloud customers.<!--excerpt_end-->
 
 # Shared Responsibility Model in Cloud Computing Simplified

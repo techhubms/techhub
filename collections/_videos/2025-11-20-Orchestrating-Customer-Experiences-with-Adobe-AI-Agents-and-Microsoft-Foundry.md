@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Orchestrating Customer Experiences with Adobe AI Agents and Microsoft Foundry"
-description: "This session from Microsoft Ignite 2025 explores the collaboration between Adobe and Microsoft in building AI-powered solutions for marketing teams. It highlights how interoperable AI tools, including Microsoft Foundry, enable connected workflows, real-time data processing, and scalable personalization while maintaining enterprise-grade trust and controls. The discussion covers agentic AI foundations, responsible AI governance, extensible ecosystems, data pipelines, and dashboard analytics."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bKnGc6g2NTA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Orchestrating Customer Experiences with Adobe AI Agents and Microsoft Foundry
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=bKnGc6g2NTA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:02:21 +00:00
-permalink: "/2025-11-20-Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Adobe", "AI", "AI Agents", "AI Collaboration", "Azure", "Azure AI", "Customer Experience", "Dashboard Analytics", "Data Pipeline", "Enterprise AI", "Governance Framework", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Personalization", "Real Time Data", "Responsible AI", "Videos"]
-tags_normalized: ["adobe", "ai", "ai agents", "ai collaboration", "azure", "azure ai", "customer experience", "dashboard analytics", "data pipeline", "enterprise ai", "governance framework", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "personalization", "real time data", "responsible ai", "videos"]
+permalink: /ai/videos/Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry
+tags:
+- Adobe
+- AI
+- AI Agents
+- AI Collaboration
+- Azure
+- Azure AI
+- Customer Experience
+- Dashboard Analytics
+- Data Pipeline
+- Enterprise AI
+- Governance Framework
+- InnovatewithAzureAIappsandagents
+- Microsoft Foundry
+- Microsoft Ignite
+- MSIgnite
+- Personalization
+- Real Time Data
+- Responsible AI
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Presented by Anoop Sahgal and Siddhartha Srivastava at Microsoft Ignite 2025, this session details how Adobe and Microsoft empower marketing teams with interoperable AI tools and Microsoft Foundry.<!--excerpt_end-->
 
 {% youtube bKnGc6g2NTA %}

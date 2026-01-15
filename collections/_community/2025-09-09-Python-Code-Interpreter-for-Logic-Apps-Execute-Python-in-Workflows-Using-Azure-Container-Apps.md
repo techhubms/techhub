@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Python Code Interpreter for Logic Apps: Execute Python in Workflows Using Azure Container Apps"
-description: "This community post by DivSwa introduces the new Python Code Interpreter capability for Logic Apps, enabling developers to execute Python code directly within Logic Apps workflows. Powered by Azure Container Apps, this feature lets users leverage natural language to analyze structured data, clean and transform files like CSV or JSON, and receive insights—from summaries to visualizations—without writing manual scripts. The post explains setup, security, real-world automation use cases, and provides links for getting started."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Python Code Interpreter for Logic Apps: Execute Python in Workflows Using Azure Container Apps'
+author: DivSwa
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 18:10:15 +00:00
-permalink: "/2025-09-09-Python-Code-Interpreter-for-Logic-Apps-Execute-Python-in-Workflows-Using-Azure-Container-Apps.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Loop", "AI", "AI Agents", "Azure", "Azure Container Apps", "Business Intelligence", "Code Execution", "Coding", "Community", "CSV Analysis", "Data Analysis", "Data Transformation", "Logic Apps", "Natural Language Processing", "Python", "Python Code Interpreter", "Visualization", "Workflow Automation"]
-tags_normalized: ["agent loop", "ai", "ai agents", "azure", "azure container apps", "business intelligence", "code execution", "coding", "community", "csv analysis", "data analysis", "data transformation", "logic apps", "natural language processing", "python", "python code interpreter", "visualization", "workflow automation"]
+permalink: /ai/community/Python-Code-Interpreter-for-Logic-Apps-Execute-Python-in-Workflows-Using-Azure-Container-Apps
+tags:
+- Agent Loop
+- AI
+- AI Agents
+- Azure
+- Azure Container Apps
+- Business Intelligence
+- Code Execution
+- Coding
+- Community
+- CSV Analysis
+- Data Analysis
+- Data Transformation
+- Logic Apps
+- Natural Language Processing
+- Python
+- Python Code Interpreter
+- Visualization
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 DivSwa details how developers can now use Python Code Interpreter in Logic Apps workflows, powered by Azure Container Apps, to automate structured data analysis using natural language prompts.<!--excerpt_end-->
 
 # Python Code Interpreter for Logic Apps: Execute Python in Workflows Using Azure Container Apps

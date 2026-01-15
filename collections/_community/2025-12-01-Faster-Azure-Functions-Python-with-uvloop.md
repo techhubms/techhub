@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Faster Azure Functions Python with uvloop"
-description: "This article explains how Azure Functions for Python 3.13 and above now use uvloop as the default event loop policy, leading to significant improvements in asynchronous workload performance. It details implementation steps, benchmarking results, and future roadmap for serverless Python scaling."
-author: "eroman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-azure-functions-python-with-uvloop/ba-p/4455323"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Faster Azure Functions Python with uvloop
+author: eroman
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-azure-functions-python-with-uvloop/ba-p/4455323
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-01 19:58:50 +00:00
-permalink: "/2025-12-01-Faster-Azure-Functions-Python-with-uvloop.html"
-categories: ["Azure", "Coding"]
-tags: ["Asynchronous Workloads", "AsyncIO", "Azure", "Azure App Service", "Azure Functions", "Benchmarking", "Cloud Scalability", "Coding", "Community", "Concurrency", "Event Loop", "Flex Consumption", "Libuv", "Performance Optimization", "Python 3.13", "Python Worker", "Serverless", "Uvloop"]
-tags_normalized: ["asynchronous workloads", "asyncio", "azure", "azure app service", "azure functions", "benchmarking", "cloud scalability", "coding", "community", "concurrency", "event loop", "flex consumption", "libuv", "performance optimization", "python 3dot13", "python worker", "serverless", "uvloop"]
+permalink: /coding/community/Faster-Azure-Functions-Python-with-uvloop
+tags:
+- Asynchronous Workloads
+- AsyncIO
+- Azure
+- Azure App Service
+- Azure Functions
+- Benchmarking
+- Cloud Scalability
+- Coding
+- Community
+- Concurrency
+- Event Loop
+- Flex Consumption
+- Libuv
+- Performance Optimization
+- Python 3.13
+- Python Worker
+- Serverless
+- Uvloop
+section_names:
+- azure
+- coding
 ---
-
 eroman outlines how switching to uvloop boosts the performance of Azure Functions with Python 3.13+. Serverless apps now run asynchronous workloads faster and scale more efficiently – no code changes needed.<!--excerpt_end-->
 
 # Faster Azure Functions Python with uvloop

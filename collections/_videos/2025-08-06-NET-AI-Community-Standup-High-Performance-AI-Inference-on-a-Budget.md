@@ -1,20 +1,45 @@
----
-layout: "post"
-title: ".NET AI Community Standup: High-Performance AI Inference on a Budget"
-description: "This community standup delves into accelerating AI inference using .NET technologies, focusing on making machine learning workloads, traditionally developed in Python, more efficient and cost-effective with .NET. The session discusses leveraging Hugging Face models, ONNX Runtime, new APIs in .NET 9 and 10, and the design of flexible AI libraries for production-ready AI. Demonstrations, GPU utilization comparisons, and actionable recommendations are provided for developers aiming to deploy fast, budget-conscious AI solutions on Microsoft platforms."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ptdNWGj8CN8"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET AI Community Standup: High-Performance AI Inference on a Budget'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=ptdNWGj8CN8
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-06 20:46:02 +00:00
-permalink: "/2025-08-06-NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget.html"
-categories: ["AI", "Coding", "ML"]
-tags: [".NET", ".NET 10", ".NET 9", "AI", "AI Inference", "AI Library Design", "AI Performance", "AIML", "Coding", "Cost Optimization", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "GPU Utilization", "Hugging Face Models", "Machine Learning", "MachineLearning", "ML", "Onnx", "ONNX Runtime", "Production AI", "Python Integration", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "ai inference", "ai library design", "ai performance", "aiml", "coding", "cost optimization", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "gpu utilization", "hugging face models", "machine learning", "machinelearning", "ml", "onnx", "onnx runtime", "production ai", "python integration", "software developer", "videos"]
+permalink: /ai/videos/NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget
+tags:
+- .NET
+- .NET 10
+- .NET 9
+- AI
+- AI Inference
+- AI Library Design
+- AI Performance
+- AIML
+- Coding
+- Cost Optimization
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- GPU Utilization
+- Hugging Face Models
+- Machine Learning
+- MachineLearning
+- ML
+- Onnx
+- ONNX Runtime
+- Production AI
+- Python Integration
+- Software Developer
+- Videos
+section_names:
+- ai
+- coding
+- ml
 ---
-
 Hosted by the dotnet team, this session features Bruno Capuano and Tal Wald as they demonstrate strategies for achieving fast, cost-effective AI inference using .NET, ONNX Runtime, and modern APIs.<!--excerpt_end-->
 
 {% youtube ptdNWGj8CN8 %}

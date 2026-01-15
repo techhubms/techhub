@@ -43,17 +43,19 @@ public class FrontMatterParser
         var inFrontMatter = false;
         var frontMatterClosed = false;
 
-        foreach (var line in lines)
+        for (int i = 0; i < lines.Length; i++)
         {
-            // First --- starts frontmatter
-            if (!inFrontMatter && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
+            var line = lines[i];
+            
+            // First --- starts frontmatter (ONLY if frontmatter hasn't been closed yet)
+            if (!inFrontMatter && !frontMatterClosed && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
             {
                 inFrontMatter = true;
                 continue;
             }
 
             // Second --- ends frontmatter
-            if (inFrontMatter && !frontMatterClosed && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
+            if (inFrontMatter && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
             {
                 frontMatterClosed = true;
                 inFrontMatter = false;
@@ -70,6 +72,7 @@ public class FrontMatterParser
             {
                 contentLines.Add(line);
             }
+            // Lines before first --- are ignored
         }
 
         // Parse YAML frontmatter

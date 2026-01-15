@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "General Availability of High Scale Mode in Azure Monitor Container Insights"
-description: "This announcement details the general availability of High Scale mode in Azure Monitor's Container Insights, enabling customers to collect significantly more logs from Azure Kubernetes Service (AKS) clusters. Learn how this enhancement helps large-scale observability scenarios, what technical changes are introduced, and how to get started."
-author: "DalanMendonca"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of High Scale Mode in Azure Monitor Container Insights
+author: DalanMendonca
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 20:32:11 +00:00
-permalink: "/2025-09-08-General-Availability-of-High-Scale-Mode-in-Azure-Monitor-Container-Insights.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agent Configuration", "AKS", "Azure", "Azure Monitor", "Cloud Infrastructure", "Cloud Operations", "Community", "Container Insights", "Data Collection", "DCR", "DevOps", "High Scale Mode", "Kubernetes", "Log Collection", "Monitoring", "Observability", "Scalability"]
-tags_normalized: ["agent configuration", "aks", "azure", "azure monitor", "cloud infrastructure", "cloud operations", "community", "container insights", "data collection", "dcr", "devops", "high scale mode", "kubernetes", "log collection", "monitoring", "observability", "scalability"]
+permalink: /azure/community/General-Availability-of-High-Scale-Mode-in-Azure-Monitor-Container-Insights
+tags:
+- Agent Configuration
+- AKS
+- Azure
+- Azure Monitor
+- Cloud Infrastructure
+- Cloud Operations
+- Community
+- Container Insights
+- Data Collection
+- DCR
+- DevOps
+- High Scale Mode
+- Kubernetes
+- Log Collection
+- Monitoring
+- Observability
+- Scalability
+section_names:
+- azure
+- devops
 ---
-
 Dalan Mendonca explains the general availability of High Scale mode in Azure Monitor Container Insights, offering new capabilities for AKS cluster log collection at scale.<!--excerpt_end-->
 
 # General Availability of High Scale Mode in Azure Monitor - Container Insights

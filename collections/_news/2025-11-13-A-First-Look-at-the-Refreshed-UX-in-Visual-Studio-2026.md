@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "A First Look at the Refreshed UX in Visual Studio 2026"
-description: "This news article presents a comprehensive overview of the new user experience in Visual Studio 2026. It highlights improvements in clarity, accessibility, settings management, theming, editor configuration, and overall usability. Developers will learn about design updates meant to streamline workflows and personalize the IDE, as well as new features supporting modern coding practices."
-author: "Ruben Rios"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: A First Look at the Refreshed UX in Visual Studio 2026
+author: Ruben Rios
+canonical_url: https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-13 15:00:29 +00:00
-permalink: "/2025-11-13-A-First-Look-at-the-Refreshed-UX-in-Visual-Studio-2026.html"
-categories: ["Coding"]
-tags: ["Accessibility", "Code Editor", "Coding", "Developer Tools", "Extension Development", "IDE", "News", "Performance Improvement", "Personalization", "Settings Management", "Theme Customization", "UI Refresh", "User Experience", "VS", "Windows Development"]
-tags_normalized: ["accessibility", "code editor", "coding", "developer tools", "extension development", "ide", "news", "performance improvement", "personalization", "settings management", "theme customization", "ui refresh", "user experience", "vs", "windows development"]
+permalink: /coding/news/A-First-Look-at-the-Refreshed-UX-in-Visual-Studio-2026
+tags:
+- Accessibility
+- Code Editor
+- Coding
+- Developer Tools
+- Extension Development
+- IDE
+- News
+- Performance Improvement
+- Personalization
+- Settings Management
+- Theme Customization
+- UI Refresh
+- User Experience
+- VS
+- Windows Development
+section_names:
+- coding
 ---
-
 Ruben Rios introduces the new Visual Studio 2026 user experience, highlighting features like refreshed design, improved accessibility, settings, and editor customization aimed at supporting developers’ modern workflows.<!--excerpt_end-->
 
 # A First Look at the Refreshed UX in Visual Studio 2026

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric"
-description: "This guide explores disaster recovery (DR) strategies for Microsoft Azure Databricks and Microsoft Fabric platforms, highlighting both customer-driven and built-in DR approaches. It covers infrastructure provisioning, data synchronization, failover automation, and details the different responsibilities and procedures for each service, ensuring business continuity in cloud-native analytics environments."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-31 18:59:48 +00:00
-permalink: "/2025-12-31-Disaster-Recovery-Strategies-for-Azure-Databricks-and-Microsoft-Fabric.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["Azure", "Azure Databricks", "Azure Managed Identity", "Azure Monitor", "Azure Storage", "Business Continuity", "CI/CD", "Community", "Data Synchronization", "Delta Lake", "DevOps", "Disaster Recovery", "IaC", "Microsoft Fabric", "ML", "Power BI", "Python", "Regional Redundancy", "Terraform", "Unity Catalog"]
-tags_normalized: ["azure", "azure databricks", "azure managed identity", "azure monitor", "azure storage", "business continuity", "cislashcd", "community", "data synchronization", "delta lake", "devops", "disaster recovery", "iac", "microsoft fabric", "ml", "power bi", "python", "regional redundancy", "terraform", "unity catalog"]
+permalink: /ml/community/Disaster-Recovery-Strategies-for-Azure-Databricks-and-Microsoft-Fabric
+tags:
+- Azure
+- Azure Databricks
+- Azure Managed Identity
+- Azure Monitor
+- Azure Storage
+- Business Continuity
+- CI/CD
+- Community
+- Data Synchronization
+- Delta Lake
+- DevOps
+- Disaster Recovery
+- IaC
+- Microsoft Fabric
+- ML
+- Power BI
+- Python
+- Regional Redundancy
+- Terraform
+- Unity Catalog
+section_names:
+- azure
+- devops
+- ml
 ---
-
 Rafia Aqil and co-authors present a comprehensive technical guide to disaster recovery for Azure Databricks and Microsoft Fabric, focusing on automation, cloud resiliency, and best practices for DR in analytics platforms.<!--excerpt_end-->
 
 # Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Survey Finds Developers Adopting AI More Rapidly Than Project Managers"
-description: "A recent survey of over 1,100 developers and 50 project managers highlights a major adoption gap for AI in software development. Developers are leveraging AI to accelerate coding, increase productivity, and create new opportunities, while project managers lag in implementing structured AI upskilling. Challenges, benefits, and implications for DevOps leaders are explored."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-sees-developers-embracing-ai-faster-than-project-leaders/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Survey Finds Developers Adopting AI More Rapidly Than Project Managers
+author: Mike Vizard
+canonical_url: https://devops.com/survey-sees-developers-embracing-ai-faster-than-project-leaders/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-17 12:45:40 +00:00
-permalink: "/2025-10-17-Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Challenges", "AI Prototyping", "AI Skills", "BairesDev", "Blogs", "Career Opportunities", "Coding Automation", "Developer Productivity", "DevOps", "Machine Learning", "Project Management", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Team Leadership", "Technical Debt", "Upskilling", "Workforce Development"]
-tags_normalized: ["ai", "ai adoption", "ai challenges", "ai prototyping", "ai skills", "bairesdev", "blogs", "career opportunities", "coding automation", "developer productivity", "devops", "machine learning", "project management", "social facebook", "social linkedin", "social x", "software development", "team leadership", "technical debt", "upskilling", "workforce development"]
+permalink: /ai/blogs/Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers
+tags:
+- AI
+- AI Adoption
+- AI Challenges
+- AI Prototyping
+- AI Skills
+- BairesDev
+- Blogs
+- Career Opportunities
+- Coding Automation
+- Developer Productivity
+- DevOps
+- Machine Learning
+- Project Management
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development
+- Team Leadership
+- Technical Debt
+- Upskilling
+- Workforce Development
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard summarizes the results of a BairesDev survey, showing developers are embracing AI faster than project managers, with implications for DevOps leaders and software teams.<!--excerpt_end-->
 
 # Survey Finds Developers Adopting AI More Rapidly Than Project Managers

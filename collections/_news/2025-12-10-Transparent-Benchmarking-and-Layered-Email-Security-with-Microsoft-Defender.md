@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Transparent Benchmarking and Layered Email Security with Microsoft Defender"
-description: "This news report summarizes Microsoft's latest benchmarking study on layered email security architectures including Defender for Office 365, Secure Email Gateways (SEG), and Integrated Cloud Email Security (ICES). It details updated methodologies, real-world threat data, and post-delivery remediation metrics, equipping security professionals with transparent, actionable insights for improving email protection strategies."
-author: "Scott Woodgate and Ramya Chitrakar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Transparent Benchmarking and Layered Email Security with Microsoft Defender
+author: Scott Woodgate and Ramya Chitrakar
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/2025-12-10-Transparent-Benchmarking-and-Layered-Email-Security-with-Microsoft-Defender.html"
-categories: ["Security"]
-tags: ["Benchmarking", "Cybersecurity", "Email Security", "Integrated Cloud Email Security", "Malicious Email Protection", "Microsoft Defender For Office 365", "Microsoft Security", "News", "Post Delivery Remediation", "Secure Email Gateway", "Security", "Security Architecture", "Security Vendor Comparison", "Spam Filtering", "Threat Detection", "Transparent Security", "Zero Hour Auto Purge"]
-tags_normalized: ["benchmarking", "cybersecurity", "email security", "integrated cloud email security", "malicious email protection", "microsoft defender for office 365", "microsoft security", "news", "post delivery remediation", "secure email gateway", "security", "security architecture", "security vendor comparison", "spam filtering", "threat detection", "transparent security", "zero hour auto purge"]
+permalink: /security/news/Transparent-Benchmarking-and-Layered-Email-Security-with-Microsoft-Defender
+tags:
+- Benchmarking
+- Cybersecurity
+- Email Security
+- Integrated Cloud Email Security
+- Malicious Email Protection
+- Microsoft Defender For Office 365
+- Microsoft Security
+- News
+- Post Delivery Remediation
+- Secure Email Gateway
+- Security
+- Security Architecture
+- Security Vendor Comparison
+- Spam Filtering
+- Threat Detection
+- Transparent Security
+- Zero Hour Auto Purge
+section_names:
+- security
 ---
-
 Scott Woodgate and Ramya Chitrakar present real-world benchmarking results on layered email security using Microsoft Defender for Office 365 and ICES/SEG vendors, empowering security leaders with transparent data-driven insights.<!--excerpt_end-->
 
 # Transparent Benchmarking and Layered Email Security with Microsoft Defender

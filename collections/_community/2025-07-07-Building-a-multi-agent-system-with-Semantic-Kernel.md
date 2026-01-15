@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Building a multi-agent system with Semantic Kernel"
-description: "Geekodon introduces an agentic AI demo using Semantic Kernel, featuring planner, reviewer, and executor agents and a Copilot-style human-in-the-loop workflow."
-author: "Geekodon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/"
-viewing_mode: "external"
-categories: ["AI", "Coding", "GitHub Copilot"]
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Building a multi-agent system with Semantic Kernel
+author: Geekodon
+canonical_url: https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-07-07 11:01:49 +00:00
-permalink: "/2025-07-07-Building-a-multi-agent-system-with-Semantic-Kernel.html"
-tags: [".NET", "Agentic AI", "AI", "Coding", "Community", "Copilot UI", "Executor Agent", "GitHub Copilot", "Human in The Loop", "Planner Agent", "Process Automation", "Reviewer Agent", "Semantic Kernel"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "coding", "community", "copilot ui", "executor agent", "github copilot", "human in the loop", "planner agent", "process automation", "reviewer agent", "semantic kernel"]
+permalink: /github-copilot/community/Building-a-multi-agent-system-with-Semantic-Kernel
+tags:
+- .NET
+- Agentic AI
+- AI
+- Coding
+- Community
+- Copilot UI
+- Executor Agent
+- GitHub Copilot
+- Human in The Loop
+- Planner Agent
+- Process Automation
+- Reviewer Agent
+- Semantic Kernel
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this article, Geekodon presents a practical demo of an agentic AI system built using Semantic Kernel, highlighting key components and workflow strategies. <!--excerpt_end--> The demo showcases an architecture where three main agents—Planner, Reviewer, and Executor—work collaboratively to process and execute user requests.
 
 ## System Overview

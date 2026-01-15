@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Experimentation Analytics with Statsig in Microsoft Fabric"
-description: "This article introduces Statsig Experimentation Analytics, a new feature available as a third-party workload in Microsoft Fabric. It explains how product and analytics teams can design experiments, connect exposure data, define custom metrics, and conduct statistical tests directly on their Fabric data without data movement. The post provides a step-by-step overview, highlighting integration with Power BI, real-time incremental analysis, and secure data governance through OneLake. Readers will learn how to leverage experimentation analytics for data-driven product decisions inside the Microsoft Fabric ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/27219/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Experimentation Analytics with Statsig in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/27219/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 13:00:00 +00:00
-permalink: "/2025-10-02-Experimentation-Analytics-with-Statsig-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["A/B Testing", "Azure", "Control Group", "Data Science", "Experimentation Analytics", "Feature Rollouts", "Frequentist Testing", "KPI", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Product Analytics", "Sequential Testing", "Statistical Analysis", "Statsig", "Variant Group"]
-tags_normalized: ["aslashb testing", "azure", "control group", "data science", "experimentation analytics", "feature rollouts", "frequentist testing", "kpi", "microsoft fabric", "ml", "news", "onelake", "power bi", "product analytics", "sequential testing", "statistical analysis", "statsig", "variant group"]
+permalink: /ml/news/Experimentation-Analytics-with-Statsig-in-Microsoft-Fabric
+tags:
+- A/B Testing
+- Azure
+- Control Group
+- Data Science
+- Experimentation Analytics
+- Feature Rollouts
+- Frequentist Testing
+- KPI
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Power BI
+- Product Analytics
+- Sequential Testing
+- Statistical Analysis
+- Statsig
+- Variant Group
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents an overview of Statsig Experimentation Analytics, explaining how product and analytics teams can run experiments, analyze data, and drive product decisions securely within the Fabric platform.<!--excerpt_end-->
 
 # Experimentation Analytics with Statsig in Microsoft Fabric

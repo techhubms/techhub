@@ -7,7 +7,7 @@ public record GenAIBasicsPageData
 {
     public required string Title { get; init; }
     public required string Description { get; init; }
-    public required List<string> Categories { get; init; }
+    public required List<string> SectionNames { get; init; }
     public required List<string> Tags { get; init; }
     public required string Intro { get; init; }
     public required List<RelatedPage> RelatedPages { get; init; }

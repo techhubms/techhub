@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "PowerShell 7.5 GA is now available"
-description: "PowerShell 7.5.0 has been released with a focus on quality, security, and stability. This update incorporates significant community contributions, introduces new cmdlets, experimental features, and a range of quality-of-life improvements. The release underscores an ongoing commitment to a robust and secure scripting platform."
-author: "Jason Helmick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: PowerShell 7.5 GA is now available
+author: Jason Helmick
+canonical_url: https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-12 21:34:13 +00:00
-permalink: "/2025-02-12-PowerShell-75-GA-is-now-available.html"
-categories: ["Coding"]
-tags: ["Automation", "Cmdlets", "Coding", "Community Contributions", "Experimental Features", "News", "Platform Stability", "PowerShell", "PowerShell 7.5", "Quality Improvements", "Scripting"]
-tags_normalized: ["automation", "cmdlets", "coding", "community contributions", "experimental features", "news", "platform stability", "powershell", "powershell 7dot5", "quality improvements", "scripting"]
+permalink: /coding/news/PowerShell-75-GA-is-now-available
+tags:
+- Automation
+- Cmdlets
+- Coding
+- Community Contributions
+- Experimental Features
+- News
+- Platform Stability
+- PowerShell
+- PowerShell 7.5
+- Quality Improvements
+- Scripting
+section_names:
+- coding
 ---
-
 Jason Helmick announces the general availability of PowerShell 7.5, highlighting new features, improvements, and community contributions.<!--excerpt_end-->
 
 ## Summary of the Release

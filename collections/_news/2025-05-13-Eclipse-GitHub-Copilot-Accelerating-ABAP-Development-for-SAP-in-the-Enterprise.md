@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Eclipse + GitHub Copilot: Accelerating ABAP Development for SAP in the Enterprise"
-description: "This article by Amit Lal examines the new integration of GitHub Copilot with Eclipse for ABAP development in SAP environments. It covers setup guidance, productivity benefits, enterprise considerations, practical examples, and governance implications for leveraging AI-enhanced development workflows."
-author: "Amit Lal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/eclipse-github-copilot-lightspeed-sap-abap-development/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: 'Eclipse + GitHub Copilot: Accelerating ABAP Development for SAP in the Enterprise'
+author: Amit Lal
+canonical_url: https://devblogs.microsoft.com/all-things-azure/eclipse-github-copilot-lightspeed-sap-abap-development/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-13 21:17:28 +00:00
-permalink: "/2025-05-13-Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["ABAP", "AI", "AI Integration", "AI Powered Development", "All Things Azure", "Code Quality", "Code Suggestions", "Copilot", "Copilot For Business", "Eclipse", "Enterprise Workflows", "GitHub Copilot", "GitHub Copilot Business", "News", "Plugin Setup", "Productivity", "SAP", "SAP Development"]
-tags_normalized: ["abap", "ai", "ai integration", "ai powered development", "all things azure", "code quality", "code suggestions", "copilot", "copilot for business", "eclipse", "enterprise workflows", "github copilot", "github copilot business", "news", "plugin setup", "productivity", "sap", "sap development"]
+permalink: /github-copilot/news/Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise
+tags:
+- ABAP
+- AI
+- AI Integration
+- AI Powered Development
+- All Things Azure
+- Code Quality
+- Code Suggestions
+- Copilot
+- Copilot For Business
+- Eclipse
+- Enterprise Workflows
+- GitHub Copilot
+- GitHub Copilot Business
+- News
+- Plugin Setup
+- Productivity
+- SAP
+- SAP Development
+section_names:
+- ai
+- github-copilot
 ---
-
 Amit Lal explores the integration of GitHub Copilot with Eclipse for ABAP, guiding readers through the setup and examining its impact on SAP development. Discover practical benefits, real-world examples, and key considerations for enterprises adopting AI-powered coding tools.<!--excerpt_end-->
 
 # Eclipse + GitHub Copilot: Accelerating ABAP Development for SAP in the Enterprise

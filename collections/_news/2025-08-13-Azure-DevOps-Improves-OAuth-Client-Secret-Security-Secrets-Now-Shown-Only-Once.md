@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure DevOps Improves OAuth Client Secret Security: Secrets Now Shown Only Once"
-description: "This announcement details a significant upcoming change in Azure DevOps’ handling of OAuth client secrets. Starting in September 2025, newly created client secrets will only be shown once at creation and will not be retrievable later via UI or API. The update aims to enhance security by promoting secure secret storage, retiring the Get Registration Secret API, and providing new APIs for secret rotation. Best practices, timelines, and links for further guidance are provided."
-author: "Angel Wong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-devops-oauth-client-secrets-now-shown-only-once/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+layout: post
+title: 'Azure DevOps Improves OAuth Client Secret Security: Secrets Now Shown Only Once'
+author: Angel Wong
+canonical_url: https://devblogs.microsoft.com/devops/azure-devops-oauth-client-secrets-now-shown-only-once/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-13 15:31:56 +00:00
-permalink: "/2025-08-13-Azure-DevOps-Improves-OAuth-Client-Secret-Security-Secrets-Now-Shown-Only-Once.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Deprecation", "Azure", "Azure DevOps", "Azure Key Vault", "Client Secrets", "Credential Storage", "DevOps", "DevOps Workflows", "News", "OAuth", "Secret Management", "Secret Rotation", "Secure First Initiative", "Security", "Security Best Practices"]
-tags_normalized: ["api deprecation", "azure", "azure devops", "azure key vault", "client secrets", "credential storage", "devops", "devops workflows", "news", "oauth", "secret management", "secret rotation", "secure first initiative", "security", "security best practices"]
+permalink: /azure/news/Azure-DevOps-Improves-OAuth-Client-Secret-Security-Secrets-Now-Shown-Only-Once
+tags:
+- API Deprecation
+- Azure
+- Azure DevOps
+- Azure Key Vault
+- Client Secrets
+- Credential Storage
+- DevOps
+- DevOps Workflows
+- News
+- OAuth
+- Secret Management
+- Secret Rotation
+- Secure First Initiative
+- Security
+- Security Best Practices
+section_names:
+- azure
+- devops
+- security
 ---
-
 Angel Wong announces an important change to how Azure DevOps handles OAuth client secrets, introducing a ‘show-once’ system to improve security and retiring the existing secret retrieval API.<!--excerpt_end-->
 
 # Azure DevOps Improves OAuth Client Secret Security: Secrets Now Shown Only Once

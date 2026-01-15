@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unlocking Real-Time Intelligence with Microsoft Fabric and Advanced AI: Insights from Ignite 2025"
-description: "This session from Microsoft Ignite 2025 explores Real-Time Intelligence, focusing on its role in delivering actionable, real-time data analytics for enterprise scenarios. The speakers delve into industry use cases, integration with Microsoft Fabric, operational improvements in fields like healthcare and hospitality, and advanced features such as Copilot-driven data exploration, Microsoft Sentinel integration, and anomaly detection capabilities. Participants will gain a deep understanding of how real-time intelligence can transform decision-making and enhance data strategy through Microsoft's modern platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AAm9mhhrNec"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Unlocking Real-Time Intelligence with Microsoft Fabric and Advanced AI: Insights from Ignite 2025'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=AAm9mhhrNec
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:23:30 +00:00
-permalink: "/2025-11-21-Unlocking-Real-Time-Intelligence-with-Microsoft-Fabric-and-Advanced-AI-Insights-from-Ignite-2025.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Advanced Analytics", "AI", "Anomaly Detection", "Azure", "Copilot Data Exploration", "Customer Success", "Data Platform", "Graph Operations", "Healthcare Analytics", "Hospital Operations", "Industry Use Cases", "Live Data Processing", "Machine Learning", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MSIgnite", "Natural Language Insights", "Operational Analytics", "Preview Features", "Real Time Intelligence", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["advanced analytics", "ai", "anomaly detection", "azure", "copilot data exploration", "customer success", "data platform", "graph operations", "healthcare analytics", "hospital operations", "industry use cases", "live data processing", "machine learning", "microsoft fabric", "microsoft sentinel", "ml", "msignite", "natural language insights", "operational analytics", "preview features", "real time intelligence", "unifyyourdataplatform", "videos"]
+permalink: /ai/videos/Unlocking-Real-Time-Intelligence-with-Microsoft-Fabric-and-Advanced-AI-Insights-from-Ignite-2025
+tags:
+- Advanced Analytics
+- AI
+- Anomaly Detection
+- Azure
+- Copilot Data Exploration
+- Customer Success
+- Data Platform
+- Graph Operations
+- Healthcare Analytics
+- Hospital Operations
+- Industry Use Cases
+- Live Data Processing
+- Machine Learning
+- Microsoft Fabric
+- Microsoft Sentinel
+- ML
+- MSIgnite
+- Natural Language Insights
+- Operational Analytics
+- Preview Features
+- Real Time Intelligence
+- Unifyyourdataplatform
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Presented by Microsoft Events, this Ignite 2025 breakout covers advanced real-time intelligence, featuring Microsoft Fabric, Copilot AI tools, Sentinel integration, and real-world industry analytics use cases.<!--excerpt_end-->
 
 {% youtube AAm9mhhrNec %}

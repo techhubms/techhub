@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing the Release Candidate (RC) of TypeScript 5.8"
-description: "Daniel Rosenwasser introduces the TypeScript 5.8 Release Candidate, highlighting its new features such as granular checks for return statements, improved ESM and CommonJS module support, enhancements for Node.js compatibility, new compiler flags, performance optimizations, and more. Users are encouraged to test the RC and provide feedback."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+layout: post
+title: Announcing the Release Candidate (RC) of TypeScript 5.8
+author: Daniel Rosenwasser
+canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/
+viewing_mode: external
+feed_name: Microsoft TypeScript Blog
+feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-13 22:27:05 +00:00
-permalink: "/2025-02-13-Announcing-the-Release-Candidate-RC-of-TypeScript-58.html"
-categories: ["Coding"]
-tags: ["Coding", "CommonJS", "Compiler Flags", "Computed Properties", "Declaration Files", "ECMAScript Modules", "Import Assertions", "JavaScript", "Library Replacement", "Module Resolution", "News", "Nightly Builds", "Node.js", "Performance Optimization", "Release Candidate", "TypeScript"]
-tags_normalized: ["coding", "commonjs", "compiler flags", "computed properties", "declaration files", "ecmascript modules", "import assertions", "javascript", "library replacement", "module resolution", "news", "nightly builds", "nodedotjs", "performance optimization", "release candidate", "typescript"]
+permalink: /coding/news/Announcing-the-Release-Candidate-RC-of-TypeScript-58
+tags:
+- Coding
+- CommonJS
+- Compiler Flags
+- Computed Properties
+- Declaration Files
+- ECMAScript Modules
+- Import Assertions
+- JavaScript
+- Library Replacement
+- Module Resolution
+- News
+- Nightly Builds
+- Node.js
+- Performance Optimization
+- Release Candidate
+- TypeScript
+section_names:
+- coding
 ---
-
 In this article, Daniel Rosenwasser details the new features and changes in the Release Candidate of TypeScript 5.8, aimed at improving type checking, module interoperability, build performance, and compatibility with modern JavaScript.<!--excerpt_end-->
 
 ## Announcing TypeScript 5.8 Release Candidate (RC)

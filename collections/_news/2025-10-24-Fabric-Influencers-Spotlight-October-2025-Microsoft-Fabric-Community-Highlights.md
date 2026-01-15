@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights"
-description: "This October 2025 edition of the Fabric Influencers Spotlight curates standout technical content by Microsoft MVPs and Super Users, covering topics across the Microsoft Fabric platform. It highlights hands-on blog posts, tutorials, and presentations spanning Power BI, data engineering, data science, semantic models, certification, DevOps strategies, administrative best practices, and real-time analytics within the Microsoft Fabric ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/29208/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/29208/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-24 09:00:00 +00:00
-permalink: "/2025-10-24-Fabric-Influencers-Spotlight-October-2025-Microsoft-Fabric-Community-Highlights.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Administration", "Azure", "Certification DP 600", "Certification DP 700", "Coding", "Data Engineering", "Data Science", "Data Warehousing", "DAX", "DBSCAN", "DevOps", "Eventhouse", "Fabric Data Agents", "Fabric Notebooks", "Git Integration", "Governance", "KMeans", "Medallion Architecture", "Microsoft Fabric", "ML", "MVP", "News", "Power BI", "Real Time Intelligence", "Semantic Models", "Super User", "UMAP", "Workspaces"]
-tags_normalized: ["administration", "azure", "certification dp 600", "certification dp 700", "coding", "data engineering", "data science", "data warehousing", "dax", "dbscan", "devops", "eventhouse", "fabric data agents", "fabric notebooks", "git integration", "governance", "kmeans", "medallion architecture", "microsoft fabric", "ml", "mvp", "news", "power bi", "real time intelligence", "semantic models", "super user", "umap", "workspaces"]
+permalink: /ml/news/Fabric-Influencers-Spotlight-October-2025-Microsoft-Fabric-Community-Highlights
+tags:
+- Administration
+- Azure
+- Certification DP 600
+- Certification DP 700
+- Coding
+- Data Engineering
+- Data Science
+- Data Warehousing
+- DAX
+- DBSCAN
+- DevOps
+- Eventhouse
+- Fabric Data Agents
+- Fabric Notebooks
+- Git Integration
+- Governance
+- KMeans
+- Medallion Architecture
+- Microsoft Fabric
+- ML
+- MVP
+- News
+- Power BI
+- Real Time Intelligence
+- Semantic Models
+- Super User
+- UMAP
+- Workspaces
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 The Microsoft Fabric Blog team showcases top technical achievements from MVPs and Super Users in October 2025. This edition features in-depth tutorials and strategies—spanning Power BI, data science, security in semantic models, DevOps workflows, and real-time analytics—by leading community members.<!--excerpt_end-->
 
 # Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights

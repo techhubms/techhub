@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How I Replaced 10 Logic App Conditions with 1 C# Script"
-description: "This brief post by maverick-1009 shares how to streamline complex Azure Logic Apps workflows. By leveraging the Inline Code (C#) action, the author replaced multiple conditional statements with a single script, reducing complexity and eliminating cold start or HTTP latency typically associated with Azure Functions."
-author: "maverick-1009"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mi33ug/how_i_replaced_10_logic_app_conditions_with_1_c/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: How I Replaced 10 Logic App Conditions with 1 C# Script
+author: maverick-1009
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mi33ug/how_i_replaced_10_logic_app_conditions_with_1_c/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-05 07:56:10 +00:00
-permalink: "/2025-08-05-How-I-Replaced-10-Logic-App-Conditions-with-1-C-Script.html"
-categories: ["Azure", "Coding"]
-tags: ["Automation", "Azure", "Azure Functions", "Azure Logic Apps", "C#", "Coding", "Cold Start", "Community", "Conditional Logic", "HTTP Latency", "Inline Code", "Workflow Automation", "Workflow Optimization"]
-tags_normalized: ["automation", "azure", "azure functions", "azure logic apps", "csharp", "coding", "cold start", "community", "conditional logic", "http latency", "inline code", "workflow automation", "workflow optimization"]
+permalink: /coding/community/How-I-Replaced-10-Logic-App-Conditions-with-1-C-Script
+tags:
+- Automation
+- Azure
+- Azure Functions
+- Azure Logic Apps
+- C#
+- Coding
+- Cold Start
+- Community
+- Conditional Logic
+- HTTP Latency
+- Inline Code
+- Workflow Automation
+- Workflow Optimization
+section_names:
+- azure
+- coding
 ---
-
 maverick-1009 explains a practical approach to consolidating Logic App conditions using C# Inline Code to streamline Azure workflows.<!--excerpt_end-->
 
 ## How I Replaced 10 Logic App Conditions with 1 C# Script

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "DataMountain: .NET Data Warehousing That Beats C++ Performance"
-description: "This session introduces DataMountain, a new .NET-based data warehouse designed by Pansynchro Technologies to deliver performance that rivals or exceeds C++ solutions, such as ClickHouse. It explores performance-boosting strategies in .NET, including advanced code generation, use of Spans and Vectors, and unique .NET optimization techniques, showing how modern .NET development achieves high-end data processing results."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zbH-cIihBh4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'DataMountain: .NET Data Warehousing That Beats C++ Performance'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=zbH-cIihBh4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:35 +00:00
-permalink: "/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html"
-categories: ["Coding", "ML"]
-tags: [".NET", ".NET 10", "C#", "ClickHouse", "Code Generation", "Coding", "Data Engineering", "Data Processing", "Data Warehousing", "High Performance Computing", "ML", "Optimization", "Performance Benchmarking", "Spans", "SQL Performance", "Vectors", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "csharp", "clickhouse", "code generation", "coding", "data engineering", "data processing", "data warehousing", "high performance computing", "ml", "optimization", "performance benchmarking", "spans", "sql performance", "vectors", "videos"]
+permalink: /ml/videos/DataMountain-NET-Data-Warehousing-That-Beats-C-Performance
+tags:
+- .NET
+- .NET 10
+- C#
+- ClickHouse
+- Code Generation
+- Coding
+- Data Engineering
+- Data Processing
+- Data Warehousing
+- High Performance Computing
+- ML
+- Optimization
+- Performance Benchmarking
+- Spans
+- SQL Performance
+- Vectors
+- Videos
+section_names:
+- coding
+- ml
 ---
-
 dotnet showcases DataMountain, a .NET-based data warehouse that achieves exceptional performance, highlighting how recent .NET features enable results comparable to systems languages like C++.<!--excerpt_end-->
 
 {% youtube zbH-cIihBh4 %}

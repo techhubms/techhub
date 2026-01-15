@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Adding Runtime NuGet Package Loading to an Application"
-description: "Rick Strahl explores how to dynamically add external code to .NET applications at runtime via NuGet packages and assembly loading. The article details implementation in the LiveReloadServer tool, code examples for package and assembly loading, and benefits/considerations for runtime extensibility."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Jun/09/Adding-Runtime-NuGet-Package-Loading-to-an-Application"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: Adding Runtime NuGet Package Loading to an Application
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Jun/09/Adding-Runtime-NuGet-Package-Loading-to-an-Application
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-06-10 04:40:37 +00:00
-permalink: "/2025-06-10-Adding-Runtime-NuGet-Package-Loading-to-an-Application.html"
-categories: ["Coding"]
-tags: [".NET", ".NET ASP.NET", "ASP.NET", "Assembly Loading", "Blogs", "C#", "Coding", "Dependency Management", "Dynamic Code", "LiveReloadServer", "NuGet", "Razor Pages", "Runtime Extensibility"]
-tags_normalized: ["dotnet", "dotnet aspdotnet", "aspdotnet", "assembly loading", "blogs", "csharp", "coding", "dependency management", "dynamic code", "livereloadserver", "nuget", "razor pages", "runtime extensibility"]
+permalink: /coding/blogs/Adding-Runtime-NuGet-Package-Loading-to-an-Application
+tags:
+- .NET
+- .NET ASP.NET
+- ASP.NET
+- Assembly Loading
+- Blogs
+- C#
+- Coding
+- Dependency Management
+- Dynamic Code
+- LiveReloadServer
+- NuGet
+- Razor Pages
+- Runtime Extensibility
+section_names:
+- coding
 ---
-
 In this article, Rick Strahl discusses how to enable runtime extensibility in .NET apps using NuGet package loading and dynamic assembly integration, with practical code samples and insights from his work on LiveReloadServer.<!--excerpt_end-->
 
 # Adding Runtime NuGet Package Loading to an Application

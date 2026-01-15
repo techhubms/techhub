@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Introducing Anthropic’s Claude Models in Microsoft Foundry: Expanding AI on Azure"
-description: "This news update details Microsoft's partnership with Anthropic to add Claude AI models to Microsoft Foundry on Azure. Developers can now access both the Claude and GPT series on a unified platform. The article explains the capabilities of each Claude model, integration strategies, developer tooling, and pricing, focusing on building secure, scalable, and practical AI agents using Foundry's open, governed environment."
-author: "Asha Sharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Introducing Anthropic’s Claude Models in Microsoft Foundry: Expanding AI on Azure'
+author: Asha Sharma
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 15:00:28 +00:00
-permalink: "/2025-11-18-Introducing-Anthropics-Claude-Models-in-Microsoft-Foundry-Expanding-AI-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI + Machine Learning", "AI Agents", "AI Integration", "Anthropic", "Azure", "Claude", "Claude Code", "Claude Haiku 4.5", "Claude Opus 4.1", "Claude Sonnet 4.5", "Enterprise AI", "Foundry Agent Service", "Governance", "GPT", "MCP", "Microsoft Foundry", "News", "Pricing", "Responsible AI"]
-tags_normalized: ["agentic ai", "ai", "ai plus machine learning", "ai agents", "ai integration", "anthropic", "azure", "claude", "claude code", "claude haiku 4dot5", "claude opus 4dot1", "claude sonnet 4dot5", "enterprise ai", "foundry agent service", "governance", "gpt", "mcp", "microsoft foundry", "news", "pricing", "responsible ai"]
+permalink: /ai/news/Introducing-Anthropics-Claude-Models-in-Microsoft-Foundry-Expanding-AI-on-Azure
+tags:
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Integration
+- Anthropic
+- Azure
+- Claude
+- Claude Code
+- Claude Haiku 4.5
+- Claude Opus 4.1
+- Claude Sonnet 4.5
+- Enterprise AI
+- Foundry Agent Service
+- Governance
+- GPT
+- MCP
+- Microsoft Foundry
+- News
+- Pricing
+- Responsible AI
+section_names:
+- ai
+- azure
 ---
-
 Asha Sharma introduces the integration of Anthropic’s Claude models into Microsoft Foundry on Azure, offering developers extensive AI options and practical tools for building enterprise-ready intelligent agents.<!--excerpt_end-->
 
 # Introducing Anthropic’s Claude Models in Microsoft Foundry: Expanding AI on Azure

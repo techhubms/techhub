@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Observability in Retail: How to Monitor and Manage Interactive Kiosk Fleets"
-description: "Cheryl Lesniak examines the observability challenges in managing large numbers of retail kiosks. The article highlights the importance of centralized monitoring, real-time telemetry, and proactive issue detection to minimize outages and ensure optimal customer experiences across distributed retail environments."
-author: "Cheryl Lesniak"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets/?utm_source=rss&utm_medium=rss&utm_campaign=observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Observability in Retail: How to Monitor and Manage Interactive Kiosk Fleets'
+author: Cheryl Lesniak
+canonical_url: https://devops.com/observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets/?utm_source=rss&utm_medium=rss&utm_campaign=observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-07-30 11:54:54 +00:00
-permalink: "/2025-07-30-Observability-in-Retail-How-to-Monitor-and-Manage-Interactive-Kiosk-Fleets.html"
-categories: ["DevOps"]
-tags: ["Blogs", "Business Of DevOps", "Centralized Observability", "Contributed Content", "Customer Experience", "Customer Experience Technology", "DevOps", "Distributed Systems", "Kiosk Monitoring", "Observability", "Observability in DevOps", "Outage Prevention", "Proactive Monitoring", "Retail Kiosk Monitoring", "Retail Kiosks", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry"]
-tags_normalized: ["blogs", "business of devops", "centralized observability", "contributed content", "customer experience", "customer experience technology", "devops", "distributed systems", "kiosk monitoring", "observability", "observability in devops", "outage prevention", "proactive monitoring", "retail kiosk monitoring", "retail kiosks", "social facebook", "social linkedin", "social x", "telemetry"]
+permalink: /devops/blogs/Observability-in-Retail-How-to-Monitor-and-Manage-Interactive-Kiosk-Fleets
+tags:
+- Blogs
+- Business Of DevOps
+- Centralized Observability
+- Contributed Content
+- Customer Experience
+- Customer Experience Technology
+- DevOps
+- Distributed Systems
+- Kiosk Monitoring
+- Observability
+- Observability in DevOps
+- Outage Prevention
+- Proactive Monitoring
+- Retail Kiosk Monitoring
+- Retail Kiosks
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Telemetry
+section_names:
+- devops
 ---
-
 In this article, Cheryl Lesniak discusses the unique observability and monitoring requirements for managing interactive kiosk fleets at scale in the retail sector.<!--excerpt_end-->
 
 ## Overview

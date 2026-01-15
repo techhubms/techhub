@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deploying Azure Local at Scale: Lessons from Coles Supermarket at Microsoft Ignite 2024"
-description: "This video features Rick Claus interviewing Jason Tayler of Coles Supermarket at Microsoft Ignite 2024, exploring the retailer's significant rollout of Azure Local (formerly Azure Stack HCI). The discussion covers deploying thousands of nodes, running workloads—including AI inferencing—on Azure Local, transitioning from Azure Stack to Azure Local, and expert recommendations for organizations planning similar initiatives. Gain unique, real-world insights into the benefits, challenges, and best practices for leveraging Azure Local in large-scale retail environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nPe4_ef8zFg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Deploying Azure Local at Scale: Lessons from Coles Supermarket at Microsoft Ignite 2024'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=nPe4_ef8zFg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-05 22:00:38 +00:00
-permalink: "/2025-03-05-Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Inferencing", "Azure", "Azure Local", "Azure Stack HCI", "Cloud Transition", "Coles Supermarket", "Deployment Strategies", "Edge Computing", "Enterprise IT", "Hybrid Cloud", "IT Infrastructure", "Microsoft", "Microsoft Azure", "Microsoft Ignite", "Node Management", "Retail Technology", "Videos", "Workload Deployment"]
-tags_normalized: ["ai", "ai inferencing", "azure", "azure local", "azure stack hci", "cloud transition", "coles supermarket", "deployment strategies", "edge computing", "enterprise it", "hybrid cloud", "it infrastructure", "microsoft", "microsoft azure", "microsoft ignite", "node management", "retail technology", "videos", "workload deployment"]
+permalink: /ai/videos/Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024
+tags:
+- AI
+- AI Inferencing
+- Azure
+- Azure Local
+- Azure Stack HCI
+- Cloud Transition
+- Coles Supermarket
+- Deployment Strategies
+- Edge Computing
+- Enterprise IT
+- Hybrid Cloud
+- IT Infrastructure
+- Microsoft
+- Microsoft Azure
+- Microsoft Ignite
+- Node Management
+- Retail Technology
+- Videos
+- Workload Deployment
+section_names:
+- ai
+- azure
 ---
-
 In this Microsoft Ignite 2024 interview, Rick Claus sits down with Jason Tayler of Coles Supermarket to discuss their extensive Azure Local deployment. Jason shares practical lessons, challenges, and recommendations for organizations adopting Azure Local at scale.<!--excerpt_end-->
 
 {% youtube nPe4_ef8zFg %}

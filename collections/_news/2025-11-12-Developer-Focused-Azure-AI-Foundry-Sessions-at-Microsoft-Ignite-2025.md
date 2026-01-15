@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Developer-Focused Azure AI Foundry Sessions at Microsoft Ignite 2025"
-description: "This session guide highlights top Azure AI Foundry sessions for Microsoft Ignite 2025, focusing on developer-oriented learning. Attendees can explore hands-on labs, breakout sessions on agentic AI, practical demos, automated reasoning, responsible AI, and the latest developer tools. It is designed to help developers navigate the Azure AI Foundry ecosystem and get the most from the event."
-author: "Sandra Perez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/ignitedevsessions/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: Developer-Focused Azure AI Foundry Sessions at Microsoft Ignite 2025
+author: Sandra Perez
+canonical_url: https://devblogs.microsoft.com/foundry/ignitedevsessions/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-12 20:00:12 +00:00
-permalink: "/2025-11-12-Developer-Focused-Azure-AI-Foundry-Sessions-at-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Factory", "Agentic AI", "AI", "AI Agents", "AI Orchestration", "AI Red Teaming", "Automation", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure OpenAI", "Developer Tools", "Enterprise Security", "GitHub", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "News", "Responsible AI", "VS Code"]
-tags_normalized: ["agent factory", "agentic ai", "ai", "ai agents", "ai orchestration", "ai red teaming", "automation", "azure", "azure ai foundry", "azure ai search", "azure openai", "developer tools", "enterprise security", "github", "microsoft ignite", "msignite", "multi agent systems", "news", "responsible ai", "vs code"]
+permalink: /ai/news/Developer-Focused-Azure-AI-Foundry-Sessions-at-Microsoft-Ignite-2025
+tags:
+- Agent Factory
+- Agentic AI
+- AI
+- AI Agents
+- AI Orchestration
+- AI Red Teaming
+- Automation
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure OpenAI
+- Developer Tools
+- Enterprise Security
+- GitHub
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- News
+- Responsible AI
+- VS Code
+section_names:
+- ai
+- azure
 ---
-
 Sandra Perez shares a comprehensive guide to Azure AI Foundry sessions at Microsoft Ignite 2025, highlighting developer-focused opportunities for hands-on learning and advanced AI agent development.<!--excerpt_end-->
 
 # Developer-Focused Azure AI Foundry Sessions at Microsoft Ignite 2025

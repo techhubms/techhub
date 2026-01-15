@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Maps in Microsoft Fabric: Bring Your Own Imagery for Real-Time Geospatial Intelligence"
-description: "This article introduces new geospatial features in Microsoft Fabric's Real-Time Intelligence workload, including support for custom imagery and raster data from OneLake, custom labeling for spatial layers, and advanced sharing through Org Apps. Learn how Fabric enables analysis-ready mapping, asset tracking, real-time logistics, and sustainability insights using your organization's own data."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-bring-your-own-imagery-into-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Maps in Microsoft Fabric: Bring Your Own Imagery for Real-Time Geospatial Intelligence'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-bring-your-own-imagery-into-real-time-intelligence/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 03:00:00 +00:00
-permalink: "/2025-11-20-Maps-in-Microsoft-Fabric-Bring-Your-Own-Imagery-for-Real-Time-Geospatial-Intelligence.html"
-categories: ["Azure", "ML"]
-tags: ["Asset Tracking", "Azure", "Canopy Imagery", "Construction Monitoring", "Custom Labels", "Data Layers", "Data Visualization", "ESG Dashboards", "Geospatial Analytics", "Imagery", "Maps", "Microsoft Fabric", "ML", "News", "OneLake", "Org Apps", "Planetary Computer", "Raster Data", "Real Time Intelligence", "Site Monitoring", "Spatial Data", "Sustainability", "Vegetation Management"]
-tags_normalized: ["asset tracking", "azure", "canopy imagery", "construction monitoring", "custom labels", "data layers", "data visualization", "esg dashboards", "geospatial analytics", "imagery", "maps", "microsoft fabric", "ml", "news", "onelake", "org apps", "planetary computer", "raster data", "real time intelligence", "site monitoring", "spatial data", "sustainability", "vegetation management"]
+permalink: /ml/news/Maps-in-Microsoft-Fabric-Bring-Your-Own-Imagery-for-Real-Time-Geospatial-Intelligence
+tags:
+- Asset Tracking
+- Azure
+- Canopy Imagery
+- Construction Monitoring
+- Custom Labels
+- Data Layers
+- Data Visualization
+- ESG Dashboards
+- Geospatial Analytics
+- Imagery
+- Maps
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Org Apps
+- Planetary Computer
+- Raster Data
+- Real Time Intelligence
+- Site Monitoring
+- Spatial Data
+- Sustainability
+- Vegetation Management
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog showcases new mapping capabilities for Real-Time Intelligence, allowing users to add their own imagery and spatial data for enhanced geospatial analysis and decision-making.<!--excerpt_end-->
 
 # Maps in Microsoft Fabric: Bring Your Own Imagery for Real-Time Geospatial Intelligence

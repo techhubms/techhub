@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI Dev Days 2025: Your Gateway to the Future of AI Development"
-description: "AI Dev Days 2025 is a two-day virtual event for developers, builders, and creators focusing on the latest in AI, Azure, Microsoft Foundry, GitHub, and VS Code. Highlights include hands-on labs, innovations in Agentic DevOps, GitHub Copilot, and sessions on boosting developer productivity with Microsoft platforms."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'AI Dev Days 2025: Your Gateway to the Future of AI Development'
+author: Lee_Stott
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 08:00:00 +00:00
-permalink: "/2025-12-09-AI-Dev-Days-2025-Your-Gateway-to-the-Future-of-AI-Development.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentic DevOps", "AI", "AI Dev Days", "App Modernisation", "Azure", "Azure SRE Agent", "Coding", "Community", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Hands On Labs", "MCP", "Microsoft Foundry", "Microsoft Ignite", "VS", "VS Code"]
-tags_normalized: ["agent hq", "agentic devops", "ai", "ai dev days", "app modernisation", "azure", "azure sre agent", "coding", "community", "developer productivity", "devops", "github", "github copilot", "github universe", "hands on labs", "mcp", "microsoft foundry", "microsoft ignite", "vs", "vs code"]
+permalink: /github-copilot/community/AI-Dev-Days-2025-Your-Gateway-to-the-Future-of-AI-Development
+tags:
+- Agent HQ
+- Agentic DevOps
+- AI
+- AI Dev Days
+- App Modernisation
+- Azure
+- Azure SRE Agent
+- Coding
+- Community
+- Developer Productivity
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- Hands On Labs
+- MCP
+- Microsoft Foundry
+- Microsoft Ignite
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Lee_Stott introduces AI Dev Days 2025, a major virtual event for AI and Microsoft platform developers, featuring sessions on Azure, GitHub Copilot, DevOps, and hands-on labs.<!--excerpt_end-->
 
 # AI Dev Days 2025: Your Gateway to the Future of AI Development

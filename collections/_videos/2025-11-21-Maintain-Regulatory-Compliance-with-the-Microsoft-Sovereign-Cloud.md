@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Maintain Regulatory Compliance with the Microsoft Sovereign Cloud"
-description: "This Microsoft Ignite 2025 session delves into Microsoft Sovereign Cloud’s approach to digital sovereignty. Engineering leaders present the platform’s capabilities for securing data, managing encryption, and supporting critical workloads in hybrid and regulated environments. Key topics include regulatory complexity, compliance controls, customer-managed keys, private sovereign clouds, and innovations in security and AI enablement."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ALNbqZzuBHg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Maintain Regulatory Compliance with the Microsoft Sovereign Cloud
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=ALNbqZzuBHg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:11:09 +00:00
-permalink: "/2025-11-21-Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Enablement", "Azure", "Compliance Auditing", "Customer Managed Keys", "Data Sovereignty", "Encryption", "Healthcare", "Hybrid Cloud", "Key Management", "Microsoft Sovereign Cloud", "Migrateandmodernizeyourestate", "MSIgnite", "Offline Cloud", "Private Clouds", "Regulatory Compliance", "Security", "Site To Site Recovery", "Videos"]
-tags_normalized: ["ai", "ai enablement", "azure", "compliance auditing", "customer managed keys", "data sovereignty", "encryption", "healthcare", "hybrid cloud", "key management", "microsoft sovereign cloud", "migrateandmodernizeyourestate", "msignite", "offline cloud", "private clouds", "regulatory compliance", "security", "site to site recovery", "videos"]
+permalink: /ai/videos/Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud
+tags:
+- AI
+- AI Enablement
+- Azure
+- Compliance Auditing
+- Customer Managed Keys
+- Data Sovereignty
+- Encryption
+- Healthcare
+- Hybrid Cloud
+- Key Management
+- Microsoft Sovereign Cloud
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Offline Cloud
+- Private Clouds
+- Regulatory Compliance
+- Security
+- Site To Site Recovery
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents an in-depth look at how Microsoft Sovereign Cloud empowers organizations to maintain regulatory compliance and digital sovereignty, featuring insights from Harald Solstad Fianbakken and Ella Hassan.<!--excerpt_end-->
 
 {% youtube ALNbqZzuBHg %}

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Introducing Mistral Large 3 in Microsoft Foundry: Open Enterprise AI for Production Workloads"
-description: "This article introduces Mistral Large 3, a frontier-class open-source AI model now available through Microsoft Foundry on Azure. The post explores its capabilities in instruction-following, long-context understanding, and multimodal reasoning for enterprise-scale applications. It highlights practical use cases, deployment flexibility, licensing details, integration with agentic systems, and governance features, making it relevant for organizations building reliable, scalable AI solutions leveraging open models in the Microsoft ecosystem."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-mistral-large-3-in-microsoft-foundry-open-capable-and-ready-for-production-workloads/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Introducing Mistral Large 3 in Microsoft Foundry: Open Enterprise AI for Production Workloads'
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-mistral-large-3-in-microsoft-foundry-open-capable-and-ready-for-production-workloads/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 00:53:08 +00:00
-permalink: "/2025-12-04-Introducing-Mistral-Large-3-in-Microsoft-Foundry-Open-Enterprise-AI-for-Production-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Systems", "AI", "Apache 2.0 License", "Automation Flows", "Azure", "Azure AI Foundry", "Cloud AI", "Company News", "Document Intelligence", "Enterprise AI", "Hybrid Deployment", "Long Context Reasoning", "Microsoft Foundry", "Mistral Large 3", "Model Governance", "Multimodal AI", "News", "Observability", "Open Weight Models", "Performance Benchmarking", "Production Workloads", "Responsible AI", "Retrieval Augmented Generation", "Safety", "VPC"]
-tags_normalized: ["agentic systems", "ai", "apache 2dot0 license", "automation flows", "azure", "azure ai foundry", "cloud ai", "company news", "document intelligence", "enterprise ai", "hybrid deployment", "long context reasoning", "microsoft foundry", "mistral large 3", "model governance", "multimodal ai", "news", "observability", "open weight models", "performance benchmarking", "production workloads", "responsible ai", "retrieval augmented generation", "safety", "vpc"]
+permalink: /ai/news/Introducing-Mistral-Large-3-in-Microsoft-Foundry-Open-Enterprise-AI-for-Production-Workloads
+tags:
+- Agentic Systems
+- AI
+- Apache 2.0 License
+- Automation Flows
+- Azure
+- Azure AI Foundry
+- Cloud AI
+- Company News
+- Document Intelligence
+- Enterprise AI
+- Hybrid Deployment
+- Long Context Reasoning
+- Microsoft Foundry
+- Mistral Large 3
+- Model Governance
+- Multimodal AI
+- News
+- Observability
+- Open Weight Models
+- Performance Benchmarking
+- Production Workloads
+- Responsible AI
+- Retrieval Augmented Generation
+- Safety
+- VPC
+section_names:
+- ai
+- azure
 ---
-
 stclarke introduces Mistral Large 3, a frontier open-source AI model now on Microsoft Foundry in Azure, highlighting its enterprise-ready features for production workloads and advanced AI use cases.<!--excerpt_end-->
 
 # Introducing Mistral Large 3 in Microsoft Foundry: Open and Ready for Production Workloads

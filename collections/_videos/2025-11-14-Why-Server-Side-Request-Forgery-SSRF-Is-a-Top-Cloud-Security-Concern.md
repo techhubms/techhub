@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Why Server-Side Request Forgery (SSRF) Is a Top Cloud Security Concern"
-description: "This video features security expert Michael Howard discussing why Server-Side Request Forgery (SSRF) is one of the most serious security bugs in modern cloud applications. The discussion highlights the risks posed by SSRF, its increasing relevance in cloud environments, and why developers must understand and defend against this threat."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7nAp63gv2jE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Why Server-Side Request Forgery (SSRF) Is a Top Cloud Security Concern
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=7nAp63gv2jE
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-14 16:35:46 +00:00
-permalink: "/2025-11-14-Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern.html"
-categories: ["Security"]
-tags: ["Cloud Security", "Development Security", "Michael Howard", "Microsoft", "Security", "Security Best Practices", "Security Bug", "Security Risks", "Server Side Request Forgery", "SSRF", "Videos", "Vulnerability", "Web Application Security"]
-tags_normalized: ["cloud security", "development security", "michael howard", "microsoft", "security", "security best practices", "security bug", "security risks", "server side request forgery", "ssrf", "videos", "vulnerability", "web application security"]
+permalink: /security/videos/Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern
+tags:
+- Cloud Security
+- Development Security
+- Michael Howard
+- Microsoft
+- Security
+- Security Best Practices
+- Security Bug
+- Security Risks
+- Server Side Request Forgery
+- SSRF
+- Videos
+- Vulnerability
+- Web Application Security
+section_names:
+- security
 ---
-
 In this video, Microsoft Developer shares insights from Michael Howard, who explains why SSRF is a critical security threat developers must be aware of.<!--excerpt_end-->
 
 {% youtube 7nAp63gv2jE %}

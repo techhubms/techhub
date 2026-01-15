@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry"
-description: "This announcement introduces the Microsoft Agent Framework, now in public preview, and highlights new capabilities in Azure AI Foundry that empower developers to build, orchestrate, and govern multi-agent AI systems. The open-source SDK merges research and enterprise features, supporting observability, compliance, and responsible AI adoption through integrated workflows, enhanced telemetry, and voice APIs. Case studies from KPMG, Capgemini, Citrix, TCS, Sitecore, and Elastic illustrate enterprise adoption, while responsible AI features and open standards reinforce Microsoft’s leadership in agentic AI solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry'
+author: stclarke
+canonical_url: https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 19:03:22 +00:00
-permalink: "/2025-10-01-Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent2Agent", "AI", "AI Agents", "AutoGen", "Azure", "Azure AI Foundry", "Coding", "Company News", "Developer Tools", "Enterprise AI", "KPMG Clara", "MCP", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenAPI", "OpenTelemetry", "Responsible AI", "SDK", "Semantic Kernel", "Voice Live API", "VS Code Extension", "Workflow Automation"]
-tags_normalized: ["agent2agent", "ai", "ai agents", "autogen", "azure", "azure ai foundry", "coding", "company news", "developer tools", "enterprise ai", "kpmg clara", "mcp", "microsoft agent framework", "multi agent systems", "news", "observability", "openapi", "opentelemetry", "responsible ai", "sdk", "semantic kernel", "voice live api", "vs code extension", "workflow automation"]
+permalink: /ai/news/Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry
+tags:
+- Agent2Agent
+- AI
+- AI Agents
+- AutoGen
+- Azure
+- Azure AI Foundry
+- Coding
+- Company News
+- Developer Tools
+- Enterprise AI
+- KPMG Clara
+- MCP
+- Microsoft Agent Framework
+- Multi Agent Systems
+- News
+- Observability
+- OpenAPI
+- OpenTelemetry
+- Responsible AI
+- SDK
+- Semantic Kernel
+- Voice Live API
+- VS Code Extension
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 stclarke introduces Microsoft Agent Framework and Azure AI Foundry enhancements, offering developers unified tools to build, orchestrate, and govern enterprise-grade multi-agent AI systems with integrated observability and responsible AI features.<!--excerpt_end-->
 
 # Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry

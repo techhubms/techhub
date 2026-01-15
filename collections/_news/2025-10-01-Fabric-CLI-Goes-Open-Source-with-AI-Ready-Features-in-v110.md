@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Fabric CLI Goes Open Source with AI-Ready Features in v1.1.0"
-description: "This article from the Microsoft Fabric Blog announces that the Fabric CLI is now open source, transforming it into a community-driven tool for Microsoft Fabric automation, CI/CD, and ad-hoc operations. The latest v1.1.0 brings key improvements, AI-assisted contributions, and new features like JSON output, autocomplete, and extension support. The post invites the community to co-develop the CLI's future, emphasizing openness, collaboration, and innovation in developer tooling."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-open-source-ai-ready-and-more-powerful/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Fabric CLI Goes Open Source with AI-Ready Features in v1.1.0
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-open-source-ai-ready-and-more-powerful/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 17:00:00 +00:00
-permalink: "/2025-10-01-Fabric-CLI-Goes-Open-Source-with-AI-Ready-Features-in-v110.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Assisted Development", "Automation", "Azure", "CI/CD", "CLI Tools", "Coding", "Command Line Interface", "Community Contributions", "Deployment", "Developer Tools", "DevOps", "Extensions", "Fabric CLI", "Interactive Scripting", "JSON Output", "Microsoft Fabric", "News", "Open Source", "VS Code Integration", "Workspace Automation"]
-tags_normalized: ["ai", "ai assisted development", "automation", "azure", "cislashcd", "cli tools", "coding", "command line interface", "community contributions", "deployment", "developer tools", "devops", "extensions", "fabric cli", "interactive scripting", "json output", "microsoft fabric", "news", "open source", "vs code integration", "workspace automation"]
+permalink: /ai/news/Fabric-CLI-Goes-Open-Source-with-AI-Ready-Features-in-v110
+tags:
+- AI
+- AI Assisted Development
+- Automation
+- Azure
+- CI/CD
+- CLI Tools
+- Coding
+- Command Line Interface
+- Community Contributions
+- Deployment
+- Developer Tools
+- DevOps
+- Extensions
+- Fabric CLI
+- Interactive Scripting
+- JSON Output
+- Microsoft Fabric
+- News
+- Open Source
+- VS Code Integration
+- Workspace Automation
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Microsoft Fabric Blog introduces the open-sourcing of the Fabric CLI, with author insights on new AI-ready features, developer empowerment, and community-driven roadmap. Discover how v1.1.0 enhances workflows and encourages collaborative innovation.<!--excerpt_end-->
 
 # Fabric CLI: Open Source, AI-Ready, and More Powerful

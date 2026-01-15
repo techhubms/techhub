@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI Upskilling Framework Level 3: Building Agentic Workflows from Microsoft Ignite"
-description: "This session, presented during Microsoft Ignite and reported by the Global AI Community, explores advanced concepts in the AI Upskilling Framework, specifically Level 3, focused on agentic workflows. The session highlights new Microsoft announcements, demonstrations using Microsoft Foundry, introduction of the Microsoft Agentic Framework (MAF), and showcases real-world agentic workflow demos in claims processing and fraud detection. The goal is to help developers understand, build, and implement agentic AI solutions, supporting diverse roles with up-to-date Microsoft tools and resources."
-author: "carlottacaste"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'AI Upskilling Framework Level 3: Building Agentic Workflows from Microsoft Ignite'
+author: carlottacaste
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-12 17:31:50 +00:00
-permalink: "/2025-12-12-AI-Upskilling-Framework-Level-3-Building-Agentic-Workflows-from-Microsoft-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "AI Demos", "AI Development", "AI Training", "AI Upskilling Framework", "Azure", "Claims Workflow", "Community", "Community Resources", "Developer Skills", "Fraud Detection", "LinkedIn Learning", "MAF", "Microsoft Agentic Framework", "Microsoft Foundry", "Microsoft Ignite", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "ai demos", "ai development", "ai training", "ai upskilling framework", "azure", "claims workflow", "community", "community resources", "developer skills", "fraud detection", "linkedin learning", "maf", "microsoft agentic framework", "microsoft foundry", "microsoft ignite", "workflow automation"]
+permalink: /ai/community/AI-Upskilling-Framework-Level-3-Building-Agentic-Workflows-from-Microsoft-Ignite
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- AI Demos
+- AI Development
+- AI Training
+- AI Upskilling Framework
+- Azure
+- Claims Workflow
+- Community
+- Community Resources
+- Developer Skills
+- Fraud Detection
+- LinkedIn Learning
+- MAF
+- Microsoft Agentic Framework
+- Microsoft Foundry
+- Microsoft Ignite
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Carlotta Castelluccio and other Microsoft AI experts present highlights from Microsoft Ignite on AI Upskilling Framework Level 3, focusing on how developers can build and implement agentic workflows using Microsoft technologies.<!--excerpt_end-->
 
 # AI Upskilling Framework Level 3: Building Agentic Workflows from Microsoft Ignite

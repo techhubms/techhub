@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability"
-description: "This article explains how the Azure Failure Prediction & Detection (AFPD) system helps prevent customer workload downtime and improves fleet health across Azure Compute services. It details AFPD's predictive monitoring, mitigation, and remediation flow, how customers interact with AFPD events and resource health notifications, and how tools like Project Flash endpoints and VM Watch enhance failure detection and response. Engineers and cloud operators will learn actionable approaches to reduce interruption risk, automate mitigation, and maintain healthy Azure environments using native cloud monitoring and alerting features."
-author: "andrewb710"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability'
+author: andrewb710
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-31 19:02:54 +00:00
-permalink: "/2025-10-31-Azure-Failure-Prediction-and-Detection-AFPD-Preventing-Downtime-with-Proactive-Reliability.html"
-categories: ["Azure", "DevOps"]
-tags: ["A/B Testing", "AFPD", "Azure", "Azure Compute", "Azure Failure Prediction & Detection", "Azure Notifications", "Azure Resource Graph", "Cloud Monitoring", "Cloud Reliability", "Community", "Contextual Bandit Models", "DevOps", "Event Grid", "Failure Mitigation", "Fleet Health", "Live Migration", "Operational Resilience", "Project Flash", "Project Narya", "Resource Health", "Scheduled Events", "Virtual Machines", "VM Watch"]
-tags_normalized: ["aslashb testing", "afpd", "azure", "azure compute", "azure failure prediction and detection", "azure notifications", "azure resource graph", "cloud monitoring", "cloud reliability", "community", "contextual bandit models", "devops", "event grid", "failure mitigation", "fleet health", "live migration", "operational resilience", "project flash", "project narya", "resource health", "scheduled events", "virtual machines", "vm watch"]
+permalink: /azure/community/Azure-Failure-Prediction-and-Detection-AFPD-Preventing-Downtime-with-Proactive-Reliability
+tags:
+- A/B Testing
+- AFPD
+- Azure
+- Azure Compute
+- Azure Failure Prediction & Detection
+- Azure Notifications
+- Azure Resource Graph
+- Cloud Monitoring
+- Cloud Reliability
+- Community
+- Contextual Bandit Models
+- DevOps
+- Event Grid
+- Failure Mitigation
+- Fleet Health
+- Live Migration
+- Operational Resilience
+- Project Flash
+- Project Narya
+- Resource Health
+- Scheduled Events
+- Virtual Machines
+- VM Watch
+section_names:
+- azure
+- devops
 ---
-
 Andrew Boyd and collaborators shed light on Azure’s Failure Prediction & Detection (AFPD) system, detailing proactive strategies for maintaining cloud reliability, minimizing downtime, and making the most of Azure's notification and fleet health tools.<!--excerpt_end-->
 
 # Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability

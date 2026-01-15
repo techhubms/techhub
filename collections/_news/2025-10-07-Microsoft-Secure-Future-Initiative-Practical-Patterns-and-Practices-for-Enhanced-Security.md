@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security"
-description: "This post introduces the latest installment of Microsoft's Secure Future Initiative (SFI) patterns and practices. It provides hands-on guidance for implementing robust security architectures, including network isolation, secure tenant management, enhanced Entra ID app security, software supply chain protection, and centralized log management. Designed for practitioners, it offers actionable recommendations rooted in Microsoft's internal practices and proven architectures like Zero Trust, aiming to help organizations build resilient, secure-by-design engineering environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-07 16:56:53 +00:00
-permalink: "/2025-10-07-Microsoft-Secure-Future-Initiative-Practical-Patterns-and-Practices-for-Enhanced-Security.html"
-categories: ["Security"]
-tags: ["Azure AD", "CI/CD Security", "Cloud Security", "Company News", "Conditional Access", "Incident Response", "Log Management", "Microsoft Entra ID", "Microsoft Secure Future Initiative", "Multifactor Authentication", "Network Isolation", "News", "Security", "Security Architecture", "Security Patterns", "Software Supply Chain", "Tenant Security", "Zero Trust"]
-tags_normalized: ["azure ad", "cislashcd security", "cloud security", "company news", "conditional access", "incident response", "log management", "microsoft entra id", "microsoft secure future initiative", "multifactor authentication", "network isolation", "news", "security", "security architecture", "security patterns", "software supply chain", "tenant security", "zero trust"]
+permalink: /security/news/Microsoft-Secure-Future-Initiative-Practical-Patterns-and-Practices-for-Enhanced-Security
+tags:
+- Azure AD
+- CI/CD Security
+- Cloud Security
+- Company News
+- Conditional Access
+- Incident Response
+- Log Management
+- Microsoft Entra ID
+- Microsoft Secure Future Initiative
+- Multifactor Authentication
+- Network Isolation
+- News
+- Security
+- Security Architecture
+- Security Patterns
+- Software Supply Chain
+- Tenant Security
+- Zero Trust
+section_names:
+- security
 ---
-
 stclarke outlines new practical patterns and practices from the Microsoft Secure Future Initiative, offering actionable advice for technical teams to strengthen organizational security across networks, engineering systems, and threat monitoring.<!--excerpt_end-->
 
 # Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security

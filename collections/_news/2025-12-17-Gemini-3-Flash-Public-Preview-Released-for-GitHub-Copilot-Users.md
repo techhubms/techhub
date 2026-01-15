@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Gemini 3 Flash Public Preview Released for GitHub Copilot Users"
-description: "Gemini 3 Flash is now available in public preview across multiple GitHub Copilot plans, offering a new model option focused on speed. This announcement covers availability, how to enable access for different user types, and guidance for administrators and individual users. It also provides resources for documentation and community feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Gemini 3 Flash Public Preview Released for GitHub Copilot Users
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:04:53 +00:00
-permalink: "/2025-12-17-Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "API Key", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Mobile", "Copilot Pro", "Gemini 3 Flash", "GitHub Copilot", "Model Picker", "News", "Public Preview", "VS Code"]
-tags_normalized: ["ai", "ai models", "api key", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot mobile", "copilot pro", "gemini 3 flash", "github copilot", "model picker", "news", "public preview", "vs code"]
+permalink: /github-copilot/news/Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users
+tags:
+- AI
+- AI Models
+- API Key
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Mobile
+- Copilot Pro
+- Gemini 3 Flash
+- GitHub Copilot
+- Model Picker
+- News
+- Public Preview
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the rollout of Gemini 3 Flash in public preview for GitHub Copilot, highlighting how users across plans can enable the new, fast model and where it is accessible.<!--excerpt_end-->
 
 # Gemini 3 Flash Public Preview Released for GitHub Copilot Users

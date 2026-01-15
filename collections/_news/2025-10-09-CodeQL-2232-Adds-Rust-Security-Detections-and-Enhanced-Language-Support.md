@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CodeQL 2.23.2 Adds Rust Security Detections and Enhanced Language Support"
-description: "This article announces the release of CodeQL 2.23.2, highlighting new and improved security analysis capabilities for developers. It covers enhanced support for various programming languages and frameworks, the addition of a new Rust security query, and improvements in query precision for C#, Python, Ruby, and Go. The update strengthens GitHub's application security tooling for code scanning and provides guidance on upgrading. Readers will learn about practical static analysis enhancements and their impact on secure software development."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-09-codeql-2-23-2-adds-additional-detections-for-rust-and-improves-accuracy-across-languages"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: CodeQL 2.23.2 Adds Rust Security Detections and Enhanced Language Support
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-09-codeql-2-23-2-adds-additional-detections-for-rust-and-improves-accuracy-across-languages
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-09 22:05:23 +00:00
-permalink: "/2025-10-09-CodeQL-2232-Adds-Rust-Security-Detections-and-Enhanced-Language-Support.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Application Security", "C#", "CI/CD", "CodeQL", "Coding", "Data Flow Analysis", "DevOps", "GitHub Code Scanning", "Go", "Improvement", "JavaScript", "News", "Python", "Ruby", "Rust", "Security", "Static Analysis", "Taint Tracking", "TypeScript", "Vulnerability Detection"]
-tags_normalized: ["application security", "csharp", "cislashcd", "codeql", "coding", "data flow analysis", "devops", "github code scanning", "go", "improvement", "javascript", "news", "python", "ruby", "rust", "security", "static analysis", "taint tracking", "typescript", "vulnerability detection"]
+permalink: /coding/news/CodeQL-2232-Adds-Rust-Security-Detections-and-Enhanced-Language-Support
+tags:
+- Application Security
+- C#
+- CI/CD
+- CodeQL
+- Coding
+- Data Flow Analysis
+- DevOps
+- GitHub Code Scanning
+- Go
+- Improvement
+- JavaScript
+- News
+- Python
+- Ruby
+- Rust
+- Security
+- Static Analysis
+- Taint Tracking
+- TypeScript
+- Vulnerability Detection
+section_names:
+- coding
+- devops
+- security
 ---
-
 Allison reports on the CodeQL 2.23.2 release, detailing important new security queries for Rust, advanced data flow tracking, and improvements to code scanning accuracy across multiple languages.<!--excerpt_end-->
 
 # CodeQL 2.23.2 Adds Rust Security Detections and Enhanced Language Support

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Chain of Responsibility Design Pattern in C#"
-description: "This article by Ahsan Ullah explores the Chain of Responsibility design pattern, illustrating its principles with practical implementation in C#. It covers the motivation for using the pattern, detailed code examples, typical use cases, benefits, drawbacks, and best practices, including an example of refactoring for improved maintainability."
-author: "Ahsan Ullah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/csharp-chain-of-responsibility-design-pattern/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+layout: post
+title: Chain of Responsibility Design Pattern in C#
+author: Ahsan Ullah
+canonical_url: https://code-maze.com/csharp-chain-of-responsibility-design-pattern/
+viewing_mode: external
+feed_name: Code Maze Blog
+feed_url: https://code-maze.com/feed/
 date: 2024-12-09 06:56:56 +00:00
-permalink: "/2024-12-09-Chain-of-Responsibility-Design-Pattern-in-C.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Chain Of Responsibility", "Coding", "Design Pattern", "Design Patterns", "Loose Coupling", "Middleware", "Refactoring", "Request Handling", "Single Responsibility Principle", "Software Architecture"]
-tags_normalized: ["dotnet", "blogs", "csharp", "chain of responsibility", "coding", "design pattern", "design patterns", "loose coupling", "middleware", "refactoring", "request handling", "single responsibility principle", "software architecture"]
+permalink: /coding/blogs/Chain-of-Responsibility-Design-Pattern-in-C
+tags:
+- .NET
+- Blogs
+- C#
+- Chain Of Responsibility
+- Coding
+- Design Pattern
+- Design Patterns
+- Loose Coupling
+- Middleware
+- Refactoring
+- Request Handling
+- Single Responsibility Principle
+- Software Architecture
+section_names:
+- coding
 ---
-
 Ahsan Ullah explores the Chain of Responsibility design pattern in this in-depth article, demonstrating how to implement and leverage it for flexible, maintainable C# applications.<!--excerpt_end-->
 
 # Chain of Responsibility Design Pattern in C#

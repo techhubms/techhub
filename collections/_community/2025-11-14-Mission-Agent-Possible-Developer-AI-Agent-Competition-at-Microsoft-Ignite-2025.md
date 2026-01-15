@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Mission Agent Possible: Developer AI Agent Competition at Microsoft Ignite 2025"
-description: "This announcement introduces 'Mission Agent Possible,' a developer-focused contest at Microsoft Ignite 2025. Participants are challenged to build AI agents that solve simulated crises, with guidance on model selection and hands-on development resources. The contest rewards skills in intelligent solution building and offers prizes for both in-person and global participants, aiming to foster creativity and problem-solving with Microsoft's AI technologies."
-author: "williamsrabia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mission-agent-possible-your-chance-to-build-solve-and-win-at/ba-p/4467585"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Mission Agent Possible: Developer AI Agent Competition at Microsoft Ignite 2025'
+author: williamsrabia
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mission-agent-possible-your-chance-to-build-solve-and-win-at/ba-p/4467585
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 08:00:00 +00:00
-permalink: "/2025-11-14-Mission-Agent-Possible-Developer-AI-Agent-Competition-at-Microsoft-Ignite-2025.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "AI Innovation", "Azure AI Foundry", "Community", "Contest", "Developer Challenge", "Developer Skills", "Event", "GitHub Models Playground", "Intelligent Solutions", "Machine Learning", "Microsoft Azure", "Microsoft Ignite", "Model Selection", "Prizes", "Problem Solving"]
-tags_normalized: ["ai", "ai agent", "ai innovation", "azure ai foundry", "community", "contest", "developer challenge", "developer skills", "event", "github models playground", "intelligent solutions", "machine learning", "microsoft azure", "microsoft ignite", "model selection", "prizes", "problem solving"]
+permalink: /ai/community/Mission-Agent-Possible-Developer-AI-Agent-Competition-at-Microsoft-Ignite-2025
+tags:
+- AI
+- AI Agent
+- AI Innovation
+- Azure AI Foundry
+- Community
+- Contest
+- Developer Challenge
+- Developer Skills
+- Event
+- GitHub Models Playground
+- Intelligent Solutions
+- Machine Learning
+- Microsoft Azure
+- Microsoft Ignite
+- Model Selection
+- Prizes
+- Problem Solving
+section_names:
+- ai
 ---
-
 Williamsrabia invites developers worldwide to compete in the Mission Agent Possible contest at Microsoft Ignite 2025, showcasing AI agent building skills for global recognition and rewards.<!--excerpt_end-->
 
 # Mission Agent Possible: Your Developer Challenge at Microsoft Ignite 2025

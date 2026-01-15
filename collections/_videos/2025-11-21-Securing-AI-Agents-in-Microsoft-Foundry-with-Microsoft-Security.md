@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Securing AI Agents in Microsoft Foundry with Microsoft Security"
-description: "This session from Microsoft Ignite 2025 explores best practices to safeguard AI agents built in Microsoft Foundry by leveraging Microsoft Security solutions. It covers identity management, data access controls, posture management, and scalable governance for AI agents. Key topics include threat mapping using industry frameworks, runtime intervention strategies, and implementation of Conditional Access policies with Microsoft Intra Agent ID and Defender tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Zaew1UDiOPs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Securing AI Agents in Microsoft Foundry with Microsoft Security
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Zaew1UDiOPs
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:11:07 +00:00
-permalink: "/2025-11-21-Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security.html"
-categories: ["AI", "Security"]
-tags: ["Advanced Security", "Agent ID", "Agent Runtime", "AI", "AI Agents", "Atlas Framework", "Conditional Access", "Data Access", "Defender", "Governance", "Identity Management", "Ignite", "Insider Risk", "Lifecycle Management", "Microsoft Foundry", "Microsoft Security", "MITRE Framework", "MSIgnite", "OWASP", "ProtectcloudAIplatformandapps", "Security", "Security Posture", "Videos"]
-tags_normalized: ["advanced security", "agent id", "agent runtime", "ai", "ai agents", "atlas framework", "conditional access", "data access", "defender", "governance", "identity management", "ignite", "insider risk", "lifecycle management", "microsoft foundry", "microsoft security", "mitre framework", "msignite", "owasp", "protectcloudaiplatformandapps", "security", "security posture", "videos"]
+permalink: /ai/videos/Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security
+tags:
+- Advanced Security
+- Agent ID
+- Agent Runtime
+- AI
+- AI Agents
+- Atlas Framework
+- Conditional Access
+- Data Access
+- Defender
+- Governance
+- Identity Management
+- Ignite
+- Insider Risk
+- Lifecycle Management
+- Microsoft Foundry
+- Microsoft Security
+- MITRE Framework
+- MSIgnite
+- OWASP
+- ProtectcloudAIplatformandapps
+- Security
+- Security Posture
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an advanced Microsoft Ignite session led by Neta Haiby, Shravana Mukherjee, and Peter Simones, focusing on securing AI agents in Microsoft Foundry using Microsoft Security tools and governance techniques.<!--excerpt_end-->
 
 {% youtube Zaew1UDiOPs %}

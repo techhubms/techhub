@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio"
-description: "This news details the release of GPT-5.1 as an experimental AI model within Microsoft Copilot Studio for U.S. customers in early release Power Platform environments. It explains the enhancements offered by the GPT-5.1 series, guidance for evaluating the model, and recommendations for non-production use while broader testing occurs. The update allows users to experiment with new AI reasoning and chat features in Copilot Studio."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-13 18:41:10 +00:00
-permalink: "/2025-11-13-GPT-51-Experimental-Model-Now-Available-in-Microsoft-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Development", "AI Reasoning", "Chat Models", "Company News", "Early Access", "Experimental Model", "GPT 5.1", "Microsoft Copilot Studio", "Model Selection", "News", "Non Production Testing", "OpenAI", "Power Platform", "Release Announcement"]
-tags_normalized: ["ai", "ai development", "ai reasoning", "chat models", "company news", "early access", "experimental model", "gpt 5dot1", "microsoft copilot studio", "model selection", "news", "non production testing", "openai", "power platform", "release announcement"]
+permalink: /ai/news/GPT-51-Experimental-Model-Now-Available-in-Microsoft-Copilot-Studio
+tags:
+- AI
+- AI Development
+- AI Reasoning
+- Chat Models
+- Company News
+- Early Access
+- Experimental Model
+- GPT 5.1
+- Microsoft Copilot Studio
+- Model Selection
+- News
+- Non Production Testing
+- OpenAI
+- Power Platform
+- Release Announcement
+section_names:
+- ai
 ---
-
 stclarke announces the availability of GPT-5.1 as an experimental AI model within Microsoft Copilot Studio, enabling early adopters to explore advanced chat and reasoning enhancements.<!--excerpt_end-->
 
 # GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio

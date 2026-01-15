@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Entra Suite: The Future of Identity and Access Security"
-description: "This article gives a practical overview of the Microsoft Entra Suite, detailing its core components and explaining how Entra Private Access, Internet Access, ID Protection, ID Governance, and Verified ID work together. It covers real-world adoption tips for organizations moving to Zero Trust and cloud-first security, outlines licensing considerations, discusses the transition from VPNs, and highlights upcoming features. The guide clearly explains how Entra Suite improves unified identity, access management, and network security for enterprise environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Microsoft Entra Suite: The Future of Identity and Access Security'
+author: Dellenny
+canonical_url: https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-27 08:09:33 +00:00
-permalink: "/2025-09-27-Microsoft-Entra-Suite-The-Future-of-Identity-and-Access-Security.html"
-categories: ["Security"]
-tags: ["Access Governance", "Authentication", "Blogs", "Cloud Security", "Conditional Access", "Entra ID Governance", "Entra ID Protection", "Entra Internet Access", "Entra Private Access", "Hybrid Work Security", "Identity And Access Management", "MFA", "Microsoft 365", "Microsoft Entra", "Multicloud", "Passwordless", "Security", "Verified ID", "Zero Trust"]
-tags_normalized: ["access governance", "authentication", "blogs", "cloud security", "conditional access", "entra id governance", "entra id protection", "entra internet access", "entra private access", "hybrid work security", "identity and access management", "mfa", "microsoft 365", "microsoft entra", "multicloud", "passwordless", "security", "verified id", "zero trust"]
+permalink: /security/blogs/Microsoft-Entra-Suite-The-Future-of-Identity-and-Access-Security
+tags:
+- Access Governance
+- Authentication
+- Blogs
+- Cloud Security
+- Conditional Access
+- Entra ID Governance
+- Entra ID Protection
+- Entra Internet Access
+- Entra Private Access
+- Hybrid Work Security
+- Identity And Access Management
+- MFA
+- Microsoft 365
+- Microsoft Entra
+- Multicloud
+- Passwordless
+- Security
+- Verified ID
+- Zero Trust
+section_names:
+- security
 ---
-
 Dellenny provides an in-depth look at Microsoft Entra Suite, outlining its role in unifying identity and access security for enterprises navigating cloud-first and hybrid IT environments.<!--excerpt_end-->
 
 # Microsoft Entra Suite: The Future of Identity and Access Security

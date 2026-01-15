@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Scaling Context-Aware Workflows with GitHub Copilot in VS Code"
-description: "This session explores how to leverage GitHub Copilot in Visual Studio Code as an advanced, context-aware AI pair programmer. It covers techniques for providing Copilot with deeper insight into your codebase and workflows using custom instructions, prompt engineering, MCPs, and context engineering. The talk delivers a practical framework for scaling Copilot adoption across enterprise codebases and includes templates for project-wide context and structured instructions."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_fZZz_gIE8A"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Scaling Context-Aware Workflows with GitHub Copilot in VS Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=_fZZz_gIE8A
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-29 13:01:10 +00:00
-permalink: "/2025-12-29-Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Pair Programming", "Codebase Insights", "Coding", "Context Engineering", "Copilot Enterprise", "Custom Instructions", "Enterprise Workflows", "GitHub Copilot", "MCP", "Microsoft Foundry", "Project Structure", "Prompt Engineering", "Template", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai development", "ai pair programming", "codebase insights", "coding", "context engineering", "copilot enterprise", "custom instructions", "enterprise workflows", "github copilot", "mcp", "microsoft foundry", "project structure", "prompt engineering", "template", "videos", "vs code"]
+permalink: /github-copilot/videos/Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code
+tags:
+- AI
+- AI Development
+- AI Pair Programming
+- Codebase Insights
+- Coding
+- Context Engineering
+- Copilot Enterprise
+- Custom Instructions
+- Enterprise Workflows
+- GitHub Copilot
+- MCP
+- Microsoft Foundry
+- Project Structure
+- Prompt Engineering
+- Template
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code demonstrates how to transform GitHub Copilot into a deeply context-aware AI pair programmer, with techniques for integrating your project’s architecture and team workflows.<!--excerpt_end-->
 
 {% youtube _fZZz_gIE8A %}

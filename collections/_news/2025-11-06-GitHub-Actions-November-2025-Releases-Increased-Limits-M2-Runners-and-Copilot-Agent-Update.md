@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Actions November 2025 Releases: Increased Limits, M2 Runners, and Copilot Agent Update"
-description: "This news update covers the November 2025 GitHub Actions release, highlighting increased limits for reusable workflows, general availability of M2-powered macOS runners, and a key change for the Copilot coding agent. The improvements streamline workflow automation, enhance runner performance, and broaden Copilot's accessibility for developers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-06-new-releases-for-github-actions-november-2025"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Actions November 2025 Releases: Increased Limits, M2 Runners, and Copilot Agent Update'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-06-new-releases-for-github-actions-november-2025
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-06 19:02:42 +00:00
-permalink: "/2025-11-06-GitHub-Actions-November-2025-Releases-Increased-Limits-M2-Runners-and-Copilot-Agent-Update.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions", "AI", "AI Integration", "CI/CD", "Coding Agent", "Continuous Integration", "DevOps", "GitHub Actions", "GitHub Copilot", "Improvement", "M2 Macos Runners", "Macos", "News", "Organizational Settings", "Performance", "Reusable Workflows", "Runner Improvements", "Workflow Automation"]
-tags_normalized: ["actions", "ai", "ai integration", "cislashcd", "coding agent", "continuous integration", "devops", "github actions", "github copilot", "improvement", "m2 macos runners", "macos", "news", "organizational settings", "performance", "reusable workflows", "runner improvements", "workflow automation"]
+permalink: /github-copilot/news/GitHub-Actions-November-2025-Releases-Increased-Limits-M2-Runners-and-Copilot-Agent-Update
+tags:
+- Actions
+- AI
+- AI Integration
+- CI/CD
+- Coding Agent
+- Continuous Integration
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- M2 Macos Runners
+- Macos
+- News
+- Organizational Settings
+- Performance
+- Reusable Workflows
+- Runner Improvements
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison summarizes the November 2025 GitHub Actions updates, including expanded reusable workflow limits, new M2 macOS runner support, and improved integration for the GitHub Copilot coding agent.<!--excerpt_end-->
 
 # GitHub Actions November 2025 Releases: Increased Limits, M2 Runners, and Copilot Agent Update

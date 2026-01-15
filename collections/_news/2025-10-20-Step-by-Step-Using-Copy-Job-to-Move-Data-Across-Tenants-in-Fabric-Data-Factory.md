@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory"
-description: "This guide from the Microsoft Fabric team explains how to use the Copy job feature in Microsoft Fabric Data Factory to transfer data securely and efficiently between different Azure tenants. The walkthrough covers prerequisites like setting up Azure Data Lake Gen2 with service principal authentication, configuring access control, and executing copy operations into a Fabric Data Warehouse. Key features like full and incremental copy, table mapping, and security configuration are illustrated with clear, practical steps."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 12:00:00 +00:00
-permalink: "/2025-10-20-Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-Fabric-Data-Factory.html"
-categories: ["Azure", "ML"]
-tags: ["Access Control", "Authentication", "Azure", "Azure Data Lake Gen2", "Bulk Copy", "Change Data Capture", "Cloud Data Movement", "Copy Job", "Data Factory", "Data Ingestion", "Data Warehouse", "ETL", "Incremental Copy", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Role Assignment", "Service Principal", "Table Mapping", "Tenant Transfer"]
-tags_normalized: ["access control", "authentication", "azure", "azure data lake gen2", "bulk copy", "change data capture", "cloud data movement", "copy job", "data factory", "data ingestion", "data warehouse", "etl", "incremental copy", "microsoft entra id", "microsoft fabric", "ml", "news", "role assignment", "service principal", "table mapping", "tenant transfer"]
+permalink: /ml/news/Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-Fabric-Data-Factory
+tags:
+- Access Control
+- Authentication
+- Azure
+- Azure Data Lake Gen2
+- Bulk Copy
+- Change Data Capture
+- Cloud Data Movement
+- Copy Job
+- Data Factory
+- Data Ingestion
+- Data Warehouse
+- ETL
+- Incremental Copy
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- Role Assignment
+- Service Principal
+- Table Mapping
+- Tenant Transfer
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents a practical tutorial for moving data across Azure tenants using Copy job in Fabric Data Factory. Authored by the Microsoft Fabric Blog team, this walkthrough emphasizes secure authentication, configuration, and transfer into a Fabric Data Warehouse.<!--excerpt_end-->
 
 # Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory

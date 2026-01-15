@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Hyper-V and Azure Host OS Architecture"
-description: "A detailed community discussion focused on unraveling the foundational architecture of Microsoft Azure, specifically exploring whether Hyper-V runs on Azure Host OS or vice versa. The post provides explanations, technical clarifications, and references about Hyper-V as a type 1 hypervisor, the role of Azure Host OS as the root partition, how virtualization works at the hardware/software level, and the historical evolution of Microsoft’s virtualization stack."
-author: "mogeko233"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Understanding Hyper-V and Azure Host OS Architecture
+author: mogeko233
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 02:26:59 +00:00
-permalink: "/2025-08-07-Understanding-Hyper-V-and-Azure-Host-OS-Architecture.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Host OS", "Child Partition", "Community", "Hardware Virtualization", "Hyper V", "Hypervisor Architecture", "Microsoft Azure", "Protection Rings", "Root Partition", "Server Core", "Type 1 Hypervisor", "Virtual Machines", "Virtualization", "VMCS", "Windows Server", "X86 Virtualization"]
-tags_normalized: ["azure", "azure host os", "child partition", "community", "hardware virtualization", "hyper v", "hypervisor architecture", "microsoft azure", "protection rings", "root partition", "server core", "type 1 hypervisor", "virtual machines", "virtualization", "vmcs", "windows server", "x86 virtualization"]
+permalink: /azure/community/Understanding-Hyper-V-and-Azure-Host-OS-Architecture
+tags:
+- Azure
+- Azure Host OS
+- Child Partition
+- Community
+- Hardware Virtualization
+- Hyper V
+- Hypervisor Architecture
+- Microsoft Azure
+- Protection Rings
+- Root Partition
+- Server Core
+- Type 1 Hypervisor
+- Virtual Machines
+- Virtualization
+- VMCS
+- Windows Server
+- X86 Virtualization
+section_names:
+- azure
 ---
-
 mogeko233 breaks down the architecture of Microsoft Azure by explaining the relationship between Hyper-V, the Azure Host OS, and virtualization concepts, referencing both community input and official documentation.<!--excerpt_end-->
 
 # Understanding Hyper-V and Azure Host OS Architecture

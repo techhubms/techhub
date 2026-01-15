@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Advancements in Table Structure Recognition with Azure Document Intelligence"
-description: "This article details the latest advancements in Azure Document Intelligence's table structure recognizer, focusing on precise extraction of tables from diverse and complex documents. It compares traditional parsing with modern AI and computer vision techniques, elaborates on new model architecture for accurate line placement, highlights GPU acceleration for efficient processing, and discusses the use of synthetic data for robust training. The discussion is highly technical and targets developers and architects interested in document AI, computer vision, and large-scale data extraction with Microsoft technologies."
-author: "jppark"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/unveiling-the-next-generation-of-table-structure-recognition/ba-p/4443684"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Advancements in Table Structure Recognition with Azure Document Intelligence
+author: jppark
+canonical_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/unveiling-the-next-generation-of-table-structure-recognition/ba-p/4443684
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 21:26:24 +00:00
-permalink: "/2025-08-14-Advancements-in-Table-Structure-Recognition-with-Azure-Document-Intelligence.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Services", "Azure Document Intelligence", "Community", "Computer Vision", "Deep Learning", "Document AI", "Document Processing", "GPU Acceleration", "Hungarian Matching", "Large Language Models", "Layout Analysis", "Model Architecture", "Performance Benchmarking", "Separation Line Placement", "Synthetic Data", "Table Extraction", "Table Recognition"]
-tags_normalized: ["ai", "azure", "azure ai services", "azure document intelligence", "community", "computer vision", "deep learning", "document ai", "document processing", "gpu acceleration", "hungarian matching", "large language models", "layout analysis", "model architecture", "performance benchmarking", "separation line placement", "synthetic data", "table extraction", "table recognition"]
+permalink: /ai/community/Advancements-in-Table-Structure-Recognition-with-Azure-Document-Intelligence
+tags:
+- AI
+- Azure
+- Azure AI Services
+- Azure Document Intelligence
+- Community
+- Computer Vision
+- Deep Learning
+- Document AI
+- Document Processing
+- GPU Acceleration
+- Hungarian Matching
+- Large Language Models
+- Layout Analysis
+- Model Architecture
+- Performance Benchmarking
+- Separation Line Placement
+- Synthetic Data
+- Table Extraction
+- Table Recognition
+section_names:
+- ai
+- azure
 ---
-
 jppark explores the latest technical advancements in Azure Document Intelligence for precise and fast table structure recognition, examining new model architectures, GPU acceleration, and synthetic data training.<!--excerpt_end-->
 
 # Advancements in Table Structure Recognition with Azure Document Intelligence

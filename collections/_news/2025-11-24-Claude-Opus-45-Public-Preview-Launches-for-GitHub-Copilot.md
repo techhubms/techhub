@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Claude Opus 4.5 Public Preview Launches for GitHub Copilot"
-description: "This update announces the rollout of Claude Opus 4.5, Anthropic’s latest advanced AI model, within GitHub Copilot. The news highlights the model’s performance in coding benchmarks and reduced token usage, as well as instructions for enabling access for various user plans. Users will find practical guidance for activating the model across VS Code, GitHub web, mobile, or CLI, with notes on gradual availability and enterprise policy settings."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Opus 4.5 Public Preview Launches for GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-24 18:12:32 +00:00
-permalink: "/2025-11-24-Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model", "Anthropic", "Claude Opus 4.5", "Coding Benchmarks", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Mobile", "Documentation", "Enterprise Plans", "GitHub Copilot", "Model Picker", "Model Rollout", "News", "Premium Request Multiplier", "Pro Plans", "Token Usage", "VS Code"]
-tags_normalized: ["ai", "ai model", "anthropic", "claude opus 4dot5", "coding benchmarks", "copilot", "copilot chat", "copilot cli", "copilot mobile", "documentation", "enterprise plans", "github copilot", "model picker", "model rollout", "news", "premium request multiplier", "pro plans", "token usage", "vs code"]
+permalink: /github-copilot/news/Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot
+tags:
+- AI
+- AI Model
+- Anthropic
+- Claude Opus 4.5
+- Coding Benchmarks
+- Copilot
+- Copilot Chat
+- Copilot CLI
+- Copilot Mobile
+- Documentation
+- Enterprise Plans
+- GitHub Copilot
+- Model Picker
+- Model Rollout
+- News
+- Premium Request Multiplier
+- Pro Plans
+- Token Usage
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the rollout of Claude Opus 4.5 in GitHub Copilot, explaining its enhanced coding performance and how users can enable it based on their plan.<!--excerpt_end-->
 
 # Claude Opus 4.5 Public Preview Launches for GitHub Copilot

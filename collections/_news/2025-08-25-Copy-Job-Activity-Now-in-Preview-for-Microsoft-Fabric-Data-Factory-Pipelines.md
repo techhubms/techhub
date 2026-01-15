@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines"
-description: "This news article introduces the Copy job Activity now in Preview within Microsoft Fabric Data Factory pipelines. It details how the new orchestration activity simplifies data movement and ingestion, integrates monitoring features, supports flexible data orchestration with other pipeline activities, and enhances data workflow automation for data engineers and architects working on the Microsoft Fabric platform."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-25 08:00:00 +00:00
-permalink: "/2025-08-25-Copy-Job-Activity-Now-in-Preview-for-Microsoft-Fabric-Data-Factory-Pipelines.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Copy Job Activity", "Data Factory", "Data Ingestion", "Data Orchestration", "Data Pipelines", "Incremental Copy", "Medallion Architecture", "Microsoft Fabric", "ML", "Monitoring", "News", "No Code Data Engineering", "Pipeline Automation"]
-tags_normalized: ["azure", "copy job activity", "data factory", "data ingestion", "data orchestration", "data pipelines", "incremental copy", "medallion architecture", "microsoft fabric", "ml", "monitoring", "news", "no code data engineering", "pipeline automation"]
+permalink: /ml/news/Copy-Job-Activity-Now-in-Preview-for-Microsoft-Fabric-Data-Factory-Pipelines
+tags:
+- Azure
+- Copy Job Activity
+- Data Factory
+- Data Ingestion
+- Data Orchestration
+- Data Pipelines
+- Incremental Copy
+- Medallion Architecture
+- Microsoft Fabric
+- ML
+- Monitoring
+- News
+- No Code Data Engineering
+- Pipeline Automation
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the Preview release of Copy job Activity, a new orchestration feature in Data Factory pipelines, enabling streamlined data movement and workflow automation for engineers working on Microsoft Fabric.<!--excerpt_end-->
 
 # Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines

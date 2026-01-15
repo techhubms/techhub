@@ -1,22 +1,28 @@
----
-layout: "post"
-title: "Code Completion"
-description: "AI-powered code suggestions as you type in your editor"
-author: "Liuba Gonta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/EPXdLelATrE"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+layout: post
+title: Code Completion
+author: Liuba Gonta
+canonical_url: https://youtu.be/EPXdLelATrE
 date: 2025-01-02 11:20:08 +00:00
-permalink: "/2025-01-02-Code-Completion.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "Code Completion", "GitHub Copilot", "IDE", "Suggestions", "Videos"]
-tags_normalized: ["ai", "code", "code completion", "github copilot", "ide", "suggestions", "videos"]
+permalink: /github-copilot/videos/Code-Completion
+viewing_mode: internal
+section: github-copilot
+ghes_support: true
+plans:
+- Free
+alt-collection: features
+tags:
+- AI
+- Code
+- Code Completion
+- GitHub Copilot
+- IDE
+- Suggestions
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 This video demonstrates GitHub Copilot's Code Completion feature. Enhance your coding experience with AI-powered code completions while you are typing. Also called 'suggestions'. These are the most common way of using Copilot as they show up as a suggestion while you are typing in your editor.<!--excerpt_end-->
 
 {% youtube EPXdLelATrE %}

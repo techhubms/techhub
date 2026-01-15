@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Semantic Kernel: Multi-agent Orchestration Framework Unveiled"
-description: "This post by Tao Chen and Chris Rickman introduces Semantic Kernel’s new multi-agent orchestration framework. It details orchestration patterns—including sequential, concurrent, group chat, handoff, and magentic—and provides practical guidance, sample code, and use cases to help developers build robust, flexible multi-agent systems within Microsoft’s Semantic Kernel ecosystem."
-author: "Tao Chen, Chris Rickman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: 'Semantic Kernel: Multi-agent Orchestration Framework Unveiled'
+author: Tao Chen, Chris Rickman
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-27 16:54:32 +00:00
-permalink: "/2025-05-27-Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agent Orchestration", "AI", "Coding", "Collaborative AI", "Concurrent Orchestration", "Developer Tools", "Group Chat Orchestration", "Handoff Orchestration", "Magentic Orchestration", "Microsoft AI", "Multi Agent Systems", "News", "Orchestration Framework", "Python", "Semantic Kernel", "Sequential Orchestration", "Workflow Automation"]
-tags_normalized: ["dotnet", "agent orchestration", "ai", "coding", "collaborative ai", "concurrent orchestration", "developer tools", "group chat orchestration", "handoff orchestration", "magentic orchestration", "microsoft ai", "multi agent systems", "news", "orchestration framework", "python", "semantic kernel", "sequential orchestration", "workflow automation"]
+permalink: /ai/news/Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled
+tags:
+- .NET
+- Agent Orchestration
+- AI
+- Coding
+- Collaborative AI
+- Concurrent Orchestration
+- Developer Tools
+- Group Chat Orchestration
+- Handoff Orchestration
+- Magentic Orchestration
+- Microsoft AI
+- Multi Agent Systems
+- News
+- Orchestration Framework
+- Python
+- Semantic Kernel
+- Sequential Orchestration
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 In this post, authors Tao Chen and Chris Rickman introduce and explain the new multi-agent orchestration framework for Semantic Kernel, highlighting orchestration patterns, developer experience, and practical use cases.<!--excerpt_end-->
 
 # Semantic Kernel: Multi-agent Orchestration Framework Unveiled

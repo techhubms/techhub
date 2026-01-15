@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Securely Access VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration"
-description: "This article presents a guide to securely connecting Amazon S3 buckets locked inside VPCs or corporate firewalls to Microsoft Fabric, leveraging Entra ID-based OIDC authentication and the on-premises data gateway. It summarizes step-by-step configuration for identity trust with AWS IAM, private network connectivity, shortcut creation in Fabric, and outlines security best practices and current limitations."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Securely Access VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 09:00:00 +00:00
-permalink: "/2025-12-01-Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft-Fabric-Using-Entra-Integration.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Amazon S3", "AWS IAM", "Azure", "Cloud Security", "CloudTrail", "Cross Cloud Access", "Data Governance", "Identity Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "OIDC", "On Premises Data Gateway", "S3 Shortcut", "Security", "Service Principal", "VPC", "Zero Trust"]
-tags_normalized: ["amazon s3", "aws iam", "azure", "cloud security", "cloudtrail", "cross cloud access", "data governance", "identity management", "microsoft entra id", "microsoft fabric", "ml", "news", "oidc", "on premises data gateway", "s3 shortcut", "security", "service principal", "vpc", "zero trust"]
+permalink: /ml/news/Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft-Fabric-Using-Entra-Integration
+tags:
+- Amazon S3
+- AWS IAM
+- Azure
+- Cloud Security
+- CloudTrail
+- Cross Cloud Access
+- Data Governance
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- OIDC
+- On Premises Data Gateway
+- S3 Shortcut
+- Security
+- Service Principal
+- VPC
+- Zero Trust
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog describes how organizations can connect VPC-protected Amazon S3 buckets to Microsoft Fabric securely via Entra ID integration, using OIDC and an on-premises data gateway.<!--excerpt_end-->
 
 # Secure Access to VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Aspire 9.4: CLI, Interactive Dashboard, AI Integrations, and New Features"
-description: "The .NET Aspire 9.4 release introduces a GA command-line interface, enhanced dashboard interactivity, new AI-focused integrations with GitHub Models and Azure AI Foundry, and various developer productivity improvements. This article by Maddy Montaquila highlights key features, code examples, and guidance for upgrading."
-author: "Maddy Montaquila"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-aspire-9-4/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Aspire 9.4: CLI, Interactive Dashboard, AI Integrations, and New Features'
+author: Maddy Montaquila
+canonical_url: https://devblogs.microsoft.com/dotnet/announcing-aspire-9-4/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-29 18:05:00 +00:00
-permalink: "/2025-07-29-Aspire-94-CLI-Interactive-Dashboard-AI-Integrations-and-New-Features.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", ".NET Aspire", "AI", "AOT Compilation", "Apphost", "Aspire", "Aspire 9.4", "Azure", "Azure AI Foundry", "CLI", "Coding", "Custom Resource", "Dashboard", "Developer Productivity", "External Service", "Featured", "GitHub Models", "Interaction Service", "News", "OpenTelemetry", "YARP Integration"]
-tags_normalized: ["dotnet", "dotnet aspire", "ai", "aot compilation", "apphost", "aspire", "aspire 9dot4", "azure", "azure ai foundry", "cli", "coding", "custom resource", "dashboard", "developer productivity", "external service", "featured", "github models", "interaction service", "news", "opentelemetry", "yarp integration"]
+permalink: /ai/news/Aspire-94-CLI-Interactive-Dashboard-AI-Integrations-and-New-Features
+tags:
+- .NET
+- .NET Aspire
+- AI
+- AOT Compilation
+- Apphost
+- Aspire
+- Aspire 9.4
+- Azure
+- Azure AI Foundry
+- CLI
+- Coding
+- Custom Resource
+- Dashboard
+- Developer Productivity
+- External Service
+- Featured
+- GitHub Models
+- Interaction Service
+- News
+- OpenTelemetry
+- YARP Integration
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Maddy Montaquila introduces the Aspire 9.4 release, showcasing new CLI capabilities, interactive dashboard features, and first-class AI service integrations. Discover what's new for developing modern .NET distributed and AI-enabled applications with enhanced productivity.<!--excerpt_end-->
 
 ## Aspire 9.4 Release Overview

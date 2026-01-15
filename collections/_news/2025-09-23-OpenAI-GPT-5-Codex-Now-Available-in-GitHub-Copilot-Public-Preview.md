@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "OpenAI GPT-5-Codex Now Available in GitHub Copilot Public Preview"
-description: "This news update details the rollout of OpenAI's GPT-5-Codex model within GitHub Copilot. The release introduces agentic coding optimization for Copilot users and outlines available plans, activation steps in Visual Studio Code, procedural guidance for enterprise and business administrators, and further learning resources for developers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: OpenAI GPT-5-Codex Now Available in GitHub Copilot Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 16:43:02 +00:00
-permalink: "/2025-09-23-OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Coding", "AI", "AI Development", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "GitHub Copilot", "GPT 5 Codex", "Model Rollout", "News", "OpenAI", "Software Release", "VS Code"]
-tags_normalized: ["agentic coding", "ai", "ai development", "copilot", "copilot chat", "copilot enterprise", "copilot pro", "developer tools", "github copilot", "gpt 5 codex", "model rollout", "news", "openai", "software release", "vs code"]
+permalink: /github-copilot/news/OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview
+tags:
+- Agentic Coding
+- AI
+- AI Development
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro
+- Developer Tools
+- GitHub Copilot
+- GPT 5 Codex
+- Model Rollout
+- News
+- OpenAI
+- Software Release
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison summarizes the public preview rollout of OpenAI’s GPT-5-Codex model for GitHub Copilot, explaining new features and providing steps for activation in different Copilot plans.<!--excerpt_end-->
 
 # OpenAI GPT-5-Codex Rolls Out in GitHub Copilot Public Preview

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "CodeQL 2.23.0: New Rust Log Injection Detection and Security Improvements"
-description: "This news post details updates in CodeQL 2.23.0, the static analysis engine powering GitHub code scanning. The release introduces a new Rust query for log injection, promotes a Java Spring Boot security query, refines analysis for C#, improves Python queries, and includes broader security detection and performance enhancements across multiple languages. Both open source and enterprise users benefit, with automatic deployment on GitHub.com and manual upgrade paths available for GitHub Enterprise Server."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-10-codeql-2-23-0-adds-support-for-rust-log-injection-and-other-security-detection-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'CodeQL 2.23.0: New Rust Log Injection Detection and Security Improvements'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-10-codeql-2-23-0-adds-support-for-rust-log-injection-and-other-security-detection-improvements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 18:04:45 +00:00
-permalink: "/2025-09-10-CodeQL-2230-New-Rust-Log-Injection-Detection-and-Security-Improvements.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Application Security", "C#", "Code Scanning", "CodeQL", "Coding", "Dataflow Analysis", "DevOps", "GitHub", "GitHub Enterprise Server", "Improvement", "Java", "Log Injection", "News", "Python", "Rust", "Security", "Security Scanning", "Spring Boot", "Static Analysis", "Taint Tracking"]
-tags_normalized: ["application security", "csharp", "code scanning", "codeql", "coding", "dataflow analysis", "devops", "github", "github enterprise server", "improvement", "java", "log injection", "news", "python", "rust", "security", "security scanning", "spring boot", "static analysis", "taint tracking"]
+permalink: /coding/news/CodeQL-2230-New-Rust-Log-Injection-Detection-and-Security-Improvements
+tags:
+- Application Security
+- C#
+- Code Scanning
+- CodeQL
+- Coding
+- Dataflow Analysis
+- DevOps
+- GitHub
+- GitHub Enterprise Server
+- Improvement
+- Java
+- Log Injection
+- News
+- Python
+- Rust
+- Security
+- Security Scanning
+- Spring Boot
+- Static Analysis
+- Taint Tracking
+section_names:
+- coding
+- devops
+- security
 ---
-
 Allison covers the latest in CodeQL 2.23.0, highlighting new Rust log injection detection, security query improvements across languages, and deployment updates for GitHub code scanning users.<!--excerpt_end-->
 
 # CodeQL 2.23.0: New Rust Log Injection Detection and Security Improvements

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Functions vs Azure Container Apps: Choosing Your Serverless Compute Option"
-description: "This in-depth guide by Dellenny compares Azure Functions and Azure Container Apps, outlining use cases, architectural differences, scaling models, costs, and developer experience. It helps architects and developers understand when to use each Azure serverless platform and how to select the right approach for cloud-native applications, automation, and microservices."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Azure Functions vs Azure Container Apps: Choosing Your Serverless Compute Option'
+author: Dellenny
+canonical_url: https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-06 09:52:01 +00:00
-permalink: "/2025-10-06-Azure-Functions-vs-Azure-Container-Apps-Choosing-Your-Serverless-Compute-Option.html"
-categories: ["Azure", "Coding"]
-tags: ["AKS", "Architecture", "Azure", "Azure Container Apps", "Azure Functions", "Blogs", "Cloud Architecture", "Coding", "Containers", "Cost Optimization", "Event Driven", "Function as A Service", "KEDA", "Kubernetes", "Microservices", "Scaling", "Serverless Computing", "Solution Architecture", "Stateful Workloads"]
-tags_normalized: ["aks", "architecture", "azure", "azure container apps", "azure functions", "blogs", "cloud architecture", "coding", "containers", "cost optimization", "event driven", "function as a service", "keda", "kubernetes", "microservices", "scaling", "serverless computing", "solution architecture", "stateful workloads"]
+permalink: /coding/blogs/Azure-Functions-vs-Azure-Container-Apps-Choosing-Your-Serverless-Compute-Option
+tags:
+- AKS
+- Architecture
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Blogs
+- Cloud Architecture
+- Coding
+- Containers
+- Cost Optimization
+- Event Driven
+- Function as A Service
+- KEDA
+- Kubernetes
+- Microservices
+- Scaling
+- Serverless Computing
+- Solution Architecture
+- Stateful Workloads
+section_names:
+- azure
+- coding
 ---
-
 Dellenny presents a detailed comparison of Azure Functions and Azure Container Apps, guiding architects and developers on choosing the right serverless compute platform in Microsoft Azure.<!--excerpt_end-->
 
 # Azure Functions vs Azure Container Apps: Choosing Your Serverless Compute Option

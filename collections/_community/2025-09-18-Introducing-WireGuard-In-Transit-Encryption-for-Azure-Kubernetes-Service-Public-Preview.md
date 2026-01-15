@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing WireGuard In-Transit Encryption for Azure Kubernetes Service (Public Preview)"
-description: "This community post by josephyostos announces the public preview of WireGuard-based in-transit encryption for Azure Kubernetes Service (AKS). It explains how WireGuard now natively integrates with Advanced Container Networking Services to encrypt inter-node pod traffic, provides details on architecture and configuration, and outlines security and operational benefits for containerized workloads in Azure."
-author: "josephyostos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-wireguard-in-transit-encryption-for-aks-public/ba-p/4421057"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing WireGuard In-Transit Encryption for Azure Kubernetes Service (Public Preview)
+author: josephyostos
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-wireguard-in-transit-encryption-for-aks-public/ba-p/4421057
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 10:43:54 +00:00
-permalink: "/2025-09-18-Introducing-WireGuard-In-Transit-Encryption-for-Azure-Kubernetes-Service-Public-Preview.html"
-categories: ["Azure", "Security"]
-tags: ["Advanced Container Networking", "AKS", "Azure", "Azure CNI", "Cilium", "Cloud Security", "Cluster Security", "Community", "Container Networking", "Encryption", "in Transit Encryption", "Key Management", "Network Security", "Security", "VNet Encryption", "WireGuard"]
-tags_normalized: ["advanced container networking", "aks", "azure", "azure cni", "cilium", "cloud security", "cluster security", "community", "container networking", "encryption", "in transit encryption", "key management", "network security", "security", "vnet encryption", "wireguard"]
+permalink: /azure/community/Introducing-WireGuard-In-Transit-Encryption-for-Azure-Kubernetes-Service-Public-Preview
+tags:
+- Advanced Container Networking
+- AKS
+- Azure
+- Azure CNI
+- Cilium
+- Cloud Security
+- Cluster Security
+- Community
+- Container Networking
+- Encryption
+- in Transit Encryption
+- Key Management
+- Network Security
+- Security
+- VNet Encryption
+- WireGuard
+section_names:
+- azure
+- security
 ---
-
 josephyostos details the new WireGuard-based in-transit encryption feature for Azure Kubernetes Service, describing its integration, architecture, and benefits for securing pod-to-pod traffic in security-sensitive environments.<!--excerpt_end-->
 
 # Introducing WireGuard In-Transit Encryption for Azure Kubernetes Service (AKS)

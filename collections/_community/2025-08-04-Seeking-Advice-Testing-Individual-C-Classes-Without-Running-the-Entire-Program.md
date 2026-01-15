@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Seeking Advice: Testing Individual C# Classes Without Running the Entire Program"
-description: "The author asks for suggestions on how to test individual C# classes and code bits without running the complete application. They share their challenges coming from a Python background and discuss frustrations with .NET Fiddle and creating test projects. The community is invited to provide practical workflow tips."
-author: "RutabagaJumpy3956"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhd7tp/i_want_to_test_my_program_but_couldnt_figure_out/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+layout: post
+title: 'Seeking Advice: Testing Individual C# Classes Without Running the Entire Program'
+author: RutabagaJumpy3956
+canonical_url: https://www.reddit.com/r/csharp/comments/1mhd7tp/i_want_to_test_my_program_but_couldnt_figure_out/
+viewing_mode: external
+feed_name: Reddit CSharp
+feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 13:18:37 +00:00
-permalink: "/2025-08-04-Seeking-Advice-Testing-Individual-C-Classes-Without-Running-the-Entire-Program.html"
-categories: ["Coding"]
-tags: [".NET Fiddle", "C#", "Class Testing", "Code Testing", "Coding", "Community", "Debugging", "Development Workflow", "Intellisense", "Interactive Coding", "Lambda Expressions", "Project Structure"]
-tags_normalized: ["dotnet fiddle", "csharp", "class testing", "code testing", "coding", "community", "debugging", "development workflow", "intellisense", "interactive coding", "lambda expressions", "project structure"]
+permalink: /coding/community/Seeking-Advice-Testing-Individual-C-Classes-Without-Running-the-Entire-Program
+tags:
+- .NET Fiddle
+- C#
+- Class Testing
+- Code Testing
+- Coding
+- Community
+- Debugging
+- Development Workflow
+- Intellisense
+- Interactive Coding
+- Lambda Expressions
+- Project Structure
+section_names:
+- coding
 ---
-
 RutabagaJumpy3956 shares their challenges with testing C# code segments without executing the entire program and seeks advice from the community about better approaches.<!--excerpt_end-->
 
 ## Background

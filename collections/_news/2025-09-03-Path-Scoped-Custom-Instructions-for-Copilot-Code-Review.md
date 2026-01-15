@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Path-Scoped Custom Instructions for Copilot Code Review"
-description: "This update from GitHub announces that Copilot code review now supports path-scoped custom instruction files, allowing targeted code review guidance in repositories. The post outlines how developers can leverage `*.instructions.md` files and the new `applyTo` section for fine-grained feedback, and details the deprecation of the previous coding guidelines feature in favor of this new flexible approach."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-03-copilot-code-review-path-scoped-custom-instruction-file-support"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Path-Scoped Custom Instructions for Copilot Code Review
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-03-copilot-code-review-path-scoped-custom-instruction-file-support
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-03 20:41:26 +00:00
-permalink: "/2025-09-03-Path-Scoped-Custom-Instructions-for-Copilot-Code-Review.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Applyto Section", "Code Review Automation", "Copilot Code Review", "Custom Instructions", "Developer Tools", "GitHub", "GitHub Copilot", "News", "Path Scoped Instructions", "Pull Requests", "Repository Guidance"]
-tags_normalized: ["ai", "applyto section", "code review automation", "copilot code review", "custom instructions", "developer tools", "github", "github copilot", "news", "path scoped instructions", "pull requests", "repository guidance"]
+permalink: /github-copilot/news/Path-Scoped-Custom-Instructions-for-Copilot-Code-Review
+tags:
+- AI
+- Applyto Section
+- Code Review Automation
+- Copilot Code Review
+- Custom Instructions
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- News
+- Path Scoped Instructions
+- Pull Requests
+- Repository Guidance
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces new path-scoped custom instruction file support in Copilot code review, enhancing developers’ ability to provide focused feedback within specific parts of their repositories.<!--excerpt_end-->
 
 # Path-Scoped Custom Instructions for Copilot Code Review

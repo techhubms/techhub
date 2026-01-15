@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enterprise AI Controls and Agent Control Plane Public Preview for GitHub Copilot"
-description: "This announcement details the public preview of enterprise-scale AI administrative capabilities on GitHub Enterprise Cloud with Copilot. It introduces a dedicated agent control plane for managing custom agents, auditing agent activity, applying governance policies, and centralizing AI and Copilot system configuration at scale. Key features include agent activity logs, custom agent management, configurable security roles, and upcoming support for additional IDEs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-enterprise-ai-controls-the-agent-control-plane-are-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enterprise AI Controls and Agent Control Plane Public Preview for GitHub Copilot
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-enterprise-ai-controls-the-agent-control-plane-are-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:24:07 +00:00
-permalink: "/2025-10-28-Enterprise-AI-Controls-and-Agent-Control-Plane-Public-Preview-for-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Administration", "Agent Control Plane", "Agent Management", "AI", "AI Governance", "Audit Logs", "Copilot", "Custom Agents", "DevOps", "Enterprise Cloud", "Enterprise Management Tools", "Enterprise Roles", "Fine Grained Permissions", "GitHub Administration", "GitHub Copilot", "MCP Allowlist", "News", "Policy Configuration", "Universe25", "VS Code"]
-tags_normalized: ["administration", "agent control plane", "agent management", "ai", "ai governance", "audit logs", "copilot", "custom agents", "devops", "enterprise cloud", "enterprise management tools", "enterprise roles", "fine grained permissions", "github administration", "github copilot", "mcp allowlist", "news", "policy configuration", "universe25", "vs code"]
+permalink: /github-copilot/news/Enterprise-AI-Controls-and-Agent-Control-Plane-Public-Preview-for-GitHub-Copilot
+tags:
+- Administration
+- Agent Control Plane
+- Agent Management
+- AI
+- AI Governance
+- Audit Logs
+- Copilot
+- Custom Agents
+- DevOps
+- Enterprise Cloud
+- Enterprise Management Tools
+- Enterprise Roles
+- Fine Grained Permissions
+- GitHub Administration
+- GitHub Copilot
+- MCP Allowlist
+- News
+- Policy Configuration
+- Universe25
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison announces the public preview of enterprise AI controls and an agent control plane for GitHub Copilot, empowering administrators with governance, auditability, and organizational configuration tools tailored for enterprises.<!--excerpt_end-->
 
 # Enterprise AI Controls & Agent Control Plane: Public Preview

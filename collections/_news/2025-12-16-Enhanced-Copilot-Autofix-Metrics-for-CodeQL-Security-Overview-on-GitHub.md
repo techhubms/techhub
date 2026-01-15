@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enhanced Copilot Autofix Metrics for CodeQL Security Overview on GitHub"
-description: "This update details improvements to the GitHub Enterprise Cloud security overview dashboard, refining how Copilot Autofix usage is reported for remediating CodeQL alerts. It explains retroactive recalculations of remediation metrics, providing clearer insight into how Copilot Autofix reduces vulnerabilities and security debt in codebases."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enhanced Copilot Autofix Metrics for CodeQL Security Overview on GitHub
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 10:45:33 +00:00
-permalink: "/2025-12-16-Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub.html"
-categories: ["AI", "GitHub Copilot", "Security"]
-tags: ["AI", "Application Security", "Code Scanning", "CodeQL", "Copilot Autofix", "GitHub Copilot", "GitHub Enterprise Cloud", "Improvement", "News", "Pull Request Insights", "Remediation", "Security", "Security Dashboard", "Security Metrics", "Security Overview", "Vulnerability Management"]
-tags_normalized: ["ai", "application security", "code scanning", "codeql", "copilot autofix", "github copilot", "github enterprise cloud", "improvement", "news", "pull request insights", "remediation", "security", "security dashboard", "security metrics", "security overview", "vulnerability management"]
+permalink: /github-copilot/news/Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub
+tags:
+- AI
+- Application Security
+- Code Scanning
+- CodeQL
+- Copilot Autofix
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- Improvement
+- News
+- Pull Request Insights
+- Remediation
+- Security
+- Security Dashboard
+- Security Metrics
+- Security Overview
+- Vulnerability Management
+section_names:
+- ai
+- github-copilot
+- security
 ---
-
 Allison shares an update about enhanced Copilot Autofix usage metrics on the GitHub security overview dashboard, improving clarity for developers and security teams.<!--excerpt_end-->
 
 # Enhanced Copilot Autofix Metrics for CodeQL Security Overview on GitHub

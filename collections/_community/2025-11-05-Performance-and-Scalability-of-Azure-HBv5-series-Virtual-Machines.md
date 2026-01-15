@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Performance and Scalability of Azure HBv5-series Virtual Machines"
-description: "This article provides a detailed exploration of Azure HBv5-series virtual machines, focusing on their technical features, benchmark results, cost-performance optimization, and use cases for high performance computing (HPC). It compares HBv5 with previous generations (HBv4, HBv3, HBv2), outlines key improvements in memory bandwidth, CPU architecture, networking, and disk IO, and discusses practical performance, cost, and fleet consolidation benefits for workloads like computational fluid dynamics, weather simulation, geoscience, and molecular dynamics. The article also covers microbenchmark methodologies, scalability analysis (weak and strong scaling), and offers actionable recommendations for HPC practitioners considering HBv5 adoption."
-author: "jvenkatesh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Performance and Scalability of Azure HBv5-series Virtual Machines
+author: jvenkatesh
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 06:42:40 +00:00
-permalink: "/2025-11-05-Performance-and-Scalability-of-Azure-HBv5-series-Virtual-Machines.html"
-categories: ["Azure"]
-tags: ["AMD EPYC", "Ansys Fluent", "Azure", "Azure HBv5", "Community", "Cost Optimization", "CPU Benchmarking", "Devito", "High Performance Computing", "HPC", "InfiniBand", "Memory Bandwidth", "NAMD", "NVIDIA Quantum 2", "OpenFOAM", "Scalability", "Siemens Star CCM+", "STREAM Benchmark", "Strong Scaling", "Virtual Machines", "VM Fleet Consolidation", "Weak Scaling", "WRF"]
-tags_normalized: ["amd epyc", "ansys fluent", "azure", "azure hbv5", "community", "cost optimization", "cpu benchmarking", "devito", "high performance computing", "hpc", "infiniband", "memory bandwidth", "namd", "nvidia quantum 2", "openfoam", "scalability", "siemens star ccmplus", "stream benchmark", "strong scaling", "virtual machines", "vm fleet consolidation", "weak scaling", "wrf"]
+permalink: /azure/community/Performance-and-Scalability-of-Azure-HBv5-series-Virtual-Machines
+tags:
+- AMD EPYC
+- Ansys Fluent
+- Azure
+- Azure HBv5
+- Community
+- Cost Optimization
+- CPU Benchmarking
+- Devito
+- High Performance Computing
+- HPC
+- InfiniBand
+- Memory Bandwidth
+- NAMD
+- NVIDIA Quantum 2
+- OpenFOAM
+- Scalability
+- Siemens Star CCM+
+- STREAM Benchmark
+- Strong Scaling
+- Virtual Machines
+- VM Fleet Consolidation
+- Weak Scaling
+- WRF
+section_names:
+- azure
 ---
-
 jvenkatesh and colleagues present an in-depth technical overview and benchmarks of Azure HBv5-series Virtual Machines, highlighting improvements for HPC workloads and practical guidance for Azure users.<!--excerpt_end-->
 
 # Performance and Scalability of Azure HBv5-series Virtual Machines

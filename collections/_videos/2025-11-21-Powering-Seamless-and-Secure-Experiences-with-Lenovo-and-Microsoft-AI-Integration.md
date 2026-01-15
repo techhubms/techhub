@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Powering Seamless and Secure Experiences with Lenovo and Microsoft AI Integration"
-description: "This session from Microsoft Ignite 2025 explores the collaboration between Microsoft and Lenovo, focusing on how Lenovo's hardware and Microsoft's software and cloud platforms (Azure, Microsoft 365, Windows) deliver integrated solutions for businesses. The discussion highlights Microsoft's AI advancements, the role of AI as a catalyst for industry innovation, integration strategies across devices, and new opportunities in data center functionality."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WJdoMr0juZ8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Powering Seamless and Secure Experiences with Lenovo and Microsoft AI Integration
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=WJdoMr0juZ8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:50:52 +00:00
-permalink: "/2025-11-21-Powering-Seamless-and-Secure-Experiences-with-Lenovo-and-Microsoft-AI-Integration.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "AI Revolution", "Azure", "Cloud Platforms", "Data Centers", "Deployment Acceleration", "Device Security", "Enterprise Solutions", "Industry Innovation", "Integrated Solutions", "Lenovo", "Microsoft 365", "Microsoft Events", "Microsoft Ignite", "MSIgnite", "Videos", "Windows"]
-tags_normalized: ["ai", "ai integration", "ai revolution", "azure", "cloud platforms", "data centers", "deployment acceleration", "device security", "enterprise solutions", "industry innovation", "integrated solutions", "lenovo", "microsoft 365", "microsoft events", "microsoft ignite", "msignite", "videos", "windows"]
+permalink: /ai/videos/Powering-Seamless-and-Secure-Experiences-with-Lenovo-and-Microsoft-AI-Integration
+tags:
+- AI
+- AI Integration
+- AI Revolution
+- Azure
+- Cloud Platforms
+- Data Centers
+- Deployment Acceleration
+- Device Security
+- Enterprise Solutions
+- Industry Innovation
+- Integrated Solutions
+- Lenovo
+- Microsoft 365
+- Microsoft Events
+- Microsoft Ignite
+- MSIgnite
+- Videos
+- Windows
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a session featuring Dave Mooney at Microsoft Ignite 2025, discussing the strategic partnership between Microsoft and Lenovo, with emphasis on AI integration and seamless device experiences.<!--excerpt_end-->
 
 {% youtube WJdoMr0juZ8 %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows"
-description: "This announcement introduces Microsoft’s new Dragon Copilot, an AI-driven clinical assistant purpose-built for nurses. The ambient experience captures clinical documentation, queries patient transcripts, and integrates trusted medical information into nursing workflows, reducing administrative burden and empowering nurses to focus on patient care. The post highlights Microsoft’s commitment to applying AI advancements in healthcare to improve workflow efficiency and enhance patient outcomes through automation and intelligent support."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows
+author: stclarke
+canonical_url: https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:11:05 +00:00
-permalink: "/2025-10-16-Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows.html"
-categories: ["AI"]
-tags: ["AI", "AI Automation", "Ambient Clinical Documentation", "Ambient Experience", "Clinical Assistant", "Company News", "Digital Health", "Dragon Copilot", "Healthcare AI", "LinkedIn Post", "Medical Information Retrieval", "Microsoft AI", "News", "Nuance", "Nursing Workflows", "Patient Care", "Patient Data", "Workflow Automation"]
-tags_normalized: ["ai", "ai automation", "ambient clinical documentation", "ambient experience", "clinical assistant", "company news", "digital health", "dragon copilot", "healthcare ai", "linkedin post", "medical information retrieval", "microsoft ai", "news", "nuance", "nursing workflows", "patient care", "patient data", "workflow automation"]
+permalink: /ai/news/Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows
+tags:
+- AI
+- AI Automation
+- Ambient Clinical Documentation
+- Ambient Experience
+- Clinical Assistant
+- Company News
+- Digital Health
+- Dragon Copilot
+- Healthcare AI
+- LinkedIn Post
+- Medical Information Retrieval
+- Microsoft AI
+- News
+- Nuance
+- Nursing Workflows
+- Patient Care
+- Patient Data
+- Workflow Automation
+section_names:
+- ai
 ---
-
 stclarke shares news of Microsoft’s launch of Dragon Copilot, an AI-powered ambient experience designed to streamline nursing workflows and reduce administrative tasks so nurses can focus more on patient care.<!--excerpt_end-->
 
 # Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows

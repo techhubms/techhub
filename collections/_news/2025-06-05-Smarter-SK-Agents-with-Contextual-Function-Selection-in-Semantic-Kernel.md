@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Smarter SK Agents with Contextual Function Selection in Semantic Kernel"
-description: "This article by Sergey Menshykh introduces the Contextual Function Selection feature in the Semantic Kernel Agent Framework. It explains how this enhancement uses Retrieval-Augmented Generation to dynamically filter and advertise only the most relevant functions during AI interactions, improving performance, efficiency, and relevance for developers."
-author: "Sergey Menshykh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/smarter-sk-agents-with-contextual-function-selection/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: Smarter SK Agents with Contextual Function Selection in Semantic Kernel
+author: Sergey Menshykh
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/smarter-sk-agents-with-contextual-function-selection/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-06-05 09:28:47 +00:00
-permalink: "/2025-06-05-Smarter-SK-Agents-with-Contextual-Function-Selection-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agents", "AI", "AI Agents", "Azure OpenAI", "C#", "ChatCompletionAgent", "Coding", "Contextual Function Selection", "Customer Review Summarization", "Function Filtering", "News", "Plugin Integration", "Retrieval Augmented Generation", "Semantic Kernel", "Token Efficiency", "Tools"]
-tags_normalized: ["dotnet", "agents", "ai", "ai agents", "azure openai", "csharp", "chatcompletionagent", "coding", "contextual function selection", "customer review summarization", "function filtering", "news", "plugin integration", "retrieval augmented generation", "semantic kernel", "token efficiency", "tools"]
+permalink: /ai/news/Smarter-SK-Agents-with-Contextual-Function-Selection-in-Semantic-Kernel
+tags:
+- .NET
+- Agents
+- AI
+- AI Agents
+- Azure OpenAI
+- C#
+- ChatCompletionAgent
+- Coding
+- Contextual Function Selection
+- Customer Review Summarization
+- Function Filtering
+- News
+- Plugin Integration
+- Retrieval Augmented Generation
+- Semantic Kernel
+- Token Efficiency
+- Tools
+section_names:
+- ai
+- coding
 ---
-
 Sergey Menshykh discusses the new Contextual Function Selection capability in Semantic Kernel, illustrating its practical benefits for AI agent development with dynamic function filtering and performance optimization.<!--excerpt_end-->
 
 # Smarter SK Agents with Contextual Function Selection

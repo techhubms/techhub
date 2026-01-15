@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Agentic DevOps in Action: Transforming Every Phase of the Developer Lifecycle with GitHub Copilot"
-description: "This article explores Agentic DevOps, a new approach powered by AI agents and GitHub Copilot, that automates and enhances each phase of software development. Covering ideation, coding, integration, testing, monitoring, and modernization, it demonstrates the practical benefits of integrating autonomous AI agents into developer workflows."
-author: "Amanda Silver, Mario Rodriguez, Den Delimarsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+layout: post
+title: 'Agentic DevOps in Action: Transforming Every Phase of the Developer Lifecycle with GitHub Copilot'
+author: Amanda Silver, Mario Rodriguez, Den Delimarsky
+canonical_url: https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/feed
 date: 2025-05-29 19:16:40 +00:00
-permalink: "/2025-05-29-Agentic-DevOps-in-Action-Transforming-Every-Phase-of-the-Developer-Lifecycle-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agent Mode", "Agentic DevOps", "AI", "AI Agents", "App Modernization", "Automation", "Azure", "Coding", "Coding Agent", "DevOps", "Figma Integration", "GitHub", "GitHub Copilot", "MCP", "News", "Playwright", "Software Development Lifecycle", "SRE Agent", "VS"]
-tags_normalized: ["dotnet", "agent mode", "agentic devops", "ai", "ai agents", "app modernization", "automation", "azure", "coding", "coding agent", "devops", "figma integration", "github", "github copilot", "mcp", "news", "playwright", "software development lifecycle", "sre agent", "vs"]
+permalink: /github-copilot/news/Agentic-DevOps-in-Action-Transforming-Every-Phase-of-the-Developer-Lifecycle-with-GitHub-Copilot
+tags:
+- .NET
+- Agent Mode
+- Agentic DevOps
+- AI
+- AI Agents
+- App Modernization
+- Automation
+- Azure
+- Coding
+- Coding Agent
+- DevOps
+- Figma Integration
+- GitHub
+- GitHub Copilot
+- MCP
+- News
+- Playwright
+- Software Development Lifecycle
+- SRE Agent
+- VS
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Authored by Amanda Silver, Mario Rodriguez, and Den Delimarsky, this article details how Agentic DevOps and GitHub Copilot are reimagining each phase of the developer lifecycle by leveraging AI-driven agents across ideation, coding, testing, monitoring, and modernization.<!--excerpt_end-->
 
 # Agentic DevOps in Action: Reimagining Every Phase of the Developer Lifecycle

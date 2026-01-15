@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "[Bug] “Commit changes” button remains active during GitHub file upload — causes incomplete commits"
-description: "The author highlights a UX flaw in GitHub’s file upload workflow: the “Commit changes” button remains active even before uploads are complete, potentially causing incomplete commits and HTTP 400 errors. They suggest disabling the button until all files finish uploading and invite community discussion on the issue."
-author: "Abey_lawda_ka_reddit"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mblpfk/bug_commit_changes_button_remains_active_during/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: '[Bug] “Commit changes” button remains active during GitHub file upload — causes incomplete commits'
+author: Abey_lawda_ka_reddit
+canonical_url: https://www.reddit.com/r/github/comments/1mblpfk/bug_commit_changes_button_remains_active_during/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-07-28 16:58:05 +00:00
-permalink: "/2025-07-28-Bug-Commit-changes-button-remains-active-during-GitHub-file-upload-causes-incomplete-commits.html"
-categories: ["DevOps"]
-tags: ["Commit Changes", "Community", "Community Feedback", "DevOps", "File Upload", "GitHub", "GitHub Repository", "HTTP 400 Error", "Suggestion", "UI Bug", "User Experience", "Workflow"]
-tags_normalized: ["commit changes", "community", "community feedback", "devops", "file upload", "github", "github repository", "http 400 error", "suggestion", "ui bug", "user experience", "workflow"]
+permalink: /devops/community/Bug-Commit-changes-button-remains-active-during-GitHub-file-upload-causes-incomplete-commits
+tags:
+- Commit Changes
+- Community
+- Community Feedback
+- DevOps
+- File Upload
+- GitHub
+- GitHub Repository
+- HTTP 400 Error
+- Suggestion
+- UI Bug
+- User Experience
+- Workflow
+section_names:
+- devops
 ---
-
 Abey_lawda_ka_reddit outlines a GitHub UX bug where the “Commit changes” button is prematurely enabled during file uploads. The post calls for feedback and discusses the potential impact of this issue.<!--excerpt_end-->
 
 ## GitHub UI Bug: “Commit changes” Button Active During File Upload

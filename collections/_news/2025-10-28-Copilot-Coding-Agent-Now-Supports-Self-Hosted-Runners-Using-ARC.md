@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC"
-description: "This news update announces that GitHub Copilot coding agents can now operate in custom infrastructure via self-hosted GitHub Actions runners managed by Actions Runner Controller (ARC). It walks through the ability to configure the agent environment for deeper integration with internal resources and provides steps to get started with ARC scale sets."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:20:53 +00:00
-permalink: "/2025-10-28-Copilot-Coding-Agent-Now-Supports-Self-Hosted-Runners-Using-ARC.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions", "Actions Runner Controller", "Agent Customization", "AI", "ARC", "Build Automation", "Cloud Infrastructure", "Continuous Integration", "Copilot", "Copilot Coding Agent", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pull Request Automation", "Scale Sets", "Self Hosted Runners", "Universe25", "YAML"]
-tags_normalized: ["actions", "actions runner controller", "agent customization", "ai", "arc", "build automation", "cloud infrastructure", "continuous integration", "copilot", "copilot coding agent", "devops", "devops automation", "github actions", "github copilot", "improvement", "news", "pull request automation", "scale sets", "self hosted runners", "universe25", "yaml"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Supports-Self-Hosted-Runners-Using-ARC
+tags:
+- Actions
+- Actions Runner Controller
+- Agent Customization
+- AI
+- ARC
+- Build Automation
+- Cloud Infrastructure
+- Continuous Integration
+- Copilot
+- Copilot Coding Agent
+- DevOps
+- DevOps Automation
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- News
+- Pull Request Automation
+- Scale Sets
+- Self Hosted Runners
+- Universe25
+- YAML
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details the new capability for GitHub Copilot coding agents to leverage self-hosted runners via Actions Runner Controller, enabling more customizable and secure development environments for automated coding workflows.<!--excerpt_end-->
 
 # Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC

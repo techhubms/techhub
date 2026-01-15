@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade"
-description: "This walkthrough provides a practical guide on how to use the GitHub Copilot App Modernization – Upgrade for Java extension within Visual Studio Code to modernize legacy Java applications. It details prerequisites, setup, core features, workflow steps, and troubleshooting tips for upgrading Java projects, including Spring Boot and Jakarta EE, and demonstrates how the tool leverages AI-powered automation and GitHub Copilot chat for efficient project transformation."
-author: "jorgebalderas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade
+author: jorgebalderas
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 04:15:00 +00:00
-permalink: "/2025-08-12-Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Refactoring", "CI/CD", "Claude Sonnet 4", "Code Automation", "Coding", "Community", "CVE Security Validation", "GitHub Copilot", "GitHub Copilot App Modernization", "GitHub Copilot Chat", "Gradle", "Jakarta EE Upgrade", "Java 21", "Java 8", "Java Application Modernization", "Legacy Code Upgrade", "Maven", "Maven Wrapper", "OpenRewrite", "PetClinic Example", "Spring Boot Upgrade", "Unit Test Generation", "Upgrade For Java", "Visual Studio Code Extension"]
-tags_normalized: ["ai", "ai powered refactoring", "cislashcd", "claude sonnet 4", "code automation", "coding", "community", "cve security validation", "github copilot", "github copilot app modernization", "github copilot chat", "gradle", "jakarta ee upgrade", "java 21", "java 8", "java application modernization", "legacy code upgrade", "maven", "maven wrapper", "openrewrite", "petclinic example", "spring boot upgrade", "unit test generation", "upgrade for java", "visual studio code extension"]
+permalink: /github-copilot/community/Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade
+tags:
+- AI
+- AI Powered Refactoring
+- CI/CD
+- Claude Sonnet 4
+- Code Automation
+- Coding
+- Community
+- CVE Security Validation
+- GitHub Copilot
+- GitHub Copilot App Modernization
+- GitHub Copilot Chat
+- Gradle
+- Jakarta EE Upgrade
+- Java 21
+- Java 8
+- Java Application Modernization
+- Legacy Code Upgrade
+- Maven
+- Maven Wrapper
+- OpenRewrite
+- PetClinic Example
+- Spring Boot Upgrade
+- Unit Test Generation
+- Upgrade For Java
+- Visual Studio Code Extension
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Jorge Balderas presents a practical guide to upgrading legacy Java applications using the GitHub Copilot App Modernization – Upgrade for Java extension, highlighting AI-driven automation and hands-on steps for developers.<!--excerpt_end-->
 
 # Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade

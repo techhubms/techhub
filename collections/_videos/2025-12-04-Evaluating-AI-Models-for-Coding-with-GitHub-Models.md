@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Evaluating AI Models for Coding with GitHub Models"
-description: "This video, presented by Microsoft Developer’s Damian Brady, introduces GitHub Models—a tool designed for developers to test and compare over 40 AI code models. It explores practical ways to evaluate which AI solution best fits specific coding tasks, offering hands-on guidance for prompt engineering and result analysis."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5eCkVjQM9XA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Evaluating AI Models for Coding with GitHub Models
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=5eCkVjQM9XA
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 16:00:37 +00:00
-permalink: "/2025-12-04-Evaluating-AI-Models-for-Coding-with-GitHub-Models.html"
-categories: ["AI"]
-tags: ["AI", "AI Code Assistants", "AI Evaluation", "AI For Developers", "AIForDevelopers", "Coding Tools", "Developer Tools", "GitHub", "GitHub Models", "GitHubModels", "Machine Learning", "Model Comparison", "Prompt Engineering", "Videos"]
-tags_normalized: ["ai", "ai code assistants", "ai evaluation", "ai for developers", "aifordevelopers", "coding tools", "developer tools", "github", "github models", "githubmodels", "machine learning", "model comparison", "prompt engineering", "videos"]
+permalink: /ai/videos/Evaluating-AI-Models-for-Coding-with-GitHub-Models
+tags:
+- AI
+- AI Code Assistants
+- AI Evaluation
+- AI For Developers
+- AIForDevelopers
+- Coding Tools
+- Developer Tools
+- GitHub
+- GitHub Models
+- GitHubModels
+- Machine Learning
+- Model Comparison
+- Prompt Engineering
+- Videos
+section_names:
+- ai
 ---
-
 Damian Brady from Microsoft Developer demonstrates how developers can leverage GitHub Models to compare more than 40 AI coding models. This video helps developers select the best AI solution for their workflow.<!--excerpt_end-->
 
 {% youtube 5eCkVjQM9XA %}

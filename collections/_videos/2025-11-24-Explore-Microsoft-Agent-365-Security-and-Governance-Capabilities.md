@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Explore Microsoft Agent 365 Security and Governance Capabilities"
-description: "This session from Microsoft Ignite 2025 delves into managing and securing AI agents using Microsoft Agent 365. The speakers present practical approaches for conditional access controls, data loss prevention, and compliance frameworks such as Purview Audit. Attendees learn how to oversee AI agent activities, mitigate risks associated with agent sprawl, enforce governance, and respond to threats with effective incident investigation and remediation strategies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RsCz57M2SMc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Explore Microsoft Agent 365 Security and Governance Capabilities
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=RsCz57M2SMc
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:28:51 +00:00
-permalink: "/2025-11-24-Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agents", "Audit Trail", "Conditional Access", "Data Loss Prevention", "DLP", "Governance", "Incident Response", "Lateral Movement", "Microsoft Agent 365", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Purview Audit", "Regulatory Compliance", "Security", "Session Management", "Threat Protection", "Videos"]
-tags_normalized: ["ai", "ai agents", "audit trail", "conditional access", "data loss prevention", "dlp", "governance", "incident response", "lateral movement", "microsoft agent 365", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "purview audit", "regulatory compliance", "security", "session management", "threat protection", "videos"]
+permalink: /ai/videos/Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities
+tags:
+- AI
+- AI Agents
+- Audit Trail
+- Conditional Access
+- Data Loss Prevention
+- DLP
+- Governance
+- Incident Response
+- Lateral Movement
+- Microsoft Agent 365
+- Microsoft Ignite
+- MSIgnite
+- ProtectcloudAIplatformandapps
+- Purview Audit
+- Regulatory Compliance
+- Security
+- Session Management
+- Threat Protection
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Events presents an Ignite session led by Kim Kischel, Joanne Marone, Irina Nechaeva, and Shilpa Ranganathan, spotlighting security and governance strategies for AI agents with Microsoft Agent 365.<!--excerpt_end-->
 
 {% youtube RsCz57M2SMc %}

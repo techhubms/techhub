@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Build a Pizza Ordering Agent with Microsoft Foundry and MCP"
-description: "This hands-on session demonstrates how to create an intelligent pizza ordering AI agent using Microsoft Foundry Agent Service. Learn to design domain-specific assistants, implement retrieval-augmented generation (RAG), integrate external tools, and connect to live data sources with MCP. The workshop guides you from foundational agent setup through custom tool integration and end-to-end solution delivery, including real-world examples like Contoso PizzaBot."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=jcDhtVZONb4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Build a Pizza Ordering Agent with Microsoft Foundry and MCP
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=jcDhtVZONb4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 23:58:13 +00:00
-permalink: "/2025-12-10-Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "Azure", "Azure Free Trial", "Cloud Computing", "Contoso PizzaBot", "Custom Tools", "Dev", "Developer", "Development", "Domain Specific AI", "External Data Integration", "Live Data Integration", "MCP Integration", "Microsoft", "Microsoft Foundry Agent Service", "Order Management", "RAG", "Retrieval Augmented Generation", "System Prompts", "Tech", "Technology", "Videos", "Workshop"]
-tags_normalized: ["ai", "ai agent", "azure", "azure free trial", "cloud computing", "contoso pizzabot", "custom tools", "dev", "developer", "development", "domain specific ai", "external data integration", "live data integration", "mcp integration", "microsoft", "microsoft foundry agent service", "order management", "rag", "retrieval augmented generation", "system prompts", "tech", "technology", "videos", "workshop"]
+permalink: /ai/videos/Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP
+tags:
+- AI
+- AI Agent
+- Azure
+- Azure Free Trial
+- Cloud Computing
+- Contoso PizzaBot
+- Custom Tools
+- Dev
+- Developer
+- Development
+- Domain Specific AI
+- External Data Integration
+- Live Data Integration
+- MCP Integration
+- Microsoft
+- Microsoft Foundry Agent Service
+- Order Management
+- RAG
+- Retrieval Augmented Generation
+- System Prompts
+- Tech
+- Technology
+- Videos
+- Workshop
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer leads a practical session on building an intelligent pizza ordering agent using Microsoft Foundry Agent Service and MCP integration, featuring custom tools and external data.<!--excerpt_end-->
 
 {% youtube jcDhtVZONb4 %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Advancing Industrial Agility with Agentic AI at Microsoft Ignite"
-description: "This session from Microsoft Ignite 2025 explores how agentic AI is driving transformation across industries such as energy, manufacturing, mobility, and consumer goods. Experts from leading organizations present real-world AI implementations, discuss industrial autonomy, multi-agent systems, digital twins, and the impact of AI-powered automation and service delivery models."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eOKhk7Le9n8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Advancing Industrial Agility with Agentic AI at Microsoft Ignite
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=eOKhk7Le9n8
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:53:41 +00:00
-permalink: "/2025-11-20-Advancing-Industrial-Agility-with-Agentic-AI-at-Microsoft-Ignite.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Automation", "AI Strategy", "Autonomous Systems", "Azure", "Azure AI", "Digital Twins", "Energy", "Industrial AI", "Industrial Autonomy", "Industrial Transformation", "InnovatewithAzureAIappsandagents", "Manufacturing", "Microsoft Ignite", "Mobility", "MSIgnite", "Multi Agent Systems", "Service Delivery", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai automation", "ai strategy", "autonomous systems", "azure", "azure ai", "digital twins", "energy", "industrial ai", "industrial autonomy", "industrial transformation", "innovatewithazureaiappsandagents", "manufacturing", "microsoft ignite", "mobility", "msignite", "multi agent systems", "service delivery", "videos"]
+permalink: /ai/videos/Advancing-Industrial-Agility-with-Agentic-AI-at-Microsoft-Ignite
+tags:
+- Agentic AI
+- AI
+- AI Automation
+- AI Strategy
+- Autonomous Systems
+- Azure
+- Azure AI
+- Digital Twins
+- Energy
+- Industrial AI
+- Industrial Autonomy
+- Industrial Transformation
+- InnovatewithAzureAIappsandagents
+- Manufacturing
+- Microsoft Ignite
+- Mobility
+- MSIgnite
+- Multi Agent Systems
+- Service Delivery
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a breakout session at Ignite 2025 featuring industry leaders reflecting on agentic AI applications and automation in sectors including energy and manufacturing.<!--excerpt_end-->
 
 {% youtube eOKhk7Le9n8 %}

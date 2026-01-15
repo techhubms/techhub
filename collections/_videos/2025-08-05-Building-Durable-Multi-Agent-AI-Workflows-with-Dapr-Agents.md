@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Building Durable Multi-Agent AI Workflows with Dapr Agents"
-description: "This episode of Open at Microsoft introduces developers to Dapr Durable AI Agent Workflow Framework, demonstrating how to build scalable, resilient, multi-agent systems using Dapr Agents. It explains how Dapr’s distributed application runtime and the agentic virtual actor model can orchestrate AI-driven automation, streamline agent management, and enable robust production-ready solutions. Viewers will see demos, architectural insights, and learn how to get involved with the Dapr community and open-source development."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VLRg4TKtLBc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Building Durable Multi-Agent AI Workflows with Dapr Agents
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=VLRg4TKtLBc
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-05 15:01:00 +00:00
-permalink: "/2025-08-05-Building-Durable-Multi-Agent-AI-Workflows-with-Dapr-Agents.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agentic Systems", "AI", "AI Agents", "Azure", "Cloud Architecture", "Cloud Computing", "Coding", "Dapr", "Dapr Agents", "Dev", "Developer Tools", "Development", "DevOps", "Distributed Applications", "Durable Workflows", "LLM", "Microservices", "Microsoft", "Microsoft Azure", "Open Source", "Production Systems", "Pub/Sub Messaging", "Scalability", "Stateful Workflows", "Tech", "Technology", "Videos", "Virtual Actor Model"]
-tags_normalized: ["agentic systems", "ai", "ai agents", "azure", "cloud architecture", "cloud computing", "coding", "dapr", "dapr agents", "dev", "developer tools", "development", "devops", "distributed applications", "durable workflows", "llm", "microservices", "microsoft", "microsoft azure", "open source", "production systems", "pubslashsub messaging", "scalability", "stateful workflows", "tech", "technology", "videos", "virtual actor model"]
+permalink: /ai/videos/Building-Durable-Multi-Agent-AI-Workflows-with-Dapr-Agents
+tags:
+- Agentic Systems
+- AI
+- AI Agents
+- Azure
+- Cloud Architecture
+- Cloud Computing
+- Coding
+- Dapr
+- Dapr Agents
+- Dev
+- Developer Tools
+- Development
+- DevOps
+- Distributed Applications
+- Durable Workflows
+- LLM
+- Microservices
+- Microsoft
+- Microsoft Azure
+- Open Source
+- Production Systems
+- Pub/Sub Messaging
+- Scalability
+- Stateful Workflows
+- Tech
+- Technology
+- Videos
+- Virtual Actor Model
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Microsoft Developer showcases how the Dapr Durable AI Agent Workflow Framework lets you create scalable, resilient, multi-agent AI systems with Dapr. Learn practical agent orchestration and production techniques.<!--excerpt_end-->
 
 {% youtube VLRg4TKtLBc %}

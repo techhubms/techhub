@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Accelerate Cloud Migration with Azure Copilot Migration Agent"
-description: "This guide provides an in-depth overview of the Azure Copilot Migration Agent, an AI-driven tool designed to simplify and expedite enterprise migration projects. Covering the entire migration journey from automated discovery to optimized landing zone setup and database modernization, it demonstrates how the integration of Azure Copilot and GitHub Copilot enable faster, smarter cloud adoption. Readers will learn how to leverage this technology to reduce complexity, improve governance, and unlock cloud-native innovation."
-author: "shashban"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent-bringing-agentic-migration-and/ba-p/4471329"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Accelerate Cloud Migration with Azure Copilot Migration Agent
+author: shashban
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent-bringing-agentic-migration-and/ba-p/4471329
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 12:36:16 +00:00
-permalink: "/2025-11-19-Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Driven Automation", "Automation", "Azure", "Azure Copilot", "Azure Migrate", "Cloud Adoption Framework", "Cloud Migration", "Community", "Database Modernization", "DevOps", "Governance", "Landing Zone Setup", "Linux Migration", "Migration Agent", "Modernization", "MySQL", "PostgreSQL", "ROI Analysis", "Security Practices", "VMWare To Azure"]
-tags_normalized: ["ai", "ai driven automation", "automation", "azure", "azure copilot", "azure migrate", "cloud adoption framework", "cloud migration", "community", "database modernization", "devops", "governance", "landing zone setup", "linux migration", "migration agent", "modernization", "mysql", "postgresql", "roi analysis", "security practices", "vmware to azure"]
+permalink: /ai/community/Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent
+tags:
+- AI
+- AI Driven Automation
+- Automation
+- Azure
+- Azure Copilot
+- Azure Migrate
+- Cloud Adoption Framework
+- Cloud Migration
+- Community
+- Database Modernization
+- DevOps
+- Governance
+- Landing Zone Setup
+- Linux Migration
+- Migration Agent
+- Modernization
+- MySQL
+- PostgreSQL
+- ROI Analysis
+- Security Practices
+- VMWare To Azure
+section_names:
+- ai
+- azure
+- devops
 ---
-
 shashban explores the capabilities of the Azure Copilot Migration Agent, detailing its AI-powered approach to streamlining migration and modernization for enterprises.<!--excerpt_end-->
 
 # Accelerate Cloud Migration with Azure Copilot Migration Agent

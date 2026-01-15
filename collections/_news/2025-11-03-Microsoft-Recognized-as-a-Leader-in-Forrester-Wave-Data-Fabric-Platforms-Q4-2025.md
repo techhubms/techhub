@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Recognized as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025"
-description: "This announcement covers Microsoft's recognition as a Leader in The Forrester Wave™: Data Fabric Platforms, Q4 2025. The post highlights Microsoft Fabric’s strengths in unified data integration, advanced analytics, end-to-end data governance, and embedded AI, including innovations like agentic AI and Copilot in Fabric. It outlines Microsoft Fabric’s enterprise capabilities and its growing community impact."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Recognized as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 08:00:00 +00:00
-permalink: "/2025-11-03-Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Integration", "Analytics", "Azure", "Business Intelligence", "Copilot in Fabric", "Data Engineering", "Data Fabric", "Data Governance", "Data Integration", "Forrester Wave", "Microsoft Fabric", "ML", "News", "OneLake", "Real Time Data", "Unified Data Platform"]
-tags_normalized: ["agentic ai", "ai", "ai integration", "analytics", "azure", "business intelligence", "copilot in fabric", "data engineering", "data fabric", "data governance", "data integration", "forrester wave", "microsoft fabric", "ml", "news", "onelake", "real time data", "unified data platform"]
+permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025
+tags:
+- Agentic AI
+- AI
+- AI Integration
+- Analytics
+- Azure
+- Business Intelligence
+- Copilot in Fabric
+- Data Engineering
+- Data Fabric
+- Data Governance
+- Data Integration
+- Forrester Wave
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Real Time Data
+- Unified Data Platform
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog highlights Microsoft's achievement as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025, emphasizing innovation in unified data, AI, and analytics.<!--excerpt_end-->
 
 # Microsoft Recognized as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025

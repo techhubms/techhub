@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data"
-description: "This content details a serverless monitoring solution utilizing Azure Logic Apps and Azure OpenAI Service (GPT-4o) to automate data extraction from Azure Log Analytics, perform AI-driven analysis, and deliver actionable reports via email. The architecture emphasizes automation, secure authentication, scalability, and infrastructure as code deployments, targeting teams seeking to modernize their Azure monitoring workflows."
-author: "VinodSoni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/azure-logic-app-ai-powered-monitoring-solution-automate-analyze/ba-p/4442665"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data'
+author: VinodSoni
+canonical_url: https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/azure-logic-app-ai-powered-monitoring-solution-automate-analyze/ba-p/4442665
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:37:11 +00:00
-permalink: "/2025-08-12-Azure-Logic-App-AI-Powered-Monitoring-Solution-Automate-Analyze-and-Act-on-Your-Azure-Data.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Summarization", "Application Insights", "Azure", "Azure Log Analytics", "Azure Logic Apps", "Azure OpenAI Service", "Bicep", "Cloud Architecture", "Community", "Email Reporting", "GPT 4o", "IaC", "KQL", "Managed Identity", "Monitoring Automation", "RBAC", "Serverless"]
-tags_normalized: ["ai", "ai summarization", "application insights", "azure", "azure log analytics", "azure logic apps", "azure openai service", "bicep", "cloud architecture", "community", "email reporting", "gpt 4o", "iac", "kql", "managed identity", "monitoring automation", "rbac", "serverless"]
+permalink: /ai/community/Azure-Logic-App-AI-Powered-Monitoring-Solution-Automate-Analyze-and-Act-on-Your-Azure-Data
+tags:
+- AI
+- AI Summarization
+- Application Insights
+- Azure
+- Azure Log Analytics
+- Azure Logic Apps
+- Azure OpenAI Service
+- Bicep
+- Cloud Architecture
+- Community
+- Email Reporting
+- GPT 4o
+- IaC
+- KQL
+- Managed Identity
+- Monitoring Automation
+- RBAC
+- Serverless
+section_names:
+- ai
+- azure
 ---
-
 VinodSoni presents an AI-powered Azure monitoring solution that uses Logic Apps and the OpenAI GPT-4o model to automate log analysis, secure workflow orchestration, and generate daily actionable reports.<!--excerpt_end-->
 
 # Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data

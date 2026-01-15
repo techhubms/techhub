@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Audit and Enable Windows Recovery Environment (WinRE) via Azure Arc Policies"
-description: "This article explains the Public Preview of Azure Policies designed to audit and enable Windows Recovery Environment (WinRE) on Azure Arc-enabled Windows Servers. IT administrators can leverage these policies, delivered through the Machine Configuration component of the Azure Connected Machine agent, to centrally manage and automate WinRE compliance across hybrid and multicloud server fleets. The content covers policy scope, supported licensing, deployment details, and highlights Azure Arc's role in maintaining resilience in cross-environment Windows Server deployments."
-author: "Aurnov_Chattopadhyay"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-audit-and-enable-windows-recovery-environment/ba-p/4462939"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Audit and Enable Windows Recovery Environment (WinRE) via Azure Arc Policies
+author: Aurnov_Chattopadhyay
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-audit-and-enable-windows-recovery-environment/ba-p/4462939
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-21 00:53:23 +00:00
-permalink: "/2025-10-21-Audit-and-Enable-Windows-Recovery-Environment-WinRE-via-Azure-Arc-Policies.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure Policy", "Community", "Compliance", "Configuration Management", "Connected Machine Agent", "Defender For Servers", "ESU", "Hybrid Cloud", "Machine Configuration", "Policy Enforcement", "Security", "Server Resiliency", "Windows Recovery Environment", "Windows Server", "WinRE"]
-tags_normalized: ["azure", "azure arc", "azure policy", "community", "compliance", "configuration management", "connected machine agent", "defender for servers", "esu", "hybrid cloud", "machine configuration", "policy enforcement", "security", "server resiliency", "windows recovery environment", "windows server", "winre"]
+permalink: /azure/community/Audit-and-Enable-Windows-Recovery-Environment-WinRE-via-Azure-Arc-Policies
+tags:
+- Azure
+- Azure Arc
+- Azure Policy
+- Community
+- Compliance
+- Configuration Management
+- Connected Machine Agent
+- Defender For Servers
+- ESU
+- Hybrid Cloud
+- Machine Configuration
+- Policy Enforcement
+- Security
+- Server Resiliency
+- Windows Recovery Environment
+- Windows Server
+- WinRE
+section_names:
+- azure
+- security
 ---
-
 Aurnov_Chattopadhyay details how Azure Arc's new Public Preview policies enable IT admins to audit and configure Windows Recovery Environment (WinRE) settings across Arc-enabled Windows Servers, providing resilient configuration management for hybrid environments.<!--excerpt_end-->
 
 # Audit and Enable Windows Recovery Environment (WinRE) for Azure Arc-enabled Servers

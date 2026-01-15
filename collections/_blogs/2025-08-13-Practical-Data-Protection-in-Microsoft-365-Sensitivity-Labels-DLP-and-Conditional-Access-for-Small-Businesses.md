@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Practical Data Protection in Microsoft 365: Sensitivity Labels, DLP, and Conditional Access for Small Businesses"
-description: "This article presents a straightforward guide for small businesses looking to secure data in Microsoft 365 using sensitivity labels, Data Loss Prevention (DLP), and conditional access policies. The author explains each tool's role, real-world examples, and step-by-step setup instructions to help teams safeguard information without needing deep technical expertise."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/protecting-your-business-data-sensitivity-labels-dlp-and-conditional-access-explained-simply/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Practical Data Protection in Microsoft 365: Sensitivity Labels, DLP, and Conditional Access for Small Businesses'
+author: Dellenny
+canonical_url: https://dellenny.com/protecting-your-business-data-sensitivity-labels-dlp-and-conditional-access-explained-simply/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-13 08:28:44 +00:00
-permalink: "/2025-08-13-Practical-Data-Protection-in-Microsoft-365-Sensitivity-Labels-DLP-and-Conditional-Access-for-Small-Businesses.html"
-categories: ["Security"]
-tags: ["Access Control", "Azure Active Directory", "Blogs", "Compliance Center", "Conditional Access", "Data Loss Prevention", "Data Protection", "DLP", "File Encryption", "Information Protection", "Microsoft 365", "Multi Factor Authentication", "Office 365 Security", "Security", "Security Policy", "Sensitivity Labels", "Small Business IT"]
-tags_normalized: ["access control", "azure active directory", "blogs", "compliance center", "conditional access", "data loss prevention", "data protection", "dlp", "file encryption", "information protection", "microsoft 365", "multi factor authentication", "office 365 security", "security", "security policy", "sensitivity labels", "small business it"]
+permalink: /security/blogs/Practical-Data-Protection-in-Microsoft-365-Sensitivity-Labels-DLP-and-Conditional-Access-for-Small-Businesses
+tags:
+- Access Control
+- Azure Active Directory
+- Blogs
+- Compliance Center
+- Conditional Access
+- Data Loss Prevention
+- Data Protection
+- DLP
+- File Encryption
+- Information Protection
+- Microsoft 365
+- Multi Factor Authentication
+- Office 365 Security
+- Security
+- Security Policy
+- Sensitivity Labels
+- Small Business IT
+section_names:
+- security
 ---
-
 Dellenny breaks down how small businesses can protect data in Microsoft 365 using sensitivity labels, DLP, and conditional access, providing clear steps and real-life analogies.<!--excerpt_end-->
 
 # Practical Data Protection in Microsoft 365: Sensitivity Labels, DLP, and Conditional Access for Small Businesses

@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Azure Databricks Cost Optimization: A Practical Guide"
-description: "This in-depth, step-by-step guide, authored by Rafia_Aqil and Sanjeev Nair​, demystifies Azure Databricks cost management. Covering discovery, technical best practices, and team alignment, it details how to assess spend, configure clusters efficiently, optimize code and data engineering workflows, and implement robust cost observability. Readers will learn actionable strategies to control cloud expenses while maintaining performance on Databricks in Azure."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Databricks Cost Optimization: A Practical Guide'
+author: Rafia_Aqil
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-15 08:01:17 +00:00
-permalink: "/2025-11-15-Azure-Databricks-Cost-Optimization-A-Practical-Guide.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Adaptive Query Execution", "Auto Scaling", "Azure", "Azure Databricks", "Azure Monitor", "Change Data Capture", "Cluster Management", "Cluster Policies", "Coding", "Community", "Cost Optimization", "Data Engineering", "Data Storage", "Delta Lake", "DevOps", "ETL", "FinOps", "Machine Learning", "ML", "Performance Tuning", "Photon Engine", "Spark", "SQL Warehouse", "Unity Catalog"]
-tags_normalized: ["adaptive query execution", "auto scaling", "azure", "azure databricks", "azure monitor", "change data capture", "cluster management", "cluster policies", "coding", "community", "cost optimization", "data engineering", "data storage", "delta lake", "devops", "etl", "finops", "machine learning", "ml", "performance tuning", "photon engine", "spark", "sql warehouse", "unity catalog"]
+permalink: /ml/community/Azure-Databricks-Cost-Optimization-A-Practical-Guide
+tags:
+- Adaptive Query Execution
+- Auto Scaling
+- Azure
+- Azure Databricks
+- Azure Monitor
+- Change Data Capture
+- Cluster Management
+- Cluster Policies
+- Coding
+- Community
+- Cost Optimization
+- Data Engineering
+- Data Storage
+- Delta Lake
+- DevOps
+- ETL
+- FinOps
+- Machine Learning
+- ML
+- Performance Tuning
+- Photon Engine
+- Spark
+- SQL Warehouse
+- Unity Catalog
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 Rafia_Aqil and Sanjeev Nair provide a detailed, technical roadmap for optimizing Azure Databricks costs, covering discovery, configuration, data engineering, code improvements, and actionable team strategies.<!--excerpt_end-->
 
 # Azure Databricks Cost Optimization: A Practical Guide

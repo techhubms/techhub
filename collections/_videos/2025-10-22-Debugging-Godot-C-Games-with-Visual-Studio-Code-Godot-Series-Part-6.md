@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)"
-description: "This video from the .NET team offers a practical guide to debugging C# game projects in Godot using both Godot's built-in tools and Visual Studio Code features. Viewers learn to diagnose and fix issues common in game development, such as physics and input bugs, by utilizing debugging consoles, breakpoints, watch expressions, and collision shape visualization. The episode includes hands-on demos and a coding challenge for applying conditional breakpoints in practice."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eQzfXKf1YfY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=eQzfXKf1YfY
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:14 +00:00
-permalink: "/2025-10-22-Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6.html"
-categories: ["Coding"]
-tags: [".NET", "Breakpoints", "C#", "Call Stack", "Coding", "Collision Shapes", "Conditional Breakpoints", "Debugging", "Game Development", "GameDev Tools", "Godot Engine", "Live Scene Data", "Microsoft Developer", "Remote Tab", "Videos", "VS Code", "Watch Expressions"]
-tags_normalized: ["dotnet", "breakpoints", "csharp", "call stack", "coding", "collision shapes", "conditional breakpoints", "debugging", "game development", "gamedev tools", "godot engine", "live scene data", "microsoft developer", "remote tab", "videos", "vs code", "watch expressions"]
+permalink: /coding/videos/Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6
+tags:
+- .NET
+- Breakpoints
+- C#
+- Call Stack
+- Coding
+- Collision Shapes
+- Conditional Breakpoints
+- Debugging
+- Game Development
+- GameDev Tools
+- Godot Engine
+- Live Scene Data
+- Microsoft Developer
+- Remote Tab
+- Videos
+- VS Code
+- Watch Expressions
+section_names:
+- coding
 ---
-
 In this episode, dotnet demonstrates essential debugging techniques for C# game development in Godot, using both Godot and Visual Studio Code tools to help developers confidently troubleshoot common game issues.<!--excerpt_end-->
 
 {% youtube eQzfXKf1YfY %}

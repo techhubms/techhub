@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse"
-description: "This article introduces the Eventhouse Endpoint, a key feature in Microsoft Fabric that enables fast, real-time querying of Lakehouse tables. It explains how users can benefit from instant schema synchronization, advanced analytics with SQL and KQL, seamless integration with Python, and rich consumption experiences, all in support of high-volume data and AI-driven operations."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 11:00:00 +00:00
-permalink: "/2025-10-20-Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-for-Lakehouse.html"
-categories: ["Azure", "ML"]
-tags: ["Advanced Analytics", "Anomaly Detection", "Azure", "Data Engineering", "Dynamic Data Types", "Eventhouse Endpoint", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Python Integration", "Query Acceleration Policy", "Real Time Analytics", "Schema Synchronization", "SQL", "Time Series Analysis"]
-tags_normalized: ["advanced analytics", "anomaly detection", "azure", "data engineering", "dynamic data types", "eventhouse endpoint", "kql", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "python integration", "query acceleration policy", "real time analytics", "schema synchronization", "sql", "time series analysis"]
+permalink: /ml/news/Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-for-Lakehouse
+tags:
+- Advanced Analytics
+- Anomaly Detection
+- Azure
+- Data Engineering
+- Dynamic Data Types
+- Eventhouse Endpoint
+- KQL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Python Integration
+- Query Acceleration Policy
+- Real Time Analytics
+- Schema Synchronization
+- SQL
+- Time Series Analysis
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog highlights how the Eventhouse Endpoint brings real-time analytics and high-performance querying to Lakehouse tables, giving users instant insights and seamless analytics integration.<!--excerpt_end-->
 
 # Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse

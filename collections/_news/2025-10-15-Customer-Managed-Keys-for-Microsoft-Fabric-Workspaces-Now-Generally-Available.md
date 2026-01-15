@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Customer-Managed Keys for Microsoft Fabric Workspaces Now Generally Available"
-description: "This article details the general availability of customer-managed keys (CMK) for Microsoft Fabric workspaces, enabling organizations to control their data-at-rest encryption using keys they own and manage in Azure Key Vault. Learn about new supported workloads, extended encryption support, and how administrators can get started, focusing on compliance and advanced security requirements."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Customer-Managed Keys for Microsoft Fabric Workspaces Now Generally Available
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-generally-available/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 10:00:00 +00:00
-permalink: "/2025-10-15-Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-Generally-Available.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Key Vault", "CMK", "Compliance", "Customer Managed Keys", "Data Protection", "Data Security", "Encryption", "Fabric Warehouse", "Governance", "Managed HSM", "Microsoft Fabric", "News", "Security", "SQL Analytics Endpoint", "TLS 1.2", "Workspace Administration"]
-tags_normalized: ["azure", "azure key vault", "cmk", "compliance", "customer managed keys", "data protection", "data security", "encryption", "fabric warehouse", "governance", "managed hsm", "microsoft fabric", "news", "security", "sql analytics endpoint", "tls 1dot2", "workspace administration"]
+permalink: /azure/news/Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-Generally-Available
+tags:
+- Azure
+- Azure Key Vault
+- CMK
+- Compliance
+- Customer Managed Keys
+- Data Protection
+- Data Security
+- Encryption
+- Fabric Warehouse
+- Governance
+- Managed HSM
+- Microsoft Fabric
+- News
+- Security
+- SQL Analytics Endpoint
+- TLS 1.2
+- Workspace Administration
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog announces the general availability of customer-managed keys for Fabric workspaces, giving administrators enhanced encryption control. This update allows organizations to secure their data at rest using Azure Key Vault keys, addressing compliance and security needs.<!--excerpt_end-->
 
 # Customer-Managed Keys for Microsoft Fabric Workspaces Now Generally Available

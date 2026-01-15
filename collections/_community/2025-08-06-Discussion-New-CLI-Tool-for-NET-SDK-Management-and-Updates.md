@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Discussion: New CLI Tool for .NET SDK Management and Updates"
-description: "This thread, posted by chusk3 referencing the .NET SDK team and PM Chet, invites the community to review and provide feedback on a proposed CLI-based tool for downloading, installing, and updating .NET SDK and Runtime. The tool aims to bring a consistent and simplified experience across platforms, addressing challenges with platform-specific package managers and keeping up to date with the latest .NET releases. Community members discuss perceived value, platform differences, current pain points, and alternative installation strategies."
-author: "chusk3"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mjgvq3/want_to_make_it_easier_to_get_startedstay_up_to/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: 'Discussion: New CLI Tool for .NET SDK Management and Updates'
+author: chusk3
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mjgvq3/want_to_make_it_easier_to_get_startedstay_up_to/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-06 21:13:04 +00:00
-permalink: "/2025-08-06-Discussion-New-CLI-Tool-for-NET-SDK-Management-and-Updates.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Install", ".NET Runtime", ".NET SDK", "CLI Tools", "Coding", "Community", "Cross Platform Development", "Developer Experience", "Dnup", "Linux", "Package Management", "Scoop", "Self Contained Deployment", "Software Installation", "Tool Updates", "Ubuntu", "VS", "Windows", "Winget"]
-tags_normalized: ["dotnet", "dotnet install", "dotnet runtime", "dotnet sdk", "cli tools", "coding", "community", "cross platform development", "developer experience", "dnup", "linux", "package management", "scoop", "self contained deployment", "software installation", "tool updates", "ubuntu", "vs", "windows", "winget"]
+permalink: /coding/community/Discussion-New-CLI-Tool-for-NET-SDK-Management-and-Updates
+tags:
+- .NET
+- .NET Install
+- .NET Runtime
+- .NET SDK
+- CLI Tools
+- Coding
+- Community
+- Cross Platform Development
+- Developer Experience
+- Dnup
+- Linux
+- Package Management
+- Scoop
+- Self Contained Deployment
+- Software Installation
+- Tool Updates
+- Ubuntu
+- VS
+- Windows
+- Winget
+section_names:
+- coding
 ---
-
 chusk3 shares an invitation from the .NET SDK team, led by PM Chet, for developers to discuss a new CLI tool proposal aimed at streamlining .NET SDK and Runtime installations and updates.<!--excerpt_end-->
 
 # Discussion: New CLI Tool for .NET SDK Management and Updates

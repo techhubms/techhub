@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "MCP in Action: Real-World Case Studies"
-description: "This article explores practical implementations of the Model Context Protocol (MCP) through real-world case studies. It highlights MCP integration in tools like Azure, GitHub, and VS Code, demonstrating its application in workflow automation and multi-agent orchestration, and its interoperability with Azure AI services and OpenAI."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IxshWb2Az5w"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'MCP in Action: Real-World Case Studies'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=IxshWb2Az5w
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:25 +00:00
-permalink: "/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azure", "Azure AI Search", "Azure API Management", "DevOps", "Enterprise Automation", "GitHub", "MCP", "Multi Agent Systems", "OpenAI", "Videos", "VS Code"]
-tags_normalized: ["ai", "azure", "azure ai search", "azure api management", "devops", "enterprise automation", "github", "mcp", "multi agent systems", "openai", "videos", "vs code"]
+permalink: /ai/videos/MCP-in-Action-Real-World-Case-Studies
+tags:
+- AI
+- Azure
+- Azure AI Search
+- Azure API Management
+- DevOps
+- Enterprise Automation
+- GitHub
+- MCP
+- Multi Agent Systems
+- OpenAI
+- Videos
+- VS Code
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Authored by Microsoft Developer, this article showcases how the Model Context Protocol (MCP) is applied in real-world settings across Azure, GitHub, and VS Code, highlighting its integration with key AI tools and services.<!--excerpt_end-->
 
 {% youtube IxshWb2Az5w %}

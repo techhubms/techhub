@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Order of Operations for Web Agency: Building, Deploying, and Transferring Client Websites"
-description: "The article outlines a step-by-step workflow for a website agency creating client sites: building on Lovable.dev, exporting to GitHub, deploying with Vercel, connecting domains, and transferring project ownership to clients. The process ensures sites are live and clients can manage them independently."
-author: "DoodleMoodle542"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/github/comments/1mgba7n/need_help_web_ai_agency/"
-viewing_mode: "external"
-feed_name: "Reddit GitHub"
-feed_url: "https://www.reddit.com/r/github/.rss"
+﻿---
+layout: post
+title: 'Order of Operations for Web Agency: Building, Deploying, and Transferring Client Websites'
+author: DoodleMoodle542
+canonical_url: https://www.reddit.com/r/github/comments/1mgba7n/need_help_web_ai_agency/
+viewing_mode: external
+feed_name: Reddit GitHub
+feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 05:28:12 +00:00
-permalink: "/2025-08-03-Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites.html"
-categories: ["DevOps"]
-tags: ["Client Handoff", "Community", "DevOps", "DNS Configuration", "Domain Management", "GitHub", "Lovable.dev", "Project Transfer", "SSL", "Vercel", "Web Agency Workflow", "Website Deployment"]
-tags_normalized: ["client handoff", "community", "devops", "dns configuration", "domain management", "github", "lovabledotdev", "project transfer", "ssl", "vercel", "web agency workflow", "website deployment"]
+permalink: /devops/community/Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites
+tags:
+- Client Handoff
+- Community
+- DevOps
+- DNS Configuration
+- Domain Management
+- GitHub
+- Lovable.dev
+- Project Transfer
+- SSL
+- Vercel
+- Web Agency Workflow
+- Website Deployment
+section_names:
+- devops
 ---
-
 Authored by DoodleMoodle542, this article details a practical workflow for web agencies: from building client sites on Lovable.dev to deploying on Vercel, managing domains, and efficiently transferring ownership.<!--excerpt_end-->
 
 ## Step-by-Step Workflow for Web Agency Projects

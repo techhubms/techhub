@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Accelerating AI Agent Development: Foundry MCP Server Preview Announced"
-description: "This news post introduces the preview of Foundry MCP Server, a cloud-hosted service within Microsoft Foundry. MCP (Model Context Protocol) enables secure, interoperable AI agent integration with enterprise platforms. The article covers the features of MCP Server, including agent management, model benchmarking, deployment, monitoring, and integration scenarios using Visual Studio Code, Visual Studio, and Microsoft Foundry. Security and access details leveraging Entra ID are also presented."
-author: "SeokJin Han"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/announcing-foundry-mcp-server-preview-speeding-up-ai-dev-with-microsoft-foundry/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'Accelerating AI Agent Development: Foundry MCP Server Preview Announced'
+author: SeokJin Han
+canonical_url: https://devblogs.microsoft.com/foundry/announcing-foundry-mcp-server-preview-speeding-up-ai-dev-with-microsoft-foundry/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-03 19:15:11 +00:00
-permalink: "/2025-12-03-Accelerating-AI-Agent-Development-Foundry-MCP-Server-Preview-Announced.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["Agent Management", "Agents", "AI", "AI Agents", "Azure", "Azure Entra ID", "Cloud Integration", "Coding", "Foundry MCP Server", "MCP", "Microsoft Foundry", "Model Benchmarks", "Model Deployment", "Monitoring", "MSIgnite", "News", "OAuth 2.0", "RBAC", "Security", "Security Best Practices", "VS", "VS Code"]
-tags_normalized: ["agent management", "agents", "ai", "ai agents", "azure", "azure entra id", "cloud integration", "coding", "foundry mcp server", "mcp", "microsoft foundry", "model benchmarks", "model deployment", "monitoring", "msignite", "news", "oauth 2dot0", "rbac", "security", "security best practices", "vs", "vs code"]
+permalink: /ai/news/Accelerating-AI-Agent-Development-Foundry-MCP-Server-Preview-Announced
+tags:
+- Agent Management
+- Agents
+- AI
+- AI Agents
+- Azure
+- Azure Entra ID
+- Cloud Integration
+- Coding
+- Foundry MCP Server
+- MCP
+- Microsoft Foundry
+- Model Benchmarks
+- Model Deployment
+- Monitoring
+- MSIgnite
+- News
+- OAuth 2.0
+- RBAC
+- Security
+- Security Best Practices
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- security
 ---
-
 SeokJin Han details the launch of Foundry MCP Server in preview, highlighting how it simplifies AI agent development and integration, with robust security via Entra ID.<!--excerpt_end-->
 
 # Accelerating AI Agent Development: Foundry MCP Server Preview Announced

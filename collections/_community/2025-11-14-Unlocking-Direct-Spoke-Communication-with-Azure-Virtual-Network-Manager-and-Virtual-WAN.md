@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN"
-description: "This article explores how Azure Virtual Network Manager (AVNM) and Azure Virtual WAN (vWAN) can be combined to enable direct spoke-to-spoke communication inside a managed hub architecture. It details how this integration reduces latency, improves bandwidth, and simplifies network management by leveraging mesh connectivity while retaining centralized security and global reach."
-author: "SimonaTarantola"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN
+author: SimonaTarantola
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 14:09:16 +00:00
-permalink: "/2025-11-14-Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN.html"
-categories: ["Azure"]
-tags: ["AVNM", "Azure", "Azure Firewall", "Azure Virtual Network Manager", "Azure Virtual WAN", "Cloud Networking", "Community", "ExpressRoute", "Hub And Spoke Architecture", "Hybrid Connectivity", "Managed Hub", "Network Mesh", "Network Security", "NSG Flow Logs", "Route Propagation", "VNet Peering", "Vwan"]
-tags_normalized: ["avnm", "azure", "azure firewall", "azure virtual network manager", "azure virtual wan", "cloud networking", "community", "expressroute", "hub and spoke architecture", "hybrid connectivity", "managed hub", "network mesh", "network security", "nsg flow logs", "route propagation", "vnet peering", "vwan"]
+permalink: /azure/community/Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN
+tags:
+- AVNM
+- Azure
+- Azure Firewall
+- Azure Virtual Network Manager
+- Azure Virtual WAN
+- Cloud Networking
+- Community
+- ExpressRoute
+- Hub And Spoke Architecture
+- Hybrid Connectivity
+- Managed Hub
+- Network Mesh
+- Network Security
+- NSG Flow Logs
+- Route Propagation
+- VNet Peering
+- Vwan
+section_names:
+- azure
 ---
-
 SimonaTarantola analyzes the combined use of Azure Virtual Network Manager and Azure Virtual WAN, showing how architects can enable direct, resilient spoke-to-spoke communication and achieve simpler, high-performance network designs.<!--excerpt_end-->
 
 # Unlocking Direct Spoke Communication Inside a Managed Hub Architecture

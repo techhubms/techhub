@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Copilot - Levels of enlightenment"
-description: "Rob Bos shares lessons learned from using GitHub Copilot, offering practical tips and insights in his 'Levels of Enlightenment' video series."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment"
-viewing_mode: "external"
-categories: ["AI", "GitHub Copilot", "Coding"]
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: GitHub Copilot - Levels of enlightenment
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-07 00:00:00 +00:00
-permalink: "/2024-06-07-GitHub-Copilot-Levels-of-enlightenment.html"
-tags: ["AI", "Blogs", "Code Generation", "Coding", "Coding Tips", "Developer Productivity", "GitHub Copilot", "Machine Learning Tools", "Prompt Engineering", "Software Practices"]
-tags_normalized: ["ai", "blogs", "code generation", "coding", "coding tips", "developer productivity", "github copilot", "machine learning tools", "prompt engineering", "software practices"]
+permalink: /github-copilot/blogs/GitHub-Copilot-Levels-of-enlightenment
+tags:
+- AI
+- Blogs
+- Code Generation
+- Coding
+- Coding Tips
+- Developer Productivity
+- GitHub Copilot
+- Machine Learning Tools
+- Prompt Engineering
+- Software Practices
+section_names:
+- ai
+- github-copilot
+- coding
 ---
-
 In his video series 'Levels of Enlightenment,' Rob Bos shares his journey and practical lessons learned while using GitHub Copilot over the last year and a half. <!--excerpt_end--> Each episode highlights an "aha" moment, outlining strategies to help developers extract greater value from Copilot and improve their software development process.
 
 ## Overview

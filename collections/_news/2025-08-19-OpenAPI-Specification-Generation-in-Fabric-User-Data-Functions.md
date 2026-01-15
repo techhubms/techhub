@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "OpenAPI Specification Generation in Fabric User Data Functions"
-description: "This news article explains how Microsoft Fabric now enables automatic generation of OpenAPI specifications for User Data Functions using the Functions portal. It covers the integration possibilities with client code generation, API management platforms like Azure API Management, and AI agents via Azure AI Foundry. Step-by-step instructions for updating the fabric-user-data-functions library and generating specifications in both JSON and YAML formats are included, plus tips for using Python docstrings to enrich API documentation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: OpenAPI Specification Generation in Fabric User Data Functions
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-19 10:00:00 +00:00
-permalink: "/2025-08-19-OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Use Cases", "AI", "AI Agents", "API Gateway", "API Integration", "API Management", "Azure", "Azure AI Foundry", "Azure API Management", "Client Code", "Code Generation", "Data Engineering", "Develop Mode", "Docstring", "Fabric User Data Functions", "JSON", "Microsoft Fabric", "ML", "News", "OpenAPI Specification", "Python", "REST API", "Swagger", "User Data Functions", "YAML"]
-tags_normalized: ["agentic use cases", "ai", "ai agents", "api gateway", "api integration", "api management", "azure", "azure ai foundry", "azure api management", "client code", "code generation", "data engineering", "develop mode", "docstring", "fabric user data functions", "json", "microsoft fabric", "ml", "news", "openapi specification", "python", "rest api", "swagger", "user data functions", "yaml"]
+permalink: /ai/news/OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions
+tags:
+- Agentic Use Cases
+- AI
+- AI Agents
+- API Gateway
+- API Integration
+- API Management
+- Azure
+- Azure AI Foundry
+- Azure API Management
+- Client Code
+- Code Generation
+- Data Engineering
+- Develop Mode
+- Docstring
+- Fabric User Data Functions
+- JSON
+- Microsoft Fabric
+- ML
+- News
+- OpenAPI Specification
+- Python
+- REST API
+- Swagger
+- User Data Functions
+- YAML
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how developers can use the Functions portal to automatically generate OpenAPI specifications for User Data Functions, supporting API integrations, client code generation, and AI agent capabilities.<!--excerpt_end-->
 
 # OpenAPI Specification Generation in Fabric User Data Functions

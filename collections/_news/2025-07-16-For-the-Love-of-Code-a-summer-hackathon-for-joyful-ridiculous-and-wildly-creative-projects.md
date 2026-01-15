@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "For the Love of Code - A Summer Hackathon for Joyful and Creative Projects"
-description: "Lee Reilly announces 'For the Love of Code,' a summer hackathon inviting developers to build fun, creative, or even ridiculous projects, including those fueled by passion or spontaneous ideas. The event encourages participation from anyone interested in coding for joy, emphasizing creativity and community."
-author: "Lee Reilly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/for-the-love-of-code-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: For the Love of Code - A Summer Hackathon for Joyful and Creative Projects
+author: Lee Reilly
+canonical_url: https://github.blog/open-source/for-the-love-of-code-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-07-16 15:00:00 +00:00
-permalink: "/2025-07-16-For-the-Love-of-Code-a-summer-hackathon-for-joyful-ridiculous-and-wildly-creative-projects.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Creativity", "Developer Community", "GitHub Copilot", "Hackathon", "Innovation", "News", "Open Source", "Side Projects", "Software Development", "Summer Event"]
-tags_normalized: ["ai", "creativity", "developer community", "github copilot", "hackathon", "innovation", "news", "open source", "side projects", "software development", "summer event"]
+permalink: /github-copilot/news/For-the-Love-of-Code-a-summer-hackathon-for-joyful-ridiculous-and-wildly-creative-projects
+tags:
+- AI
+- Creativity
+- Developer Community
+- GitHub Copilot
+- Hackathon
+- Innovation
+- News
+- Open Source
+- Side Projects
+- Software Development
+- Summer Event
+section_names:
+- ai
+- github-copilot
 ---
-
 Lee Reilly introduces 'For the Love of Code,' a summer hackathon inspiring coders to turn imaginative or long-shelved ideas into reality. Discover more about this creative coding event below.<!--excerpt_end-->
 
 ## Overview

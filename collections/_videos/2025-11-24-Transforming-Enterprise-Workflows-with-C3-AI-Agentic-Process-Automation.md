@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Transforming Enterprise Workflows with C3 AI Agentic Process Automation"
-description: "This session from Microsoft Ignite 2025 covers how C3 AI Agentic Process Automation enables end-users to design and execute advanced, intelligent workflows at scale—beyond traditional rules-based RPA systems. It discusses integration of multiple data types, the creation of adaptive workflows, case studies across several industries, and live demonstrations of the platform’s key capabilities."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6kr3LIlocsI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Transforming Enterprise Workflows with C3 AI Agentic Process Automation
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=6kr3LIlocsI
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:51:07 +00:00
-permalink: "/2025-11-24-Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation.html"
-categories: ["AI"]
-tags: ["Agentic Process Automation", "AI", "AI Integration", "Banking Ontology", "C3 AI", "Data Fusion", "Enterprise Automation", "Financial Services Application", "Human in The Loop", "Innovatewithlow", "Intelligent Workflows", "Microsoft Ignite", "MSIgnite", "Ontology", "RPA Alternative", "Studio Interface", "Supply Chain Analytics", "Videos", "Workflow Automation", "Workflow Monitoring"]
-tags_normalized: ["agentic process automation", "ai", "ai integration", "banking ontology", "c3 ai", "data fusion", "enterprise automation", "financial services application", "human in the loop", "innovatewithlow", "intelligent workflows", "microsoft ignite", "msignite", "ontology", "rpa alternative", "studio interface", "supply chain analytics", "videos", "workflow automation", "workflow monitoring"]
+permalink: /ai/videos/Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation
+tags:
+- Agentic Process Automation
+- AI
+- AI Integration
+- Banking Ontology
+- C3 AI
+- Data Fusion
+- Enterprise Automation
+- Financial Services Application
+- Human in The Loop
+- Innovatewithlow
+- Intelligent Workflows
+- Microsoft Ignite
+- MSIgnite
+- Ontology
+- RPA Alternative
+- Studio Interface
+- Supply Chain Analytics
+- Videos
+- Workflow Automation
+- Workflow Monitoring
+section_names:
+- ai
 ---
-
 Presented by John Abelt and Nikhil Krishnan at Microsoft Ignite 2025, this session explores how C3 AI Agentic Process Automation enables scalable, intelligent enterprise workflows.<!--excerpt_end-->
 
 {% youtube 6kr3LIlocsI %}

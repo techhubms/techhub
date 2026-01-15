@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce"
-description: "This article by pranabpaul offers a detailed overview of integration patterns for connecting Microsoft Copilot Studio, Copilot, Azure Logic Apps, and the Azure Agent Framework with leading enterprise platforms SAP, ServiceNow, and Salesforce. Covering both low-code (Copilot Studio) and pro-code (MCP, Agent-to-Agent) scenarios, it highlights secure identity federation, modular agent orchestration, and automation strategies for building advanced enterprise solutions."
-author: "pranabpaul"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce'
+author: pranabpaul
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-31 20:41:25 +00:00
-permalink: "/2025-10-31-Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce.html"
-categories: ["AI", "Azure"]
-tags: ["Agent To Agent (a2a)", "AI", "Azure", "Azure Agent Framework", "Azure Logic Apps", "Community", "Conversational AI", "Enterprise Automation", "Federated Identity", "Foundry", "Identity Federation", "Low Code Integration", "MCP", "Microsoft Copilot Studio", "Microsoft Entra ID", "Salesforce Integration", "SAP Integration", "ServiceNow Integration"]
-tags_normalized: ["agent to agent a2a", "ai", "azure", "azure agent framework", "azure logic apps", "community", "conversational ai", "enterprise automation", "federated identity", "foundry", "identity federation", "low code integration", "mcp", "microsoft copilot studio", "microsoft entra id", "salesforce integration", "sap integration", "servicenow integration"]
+permalink: /ai/community/Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce
+tags:
+- Agent To Agent (a2a)
+- AI
+- Azure
+- Azure Agent Framework
+- Azure Logic Apps
+- Community
+- Conversational AI
+- Enterprise Automation
+- Federated Identity
+- Foundry
+- Identity Federation
+- Low Code Integration
+- MCP
+- Microsoft Copilot Studio
+- Microsoft Entra ID
+- Salesforce Integration
+- SAP Integration
+- ServiceNow Integration
+section_names:
+- ai
+- azure
 ---
-
 pranabpaul explains how to design agentic integrations between Microsoft Copilot Studio, Azure Logic Apps, and major platforms—SAP, ServiceNow, and Salesforce—focusing on best practices for automation and interoperability.<!--excerpt_end-->
 
 # Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce

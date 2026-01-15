@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business"
-description: "This detailed case study describes the development of a next-generation customer tiering system for Microsoft’s B2B software business, integrating AI, machine learning, and Azure-based analytics. The UCLA Anderson MSBA team designed an operationally grounded, interpretable segmentation using statistical clustering, hybrid KPI optimization, dynamic diagnostics, and LLM-powered interactive tools. The architecture advances from legacy heuristics to scalable, data-aligned tiering, suitable for strategy, resource allocation, and sales planning."
-author: "BonnieAo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business
+author: BonnieAo
+canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-04 21:00:36 +00:00
-permalink: "/2025-12-04-KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Stream Analytics", "Azure Synapse Analytics", "Business Analytics", "CatBoost", "Clustering", "Community", "Composite Score Optimization", "Dynamic Tiering", "FastAPI", "Gurobi", "Hybrid Segmentation", "KPI Segmentation", "LLMs", "Machine Learning", "Microsoft MCAPS", "ML", "OpenAI API", "Optimization", "OR Tools", "Pyomo", "Sales Planning", "Ward Clustering", "XGBoost"]
-tags_normalized: ["ai", "azure", "azure stream analytics", "azure synapse analytics", "business analytics", "catboost", "clustering", "community", "composite score optimization", "dynamic tiering", "fastapi", "gurobi", "hybrid segmentation", "kpi segmentation", "llms", "machine learning", "microsoft mcaps", "ml", "openai api", "optimization", "or tools", "pyomo", "sales planning", "ward clustering", "xgboost"]
+permalink: /ai/community/KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business
+tags:
+- AI
+- Azure
+- Azure Stream Analytics
+- Azure Synapse Analytics
+- Business Analytics
+- CatBoost
+- Clustering
+- Community
+- Composite Score Optimization
+- Dynamic Tiering
+- FastAPI
+- Gurobi
+- Hybrid Segmentation
+- KPI Segmentation
+- LLMs
+- Machine Learning
+- Microsoft MCAPS
+- ML
+- OpenAI API
+- Optimization
+- OR Tools
+- Pyomo
+- Sales Planning
+- Ward Clustering
+- XGBoost
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Bonnie Ao and the UCLA Anderson MSBA team present a Microsoft-sponsored capstone on designing an AI-driven, KPI-optimized customer tiering framework, covering Azure-based analytics, ML, and operational constraints.<!--excerpt_end-->
 
 # KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business

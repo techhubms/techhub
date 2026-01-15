@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Integrating Security into DevOps Workflows with Microsoft Defender CSPM"
-description: "This blog post by Petrus Vasenius provides an in-depth exploration of integrating Microsoft Defender Cloud Security Posture Management (CSPM) into DevOps workflows. It details how the updated capabilities of Defender CSPM enable security scanning and policy enforcement directly in CI/CD pipelines, offering practical steps, integration strategies, and automation for continuous security and compliance in Azure and multi-cloud environments."
-author: "petrus.vasenius@zure.com (Petrus Vasenius)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+layout: post
+title: Integrating Security into DevOps Workflows with Microsoft Defender CSPM
+author: petrus.vasenius@zure.com (Petrus Vasenius)
+canonical_url: https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm
+viewing_mode: external
+feed_name: Zure Data & AI Blog
+feed_url: https://zure.com/blog/rss.xml
 date: 2025-04-15 06:15:25 +00:00
-permalink: "/2025-04-15-Integrating-Security-into-DevOps-Workflows-with-Microsoft-Defender-CSPM.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ARM Templates", "Automated Remediation", "Azure", "Blog", "Blogs", "CI/CD", "Cloud Security", "Compliance Automation", "Container Security", "Continuous Security", "DevOps", "DevSecOps", "Endor Labs", "IaC", "Microsoft Defender CSPM", "Security", "Security as Code", "Security Gates", "Terraform", "Vulnerability Management"]
-tags_normalized: ["arm templates", "automated remediation", "azure", "blog", "blogs", "cislashcd", "cloud security", "compliance automation", "container security", "continuous security", "devops", "devsecops", "endor labs", "iac", "microsoft defender cspm", "security", "security as code", "security gates", "terraform", "vulnerability management"]
+permalink: /azure/blogs/Integrating-Security-into-DevOps-Workflows-with-Microsoft-Defender-CSPM
+tags:
+- ARM Templates
+- Automated Remediation
+- Azure
+- Blog
+- Blogs
+- CI/CD
+- Cloud Security
+- Compliance Automation
+- Container Security
+- Continuous Security
+- DevOps
+- DevSecOps
+- Endor Labs
+- IaC
+- Microsoft Defender CSPM
+- Security
+- Security as Code
+- Security Gates
+- Terraform
+- Vulnerability Management
+section_names:
+- azure
+- devops
+- security
 ---
-
 Petrus Vasenius explains how Microsoft Defender CSPM strengthens DevOps workflows by embedding security checks and automated remediation into CI/CD pipelines, ensuring cloud applications remain secure and compliant throughout development and deployment.<!--excerpt_end-->
 
 # Integrating Security into DevOps Workflows with Microsoft Defender CSPM

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Draft Smarter Regex Without the Headaches"
-description: "This article demonstrates how developers can use GitHub Copilot's Chat, Edit, and Agent Mode to generate, simplify, and test regular expression (regex) patterns directly in their coding environment. Randy Pagels shares practical strategies for leveraging Copilot to draft, understand, and validate regex, reducing manual guesswork and streamlining code quality."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Draft Smarter Regex Without the Headaches
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-05 00:00:00 +00:00
-permalink: "/2025-09-05-Draft-Smarter-Regex-Without-the-Headaches.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automation", "Blogs", "Code Generation", "Code Quality", "Code Refactoring", "Coding", "Copilot Agent Mode", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Pattern Matching", "Programming", "Regex", "Regular Expressions", "Software Engineering", "Testing"]
-tags_normalized: ["ai", "ai tools", "automation", "blogs", "code generation", "code quality", "code refactoring", "coding", "copilot agent mode", "copilot chat", "developer productivity", "github copilot", "pattern matching", "programming", "regex", "regular expressions", "software engineering", "testing"]
+permalink: /github-copilot/blogs/Draft-Smarter-Regex-Without-the-Headaches
+tags:
+- AI
+- AI Tools
+- Automation
+- Blogs
+- Code Generation
+- Code Quality
+- Code Refactoring
+- Coding
+- Copilot Agent Mode
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- Pattern Matching
+- Programming
+- Regex
+- Regular Expressions
+- Software Engineering
+- Testing
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels explains how GitHub Copilot helps developers quickly draft, explain, and test regex patterns, making regular expression work less frustrating and more productive.<!--excerpt_end-->
 
 # Draft Smarter Regex Without the Headaches

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Transitioning to Microsoft.Extensions.AI’s IEmbeddingGenerator in Semantic Kernel"
-description: "This article by Roger Barreto details Semantic Kernel’s migration from its experimental embeddings interfaces to the standardized Microsoft.Extensions.AI IEmbeddingGenerator interface. It covers the motivations, key differences, migration guidance, connector support, and benefits for .NET developers integrating AI services."
-author: "Roger Barreto"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/transitioning-to-new-iembeddinggenerator-interface/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+layout: post
+title: Transitioning to Microsoft.Extensions.AI’s IEmbeddingGenerator in Semantic Kernel
+author: Roger Barreto
+canonical_url: https://devblogs.microsoft.com/semantic-kernel/transitioning-to-new-iembeddinggenerator-interface/
+viewing_mode: external
+feed_name: Microsoft DevBlog
+feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-21 14:46:46 +00:00
-permalink: "/2025-05-21-Transitioning-to-MicrosoftExtensionsAIs-IEmbeddingGenerator-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Services", "Azure OpenAI", "C#", "Coding", "Connector Support", "Ecosystem", "Embeddings", "IEmbeddingGenerator", "Microsoft", "Microsoft Semantic Kernel", "Microsoft.Extensions.AI", "Migration Guide", "News", "OpenAI", "RAG", "Samples", "Semantic Kernel", "Type Safety", "Vector Database"]
-tags_normalized: ["dotnet", "ai", "ai services", "azure openai", "csharp", "coding", "connector support", "ecosystem", "embeddings", "iembeddinggenerator", "microsoft", "microsoft semantic kernel", "microsoftdotextensionsdotai", "migration guide", "news", "openai", "rag", "samples", "semantic kernel", "type safety", "vector database"]
+permalink: /ai/news/Transitioning-to-MicrosoftExtensionsAIs-IEmbeddingGenerator-in-Semantic-Kernel
+tags:
+- .NET
+- AI
+- AI Services
+- Azure OpenAI
+- C#
+- Coding
+- Connector Support
+- Ecosystem
+- Embeddings
+- IEmbeddingGenerator
+- Microsoft
+- Microsoft Semantic Kernel
+- Microsoft.Extensions.AI
+- Migration Guide
+- News
+- OpenAI
+- RAG
+- Samples
+- Semantic Kernel
+- Type Safety
+- Vector Database
+section_names:
+- ai
+- coding
 ---
-
 Roger Barreto examines the transition of Semantic Kernel to the Microsoft.Extensions.AI IEmbeddingGenerator interface, highlighting migration steps, key benefits, and standardized AI service integration in the .NET ecosystem.<!--excerpt_end-->
 
 # Transitioning to Microsoft.Extensions.AI’s IEmbeddingGenerator in Semantic Kernel

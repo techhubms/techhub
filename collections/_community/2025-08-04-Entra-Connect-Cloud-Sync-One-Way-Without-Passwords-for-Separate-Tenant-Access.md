@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Entra Connect Cloud Sync One Way Without Passwords for Separate Tenant Access"
-description: "The article, by SisqoEngineer, discusses configuring Entra Connect Cloud Sync to synchronize users from on-premises AD to a new Entra tenant without password hash sync. The approach aims to create distinct logins for users, disable users when disabled on-prem, and simplify access management, especially for resource segregation."
-author: "SisqoEngineer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhi4mz/entra_connect_cloud_sync_one_way_wo_passwords/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Entra Connect Cloud Sync One Way Without Passwords for Separate Tenant Access
+author: SisqoEngineer
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mhi4mz/entra_connect_cloud_sync_one_way_wo_passwords/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 16:26:22 +00:00
-permalink: "/2025-08-04-Entra-Connect-Cloud-Sync-One-Way-Without-Passwords-for-Separate-Tenant-Access.html"
-categories: ["Azure"]
-tags: ["Account Disablement", "Account Provisioning", "Active Directory", "Azure", "Cloud Sync", "Community", "Entra Connect", "Password Hash Sync", "Resource Access", "Tenant", "User Management"]
-tags_normalized: ["account disablement", "account provisioning", "active directory", "azure", "cloud sync", "community", "entra connect", "password hash sync", "resource access", "tenant", "user management"]
+permalink: /azure/community/Entra-Connect-Cloud-Sync-One-Way-Without-Passwords-for-Separate-Tenant-Access
+tags:
+- Account Disablement
+- Account Provisioning
+- Active Directory
+- Azure
+- Cloud Sync
+- Community
+- Entra Connect
+- Password Hash Sync
+- Resource Access
+- Tenant
+- User Management
+section_names:
+- azure
 ---
-
 SisqoEngineer shares an approach for using Entra Connect Cloud Sync to provision users to a separate Azure tenant without syncing their passwords. This setup is aimed at maintaining distinct logins and automating account management tasks.<!--excerpt_end-->
 
 ## Using Entra Connect Cloud Sync One-Way (Without Passwords) for Resource Segregation

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Custom Repository Properties: GraphQL API and URL Type Enhancements"
-description: "This news update highlights two enhancements to GitHub's custom repository properties: programmatic management via the GraphQL API and a new URL property type with validation. These features help organizations better organize and automate repository governance at scale, and support integration with external resources like Azure Kubernetes Fleet portals."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Custom Repository Properties: GraphQL API and URL Type Enhancements'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 05:27:55 +00:00
-permalink: "/2025-12-10-GitHub-Custom-Repository-Properties-GraphQL-API-and-URL-Type-Enhancements.html"
-categories: ["DevOps"]
-tags: ["API Integration", "Automation", "Azure Kubernetes Fleet", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub", "GraphQL API", "Improvement", "News", "Platform Governance", "Repository Properties", "URL Property", "Validation", "Workflow Automation"]
-tags_normalized: ["api integration", "automation", "azure kubernetes fleet", "devops", "enterprise management", "enterprise management tools", "github", "graphql api", "improvement", "news", "platform governance", "repository properties", "url property", "validation", "workflow automation"]
+permalink: /devops/news/GitHub-Custom-Repository-Properties-GraphQL-API-and-URL-Type-Enhancements
+tags:
+- API Integration
+- Automation
+- Azure Kubernetes Fleet
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub
+- GraphQL API
+- Improvement
+- News
+- Platform Governance
+- Repository Properties
+- URL Property
+- Validation
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison reports on GitHub's new features for repository custom properties, including GraphQL API management and robust URL type validation for improved organizational workflows.<!--excerpt_end-->
 
 # GitHub Custom Repository Properties: GraphQL API and URL Type Enhancements

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Announcing Azure Cobalt 200: Next-Generation Arm-Based CPU for Cloud Workloads"
-description: "This post introduces Azure Cobalt 200, Microsoft's latest Arm-based processor designed for cloud-native workloads. It highlights performance improvements over Cobalt 100, architecture details, energy and security features, benchmark methodology, and hardware/software integration within Azure’s infrastructure. Readers learn about technical advances, infrastructure innovation, and real-world impact for cloud compute challenges and security needs."
-author: "sebilgin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-cobalt-200-azure-s-next-cloud-native-cpu/ba-p/4469807"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Announcing Azure Cobalt 200: Next-Generation Arm-Based CPU for Cloud Workloads'
+author: sebilgin
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-cobalt-200-azure-s-next-cloud-native-cpu/ba-p/4469807
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:05 +00:00
-permalink: "/2025-11-18-Announcing-Azure-Cobalt-200-Next-Generation-Arm-Based-CPU-for-Cloud-Workloads.html"
-categories: ["Azure", "Security"]
-tags: ["ARM Neoverse CSS V3", "Azure", "Azure Boost", "Azure Cobalt 200", "Azure Infrastructure", "Azure Integrated HSM", "Cloud Native Compute", "Community", "Confidential Compute Architecture", "Cryptography Accelerator", "Data Analytics", "Dynamic Voltage Frequency Scaling", "Energy Efficiency", "FIPS 140 3", "Key Vault", "Memory Encryption", "Performance Benchmarking", "Security", "Server Architecture", "System On Chip", "TSMC 3nm", "Virtual Machines"]
-tags_normalized: ["arm neoverse css v3", "azure", "azure boost", "azure cobalt 200", "azure infrastructure", "azure integrated hsm", "cloud native compute", "community", "confidential compute architecture", "cryptography accelerator", "data analytics", "dynamic voltage frequency scaling", "energy efficiency", "fips 140 3", "key vault", "memory encryption", "performance benchmarking", "security", "server architecture", "system on chip", "tsmc 3nm", "virtual machines"]
+permalink: /azure/community/Announcing-Azure-Cobalt-200-Next-Generation-Arm-Based-CPU-for-Cloud-Workloads
+tags:
+- ARM Neoverse CSS V3
+- Azure
+- Azure Boost
+- Azure Cobalt 200
+- Azure Infrastructure
+- Azure Integrated HSM
+- Cloud Native Compute
+- Community
+- Confidential Compute Architecture
+- Cryptography Accelerator
+- Data Analytics
+- Dynamic Voltage Frequency Scaling
+- Energy Efficiency
+- FIPS 140 3
+- Key Vault
+- Memory Encryption
+- Performance Benchmarking
+- Security
+- Server Architecture
+- System On Chip
+- TSMC 3nm
+- Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 Selim Bilgin and Pat Stemen present the technical foundations and innovations behind Azure Cobalt 200, detailing its cloud-native capabilities, hardware acceleration, security features, and impact on Microsoft’s cloud infrastructure.<!--excerpt_end-->
 
 # Announcing Azure Cobalt 200: Next-Generation Arm-Based CPU for Cloud Workloads

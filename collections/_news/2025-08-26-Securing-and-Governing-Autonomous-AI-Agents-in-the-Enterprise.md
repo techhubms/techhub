@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Securing and Governing Autonomous AI Agents in the Enterprise"
-description: "This article by Igor Sakhnov, Corporate Vice President and Deputy CISO for Identity at Microsoft, explores strategies to secure and govern autonomous AI agents in enterprises as their adoption surpasses human users. The post outlines risk profiles unique to AI agents, practical measures for identity management, access control, detection of emerging threats, and how Microsoft’s security products extend zero trust and governance into the agentic era."
-author: "Igor Sakhnov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Securing and Governing Autonomous AI Agents in the Enterprise
+author: Igor Sakhnov
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: "/2025-08-26-Securing-and-Governing-Autonomous-AI-Agents-in-the-Enterprise.html"
-categories: ["AI", "Security"]
-tags: ["Access Control", "Agent Identity", "Agent Registry", "Agentic Systems", "AI", "AI Governance", "AI Security", "Autonomous Agents", "Compliance", "Data Protection", "Enterprise Security", "Entra Agent ID", "MCP", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "News", "Role Based Access Control", "Security", "Security Posture", "Threat Detection", "XPIA", "Zero Trust Security"]
-tags_normalized: ["access control", "agent identity", "agent registry", "agentic systems", "ai", "ai governance", "ai security", "autonomous agents", "compliance", "data protection", "enterprise security", "entra agent id", "mcp", "microsoft defender", "microsoft entra", "microsoft purview", "news", "role based access control", "security", "security posture", "threat detection", "xpia", "zero trust security"]
+permalink: /ai/news/Securing-and-Governing-Autonomous-AI-Agents-in-the-Enterprise
+tags:
+- Access Control
+- Agent Identity
+- Agent Registry
+- Agentic Systems
+- AI
+- AI Governance
+- AI Security
+- Autonomous Agents
+- Compliance
+- Data Protection
+- Enterprise Security
+- Entra Agent ID
+- MCP
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- News
+- Role Based Access Control
+- Security
+- Security Posture
+- Threat Detection
+- XPIA
+- Zero Trust Security
+section_names:
+- ai
+- security
 ---
-
 Igor Sakhnov, Corporate Vice President and Deputy CISO for Identity at Microsoft, shares practical advice on securing and governing autonomous AI agents, highlighting new risks and governance strategies in large-scale enterprise deployments.<!--excerpt_end-->
 
 # Securing and Governing Autonomous AI Agents in the Enterprise

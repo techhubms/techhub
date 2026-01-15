@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Improved Network Diagnostics and Required Self-Hosted Runner Upgrades for GitHub Actions with Azure VNET Injection"
-description: "This news update explains new features for GitHub-hosted runners using Azure VNET injection, providing enhanced diagnostics for network connectivity issues. It also details mandatory upgrades for self-hosted runners, including support for Ubuntu 24.04, aimed at improving CI/CD reliability and security. Readers learn how to troubleshoot Azure-connected runners and prepare for upcoming changes to the GitHub Actions infrastructure."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-12-better-diagnostics-for-vnet-injected-runners-and-required-self-hosted-runner-upgrades"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Network Diagnostics and Required Self-Hosted Runner Upgrades for GitHub Actions with Azure VNET Injection
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-12-better-diagnostics-for-vnet-injected-runners-and-required-self-hosted-runner-upgrades
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-12 14:12:05 +00:00
-permalink: "/2025-12-12-Improved-Network-Diagnostics-and-Required-Self-Hosted-Runner-Upgrades-for-GitHub-Actions-with-Azure-VNET-Injection.html"
-categories: ["Azure", "DevOps"]
-tags: ["Actions", "Azure", "Azure VNET Injection", "CI/CD", "Connectivity Issues", "Developer Automation", "DevOps", "Docker", "GitHub Actions", "Improvement", "Infrastructure", "Linux", "Network Diagnostics", "News", "Runner Architecture", "Self Hosted Runner", "System Upgrade", "Ubuntu 24.04", "Version Requirement", "Workflow Reliability"]
-tags_normalized: ["actions", "azure", "azure vnet injection", "cislashcd", "connectivity issues", "developer automation", "devops", "docker", "github actions", "improvement", "infrastructure", "linux", "network diagnostics", "news", "runner architecture", "self hosted runner", "system upgrade", "ubuntu 24dot04", "version requirement", "workflow reliability"]
+permalink: /azure/news/Improved-Network-Diagnostics-and-Required-Self-Hosted-Runner-Upgrades-for-GitHub-Actions-with-Azure-VNET-Injection
+tags:
+- Actions
+- Azure
+- Azure VNET Injection
+- CI/CD
+- Connectivity Issues
+- Developer Automation
+- DevOps
+- Docker
+- GitHub Actions
+- Improvement
+- Infrastructure
+- Linux
+- Network Diagnostics
+- News
+- Runner Architecture
+- Self Hosted Runner
+- System Upgrade
+- Ubuntu 24.04
+- Version Requirement
+- Workflow Reliability
+section_names:
+- azure
+- devops
 ---
-
 Allison informs readers about the latest improvements in diagnosing network issues for GitHub-hosted runners with Azure VNET injection, and outlines required upgrades for self-hosted runners to ensure compatibility and security.<!--excerpt_end-->
 
 # Improved Network Diagnostics and Required Self-Hosted Runner Upgrades for GitHub Actions with Azure VNET Injection

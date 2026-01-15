@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation"
-description: "This post introduces a free starter pack for Conditional Access (CA) in Microsoft Entra ID (formerly Azure Active Directory), providing ready-made policy templates, deployment PowerShell scripts, and a GitHub Actions workflow for safe, automated rollout. It offers practical guidance for blocking legacy authentication, enforcing MFA, and using report-only mode to ensure secure deployments."
-author: "SoaebRathod"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation'
+author: SoaebRathod
+canonical_url: https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-23 14:13:11 +00:00
-permalink: "/2025-08-23-Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automation", "Azure", "Azure AD", "CI/CD", "Community", "Conditional Access", "DevOps", "GitHub Actions", "Identity Management", "Legacy Authentication", "MFA", "Microsoft Entra ID", "Microsoft Graph", "Policy Deployment", "PowerShell", "Report Only Mode", "Security", "Security Policy", "Sign in Logs", "Zero Trust"]
-tags_normalized: ["automation", "azure", "azure ad", "cislashcd", "community", "conditional access", "devops", "github actions", "identity management", "legacy authentication", "mfa", "microsoft entra id", "microsoft graph", "policy deployment", "powershell", "report only mode", "security", "security policy", "sign in logs", "zero trust"]
+permalink: /azure/community/Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation
+tags:
+- Automation
+- Azure
+- Azure AD
+- CI/CD
+- Community
+- Conditional Access
+- DevOps
+- GitHub Actions
+- Identity Management
+- Legacy Authentication
+- MFA
+- Microsoft Entra ID
+- Microsoft Graph
+- Policy Deployment
+- PowerShell
+- Report Only Mode
+- Security
+- Security Policy
+- Sign in Logs
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 SoaebRathod shares a practical starter pack for implementing Conditional Access in Microsoft Entra ID, complete with policy templates, PowerShell deployment scripts, and a GitHub Actions workflow for secure, automated rollout.<!--excerpt_end-->
 
 # Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation

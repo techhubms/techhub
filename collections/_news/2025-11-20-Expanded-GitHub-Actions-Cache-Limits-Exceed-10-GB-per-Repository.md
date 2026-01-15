@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Expanded GitHub Actions Cache Limits Exceed 10 GB per Repository"
-description: "GitHub Actions repositories can now surpass the former 10 GB cache size limitation, allowing for greater storage of build dependencies between workflow runs. This update introduces flexible pay-as-you-go cache extensions, new eviction and retention policies, and admin controls over storage usage and billing."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Expanded GitHub Actions Cache Limits Exceed 10 GB per Repository
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 21:01:36 +00:00
-permalink: "/2025-11-20-Expanded-GitHub-Actions-Cache-Limits-Exceed-10-GB-per-Repository.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "Billing", "Cache Management", "CI/CD", "Codespaces", "DevOps", "Enterprise Account", "Enterprise Admin", "Eviction Policies", "Git LFS", "GitHub Actions", "Improvement", "News", "Pro Account", "Repository Management", "Retention Policies", "Storage Policies", "Team Account", "Workflow Optimization"]
-tags_normalized: ["actions", "automation", "billing", "cache management", "cislashcd", "codespaces", "devops", "enterprise account", "enterprise admin", "eviction policies", "git lfs", "github actions", "improvement", "news", "pro account", "repository management", "retention policies", "storage policies", "team account", "workflow optimization"]
+permalink: /devops/news/Expanded-GitHub-Actions-Cache-Limits-Exceed-10-GB-per-Repository
+tags:
+- Actions
+- Automation
+- Billing
+- Cache Management
+- CI/CD
+- Codespaces
+- DevOps
+- Enterprise Account
+- Enterprise Admin
+- Eviction Policies
+- Git LFS
+- GitHub Actions
+- Improvement
+- News
+- Pro Account
+- Repository Management
+- Retention Policies
+- Storage Policies
+- Team Account
+- Workflow Optimization
+section_names:
+- devops
 ---
-
 Allison details the update allowing GitHub Actions cache size to exceed 10 GB per repository, introducing new policy controls and pay-as-you-go storage options for administrators.<!--excerpt_end-->
 
 # Expanded GitHub Actions Cache Limits Exceed 10 GB per Repository

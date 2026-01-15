@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Copilot Custom Chat Modes for Large, Complex Projects in VS Code"
-description: "Harald Binkle explains how to create and use custom chat modes for GitHub Copilot in VS Code. These specialized modes help developers tackle code review, testing, API design, performance optimization, and documentation more efficiently in large projects by defining targeted AI 'personalities' and toolsets."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/github-copilot-custom-chat-modes/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+layout: post
+title: GitHub Copilot Custom Chat Modes for Large, Complex Projects in VS Code
+author: Harald Binkle
+canonical_url: https://harrybin.de/posts/github-copilot-custom-chat-modes/
+viewing_mode: external
+feed_name: Harald Binkle's blog
+feed_url: https://harrybin.de/rss.xml
 date: 2025-07-06 15:00:00 +00:00
-permalink: "/2025-07-06-GitHub-Copilot-Custom-Chat-Modes-for-Large-Complex-Projects-in-VS-Code.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Configuration", "API Design", "Blogs", "Code Review", "Coding", "Custom Chat Modes", "Developer Workflow", "DevOps", "Documentation", "GitHub Copilot", "Instruction Files", "Performance Optimization", "Productivity", "Testing", "VS Code"]
-tags_normalized: ["ai", "ai configuration", "api design", "blogs", "code review", "coding", "custom chat modes", "developer workflow", "devops", "documentation", "github copilot", "instruction files", "performance optimization", "productivity", "testing", "vs code"]
+permalink: /github-copilot/blogs/GitHub-Copilot-Custom-Chat-Modes-for-Large-Complex-Projects-in-VS-Code
+tags:
+- AI
+- AI Configuration
+- API Design
+- Blogs
+- Code Review
+- Coding
+- Custom Chat Modes
+- Developer Workflow
+- DevOps
+- Documentation
+- GitHub Copilot
+- Instruction Files
+- Performance Optimization
+- Productivity
+- Testing
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 In this article, Harald Binkle details how custom chat modes for GitHub Copilot in VS Code can improve productivity and collaboration in large projects by tailoring AI behavior and tools to specific workflows.<!--excerpt_end-->
 
 # GitHub Copilot Custom Chat Modes for Large Projects
@@ -57,7 +73,6 @@ Custom chat modes are defined by `.chatmode.md` files, typically placed in `.git
 
 ```markdown
 ---
-description: Review code changes and suggest improvements
 tools: ["codebase", "search", "usages"]
 ---
 
@@ -80,7 +95,6 @@ Provide specific, actionable feedback with code examples where appropriate.
 
 ```markdown
 ---
-description: Focus on test creation, debugging, and testing strategies
 tools: ["codebase", "search", "usages", "findTestFiles", "terminal"]
 ---
 
@@ -125,7 +139,6 @@ Provide complete, runnable examples with appropriate setup and teardown.
 
 ```markdown
 ---
-description: Design and work with APIs, interfaces, data contracts
 tools: ["codebase", "search", "usages", "fetch", "githubRepo"]
 ---
 
@@ -182,7 +195,6 @@ Always consider the data lifecycle and integration points.
 
 ```markdown
 ---
-description: Focus on creating and improving documentation
 tools: ["codebase", "search", "fetch"]
 ---
 
@@ -203,7 +215,6 @@ Keep docs updated with the codebase.
 
 ```markdown
 ---
-description: Focus on performance analysis and optimization
 tools: ["codebase", "search", "usages", "terminal"]
 ---
 

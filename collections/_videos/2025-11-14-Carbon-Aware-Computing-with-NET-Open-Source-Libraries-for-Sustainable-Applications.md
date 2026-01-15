@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Carbon Aware Computing with .NET Open Source Libraries for Sustainable Applications"
-description: "This session explores how to develop climate-friendly software using Green Software Development design patterns and open source .NET libraries. It covers carbon aware computing paradigms such as time-shifting, demand shaping, resource utilization, and dynamic scaling—demonstrating their practical implementation both on-premises, in Azure PaaS, and on Kubernetes. Real-world examples leverage CarbonAware SDK, Hangfire for job scheduling, Powershell for automation, and Kubernetes exporters for KEDA and Prometheus. Participants will learn how to dynamically adapt applications based on carbon intensity and access live power grid prediction data for optimal resource allocation."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IqSzmerSXuk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Carbon Aware Computing with .NET Open Source Libraries for Sustainable Applications
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=IqSzmerSXuk
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 06:00:06 +00:00
-permalink: "/2025-11-14-Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Azure", "Azure PaaS", "CarbonAware SDK", "Cloud Computing", "CO2 Intensity Prediction", "Coding", "Demand Shaping", "DevOps", "Dynamic Scaling", "Green Software", "Hangfire", "Job Scheduling", "KEDA", "Kubernetes", "Open Source", "Powershell", "Prometheus", "Sustainability", "Time Shifting", "Videos"]
-tags_normalized: ["dotnet", "azure", "azure paas", "carbonaware sdk", "cloud computing", "co2 intensity prediction", "coding", "demand shaping", "devops", "dynamic scaling", "green software", "hangfire", "job scheduling", "keda", "kubernetes", "open source", "powershell", "prometheus", "sustainability", "time shifting", "videos"]
+permalink: /coding/videos/Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications
+tags:
+- .NET
+- Azure
+- Azure PaaS
+- CarbonAware SDK
+- Cloud Computing
+- CO2 Intensity Prediction
+- Coding
+- Demand Shaping
+- DevOps
+- Dynamic Scaling
+- Green Software
+- Hangfire
+- Job Scheduling
+- KEDA
+- Kubernetes
+- Open Source
+- Powershell
+- Prometheus
+- Sustainability
+- Time Shifting
+- Videos
+section_names:
+- azure
+- coding
+- devops
 ---
-
 dotnet delivers an in-depth talk on implementing carbon aware computing using .NET open source libraries, showcasing sustainable development patterns for Azure, on-premises, and Kubernetes environments.<!--excerpt_end-->
 
 {% youtube IqSzmerSXuk %}

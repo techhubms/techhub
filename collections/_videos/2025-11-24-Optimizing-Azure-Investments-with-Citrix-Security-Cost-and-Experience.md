@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Optimizing Azure Investments with Citrix: Security, Cost, and Experience"
-description: "This Microsoft Ignite session explores how organizations already using Azure and Windows 365 can further enhance their environments with the Citrix platform. It demonstrates strategies for optimizing cloud costs, strengthening security—such as zero trust access and session watermarking—and improving user experience via modern Citrix features. The speakers detail Citrix’s integration with Microsoft cloud technologies, cross-platform compatibility for unified communications, and tools for streamlined migration and IT troubleshooting, showcasing real-world transitions from on-premises to Citrix Cloud."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mgChCdqRxLw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Optimizing Azure Investments with Citrix: Security, Cost, and Experience'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mgChCdqRxLw
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:18:51 +00:00
-permalink: "/2025-11-24-Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Capture Prevention", "Citrix", "Citrix Cloud", "Cloud Migration", "Cloud Optimization", "Hybrid Work", "IT Troubleshooting", "Migrateandmodernizeyourestate", "MSIgnite", "On Premises Migration", "Secure Private Access", "Security", "Unified Communications", "User Experience", "Videos", "Watermarking", "Windows 365", "Zero Trust"]
-tags_normalized: ["azure", "capture prevention", "citrix", "citrix cloud", "cloud migration", "cloud optimization", "hybrid work", "it troubleshooting", "migrateandmodernizeyourestate", "msignite", "on premises migration", "secure private access", "security", "unified communications", "user experience", "videos", "watermarking", "windows 365", "zero trust"]
+permalink: /azure/videos/Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience
+tags:
+- Azure
+- Capture Prevention
+- Citrix
+- Citrix Cloud
+- Cloud Migration
+- Cloud Optimization
+- Hybrid Work
+- IT Troubleshooting
+- Migrateandmodernizeyourestate
+- MSIgnite
+- On Premises Migration
+- Secure Private Access
+- Security
+- Unified Communications
+- User Experience
+- Videos
+- Watermarking
+- Windows 365
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events presents a session with Shawn Bass, Quentin DRION, and Hermann Pais highlighting how Citrix multiplies the value of Azure and Windows 365 by enhancing security, optimizing costs, and improving user experience.<!--excerpt_end-->
 
 {% youtube mgChCdqRxLw %}

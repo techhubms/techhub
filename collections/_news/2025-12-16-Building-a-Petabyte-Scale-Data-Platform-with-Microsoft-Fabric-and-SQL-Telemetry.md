@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building a Petabyte-Scale Data Platform with Microsoft Fabric and SQL Telemetry"
-description: "This article from the Microsoft Fabric Blog offers a technical deep dive into architecting and operating a 10+ Petabyte data lake and data platform using Microsoft Fabric. Topics covered include lakehouse architecture, Spark Streaming, CI/CD automation, Dimensional Modeling, data quality, scalable testing, incremental processing, and integration of open-source and Microsoft tools to enable real-time, large-scale data engineering."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Building a Petabyte-Scale Data Platform with Microsoft Fabric and SQL Telemetry
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 10:00:00 +00:00
-permalink: "/2025-12-16-Building-a-Petabyte-Scale-Data-Platform-with-Microsoft-Fabric-and-SQL-Telemetry.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["AKS", "Anomaly Detection", "Autoscale Billing", "Azure", "Azure Data Lake", "CI/CD", "Coding", "Data Engineering", "Data Platform", "Data Quality", "Delta Lake", "DevOps", "GitOps", "KEDA", "Kimball Dimensional Modeling", "Lakehouse Architecture", "Microsoft Fabric", "ML", "News", "OpenTelemetry", "Petabyte Scale", "Power BI", "SLA Monitoring", "Spark Streaming", "VS Code Devcontainer"]
-tags_normalized: ["aks", "anomaly detection", "autoscale billing", "azure", "azure data lake", "cislashcd", "coding", "data engineering", "data platform", "data quality", "delta lake", "devops", "gitops", "keda", "kimball dimensional modeling", "lakehouse architecture", "microsoft fabric", "ml", "news", "opentelemetry", "petabyte scale", "power bi", "sla monitoring", "spark streaming", "vs code devcontainer"]
+permalink: /ml/news/Building-a-Petabyte-Scale-Data-Platform-with-Microsoft-Fabric-and-SQL-Telemetry
+tags:
+- AKS
+- Anomaly Detection
+- Autoscale Billing
+- Azure
+- Azure Data Lake
+- CI/CD
+- Coding
+- Data Engineering
+- Data Platform
+- Data Quality
+- Delta Lake
+- DevOps
+- GitOps
+- KEDA
+- Kimball Dimensional Modeling
+- Lakehouse Architecture
+- Microsoft Fabric
+- ML
+- News
+- OpenTelemetry
+- Petabyte Scale
+- Power BI
+- SLA Monitoring
+- Spark Streaming
+- VS Code Devcontainer
+section_names:
+- azure
+- coding
+- devops
+- ml
 ---
-
 In this deep technical blog, the Microsoft Fabric Blog team explains how they engineered a robust, Petabyte-scale data platform on Microsoft Fabric, focusing on real-time telemetry and modern data engineering practices.<!--excerpt_end-->
 
 # SQL Telemetry & Intelligence – How we built a Petabyte-scale Data Platform with Fabric

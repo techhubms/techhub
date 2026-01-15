@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258"
-description: "This Microsoft Ignite session explores the latest security advancements in Windows 11 and Windows 365, focusing on improved protection for users, devices, and data. Topics include password and identity management, malware protection, hotpatching, hardware updates, passkey integration, PQC certificate changes, and native Sysmon integration. The session also covers managing Windows endpoints securely using Cloud PC solutions like Windows 365 Link and demonstrates practical configurations such as clipboard protection and restricting copy-paste actions between cloud and local PCs."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=TY0uDOnFzPY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=TY0uDOnFzPY
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:15:06 +00:00
-permalink: "/2025-11-21-Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258.html"
-categories: ["Security"]
-tags: ["Clipboard Protection", "Cloud PC", "Cloud Security", "Data Security", "Endpoint Security", "Hotpatching", "Identity Management", "Malware Protection", "Microsoft Ignite", "MSIgnite", "Passkey Integration", "PQC Certificates", "Secureyourdata", "Security", "Sysmon", "Videos", "Windows 11", "Windows 365", "Windows Hello"]
-tags_normalized: ["clipboard protection", "cloud pc", "cloud security", "data security", "endpoint security", "hotpatching", "identity management", "malware protection", "microsoft ignite", "msignite", "passkey integration", "pqc certificates", "secureyourdata", "security", "sysmon", "videos", "windows 11", "windows 365", "windows hello"]
+permalink: /security/videos/Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258
+tags:
+- Clipboard Protection
+- Cloud PC
+- Cloud Security
+- Data Security
+- Endpoint Security
+- Hotpatching
+- Identity Management
+- Malware Protection
+- Microsoft Ignite
+- MSIgnite
+- Passkey Integration
+- PQC Certificates
+- Secureyourdata
+- Security
+- Sysmon
+- Videos
+- Windows 11
+- Windows 365
+- Windows Hello
+section_names:
+- security
 ---
-
 This session, presented by Katherine Anderson, Katharine Holdsworth, and Pratik Shah at Microsoft Ignite, guides viewers through the latest Windows 11 and Windows 365 security features designed to improve endpoint protection.<!--excerpt_end-->
 
 {% youtube TY0uDOnFzPY %}

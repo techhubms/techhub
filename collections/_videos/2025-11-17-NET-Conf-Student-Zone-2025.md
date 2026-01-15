@@ -1,20 +1,38 @@
----
-layout: "post"
-title: ".NET Conf Student Zone 2025"
-description: "This session from .NET Conf 2025 Student Zone inspires and educates students on the latest innovations in .NET. The event highlights hands-on demos featuring the CLI, AI and Copilot tools, Aspire, gaming integration, and explores cross-platform development with Visual Studio Code and Visual Studio across Mac and Linux. It emphasizes open-source concepts and includes Q&A and learning resources for newcomers."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MYaFPDjbd3k"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET Conf Student Zone 2025
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=MYaFPDjbd3k
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-17 20:12:59 +00:00
-permalink: "/2025-11-17-NET-Conf-Student-Zone-2025.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "Aspire", "CLI", "Coding", "Copilot", "Cross Platform", "Demo", "Gaming", "GitHub Copilot", "Hands On", "Linux", "Mac", "Open Source", "Programming", "Student Zone", "Videos", "VS", "VS Code"]
-tags_normalized: ["dotnet", "ai", "aspire", "cli", "coding", "copilot", "cross platform", "demo", "gaming", "github copilot", "hands on", "linux", "mac", "open source", "programming", "student zone", "videos", "vs", "vs code"]
+permalink: /github-copilot/videos/NET-Conf-Student-Zone-2025
+tags:
+- .NET
+- AI
+- Aspire
+- CLI
+- Coding
+- Copilot
+- Cross Platform
+- Demo
+- Gaming
+- GitHub Copilot
+- Hands On
+- Linux
+- Mac
+- Open Source
+- Programming
+- Student Zone
+- Videos
+- VS
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 dotnet presents a student-focused .NET Conf 2025 session, featuring demos and tutorials on AI, Copilot, Aspire, cross-platform capabilities, and core coding skills for new developers.<!--excerpt_end-->
 
 {% youtube MYaFPDjbd3k %}

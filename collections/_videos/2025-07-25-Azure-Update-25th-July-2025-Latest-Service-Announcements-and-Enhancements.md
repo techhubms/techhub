@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure Update – 25th July 2025: Latest Service Announcements and Enhancements"
-description: "A concise overview of the latest updates in the Microsoft Azure ecosystem as presented by John Savill. This video covers advancements in Azure networking, security, analytics, and monitoring, highlighting new features such as static block allocation for Azure CNI, improvements to Azure Firewall, enhanced App Gateway integration for containers, managed network encryption for Lustre, updates in Log Analytics, and developments in Microsoft Sentinel Data Lake."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fcdA1iVrrYw"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Azure Update – 25th July 2025: Latest Service Announcements and Enhancements'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=fcdA1iVrrYw
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-25 14:27:36 +00:00
-permalink: "/2025-07-25-Azure-Update-25th-July-2025-Latest-Service-Announcements-and-Enhancements.html"
-categories: ["Azure", "ML", "DevOps", "Security"]
-tags: ["App Gateway For Containers", "Azure", "Azure Cloud", "Azure CNI", "Azure Firewall", "Azure Managed Lustre", "Azure Monitoring", "Azure Networking", "Azure News", "Azure Services", "Azure Updates", "Cloud", "Cloud Architecture", "Cloud Security", "Data Lake", "DevOps", "Infrastructure", "Log Analytics", "Microsoft", "Microsoft Azure", "Microsoft Sentinel", "ML", "Security", "Sentinel Data Lake", "Videos", "VNet Encryption"]
-tags_normalized: ["app gateway for containers", "azure", "azure cloud", "azure cni", "azure firewall", "azure managed lustre", "azure monitoring", "azure networking", "azure news", "azure services", "azure updates", "cloud", "cloud architecture", "cloud security", "data lake", "devops", "infrastructure", "log analytics", "microsoft", "microsoft azure", "microsoft sentinel", "ml", "security", "sentinel data lake", "videos", "vnet encryption"]
+permalink: /ml/videos/Azure-Update-25th-July-2025-Latest-Service-Announcements-and-Enhancements
+tags:
+- App Gateway For Containers
+- Azure
+- Azure Cloud
+- Azure CNI
+- Azure Firewall
+- Azure Managed Lustre
+- Azure Monitoring
+- Azure Networking
+- Azure News
+- Azure Services
+- Azure Updates
+- Cloud
+- Cloud Architecture
+- Cloud Security
+- Data Lake
+- DevOps
+- Infrastructure
+- Log Analytics
+- Microsoft
+- Microsoft Azure
+- Microsoft Sentinel
+- ML
+- Security
+- Sentinel Data Lake
+- Videos
+- VNet Encryption
+section_names:
+- azure
+- ml
+- devops
+- security
 ---
-
 John Savill delivers an informative summary of recent advancements in Microsoft Azure, covering networking, security, analytics, and monitoring. Viewers will learn about the latest features and improvements relevant to Azure professionals.<!--excerpt_end-->
 
 {% youtube fcdA1iVrrYw %}

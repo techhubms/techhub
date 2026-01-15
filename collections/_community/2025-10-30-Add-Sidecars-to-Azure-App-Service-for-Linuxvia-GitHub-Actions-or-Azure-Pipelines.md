@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines"
-description: "This post introduces ready-made templates for deploying helper sidecar containers alongside your main application in Azure App Service for Linux. It explains how to use GitHub Actions or Azure Pipelines for CI/CD and provides concrete guidance on attaching telemetry agents, APIs, caches, and more within a unified lifecycle. Templates enable both code-based and containerized app workflows."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 04:08:13 +00:00
-permalink: "/2025-10-30-Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitHub-Actions-or-Azure-Pipelines.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "App Service Runtime", "Azure", "Azure App Service", "Azure Pipelines", "CI/CD", "Coding", "Community", "DevOps", "GitHub Actions", "Java", "Linux Containers", "Monitoring Agents", "Node.js", "OIDC Authentication", "PHP", "Python", "Sidecar Containers", "Sitecontainers", "Telemetry", "VSTS", "YAML Templates"]
-tags_normalized: ["dotnet", "app service runtime", "azure", "azure app service", "azure pipelines", "cislashcd", "coding", "community", "devops", "github actions", "java", "linux containers", "monitoring agents", "nodedotjs", "oidc authentication", "php", "python", "sidecar containers", "sitecontainers", "telemetry", "vsts", "yaml templates"]
+permalink: /coding/community/Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitHub-Actions-or-Azure-Pipelines
+tags:
+- .NET
+- App Service Runtime
+- Azure
+- Azure App Service
+- Azure Pipelines
+- CI/CD
+- Coding
+- Community
+- DevOps
+- GitHub Actions
+- Java
+- Linux Containers
+- Monitoring Agents
+- Node.js
+- OIDC Authentication
+- PHP
+- Python
+- Sidecar Containers
+- Sitecontainers
+- Telemetry
+- VSTS
+- YAML Templates
+section_names:
+- azure
+- coding
+- devops
 ---
-
 TulikaC explains how to use GitHub Actions and Azure Pipelines templates to deploy helper sidecars with Azure App Service for Linux, making CI/CD setup seamless for various runtime and container scenarios.<!--excerpt_end-->
 
 # Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines

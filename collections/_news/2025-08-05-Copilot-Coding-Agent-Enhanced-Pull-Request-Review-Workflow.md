@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Copilot Coding Agent: Enhanced Pull Request Review Workflow"
-description: "GitHub Copilot coding agent now responds only when explicitly mentioned in pull request comments, improving control and feedback in collaborative development. The update ensures Copilot only takes action upon request from users with write access."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+layout: post
+title: 'Copilot Coding Agent: Enhanced Pull Request Review Workflow'
+author: Allison
+canonical_url: https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-05 20:05:53 +00:00
-permalink: "/2025-08-05-Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Change Requests", "Coding Agent", "Collaboration", "Development Workflow", "DevOps", "GitHub Copilot", "News", "Pull Request", "Repository Management", "Write Access"]
-tags_normalized: ["ai", "automation", "change requests", "coding agent", "collaboration", "development workflow", "devops", "github copilot", "news", "pull request", "repository management", "write access"]
+permalink: /github-copilot/news/Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow
+tags:
+- AI
+- Automation
+- Change Requests
+- Coding Agent
+- Collaboration
+- Development Workflow
+- DevOps
+- GitHub Copilot
+- News
+- Pull Request
+- Repository Management
+- Write Access
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Authored by Allison, this news discusses updates to the GitHub Copilot coding agent, focusing on improved pull request review experiences and explicit interaction controls for repository collaborators.<!--excerpt_end-->
 
 ## Copilot Coding Agent: Enhanced Pull Request Review Experience

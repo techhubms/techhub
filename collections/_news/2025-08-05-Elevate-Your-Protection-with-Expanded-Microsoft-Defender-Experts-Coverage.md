@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Elevate Your Protection with Expanded Microsoft Defender Experts Coverage"
-description: "This announcement details expanded capabilities in Microsoft Defender Experts, now providing 24/7 expert-driven protection for cloud workloads including hybrid and multicloud servers through Microsoft Defender for Cloud, and enhanced detection using third-party network signals in Defender Experts for XDR."
-author: "Henry Yan and Sylvie Liu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/elevate-your-protection-with-expanded-microsoft-defender-experts-coverage/4439134"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Elevate Your Protection with Expanded Microsoft Defender Experts Coverage
+author: Henry Yan and Sylvie Liu
+canonical_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/elevate-your-protection-with-expanded-microsoft-defender-experts-coverage/4439134
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-05 16:00:00 +00:00
-permalink: "/2025-08-05-Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Cloud Security", "Hybrid Cloud", "Incident Detection", "Microsoft Defender Experts", "Microsoft Defender For Cloud", "Multicloud", "News", "Security", "Security Monitoring", "Third Party Network Signals", "Threat Response", "XDR"]
-tags_normalized: ["azure", "cloud security", "hybrid cloud", "incident detection", "microsoft defender experts", "microsoft defender for cloud", "multicloud", "news", "security", "security monitoring", "third party network signals", "threat response", "xdr"]
+permalink: /azure/news/Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage
+tags:
+- Azure
+- Cloud Security
+- Hybrid Cloud
+- Incident Detection
+- Microsoft Defender Experts
+- Microsoft Defender For Cloud
+- Multicloud
+- News
+- Security
+- Security Monitoring
+- Third Party Network Signals
+- Threat Response
+- XDR
+section_names:
+- azure
+- security
 ---
-
 Authored by Henry Yan and Sylvie Liu, this post introduces new 24/7, expert-driven protections from Microsoft Defender Experts for protecting cloud workloads, including support for multicloud environments.<!--excerpt_end-->
 
 ## Summary

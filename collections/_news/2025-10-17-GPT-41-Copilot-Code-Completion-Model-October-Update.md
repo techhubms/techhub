@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-4.1 Copilot Code Completion Model – October Update"
-description: "This news update covers recent improvements to the GitHub Copilot code completion model using GPT-4.1. The update enhances Copilot's ability to infer developer intent from code context, resulting in more accurate and relevant inline code suggestions for users across all plans and configurations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GPT-4.1 Copilot Code Completion Model – October Update
+author: Allison
+canonical_url: https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 15:29:48 +00:00
-permalink: "/2025-10-17-GPT-41-Copilot-Code-Completion-Model-October-Update.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Suggestions", "AI Models", "Code Completion", "Copilot", "Copilot Update", "Developer Productivity", "GitHub Copilot", "GPT 4.1", "Improvement", "Inline Code Suggestions", "Machine Learning", "News", "Software Development Tools"]
-tags_normalized: ["ai", "ai code suggestions", "ai models", "code completion", "copilot", "copilot update", "developer productivity", "github copilot", "gpt 4dot1", "improvement", "inline code suggestions", "machine learning", "news", "software development tools"]
+permalink: /github-copilot/news/GPT-41-Copilot-Code-Completion-Model-October-Update
+tags:
+- AI
+- AI Code Suggestions
+- AI Models
+- Code Completion
+- Copilot
+- Copilot Update
+- Developer Productivity
+- GitHub Copilot
+- GPT 4.1
+- Improvement
+- Inline Code Suggestions
+- Machine Learning
+- News
+- Software Development Tools
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the October update to the GitHub Copilot GPT-4.1 code completion model, highlighting improvements to intent inference and code suggestion accuracy.<!--excerpt_end-->
 
 # GPT-4.1 Copilot Code Completion Model – October Update

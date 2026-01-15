@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "From Legacy to GitOps: A Roadmap for Enterprise Modernization"
-description: "This article by Ekambar Kumar Singirikonda presents an in-depth guide for enterprises looking to transition from legacy infrastructure management to a GitOps-based approach. It details the key phases of modernization, including assessment, automation, incremental migration, standardization, and optimization. The roadmap emphasizes technical strategies, required cultural shifts, and best practices for leveraging version-controlled code repositories, automation tools, and policy-driven governance at scale."
-author: "Ekambar Kumar Singirikonda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'From Legacy to GitOps: A Roadmap for Enterprise Modernization'
+author: Ekambar Kumar Singirikonda
+canonical_url: https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-19 10:59:49 +00:00
-permalink: "/2025-09-19-From-Legacy-to-GitOps-A-Roadmap-for-Enterprise-Modernization.html"
-categories: ["DevOps"]
-tags: ["Argo CD", "Automation", "Blogs", "Business Of DevOps", "CI/CD", "Compliance", "Contributed Content", "DevOps", "Enterprise GitOps Roadmap", "Enterprise Modernization", "Flux", "Git", "GitHub Actions", "Gitops", "GitOps Automation", "GitOps Cultural Shift", "GitOps Governance", "GitOps Security", "Governance", "Governance Blueprint", "IaC", "IaC GitOps", "Legacy Systems", "Observability", "Org Change", "Platform Engineering", "Policy as Code", "Policy as Code GitOps", "Pulumi", "Social Facebook", "Social LinkedIn", "Social X", "Terraform"]
-tags_normalized: ["argo cd", "automation", "blogs", "business of devops", "cislashcd", "compliance", "contributed content", "devops", "enterprise gitops roadmap", "enterprise modernization", "flux", "git", "github actions", "gitops", "gitops automation", "gitops cultural shift", "gitops governance", "gitops security", "governance", "governance blueprint", "iac", "iac gitops", "legacy systems", "observability", "org change", "platform engineering", "policy as code", "policy as code gitops", "pulumi", "social facebook", "social linkedin", "social x", "terraform"]
+permalink: /devops/blogs/From-Legacy-to-GitOps-A-Roadmap-for-Enterprise-Modernization
+tags:
+- Argo CD
+- Automation
+- Blogs
+- Business Of DevOps
+- CI/CD
+- Compliance
+- Contributed Content
+- DevOps
+- Enterprise GitOps Roadmap
+- Enterprise Modernization
+- Flux
+- Git
+- GitHub Actions
+- Gitops
+- GitOps Automation
+- GitOps Cultural Shift
+- GitOps Governance
+- GitOps Security
+- Governance
+- Governance Blueprint
+- IaC
+- IaC GitOps
+- Legacy Systems
+- Observability
+- Org Change
+- Platform Engineering
+- Policy as Code
+- Policy as Code GitOps
+- Pulumi
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Terraform
+section_names:
+- devops
 ---
-
 Ekambar Kumar Singirikonda provides a comprehensive roadmap for enterprises aiming to modernize legacy infrastructure using GitOps. The article covers essential phases, automation, governance, and technical best practices to support a successful GitOps transformation.<!--excerpt_end-->
 
 # From Legacy to GitOps: A Roadmap for Enterprise Modernization

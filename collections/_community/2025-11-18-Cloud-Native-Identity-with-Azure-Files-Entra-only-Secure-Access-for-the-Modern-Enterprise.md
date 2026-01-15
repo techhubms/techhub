@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Cloud Native Identity with Azure Files: Entra-only Secure Access for the Modern Enterprise"
-description: "This announcement details the public preview of native Microsoft Entra-only identity support for Azure Files SMB, enabling cloud-based authentication without dependency on traditional Active Directory infrastructure. The content outlines benefits such as reduced operational overhead, modernized identity management, admin RBAC permissions, streamlined VDI support, and remote access scenarios, all fully managed in Azure. Real-world architecture examples illustrate how this feature can modernize enterprise storage, improve security, and support cloud-first strategies."
-author: "Priyanka-Gangal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/cloud-native-identity-with-azure-files-entra-only-secure-access/ba-p/4469778"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Cloud Native Identity with Azure Files: Entra-only Secure Access for the Modern Enterprise'
+author: Priyanka-Gangal
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/cloud-native-identity-with-azure-files-entra-only-secure-access/ba-p/4469778
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:41:59 +00:00
-permalink: "/2025-11-18-Cloud-Native-Identity-with-Azure-Files-Entra-only-Secure-Access-for-the-Modern-Enterprise.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Admin Roles", "Azure", "Azure Files", "Cloud Security", "Cloud Storage", "Community", "FSLogix", "Hybrid Identity", "Identity Management", "Microsoft Entra ID", "Operational Overhead", "RBAC", "Remote Work", "Security", "SMB Authentication", "Thin Client", "Virtual Desktop Infrastructure", "Zero Trust"]
-tags_normalized: ["active directory", "admin roles", "azure", "azure files", "cloud security", "cloud storage", "community", "fslogix", "hybrid identity", "identity management", "microsoft entra id", "operational overhead", "rbac", "remote work", "security", "smb authentication", "thin client", "virtual desktop infrastructure", "zero trust"]
+permalink: /azure/community/Cloud-Native-Identity-with-Azure-Files-Entra-only-Secure-Access-for-the-Modern-Enterprise
+tags:
+- Active Directory
+- Admin Roles
+- Azure
+- Azure Files
+- Cloud Security
+- Cloud Storage
+- Community
+- FSLogix
+- Hybrid Identity
+- Identity Management
+- Microsoft Entra ID
+- Operational Overhead
+- RBAC
+- Remote Work
+- Security
+- SMB Authentication
+- Thin Client
+- Virtual Desktop Infrastructure
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Priyanka-Gangal introduces the public preview of Entra-only identities for Azure Files, highlighting how cloud-native authentication streamlines secure access, reduces complexity, and modernizes enterprise storage infrastructure.<!--excerpt_end-->
 
 # Cloud Native Identity with Azure Files: Entra-only Secure Access for the Modern Enterprise

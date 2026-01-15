@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Simplify Image Signing and Verification with Notary Project and Trusted Signing (Public Preview)"
-description: "This guide by YiZha introduces how the Notary Project and Azure Trusted Signing can secure your software supply chain. It explains standards-based signing of container images, SBOMs, Helm charts, and AI models, along with automated verification in CI/CD pipelines, AKS, and deployment. The post covers the specifics of end-to-end image signing, enforcement in Azure Kubernetes Service, and improved certificate management for developers."
-author: "YiZha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-image-signing-and-verification-with-notary-project-and/ba-p/4455292"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Simplify Image Signing and Verification with Notary Project and Trusted Signing (Public Preview)
+author: YiZha
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-image-signing-and-verification-with-notary-project-and/ba-p/4455292
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 15:23:36 +00:00
-permalink: "/2025-09-25-Simplify-Image-Signing-and-Verification-with-Notary-Project-and-Trusted-Signing-Public-Preview.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Artifact Signing", "Azure", "Azure DevOps", "Azure Key Vault", "Azure Trusted Signing", "Certificate Management", "CI/CD Pipeline", "Community", "Container Image Security", "DevOps", "GitHub Actions", "Helm Charts", "Image Verification", "Notary Project", "Notation CLI", "OCI Artifacts", "Ratify", "SBOM", "Security", "Supply Chain Security"]
-tags_normalized: ["aks", "artifact signing", "azure", "azure devops", "azure key vault", "azure trusted signing", "certificate management", "cislashcd pipeline", "community", "container image security", "devops", "github actions", "helm charts", "image verification", "notary project", "notation cli", "oci artifacts", "ratify", "sbom", "security", "supply chain security"]
+permalink: /azure/community/Simplify-Image-Signing-and-Verification-with-Notary-Project-and-Trusted-Signing-Public-Preview
+tags:
+- AKS
+- Artifact Signing
+- Azure
+- Azure DevOps
+- Azure Key Vault
+- Azure Trusted Signing
+- Certificate Management
+- CI/CD Pipeline
+- Community
+- Container Image Security
+- DevOps
+- GitHub Actions
+- Helm Charts
+- Image Verification
+- Notary Project
+- Notation CLI
+- OCI Artifacts
+- Ratify
+- SBOM
+- Security
+- Supply Chain Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 YiZha details how to strengthen your supply chain security using Notary Project and Azure Trusted Signing. This walkthrough explores standard-based image signing and verification, and shows how developers can streamline certificate management for artifacts in Azure-focused pipelines.<!--excerpt_end-->
 
 # Simplify Image Signing and Verification with Notary Project and Trusted Signing (Public Preview)

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "What’s New in Microsoft Purview eDiscovery"
-description: "This update details the latest features in Microsoft Purview eDiscovery, focusing on efficiency and compliance improvements for legal and compliance teams. Topics include enhanced reporting, workflow automation, data source management, and new controls for exports and premium features—empowering teams managing regulatory inquiries, litigation, and investigations."
-author: "Aaron_Thorp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-security-community/what-s-new-in-microsoft-purview-ediscovery/ba-p/4441676"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: What’s New in Microsoft Purview eDiscovery
+author: Aaron_Thorp
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/what-s-new-in-microsoft-purview-ediscovery/ba-p/4441676
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 16:00:00 +00:00
-permalink: "/2025-08-11-Whats-New-in-Microsoft-Purview-eDiscovery.html"
-categories: ["Security"]
-tags: ["Audit Readiness", "Case Management", "Community", "Compliance", "Compliance Boundary", "Condition Builder", "Data Sources", "Decryption Settings", "Ediscovery", "Export Controls", "Legal Hold", "Logical Operators", "Microsoft 365 Compliance", "Microsoft Purview", "Modern Ediscovery", "Premium Features", "Reporting", "Search Duplication", "Security"]
-tags_normalized: ["audit readiness", "case management", "community", "compliance", "compliance boundary", "condition builder", "data sources", "decryption settings", "ediscovery", "export controls", "legal hold", "logical operators", "microsoft 365 compliance", "microsoft purview", "modern ediscovery", "premium features", "reporting", "search duplication", "security"]
+permalink: /security/community/Whats-New-in-Microsoft-Purview-eDiscovery
+tags:
+- Audit Readiness
+- Case Management
+- Community
+- Compliance
+- Compliance Boundary
+- Condition Builder
+- Data Sources
+- Decryption Settings
+- Ediscovery
+- Export Controls
+- Legal Hold
+- Logical Operators
+- Microsoft 365 Compliance
+- Microsoft Purview
+- Modern Ediscovery
+- Premium Features
+- Reporting
+- Search Duplication
+- Security
+section_names:
+- security
 ---
-
 Aaron_Thorp introduces the newest features and workflow enhancements in Microsoft Purview eDiscovery, aimed at streamlining case management and strengthening compliance and security for organizations.<!--excerpt_end-->
 
 # What’s New in Microsoft Purview eDiscovery

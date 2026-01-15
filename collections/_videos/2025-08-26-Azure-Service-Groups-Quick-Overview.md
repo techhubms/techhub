@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Azure Service Groups Quick Overview"
-description: "This short video from John Savill's Technical Training provides a concise overview of Azure Service Groups—a feature for organizing and managing Azure resources efficiently. The content highlights what Azure Service Groups are, their core capabilities, and where they fit in cloud resource management within the Microsoft Azure platform."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/E_-t-YjR2fk"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Azure Service Groups Quick Overview
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/shorts/E_-t-YjR2fk
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-26 18:55:48 +00:00
-permalink: "/2025-08-26-Azure-Service-Groups-Quick-Overview.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Cloud", "Azure Resource Management", "Azure Service Groups", "Cloud", "Cloud Architecture", "Cloud Computing", "Cloud Management", "Microsoft", "Microsoft Azure", "Resource Organization", "Technical Training", "Videos"]
-tags_normalized: ["azure", "azure cloud", "azure resource management", "azure service groups", "cloud", "cloud architecture", "cloud computing", "cloud management", "microsoft", "microsoft azure", "resource organization", "technical training", "videos"]
+permalink: /azure/videos/Azure-Service-Groups-Quick-Overview
+tags:
+- Azure
+- Azure Cloud
+- Azure Resource Management
+- Azure Service Groups
+- Cloud
+- Cloud Architecture
+- Cloud Computing
+- Cloud Management
+- Microsoft
+- Microsoft Azure
+- Resource Organization
+- Technical Training
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training presents a concise video outlining the fundamentals of Azure Service Groups for better cloud resource management on Microsoft Azure.<!--excerpt_end-->
 
 {% youtube E_-t-YjR2fk %}

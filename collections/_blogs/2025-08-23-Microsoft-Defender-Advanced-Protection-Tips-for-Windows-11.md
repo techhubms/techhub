@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Defender Advanced Protection Tips for Windows 11"
-description: "This guide provides practical steps to boost your Windows 11 security using Microsoft Defender Antivirus. It covers enabling advanced features like Controlled Folder Access, Tamper Protection, Exploit Protection, and more. The article is designed to help users enhance their system's defenses against modern cyber threats through built-in Microsoft security technologies."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Microsoft Defender Advanced Protection Tips for Windows 11
+author: Dellenny
+canonical_url: https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-23 07:39:27 +00:00
-permalink: "/2025-08-23-Microsoft-Defender-Advanced-Protection-Tips-for-Windows-11.html"
-categories: ["Security"]
-tags: ["Antivirus", "BitLocker", "Blogs", "Controlled Folder Access", "Data Backup", "Device Health", "Exploit Protection", "Microsoft Defender", "Network Protection", "Offline Scan", "Phishing Protection", "Ransomware Protection", "Security", "SmartScreen", "Tamper Protection", "Windows 11", "Windows Security"]
-tags_normalized: ["antivirus", "bitlocker", "blogs", "controlled folder access", "data backup", "device health", "exploit protection", "microsoft defender", "network protection", "offline scan", "phishing protection", "ransomware protection", "security", "smartscreen", "tamper protection", "windows 11", "windows security"]
+permalink: /security/blogs/Microsoft-Defender-Advanced-Protection-Tips-for-Windows-11
+tags:
+- Antivirus
+- BitLocker
+- Blogs
+- Controlled Folder Access
+- Data Backup
+- Device Health
+- Exploit Protection
+- Microsoft Defender
+- Network Protection
+- Offline Scan
+- Phishing Protection
+- Ransomware Protection
+- Security
+- SmartScreen
+- Tamper Protection
+- Windows 11
+- Windows Security
+section_names:
+- security
 ---
-
 Dellenny shares advanced tips for configuring Microsoft Defender Antivirus in Windows 11, empowering users to harden their PCs against evolving security threats using built-in protection features.<!--excerpt_end-->
 
 # Microsoft Defender Advanced Protection Tips for Windows 11

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Sprint to Imagine Cup: Igniting Innovation on Campus"
-description: "This news piece highlights the Sprint to Imagine Cup initiative, which brings together students, Microsoft Most Valuable Professionals (MVPs), and industry experts to foster hands-on learning with Microsoft AI technologies and GitHub Copilot. The events focus on empowering student developers globally, helping them develop AI solutions and enhance their coding skills through expert-led sessions and collaborative community engagement."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Sprint to Imagine Cup: Igniting Innovation on Campus'
+author: stclarke
+canonical_url: https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-28 16:55:08 +00:00
-permalink: "/2025-10-28-Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Education", "AI Solutions", "Coding", "Community Events", "Company News", "Education", "GitHub Copilot", "Hands On Learning", "Imagine Cup", "MCP", "Microsoft AI", "Microsoft Learn", "Microsoft MVP", "News", "Prototyping", "Student Developers", "Technical Skills", "University Collaboration"]
-tags_normalized: ["ai", "ai education", "ai solutions", "coding", "community events", "company news", "education", "github copilot", "hands on learning", "imagine cup", "mcp", "microsoft ai", "microsoft learn", "microsoft mvp", "news", "prototyping", "student developers", "technical skills", "university collaboration"]
+permalink: /github-copilot/news/Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus
+tags:
+- AI
+- AI Education
+- AI Solutions
+- Coding
+- Community Events
+- Company News
+- Education
+- GitHub Copilot
+- Hands On Learning
+- Imagine Cup
+- MCP
+- Microsoft AI
+- Microsoft Learn
+- Microsoft MVP
+- News
+- Prototyping
+- Student Developers
+- Technical Skills
+- University Collaboration
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 stclarke reports on Sprint to Imagine Cup, where students learn to leverage Microsoft AI technologies and GitHub Copilot through global, expert-led events, building technical and coding skills for meaningful impact.<!--excerpt_end-->
 
 # Sprint to Imagine Cup: Igniting Innovation on Campus

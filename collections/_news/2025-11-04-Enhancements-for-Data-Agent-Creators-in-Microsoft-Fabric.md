@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhancements for Data Agent Creators in Microsoft Fabric"
-description: "This post details significant new features for Data Agent creators in Microsoft Fabric, focusing on improved debugging tools, higher configuration limits, enhanced SDK validation, markdown support for instructions, and a flexible multi-tasking workflow. These upgrades help developers iterate quickly, author clear logic, and deliver more reliable data-driven agents."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Enhancements for Data Agent Creators in Microsoft Fabric
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-04 11:00:00 +00:00
-permalink: "/2025-11-04-Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agent Authoring", "Agent Configuration", "AI", "Azure", "Data Agent", "Data Science", "Debugging", "Development Tools", "Example Queries", "Few Shot Learning", "KQL", "Markdown", "Microsoft Fabric", "ML", "Multi Tasking", "News", "SDK", "SQL Validation"]
-tags_normalized: ["agent authoring", "agent configuration", "ai", "azure", "data agent", "data science", "debugging", "development tools", "example queries", "few shot learning", "kql", "markdown", "microsoft fabric", "ml", "multi tasking", "news", "sdk", "sql validation"]
+permalink: /ai/news/Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric
+tags:
+- Agent Authoring
+- Agent Configuration
+- AI
+- Azure
+- Data Agent
+- Data Science
+- Debugging
+- Development Tools
+- Example Queries
+- Few Shot Learning
+- KQL
+- Markdown
+- Microsoft Fabric
+- ML
+- Multi Tasking
+- News
+- SDK
+- SQL Validation
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog introduces powerful improvements for Data Agent creators, helping developers refine, debug, and structure their agents more efficiently using enhanced SDK tools and markdown-based configuration.<!--excerpt_end-->
 
 # Creator Improvements in the Data Agent

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "What is Azure AI Foundry Local?"
-description: "This video, featuring Dona Sarkar from Microsoft, introduces Azure AI Foundry Local—a solution for running AI models on local hardware instead of in the cloud. It explores how this approach can improve privacy, security, and enable offline AI-powered applications using Microsoft's AI technology stack."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=N1paWARiUcI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: What is Azure AI Foundry Local?
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=N1paWARiUcI
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 16:49:13 +00:00
-permalink: "/2025-10-22-What-is-Azure-AI-Foundry-Local.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Model Deployment", "Azure", "Azure AI Foundry Local", "Dona Sarkar", "Edge Computing", "Microsoft Azure", "Offline AI", "On Premises AI", "Privacy", "Videos"]
-tags_normalized: ["ai", "ai infrastructure", "ai model deployment", "azure", "azure ai foundry local", "dona sarkar", "edge computing", "microsoft azure", "offline ai", "on premises ai", "privacy", "videos"]
+permalink: /ai/videos/What-is-Azure-AI-Foundry-Local
+tags:
+- AI
+- AI Infrastructure
+- AI Model Deployment
+- Azure
+- Azure AI Foundry Local
+- Dona Sarkar
+- Edge Computing
+- Microsoft Azure
+- Offline AI
+- On Premises AI
+- Privacy
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer’s Dona Sarkar introduces Azure AI Foundry Local, highlighting its benefits for privacy, security, and offline AI scenarios by allowing local execution of advanced AI models.<!--excerpt_end-->
 
 {% youtube N1paWARiUcI %}

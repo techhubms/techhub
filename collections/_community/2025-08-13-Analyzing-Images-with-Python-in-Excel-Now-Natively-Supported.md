@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Analyzing Images with Python in Excel: Now Natively Supported"
-description: "This article introduces a new feature in Microsoft Excel that enables users to analyze images directly within Excel using Python. The capability is available for Windows, Mac, and Excel for the Web, and leverages libraries such as Pillow, NumPy, and SciPy. Users can insert images into cells and execute Python code to analyze or manipulate them, unlocking new workflows for data analysis and reporting. The article walks through a practical example of detecting blurry images and provides additional scenarios, tips, and feature availability information."
-author: "ndeyanta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+layout: post
+title: 'Analyzing Images with Python in Excel: Now Natively Supported'
+author: ndeyanta
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 15:45:03 +00:00
-permalink: "/2025-08-13-Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported.html"
-categories: ["Coding"]
-tags: ["Coding", "Community", "Computer Vision", "Data Science", "Excel Data Analysis", "Excel For Mac", "Excel For The Web", "Excel For Windows", "Image Analysis", "Image Manipulation", "Microsoft 365", "Microsoft Excel", "NumPy", "Pillow", "Python in Excel", "SciPy", "Xl() Function"]
-tags_normalized: ["coding", "community", "computer vision", "data science", "excel data analysis", "excel for mac", "excel for the web", "excel for windows", "image analysis", "image manipulation", "microsoft 365", "microsoft excel", "numpy", "pillow", "python in excel", "scipy", "xl function"]
+permalink: /coding/community/Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported
+tags:
+- Coding
+- Community
+- Computer Vision
+- Data Science
+- Excel Data Analysis
+- Excel For Mac
+- Excel For The Web
+- Excel For Windows
+- Image Analysis
+- Image Manipulation
+- Microsoft 365
+- Microsoft Excel
+- NumPy
+- Pillow
+- Python in Excel
+- SciPy
+- Xl() Function
+section_names:
+- coding
 ---
-
 Ndeyanta Jallow introduces a powerful new feature in Microsoft Excel allowing users to analyze images programmatically using Python, demonstrating how developers can leverage common libraries for image analysis workflows.<!--excerpt_end-->
 
 # Analyzing Images with Python in Excel: Now Natively Supported

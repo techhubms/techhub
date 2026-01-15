@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Elevate DevEx 2.0 with Continuous Security Across the SDLC"
-description: "This session from Microsoft Ignite 2025 showcases how continuous security practices can be embedded into the developer workflow using Azure and GitHub pipelines. It covers IDE coaching, SAST at commit, SBOM generation, container scanning, dependency checks, and integration with Microsoft Copilot and Azure OpenAI for actionable security fixes. Additional focus includes DAST, API testing, and AI-driven triage to enhance developer experience and speed up secure delivery."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3L3ve-vuyes"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Elevate DevEx 2.0 with Continuous Security Across the SDLC
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=3L3ve-vuyes
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:22:05 +00:00
-permalink: "/2025-11-19-Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Driven Triage", "API Testing", "AppScan", "Azure", "Azure OpenAI", "Container Scanning", "Continuous Security", "DAST", "Dependency Checks", "DevEx 2.0", "DevOps", "GitHub Pipelines", "GPT 5", "IDE Coaching", "Microsoft Copilot", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Risk Tracking", "SAST", "SBOM", "Security", "Security Alignment", "Videos"]
-tags_normalized: ["ai", "ai driven triage", "api testing", "appscan", "azure", "azure openai", "container scanning", "continuous security", "dast", "dependency checks", "devex 2dot0", "devops", "github pipelines", "gpt 5", "ide coaching", "microsoft copilot", "modernizesecopswithaunifiedplatform", "msignite", "risk tracking", "sast", "sbom", "security", "security alignment", "videos"]
+permalink: /ai/videos/Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC
+tags:
+- AI
+- AI Driven Triage
+- API Testing
+- AppScan
+- Azure
+- Azure OpenAI
+- Container Scanning
+- Continuous Security
+- DAST
+- Dependency Checks
+- DevEx 2.0
+- DevOps
+- GitHub Pipelines
+- GPT 5
+- IDE Coaching
+- Microsoft Copilot
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Risk Tracking
+- SAST
+- SBOM
+- Security
+- Security Alignment
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Presented by Microsoft Events at Microsoft Ignite 2025, this session led by Colin Bell demonstrates embedding continuous security into DevOps workflows and leveraging AI for actionable security fixes in code.<!--excerpt_end-->
 
 {% youtube 3L3ve-vuyes %}

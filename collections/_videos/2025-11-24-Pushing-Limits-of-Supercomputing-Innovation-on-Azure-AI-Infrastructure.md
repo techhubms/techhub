@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure"
-description: "This session from Microsoft Ignite 2025 dives into how Azure validates supercomputing capabilities, focusing on GPU kernels, large language model pretraining (like LLAMA), and large-scale AI model training. It highlights the technical strategies used to identify bottlenecks, optimize performance, and ensure readiness for massive multi-billion parameter AI models in Azure. The presentation covers real-world infrastructure—compute, networking, storage, and managed services—along with hands-on insights from Azure engineers."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_NRldsqv__w"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=_NRldsqv__w
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:42:11 +00:00
-permalink: "/2025-11-24-Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Validation", "Azure", "Azure AI Infrastructure", "Cloud Compute", "Data Ingestion", "GB200", "GB300", "GPU Kernels", "GRAC 314B", "H100", "Large Language Models", "LLAMA Pretraining", "Microsoft Ignite", "Migrateandmodernizeyourestate", "ML", "Model Training", "MSIgnite", "Multi Billion Parameter Models", "Performance Optimization", "Supercomputing", "Videos"]
-tags_normalized: ["ai", "ai validation", "azure", "azure ai infrastructure", "cloud compute", "data ingestion", "gb200", "gb300", "gpu kernels", "grac 314b", "h100", "large language models", "llama pretraining", "microsoft ignite", "migrateandmodernizeyourestate", "ml", "model training", "msignite", "multi billion parameter models", "performance optimization", "supercomputing", "videos"]
+permalink: /ai/videos/Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure
+tags:
+- AI
+- AI Validation
+- Azure
+- Azure AI Infrastructure
+- Cloud Compute
+- Data Ingestion
+- GB200
+- GB300
+- GPU Kernels
+- GRAC 314B
+- H100
+- Large Language Models
+- LLAMA Pretraining
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- ML
+- Model Training
+- MSIgnite
+- Multi Billion Parameter Models
+- Performance Optimization
+- Supercomputing
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Events engineers present an in-depth overview of Azure’s supercomputing infrastructure, offering practical strategies and bottleneck detection for large-scale AI model training.<!--excerpt_end-->
 
 {% youtube _NRldsqv__w %}

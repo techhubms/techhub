@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Working with Stacked Branches in Git: Strategies and Best Practices"
-description: "Andrew Lock explores the advantages of using stacked branches and stacked pull requests (PRs) for larger feature development in Git. The post covers the rationale, practical benefits, and detailed methods—including interactive rebase and git-absorb—for managing changes in stacked branches."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/working-with-stacked-branches-in-git-part-1/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Working with Stacked Branches in Git: Strategies and Best Practices'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-1/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-17 09:00:00 +00:00
-permalink: "/2025-06-17-Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices.html"
-categories: ["DevOps"]
-tags: ["Automation", "Blogs", "Branch Management", "Code Review", "DevOps", "Git", "Git Absorb", "Interactive Rebase", "JetBrains Rider", "Modular Commits", "Pull Requests", "Software Development", "Stacked Branches", "Workflow"]
-tags_normalized: ["automation", "blogs", "branch management", "code review", "devops", "git", "git absorb", "interactive rebase", "jetbrains rider", "modular commits", "pull requests", "software development", "stacked branches", "workflow"]
+permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices
+tags:
+- Automation
+- Blogs
+- Branch Management
+- Code Review
+- DevOps
+- Git
+- Git Absorb
+- Interactive Rebase
+- JetBrains Rider
+- Modular Commits
+- Pull Requests
+- Software Development
+- Stacked Branches
+- Workflow
+section_names:
+- devops
 ---
-
 In this post, Andrew Lock delves into the use of stacked branches and PRs in Git, outlining practical workflows and tools for managing complex feature development efficiently.<!--excerpt_end-->
 
 # Working with Stacked Branches in Git (Part 1)

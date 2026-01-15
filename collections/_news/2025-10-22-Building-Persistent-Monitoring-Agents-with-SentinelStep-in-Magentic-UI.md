@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building Persistent Monitoring Agents with SentinelStep in Magentic-UI"
-description: "This article introduces SentinelStep, a new mechanism within Magentic-UI—a Microsoft research prototype—that allows AI agents to perform long-running monitoring tasks by addressing polling frequency and context overflow issues. It details how SentinelStep operates, its evaluation challenges, and its open-source availability for developers and researchers interested in agentic AI systems on Microsoft platforms."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Building Persistent Monitoring Agents with SentinelStep in Magentic-UI
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-22 15:43:25 +00:00
-permalink: "/2025-10-22-Building-Persistent-Monitoring-Agents-with-SentinelStep-in-Magentic-UI.html"
-categories: ["AI"]
-tags: ["Agent Workflow", "AI", "AI Evaluation", "AI Governance", "Company News", "Context Management", "GitHub", "LLM Agents", "Magentic UI", "Microsoft Research", "Monitoring Agents", "News", "pip Install", "Polling", "Python", "SentinelBench", "SentinelStep"]
-tags_normalized: ["agent workflow", "ai", "ai evaluation", "ai governance", "company news", "context management", "github", "llm agents", "magentic ui", "microsoft research", "monitoring agents", "news", "pip install", "polling", "python", "sentinelbench", "sentinelstep"]
+permalink: /ai/news/Building-Persistent-Monitoring-Agents-with-SentinelStep-in-Magentic-UI
+tags:
+- Agent Workflow
+- AI
+- AI Evaluation
+- AI Governance
+- Company News
+- Context Management
+- GitHub
+- LLM Agents
+- Magentic UI
+- Microsoft Research
+- Monitoring Agents
+- News
+- pip Install
+- Polling
+- Python
+- SentinelBench
+- SentinelStep
+section_names:
+- ai
 ---
-
 stclarke discusses SentinelStep in Magentic-UI, a Microsoft research effort to create AI agents capable of persistent, efficient monitoring tasks, with real-world evaluation and open-source availability.<!--excerpt_end-->
 
 # Building Persistent Monitoring Agents with SentinelStep in Magentic-UI

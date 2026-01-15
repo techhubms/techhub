@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Shortcut Introduces Korey AI Agent for Software Project Management"
-description: "Mike Vizard explores the introduction of Korey, an AI agent developed by Shortcut to orchestrate software development projects. Korey automates project planning, tracking, and workflow orchestration by converting natural language ideas into actionable tasks and providing real-time project insights for DevOps and engineering teams."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/shortcut-adds-ai-agent-to-orchestrate-management-of-software-development-projects/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Shortcut Introduces Korey AI Agent for Software Project Management
+author: Mike Vizard
+canonical_url: https://devops.com/shortcut-adds-ai-agent-to-orchestrate-management-of-software-development-projects/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-02 17:17:53 +00:00
-permalink: "/2025-10-02-Shortcut-Introduces-Korey-AI-Agent-for-Software-Project-Management.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agent", "AI Agents For Software Development", "AI in Project Tracking", "AI Powered Product Management", "AI Project Management", "Automation", "Blogs", "Business Of DevOps", "DevOps", "DevOps Automation", "Engineering Productivity", "Engineering Workflows", "Jira Alternative", "Korey", "Natural Language Processing", "Natural Language To Project Plans", "Product Management", "Project Management", "Shortcut", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Software Engineering Productivity", "Task Tracking", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai agent", "ai agents for software development", "ai in project tracking", "ai powered product management", "ai project management", "automation", "blogs", "business of devops", "devops", "devops automation", "engineering productivity", "engineering workflows", "jira alternative", "korey", "natural language processing", "natural language to project plans", "product management", "project management", "shortcut", "social facebook", "social linkedin", "social x", "software engineering", "software engineering productivity", "task tracking", "workflow orchestration"]
+permalink: /ai/blogs/Shortcut-Introduces-Korey-AI-Agent-for-Software-Project-Management
+tags:
+- AI
+- AI Agent
+- AI Agents For Software Development
+- AI in Project Tracking
+- AI Powered Product Management
+- AI Project Management
+- Automation
+- Blogs
+- Business Of DevOps
+- DevOps
+- DevOps Automation
+- Engineering Productivity
+- Engineering Workflows
+- Jira Alternative
+- Korey
+- Natural Language Processing
+- Natural Language To Project Plans
+- Product Management
+- Project Management
+- Shortcut
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Engineering
+- Software Engineering Productivity
+- Task Tracking
+- Workflow Orchestration
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard discusses how Korey, the new Shortcut AI agent, empowers DevOps and software engineering teams to streamline project planning and management through automation and intelligent workflow orchestration.<!--excerpt_end-->
 
 # Shortcut Introduces Korey AI Agent for Software Project Management

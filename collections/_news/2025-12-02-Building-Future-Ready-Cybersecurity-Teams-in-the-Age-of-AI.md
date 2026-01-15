@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building Future-Ready Cybersecurity Teams in the Age of AI"
-description: "This article by Ann Johnson explores how the rise of AI is transforming cybersecurity, creating both new dangers and new demands for security teams. It emphasizes the urgency of evolving talent strategies, recruitment, onboarding, and continual upskilling to ensure organizations have resilient, adaptable defenders against AI-powered threats. The content highlights Microsoft’s perspective on talent development, practical guidance for CISOs, HR leaders, and academic partners, and industry-wide best practices for securing the future."
-author: "Ann Johnson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Building Future-Ready Cybersecurity Teams in the Age of AI
+author: Ann Johnson
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-02 17:00:00 +00:00
-permalink: "/2025-12-02-Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI.html"
-categories: ["AI", "Security"]
-tags: ["Adaptive Defenders", "AI", "AI in Security", "CISO", "Continuous Learning", "Cybersecurity Teams", "Cyberthreats", "Deepfakes", "Diversity Of Thought", "Hiring Practices", "Malware", "Microsoft Security", "News", "Onboarding", "Phishing", "Retention", "Secure Future Initiative", "Security", "Security Culture", "Security Leadership", "Talent Strategy", "Threat Intelligence", "Upskilling"]
-tags_normalized: ["adaptive defenders", "ai", "ai in security", "ciso", "continuous learning", "cybersecurity teams", "cyberthreats", "deepfakes", "diversity of thought", "hiring practices", "malware", "microsoft security", "news", "onboarding", "phishing", "retention", "secure future initiative", "security", "security culture", "security leadership", "talent strategy", "threat intelligence", "upskilling"]
+permalink: /ai/news/Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI
+tags:
+- Adaptive Defenders
+- AI
+- AI in Security
+- CISO
+- Continuous Learning
+- Cybersecurity Teams
+- Cyberthreats
+- Deepfakes
+- Diversity Of Thought
+- Hiring Practices
+- Malware
+- Microsoft Security
+- News
+- Onboarding
+- Phishing
+- Retention
+- Secure Future Initiative
+- Security
+- Security Culture
+- Security Leadership
+- Talent Strategy
+- Threat Intelligence
+- Upskilling
+section_names:
+- ai
+- security
 ---
-
 Ann Johnson outlines strategies for building resilient cybersecurity teams that can tackle AI-powered cyberthreats, with emphasis on talent development, recruitment, and continual learning in a rapidly changing landscape.<!--excerpt_end-->
 
 # Building Future-Ready Cybersecurity Teams in the Age of AI

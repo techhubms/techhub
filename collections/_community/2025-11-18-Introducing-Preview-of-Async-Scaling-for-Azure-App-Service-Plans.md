@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Introducing Preview of Async Scaling for Azure App Service Plans"
-description: "This article introduces the preview release of asynchronous scaling for Azure App Service Plans. It explains the challenges previously faced when scaling out large instance counts, how the new async scaling capability improves user experience, and provides detailed CLI usage examples for both plan creation and scaling out. Support for all but free/shared SKUs is covered, and the feature is available via ARM/CLI and rolling out to the Azure Portal."
-author: "apwestgarth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-preview-of-async-scaling-for-app-service-plans/ba-p/4469680"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Introducing Preview of Async Scaling for Azure App Service Plans
+author: apwestgarth
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-preview-of-async-scaling-for-app-service-plans/ba-p/4469680
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:12:17 +00:00
-permalink: "/2025-11-18-Introducing-Preview-of-Async-Scaling-for-Azure-App-Service-Plans.html"
-categories: ["Azure"]
-tags: ["App Service Plan", "ARM", "Async Scaling", "Azure", "Azure App Service", "Azure CLI", "Cloud Scalability", "Community", "Linux", "Platform as A Service", "Preview Feature", "Provisioning", "Resource Management", "Scaling", "Web Apps", "Windows"]
-tags_normalized: ["app service plan", "arm", "async scaling", "azure", "azure app service", "azure cli", "cloud scalability", "community", "linux", "platform as a service", "preview feature", "provisioning", "resource management", "scaling", "web apps", "windows"]
+permalink: /azure/community/Introducing-Preview-of-Async-Scaling-for-Azure-App-Service-Plans
+tags:
+- App Service Plan
+- ARM
+- Async Scaling
+- Azure
+- Azure App Service
+- Azure CLI
+- Cloud Scalability
+- Community
+- Linux
+- Platform as A Service
+- Preview Feature
+- Provisioning
+- Resource Management
+- Scaling
+- Web Apps
+- Windows
+section_names:
+- azure
 ---
-
 apwestgarth presents a preview of async scaling for Azure App Service Plans, describing how this update streamlines scaling out large numbers of instances and guides users in using the new feature with detailed CLI commands.<!--excerpt_end-->
 
 # Introducing Preview of Async Scaling for Azure App Service Plans

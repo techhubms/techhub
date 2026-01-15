@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever"
-description: "This news post announces two significant updates to the OpenAPI.NET library—v2 and v3—introducing support for the latest OpenAPI specifications, improved performance, and expanded features tailored for the .NET ecosystem. Developers will benefit from faster parsing, better memory usage, and robust new capabilities for API documentation and tooling."
-author: "Darrel Miller, Rachit Kumar Malik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/"
-viewing_mode: "external"
-feed_name: "Microsoft OpenAPI Blog"
-feed_url: "https://devblogs.microsoft.com/openapi/feed/"
+﻿---
+layout: post
+title: 'OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever'
+author: Darrel Miller, Rachit Kumar Malik
+canonical_url: https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/
+viewing_mode: external
+feed_name: Microsoft OpenAPI Blog
+feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2025-11-13 20:53:01 +00:00
-permalink: "/2025-11-13-OpenAPINET-v2-and-v3-Major-Release-The-Biggest-Update-Ever.html"
-categories: ["Coding"]
-tags: [".NET", "API Documentation", "ASP.NET Core", "Coding", "Microsoft", "News", "NSwag", "Open Source", "OpenAPI", "OpenAPI Specification", "OpenAPI V3.1", "OpenAPI V3.2", "OpenAPI.NET", "Performance Optimization", "Semantic Kernel", "Serialization", "Swashbuckle", "System.Text.Json"]
-tags_normalized: ["dotnet", "api documentation", "aspdotnet core", "coding", "microsoft", "news", "nswag", "open source", "openapi", "openapi specification", "openapi v3dot1", "openapi v3dot2", "openapidotnet", "performance optimization", "semantic kernel", "serialization", "swashbuckle", "systemdottextdotjson"]
+permalink: /coding/news/OpenAPINET-v2-and-v3-Major-Release-The-Biggest-Update-Ever
+tags:
+- .NET
+- API Documentation
+- ASP.NET Core
+- Coding
+- Microsoft
+- News
+- NSwag
+- Open Source
+- OpenAPI
+- OpenAPI Specification
+- OpenAPI V3.1
+- OpenAPI V3.2
+- OpenAPI.NET
+- Performance Optimization
+- Semantic Kernel
+- Serialization
+- Swashbuckle
+- System.Text.Json
+section_names:
+- coding
 ---
-
 Darrel Miller and Rachit Kumar Malik announce the largest update ever to OpenAPI.NET, bringing major performance, compatibility, and feature enhancements to help .NET developers keep pace with modern API standards.<!--excerpt_end-->
 
 # OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever

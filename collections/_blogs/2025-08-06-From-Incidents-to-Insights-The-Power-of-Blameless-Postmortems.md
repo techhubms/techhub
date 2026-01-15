@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "From Incidents to Insights: The Power of Blameless Postmortems"
-description: "Jyostna Seelam explores the importance of blameless postmortems in DevOps, emphasizing psychological safety, structured preparation, system-based analysis, and continuous improvement. The article guides teams on turning incidents into learning opportunities, creating resilient cultures, and strengthening systems through collaborative and transparent post-incident reviews."
-author: "Jyostna Seelam"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/?utm_source=rss&utm_medium=rss&utm_campaign=from-incidents-to-insights-the-power-of-blameless-postmortems"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'From Incidents to Insights: The Power of Blameless Postmortems'
+author: Jyostna Seelam
+canonical_url: https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/?utm_source=rss&utm_medium=rss&utm_campaign=from-incidents-to-insights-the-power-of-blameless-postmortems
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-06 08:55:38 +00:00
-permalink: "/2025-08-06-From-Incidents-to-Insights-The-Power-of-Blameless-Postmortems.html"
-categories: ["DevOps"]
-tags: ["Accountability", "Blameless Post Mortem", "Blogs", "Business Of DevOps", "Continuous Improvement", "Contributed Content", "DevOps", "DevOps Culture", "Incident Response", "Post Mortem Best Practices", "Psychological Safety", "Root Cause Analysis", "Social Facebook", "Social LinkedIn", "Social X", "Systemic Failure", "Team Collaboration"]
-tags_normalized: ["accountability", "blameless post mortem", "blogs", "business of devops", "continuous improvement", "contributed content", "devops", "devops culture", "incident response", "post mortem best practices", "psychological safety", "root cause analysis", "social facebook", "social linkedin", "social x", "systemic failure", "team collaboration"]
+permalink: /devops/blogs/From-Incidents-to-Insights-The-Power-of-Blameless-Postmortems
+tags:
+- Accountability
+- Blameless Post Mortem
+- Blogs
+- Business Of DevOps
+- Continuous Improvement
+- Contributed Content
+- DevOps
+- DevOps Culture
+- Incident Response
+- Post Mortem Best Practices
+- Psychological Safety
+- Root Cause Analysis
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Systemic Failure
+- Team Collaboration
+section_names:
+- devops
 ---
-
 In this insightful article, Jyostna Seelam discusses how blameless postmortems transform DevOps incidents into powerful learning and improvement opportunities, driving team resilience.<!--excerpt_end-->
 
 # From Incidents to Insights: The Power of Blameless Postmortems

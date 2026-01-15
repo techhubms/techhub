@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Build Secure Agentic AI Apps with SQL Server 2025"
-description: "This Microsoft Ignite 2025 session highlights how Ivanti leverages SQL Server 2025’s built-in AI capabilities, including vectorization, embeddings, and agentic AI, to transform IT service management within the enterprise. Speakers discuss the platform’s security, performance, and availability enhancements and the vision behind 'One Consistent SQL for the Era of AI.' The session also addresses developer certifications, trust and guardrails in AI adoption, and integration challenges with alternative vector databases."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rjBdWnz0Kdg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Build Secure Agentic AI Apps with SQL Server 2025
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=rjBdWnz0Kdg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:27:24 +00:00
-permalink: "/2025-11-24-Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025.html"
-categories: ["AI", "Coding"]
-tags: ["Agentic AI", "AI", "AI Capabilities", "Alternative Vector Databases", "Availability", "ChromaDB", "Coding", "Developer Certification", "Embeddings", "Enterprise IT", "Microsoft Ignite", "MSIgnite", "Other", "Performance", "Pinecone", "Service Management", "SQL Server", "Vectorization", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai capabilities", "alternative vector databases", "availability", "chromadb", "coding", "developer certification", "embeddings", "enterprise it", "microsoft ignite", "msignite", "other", "performance", "pinecone", "service management", "sql server", "vectorization", "videos"]
+permalink: /ai/videos/Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025
+tags:
+- Agentic AI
+- AI
+- AI Capabilities
+- Alternative Vector Databases
+- Availability
+- ChromaDB
+- Coding
+- Developer Certification
+- Embeddings
+- Enterprise IT
+- Microsoft Ignite
+- MSIgnite
+- Other
+- Performance
+- Pinecone
+- Service Management
+- SQL Server
+- Vectorization
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Microsoft Events presents a session featuring Anna Hoffman and Sirjad Parakkat on how Ivanti utilizes SQL Server 2025’s agentic AI features to enhance service management and simplify IT operations.<!--excerpt_end-->
 
 {% youtube rjBdWnz0Kdg %}

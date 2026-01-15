@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Zero Trust Workshop: Implementing Microsoft's Security Framework"
-description: "This free workshop by John Savill's Technical Training provides an actionable plan to implement Zero Trust using Microsoft technologies. Covering fundamentals, NIST mapping, assessment tools, and step-by-step roadmaps per pillar, the workshop is tailored for technical professionals seeking practical guidance on securing modern cloud environments with Microsoft Entra, Intune, and Sentinel."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xVWr1ml47_g"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=xVWr1ml47_g
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-03 15:35:20 +00:00
-permalink: "/2025-09-03-Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework.html"
-categories: ["Azure", "Security"]
-tags: ["Assessment Tools", "Azure", "Azure Security", "Cloud", "Cloud Security", "Entra", "Intune", "Microsoft", "Microsoft Entra", "Microsoft Security", "Microsoft Sentinel", "NIST", "Security", "Security Roadmap", "Security Workshop", "Sentinel", "Videos", "Zero Trust"]
-tags_normalized: ["assessment tools", "azure", "azure security", "cloud", "cloud security", "entra", "intune", "microsoft", "microsoft entra", "microsoft security", "microsoft sentinel", "nist", "security", "security roadmap", "security workshop", "sentinel", "videos", "zero trust"]
+permalink: /azure/videos/Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework
+tags:
+- Assessment Tools
+- Azure
+- Azure Security
+- Cloud
+- Cloud Security
+- Entra
+- Intune
+- Microsoft
+- Microsoft Entra
+- Microsoft Security
+- Microsoft Sentinel
+- NIST
+- Security
+- Security Roadmap
+- Security Workshop
+- Sentinel
+- Videos
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 John Savill presents a comprehensive Zero Trust workshop, offering actionable steps and tools for implementing Microsoft's security model. The session covers core principles, NIST mappings, and integration with Entra, Intune, and Sentinel.<!--excerpt_end-->
 
 {% youtube xVWr1ml47_g %}

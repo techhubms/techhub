@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Make Sense of Your Output Window with Copilot in Visual Studio"
-description: "This article introduces a new integration between GitHub Copilot and the Output Window in Visual Studio 17.14. Developers can now highlight logs directly in the Output Window and ask Copilot for explanations or troubleshooting help, streamlining the debugging process. The post walks through how the feature works, its benefits for productivity, and where to find more resources about Visual Studio enhancements."
-author: "Jessie Houghton"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: Make Sense of Your Output Window with Copilot in Visual Studio
+author: Jessie Houghton
+canonical_url: https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-04 12:00:38 +00:00
-permalink: "/2025-09-04-Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Build Logs", "Coding", "Context", "Copilot Chat", "Debug", "Debugging", "Developer Tools", "Development Productivity", "Error Resolution", "GitHub Copilot", "GitHub Copilot Chat", "IDE Features", "Log Analysis", "Microsoft", "News", "Output Window", "Visual Studio 17.14", "VS"]
-tags_normalized: ["ai", "build logs", "coding", "context", "copilot chat", "debug", "debugging", "developer tools", "development productivity", "error resolution", "github copilot", "github copilot chat", "ide features", "log analysis", "microsoft", "news", "output window", "visual studio 17dot14", "vs"]
+permalink: /github-copilot/news/Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio
+tags:
+- AI
+- Build Logs
+- Coding
+- Context
+- Copilot Chat
+- Debug
+- Debugging
+- Developer Tools
+- Development Productivity
+- Error Resolution
+- GitHub Copilot
+- GitHub Copilot Chat
+- IDE Features
+- Log Analysis
+- Microsoft
+- News
+- Output Window
+- Visual Studio 17.14
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Jessie Houghton showcases how GitHub Copilot's new Output Window context in Visual Studio allows developers to interact with build and debug logs, improving troubleshooting and workflow efficiency.<!--excerpt_end-->
 
 # Make Sense of Your Output Window with Copilot in Visual Studio

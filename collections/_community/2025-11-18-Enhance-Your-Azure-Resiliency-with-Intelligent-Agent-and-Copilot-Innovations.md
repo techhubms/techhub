@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations"
-description: "This article from rochakm covers new Azure capabilities introduced at Microsoft Ignite 2025, focusing on infrastructure resiliency, data protection, and cyber recovery. It highlights the Azure Copilot resiliency agent, AI-powered automation, vault soft delete, and security features such as Microsoft Defender for Cloud integration. Learn how to use guided automation for zonal resilience, backup management, and disaster recovery in cloud-first environments, with actionable guidance for technical professionals seeking to maintain business continuity and high availability."
-author: "rochakm"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations
+author: rochakm
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:03:51 +00:00
-permalink: "/2025-11-18-Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Azure Backup", "Azure Copilot", "Azure Site Recovery", "Community", "Compliance", "Cyber Recovery", "Data Resiliency", "Disaster Recovery", "High Availability", "Immutability", "Infrastructure Resiliency", "Microsoft Defender For Cloud", "Microsoft Ignite", "Operations Center", "Recovery Services Vault", "Security", "Vault Soft Delete", "Zonal Architecture"]
-tags_normalized: ["ai", "azure", "azure backup", "azure copilot", "azure site recovery", "community", "compliance", "cyber recovery", "data resiliency", "disaster recovery", "high availability", "immutability", "infrastructure resiliency", "microsoft defender for cloud", "microsoft ignite", "operations center", "recovery services vault", "security", "vault soft delete", "zonal architecture"]
+permalink: /ai/community/Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations
+tags:
+- AI
+- Azure
+- Azure Backup
+- Azure Copilot
+- Azure Site Recovery
+- Community
+- Compliance
+- Cyber Recovery
+- Data Resiliency
+- Disaster Recovery
+- High Availability
+- Immutability
+- Infrastructure Resiliency
+- Microsoft Defender For Cloud
+- Microsoft Ignite
+- Operations Center
+- Recovery Services Vault
+- Security
+- Vault Soft Delete
+- Zonal Architecture
+section_names:
+- ai
+- azure
+- security
 ---
-
 rochakm presents a technical overview of the latest Azure resiliency and recovery capabilities, including the Azure Copilot agent and integrated security features, designed for architects and engineers at Ignite 2025.<!--excerpt_end-->
 
 # Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Azure AI is Revolutionizing Supply Chain Forecasting and Inventory"
-description: "This article explains how Azure AI is transforming supply chain forecasting and inventory management. It covers traditional forecasting challenges and details the role of Azure Synapse Analytics, Azure Machine Learning, Azure IoT Hub, Azure Digital Twins, and Power BI in creating intelligent, real-time, and adaptive solutions for modern enterprises, resulting in lower costs and increased resilience."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and-inventory/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How Azure AI is Revolutionizing Supply Chain Forecasting and Inventory
+author: Dellenny
+canonical_url: https://dellenny.com/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and-inventory/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-29 09:10:39 +00:00
-permalink: "/2025-09-29-How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AutoML", "Azure", "Azure AI", "Azure Cognitive Services", "Azure Data Factory", "Azure Digital Twins", "Azure IoT Hub", "Azure Machine Learning", "Azure Stream Analytics", "Azure Synapse Analytics", "Blogs", "Demand Forecasting", "Inventory Management", "ML", "Power BI", "Predictive Analytics", "Real Time Data", "Supply Chain", "Time Series Analysis"]
-tags_normalized: ["ai", "automl", "azure", "azure ai", "azure cognitive services", "azure data factory", "azure digital twins", "azure iot hub", "azure machine learning", "azure stream analytics", "azure synapse analytics", "blogs", "demand forecasting", "inventory management", "ml", "power bi", "predictive analytics", "real time data", "supply chain", "time series analysis"]
+permalink: /ai/blogs/How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory
+tags:
+- AI
+- AutoML
+- Azure
+- Azure AI
+- Azure Cognitive Services
+- Azure Data Factory
+- Azure Digital Twins
+- Azure IoT Hub
+- Azure Machine Learning
+- Azure Stream Analytics
+- Azure Synapse Analytics
+- Blogs
+- Demand Forecasting
+- Inventory Management
+- ML
+- Power BI
+- Predictive Analytics
+- Real Time Data
+- Supply Chain
+- Time Series Analysis
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Dellenny explores how Azure AI and related Microsoft cloud services are revolutionizing supply chain forecasting and inventory management by enabling smarter, real-time, and adaptive decision-making.<!--excerpt_end-->
 
 # How Azure AI is Revolutionizing Supply Chain Forecasting and Inventory

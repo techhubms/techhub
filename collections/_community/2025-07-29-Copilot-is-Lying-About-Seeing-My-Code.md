@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Copilot is Lying About Seeing My Code"
-description: "The author recounts an experience where GitHub Copilot appeared to reference their specific code, raising concerns about Copilot's claim that it cannot see user code. Despite Copilot's assurances, the author is skeptical, questioning the AI's transparency regarding code access and contextual suggestions."
-author: "KingPvzYT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mc7cof/copilot_is_lying_about_seeing_my_code/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Copilot is Lying About Seeing My Code
+author: KingPvzYT
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mc7cof/copilot_is_lying_about_seeing_my_code/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-29 09:59:08 +00:00
-permalink: "/2025-07-29-Copilot-is-Lying-About-Seeing-My-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistants", "Bug Fixing", "Code Analysis", "Code Completion", "Code Privacy", "Code Suggestion", "Coding", "Community", "GitHub Copilot", "Searchbar", "User Experience", "VS"]
-tags_normalized: ["ai", "ai assistants", "bug fixing", "code analysis", "code completion", "code privacy", "code suggestion", "coding", "community", "github copilot", "searchbar", "user experience", "vs"]
+permalink: /github-copilot/community/Copilot-is-Lying-About-Seeing-My-Code
+tags:
+- AI
+- AI Assistants
+- Bug Fixing
+- Code Analysis
+- Code Completion
+- Code Privacy
+- Code Suggestion
+- Coding
+- Community
+- GitHub Copilot
+- Searchbar
+- User Experience
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 KingPvzYT shares their doubts about GitHub Copilot's privacy claims after Copilot seemed to reference their exact code. This article delves into the experience and questions raised around code context and transparency.<!--excerpt_end-->
 
 ## Article Summary

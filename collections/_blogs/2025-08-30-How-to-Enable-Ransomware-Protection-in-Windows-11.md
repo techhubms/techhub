@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "How to Enable Ransomware Protection in Windows 11"
-description: "This step-by-step guide explains how to enable ransomware protection on Windows 11 using Microsoft Defender Antivirus. It covers accessing Windows Security, turning on Controlled Folder Access, protecting additional folders, and configuring trusted apps. The guide also highlights using OneDrive file recovery for added security, helping users safeguard their data against ransomware attacks."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: How to Enable Ransomware Protection in Windows 11
+author: Dellenny
+canonical_url: https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-08-30 10:50:23 +00:00
-permalink: "/2025-08-30-How-to-Enable-Ransomware-Protection-in-Windows-11.html"
-categories: ["Security"]
-tags: ["Blogs", "Controlled Folder Access", "Cybersecurity", "Data Protection", "File Recovery", "Microsoft Defender Antivirus", "Microsoft Security", "OneDrive", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
-tags_normalized: ["blogs", "controlled folder access", "cybersecurity", "data protection", "file recovery", "microsoft defender antivirus", "microsoft security", "onedrive", "ransomware protection", "security", "windows 11", "windows security"]
+permalink: /security/blogs/How-to-Enable-Ransomware-Protection-in-Windows-11
+tags:
+- Blogs
+- Controlled Folder Access
+- Cybersecurity
+- Data Protection
+- File Recovery
+- Microsoft Defender Antivirus
+- Microsoft Security
+- OneDrive
+- Ransomware Protection
+- Security
+- Windows 11
+- Windows Security
+section_names:
+- security
 ---
-
 Dellenny provides a practical guide on enabling ransomware protection in Windows 11 using Microsoft Defender Antivirus, helping users secure their data from cyber threats.<!--excerpt_end-->
 
 # How to Enable Ransomware Protection in Windows 11

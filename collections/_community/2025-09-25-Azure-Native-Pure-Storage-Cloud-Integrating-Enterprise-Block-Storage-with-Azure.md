@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure"
-description: "This article details the collaboration between Microsoft Azure and Pure Storage teams to deliver Pure Storage Cloud as a native Azure service. It highlights architecture, deployment, network integration, and joint support models, with a focus on streamlining storage options for Azure VMware Solution and leveraging the latest Azure infrastructure features."
-author: "karautenMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure'
+author: karautenMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 16:00:00 +00:00
-permalink: "/2025-09-25-Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Native Integration", "Azure Storage", "Azure VMware Solution", "Cloud Infrastructure", "Cloud Storage", "Community", "Data Management", "Enterprise Block Storage", "Hybrid Cloud", "Premium Managed Disks", "Pure Storage Cloud", "Snapshot Replication", "Storage as A Service", "VMware Integration", "VNet Peering"]
-tags_normalized: ["azure", "azure native integration", "azure storage", "azure vmware solution", "cloud infrastructure", "cloud storage", "community", "data management", "enterprise block storage", "hybrid cloud", "premium managed disks", "pure storage cloud", "snapshot replication", "storage as a service", "vmware integration", "vnet peering"]
+permalink: /azure/community/Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure
+tags:
+- Azure
+- Azure Native Integration
+- Azure Storage
+- Azure VMware Solution
+- Cloud Infrastructure
+- Cloud Storage
+- Community
+- Data Management
+- Enterprise Block Storage
+- Hybrid Cloud
+- Premium Managed Disks
+- Pure Storage Cloud
+- Snapshot Replication
+- Storage as A Service
+- VMware Integration
+- VNet Peering
+section_names:
+- azure
 ---
-
 karautenMSFT presents an in-depth overview of the Azure Native Pure Storage Cloud, describing how Azure and Pure Storage engineering teams collaborated to provide an enterprise-grade, high-performance external storage solution natively integrated with Azure services.<!--excerpt_end-->
 
 # Azure Native Pure Storage Cloud: Bringing Azure and Pure Storage Together

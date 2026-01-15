@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot"
-description: "This video features Den Delimarsky and James Montemagno as they embark on creating a complete 2D platformer game using Spec Kit, Visual Studio Code, and GitHub Copilot during GitHub Universe. The session demonstrates how developers can rapidly prototype and build games with a spec-driven approach, leveraging GitHub Copilot for AI-powered coding assistance within VS Code. Viewers will learn about integrating Copilot into their workflow, practical game development tips, and utilizing modern developer tools efficiently. This content is especially relevant for those keen on game development, developer tooling, and the use of AI in coding."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9HEwtaepw1E"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=9HEwtaepw1E
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-30 21:51:25 +00:00
-permalink: "/2025-10-30-Building-a-2D-Platformer-with-Spec-Kit-VS-Code-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["2D Platformer", "AI", "AI Assistance", "Beginner", "Code", "Coding", "Coding Demo", "Demo", "Den Delimarsky", "Developer", "Developer Community", "Developer Tools", "Game Development", "Gamedev", "GitHub", "GitHub Copilot", "GitHub Universe", "Githubuniverse", "James Montemagno", "Microsoft", "Spec Driven Development", "Spec Kit", "Speckit", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["2d platformer", "ai", "ai assistance", "beginner", "code", "coding", "coding demo", "demo", "den delimarsky", "developer", "developer community", "developer tools", "game development", "gamedev", "github", "github copilot", "github universe", "githubuniverse", "james montemagno", "microsoft", "spec driven development", "spec kit", "speckit", "videos", "vs code", "vs code extensions"]
+permalink: /github-copilot/videos/Building-a-2D-Platformer-with-Spec-Kit-VS-Code-and-GitHub-Copilot
+tags:
+- 2D Platformer
+- AI
+- AI Assistance
+- Beginner
+- Code
+- Coding
+- Coding Demo
+- Demo
+- Den Delimarsky
+- Developer
+- Developer Community
+- Developer Tools
+- Game Development
+- Gamedev
+- GitHub
+- GitHub Copilot
+- GitHub Universe
+- Githubuniverse
+- James Montemagno
+- Microsoft
+- Spec Driven Development
+- Spec Kit
+- Speckit
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code presents a session where Den Delimarsky and James Montemagno build a 2D platformer in VS Code using Spec Kit and GitHub Copilot, demonstrating AI-assisted game development.<!--excerpt_end-->
 
 {% youtube 9HEwtaepw1E %}

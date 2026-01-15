@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Pull Request ‘Files Changed’ Public Preview Updates – Increased File Limits and Performance Improvements"
-description: "This news update details the latest improvements to GitHub's pull request 'Files changed' page, focusing on enhanced performance and a file limit increase from 300 to 1,000. The new single file mode streamlines navigation and ensures better handling of large pull requests. The update invites user feedback as this public preview rolls out gradually."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Pull Request ‘Files Changed’ Public Preview Updates – Increased File Limits and Performance Improvements
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 22:53:29 +00:00
-permalink: "/2025-09-11-GitHub-Pull-Request-Files-Changed-Public-Preview-Updates-Increased-File-Limits-and-Performance-Improvements.html"
-categories: ["DevOps"]
-tags: ["Code Review", "Collaboration", "Collaboration Tools", "Developer Experience", "DevOps", "File Limit", "Files Changed", "GitHub", "Improvement", "Navigation Enhancement", "News", "Performance Improvement", "Public Preview", "Pull Requests", "Single File Mode", "UI Update"]
-tags_normalized: ["code review", "collaboration", "collaboration tools", "developer experience", "devops", "file limit", "files changed", "github", "improvement", "navigation enhancement", "news", "performance improvement", "public preview", "pull requests", "single file mode", "ui update"]
+permalink: /devops/news/GitHub-Pull-Request-Files-Changed-Public-Preview-Updates-Increased-File-Limits-and-Performance-Improvements
+tags:
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Developer Experience
+- DevOps
+- File Limit
+- Files Changed
+- GitHub
+- Improvement
+- Navigation Enhancement
+- News
+- Performance Improvement
+- Public Preview
+- Pull Requests
+- Single File Mode
+- UI Update
+section_names:
+- devops
 ---
-
 Allison shares insights on the latest GitHub pull request experience update, which brings improved performance and supports larger pull requests with a new single file view and higher file limits.<!--excerpt_end-->
 
 # GitHub Pull Request “Files Changed” Public Preview Experience – September 11 Updates

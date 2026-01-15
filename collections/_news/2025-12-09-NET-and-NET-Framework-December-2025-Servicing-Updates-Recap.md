@@ -1,20 +1,36 @@
----
-layout: "post"
-title: ".NET and .NET Framework December 2025 Servicing Updates Recap"
-description: "This news post from the .NET Team and Tara Overfield recaps the December 2025 servicing releases for .NET 10.0 and .NET Framework. It summarizes the non-security fixes, provides direct links to release notes, installers, and known issues, and notes that the .NET Framework has no new updates this month. Developers can find changelogs for the Runtime, AspNetCore, SDK, WinForms, Entity Framework Core, and more, along with relevant feedback opportunities."
-author: ".NET Team, Tara Overfield"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: .NET and .NET Framework December 2025 Servicing Updates Recap
+author: .NET Team, Tara Overfield
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-09 18:48:25 +00:00
-permalink: "/2025-12-09-NET-and-NET-Framework-December-2025-Servicing-Updates-Recap.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10.0", ".NET Framework", "ASP.NET Core", "Coding", "Container Images", "EF Core", "Linux Packages", "Maintenance & Updates", "Microsoft", "News", "Non Security Fixes", "Patch Update", "Platform Maintenance", "Release Notes", "Runtime", "SDK", "Servicing Release", "WinForms"]
-tags_normalized: ["dotnet", "dotnet 10dot0", "dotnet framework", "aspdotnet core", "coding", "container images", "ef core", "linux packages", "maintenance and updates", "microsoft", "news", "non security fixes", "patch update", "platform maintenance", "release notes", "runtime", "sdk", "servicing release", "winforms"]
+permalink: /coding/news/NET-and-NET-Framework-December-2025-Servicing-Updates-Recap
+tags:
+- .NET
+- .NET 10.0
+- .NET Framework
+- ASP.NET Core
+- Coding
+- Container Images
+- EF Core
+- Linux Packages
+- Maintenance & Updates
+- Microsoft
+- News
+- Non Security Fixes
+- Patch Update
+- Platform Maintenance
+- Release Notes
+- Runtime
+- SDK
+- Servicing Release
+- WinForms
+section_names:
+- coding
 ---
-
 The .NET Team and Tara Overfield present an overview of the December 2025 .NET and .NET Framework servicing releases, emphasizing non-security fixes for .NET 10.0 and resource links for developers.<!--excerpt_end-->
 
 # .NET and .NET Framework December 2025 Servicing Updates Recap

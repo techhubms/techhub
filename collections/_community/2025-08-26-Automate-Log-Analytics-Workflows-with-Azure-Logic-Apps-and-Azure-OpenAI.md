@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Automate Log Analytics Workflows with Azure Logic Apps and Azure OpenAI"
-description: "This post by NoyaBlanga provides a step-by-step guide for automating log analysis workflows using Azure Logic Apps, Log Analytics queries, and large language models (LLMs) via Azure OpenAI. You’ll learn how to orchestrate end-to-end automation that pulls log data, performs advanced AI-driven summarization, and delivers actionable operational insights for Application Insights and other Azure Monitor data sources."
-author: "NoyaBlanga"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Automate Log Analytics Workflows with Azure Logic Apps and Azure OpenAI
+author: NoyaBlanga
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 13:19:57 +00:00
-permalink: "/2025-08-26-Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Application Insights", "Automation", "Azure", "Azure Logic Apps", "Azure Monitor", "Azure OpenAI", "Cloud Monitoring", "Community", "Data Summarization", "Email Reports", "Error Analysis", "GPT 4", "KQL", "LLMs", "Log Analytics", "Microsoft Azure", "Operational Insights", "Workflows"]
-tags_normalized: ["ai", "application insights", "automation", "azure", "azure logic apps", "azure monitor", "azure openai", "cloud monitoring", "community", "data summarization", "email reports", "error analysis", "gpt 4", "kql", "llms", "log analytics", "microsoft azure", "operational insights", "workflows"]
+permalink: /ai/community/Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI
+tags:
+- AI
+- Application Insights
+- Automation
+- Azure
+- Azure Logic Apps
+- Azure Monitor
+- Azure OpenAI
+- Cloud Monitoring
+- Community
+- Data Summarization
+- Email Reports
+- Error Analysis
+- GPT 4
+- KQL
+- LLMs
+- Log Analytics
+- Microsoft Azure
+- Operational Insights
+- Workflows
+section_names:
+- ai
+- azure
 ---
-
 NoyaBlanga explains how to automate log analysis workflows using Azure Logic Apps, Log Analytics, and Azure OpenAI, enabling developers to deliver actionable, AI-driven insights via scheduled workflows.<!--excerpt_end-->
 
 # Automate Your Log Analytics Workflows with AI and Logic Apps

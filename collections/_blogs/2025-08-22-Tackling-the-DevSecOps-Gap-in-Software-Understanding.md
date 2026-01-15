@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Tackling the DevSecOps Gap in Software Understanding"
-description: "This article by Alan Shimel reviews the urgency of addressing the software visibility gap within modern DevSecOps practices, prompted by insights from CISA and other federal cybersecurity agencies. It covers the significance of SBOMs, whole-lifecycle traceability, and policy-level collaboration, emphasizing the technical and cultural shifts needed to secure critical infrastructure through DevSecOps workflows."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Tackling the DevSecOps Gap in Software Understanding
+author: Alan Shimel
+canonical_url: https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-22 02:45:22 +00:00
-permalink: "/2025-08-22-Tackling-the-DevSecOps-Gap-in-Software-Understanding.html"
-categories: ["DevOps", "Security"]
-tags: ["Artifact Traceability", "Blogs", "Build Pipeline", "CI/CD", "CISA", "Component Provenance", "DevOps", "DevSecOps", "Lifecycle Management", "Policy Collaboration", "SBOM", "SBOMs", "Secure Software Development", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Visibility", "Supply Chain Security", "Zero Trust"]
-tags_normalized: ["artifact traceability", "blogs", "build pipeline", "cislashcd", "cisa", "component provenance", "devops", "devsecops", "lifecycle management", "policy collaboration", "sbom", "sboms", "secure software development", "security", "security automation", "social facebook", "social linkedin", "social x", "software bill of materials", "software visibility", "supply chain security", "zero trust"]
+permalink: /devops/blogs/Tackling-the-DevSecOps-Gap-in-Software-Understanding
+tags:
+- Artifact Traceability
+- Blogs
+- Build Pipeline
+- CI/CD
+- CISA
+- Component Provenance
+- DevOps
+- DevSecOps
+- Lifecycle Management
+- Policy Collaboration
+- SBOM
+- SBOMs
+- Secure Software Development
+- Security
+- Security Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials
+- Software Visibility
+- Supply Chain Security
+- Zero Trust
+section_names:
+- devops
+- security
 ---
-
 Alan Shimel analyzes the importance of closing the software visibility gap for DevSecOps, exploring issues like SBOMs, traceability, and collaboration among security teams to strengthen both software and supply chain security.<!--excerpt_end-->
 
 # Tackling the DevSecOps Gap in Software Understanding  

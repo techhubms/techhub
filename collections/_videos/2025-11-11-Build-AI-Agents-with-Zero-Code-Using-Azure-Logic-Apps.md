@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Build AI Agents with Zero Code Using Azure Logic Apps"
-description: "This episode hosted by Priyanka Vergadia features Rohitha Hewawasam, Engineering Manager for Azure Logic Apps, discussing how to construct AI agents with a no-code/low-code approach. The content focuses on leveraging Azure Logic Apps’ 1400+ enterprise connectors, integrating GPT-4, prompt engineering, and combining various tools like Microsoft Teams and ServiceNow to create robust, scalable AI workflows. Practical demos and insights help developers understand everything from authentication and compliance to debugging and scaling multi-agent systems."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6YFN25o9jn4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Build AI Agents with Zero Code Using Azure Logic Apps
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=6YFN25o9jn4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-11 21:47:17 +00:00
-permalink: "/2025-11-11-Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Authentication", "Azure", "Azure Logic Apps", "Azure OpenAI", "Cloud Computing", "Compliance", "Connectors", "Debugging", "Dev", "Development", "Enterprise Integration", "GPT 4", "Low Code", "Microsoft", "Microsoft Developer", "Microsoft Teams", "Multi Agent Systems", "No Code", "Prompt Engineering", "ServiceNow Integration", "Tech", "Technology", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "authentication", "azure", "azure logic apps", "azure openai", "cloud computing", "compliance", "connectors", "debugging", "dev", "development", "enterprise integration", "gpt 4", "low code", "microsoft", "microsoft developer", "microsoft teams", "multi agent systems", "no code", "prompt engineering", "servicenow integration", "tech", "technology", "videos", "workflow automation"]
+permalink: /ai/videos/Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps
+tags:
+- AI
+- AI Agents
+- Authentication
+- Azure
+- Azure Logic Apps
+- Azure OpenAI
+- Cloud Computing
+- Compliance
+- Connectors
+- Debugging
+- Dev
+- Development
+- Enterprise Integration
+- GPT 4
+- Low Code
+- Microsoft
+- Microsoft Developer
+- Microsoft Teams
+- Multi Agent Systems
+- No Code
+- Prompt Engineering
+- ServiceNow Integration
+- Tech
+- Technology
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer’s Priyanka Vergadia talks with Rohitha Hewawasam about building AI agents on Azure Logic Apps without code, highlighting integration, connectors, and practical use cases.<!--excerpt_end-->
 
 {% youtube 6YFN25o9jn4 %}

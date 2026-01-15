@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Natural Language to Generate and Explain Pipeline Expressions with Copilot (Preview)"
-description: "This post introduces a new Copilot feature in Microsoft Fabric Data Factory that enables users to build, understand, and explain pipeline expressions using natural language. Developers and data engineers can interact conversationally with Copilot to both generate and interpret dynamic expressions, streamlining workflow and reducing errors."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/preview-natural-language-to-generate-and-explain-pipeline-expressions-with-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Natural Language to Generate and Explain Pipeline Expressions with Copilot (Preview)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/preview-natural-language-to-generate-and-explain-pipeline-expressions-with-copilot/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 10:30:00 +00:00
-permalink: "/2025-11-21-Natural-Language-to-Generate-and-Explain-Pipeline-Expressions-with-Copilot-Preview.html"
-categories: ["AI", "ML"]
-tags: ["AI", "AI Productivity Tools", "Automated Code Generation", "Conversational AI", "Copilot Studio", "Data Engineering", "Data Factory", "Data Transformation", "Dynamic Expressions", "Machine Learning", "Microsoft Fabric", "ML", "Natural Language Processing", "News", "Pipeline Expression Builder", "Preview Features"]
-tags_normalized: ["ai", "ai productivity tools", "automated code generation", "conversational ai", "copilot studio", "data engineering", "data factory", "data transformation", "dynamic expressions", "machine learning", "microsoft fabric", "ml", "natural language processing", "news", "pipeline expression builder", "preview features"]
+permalink: /ai/news/Natural-Language-to-Generate-and-Explain-Pipeline-Expressions-with-Copilot-Preview
+tags:
+- AI
+- AI Productivity Tools
+- Automated Code Generation
+- Conversational AI
+- Copilot Studio
+- Data Engineering
+- Data Factory
+- Data Transformation
+- Dynamic Expressions
+- Machine Learning
+- Microsoft Fabric
+- ML
+- Natural Language Processing
+- News
+- Pipeline Expression Builder
+- Preview Features
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Fabric Blog presents a new Copilot (Preview) feature for the Pipeline Expression Builder in Data Factory, allowing users to create and explain expressions through natural language, transforming data workflow efficiency.<!--excerpt_end-->
 
 # Natural Language to Generate and Explain Pipeline Expressions with Copilot (Preview)

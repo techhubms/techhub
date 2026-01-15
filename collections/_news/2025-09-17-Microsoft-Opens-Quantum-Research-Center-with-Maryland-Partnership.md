@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Opens Quantum Research Center with Maryland Partnership"
-description: "Microsoft announces the opening of a new quantum research center at the University of Maryland’s Discovery District, in collaboration with state, federal agencies, and academia. The initiative aims to accelerate quantum computing innovation, hardware/software development, and public-private partnerships, highlighting advancements in error correction and topological qubit research."
-author: "sbaynes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/09/17/our-new-collaboration-with-maryland-will-accelerate-scalable-quantum-computing/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Opens Quantum Research Center with Maryland Partnership
+author: sbaynes
+canonical_url: https://blogs.microsoft.com/on-the-issues/2025/09/17/our-new-collaboration-with-maryland-will-accelerate-scalable-quantum-computing/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 15:45:54 +00:00
-permalink: "/2025-09-17-Microsoft-Opens-Quantum-Research-Center-with-Maryland-Partnership.html"
-categories: ["AI"]
-tags: ["AI", "Atom Computing", "Company News", "DARPA", "Hardware Software Co Design", "Majorana 1", "Microsoft Quantum", "News", "On The Issues", "Public Private Partnership", "Quantum Benchmarking Initiative", "Quantum Computing", "Quantum Error Correction", "Quantum Innovation", "Quantum Platform", "Quantum Research", "Research Collaboration", "Topological Qubits", "University Of Maryland"]
-tags_normalized: ["ai", "atom computing", "company news", "darpa", "hardware software co design", "majorana 1", "microsoft quantum", "news", "on the issues", "public private partnership", "quantum benchmarking initiative", "quantum computing", "quantum error correction", "quantum innovation", "quantum platform", "quantum research", "research collaboration", "topological qubits", "university of maryland"]
+permalink: /ai/news/Microsoft-Opens-Quantum-Research-Center-with-Maryland-Partnership
+tags:
+- AI
+- Atom Computing
+- Company News
+- DARPA
+- Hardware Software Co Design
+- Majorana 1
+- Microsoft Quantum
+- News
+- On The Issues
+- Public Private Partnership
+- Quantum Benchmarking Initiative
+- Quantum Computing
+- Quantum Error Correction
+- Quantum Innovation
+- Quantum Platform
+- Quantum Research
+- Research Collaboration
+- Topological Qubits
+- University Of Maryland
+section_names:
+- ai
 ---
-
 sbaynes reports on Microsoft's collaboration with Maryland, launching a new quantum research center focused on scalable quantum computing research, quantum error correction, and technological innovation with partners across government and academia.<!--excerpt_end-->
 
 # Microsoft Opens Quantum Research Center with Maryland Partnership

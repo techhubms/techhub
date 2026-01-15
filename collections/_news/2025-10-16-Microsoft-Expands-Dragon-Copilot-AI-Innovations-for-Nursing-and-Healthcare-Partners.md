@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners"
-description: "This news release details Microsoft’s expansion of Dragon Copilot, its enterprise AI clinical assistant, with new ambient intelligence features for nursing workflows and enhanced extensibility for healthcare partners. The update empowers clinicians and nurses with secure, AI-driven capabilities for streamlined documentation, clinical insights, revenue cycle management, and integration of third-party AI solutions, aiming to reduce workflow burdens, combat burnout, and deliver more efficient patient care."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 14:06:15 +00:00
-permalink: "/2025-10-16-Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners.html"
-categories: ["AI"]
-tags: ["AI", "AI Assistant", "Ambient AI", "Atropos Health", "Clinical Documentation", "Clinical Insights", "Company News", "Dragon Copilot", "Elsevier", "Healthcare AI", "Microsoft Health", "News", "Nursing Workflows", "OpenEvidence", "Partner Integrations", "Patient Experience", "Press Ganey", "Revenue Cycle Management", "Smart Hospitals", "UpToDate", "Virtual Care"]
-tags_normalized: ["ai", "ai assistant", "ambient ai", "atropos health", "clinical documentation", "clinical insights", "company news", "dragon copilot", "elsevier", "healthcare ai", "microsoft health", "news", "nursing workflows", "openevidence", "partner integrations", "patient experience", "press ganey", "revenue cycle management", "smart hospitals", "uptodate", "virtual care"]
+permalink: /ai/news/Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners
+tags:
+- AI
+- AI Assistant
+- Ambient AI
+- Atropos Health
+- Clinical Documentation
+- Clinical Insights
+- Company News
+- Dragon Copilot
+- Elsevier
+- Healthcare AI
+- Microsoft Health
+- News
+- Nursing Workflows
+- OpenEvidence
+- Partner Integrations
+- Patient Experience
+- Press Ganey
+- Revenue Cycle Management
+- Smart Hospitals
+- UpToDate
+- Virtual Care
+section_names:
+- ai
 ---
-
 stclarke presents details on Microsoft’s latest advancements in Dragon Copilot, bringing new AI-powered features to nursing and health partners for more efficient clinical workflows and improved patient care.<!--excerpt_end-->
 
 # Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners

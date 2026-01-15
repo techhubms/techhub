@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "From Signals to Insights: Building a Real-Time Streaming Data Platform with Fabric Eventstream"
-description: "The article explains how Contoso integrates MQTT sensors, public weather feeds, and Microsoft Fabric Real-Time Intelligence to monitor smart buildings. It covers real-time stream processing importance, system architecture, and implementation details to enable immediate actions on live data inputs."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/from-signals-to-insights-building-a-real-time-streaming-data-platform-with-fabric-eventstream/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'From Signals to Insights: Building a Real-Time Streaming Data Platform with Fabric Eventstream'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/from-signals-to-insights-building-a-real-time-streaming-data-platform-with-fabric-eventstream/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-24 09:00:00 +00:00
-permalink: "/2025-07-24-From-Signals-to-Insights-Building-a-Real-Time-Streaming-Data-Platform-with-Fabric-Eventstream.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Building Monitoring", "Data Driven Decision Making", "Eventstream", "IoT", "Microsoft Fabric", "ML", "MQTT", "News", "Public Weather Feeds", "Real Time Intelligence", "Sensor Data", "Smart Buildings", "Stream Processing"]
-tags_normalized: ["azure", "building monitoring", "data driven decision making", "eventstream", "iot", "microsoft fabric", "ml", "mqtt", "news", "public weather feeds", "real time intelligence", "sensor data", "smart buildings", "stream processing"]
+permalink: /ml/news/From-Signals-to-Insights-Building-a-Real-Time-Streaming-Data-Platform-with-Fabric-Eventstream
+tags:
+- Azure
+- Building Monitoring
+- Data Driven Decision Making
+- Eventstream
+- IoT
+- Microsoft Fabric
+- ML
+- MQTT
+- News
+- Public Weather Feeds
+- Real Time Intelligence
+- Sensor Data
+- Smart Buildings
+- Stream Processing
+section_names:
+- azure
+- ml
 ---
-
 Authored by Alicia Li and Arindam Chatterjee, this Microsoft Fabric Blog post explores how Contoso leverages MQTT sensors and Microsoft Fabric’s Real-Time Intelligence to monitor smart buildings through a streaming data platform.<!--excerpt_end-->
 
 ### Overview

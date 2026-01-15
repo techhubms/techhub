@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Best Practices for Migrating COTS Applications to Microsoft Azure"
-description: "This detailed guide by srhulsus covers effective strategies for migrating commercial off-the-shelf (COTS) applications to Microsoft Azure. It highlights the importance of vendor coordination, Azure landing zone provisioning, infrastructure validation, compliance with licensing, modernization of supporting services, operational alignment, and ongoing optimization. Readers learn actionable approaches for migration planning, using Microsoft tools for security and monitoring, and building a cloud-ready foundation with Azure solutions."
-author: "srhulsus"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Best Practices for Migrating COTS Applications to Microsoft Azure
+author: srhulsus
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 20:43:14 +00:00
-permalink: "/2025-11-26-Best-Practices-for-Migrating-COTS-Applications-to-Microsoft-Azure.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Availability Zones", "Azure", "Azure Advisor", "Azure API Management", "Azure Governance", "Azure Landing Zone", "Azure Migrate", "Azure Monitor", "Azure Site Recovery", "Azure SQL Managed Instance", "Azure Virtual Machines", "Azure VMware Solution", "Backup", "Cloud Adoption Framework", "Cloud Security", "Community", "COTS Migration", "Disaster Recovery", "Identity Integration", "Licensing", "Logic Apps", "Microsoft Azure", "Microsoft Entra ID", "Microsoft Sentinel", "Monitoring", "Operational Optimization", "Runbooks", "Security"]
-tags_normalized: ["automation", "availability zones", "azure", "azure advisor", "azure api management", "azure governance", "azure landing zone", "azure migrate", "azure monitor", "azure site recovery", "azure sql managed instance", "azure virtual machines", "azure vmware solution", "backup", "cloud adoption framework", "cloud security", "community", "cots migration", "disaster recovery", "identity integration", "licensing", "logic apps", "microsoft azure", "microsoft entra id", "microsoft sentinel", "monitoring", "operational optimization", "runbooks", "security"]
+permalink: /azure/community/Best-Practices-for-Migrating-COTS-Applications-to-Microsoft-Azure
+tags:
+- Automation
+- Availability Zones
+- Azure
+- Azure Advisor
+- Azure API Management
+- Azure Governance
+- Azure Landing Zone
+- Azure Migrate
+- Azure Monitor
+- Azure Site Recovery
+- Azure SQL Managed Instance
+- Azure Virtual Machines
+- Azure VMware Solution
+- Backup
+- Cloud Adoption Framework
+- Cloud Security
+- Community
+- COTS Migration
+- Disaster Recovery
+- Identity Integration
+- Licensing
+- Logic Apps
+- Microsoft Azure
+- Microsoft Entra ID
+- Microsoft Sentinel
+- Monitoring
+- Operational Optimization
+- Runbooks
+- Security
+section_names:
+- azure
+- security
 ---
-
 srhulsus explains essential best practices for planning and executing COTS application migrations to Microsoft Azure, covering operational, security, and modernization steps.<!--excerpt_end-->
 
 # Best Practices for Migrating COTS Applications to Microsoft Azure

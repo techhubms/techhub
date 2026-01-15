@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Claude Opus 4.5 Preview Available in GitHub Copilot Chat and IDEs"
-description: "GitHub Copilot now offers public preview access to Claude Opus 4.5 within Copilot Business, Enterprise, Pro, and Pro+ editions. The model is available in GitHub Copilot Chat on platforms like GitHub.com, Visual Studio, JetBrains IDEs, Xcode, and Eclipse. Organization administrators can enable access in Copilot settings, allowing users to select Claude Opus 4.5 as a chat model for coding assistance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-03-claude-opus-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Claude Opus 4.5 Preview Available in GitHub Copilot Chat and IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-03-claude-opus-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-03 19:38:19 +00:00
-permalink: "/2025-12-03-Claude-Opus-45-Preview-Available-in-GitHub-Copilot-Chat-and-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Ask Mode", "Claude Opus 4.5", "Coding Assistant", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Eclipse", "Edit Mode", "GitHub Copilot", "IDE Integration", "JetBrains", "Model Management", "News", "VS", "Xcode"]
-tags_normalized: ["agent mode", "ai", "ask mode", "claude opus 4dot5", "coding assistant", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "eclipse", "edit mode", "github copilot", "ide integration", "jetbrains", "model management", "news", "vs", "xcode"]
+permalink: /github-copilot/news/Claude-Opus-45-Preview-Available-in-GitHub-Copilot-Chat-and-IDEs
+tags:
+- Agent Mode
+- AI
+- Ask Mode
+- Claude Opus 4.5
+- Coding Assistant
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Pro
+- Eclipse
+- Edit Mode
+- GitHub Copilot
+- IDE Integration
+- JetBrains
+- Model Management
+- News
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the public preview of Claude Opus 4.5 in GitHub Copilot Chat, detailing its availability in multiple IDEs and guidance for enabling access in Copilot organization settings.<!--excerpt_end-->
 
 # Claude Opus 4.5 Preview Available in GitHub Copilot Chat and IDEs

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local"
-description: "This article offers an in-depth look at the new General Availability of Azure Migrate support for migrating VMware VMs to Azure Local. It details three primary Azure-based modernization strategies—Modernize and Move, Lift and Optimize, and Edge-Optimized Deployment—explaining how Azure Migrate, Azure VMware Solution, and Azure Arc empower organizations to manage, govern, and secure workloads across hybrid and distributed environments. Key features announced include agentless migrations, support for PowerShell automation, and advanced customization options, all aimed at providing flexibility and compliance for organizations with varying cloud and edge needs."
-author: "trumanbrown"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local
+author: trumanbrown
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 20:23:03 +00:00
-permalink: "/2025-10-28-Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentless Migration", "Azure", "Azure Arc", "Azure Local", "Azure Migrate", "Azure VMware Solution", "Cloud Migration", "Community", "Compliance", "Data Residency", "DevOps", "Edge Computing", "Governance", "Hybrid Cloud", "Infrastructure Modernization", "PowerShell Automation", "Security", "Unified Management", "VMware"]
-tags_normalized: ["agentless migration", "azure", "azure arc", "azure local", "azure migrate", "azure vmware solution", "cloud migration", "community", "compliance", "data residency", "devops", "edge computing", "governance", "hybrid cloud", "infrastructure modernization", "powershell automation", "security", "unified management", "vmware"]
+permalink: /azure/community/Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local
+tags:
+- Agentless Migration
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Migrate
+- Azure VMware Solution
+- Cloud Migration
+- Community
+- Compliance
+- Data Residency
+- DevOps
+- Edge Computing
+- Governance
+- Hybrid Cloud
+- Infrastructure Modernization
+- PowerShell Automation
+- Security
+- Unified Management
+- VMware
+section_names:
+- azure
+- devops
+- security
 ---
-
 trumanbrown explains the new General Availability of Azure Migrate support for VMware VM migrations to Azure Local, highlighting modernization paths, unified management, and advanced migration features for secure hybrid cloud environments.<!--excerpt_end-->
 
 # Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local

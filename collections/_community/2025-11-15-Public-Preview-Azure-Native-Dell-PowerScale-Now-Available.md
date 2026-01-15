@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Public Preview: Azure Native Dell PowerScale Now Available"
-description: "Discover how Dell and Microsoft have partnered to deliver Dell PowerScale as a fully managed, Azure Native ISV service. This guide explains the new offering, deployment options, architectural benefits, supported regions, and its integration with Azure for scalable, enterprise-grade unstructured data storage. Learn how this service streamlines storage management and enables hybrid and cloud-native data solutions for demanding workloads like AI, analytics, and HPC."
-author: "Aung_Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Public Preview: Azure Native Dell PowerScale Now Available'
+author: Aung_Oo
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-15 20:17:04 +00:00
-permalink: "/2025-11-15-Public-Preview-Azure-Native-Dell-PowerScale-Now-Available.html"
-categories: ["Azure"]
-tags: ["AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure CLI", "Azure Marketplace", "Azure Native ISV Service", "Azure Portal", "Cloud Disaster Recovery", "Cloud Pools", "Community", "Data Analytics", "Data Replication", "Dell PowerScale", "Enterprise Storage", "File System as A Service", "HPC", "Hybrid Cloud", "Multi Petabyte Scalability", "OneFS", "PowerShell", "Public Preview", "Scale Out Storage", "Unstructured Data"]
-tags_normalized: ["ai", "ai workloads", "azure", "azure blob storage", "azure cli", "azure marketplace", "azure native isv service", "azure portal", "cloud disaster recovery", "cloud pools", "community", "data analytics", "data replication", "dell powerscale", "enterprise storage", "file system as a service", "hpc", "hybrid cloud", "multi petabyte scalability", "onefs", "powershell", "public preview", "scale out storage", "unstructured data"]
+permalink: /azure/community/Public-Preview-Azure-Native-Dell-PowerScale-Now-Available
+tags:
+- AI
+- AI Workloads
+- Azure
+- Azure Blob Storage
+- Azure CLI
+- Azure Marketplace
+- Azure Native ISV Service
+- Azure Portal
+- Cloud Disaster Recovery
+- Cloud Pools
+- Community
+- Data Analytics
+- Data Replication
+- Dell PowerScale
+- Enterprise Storage
+- File System as A Service
+- HPC
+- Hybrid Cloud
+- Multi Petabyte Scalability
+- OneFS
+- PowerShell
+- Public Preview
+- Scale Out Storage
+- Unstructured Data
+section_names:
+- azure
 ---
-
 Aung_Oo provides an in-depth overview of the newly launched, fully managed Dell PowerScale for Microsoft Azure, highlighting its features, deployment models, and integration with Azure's ecosystem.<!--excerpt_end-->
 
 # Public Preview: Azure Native Dell PowerScale Now Available

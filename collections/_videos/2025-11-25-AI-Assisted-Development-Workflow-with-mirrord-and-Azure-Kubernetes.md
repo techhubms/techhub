@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "AI-Assisted Development Workflow with mirrord and Azure Kubernetes"
-description: "This video explores how developers can leverage mirrord, an open-source tool, to test AI-generated code in a realistic Kubernetes environment using Azure Kubernetes Service (AKS). Through practical demonstrations, it shows how mirrord enables local development with cloud-like feedback, improving the effectiveness of AI code editors with distributed applications."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=p43HWjZFycs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: AI-Assisted Development Workflow with mirrord and Azure Kubernetes
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=p43HWjZFycs
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-25 17:24:34 +00:00
-permalink: "/2025-11-25-AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Code Editors", "AKS", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Continuous Integration", "Debugging", "Dev", "Development", "Development Workflow", "DevOps", "Distributed Systems", "Kubernetes", "Local Testing", "Metalbear", "Microservices", "Microsoft", "Mirrord", "Open Source Tools", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai code editors", "aks", "azure", "cloud computing", "cloud development", "coding", "continuous integration", "debugging", "dev", "development", "development workflow", "devops", "distributed systems", "kubernetes", "local testing", "metalbear", "microservices", "microsoft", "mirrord", "open source tools", "tech", "technology", "videos"]
+permalink: /ai/videos/AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes
+tags:
+- AI
+- AI Code Editors
+- AKS
+- Azure
+- Cloud Computing
+- Cloud Development
+- Coding
+- Continuous Integration
+- Debugging
+- Dev
+- Development
+- Development Workflow
+- DevOps
+- Distributed Systems
+- Kubernetes
+- Local Testing
+- Metalbear
+- Microservices
+- Microsoft
+- Mirrord
+- Open Source Tools
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Microsoft Developer presents a walkthrough of integrating mirrord for local AI-assisted coding and realistic Kubernetes testing with Azure, featuring insights from Jorge Arteiro and Arsh Sharma.<!--excerpt_end-->
 
 {% youtube p43HWjZFycs %}

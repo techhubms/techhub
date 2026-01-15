@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Ctrl Shift - MCP & A2A: Why Business Leaders Should Care"
-description: "This video episode explores the importance of Model Context Protocol (MCP) and Agent to Agent (A2A) in the evolving landscape of AI, focusing on why these concepts matter to business leaders. Key topics include the benefits of MCP and A2A, their potential impact on generative AI solutions, and the shifting trends in business driven by agent-based technologies and protocols such as MCP."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=s8xJTAu5icM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Ctrl Shift - MCP & A2A: Why Business Leaders Should Care'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=s8xJTAu5icM
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-28 14:15:52 +00:00
-permalink: "/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html"
-categories: ["AI"]
-tags: ["A2A", "Agent 2 Agent", "Agent To Agent", "Agents", "AI", "AI Agents", "AI Architecture", "Business AI", "Generative AI", "Large Language Models", "LLM", "MCP", "Tech Trends", "Videos"]
-tags_normalized: ["a2a", "agent 2 agent", "agent to agent", "agents", "ai", "ai agents", "ai architecture", "business ai", "generative ai", "large language models", "llm", "mcp", "tech trends", "videos"]
+permalink: /ai/videos/Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care
+tags:
+- A2A
+- Agent 2 Agent
+- Agent To Agent
+- Agents
+- AI
+- AI Agents
+- AI Architecture
+- Business AI
+- Generative AI
+- Large Language Models
+- LLM
+- MCP
+- Tech Trends
+- Videos
+section_names:
+- ai
 ---
-
 John Savill's Technical Training discusses the role of Model Context Protocol (MCP) and Agent to Agent (A2A) technologies, highlighting their significance for business leaders and their influence on AI-driven business strategies.<!--excerpt_end-->
 
 {% youtube s8xJTAu5icM %}

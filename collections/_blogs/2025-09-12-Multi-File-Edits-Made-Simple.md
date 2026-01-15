@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Multi-File Edits Made Simple"
-description: "This article presents a hands-on guide to using GitHub Copilot's new multi-file edit functionality, focusing on scenarios like refactoring code across files, modernizing imports, and maintaining code style consistency. It explains how Copilot Edits proposes project-wide changes, enables fine-grained control with diff previews, and speeds up larger refactor tasks—while letting developers stay in charge of what’s changed."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: Multi-File Edits Made Simple
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-12 00:00:00 +00:00
-permalink: "/2025-09-12-Multi-File-Edits-Made-Simple.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async/Await", "Automation", "Blogs", "Code Consistency", "Code Review", "Coding", "Copilot Edits", "Developer Tools", "Diff Preview", "ES Modules", "GitHub Copilot", "Modernization", "Multi File Editing", "Node.js", "Programming Productivity", "Project Wide Changes", "Refactoring"]
-tags_normalized: ["ai", "asyncslashawait", "automation", "blogs", "code consistency", "code review", "coding", "copilot edits", "developer tools", "diff preview", "es modules", "github copilot", "modernization", "multi file editing", "nodedotjs", "programming productivity", "project wide changes", "refactoring"]
+permalink: /github-copilot/blogs/Multi-File-Edits-Made-Simple
+tags:
+- AI
+- Async/Await
+- Automation
+- Blogs
+- Code Consistency
+- Code Review
+- Coding
+- Copilot Edits
+- Developer Tools
+- Diff Preview
+- ES Modules
+- GitHub Copilot
+- Modernization
+- Multi File Editing
+- Node.js
+- Programming Productivity
+- Project Wide Changes
+- Refactoring
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels explains how to use GitHub Copilot’s multi-file edits feature to refactor, update, and modernize your codebase efficiently—all while retaining developer control.<!--excerpt_end-->
 
 # Multi-File Edits Made Simple

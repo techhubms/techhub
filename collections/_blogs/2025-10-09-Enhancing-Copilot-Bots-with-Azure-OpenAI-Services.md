@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enhancing Copilot Bots with Azure OpenAI Services"
-description: "This post offers a detailed look at integrating Azure OpenAI Services with Microsoft's Copilot bots. It explores how to ground bots on enterprise data, leverage generative AI capabilities, deploy and manage conversational agents using security and compliance features, and implement best practices for scalable, business-aware solutions."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Enhancing Copilot Bots with Azure OpenAI Services
+author: Dellenny
+canonical_url: https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-10-09 07:08:29 +00:00
-permalink: "/2025-10-09-Enhancing-Copilot-Bots-with-Azure-OpenAI-Services.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Security", "Assistants API", "Azure", "Azure Cognitive Search", "Azure OpenAI Service", "Blogs", "Conversational AI", "Copilot", "Copilot Studio", "Enterprise Bots", "Enterprise Data Integration", "GPT 4", "Microsoft Copilot", "Model Governance", "Multimodal AI", "RAG", "Responsible AI"]
-tags_normalized: ["ai", "ai security", "assistants api", "azure", "azure cognitive search", "azure openai service", "blogs", "conversational ai", "copilot", "copilot studio", "enterprise bots", "enterprise data integration", "gpt 4", "microsoft copilot", "model governance", "multimodal ai", "rag", "responsible ai"]
+permalink: /ai/blogs/Enhancing-Copilot-Bots-with-Azure-OpenAI-Services
+tags:
+- AI
+- AI Security
+- Assistants API
+- Azure
+- Azure Cognitive Search
+- Azure OpenAI Service
+- Blogs
+- Conversational AI
+- Copilot
+- Copilot Studio
+- Enterprise Bots
+- Enterprise Data Integration
+- GPT 4
+- Microsoft Copilot
+- Model Governance
+- Multimodal AI
+- RAG
+- Responsible AI
+section_names:
+- ai
+- azure
 ---
-
 Dellenny explains how to enhance Copilot bots with Azure OpenAI Services, covering integration techniques, grounded AI, deployment best practices, and key implementation challenges for enterprise bots.<!--excerpt_end-->
 
 # Enhancing Copilot Bots with Azure OpenAI Services

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Cycode Unveils AI Tool and Platform Detection for Application Security Teams"
-description: "Cycode has introduced new features to its Application Security Posture Management (ASPM) platform, providing the ability to inventory AI coding tools and platforms used by developers. The platform now includes automated discovery of AI and machine learning assets, supports policy enforcement for validated AI adoption, and extends its SBOM with an AI Bill of Materials (AIBOM) to trace underlying AI technologies throughout the software development lifecycle."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: Cycode Unveils AI Tool and Platform Detection for Application Security Teams
+author: Mike Vizard
+canonical_url: https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-10-21 21:31:46 +00:00
-permalink: "/2025-10-21-Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams.html"
-categories: ["AI", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Bill Of Materials", "AI Code Generation", "AI Coding Assistants", "AI Inventory", "AIBOM", "Application Security", "ASPM", "Blogs", "Cycode", "DevOps", "DevSecOps", "LLM", "Machine Learning", "MCP", "ML", "Policy Enforcement", "Risk Intelligence Graph", "SBoM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Vulnerability Assessment"]
-tags_normalized: ["ai", "ai bill of materials", "ai code generation", "ai coding assistants", "ai inventory", "aibom", "application security", "aspm", "blogs", "cycode", "devops", "devsecops", "llm", "machine learning", "mcp", "ml", "policy enforcement", "risk intelligence graph", "sbom", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "vulnerability assessment"]
+permalink: /ai/blogs/Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams
+tags:
+- AI
+- AI Bill Of Materials
+- AI Code Generation
+- AI Coding Assistants
+- AI Inventory
+- AIBOM
+- Application Security
+- ASPM
+- Blogs
+- Cycode
+- DevOps
+- DevSecOps
+- LLM
+- Machine Learning
+- MCP
+- ML
+- Policy Enforcement
+- Risk Intelligence Graph
+- SBoM
+- Security
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Bill Of Materials
+- Vulnerability Assessment
+section_names:
+- ai
+- devops
+- ml
+- security
 ---
-
 Mike Vizard covers Cycode’s preview of capabilities to detect and inventory AI tools and platforms in codebases, helping DevSecOps teams enhance application security and governance.<!--excerpt_end-->
 
 # Cycode Unveils AI Tool and Platform Detection for Application Security Teams

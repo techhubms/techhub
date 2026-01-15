@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Accelerating Pull Request Reviews with GitHub Copilot Code Review"
-description: "This video walkthrough from GitHub showcases how the Copilot code review agent streamlines pull request feedback for development teams. Senior PM Elle Shwer presents hands-on demos of automatic review triggering, stacked PR handling, natural language customization, and deep CodeQL integration, highlighting how Copilot improves review efficiency and code quality while letting reviewers maintain essential context."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8hyvYP5PCks"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Accelerating Pull Request Reviews with GitHub Copilot Code Review
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=8hyvYP5PCks
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-02 15:00:17 +00:00
-permalink: "/2025-12-02-Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automatic Reviews", "Code Review", "CodeQL", "CodeReview", "Coding", "Dev Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "Natural Language", "PR Automation", "Pull Requests", "Review Customization", "Videos"]
-tags_normalized: ["ai", "ai assistant", "automatic reviews", "code review", "codeql", "codereview", "coding", "dev productivity", "developer tools", "github", "github copilot", "mission control", "natural language", "pr automation", "pull requests", "review customization", "videos"]
+permalink: /github-copilot/videos/Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review
+tags:
+- AI
+- AI Assistant
+- Automatic Reviews
+- Code Review
+- CodeQL
+- CodeReview
+- Coding
+- Dev Productivity
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Mission Control
+- Natural Language
+- PR Automation
+- Pull Requests
+- Review Customization
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub's Elle Shwer introduces Copilot code review, demonstrating how the AI assistant helps developers close pull requests faster while maintaining code quality.<!--excerpt_end-->
 
 {% youtube 8hyvYP5PCks %}

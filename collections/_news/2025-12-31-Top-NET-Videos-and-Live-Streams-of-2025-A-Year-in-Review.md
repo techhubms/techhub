@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Top .NET Videos and Live Streams of 2025: A Year in Review"
-description: "A comprehensive roundup of the most impactful .NET videos, live streams, and events from 2025, featuring deep dives into .NET 10, C# 14, Blazor, AI integration, and community-driven learning series. Ideal for developers looking to catch up on key technical sessions, architecture discussions, and new tools in the .NET ecosystem."
-author: "Jon Galloway"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Top .NET Videos and Live Streams of 2025: A Year in Review'
+author: Jon Galloway
+canonical_url: https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2025/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-31 18:05:00 +00:00
-permalink: "/2025-12-31-Top-NET-Videos-and-Live-Streams-of-2025-A-Year-in-Review.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Conf", "AI", "AI Integration", "Akka.NET", "API Design", "ASP.NET Core", "Blazor", "C#", "Clean Architecture", "Coding", "Community Standup", "Data API Builder", "Developer Tools", "EF", "FastEndpoints", "Live Streams", "MAUI", "MCP", "Modernization", "News", "Performance", "VS", "Wrapped"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet conf", "ai", "ai integration", "akkadotnet", "api design", "aspdotnet core", "blazor", "csharp", "clean architecture", "coding", "community standup", "data api builder", "developer tools", "ef", "fastendpoints", "live streams", "maui", "mcp", "modernization", "news", "performance", "vs", "wrapped"]
+permalink: /coding/news/Top-NET-Videos-and-Live-Streams-of-2025-A-Year-in-Review
+tags:
+- .NET
+- .NET 10
+- .NET Conf
+- AI
+- AI Integration
+- Akka.NET
+- API Design
+- ASP.NET Core
+- Blazor
+- C#
+- Clean Architecture
+- Coding
+- Community Standup
+- Data API Builder
+- Developer Tools
+- EF
+- FastEndpoints
+- Live Streams
+- MAUI
+- MCP
+- Modernization
+- News
+- Performance
+- VS
+- Wrapped
+section_names:
+- coding
 ---
-
 Jon Galloway provides a detailed look at the top .NET videos and live streams of 2025, spotlighting technical tutorials, community sessions, and cutting-edge developments in the .NET landscape.<!--excerpt_end-->
 
 # Top .NET Videos and Live Streams of 2025: A Year in Review

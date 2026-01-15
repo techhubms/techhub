@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI Shell Preview 4: Enhanced MacOS Support, Entra ID Authentication, and More"
-description: "The PowerShell team announces AI Shell Preview 4, featuring improved macOS support, Entra ID authentication for Azure OpenAI, enhancements to the Invoke-AIShell command, a new experimental Phi Silica agent, and various update and usability improvements."
-author: "Steven Bucher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/preview-4-ai-shell/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+layout: post
+title: 'AI Shell Preview 4: Enhanced MacOS Support, Entra ID Authentication, and More'
+author: Steven Bucher
+canonical_url: https://devblogs.microsoft.com/powershell/preview-4-ai-shell/
+viewing_mode: external
+feed_name: Microsoft PowerShell Blog
+feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-05-21 15:16:13 +00:00
-permalink: "/2025-05-21-AI-Shell-Preview-4-Enhanced-MacOS-Support-Entra-ID-Authentication-and-More.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Integration", "AI Shell", "Authentication", "Azure", "Azure OpenAI", "Coding", "Command Line Tools", "Copilot in Azure", "Entra ID", "Invoke AIShell", "Macos", "News", "OllamaAgent", "Phi Silica", "PowerShell", "Predictive IntelliSense"]
-tags_normalized: ["ai", "ai integration", "ai shell", "authentication", "azure", "azure openai", "coding", "command line tools", "copilot in azure", "entra id", "invoke aishell", "macos", "news", "ollamaagent", "phi silica", "powershell", "predictive intellisense"]
+permalink: /ai/news/AI-Shell-Preview-4-Enhanced-MacOS-Support-Entra-ID-Authentication-and-More
+tags:
+- AI
+- AI Integration
+- AI Shell
+- Authentication
+- Azure
+- Azure OpenAI
+- Coding
+- Command Line Tools
+- Copilot in Azure
+- Entra ID
+- Invoke AIShell
+- Macos
+- News
+- OllamaAgent
+- Phi Silica
+- PowerShell
+- Predictive IntelliSense
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Steven Bucher from the PowerShell Team introduces AI Shell Preview 4, diving into its new features: enhanced macOS integration, Entra ID authentication, improved shell commands, a new offline AI agent, and more.<!--excerpt_end-->
 
 # AI Shell Preview 4 Is Here: Better macOS Support, Entra ID Authentication, and More

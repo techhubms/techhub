@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Shadow: How AI Coding Agents are Transforming DevOps Workflows"
-description: "A detailed examination of Shadow, an open-source AI coding agent designed to automate code understanding, editing, and repository management within DevOps workflows. The article explores Shadow's architecture, GitHub integration, security-first design, and its impact on development teams adopting AI-assisted automation in DevOps practices."
-author: "Tom Smith"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/shadow-how-ai-coding-agents-are-transforming-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=shadow-how-ai-coding-agents-are-transforming-devops-workflows"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Shadow: How AI Coding Agents are Transforming DevOps Workflows'
+author: Tom Smith
+canonical_url: https://devops.com/shadow-how-ai-coding-agents-are-transforming-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=shadow-how-ai-coding-agents-are-transforming-devops-workflows
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-08-14 07:38:39 +00:00
-permalink: "/2025-08-14-Shadow-How-AI-Coding-Agents-are-Transforming-DevOps-Workflows.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Agents", "AI Assisted Workflows", "AI Coding Agent", "Blogs", "Business Of DevOps", "Code Intelligence", "Coding", "Coding Assistant", "Command Validation", "Continuous Deployment", "Continuous Integration", "Developer Time", "DevOps", "DevOps Automation", "Documentation Automation", "Doin' DevOps", "GitHub Integration", "IaC", "Kata QEMU", "Kubernetes", "MIT License", "Open Source", "Repository Management", "Semantic Code Search", "Shadow", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["ai", "ai agents", "ai assisted workflows", "ai coding agent", "blogs", "business of devops", "code intelligence", "coding", "coding assistant", "command validation", "continuous deployment", "continuous integration", "developer time", "devops", "devops automation", "documentation automation", "doin devops", "github integration", "iac", "kata qemu", "kubernetes", "mit license", "open source", "repository management", "semantic code search", "shadow", "social facebook", "social linkedin", "social x"]
+permalink: /ai/blogs/Shadow-How-AI-Coding-Agents-are-Transforming-DevOps-Workflows
+tags:
+- AI
+- AI Agents
+- AI Assisted Workflows
+- AI Coding Agent
+- Blogs
+- Business Of DevOps
+- Code Intelligence
+- Coding
+- Coding Assistant
+- Command Validation
+- Continuous Deployment
+- Continuous Integration
+- Developer Time
+- DevOps
+- DevOps Automation
+- Documentation Automation
+- Doin' DevOps
+- GitHub Integration
+- IaC
+- Kata QEMU
+- Kubernetes
+- MIT License
+- Open Source
+- Repository Management
+- Semantic Code Search
+- Shadow
+- Social Facebook
+- Social LinkedIn
+- Social X
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Tom Smith delves into Shadow, an open-source AI coding agent that streamlines and transforms DevOps workflows by automating code management, analysis, and repository tasks for development teams.<!--excerpt_end-->
 
 # Shadow: How AI Coding Agents are Transforming DevOps Workflows

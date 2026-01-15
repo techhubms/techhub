@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Are Snapshots Suitable for One-Time Backup in Azure?"
-description: "The author questions if Azure snapshots are a viable one-time backup for a rarely powered-on VM used solely for archival, noting Azure's snapshots appear to be full-disk copies. Comparisons are made to on-premises practices, where long-term reliance on snapshots is discouraged."
-author: "Izual_Rebirth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+layout: post
+title: Are Snapshots Suitable for One-Time Backup in Azure?
+author: Izual_Rebirth
+canonical_url: https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/
+viewing_mode: external
+feed_name: Reddit Azure
+feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 10:22:58 +00:00
-permalink: "/2025-07-29-Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure.html"
-categories: ["Azure"]
-tags: ["Archival", "Azure", "Azure Snapshot", "Cloud Backup", "Community", "Disk Copy", "On Premises", "One Time Backup", "Snapshot", "Virtual Machine", "VM Backup"]
-tags_normalized: ["archival", "azure", "azure snapshot", "cloud backup", "community", "disk copy", "on premises", "one time backup", "snapshot", "virtual machine", "vm backup"]
+permalink: /azure/community/Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure
+tags:
+- Archival
+- Azure
+- Azure Snapshot
+- Cloud Backup
+- Community
+- Disk Copy
+- On Premises
+- One Time Backup
+- Snapshot
+- Virtual Machine
+- VM Backup
+section_names:
+- azure
 ---
-
 Izual_Rebirth explores whether Azure snapshots are a practical solution for a one-off backup of an inactive, archival VM, drawing comparisons to on-premises environments.<!--excerpt_end-->
 
 ## Are Snapshots Suitable for a One Time Backup Option in Azure?

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Track Organization Copilot Usage with Copilot Usage APIs"
-description: "This release update explains how organizations can monitor Copilot usage metrics using the GitHub Copilot usage APIs. It covers available metrics, permissions required, and step-by-step instructions to enable the necessary policy settings for both enterprise and organization accounts, helping administrators better understand Copilot adoption and engagement within their teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-track-organization-copilot-usage"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Track Organization Copilot Usage with Copilot Usage APIs
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-16-track-organization-copilot-usage
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 15:08:56 +00:00
-permalink: "/2025-12-16-Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Tools", "AI", "AI Controls", "API Metrics", "Copilot", "Copilot Usage API", "Enterprise Management", "Feature Adoption", "GitHub Copilot", "News", "Organization Settings", "Permissions", "Policy Settings", "Reporting", "REST API", "Usage Statistics", "User Engagement"]
-tags_normalized: ["admin tools", "ai", "ai controls", "api metrics", "copilot", "copilot usage api", "enterprise management", "feature adoption", "github copilot", "news", "organization settings", "permissions", "policy settings", "reporting", "rest api", "usage statistics", "user engagement"]
+permalink: /github-copilot/news/Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs
+tags:
+- Admin Tools
+- AI
+- AI Controls
+- API Metrics
+- Copilot
+- Copilot Usage API
+- Enterprise Management
+- Feature Adoption
+- GitHub Copilot
+- News
+- Organization Settings
+- Permissions
+- Policy Settings
+- Reporting
+- REST API
+- Usage Statistics
+- User Engagement
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison outlines how organization and enterprise owners can enable and access Copilot usage metrics using GitHub's Copilot usage APIs, providing actionable guidance for managing and monitoring Copilot adoption.<!--excerpt_end-->
 
 # Track Organization Copilot Usage with Copilot Usage APIs

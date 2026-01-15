@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Top GitHub Copilot Shortcuts and Productivity Tips for VS Code"
-description: "This practical guide by John Edward explores must-know GitHub Copilot shortcuts and productivity tips for developers using Visual Studio Code. The article highlights keyboard shortcuts, Copilot Chat features, advanced prompting strategies, review practices, and ways to maximize Copilot's capabilities for more efficient coding workflows."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: Top GitHub Copilot Shortcuts and Productivity Tips for VS Code
+author: John Edward
+canonical_url: https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-11-21 15:39:36 +00:00
-permalink: "/2025-11-21-Top-GitHub-Copilot-Shortcuts-and-Productivity-Tips-for-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Blogs", "Code Review", "Coding", "Contextual AI", "Copilot Agent Mode", "Copilot Chat", "Copilot Inline Suggestions", "Copilot Slash Commands", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Keyboard Shortcuts", "Programming Tools", "Prompt Engineering", "Software Development", "VS Code"]
-tags_normalized: ["ai", "ai pair programming", "blogs", "code review", "coding", "contextual ai", "copilot agent mode", "copilot chat", "copilot inline suggestions", "copilot slash commands", "developer productivity", "githib copilot", "github copilot", "keyboard shortcuts", "programming tools", "prompt engineering", "software development", "vs code"]
+permalink: /github-copilot/blogs/Top-GitHub-Copilot-Shortcuts-and-Productivity-Tips-for-VS-Code
+tags:
+- AI
+- AI Pair Programming
+- Blogs
+- Code Review
+- Coding
+- Contextual AI
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Inline Suggestions
+- Copilot Slash Commands
+- Developer Productivity
+- GitHib Copilot
+- GitHub Copilot
+- Keyboard Shortcuts
+- Programming Tools
+- Prompt Engineering
+- Software Development
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 John Edward shares actionable GitHub Copilot shortcuts and productivity techniques for Visual Studio Code, helping developers use Copilot more effectively.<!--excerpt_end-->
 
 # Top GitHub Copilot Shortcuts and Productivity Tips for VS Code

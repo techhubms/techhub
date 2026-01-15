@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AI Toolkit and GitHub Copilot: Model Recommendations Workshop"
-description: "In this video, April from Microsoft Developer presents Part 2 of the AI Toolkit and GitHub Copilot workshop series, focusing on using Copilot's Agent mode to recommend language models for AI agents. She demonstrates how developers can use Copilot in conjunction with the AI Toolkit to analyze scenarios, select optimal language models, deploy them from the Model Catalog, and compare their performance in the Model Playground. Essential setup steps, such as installing the AI Toolkit and initializing a Microsoft Foundry project, are also covered, with links and resources provided throughout."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hVDGQG1mw88"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'AI Toolkit and GitHub Copilot: Model Recommendations Workshop'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=hVDGQG1mw88
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:21 +00:00
-permalink: "/2025-12-01-AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop.html"
-categories: ["AI", "Azure", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Development", "AI Toolkit", "Azure", "Cloud Computing", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Language Models", "Microsoft", "Microsoft Foundry", "Model Catalog", "Model Playground", "Model Recommendations", "Tech", "Technology", "Videos", "Workshop"]
-tags_normalized: ["agent mode", "ai", "ai development", "ai toolkit", "azure", "cloud computing", "dev", "developer tools", "development", "github copilot", "language models", "microsoft", "microsoft foundry", "model catalog", "model playground", "model recommendations", "tech", "technology", "videos", "workshop"]
+permalink: /github-copilot/videos/AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop
+tags:
+- Agent Mode
+- AI
+- AI Development
+- AI Toolkit
+- Azure
+- Cloud Computing
+- Dev
+- Developer Tools
+- Development
+- GitHub Copilot
+- Language Models
+- Microsoft
+- Microsoft Foundry
+- Model Catalog
+- Model Playground
+- Model Recommendations
+- Tech
+- Technology
+- Videos
+- Workshop
+section_names:
+- ai
+- azure
+- github-copilot
 ---
-
 April from Microsoft Developer walks through using Copilot and the AI Toolkit for model recommendations, deployments, and testing within the Microsoft Foundry platform in this practical workshop.<!--excerpt_end-->
 
 {% youtube hVDGQG1mw88 %}

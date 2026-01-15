@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Expanding Azure Arc for Hybrid and Multicloud Management"
-description: "This community post announces several major enhancements to Azure Arc unveiled at Ignite 2025, designed to streamline hybrid and multi-cloud infrastructure governance for enterprises. Key new features include GCP multicloud connector, hybrid Azure Virtual Desktop, auto-agent upgrades, visual OS configuration editor, Windows Server recovery audits, GA workload identities for Kubernetes, revamped Site Manager, improved migration with Azure Migrate, and general availability of the Azure Key Vault Secret Store Extension. These updates focus on operational consistency, security, compliance, and ease of management across on-premises, edge, and cloud platforms."
-author: "SatyaVel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/expanding-azure-arc-for-hybrid-and-multicloud-management/ba-p/4470656"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Expanding Azure Arc for Hybrid and Multicloud Management
+author: SatyaVel
+canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/expanding-azure-arc-for-hybrid-and-multicloud-management/ba-p/4470656
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:26:46 +00:00
-permalink: "/2025-11-18-Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Management.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentless Inventory", "AWS", "Azure", "Azure Arc", "Azure Key Vault", "Azure Migrate", "Azure Policy", "Azure Virtual Desktop", "Community", "Compliance", "Connected Machine Agent", "DevOps", "Disaster Recovery", "Google Cloud Platform", "Hybrid Cloud", "Kubernetes", "Microsoft Entra", "Multicloud", "OIDC Federation", "Operational Consistency", "OS Configuration Editor", "Security", "Site Management", "Windows Recovery Environment", "Workload Identity"]
-tags_normalized: ["agentless inventory", "aws", "azure", "azure arc", "azure key vault", "azure migrate", "azure policy", "azure virtual desktop", "community", "compliance", "connected machine agent", "devops", "disaster recovery", "google cloud platform", "hybrid cloud", "kubernetes", "microsoft entra", "multicloud", "oidc federation", "operational consistency", "os configuration editor", "security", "site management", "windows recovery environment", "workload identity"]
+permalink: /azure/community/Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Management
+tags:
+- Agentless Inventory
+- AWS
+- Azure
+- Azure Arc
+- Azure Key Vault
+- Azure Migrate
+- Azure Policy
+- Azure Virtual Desktop
+- Community
+- Compliance
+- Connected Machine Agent
+- DevOps
+- Disaster Recovery
+- Google Cloud Platform
+- Hybrid Cloud
+- Kubernetes
+- Microsoft Entra
+- Multicloud
+- OIDC Federation
+- Operational Consistency
+- OS Configuration Editor
+- Security
+- Site Management
+- Windows Recovery Environment
+- Workload Identity
+section_names:
+- azure
+- devops
+- security
 ---
-
 SatyaVel showcases Ignite 2025’s Azure Arc enhancements, covering new multicloud management, hybrid VDI, compliance, and security features, offering practical insights for professionals managing diverse IT estates.<!--excerpt_end-->
 
 # Expanding Azure Arc for Hybrid and Multicloud Management

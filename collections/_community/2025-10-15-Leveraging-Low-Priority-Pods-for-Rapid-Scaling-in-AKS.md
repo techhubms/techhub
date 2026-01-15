@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Leveraging Low Priority Pods for Rapid Scaling in AKS"
-description: "This comprehensive community guide by samcogan explains how to use low priority pods to maintain buffer nodes in Azure Kubernetes Service (AKS) clusters. It covers the mechanics, trade-offs, setup steps, and best practices for improving cluster responsiveness and handling rapid workload spikes through Kubernetes preemption and the cluster autoscaler."
-author: "samcogan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/leveraging-low-priority-pods-for-rapid-scaling-in-aks/ba-p/4461670"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Leveraging Low Priority Pods for Rapid Scaling in AKS
+author: samcogan
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/leveraging-low-priority-pods-for-rapid-scaling-in-aks/ba-p/4461670
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 09:46:02 +00:00
-permalink: "/2025-10-15-Leveraging-Low-Priority-Pods-for-Rapid-Scaling-in-AKS.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Azure", "Buffer Nodes", "Cloud Native", "Cluster Scalability", "Community", "DevOps", "Grafana", "Kubernetes", "Low Priority Pods", "Node Autoscaler", "Pod Scheduling", "PriorityClass", "Production Workloads", "Prometheus", "Resource Preemption", "Scaling Strategies", "SRE"]
-tags_normalized: ["aks", "azure", "buffer nodes", "cloud native", "cluster scalability", "community", "devops", "grafana", "kubernetes", "low priority pods", "node autoscaler", "pod scheduling", "priorityclass", "production workloads", "prometheus", "resource preemption", "scaling strategies", "sre"]
+permalink: /azure/community/Leveraging-Low-Priority-Pods-for-Rapid-Scaling-in-AKS
+tags:
+- AKS
+- Azure
+- Buffer Nodes
+- Cloud Native
+- Cluster Scalability
+- Community
+- DevOps
+- Grafana
+- Kubernetes
+- Low Priority Pods
+- Node Autoscaler
+- Pod Scheduling
+- PriorityClass
+- Production Workloads
+- Prometheus
+- Resource Preemption
+- Scaling Strategies
+- SRE
+section_names:
+- azure
+- devops
 ---
-
 samcogan shares an in-depth strategy for managing Kubernetes cluster scaling in Azure by using low priority pods as preemptible buffers, enabling faster workload response and minimizing downtime during traffic spikes.<!--excerpt_end-->
 
 # Leveraging Low Priority Pods for Rapid Scaling in AKS
@@ -67,12 +83,6 @@ metadata:
   name: low-priority
 value: 0
 globalDefault: false
-description: "Priority class for buffer pods"
-```
-
-Define a deployment using the buffer pods:
-
-```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:

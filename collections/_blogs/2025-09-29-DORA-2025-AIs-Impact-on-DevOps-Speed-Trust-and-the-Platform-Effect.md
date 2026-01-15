@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "DORA 2025: AI’s Impact on DevOps — Speed, Trust, and the Platform Effect"
-description: "This article reviews the 2025 DORA Report, exploring the surge in AI adoption within software development and DevOps. It discusses how AI amplifies organizational strengths and weaknesses, the tension between productivity and trust in AI-generated code, and the crucial roles of platform engineering and value stream management in realizing measurable performance gains. The piece draws data-driven lessons for DevOps leaders navigating AI’s evolving role in delivery pipelines."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/dora-2025-faster-but-are-we-any-better/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'DORA 2025: AI’s Impact on DevOps — Speed, Trust, and the Platform Effect'
+author: Alan Shimel
+canonical_url: https://devops.com/dora-2025-faster-but-are-we-any-better/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-09-29 07:37:10 +00:00
-permalink: "/2025-09-29-DORA-2025-AIs-Impact-on-DevOps-Speed-Trust-and-the-Platform-Effect.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Assisted Development", "AI Assisted Software Development", "AI Trust", "Amplification", "Automation", "Blogs", "Business Of DevOps", "Change Failure Rate", "Culture & Practices", "Deployment Frequency", "Developer Productivity", "Development Productivity", "DevOps", "DevOps Metrics", "DORA Report", "DORA Research", "Internal Platforms", "Organizational Performance", "Organizational Systems", "Platform Engineering", "Research Report", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Strategic AI Investment", "Team Collaboration", "Value Stream Management"]
-tags_normalized: ["ai", "ai adoption", "ai assisted development", "ai assisted software development", "ai trust", "amplification", "automation", "blogs", "business of devops", "change failure rate", "culture and practices", "deployment frequency", "developer productivity", "development productivity", "devops", "devops metrics", "dora report", "dora research", "internal platforms", "organizational performance", "organizational systems", "platform engineering", "research report", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "strategic ai investment", "team collaboration", "value stream management"]
+permalink: /ai/blogs/DORA-2025-AIs-Impact-on-DevOps-Speed-Trust-and-the-Platform-Effect
+tags:
+- AI
+- AI Adoption
+- AI Assisted Development
+- AI Assisted Software Development
+- AI Trust
+- Amplification
+- Automation
+- Blogs
+- Business Of DevOps
+- Change Failure Rate
+- Culture & Practices
+- Deployment Frequency
+- Developer Productivity
+- Development Productivity
+- DevOps
+- DevOps Metrics
+- DORA Report
+- DORA Research
+- Internal Platforms
+- Organizational Performance
+- Organizational Systems
+- Platform Engineering
+- Research Report
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Delivery
+- Software Engineering
+- Strategic AI Investment
+- Team Collaboration
+- Value Stream Management
+section_names:
+- ai
+- devops
 ---
-
 Alan Shimel analyzes the 2025 DORA Report, focusing on how widespread AI adoption is transforming DevOps teams’ speed, stability, and performance. He discusses productivity, trust, and the pivotal role of platforms and value stream management.<!--excerpt_end-->
 
 # DORA 2025: AI’s Impact on DevOps — Speed, Trust, and the Platform Effect

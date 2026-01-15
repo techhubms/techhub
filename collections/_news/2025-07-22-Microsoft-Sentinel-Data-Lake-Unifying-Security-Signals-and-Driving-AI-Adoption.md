@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Sentinel Data Lake: Unifying Security Signals and Driving AI Adoption"
-description: "Microsoft Sentinel is evolving to include a new, cost-effective data lake, aiming to unify security data, accelerate AI adoption, and provide enhanced visibility for security teams. This public preview makes storing and analyzing critical data more accessible and budget-friendly, helping teams detect and respond to threats faster."
-author: "Scott Woodgate and Krishna Kumar Parthasarathy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Microsoft Sentinel Data Lake: Unifying Security Signals and Driving AI Adoption'
+author: Scott Woodgate and Krishna Kumar Parthasarathy
+canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-22 13:00:00 +00:00
-permalink: "/2025-07-22-Microsoft-Sentinel-Data-Lake-Unifying-Security-Signals-and-Driving-AI-Adoption.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Adoption", "Azure", "Cost Optimization", "Cybersecurity", "Data Lake", "Incident Response", "Microsoft Sentinel", "News", "Public Preview", "Security", "Security Operations", "SIEM", "Unified Security Data"]
-tags_normalized: ["ai", "ai adoption", "azure", "cost optimization", "cybersecurity", "data lake", "incident response", "microsoft sentinel", "news", "public preview", "security", "security operations", "siem", "unified security data"]
+permalink: /ai/news/Microsoft-Sentinel-Data-Lake-Unifying-Security-Signals-and-Driving-AI-Adoption
+tags:
+- AI
+- AI Adoption
+- Azure
+- Cost Optimization
+- Cybersecurity
+- Data Lake
+- Incident Response
+- Microsoft Sentinel
+- News
+- Public Preview
+- Security
+- Security Operations
+- SIEM
+- Unified Security Data
+section_names:
+- ai
+- azure
+- security
 ---
-
 Scott Woodgate and Krishna Kumar Parthasarathy introduce a new data lake for Microsoft Sentinel, enhancing unified security data management, AI-driven insights, and affordability for security teams.<!--excerpt_end-->
 
 # Microsoft Sentinel Data Lake: Unifying Security Signals and Powering Agentic AI

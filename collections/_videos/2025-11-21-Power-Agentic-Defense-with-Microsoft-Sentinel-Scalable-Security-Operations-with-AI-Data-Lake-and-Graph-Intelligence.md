@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence"
-description: "This session from Microsoft Ignite 2025 explores the evolution of Microsoft Sentinel into an agentic, AI-ready security platform. It covers Sentinel's scalable architecture, integration of graph intelligence, utilization of Azure Data Lake, automation of investigative workflows, and practical techniques like KQL Jobs for threat hunting. The presentation highlights Sentinel’s capabilities in automating, investigating, and responding to threats efficiently, as well as new features like the Security Store, partner integrations, and custom graph models. It's aimed at security engineers and operations teams looking to modernize security operations on Microsoft’s cloud platform."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3roUCNzZbwU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=3roUCNzZbwU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:44:29 +00:00
-permalink: "/2025-11-21-Power-Agentic-Defense-with-Microsoft-Sentinel-Scalable-Security-Operations-with-AI-Data-Lake-and-Graph-Intelligence.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic AI", "AI", "Azure", "Azure Data Lake", "Case Management", "Cyber Defense", "Graph Intelligence", "Graph Models", "Incident Response", "KQL", "Microsoft Ignite", "Microsoft Sentinel", "Modern SecOps", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Partner Integrations", "Security", "Security Automation", "Security Operations", "Security Store", "SIEM", "Threat Hunting", "Videos"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure data lake", "case management", "cyber defense", "graph intelligence", "graph models", "incident response", "kql", "microsoft ignite", "microsoft sentinel", "modern secops", "modernizesecopswithaunifiedplatform", "msignite", "partner integrations", "security", "security automation", "security operations", "security store", "siem", "threat hunting", "videos"]
+permalink: /ai/videos/Power-Agentic-Defense-with-Microsoft-Sentinel-Scalable-Security-Operations-with-AI-Data-Lake-and-Graph-Intelligence
+tags:
+- Agentic AI
+- AI
+- Azure
+- Azure Data Lake
+- Case Management
+- Cyber Defense
+- Graph Intelligence
+- Graph Models
+- Incident Response
+- KQL
+- Microsoft Ignite
+- Microsoft Sentinel
+- Modern SecOps
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Partner Integrations
+- Security
+- Security Automation
+- Security Operations
+- Security Store
+- SIEM
+- Threat Hunting
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Events presents a Microsoft Ignite 2025 session featuring Krishna Kumar Parthasarathy, Reena Pathak, Evangeline White, and Scott Woodgate on scaling security operations with Microsoft Sentinel’s AI-driven, graph-integrated platform.<!--excerpt_end-->
 
 {% youtube 3roUCNzZbwU %}

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture"
-description: "This guide covers a reference architecture for deploying AI workloads on Microsoft Azure using a Landing Zone pattern across multiple subscriptions. It details security, scalability, and governance practices, leveraging core Azure services like Application Gateway (WAF), Key Vault, Azure OpenAI, AI Search, ML, networking, and observability tools. With real-world scenarios, it walks through the user journey and the architectural benefits for enterprise adoption."
-author: "Rohon_Mohapatra"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba-p/4455951"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture'
+author: Rohon_Mohapatra
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba-p/4455951
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 18:32:35 +00:00
-permalink: "/2025-09-25-Azure-AI-Landing-Zone-Enterprise-Scale-Secure-and-Governed-AI-Deployment-Architecture.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Landing Zone", "API Management", "App Service", "Application Gateway", "Application Insights", "Azure", "Azure AI Search", "Azure Architecture", "Azure Cognitive Services", "Azure Key Vault", "Azure OpenAI", "Community", "Container Apps", "Cosmos DB", "Defender For Cloud", "Event Hub", "Function Apps", "Governance", "Log Analytics", "Logic Apps", "Network Security Groups", "Power BI", "Private Endpoints", "Security", "Virtual Network Peering", "Web Application Firewall", "Zero Trust"]
-tags_normalized: ["ai", "ai landing zone", "api management", "app service", "application gateway", "application insights", "azure", "azure ai search", "azure architecture", "azure cognitive services", "azure key vault", "azure openai", "community", "container apps", "cosmos db", "defender for cloud", "event hub", "function apps", "governance", "log analytics", "logic apps", "network security groups", "power bi", "private endpoints", "security", "virtual network peering", "web application firewall", "zero trust"]
+permalink: /ai/community/Azure-AI-Landing-Zone-Enterprise-Scale-Secure-and-Governed-AI-Deployment-Architecture
+tags:
+- AI
+- AI Landing Zone
+- API Management
+- App Service
+- Application Gateway
+- Application Insights
+- Azure
+- Azure AI Search
+- Azure Architecture
+- Azure Cognitive Services
+- Azure Key Vault
+- Azure OpenAI
+- Community
+- Container Apps
+- Cosmos DB
+- Defender For Cloud
+- Event Hub
+- Function Apps
+- Governance
+- Log Analytics
+- Logic Apps
+- Network Security Groups
+- Power BI
+- Private Endpoints
+- Security
+- Virtual Network Peering
+- Web Application Firewall
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Rohon_Mohapatra presents a comprehensive enterprise architecture for deploying and governing AI workloads on Azure at scale, covering Landing Zone patterns, secure networking, scalable app hosting, and integration with Azure's AI ecosystem.<!--excerpt_end-->
 
 # Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture

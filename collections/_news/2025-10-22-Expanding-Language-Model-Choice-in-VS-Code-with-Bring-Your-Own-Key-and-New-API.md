@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Expanding Language Model Choice in VS Code with Bring Your Own Key and New API"
-description: "This article highlights recent enhancements to Visual Studio Code's AI capabilities, focusing on the new Language Model Chat Provider API and the Bring Your Own Key (BYOK) feature. Developers can now choose from a wide range of AI models—including custom and third-party LLMs—for chat and code generation experiences, and extension authors can integrate additional models via the extensible API."
-author: "Olivia Guzzardo McVicker, Pierce Boggan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/10/22/bring-your-own-key"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: Expanding Language Model Choice in VS Code with Bring Your Own Key and New API
+author: Olivia Guzzardo McVicker, Pierce Boggan
+canonical_url: https://code.visualstudio.com/blogs/2025/10/22/bring-your-own-key
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-10-22 00:00:00 +00:00
-permalink: "/2025-10-22-Expanding-Language-Model-Choice-in-VS-Code-with-Bring-Your-Own-Key-and-New-API.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Extensions", "AI Toolkit", "Azure AI Foundry", "BYOK", "Cerebras", "Code Generation", "Coding", "Custom LLM", "Extension Development", "GitHub Copilot", "GitHub Copilot Chat", "Hugging Face", "Language Model Chat Provider API", "LLM Integration", "Model Management", "News", "Ollama", "OpenAI Compatible", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai extensions", "ai toolkit", "azure ai foundry", "byok", "cerebras", "code generation", "coding", "custom llm", "extension development", "github copilot", "github copilot chat", "hugging face", "language model chat provider api", "llm integration", "model management", "news", "ollama", "openai compatible", "vs code", "vs code extensions"]
+permalink: /github-copilot/news/Expanding-Language-Model-Choice-in-VS-Code-with-Bring-Your-Own-Key-and-New-API
+tags:
+- AI
+- AI Extensions
+- AI Toolkit
+- Azure AI Foundry
+- BYOK
+- Cerebras
+- Code Generation
+- Coding
+- Custom LLM
+- Extension Development
+- GitHub Copilot
+- GitHub Copilot Chat
+- Hugging Face
+- Language Model Chat Provider API
+- LLM Integration
+- Model Management
+- News
+- Ollama
+- OpenAI Compatible
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Olivia Guzzardo McVicker and Pierce Boggan outline how new APIs and BYOK in Visual Studio Code allow developers to integrate and manage a broader range of AI models—including custom and third-party LLMs—enriching code chat and generation tools.<!--excerpt_end-->
 
 # Expanding Language Model Choice in VS Code with Bring Your Own Key and New API

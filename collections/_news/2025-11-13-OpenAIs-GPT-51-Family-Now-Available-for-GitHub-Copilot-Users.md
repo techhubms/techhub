@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "OpenAI’s GPT-5.1 Family Now Available for GitHub Copilot Users"
-description: "This update details the public preview rollout of OpenAI’s GPT-5.1, GPT-5.1-Codex, and GPT-5.1-Codex-Mini models within GitHub Copilot. It covers availability across various IDEs and Copilot versions, methods for enabling the new models, and relevant links for documentation and feedback. The focus is on what developers and organizations need to do to access and benefit from these state-of-the-art AI models, as well as which Copilot tiers and environments are supported."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: OpenAI’s GPT-5.1 Family Now Available for GitHub Copilot Users
+author: Allison
+canonical_url: https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-11-13 17:10:39 +00:00
-permalink: "/2025-11-13-OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "API Key Integration", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Plans", "Eclipse", "GitHub Copilot", "GPT 5.1", "GPT 5.1 Codex", "GPT 5.1 Codex Mini", "IDE Integration", "JetBrains", "Model Selection", "News", "Policy Management", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai models", "api key integration", "copilot", "copilot chat", "copilot cli", "copilot plans", "eclipse", "github copilot", "gpt 5dot1", "gpt 5dot1 codex", "gpt 5dot1 codex mini", "ide integration", "jetbrains", "model selection", "news", "policy management", "vs code", "xcode"]
+permalink: /github-copilot/news/OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users
+tags:
+- AI
+- AI Models
+- API Key Integration
+- Copilot
+- Copilot Chat
+- Copilot CLI
+- Copilot Plans
+- Eclipse
+- GitHub Copilot
+- GPT 5.1
+- GPT 5.1 Codex
+- GPT 5.1 Codex Mini
+- IDE Integration
+- JetBrains
+- Model Selection
+- News
+- Policy Management
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the public preview of OpenAI’s GPT-5.1 series models for GitHub Copilot, outlining model availability across IDEs, how to enable them, and where to learn more.<!--excerpt_end-->
 
 # OpenAI's GPT-5.1 Family Now Available for GitHub Copilot Users

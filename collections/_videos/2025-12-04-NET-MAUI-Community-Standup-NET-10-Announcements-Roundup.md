@@ -1,20 +1,33 @@
----
-layout: "post"
-title: ".NET MAUI Community Standup - .NET 10 Announcements Roundup"
-description: "This video covers the latest features introduced in .NET 10, focusing on the updates and releases in the .NET MAUI ecosystem. Hosts David Ortinau and Gerald Versluis review what shipped recently and highlight key community contributions and resources for developers building with MAUI."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LuA4WbZY7tw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: .NET MAUI Community Standup - .NET 10 Announcements Roundup
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=LuA4WbZY7tw
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-04 16:48:58 +00:00
-permalink: "/2025-12-04-NET-MAUI-Community-Standup-NET-10-Announcements-Roundup.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "Coding", "David Ortinau", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Dotnetmaui", "Gerald Versluis", "MAUI", "Microsoft", "Platform Updates", "Software Developer", "Software Development", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "coding", "david ortinau", "demo", "developer", "developer community", "dotnetdeveloper", "dotnetmaui", "gerald versluis", "maui", "microsoft", "platform updates", "software developer", "software development", "videos"]
+permalink: /coding/videos/NET-MAUI-Community-Standup-NET-10-Announcements-Roundup
+tags:
+- .NET
+- .NET 10
+- Coding
+- David Ortinau
+- Demo
+- Developer
+- Developer Community
+- Dotnetdeveloper
+- Dotnetmaui
+- Gerald Versluis
+- MAUI
+- Microsoft
+- Platform Updates
+- Software Developer
+- Software Development
+- Videos
+section_names:
+- coding
 ---
-
 In this roundup, David Ortinau and Gerald Versluis present the latest .NET 10 and .NET MAUI updates, spotlighting major features and contributions from the developer community.<!--excerpt_end-->
 
 {% youtube LuA4WbZY7tw %}

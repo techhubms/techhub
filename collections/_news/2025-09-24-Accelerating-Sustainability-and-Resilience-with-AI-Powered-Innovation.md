@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Accelerating Sustainability and Resilience with AI-Powered Innovation"
-description: "This article from the Microsoft Cloud blog discusses how AI and Azure-based technologies are driving advances in sustainability and resilience across industries. Real-world examples illustrate the use of AI for climate adaptation, supply chain optimization, scientific research, and innovations in datacenter cooling. The post also highlights Microsoft's efforts to improve the sustainability of AI infrastructure itself, detailing work in datacenter cooling, water efficiency, and responsible resource management. Practical e-books and guides are referenced to help organizations start leveraging AI for measurable sustainability progress."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/09/23/accelerating-sustainability-and-resilience-with-ai-powered-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Accelerating Sustainability and Resilience with AI-Powered Innovation
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/09/23/accelerating-sustainability-and-resilience-with-ai-powered-innovation/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 14:53:38 +00:00
-permalink: "/2025-09-24-Accelerating-Sustainability-and-Resilience-with-AI-Powered-Innovation.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI For Sustainability", "AI Optimization", "Azure", "Azure Databricks", "Azure OpenAI", "Azure Quantum Elements", "Climate Adaptation", "Cloud Infrastructure", "Company News", "Datacenter Cooling", "Digital Twin", "Energy Efficiency", "Environmental Innovation", "Microfluidics", "Microsoft Cloud", "News", "Supply Chain Analytics", "Sustainability", "Sustainable Cloud"]
-tags_normalized: ["ai", "ai for sustainability", "ai optimization", "azure", "azure databricks", "azure openai", "azure quantum elements", "climate adaptation", "cloud infrastructure", "company news", "datacenter cooling", "digital twin", "energy efficiency", "environmental innovation", "microfluidics", "microsoft cloud", "news", "supply chain analytics", "sustainability", "sustainable cloud"]
+permalink: /ai/news/Accelerating-Sustainability-and-Resilience-with-AI-Powered-Innovation
+tags:
+- AI
+- AI For Sustainability
+- AI Optimization
+- Azure
+- Azure Databricks
+- Azure OpenAI
+- Azure Quantum Elements
+- Climate Adaptation
+- Cloud Infrastructure
+- Company News
+- Datacenter Cooling
+- Digital Twin
+- Energy Efficiency
+- Environmental Innovation
+- Microfluidics
+- Microsoft Cloud
+- News
+- Supply Chain Analytics
+- Sustainability
+- Sustainable Cloud
+section_names:
+- ai
+- azure
 ---
-
 stclarke explores how Microsoft and its partners are using AI and Azure technologies to accelerate sustainability and resilience, featuring innovations in cloud infrastructure, climate action, supply chain, and scientific discovery.<!--excerpt_end-->
 
 # Accelerating Sustainability and Resilience with AI-Powered Innovation

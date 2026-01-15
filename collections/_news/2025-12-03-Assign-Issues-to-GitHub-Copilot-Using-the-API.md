@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Assign Issues to GitHub Copilot Using the API"
-description: "This news update covers how developers can now assign issues directly to GitHub Copilot using either GraphQL or the REST API. It explains the required mutations and endpoints, repository and branch configuration options, and additional features such as custom instructions and agents. Key links are provided for further documentation and community support."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Assign Issues to GitHub Copilot Using the API
+author: Allison
+canonical_url: https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-12-03 19:21:25 +00:00
-permalink: "/2025-12-03-Assign-Issues-to-GitHub-Copilot-Using-the-API.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Addassigneestoassignable Mutation", "AI", "API Integration", "Branch Management", "Copilot", "Copilot Assignment", "Createissue Mutation", "Custom Agents", "Custom Instructions", "DevOps", "DevOps Automation", "GitHub Copilot", "GraphQL API", "Improvement", "Issue Assignment", "News", "Projects & Issues", "Replaceactorsforassignable Mutation", "Repository Configuration", "REST API", "Updateissue Mutation"]
-tags_normalized: ["addassigneestoassignable mutation", "ai", "api integration", "branch management", "copilot", "copilot assignment", "createissue mutation", "custom agents", "custom instructions", "devops", "devops automation", "github copilot", "graphql api", "improvement", "issue assignment", "news", "projects and issues", "replaceactorsforassignable mutation", "repository configuration", "rest api", "updateissue mutation"]
+permalink: /github-copilot/news/Assign-Issues-to-GitHub-Copilot-Using-the-API
+tags:
+- Addassigneestoassignable Mutation
+- AI
+- API Integration
+- Branch Management
+- Copilot
+- Copilot Assignment
+- Createissue Mutation
+- Custom Agents
+- Custom Instructions
+- DevOps
+- DevOps Automation
+- GitHub Copilot
+- GraphQL API
+- Improvement
+- Issue Assignment
+- News
+- Projects & Issues
+- Replaceactorsforassignable Mutation
+- Repository Configuration
+- REST API
+- Updateissue Mutation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison reports that developers can now assign issues to GitHub Copilot via both GraphQL and REST APIs, providing flexible automation options through clear API documentation.<!--excerpt_end-->
 
 # Assign Issues to GitHub Copilot Using the API

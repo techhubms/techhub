@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News"
-description: "This GitHub video update covers several high-impact changes for developers: OpenAI's GPT-5 and Anthropic's Claude Opus 4.1 are now available in GitHub Copilot, bringing new AI capabilities to Microsoft's developer tools. Additional highlights include TypeScript 5.9's release, updates on Python 3.14 and Mojo language, plus news about MCP support in VS Code, open source projects, and key organizational changes at GitHub."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lhpQBp9I80w"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=lhpQBp9I80w
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-15 16:12:57 +00:00
-permalink: "/2025-08-15-GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Anthropic", "Claude Opus 4.1", "Coding", "Developer Tools", "DeveloperNews", "GitHub", "GitHub Copilot", "GPT 5", "JS13kGames", "MCP", "Mojo Language", "Open Source", "OpenAI", "Python 3.14", "React Native", "Reanimated 4", "TypeScript 5.9", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai integration", "anthropic", "claude opus 4dot1", "coding", "developer tools", "developernews", "github", "github copilot", "gpt 5", "js13kgames", "mcp", "mojo language", "open source", "openai", "python 3dot14", "react native", "reanimated 4", "typescript 5dot9", "videos", "vs code"]
+permalink: /github-copilot/videos/GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News
+tags:
+- AI
+- AI Integration
+- Anthropic
+- Claude Opus 4.1
+- Coding
+- Developer Tools
+- DeveloperNews
+- GitHub
+- GitHub Copilot
+- GPT 5
+- JS13kGames
+- MCP
+- Mojo Language
+- Open Source
+- OpenAI
+- Python 3.14
+- React Native
+- Reanimated 4
+- TypeScript 5.9
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub presents this week's developer news, spotlighting the integration of GPT-5 and Claude 4.1 into GitHub Copilot. Hosted by the GitHub team, the episode also covers TypeScript 5.9 updates and other key releases.<!--excerpt_end-->
 
 {% youtube lhpQBp9I80w %}

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Cannot understand premium requests count calculation"
-description: "The author expresses confusion over how premium requests are calculated for a GitHub Copilot subscription, noting rapid exhaustion of their quota and questioning the value offered for the price. The post mentions lack of access to anthropic or Google models after reaching the limit."
-author: "FeelingResolution806"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mha6xk/cannot_understand_premium_requests_count/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: Cannot understand premium requests count calculation
+author: FeelingResolution806
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mha6xk/cannot_understand_premium_requests_count/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 10:53:30 +00:00
-permalink: "/2025-08-04-Cannot-understand-premium-requests-count-calculation.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Community", "Copilot Usage", "GitHub Copilot", "Model Access", "Premium Requests", "Pricing", "Pricing Concerns", "Request Limits", "Subscription", "Usage Quota"]
-tags_normalized: ["ai", "ai models", "community", "copilot usage", "github copilot", "model access", "premium requests", "pricing", "pricing concerns", "request limits", "subscription", "usage quota"]
+permalink: /github-copilot/community/Cannot-understand-premium-requests-count-calculation
+tags:
+- AI
+- AI Models
+- Community
+- Copilot Usage
+- GitHub Copilot
+- Model Access
+- Premium Requests
+- Pricing
+- Pricing Concerns
+- Request Limits
+- Subscription
+- Usage Quota
+section_names:
+- ai
+- github-copilot
 ---
-
 FeelingResolution806 raises concerns about how premium requests in the GitHub Copilot subscription are counted and exhausted rapidly, questioning the underlying calculation and value.<!--excerpt_end-->
 
 ## Overview

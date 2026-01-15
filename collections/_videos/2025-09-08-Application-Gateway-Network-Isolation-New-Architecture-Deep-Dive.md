@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Application Gateway Network Isolation: New Architecture Deep Dive"
-description: "This video explores the newly introduced network isolation architecture for Azure Application Gateway. John Savill explains the migration from public to private endpoints, key architectural changes, control plane and data plane separation, implications for WAF, and current limitations. Viewers also get walkthroughs for V1 to V2 migration, flag settings for new deployments, and practical deployment advice tailored for Azure network administrators and architects."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zQNk1BjhwQI"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: 'Application Gateway Network Isolation: New Architecture Deep Dive'
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=zQNk1BjhwQI
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-08 11:48:33 +00:00
-permalink: "/2025-09-08-Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive.html"
-categories: ["Azure", "Security"]
-tags: ["App Gateway", "App Gateway V2", "Application Gateway", "Azure", "Azure Application Gateway", "Azure Architecture", "Azure Cloud", "Azure Networking", "Azure Security", "Cloud", "Cloud Security", "Control Plane", "Deployment", "Firewall", "Load Balancing", "Microsoft", "Microsoft Azure", "Migration", "Network Isolation", "Private Endpoint", "Security", "Videos", "WAF"]
-tags_normalized: ["app gateway", "app gateway v2", "application gateway", "azure", "azure application gateway", "azure architecture", "azure cloud", "azure networking", "azure security", "cloud", "cloud security", "control plane", "deployment", "firewall", "load balancing", "microsoft", "microsoft azure", "migration", "network isolation", "private endpoint", "security", "videos", "waf"]
+permalink: /azure/videos/Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive
+tags:
+- App Gateway
+- App Gateway V2
+- Application Gateway
+- Azure
+- Azure Application Gateway
+- Azure Architecture
+- Azure Cloud
+- Azure Networking
+- Azure Security
+- Cloud
+- Cloud Security
+- Control Plane
+- Deployment
+- Firewall
+- Load Balancing
+- Microsoft
+- Microsoft Azure
+- Migration
+- Network Isolation
+- Private Endpoint
+- Security
+- Videos
+- WAF
+section_names:
+- azure
+- security
 ---
-
 In this detailed session, John Savill guides viewers through the architecture and deployment of network-isolated Azure Application Gateways, emphasizing practical security considerations and new features.<!--excerpt_end-->
 
 {% youtube zQNk1BjhwQI %}

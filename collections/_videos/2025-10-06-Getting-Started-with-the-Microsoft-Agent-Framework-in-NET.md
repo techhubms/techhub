@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Getting Started with the Microsoft Agent Framework in .NET"
-description: "This session introduces developers to the Microsoft Agent Framework using .NET. It covers agent design, orchestration, and execution, with practical demos and guidance from Microsoft's latest resources. Ideal for those interested in embedding AI-powered agents in applications and understanding foundational agent concepts in the Microsoft ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KDxi3NG3nfU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Getting Started with the Microsoft Agent Framework in .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=KDxi3NG3nfU
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-06 16:35:53 +00:00
-permalink: "/2025-10-06-Getting-Started-with-the-Microsoft-Agent-Framework-in-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Developer", "Agent", "Agent Design", "Agent Orchestration", "Agentmode", "AgetnFx", "AI", "AI Agents", "Application Intelligence", "Coding", "Copilot", "Demo", "Developer", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Microsoft Agent Framework", "Microsoft AI", "Software Developer", "Software Development", "Videos"]
-tags_normalized: ["dotnet", "dotnet developer", "agent", "agent design", "agent orchestration", "agentmode", "agetnfx", "ai", "ai agents", "application intelligence", "coding", "copilot", "demo", "developer", "developer tools", "dotnetdeveloper", "microsoft", "microsoft agent framework", "microsoft ai", "software developer", "software development", "videos"]
+permalink: /ai/videos/Getting-Started-with-the-Microsoft-Agent-Framework-in-NET
+tags:
+- .NET
+- .NET Developer
+- Agent
+- Agent Design
+- Agent Orchestration
+- Agentmode
+- AgetnFx
+- AI
+- AI Agents
+- Application Intelligence
+- Coding
+- Copilot
+- Demo
+- Developer
+- Developer Tools
+- Dotnetdeveloper
+- Microsoft
+- Microsoft Agent Framework
+- Microsoft AI
+- Software Developer
+- Software Development
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Join Bruno Capuano and Zack Way as they guide you through the essentials of the Microsoft Agent Framework with .NET, providing hands-on demos and foundational knowledge for building AI-powered agents.<!--excerpt_end-->
 
 {% youtube KDxi3NG3nfU %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "First Impressions of GPT-5 Integration in Visual Studio Code Copilot"
-description: "A community post sharing early hands-on impressions of GPT-5 within GitHub Copilot in Visual Studio Code, comparing its code summarization and improvement suggestions to GPT-4.1 and Claude 4. The author discusses the analytic style of GPT-5, pricing concerns, and practical usability for developers."
-author: "Jazzlike_Course_9895"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mkftq0/gpt5_already_in_vsc_copilot/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+layout: post
+title: First Impressions of GPT-5 Integration in Visual Studio Code Copilot
+author: Jazzlike_Course_9895
+canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mkftq0/gpt5_already_in_vsc_copilot/
+viewing_mode: external
+feed_name: Reddit Github Copilot
+feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 23:41:48 +00:00
-permalink: "/2025-08-07-First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "AI Integration", "AI Model Comparison", "Claude 4", "Code Summarization", "Community", "Copilot Settings", "Developer Experience", "GitHub Copilot", "GPT 4.1", "GPT 5", "Microsoft", "Pricing", "Prompt Engineering", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai assistant", "ai integration", "ai model comparison", "claude 4", "code summarization", "community", "copilot settings", "developer experience", "github copilot", "gpt 4dot1", "gpt 5", "microsoft", "pricing", "prompt engineering", "vs code", "vs code extensions"]
+permalink: /github-copilot/community/First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot
+tags:
+- AI
+- AI Assistant
+- AI Integration
+- AI Model Comparison
+- Claude 4
+- Code Summarization
+- Community
+- Copilot Settings
+- Developer Experience
+- GitHub Copilot
+- GPT 4.1
+- GPT 5
+- Microsoft
+- Pricing
+- Prompt Engineering
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- github-copilot
 ---
-
 Jazzlike_Course_9895 shares initial experiences using GPT-5 in Visual Studio Code Copilot, highlighting differences from previous AI models and discussing how GPT-5’s analytic code feedback compares to alternatives like Claude 4 and GPT-4.1.<!--excerpt_end-->
 
 # First Impressions of GPT-5 Integration in Visual Studio Code Copilot

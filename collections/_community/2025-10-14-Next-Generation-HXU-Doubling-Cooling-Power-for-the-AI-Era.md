@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Next Generation HXU: Doubling Cooling Power for the AI Era"
-description: "This article presents Microsoft's next-generation Heat Exchanger Unit (HXU), designed to double cooling capacity in datacenter environments that support demanding AI workloads. The piece covers HXU’s performance, architectural innovations, security/compliance features, and its role in ensuring reliability for AI system deployment in air-cooled datacenters."
-author: "andy_reg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Next Generation HXU: Doubling Cooling Power for the AI Era'
+author: andy_reg
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/2025-10-14-Next-Generation-HXU-Doubling-Cooling-Power-for-the-AI-Era.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Accelerators", "AI Infrastructure", "Azure", "Community", "Cybersecurity", "Datacenter Cooling", "High Density Computing", "HXU", "ISO/IEC 27001", "Liquid Cooling", "Microsoft Azure", "Modular Design", "NIST SP 800 53", "Open Compute Project", "Power Density", "Predictive Maintenance", "Redundancy", "Security", "Telemetry"]
-tags_normalized: ["ai", "ai accelerators", "ai infrastructure", "azure", "community", "cybersecurity", "datacenter cooling", "high density computing", "hxu", "isoslashiec 27001", "liquid cooling", "microsoft azure", "modular design", "nist sp 800 53", "open compute project", "power density", "predictive maintenance", "redundancy", "security", "telemetry"]
+permalink: /ai/community/Next-Generation-HXU-Doubling-Cooling-Power-for-the-AI-Era
+tags:
+- AI
+- AI Accelerators
+- AI Infrastructure
+- Azure
+- Community
+- Cybersecurity
+- Datacenter Cooling
+- High Density Computing
+- HXU
+- ISO/IEC 27001
+- Liquid Cooling
+- Microsoft Azure
+- Modular Design
+- NIST SP 800 53
+- Open Compute Project
+- Power Density
+- Predictive Maintenance
+- Redundancy
+- Security
+- Telemetry
+section_names:
+- ai
+- azure
+- security
 ---
-
 andy_reg introduces Microsoft's next-generation HXU, a heat exchanger unit that doubles cooling capacity for AI-ready datacenters, with features ensuring reliability, scalability, and cyber resilience.<!--excerpt_end-->
 
 # Next Generation HXU: Doubling Cooling Power for the AI Era

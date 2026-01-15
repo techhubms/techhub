@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How we solved environment variable chaos for 40+ microservices on ECS/Lambda/Batch with AWS Parameter Store"
-description: "The author outlines a practical approach for managing environment variables across 40+ microservices running on AWS ECS, Lambda, and Batch. By centralizing secrets and configurations using AWS Parameter Store, the team improved security and operational efficiency, reducing manual redeployments and eliminating hardcoded secrets from their codebase."
-author: "compacompila"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mgl9tl/how_we_solved_environment_variable_chaos_for_40/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+layout: post
+title: How we solved environment variable chaos for 40+ microservices on ECS/Lambda/Batch with AWS Parameter Store
+author: compacompila
+canonical_url: https://www.reddit.com/r/devops/comments/1mgl9tl/how_we_solved_environment_variable_chaos_for_40/
+viewing_mode: external
+feed_name: Reddit DevOps
+feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-03 14:54:50 +00:00
-permalink: "/2025-08-03-How-we-solved-environment-variable-chaos-for-40-microservices-on-ECSLambdaBatch-with-AWS-Parameter-Store.html"
-categories: ["DevOps", "Security"]
-tags: ["AWS Batch", "AWS ECS", "AWS Lambda", "AWS Parameter Store", "Community", "DevOps", "Environment Variables", "Go", "IAM", "Microservices", "Secrets Management", "SecureString", "Security"]
-tags_normalized: ["aws batch", "aws ecs", "aws lambda", "aws parameter store", "community", "devops", "environment variables", "go", "iam", "microservices", "secrets management", "securestring", "security"]
+permalink: /devops/community/How-we-solved-environment-variable-chaos-for-40-microservices-on-ECSLambdaBatch-with-AWS-Parameter-Store
+tags:
+- AWS Batch
+- AWS ECS
+- AWS Lambda
+- AWS Parameter Store
+- Community
+- DevOps
+- Environment Variables
+- Go
+- IAM
+- Microservices
+- Secrets Management
+- SecureString
+- Security
+section_names:
+- devops
+- security
 ---
-
 In this post, compacompila describes how their team centralized environment variable management for over 40 AWS-based microservices using AWS Parameter Store, leading to enhanced security and streamlined operations.<!--excerpt_end-->
 
 ## Introduction

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "MCP C# SDK Updated: Protocol 2025-06-18 Brings Elicitation, Structured Output, and Enhanced Security"
-description: "Mike Kistler outlines the major update to the MCP C# SDK, supporting the latest Model Context Protocol (2025-06-18). The release introduces improved authentication, elicitation, structured tool output, resource links in tool responses, and schema improvements for .NET developers building AI-powered applications."
-author: "Mike Kistler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/mcp-csharp-sdk-2025-06-18-update/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'MCP C# SDK Updated: Protocol 2025-06-18 Brings Elicitation, Structured Output, and Enhanced Security'
+author: Mike Kistler
+canonical_url: https://devblogs.microsoft.com/dotnet/mcp-csharp-sdk-2025-06-18-update/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-22 17:00:00 +00:00
-permalink: "/2025-07-22-MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security.html"
-categories: ["AI", "Coding", "Security"]
-tags: [".NET", "AI", "Authentication", "C#", "Coding", "Dependency Injection", "Elicitation", "MCP", "News", "OAuth2", "OpenID Connect", "Resource Links", "Schema", "SDK", "Security", "Structured Output", "Tool Metadata"]
-tags_normalized: ["dotnet", "ai", "authentication", "csharp", "coding", "dependency injection", "elicitation", "mcp", "news", "oauth2", "openid connect", "resource links", "schema", "sdk", "security", "structured output", "tool metadata"]
+permalink: /ai/news/MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security
+tags:
+- .NET
+- AI
+- Authentication
+- C#
+- Coding
+- Dependency Injection
+- Elicitation
+- MCP
+- News
+- OAuth2
+- OpenID Connect
+- Resource Links
+- Schema
+- SDK
+- Security
+- Structured Output
+- Tool Metadata
+section_names:
+- ai
+- coding
+- security
 ---
-
 In this post, Mike Kistler presents the major update for the MCP C# SDK, introducing support for protocol version 2025-06-18. The release offers .NET developers new features such as elicitation, structured tool output, enhanced authentication, resource links, and schema improvements for AI application development.<!--excerpt_end-->
 
 # MCP C# SDK Gets Major Update: Protocol Version 2025-06-18 Support

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: ".NET and .NET Framework November 2025 Servicing Releases Updates"
-description: "A summary of the November 2025 servicing updates for .NET and .NET Framework, including links to release notes, installers, and changelogs for .NET 8.0 and 9.0. The update focuses on non-security fixes, provides relevant downloads, container images, and known issue trackers for developers and administrators."
-author: "Tara Overfield, Victor Israel-Bolarinwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: .NET and .NET Framework November 2025 Servicing Releases Updates
+author: Tara Overfield, Victor Israel-Bolarinwa
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-11 15:30:00 +00:00
-permalink: "/2025-11-11-NET-and-NET-Framework-November-2025-Servicing-Releases-Updates.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "ASP.NET Core", "Coding", "Container Images", "Linux Packages", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Release Notes", "Runtime", "SDK", "Servicing Release"]
-tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "aspdotnet core", "coding", "container images", "linux packages", "maintenance", "maintenance and updates", "microsoft", "news", "release notes", "runtime", "sdk", "servicing release"]
+permalink: /coding/news/NET-and-NET-Framework-November-2025-Servicing-Releases-Updates
+tags:
+- .NET
+- .NET 8.0
+- .NET 9.0
+- .NET Framework
+- ASP.NET Core
+- Coding
+- Container Images
+- Linux Packages
+- Maintenance
+- Maintenance & Updates
+- Microsoft
+- News
+- Release Notes
+- Runtime
+- SDK
+- Servicing Release
+section_names:
+- coding
 ---
-
 Tara Overfield and Victor Israel-Bolarinwa recap the November 2025 servicing updates for .NET and .NET Framework, highlighting new release notes, downloads, and maintenance changes for .NET 8.0 and 9.0.<!--excerpt_end-->
 
 # .NET and .NET Framework November 2025 Servicing Releases Updates

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Microsoft’s Contributions to Fedora Linux: Cloud Delivery, Security, and Azure Integration"
-description: "This article highlights Microsoft's active engineering involvement within the Fedora Linux community, including modernizing cloud image delivery (especially on Azure), improving secure boot infrastructure, packaging kernel observability tools, enhancing Fedora in Azure and WSL, and plans for further automation and open source collaboration."
-author: "bexelbie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/building-bridges-microsoft-s-participation-in-the-fedora-linux/ba-p/4478461"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Microsoft’s Contributions to Fedora Linux: Cloud Delivery, Security, and Azure Integration'
+author: bexelbie
+canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/building-bridges-microsoft-s-participation-in-the-fedora-linux/ba-p/4478461
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-16 19:01:32 +00:00
-permalink: "/2025-12-16-Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ARM64", "Azure", "Azure Community Gallery", "Azure Linux Team", "Azure VM Utils", "Cloud Image Delivery", "Cloud Infrastructure", "Community", "DevOps", "Ebpf", "Fedora Linux", "Fedora SIGs", "Inspektor Gadget", "Kernel Instrumentation", "LISA Framework", "Microsoft Linux Engineering", "Observability", "OpenShift Automation", "Rust Client", "Secure Boot", "Security", "Sigul", "UEFI Signing", "WSL"]
-tags_normalized: ["arm64", "azure", "azure community gallery", "azure linux team", "azure vm utils", "cloud image delivery", "cloud infrastructure", "community", "devops", "ebpf", "fedora linux", "fedora sigs", "inspektor gadget", "kernel instrumentation", "lisa framework", "microsoft linux engineering", "observability", "openshift automation", "rust client", "secure boot", "security", "sigul", "uefi signing", "wsl"]
+permalink: /azure/community/Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration
+tags:
+- ARM64
+- Azure
+- Azure Community Gallery
+- Azure Linux Team
+- Azure VM Utils
+- Cloud Image Delivery
+- Cloud Infrastructure
+- Community
+- DevOps
+- Ebpf
+- Fedora Linux
+- Fedora SIGs
+- Inspektor Gadget
+- Kernel Instrumentation
+- LISA Framework
+- Microsoft Linux Engineering
+- Observability
+- OpenShift Automation
+- Rust Client
+- Secure Boot
+- Security
+- Sigul
+- UEFI Signing
+- WSL
+section_names:
+- azure
+- devops
+- security
 ---
-
 bexelbie shares how Microsoft's Linux engineering teams are collaborating with Fedora to modernize cloud image delivery, security infrastructure, and Azure compatibility, advancing open source development.<!--excerpt_end-->
 
 # Microsoft’s Contributions to Fedora Linux: Cloud Delivery, Security, and Azure Integration

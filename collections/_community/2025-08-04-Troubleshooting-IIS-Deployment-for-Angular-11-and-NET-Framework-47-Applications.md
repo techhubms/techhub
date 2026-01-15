@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Troubleshooting IIS Deployment for Angular 11 and .NET Framework 4.7 Applications"
-description: "The author describes issues encountered when deploying an Angular 11 frontend and .NET Framework 4.7 backend to IIS, receiving a 404 status code. The article outlines their deployment process and seeks advice on common misconfigurations and best practices for deploying this stack to IIS."
-author: "Defiant_Priority_801"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhjloq/deployment_to_iis/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: Troubleshooting IIS Deployment for Angular 11 and .NET Framework 4.7 Applications
+author: Defiant_Priority_801
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mhjloq/deployment_to_iis/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 17:20:05 +00:00
-permalink: "/2025-08-04-Troubleshooting-IIS-Deployment-for-Angular-11-and-NET-Framework-47-Applications.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET Framework 4.7", "404 Error", "Angular 11", "Backend Deployment", "Coding", "Community", "DevOps", "Frontend Deployment", "IIS Deployment", "MSBuild", "Production Build", "Site Configuration", "Web.config"]
-tags_normalized: ["dotnet", "dotnet framework 4dot7", "404 error", "angular 11", "backend deployment", "coding", "community", "devops", "frontend deployment", "iis deployment", "msbuild", "production build", "site configuration", "webdotconfig"]
+permalink: /coding/community/Troubleshooting-IIS-Deployment-for-Angular-11-and-NET-Framework-47-Applications
+tags:
+- .NET
+- .NET Framework 4.7
+- 404 Error
+- Angular 11
+- Backend Deployment
+- Coding
+- Community
+- DevOps
+- Frontend Deployment
+- IIS Deployment
+- MSBuild
+- Production Build
+- Site Configuration
+- Web.config
+section_names:
+- coding
+- devops
 ---
-
 Defiant_Priority_801 outlines challenges encountered while deploying an Angular 11 and .NET Framework 4.7 application stack to IIS, particularly struggling with 404 errors after following standard deployment procedures.<!--excerpt_end-->
 
 Defiant_Priority_801 is seeking assistance with deploying a full-stack application—with an Angular 11 frontend and a .NET Framework 4.7 backend—to Internet Information Services (IIS). While both parts of the application run as expected locally, deployment to IIS results in a StatusCode 404 (Not Found) when attempting to access the site.

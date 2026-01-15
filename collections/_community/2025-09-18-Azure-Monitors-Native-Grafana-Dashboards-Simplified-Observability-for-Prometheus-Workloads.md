@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads"
-description: "This post details the addition of native Grafana dashboards to Azure Monitor’s managed service for Prometheus, making advanced Azure observability and visualization tooling available inside the Azure portal at no extra cost. It explains integration benefits, use cases for SRE and DevOps teams, and guidance for getting started with Azure Monitor, Prometheus, and Grafana."
-author: "sunayanasingh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads'
+author: sunayanasingh
+canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 17:51:27 +00:00
-permalink: "/2025-09-18-Azure-Monitors-Native-Grafana-Dashboards-Simplified-Observability-for-Prometheus-Workloads.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Application Insights", "Azure", "Azure Managed Grafana", "Azure Monitor", "Cloud Native Monitoring", "Community", "Container Insights", "Dashboards", "DevOps", "Grafana", "Kubernetes Monitoring", "Metrics Visualization", "Observability", "OpenTelemetry", "Prometheus", "SaaS Monitoring", "SRE"]
-tags_normalized: ["aks", "application insights", "azure", "azure managed grafana", "azure monitor", "cloud native monitoring", "community", "container insights", "dashboards", "devops", "grafana", "kubernetes monitoring", "metrics visualization", "observability", "opentelemetry", "prometheus", "saas monitoring", "sre"]
+permalink: /azure/community/Azure-Monitors-Native-Grafana-Dashboards-Simplified-Observability-for-Prometheus-Workloads
+tags:
+- AKS
+- Application Insights
+- Azure
+- Azure Managed Grafana
+- Azure Monitor
+- Cloud Native Monitoring
+- Community
+- Container Insights
+- Dashboards
+- DevOps
+- Grafana
+- Kubernetes Monitoring
+- Metrics Visualization
+- Observability
+- OpenTelemetry
+- Prometheus
+- SaaS Monitoring
+- SRE
+section_names:
+- azure
+- devops
 ---
-
 sunayanasingh introduces the native integration of Grafana dashboards within Azure Monitor managed Prometheus services, now directly accessible via the Azure portal. Learn about streamlined observability and easy onboarding for Azure workloads.<!--excerpt_end-->
 
 # Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads

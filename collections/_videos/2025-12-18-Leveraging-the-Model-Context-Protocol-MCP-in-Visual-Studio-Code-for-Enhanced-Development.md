@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development"
-description: "This technical session explores how developers can utilize the open Model Context Protocol (MCP) standard with Visual Studio Code. Attendees learn how MCP servers integrate with VS Code to access external tools and services, including performing file operations, managing databases, and interacting with external APIs, all through a unified interface that empowers AI-assisted development workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lHWKy2GFWi0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=lHWKy2GFWi0
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-18 13:01:34 +00:00
-permalink: "/2025-12-18-Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Assisted Development", "AI Integration", "Coding", "Database Access", "Developer Tools", "External APIs", "File Operations", "MCP", "Microsoft Foundry", "Unified Interface", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai assisted development", "ai integration", "coding", "database access", "developer tools", "external apis", "file operations", "mcp", "microsoft foundry", "unified interface", "videos", "vs code"]
+permalink: /ai/videos/Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development
+tags:
+- AI
+- AI Assisted Development
+- AI Integration
+- Coding
+- Database Access
+- Developer Tools
+- External APIs
+- File Operations
+- MCP
+- Microsoft Foundry
+- Unified Interface
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
 ---
-
 Visual Studio Code showcases how developers can leverage the Model Context Protocol (MCP) to interact with external tools, databases, and APIs through AI-powered integrations. Presented by the Visual Studio Code team.<!--excerpt_end-->
 
 {% youtube lHWKy2GFWi0 %}

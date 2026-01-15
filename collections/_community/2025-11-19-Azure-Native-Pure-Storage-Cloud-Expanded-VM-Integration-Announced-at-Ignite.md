@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite"
-description: "This post details the Azure Storage team's investment in partner solutions, highlighting the joint development with Pure Storage to deliver enterprise-grade storage on Azure. It covers new capabilities allowing Pure Storage Cloud volumes to be provisioned directly to Azure Virtual Machines, simplifying deployment and management. Customer stories illustrate cost savings, improved performance, and migration scenarios for business-critical workloads. The post provides links to documentation, technical deep dives, and step-by-step demos."
-author: "Aung_Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite'
+author: Aung_Oo
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 17:45:00 +00:00
-permalink: "/2025-11-19-Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Resource Manager", "Azure Storage", "Azure VMware Solution", "Cloud Integration", "Community", "Cost Optimization", "Data Migration", "Enterprise Storage", "Linux", "Performance", "Portal Management", "Premium Managed Disks V2", "Pure Storage Cloud", "Storage Management", "Virtual Machines", "Windows"]
-tags_normalized: ["azure", "azure boost", "azure resource manager", "azure storage", "azure vmware solution", "cloud integration", "community", "cost optimization", "data migration", "enterprise storage", "linux", "performance", "portal management", "premium managed disks v2", "pure storage cloud", "storage management", "virtual machines", "windows"]
+permalink: /azure/community/Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite
+tags:
+- Azure
+- Azure Boost
+- Azure Resource Manager
+- Azure Storage
+- Azure VMware Solution
+- Cloud Integration
+- Community
+- Cost Optimization
+- Data Migration
+- Enterprise Storage
+- Linux
+- Performance
+- Portal Management
+- Premium Managed Disks V2
+- Pure Storage Cloud
+- Storage Management
+- Virtual Machines
+- Windows
+section_names:
+- azure
 ---
-
 Aung_Oo introduces the expanded Azure Native Pure Storage Cloud integration, detailing how customers can provision volumes to Azure VMs and benefit from enterprise-class storage features, management improvements, and extensive partner support.<!--excerpt_end-->
 
 # Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite

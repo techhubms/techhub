@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor"
-description: "This guide explains how Azure Copilot’s new Storage Migration Solutions Advisor uses conversational AI to simplify and accelerate decision-making for enterprise data migration to Azure. Learn about smart recommendations, step-by-step workflows, options for native and third-party migration tools, and pro tips to make your cloud migration smoother and more efficient."
-author: "madhurinrao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor
+author: madhurinrao
+canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 18:57:02 +00:00
-permalink: "/2025-12-11-Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Driven Workflow", "AWS S3", "AzCopy", "Azure", "Azure Copilot", "Azure Files", "Azure Storage Discovery", "Azure Storage Mover", "Blob Storage", "Cloud Migration", "Community", "Conversational Guidance", "Data Box", "Data Migration", "Hybrid Cloud", "Microsoft Azure", "Migration Planning", "Migration Tools", "NFS", "Partner Solutions", "SMB", "Storage Migration Solutions Advisor"]
-tags_normalized: ["ai", "ai driven workflow", "aws s3", "azcopy", "azure", "azure copilot", "azure files", "azure storage discovery", "azure storage mover", "blob storage", "cloud migration", "community", "conversational guidance", "data box", "data migration", "hybrid cloud", "microsoft azure", "migration planning", "migration tools", "nfs", "partner solutions", "smb", "storage migration solutions advisor"]
+permalink: /ai/community/Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor
+tags:
+- AI
+- AI Driven Workflow
+- AWS S3
+- AzCopy
+- Azure
+- Azure Copilot
+- Azure Files
+- Azure Storage Discovery
+- Azure Storage Mover
+- Blob Storage
+- Cloud Migration
+- Community
+- Conversational Guidance
+- Data Box
+- Data Migration
+- Hybrid Cloud
+- Microsoft Azure
+- Migration Planning
+- Migration Tools
+- NFS
+- Partner Solutions
+- SMB
+- Storage Migration Solutions Advisor
+section_names:
+- ai
+- azure
 ---
-
 madhurinrao outlines how Azure Copilot’s Storage Migration Solutions Advisor leverages conversational AI to streamline storage and data migration decisions for Azure customers, offering step-by-step guidance and recommendations.<!--excerpt_end-->
 
 # Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor

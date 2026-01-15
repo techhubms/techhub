@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Unlock Your First AI Solution with Microsoft Azure and UnifyCloud | OD1210"
-description: "This Microsoft Ignite session guides small and medium businesses through two quick, practical ways to adopt AI using Azure: building solutions with Foundry Templates and deploying partner AI applications from the Microsoft Marketplace. The session features step-by-step demonstrations, resource management tips, and advice from experts Vivek Bhatnagar and Joshua Huang. Along the way, attendees see how to leverage enterprise-grade Azure AI, developer tools like Azure Cloud Shell, and platforms like AI Factory and Cloud Atlas for quick implementations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Kd3KgJx0U1M"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: Unlock Your First AI Solution with Microsoft Azure and UnifyCloud | OD1210
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Kd3KgJx0U1M
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 05:30:51 +00:00
-permalink: "/2025-11-19-Unlock-Your-First-AI-Solution-with-Microsoft-Azure-and-UnifyCloud-OD1210.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Deployment", "AI Factory", "AI Guardian", "Azure", "Azure AI", "Cloud Atlas", "Cloud Shell", "Deployment Automation", "Foundry Templates", "GitHub Repository", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Resource Management", "SMB", "Step By Step Demo", "Videos"]
-tags_normalized: ["ai", "ai deployment", "ai factory", "ai guardian", "azure", "azure ai", "cloud atlas", "cloud shell", "deployment automation", "foundry templates", "github repository", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft marketplace", "msignite", "resource management", "smb", "step by step demo", "videos"]
+permalink: /ai/videos/Unlock-Your-First-AI-Solution-with-Microsoft-Azure-and-UnifyCloud-OD1210
+tags:
+- AI
+- AI Deployment
+- AI Factory
+- AI Guardian
+- Azure
+- Azure AI
+- Cloud Atlas
+- Cloud Shell
+- Deployment Automation
+- Foundry Templates
+- GitHub Repository
+- InnovatewithAzureAIappsandagents
+- Microsoft Ignite
+- Microsoft Marketplace
+- MSIgnite
+- Resource Management
+- SMB
+- Step By Step Demo
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Events presents a session at Ignite 2025 where Vivek Bhatnagar and Joshua Huang show SMBs how to quickly implement AI using Azure, including Foundry Templates and marketplace solutions.<!--excerpt_end-->
 
 {% youtube Kd3KgJx0U1M %}

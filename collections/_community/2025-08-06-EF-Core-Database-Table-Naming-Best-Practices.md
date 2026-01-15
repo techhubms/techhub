@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "EF Core Database Table Naming Best Practices"
-description: "A community discussion on recommended strategies for naming database tables in Entity Framework Core (EF Core) projects. Covers default behaviors, using attributes or Fluent API for customization, and leveraging naming conventions such as snake_case versus PascalCase. Also addresses when explicit configuration is needed, and best practices for infrastructure versus domain modeling."
-author: "jemofcourse"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mje247/ef_core_table_naming/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+layout: post
+title: EF Core Database Table Naming Best Practices
+author: jemofcourse
+canonical_url: https://www.reddit.com/r/dotnet/comments/1mje247/ef_core_table_naming/
+viewing_mode: external
+feed_name: Reddit DotNet
+feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-06 19:24:20 +00:00
-permalink: "/2025-08-06-EF-Core-Database-Table-Naming-Best-Practices.html"
-categories: ["Coding"]
-tags: [".NET", "Attributes", "C#", "Coding", "Community", "Custom Conventions", "Database Design", "DbContext", "EF Core", "Fluent API", "Infrastructure Code", "Naming Conventions", "PascalCase", "Snake Case", "Table Naming"]
-tags_normalized: ["dotnet", "attributes", "csharp", "coding", "community", "custom conventions", "database design", "dbcontext", "ef core", "fluent api", "infrastructure code", "naming conventions", "pascalcase", "snake case", "table naming"]
+permalink: /coding/community/EF-Core-Database-Table-Naming-Best-Practices
+tags:
+- .NET
+- Attributes
+- C#
+- Coding
+- Community
+- Custom Conventions
+- Database Design
+- DbContext
+- EF Core
+- Fluent API
+- Infrastructure Code
+- Naming Conventions
+- PascalCase
+- Snake Case
+- Table Naming
+section_names:
+- coding
 ---
-
 jemofcourse shares community insights and best practices on naming tables with Entity Framework Core, exploring default behaviors, Fluent API, and naming conventions for database clarity.<!--excerpt_end-->
 
 # EF Core Database Table Naming Best Practices

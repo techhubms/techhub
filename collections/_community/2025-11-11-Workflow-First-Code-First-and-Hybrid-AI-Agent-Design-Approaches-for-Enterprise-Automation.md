@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation"
-description: "This article, authored by PradyH, compares workflow-first, code-first, and hybrid approaches to building AI Agents—highlighting orchestration needs in modern enterprises. It deeply explores Microsoft’s Copilot Studio, Logic Apps, Power Automate, Azure AI Foundry, and Microsoft Agent Framework, along with open-source frameworks like LangChain and Semantic Kernel, emphasizing integration, governance, and developer productivity."
-author: "PradyH"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation'
+author: PradyH
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 18:36:18 +00:00
-permalink: "/2025-11-11-Workflow-First-Code-First-and-Hybrid-AI-Agent-Design-Approaches-for-Enterprise-Automation.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET SDK", "Agent Orchestration", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Azure Functions", "Coding", "Community", "Copilot Studio", "Enterprise Automation", "Hybrid Development", "Integration", "LangChain", "Logic Apps", "Microsoft Agent Framework", "Microsoft Graph", "Multi Agent Systems", "Observability", "Power Automate", "Python SDK", "SDK Development", "Semantic Kernel", "Visual Designers", "Workflow Automation"]
-tags_normalized: ["dotnet sdk", "agent orchestration", "ai", "ai agents", "azure", "azure ai foundry", "azure functions", "coding", "community", "copilot studio", "enterprise automation", "hybrid development", "integration", "langchain", "logic apps", "microsoft agent framework", "microsoft graph", "multi agent systems", "observability", "power automate", "python sdk", "sdk development", "semantic kernel", "visual designers", "workflow automation"]
+permalink: /ai/community/Workflow-First-Code-First-and-Hybrid-AI-Agent-Design-Approaches-for-Enterprise-Automation
+tags:
+- .NET SDK
+- Agent Orchestration
+- AI
+- AI Agents
+- Azure
+- Azure AI Foundry
+- Azure Functions
+- Coding
+- Community
+- Copilot Studio
+- Enterprise Automation
+- Hybrid Development
+- Integration
+- LangChain
+- Logic Apps
+- Microsoft Agent Framework
+- Microsoft Graph
+- Multi Agent Systems
+- Observability
+- Power Automate
+- Python SDK
+- SDK Development
+- Semantic Kernel
+- Visual Designers
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 PradyH discusses the pros and cons of workflow-first, code-first, and hybrid approaches to building AI Agents for enterprise automation, drawing on practical experiences with Microsoft and open-source tools.<!--excerpt_end-->
 
 # Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation

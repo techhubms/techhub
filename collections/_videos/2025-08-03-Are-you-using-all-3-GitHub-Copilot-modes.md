@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Are You Using All 3 GitHub Copilot Modes?"
-description: "This short video by GitHub offers a preview of the three core modes in GitHub Copilot: Agent, Edit, and Ask. It encourages viewers to watch a more in-depth video for a comprehensive understanding of these features, while providing links for further engagement with GitHub resources and community."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/oZR41osK57w"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Are You Using All 3 GitHub Copilot Modes?
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/oZR41osK57w
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-03 14:01:06 +00:00
-permalink: "/2025-08-03-Are-you-using-all-3-GitHub-Copilot-modes.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistant", "AI Programming", "Code Completion", "Copilot Agent Mode", "Copilot Ask Mode", "Copilot Edit Mode", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming", "Programming Tools", "Videos"]
-tags_normalized: ["ai", "ai code assistant", "ai programming", "code completion", "copilot agent mode", "copilot ask mode", "copilot edit mode", "developer productivity", "github", "github copilot", "programming", "programming tools", "videos"]
+permalink: /github-copilot/videos/Are-you-using-all-3-GitHub-Copilot-modes
+tags:
+- AI
+- AI Code Assistant
+- AI Programming
+- Code Completion
+- Copilot Agent Mode
+- Copilot Ask Mode
+- Copilot Edit Mode
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Programming
+- Programming Tools
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this teaser by GitHub, viewers get an introduction to the three GitHub Copilot modes—Agent, Edit, and Ask. The author, GitHub, invites users to explore the full deep dive for an in-depth look at these AI-powered productivity features.<!--excerpt_end-->
 
 {% youtube oZR41osK57w %}

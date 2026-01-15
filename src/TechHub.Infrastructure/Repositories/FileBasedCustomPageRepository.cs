@@ -149,7 +149,7 @@ public class FileBasedCustomPageRepository : ICustomPageRepository, IDisposable
 
         // Extract optional fields
         var description = _frontMatterParser.GetValue<string>(frontMatter, "description") ?? string.Empty;
-        var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
+        var sectionNames = _frontMatterParser.GetListValue(frontMatter, "section_names");
         var sidebarInfo = _frontMatterParser.GetValue<JsonElement?>(frontMatter, "sidebar_info");
 
         // Derive slug from permalink (last segment of the permalink path)
@@ -162,7 +162,7 @@ public class FileBasedCustomPageRepository : ICustomPageRepository, IDisposable
             Title = title,
             Description = description,
             Permalink = permalink,
-            Categories = categories,
+            SectionNames = sectionNames,
             Content = content,
             SidebarInfo = sidebarInfo
         };

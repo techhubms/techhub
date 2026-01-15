@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "AI Dev Days: Virtual Event for Developers on Azure, GitHub, and AI with Microsoft Reactor"
-description: "This news post highlights AI Dev Days, a two-day virtual event by Microsoft Reactor and Foundry. Participants will get hands-on learning with Azure, GitHub, Foundry, and other Microsoft tools, focusing on agentic workflows, app modernization, and the latest AI models. The event features sessions on Azure SRE Agent, MCP, Agentic DevOps, GitHub Copilot, VS Code, and Visual Studio, along with practical labs and expert insights from Microsoft Ignite and GitHub Universe."
-author: "Jenn Cockrell"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+layout: post
+title: 'AI Dev Days: Virtual Event for Developers on Azure, GitHub, and AI with Microsoft Reactor'
+author: Jenn Cockrell
+canonical_url: https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/
+viewing_mode: external
+feed_name: Microsoft AI Foundry Blog
+feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-03 03:15:13 +00:00
-permalink: "/2025-12-03-AI-Dev-Days-Virtual-Event-for-Developers-on-Azure-GitHub-and-AI-with-Microsoft-Reactor.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentic DevOps", "AI", "AI Dev Days", "AI Training", "App Modernization", "Azure", "Azure SRE Agent", "Coding", "DevOps", "Foundry", "GitHub Copilot", "GitHub Universe", "MCP", "Microsoft Foundry", "Microsoft Ignite", "Microsoft Reactor", "News", "VirtualEvent", "VS", "VS Code"]
-tags_normalized: ["agent hq", "agentic devops", "ai", "ai dev days", "ai training", "app modernization", "azure", "azure sre agent", "coding", "devops", "foundry", "github copilot", "github universe", "mcp", "microsoft foundry", "microsoft ignite", "microsoft reactor", "news", "virtualevent", "vs", "vs code"]
+permalink: /github-copilot/news/AI-Dev-Days-Virtual-Event-for-Developers-on-Azure-GitHub-and-AI-with-Microsoft-Reactor
+tags:
+- Agent HQ
+- Agentic DevOps
+- AI
+- AI Dev Days
+- AI Training
+- App Modernization
+- Azure
+- Azure SRE Agent
+- Coding
+- DevOps
+- Foundry
+- GitHub Copilot
+- GitHub Universe
+- MCP
+- Microsoft Foundry
+- Microsoft Ignite
+- Microsoft Reactor
+- News
+- VirtualEvent
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Jenn Cockrell introduces AI Dev Days, a virtual event from Microsoft Reactor and Foundry for developers to skill up with the latest in Azure, AI, GitHub Copilot, and agent-based workflows.<!--excerpt_end-->
 
 # AI Dev Days: Level-Up Your AI Skills with Microsoft Reactor

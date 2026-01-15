@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "How AI Fixed My Procrastination: Using Copilot and AI Agents in Visual Studio Projects"
-description: "Mads Kristensen details how leveraging Copilot and AI agent capabilities in Visual Studio helped him kickstart and complete long-postponed projects, including building a static website, developing a custom programming language service, and creating new color themes. The article offers practical insights into agent-assisted development, GitHub Copilot productivity, and extension development within the Microsoft ecosystem."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'How AI Fixed My Procrastination: Using Copilot and AI Agents in Visual Studio Projects'
+author: Mads Kristensen
+canonical_url: https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-22 15:00:38 +00:00
-permalink: "/2025-12-22-How-AI-Fixed-My-Procrastination-Using-Copilot-and-AI-Agents-in-Visual-Studio-Projects.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET 10", "Agent Mode", "Agentic Development", "AI", "AI Agents", "C#", "CI/CD", "Cloud Agent", "Coding", "Color Themes", "Copilot", "Copilot Chat", "DevOps", "Extension Development", "GitHub Actions", "GitHub Copilot", "Language Service", "News", "NuGet Package", "Parser Development", "Static Website", "TOON Language", "VS"]
-tags_normalized: ["dotnet 10", "agent mode", "agentic development", "ai", "ai agents", "csharp", "cislashcd", "cloud agent", "coding", "color themes", "copilot", "copilot chat", "devops", "extension development", "github actions", "github copilot", "language service", "news", "nuget package", "parser development", "static website", "toon language", "vs"]
+permalink: /github-copilot/news/How-AI-Fixed-My-Procrastination-Using-Copilot-and-AI-Agents-in-Visual-Studio-Projects
+tags:
+- .NET 10
+- Agent Mode
+- Agentic Development
+- AI
+- AI Agents
+- C#
+- CI/CD
+- Cloud Agent
+- Coding
+- Color Themes
+- Copilot
+- Copilot Chat
+- DevOps
+- Extension Development
+- GitHub Actions
+- GitHub Copilot
+- Language Service
+- News
+- NuGet Package
+- Parser Development
+- Static Website
+- TOON Language
+- VS
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Mads Kristensen shares how using Copilot and AI agents in Visual Studio accelerated his web development, created a new programming language extension, and enabled efficient color theme creation—all while overcoming procrastination.<!--excerpt_end-->
 
 # How AI Fixed My Procrastination: Using Copilot and AI Agents in Visual Studio Projects

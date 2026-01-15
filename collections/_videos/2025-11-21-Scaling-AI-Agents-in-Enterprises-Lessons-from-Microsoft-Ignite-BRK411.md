@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Scaling AI Agents in Enterprises: Lessons from Microsoft Ignite BRK411"
-description: "This session from Microsoft Ignite 2025 explores practical strategies and lessons learned in scaling AI agentic systems in enterprise environments. Industry leaders discuss what it means to be ‘Copilot ready’ and share essential insights on data foundations, security, governance, and building user trust for robust agent deployments. Key topics include Azure AI Foundry, enterprise adoption models, overcoming data silos, driving automation and compliance, and empowering business users to customize AI assistants."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ly-QiRuq7cg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Scaling AI Agents in Enterprises: Lessons from Microsoft Ignite BRK411'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=Ly-QiRuq7cg
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:45:08 +00:00
-permalink: "/2025-11-21-Scaling-AI-Agents-in-Enterprises-Lessons-from-Microsoft-Ignite-BRK411.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Scaling", "Agentic Stack", "AI", "AI Agents", "AI Democratization", "Azure", "Azure AI Foundry", "Business Value", "Compliance", "Copilot Ready", "Data Governance", "Enterprise Adoption", "Enterprise AI", "Enterprise Automation", "Microsoft Ignite", "MSIgnite", "Other", "User Trust", "Videos"]
-tags_normalized: ["agent scaling", "agentic stack", "ai", "ai agents", "ai democratization", "azure", "azure ai foundry", "business value", "compliance", "copilot ready", "data governance", "enterprise adoption", "enterprise ai", "enterprise automation", "microsoft ignite", "msignite", "other", "user trust", "videos"]
+permalink: /ai/videos/Scaling-AI-Agents-in-Enterprises-Lessons-from-Microsoft-Ignite-BRK411
+tags:
+- Agent Scaling
+- Agentic Stack
+- AI
+- AI Agents
+- AI Democratization
+- Azure
+- Azure AI Foundry
+- Business Value
+- Compliance
+- Copilot Ready
+- Data Governance
+- Enterprise Adoption
+- Enterprise AI
+- Enterprise Automation
+- Microsoft Ignite
+- MSIgnite
+- Other
+- User Trust
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this Microsoft Ignite breakout, speakers Nick Baguley, Tom Davis, Zion Zatlavi, and Sharon Zhang share hands-on advice for scaling AI agentic systems in large enterprises, focusing on Azure AI Foundry and Copilot readiness.<!--excerpt_end-->
 
 {% youtube Ly-QiRuq7cg %}

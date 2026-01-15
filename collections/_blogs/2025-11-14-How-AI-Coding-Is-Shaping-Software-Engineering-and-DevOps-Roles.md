@@ -1,20 +1,52 @@
----
-layout: "post"
-title: "How AI Coding Is Shaping Software Engineering and DevOps Roles"
-description: "A summary of a GitLab survey of 3,266 DevSecOps professionals on the impact of pervasive AI coding in software development. Covers the increased demand for software engineers, adoption of AI tools across the SDLC, challenges in compliance, code quality concerns, and the continuing need for human creativity and oversight in DevOps practices."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: How AI Coding Is Shaping Software Engineering and DevOps Roles
+author: Mike Vizard
+canonical_url: https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-14 12:33:41 +00:00
-permalink: "/2025-11-14-How-AI-Coding-Is-Shaping-Software-Engineering-and-DevOps-Roles.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Compliance Challenges", "AI Generated Code", "AI Generated Code Vulnerabilities", "AI in DevOps", "AI in Software Development", "AI Tools Adoption", "Blogs", "Business Of DevOps", "Code Vulnerabilities", "Collaboration Barriers", "Compliance Management", "Developer Upskilling", "DevOps", "DevOps Productivity", "DevSecOps", "DevSecOps Challenges", "Doin' DevOps", "GitLab", "GitLab DevSecOps Survey", "Platform Engineering", "SDLC Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Software Engineer Demand", "Survey Insights", "Technical Debt", "Technical Debt From AI", "Tool Adoption", "Vibecoding", "Vibecoding Risks"]
-tags_normalized: ["agentic ai", "ai", "ai compliance challenges", "ai generated code", "ai generated code vulnerabilities", "ai in devops", "ai in software development", "ai tools adoption", "blogs", "business of devops", "code vulnerabilities", "collaboration barriers", "compliance management", "developer upskilling", "devops", "devops productivity", "devsecops", "devsecops challenges", "doin devops", "gitlab", "gitlab devsecops survey", "platform engineering", "sdlc automation", "social facebook", "social linkedin", "social x", "software development lifecycle", "software engineer demand", "survey insights", "technical debt", "technical debt from ai", "tool adoption", "vibecoding", "vibecoding risks"]
+permalink: /ai/blogs/How-AI-Coding-Is-Shaping-Software-Engineering-and-DevOps-Roles
+tags:
+- Agentic AI
+- AI
+- AI Compliance Challenges
+- AI Generated Code
+- AI Generated Code Vulnerabilities
+- AI in DevOps
+- AI in Software Development
+- AI Tools Adoption
+- Blogs
+- Business Of DevOps
+- Code Vulnerabilities
+- Collaboration Barriers
+- Compliance Management
+- Developer Upskilling
+- DevOps
+- DevOps Productivity
+- DevSecOps
+- DevSecOps Challenges
+- Doin' DevOps
+- GitLab
+- GitLab DevSecOps Survey
+- Platform Engineering
+- SDLC Automation
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Development Lifecycle
+- Software Engineer Demand
+- Survey Insights
+- Technical Debt
+- Technical Debt From AI
+- Tool Adoption
+- Vibecoding
+- Vibecoding Risks
+section_names:
+- ai
+- devops
 ---
-
 Mike Vizard summarizes findings from a recent GitLab DevSecOps survey, revealing how AI coding is driving demand for software engineers and transforming DevOps, with significant implications for compliance and team collaboration.<!--excerpt_end-->
 
 # How AI Coding Is Shaping Software Engineering and DevOps Roles

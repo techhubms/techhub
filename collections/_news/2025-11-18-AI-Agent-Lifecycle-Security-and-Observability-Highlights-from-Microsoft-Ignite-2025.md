@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI Agent Lifecycle, Security, and Observability: Highlights from Microsoft Ignite 2025"
-description: "This article summarizes the major themes and product announcements from Microsoft Ignite 2025, focusing on the lifecycle of AI for organizations. It covers agent development using Copilot Studio, security and observability with Defender, Entra, Purview, and Foundry IQ, and the integration of business intelligence via Fabric IQ and Power BI. Readers will learn how Microsoft is empowering organizations to deploy, secure, and manage AI agents throughout their operations, with tools for responsible and scalable innovation."
-author: "ryon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'AI Agent Lifecycle, Security, and Observability: Highlights from Microsoft Ignite 2025'
+author: ryon
+canonical_url: https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 17:18:34 +00:00
-permalink: "/2025-11-18-AI-Agent-Lifecycle-Security-and-Observability-Highlights-from-Microsoft-Ignite-2025.html"
-categories: ["AI", "Security"]
-tags: ["Agent Lifecycle", "Agent Observability", "AI", "AI Agents", "Copilot Studio", "Fabric IQ", "Governance", "Microsoft 365", "Microsoft Defender", "Microsoft Entra", "Microsoft Foundry", "Microsoft Ignite", "Microsoft Purview", "News", "Power BI", "Security", "Security Solutions", "Work IQ"]
-tags_normalized: ["agent lifecycle", "agent observability", "ai", "ai agents", "copilot studio", "fabric iq", "governance", "microsoft 365", "microsoft defender", "microsoft entra", "microsoft foundry", "microsoft ignite", "microsoft purview", "news", "power bi", "security", "security solutions", "work iq"]
+permalink: /ai/news/AI-Agent-Lifecycle-Security-and-Observability-Highlights-from-Microsoft-Ignite-2025
+tags:
+- Agent Lifecycle
+- Agent Observability
+- AI
+- AI Agents
+- Copilot Studio
+- Fabric IQ
+- Governance
+- Microsoft 365
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Foundry
+- Microsoft Ignite
+- Microsoft Purview
+- News
+- Power BI
+- Security
+- Security Solutions
+- Work IQ
+section_names:
+- ai
+- security
 ---
-
 ryon outlines the major AI advancements announced at Microsoft Ignite 2025, emphasizing agent lifecycle management, security, and integration across Microsoft’s enterprise platforms.<!--excerpt_end-->
 
 # AI Agent Lifecycle, Security, and Observability: Highlights from Microsoft Ignite 2025

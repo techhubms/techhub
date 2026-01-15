@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code"
-description: "This video introduces Agent Skills (Skills.md), an open standard for defining folders of instructions, scripts, and resources to extend the capabilities of AI agents like GitHub Copilot in Visual Studio Code. The session demonstrates how developers can customize GitHub Copilot’s behavior for specialized tasks by configuring agent skills, and explains interoperability across various Copilot environments, including CLI and coding agents."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rIrxkB-02P0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=rIrxkB-02P0
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-17 20:14:12 +00:00
-permalink: "/2025-12-17-Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agent Skills", "Agentmode", "Agents", "Agentskills", "AI", "AI Agents", "AI Workflow", "Code", "Code Customization", "Coding", "Copilot CLI", "Copilot Coding Agent", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "Microsoft", "Skills.md", "Software Developer", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "agent skills", "agentmode", "agents", "agentskills", "ai", "ai agents", "ai workflow", "code", "code customization", "coding", "copilot cli", "copilot coding agent", "developer", "developer community", "developer tools", "github copilot", "microsoft", "skillsdotmd", "software developer", "software development", "videos", "vs code"]
+permalink: /github-copilot/videos/Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code
+tags:
+- Agent Mode
+- Agent Skills
+- Agentmode
+- Agents
+- Agentskills
+- AI
+- AI Agents
+- AI Workflow
+- Code
+- Code Customization
+- Coding
+- Copilot CLI
+- Copilot Coding Agent
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub Copilot
+- Microsoft
+- Skills.md
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code hosts James Montemagno, Harald Kirschner, and Tim Rogers to discuss Agent Skills (Skills.md) in GitHub Copilot. The video explores how developers can expand Copilot’s functionality in VS Code through custom agent skills.<!--excerpt_end-->
 
 {% youtube rIrxkB-02P0 %}

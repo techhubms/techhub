@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Design AI Workloads with the Azure Well-Architected Framework"
-description: "This episode of Azure Essentials discusses how the Azure Well-Architected Framework (WAF) applies to designing AI workloads. Hosts Thomas Maurer and Clayton Siemens explore WAF pillars, practical design principles for AI, tools, and resources to ensure secure, responsible, and efficient AI solutions on Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UXeU4PKrQUw"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Design AI Workloads with the Azure Well-Architected Framework
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=UXeU4PKrQUw
+viewing_mode: internal
+feed_name: Microsoft Build 2025 YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-29 07:00:24 +00:00
-permalink: "/2025-07-29-Design-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Workload Design", "Azure", "Azure Essentials Show", "Azure PaaS", "Azure SaaS", "Azure Well Architected Framework", "AzureEssentialsShow", "Cost Optimization", "Ethical AI", "Explainable AI", "Model Decay", "Operational Excellence", "Performance Efficiency", "Reliability", "Videos"]
-tags_normalized: ["ai", "ai workload design", "azure", "azure essentials show", "azure paas", "azure saas", "azure well architected framework", "azureessentialsshow", "cost optimization", "ethical ai", "explainable ai", "model decay", "operational excellence", "performance efficiency", "reliability", "videos"]
+permalink: /ai/videos/Design-AI-Workloads-with-the-Azure-Well-Architected-Framework
+tags:
+- AI
+- AI Workload Design
+- Azure
+- Azure Essentials Show
+- Azure PaaS
+- Azure SaaS
+- Azure Well Architected Framework
+- AzureEssentialsShow
+- Cost Optimization
+- Ethical AI
+- Explainable AI
+- Model Decay
+- Operational Excellence
+- Performance Efficiency
+- Reliability
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this video, Microsoft Developer's Thomas Maurer and Clayton Siemens discuss designing AI workloads using the Azure Well-Architected Framework, highlighting key principles and actionable guidance.<!--excerpt_end-->
 
 {% youtube UXeU4PKrQUw %}

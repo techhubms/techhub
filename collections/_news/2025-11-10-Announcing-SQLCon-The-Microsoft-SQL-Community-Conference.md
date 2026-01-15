@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Announcing SQLCon: The Microsoft SQL Community Conference"
-description: "This announcement introduces SQLCon, a conference dedicated to the SQL community, database developers, and data engineers. SQLCon will offer deep technical sessions on SQL Server 2025, Azure SQL, Microsoft Fabric, AI-driven databases, Copilot integrations, security, and hybrid data management. It promises practical learning and direct guidance from Microsoft experts."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: 'Announcing SQLCon: The Microsoft SQL Community Conference'
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-10 14:16:58 +00:00
-permalink: "/2025-11-10-Announcing-SQLCon-The-Microsoft-SQL-Community-Conference.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["AI", "AI Model Management", "Azure", "Azure Arc", "Azure SQL Database", "Change Event Streaming", "CI/CD", "Cloud Migration", "Coding", "Copilot Integration", "Data Security", "Database Development", "Database Mirroring", "Entra ID", "GraphQL API", "Hybrid Data Management", "JSON Data Type", "Microsoft Fabric", "ML", "News", "Regular Expressions", "REST API", "Security", "Semantic Search", "SQL Server", "SQL Server Management Studio", "Vector Search"]
-tags_normalized: ["ai", "ai model management", "azure", "azure arc", "azure sql database", "change event streaming", "cislashcd", "cloud migration", "coding", "copilot integration", "data security", "database development", "database mirroring", "entra id", "graphql api", "hybrid data management", "json data type", "microsoft fabric", "ml", "news", "regular expressions", "rest api", "security", "semantic search", "sql server", "sql server management studio", "vector search"]
+permalink: /ai/news/Announcing-SQLCon-The-Microsoft-SQL-Community-Conference
+tags:
+- AI
+- AI Model Management
+- Azure
+- Azure Arc
+- Azure SQL Database
+- Change Event Streaming
+- CI/CD
+- Cloud Migration
+- Coding
+- Copilot Integration
+- Data Security
+- Database Development
+- Database Mirroring
+- Entra ID
+- GraphQL API
+- Hybrid Data Management
+- JSON Data Type
+- Microsoft Fabric
+- ML
+- News
+- Regular Expressions
+- REST API
+- Security
+- Semantic Search
+- SQL Server
+- SQL Server Management Studio
+- Vector Search
+section_names:
+- ai
+- azure
+- coding
+- ml
+- security
 ---
-
 Microsoft Fabric Blog announces SQLCon, a new conference for database professionals, with a focus on the latest advancements in SQL Server, Azure SQL, Fabric, AI, and security.<!--excerpt_end-->
 
 # Announcing SQLCon: The Microsoft SQL Community Conference

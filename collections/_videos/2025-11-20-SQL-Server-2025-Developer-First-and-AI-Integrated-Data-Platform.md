@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "SQL Server 2025: Developer-First and AI-Integrated Data Platform"
-description: "This advanced session from Microsoft Ignite 2025 explores the capabilities of SQL Server 2025 as an enterprise-grade, AI-ready database. It covers new developer-first features such as native JSON and REST APIs, built-in vector search for AI workloads, optimized locking for higher availability, and Fabric mirroring for real-time analytics. The session includes customer case studies, product innovation stories, and hands-on topics like prompt programming with Copilot in T-SQL environments, along with announcements around SQL AI certifications and SQL Server edition changes."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HelG1r0GneA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'SQL Server 2025: Developer-First and AI-Integrated Data Platform'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=HelG1r0GneA
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:39:16 +00:00
-permalink: "/2025-11-20-SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Integration", "Application Availability", "Azure", "Azure SQL", "Coding", "Copilot", "Data Platform", "Developer Features", "Fabric Mirroring", "JSON Native Data", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Prompt Programming", "Real Time Analytics", "REST API", "SQL AI Certification", "SQL Server", "T SQL", "Vector Search", "Videos"]
-tags_normalized: ["ai", "ai integration", "application availability", "azure", "azure sql", "coding", "copilot", "data platform", "developer features", "fabric mirroring", "json native data", "migrateandmodernizeyourestate", "ml", "msignite", "prompt programming", "real time analytics", "rest api", "sql ai certification", "sql server", "t sql", "vector search", "videos"]
+permalink: /ai/videos/SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform
+tags:
+- AI
+- AI Integration
+- Application Availability
+- Azure
+- Azure SQL
+- Coding
+- Copilot
+- Data Platform
+- Developer Features
+- Fabric Mirroring
+- JSON Native Data
+- Migrateandmodernizeyourestate
+- ML
+- MSIgnite
+- Prompt Programming
+- Real Time Analytics
+- REST API
+- SQL AI Certification
+- SQL Server
+- T SQL
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 Presented by Microsoft Events, this session showcases how SQL Server 2025 empowers developers and data professionals to build modern, AI-powered applications with innovative features and robust integration options.<!--excerpt_end-->
 
 {% youtube HelG1r0GneA %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP"
-description: "This session explores Archestra, an open-source platform focused on secure and scalable automation for enterprise agents, leveraging MCP (Microsoft Cloud Platform). The video delves into deployment, management, AI orchestration, and security via advanced model governance and access controls. Attendees gain hands-on experience through demonstrations, codebase contributions, and engagement with the Archestra community, emphasizing secure enterprise automation using open source principles and Microsoft technology."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SkmluS-xzmM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=SkmluS-xzmM
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-14 21:10:06 +00:00
-permalink: "/2025-10-14-Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP.html"
-categories: ["AI", "Security"]
-tags: ["Access Control", "AI", "AI Orchestration", "Archestra", "Automation", "Community Contribution", "Enterprise Agents", "MCP", "Microsoft Cloud Platform", "Model Governance", "Open Source", "Security", "Software Deployment", "Videos"]
-tags_normalized: ["access control", "ai", "ai orchestration", "archestra", "automation", "community contribution", "enterprise agents", "mcp", "microsoft cloud platform", "model governance", "open source", "security", "software deployment", "videos"]
+permalink: /ai/videos/Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP
+tags:
+- Access Control
+- AI
+- AI Orchestration
+- Archestra
+- Automation
+- Community Contribution
+- Enterprise Agents
+- MCP
+- Microsoft Cloud Platform
+- Model Governance
+- Open Source
+- Security
+- Software Deployment
+- Videos
+section_names:
+- ai
+- security
 ---
-
 GitHub presents a session on Archestra, guiding viewers through securely deploying and orchestrating enterprise AI agents with MCP. The video demonstrates security strategies and collaborative development using open-source tools.<!--excerpt_end-->
 
 {% youtube SkmluS-xzmM %}

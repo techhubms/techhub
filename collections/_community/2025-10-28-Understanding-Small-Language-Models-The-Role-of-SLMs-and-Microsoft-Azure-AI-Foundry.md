@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry"
-description: "This article by Sherrylist offers a clear introduction to Small Language Models (SLMs), contrasting them with Large Language Models (LLMs), and highlighting their importance for privacy, performance, and edge use cases. It specifically discusses practical impacts, Microsoft's Azure AI Foundry, and key technical concepts for developers and AI enthusiasts."
-author: "Sherrylist"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry'
+author: Sherrylist
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 07:00:00 +00:00
-permalink: "/2025-10-28-Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry.html"
-categories: ["AI"]
-tags: ["AI", "AI Deployment", "AI Privacy", "Azure AI Foundry", "Community", "Edge AI", "Inference", "Large Language Models", "LLM", "Machine Learning", "Microsoft", "On Device AI", "Parameters", "Prompt Engineering", "SLM", "Small Language Models", "Tokenization"]
-tags_normalized: ["ai", "ai deployment", "ai privacy", "azure ai foundry", "community", "edge ai", "inference", "large language models", "llm", "machine learning", "microsoft", "on device ai", "parameters", "prompt engineering", "slm", "small language models", "tokenization"]
+permalink: /ai/community/Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry
+tags:
+- AI
+- AI Deployment
+- AI Privacy
+- Azure AI Foundry
+- Community
+- Edge AI
+- Inference
+- Large Language Models
+- LLM
+- Machine Learning
+- Microsoft
+- On Device AI
+- Parameters
+- Prompt Engineering
+- SLM
+- Small Language Models
+- Tokenization
+section_names:
+- ai
 ---
-
 Sherrylist explains the fundamentals and significance of Small Language Models (SLMs), comparing them to LLMs, and covers real-world use cases, including Microsoft Azure AI Foundry, to help developers understand and work with edge AI solutions.<!--excerpt_end-->
 
 # Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry

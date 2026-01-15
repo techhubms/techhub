@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modern Windows Development with .NET"
-description: "This session outlines the latest trends and technologies in Windows desktop application development using the .NET platform. It covers the integration of WinUI 3, Windows App SDK, and .NET 10, highlighting how these tools simplify building high-performance, native Windows applications. The content also addresses integrating AI, improving native experiences, and leveraging new language and framework capabilities. Resources for further learning and community engagement are included."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IJ8s5OvbFdg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Modern Windows Development with .NET
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=IJ8s5OvbFdg
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/2025-11-12-Modern-Windows-Development-with-NET.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Integration", "ASP.NET Core 10", "C# 14", "Cloud Native Apps", "Coding", "Desktop Applications", "Development Tools", "F# 10", "MAUI", "Microsoft", "Modernization", "Native Applications", "Performance", "Videos", "VS", "Windows App SDK", "Windows Development", "WinUI 3"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "aspdotnet core 10", "csharp 14", "cloud native apps", "coding", "desktop applications", "development tools", "fsharp 10", "maui", "microsoft", "modernization", "native applications", "performance", "videos", "vs", "windows app sdk", "windows development", "winui 3"]
+permalink: /coding/videos/Modern-Windows-Development-with-NET
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Integration
+- ASP.NET Core 10
+- C# 14
+- Cloud Native Apps
+- Coding
+- Desktop Applications
+- Development Tools
+- F# 10
+- MAUI
+- Microsoft
+- Modernization
+- Native Applications
+- Performance
+- Videos
+- VS
+- Windows App SDK
+- Windows Development
+- WinUI 3
+section_names:
+- coding
 ---
-
 dotnet presents a session on using .NET 10, WinUI 3, and the Windows App SDK to modernize Windows desktop application development and leverage the full power of the Windows platform with the latest toolset.<!--excerpt_end-->
 
 {% youtube IJ8s5OvbFdg %}

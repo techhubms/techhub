@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Customize AI Responses from GitHub Copilot with Custom Instructions"
-description: "Matt Soucoup details how developers can use custom instructions in GitHub Copilot to tailor AI-generated code responses to match their team’s guidelines, coding standards, and workflow. The article explains the setup process, provides an example for C#, and clarifies the scope and benefits of using custom instructions."
-author: "Matt Soucoup"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/customize-ai-responses-from-github-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Customize AI Responses from GitHub Copilot with Custom Instructions
+author: Matt Soucoup
+canonical_url: https://devblogs.microsoft.com/dotnet/customize-ai-responses-from-github-copilot/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-10 17:15:00 +00:00
-permalink: "/2025-07-10-Customize-AI-Responses-from-GitHub-Copilot-with-Custom-Instructions.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Customization", "C#", "Code Generation", "Coding", "Coding Standards", "Copilot", "Copilot Agent Mode", "Custom Instructions", "Development Workflow", "GitHub Copilot", "News", "VS", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai customization", "csharp", "code generation", "coding", "coding standards", "copilot", "copilot agent mode", "custom instructions", "development workflow", "github copilot", "news", "vs", "vs code"]
+permalink: /github-copilot/news/Customize-AI-Responses-from-GitHub-Copilot-with-Custom-Instructions
+tags:
+- .NET
+- AI
+- AI Customization
+- C#
+- Code Generation
+- Coding
+- Coding Standards
+- Copilot
+- Copilot Agent Mode
+- Custom Instructions
+- Development Workflow
+- GitHub Copilot
+- News
+- VS
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Matt Soucoup explains how custom instructions in GitHub Copilot help developers generate AI-powered code that aligns with their team’s coding standards and preferences.<!--excerpt_end-->
 
 ## Overview

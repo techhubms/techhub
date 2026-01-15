@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration"
-description: "This Microsoft Ignite session investigates the pitfalls of legacy Active Directory (AD) backup and disaster recovery strategies, comparing them to patent-backed modern solutions. It covers common failure points, the risk of reinfection, requirements for robust recovery, and the role of automated tooling—especially for threat detection and clean forest restoration. The session highlights the transition from outdated methods to proactive, instant recovery, including deployment in Azure environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mVZqmcmB6FU"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+layout: post
+title: 'Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration'
+author: Microsoft Events
+canonical_url: https://www.youtube.com/watch?v=mVZqmcmB6FU
+viewing_mode: internal
+feed_name: Microsoft Events YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:05:04 +00:00
-permalink: "/2025-11-19-Active-Directory-Disaster-Recovery-Modern-Approaches-for-Secure-Forest-Restoration.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Alerting", "Azure", "Cayosoft", "Change Monitoring", "Disaster Recovery", "Enterprise Backup", "Forest Recovery", "Identity Layer Security", "Identity Management", "Isolated Standby Environment", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Recovery Plan", "Security", "Threat Detection", "Videos", "Windows Server Backup"]
-tags_normalized: ["active directory", "alerting", "azure", "cayosoft", "change monitoring", "disaster recovery", "enterprise backup", "forest recovery", "identity layer security", "identity management", "isolated standby environment", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "recovery plan", "security", "threat detection", "videos", "windows server backup"]
+permalink: /azure/videos/Active-Directory-Disaster-Recovery-Modern-Approaches-for-Secure-Forest-Restoration
+tags:
+- Active Directory
+- Alerting
+- Azure
+- Cayosoft
+- Change Monitoring
+- Disaster Recovery
+- Enterprise Backup
+- Forest Recovery
+- Identity Layer Security
+- Identity Management
+- Isolated Standby Environment
+- Microsoft Ignite
+- MSIgnite
+- ProtectcloudAIplatformandapps
+- Recovery Plan
+- Security
+- Threat Detection
+- Videos
+- Windows Server Backup
+section_names:
+- azure
+- security
 ---
-
 Microsoft Events host Craig Birch explores Active Directory disaster recovery at Microsoft Ignite, detailing the shift from legacy backup methods to instant, secure forest restoration involving Azure and advanced security features.<!--excerpt_end-->
 
 {% youtube mVZqmcmB6FU %}

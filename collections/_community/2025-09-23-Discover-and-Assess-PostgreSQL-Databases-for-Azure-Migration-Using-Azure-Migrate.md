@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate"
-description: "This guide discusses using Azure Migrate to discover and assess PostgreSQL databases across diverse environments for migration and modernization to Azure. It covers the public preview of agentless discovery, readiness assessment, dependency mapping, and migration cost planning to Azure VM (IaaS) and Azure Database for PostgreSQL (PaaS) targets."
-author: "ShradhaKalra"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba-p/4456108"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate
+author: ShradhaKalra
+canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba-p/4456108
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 08:09:24 +00:00
-permalink: "/2025-09-23-Discover-and-Assess-PostgreSQL-Databases-for-Azure-Migration-Using-Azure-Migrate.html"
-categories: ["Azure"]
-tags: ["Agentless Discovery", "Azure", "Azure Compute SKU", "Azure Database For PostgreSQL", "Azure Migrate", "Cloud Migration", "Community", "Configuration Compatibility", "Cost Analysis", "Database Migration", "Dependency Mapping", "IaaS", "Microsoft Hyper V", "Migration Assessment", "PaaS", "PostgreSQL", "VMware"]
-tags_normalized: ["agentless discovery", "azure", "azure compute sku", "azure database for postgresql", "azure migrate", "cloud migration", "community", "configuration compatibility", "cost analysis", "database migration", "dependency mapping", "iaas", "microsoft hyper v", "migration assessment", "paas", "postgresql", "vmware"]
+permalink: /azure/community/Discover-and-Assess-PostgreSQL-Databases-for-Azure-Migration-Using-Azure-Migrate
+tags:
+- Agentless Discovery
+- Azure
+- Azure Compute SKU
+- Azure Database For PostgreSQL
+- Azure Migrate
+- Cloud Migration
+- Community
+- Configuration Compatibility
+- Cost Analysis
+- Database Migration
+- Dependency Mapping
+- IaaS
+- Microsoft Hyper V
+- Migration Assessment
+- PaaS
+- PostgreSQL
+- VMware
+section_names:
+- azure
 ---
-
 ShradhaKalra provides a practical overview of Azure Migrate’s new capabilities to discover and assess PostgreSQL databases for migration and modernization to Azure, highlighting agentless assessment, dependency mapping, and migration planning features.<!--excerpt_end-->
 
 # Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate

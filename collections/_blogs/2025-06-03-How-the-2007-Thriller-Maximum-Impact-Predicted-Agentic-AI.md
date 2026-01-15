@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How the 2007 Thriller Maximum Impact Predicted Agentic AI"
-description: "A reflective exploration by Rene van Osnabrugge on how early fiction imagined agentic AI, now coming to life through technologies like ChatGPT, Microsoft Copilot Studio, and GitHub Spark. The article examines the progression from science fiction concepts to practical multi-agent AI systems and their transformative impact on IT and software development."
-author: "Rene van Osnabrugge"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/"
-viewing_mode: "external"
-feed_name: "René van Osnabrugge's Blog"
-feed_url: "https://roadtoalm.com/feed/"
+﻿---
+layout: post
+title: How the 2007 Thriller Maximum Impact Predicted Agentic AI
+author: Rene van Osnabrugge
+canonical_url: https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/
+viewing_mode: external
+feed_name: René van Osnabrugge's Blog
+feed_url: https://roadtoalm.com/feed/
 date: 2025-06-03 12:34:16 +00:00
-permalink: "/2025-06-03-How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI.html"
-categories: ["AI"]
-tags: ["6Ds Of Exponential Organizations", "Agentic AI", "AI", "AI Middleware", "AI Orchestration", "Automation", "Blogs", "Book Reflection", "ChatGPT", "Digital Transformation", "GitHub Spark", "MCP (multi Agent Coordination Protocol)", "Microsoft Copilot Studio", "Multi Agent Systems", "Natural Language Interfaces", "Software Industry Trends", "Uncategorized"]
-tags_normalized: ["6ds of exponential organizations", "agentic ai", "ai", "ai middleware", "ai orchestration", "automation", "blogs", "book reflection", "chatgpt", "digital transformation", "github spark", "mcp multi agent coordination protocol", "microsoft copilot studio", "multi agent systems", "natural language interfaces", "software industry trends", "uncategorized"]
+permalink: /ai/blogs/How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI
+tags:
+- 6Ds Of Exponential Organizations
+- Agentic AI
+- AI
+- AI Middleware
+- AI Orchestration
+- Automation
+- Blogs
+- Book Reflection
+- ChatGPT
+- Digital Transformation
+- GitHub Spark
+- MCP (multi Agent Coordination Protocol)
+- Microsoft Copilot Studio
+- Multi Agent Systems
+- Natural Language Interfaces
+- Software Industry Trends
+- Uncategorized
+section_names:
+- ai
 ---
-
 Rene van Osnabrugge reflects on how Jack Henderson’s 2007 thriller Maximum Impact foreshadowed the arrival of agentic AI, discussing how real-world advances such as ChatGPT, GitHub Spark, and Microsoft Copilot Studio now fulfill that vision.<!--excerpt_end-->
 
 # How the 2007 Thriller Maximum Impact Predicted Agentic AI

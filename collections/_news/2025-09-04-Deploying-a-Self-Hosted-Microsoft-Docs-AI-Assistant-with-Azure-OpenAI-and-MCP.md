@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Deploying a Self-Hosted Microsoft Docs AI Assistant with Azure OpenAI and MCP"
-description: "This guide by Ricardo Macedo Martins details the end-to-end process for deploying a self-hosted AI assistant built on Microsoft technologies. You'll learn to combine Azure OpenAI, Azure Container Apps, and the Model Context Protocol (MCP) to create a secure developer tool that provides grounded answers from Microsoft Learn documents, using scalable cloud infrastructure and DevOps-friendly workflows."
-author: "Ricardo Macedo Martins"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+layout: post
+title: Deploying a Self-Hosted Microsoft Docs AI Assistant with Azure OpenAI and MCP
+author: Ricardo Macedo Martins
+canonical_url: https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/
+viewing_mode: external
+feed_name: Microsoft All Things Azure Blog
+feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-09-04 22:09:45 +00:00
-permalink: "/2025-09-04-Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Apps", "All Things Azure", "Azure", "Azure AI Foundry", "Azure CLI", "Azure Container Apps", "Azure Container Registry", "Azure OpenAI Service", "Cloud Architecture", "Coding", "Developer Tools", "DevOps", "Docker", "GPT 35 Turbo", "GPT 4", "GPT 4.1", "MCP", "Microsoft Learn", "Mslearn Mcp Chat", "News", "Next.js", "Node.js", "RAG Pipeline", "Secure Deployment", "Serverless Hosting"]
-tags_normalized: ["ai", "ai apps", "all things azure", "azure", "azure ai foundry", "azure cli", "azure container apps", "azure container registry", "azure openai service", "cloud architecture", "coding", "developer tools", "devops", "docker", "gpt 35 turbo", "gpt 4", "gpt 4dot1", "mcp", "microsoft learn", "mslearn mcp chat", "news", "nextdotjs", "nodedotjs", "rag pipeline", "secure deployment", "serverless hosting"]
+permalink: /ai/news/Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP
+tags:
+- AI
+- AI Apps
+- All Things Azure
+- Azure
+- Azure AI Foundry
+- Azure CLI
+- Azure Container Apps
+- Azure Container Registry
+- Azure OpenAI Service
+- Cloud Architecture
+- Coding
+- Developer Tools
+- DevOps
+- Docker
+- GPT 35 Turbo
+- GPT 4
+- GPT 4.1
+- MCP
+- Microsoft Learn
+- Mslearn Mcp Chat
+- News
+- Next.js
+- Node.js
+- RAG Pipeline
+- Secure Deployment
+- Serverless Hosting
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Ricardo Macedo Martins walks developers through deploying a custom AI assistant using Azure OpenAI, Model Context Protocol, and Azure Container Apps, leveraging Microsoft Learn content in a secure, production-ready stack.<!--excerpt_end-->
 
 # Deploying a Self-Hosted Microsoft Docs AI Assistant with Azure OpenAI and MCP

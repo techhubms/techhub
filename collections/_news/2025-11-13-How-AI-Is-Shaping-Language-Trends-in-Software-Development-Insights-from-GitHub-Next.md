@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next"
-description: "This article presents key insights from an interview with Idan Gazit, head of GitHub Next, exploring how AI is influencing language choices like TypeScript and Python in software development. It examines the AI feedback loop, the rise of typed languages, the impact of AI coding assistance, and the shifting skills landscape for developers and enterprises."
-author: "Alexandra Lietzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next'
+author: Alexandra Lietzke
+canonical_url: https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-13 16:00:00 +00:00
-permalink: "/2025-11-13-How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next.html"
-categories: ["AI", "Coding"]
-tags: ["Agents", "AI", "AI Development Tools", "AI Feedback Loop", "Bash Scripting", "Coding", "Developer Productivity", "Enterprise AI Adoption", "GitHub Next", "LLMs", "News", "News & Insights", "Octoverse", "Programming Languages", "Python", "Software Architecture", "Typed Languages", "Typescript", "WASM", "WebAssembly"]
-tags_normalized: ["agents", "ai", "ai development tools", "ai feedback loop", "bash scripting", "coding", "developer productivity", "enterprise ai adoption", "github next", "llms", "news", "news and insights", "octoverse", "programming languages", "python", "software architecture", "typed languages", "typescript", "wasm", "webassembly"]
+permalink: /ai/news/How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next
+tags:
+- Agents
+- AI
+- AI Development Tools
+- AI Feedback Loop
+- Bash Scripting
+- Coding
+- Developer Productivity
+- Enterprise AI Adoption
+- GitHub Next
+- LLMs
+- News
+- News & Insights
+- Octoverse
+- Programming Languages
+- Python
+- Software Architecture
+- Typed Languages
+- Typescript
+- WASM
+- WebAssembly
+section_names:
+- ai
+- coding
 ---
-
 Alexandra Lietzke shares insights from Idan Gazit of GitHub Next on how AI is transforming programming language trends, developer workflows, and the future of software development.<!--excerpt_end-->
 
 # How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next

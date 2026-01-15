@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Automating .NET Aspire Architecture Documentation with GitHub Copilot"
-description: "This hands-on Level 300 session demonstrates how to automate the creation and updating of .NET Aspire architecture documentation. It leverages the capabilities of GitHub Copilot Chat and the Copilot Coding Agent to generate living docs—Mermaid diagrams, markdown files, and Aspire Dashboard screenshots—keeping architecture records in sync with your app's evolving state. Attendees will learn how to connect architectural definitions to CI/CD workflows, using tools like VS Code's mcp-mermaid and Playwright MCP, ensuring documentation is always up-to-date for any cloud-native .NET Aspire solution."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8NoetLolw-0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: Automating .NET Aspire Architecture Documentation with GitHub Copilot
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=8NoetLolw-0
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 04:00:06 +00:00
-permalink: "/2025-11-14-Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET 10 Preview", ".NET Aspire", "AI", "AppHost", "Architecture Documentation", "Aspire Dashboard", "Automation", "CI/CD", "Cloud Native", "Coding", "Copilot Chat", "Copilot Coding Agent", "DevOps", "DevOps Workflow", "GitHub Copilot", "Living Documentation", "Markdown", "Mermaid", "Playwright MCP", "Pull Requests", "Videos", "VS Code"]
-tags_normalized: ["dotnet 10 preview", "dotnet aspire", "ai", "apphost", "architecture documentation", "aspire dashboard", "automation", "cislashcd", "cloud native", "coding", "copilot chat", "copilot coding agent", "devops", "devops workflow", "github copilot", "living documentation", "markdown", "mermaid", "playwright mcp", "pull requests", "videos", "vs code"]
+permalink: /github-copilot/videos/Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot
+tags:
+- .NET 10 Preview
+- .NET Aspire
+- AI
+- AppHost
+- Architecture Documentation
+- Aspire Dashboard
+- Automation
+- CI/CD
+- Cloud Native
+- Coding
+- Copilot Chat
+- Copilot Coding Agent
+- DevOps
+- DevOps Workflow
+- GitHub Copilot
+- Living Documentation
+- Markdown
+- Mermaid
+- Playwright MCP
+- Pull Requests
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 dotnet presents an in-depth session on using GitHub Copilot and Copilot Coding Agent to automate and maintain .NET Aspire app architecture documentation through code and DevOps workflows.<!--excerpt_end-->
 
 {% youtube 8NoetLolw-0 %}

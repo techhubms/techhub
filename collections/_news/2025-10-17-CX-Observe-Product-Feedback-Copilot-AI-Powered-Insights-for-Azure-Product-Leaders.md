@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "CX Observe Product Feedback Copilot: AI-Powered Insights for Azure Product Leaders"
-description: "This post highlights CX Observe Product Feedback Copilot, an AI-driven solution developed during Microsoft’s 2024 Global Hackathon. The tool leverages AI and Azure infrastructure to convert unstructured customer feedback into actionable insights, streamlining strategic planning for Azure product leaders. It uses techniques such as AI semantic clustering and user story conversion to surface key pain points and allow effective product roadmap prioritization. The article recounts its development journey, technical approach, and practical business impact within Microsoft’s Azure teams."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/garage/wall-of-fame/cx-observe-product-feedback/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'CX Observe Product Feedback Copilot: AI-Powered Insights for Azure Product Leaders'
+author: stclarke
+canonical_url: https://www.microsoft.com/en-us/garage/wall-of-fame/cx-observe-product-feedback/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-17 15:17:46 +00:00
-permalink: "/2025-10-17-CX-Observe-Product-Feedback-Copilot-AI-Powered-Insights-for-Azure-Product-Leaders.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Copilot", "AI Innovation", "Azure", "Azure Infrastructure", "Company News", "Customer Feedback", "CX Observe Product Feedback", "Feedback Analytics", "Hackathon", "K Means Algorithm", "Microsoft Garage", "News", "Product Management", "Roadmap Prioritization", "Semantic Clustering", "Strategic Planning", "Technology", "User Stories"]
-tags_normalized: ["ai", "ai copilot", "ai innovation", "azure", "azure infrastructure", "company news", "customer feedback", "cx observe product feedback", "feedback analytics", "hackathon", "k means algorithm", "microsoft garage", "news", "product management", "roadmap prioritization", "semantic clustering", "strategic planning", "technology", "user stories"]
+permalink: /ai/news/CX-Observe-Product-Feedback-Copilot-AI-Powered-Insights-for-Azure-Product-Leaders
+tags:
+- AI
+- AI Copilot
+- AI Innovation
+- Azure
+- Azure Infrastructure
+- Company News
+- Customer Feedback
+- CX Observe Product Feedback
+- Feedback Analytics
+- Hackathon
+- K Means Algorithm
+- Microsoft Garage
+- News
+- Product Management
+- Roadmap Prioritization
+- Semantic Clustering
+- Strategic Planning
+- Technology
+- User Stories
+section_names:
+- ai
+- azure
 ---
-
 stclarke introduces CX Observe Product Feedback Copilot, an AI-powered tool transforming raw customer feedback into actionable insights for Azure product teams. Discover how this innovation streamlines product strategy and drives value for Microsoft’s cloud customers.<!--excerpt_end-->
 
 # CX Observe Product Feedback Copilot: AI-Powered Insights for Azure Product Leaders

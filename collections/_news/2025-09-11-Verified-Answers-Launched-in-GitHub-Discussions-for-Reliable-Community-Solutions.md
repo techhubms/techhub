@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Verified Answers Launched in GitHub Discussions for Reliable Community Solutions"
-description: "GitHub Discussions introduces the 'Verified Answer' state to help repository administrators mark high-quality, trustworthy answers within community threads, sitting above the existing 'Marked as Answer' option. This system highlights authoritative solutions, supports responsible AI practices, and can enhance integration with tools like LLMs and GitHub Copilot, offering improved knowledge curation for developer communities."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Verified Answers Launched in GitHub Discussions for Reliable Community Solutions
+author: Allison
+canonical_url: https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 20:32:02 +00:00
-permalink: "/2025-09-11-Verified-Answers-Launched-in-GitHub-Discussions-for-Reliable-Community-Solutions.html"
-categories: ["DevOps"]
-tags: ["AI", "AI Standards", "Best Practices", "Collaboration Tools", "Community Engagement", "Community Management", "Copilot Readiness", "Developer Collaboration", "DevOps", "GitHub Discussions", "Knowledge Sharing", "LLM Integration", "News", "Repository Administration", "Verified Answers"]
-tags_normalized: ["ai", "ai standards", "best practices", "collaboration tools", "community engagement", "community management", "copilot readiness", "developer collaboration", "devops", "github discussions", "knowledge sharing", "llm integration", "news", "repository administration", "verified answers"]
+permalink: /devops/news/Verified-Answers-Launched-in-GitHub-Discussions-for-Reliable-Community-Solutions
+tags:
+- AI
+- AI Standards
+- Best Practices
+- Collaboration Tools
+- Community Engagement
+- Community Management
+- Copilot Readiness
+- Developer Collaboration
+- DevOps
+- GitHub Discussions
+- Knowledge Sharing
+- LLM Integration
+- News
+- Repository Administration
+- Verified Answers
+section_names:
+- devops
 ---
-
 Allison explores the new 'Verified Answers' feature in GitHub Discussions, showing how repository administrators can highlight accurate, high-value solutions for their communities.<!--excerpt_end-->
 
 # Verified Answers Launched in GitHub Discussions for Reliable Community Solutions

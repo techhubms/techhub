@@ -1,20 +1,58 @@
----
-layout: "post"
-title: "Why Your SLO Dashboard Is Lying: Building Business-Aligned Service Level Objectives"
-description: "This post by Muhammad Yawar Malik critically examines how traditional SLO dashboards focused on uptime and simple metrics can fail to protect business value. It describes a systematic approach to redesigning SLOs based on real business impact, discusses weighted error budgets and feature-specific SLIs, and shares implementation strategies including context-aware request classification and actionable incident alerting for modern DevOps and SRE teams."
-author: "Muhammad Yawar Malik"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+layout: post
+title: 'Why Your SLO Dashboard Is Lying: Building Business-Aligned Service Level Objectives'
+author: Muhammad Yawar Malik
+canonical_url: https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/
+viewing_mode: external
+feed_name: DevOps Blog
+feed_url: https://devops.com/feed/
 date: 2025-11-11 12:41:30 +00:00
-permalink: "/2025-11-11-Why-Your-SLO-Dashboard-Is-Lying-Building-Business-Aligned-Service-Level-Objectives.html"
-categories: ["DevOps"]
-tags: ["API Latency", "Application Performance Management", "Application Performance Management/Monitoring", "Blogs", "Business Aligned SLOs", "Business Context", "Business Metrics", "Business Of DevOps", "Business Resilience", "Context Aware Monitoring", "Contributed Content", "Customer Impact", "Data Driven DevOps", "DevOps", "Engineering Reliability", "Enterprise Customers", "Enterprise Reliability", "Error Budget Management", "Error Budgets", "Incident Management", "Incident Prioritization", "Observability", "Performance Monitoring", "Reliability Engineering", "Reliability Framework", "Reliability Strategy", "Revenue Weighted SLOs", "Service Availability", "Service Level Objectives", "Site Reliability Engineering", "SLA Optimization", "SLIs", "SLOs", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "Uptime", "Uptime Metrics", "User Segmentation", "Weighted Error Budgets"]
-tags_normalized: ["api latency", "application performance management", "application performance managementslashmonitoring", "blogs", "business aligned slos", "business context", "business metrics", "business of devops", "business resilience", "context aware monitoring", "contributed content", "customer impact", "data driven devops", "devops", "engineering reliability", "enterprise customers", "enterprise reliability", "error budget management", "error budgets", "incident management", "incident prioritization", "observability", "performance monitoring", "reliability engineering", "reliability framework", "reliability strategy", "revenue weighted slos", "service availability", "service level objectives", "site reliability engineering", "sla optimization", "slis", "slos", "social facebook", "social linkedin", "social x", "sre", "uptime", "uptime metrics", "user segmentation", "weighted error budgets"]
+permalink: /devops/blogs/Why-Your-SLO-Dashboard-Is-Lying-Building-Business-Aligned-Service-Level-Objectives
+tags:
+- API Latency
+- Application Performance Management
+- Application Performance Management/Monitoring
+- Blogs
+- Business Aligned SLOs
+- Business Context
+- Business Metrics
+- Business Of DevOps
+- Business Resilience
+- Context Aware Monitoring
+- Contributed Content
+- Customer Impact
+- Data Driven DevOps
+- DevOps
+- Engineering Reliability
+- Enterprise Customers
+- Enterprise Reliability
+- Error Budget Management
+- Error Budgets
+- Incident Management
+- Incident Prioritization
+- Observability
+- Performance Monitoring
+- Reliability Engineering
+- Reliability Framework
+- Reliability Strategy
+- Revenue Weighted SLOs
+- Service Availability
+- Service Level Objectives
+- Site Reliability Engineering
+- SLA Optimization
+- SLIs
+- SLOs
+- Social Facebook
+- Social LinkedIn
+- Social X
+- SRE
+- Uptime
+- Uptime Metrics
+- User Segmentation
+- Weighted Error Budgets
+section_names:
+- devops
 ---
-
 Muhammad Yawar Malik explores the pitfalls of traditional SLO dashboards and presents a hands-on framework for building service level objectives that reflect true business impact, transforming how DevOps teams prioritize reliability.<!--excerpt_end-->
 
 # Why Your SLO Dashboard Is Lying: Moving Beyond Vanity Metrics in Production

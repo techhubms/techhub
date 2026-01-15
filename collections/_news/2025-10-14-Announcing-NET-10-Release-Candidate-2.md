@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Announcing .NET 10 Release Candidate 2"
-description: "This announcement covers the release of .NET 10 Release Candidate 2, highlighting stabilization and quality improvements across the .NET ecosystem. It details updates for .NET MAUI, Entity Framework Core, ASP.NET Core, Blazor, SDK integration, and tools like Visual Studio 2026 Insiders and Visual Studio Code. Developers are encouraged to validate and provide feedback ahead of general availability."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Announcing .NET 10 Release Candidate 2
+author: .NET Team
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-14 22:15:00 +00:00
-permalink: "/2025-10-14-Announcing-NET-10-Release-Candidate-2.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "Android API 36.1", "ASP.NET Core", "Blazor", "C#", "Code Quality", "Coding", "Containers", "Dev Kit", "EF Core", "F#", "MAUI", "Migration", "News", "Quality", "Release Candidate", "SDK", "Source Generation", "Uno Platform", "Visual Basic", "VS", "WinForms", "WPF", "XAML", "Xcode 26"]
-tags_normalized: ["dotnet", "dotnet 10", "android api 36dot1", "aspdotnet core", "blazor", "csharp", "code quality", "coding", "containers", "dev kit", "ef core", "fsharp", "maui", "migration", "news", "quality", "release candidate", "sdk", "source generation", "uno platform", "visual basic", "vs", "winforms", "wpf", "xaml", "xcode 26"]
+permalink: /coding/news/Announcing-NET-10-Release-Candidate-2
+tags:
+- .NET
+- .NET 10
+- Android API 36.1
+- ASP.NET Core
+- Blazor
+- C#
+- Code Quality
+- Coding
+- Containers
+- Dev Kit
+- EF Core
+- F#
+- MAUI
+- Migration
+- News
+- Quality
+- Release Candidate
+- SDK
+- Source Generation
+- Uno Platform
+- Visual Basic
+- VS
+- WinForms
+- WPF
+- XAML
+- Xcode 26
+section_names:
+- coding
 ---
-
 The .NET Team introduces .NET 10 Release Candidate 2, emphasizing final quality and stabilization improvements for developers across platforms and frameworks.<!--excerpt_end-->
 
 # Announcing .NET 10 Release Candidate 2

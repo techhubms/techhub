@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Case Study: Reducing Support Ticket Volume Using AI Bots Built in Copilot Studio"
-description: "This case study examines how a mid-sized SaaS provider reduced support ticket volume by 40% with AI-driven bots built in Microsoft Copilot Studio. It covers the implementation process, benefits, technical integration steps, challenges, and measurable results of deploying AI automation in customer support environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/case-study-reducing-support-ticket-volume-using-ai-bots-built-in-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+layout: post
+title: 'Case Study: Reducing Support Ticket Volume Using AI Bots Built in Copilot Studio'
+author: Dellenny
+canonical_url: https://dellenny.com/case-study-reducing-support-ticket-volume-using-ai-bots-built-in-copilot-studio/
+viewing_mode: external
+feed_name: Dellenny's Blog
+feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:23:11 +00:00
-permalink: "/2025-09-15-Case-Study-Reducing-Support-Ticket-Volume-Using-AI-Bots-Built-in-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Bots", "AI Implementation", "API Integration", "Blogs", "Bot Integration", "Copilot", "Copilot Studio", "CSAT", "Customer Support", "Low Code Development", "Microsoft", "Power BI", "Prompt Engineering", "Support Automation", "Support Portal", "Ticket Deflection"]
-tags_normalized: ["ai", "ai bots", "ai implementation", "api integration", "blogs", "bot integration", "copilot", "copilot studio", "csat", "customer support", "low code development", "microsoft", "power bi", "prompt engineering", "support automation", "support portal", "ticket deflection"]
+permalink: /ai/blogs/Case-Study-Reducing-Support-Ticket-Volume-Using-AI-Bots-Built-in-Copilot-Studio
+tags:
+- AI
+- AI Bots
+- AI Implementation
+- API Integration
+- Blogs
+- Bot Integration
+- Copilot
+- Copilot Studio
+- CSAT
+- Customer Support
+- Low Code Development
+- Microsoft
+- Power BI
+- Prompt Engineering
+- Support Automation
+- Support Portal
+- Ticket Deflection
+section_names:
+- ai
 ---
-
 Dellenny presents a case study on leveraging Microsoft Copilot Studio to build AI bots that reduced support ticket volume and improved customer satisfaction for a SaaS provider.<!--excerpt_end-->
 
 # Case Study: Reducing Support Ticket Volume Using AI Bots Built in Copilot Studio

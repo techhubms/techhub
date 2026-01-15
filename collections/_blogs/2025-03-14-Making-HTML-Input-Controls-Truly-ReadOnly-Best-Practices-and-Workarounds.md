@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Making HTML Input Controls Truly ReadOnly: Best Practices and Workarounds"
-description: "This article by Rick Strahl explores the nuanced differences between HTML readonly and disabled attributes for input controls, the resulting user experience, form submission behavior, and approaches to improve readonly usability. It demonstrates CSS and tabindex techniques for making readonly controls behave more like disabled controls while preserving their ability to be posted to the server, including practical advice and discussion of accessibility trade-offs."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Mar/14/Making-Html-Input-Controls-Truly-ReadOnly"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+layout: post
+title: 'Making HTML Input Controls Truly ReadOnly: Best Practices and Workarounds'
+author: Rick Strahl
+canonical_url: https://weblog.west-wind.com/posts/2025/Mar/14/Making-Html-Input-Controls-Truly-ReadOnly
+viewing_mode: external
+feed_name: Rick Strahl's Blog
+feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-03-14 20:26:04 +00:00
-permalink: "/2025-03-14-Making-HTML-Input-Controls-Truly-ReadOnly-Best-Practices-and-Workarounds.html"
-categories: ["Coding"]
-tags: ["Accessibility", "Blogs", "Bootstrap", "Coding", "CSS", "Disabled Attribute", "Form Submission", "Frontend", "HTML", "Input Controls", "Pointer Events", "Razor", "Readonly Attribute", "Tabindex", "User Interface", "Vue.js", "Web Development"]
-tags_normalized: ["accessibility", "blogs", "bootstrap", "coding", "css", "disabled attribute", "form submission", "frontend", "html", "input controls", "pointer events", "razor", "readonly attribute", "tabindex", "user interface", "vuedotjs", "web development"]
+permalink: /coding/blogs/Making-HTML-Input-Controls-Truly-ReadOnly-Best-Practices-and-Workarounds
+tags:
+- Accessibility
+- Blogs
+- Bootstrap
+- Coding
+- CSS
+- Disabled Attribute
+- Form Submission
+- Frontend
+- HTML
+- Input Controls
+- Pointer Events
+- Razor
+- Readonly Attribute
+- Tabindex
+- User Interface
+- Vue.js
+- Web Development
+section_names:
+- coding
 ---
-
 Rick Strahl offers practical solutions for improving HTML readonly input controls, providing tips on CSS, tabindex, and UI design trade-offs for web developers.<!--excerpt_end-->
 
 # Making HTML Input Controls Truly ReadOnly: Best Practices and Workarounds

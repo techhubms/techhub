@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter – September 25, 2025"
-description: "This community newsletter, curated by WSilveira, covers the latest in Logic Apps and Azure Integration Services. It highlights the Ace Aviator of the Month, product group news, notable community resources, and technical articles on Logic Apps, AI agent loops, DevOps automation, hybrid integration, BizTalk migration, cost optimization, and secure email delivery with Graph API."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Logic Apps Aviators Newsletter – September 25, 2025
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-01 22:02:28 +00:00
-permalink: "/2025-09-01-Logic-Apps-Aviators-Newsletter-September-25-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure Functions", "Azure Integration Services", "Azure Logic Apps", "BizTalk Migration", "CI/CD", "Coding", "Community", "Data Mapper", "DevOps", "GitHub", "Hybrid Integration", "Integration", "Kubernetes", "Managed Identity", "Microsoft Fabric", "Microsoft Graph API", "REST API", "VS Code"]
-tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure functions", "azure integration services", "azure logic apps", "biztalk migration", "cislashcd", "coding", "community", "data mapper", "devops", "github", "hybrid integration", "integration", "kubernetes", "managed identity", "microsoft fabric", "microsoft graph api", "rest api", "vs code"]
+permalink: /ai/community/Logic-Apps-Aviators-Newsletter-September-25-2025
+tags:
+- Agent Loop
+- AI
+- API Management
+- Automation
+- Azure
+- Azure Functions
+- Azure Integration Services
+- Azure Logic Apps
+- BizTalk Migration
+- CI/CD
+- Coding
+- Community
+- Data Mapper
+- DevOps
+- GitHub
+- Hybrid Integration
+- Integration
+- Kubernetes
+- Managed Identity
+- Microsoft Fabric
+- Microsoft Graph API
+- REST API
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 WSilveira’s comprehensive Logic Apps Aviators Newsletter for September 2025 highlights technical advances, product updates, and practical community insights on Azure Logic Apps, AI-driven integration, DevOps, and secure automation.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter – September 25, 2025

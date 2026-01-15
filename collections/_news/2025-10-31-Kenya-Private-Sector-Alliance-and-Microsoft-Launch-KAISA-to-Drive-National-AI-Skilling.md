@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Kenya Private Sector Alliance and Microsoft Launch KAISA to Drive National AI Skilling"
-description: "This news piece details the launch of the Kenya AI Skilling Alliance (KAISA) by the Kenya Private Sector Alliance (KEPSA) and Microsoft. The initiative aims to create a coordinated national framework for AI skills development, innovation, research, and policy collaboration. It brings together leaders from government, the private sector, academia, and civil society to position Kenya as a leading hub for responsible and inclusive AI adoption in Africa. Key topics include strategic partnerships, sector-based working groups, national AI training programs, research, policy engagement, and the inclusion of marginalized communities in the emerging AI-driven economy."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Kenya Private Sector Alliance and Microsoft Launch KAISA to Drive National AI Skilling
+author: stclarke
+canonical_url: https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-31 14:03:18 +00:00
-permalink: "/2025-10-31-Kenya-Private-Sector-Alliance-and-Microsoft-Launch-KAISA-to-Drive-National-AI-Skilling.html"
-categories: ["AI"]
-tags: ["Africa AI Adoption", "AI", "AI Ecosystem", "AI Innovation", "AI Skills Development", "AI Training", "Company News", "Digital Skilling", "Education Technology", "Ethical AI", "Inclusive AI", "KAISA", "Kenya Private Sector Alliance", "Microsoft", "News", "Policy Collaboration", "Responsible AI", "Technology Partnerships", "Workforce Development", "Youth Skilling"]
-tags_normalized: ["africa ai adoption", "ai", "ai ecosystem", "ai innovation", "ai skills development", "ai training", "company news", "digital skilling", "education technology", "ethical ai", "inclusive ai", "kaisa", "kenya private sector alliance", "microsoft", "news", "policy collaboration", "responsible ai", "technology partnerships", "workforce development", "youth skilling"]
+permalink: /ai/news/Kenya-Private-Sector-Alliance-and-Microsoft-Launch-KAISA-to-Drive-National-AI-Skilling
+tags:
+- Africa AI Adoption
+- AI
+- AI Ecosystem
+- AI Innovation
+- AI Skills Development
+- AI Training
+- Company News
+- Digital Skilling
+- Education Technology
+- Ethical AI
+- Inclusive AI
+- KAISA
+- Kenya Private Sector Alliance
+- Microsoft
+- News
+- Policy Collaboration
+- Responsible AI
+- Technology Partnerships
+- Workforce Development
+- Youth Skilling
+section_names:
+- ai
 ---
-
 stclarke reports on the partnership between the Kenya Private Sector Alliance and Microsoft, highlighting the launch of the Kenya AI Skilling Alliance (KAISA) as a key step in advancing AI skills, innovation, and research across Kenya.<!--excerpt_end-->
 
 # Kenya Private Sector Alliance and Microsoft Launch KAISA to Drive National AI Skilling

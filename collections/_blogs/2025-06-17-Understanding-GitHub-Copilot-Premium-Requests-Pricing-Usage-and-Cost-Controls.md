@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding GitHub Copilot Premium Requests: Pricing, Usage, and Cost Controls"
-description: "Rob Bos provides a comprehensive overview of the new GitHub Copilot Premium Requests, describing upcoming usage-based billing, premium request types, plan differences, and strategies to prevent overspending. The article includes guides for monitoring personal and organizational usage, along with a CSV analyzer tool for enterprise transparency."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2025/06/17/Copilot-premium-requests"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+layout: post
+title: 'Understanding GitHub Copilot Premium Requests: Pricing, Usage, and Cost Controls'
+author: Rob Bos
+canonical_url: https://devopsjournal.io/blog/2025/06/17/Copilot-premium-requests
+viewing_mode: external
+feed_name: Rob Bos' Blog
+feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-06-17 00:00:00 +00:00
-permalink: "/2025-06-17-Understanding-GitHub-Copilot-Premium-Requests-Pricing-Usage-and-Cost-Controls.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Billing", "Blogs", "Coding Agent", "Copilot Extensions", "Copilot Plans", "Cost Control", "Enterprise Reporting", "Generative AI", "GitHub", "GitHub Copilot", "Model Multipliers", "Premium Requests", "Usage Monitoring", "VS", "VS Code"]
-tags_normalized: ["ai", "billing", "blogs", "coding agent", "copilot extensions", "copilot plans", "cost control", "enterprise reporting", "generative ai", "github", "github copilot", "model multipliers", "premium requests", "usage monitoring", "vs", "vs code"]
+permalink: /github-copilot/blogs/Understanding-GitHub-Copilot-Premium-Requests-Pricing-Usage-and-Cost-Controls
+tags:
+- AI
+- Billing
+- Blogs
+- Coding Agent
+- Copilot Extensions
+- Copilot Plans
+- Cost Control
+- Enterprise Reporting
+- Generative AI
+- GitHub
+- GitHub Copilot
+- Model Multipliers
+- Premium Requests
+- Usage Monitoring
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 In this article, Rob Bos details the upcoming enforcement of GitHub Copilot Premium Requests. He explains how pricing will work, what actions incur costs, and walks users through tools and strategies to monitor and control their Copilot spending.<!--excerpt_end-->
 
 # GitHub Copilot Premium Requests

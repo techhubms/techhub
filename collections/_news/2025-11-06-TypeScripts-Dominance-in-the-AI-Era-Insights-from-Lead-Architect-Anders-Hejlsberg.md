@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "TypeScript’s Dominance in the AI Era: Insights from Lead Architect Anders Hejlsberg"
-description: "This article explores the rise of TypeScript as the most-used programming language on GitHub in 2025, drawing on insights from its creator Anders Hejlsberg. It covers the language's evolution, the transition to a Go-based compiler, open source collaboration, and how TypeScript's static typing and developer-first features align with the new reality of AI-assisted coding. The discussion includes the impact of AI on language choice, the changing nature of developer tools, and why TypeScript continues to thrive as both humans and machines write more code together."
-author: "Aaron Winston"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'TypeScript’s Dominance in the AI Era: Insights from Lead Architect Anders Hejlsberg'
+author: Aaron Winston
+canonical_url: https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2025-11-06 17:00:00 +00:00
-permalink: "/2025-11-06-TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Assisted Coding", "Code Reliability", "Coding", "Compiler Performance", "Developer Skills", "Developer Tools", "GitHub", "JavaScript", "Language Evolution", "MCP", "News", "Octoverse", "Open Source", "Programming Languages", "Programming Languages & Frameworks", "Static Typing", "Typescript"]
-tags_normalized: ["ai", "ai assisted coding", "code reliability", "coding", "compiler performance", "developer skills", "developer tools", "github", "javascript", "language evolution", "mcp", "news", "octoverse", "open source", "programming languages", "programming languages and frameworks", "static typing", "typescript"]
+permalink: /ai/news/TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg
+tags:
+- AI
+- AI Assisted Coding
+- Code Reliability
+- Coding
+- Compiler Performance
+- Developer Skills
+- Developer Tools
+- GitHub
+- JavaScript
+- Language Evolution
+- MCP
+- News
+- Octoverse
+- Open Source
+- Programming Languages
+- Programming Languages & Frameworks
+- Static Typing
+- Typescript
+section_names:
+- ai
+- coding
 ---
-
 Aaron Winston interviews Anders Hejlsberg, creator of TypeScript, revealing how the language grew to become GitHub's most-used language in 2025. The article details TypeScript’s evolution, its impact on AI workflows, and what this means for developers today.<!--excerpt_end-->
 
 # TypeScript’s Rise in the AI Era: Insights from Lead Architect, Anders Hejlsberg

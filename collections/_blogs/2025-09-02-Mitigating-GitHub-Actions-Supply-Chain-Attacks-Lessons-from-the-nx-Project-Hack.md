@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Mitigating GitHub Actions Supply Chain Attacks: Lessons from the nx Project Hack"
-description: "This article by Jesse Houwing analyzes the technical attack chain behind the recent nx package supply chain compromise, which exploited GitHub Actions misconfigurations to exfiltrate sensitive secrets and tokens. The content provides detailed remediation strategies and security best practices for securing GitHub Actions workflows, including least-privilege permission configuration, secret management, workflow design pitfalls, dependency pinning, and advanced scanning/monitoring. Both the anatomy of the attack and step-by-step mitigation approaches are covered for DevOps and security practitioners."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+layout: post
+title: 'Mitigating GitHub Actions Supply Chain Attacks: Lessons from the nx Project Hack'
+author: Jesse Houwing
+canonical_url: https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/
+viewing_mode: external
+feed_name: Jesse Houwing's Blog
+feed_url: https://jessehouwing.net/rss/
 date: 2025-09-02 21:05:46 +00:00
-permalink: "/2025-09-02-Mitigating-GitHub-Actions-Supply-Chain-Attacks-Lessons-from-the-nx-Project-Hack.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security Code Scanning", "Blogs", "Branch Policies", "CI/CD", "Dependabot", "DevOps", "Environment Secrets", "GitHub", "GitHub Actions", "GitHub Token", "npm", "Permission Management", "Repository Secrets", "Secret Management", "Security", "StepSecurity", "Supply Chain Security", "Workflow Security", "YAML"]
-tags_normalized: ["advanced security code scanning", "blogs", "branch policies", "cislashcd", "dependabot", "devops", "environment secrets", "github", "github actions", "github token", "npm", "permission management", "repository secrets", "secret management", "security", "stepsecurity", "supply chain security", "workflow security", "yaml"]
+permalink: /devops/blogs/Mitigating-GitHub-Actions-Supply-Chain-Attacks-Lessons-from-the-nx-Project-Hack
+tags:
+- Advanced Security Code Scanning
+- Blogs
+- Branch Policies
+- CI/CD
+- Dependabot
+- DevOps
+- Environment Secrets
+- GitHub
+- GitHub Actions
+- GitHub Token
+- npm
+- Permission Management
+- Repository Secrets
+- Secret Management
+- Security
+- StepSecurity
+- Supply Chain Security
+- Workflow Security
+- YAML
+section_names:
+- devops
+- security
 ---
-
 Jesse Houwing examines the nx supply chain attack in detail, explaining how GitHub Actions misconfigurations led to leaked secrets and how to secure CI/CD workflows with actionable security best practices.<!--excerpt_end-->
 
 # Mitigating GitHub Actions Supply Chain Attacks: Lessons from the nx Project Hack

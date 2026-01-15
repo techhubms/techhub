@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Ubuntu-Based Runtimes Coming to Azure App Service for Linux"
-description: "This post from TulikaC provides details on the upcoming shift in Azure App Service for Linux, where new major versions of supported stacks (.NET 10, Python 3.14, Node 24, PHP 8.5, Java 25) will now be built on Ubuntu LTS images rather than Debian. The post highlights platform benefits, migration guidance, and operational impacts, with practical info for developers deploying code-based web applications on Azure."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Ubuntu-Based Runtimes Coming to Azure App Service for Linux
+author: TulikaC
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 04:00:28 +00:00
-permalink: "/2025-10-30-Ubuntu-Based-Runtimes-Coming-to-Azure-App-Service-for-Linux.html"
-categories: ["Azure", "Coding"]
-tags: [".NET 10", "App Deployment", "Azure", "Azure App Service", "Azure CLI", "Coding", "Community", "Debian", "GitHub Actions", "Java 25", "Linux", "Node 24", "PHP 8.5", "Platform Updates", "Python 3.14", "Runtime Environments", "Ubuntu", "Web Applications"]
-tags_normalized: ["dotnet 10", "app deployment", "azure", "azure app service", "azure cli", "coding", "community", "debian", "github actions", "java 25", "linux", "node 24", "php 8dot5", "platform updates", "python 3dot14", "runtime environments", "ubuntu", "web applications"]
+permalink: /coding/community/Ubuntu-Based-Runtimes-Coming-to-Azure-App-Service-for-Linux
+tags:
+- .NET 10
+- App Deployment
+- Azure
+- Azure App Service
+- Azure CLI
+- Coding
+- Community
+- Debian
+- GitHub Actions
+- Java 25
+- Linux
+- Node 24
+- PHP 8.5
+- Platform Updates
+- Python 3.14
+- Runtime Environments
+- Ubuntu
+- Web Applications
+section_names:
+- azure
+- coding
 ---
-
 TulikaC explains how Azure App Service for Linux is transitioning its new application runtimes to Ubuntu LTS, outlining the changes for developers and the operational benefits of this update.<!--excerpt_end-->
 
 # Ubuntu-Powered Runtimes on Azure App Service for Linux: Leaner, Faster, Stronger

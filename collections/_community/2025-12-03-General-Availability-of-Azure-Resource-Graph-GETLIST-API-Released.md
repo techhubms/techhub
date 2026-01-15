@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "General Availability of Azure Resource Graph GET/LIST API Released"
-description: "This announcement details the release of the Azure Resource Graph (ARG) GET/LIST API and its practical impact on Azure management and governance. It highlights the API’s ability to deliver significantly higher throttling quotas, reduce read throttling, and improve performance for resource queries in the cloud. The post provides guidance on usage scenarios, covers API request structure and routing mechanics, compares ARG GET/LIST with traditional ARM and ARG queries, and links to supporting resources for implementation, limitations, and feedback."
-author: "JaspreetKaur"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: General Availability of Azure Resource Graph GET/LIST API Released
+author: JaspreetKaur
+canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 04:39:28 +00:00
-permalink: "/2025-12-03-General-Availability-of-Azure-Resource-Graph-GETLIST-API-Released.html"
-categories: ["Azure"]
-tags: ["API Contract", "API Throttling", "ARG GET/LIST API", "ARM API", "Azure", "Azure Governance", "Azure Resource Graph", "Azure Subscription", "Cloud Operations", "Cloud Scalability", "Community", "Control Plane Routing", "Feedback", "InstanceView", "Kusto Query Language", "Microsoft Learn", "Performance Optimization", "Quota Management", "Resilient Architecture", "Resource Group", "Resource Management", "Virtual Machines"]
-tags_normalized: ["api contract", "api throttling", "arg getslashlist api", "arm api", "azure", "azure governance", "azure resource graph", "azure subscription", "cloud operations", "cloud scalability", "community", "control plane routing", "feedback", "instanceview", "kusto query language", "microsoft learn", "performance optimization", "quota management", "resilient architecture", "resource group", "resource management", "virtual machines"]
+permalink: /azure/community/General-Availability-of-Azure-Resource-Graph-GETLIST-API-Released
+tags:
+- API Contract
+- API Throttling
+- ARG GET/LIST API
+- ARM API
+- Azure
+- Azure Governance
+- Azure Resource Graph
+- Azure Subscription
+- Cloud Operations
+- Cloud Scalability
+- Community
+- Control Plane Routing
+- Feedback
+- InstanceView
+- Kusto Query Language
+- Microsoft Learn
+- Performance Optimization
+- Quota Management
+- Resilient Architecture
+- Resource Group
+- Resource Management
+- Virtual Machines
+section_names:
+- azure
 ---
-
 JaspreetKaur announces the general availability of Azure Resource Graph GET/LIST API, explaining how this new feature provides improved throttling quotas and optimized resource query performance for Azure workloads.<!--excerpt_end-->
 
 # General Availability of Azure Resource Graph GET/LIST API Released

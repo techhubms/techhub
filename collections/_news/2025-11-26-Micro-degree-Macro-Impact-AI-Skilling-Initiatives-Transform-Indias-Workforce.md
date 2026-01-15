@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Micro-degree, Macro Impact: AI Skilling Initiatives Transform India’s Workforce"
-description: "This news article highlights the rise of AI-powered vocational education in India, driven by Microsoft’s collaboration with government agencies and private institutions. It details the impact of Microsoft’s AI micro-degree programs, initiatives like Microsoft Elevate, real-world success stories of young graduates and entrepreneurs, and the nationwide push to train millions in future-ready digital skills. The article explains how hands-on AI education is bridging the gap between traditional vocational training and employability in emerging tech fields."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Micro-degree, Macro Impact: AI Skilling Initiatives Transform India’s Workforce'
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-26 13:58:08 +00:00
-permalink: "/2025-11-26-Micro-degree-Macro-Impact-AI-Skilling-Initiatives-Transform-Indias-Workforce.html"
-categories: ["AI"]
-tags: ["AI", "AI Micro Degree", "AI Powered Education", "AI Skilling", "AI Talent Pipeline", "Cloud Computing", "Company News", "Data Science", "Gen AI", "India", "Job Creation", "Microsoft", "Microsoft Elevate", "National Skill Training Institutes", "News", "Python", "Vocational Education", "Work Trend Index"]
-tags_normalized: ["ai", "ai micro degree", "ai powered education", "ai skilling", "ai talent pipeline", "cloud computing", "company news", "data science", "gen ai", "india", "job creation", "microsoft", "microsoft elevate", "national skill training institutes", "news", "python", "vocational education", "work trend index"]
+permalink: /ai/news/Micro-degree-Macro-Impact-AI-Skilling-Initiatives-Transform-Indias-Workforce
+tags:
+- AI
+- AI Micro Degree
+- AI Powered Education
+- AI Skilling
+- AI Talent Pipeline
+- Cloud Computing
+- Company News
+- Data Science
+- Gen AI
+- India
+- Job Creation
+- Microsoft
+- Microsoft Elevate
+- National Skill Training Institutes
+- News
+- Python
+- Vocational Education
+- Work Trend Index
+section_names:
+- ai
 ---
-
 stclarke presents a thorough look at India’s transformation through Microsoft-led AI skilling. The report follows young entrepreneurs, trainers, and students leveraging AI micro-degrees, workforce initiatives, and real-world Microsoft collaborations.<!--excerpt_end-->
 
 # Micro-degree, Macro Impact: AI Skilling Initiatives Transform India’s Workforce

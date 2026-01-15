@@ -1,17 +1,32 @@
----
-layout: "post"
-title: "XPRT Magazine 01"
-description: "The inaugural issue of XPRT Magazine explores modern software development, cloud, DevOps, and innovative technologies, featuring hands-on experiences and practical guidance."
-categories: ["Azure", "DevOps", "Coding", "Security"]
+﻿---
+layout: post
+title: XPRT Magazine 01
 date: 2015-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2015-05-01-XPRT-Magazine-01.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["API Management", "Application Insights", "Azure", "Coding", "Community", "DevOps", "HoloLens", "Ionic", "Magazines", "Microservices", "Mobile Apps", "Security", "Service Fabric", "Version Control", "VS"]
-tags_normalized: ["api management", "application insights", "azure", "coding", "community", "devops", "hololens", "ionic", "magazines", "microservices", "mobile apps", "security", "service fabric", "version control", "vs"]
+author: Xebia
+viewing_mode: external
+permalink: /coding/community/XPRT-Magazine-01
+tags:
+- API Management
+- Application Insights
+- Azure
+- Coding
+- Community
+- DevOps
+- HoloLens
+- Ionic
+- Magazines
+- Microservices
+- Mobile Apps
+- Security
+- Service Fabric
+- Version Control
+- VS
+section_names:
+- azure
+- devops
+- coding
+- security
 ---
-
 Welcome to the very first XPRT Magazine! This issue features practical articles on API management, Azure Service Fabric, cross-platform mobile development with Ionic, hands-on HoloLens programming, DevOps, microservices, and more. Dive into real-world lessons, technical introductions, and innovative approaches from industry experts.
 <!--excerpt_end-->
 
