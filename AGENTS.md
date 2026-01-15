@@ -25,7 +25,7 @@
   - [Testing the Running Website](#testing-the-running-website)
   - [If CLI Tools Are Absolutely Required](#if-cli-tools-are-absolutely-required)
   - [Stopping the Website](#stopping-the-website)
-  - [run.ps1 Script Parameters (for AI Agents)](#runps1-script-parameters-for-ai-agents)
+  - [Run Function Parameters (for AI Agents)](#run-function-parameters-for-ai-agents)
   - [Building/Testing Individual Projects](#buildingtesting-individual-projects)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
@@ -274,7 +274,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on:
 
-- How to start the website with `./run.ps1`
+- How to start the website with the `Run` function
 - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
 - When to use `-OnlyTests` vs `-SkipTests` parameters
 - How to safely interact with the running website
@@ -388,7 +388,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 **Running and Testing**:
 
 - See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions
-- Quick reference: Use `./run.ps1 -OnlyTests` for automated testing, `./run.ps1 -SkipTests` for interactive debugging
+- Quick reference: Use `Run -OnlyTests` for automated testing, `Run -SkipTests` for interactive debugging
 
 **Critical Requirements**:
 
@@ -436,8 +436,8 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 **Run Full Test Suite**:
 
-- **For AI agents**: Use `./run.ps1 -OnlyTests` to run all tests (unit, integration, component, E2E) and exit
-- **For humans**: Use `./run.ps1` to run tests and keep servers running for interactive debugging
+- **For AI agents**: Use `Run -OnlyTests` to run all tests (unit, integration, component, E2E) and exit
+- **For humans**: Use `Run` to run tests and keep servers running for interactive debugging
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
 - **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
@@ -538,33 +538,33 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 ### Starting the Website
 
-**ALWAYS use the run.ps1 script**:
+**ALWAYS use the Run function** (automatically loaded in PowerShell):
 
 ```powershell
 # Start both API and Web (browser never opens in DevContainer)
 # Default behavior: runs tests, then keeps servers running
-./run.ps1
+Run
 
 # For automated testing (AI agents verifying changes)
-./run.ps1 -OnlyTests
+Run -OnlyTests
 
 # For interactive debugging with Playwright MCP (AI agents AND humans)
-./run.ps1 -SkipTests
+Run -SkipTests
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
 🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
-✅ **ALWAYS** use `./run.ps1 -OnlyTests` which handles server startup, testing, and shutdown automatically.
+✅ **ALWAYS** use `Run -OnlyTests` which handles server startup, testing, and shutdown automatically.
 
 **CRITICAL RULES**:
 
-✅ **DO**: Start website with `./run.ps1` in a dedicated terminal  
+✅ **DO**: Start website with `Run` in a dedicated terminal  
 ✅ **DO**: Let it run in the background - NEVER touch that terminal again  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
-✅ **DO**: Use `./run.ps1 -OnlyTests` for automated testing (run all tests, verify changes, exit)
-✅ **DO**: Use `./run.ps1 -SkipTests` for interactive debugging (AI agents AND humans using Playwright MCP)
+✅ **DO**: Use `Run -OnlyTests` for automated testing (run all tests, verify changes, exit)
+✅ **DO**: Use `Run -SkipTests` for interactive debugging (AI agents AND humans using Playwright MCP)
 
 🚫 **NEVER**: Type ANY command in the terminal running the website  
 🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
@@ -627,12 +627,12 @@ curl http://localhost:5184/api/sections
 
 **Only stop when task is complete or restart is needed**:
 
-1. Switch to the terminal running `./run.ps1`
+1. Switch to the terminal running `Run`
 2. Press `Ctrl+C` to gracefully stop both API and Web servers
 3. Wait for "Cleanup complete" message
 4. Terminal is now safe to use for other commands
 
-**The run.ps1 script handles**:
+**The Run function handles**:
 
 - Aspire AppHost orchestration (starts both API and Web)
 - Health checks before declaring ready (up to 60 seconds for Aspire startup)
@@ -640,7 +640,7 @@ curl http://localhost:5184/api/sections
 - Port cleanup on exit
 - Clean console output (warnings/errors only, info logs suppressed)
 
-### run.ps1 Script Parameters (for AI Agents)
+### Run Function Parameters (for AI Agents)
 
 **Common Options**:
 
@@ -657,22 +657,22 @@ curl http://localhost:5184/api/sections
 
 ```powershell
 # Automated testing - verify all changes work
-./run.ps1 -OnlyTests
+Run -OnlyTests
 
 # Interactive debugging - AI agents OR humans using Playwright MCP
-./run.ps1 -SkipTests
+Run -SkipTests
 
 # Default - run tests first, then keep servers running
-./run.ps1
+Run
 
 # Clean build and test first
-./run.ps1 -Clean
+Run -Clean
 
 # Build only, don't run
-./run.ps1 -Build
+Run -Build
 ```
 
-**Script Built-in Features**:
+**Built-in Features**:
 
 - **Port Cleanup**: Automatically kills processes using required ports before starting
 - **Ctrl+C Handling**: Properly stops all processes and cleans up ports when interrupted
@@ -681,45 +681,45 @@ curl http://localhost:5184/api/sections
 
 ### Building/Testing Individual Projects
 
-**ALWAYS prefer ./run.ps1 for build and test operations**:
+**ALWAYS prefer the Run function for build and test operations**:
 
 ```powershell
 # Build and test everything (recommended)
-./run.ps1 -OnlyTests
+Run -OnlyTests
 
 # Build everything with clean slate
-./run.ps1 -Clean -OnlyTests
+Run -Clean -OnlyTests
 
 # Build only
-./run.ps1 -Build
+Run -Build
 ```
 
-**Only use low-level dotnet commands when run.ps1 doesn't support the operation**:
+**Only use low-level dotnet commands when the Run function doesn't support the operation**:
 
 ```powershell
-# Restore NuGet packages (not in run.ps1)
+# Restore NuGet packages (not in Run function)
 dotnet restore
 
 # Clean build artifacts only (without rebuild)
 dotnet clean TechHub.slnx
 
-# Watch mode for development (not in run.ps1)
+# Watch mode for development (not in Run function)
 dotnet watch --project src/TechHub.Api/TechHub.Api.csproj
 dotnet watch --project src/TechHub.Web/TechHub.Web.csproj
 
-# Code coverage (not in run.ps1)
+# Code coverage (not in Run function)
 dotnet test --collect:"XPlat Code Coverage"
 
-# Entity Framework migrations (future, not in run.ps1)
+# Entity Framework migrations (future, not in Run function)
 dotnet ef migrations add MigrationName --project src/TechHub.Infrastructure
 dotnet ef database update --project src/TechHub.Api
 
-# Global tools management (not in run.ps1)
+# Global tools management (not in Run function)
 dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef
 ```
 
-**Why prefer ./run.ps1**:
+**Why prefer the Run function**:
 
 - Handles server startup/shutdown correctly
 - Runs E2E tests with proper infrastructure
@@ -949,7 +949,7 @@ Tech Hub uses Aspire for orchestration and observability:
 
 ```powershell
 # Default - uses Aspire AppHost with built-in dashboard
-./run.ps1
+Run
 
 # Dashboard URL: https://localhost:17101 (URL with token shown in startup output)
 ```

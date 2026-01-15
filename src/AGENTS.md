@@ -23,9 +23,9 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 **ALWAYS refer to [Root AGENTS.md](../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
 
-- Starting the website with `./run.ps1`
-- Running all tests with `./run.ps1 -OnlyTests`
-- Interactive debugging with `./run.ps1 -SkipTests`
+- Starting the website with the `Run` function
+- Running all tests with `Run -OnlyTests`
+- Interactive debugging with `Run -SkipTests`
 - Using Playwright MCP tools for testing
 - Proper terminal management and safety
 - Building/testing individual projects
@@ -33,9 +33,9 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 **Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-./run.ps1                 # Run tests, then keep servers running
-./run.ps1 -OnlyTests      # Run all tests and exit (for verification)
-./run.ps1 -SkipTests      # Skip tests, start servers (for debugging)
+Run                 # Run tests, then keep servers running
+Run -OnlyTests      # Run all tests and exit (for verification)
+Run -SkipTests      # Skip tests, start servers (for debugging)
 ```
 
 ### ✅ Always Do

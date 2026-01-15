@@ -35,7 +35,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 1: Build and Test Verification
 
-**Execute**: [`./run.ps1 -Clean -OnlyTests`](/workspaces/techhub/run.ps1)
+**Execute**: `Run -Clean -OnlyTests`
 
 **Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
@@ -140,7 +140,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 **After making changes**:
 
-- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify changes
+- Run `Run -OnlyTests` to verify changes
 - Use `get_errors` tool to check for new VS Code diagnostics
 - Fix any new issues introduced by changes
 
@@ -182,7 +182,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 **After user approval**:
 
 - Execute `find-dead-code.ps1 -Fix` (if user confirmed)
-- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify nothing broke
+- Run `Run -OnlyTests` to verify nothing broke
 - Use `get_errors` to check for new compilation issues
 
 ---
@@ -550,7 +550,7 @@ Provide an overall test quality grade based on findings:
 - Fix test issues using `replace_string_in_file` or `multi_replace_string_in_file`
 - Move misplaced tests to correct projects
 - Add missing test coverage
-- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify all tests still pass
+- Run `Run -OnlyTests` to verify all tests still pass
 - Use `get_errors` to check for new issues
 
 ---
@@ -682,14 +682,14 @@ Provide an overall test quality grade based on findings:
 **After user approval**:
 
 - Fix issues using `replace_string_in_file` or `multi_replace_string_in_file`
-- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify changes
+- Run `Run -OnlyTests` to verify changes
 - Use `get_errors` to check for new issues
 
 ---
 
 ### Step 9: Final Validation
 
-**Execute**: [`./run.ps1 -Clean -OnlyTests`](/run.ps1)
+**Execute**: `Run -Clean -OnlyTests`
 
 **Purpose**: Final verification that all changes are correct and nothing is broken.
 
@@ -789,5 +789,5 @@ After completing all steps, provide a summary report:
 
 **Project Scripts**:
 
-- [run.ps1](/run.ps1) - Build, test, and run the solution
+- Run function - Build, test, and run the solution
 - [run-powershell-tests.ps1](/scripts/run-powershell-tests.ps1) - PowerShell script validation

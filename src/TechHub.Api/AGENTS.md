@@ -15,8 +15,8 @@ This project implements the REST API backend using ASP.NET Core Minimal APIs. It
 
 **ALWAYS refer to [Root AGENTS.md](../../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
 
-- Starting the website with `./run.ps1`
-- Running tests with `./run.ps1 -OnlyTests`
+- Starting the website with the `Run` function
+- Running tests with `Run -OnlyTests`
 - Using Playwright MCP tools for testing
 - Proper terminal management
 

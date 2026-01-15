@@ -8,14 +8,14 @@ End-to-end tests using Playwright to verify complete user workflows and function
 
 ### Recommended Approach
 
-**Always use `./run.ps1`** - it handles server startup, test execution, and cleanup automatically:
+**Always use `Run`** - it handles server startup, test execution, and cleanup automatically:
 
 ```powershell
 # Run all tests, then exit (recommended for verifying changes)
-./run.ps1 -OnlyTests
+Run -OnlyTests
 
 # Run tests first, then keep servers running for debugging
-./run.ps1
+Run
 ```
 
 ### Interactive Debugging with Playwright MCP
@@ -24,7 +24,7 @@ For investigating bugs or exploring UI behavior interactively:
 
 ```powershell
 # Start servers without running tests
-./run.ps1 -SkipTests
+Run -SkipTests
 
 # Then use Playwright MCP tools directly in GitHub Copilot Chat to:
 # - Navigate pages and inspect elements
@@ -42,7 +42,7 @@ For investigating bugs or exploring UI behavior interactively:
 
 ### Running Specific Tests
 
-**Only when servers are already running** (via `./run.ps1 -SkipTests`):
+**Only when servers are already running** (via `Run -SkipTests`):
 
 ```powershell
 # Run all E2E tests
@@ -55,7 +55,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQual
 dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests.NavigateToSection_DefaultsToAllCollection"
 ```
 
-⚠️ **WARNING**: `dotnet test` requires servers at `localhost:5029` (API) and `localhost:5184` (Web). It **WILL FAIL** if servers aren't running. Always prefer `./run.ps1 -OnlyTests`.
+⚠️ **WARNING**: `dotnet test` requires servers at `localhost:5029` (API) and `localhost:5184` (Web). It **WILL FAIL** if servers aren't running. Always prefer `Run -OnlyTests`.
 
 ## Test Architecture
 

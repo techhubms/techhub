@@ -128,7 +128,7 @@ After completing sync:
 
 ```markdown
 ❌ `bundle exec jekyll serve`
-✅ `./run.ps1`
+✅ `Run` function (auto-loaded PowerShell function)
 ```
 
 ### Missing Sections

@@ -108,9 +108,28 @@ $env:POWERSHELL_TELEMETRY_OPTOUT = "1"
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
+# ==================== Tech Hub Runner Module ====================
+# Auto-load the TechHubRunner module for 'Run' command
+$techHubRoot = "/workspaces/techhub"
+if (Test-Path $techHubRoot) {
+    $modulePath = Join-Path $techHubRoot "scripts/TechHubRunner.psm1"
+    if (Test-Path $modulePath) {
+        Import-Module $modulePath -Force -DisableNameChecking
+    }
+}
+
 # ==================== Welcome Message ====================
 Write-Host "Tech Hub .NET Development Environment" -ForegroundColor Cyan
 Write-Host "✅ PowerShell profile loaded" -ForegroundColor Green
+Write-Host ""
+Write-Host "Quick start: Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
+Write-Host "  Run              - Build, test, and start servers" -ForegroundColor Gray
+Write-Host "  Run -Help        - Show usage information" -ForegroundColor Gray
+Write-Host "  Run -SkipTests   - Skip tests, start servers directly" -ForegroundColor Gray
+Write-Host "  Run -OnlyTests   - Run tests only, then exit" -ForegroundColor Gray
+Write-Host "  Run -Clean       - Clean build before starting" -ForegroundColor Gray
+Write-Host "  Run -Build       - Build only, don't run" -ForegroundColor Gray
+Write-Host ""
 EOF
 
 chmod +x "$PWSH_PROFILE"

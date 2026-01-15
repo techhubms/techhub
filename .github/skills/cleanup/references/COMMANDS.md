@@ -67,8 +67,8 @@ dotnet test tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj
 # Run tests matching a filter
 dotnet test TechHub.slnx --filter "FullyQualifiedName~ContentItem"
 
-# Run using project script (recommended)
-pwsh -File run.ps1 -OnlyTests
+# Run using Run function (recommended)
+pwsh -Command "Run -OnlyTests"
 ```
 
 ## PowerShell Script Tests
@@ -123,7 +123,7 @@ dotnet format TechHub.slnx
 dotnet format TechHub.slnx --diagnostics IDE0005
 
 # 4. Run all tests
-pwsh -File run.ps1 -OnlyTests
+pwsh -Command "Run -OnlyTests"
 
 # 5. Verify documentation
 pwsh -File .github/skills/cleanup/scripts/verify-documentation.ps1

@@ -27,23 +27,23 @@ You are a testing specialist for the Tech Hub .NET migration project. This direc
 
 **ALWAYS refer to [Root AGENTS.md](../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
 
-- Running all tests with `./run.ps1 -OnlyTests`
-- Interactive debugging with `./run.ps1 -SkipTests`
+- Running all tests with `Run -OnlyTests`
+- Interactive debugging with `Run -SkipTests`
 - Using Playwright MCP tools for testing
 - Proper terminal management
 
 **Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-./run.ps1 -OnlyTests      # Run all tests and exit (for verification)
-./run.ps1 -SkipTests      # Skip tests, start servers (for debugging)
-./run.ps1                 # Run tests, then keep servers running
+Run -OnlyTests      # Run all tests and exit (for verification)
+Run -SkipTests      # Skip tests, start servers (for debugging)
+Run                 # Run tests, then keep servers running
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
 🚫 **NEVER run `dotnet test tests/TechHub.E2E.Tests` directly** - it **WILL FAIL** without servers running!
-✅ **ALWAYS use `./run.ps1 -OnlyTests`** which handles server startup, testing, and shutdown automatically.
+✅ **ALWAYS use `Run -OnlyTests`** which handles server startup, testing, and shutdown automatically.
 
 ## Core Testing Rules
 
@@ -55,7 +55,7 @@ These apply to ALL tests across all layers:
 - Write regression test FIRST for bugs, then fix it
 - Test real implementation - NEVER duplicate production logic in tests
 - Mock only external dependencies (file system, HTTP clients, external APIs)
-- Run tests after code changes: `./run.ps1 -OnlyTests`
+- Run tests after code changes: `Run -OnlyTests`
 - Use `async Task` for async tests - NEVER `async void`
 - Test public APIs - Don't test implementation details
 - Dispose resources in test cleanup

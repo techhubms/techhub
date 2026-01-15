@@ -14,17 +14,17 @@ This directory contains the .NET/Blazor implementation of Tech Hub, migrating fr
 4. Web UI opens automatically at <http://localhost:5184>
 5. API available at <http://localhost:5029> (Swagger: <http://localhost:5029/swagger>)
 
-**Alternative - PowerShell Script**:
+**Alternative - PowerShell Function**:
 
 ```powershell
 # Build and run both API and Web
-./run.ps1
+Run
 
 # Clean build and test first, then start both API and Web if tests pass
-./run.ps1 -Clean -Test
+Run -Clean -Test
 ```
 
-**Stop the Application**: Press `Ctrl+C` in the terminal where the script is running.
+**Stop the Application**: Press `Ctrl+C` in the terminal where the function is running.
 
 ## .NET Aspire
 
@@ -37,14 +37,14 @@ Tech Hub uses **.NET Aspire** for orchestration, observability, and service disc
 
 ### Running with Aspire
 
-#### Via run.ps1 (Recommended)
+#### Via Run Function (Recommended)
 
 ```powershell
 # Default mode - uses Aspire AppHost to orchestrate API + Web
-./run.ps1
+Run
 
 # With Aspire Dashboard for telemetry visualization
-./run.ps1 -Dashboard
+Run -Dashboard
 ```
 
 #### Direct AppHost
@@ -70,7 +70,7 @@ To start the dashboard:
 
 ```powershell
 # Start with dashboard (runs as Docker container)
-./run.ps1 -Dashboard
+Run -Dashboard
 
 # Dashboard URL: http://localhost:18888
 # Note: Copy the login token from the terminal output
