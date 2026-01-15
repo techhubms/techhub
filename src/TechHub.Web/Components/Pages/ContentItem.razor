@@ -7,44 +7,38 @@
 
 <PageTitle>@(item?.Title ?? "Loading...") - Tech Hub</PageTitle>
 
-@if (sectionData == null)
-{
-    <p class="error-message">Error: Section data could not be loaded.</p>
-}
-else
-{
-    <HeadContent>
-        <link rel="canonical"
-            href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
-        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @sectionData.Title - RSS Feed"
-            href="@($"{sectionData.Url}/feed.xml")" />
-    </HeadContent>
+<HeadContent>
+    <link rel="canonical"
+        href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
+    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @GetSectionDisplayName(SectionName) - RSS Feed"
+        href="@($"/{SectionName}/feed.xml")" />
+</HeadContent>
 
-    <Header Section="@sectionData" />
+<Header SectionName="@SectionName" />
 
-    <div class="page-with-sidebar">
-        <aside class="sidebar">
-            @if (item != null)
-            {
-                <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
-                    CssClass="article-tags" />
-                <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
-            }
-        </aside>
+<div class="page-with-sidebar">
+    <aside class="sidebar">
+        @if (item != null)
+        {
+            <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
+                CssClass="article-tags" />
+            <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
+        }
+    </aside>
 
-        @* Main content area *@
-        <main class="page-main-content">
-            @if (item != null)
-            {
-                <ContentItemDetail Item="@item" />
-            }
-        </main>
-    </div>
-}
+    @* Main content area *@
+    <main class="page-main-content">
+        @if (item != null)
+        {
+            <ContentItemDetail Item="@item" />
+        }
+    </main>
+</div>
 
 @code {
     [Inject] public required ErrorService ErrorService { get; set; }
     [Inject] public required ILogger<ContentItem> Logger { get; set; }
+    [Inject] public required SectionCache SectionCache { get; set; }
 
     [Parameter]
     public string SectionName { get; set; } = null!;
@@ -55,14 +49,18 @@ else
     [Parameter]
     public string ItemId { get; set; } = null!;
 
-    private SectionDto? sectionData;
     private ContentItemDetailDto? item;
 
     protected override async Task OnInitializedAsync()
     {
-        // Load section first (SSR)
-        await LoadSection();
-        // Then load item (can be async)
+        // Verify section exists
+        if (SectionCache.GetSectionByName(SectionName) == null)
+        {
+            Navigation.NavigateTo("/not-found");
+            return;
+        }
+
+        // Load item
         await LoadItem();
     }
 
@@ -70,28 +68,7 @@ else
     {
         if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(Collection) && !string.IsNullOrEmpty(ItemId))
         {
-            // Reload section if changed
-            if (sectionData != null && sectionData.Name != SectionName)
-            {
-                await LoadSection();
-            }
             await LoadItem();
-        }
-    }
-
-    private async Task LoadSection()
-    {
-        try
-        {
-            sectionData = await ApiClient.GetSectionAsync(SectionName.ToLowerInvariant());
-            if (sectionData == null)
-            {
-                Navigation.NavigateTo("/not-found");
-            }
-        }
-        catch (Exception ex)
-        {
-            ErrorService.HandleError(ex, Navigation, Logger);
         }
     }
 

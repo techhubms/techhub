@@ -1,11 +1,13 @@
 @using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@inject SectionCache SectionCache
 
 @* 
    Header Component - Complete site header structure
    
    Usage:
-     With section (section/collection pages):
-       <Header Section="@sectionData" />
+     With section name (section/collection pages):
+       <Header SectionName="ai" />
      
      With custom banner content (home page):
        <Header>
@@ -18,10 +20,18 @@
 
 <NavHeader />
 
-@if (Section != null)
+@if (!string.IsNullOrEmpty(SectionName))
 {
-    <SectionBanner Section="@Section" />
-    <SubNav Section="@Section" />
+    var sectionData = SectionCache.GetSectionByName(SectionName);
+    if (sectionData != null)
+    {
+        <SectionBanner Section="@sectionData" />
+        <SubNav Section="@sectionData" />
+    }
+    else
+    {
+        <SubNav />
+    }
 }
 else if (ChildContent != null)
 {
@@ -35,7 +45,7 @@ else
 
 @code {
     [Parameter]
-    public SectionDto? Section { get; set; }
+    public string? SectionName { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }

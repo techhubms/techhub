@@ -9,13 +9,13 @@
 
 <PageTitle>@(pageData?.Title ?? "GitHub Copilot Levels") - Tech Hub</PageTitle>
 
-@if (sectionData != null && pageData != null)
+@if (pageData != null)
 {
     <HeadContent>
         <link rel="canonical" href="https://tech.hub.ms/github-copilot/levels-of-enlightenment" />
     </HeadContent>
 
-    <Header Section="@sectionData" />
+    <Header SectionName="github-copilot" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
@@ -96,17 +96,15 @@
 }
 
 @code {
-    private SectionDto? sectionData;
     private LevelsPageData? pageData;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            sectionData = await ApiClient.GetSectionAsync("github-copilot");
             pageData = await ApiClient.GetLevelsDataAsync();
 
-            if (sectionData == null || pageData == null)
+            if (pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }

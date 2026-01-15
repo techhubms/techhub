@@ -10,13 +10,13 @@
 
 <PageTitle>@(selectedVideoDetail?.Title ?? pageData?.Title ?? "VS Code Updates") - Tech Hub</PageTitle>
 
-@if (sectionData != null && pageData != null)
+@if (pageData != null)
 {
     <HeadContent>
         <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
     </HeadContent>
 
-    <Header Section="@sectionData" />
+    <Header SectionName="github-copilot" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
@@ -67,7 +67,6 @@
     [Parameter]
     public string? VideoSlug { get; set; }
 
-    private SectionDto? sectionData;
     private VSCodeUpdatesPageData? pageData;
     private List<ContentItemDto> videoItems = new();
     private ContentItemDetailDto? selectedVideoDetail;
@@ -91,10 +90,9 @@
     {
         try
         {
-            sectionData = await ApiClient.GetSectionAsync("github-copilot");
             pageData = await ApiClient.GetVSCodeUpdatesDataAsync();
 
-            if (sectionData == null || pageData == null)
+            if (pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
                 return;
@@ -134,8 +132,8 @@
         }
 
         selectedVideoDetail = await ApiClient.GetContentDetailAsync(
-                                                                                                    "github-copilot",
-                                                                                                    "videos",
+                                                                                                            "github-copilot",
+                                                                                                            "videos",
         selectedVideoSlug);
     }
 

@@ -24,29 +24,29 @@ public class SectionTests : TestContext
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 
-        var sectionDto = new SectionDto
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize(new List<SectionDto>
         {
-            Name = "ai",
-            Title = "Artificial Intelligence",
-            Description = "AI and machine learning content",
-            Url = "/ai",
-            BackgroundImage = "/images/ai-bg.jpg",
-            Collections =
-            [
-                new CollectionReferenceDto
-                {
-                    Title = "News",
-                    Name = "news",
-                    Url = "/ai/news",
-                    Description = "Latest AI news",
-                    DisplayName = "News"
-                }
-            ]
-        };
-
-        mockApiClient
-            .Setup(x => x.GetSectionAsync("ai"))
-            .ReturnsAsync(sectionDto);
+            new SectionDto
+            {
+                Name = "ai",
+                Title = "Artificial Intelligence",
+                Description = "AI and machine learning content",
+                Url = "/ai",
+                BackgroundImage = "/images/ai-bg.jpg",
+                Collections =
+                [
+                    new CollectionReferenceDto
+                    {
+                        Title = "News",
+                        Name = "news",
+                        Url = "/ai/news",
+                        Description = "Latest AI news",
+                        DisplayName = "News"
+                    }
+                ]
+            }
+        });
 
         mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
@@ -54,8 +54,7 @@ public class SectionTests : TestContext
 
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
-        Services.AddSingleton(Mock.Of<ErrorService>());
-        Services.AddSingleton(Mock.Of<SectionCache>());
+        Services.AddSingleton(sectionCache);
 
         // Act - Render Section component
         var cut = RenderComponent<Section>(parameters => parameters
@@ -89,29 +88,29 @@ public class SectionTests : TestContext
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 
-        var sectionDto = new SectionDto
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize(new List<SectionDto>
         {
-            Name = "ai",
-            Title = "Artificial Intelligence",
-            Description = "AI and machine learning content",
-            Url = "/ai",
-            BackgroundImage = "/images/ai-bg.jpg",
-            Collections =
-            [
-                new CollectionReferenceDto
-                {
-                    Title = "News",
-                    Name = "news",
-                    Url = "/ai/news",
-                    Description = "Latest AI news",
-                    DisplayName = "News"
-                }
-            ]
-        };
-
-        mockApiClient
-            .Setup(x => x.GetSectionAsync("ai"))
-            .ReturnsAsync(sectionDto);
+            new SectionDto
+            {
+                Name = "ai",
+                Title = "Artificial Intelligence",
+                Description = "AI and machine learning content",
+                Url = "/ai",
+                BackgroundImage = "/images/ai-bg.jpg",
+                Collections =
+                [
+                    new CollectionReferenceDto
+                    {
+                        Title = "News",
+                        Name = "news",
+                        Url = "/ai/news",
+                        Description = "Latest AI news",
+                        DisplayName = "News"
+                    }
+                ]
+            }
+        });
 
         mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
@@ -119,8 +118,7 @@ public class SectionTests : TestContext
 
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
-        Services.AddSingleton(Mock.Of<ErrorService>());
-        Services.AddSingleton(Mock.Of<SectionCache>());
+        Services.AddSingleton(sectionCache);
 
         // Act
         var cut = RenderComponent<Section>(parameters => parameters

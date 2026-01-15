@@ -17,6 +17,7 @@ namespace TechHub.Web.Tests.Components;
 public class ContentItemsGridTests : TestContext
 {
     private readonly Mock<TechHubApiClient> _mockApiClient;
+    private readonly SectionCache _sectionCache;
 
     public ContentItemsGridTests()
     {
@@ -31,7 +32,7 @@ public class ContentItemsGridTests : TestContext
             .Setup(x => x.GetContentAsync(It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync([]);
 
-        // Configure WebAppSettings - no longer needs CollectionDisplayNames (comes from API)
+        // Configure WebAppSettings
         var appSettings = new WebAppSettings
         {
             Seo = new SeoSettings
@@ -42,8 +43,41 @@ public class ContentItemsGridTests : TestContext
             }
         };
 
+        // Initialize SectionCache with test data
+        _sectionCache = new SectionCache();
+        _sectionCache.Initialize(new List<SectionDto>
+        {
+            new SectionDto
+            {
+                Name = "github-copilot",
+                Title = "GitHub Copilot",
+                Description = "GitHub Copilot content",
+                Url = "/github-copilot",
+                BackgroundImage = "/images/github-copilot-bg.jpg",
+                Collections =
+                [
+                    new CollectionReferenceDto { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", DisplayName = "News" },
+                    new CollectionReferenceDto { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", DisplayName = "Community Posts" },
+                    new CollectionReferenceDto { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", DisplayName = "Videos" }
+                ]
+            },
+            new SectionDto
+            {
+                Name = "all",
+                Title = "All",
+                Description = "All content",
+                Url = "/all",
+                BackgroundImage = "/images/all-bg.jpg",
+                Collections =
+                [
+                    new CollectionReferenceDto { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
+                ]
+            }
+        });
+
         Services.AddSingleton(Options.Create(appSettings));
         Services.AddSingleton(_mockApiClient.Object);
+        Services.AddSingleton(_sectionCache);
     }
 
     [Fact]
@@ -52,9 +86,7 @@ public class ContentItemsGridTests : TestContext
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
-            .Add(p => p.CollectionName, "all")
-            .Add(p => p.SectionTitle, "GitHub Copilot")
-            .Add(p => p.Collections, []));
+            .Add(p => p.CollectionName, "all"));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -67,25 +99,10 @@ public class ContentItemsGridTests : TestContext
     [Fact]
     public async Task ContentItemsGrid_GitHubCopilot_NewsCollection_DisplaysCorrectTitle()
     {
-        // Arrange
-        var collections = new List<CollectionReferenceDto>
-        {
-            new CollectionReferenceDto
-            {
-                Name = "news",
-                Title = "News",
-                Url = "/github-copilot/news",
-                Description = "News items",
-                DisplayName = "News"
-            }
-        };
-
-        // Act
+        // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
-            .Add(p => p.CollectionName, "news")
-            .Add(p => p.SectionTitle, "GitHub Copilot")
-            .Add(p => p.Collections, collections));
+            .Add(p => p.CollectionName, "news"));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -98,25 +115,10 @@ public class ContentItemsGridTests : TestContext
     [Fact]
     public async Task ContentItemsGrid_GitHubCopilot_CommunityCollection_DisplaysCorrectTitle()
     {
-        // Arrange
-        var collections = new List<CollectionReferenceDto>
-        {
-            new CollectionReferenceDto
-            {
-                Name = "community",
-                Title = "Community",
-                Url = "/github-copilot/community",
-                Description = "Community items",
-                DisplayName = "Community Posts"
-            }
-        };
-
-        // Act
+        // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
-            .Add(p => p.CollectionName, "community")
-            .Add(p => p.SectionTitle, "GitHub Copilot")
-            .Add(p => p.Collections, collections));
+            .Add(p => p.CollectionName, "community"));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -129,25 +131,10 @@ public class ContentItemsGridTests : TestContext
     [Fact]
     public async Task ContentItemsGrid_GitHubCopilot_VideosCollection_DisplaysCorrectTitle()
     {
-        // Arrange
-        var collections = new List<CollectionReferenceDto>
-        {
-            new CollectionReferenceDto
-            {
-                Name = "videos",
-                Title = "Videos",
-                Url = "/github-copilot/videos",
-                Description = "Videos",
-                DisplayName = "Videos"
-            }
-        };
-
-        // Act
+        // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
-            .Add(p => p.CollectionName, "videos")
-            .Add(p => p.SectionTitle, "GitHub Copilot")
-            .Add(p => p.Collections, collections));
+            .Add(p => p.CollectionName, "videos"));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -163,9 +150,7 @@ public class ContentItemsGridTests : TestContext
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
-            .Add(p => p.CollectionName, "all")
-            .Add(p => p.SectionTitle, "All")
-            .Add(p => p.Collections, []));
+            .Add(p => p.CollectionName, "all"));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -178,25 +163,10 @@ public class ContentItemsGridTests : TestContext
     [Fact]
     public async Task ContentItemsGrid_AllSection_NewsCollection_DisplaysCorrectTitle()
     {
-        // Arrange
-        var collections = new List<CollectionReferenceDto>
-        {
-            new CollectionReferenceDto
-            {
-                Name = "news",
-                Title = "News",
-                Url = "/all/news",
-                Description = "All news",
-                DisplayName = "News"
-            }
-        };
-
-        // Act
+        // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
-            .Add(p => p.CollectionName, "news")
-            .Add(p => p.SectionTitle, "All")
-            .Add(p => p.Collections, collections));
+            .Add(p => p.CollectionName, "news"));
 
         // Wait for async rendering
         await Task.Delay(100);

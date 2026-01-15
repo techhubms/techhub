@@ -3,6 +3,7 @@
 @using TechHub.Web.Services
 @using Microsoft.Extensions.Options
 @inject TechHubApiClient ApiClient
+@inject SectionCache SectionCache
 @inject ILogger<ContentItemsGrid> Logger
 @inject IOptions<WebAppSettings> AppSettings
 @attribute [StreamRendering]
@@ -64,19 +65,13 @@
     [Parameter, EditorRequired]
     public required string CollectionName { get; set; }
 
-    [Parameter]
-    public string SectionTitle { get; set; } = string.Empty;
-
-    [Parameter]
-    public IReadOnlyList<CollectionReferenceDto> Collections { get; set; } = Array.Empty<CollectionReferenceDto>();
-
     private List<ContentItemDto> contentItems = new();
     private bool isLoading = true;
     private string? errorMessage;
     private string previousCollectionName = string.Empty;
 
     private bool ShowCollectionBadge =>
-    SectionTitle.Equals("All", StringComparison.OrdinalIgnoreCase) ||
+    SectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
     CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
     protected override async Task OnInitializedAsync()
@@ -101,8 +96,8 @@
         errorMessage = null;
         StateHasChanged();
 
-        Logger.LogDebug("LoadContent START: Section={SectionName}, Collection={CollectionName}, SectionTitle={SectionTitle}",
-        SectionName, CollectionName, SectionTitle);
+        Logger.LogDebug("LoadContent START: Section={SectionName}, Collection={CollectionName}",
+        SectionName, CollectionName);
 
         try
         {
@@ -111,7 +106,7 @@
             // Handle "all" collection - get all content for this section across all collections
             if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
-                if (SectionTitle.Equals("All", StringComparison.OrdinalIgnoreCase))
+                if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
                 {
                     // /all/all - get everything
                     Logger.LogDebug("Calling ApiClient.GetContentAsync(\"\", \"\") for /all/all");
@@ -119,13 +114,13 @@
                 }
                 else
                 {
-                    // /section/all - get all content for this section (use SectionName, not SectionTitle)
+                    // /section/all - get all content for this section (use SectionName)
                     Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, '') for section={SectionName}", SectionName);
                     items = await ApiClient.GetContentAsync(SectionName, "");
                 }
             }
             // Special handling for "All" section with specific collection
-            else if (SectionTitle.Equals("All", StringComparison.OrdinalIgnoreCase))
+            else if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 // /all/news - get all news across all sections
                 Logger.LogDebug("Calling ApiClient.GetContentAsync('', {Collection}) for collection={Collection}", CollectionName,
@@ -134,7 +129,7 @@
             }
             else
             {
-                // /section/collection - get specific collection for specific section (use SectionName, not SectionTitle)
+                // /section/collection - get specific collection for specific section (use SectionName)
                 Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, {Collection}) for section={SectionName}, collection={Collection}",
                 SectionName, CollectionName, SectionName, CollectionName);
                 items = await ApiClient.GetContentAsync(SectionName, CollectionName);
@@ -164,18 +159,25 @@
             return "All";
         }
 
-        // Get DisplayName from the collection DTO (single source of truth from API)
-        var collection = Collections.FirstOrDefault(c => c.Name == CollectionName);
-        return collection?.DisplayName ?? collection?.Title ?? CollectionName;
+        // Try to get DisplayName from section cache first
+        var section = SectionCache.GetSectionByName(SectionName);
+        var collection = section?.Collections.FirstOrDefault(c => c.Name == CollectionName);
+        if (collection != null)
+        {
+            return collection.DisplayName ?? collection.Title ?? CollectionName;
+        }
+
+        // Fallback to SectionHelper
+        return SectionHelper.GetCollectionDisplayName(CollectionName);
     }
 
     private string GetPageTitle()
     {
         var collectionDisplay = GetCollectionDisplayName();
-        var isAllSection = SectionTitle.Equals("All", StringComparison.OrdinalIgnoreCase);
+        var isAllSection = SectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
         var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
-        // Get proper section display name (e.g., "GitHub Copilot" instead of "github copilot")
+        // Get proper section display name (e.g., "GitHub Copilot" instead of "github-copilot")
         var sectionDisplayName = SectionHelper.GetSectionDisplayName(SectionName);
 
         if (isAllSection && isAllCollection)

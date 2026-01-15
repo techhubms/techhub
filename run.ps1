@@ -88,6 +88,9 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
+# Script-level variables for process management
+$script:appHostProcess = $null
+
 # Determine workspace root
 $workspaceRoot = $PSScriptRoot
 
@@ -224,8 +227,8 @@ function Invoke-Tests {
     $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
     $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
     $appHostStartInfo.UseShellExecute = $false
-    $appHostStartInfo.RedirectStandardOutput = $true
-    $appHostStartInfo.RedirectStandardError = $true
+    $appHostStartInfo.RedirectStandardOutput = $false
+    $appHostStartInfo.RedirectStandardError = $false
     $appHostStartInfo.CreateNoWindow = $false
     # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
     # This provides cleaner console output (Error only) and proper test log files
@@ -234,24 +237,10 @@ function Invoke-Tests {
     # but suppress noisy Microsoft.AspNetCore.* framework logs
     $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
     $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+    # Disable Aspire dashboard authentication for local development (no login token required)
+    $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
     
     $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
-    
-    # Capture output in background and extract dashboard URL
-    $outputJob = Start-Job -ScriptBlock {
-        param($process)
-        $dashboardUrl = $null
-        while (-not $process.StandardOutput.EndOfStream) {
-            $line = $process.StandardOutput.ReadLine()
-            Write-Output $line  # Echo to console
-            
-            # Extract dashboard URL
-            if ($line -match "Login to the dashboard at (https://[^\s]+)") {
-                $dashboardUrl = $matches[1]
-            }
-        }
-        return $dashboardUrl
-    } -ArgumentList $script:appHostProcess
     
     Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
     
@@ -347,12 +336,6 @@ function Invoke-Tests {
     
     Write-Success "Services ready"
     
-    # Try to get dashboard URL from captured output
-    if ($null -ne $outputJob) {
-        $script:dashboardUrl = Receive-Job -Job $outputJob -Keep -ErrorAction SilentlyContinue
-        Remove-Job -Job $outputJob -Force -ErrorAction SilentlyContinue
-    }
-    
     # PHASE 3: Run E2E tests
     Write-Step "Running E2E tests"
     Write-Host ""
@@ -421,12 +404,7 @@ function Invoke-Tests {
     Write-Info "AppHost is running:"
     Write-Info "  API: https://localhost:7153 (Swagger: https://localhost:7153/swagger)"
     Write-Info "  Web: https://localhost:7190"
-    if ($script:dashboardUrl) {
-        Write-Info "  Dashboard: $script:dashboardUrl"
-    }
-    else {
-        Write-Info "  Dashboard: Check startup output above for login URL"
-    }
+    Write-Info "  Dashboard: https://localhost:17101 (no login required)"
     Write-Host ""
     Write-Host "Press Ctrl+C to stop" -ForegroundColor Yellow
     

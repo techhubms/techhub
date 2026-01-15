@@ -1,76 +1,41 @@
 @page "/{sectionName}/{collectionName}"
-@using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using static TechHub.Web.Services.SectionHelper
-@inject TechHubApiClient ApiClient
+@inject SectionCache SectionCache
 @inject NavigationManager Navigation
 
-@if (sectionData == null)
-{
-    <p class="error-message">Error: Section data could not be loaded.</p>
-}
-else
-{
-    <PageTitle>@GetCollectionDisplayName(CollectionName) - @sectionData.Title - Tech Hub</PageTitle>
+<PageTitle>@GetCollectionDisplayName(CollectionName) - @GetSectionDisplayName(SectionName) - Tech Hub</PageTitle>
 
-    <HeadContent>
-        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @sectionData.Title - RSS Feed"
-            href="@($"{sectionData.Url}/feed.xml")" />
-    </HeadContent>
+<HeadContent>
+    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @GetSectionDisplayName(SectionName) - RSS Feed"
+        href="@($"/{SectionName}/feed.xml")" />
+</HeadContent>
 
-    <Header Section="@sectionData" />
+<Header SectionName="@SectionName" />
 
-    <div class="page-with-sidebar">
-        <aside class="sidebar">
-            <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"{sectionData.Url}/feed.xml") })" />
-        </aside>
+<div class="page-with-sidebar">
+    <aside class="sidebar">
+        <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
+    </aside>
 
-        <main class="page-main-content">
-            <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" SectionTitle="@sectionData.Title"
-                Collections="@sectionData.Collections" @key="@CollectionName" />
-        </main>
-    </div>
-}
+    <main class="page-main-content">
+        <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" @key="@CollectionName" />
+    </main>
+</div>
 
 @code {
-    [Inject] public required ErrorService ErrorService { get; set; }
-    [Inject] public required ILogger<SectionCollection> Logger { get; set; }
-
     [Parameter]
     public string SectionName { get; set; } = null!;
 
     [Parameter]
     public string CollectionName { get; set; } = null!;
 
-    private SectionDto? sectionData;
-
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        await LoadSection();
-    }
-
-    protected override async Task OnParametersSetAsync()
-    {
-        // Reload section if section name changed
-        if (sectionData != null && sectionData.Name != SectionName)
+        // Verify section exists, redirect to 404 if not
+        if (SectionCache.GetSectionByName(SectionName) == null)
         {
-            await LoadSection();
-        }
-    }
-
-    private async Task LoadSection()
-    {
-        try
-        {
-            sectionData = await ApiClient.GetSectionAsync(SectionName);
-            if (sectionData == null)
-            {
-                Navigation.NavigateTo("/not-found");
-            }
-        }
-        catch (Exception ex)
-        {
-            ErrorService.HandleError(ex, Navigation, Logger);
+            Navigation.NavigateTo("/not-found");
         }
     }
 }
