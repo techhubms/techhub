@@ -23482,5 +23482,11 @@
     "canonical_url": "https://code.visualstudio.com/blogs/2026/01/15/docfind",
     "reason": "Succesfully added: Assigned Coding because this post is a deep dive into building a Rust/WebAssembly-based search engine, covering code structures, binary packing, and engineering challenges (Coding rule 1 and 4). Assigned DevOps because the creation of a build-time CLI tool, operational considerations, and WASM deployment for docfind are central (DevOps rules 6 and 9). Assigned AI because the article discusses the practical use of GitHub Copilot as an integral AI-driven coding assistant during development, along with algorithmic approaches to search (AI rules 2 and 4). Azure or other categories do not apply as no Azure or ML specifics are present. The central focus is Microsoft developer tooling and AI-assisted engineering.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category due to substantial focus on Azure SQL and Fabric (Azure rule 1), and major investments in Azure-specific portals and resources. DevOps category is included because of roadmap commitments to source control integration, CI/CD, and database DevOps (DevOps rule 1, 5, and 6). Coding category is appropriate because of the focus on developer tools (VS Code extension, SDKs) and programmable features (Coding rules 1, 2, and 5). AI and GitHub Copilot categories are both included due to explicit mentions of integrating GitHub Copilot into SSMS and VS Code, supporting AI-assisted development (AI rule 2, GitHub Copilot rules 1–4). Tags were selected to capture all major technologies, products, and technical processes highlighted in the article.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/",
+    "collection": "news",
+    "timestamp": "2026-01-15 16:08:04 +00:00"
   }
 ]

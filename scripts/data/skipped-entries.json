@@ -11289,5 +11289,17 @@
     "timestamp": "2026-01-15 08:03:57 +00:00",
     "canonical_url": "https://news.microsoft.com/source/emea/features/microsoft-copilot-zendawa-ai-kenya-pharmacies/",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is centered on Microsoft's educational initiatives and the launch of the Elevate for Educators program, focusing on empowering educators and students with AI literacy, professional development, and global community resources. The described AI-powered tools, such as those within the Microsoft 365 Copilot app, are oriented toward general education and productivity in teaching, not software development, coding, DevOps, security engineering, or data science. Per the strict copilot distinction and generic exclusion rules, content about Microsoft 365 Copilot or educational AI features targeting teaching/learning and business productivity (not developer/maker/engineering productivity) are excluded. There is no discussion of coding, developer tools, DevOps practices, Azure deployment, ML/data science engineering, or security implementation with Microsoft platforms. Thus, all categories are excluded according to the workflow.",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/15/microsoft-expands-its-commitment-to-education-with-elevate-for-educators-program-and-new-ai-powered-tools/",
+    "collection": "news",
+    "timestamp": "2026-01-15 16:08:18 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The video is primarily about community management and the enforcement of a code of conduct in the Homebrew open source project. It discusses toxic behavior, community health, and maintainer well-being—topics not related to Microsoft development technologies or any of the included categories. Despite some connections to GitHub (since it's hosted there), the content does not cover DevOps practices, GitHub developer tools, or any technical aspects central to the predefined categories. This falls under generic exclusion rules regarding workplace/culture and management content without technical implementation.",
+    "canonical_url": "https://www.youtube.com/shorts/8dyuHoMSqyU",
+    "collection": "videos",
+    "timestamp": "2026-01-15 16:08:53 +00:00"
   }
 ]
