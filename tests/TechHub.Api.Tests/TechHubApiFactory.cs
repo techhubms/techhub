@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Interfaces;
-using TechHub.Core.Logging;
 using TechHub.Core.Models;
 
 namespace TechHub.Api.Tests;

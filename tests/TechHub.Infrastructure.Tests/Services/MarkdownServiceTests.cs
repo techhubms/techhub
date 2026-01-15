@@ -5,9 +5,16 @@ namespace TechHub.Infrastructure.Tests.Services;
 /// <summary>
 /// Tests for markdown rendering and processing
 /// Validates: HTML conversion, excerpt extraction, YouTube embeds
+/// 
+/// SINGLETON SERVICE: MarkdownService is registered as Singleton in Program.cs
+/// Tests use shared instance to mirror production behavior - if someone adds
+/// mutable state, parallel execution tests will fail (catching production bugs)
 /// </summary>
 public class MarkdownServiceTests
 {
+    // INTENTIONAL: Shared instance mirrors Singleton registration in production
+    // This catches bugs if someone adds mutable state to the service
+    // See: src/TechHub.Api/Program.cs line 50
     private readonly MarkdownService _service;
 
     public MarkdownServiceTests()
@@ -562,6 +569,107 @@ public class MarkdownServiceTests
 
         // Assert
         Assert.Equal("{% youtube dQw4w9WgXcQ %}", result);
+    }
+
+    #endregion
+
+    #region Singleton Stateless Verification
+
+    /// <summary>
+    /// CRITICAL: Verifies MarkdownService is stateless (required for Singleton)
+    /// This test will FAIL if someone adds mutable state to the service
+    /// Production uses Singleton registration, so this catches production-breaking bugs
+    /// </summary>
+    [Fact]
+    public async Task RenderToHtml_ParallelExecution_ProducesConsistentResults()
+    {
+        // Arrange: Same markdown for all parallel calls
+        var markdown = """
+            # Test Heading
+            
+            This is a **test** paragraph with `code`.
+            
+            - Item 1
+            - Item 2
+            """;
+
+        // Get expected result from first call
+        var expectedHtml = _service.RenderToHtml(markdown);
+
+        // Act: Execute 100 parallel calls to shared instance
+        // If service has mutable state, results will differ
+        var tasks = Enumerable.Range(0, 100).Select(async _ =>
+        {
+            await Task.Yield(); // Force async execution on thread pool
+            return _service.RenderToHtml(markdown);
+        });
+
+        var results = await Task.WhenAll(tasks);
+
+        // Assert: ALL results must be identical (proves stateless)
+        foreach (var html in results)
+        {
+            Assert.Equal(expectedHtml, html);
+        }
+    }
+
+    /// <summary>
+    /// CRITICAL: Verifies ExtractExcerpt is stateless
+    /// </summary>
+    [Fact]
+    public async Task ExtractExcerpt_ParallelExecution_ProducesConsistentResults()
+    {
+        // Arrange
+        var markdown = """
+            First paragraph with lots of content.
+            
+            <!--excerpt_end-->
+            
+            Full article continues here.
+            """;
+
+        var expectedExcerpt = _service.ExtractExcerpt(markdown);
+
+        // Act: 100 parallel calls
+        var tasks = Enumerable.Range(0, 100).Select(async _ =>
+        {
+            await Task.Yield();
+            return _service.ExtractExcerpt(markdown);
+        });
+
+        var results = await Task.WhenAll(tasks);
+
+        // Assert: All identical
+        foreach (var excerpt in results)
+        {
+            Assert.Equal(expectedExcerpt, excerpt);
+        }
+    }
+
+    /// <summary>
+    /// CRITICAL: Verifies ProcessYouTubeEmbeds is stateless
+    /// </summary>
+    [Fact]
+    public async Task ProcessYouTubeEmbeds_ParallelExecution_ProducesConsistentResults()
+    {
+        // Arrange
+        var markdown = "Watch this: [YouTube: abc123]";
+        var expected = _service.ProcessYouTubeEmbeds(markdown);
+
+        // Act: 100 parallel calls
+        var tasks = Enumerable.Range(0, 100).Select(async _ =>
+        {
+            await Task.Yield();
+            return _service.ProcessYouTubeEmbeds(markdown);
+        });
+
+        var results = await Task.WhenAll(tasks);
+
+        // Assert: All identical
+        foreach (var result in results)
+        {
+            Assert.Equal(expected, result);
+        }
     }
 
     #endregion

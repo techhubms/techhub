@@ -177,7 +177,7 @@ public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHu
 
         // RFC1123 format can be parsed by DateTime
         var parsed = DateTime.Parse(pubDate!);
-        parsed.Should().NotBe(default(DateTime));
+        parsed.Should().NotBe(default);
     }
 
     [Fact]

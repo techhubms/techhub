@@ -48,11 +48,15 @@ public class ContentItemTests
         dateUtc.Kind.Should().Be(DateTimeKind.Utc);
     }
 
+    /// <summary>
+    /// Test: DateIso property formats Unix epoch as ISO date string (YYYY-MM-DD)
+    /// Why: Frontend needs consistent date format for display and filtering
+    /// </summary>
     [Fact]
     public void DateIso_FormatsDateCorrectly()
     {
         // Arrange
-        var item = CreateValidContentItem(); // DateEpoch = 1705305600 = 2024-01-15 00:00:00 UTC
+        var item = CreateValidContentItem(); // DateEpoch = 1705305600 = 2024-01-15 08:00:00 UTC
 
         // Act
         var dateIso = item.DateIso;
@@ -61,11 +65,15 @@ public class ContentItemTests
         dateIso.Should().Be("2024-01-15");
     }
 
+    /// <summary>
+    /// Test: DateIso handles various epoch timestamps correctly
+    /// Why: Verify date formatting works across different years
+    /// </summary>
     [Theory]
-    [InlineData(1705305600, "2024-01-15")] // 2024-01-15 00:00:00 UTC
+    [InlineData(1705305600, "2024-01-15")] // 2024-01-15 08:00:00 UTC
     [InlineData(1672531200, "2023-01-01")] // 2023-01-01 00:00:00 UTC
     [InlineData(1735689600, "2025-01-01")] // 2025-01-01 00:00:00 UTC
-    public void DateIso_HandlesVariousDates(long epoch, string expectedIso)
+    public void DateIso_VariousEpochValues_FormatsCorrectly(long epoch, string expectedIso)
     {
         // Arrange
         var item = new ContentItem
@@ -88,8 +96,12 @@ public class ContentItemTests
         dateIso.Should().Be(expectedIso);
     }
 
+    /// <summary>
+    /// Test: GetUrlInSection constructs content URL with section prefix
+    /// Why: Generate correct routing URLs for content items in section context
+    /// </summary>
     [Fact]
-    public void GetUrlInSection_GeneratesCorrectUrl()
+    public void GetUrlInSection_ValidSection_GeneratesCorrectUrl()
     {
         // Arrange
         var item = CreateValidContentItem();
@@ -102,11 +114,15 @@ public class ContentItemTests
         url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
+    /// <summary>
+    /// Test: GetUrlInSection handles various section/collection/slug combinations
+    /// Why: URL generation must work for all content types
+    /// </summary>
     [Theory]
     [InlineData("/ai", "news", "test-slug", "/ai/news/test-slug")]
     [InlineData("/github-copilot", "videos", "video-demo", "/github-copilot/videos/video-demo")]
     [InlineData("/azure", "blogs", "2024-01-01-blog", "/azure/blogs/2024-01-01-blog")]
-    public void GetUrlInSection_GeneratesCorrectUrl_ForVariousParameters(
+    public void GetUrlInSection_VariousParameters_GeneratesCorrectUrls(
         string sectionUrl, string collectionName, string slug, string expectedUrl)
     {
         // Arrange
@@ -130,8 +146,12 @@ public class ContentItemTests
         url.Should().Be(expectedUrl);
     }
 
+    /// <summary>
+    /// Test: Validate passes for fully populated valid content item
+    /// Why: Ensure validation rules don't reject valid content
+    /// </summary>
     [Fact]
-    public void Validate_PassesForValidItem()
+    public void Validate_ValidItem_PassesWithoutException()
     {
         // Arrange
         var item = CreateValidContentItem();
@@ -143,8 +163,12 @@ public class ContentItemTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Slug is empty string
+    /// Why: Slug is required for URL generation
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenSlugIsEmpty()
+    public void Validate_EmptySlug_ThrowsArgumentException()
     {
         // Arrange
         var item = new ContentItem
@@ -169,8 +193,12 @@ public class ContentItemTests
             .WithParameterName("Slug");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Slug is whitespace only
+    /// Why: Whitespace-only slug is invalid for URLs
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenSlugIsWhitespace()
+    public void Validate_WhitespaceSlug_ThrowsArgumentException()
     {
         // Arrange
         var item = new ContentItem
@@ -194,8 +222,12 @@ public class ContentItemTests
             .WithParameterName("Slug");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Title is empty
+    /// Why: Title is required for content display
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenTitleIsEmpty()
+    public void Validate_EmptyTitle_ThrowsArgumentException()
     {
         // Arrange
         var item = new ContentItem
@@ -220,11 +252,15 @@ public class ContentItemTests
             .WithParameterName("Title");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when DateEpoch is zero or negative
+    /// Why: DateEpoch must be positive Unix timestamp
+    /// </summary>
     [Theory]
     [InlineData(0)]
     [InlineData(-1)]
     [InlineData(-100)]
-    public void Validate_ThrowsWhenDateEpochIsInvalid(long invalidEpoch)
+    public void Validate_InvalidDateEpoch_ThrowsArgumentException(long invalidEpoch)
     {
         // Arrange
         var item = new ContentItem
@@ -249,8 +285,12 @@ public class ContentItemTests
             .WithParameterName("DateEpoch");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when SectionNames is empty array
+    /// Why: Content must belong to at least one section
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenSectionsIsEmpty()
+    public void Validate_EmptySectionNames_ThrowsArgumentException()
     {
         // Arrange
         var item = new ContentItem
@@ -275,8 +315,12 @@ public class ContentItemTests
             .WithParameterName("SectionNames");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when RenderedHtml is empty
+    /// Why: RenderedHtml is required for content display
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenRenderedHtmlIsEmpty()
+    public void Validate_EmptyRenderedHtml_ThrowsArgumentException()
     {
         // Arrange
         var item = new ContentItem
@@ -301,8 +345,12 @@ public class ContentItemTests
             .WithParameterName("RenderedHtml");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Excerpt exceeds 1000 characters
+    /// Why: Excerpt length limit prevents excessive UI text
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenExcerptIsTooLong()
+    public void Validate_ExcerptOver1000Characters_ThrowsArgumentException()
     {
         // Arrange
         var longExcerpt = new string('a', 1001); // 1001 characters
@@ -328,8 +376,12 @@ public class ContentItemTests
             .WithParameterName("Excerpt");
     }
 
+    /// <summary>
+    /// Test: Validate passes when Excerpt is exactly 1000 characters (boundary)
+    /// Why: Verify boundary condition for excerpt length validation
+    /// </summary>
     [Fact]
-    public void Validate_PassesWhenExcerptIsExactly1000Characters()
+    public void Validate_ExcerptExactly1000Characters_Passes()
     {
         // Arrange
         var excerpt = new string('a', 1000);
@@ -353,8 +405,12 @@ public class ContentItemTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Validate passes when optional fields are null
+    /// Why: Ensure optional fields (Author, ExternalUrl, VideoId, ViewingMode) are truly optional
+    /// </summary>
     [Fact]
-    public void Validate_PassesWithOptionalFields()
+    public void Validate_OptionalFieldsNull_Passes()
     {
         // Arrange
         var item = new ContentItem
@@ -382,12 +438,13 @@ public class ContentItemTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: ContentItem properties can be set during initialization
+    /// Why: Verify record type with init-only properties works as expected
+    /// </summary>
     [Fact]
-    public void ContentItem_PropertiesAreInitOnly()
+    public void ContentItem_InitOnlyProperties_CanBeSetDuringInitialization()
     {
-        // This test verifies that ContentItem uses init-only setters
-        // by creating an instance and verifying properties are set correctly
-
         // Arrange & Act
         var item = new ContentItem
         {

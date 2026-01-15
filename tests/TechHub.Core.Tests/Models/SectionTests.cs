@@ -31,8 +31,12 @@ public class SectionTests
         };
     }
 
+    /// <summary>
+    /// Test: Validate passes for fully populated valid section
+    /// Why: Ensure validation rules don't reject valid sections
+    /// </summary>
     [Fact]
-    public void Validate_PassesForValidSection()
+    public void Validate_ValidSection_PassesWithoutException()
     {
         // Arrange
         var section = CreateValidSection();
@@ -44,8 +48,12 @@ public class SectionTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Name is empty string
+    /// Why: Section name is required for routing and identification
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenNameIsEmpty()
+    public void Validate_EmptyName_ThrowsArgumentException()
     {
         // Arrange
         var section = new Section
@@ -77,8 +85,12 @@ public class SectionTests
             .WithParameterName("Name");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Name is whitespace only
+    /// Why: Whitespace-only name is invalid for URLs
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenNameIsWhitespace()
+    public void Validate_WhitespaceName_ThrowsArgumentException()
     {
         // Arrange
         var section = new Section
@@ -109,13 +121,17 @@ public class SectionTests
             .WithParameterName("Name");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Name contains invalid characters
+    /// Why: Section names must be lowercase with hyphens only (URL-safe)
+    /// </summary>
     [Theory]
     [InlineData("AI")] // Uppercase
     [InlineData("GitHub-Copilot")] // Mixed case
     [InlineData("ai_news")] // Underscore
     [InlineData("ai.news")] // Period
     [InlineData("ai news")] // Space
-    public void Validate_ThrowsWhenNameHasInvalidCharacters(string invalidName)
+    public void Validate_InvalidCharactersInName_ThrowsArgumentException(string invalidName)
     {
         // Arrange
         var section = new Section
@@ -147,12 +163,16 @@ public class SectionTests
             .WithParameterName("Name");
     }
 
+    /// <summary>
+    /// Test: Validate passes for valid lowercase-hyphenated names
+    /// Why: Verify various valid name formats are accepted
+    /// </summary>
     [Theory]
     [InlineData("ai")]
     [InlineData("github-copilot")]
     [InlineData("machine-learning")]
     [InlineData("devops")]
-    public void Validate_PassesForValidNames(string validName)
+    public void Validate_ValidLowercaseNames_Passes(string validName)
     {
         // Arrange
         var section = new Section
@@ -182,8 +202,12 @@ public class SectionTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Title is empty
+    /// Why: Title is required for section display
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenTitleIsEmpty()
+    public void Validate_EmptyTitle_ThrowsArgumentException()
     {
         // Arrange
         var section = new Section
@@ -215,8 +239,12 @@ public class SectionTests
             .WithParameterName("Title");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Url is empty
+    /// Why: URL is required for routing to section pages
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenUrlIsEmpty()
+    public void Validate_EmptyUrl_ThrowsArgumentException()
     {
         // Arrange
         var section = new Section
@@ -248,11 +276,15 @@ public class SectionTests
             .WithParameterName("Url");
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when URL doesn't start with slash or has trailing slash
+    /// Why: URLs must follow format: /section-name (leading slash, no trailing slash)
+    /// </summary>
     [Theory]
     [InlineData("ai")] // Missing leading slash
     [InlineData("github-copilot")] // Missing leading slash
     [InlineData("azure/")] // Trailing slash
-    public void Validate_ThrowsWhenUrlDoesNotStartWithSlash(string invalidUrl)
+    public void Validate_InvalidUrlFormat_ThrowsArgumentException(string invalidUrl)
     {
         // Arrange
         var section = new Section
@@ -284,11 +316,15 @@ public class SectionTests
             .WithParameterName("Url");
     }
 
+    /// <summary>
+    /// Test: Validate passes for valid URL formats
+    /// Why: Verify various valid URL formats are accepted
+    /// </summary>
     [Theory]
     [InlineData("/ai")]
     [InlineData("/github-copilot")]
     [InlineData("/machine-learning")]
-    public void Validate_PassesForValidUrls(string validUrl)
+    public void Validate_ValidUrlFormats_Passes(string validUrl)
     {
         // Arrange
         var section = new Section
@@ -318,8 +354,12 @@ public class SectionTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Collections array is empty
+    /// Why: Section must have at least one collection for content display
+    /// </summary>
     [Fact]
-    public void Validate_ThrowsWhenCollectionsIsEmpty()
+    public void Validate_EmptyCollections_ThrowsArgumentException()
     {
         // Arrange
         var section = new Section
@@ -341,8 +381,12 @@ public class SectionTests
             .WithParameterName("Collections");
     }
 
+    /// <summary>
+    /// Test: Validate passes with multiple collections
+    /// Why: Sections typically have multiple collection types (news, blogs, videos)
+    /// </summary>
     [Fact]
-    public void Validate_PassesWithMultipleCollections()
+    public void Validate_MultipleCollections_Passes()
     {
         // Arrange
         var section = new Section
@@ -388,12 +432,13 @@ public class SectionTests
         act.Should().NotThrow();
     }
 
+    /// <summary>
+    /// Test: Section properties can be set during initialization
+    /// Why: Verify record type with init-only properties works as expected
+    /// </summary>
     [Fact]
-    public void Section_PropertiesAreInitOnly()
+    public void Section_InitOnlyProperties_CanBeSetDuringInitialization()
     {
-        // This test verifies that Section uses init-only setters
-        // by creating an instance and verifying properties are set correctly
-
         // Arrange & Act
         var section = new Section
         {
@@ -412,14 +457,14 @@ public class SectionTests
         section.Url.Should().Be("/test");
     }
 
+    /// <summary>
+    /// Test: Section model enforces all required properties
+    /// Why: Verify 'required' keyword is working correctly
+    /// </summary>
     [Fact]
-    public void Section_AllPropertiesAreRequired()
+    public void Section_RequiredProperties_MustBeSet()
     {
-        // This test verifies that the Section model enforces required properties
-        // by attempting to create instances without required properties
-        // If this compiles, the 'required' keyword is working correctly
-
-        // Arrange & Act & Assert - This should compile because all required properties are set
+        // Arrange & Act - This compiles because all required properties are set
         var section = new Section
         {
             Name = "test",

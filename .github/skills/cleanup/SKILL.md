@@ -23,6 +23,7 @@ Execute cleanup tasks in this order for best results:
 3. **Generate Quality Overview** - Analyze warnings/errors and create overview
 4. **Fix or Suppress Issues** - Address issues based on overview recommendations
 5. **Dead Code Removal** - Remove unused code
+5a. **Project Analysis** - Comprehensively analyze implementation, docs, and tests to identify gaps
 6. **Documentation Sync** - Update docs to match code
 7. **Test Review** - Review tests for correctness, completeness, and proper positioning
 8. **Best Practices Review** - Scan for common anti-patterns and code quality issues
@@ -34,7 +35,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 1: Build and Test Verification
 
-**Execute**: [`./run.ps1 -Clean -OnlyTests`](./workspaces/techhub/run.ps1)
+**Execute**: [`./run.ps1 -Clean -OnlyTests`](/workspaces/techhub/run.ps1)
 
 **Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
@@ -54,7 +55,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 2: Code Formatting
 
-**Execute**: [`/.github/skills/cleanup/scripts/format-code.ps1`](./.github/skills/cleanup/scripts/format-code.ps1)
+**Execute**: [`./.github/skills/cleanup/scripts/format-code.ps1`](/.github/skills/cleanup/scripts/format-code.ps1)
 
 **Purpose**: Apply consistent code formatting to all C# files using `dotnet format`.
 
@@ -72,11 +73,11 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 3: Generate Quality Overview
 
-**Execute**: [`/.github/skills/cleanup/scripts/analyze-code-quality.ps1`](./.github/skills/cleanup/scripts/analyze-code-quality.ps1)
+**Execute**: [`./.github/skills/cleanup/scripts/analyze-code-quality.ps1`](/.github/skills/cleanup/scripts/analyze-code-quality.ps1)
 
 **Purpose**: Build the solution and analyze all warnings, errors, and code quality issues from `dotnet build` output.
 
-**Output**: Creates a detailed overview file at `.tmp/code-quality-overview.md` using the [overview template](./.github/skills/cleanup/templates/overview-template.md).
+**Output**: Creates a detailed overview file at `.tmp/code-quality-overview.md` using the [overview template](/.github/skills/cleanup/templates/overview-template.md).
 
 **What the template shows**:
 
@@ -139,7 +140,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 **After making changes**:
 
-- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify changes
+- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify changes
 - Use `get_errors` tool to check for new VS Code diagnostics
 - Fix any new issues introduced by changes
 
@@ -147,7 +148,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 ### Step 5: Dead Code Detection
 
-**Execute**: [`/.github/skills/cleanup/scripts/find-dead-code.ps1`](./.github/skills/cleanup/scripts/find-dead-code.ps1)
+**Execute**: [`./.github/skills/cleanup/scripts/find-dead-code.ps1`](/.github/skills/cleanup/scripts/find-dead-code.ps1)
 
 **Purpose**: Identify unused code, imports, members, and CSS classes.
 
@@ -181,16 +182,152 @@ The template includes a "Quick Response Guide" section that helps users respond 
 **After user approval**:
 
 - Execute `find-dead-code.ps1 -Fix` (if user confirmed)
-- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify nothing broke
+- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify nothing broke
 - Use `get_errors` to check for new compilation issues
+
+---
+
+### Step 5a: Project Analysis (NEW)
+
+**Purpose**: Perform comprehensive analysis of the entire project to understand what exists BEFORE reviewing documentation and tests. This provides critical context for subsequent reviews.
+
+**Why This Step Matters**:
+
+Without understanding what's actually implemented, documentation and test reviews are superficial. This step systematically discovers:
+
+- What features exist in code (implementation)
+- What's documented (documentation)
+- What's tested (test coverage)
+
+This analysis provides the foundation for identifying:
+
+- Undocumented features
+- Missing test coverage
+- Stale documentation
+- Gaps between implementation and tests
+
+**Analysis Process** (follow in order):
+
+**1. Implementation Analysis**:
+
+- **API Endpoints**: List all endpoints in `src/TechHub.Api/`
+  - Use `grep_search` for `MapGet|MapPost|MapPut|MapDelete` patterns
+  - Document endpoint paths, HTTP methods, parameters
+  
+- **Blazor Components**: List all components in `src/TechHub.Web/Components/`
+  - Use `file_search` for `*.razor` files
+  - Document component names, parameters, purposes
+  
+- **Services & Repositories**: List all services in `src/TechHub.Infrastructure/`
+  - Use `grep_search` for `public.*Service|public.*Repository` patterns
+  - Document service names and primary responsibilities
+  
+- **Domain Models**: List all models in `src/TechHub.Core/Models/`
+  - Use `file_search` for `*.cs` files
+  - Document record/class names and key properties
+  
+- **Configuration**: Review `appsettings.json` for sections, collections, settings
+  - Document all configured features
+
+- **Your own judgement**: Based on what you've found so far, look for any other significant features or patterns in the codebase that should be noted. Take as long as you need.
+
+**2. Documentation Analysis**:
+
+- **API Specification**: Read `docs/api-specification.md`
+  - List documented endpoints
+  - Compare with implementation (Step 1)
+  
+- **AGENTS.md Files**: Scan all AGENTS.md files
+  - List documented patterns and features
+  - There are nested AGENTS.md files in many folders
+  - Note any references to code/features
+  
+- **Functional Docs**: Read `docs/*.md` files
+  - List documented features (filtering, content management, RSS)
+  - Note any implementation details mentioned
+
+**3. Test Coverage Analysis**:
+
+- **Unit Tests**: Scan `tests/TechHub.Core.Tests/` and `tests/TechHub.Infrastructure.Tests/`
+  - Use `grep_search` for `public.*void.*Test|\[Fact\]|\[Theory\]` patterns
+  - List tested classes and methods
+  
+- **Integration Tests**: Scan `tests/TechHub.Api.Tests/`
+  - List tested API endpoints
+  - Compare with implementation endpoints (Step 1)
+  
+- **Component Tests**: Scan `tests/TechHub.Web.Tests/`
+  - List tested components
+  - Compare with implementation components (Step 1)
+  
+- **E2E Tests**: Scan `tests/TechHub.E2E.Tests/`
+  - List tested user workflows
+  - Identify which features have E2E coverage
+
+**4. Gap Analysis**:
+
+Compare implementation, documentation, and tests:
+
+- **Undocumented Features**: Implementation exists but not documented
+- **Untested Features**: Implementation exists but no tests
+- **Stale Documentation**: Documentation references removed features
+- **Misplaced Tests**: Tests in wrong layer (e.g., E2E tests with mocks)
+- **Missing E2E Coverage**: UI changes without E2E tests
+
+**Output**:
+
+Create a summary report at `.tmp/project-analysis.md`:
+
+```markdown
+## Project Analysis Summary
+
+### Implementation Inventory
+- **API Endpoints**: 14 endpoints (list with paths)
+- **Blazor Components**: 8 components (list with names)
+- **Services**: 5 services (list with names)
+- **Domain Models**: 6 models (list with names)
+
+### Documentation Inventory
+- **API Specification**: Documents 14 endpoints (✅ complete)
+- **Functional Docs**: 4 files covering filtering, content, RSS
+- **AGENTS.md Files**: 17 files covering all domains
+
+### Test Coverage Inventory
+- **Unit Tests**: 155 tests across 8 test files
+- **Integration Tests**: 100 tests across 6 test files
+- **Component Tests**: 0 tests (⚠️ missing)
+- **E2E Tests**: 103 tests across 13 test files
+
+### Gap Analysis
+- **Undocumented**: (list features)
+- **Untested**: (list features)
+- **Stale Docs**: (list outdated content)
+- **Misplaced Tests**: (list tests in wrong layer)
+- **Missing E2E**: (list UI changes without E2E tests)
+```
+
+**Action Required**:
+
+1. **Present the analysis report** to user
+2. **Highlight critical gaps** (untested features, undocumented endpoints)
+3. **Wait for user decisions**:
+   - "Proceed with documentation review" (continue to Step 6)
+   - "Fix gaps first" (address gaps before continuing)
+   - "Skip gap fixing" (note gaps but continue)
+
+**This analysis provides context for**:
+
+- Step 6 (Documentation Review): Know what to look for
+- Step 7 (Test Review): Know what should be tested
+- Step 8 (Best Practices): Understand feature usage patterns
 
 ---
 
 ### Step 6: Documentation Review
 
-**Execute**: [`/.github/skills/cleanup/scripts/verify-documentation.ps1`](./.github/skills/cleanup/scripts/verify-documentation.ps1)
+**Execute**: [`./.github/skills/cleanup/scripts/verify-documentation.ps1`](/.github/skills/cleanup/scripts/verify-documentation.ps1)
 
-**Purpose**: Ensure documentation matches current code and follows [documentation strategy](./workspaces/techhub/docs/AGENTS.md).
+**Purpose**: Ensure documentation matches current code and follows [documentation strategy](/workspaces/techhub/docs/AGENTS.md).
 
 **What it checks**:
 
@@ -209,11 +346,8 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 After running the basic verification script, perform comprehensive review:
 
-1. **Read [/workspaces/techhub/docs/AGENTS.md](./workspaces/techhub/docs/AGENTS.md)** to understand documentation strategy
-2. **Scan implementation** to find undocumented features:
-   - New API endpoints not in api-specification.md
-   - Changed filtering behavior not in filtering-system.md
-   - New content workflows not in content-management.md
+1. **Read [/workspaces/techhub/docs/AGENTS.md](/workspaces/techhub/docs/AGENTS.md)** to understand documentation strategy
+2. **Use project analysis from Step 5a** to identify undocumented features
 3. **Review existing docs** for:
    - **Completeness**: Missing sections or outdated information
    - **Staleness**: References to removed features or old patterns
@@ -249,7 +383,7 @@ After running the basic verification script, perform comprehensive review:
 
 ### Step 7: Test Review
 
-**Read First**: [/workspaces/techhub/tests/AGENTS.md](./workspaces/techhub/tests/AGENTS.md)
+**Read First**: [/workspaces/techhub/tests/AGENTS.md](/workspaces/techhub/tests/AGENTS.md)
 
 **Purpose**: Review all tests for correctness, completeness, proper positioning, and adherence to testing standards defined in tests/AGENTS.md.
 
@@ -326,23 +460,28 @@ After running the basic verification script, perform comprehensive review:
 **Review Process**:
 
 1. **Read tests/AGENTS.md** to understand testing standards
-2. **Read project-specific test AGENTS.md files**:
+2. **Use project analysis from Step 5a** to identify coverage gaps:
+   - API endpoints without integration tests
+   - Components without component or E2E tests
+   - Services without unit tests
+   - UI changes without E2E tests
+3. **Read project-specific test AGENTS.md files**:
    - `tests/TechHub.Core.Tests/AGENTS.md` - Unit test patterns
    - `tests/TechHub.Infrastructure.Tests/AGENTS.md` - Infrastructure test patterns
    - `tests/TechHub.Api.Tests/AGENTS.md` - Integration test patterns (mocked dependencies)
-   - `tests/TechHub.Web.Tests/AGENTS.md` - Component test patterns
-   - `tests/TechHub.E2E.Tests/AGENTS.md` - E2E test patterns (real dependencies)
+4  - `tests/TechHub.Web.Tests/AGENTS.md` - Component test patterns
+5  - `tests/TechHub.E2E.Tests/AGENTS.md` - E2E test patterns (real dependencies)
    - `tests/powershell/AGENTS.md` - PowerShell test patterns
-3. **Scan test files** in each test project using `file_search` and `grep_search`
-4. **For each test method, verify**:
+4. **Scan test files** in each test project using `file_search` and `grep_search`
+5. **For each test method, verify**:
    - Read the test code (Arrange, Act, Assert sections)
    - Check if the test name accurately describes what is being tested
-   - Verify the scenario in the name matches the actual test setup
-   - Verify the expected outcome in the name matches the assertions
-   - Flag any mismatch between name and behavior
-5. **Check for violations** of testing standards
-6. **Identify misplaced tests** (e.g., unit tests in E2E project)
-7. **Find missing test coverage** for critical features
+6  - Verify the scenario in the name matches the actual test setup
+7  - Verify the expected outcome in the name matches the assertions
+8  - Flag any mismatch between name and behavior
+6. **Check for violations** of testing standards
+7. **Identify misplaced tests** (e.g., unit tests in E2E project)
+8. **Find missing test coverage** for critical features
 
 **Action Required**:
 
@@ -375,12 +514,43 @@ After running the basic verification script, perform comprehensive review:
 - **Missing E2E Coverage**: UI changes MUST have E2E tests
   - Check for URL routing, component interactivity, navigation changes without E2E tests
 
+**Grading Rubric**:
+
+Provide an overall test quality grade based on findings:
+
+- **A (Excellent)**: 0 critical, 0-2 important issues, any minor issues
+  - Tests are comprehensive, well-structured, correctly positioned
+  - Names accurately describe behavior
+  - All edge cases covered
+  
+- **B (Good)**: 0 critical, 3-5 important issues, any minor issues
+  - Tests are solid with room for improvement
+  - Most names accurate, minor gaps in coverage
+  - Generally follows best practices
+  
+- **C (Acceptable)**: 0 critical, 6+ important issues OR 1-2 critical issues
+  - Tests work but have notable quality problems
+  - Some misleading names or missing coverage
+  - Needs improvement to meet standards
+  
+- **D (Poor)**: 3-5 critical issues
+  - Tests have serious quality problems
+  - Misleading names, incorrect positioning, or broken patterns
+  - Requires immediate attention
+  
+- **F (Failing)**: 6+ critical issues OR tests don't run
+  - Tests are fundamentally broken or missing
+  - Critical defects prevent reliable testing
+  - Major rework required
+
+**NEVER report "good to excellent" if ANY critical issues exist** - critical issues automatically cap grade at C or lower.
+
 **After user approval**:
 
 - Fix test issues using `replace_string_in_file` or `multi_replace_string_in_file`
 - Move misplaced tests to correct projects
 - Add missing test coverage
-- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify all tests still pass
+- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify all tests still pass
 - Use `get_errors` to check for new issues
 
 ---
@@ -512,14 +682,14 @@ After running the basic verification script, perform comprehensive review:
 **After user approval**:
 
 - Fix issues using `replace_string_in_file` or `multi_replace_string_in_file`
-- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify changes
+- Run [`./run.ps1 -OnlyTests`](/run.ps1) to verify changes
 - Use `get_errors` to check for new issues
 
 ---
 
 ### Step 9: Final Validation
 
-**Execute**: [`/run.ps1 -Clean -OnlyTests`](./run.ps1)
+**Execute**: [`./run.ps1 -Clean -OnlyTests`](/run.ps1)
 
 **Purpose**: Final verification that all changes are correct and nothing is broken.
 
@@ -535,8 +705,8 @@ After running the basic verification script, perform comprehensive review:
 - [ ] Solution builds without errors
 - [ ] Warnings significantly reduced (or properly suppressed)
 - [ ] All tests pass (same or better than Step 1)
-- [ ] Code formatting verified: [`/.github/skills/cleanup/scripts/format-code.ps1 -Verify`](./.github/skills/cleanup/scripts/format-code.ps1)
-- [ ] PowerShell tests pass: [`/scripts/run-powershell-tests.ps1`](./scripts/run-powershell-tests.ps1)
+- [ ] Code formatting verified: [`./.github/skills/cleanup/scripts/format-code.ps1 -Verify`](/.github/skills/cleanup/scripts/format-code.ps1)
+- [ ] PowerShell tests pass: [`./scripts/run-powershell-tests.ps1`](/scripts/run-powershell-tests.ps1)
 - [ ] No new VS Code diagnostics (`get_errors` tool)
 
 ---
@@ -608,16 +778,16 @@ After completing all steps, provide a summary report:
 
 **Scripts**:
 
-- [format-code.ps1](./.github/skills/cleanup/scripts/format-code.ps1) - Code formatting
-- [analyze-code-quality.ps1](./.github/skills/cleanup/scripts/analyze-code-quality.ps1) - Quality analysis and overview generation
-- [find-dead-code.ps1](./.github/skills/cleanup/scripts/find-dead-code.ps1) - Dead code detection
-- [verify-documentation.ps1](./.github/skills/cleanup/scripts/verify-documentation.ps1) - Documentation verification
+- [format-code.ps1](/.github/skills/cleanup/scripts/format-code.ps1) - Code formatting
+- [analyze-code-quality.ps1](/.github/skills/cleanup/scripts/analyze-code-quality.ps1) - Quality analysis and overview generation
+- [find-dead-code.ps1](/.github/skills/cleanup/scripts/find-dead-code.ps1) - Dead code detection
+- [verify-documentation.ps1](/.github/skills/cleanup/scripts/verify-documentation.ps1) - Documentation verification
 
 **Templates**:
 
-- [overview-template.md](./.github/skills/cleanup/templates/overview-template.md) - Standard format for quality overviews
+- [overview-template.md](/.github/skills/cleanup/templates/overview-template.md) - Standard format for quality overviews
 
 **Project Scripts**:
 
-- [run.ps1](./run.ps1) - Build, test, and run the solution
-- [run-powershell-tests.ps1](./scripts/run-powershell-tests.ps1) - PowerShell script validation
+- [run.ps1](/run.ps1) - Build, test, and run the solution
+- [run-powershell-tests.ps1](/scripts/run-powershell-tests.ps1) - PowerShell script validation

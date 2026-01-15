@@ -156,7 +156,82 @@ public void GetUrlInSection_DifferentSections_ReturnsCorrectUrl(string sectionNa
 }
 ```
 
-### Test Fixtures (IClassFixture\<T\>)
+### Testing Singleton Services
+
+**🚨 CRITICAL**: If a service is registered as **Singleton** in production, tests MUST verify it can safely be used as a Singleton.
+
+**Pattern**: Shared instance in tests mirrors production Singleton registration
+
+**Why**: If someone adds mutable state to a Singleton service, tests should FAIL to catch the production-breaking bug.
+
+**Example**: Testing `MarkdownService` (registered as Singleton in Program.cs)
+
+```csharp
+public class MarkdownServiceTests
+{
+    // Shared instance mirrors Singleton registration in production
+    // If someone adds mutable state, parallel tests will fail
+    private readonly MarkdownService _service;
+
+    public MarkdownServiceTests()
+    {
+        // INTENTIONAL: Shared instance mimics production Singleton behavior
+        // This will catch bugs if someone adds state to the service
+        _service = new MarkdownService();
+    }
+
+    [Fact]
+    public void RenderToHtml_BasicMarkdown_ConvertsToHtml()
+    {
+        // Arrange: Use shared instance
+        var markdown = "# Heading";
+
+        // Act: Shared instance must be stateless
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("<h1");
+    }
+
+    /// <summary>
+    /// CRITICAL: This test verifies the service is stateless
+    /// If someone adds mutable state, this test will fail randomly
+    /// </summary>
+    [Fact]
+    public async Task RenderToHtml_ParallelExecution_ProducesConsistentResults()
+    {
+        // Arrange: Same markdown for all parallel calls
+        var markdown = "# Test Heading";
+        var expectedHtml = _service.RenderToHtml(markdown);
+
+        // Act: Execute in parallel (would fail if service has mutable state)
+        var tasks = Enumerable.Range(0, 100).Select(async _ =>
+        {
+            await Task.Yield(); // Force async execution
+            return _service.RenderToHtml(markdown);
+        });
+
+        var results = await Task.WhenAll(tasks);
+
+        // Assert: All results identical (proves stateless)
+        results.Should().AllSatisfy(html => html.Should().Be(expectedHtml));
+    }
+}
+```
+
+**Key Rules**:
+
+- ✅ **Mirror production registration** - Singleton in production = shared in tests
+- ✅ **Add parallel execution test** - Catches mutable state bugs
+- ✅ **Document why instance is shared** - Explain it mirrors production
+- ❌ **Never add state to Singleton services** - Tests will fail
+
+**Services Registered as Singleton** (see `src/TechHub.Api/Program.cs`):
+
+- `MarkdownService` - Markdown rendering (stateless)
+- `SectionRepository` - Section data access (uses caching)
+- `ContentRepository` - Content data access (uses caching)
+- `RssService` - RSS feed generation (stateless)### Test Fixtures (IClassFixture\<T\>)
 
 **Use fixtures for expensive setup shared across tests**:
 

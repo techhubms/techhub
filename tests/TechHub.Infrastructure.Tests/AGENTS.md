@@ -37,6 +37,78 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 
 ## Test Patterns
 
+### Testing Singleton Services
+
+**🚨 CRITICAL RULE**: Services registered as **Singleton** in production MUST be tested with shared instances.
+
+**Why**: Production uses ONE instance shared across ALL requests. Tests must verify this is safe.
+
+**Pattern**: Create shared instance in test constructor (mimics production)
+
+```csharp
+public class MarkdownServiceTests
+{
+    // INTENTIONAL: Shared instance mirrors Singleton registration in Program.cs
+    // If someone adds mutable state, parallel execution tests will fail
+    private readonly MarkdownService _service;
+
+    public MarkdownServiceTests()
+    {
+        _service = new MarkdownService();
+    }
+
+    [Fact]
+    public void RenderToHtml_BasicMarkdown_ConvertsToHtml()
+    {
+        // Arrange: Shared instance (like production Singleton)
+        var markdown = "# Heading";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("<h1");
+    }
+
+    /// <summary>
+    /// Parallel execution test - CRITICAL for Singleton services
+    /// If someone adds mutable state, this test will fail
+    /// </summary>
+    [Fact]
+    public async Task RenderToHtml_ConcurrentCalls_ProducesConsistentResults()
+    {
+        // Arrange
+        var markdown = "# Test";
+        var expected = _service.RenderToHtml(markdown);
+
+        // Act: 100 parallel calls (would fail if service has state)
+        var tasks = Enumerable.Range(0, 100).Select(async _ =>
+        {
+            await Task.Yield();
+            return _service.RenderToHtml(markdown);
+        });
+        var results = await Task.WhenAll(tasks);
+
+        // Assert: All identical (proves stateless)
+        results.Should().AllSatisfy(r => r.Should().Be(expected));
+    }
+}
+```
+
+**Services Registered as Singleton**:
+
+- `MarkdownService` - MUST be stateless (pure transformations)
+- `SectionRepository` - Uses caching (cache is thread-safe)
+- `ContentRepository` - Uses caching (cache is thread-safe)
+- `RssService` - MUST be stateless
+
+**Key Rules**:
+
+- ✅ **Use shared instance** for Singleton services
+- ✅ **Add parallel execution test** to catch mutable state
+- ✅ **Document why instance is shared** in comments
+- ❌ **Never add mutable state** to Singleton services
+
 ### Testing File Parsing
 
 ```csharp

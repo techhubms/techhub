@@ -18,7 +18,10 @@ if (!skipFileLogging && (builder.Environment.IsDevelopment() || builder.Environm
     var logPath = builder.Configuration["Logging:File:Path"];
     if (!string.IsNullOrEmpty(logPath))
     {
+        // FileLoggerProvider is registered with DI and disposed by framework
+#pragma warning disable CA2000
         builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+#pragma warning restore CA2000
     }
 }
 

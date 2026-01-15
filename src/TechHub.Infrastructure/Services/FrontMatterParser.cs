@@ -46,7 +46,7 @@ public class FrontMatterParser
         for (int i = 0; i < lines.Length; i++)
         {
             var line = lines[i];
-            
+
             // First --- starts frontmatter (ONLY if frontmatter hasn't been closed yet)
             if (!inFrontMatter && !frontMatterClosed && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
             {

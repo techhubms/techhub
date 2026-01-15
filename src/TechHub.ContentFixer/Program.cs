@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.RegularExpressions;
 using TechHub.Core.Helpers;
 using TechHub.Infrastructure.Services;
@@ -19,7 +19,7 @@ namespace TechHub.ContentFixer;
 /// - Replace Jekyll variables with actual values
 /// - Keep {% youtube VIDEO_ID %} tags intact
 /// </summary>
-class Program
+internal sealed class Program
 {
     private static readonly Dictionary<string, string> SectionMapping = new()
     {
@@ -33,13 +33,13 @@ class Program
         ["Cloud"] = "cloud"
     };
 
-    static async Task<int> Main(string[] args)
+    private static async Task<int> Main(string[] args)
     {
         var dryRun = args.Contains("--dry-run");
         var fileArg = Array.FindIndex(args, a => a == "--file");
-        var path = fileArg >= 0 && fileArg + 1 < args.Length 
-            ? args[fileArg + 1] 
-            : args.FirstOrDefault(a => !a.StartsWith("--")) ?? "collections";
+        var path = fileArg >= 0 && fileArg + 1 < args.Length
+            ? args[fileArg + 1]
+            : args.FirstOrDefault(a => !a.StartsWith("--", StringComparison.Ordinal)) ?? "collections";
 
         Console.WriteLine("==> Tech Hub Content Fixer");
         Console.WriteLine();
@@ -96,6 +96,7 @@ class Program
             Console.WriteLine($"Skipped: {skipped} files (already fixed)");
             Console.ResetColor();
         }
+
         if (errors > 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -115,9 +116,7 @@ class Program
 
         if (Directory.Exists(path))
         {
-            return Directory.GetFiles(path, "*.md", SearchOption.AllDirectories)
-                .OrderBy(f => f)
-                .ToList();
+            return [.. Directory.GetFiles(path, "*.md", SearchOption.AllDirectories).OrderBy(f => f)];
         }
 
         throw new ArgumentException($"Path not found: {path}");
@@ -133,7 +132,7 @@ class Program
         var parser = new FrontMatterParser();
         Dictionary<string, object> frontMatter;
         string markdownContent;
-        
+
         try
         {
             (frontMatter, markdownContent) = parser.Parse(content);
@@ -211,7 +210,7 @@ class Program
             // Check if already has section/collection prefix (idempotent)
             if (!Regex.IsMatch(permalink, @"^/[^/]+/[^/]+/"))
             {
-                var filename = permalink.TrimStart('/').Replace(".html", "");
+                var filename = permalink.TrimStart('/').Replace(".html", "", StringComparison.Ordinal);
                 var slug = Regex.Replace(filename, @"^\d{4}-\d{2}-\d{2}-", "");
 
                 var sectionNames = GetListValue(frontMatter, "section_names");
@@ -289,7 +288,7 @@ class Program
             return normalized;
         }
 
-        return displayName.ToLowerInvariant().Replace(" ", "-");
+        return displayName.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal);
     }
 
     private static List<string> GetListValue(Dictionary<string, object> frontMatter, string key)
@@ -302,7 +301,7 @@ class Program
         return value switch
         {
             string str => [str],
-            IEnumerable<object> list => list.Select(x => x?.ToString() ?? string.Empty).ToList(),
+            IEnumerable<object> list => [.. list.Select(x => x?.ToString() ?? string.Empty)],
             _ => []
         };
     }
@@ -330,6 +329,7 @@ class Program
                     _ => value?.ToString() ?? match.Value
                 };
             }
+
             return match.Value;
         });
 

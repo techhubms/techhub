@@ -198,6 +198,14 @@ dotnet_diagnostic.CA1024.severity = none
 # Suppressed: Public types required for dependency injection in Blazor
 dotnet_diagnostic.CA1515.severity = none
 
+# CA1303: Localization warnings (24 occurrences in ContentFixer)
+# Suppressed: ContentFixer is internal CLI tooling, not user-facing software requiring localization
+dotnet_diagnostic.CA1303.severity = none
+
+# CA1031: Catching generic Exception (4 occurrences in ContentFixer)
+# Suppressed: ContentFixer needs generic exception handling for user-friendly CLI error messages
+dotnet_diagnostic.CA1031.severity = none
+
 ##############################
 # C# Formatting Rules
 ##############################

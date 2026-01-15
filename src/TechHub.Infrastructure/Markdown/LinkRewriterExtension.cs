@@ -12,18 +12,11 @@ namespace TechHub.Infrastructure.Markdown;
 /// - Rewrites internal .html links to proper section/collection URLs
 /// - Fixes hash-only links to include full current page URL
 /// </summary>
-public class LinkRewriterExtension : IMarkdownExtension
+public class LinkRewriterExtension(string? currentPagePath = null, string? sectionName = null, string? collectionName = null) : IMarkdownExtension
 {
-    private readonly string? _currentPagePath;
-    private readonly string? _sectionName;
-    private readonly string? _collectionName;
-
-    public LinkRewriterExtension(string? currentPagePath = null, string? sectionName = null, string? collectionName = null)
-    {
-        _currentPagePath = currentPagePath;
-        _sectionName = sectionName;
-        _collectionName = collectionName;
-    }
+    private readonly string? _currentPagePath = currentPagePath;
+    private readonly string? _sectionName = sectionName;
+    private readonly string? _collectionName = collectionName;
 
     public void Setup(MarkdownPipelineBuilder pipeline)
     {
@@ -48,18 +41,11 @@ public class LinkRewriterExtension : IMarkdownExtension
     /// <summary>
     /// Custom link renderer that processes link URLs
     /// </summary>
-    private class CustomLinkRenderer : HtmlObjectRenderer<LinkInline>
+    private sealed class CustomLinkRenderer(string? currentPagePath, string? sectionName, string? collectionName) : HtmlObjectRenderer<LinkInline>
     {
-        private readonly string? _currentPagePath;
-        private readonly string? _sectionName;
-        private readonly string? _collectionName;
-
-        public CustomLinkRenderer(string? currentPagePath, string? sectionName, string? collectionName)
-        {
-            _currentPagePath = currentPagePath;
-            _sectionName = sectionName;
-            _collectionName = collectionName;
-        }
+        private readonly string? _currentPagePath = currentPagePath;
+        private readonly string? _sectionName = sectionName;
+        private readonly string? _collectionName = collectionName;
 
         protected override void Write(HtmlRenderer renderer, LinkInline link)
         {
@@ -126,7 +112,7 @@ public class LinkRewriterExtension : IMarkdownExtension
                 return false;
 
             // Check if it has a protocol (http://, https://, mailto:, etc.)
-            if (url.Contains("://"))
+            if (url.Contains("://", StringComparison.Ordinal))
             {
                 // URLs with protocols are external unless they're our own domain
                 var uri = new Uri(url, UriKind.Absolute);
@@ -149,7 +135,7 @@ public class LinkRewriterExtension : IMarkdownExtension
             }
 
             // 2. Internal .html links - rewrite to /section/collection/slug format
-            if (url.EndsWith(".html") && !url.Contains("://"))
+            if (url.EndsWith(".html", StringComparison.Ordinal) && !url.Contains("://", StringComparison.Ordinal))
             {
                 // Extract filename without extension
                 var filename = Path.GetFileNameWithoutExtension(url);
