@@ -1,8 +1,21 @@
 using TechHub.Core.Configuration;
+using TechHub.Core.Logging;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure file logging for Development and Test environments
+// Skip during integration tests (AppSettings:SkipFileLogging = true)
+var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
+if (!skipFileLogging && (builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("Test")))
+{
+    var logPath = builder.Configuration["Logging:File:Path"];
+    if (!string.IsNullOrEmpty(logPath))
+    {
+        builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+    }
+}
 
 // Enable static web assets for non-Development environments (e.g., Test)
 // Required for E2E tests which run in Test environment

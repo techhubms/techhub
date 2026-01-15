@@ -3,11 +3,24 @@ using TechHub.Api.Extensions;
 using TechHub.Api.Middleware;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Services;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure file logging for Development and Test environments
+// Skip during integration tests (AppSettings:SkipFileLogging = true)
+var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
+if (!skipFileLogging && (builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("Test")))
+{
+    var logPath = builder.Configuration["Logging:File:Path"];
+    if (!string.IsNullOrEmpty(logPath))
+    {
+        builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+    }
+}
 
 // Add services to the container
 builder.Services.AddOpenApi();

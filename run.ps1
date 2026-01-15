@@ -230,6 +230,9 @@ function Invoke-Tests {
     Write-Step "Running unit and integration tests"
     Write-Host ""
     
+    # Set Test environment for integration tests to prevent api-dev.log creation
+    $env:ASPNETCORE_ENVIRONMENT = "Test"
+    
     $nonE2eTestArgs = @(
         "test",
         $solutionPath,
@@ -258,77 +261,45 @@ function Invoke-Tests {
     $apiUrl = "http://localhost:$ApiPort"
     $webUrl = "http://localhost:$WebPort"
     
-    # Use system temp directory for logs (works on CI/CD)
-    $logsDir = Join-Path ([System.IO.Path]::GetTempPath()) "techhub-tests"
-    if (-not (Test-Path $logsDir)) {
-        New-Item -ItemType Directory -Path $logsDir -Force | Out-Null
-    }
-    
-    $apiLogPath = Join-Path $logsDir "api-e2e.log"
-    $webLogPath = Join-Path $logsDir "web-e2e.log"
-    
-    Write-Info "Server output will be logged to $logsDir/"
+    Write-Info "Server logs will be written to /workspaces/techhub/.tmp/"
+    Write-Info "  API: api-test.log"
+    Write-Info "  Web: web-test.log"
     
     # Track processes for cleanup
     $script:testApiProcess = $null
     $script:testWebProcess = $null
-    $apiLogWriter = $null
-    $webLogWriter = $null
     
-    # Start API process with Test environment (suppresses console logging via appsettings.Test.json)
+    # Start API process with Test environment
+    # Console output flows naturally to terminal (warnings/errors visible immediately)
+    # FileLoggerProvider handles file logging to /tmp/techhub-logs/api-test.log
     $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
     $apiStartInfo.FileName = "dotnet"
     $apiStartInfo.Arguments = "watch --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
     $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
     $apiStartInfo.UseShellExecute = $false
     $apiStartInfo.CreateNoWindow = $false
-    $apiStartInfo.RedirectStandardOutput = $true
-    $apiStartInfo.RedirectStandardError = $true
     $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
     $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
     
     $script:testApiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
-    
-    # Redirect API output (stdout + stderr) to log file
-    $apiLogWriter = [System.IO.StreamWriter]::new($apiLogPath, $false)
-    $apiLogWriter.AutoFlush = $true
-    $script:apiOutputJob = Start-ThreadJob -ScriptBlock {
-        param($stdoutReader, $stderrReader, $writer)
-        $jobs = @(
-            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
-            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
-        )
-        $jobs | Wait-Job | Out-Null
-    } -ArgumentList $script:testApiProcess.StandardOutput, $script:testApiProcess.StandardError, $apiLogWriter
-    
     Write-Info "  API started (PID: $($script:testApiProcess.Id))"
     
-    # Start Web process with Test environment (suppresses console logging via appsettings.Test.json)
+    # Wait a moment before starting Web to avoid dotnet watch build race conditions
+    Start-Sleep -Milliseconds 500
+    
+    # Start Web process with Test environment
+    # Console output flows naturally to terminal (warnings/errors visible immediately)
+    # FileLoggerProvider handles file logging to /tmp/techhub-logs/web-test.log
     $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
     $webStartInfo.FileName = "dotnet"
     $webStartInfo.Arguments = "watch --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
     $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
     $webStartInfo.UseShellExecute = $false
     $webStartInfo.CreateNoWindow = $false
-    $webStartInfo.RedirectStandardOutput = $true
-    $webStartInfo.RedirectStandardError = $true
     $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
     $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $webUrl
     
     $script:testWebProcess = [System.Diagnostics.Process]::Start($webStartInfo)
-    
-    # Redirect Web output (stdout + stderr) to log file
-    $webLogWriter = [System.IO.StreamWriter]::new($webLogPath, $false)
-    $webLogWriter.AutoFlush = $true
-    $script:webOutputJob = Start-ThreadJob -ScriptBlock {
-        param($stdoutReader, $stderrReader, $writer)
-        $jobs = @(
-            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
-            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
-        )
-        $jobs | Wait-Job | Out-Null
-    } -ArgumentList $script:testWebProcess.StandardOutput, $script:testWebProcess.StandardError, $webLogWriter
-    
     Write-Info "  Web started (PID: $($script:testWebProcess.Id))"
     
     # Wait for servers to be ready
@@ -374,8 +345,8 @@ function Invoke-Tests {
     if (-not $apiReady -or -not $webReady) {
         Write-Error "Servers failed to start within $maxAttempts seconds"
         Write-Info "Check logs for details:"
-        Write-Info "  API: $apiLogPath"
-        Write-Info "  Web: $webLogPath"
+        Write-Info "  API: /workspaces/techhub/.tmp/api-test.log"
+        Write-Info "  Web: /workspaces/techhub/.tmp/web-test.log"
         
         # Clean up on startup failure
         if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
@@ -401,7 +372,8 @@ function Invoke-Tests {
     # CI environment: 4 threads (from xunit.runner.json - safer for limited CI runners)
     if ($env:CI) {
         Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
-    } else {
+    }
+    else {
         Write-Info "Local environment - using 8 threads for faster execution"
         $env:XUNIT_MAX_PARALLEL_THREADS = 8
     }
@@ -423,9 +395,9 @@ function Invoke-Tests {
     Write-Host ""
     Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
     
-    Write-Info "Server logs:"
-    Write-Info "  API: $apiLogPath"
-    Write-Info "  Web: $webLogPath"
+    Write-Info "Server logs written to /workspaces/techhub/.tmp/"
+    Write-Info "  API: api-test.log"
+    Write-Info "  Web: web-test.log"
     Write-Host ""
     
     if ($e2eExitCode -ne 0) {
@@ -480,9 +452,9 @@ function Invoke-Tests {
     Write-Info "  API: $apiUrl (Swagger: $apiUrl/swagger)"
     Write-Info "  Web: $webUrl"
     Write-Host ""
-    Write-Info "Server logs:"
-    Write-Info "  API: $apiLogPath"
-    Write-Info "  Web: $webLogPath"
+    Write-Info "Server logs written to /workspaces/techhub/.tmp/"
+    Write-Info "  API: api-test.log"
+    Write-Info "  Web: web-test.log"
     Write-Host ""
     Write-Host "Press Ctrl+C to stop servers when done" -ForegroundColor Yellow
     
@@ -544,12 +516,14 @@ function Stop-ExistingProcesses {
                             if (-not $Silent) {
                                 Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
                             }
-                        } else {
+                        }
+                        else {
                             if (-not $Silent) {
                                 Write-Info ("  Port {0} - PID {1}: (process already exited)" -f $port, $processId)
                             }
                         }
-                    } catch {
+                    }
+                    catch {
                         if (-not $Silent) {
                             Write-Info ("  Port {0} - PID {1}: (unable to get process details)" -f $port, $processId)
                         }
@@ -677,12 +651,14 @@ function Invoke-FullCleanup {
                             }
                             # Use Stop-Process with -Force for reliability
                             Stop-Process -Id $processId -Force -ErrorAction SilentlyContinue
-                        } else {
+                        }
+                        else {
                             if (-not $Silent) {
                                 Write-Info ("  Port {0} - PID {1} already exited" -f $port, $processId)
                             }
                         }
-                    } catch {
+                    }
+                    catch {
                         if (-not $Silent) {
                             Write-Warning ("  Port {0} - Failed to kill PID {1}: {2}" -f $port, $processId, $_.Exception.Message)
                         }
@@ -714,7 +690,8 @@ function Invoke-FullCleanup {
     if (-not $Silent) {
         if ($cleanedAny) {
             Write-Success "Cleanup completed"
-        } else {
+        }
+        else {
             Write-Info "  No orphaned processes found"
         }
     }

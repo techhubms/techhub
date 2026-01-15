@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 
 namespace TechHub.Api.Tests;
@@ -22,6 +24,18 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        // Set Test environment FIRST
+        builder.UseEnvironment("Test");
+
+        // Disable file logging during integration tests
+        builder.ConfigureAppConfiguration((context, config) =>
+        {
+            config.AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["AppSettings:SkipFileLogging"] = "true"
+            });
+        });
+
         // Only swap out repositories if mocks are being used
         if (_useMocks)
         {
@@ -46,15 +60,12 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             });
         }
 
-        // Configure logging to file only (no console output)
-        builder.ConfigureLogging(logging =>
+        // Override logging configuration to disable all logging during integration tests
+        // This prevents log files from being created and keeps test output clean
+        builder.ConfigureLogging((context, logging) =>
         {
             logging.ClearProviders();
-            var logPath = Path.Combine(Path.GetTempPath(), "techhub-tests", "api-integration.log");
-            logging.AddProvider(new FileLoggerProvider(logPath));
         });
-
-        builder.UseEnvironment("Test");
     }
 
     /// <summary>
@@ -211,66 +222,5 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             .ToList();
         mockRepo.Setup(r => r.GetAllTagsAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(allTags);
-    }
-}
-
-/// <summary>
-/// Simple file logger provider for test server logs
-/// </summary>
-file class FileLoggerProvider : ILoggerProvider
-{
-    private readonly string _filePath;
-    private readonly StreamWriter _writer;
-    private readonly object _lock = new();
-
-    public FileLoggerProvider(string filePath)
-    {
-        _filePath = filePath;
-        var directory = Path.GetDirectoryName(_filePath);
-        if (!string.IsNullOrEmpty(directory))
-        {
-            Directory.CreateDirectory(directory);
-        }
-
-        _writer = new StreamWriter(_filePath, append: true) { AutoFlush = true };
-    }
-
-    public ILogger CreateLogger(string categoryName) => new FileLogger(categoryName, _writer, _lock);
-
-    public void Dispose()
-    {
-        _writer.Dispose();
-        GC.SuppressFinalize(this);
-    }
-}
-
-/// <summary>
-/// Simple file logger for test server
-/// </summary>
-file class FileLogger(string categoryName, StreamWriter writer, object lockObj) : ILogger
-{
-    private readonly string _categoryName = categoryName;
-    private readonly StreamWriter _writer = writer;
-    private readonly object _lock = lockObj;
-
-    public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
-
-    public bool IsEnabled(LogLevel logLevel) => logLevel >= LogLevel.Information;
-
-    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
-    {
-        if (!IsEnabled(logLevel))
-        {
-            return;
-        }
-
-        lock (_lock)
-        {
-            _writer.WriteLine($"[{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}] [{logLevel}] {_categoryName}: {formatter(state, exception)}");
-            if (exception != null)
-            {
-                _writer.WriteLine(exception.ToString());
-            }
-        }
     }
 }
