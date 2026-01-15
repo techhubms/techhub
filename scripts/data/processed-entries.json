@@ -23500,5 +23500,11 @@
     "timestamp": "2026-01-15 18:07:12 +00:00",
     "canonical_url": "https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/",
     "reason": "Succesfully added: Assigned 'AI' because the article centers on AI-powered coding agents like Claude, Codex, Cursor, Devin, and Replit (AI inclusion rule 1, 4). Assigned 'Security' because the core focus is on application vulnerabilities and security flaws introduced by these agents (Security inclusion rules 2, 4, 7). Did not assign 'Coding' because while code generation is discussed, the article doesn't provide technical implementation or developer guidance about specific coding practices. No other categories assigned as there is no significant Microsoft, DevOps, Azure, or ML/data science content."
+  },
+  {
+    "timestamp": "2026-01-15 20:03:56 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI because the solution heavily leverages Azure AI Services (AI rule 1), including Speech, Text Analytics for Health, and OpenAI. Assigned Azure because every part uses Azure cloud resources (Azure rule 1). Assigned ML because Text Analytics for Health and integrated analytics pipelines involve applied machine learning technologies and structured data output for downstream ML/analytics (ML rules 1, 2, and 4). Did not assign DevOps or Coding, as content focuses on architectural service integration and deployment steps rather than developer frameworks, CI/CD workflows, or code samples.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080"
   }
 ]
