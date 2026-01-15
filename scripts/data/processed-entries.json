@@ -23494,5 +23494,11 @@
     "timestamp": "2026-01-15 17:11:14 +00:00",
     "reason": "Succesfully added: Assigned AI category as the content discusses AI integration (vector search and indexing) in Microsoft SQL engines (AI rule 1, 4). Added Azure because Azure SQL is the showcased product (Azure rule 1). Included ML because vector search and the mention of DiskANN are closely associated with machine learning and analytics tasks (ML rule 1, 3). Did not assign Coding because content centers primarily on platform features, configuration, and demonstrations rather than code-level development. No DevOps or Security aspect is described. No generic exclusion rules apply as this is technical, English-language, non-promotional developer content on Microsoft platforms.",
     "collection": "videos"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-01-15 18:07:12 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on AI-powered coding agents like Claude, Codex, Cursor, Devin, and Replit (AI inclusion rule 1, 4). Assigned 'Security' because the core focus is on application vulnerabilities and security flaws introduced by these agents (Security inclusion rules 2, 4, 7). Did not assign 'Coding' because while code generation is discussed, the article doesn't provide technical implementation or developer guidance about specific coding practices. No other categories assigned as there is no significant Microsoft, DevOps, Azure, or ML/data science content."
   }
 ]
