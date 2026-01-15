@@ -4,6 +4,7 @@ using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using FluentAssertions;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -71,10 +72,10 @@ Test video content
         var video = items.FirstOrDefault();
 
         // Assert
-        Assert.NotNull(video);
-        Assert.Equal("Internal Video", video.Title);
-        Assert.Equal("internal", video.ViewingMode);
-        Assert.Equal("https://youtube.com/watch?v=abc123", video.ExternalUrl); // URL is always set, ViewingMode controls usage
+        video.Should().NotBeNull();
+        video.Title.Should().Be("Internal Video");
+        video.ViewingMode.Should().Be("internal");
+        video.ExternalUrl.Should().Be("https://youtube.com/watch?v=abc123"); // URL is always set, ViewingMode controls usage
     }
 
     [Fact]
@@ -103,10 +104,10 @@ Test video content
         var video = items.FirstOrDefault();
 
         // Assert
-        Assert.NotNull(video);
-        Assert.Equal("External Video", video.Title);
-        Assert.Equal("external", video.ViewingMode);
-        Assert.Equal("https://youtube.com/watch?v=xyz789", video.ExternalUrl);
+        video.Should().NotBeNull();
+        video.Title.Should().Be("External Video");
+        video.ViewingMode.Should().Be("external");
+        video.ExternalUrl.Should().Be("https://youtube.com/watch?v=xyz789");
     }
 
     [Fact]
@@ -134,10 +135,10 @@ Test video content
         var video = items.FirstOrDefault();
 
         // Assert
-        Assert.NotNull(video);
-        Assert.Equal("Default Video", video.Title);
-        Assert.Equal("external", video.ViewingMode); // Defaults to 'external' when not specified
-        Assert.Equal("https://youtube.com/watch?v=def456", video.ExternalUrl);
+        video.Should().NotBeNull();
+        video.Title.Should().Be("Default Video");
+        video.ViewingMode.Should().Be("external"); // Defaults to 'external' when not specified
+        video.ExternalUrl.Should().Be("https://youtube.com/watch?v=def456");
     }
 
     public void Dispose()

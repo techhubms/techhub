@@ -1,6 +1,7 @@
 using System.Xml.Linq;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -100,22 +101,22 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
 
         // Assert
-        Assert.Equal(200, response.Status);
-        Assert.Contains("application/rss+xml", response.Headers["content-type"]);
+        response.Status.Should().Be(200);
+        response.Headers["content-type"].Should().Contain("application/rss+xml");
 
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 
         // Verify RSS structure
         var rss = doc.Element("rss");
-        Assert.NotNull(rss);
-        Assert.Equal("2.0", rss.Attribute("version")?.Value);
+        rss.Should().NotBeNull();
+        rss!.Attribute("version")?.Value.Should().Be("2.0");
 
         var channel = rss.Element("channel");
-        Assert.NotNull(channel);
-        Assert.NotNull(channel.Element("title"));
-        Assert.NotNull(channel.Element("link"));
-        Assert.NotNull(channel.Element("description"));
+        channel.Should().NotBeNull();
+        channel!.Element("title").Should().NotBeNull();
+        channel.Element("link").Should().NotBeNull();
+        channel.Element("description").Should().NotBeNull();
     }
 
     [Theory]
@@ -130,15 +131,15 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/{sectionName}");
 
         // Assert
-        Assert.Equal(200, response.Status);
-        Assert.Contains("application/rss+xml", response.Headers["content-type"]);
+        response.Status.Should().Be(200);
+        response.Headers["content-type"].Should().Contain("application/rss+xml");
 
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 
         // Verify has items
         var items = doc.Descendants("item");
-        Assert.NotEmpty(items);
+        items.Should().NotBeEmpty();
     }
 
     [Fact]
@@ -166,16 +167,16 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 
         // Assert - Verify feed has items
         var items = doc.Descendants("item").ToList();
-        Assert.NotEmpty(items);
-        Assert.True(items.Count <= 50, "Feed should be limited to 50 items");
+        items.Should().NotBeEmpty();
+        (items.Count <= 50).Should().BeTrue("Feed should be limited to 50 items");
 
         // Verify first item has required elements
         var firstItem = items.First();
-        Assert.NotNull(firstItem.Element("title"));
-        Assert.NotNull(firstItem.Element("link"));
-        Assert.NotNull(firstItem.Element("description"));
-        Assert.NotNull(firstItem.Element("pubDate"));
-        Assert.NotNull(firstItem.Element("guid"));
+        firstItem.Element("title").Should().NotBeNull();
+        firstItem.Element("link").Should().NotBeNull();
+        firstItem.Element("description").Should().NotBeNull();
+        firstItem.Element("pubDate").Should().NotBeNull();
+        firstItem.Element("guid").Should().NotBeNull();
     }
 
     [Fact]
@@ -201,21 +202,21 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/roundups/feed.xml");
 
         // Assert
-        Assert.Equal(200, response.Status);
-        Assert.Contains("application/rss+xml", response.Headers["content-type"]);
+        response.Status.Should().Be(200);
+        response.Headers["content-type"].Should().Contain("application/rss+xml");
 
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 
         // Verify RSS structure
         var rss = doc.Element("rss");
-        Assert.NotNull(rss);
-        Assert.Equal("2.0", rss.Attribute("version")?.Value);
+        rss.Should().NotBeNull();
+        rss!.Attribute("version")?.Value.Should().Be("2.0");
 
         var channel = rss.Element("channel");
-        Assert.NotNull(channel);
-        Assert.NotNull(channel.Element("title"));
-        Assert.NotNull(channel.Element("link"));
-        Assert.NotNull(channel.Element("description"));
+        channel.Should().NotBeNull();
+        channel!.Element("title").Should().NotBeNull();
+        channel.Element("link").Should().NotBeNull();
+        channel.Element("description").Should().NotBeNull();
     }
 }

@@ -1,4 +1,5 @@
 using TechHub.Infrastructure.Services;
+using FluentAssertions;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -45,11 +46,11 @@ public class MarkdownServiceTests
         var html = _service.RenderToHtml(markdown);
 
         // Assert: Markdown converted to proper HTML elements
-        Assert.Contains("<h1", html); // Markdig adds id attributes
-        Assert.Contains(">Heading 1</h1>", html);
-        Assert.Contains("<p>This is a paragraph.</p>", html);
-        Assert.Contains("<ul>", html);
-        Assert.Contains("<li>List item 1</li>", html);
+        html.Should().Contain("<h1"); // Markdig adds id attributes
+        html.Should().Contain(">Heading 1</h1>");
+        html.Should().Contain("<p>This is a paragraph.</p>");
+        html.Should().Contain("<ul>");
+        html.Should().Contain("<li>List item 1</li>");
     }
 
     /// <summary>
@@ -73,11 +74,11 @@ public class MarkdownServiceTests
 
         // Assert: GFM features properly rendered
         // Note: Bootstrap extension adds class="table" to tables
-        Assert.True(html.Contains("<table>") || html.Contains("<table class=\"table\">"),
+        (html.Contains("<table>") || html.Contains("<table class=\"table\">")).Should().BeTrue(
             "Expected table element with or without Bootstrap class");
-        Assert.Contains("<th>Header 1</th>", html);
-        Assert.Contains("<td>Cell 1</td>", html);
-        Assert.Contains("<del>strikethrough</del>", html);
+        html.Should().Contain("<th>Header 1</th>");
+        html.Should().Contain("<td>Cell 1</td>");
+        html.Should().Contain("<del>strikethrough</del>");
     }
 
     /// <summary>
@@ -94,7 +95,7 @@ public class MarkdownServiceTests
         var html = _service.RenderToHtml(input!);
 
         // Assert: Returns empty string (no exceptions)
-        Assert.Empty(html);
+        html.Should().BeEmpty();
     }
 
     /// <summary>
@@ -111,7 +112,7 @@ public class MarkdownServiceTests
         var html = _service.RenderToHtml(markdown);
 
         // Assert: URL wrapped in <a> tag
-        Assert.Contains("<a href=\"https://github.com/features/copilot\">", html);
+        html.Should().Contain("<a href=\"https://github.com/features/copilot\">");
     }
 
     #endregion
@@ -141,10 +142,10 @@ public class MarkdownServiceTests
         var excerpt = _service.ExtractExcerpt(markdown);
 
         // Assert: Only content before marker returned (plain text)
-        Assert.Contains("This is the excerpt", excerpt);
-        Assert.Contains("multiple paragraphs", excerpt);
-        Assert.DoesNotContain("full article content", excerpt);
-        Assert.DoesNotContain("<!--excerpt_end-->", excerpt);
+        excerpt.Should().Contain("This is the excerpt");
+        excerpt.Should().Contain("multiple paragraphs");
+        excerpt.Should().NotContain("full article content");
+        excerpt.Should().NotContain("<!--excerpt_end-->");
     }
 
     /// <summary>
@@ -167,9 +168,9 @@ public class MarkdownServiceTests
         var excerpt = _service.ExtractExcerpt(markdown);
 
         // Assert: First paragraph returned, others excluded
-        Assert.Contains("First paragraph", excerpt);
-        Assert.DoesNotContain("Second paragraph", excerpt);
-        Assert.DoesNotContain("Third paragraph", excerpt);
+        excerpt.Should().Contain("First paragraph");
+        excerpt.Should().NotContain("Second paragraph");
+        excerpt.Should().NotContain("Third paragraph");
     }
 
     /// <summary>
@@ -186,8 +187,8 @@ public class MarkdownServiceTests
         var excerpt = _service.ExtractExcerpt(markdown);
 
         // Assert: Truncated to ~1000 chars with ellipsis
-        Assert.True(excerpt.Length <= 1003); // 1000 + "..."
-        Assert.EndsWith("...", excerpt);
+        excerpt.Length.Should().BeLessThanOrEqualTo(1003); // 1000 + "..."
+        excerpt.Should().EndWith("...");
     }
 
     /// <summary>
@@ -210,13 +211,13 @@ public class MarkdownServiceTests
         var excerpt = _service.ExtractExcerpt(markdown);
 
         // Assert: All formatting removed (plain text only)
-        Assert.DoesNotContain("#", excerpt);
-        Assert.DoesNotContain("**", excerpt);
-        Assert.DoesNotContain("*", excerpt);
-        Assert.DoesNotContain("`", excerpt);
-        Assert.DoesNotContain("[", excerpt);
-        Assert.DoesNotContain("](", excerpt);
-        Assert.Contains("bold and italic and code and a link", excerpt);
+        excerpt.Should().NotContain("#");
+        excerpt.Should().NotContain("**");
+        excerpt.Should().NotContain("*");
+        excerpt.Should().NotContain("`");
+        excerpt.Should().NotContain("[");
+        excerpt.Should().NotContain("](");
+        excerpt.Should().Contain("bold and italic and code and a link");
     }
 
     /// <summary>
@@ -230,7 +231,7 @@ public class MarkdownServiceTests
         var excerpt = _service.ExtractExcerpt(string.Empty);
 
         // Assert: Empty string returned (no exceptions)
-        Assert.Empty(excerpt);
+        excerpt.Should().BeEmpty();
     }
 
     #endregion
@@ -251,11 +252,11 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(markdown);
 
         // Assert: Shortcode replaced with iframe HTML
-        Assert.Contains("<iframe", result);
-        Assert.Contains("https://www.youtube.com/embed/dQw4w9WgXcQ", result);
-        Assert.Contains("allowfullscreen", result);
-        Assert.Contains("class=\"video-container\"", result);
-        Assert.DoesNotContain("[YouTube:", result);
+        result.Should().Contain("<iframe");
+        result.Should().Contain("https://www.youtube.com/embed/dQw4w9WgXcQ");
+        result.Should().Contain("allowfullscreen");
+        result.Should().Contain("class=\"video-container\"");
+        result.Should().NotContain("[YouTube:");
     }
 
     /// <summary>
@@ -276,9 +277,9 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(markdown);
 
         // Assert: Both converted to iframes
-        Assert.Contains("embed/video1", result);
-        Assert.Contains("embed/video2", result);
-        Assert.Equal(2, System.Text.RegularExpressions.Regex.Matches(result, "<iframe").Count);
+        result.Should().Contain("embed/video1");
+        result.Should().Contain("embed/video2");
+        System.Text.RegularExpressions.Regex.Matches(result, "<iframe").Count.Should().Be(2);
     }
 
     /// <summary>
@@ -295,7 +296,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(shortcode);
 
         // Assert: All cases converted to iframe
-        Assert.Contains("embed/abc123", result);
+        result.Should().Contain("embed/abc123");
     }
 
     /// <summary>
@@ -313,9 +314,9 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(tag);
 
         // Assert: Converted to iframe embed
-        Assert.Contains("embed/abc123", result);
-        Assert.Contains("video-container", result);
-        Assert.DoesNotContain("{%", result);
+        result.Should().Contain("embed/abc123");
+        result.Should().Contain("video-container");
+        result.Should().NotContain("{%");
     }
 
     /// <summary>
@@ -332,7 +333,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(markdown);
 
         // Assert: Original markdown unchanged
-        Assert.Equal(markdown, result);
+        result.Should().Be(markdown);
     }
 
     /// <summary>
@@ -346,7 +347,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessYouTubeEmbeds(string.Empty);
 
         // Assert: Empty string returned
-        Assert.Empty(result);
+        result.Should().BeEmpty();
     }
 
     #endregion
@@ -378,11 +379,11 @@ public class MarkdownServiceTests
         var html = _service.RenderToHtml(withYouTube);
 
         // Assert: Both transformations applied
-        Assert.Contains("<h1", html); // Markdig adds id attributes
-        Assert.Contains(">Video Tutorial</h1>", html);
-        Assert.Contains("embed/tutorial123", html);
-        Assert.Contains("<strong>Key points:</strong>", html);
-        Assert.Contains("<ul>", html);
+        html.Should().Contain("<h1"); // Markdig adds id attributes
+        html.Should().Contain(">Video Tutorial</h1>");
+        html.Should().Contain("embed/tutorial123");
+        html.Should().Contain("<strong>Key points:</strong>");
+        html.Should().Contain("<ul>");
     }
 
     #endregion
@@ -408,7 +409,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("Welcome to My Page! This is a test page.", result);
+        result.Should().Be("Welcome to My Page! This is a test page.");
     }
 
     /// <summary>
@@ -430,7 +431,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("xyz789", result);
+        result.Should().Be("xyz789");
     }
 
     /// <summary>
@@ -448,11 +449,11 @@ public class MarkdownServiceTests
         };
 
         // Act & Assert
-        var exception = Assert.Throws<InvalidOperationException>(
-            () => _service.ProcessJekyllVariables(content, frontMatter));
+        var act = () => _service.ProcessJekyllVariables(content, frontMatter);
 
-        Assert.Contains("missing", exception.Message, StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("not found in frontmatter", exception.Message);
+        act.Should().Throw<InvalidOperationException>()
+            .WithMessage("*missing*")
+            .WithMessage("*not found in frontmatter*");
     }
 
     /// <summary>
@@ -474,7 +475,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("Title and Desc", result);
+        result.Should().Be("Title and Desc");
     }
 
     /// <summary>
@@ -494,7 +495,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content!, frontMatter);
 
         // Assert
-        Assert.Equal(content ?? string.Empty, result);
+        result.Should().Be(content ?? string.Empty);
     }
 
     /// <summary>
@@ -512,7 +513,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("Code: ${{ secrets.TOKEN }}", result);
+        result.Should().Be("Code: ${{ secrets.TOKEN }}");
     }
 
     /// <summary>
@@ -530,7 +531,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("""Link: [Video](/videos/2025-01-01-Test.html)""", result);
+        result.Should().Be("""Link: [Video](/videos/2025-01-01-Test.html)""");
     }
 
     /// <summary>
@@ -547,7 +548,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, null!);
 
         // Assert
-        Assert.Equal("""${{ test }} and /path""", result);
+        result.Should().Be("""${{ test }} and /path""");
     }
 
     /// <summary>
@@ -568,7 +569,7 @@ public class MarkdownServiceTests
         var result = _service.ProcessJekyllVariables(content, frontMatter);
 
         // Assert
-        Assert.Equal("{% youtube dQw4w9WgXcQ %}", result);
+        result.Should().Be("{% youtube dQw4w9WgXcQ %}");
     }
 
     #endregion
@@ -609,7 +610,7 @@ public class MarkdownServiceTests
         // Assert: ALL results must be identical (proves stateless)
         foreach (var html in results)
         {
-            Assert.Equal(expectedHtml, html);
+            html.Should().Be(expectedHtml);
         }
     }
 
@@ -642,7 +643,7 @@ public class MarkdownServiceTests
         // Assert: All identical
         foreach (var excerpt in results)
         {
-            Assert.Equal(expectedExcerpt, excerpt);
+            excerpt.Should().Be(expectedExcerpt);
         }
     }
 
@@ -668,7 +669,7 @@ public class MarkdownServiceTests
         // Assert: All identical
         foreach (var result in results)
         {
-            Assert.Equal(expected, result);
+            result.Should().Be(expected);
         }
     }
 

@@ -1,5 +1,6 @@
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -59,10 +60,10 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
             "Security"
         };
 
-        Assert.Equal(expectedOrder.Length, sectionTitles.Count);
+        sectionTitles.Count.Should().Be(expectedOrder.Length);
         for (int i = 0; i < expectedOrder.Length; i++)
         {
-            Assert.Equal(expectedOrder[i], sectionTitles[i]);
+            sectionTitles[i].Should().Be(expectedOrder[i]);
         }
     }
 
@@ -78,8 +79,8 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await ghCopilotCard.WaitForAsync();
 
         var href = await ghCopilotCard.GetHrefAsync();
-        Assert.NotNull(href);
-        Assert.Contains("github-copilot", href);
+        href.Should().NotBeNull();
+        href.Should().Contain("github-copilot");
 
         // Blazor uses enhanced navigation (SPA-style), so URL changes without page reload
         // Use ClickBlazorElementAsync to wait for Blazor interactivity before clicking
@@ -89,7 +90,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot");
 
         // Assert - Should not have hash fragment
-        Assert.DoesNotContain("#", Page.Url);
+        Page.Url.Should().NotContain("#");
     }
 
     [Fact]
@@ -104,7 +105,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Assert - URL should be /github-copilot/news
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
-        Assert.DoesNotContain("#", Page.Url); // No hash fragments
+        Page.Url.Should().NotContain("#"); // No hash fragments
     }
 
     [Fact]
@@ -126,7 +127,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         if (badgeCount > 0)
         {
             var badgeText = await collectionBadges.First.TextContentWithTimeoutAsync();
-            Assert.NotEqual("News", badgeText); // Should not show the current collection
+            badgeText.Should().NotBe("News"); // Should not show the current collection
         }
     }
 
@@ -147,7 +148,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Collection badge should have proper capitalization (e.g., "News" not "news")
         var badgeText = await collectionBadge.TextContentWithTimeoutAsync();
-        Assert.Matches("^[A-Z]", badgeText!); // Starts with capital letter
+        badgeText!.Should().MatchRegex("^[A-Z]"); // Starts with capital letter
     }
 
     [Fact]
@@ -181,10 +182,10 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         var sectionHeaderHeight = await Page.Locator(".section-banner").BoundingBoxAsync();
 
         // Assert - Both should have defined heights (not auto)
-        Assert.NotNull(homeHeaderHeight);
-        Assert.NotNull(sectionHeaderHeight);
-        Assert.True(homeHeaderHeight.Height > 0);
-        Assert.True(sectionHeaderHeight.Height > 0);
+        homeHeaderHeight.Should().NotBeNull();
+        sectionHeaderHeight.Should().NotBeNull();
+        (homeHeaderHeight.Height > 0).Should().BeTrue();
+        (sectionHeaderHeight.Height > 0).Should().BeTrue();
     }
 
     [Fact]
@@ -199,20 +200,20 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Assert - Should have background-image style
         var style = await headerElement.GetAttributeAsync("style", new() { Timeout = BlazorHelpers.DefaultElementTimeout });
-        Assert.NotNull(style);
-        Assert.Contains("background-image", style);
+        style.Should().NotBeNull();
+        style.Should().Contain("background-image");
 
         // Check that there's no grey bar (overlay should cover full height)
         var overlay = headerElement.Locator(".section-overlay");
         var overlayBox = await overlay.BoundingBoxAsync();
         var headerBox = await headerElement.BoundingBoxAsync();
 
-        Assert.NotNull(overlayBox);
-        Assert.NotNull(headerBox);
+        overlayBox.Should().NotBeNull();
+        headerBox.Should().NotBeNull();
 
         // Overlay should have reasonable height (not zero/collapsed)
-        Assert.True(overlayBox.Height > 50, "overlay should have substantial height");
-        Assert.True(headerBox.Height > 50, "header should have substantial height");
+        (overlayBox.Height > 50).Should().BeTrue("overlay should have substantial height");
+        (headerBox.Height > 50).Should().BeTrue("header should have substantial height");
     }
 
     [Fact]

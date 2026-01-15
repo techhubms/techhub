@@ -7,6 +7,7 @@ using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
+using FluentAssertions;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -60,7 +61,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse All GitHub Copilot Content", h1.TextContent);
+        h1.TextContent.Should().Be("Browse All GitHub Copilot Content");
     }
 
     [Fact]
@@ -91,7 +92,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse GitHub Copilot News", h1.TextContent);
+        h1.TextContent.Should().Be("Browse GitHub Copilot News");
     }
 
     [Fact]
@@ -122,7 +123,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse GitHub Copilot Community Posts", h1.TextContent);
+        h1.TextContent.Should().Be("Browse GitHub Copilot Community Posts");
     }
 
     [Fact]
@@ -153,7 +154,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse GitHub Copilot Videos", h1.TextContent);
+        h1.TextContent.Should().Be("Browse GitHub Copilot Videos");
     }
 
     [Fact]
@@ -171,7 +172,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse All Posts", h1.TextContent);
+        h1.TextContent.Should().Be("Browse All Posts");
     }
 
     [Fact]
@@ -202,6 +203,6 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse All News", h1.TextContent);
+        h1.TextContent.Should().Be("Browse All News");
     }
 }

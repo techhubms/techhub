@@ -1,5 +1,6 @@
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -40,7 +41,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
         var sectionCards = Page.Locator(".section-card");
         var count = await Page.GetElementCountBySelectorAsync(".section-card");
 
-        Assert.True(count > 0, "Expected at least one section card");
+        (count > 0).Should().BeTrue("Expected at least one section card");
 
         // Check first card has complete structure
         var firstCard = sectionCards.First;
@@ -85,7 +86,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
         _ = grid.Locator("> .section-card-container");
         var count = await grid.GetElementCountBySelectorAsync("> .section-card-container");
 
-        Assert.True(count > 0, "Expected section card containers to be direct children of grid");
+        (count > 0).Should().BeTrue("Expected section card containers to be direct children of grid");
     }
 
     [Fact]

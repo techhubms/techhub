@@ -1,4 +1,5 @@
 using TechHub.Infrastructure.Services;
+using FluentAssertions;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -40,11 +41,11 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: Frontmatter extracted correctly, content separated
-        Assert.Equal(3, frontMatter.Count);
-        Assert.Equal("Test Article", frontMatter["title"]);
-        Assert.Equal("2026-01-01", frontMatter["date"]);
-        Assert.StartsWith("# Article Content", content);
-        Assert.Contains("This is the body.", content);
+        frontMatter.Count.Should().Be(3);
+        frontMatter["title"].Should().Be("Test Article");
+        frontMatter["date"].Should().Be("2026-01-01");
+        content.Should().StartWith("# Article Content");
+        content.Should().Contain("This is the body.");
     }
 
     /// <summary>
@@ -61,8 +62,8 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(input);
 
         // Assert: Safe empty returns (no exceptions thrown)
-        Assert.Empty(frontMatter);
-        Assert.Empty(content);
+        frontMatter.Should().BeEmpty();
+        content.Should().BeEmpty();
     }
 
     /// <summary>
@@ -83,8 +84,8 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: Empty frontmatter, full content preserved
-        Assert.Empty(frontMatter);
-        Assert.Equal(markdown, content);
+        frontMatter.Should().BeEmpty();
+        content.Should().Be(markdown);
     }
 
     /// <summary>
@@ -107,8 +108,8 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: Returns original content when YAML parsing fails
-        Assert.Empty(frontMatter);
-        Assert.Equal(markdown, content);
+        frontMatter.Should().BeEmpty();
+        content.Should().Be(markdown);
     }
 
     /// <summary>
@@ -130,10 +131,10 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: YAML parsed until EOF, no content after frontmatter
-        Assert.Equal(2, frontMatter.Count);
-        Assert.Equal("Test", frontMatter["title"]);
-        Assert.Equal("Some value", frontMatter["description"]);
-        Assert.Empty(content); // No content after unclosed frontmatter
+        frontMatter.Count.Should().Be(2);
+        frontMatter["title"].Should().Be("Test");
+        frontMatter["description"].Should().Be("Some value");
+        content.Should().BeEmpty(); // No content after unclosed frontmatter
     }
 
     /// <summary>
@@ -157,9 +158,9 @@ public class FrontMatterParserTests
         var enabled = _parser.GetValue<bool>(frontMatter, "enabled");
 
         // Assert: Correct types returned
-        Assert.Equal("Test", title);
-        Assert.Equal(42, count);
-        Assert.True(enabled);
+        title.Should().Be("Test");
+        count.Should().Be(42);
+        enabled.Should().BeTrue();
     }
 
     /// <summary>
@@ -177,8 +178,8 @@ public class FrontMatterParserTests
         var count = _parser.GetValue(frontMatter, "count", 0);
 
         // Assert: Default values returned
-        Assert.Equal("Default Title", title);
-        Assert.Equal(0, count);
+        title.Should().Be("Default Title");
+        count.Should().Be(0);
     }
 
     /// <summary>
@@ -202,11 +203,11 @@ public class FrontMatterParserTests
         var missingList = _parser.GetListValue(frontMatter, "tags_missing");
 
         // Assert: All converted to List<string>
-        Assert.Equal(2, arrayList.Count);
-        Assert.Contains("ai", arrayList);
-        Assert.Single(singleList);
-        Assert.Equal("azure", singleList[0]);
-        Assert.Empty(missingList);
+        arrayList.Count.Should().Be(2);
+        arrayList.Should().Contain("ai");
+        singleList.Should().ContainSingle();
+        singleList[0].Should().Be("azure");
+        missingList.Should().BeEmpty();
     }
 
     /// <summary>
@@ -241,11 +242,11 @@ public class FrontMatterParserTests
         var (frontMatter, content) = _parser.Parse(markdown);
 
         // Assert: All fields extracted, content separated after frontmatter
-        Assert.Equal(5, frontMatter.Count); // title, date, author, section_names, tags
-        Assert.Equal("GitHub Copilot: New Features", frontMatter["title"]);
-        Assert.Equal("Microsoft", frontMatter["author"]); // Preserves original casing from YAML
-        Assert.Equal("GitHub Copilot", frontMatter["section_names"]); // Preserves title case from YAML (mapper converts to lowercase)
-        Assert.StartsWith("# New Features", content);
-        Assert.Contains("<!--excerpt_end-->", content);
+        frontMatter.Count.Should().Be(5); // title, date, author, section_names, tags
+        frontMatter["title"].Should().Be("GitHub Copilot: New Features");
+        frontMatter["author"].Should().Be("Microsoft"); // Preserves original casing from YAML
+        frontMatter["section_names"].Should().Be("GitHub Copilot"); // Preserves title case from YAML (mapper converts to lowercase)
+        content.Should().StartWith("# New Features");
+        content.Should().Contain("<!--excerpt_end-->");
     }
 }

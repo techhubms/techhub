@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -111,9 +112,9 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: Both items loaded from different collections
-        Assert.Equal(2, content.Count);
-        Assert.Contains(content, c => c.Title == "AI Product Launch");
-        Assert.Contains(content, c => c.Title == "Getting Started Tutorial");
+        content.Count.Should().Be(2);
+        content.Should().Contain(c => c.Title == "AI Product Launch");
+        content.Should().Contain(c => c.Title == "Getting Started Tutorial");
     }
 
     /// <summary>
@@ -153,8 +154,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var newsContent = await _repository.GetByCollectionAsync("news");
 
         // Assert: Only news items returned, not blogs
-        Assert.Single(newsContent);
-        Assert.Equal("News Item 1", newsContent[0].Title);
+        newsContent.Should().ContainSingle();
+        newsContent[0].Title.Should().Be("News Item 1");
     }
 
     /// <summary>
@@ -192,9 +193,9 @@ public class FileBasedContentRepositoryTests : IDisposable
         var aiContent = await _repository.GetBySectionAsync("ai");
 
         // Assert: Only AI section items returned
-        Assert.Single(aiContent);
-        Assert.Equal("AI News", aiContent[0].Title);
-        Assert.Contains("ai", aiContent[0].SectionNames);
+        aiContent.Should().ContainSingle();
+        aiContent[0].Title.Should().Be("AI News");
+        aiContent[0].SectionNames.Should().Contain("ai");
     }
 
     /// <summary>
@@ -223,11 +224,11 @@ public class FileBasedContentRepositoryTests : IDisposable
         var item = await _repository.GetBySlugAsync("news", "2025-01-15-product-launch");
 
         // Assert: Correct item returned with all properties
-        Assert.NotNull(item);
-        Assert.Equal("Product Launch", item.Title);
-        Assert.Equal("2025-01-15-product-launch", item.Slug);
-        Assert.Equal("news", item.CollectionName);
-        Assert.Contains("Full product launch details", item.RenderedHtml);
+        item.Should().NotBeNull();
+        item.Title.Should().Be("Product Launch");
+        item.Slug.Should().Be("2025-01-15-product-launch");
+        item.CollectionName.Should().Be("news");
+        item.RenderedHtml.Should().Contain("Full product launch details");
     }
 
     /// <summary>
@@ -245,7 +246,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         var item = await _repository.GetBySlugAsync("news", "missing-item");
 
         // Assert: Null returned (no exception thrown)
-        Assert.Null(item);
+        item.Should().BeNull();
     }
 
     /// <summary>
@@ -283,8 +284,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var results = await _repository.SearchAsync("Azure");
 
         // Assert: Only Azure-related content returned
-        Assert.Single(results);
-        Assert.Equal("Azure OpenAI Service Update", results[0].Title);
+        results.Should().ContainSingle();
+        results[0].Title.Should().Be("Azure OpenAI Service Update");
     }
 
     /// <summary>
@@ -322,8 +323,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var results = await _repository.SearchAsync("security");
 
         // Assert: Tag match returns correct item
-        Assert.Single(results);
-        Assert.Equal("Security Alert", results[0].Title);
+        results.Should().ContainSingle();
+        results[0].Title.Should().Be("Security Alert");
     }
 
     /// <summary>
@@ -353,9 +354,9 @@ public class FileBasedContentRepositoryTests : IDisposable
         var mixedResults = await _repository.SearchAsync("DoTnEt");
 
         // Assert: All variations return same result
-        Assert.Single(lowerResults);
-        Assert.Single(upperResults);
-        Assert.Single(mixedResults);
+        lowerResults.Should().ContainSingle();
+        upperResults.Should().ContainSingle();
+        mixedResults.Should().ContainSingle();
     }
 
     /// <summary>
@@ -393,11 +394,11 @@ public class FileBasedContentRepositoryTests : IDisposable
         var tags = await _repository.GetAllTagsAsync();
 
         // Assert: 4 unique tags (AI appears twice but returned once, all lowercase)
-        Assert.Equal(4, tags.Count);
-        Assert.Contains("ai", tags);
-        Assert.Contains("machine learning", tags);
-        Assert.Contains("deep learning", tags);
-        Assert.Contains("announcement", tags);
+        tags.Count.Should().Be(4);
+        tags.Should().Contain("ai");
+        tags.Should().Contain("machine learning");
+        tags.Should().Contain("deep learning");
+        tags.Should().Contain("announcement");
     }
 
     /// <summary>
@@ -429,8 +430,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: Video ID extracted from URL
-        Assert.Single(content);
-        Assert.Equal("dQw4w9WgXcQ", content[0].VideoId);
+        content.Should().ContainSingle();
+        content[0].VideoId.Should().Be("dQw4w9WgXcQ");
     }
 
     /// <summary>
@@ -461,9 +462,9 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: YouTube shortcode converted to iframe in rendered HTML
-        Assert.Single(content);
-        Assert.Contains("<iframe", content[0].RenderedHtml);
-        Assert.Contains("youtube.com/embed/ABC123xyz", content[0].RenderedHtml);
+        content.Should().ContainSingle();
+        content[0].RenderedHtml.Should().Contain("<iframe");
+        content[0].RenderedHtml.Should().Contain("youtube.com/embed/ABC123xyz");
     }
 
     /// <summary>
@@ -491,11 +492,11 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: DateEpoch is Unix timestamp (positive integer)
-        Assert.Single(content);
-        Assert.True(content[0].DateEpoch > 0, "DateEpoch should be positive Unix timestamp");
+        content.Should().ContainSingle();
+        content[0].DateEpoch.Should().BeGreaterThan(0, "DateEpoch should be positive Unix timestamp");
 
         // Verify it's roughly correct (Jan 2025 = ~1736899200 epoch)
-        Assert.True(content[0].DateEpoch > 1_700_000_000, "DateEpoch should be in 2025 range");
+        content[0].DateEpoch.Should().BeGreaterThan(1_700_000_000, "DateEpoch should be in 2025 range");
     }
 
     /// <summary>
@@ -529,8 +530,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: Only valid item loaded, invalid file skipped
-        Assert.Single(content);
-        Assert.Equal("Valid Item", content[0].Title);
+        content.Should().ContainSingle();
+        content[0].Title.Should().Be("Valid Item");
     }
 
     /// <summary>
@@ -548,7 +549,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetByCollectionAsync("news");
 
         // Assert: Empty list returned (no exception)
-        Assert.Empty(content);
+        content.Should().BeEmpty();
     }
 
     /// <summary>
@@ -564,7 +565,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetByCollectionAsync("invalid-collection");
 
         // Assert: Empty list returned (no exception)
-        Assert.Empty(content);
+        content.Should().BeEmpty();
     }
 
     /// <summary>
@@ -613,14 +614,14 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: Items returned in descending date order (newest first)
-        Assert.Equal(3, content.Count);
-        Assert.Equal("Newest Item", content[0].Title);
-        Assert.Equal("Middle Item", content[1].Title);
-        Assert.Equal("Oldest Item", content[2].Title);
+        content.Count.Should().Be(3);
+        content[0].Title.Should().Be("Newest Item");
+        content[1].Title.Should().Be("Middle Item");
+        content[2].Title.Should().Be("Oldest Item");
 
         // Verify dates are actually in descending order
-        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
-        Assert.True(content[1].DateEpoch > content[2].DateEpoch);
+        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
+        content[1].DateEpoch.Should().BeGreaterThan(content[2].DateEpoch);
     }
 
     /// <summary>
@@ -658,10 +659,10 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetByCollectionAsync("news");
 
         // Assert: Newest first
-        Assert.Equal(2, content.Count);
-        Assert.Equal("New News", content[0].Title);
-        Assert.Equal("Old News", content[1].Title);
-        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
+        content.Count.Should().Be(2);
+        content[0].Title.Should().Be("New News");
+        content[1].Title.Should().Be("Old News");
+        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
     }
 
     /// <summary>
@@ -701,10 +702,10 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetBySectionAsync("ai");
 
         // Assert: Newest first (blog before news)
-        Assert.Equal(2, content.Count);
-        Assert.Equal("AI Blog", content[0].Title);
-        Assert.Equal("AI News", content[1].Title);
-        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
+        content.Count.Should().Be(2);
+        content[0].Title.Should().Be("AI Blog");
+        content[1].Title.Should().Be("AI News");
+        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
     }
 
     /// <summary>
@@ -742,9 +743,9 @@ public class FileBasedContentRepositoryTests : IDisposable
         var results = await _repository.SearchAsync("Azure");
 
         // Assert: Newest first
-        Assert.Equal(2, results.Count);
-        Assert.Equal("Azure Update New", results[0].Title);
-        Assert.Equal("Azure Update Old", results[1].Title);
-        Assert.True(results[0].DateEpoch > results[1].DateEpoch);
+        results.Count.Should().Be(2);
+        results[0].Title.Should().Be("Azure Update New");
+        results[1].Title.Should().Be("Azure Update Old");
+        results[0].DateEpoch.Should().BeGreaterThan(results[1].DateEpoch);
     }
 }

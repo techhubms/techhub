@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -72,7 +73,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
 
         // Should link to mailchimp
         var href = await newsletterLink.GetHrefAsync();
-        Assert.Contains("mailchi.mp", href);
+        href.Should().Contain("mailchi.mp");
     }
 
     [Fact]

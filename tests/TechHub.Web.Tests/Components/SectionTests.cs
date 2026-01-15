@@ -5,6 +5,7 @@ using Moq;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
+using FluentAssertions;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -65,17 +66,17 @@ public class SectionTests : TestContext
 
         // Assert - Verify page structure is rendered with section data
         var pageStructure = cut.Find(".page-with-sidebar");
-        Assert.NotNull(pageStructure);
+        pageStructure.Should().NotBeNull();
 
         var sidebar = cut.Find(".sidebar");
-        Assert.NotNull(sidebar);
+        sidebar.Should().NotBeNull();
 
         var mainContent = cut.Find(".page-main-content");
-        Assert.NotNull(mainContent);
+        mainContent.Should().NotBeNull();
 
         // Verify section header is displayed
         var markup = cut.Markup;
-        Assert.Contains("Artificial Intelligence", markup);
+        markup.Should().Contain("Artificial Intelligence");
     }
 
     [Fact]
@@ -130,6 +131,6 @@ public class SectionTests : TestContext
 
         // Assert - Verify section header is displayed
         var markup = cut.Markup;
-        Assert.Contains("Artificial Intelligence", markup);
+        markup.Should().Contain("Artificial Intelligence");
     }
 }

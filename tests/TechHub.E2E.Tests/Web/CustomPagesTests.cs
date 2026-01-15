@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -67,7 +68,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Should have some content (paragraphs, lists, etc.)
         _ = Page.Locator("p");
         var count = await Page.GetElementCountBySelectorAsync("p");
-        Assert.True(count > 0, $"Expected at least one paragraph on {url}, but found {count}");
+        count.Should().BeGreaterThan(0, $"Expected at least one paragraph on {url}, but found {count}");
     }
 
     [Fact]
@@ -81,12 +82,12 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Check for author names in text (they appear in bold within paragraphs, not as headings)
         var pageContent = await Page.ContentAsync();
-        Assert.Contains("Rob Bos", pageContent);
-        Assert.Contains("Randy Pagels", pageContent);
+        pageContent.Should().Contain("Rob Bos");
+        pageContent.Should().Contain("Randy Pagels");
 
         // Check for Amazon link (may be in a sentence, use text contains)
         var amazonLinkExists = await Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Amazon" }).CountAsync() > 0;
-        Assert.True(amazonLinkExists, "Expected to find a link containing 'Amazon' text");
+        amazonLinkExists.Should().BeTrue("Expected to find a link containing 'Amazon' text");
     }
 
     [Fact]
@@ -100,7 +101,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Page should have some content paragraphs
         var paragraphCount = await Page.GetElementCountBySelectorAsync("p");
-        Assert.True(paragraphCount > 0, $"Expected at least one paragraph, but found {paragraphCount}");
+        paragraphCount.Should().BeGreaterThan(0, $"Expected at least one paragraph, but found {paragraphCount}");
     }
 
     [Fact]
@@ -115,8 +116,8 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Check for expandable section cards by looking for text content in the page
         var pageContent = await Page.ContentAsync();
-        Assert.Contains("DORA Metrics", pageContent);
-        Assert.Contains("SPACE Framework", pageContent);
-        Assert.Contains("Developer Experience", pageContent);  // Part of the DevEx/DX section title
+        pageContent.Should().Contain("DORA Metrics");
+        pageContent.Should().Contain("SPACE Framework");
+        pageContent.Should().Contain("Developer Experience");  // Part of the DevEx/DX section title
     }
 }

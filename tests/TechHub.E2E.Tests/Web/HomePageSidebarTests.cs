@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -62,7 +63,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         _ = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
 
         var count = await latestSection.GetElementCountBySelectorAsync("a");
-        Assert.True(count > 0 && count <= 10, $"Expected 1-10 latest item links, but found {count}");
+        count.Should().BeInRange(1, 10, $"Expected 1-10 latest item links, but found {count}");
     }
 
     [Fact]
@@ -86,7 +87,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         _ = tagsSection.Locator("a, .tag");
 
         var count = await tagsSection.GetElementCountBySelectorAsync("a, .tag");
-        Assert.True(count > 0, $"Expected at least one tag link, but found {count}");
+        count.Should().BeGreaterThan(0, $"Expected at least one tag link, but found {count}");
     }
 
     [Fact]
@@ -129,11 +130,10 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
             // Assert - Should navigate to filtered view or section with tag parameter
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             var currentUrl = Page.Url;
-            Assert.True(
-                currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) ||
+            (currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) ||
                 currentUrl.Contains("tags=", StringComparison.OrdinalIgnoreCase) ||
-                currentUrl != BaseUrl + "/",
-                $"Expected URL to change or contain tag parameter, but got: {currentUrl}");
+                currentUrl != BaseUrl + "/")
+                .Should().BeTrue($"Expected URL to change or contain tag parameter, but got: {currentUrl}");
         }
     }
 }

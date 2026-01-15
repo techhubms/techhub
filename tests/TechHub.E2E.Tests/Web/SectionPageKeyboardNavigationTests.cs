@@ -1,5 +1,6 @@
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -102,20 +103,20 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // Main nav MUST come before sub-nav
         var mainNavIndex = visitedSections.IndexOf("main-nav");
         var subNavIndex = visitedSections.IndexOf("sub-nav");
-        Assert.True(mainNavIndex >= 0, "Should tab through main navigation");
-        Assert.True(subNavIndex >= 0, "Should tab through sub-navigation");
-        Assert.True(mainNavIndex < subNavIndex, "Main navigation should come before sub-navigation");
+        (mainNavIndex >= 0).Should().BeTrue("Should tab through main navigation");
+        (subNavIndex >= 0).Should().BeTrue("Should tab through sub-navigation");
+        (mainNavIndex < subNavIndex).Should().BeTrue("Main navigation should come before sub-navigation");
 
         // Main content area should come after navigation
         var mainContentIndex = visitedSections.IndexOf("main-content");
-        Assert.True(mainContentIndex >= 0, "Should tab through main content area");
-        Assert.True(subNavIndex < mainContentIndex, "Sub-navigation should come before main content");
+        (mainContentIndex >= 0).Should().BeTrue("Should tab through main content area");
+        (subNavIndex < mainContentIndex).Should().BeTrue("Sub-navigation should come before main content");
 
         // Footer should come last (if present)
         var footerIndex = visitedSections.IndexOf("footer");
         if (footerIndex >= 0)
         {
-            Assert.True(mainContentIndex < footerIndex, "Main content should come before footer");
+            (mainContentIndex < footerIndex).Should().BeTrue("Main content should come before footer");
         }
     }
 }
