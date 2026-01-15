@@ -23470,5 +23470,17 @@
     "reason": "Succesfully added: Added the AI category because the entire series is focused on building and evaluating AI agents, including fundamental and advanced concepts (AI rule 1, 4, 5). Added the Azure category due to explicit integration with Azure AI Evaluation SDK, usage of Azure tools/services in the workflow, and the overall Microsoft technology context (Azure rule 1, 4). Added the ML category because the content covers Retrieval-Augmented Generation, memory (data/feature storage), evaluation, observability, and other topics central to modern machine learning/agentic systems (ML rules 1, 2, 3, 9). Did not add Coding: while all demos use Python and coding is present, the content does not specifically focus on general coding practice or Microsoft-specific programming frameworks/tools. The minimum word count for community content is far exceeded. Exclusion rules do not apply as the content is technical, implementation-focused, and meets all inclusion thresholds.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-15 13:16:02 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/copilot-memories/",
+    "reason": "Succesfully added: Assigned 'AI' category because the article describes an AI-powered feature (Copilot Memories) that aids code standardization and workflow within Visual Studio (AI rule 1 and 4). 'GitHub Copilot' category is included as the entire feature is part of the Copilot ecosystem (GitHub Copilot rule 1 and 2). Added 'Coding' because the tool directly supports coding standards, practices, and developer workflows within Visual Studio (Coding rule 4 and 5). The content is technical, developer-oriented, and focuses on practical adoption of AI-assisted tools for code consistency and onboarding.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-15 13:16:30 +00:00",
+    "canonical_url": "https://code.visualstudio.com/blogs/2026/01/15/docfind",
+    "reason": "Succesfully added: Assigned Coding because this post is a deep dive into building a Rust/WebAssembly-based search engine, covering code structures, binary packing, and engineering challenges (Coding rule 1 and 4). Assigned DevOps because the creation of a build-time CLI tool, operational considerations, and WASM deployment for docfind are central (DevOps rules 6 and 9). Assigned AI because the article discusses the practical use of GitHub Copilot as an integral AI-driven coding assistant during development, along with algorithmic approaches to search (AI rules 2 and 4). Azure or other categories do not apply as no Azure or ML specifics are present. The central focus is Microsoft developer tooling and AI-assisted engineering.",
+    "collection": "news"
   }
 ]
