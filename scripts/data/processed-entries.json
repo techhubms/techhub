@@ -23464,5 +23464,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because two incidents directly impacted Copilot-related services, including Copilot Code Review and Copilot policy management, which falls under AI-powered developer tools (GitHub Copilot rules 1 and 2, AI rules 2 and 5). Assigned 'DevOps' because of commercial service reliability engineering, workflow automation with GitHub Actions, and detailed root cause and mitigation steps relevant to operational practices (DevOps rule 2 for GitHub Actions, rule 5 for incident management, rule 7 for monitoring, and rule 9 for developer experience). Did not assign 'Azure', 'Coding', 'ML', or 'Security' as the content does not involve specific Microsoft Azure services, software development code, machine learning from scratch, or explicit security incidents.",
     "collection": "news",
     "canonical_url": "https://github.blog/news-insights/company-news/github-availability-report-december-2025/"
+  },
+  {
+    "timestamp": "2026-01-15 09:06:53 +00:00",
+    "reason": "Succesfully added: Added the AI category because the entire series is focused on building and evaluating AI agents, including fundamental and advanced concepts (AI rule 1, 4, 5). Added the Azure category due to explicit integration with Azure AI Evaluation SDK, usage of Azure tools/services in the workflow, and the overall Microsoft technology context (Azure rule 1, 4). Added the ML category because the content covers Retrieval-Augmented Generation, memory (data/feature storage), evaluation, observability, and other topics central to modern machine learning/agentic systems (ML rules 1, 2, 3, 9). Did not add Coding: while all demos use Python and coding is present, the content does not specifically focus on general coding practice or Microsoft-specific programming frameworks/tools. The minimum word count for community content is far exceeded. Exclusion rules do not apply as the content is technical, implementation-focused, and meets all inclusion thresholds.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731",
+    "collection": "community"
   }
 ]

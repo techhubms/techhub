@@ -11271,5 +11271,23 @@
     "timestamp": "2026-01-14 18:04:23 +00:00",
     "reason": "No categories found: No categories assigned. The content is an official news post on Microsoft's ongoing partnership with Nintendo and Sony for safer gaming experiences. Although it discusses advanced technology and industry collaboration for online safety, it is fundamentally about player safety and wellbeing, not focused on Microsoft technical implementation, development, coding, security architecture, or DevOps practices. It provides general principles, partnerships, and responsible practices but does not include actionable guidance or technical depth relating to any of the inclusion categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security'). The content is targeting a broad audience about company/industry commitments and responsible stewardship, which falls under the generic exclusions for business strategy, executive content, non-development Microsoft products, and general business advice rather than technical implementation.",
     "canonical_url": "https://news.xbox.com/en-us/2026/01/14/online-safety-principles-xbox-nintendo-sony/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/6yccsb6mmFo",
+    "reason": "No categories found: All category inclusion rules require substantive technical content related to Microsoft developer technologies. The input lacks any actual content (the 'content' field is null), the description is empty, and the tags and title suggest this is about requesting features for Visual Studio Code rather than containing technical guidance, implementation, or educational depth. There is no evidence of hands-on technical explanation, engineering approach, or any central Microsoft technology topic discussed. Without substantive content, it cannot qualify for Coding, DevOps, Azure, AI, ML, Security, or GitHub Copilot categories. This is strictly an exclusion due to insufficient content to make a category determination (no information to analyze).",
+    "collection": "videos",
+    "timestamp": "2026-01-15 02:39:52 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=m-TAeO4FnKM",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content focuses on Appwrite, an open-source backend-as-a-service platform, and its evolution into a full-stack solution with no mention of Microsoft technologies or platforms. There is no evidence in the title, description, or available information that Microsoft technologies are central to the subject. Under the Multi-Platform Content Threshold in Chapter 2 and 6, Microsoft technologies must represent at least 40% of substantive content or be central to the solution, which is not the case here.",
+    "collection": "videos",
+    "timestamp": "2026-01-15 03:32:11 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article is a news post focusing on digital transformation and the impact of AI in Kenyan pharmacies, but there is no substantive technical implementation information about Microsoft developer tools or platforms. The content does not provide sufficient detail on how Microsoft AI or development technologies are being used; instead, it focuses on the application/results of AI in a business/healthcare context, likely targeting a general or business audience. Per the rules, high-level business and end-user success stories without technical depth are excluded.",
+    "timestamp": "2026-01-15 08:03:57 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/microsoft-copilot-zendawa-ai-kenya-pharmacies/",
+    "collection": "news"
   }
 ]
