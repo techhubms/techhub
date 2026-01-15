@@ -25,8 +25,8 @@ public class SectionTests : TestContext
         );
 
         var sectionCache = new SectionCache();
-        sectionCache.Initialize(new List<SectionDto>
-        {
+        sectionCache.Initialize(
+        [
             new SectionDto
             {
                 Name = "ai",
@@ -46,7 +46,7 @@ public class SectionTests : TestContext
                     }
                 ]
             }
-        });
+        ]);
 
         mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
@@ -89,8 +89,8 @@ public class SectionTests : TestContext
         );
 
         var sectionCache = new SectionCache();
-        sectionCache.Initialize(new List<SectionDto>
-        {
+        sectionCache.Initialize(
+        [
             new SectionDto
             {
                 Name = "ai",
@@ -110,7 +110,7 @@ public class SectionTests : TestContext
                     }
                 ]
             }
-        });
+        ]);
 
         mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))

@@ -45,8 +45,8 @@ public class ContentItemsGridTests : TestContext
 
         // Initialize SectionCache with test data
         _sectionCache = new SectionCache();
-        _sectionCache.Initialize(new List<SectionDto>
-        {
+        _sectionCache.Initialize(
+        [
             new SectionDto
             {
                 Name = "github-copilot",
@@ -73,7 +73,7 @@ public class ContentItemsGridTests : TestContext
                     new CollectionReferenceDto { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
                 ]
             }
-        });
+        ]);
 
         Services.AddSingleton(Options.Create(appSettings));
         Services.AddSingleton(_mockApiClient.Object);
