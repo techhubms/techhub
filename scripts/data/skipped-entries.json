@@ -11331,5 +11331,11 @@
     "timestamp": "2026-01-15 21:07:53 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops/error-on-deployment-on-a-che/m-p/4485901#M75"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-15 22:05:01 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/8RQW2FFLiTg",
+    "reason": "No categories found: Content does not qualify for any categories. There is no main content body (content is null), and the description field is empty. Based on the title and tags, the video is about productivity tips—specifically, VS Code keyboard shortcuts. There is no evidence of Microsoft developer technology implementation, coding practices, DevOps, or any of the defined category inclusion topics. Additionally, the content is not provided, so I cannot assess for technical depth, integration, or context that would trigger category inclusion. According to the workflow (Chapter 2: 'When in doubt, exclude'), categories must not be assigned if there is insufficient information."
   }
 ]

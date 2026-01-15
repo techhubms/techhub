@@ -23542,5 +23542,11 @@
     "timestamp": "2026-01-15 21:07:53 +00:00",
     "reason": "Succesfully added: Assigned AI category because the core issue is about using Azure AI Foundry (AI rule 1) and prompt engineering with Microsoft's AI platform. Assigned Azure category as Azure AI Foundry is a core Azure service (Azure rule 1). Coding is not assigned since the content does not provide direct code implementation or programming techniques, but rather focuses on model and platform behavior differences. ML and DevOps were considered but do not fit as the core focus is not on analytics/data engineering or DevOps processes. Security is not relevant here. The post is in English, meets content length requirements, and involves legitimate troubleshooting in a technical, not biographical or sales-focused, context.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/weird-problem-when-comparing-the-answers-from-chat-playground/m-p/4486090#M22407"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-15 22:04:28 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/",
+    "reason": "Succesfully added: Assigned 'AI' category because the content describes technical details of memory systems and agent workflows in GitHub Copilot, which is an AI-powered development tool (AI Rule 2, 3, 4). Assigned 'GitHub Copilot' category since the entire article centers on Copilot's engineering, features, and multi-agent enhancements (GitHub Copilot Rule 1-4). Assigned 'Coding' because the system influences developer workflows, code review, and automation practices (Coding Rule 4, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' since those domains are not substantially addressed in the text."
   }
 ]
