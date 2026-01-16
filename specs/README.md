@@ -71,9 +71,9 @@ Check domain-specific AGENTS.md files:
 Check docs/ directory:
 
 - [docs/api-specification.md](../docs/api-specification.md) - REST API contracts
-- [docs/filtering-system.md](../docs/filtering-system.md) - Filtering behavior
 - [docs/content-management.md](../docs/content-management.md) - Content workflows
 - [docs/rss-feeds.md](../docs/rss-feeds.md) - RSS feed specification
+- `docs/filtering-system.md` - **TO BE CREATED** (see specs/001-filtering-system for requirements)
 
 ### For Migration Status
 

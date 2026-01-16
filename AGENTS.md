@@ -475,6 +475,8 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 ### 9. Update Documentation
 
+**🚨 MANDATORY**: Documentation MUST be updated whenever code behavior changes (Constitution Rule #7).
+
 **Keep documentation in sync with code changes**:
 
 **What to Update**:
@@ -491,9 +493,29 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 - Review functional docs if feature behavior changed
 - Update this file if architectural changes were made
 
+**Documentation Placement Strategy**:
+
+**🚨 CRITICAL**: See [docs/AGENTS.md](docs/AGENTS.md) for complete instructions on:
+
+- **Where to place functional documentation** (docs/ directory)
+- **Where to place technical documentation** (AGENTS.md files)
+- **Where to place content guidelines** (collections/ directory)
+- **What belongs in each file type**
+- **How to avoid duplication**
+- **Complete documentation placement examples**
+
+**Quick Reference**:
+
+- ✅ **Functional documentation** (WHAT the system does) → `docs/` directory
+- ✅ **Technical documentation** (HOW to implement) → Domain-specific AGENTS.md files
+- ✅ **Content guidelines** (writing standards) → `collections/` directory
+- 🚫 **Never skip documentation** when behavior changes
+- 🚫 **Never duplicate content** - link to existing docs instead
+- 🚫 **Never mix functional and technical** - keep them separate
+
 **Documentation Rules**:
 
-- **ALWAYS update documentation** when code behavior changes
+- **ALWAYS update documentation** when code behavior changes (NOT optional)
 - Search for existing docs before assuming none exist
 - Keep docs accurate and up-to-date
 - Follow markdown formatting guidelines (wrap symbol names in backticks, use KaTeX for equations)
@@ -506,6 +528,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 - Check for linting errors in markdown files
 - Fix any MD032 or other markdown issues
 - Documentation is part of "task complete"
+- Work is NOT done until documentation is updated
 
 ### 10. Report Completion
 

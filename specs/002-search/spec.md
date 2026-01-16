@@ -127,22 +127,44 @@ Users see clear feedback about search state, result counts, and empty result sce
 
 ### Reference Documentation
 
-- [docs/filtering-system.md](/docs/filtering-system.md) - How filtering works (NEEDS TO BE UPDATED with search)
+- [docs/filtering-system.md](/docs/filtering-system.md) - **NEEDS COMPLETE REWRITE** (see 001-filtering-system spec for details)
 - [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
+
+### Documentation Requirements
+
+**Functional Documentation Required**: After implementation, update `docs/filtering-system.md` to include search functionality:
+
+**Required Content**:
+
+- **Text Search Behavior**: How search works across titles, descriptions, tags
+- **Search Integration**: How search combines with tag/date filters (AND logic)
+- **Debouncing**: User experience of delayed search execution
+- **URL State**: Search parameter format, encoding, bookmarking
+- **Performance**: Search performance characteristics, optimization strategies
+
+**Guidelines**: See [001-filtering-system/spec.md](../001-filtering-system/spec.md) for complete functional documentation guidelines.
+
+**Technical Documentation** (implementation details belong here):
+
+- [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Search component architecture
+- [src/TechHub.Api/AGENTS.md](/src/TechHub.Api/AGENTS.md) - Search API patterns
 
 ### Current Status
 
 **API Endpoints**:
+
 - Search capability likely exists via `/api/content/filter` endpoint with query parameter
 - Needs verification of search query parameter support
 
 **Frontend Components**:
+
 - `SidebarSearch` component needs to be created
 - May be part of `SidebarTags` component or separate component
 
 ### Component Architecture
 
 **SidebarSearch Component**:
+
 - Text input field with placeholder
 - Clear button (X icon) when query has text
 - Debounce input changes (300ms)
@@ -152,12 +174,14 @@ Users see clear feedback about search state, result counts, and empty result sce
 - Visual states: default, focused, typing, has-query
 
 **Search Integration with Filters**:
+
 - Search query combines with tag filters (AND logic)
 - Search query combines with date range filter (AND logic)
 - Search query combines with collection filter (AND logic)
 - All filters share same URL parameter space
 
 **Content List Component** (existing, needs search integration):
+
 - Receives search query from parent
 - Calls API with search parameter
 - Updates displayed content based on API response
@@ -167,10 +191,12 @@ Users see clear feedback about search state, result counts, and empty result sce
 ### URL Parameter Format
 
 **Query Parameters**:
+
 - `search` - URL-encoded search query (e.g., `search=github%20copilot`)
 - Combined with other filters: `?search=copilot&tags=ai,azure&date=last-30-days`
 
 **URL Encoding**:
+
 - Search query with spaces: URL encode (e.g., `github%20copilot`)
 - Special characters: URL encode
 - Empty search: Parameter omitted from URL
@@ -178,12 +204,14 @@ Users see clear feedback about search state, result counts, and empty result sce
 ### Search Logic
 
 **Text Matching**:
+
 - Case-insensitive search
 - Match against title, description, and tags
 - Simple substring matching (OR across fields)
 - Example: Search "copilot" matches items with "copilot" OR "Copilot" OR "COPILOT" in any field
 
 **Combining with Filters**:
+
 - Search "copilot" + tag "ai" → Items with "copilot" in text AND tag "ai"
 - Search "copilot" + date "last-30-days" → Items with "copilot" in text AND published in last 30 days
 - SQL equivalent: `WHERE (title LIKE '%copilot%' OR description LIKE '%copilot%' OR tags LIKE '%copilot%') AND tag = 'ai' AND publishedDate >= @30DaysAgo`
@@ -191,11 +219,13 @@ Users see clear feedback about search state, result counts, and empty result sce
 ### Debouncing Strategy
 
 **Why 300ms**:
+
 - Standard debounce delay for search-as-you-type
 - Balances responsiveness with reducing API calls
 - Allows users to finish typing before search executes
 
 **Implementation**:
+
 - Use JavaScript `setTimeout` or Blazor equivalent
 - Cancel previous timer on each keystroke
 - Execute search after 300ms of no input
@@ -203,17 +233,20 @@ Users see clear feedback about search state, result counts, and empty result sce
 ### Testing Strategy
 
 **Component Tests** (bUnit):
+
 - SidebarSearch renders with search input
 - Typing in search box updates state
 - Clear button appears when query has text
 - Debounce delays search execution
 
 **Integration Tests** (API):
+
 - Filter endpoint supports search query parameter
 - Search parameter filters content correctly
 - Search combines with other filters correctly
 
 **E2E Tests** (Playwright):
+
 - Navigate to section page, type in search box, verify content updates
 - Type search query, verify URL updates with search parameter
 - Combine search with tags, verify AND logic
@@ -223,6 +256,7 @@ Users see clear feedback about search state, result counts, and empty result sce
 - Keyboard navigation (Tab to search box, Escape to clear)
 
 **Accessibility Tests**:
+
 - Keyboard-only navigation (Tab to search, type, Escape to clear)
 - Screen reader announces search box and result updates
 - ARIA labels for search input and clear button
@@ -243,4 +277,3 @@ Users see clear feedback about search state, result counts, and empty result sce
 - Full-text search engine (Elasticsearch, Azure Search) - using simple text matching
 - Search analytics or popular queries tracking (covered in 006-google-analytics spec)
 - Highlighted search terms in results (future enhancement)
-

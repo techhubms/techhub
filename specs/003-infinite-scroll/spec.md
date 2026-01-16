@@ -136,7 +136,7 @@ Users can use keyboard (Tab, Arrow keys) to navigate through all loaded content 
 
 ### Reference Documentation
 
-- [docs/filtering-system.md](/docs/filtering-system.md) - How filtering works (will need infinite scroll integration docs)
+- [docs/filtering-system.md](/docs/filtering-system.md) - **NEEDS COMPLETE REWRITE** (see 001-filtering-system spec) - will need infinite scroll integration documentation
 - [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
 
 ### Current Status

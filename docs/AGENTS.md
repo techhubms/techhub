@@ -101,9 +101,9 @@ Minimal getting started guide. **Read LAST** for general orientation.
 
 **Current Functional Documentation**:
 
-1. **[`filtering-system.md`](filtering-system.md)** - How filtering works (tag and date filtering logic)
-2. **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
-3. **[`api-specification.md`](api-specification.md)** - REST API contracts and endpoints
+1. **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
+2. **[`api-specification.md`](api-specification.md)** - REST API contracts and endpoints
+3. **`filtering-system.md`** - **TO BE CREATED** (see specs/001-filtering-system for requirements)
 
 These files are framework-agnostic and describe system behavior, not implementation details.
 
@@ -122,9 +122,9 @@ These files are framework-agnostic and describe system behavior, not implementat
 
 **Framework-Agnostic Functional Documentation**:
 
-- **[`filtering-system.md`](filtering-system.md)** - Tag and date filtering logic and behavior
 - **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 - **[`api-specification.md`](api-specification.md)** - REST API contracts and endpoints
+- **`filtering-system.md`** - **TO BE CREATED** - Tag and date filtering logic and behavior (see specs/001-filtering-system)
 
 ### Related Documentation (Other Locations)
 
@@ -163,9 +163,9 @@ When adding documentation, place it in the most specific appropriate location:
 
 **Files that belong here**:
 
-- **`filtering-system.md`** - How filtering works (logic, behavior, rules)
 - **`content-management.md`** - How content is managed (workflows, RSS processing)
 - **`api-specification.md`** - REST API contracts and endpoint specifications
+- **`filtering-system.md`** - **TO BE CREATED** - How filtering works (logic, behavior, rules)
 
 **Everything else goes elsewhere**:
 
@@ -192,8 +192,8 @@ When adding documentation, place it in the most specific appropriate location:
 
 **Functional Documentation (docs/)**:
 
-- **How tag filtering works** → `docs/filtering-system.md` (system functionality)
-- **How date filtering works** → `docs/filtering-system.md` (system functionality)
+- **How tag filtering works** → `docs/filtering-system.md` (**TO BE CREATED** - see specs/001-filtering-system)
+- **How date filtering works** → `docs/filtering-system.md` (**TO BE CREATED** - see specs/001-filtering-system)
 - **Content workflow process** → `docs/content-management.md` (system functionality)
 - **RSS feed processing** → `docs/content-management.md` (system functionality)
 - **API endpoint contracts** → `docs/api-specification.md` (API specification)

@@ -2,38 +2,34 @@
 SYNC IMPACT REPORT - Constitution Amendment (2026-01-16)
 =========================================================
 
-VERSION CHANGE: 1.2.0 → 2.0.0 (MAJOR bump)
+VERSION CHANGE: 2.0.0 → 2.1.0 (MINOR bump)
 
-REASON FOR MAJOR BUMP:
-- Complete rewrite focused on modern .NET/Blazor development (no Jekyll references)
-- Removed all Jekyll-related constraints and directory structure rules
-- Restructured around ABSOLUTELY CRITICAL rules that reference AGENTS.md files
-- Removed backward compatibility stance (already in 1.2.0, but now formalized)
-- Principle-driven organization rather than technology stack listing
-- Breaking change: Constitution now expects Jekyll removal, not coexistence
+REASON FOR MINOR BUMP:
+- Added new ABSOLUTELY CRITICAL rule #7: Documentation Updates
+- Non-breaking addition to governance rules
+- Codifies existing best practice into mandatory requirement
+- Adds clear reference to docs/AGENTS.md for placement guidance
 
-MAJOR CHANGES:
-- REMOVED: All Jekyll directory structure requirements
-- REMOVED: Technology stack details (moved to AGENTS.md)
-- REMOVED: Performance/security requirements (moved to AGENTS.md)
-- ADDED: ABSOLUTELY CRITICAL rules section (non-negotiable foundation)
-- ADDED: Pending features section (filtering, responsive design, etc.)
-- RESTRUCTURED: Focus on principles + references to detailed AGENTS.md files
-- CLARIFIED: No backwards compatibility - greenfield .NET approach
+CHANGES:
+- ADDED: Rule #7 - Documentation Updates (mandatory updates when behavior changes)
+- ADDED: Three-tier documentation system explanation (functional/technical/content)
+- ADDED: Reference to docs/AGENTS.md for placement strategy
+- ADDED: Critical rules about where to place different doc types
+- VERSION: Bumped to 2.1.0
 
 TEMPLATE CONSISTENCY STATUS:
 ✅ plan-template.md: Aligned with .NET project structure expectations
-✅ spec-template.md: User stories prioritized, independent testing emphasized
+✅ spec-template.md: User stories prioritized, independent testing emphasized, documentation section added
 ✅ tasks-template.md: TDD workflow matches constitution requirements
 ✅ All AGENTS.md files reviewed and referenced appropriately
+✅ docs/AGENTS.md: Contains complete placement strategy and guidelines
 
 FOLLOW-UP ACTIONS:
-✅ Constitution rewritten for .NET-first development
-✅ Version bumped to 2.0.0 (MAJOR - breaking governance changes)
-✅ Last Amended date updated to 2026-01-16
-✅ Reviewed 16 AGENTS.md files for consistency
-✅ Verified alignment with MIGRATIONSTATUS.md and README.md
-✅ Ensured pending features captured from specs/ directory
+✅ Added Rule #7 to ABSOLUTELY CRITICAL Rules section
+✅ Version bumped to 2.1.0 (MINOR - new governance rule added)
+✅ Last Amended date remains 2026-01-16
+✅ Verified alignment with docs/AGENTS.md documentation placement strategy
+✅ All spec files updated with documentation requirements
 
 LAST REVIEW: 2026-01-16
 NEXT AMENDMENT: When new principles emerge or fundamental approach changes
@@ -135,6 +131,32 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 **Reference**: See [Root AGENTS.md - Accessibility Standards](../../AGENTS.md#accessibility-standards) for complete accessibility requirements.
 
+### 7. Documentation Updates
+
+**🚨 MANDATORY**: Documentation MUST be updated whenever code behavior changes.
+
+- **Not optional**: Documentation updates are part of "task complete" - work is NOT done until docs are updated
+- **Search first**: Use `grep_search` to find existing documentation before assuming it doesn't exist
+- **Three-tier system**: Understand where documentation belongs (functional docs, AGENTS.md files, README.md)
+- **Update all affected files**: Changes may require updates to multiple documentation files
+- **Placement guidance**: See [docs/AGENTS.md](../../docs/AGENTS.md) for complete instructions on:
+  - Where to place functional documentation (docs/)
+  - Where to place technical documentation (AGENTS.md files)
+  - Where to place content guidelines (collections/)
+  - What belongs in each file type
+  - How to avoid duplication
+
+**Critical Rules**:
+
+- ✅ **Functional documentation** (WHAT the system does) → `docs/` directory
+- ✅ **Technical documentation** (HOW to implement) → Domain-specific AGENTS.md files
+- ✅ **Content guidelines** (writing standards) → `collections/` directory
+- 🚫 **Never skip documentation** when behavior changes
+- 🚫 **Never duplicate content** - link to existing docs instead
+- 🚫 **Never mix functional and technical** - keep them separate
+
+**Reference**: See [docs/AGENTS.md](../../docs/AGENTS.md) for documentation placement strategy and complete guidelines.
+
 ## Core Development Principles
 
 ### Modern .NET/Blazor Architecture
@@ -219,7 +241,7 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 
 ## Version History
 
-**Version**: 2.0.0  
+**Version**: 2.1.0  
 **Ratified**: 2026-01-01  
 **Last Amended**: 2026-01-16  
 
@@ -227,4 +249,5 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 
 - v1.0.0 (2026-01-01): Initial constitution for Jekyll migration
 - v1.2.0 (2026-01-02): Removed backwards compatibility constraints
-- v2.0.0 (2026-01-16): Complete rewrite for modern .NET/Blazor focus (this version)
+- v2.0.0 (2026-01-16): Complete rewrite for modern .NET/Blazor focus
+- v2.1.0 (2026-01-16): Added mandatory documentation update rule (#7) with placement guidance
