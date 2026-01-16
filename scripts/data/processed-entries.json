@@ -23596,5 +23596,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the 'Azure' category because the video centers around Azure platform updates and related features (Azure inclusion rule 1). Did not assign other categories like AI or ML, as the content only briefly references AI topics (GPT-5.2-Codex, OptiMind SLM) without substantive technical detail on those, and the main focus remains on Azure news and infrastructure. Coding and DevOps were not assigned as there is no in-depth discussion of programming, developer workflows, or CI/CD practices in the summary provided. Content does not trigger any generic exclusion rules; it is an English-language technical update, not biographical, business, or sales-focused.",
     "canonical_url": "https://www.youtube.com/watch?v=0U9CjXk5o2E"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/when-to-lead-when-to-delegate-to-github-copilot.html",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the entire blog focuses on practical usage patterns for GitHub Copilot (a developer tool), in line with AI Category Rule 2 and GitHub Copilot inclusion rules. No Coding category was assigned because the post is about workflow and strategy, not direct programming techniques or code examples. Content is fully technical and targets developers, with no generic exclusion rules triggered.",
+    "timestamp": "2026-01-16 17:05:59 +00:00"
   }
 ]
