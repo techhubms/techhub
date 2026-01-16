@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Cloud YouTube",
+  "ProcessedDate": "2026-01-09 22:02:41",
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "PubDate": "2026-01-09T21:01:14+00:00",
+  "Description": "This video features a discussion at Microsoft Ignite with Rajesh Ramachandran from ABB, focusing on how ABB leverages generative and agentic AI to improve industrial operations. The conversation highlights real-world examples, such as a large solar plant managed with minimal human intervention, and outlines ABB's priorities in scaling AI value, optimizing business processes, and empowering employees.\n\n#Microsoft #MicrosoftCloud",
+  "Link": "https://www.youtube.com/watch?v=th3LZHbD6WU",
+  "Title": "The New Industrialists | ABB leveraging generative and agentic AI to improve industrial operations",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "Tags": [
+    "#Microsoft",
+    "#MicrosoftCloud"
+  ],
+  "EnhancedContent": null,
+  "Author": "Microsoft Cloud"
+}

@@ -1,0 +1,24 @@
+{
+  "Link": "https://www.youtube.com/watch?v=MH-_J8gLZn4",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2026-01-12T23:01:43+00:00",
+  "ProcessedDate": "2026-01-13 01:30:59",
+  "FeedName": "DotNet YouTube",
+  "Title": ".NET AI Community Standup Topic: Let's talk about the new .NET AI Stack",
+  "EnhancedContent": null,
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "Description": "Join us for an open, no‑script conversation on what’s new and practical for building AI apps with .NET. No slides, no script, just real conversation and code, C# code.\n\nIn this session, we’ll chat about things like: Building agents in .NET (and why DevUI is exciting) Moving past “chatbots” New .NET + AI building blocks\n\nExpect an informal, open discussion, lots of opinions, a few lessons learned, and practical ideas you can take back to your own projects right away.\n\n🔗 Links: https://learn.microsoft.com/en-us/collections/xgpwsptxkdz2ke?source=docs\n\n🎙️ Featuring: Bruno Capuano, Jeremy Likness\n\n#dotnet #AI #AIAgents #MAF",
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos"
+}

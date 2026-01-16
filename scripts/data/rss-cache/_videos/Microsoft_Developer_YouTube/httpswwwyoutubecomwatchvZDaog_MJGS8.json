@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=ZDaog_MJGS8",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2026-01-13 18:03:53",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "PubDate": "2026-01-13T17:10:44+00:00",
+  "Description": "Protecting Personally Identifiable Information (PII) is critical for compliance and user trust. In this video, we introduce Microsoft’s PII Redaction service and show you how it helps detect and redact sensitive data across text, documents, and conversational transcripts.\n\nYou’ll learn: Why PII protection matters and the cost of data breaches How Azure AI Language detects and redacts PII in text, documents, and speech transcripts Key customization options for entity types, masking styles, and exclusions Real-world use cases for finance, healthcare, and AI-driven workflows How to try the service in Azure AI Foundry Playground\n\nResources & Links: 🔗Identity Theft Resource Center: https://www.idtheftcenter.org/wp-content/uploads/2024/01/ITRC\\_2023-Annual-Data-Breach-Report.pdf\n\n🔗IBM Security Report: https://www.ibm.com/reports/data-breach\n\n🔍 Explore Azure AI Language: https://aka.ms/azureai-language\n\n🚀 Try PII Redaction in AI Foundry: https://ai.azure.com/\n\n📚 Learn more about PII in our Documentation: https://aka.ms/pii-docs-overview\n\n00:00 - Introduction: Why PII Protection Matters 00:10 - Industry Stats & Compliance Challenges 00:58 - Meet Azure AI Language PII Redaction 01:12 - Demo: Detecting PII in Text 01:42 - Customization: Entity Types & Masking Styles 02:16 - Advanced Features: Exclusions & Synonyms 02:40 - Conversational & Document PII Overview 03:30 - Key Use Cases 04:01 - Wrap-Up & Try It Yourself\n\n#AzureAI #PIIRedaction #DataPrivacy #AICompliance #MicrosoftDeveloper #AzureLanguage #GDPR #HIPAA #AIForDevelopers #CloudSecurity",
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Protect sensitive data with Azure AI Language PII Redaction"
+}

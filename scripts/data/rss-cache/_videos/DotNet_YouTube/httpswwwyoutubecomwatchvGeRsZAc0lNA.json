@@ -1,0 +1,25 @@
+{
+  "Link": "https://www.youtube.com/watch?v=GeRsZAc0lNA",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2026-01-09 19:04:37",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Tags": [
+    "aspnetcore",
+    "demo",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "microsoft",
+    "orleans",
+    "softwaredeveloper"
+  ],
+  "Title": "ASP.NET Community Standup - What's next for Orleans?",
+  "FeedName": "DotNet YouTube",
+  "Description": "Join us to hear about the future of Orleans for building scalable, distributed, systems.\n\n🔗 Community Links: https://www.theurlist.com/aspnet-standup-20260120\n\n🎙️ Featuring: Daniel Roth, Mike Kistler, Reuben Bond\n\n#dotnet #aspnetcore",
+  "Author": "dotnet",
+  "PubDate": "2026-01-09T18:04:43+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null
+}

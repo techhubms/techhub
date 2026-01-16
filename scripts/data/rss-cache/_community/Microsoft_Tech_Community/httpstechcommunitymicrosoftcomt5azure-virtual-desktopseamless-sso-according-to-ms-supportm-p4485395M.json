@@ -1,0 +1,14 @@
+{
+  "Author": "RobYoung",
+  "ProcessedDate": "2026-01-14 17:06:58",
+  "Title": "Seamless SSO According to MS Support",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Description": "I am in the process of setting up a POC for AVD and followed all the instructions that I have found for enabling Seamless SSO for AVD. We are currently running in hybrid mode and I have created a server 2025 with latest patches. When I attempt to sign in via web or windows app, I signin to the web interface or the app and I am presented with the desktops. I launch a desktop and it prompts me for a user and pass (the user is pre-populated)\n\nMy understanding is that this should not happen. It should seamlessly signin (This would cause issues with our users not using passwords) I contacted Microsoft support and they state that this is by design. They stated this is how it operates in their lab.\n\nCan someone clarify, if I sign into Windows app or the web, that my authentication should seamlessly sign me into the AVD server I have published?\n\nThanks",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/seamless-sso-according-to-ms-support/m-p/4485395#M13982",
+  "EnhancedContent": "I am in the process of setting up a POC for AVD and followed all the instructions that I have found for enabling Seamless SSO for AVD.  We are currently running in hybrid mode and I have created a server 2025 with latest patches.  When I attempt to sign in via web or windows app, I signin to the web interface or the app and I am presented with the desktops.  I launch a desktop and it prompts me for a user and pass (the user is pre-populated)\n\nMy understanding is that this should not happen.  It should seamlessly signin  (This would cause issues with our users not using passwords)  I contacted Microsoft support and they state that this is by design.  They stated this is how it operates in their lab.\n\nCan someone clarify, if I sign into Windows app or the web, that my authentication should seamlessly sign me into the AVD server I have published?\n\nThanks",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2026-01-13T21:13:46+00:00"
+}

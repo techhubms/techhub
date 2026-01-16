@@ -10935,5 +10935,419 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unable-to-delete-foundry-agent-identity-entra-app-in-azure/m-p/4482418#M22397",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-02 19:03:44 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/windows-forms-user-control-layout-issues-at-runtime/m-p/4482223#M1280",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-02 21:03:52 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/SO2mm2qoy9U",
+    "reason": "No categories found: No categories assigned. The content does not provide substantive technical detail—there is only a description noting that KC Lemson discusses creating a game called Bedlam and making it available online, but there is no actual content or technical explanation provided (the content field is null). According to the processing rules, category inclusion requires actual content with technical implementation, and generic exclusion rule 'focus on actual content' excludes purely navigational or promotional material without technical substance.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-04 12:03:54 +00:00",
+    "reason": "No categories found: Content excluded due to the Non-Development Microsoft Products generic exclusion rule. The article compares and discusses usage scenarios for SharePoint, Teams, and OneDrive, but focuses entirely on end-user/business productivity guidance (file storage, collaboration, document lifecycle) rather than development, customization, or technical implementation. There is no technical depth related to coding, administration scripting, development practices, API integration, governance automation, or architecture beyond user-level feature selection. Microsoft 365 Copilot is also mentioned in related links but the main article itself contains no developer content. Therefore, no categories are assigned.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/sharepoint-vs-teams-vs-onedrive-when-to-use-each-and-when-not-to/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/FW7tsn75zh4",
+    "timestamp": "2026-01-04 16:03:50 +00:00",
+    "reason": "No categories found: Content does not qualify due to the generic exclusion rule for biographical and trivia content. The description and title indicate this video focuses on the historical trivia of Python's name rather than technical, educational, or development content involving Microsoft technologies or tooling. There is no substantive technical content or Microsoft relevance based on the input provided, so no categories were assigned."
+  },
+  {
+    "timestamp": "2026-01-05 16:04:20 +00:00",
+    "reason": "No categories found: No categories assigned. Although the content discusses the impact of AI-powered coding tools and references companies like Microsoft and GitHub, the article is an industry analysis/news piece focused on how developer support workflows and community behavior are changing in response to new tools. There is no significant technical detail, guidance, or implementation coverage of Microsoft technologies, nor coverage central to Microsoft-specific AI, coding, DevOps, Azure, ML, or Security practices (per Generic Exclusion and Inclusion Rules). Thus, no categories apply.",
+    "canonical_url": "https://devclass.com/2026/01/05/dramatic-drop-in-stack-overflow-questions-as-devs-look-elsewhere-for-help/",
+    "collection": "blogs"
+  },
+  {
+    "timestamp": "2026-01-05 16:04:48 +00:00",
+    "reason": "No categories found: Content excluded due to Generic Exclusion Rules. The episode is primarily biographical, focusing on Koushik Kothagal's personal journey as a developer, his experiences as a YouTube creator, and career advice. Although there are mentions of AI and Java, the main emphasis is on personal stories, career struggles, and developer motivation rather than substantive technical information or implementation details related to Microsoft technologies, development, or specific products/tools. This matches the 'Biographical Focus' generic exclusion rule in Chapter 3—technical depth is insufficient for any inclusion criteria.",
+    "canonical_url": "https://www.youtube.com/watch?v=aWG3QiD-QwA",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This article is a company news announcement focused on an Xbox app partnership with Hisense and V homeOS-powered smart TVs to bring Xbox Cloud Gaming to a wider audience. While it discusses the use of Xbox Cloud Gaming and Game Pass, the core content is about consumer gaming, not development, coding, DevOps, AI/ML, or Microsoft technical implementation. It does not cover Microsoft developer tools, coding practices, Azure, security, or technical details relevant to professionals in those fields. Per the exclusion rules for non-development Microsoft products, gaming and end-user consumer features are outside the scope of categories.",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/05/xbox-bring-cloud-gaming-select-hisense-homeos-powered-smart-tvs/",
+    "timestamp": "2026-01-05 19:06:11 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/qNbXVxS6eOI",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this video appears to be biographical and anecdotal in nature, focusing on an internal Microsoft story about a dog and the mail system rather than providing substantive technical content related to Microsoft technologies or development. The description highlights storytelling and personal anecdotes, without indicating technical implementation details, tutorials, or educational material relevant to the predefined categories.",
+    "timestamp": "2026-01-05 20:03:25 +00:00"
+  },
+  {
+    "timestamp": "2026-01-06 08:04:11 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/enable-single-sign-on-for-windows-app-under-proxy-environment/idi-p/4483296",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2026-01-06 16:05:23 +00:00",
+    "collection": "blogs",
+    "reason": "No categories found: No categories are assigned because this article focuses on the Ruby 4.0 release, a general programming language update that does not centrally involve any Microsoft technology or development tools. There are no significant references to Microsoft platforms, Azure, .NET, GitHub Copilot, or any qualifying Microsoft services or frameworks in the title, description, content, or tags. This is a general industry development news update about non-Microsoft technologies, which falls outside of the defined category inclusion rules.",
+    "canonical_url": "https://devclass.com/2026/01/06/ruby-4-0-released-but-its-best-new-features-are-not-production-ready/"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content does not qualify because it lacks substantive technical depth to trigger any inclusion rules. The description indicates a 'lighthearted and informal stream' focused on live coding, revisiting personal projects (the 'countdown projects'), and discussing general setup on GitHub. There is no indication that Microsoft technologies—including Azure, GitHub Copilot, or any other specific Microsoft developer/service features—are central to the session or constitute 40% or more of the content (per Multi-Platform Content Threshold). There is also no mention of core topics such as AI, DevOps, Coding with Microsoft tools, ML, Security, or specific frameworks/services. Without detailed content (the 'content' field is null) or explicit mention of relevant Microsoft technical implementation, the submission must be excluded per the 'When in doubt, exclude' rule.",
+    "collection": "videos",
+    "timestamp": "2026-01-07 09:06:59 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=KalgAXDzG4w"
+  },
+  {
+    "timestamp": "2026-01-07 16:04:54 +00:00",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The provided description is extremely brief and lacks substantive technical details. There is no actual content beyond a short marketing-oriented summary and a promotional link, with no technical depth, implementation steps, or development focus. Additionally, the materials present a sales-pitch vibe and target end users (retail shoppers) rather than developers or technical practitioners. Per sales pitch and content quality exclusions, as well as lack of substantive content, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=_s974O_vxoQ"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/container-apps-environment-networking-consumption/m-p/4483790#M22402",
+    "timestamp": "2026-01-07 17:08:38 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/retrive-deleted-release-classic-pipeline/m-p/4483154#M22400",
+    "timestamp": "2026-01-07 17:08:38 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-07 18:03:55 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/07/indie-selects-january-2026/",
+    "reason": "No categories found: No categories assigned. The content is a news roundup highlighting indie games featured on Xbox, focusing solely on indie game releases, gameplay experiences, and community spotlight. Per generic exclusion rules, coverage of gaming consoles and entertainment software (like Xbox and game reviews/recommendations) does not qualify for any Microsoft technical category such as AI, Azure, Coding, ML, DevOps, Security, or GitHub Copilot. There is no coverage of development, platforms, tooling, or other technical implementation details relevant to Microsoft consultants or developers. The tags and main content confirm a focus on gaming, and no substantive Microsoft technology usage or technical depth is present."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/2026/01/07/ces-2026-powering-the-next-frontier-in-automotive/",
+    "timestamp": "2026-01-07 20:03:43 +00:00",
+    "reason": "No categories found: All generic exclusion rules were checked first. The content consists mainly of an image description, a title, metadata (publish date, author), and cross-links to other blog posts with no substantive technical discussion, code, Microsoft technology detail, or direct explanation of topics related to Microsoft's development, AI, Azure, etc. There is no technical information about Microsoft technologies, product details, or implementation. The content is effectively a placeholder or news headline with redirection rather than an educational or technical post. According to the Quality Standards and exclusion of content with insufficient technical detail, as well as the guideline to exclude 'news' content that does not provide technical depth, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a press release about Microsoft's upcoming financial earnings announcement and contains no substantive technical content. It is focused on investor relations, company news, and press contacts, without addressing Microsoft technologies, developer tools, platforms, or any technical implementation details. Therefore, no categories are assigned.",
+    "timestamp": "2026-01-07 22:03:28 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/07/microsoft-announces-quarterly-earnings-release-date-66/",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ubuntu-as-session-host/m-p/4483664#M13978",
+    "collection": "community",
+    "timestamp": "2026-01-08 01:31:42 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-08 06:04:35 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is about using Microsoft 365 Copilot (as seen in 'Approve changes in bulk directly in M365 Copilot') and Copilot Studio for catalog enrichment in a retail context. According to the Copilot Product Distinction rules in Chapter 2 and the Non-Development Microsoft Products exclusion, content centered on Microsoft 365 Copilot or business productivity Copilot tools is excluded, as these are not developer tools. Additionally, the main use case is retail product listing management—not coding, development, or technical implementation. Therefore, generic exclusion rules apply and no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=eszTnwGVulg"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-01-08 14:06:22 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/08/tailwind-labs-lays-off-75-percent-of-its-engineers-thanks-to-brutal-impact-of-ai/",
+    "reason": "No categories found: No Microsoft technologies are discussed or central to the content. The blog post focuses on Tailwind Labs' layoffs due to AI's impact on their business, specifically mentioning the Tailwind CSS framework and related business challenges. While 'AI' is a theme, there is no mention of Microsoft AI products or services, and no Microsoft developer or cloud ecosystem involvement. None of the category inclusion rules for AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot are met. Therefore, according to the multi-platform content threshold and inclusion rules, no categories apply."
+  },
+  {
+    "timestamp": "2026-01-08 17:07:55 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The event title and description are primarily in Spanish, making the content less than 80% English. According to the Exclusion Rules (Non-English Content), non-English language content must be excluded unless there is an English version present. No categories were assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=iBf7L5BQra4",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-08 17:08:02 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/edm-model-generation-fails/m-p/4484134#M780",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-08 18:04:29 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/08/xbox-developer-direct-2026/",
+    "reason": "No categories found: No categories assigned. This content is an announcement for the Xbox Developer_Direct broadcast and focuses entirely on upcoming Xbox video games (Fable, Forza Horizon 6, Beast of Reincarnation), developer presentations, and event scheduling for gamers. It contains no developer-facing technical implementation details, Microsoft technology insights for consultants or engineers, or any focus on development, coding, DevOps, AI, ML, Azure, or Security per the inclusion rules. The content is entertainment and gaming consumer news, which is out of scope for all available categories according to the exclusion rules for non-development Microsoft products and consumer content."
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content lacks sufficient substantive technical information. The 'content' field is null, meaning there is no actual description of the technical details, features, or implementation from the v1.108 VS Code release. Generic information about streaming a product update, mentioning an upcoming demo, or listing a host does not provide the technical depth required for Coding, DevOps, or any other categories per inclusion rules. Without main content or details about actual new features, developer tools, or programming practices, the item cannot be meaningfully categorized.",
+    "canonical_url": "https://www.youtube.com/watch?v=48qofh6Wp5Y",
+    "timestamp": "2026-01-08 20:03:52 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned due to insufficient content. The input provides a title ('Agent Skills are now in VS Code'), the author, tags, and type, but the main 'content' and 'description' fields are empty or null. Without substantive content to analyze, it's not possible to apply category inclusion rules or extract relevant technical details. Per the workflow, categorization is based strictly on the available content fields, and guessing based on the title alone is not allowed.",
+    "canonical_url": "https://www.youtube.com/shorts/MQhg6gEtFGw",
+    "timestamp": "2026-01-09 01:31:49 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=x5gW0MrhdV0",
+    "reason": "No categories found: Content excluded because the 'content' field is null, which means there is no substantive text to analyze. According to the core processing rules, categorization must be based on actual content, and with a missing body, none of the inclusion rules can be applied. Additionally, the description indicates the video is an unstructured community discussion about hopes, ideas, and wishlists for open source in 2026, without any reference to technical implementations, Microsoft products or services, or developer tooling. There is also no evidence from the title or description that the required Microsoft technology threshold (≥40% or centrality) is met. Therefore, all categories are excluded.",
+    "timestamp": "2026-01-09 18:04:09 +00:00",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-09 20:03:38 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a video conversation about the importance of robotics and automation in manufacturing, focusing on the Wandelbots Nova platform. There are mentions of Microsoft (#Microsoft, #MicrosoftCloud) in tags, but the description does not provide any detail that Microsoft technologies or platforms are central or ≥40% substantive to the discussion. There is no explicit mention of Azure, Power Platform, .NET, Microsoft AI, or any other development/productivity tools being a core part of the technical solution. According to the Multi-Platform Content Threshold rules, Microsoft content must be central or a substantive focus to assign categories, which cannot be established from the given description and metadata.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=pgqVcspA6MA"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=th3LZHbD6WU",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because it primarily discusses high-level business priorities, value scaling, business process optimization, and employee empowerment in an industrial context with generative/agentic AI, without evidence of technical implementation details, developer/tool usage, or hands-on AI integration with Microsoft development platforms or services. Based on both the title and description, the content targets executive/business strategy audiences and does not provide technical/development information required by category inclusion rules. No substantive content is available (content is null) to evaluate for potential qualifying technical depth (Generic Exclusion: Business Strategy and Executive Content rule in Chapter 3).",
+    "timestamp": "2026-01-09 22:03:43 +00:00"
+  },
+  {
+    "timestamp": "2026-01-10 22:03:19 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content is a round-up of open source game jam winners on GitHub, focusing on creativity in game design and community contributions. Although GitHub is mentioned and used, there is no substantive technical discussion about development tools, programming practices, DevOps, coding techniques, Microsoft products, AI, ML, or security topics as defined in the inclusion rules. The content is celebratory and community-focused, rather than instructional or technical, and does not contain development process insights or code-level tutorials that would qualify for any existing category.",
+    "canonical_url": "https://github.blog/open-source/gaming/light-waves-rising-tides-and-drifting-ships-game-off-2025-winners/"
+  },
+  {
+    "timestamp": "2026-01-10 22:03:48 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an announcement/video highlighting the top 10 entries from GitHub's Game Off 2025 competition, which features open source games. While the content relates to software/game development generally, it does not focus on Microsoft technologies, products, developer tools, or frameworks as required by the inclusion rules. GitHub as a platform is included, but the context here is about game submissions and gaming, not GitHub developer tools, workflows, Copilot, or DevOps. No evidence in the description or tags of any central Microsoft technology (Azure, .NET, Visual Studio, etc.), AI, Coding (in a Microsoft context), DevOps, ML, or Security. As per the Multi-Platform Content Threshold, Microsoft technology must be central or at least 40% of substantive content, which is not indicated here. Therefore, all categories are excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/YzM-kIbhico"
+  },
+  {
+    "timestamp": "2026-01-12 13:17:50 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/m1zs4AwzJDM",
+    "reason": "No categories found: All fields except 'title', 'author', and 'type' are empty or null. There is no substantive content or description provided to process. According to the workflow, decisions must be based on the actual provided content, title, and description. The title alone ('PriorityQueue is awesome in .NET') is too vague to unambiguously assign any categories without further detail as required by 'when in doubt, exclude' and 'never fabricate information' rules.",
+    "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 17:06:56 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/",
+    "reason": "No categories found: No categories assigned. The content is predominantly about AI applications in medicine, specifically highlighting 'Claude in Microsoft Foundry' and the expansion of Microsoft Dragon Copilot for radiology reporting workflows. Both 'Claude' and 'Dragon Copilot' are medical/business productivity solutions rather than developer-focused AI or coding platforms. There is no discussion of development practices, AI engineering, coding integration, or use of Microsoft AI services from a developer perspective. According to the generic exclusion rules and the critical distinction for Copilot products, business productivity or healthcare workflow-focused copilot tools (such as Microsoft Dragon Copilot) are excluded as they do not target coding, AI engineering, or development. Therefore, the content does not qualify for any predefined categories."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 18:03:44 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an announcement about changes to GitHub account management features—the deprecation of converting a personal user account to an organization and the introduction of a new organization migration flow. The content covers account/profile management and repository migration but does not discuss topics that fit the defined categories: there are no details on DevOps (beyond generic migration), coding, AI/ML, Azure, or security implementation. The announcement is procedural and administrative in focus (GitHub account and organization management), which falls outside all inclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2026-01-12-deprecation-of-user-to-organization-account-transformation"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-12 18:04:15 +00:00",
+    "reason": "No categories found: All category arrays are left empty due to generic exclusion rules. The content (a video discussion from Microsoft Ignite with Aviva's Bry Dillon) is primarily focused on innovation, business model changes, industry-wide challenges, and high-level strategies such as adaptability and collaboration within the manufacturing and process industries. There are mentions of AI, technology adoption, and general trends, but no detailed discussion of Microsoft technical implementation, development tools, architecture, or engineering practices is described. As per the business strategy and executive content exclusion rule, content that focuses on high-level organizational strategy, industry challenges, and executive guidance without detailed technical implementation is excluded. No technical depth or actionable developer/architecture guidance is evident in the provided description. Additionally, the full detailed content is missing (content is null), so no technical content for category assessment is possible.",
+    "canonical_url": "https://www.youtube.com/watch?v=wGEhMgl1ddA"
+  },
+  {
+    "timestamp": "2026-01-12 19:07:12 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rule: the provided content lacks any actual technical content, details, or substantive explanation (the 'content' field is null and the description is a high-level business summary). Without the actual video transcript or substantive technical details, there is insufficient basis to evaluate inclusion for any Microsoft development or technical categories. The description is business-focused, describing productivity improvements and automation in general terms without any evidence or detail about Microsoft technologies, development practices, or technical AI implementation. Per the workflow, if information is insufficient to confidently assign categories, all categories must be left empty.",
+    "canonical_url": "https://www.youtube.com/watch?v=RmC7vtllPqI"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This is an event announcement for Microsoft Marketplace office hours rather than substantive technical content. It primarily invites users to attend a Q&A/live session, describes participation logistics, and does not provide substantial technical information, implementation details, or development-focused instruction. There is no in-depth discussion of Microsoft technologies, technical best practices, or detailed solutions that meet category inclusion criteria. Event announcements and logistics, even if mentioning AI or cloud, do not qualify for categorization per the business strategy and non-technical event guidance.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/microsoft-marketplace-office-hours-optimize-cloud-cost-and/ec-p/4485127#M667",
+    "timestamp": "2026-01-12 22:03:44 +00:00"
+  },
+  {
+    "timestamp": "2026-01-13 03:31:32 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description and title indicate the content is primarily in Spanish (e.g., '¡Acompáñanos en Open Source Friday...', 'descubrir el Programa de Campeon(a|e)s de rOpenSci', 'transmisión'), which is non-English. According to the Non-English Content exclusion rule under Generic Exclusion Rules, content not primarily in English (<80% English in main text) must be excluded. There is no English version present.",
+    "canonical_url": "https://www.youtube.com/watch?v=Q01Wrp1puP0",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-13 03:31:45 +00:00",
+    "reason": "No categories found: Content excluded because it does not qualify for any categories based on generic exclusion rules. The content is an event description for Open Source Friday, primarily focused on Nuxt (a non-Microsoft, non-Microsoft-owned frontend framework), open source topics, frontend, and web performance. While there is mention of 'live demos of Copilot and Agent Mode,' there is no indication from the description that Copilot is specifically GitHub Copilot (it may refer to any Copilot feature) or that the demos will have a strong focus on Microsoft technology with at least 40% substantive coverage. Additionally, the lack of detailed content prevents accurate assessment of how much of the event is focused on Microsoft developer technology versus generic open source or frontend content. Therefore, according to the workflow: when in doubt, exclude; and do not assign any categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=UAdUbNEwRjY",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devclass.com/2026/01/13/fly-io-introduces-sprites-lightweight-persistent-vms-to-isolate-agentic-ai/",
+    "timestamp": "2026-01-13 09:06:39 +00:00",
+    "reason": "No categories found: No categories are assigned because the content does not focus on Microsoft technologies. The primary subject is Fly.io's Sprites, a VM solution based on AWS Firecracker, which is unrelated to Azure or any Microsoft platform. The article discusses AI agent isolation, persistent VMs, and agentic coding, but all examples and the underlying infrastructure center on Fly.io, AWS, Firecracker, and Anthropic Claude. There are mentions of GitHub and Google Antigravity in the context of general ecosystem vulnerabilities but no substantive Microsoft technical content, features, development frameworks, or services are covered. As Microsoft is not central or even significantly featured, per processing rule 'Microsoft Content Must Be Central' and the applied multi-platform threshold, the categories array remains empty.",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/windows-explorer-replacement-filepilot-is-awesome/",
+    "collection": "blogs",
+    "reason": "No categories found: No categories were assigned because the content is primarily a review of a third-party tool (File Pilot) that replaces Windows File Explorer. The article focuses on usability, performance, and features of File Pilot, but does not cover Microsoft developer tools, programming, coding, Azure services, DevOps practices, AI/ML, or security topics as defined in the inclusion rules. It is not a blog about building, extending, or customizing Microsoft technology from a developer or technical architecture perspective, nor does it detail integrations with Microsoft development tools, libraries, or services. The sole mention of VS Code-style command palette is only tangential, and doesn't make Microsoft technologies central to the post. Therefore, it does not fit under any of the inclusion categories despite being relevant to Windows power users.",
+    "timestamp": "2026-01-13 11:04:29 +00:00"
+  },
+  {
+    "reason": "No categories found: This content is excluded due to the generic exclusion rule for non-development Microsoft products. The article focuses on Microsoft 365 Copilot as it relates to SharePoint Search, which is positioned as a business productivity tool rather than a developer or maker tool. The primary theme is how AI-driven features in Microsoft 365 Copilot transform information discovery for end users within SharePoint. There is a detailed description of Copilot capabilities, licensing, technical enablement, best practices, and governance, but none of this is targeted at developers, makers, technical implementation, coding, or developer-centric AI. According to Chapter 3 and the Copilot Product Distinction rule in Chapter 2, business productivity Copilots (Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot) receive no categories, regardless of technical features, unless the content is specifically about development or maker tools (such as Copilot Studio, GitHub Copilot, or developer extensibility). This article does not meet inclusion criteria and should not be assigned any categories.",
+    "timestamp": "2026-01-13 12:03:49 +00:00",
+    "canonical_url": "https://dellenny.com/copilot-sharepoint-search-how-ai-changes-information-discovery/",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/hGaOro3A5HY",
+    "timestamp": "2026-01-13 15:05:47 +00:00",
+    "reason": "No categories found: No categories assigned. The content field is null, so there is no substantive technical content to evaluate. According to the guidelines, categorization decisions must be based on provided content, and fabrication of information is explicitly prohibited. With no actual content to assess, I cannot determine if any inclusion criteria are met. This triggers a generic exclusion: 'When in doubt, exclude' and 'Never fabricate information—base decisions only on provided content.'",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-13 16:06:01 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/01/13/announcing-open-to-work-how-to-get-ahead-in-the-age-of-ai/",
+    "reason": "No categories found: All categories are excluded based on generic exclusion rules. The content is an announcement of a book release ('Open to Work: How to Get Ahead in the Age of AI') authored by LinkedIn leadership, focusing on broad workforce trends and changes in the nature of work due to AI. The content is primarily business strategy and executive-level discussion rather than technical implementation or practitioner-focused development content. It discusses career evolution, leadership perspective, and company responsibility in the context of AI, without providing technical details on Microsoft AI, coding, Azure, ML, DevOps, or Security. Furthermore, there is mention of Microsoft 365 Copilot, but only as an executive experience reference, not from a developer or technical standpoint. This triggers the 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' generic exclusion rules in Chapter 3.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-13 16:06:35 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=BkRjrey43z0",
+    "reason": "No categories found: No categories assigned. The episode primarily focuses on the social, financial, and policy aftermath of the Log4Shell vulnerability, particularly around open source funding, community health, government reaction, and the creation of the Sovereign Tech Fund. While Log4Shell is a technical issue, the podcast does not address Microsoft technologies, DevOps practices, coding, security implementation, or GitHub technical tooling. The content is about funding models, community resilience, and open source project health. There are no actionable technical details or developer-oriented guidance pertaining to Microsoft technologies, GitHub as a development platform, or relevant security or DevOps practices. Therefore, this content is excluded under the rules for 'Business Strategy and Executive Content,' 'Workplace and Business Focus,' and does not meet any category inclusion criteria.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_building-community-first-ai-infrastructure-activity-7416834810364551168-VnDs",
+    "collection": "news",
+    "reason": "No categories found: This content is excluded according to the Generic Exclusion Rules. While it mentions Microsoft's AI infrastructure and community initiatives, the actual content is primarily a high-level corporate announcement from Satya Nadella about community partnership, social responsibility, and operational commitments regarding datacenter expansion. There are no technical implementation details, developer best practices, or product-specific usage. This post focuses on business strategy, community relations, and organizational responsibility, which falls under 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions. No actionable technical guidance or Microsoft technology implementation is provided. Therefore, no categories are assigned.",
+    "timestamp": "2026-01-13 17:08:30 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0hZEqnYqCRY",
+    "collection": "videos",
+    "reason": "No categories found: No categories have been assigned because the content is focused on how actors and creators—not developers—can use general AI tools such as ChatGPT for language learning, interview preparation, and career development. Although Microsoft AI and AzureAI are mentioned in ancillary resource links and hashtags, the main substance of the video is not about building or implementing Microsoft AI technologies, developer tools, or technical workflows. There is no evidence of code, technical implementation, or Deep exploration of Microsoft services, as required by the AI, Azure, Coding, ML, DevOps, GitHub Copilot, or Security category rules. The subject matter is the use of AI as an end user for personal productivity in entertainment, not technical or development work with Microsoft technologies.",
+    "timestamp": "2026-01-13 17:09:09 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=gR_2MV8GJ7M",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content is about Drasi, an event-driven data processing system, but there is no direct evidence in the provided title, description, or resources that Drasi is a Microsoft technology or product, nor that it centrally employs Microsoft platforms (Azure, Microsoft cloud services, etc.). The only Microsoft mention is the context that the episode is part of an 'Open at Microsoft' playlist, but per workflow rules, the central technology must be Microsoft or the content must be about implementing with Microsoft platforms. Since Drasi appears to be a general-purpose open-source project not tied exclusively or primarily to Microsoft technologies, it does not meet the 40% Microsoft content threshold or inclusion criteria for any category.",
+    "timestamp": "2026-01-13 17:09:22 +00:00"
+  },
+  {
+    "timestamp": "2026-01-13 18:05:12 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/PAxwyG4ibQ8",
+    "reason": "No categories found: No categories assigned because the content, based on the description and title, focuses on open source community health, interpersonal dynamics, and community sustainability rather than technical implementation, Microsoft technologies, or development tools. Although GitHub is mentioned, the topic centers on social and funding aspects, without coverage of DevOps processes, developer tools, coding practices, or Microsoft Azure integration required by inclusion rules for 'DevOps,' 'GitHub Copilot,' or other relevant categories. There is no technical walkthrough, programming, or platform-specific discussion present. Generic exclusion rules on business/culture content (workplace and business focus) and lack of technical depth apply.",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories were excluded because the content does not centrally focus on Microsoft technologies, development practices, or implementation details related to Microsoft products. The article discusses the lack of commits on the open source MySQL repository and the general landscape of open source databases, with mentions of PostgreSQL, MariaDB, Oracle, and SQLite. Microsoft is only referenced in passing: Microsoft retired Azure Database for MariaDB in favor of MySQL, but this is a brief market/strategy mention, not a technical deep-dive or implementation tutorial. There are no specific practices, coding, DevOps, Security, AI, ML, or Azure architectural guidance presented. According to Multi-Platform Content Threshold and Microsoft Content Must Be Central rules, Microsoft technologies are not central nor ≥40% of the article. Therefore, no categories apply.",
+    "canonical_url": "https://devclass.com/2026/01/13/open-source-mysql-repository-has-no-commits-in-more-than-three-months/",
+    "timestamp": "2026-01-13 19:05:32 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/l0JU1z4GaOA",
+    "timestamp": "2026-01-13 20:04:41 +00:00",
+    "reason": "No categories found: All categories were excluded based on the generic exclusion rules. The description clearly states that the episode focuses on how an actor uses AI tools like ChatGPT to learn languages, prepare for interviews, and promote creative projects, which falls under business productivity and creative, non-technical AI usage. There is no substantive technical content, nor is there any focus on Microsoft developer tools, coding, or technical implementation. The episode centers on career and personal development, which are out of scope. The mention of ChatGPT is in a general productivity/creative context only. Additionally, lack of substantive technical content and reliance on non-developmental AI product usage (ChatGPT for personal productivity, not development) reinforce exclusion according to the prescribed rules."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because, while the article focuses on new Windows 11 PCs and AI-powered device features showcased at CES 2026, it does not provide substantive detail on software development, coding, DevOps, or technical implementation involving Microsoft technologies. The coverage is primarily about hardware and device innovation, form factors, silicon advances (Intel, AMD, Qualcomm), and end-user AI experiences in consumer/business devices (Copilot+ PCs), not developer-oriented AI, coding, Azure, ML, DevOps, or Security. According to the generic exclusion rules and category inclusion logic, there is no qualifying technical implementation content or developer focus required for assignment to 'AI', 'Coding', 'Azure', 'ML', 'DevOps', 'GitHub Copilot', or 'Security' categories. Tag choices reflect the hardware/AI innovation and partner ecosystem, but no category applies.",
+    "collection": "news",
+    "timestamp": "2026-01-13 21:04:00 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/01/13/ces-2026-showcasing-new-windows-11-pc-innovations-across-the-ecosystem/"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/make-winforms-look-like-and-behave-the-same-as-winui-3/m-p/4485632#M1281",
+    "timestamp": "2026-01-14 15:06:09 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/iBrqGkok3eA",
+    "reason": "No categories found: No categories assigned because there is insufficient information in the provided content to apply inclusion rules. The content field is null, so there are no technical details or substantive information available to assess whether Microsoft technologies, products, or services are a central focus, as required by the categorization rules. The description and tags suggest a high-level overview of quantum cryptography and encryption, but without explicit connection to Microsoft products, AI/ML platforms, Azure services, or developer tools, it does not meet the criteria for any category. Per Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must comprise ≥40% of substantive content or be central. With no content provided, this cannot be determined.",
+    "timestamp": "2026-01-14 17:08:52 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/seamless-sso-according-to-ms-support/m-p/4485395#M13982",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-14 17:08:58 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/msb4184-the-expression-quot-system-io-path-getdirectoryname-quot/m-p/4485586#M781",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-14 17:08:58 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-14 18:04:23 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an official news post on Microsoft's ongoing partnership with Nintendo and Sony for safer gaming experiences. Although it discusses advanced technology and industry collaboration for online safety, it is fundamentally about player safety and wellbeing, not focused on Microsoft technical implementation, development, coding, security architecture, or DevOps practices. It provides general principles, partnerships, and responsible practices but does not include actionable guidance or technical depth relating to any of the inclusion categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security'). The content is targeting a broad audience about company/industry commitments and responsible stewardship, which falls under the generic exclusions for business strategy, executive content, non-development Microsoft products, and general business advice rather than technical implementation.",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/14/online-safety-principles-xbox-nintendo-sony/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/6yccsb6mmFo",
+    "reason": "No categories found: All category inclusion rules require substantive technical content related to Microsoft developer technologies. The input lacks any actual content (the 'content' field is null), the description is empty, and the tags and title suggest this is about requesting features for Visual Studio Code rather than containing technical guidance, implementation, or educational depth. There is no evidence of hands-on technical explanation, engineering approach, or any central Microsoft technology topic discussed. Without substantive content, it cannot qualify for Coding, DevOps, Azure, AI, ML, Security, or GitHub Copilot categories. This is strictly an exclusion due to insufficient content to make a category determination (no information to analyze).",
+    "collection": "videos",
+    "timestamp": "2026-01-15 02:39:52 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=m-TAeO4FnKM",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content focuses on Appwrite, an open-source backend-as-a-service platform, and its evolution into a full-stack solution with no mention of Microsoft technologies or platforms. There is no evidence in the title, description, or available information that Microsoft technologies are central to the subject. Under the Multi-Platform Content Threshold in Chapter 2 and 6, Microsoft technologies must represent at least 40% of substantive content or be central to the solution, which is not the case here.",
+    "collection": "videos",
+    "timestamp": "2026-01-15 03:32:11 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article is a news post focusing on digital transformation and the impact of AI in Kenyan pharmacies, but there is no substantive technical implementation information about Microsoft developer tools or platforms. The content does not provide sufficient detail on how Microsoft AI or development technologies are being used; instead, it focuses on the application/results of AI in a business/healthcare context, likely targeting a general or business audience. Per the rules, high-level business and end-user success stories without technical depth are excluded.",
+    "timestamp": "2026-01-15 08:03:57 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/microsoft-copilot-zendawa-ai-kenya-pharmacies/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is centered on Microsoft's educational initiatives and the launch of the Elevate for Educators program, focusing on empowering educators and students with AI literacy, professional development, and global community resources. The described AI-powered tools, such as those within the Microsoft 365 Copilot app, are oriented toward general education and productivity in teaching, not software development, coding, DevOps, security engineering, or data science. Per the strict copilot distinction and generic exclusion rules, content about Microsoft 365 Copilot or educational AI features targeting teaching/learning and business productivity (not developer/maker/engineering productivity) are excluded. There is no discussion of coding, developer tools, DevOps practices, Azure deployment, ML/data science engineering, or security implementation with Microsoft platforms. Thus, all categories are excluded according to the workflow.",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/15/microsoft-expands-its-commitment-to-education-with-elevate-for-educators-program-and-new-ai-powered-tools/",
+    "collection": "news",
+    "timestamp": "2026-01-15 16:08:18 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The video is primarily about community management and the enforcement of a code of conduct in the Homebrew open source project. It discusses toxic behavior, community health, and maintainer well-being—topics not related to Microsoft development technologies or any of the included categories. Despite some connections to GitHub (since it's hosted there), the content does not cover DevOps practices, GitHub developer tools, or any technical aspects central to the predefined categories. This falls under generic exclusion rules regarding workplace/culture and management content without technical implementation.",
+    "canonical_url": "https://www.youtube.com/shorts/8dyuHoMSqyU",
+    "collection": "videos",
+    "timestamp": "2026-01-15 16:08:53 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2026/01/introducing-microsoft-innovations-and-programs-to-support-ai-powered-teaching-and-learning/",
+    "timestamp": "2026-01-15 17:10:30 +00:00",
+    "reason": "No categories found: No categories assigned due to the 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' generic exclusion rules. The content is primarily about educational programs, AI-powered learning tools for educators and students, classroom teaching enhancements, and Microsoft 365 Copilot for Education—all focused on end-users or educational leadership, not on development or technical implementation. It does not include technical, developer, coding, DevOps, ML, Security, or Azure implementation details. Instead, it targets educators, education leaders, and students, describing offerings, resources, and strategies rather than hands-on technical content for developers or IT professionals. Thus, all categories are excluded.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/01/15/college-students-now-get-12-months-of-microsoft-365-premium-and-linkedin-premium-career-on-us/",
+    "timestamp": "2026-01-15 19:08:23 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This article is primarily a business/productivity offering targeted at students, detailing a promotional giveaway of Microsoft 365 Premium (with Copilot/AI) and LinkedIn Premium Career. The content centers around productivity and career tools for educational/personal productivity—not developer, technical, or coding tools. Per 'Generic Exclusion Rules: Non-Development Microsoft Products' and 'Business Strategy and Executive Content,' Microsoft 365 Copilot, Copilot for Microsoft 365, and business productivity tools like Word, PowerPoint, Excel with Copilot are explicitly excluded unless development-focused (which this is not). The text contains no technical implementation details, code, developer tools, or hands-on guidance for building with Microsoft technologies.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-devops-template-folders/m-p/4486072#M22406",
+    "timestamp": "2026-01-15 19:08:52 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-15 21:06:46 +00:00",
+    "reason": "No categories found: No categories have been assigned because the provided content consists only of a very high-level description summarizing an interview about Clawdbot, a cross-platform open source personal AI assistant. There are no technical details, implementation insights, or substantive information about Microsoft technologies or development practices. The description discusses the project's popularity and philosophy, but does not mention Microsoft products, developer tools, or AI/Machine Learning frameworks specific to the Microsoft ecosystem. The generic exclusion rule to 'focus on actual content' applies because content is missing (the 'content' field is null), so there is not enough information to assess inclusion for any category.",
+    "canonical_url": "https://www.youtube.com/watch?v=1iCcUjnAIOM"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-15 21:07:53 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops/error-on-deployment-on-a-che/m-p/4485901#M75"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-15 22:05:01 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/8RQW2FFLiTg",
+    "reason": "No categories found: Content does not qualify for any categories. There is no main content body (content is null), and the description field is empty. Based on the title and tags, the video is about productivity tips—specifically, VS Code keyboard shortcuts. There is no evidence of Microsoft developer technology implementation, coding practices, DevOps, or any of the defined category inclusion topics. Additionally, the content is not provided, so I cannot assess for technical depth, integration, or context that would trigger category inclusion. According to the workflow (Chapter 2: 'When in doubt, exclude'), categories must not be assigned if there is insufficient information."
+  },
+  {
+    "reason": "No categories found: The provided content lacks sufficient technical details, as the 'content' field is null and the 'description' is empty. The input consists only of a title and tags, which reference changing fonts in Visual Studio Code. There is no substantive information about Microsoft development, coding, extensions, or configuration beyond the superficial topic indicated by the title. Without the main content, it is not possible to determine if this qualifies for any categories, as required by the inclusion rules.",
+    "collection": "videos",
+    "timestamp": "2026-01-16 07:06:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/CrQev1NVUPk"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/using-winui-3-without-xaml/m-p/4486235#M1282",
+    "collection": "community",
+    "timestamp": "2026-01-16 08:03:26 +00:00"
   }
 ]

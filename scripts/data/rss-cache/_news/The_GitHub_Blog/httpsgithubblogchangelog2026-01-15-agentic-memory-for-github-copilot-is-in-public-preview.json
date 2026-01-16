@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "Copilot memory is now available in public preview for all paid GitHub Copilot plans.\n\nCopilot memory enables Copilot to learn and retain useful details about your repositories. As you work with Copilot coding agent, Copilot code review, or Copilot CLI, it builds a repository-specific understanding that improves the quality of its assistance over time.\n\n### How it works\n\nCopilot automatically captures tightly scoped insights called “memories” as it works in your repositories. These memories are:\n\n- Repository-specific and validated against the current codebase before use.\n- Shared across Copilot features, so what coding agent learns can help code review.\n- Automatically expired after 28 days to prevent stale information.\n\nFor more details on how exactly Copilot memory works, check out [our engineering blog post on Copilot memory](https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/).\n\n### Get started\n\n- **Individual users** (Copilot Pro or Pro+): Enable Copilot memory in your [personal Copilot settings](https://github.com/settings/copilot).\n- **Organizations and enterprises**: Enable through policy settings in your organization or enterprise settings.\n\nRepository owners can review and delete stored memories in **Repository Settings &gt; Copilot &gt; Memory**.\n\nTo learn more about how to use this feature, check out [our Copilot memory documentation](https://docs.github.com/copilot/concepts/agents/copilot-memory).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Link": "https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview",
+  "Description": "Copilot memory is now available in public preview for all paid GitHub Copilot plans. Copilot memory enables Copilot to learn and retain useful details about your repositories. As you work…\n\nThe post [Agentic memory for GitHub Copilot is in public preview](https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-01-15 23:02:14",
+  "Title": "Agentic memory for GitHub Copilot is in public preview",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "PubDate": "2026-01-15T21:57:44+00:00",
+  "Author": "Allison"
+}

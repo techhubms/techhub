@@ -1,0 +1,14 @@
+{
+  "PubDate": "2026-01-02T00:00:00+00:00",
+  "FeedName": "Randy Pagels's Blog",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Tags": [],
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# From Tool to Teammate\n\n*Posted on Jan 2, 2026*\n\nUsage\n\nWelcome to 2026!\n\nAs we kick off a new year, it’s a great moment to reset how we think about GitHub Copilot.\n\nOver the past year, many of us started using it as a faster way to write code. That was a good first step.\n\nBut in 2026, the real shift is this, GitHub Copilot works best when you treat it like a teammate, not just a tool.\n\nProTip\n\n**Stop Asking for Code, Start Collaborating**\n\nA tool waits for instructions. A teammate understands intent, asks questions, and helps you think through problems.\n\nGitHub Copilot can do the same, if you invite it into the conversation the right way.\n\nInstead of only asking for answers, start sharing context, goals, and constraints. That’s when GitHub Copilot becomes far more useful.\n\n✅ What “Teammate Mode” Looks Like in Practice\n\n**1️⃣ Use Copilot to Think Before You Code**\n\nBefore writing a single line, try:\n\n`Help me think through the approach for this feature and call out potential risks.`\n\nThis shifts Copilot from code generator to planning partner.\n\n**2️⃣ Ask for Feedback, Not Just Output**\n\nInstead of:\n\n`Refactor this function`\n\nTry:\n\n`Review this function and suggest improvements for readability and maintainability.`\n\nYou get options, tradeoffs, and reasoning, not just rewritten code.\n\n**3️⃣ Let Copilot Ask Questions**\n\nA strong teammate does not assume.\n\n`Before making changes, ask clarifying questions about expected behavior and edge cases.`\n\nThis often prevents rework later.\n\n**4️⃣ Use Copilot as a Second Set of Eyes**\n\n`Review this code as if you were joining the project for the first time.`\n\nGreat for clarity, naming, and hidden assumptions.\n\nA Quick Reality Check\n\nGitHub Copilot is not a replacement for judgment.\n\nTeammates still review each other’s work. The same applies here.\n\nUse Copilot to move faster and think clearer, but keep responsibility where it belongs.\n\nQuick Takeaway\n\nIn 2026, the biggest gains with GitHub Copilot do not come from typing faster.\n\nThey come from working better. When you treat Copilot like a teammate, planning with it, reviewing with it, and thinking alongside it, the quality of your work improves across the board.",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Start collaborating with Copilot like a teammate, plan first, ask for feedback, and let it question assumptions.",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_blogs",
+  "Title": "From Tool to Teammate",
+  "ProcessedDate": "2026-01-08 18:03:34",
+  "Link": "https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html"
+}

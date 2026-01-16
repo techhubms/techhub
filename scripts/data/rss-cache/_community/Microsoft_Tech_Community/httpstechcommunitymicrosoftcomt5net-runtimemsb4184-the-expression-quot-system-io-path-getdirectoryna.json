@@ -1,0 +1,14 @@
+{
+  "Author": "PieterClaassens",
+  "ProcessedDate": "2026-01-14 17:06:56",
+  "Title": "MSB4184: The expression \"[System.IO.Path]::GetDirectoryName('')\" cannot be evaluate",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Description": "**Hi got this error now after I updated my VS IDE ....**\n\nThe path is not of a legal form. WinFormsSQLExamplePro C:\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Windows.targets\n\n$([System.IO.Path]::GetDirectoryName('%(\\_WinRTRuntimeDllReferencePath.FullPath)'))\n\n$([System.IO.Path]::GetDirectoryName('$(\\_WinRTRuntimeDllDirectory)'))\n\nNote the top most path entry contains a **'%'** character , whereas the 2nd path contains a **'$'** character...\n\nNot sure what is going on ... (happened after VS update)",
+  "Link": "https://techcommunity.microsoft.com/t5/net-runtime/msb4184-the-expression-quot-system-io-path-getdirectoryname-quot/m-p/4485586#M781",
+  "EnhancedContent": "**Hi got this error now after I updated my VS IDE ....**\n\nThe path is not of a legal form. WinFormsSQLExamplePro C:\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Windows.targets\n\n&lt;\\_WinRTRuntimeDllDirectory&gt;$([System.IO.Path]::GetDirectoryName('%(\\_WinRTRuntimeDllReferencePath.FullPath)'))&lt;/\\_WinRTRuntimeDllDirectory&gt;\n\n&lt;\\_CsWinRTOrTargetingPackLibDirectory&gt;$([System.IO.Path]::GetDirectoryName('$(\\_WinRTRuntimeDllDirectory)'))&lt;/\\_CsWinRTOrTargetingPackLibDirectory&gt;\n\nNote the top most path entry contains a **'%'** character , whereas the 2nd path contains a **'$'** character...\n\nNot sure what is going on ... (happened after VS update)",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2026-01-14T10:17:48+00:00"
+}
