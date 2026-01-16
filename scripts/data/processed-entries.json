@@ -23584,5 +23584,11 @@
     "timestamp": "2026-01-16 12:03:49 +00:00",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/",
     "reason": "Succesfully added: Assigned AI category because the content centers on embedding AI across organizational operations and features Microsoft AI products, including Copilot Studio (AI rules 1, 3, 4). Assigned Azure category as it discusses deploying models and apps in Azure environments, leveraging the Azure portal, and integrating with Azure-managed identities (Azure rules 1, 4, 5). Assigned ML category due to discussion of using and deploying machine learning models, blending ML workflows (ML rules 1, 2, 3, 5). Did not assign GitHub Copilot (content references Microsoft Copilot and Copilot Studio, which are business productivity and developer/maker tools, respectively), nor did I assign Coding or DevOps as the focus is primarily on strategy, not code implementation or DevOps practices. Security is not a focus beyond general governance statements. All content is technical in nature and does not trigger any exclusion rules."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-16 14:05:47 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on new Azure Storage features (Azure inclusion rule 1). Added 'Security' because the article emphasizes role-based access control (RBAC), identity delegation using Entra ID, and secure token-based access (Security rules 1, 3, 4, 7). No other categories apply, as the content does not cover AI, coding/development work, DevOps practices, ML, or GitHub Copilot features. The post meets length and language requirements, is technical and implementation-focused, and contains no exclusion triggers.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/announcing-public-preview-of-user-delegation-sas-for-azure/ba-p/4485693"
   }
 ]
