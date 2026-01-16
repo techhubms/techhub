@@ -11337,5 +11337,17 @@
     "timestamp": "2026-01-15 22:05:01 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/8RQW2FFLiTg",
     "reason": "No categories found: Content does not qualify for any categories. There is no main content body (content is null), and the description field is empty. Based on the title and tags, the video is about productivity tips—specifically, VS Code keyboard shortcuts. There is no evidence of Microsoft developer technology implementation, coding practices, DevOps, or any of the defined category inclusion topics. Additionally, the content is not provided, so I cannot assess for technical depth, integration, or context that would trigger category inclusion. According to the workflow (Chapter 2: 'When in doubt, exclude'), categories must not be assigned if there is insufficient information."
+  },
+  {
+    "reason": "No categories found: The provided content lacks sufficient technical details, as the 'content' field is null and the 'description' is empty. The input consists only of a title and tags, which reference changing fonts in Visual Studio Code. There is no substantive information about Microsoft development, coding, extensions, or configuration beyond the superficial topic indicated by the title. Without the main content, it is not possible to determine if this qualifies for any categories, as required by the inclusion rules.",
+    "collection": "videos",
+    "timestamp": "2026-01-16 07:06:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/CrQev1NVUPk"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/using-winui-3-without-xaml/m-p/4486235#M1282",
+    "collection": "community",
+    "timestamp": "2026-01-16 08:03:26 +00:00"
   }
 ]

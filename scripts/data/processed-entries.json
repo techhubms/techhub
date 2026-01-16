@@ -23578,5 +23578,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114",
     "reason": "Succesfully added: Assigned 'Azure' category because the content is centrally focused on deploying and optimizing PostgreSQL using Azure services (Azure NetApp Files, Azure VMs). 'DevOps' category is included since the main value is automation of cloud infrastructure and database provisioning via Infrastructure as Code (Terraform, ARM templates, PowerShell) as per DevOps rule 5 and 6. Did not assign 'Coding': while code is used, the focus is on infrastructure automation and configuration, not application or library coding as per Coding inclusion rules. Did not assign 'ML': while AI/ML workloads are mentioned as use cases, there is no substantive ML engineering or analytics implementation. Did not assign 'Security': while security best practices are part of the solution, the post does not provide unique or in-depth coverage of Microsoft security platforms or advanced security techniques but rather covers standard deployment security handling."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-16 12:03:49 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/",
+    "reason": "Succesfully added: Assigned AI category because the content centers on embedding AI across organizational operations and features Microsoft AI products, including Copilot Studio (AI rules 1, 3, 4). Assigned Azure category as it discusses deploying models and apps in Azure environments, leveraging the Azure portal, and integrating with Azure-managed identities (Azure rules 1, 4, 5). Assigned ML category due to discussion of using and deploying machine learning models, blending ML workflows (ML rules 1, 2, 3, 5). Did not assign GitHub Copilot (content references Microsoft Copilot and Copilot Studio, which are business productivity and developer/maker tools, respectively), nor did I assign Coding or DevOps as the focus is primarily on strategy, not code implementation or DevOps practices. Security is not a focus beyond general governance statements. All content is technical in nature and does not trigger any exclusion rules."
   }
 ]
