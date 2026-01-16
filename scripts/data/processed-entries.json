@@ -23602,5 +23602,11 @@
     "collection": "blogs",
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the entire blog focuses on practical usage patterns for GitHub Copilot (a developer tool), in line with AI Category Rule 2 and GitHub Copilot inclusion rules. No Coding category was assigned because the post is about workflow and strategy, not direct programming techniques or code examples. Content is fully technical and targets developers, with no generic exclusion rules triggered.",
     "timestamp": "2026-01-16 17:05:59 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-administration-client-support-for-the-azure-service/ba-p/4486433",
+    "timestamp": "2026-01-16 18:04:09 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content is focused on Azure Service Bus emulator features and their application in development (Azure rule 1). Assigned Coding category because the post describes local development workflows, SDK usage, and entity management scenarios with developer tooling (.NET, configuration, and programmatic management), covered under Coding rule 2 and 5. No other categories apply as there is no AI/ML, security, or DevOps process focus. This is technical, informative content meeting professional clarity and technical accuracy standards."
   }
 ]
