@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC"
-description: "This comprehensive guide by GeertVanTeylingen and collaborators explains how to automate the deployment of PostgreSQL databases on Azure VMs with Azure NetApp Files using Infrastructure as Code (IaC) templates. The article outlines technical challenges, IaC solutions via Terraform, ARM, and PowerShell, and covers performance, security, production-readiness, and multi-environment capabilities. It addresses use cases for development, testing, production, AI/ML workloads, and database migrations, providing practical guidance for teams adopting scalable, secure, and repeatable deployments on Azure."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC
+author: GeertVanTeylingen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-16 00:05:44 +00:00
-permalink: "/2026-01-16-Deploying-Production-Ready-PostgreSQL-on-Azure-VMs-with-Azure-NetApp-Files-Using-IaC.html"
-categories: ["Azure", "DevOps"]
-tags: ["AI", "AI/ML Workloads", "ARM Templates", "Automated Deployment", "Azure", "Azure NetApp Files", "Azure Virtual Machines", "Cloud Database", "Community", "Database Migration", "DevOps", "IaC", "Network Security Groups", "NFS", "Performance Optimization", "PostgreSQL", "PowerShell", "Production Workloads", "Snapshot Management", "Terraform"]
-tags_normalized: ["ai", "aislashml workloads", "arm templates", "automated deployment", "azure", "azure netapp files", "azure virtual machines", "cloud database", "community", "database migration", "devops", "iac", "network security groups", "nfs", "performance optimization", "postgresql", "powershell", "production workloads", "snapshot management", "terraform"]
+permalink: /azure/community/Deploying-Production-Ready-PostgreSQL-on-Azure-VMs-with-Azure-NetApp-Files-Using-IaC
+tags:
+- AI
+- AI/ML Workloads
+- ARM Templates
+- Automated Deployment
+- Azure
+- Azure NetApp Files
+- Azure Virtual Machines
+- Cloud Database
+- Community
+- Database Migration
+- DevOps
+- IaC
+- Network Security Groups
+- NFS
+- Performance Optimization
+- PostgreSQL
+- PowerShell
+- Production Workloads
+- Snapshot Management
+- Terraform
+section_names:
+- azure
+- devops
 ---
-
 GeertVanTeylingen, with co-authors Prabu Arjunan and Asutosh Panda, presents a practical guide to automating PostgreSQL deployments on Azure VMs with Azure NetApp Files. Learn how Infrastructure as Code and Azure services streamline repeatable, secure, and high-performance database environments.<!--excerpt_end-->
 
 # Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC

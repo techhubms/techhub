@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng"
-description: "This episode from the VS Code team explores the evolution of AI-powered agents in Visual Studio Code, focusing on Copilot Free, the new agent sessions UI, and the practical workflow benefits of orchestrating local, background, and cloud agents. Ben and Peng outline best practices for using agents in real-world development, such as building context in local chats, delegating tasks to background and cloud agents, hardening code via tests and linters, and utilizing artifact-based results like tests and screenshots. The conversation offers practical guidance for integrating AI agents into daily coding and previews future VS Code AI features."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=AtaehXB4hPQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+layout: post
+title: 'Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng'
+author: Visual Studio Code
+canonical_url: https://www.youtube.com/watch?v=AtaehXB4hPQ
+viewing_mode: internal
+feed_name: Visual Studio Code YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2026-01-12 08:00:18 +00:00
-permalink: "/2026-01-12-Orchestrating-Multiple-AI-Agents-in-VS-Code-Insights-from-Ben-and-Peng.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Sessions", "Agent UX", "AI", "AI Development Tools", "AI Orchestration", "Background Agents", "Ben", "Cloud Agents", "Code Artifacts", "Coding", "Copilot Agents", "Copilot Free", "Developer Workflow", "GitHub Copilot", "Linting", "Peng", "Session Management", "Tests", "Videos", "VS Code", "VS Code Agents", "VS Code Team"]
-tags_normalized: ["agent sessions", "agent ux", "ai", "ai development tools", "ai orchestration", "background agents", "ben", "cloud agents", "code artifacts", "coding", "copilot agents", "copilot free", "developer workflow", "github copilot", "linting", "peng", "session management", "tests", "videos", "vs code", "vs code agents", "vs code team"]
+permalink: /github-copilot/videos/Orchestrating-Multiple-AI-Agents-in-VS-Code-Insights-from-Ben-and-Peng
+tags:
+- Agent Sessions
+- Agent UX
+- AI
+- AI Development Tools
+- AI Orchestration
+- Background Agents
+- Ben
+- Cloud Agents
+- Code Artifacts
+- Coding
+- Copilot Agents
+- Copilot Free
+- Developer Workflow
+- GitHub Copilot
+- Linting
+- Peng
+- Session Management
+- Tests
+- Videos
+- VS Code
+- VS Code Agents
+- VS Code Team
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 In this episode, James interviews Ben and Peng from the VS Code team to discuss orchestrating multiple AI agents within Visual Studio Code. The conversation provides actionable advice for integrating Copilot agents into daily development workflows.<!--excerpt_end-->
 
 {% youtube AtaehXB4hPQ %}

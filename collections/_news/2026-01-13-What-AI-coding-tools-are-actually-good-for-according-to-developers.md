@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "What AI coding tools are actually good for, according to developers"
-description: "This article shares developer insights—from practical challenges to workflow integration—on how AI coding tools like GitHub Copilot should enhance development. It discusses the importance of developer control, minimizing interruptions, honest feedback, and how real-world experience is shaping AI's value to coders."
-author: "Cassidy Williams"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: What AI coding tools are actually good for, according to developers
+author: Cassidy Williams
+canonical_url: https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2026-01-13 18:39:24 +00:00
-permalink: "/2026-01-13-What-AI-coding-tools-are-actually-good-for-according-to-developers.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Tools", "AI Empowerment", "Automation", "Beta Testing", "Code Suggestions", "Contextual AI", "Developer Experience", "Developer Feedback", "Developer Workflow", "Generative AI", "GitHub Copilot", "News", "Productivity", "Software Development", "Telemetry"]
-tags_normalized: ["ai", "ai and ml", "ai coding tools", "ai empowerment", "automation", "beta testing", "code suggestions", "contextual ai", "developer experience", "developer feedback", "developer workflow", "generative ai", "github copilot", "news", "productivity", "software development", "telemetry"]
+permalink: /github-copilot/news/What-AI-coding-tools-are-actually-good-for-according-to-developers
+tags:
+- AI
+- AI & ML
+- AI Coding Tools
+- AI Empowerment
+- Automation
+- Beta Testing
+- Code Suggestions
+- Contextual AI
+- Developer Experience
+- Developer Feedback
+- Developer Workflow
+- Generative AI
+- GitHub Copilot
+- News
+- Productivity
+- Software Development
+- Telemetry
+section_names:
+- ai
+- github-copilot
 ---
-
 Cassidy Williams highlights how developer experience and honest feedback drive the evolution of AI coding tools like GitHub Copilot, emphasizing the importance of control and workflow integration.<!--excerpt_end-->
 
 # What AI coding tools are actually good for, according to developers

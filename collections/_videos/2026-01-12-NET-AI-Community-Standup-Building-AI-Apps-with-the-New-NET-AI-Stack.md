@@ -1,20 +1,41 @@
----
-layout: "post"
-title: ".NET AI Community Standup: Building AI Apps with the New .NET AI Stack"
-description: "An unscripted community conversation featuring Bruno Capuano and Jeremy Likness, focusing on practical, hands-on development with the latest .NET AI stack. Topics include building agents in .NET, new development toolkits, the role of DevUI, and actionable advice for developers integrating AI into .NET applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MH-_J8gLZn4"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: '.NET AI Community Standup: Building AI Apps with the New .NET AI Stack'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=MH-_J8gLZn4
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-12 23:01:43 +00:00
-permalink: "/2026-01-12-NET-AI-Community-Standup-Building-AI-Apps-with-the-New-NET-AI-Stack.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET AI Stack", "AI", "AI Agents", "AI Development", "Bruno Capuano", "C#", "Coding", "Community Standup", "Demo", "Developer", "Developer Community", "Developer Tools", "Development Patterns", "DevUI", "Dotnetdeveloper", "Jeremy Likness", "Machine Learning", "Microsoft", "Practical AI", "Software Developer", "Software Engineering", "Videos"]
-tags_normalized: ["dotnet", "dotnet ai stack", "ai", "ai agents", "ai development", "bruno capuano", "csharp", "coding", "community standup", "demo", "developer", "developer community", "developer tools", "development patterns", "devui", "dotnetdeveloper", "jeremy likness", "machine learning", "microsoft", "practical ai", "software developer", "software engineering", "videos"]
+permalink: /ai/videos/NET-AI-Community-Standup-Building-AI-Apps-with-the-New-NET-AI-Stack
+tags:
+- .NET
+- .NET AI Stack
+- AI
+- AI Agents
+- AI Development
+- Bruno Capuano
+- C#
+- Coding
+- Community Standup
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Development Patterns
+- DevUI
+- Dotnetdeveloper
+- Jeremy Likness
+- Machine Learning
+- Microsoft
+- Practical AI
+- Software Developer
+- Software Engineering
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 Bruno Capuano and Jeremy Likness host an unscripted .NET AI Community Standup, offering real-world advice and discussion on building AI applications using the new .NET AI stack.<!--excerpt_end-->
 
 {% youtube MH-_J8gLZn4 %}

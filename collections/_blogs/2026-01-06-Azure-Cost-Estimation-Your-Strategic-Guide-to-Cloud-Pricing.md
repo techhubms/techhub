@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Cost Estimation: Your Strategic Guide to Cloud Pricing"
-description: "This blog post by Thomas Maurer, featuring Britt from Microsoft Azure, provides a comprehensive overview of strategies and tools for estimating, managing, and optimizing cloud costs with Microsoft Azure. The content covers key Azure pricing tools, a structured framework for cost estimation, and ongoing optimization practices using native Azure services."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+layout: post
+title: 'Azure Cost Estimation: Your Strategic Guide to Cloud Pricing'
+author: Thomas Maurer
+canonical_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
+viewing_mode: external
+feed_name: Thomas Maurer's Blog
+feed_url: https://www.thomasmaurer.ch/feed/
 date: 2026-01-06 06:23:00 +00:00
-permalink: "/2026-01-06-Azure-Cost-Estimation-Your-Strategic-Guide-to-Cloud-Pricing.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Cost Estimation", "Azure Cost Management", "Azure Essentials Show", "Azure Migrate", "Azure Monitor", "Azure Pricing", "Azure Pricing Calculator", "Blogs", "Budgeting", "Cloud", "Cloud Architecture", "Cloud Pricing", "Cloud Strategy", "Cost Management", "Cost Optimization", "Microsoft", "Microsoft Azure", "Microsoft Copilot in Azure", "Pricing", "Resource Configuration", "Uncategorized", "Usage Estimation", "Video"]
-tags_normalized: ["azure", "azure advisor", "azure cost estimation", "azure cost management", "azure essentials show", "azure migrate", "azure monitor", "azure pricing", "azure pricing calculator", "blogs", "budgeting", "cloud", "cloud architecture", "cloud pricing", "cloud strategy", "cost management", "cost optimization", "microsoft", "microsoft azure", "microsoft copilot in azure", "pricing", "resource configuration", "uncategorized", "usage estimation", "video"]
+permalink: /azure/blogs/Azure-Cost-Estimation-Your-Strategic-Guide-to-Cloud-Pricing
+tags:
+- Azure
+- Azure Advisor
+- Azure Cost Estimation
+- Azure Cost Management
+- Azure Essentials Show
+- Azure Migrate
+- Azure Monitor
+- Azure Pricing
+- Azure Pricing Calculator
+- Blogs
+- Budgeting
+- Cloud
+- Cloud Architecture
+- Cloud Pricing
+- Cloud Strategy
+- Cost Management
+- Cost Optimization
+- Microsoft
+- Microsoft Azure
+- Microsoft Copilot in Azure
+- Pricing
+- Resource Configuration
+- Uncategorized
+- Usage Estimation
+- Video
+section_names:
+- azure
 ---
-
 Thomas Maurer, joined by Britt from Microsoft Azure, explains essential strategies and tools to estimate and optimize cloud costs using Microsoft Azure’s pricing resources and cost management features.<!--excerpt_end-->
 
 # Azure Cost Estimation: Your Strategic Guide to Cloud Pricing

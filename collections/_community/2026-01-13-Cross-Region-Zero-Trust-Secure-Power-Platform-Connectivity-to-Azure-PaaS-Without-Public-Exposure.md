@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Cross-Region Zero Trust: Secure Power Platform Connectivity to Azure PaaS Without Public Exposure"
-description: "This guide by Idit_Bnaya details a robust Zero Trust architecture for connecting Power Platform environments (including Dynamics 365, Power Apps, Power Automate) to locked-down Azure PaaS resources across regions, using Private Endpoints, Azure Firewall as DNS Proxy, User-Assigned Managed Identity, Enterprise Policies and automation scripts. The walkthrough includes high-availability (HA) design with regional pairs, VNet injection, and end-to-end network and identity configuration, enabling secure, private, and fully governed cross-region data flows that avoid the public internet."
-author: "Idit_Bnaya"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/cross-region-zero-trust-connecting-power-platform-to-azure-paas/ba-p/4484995"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Cross-Region Zero Trust: Secure Power Platform Connectivity to Azure PaaS Without Public Exposure'
+author: Idit_Bnaya
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cross-region-zero-trust-connecting-power-platform-to-azure-paas/ba-p/4484995
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 19:09:12 +00:00
-permalink: "/2026-01-13-Cross-Region-Zero-Trust-Secure-Power-Platform-Connectivity-to-Azure-PaaS-Without-Public-Exposure.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Azure Firewall", "Azure PaaS", "Community", "Customer Managed Key", "Dataverse", "DNS Proxy", "Enterprise Policy", "High Availability", "Key Vault", "Log Analytics", "Power Apps", "Power Automate", "Power Platform", "Private Endpoint", "RBAC", "Regional Pair", "Security", "SQL Database", "Storage Account", "User Assigned Managed Identity", "Virtual Network", "VNet Injection", "Zero Trust"]
-tags_normalized: ["automation", "azure", "azure firewall", "azure paas", "community", "customer managed key", "dataverse", "dns proxy", "enterprise policy", "high availability", "key vault", "log analytics", "power apps", "power automate", "power platform", "private endpoint", "rbac", "regional pair", "security", "sql database", "storage account", "user assigned managed identity", "virtual network", "vnet injection", "zero trust"]
+permalink: /azure/community/Cross-Region-Zero-Trust-Secure-Power-Platform-Connectivity-to-Azure-PaaS-Without-Public-Exposure
+tags:
+- Automation
+- Azure
+- Azure Firewall
+- Azure PaaS
+- Community
+- Customer Managed Key
+- Dataverse
+- DNS Proxy
+- Enterprise Policy
+- High Availability
+- Key Vault
+- Log Analytics
+- Power Apps
+- Power Automate
+- Power Platform
+- Private Endpoint
+- RBAC
+- Regional Pair
+- Security
+- SQL Database
+- Storage Account
+- User Assigned Managed Identity
+- Virtual Network
+- VNet Injection
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Idit_Bnaya presents a hands-on walkthrough for connecting Power Platform to Azure PaaS services across regions with strict Zero Trust principles, focusing on private network links, managed identity, custom orchestration, and verifiable security.<!--excerpt_end-->
 
 # Cross-Region Zero Trust: Connecting Power Platform to Azure PaaS Across Regions

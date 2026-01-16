@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How to Use Git Branches for Beginners"
-description: "This beginner-friendly tutorial explains the importance of using git branches to safely experiment or add new features to your codebase. It demonstrates how to create and switch branches with a single command, and how to manage and view your repository's branches. Designed to help new developers navigate Git and GitHub with confidence."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/3Fh1A3KGk-I"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: How to Use Git Branches for Beginners
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/3Fh1A3KGk-I
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-14 17:00:11 +00:00
-permalink: "/2026-01-14-How-to-Use-Git-Branches-for-Beginners.html"
-categories: ["DevOps"]
-tags: ["Beginner Guide", "Branches", "Developer Workflow", "DevOps", "Git", "Git Checkout", "GitHub", "GitHubForBeginners", "Repository Management", "Source Control", "Tutorial", "Version Control", "Videos"]
-tags_normalized: ["beginner guide", "branches", "developer workflow", "devops", "git", "git checkout", "github", "githubforbeginners", "repository management", "source control", "tutorial", "version control", "videos"]
+permalink: /devops/videos/How-to-Use-Git-Branches-for-Beginners
+tags:
+- Beginner Guide
+- Branches
+- Developer Workflow
+- DevOps
+- Git
+- Git Checkout
+- GitHub
+- GitHubForBeginners
+- Repository Management
+- Source Control
+- Tutorial
+- Version Control
+- Videos
+section_names:
+- devops
 ---
-
 GitHub offers a helpful guide by GitHub on creating and working with git branches, aimed at beginners who want to safely experiment and manage their code.<!--excerpt_end-->
 
 {% youtube 3Fh1A3KGk-I %}

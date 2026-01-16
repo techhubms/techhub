@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework"
-description: "A comprehensive six-part livestream series led by Pamela Fox diving into foundational and advanced techniques for building AI agents in Python using the Microsoft Agent Framework. Attendees will learn about agent architectures, tool integration, memory, workflow orchestration, monitoring, evaluation, and human-in-the-loop patterns—all with hands-on demos and code examples."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework'
+author: Pamela_Fox
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 08:00:00 +00:00
-permalink: "/2026-01-15-Python-Agents-Livestream-Series-on-Building-AI-Agents-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "Aspire Dashboard", "Azure", "Azure AI Evaluation", "Codespaces", "Community", "DevUI", "Human in The Loop", "MCP Server", "Memory Management", "Microsoft Agent Framework", "ML", "OpenTelemetry", "PostgreSQL", "Python", "Redis", "Retrieval Augmented Generation", "SQLite", "Supervisory Agents", "Workflow Orchestration"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "aspire dashboard", "azure", "azure ai evaluation", "codespaces", "community", "devui", "human in the loop", "mcp server", "memory management", "microsoft agent framework", "ml", "opentelemetry", "postgresql", "python", "redis", "retrieval augmented generation", "sqlite", "supervisory agents", "workflow orchestration"]
+permalink: /ai/community/Python-Agents-Livestream-Series-on-Building-AI-Agents-with-Microsoft-Agent-Framework
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- Aspire Dashboard
+- Azure
+- Azure AI Evaluation
+- Codespaces
+- Community
+- DevUI
+- Human in The Loop
+- MCP Server
+- Memory Management
+- Microsoft Agent Framework
+- ML
+- OpenTelemetry
+- PostgreSQL
+- Python
+- Redis
+- Retrieval Augmented Generation
+- SQLite
+- Supervisory Agents
+- Workflow Orchestration
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Pamela Fox invites you to a free, six-part livestream series on building advanced AI agents in Python using the Microsoft Agent Framework. The series covers agent fundamentals, memory, RAG, workflow orchestration, monitoring, and HITL workflows with live demos and practical examples.<!--excerpt_end-->
 
 # Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework

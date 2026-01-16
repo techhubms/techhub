@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Upcoming Free Workshops: Agentic Azure Logic Apps & Copilot Studio Integration"
-description: "This post announces two free workshops led by KentWeareMSFT focused on building agentic business processes using Azure Logic Apps and Copilot Studio MCP Servers. Attendees will learn about connecting enterprise systems via Logic Apps and developing automated agent-based workflows in a hands-on, practical format."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Upcoming Free Workshops: Agentic Azure Logic Apps & Copilot Studio Integration'
+author: KentWeareMSFT
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 21:52:15 +00:00
-permalink: "/2026-01-09-Upcoming-Free-Workshops-Agentic-Azure-Logic-Apps-and-Copilot-Studio-Integration.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "Automation", "Azure", "Azure Logic Apps", "Business Process Automation", "Community", "Copilot Studio", "Enterprise Integration", "Logic Apps Standard", "MCP Servers", "Microsoft Azure", "Workshops"]
-tags_normalized: ["agentic workflows", "ai", "automation", "azure", "azure logic apps", "business process automation", "community", "copilot studio", "enterprise integration", "logic apps standard", "mcp servers", "microsoft azure", "workshops"]
+permalink: /ai/community/Upcoming-Free-Workshops-Agentic-Azure-Logic-Apps-and-Copilot-Studio-Integration
+tags:
+- Agentic Workflows
+- AI
+- Automation
+- Azure
+- Azure Logic Apps
+- Business Process Automation
+- Community
+- Copilot Studio
+- Enterprise Integration
+- Logic Apps Standard
+- MCP Servers
+- Microsoft Azure
+- Workshops
+section_names:
+- ai
+- azure
 ---
-
 KentWeareMSFT invites users to join two free workshops dedicated to Azure Logic Apps and Copilot Studio integrations, focusing on agentic business process automation and enterprise connectivity.<!--excerpt_end-->
 
 # Upcoming Agentic Azure Logic Apps Workshops

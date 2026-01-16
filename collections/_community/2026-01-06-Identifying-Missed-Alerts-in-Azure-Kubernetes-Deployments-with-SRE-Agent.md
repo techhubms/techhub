@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Identifying Missed Alerts in Azure Kubernetes Deployments with SRE Agent"
-description: "This post shares a practical developer’s experience of discovering alerting blind spots in an Azure Kubernetes Service (AKS) setup with Azure Monitor, Kubernetes, and Azure Cache for Redis. It demonstrates how Azure SRE Agent and GitHub integration can surface undetected failure modes, automate diagnostics, and provide concrete remediation for monitoring gaps."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/find-the-alerts-you-didn-t-know-you-were-missing-with-azure-sre/ba-p/4483494"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Identifying Missed Alerts in Azure Kubernetes Deployments with SRE Agent
+author: dchelupati
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/find-the-alerts-you-didn-t-know-you-were-missing-with-azure-sre/ba-p/4483494
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-06 17:39:38 +00:00
-permalink: "/2026-01-06-Identifying-Missed-Alerts-in-Azure-Kubernetes-Deployments-with-SRE-Agent.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Alerting", "Azure", "Azure Cache For Redis", "Azure DevOps", "Azure Monitor", "Azure SRE Agent", "Bicep", "Cloud Operations", "Community", "Container Orchestration", "Credential Rotation", "DevOps", "GitHub MCP", "Incident Response", "KQL", "Kubernetes", "Liveness Probe", "Log Analytics", "Monitoring", "Security", "Subagent", "Synthetic Tests"]
-tags_normalized: ["aks", "alerting", "azure", "azure cache for redis", "azure devops", "azure monitor", "azure sre agent", "bicep", "cloud operations", "community", "container orchestration", "credential rotation", "devops", "github mcp", "incident response", "kql", "kubernetes", "liveness probe", "log analytics", "monitoring", "security", "subagent", "synthetic tests"]
+permalink: /azure/community/Identifying-Missed-Alerts-in-Azure-Kubernetes-Deployments-with-SRE-Agent
+tags:
+- AKS
+- Alerting
+- Azure
+- Azure Cache For Redis
+- Azure DevOps
+- Azure Monitor
+- Azure SRE Agent
+- Bicep
+- Cloud Operations
+- Community
+- Container Orchestration
+- Credential Rotation
+- DevOps
+- GitHub MCP
+- Incident Response
+- KQL
+- Kubernetes
+- Liveness Probe
+- Log Analytics
+- Monitoring
+- Security
+- Subagent
+- Synthetic Tests
+section_names:
+- azure
+- devops
+- security
 ---
-
 dchelupati describes how gaps in Azure Monitor alert coverage became apparent during a Redis credential rotation in an AKS application, and how Azure SRE Agent and GitHub MCP integration accelerated incident diagnosis and alert remediation.<!--excerpt_end-->
 
 # Identifying Missed Alerts in Azure Kubernetes Deployments with SRE Agent

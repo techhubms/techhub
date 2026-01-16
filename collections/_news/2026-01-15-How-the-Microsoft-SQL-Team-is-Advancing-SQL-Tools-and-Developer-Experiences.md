@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "How the Microsoft SQL Team is Advancing SQL Tools and Developer Experiences"
-description: "This article details Microsoft's ongoing investments in SQL Server, Azure SQL, and SQL database tooling across platforms such as SSMS, Visual Studio Code, and Microsoft Fabric. It highlights enhancements like GitHub Copilot integration, modern deployment practices, DevOps support, and AI-enabled features for database professionals, developers, and data engineers."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How the Microsoft SQL Team is Advancing SQL Tools and Developer Experiences
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-15 09:00:00 +00:00
-permalink: "/2026-01-15-How-the-Microsoft-SQL-Team-is-Advancing-SQL-Tools-and-Developer-Experiences.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Azure", "Azure Portal", "Azure SQL", "CI/CD", "Coding", "Data Engineering", "Database Deployment", "Database DevOps", "Database Projects", "DevOps", "Fabric", "GitHub Copilot", "Microsoft Fabric", "MSSQL Extension", "News", "SDK Style SQL Projects", "Source Control", "SQL Server", "SSMS", "VS Code"]
-tags_normalized: ["ai", "ai assisted development", "azure", "azure portal", "azure sql", "cislashcd", "coding", "data engineering", "database deployment", "database devops", "database projects", "devops", "fabric", "github copilot", "microsoft fabric", "mssql extension", "news", "sdk style sql projects", "source control", "sql server", "ssms", "vs code"]
+permalink: /github-copilot/news/How-the-Microsoft-SQL-Team-is-Advancing-SQL-Tools-and-Developer-Experiences
+tags:
+- AI
+- AI Assisted Development
+- Azure
+- Azure Portal
+- Azure SQL
+- CI/CD
+- Coding
+- Data Engineering
+- Database Deployment
+- Database DevOps
+- Database Projects
+- DevOps
+- Fabric
+- GitHub Copilot
+- Microsoft Fabric
+- MSSQL Extension
+- News
+- SDK Style SQL Projects
+- Source Control
+- SQL Server
+- SSMS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 Microsoft Fabric Blog discusses the latest investments in SQL tooling, including integration with GitHub Copilot, DevOps features, and AI-assisted development to enhance productivity for database professionals and developers.<!--excerpt_end-->
 
 # How the Microsoft SQL Team is Advancing SQL Tools and Developer Experiences

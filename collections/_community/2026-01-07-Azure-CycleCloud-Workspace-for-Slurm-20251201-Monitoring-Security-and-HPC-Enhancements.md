@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Azure CycleCloud Workspace for Slurm 2025.12.01: Monitoring, Security, and HPC Enhancements"
-description: "This release announcement by xpillons details the 2025.12.01 update to Azure CycleCloud Workspace for Slurm, introducing integrated Prometheus/Grafana monitoring, Entra ID SSO authentication, ARM64 compute support, and compatibility with new Linux distributions. It provides actionable steps for deploying and enabling these new features in HPC environments."
-author: "xpillons"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure CycleCloud Workspace for Slurm 2025.12.01: Monitoring, Security, and HPC Enhancements'
+author: xpillons
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 09:22:19 +00:00
-permalink: "/2026-01-07-Azure-CycleCloud-Workspace-for-Slurm-20251201-Monitoring-Security-and-HPC-Enhancements.html"
-categories: ["Azure", "Security"]
-tags: ["AlmaLinux 9", "ARM64", "Authentication", "Azure", "Azure CycleCloud", "Azure Managed Grafana", "Azure Monitor", "Cluster Management", "Community", "Entra ID", "Grafana", "High Performance Computing", "HPC", "Linux", "Monitoring", "Open OnDemand", "Prometheus", "Resource Management", "Security", "Single Sign On", "Slurm", "Ubuntu 24.04", "User Managed Identity"]
-tags_normalized: ["almalinux 9", "arm64", "authentication", "azure", "azure cyclecloud", "azure managed grafana", "azure monitor", "cluster management", "community", "entra id", "grafana", "high performance computing", "hpc", "linux", "monitoring", "open ondemand", "prometheus", "resource management", "security", "single sign on", "slurm", "ubuntu 24dot04", "user managed identity"]
+permalink: /azure/community/Azure-CycleCloud-Workspace-for-Slurm-20251201-Monitoring-Security-and-HPC-Enhancements
+tags:
+- AlmaLinux 9
+- ARM64
+- Authentication
+- Azure
+- Azure CycleCloud
+- Azure Managed Grafana
+- Azure Monitor
+- Cluster Management
+- Community
+- Entra ID
+- Grafana
+- High Performance Computing
+- HPC
+- Linux
+- Monitoring
+- Open OnDemand
+- Prometheus
+- Resource Management
+- Security
+- Single Sign On
+- Slurm
+- Ubuntu 24.04
+- User Managed Identity
+section_names:
+- azure
+- security
 ---
-
 xpillons introduces key improvements in the Azure CycleCloud Workspace for Slurm 2025.12.01 release, highlighting new monitoring capabilities, security enhancements via Entra ID SSO, and expanded platform support for HPC deployments.<!--excerpt_end-->
 
 # Azure CycleCloud Workspace for Slurm 2025.12.01: Major Enhancements

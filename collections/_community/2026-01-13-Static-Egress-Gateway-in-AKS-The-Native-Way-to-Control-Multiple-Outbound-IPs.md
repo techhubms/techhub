@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs"
-description: "This post by pjlewis revisits the challenge of providing multiple outbound IP addresses in Azure Kubernetes Service (AKS), now using the native Static Egress Gateway feature. It provides hands-on guidance to implementation, contrasts with older approaches, and includes considerations for BYO networking and private egress scenarios."
-author: "pjlewis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs'
+author: pjlewis
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 00:22:15 +00:00
-permalink: "/2026-01-13-Static-Egress-Gateway-in-AKS-The-Native-Way-to-Control-Multiple-Outbound-IPs.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["AKS", "Az CLI", "Azure", "BYO Networking", "Coding", "Community", "DevOps", "Egress IP", "Gateway Node Pool", "Kubectl", "Kubernetes", "Kubernetes CRD", "LoadBalancer", "Network Architecture", "Network Security", "Private Egress", "Public IP Prefix", "Security", "Static Egress Gateway", "User Defined Routing", "YADA Demo App"]
-tags_normalized: ["aks", "az cli", "azure", "byo networking", "coding", "community", "devops", "egress ip", "gateway node pool", "kubectl", "kubernetes", "kubernetes crd", "loadbalancer", "network architecture", "network security", "private egress", "public ip prefix", "security", "static egress gateway", "user defined routing", "yada demo app"]
+permalink: /coding/community/Static-Egress-Gateway-in-AKS-The-Native-Way-to-Control-Multiple-Outbound-IPs
+tags:
+- AKS
+- Az CLI
+- Azure
+- BYO Networking
+- Coding
+- Community
+- DevOps
+- Egress IP
+- Gateway Node Pool
+- Kubectl
+- Kubernetes
+- Kubernetes CRD
+- LoadBalancer
+- Network Architecture
+- Network Security
+- Private Egress
+- Public IP Prefix
+- Security
+- Static Egress Gateway
+- User Defined Routing
+- YADA Demo App
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 pjlewis demonstrates how to manage multiple outbound egress IPs natively in Azure Kubernetes Service using the Static Egress Gateway feature, providing clear, actionable implementation steps and security-focused considerations.<!--excerpt_end-->
 
 # Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs

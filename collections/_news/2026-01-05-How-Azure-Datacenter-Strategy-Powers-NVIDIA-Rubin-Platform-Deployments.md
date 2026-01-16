@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Azure Datacenter Strategy Powers NVIDIA Rubin Platform Deployments"
-description: "This article explores Microsoft's comprehensive datacenter planning that enables the rapid adoption and seamless integration of NVIDIA's next-generation Rubin AI platform. It details Azure's engineered infrastructure, collaborative design with NVIDIA, and the technical innovations driving large-scale, high-performance AI workloads."
-author: "Rani Borkar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: How Azure Datacenter Strategy Powers NVIDIA Rubin Platform Deployments
+author: Rani Borkar
+canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2026-01-05 23:00:00 +00:00
-permalink: "/2026-01-05-How-Azure-Datacenter-Strategy-Powers-NVIDIA-Rubin-Platform-Deployments.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "AI Superfactory", "AKS", "Azure", "Azure Boost", "Azure Fairwater", "Cluster Orchestration", "CycleCloud", "Datacenter", "Datacenter Engineering", "GPU Clusters", "High Performance Computing", "InfiniBand Networking", "Liquid Cooling", "News", "NVIDIA Rubin", "NVIDIA Superchips", "NVLink", "Pod Exchange", "Scalability", "Thermal Management"]
-tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "ai superfactory", "aks", "azure", "azure boost", "azure fairwater", "cluster orchestration", "cyclecloud", "datacenter", "datacenter engineering", "gpu clusters", "high performance computing", "infiniband networking", "liquid cooling", "news", "nvidia rubin", "nvidia superchips", "nvlink", "pod exchange", "scalability", "thermal management"]
+permalink: /ai/news/How-Azure-Datacenter-Strategy-Powers-NVIDIA-Rubin-Platform-Deployments
+tags:
+- AI
+- AI + Machine Learning
+- AI Infrastructure
+- AI Superfactory
+- AKS
+- Azure
+- Azure Boost
+- Azure Fairwater
+- Cluster Orchestration
+- CycleCloud
+- Datacenter
+- Datacenter Engineering
+- GPU Clusters
+- High Performance Computing
+- InfiniBand Networking
+- Liquid Cooling
+- News
+- NVIDIA Rubin
+- NVIDIA Superchips
+- NVLink
+- Pod Exchange
+- Scalability
+- Thermal Management
+section_names:
+- ai
+- azure
 ---
-
 Rani Borkar presents an in-depth look at how Microsoft Azure's long-term datacenter engineering and collaboration with NVIDIA empower fast, large-scale deployment of NVIDIA Rubin AI platforms.<!--excerpt_end-->
 
 # Microsoft’s Strategic AI Datacenter Planning Enables Seamless, Large-Scale NVIDIA Rubin Deployments

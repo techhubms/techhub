@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Announces Acquisition of Osmos to Advance Data Engineering in Fabric"
-description: "Microsoft has announced the acquisition of Osmos, an agentic AI data engineering platform. This move aims to strengthen Microsoft Fabric by streamlining data workflows, leveraging AI agents for data preparation, and enabling more seamless analytics and AI-ready data assets in OneLake. The Osmos team will join Microsoft's Fabric engineering organization, furthering the vision for autonomous, simplified, and intuitive data experiences within the unified data platform."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Announces Acquisition of Osmos to Advance Data Engineering in Fabric
+author: stclarke
+canonical_url: https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-05 18:40:45 +00:00
-permalink: "/2026-01-05-Microsoft-Announces-Acquisition-of-Osmos-to-Advance-Data-Engineering-in-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Infrastructure", "Autonomous Agents", "Azure", "Azure Data Analytics", "Big Data", "Company News", "Data Engineering", "Data Platform", "Data Preparation", "Data Unification", "Microsoft Fabric", "ML", "News", "OneLake", "Osmos", "Power BI"]
-tags_normalized: ["agentic ai", "ai", "ai infrastructure", "autonomous agents", "azure", "azure data analytics", "big data", "company news", "data engineering", "data platform", "data preparation", "data unification", "microsoft fabric", "ml", "news", "onelake", "osmos", "power bi"]
+permalink: /ai/news/Microsoft-Announces-Acquisition-of-Osmos-to-Advance-Data-Engineering-in-Fabric
+tags:
+- Agentic AI
+- AI
+- AI Infrastructure
+- Autonomous Agents
+- Azure
+- Azure Data Analytics
+- Big Data
+- Company News
+- Data Engineering
+- Data Platform
+- Data Preparation
+- Data Unification
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Osmos
+- Power BI
+section_names:
+- ai
+- azure
+- ml
 ---
-
 stclarke reports on Microsoft's acquisition of Osmos, an AI-driven data engineering platform, to enhance autonomous data workflows and analytics within Microsoft Fabric.<!--excerpt_end-->
 
 # Microsoft Announces Acquisition of Osmos to Advance Data Engineering in Fabric

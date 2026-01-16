@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How Microsoft Unifies Privacy and Security to Build Trust"
-description: "This article by Terrell Cox, Microsoft’s Deputy CISO for Privacy and Policy, explores how Microsoft combines privacy and security through advanced tools, compliance initiatives, and a philosophy that treats both as essential, integrated aspects of trust-building. Key Microsoft technologies such as Microsoft Entra, Microsoft Purview, and Defender for Cloud are highlighted as pillars of this unified approach. The piece also examines Microsoft’s adaptation to regulations like GDPR, NIS2, DORA, DPDP, and the EU AI Act, demonstrating a commitment to proactive innovation and compliance at scale."
-author: "Terrell Cox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: How Microsoft Unifies Privacy and Security to Build Trust
+author: Terrell Cox
+canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-13 17:00:00 +00:00
-permalink: "/2026-01-13-How-Microsoft-Unifies-Privacy-and-Security-to-Build-Trust.html"
-categories: ["Azure", "Security"]
-tags: ["AI", "Azure", "Cloud Security", "Compliance", "Conditional Access", "Customer Lockbox", "Data Protection", "DORA", "DPDP", "EU AI Act", "GDPR", "Identity Management", "Information Governance", "Microsoft 365", "Microsoft Defender For Cloud", "Microsoft Entra", "Microsoft Entra ID", "Microsoft Purview", "News", "NIS2", "Privacy", "Security", "Zero Trust"]
-tags_normalized: ["ai", "azure", "cloud security", "compliance", "conditional access", "customer lockbox", "data protection", "dora", "dpdp", "eu ai act", "gdpr", "identity management", "information governance", "microsoft 365", "microsoft defender for cloud", "microsoft entra", "microsoft entra id", "microsoft purview", "news", "nis2", "privacy", "security", "zero trust"]
+permalink: /azure/news/How-Microsoft-Unifies-Privacy-and-Security-to-Build-Trust
+tags:
+- AI
+- Azure
+- Cloud Security
+- Compliance
+- Conditional Access
+- Customer Lockbox
+- Data Protection
+- DORA
+- DPDP
+- EU AI Act
+- GDPR
+- Identity Management
+- Information Governance
+- Microsoft 365
+- Microsoft Defender For Cloud
+- Microsoft Entra
+- Microsoft Entra ID
+- Microsoft Purview
+- News
+- NIS2
+- Privacy
+- Security
+- Zero Trust
+section_names:
+- azure
+- security
 ---
-
 Terrell Cox, Vice President for Microsoft Security and Deputy CISO for Privacy and Policy, details Microsoft’s integrated strategy for privacy and security, offering insights into global regulatory compliance and technical safeguards.<!--excerpt_end-->
 
 # How Microsoft Unifies Privacy and Security to Build Trust

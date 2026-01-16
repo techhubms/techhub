@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Exploring AI Features in Azure Managed PostgreSQL"
-description: "This video from John Savill's Technical Training explores the integration of AI capabilities within Azure Managed PostgreSQL. Topics include using AI extensions, creating embeddings, leveraging semantic search, GitHub Copilot interaction, and integrating with Azure Foundry. The video highlights practical AI-powered workflows and tools for database developers working in the Microsoft Azure ecosystem."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=daDtYv94bN8"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: Exploring AI Features in Azure Managed PostgreSQL
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=daDtYv94bN8
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2026-01-05 09:39:54 +00:00
-permalink: "/2026-01-05-Exploring-AI-Features-in-Azure-Managed-PostgreSQL.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Extensions", "Azure", "Azure Cloud", "Azure Foundry", "Azure PostgreSQL", "Cloud", "Coding", "Database", "Database AI", "Embedding", "Embeddings", "Microsoft", "Microsoft Azure", "Postgresql", "Postgress", "Schema Visualization", "Semantic Reranking", "Semantic Search", "Vector", "Vector Database", "Videos", "VS Code Extension"]
-tags_normalized: ["ai", "ai extensions", "azure", "azure cloud", "azure foundry", "azure postgresql", "cloud", "coding", "database", "database ai", "embedding", "embeddings", "microsoft", "microsoft azure", "postgresql", "postgress", "schema visualization", "semantic reranking", "semantic search", "vector", "vector database", "videos", "vs code extension"]
+permalink: /ai/videos/Exploring-AI-Features-in-Azure-Managed-PostgreSQL
+tags:
+- AI
+- AI Extensions
+- Azure
+- Azure Cloud
+- Azure Foundry
+- Azure PostgreSQL
+- Cloud
+- Coding
+- Database
+- Database AI
+- Embedding
+- Embeddings
+- Microsoft
+- Microsoft Azure
+- Postgresql
+- Postgress
+- Schema Visualization
+- Semantic Reranking
+- Semantic Search
+- Vector
+- Vector Database
+- Videos
+- VS Code Extension
+section_names:
+- ai
+- azure
+- coding
 ---
-
 John Savill presents a comprehensive overview of AI features available within Azure Managed PostgreSQL, outlining integration methods, developer tooling, and practical scenarios for leveraging AI and vector search in the Microsoft cloud.<!--excerpt_end-->
 
 {% youtube daDtYv94bN8 %}

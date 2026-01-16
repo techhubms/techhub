@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility"
-description: "This news feature explores how Microsoft and its researchers are applying AI to transform four key areas: medical care, responsible AI design, scientific discovery, and the future of work. Interviews with subject matter experts outline real-world AI applications, evolving methodologies, and ethical considerations that accompany rapid technological change."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility
+author: stclarke
+canonical_url: https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 17:15:11 +00:00
-permalink: "/2026-01-14-4-Ways-AI-is-Reshaping-Discovery-Health-Work-and-Responsibility.html"
-categories: ["AI"]
-tags: ["AI", "AI Accountability", "AI Agents", "AI Ethics", "AI in Healthcare", "AI in Science", "AI Skilling", "Cross Disciplinary AI", "Future Of Work", "Inclusion", "Microsoft 365 Copilot", "Microsoft Research", "News", "Personalized Medicine", "Responsible AI", "Scientific Discovery"]
-tags_normalized: ["ai", "ai accountability", "ai agents", "ai ethics", "ai in healthcare", "ai in science", "ai skilling", "cross disciplinary ai", "future of work", "inclusion", "microsoft 365 copilot", "microsoft research", "news", "personalized medicine", "responsible ai", "scientific discovery"]
+permalink: /ai/news/4-Ways-AI-is-Reshaping-Discovery-Health-Work-and-Responsibility
+tags:
+- AI
+- AI Accountability
+- AI Agents
+- AI Ethics
+- AI in Healthcare
+- AI in Science
+- AI Skilling
+- Cross Disciplinary AI
+- Future Of Work
+- Inclusion
+- Microsoft 365 Copilot
+- Microsoft Research
+- News
+- Personalized Medicine
+- Responsible AI
+- Scientific Discovery
+section_names:
+- ai
 ---
-
 stclarke reports on how Microsoft researchers and experts describe AI’s impact in medicine, responsible systems design, science, and workplace transformation, offering valuable perspectives on real-world applications and challenges.<!--excerpt_end-->
 
 # 4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility

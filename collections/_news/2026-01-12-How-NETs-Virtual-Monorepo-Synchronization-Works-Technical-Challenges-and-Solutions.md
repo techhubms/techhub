@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How .NET’s Virtual Monorepo Synchronization Works: Technical Challenges and Solutions"
-description: "This article by Přemek Vysoký offers a comprehensive exploration of the strategies, technical decisions, and custom tools the .NET team uses to synchronize dozens of product repositories and infrastructure with .NET’s Virtual Monolithic Repository (VMR), highlighting the evolution from tarball-based builds to two-way git-powered code flows, along with the current and future challenges of large-scale source control."
-author: "Přemek Vysoký"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'How .NET’s Virtual Monorepo Synchronization Works: Technical Challenges and Solutions'
+author: Přemek Vysoký
+canonical_url: https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-12 17:00:00 +00:00
-permalink: "/2026-01-12-How-NETs-Virtual-Monorepo-Synchronization-Works-Technical-Challenges-and-Solutions.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET Internals", "Azure DevOps", "Build Infrastructure", "Coding", "Dependency Flow", "Developer Stories", "DevOps", "Git", "Infrastructure", "Monorepo", "News", "Patch Management", "Release Management", "Repository Synchronization", "Source Control", "Two Way Sync", "Unified Build", "Virtual Monolithic Repository", "VMR"]
-tags_normalized: ["dotnet", "dotnet internals", "azure devops", "build infrastructure", "coding", "dependency flow", "developer stories", "devops", "git", "infrastructure", "monorepo", "news", "patch management", "release management", "repository synchronization", "source control", "two way sync", "unified build", "virtual monolithic repository", "vmr"]
+permalink: /coding/news/How-NETs-Virtual-Monorepo-Synchronization-Works-Technical-Challenges-and-Solutions
+tags:
+- .NET
+- .NET Internals
+- Azure DevOps
+- Build Infrastructure
+- Coding
+- Dependency Flow
+- Developer Stories
+- DevOps
+- Git
+- Infrastructure
+- Monorepo
+- News
+- Patch Management
+- Release Management
+- Repository Synchronization
+- Source Control
+- Two Way Sync
+- Unified Build
+- Virtual Monolithic Repository
+- VMR
+section_names:
+- coding
+- devops
 ---
-
 Přemek Vysoký details the deep technical efforts behind synchronizing .NET’s many repositories in their Virtual Monolithic Repository, highlighting custom solutions, lessons learned, and ongoing DevOps challenges.<!--excerpt_end-->
 
 # How We Synchronize .NET’s Virtual Monorepo

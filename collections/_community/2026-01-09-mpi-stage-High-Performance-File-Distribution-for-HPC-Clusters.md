@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "mpi-stage: High-Performance File Distribution for HPC Clusters"
-description: "This post by pauledwards introduces mpi-stage, a lightweight tool for efficient file distribution across large HPC clusters using MPI broadcasts. Targeting scenarios like Azure CycleCloud-based GPU clusters, it solves the bottleneck of staging large container images by leveraging MPI's collective communication abilities over high-speed backend networks. The article details practical workflow integration, performance metrics, and real-world usage for distributing files such as Squashfs images to nodes' local NVMe storage. It is particularly relevant for users architecting or operating large-scale containerized workloads on Azure HPC infrastructure."
-author: "pauledwards"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'mpi-stage: High-Performance File Distribution for HPC Clusters'
+author: pauledwards
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 09:49:38 +00:00
-permalink: "/2026-01-09-mpi-stage-High-Performance-File-Distribution-for-HPC-Clusters.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure CycleCloud", "Blobfuse2", "Cluster Networking", "Community", "Container Images", "DevOps", "File Distribution", "GB300", "High Performance Computing", "HPC", "InfiniBand", "Job Orchestration", "Linux", "MPI", "Mpi Stage", "NVMe", "Parallel Computing", "Sbcast", "Shared Filesystem", "Slurm", "Squashfs", "Srun"]
-tags_normalized: ["azure", "azure cyclecloud", "blobfuse2", "cluster networking", "community", "container images", "devops", "file distribution", "gb300", "high performance computing", "hpc", "infiniband", "job orchestration", "linux", "mpi", "mpi stage", "nvme", "parallel computing", "sbcast", "shared filesystem", "slurm", "squashfs", "srun"]
+permalink: /azure/community/mpi-stage-High-Performance-File-Distribution-for-HPC-Clusters
+tags:
+- Azure
+- Azure CycleCloud
+- Blobfuse2
+- Cluster Networking
+- Community
+- Container Images
+- DevOps
+- File Distribution
+- GB300
+- High Performance Computing
+- HPC
+- InfiniBand
+- Job Orchestration
+- Linux
+- MPI
+- Mpi Stage
+- NVMe
+- Parallel Computing
+- Sbcast
+- Shared Filesystem
+- Slurm
+- Squashfs
+- Srun
+section_names:
+- azure
+- devops
 ---
-
 pauledwards demonstrates how mpi-stage leverages MPI broadcasts to efficiently distribute large files, such as container images, across Azure-based HPC clusters—improving startup times and minimizing shared file system bottlenecks.<!--excerpt_end-->
 
 # Efficiently Staging Large Files Across Hundreds of Nodes Using MPI Broadcasts

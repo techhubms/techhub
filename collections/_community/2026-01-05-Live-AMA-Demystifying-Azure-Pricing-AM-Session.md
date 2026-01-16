@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Live AMA: Demystifying Azure Pricing (AM Session)"
-description: "A live AMA session dedicated to breaking down and clarifying Azure pricing. The session covers strategies and tools for estimating cloud costs, leveraging Azure’s cost-saving features, and optimizing workloads for cost efficiency. Attendees are invited to ask the Azure product team questions in a live chat format."
-author: "Aaron_Bode"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Live AMA: Demystifying Azure Pricing (AM Session)'
+author: Aaron_Bode
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-05 21:17:45 +00:00
-permalink: "/2026-01-05-Live-AMA-Demystifying-Azure-Pricing-AM-Session.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Best Practices", "Azure Hybrid Benefit", "Azure Pricing", "Azure Pricing Calculator", "Cloud Migration", "Cloud Optimization", "Cloud Spend", "Community", "Cost Management", "Performance Tuning", "Reservations", "Savings Plans"]
-tags_normalized: ["azure", "azure best practices", "azure hybrid benefit", "azure pricing", "azure pricing calculator", "cloud migration", "cloud optimization", "cloud spend", "community", "cost management", "performance tuning", "reservations", "savings plans"]
+permalink: /azure/community/Live-AMA-Demystifying-Azure-Pricing-AM-Session
+tags:
+- Azure
+- Azure Best Practices
+- Azure Hybrid Benefit
+- Azure Pricing
+- Azure Pricing Calculator
+- Cloud Migration
+- Cloud Optimization
+- Cloud Spend
+- Community
+- Cost Management
+- Performance Tuning
+- Reservations
+- Savings Plans
+section_names:
+- azure
 ---
-
 Aaron_Bode hosts a live AMA to clarify Azure pricing. The session equips attendees with practical strategies and tools for forecasting, managing, and reducing Azure costs while maintaining performance.<!--excerpt_end-->
 
 # Live AMA: Demystifying Azure Pricing (AM Session)

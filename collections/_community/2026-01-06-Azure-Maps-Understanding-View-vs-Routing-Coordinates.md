@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Azure Maps: Understanding View vs. Routing Coordinates"
-description: "This article explains the distinction between view (display) and routing (access) coordinates in Azure Maps. It discusses why these differences matter, how Azure Maps exposes each type, and practical scenarios to avoid common mistakes in mapping and navigation workflows."
-author: "IoTGirl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Azure Maps: Understanding View vs. Routing Coordinates'
+author: IoTGirl
+canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-06 20:27:42 +00:00
-permalink: "/2026-01-06-Azure-Maps-Understanding-View-vs-Routing-Coordinates.html"
-categories: ["Azure"]
-tags: ["Access Points", "API Usage", "Azure", "Azure Maps", "Community", "Display Coordinates", "Geocoding", "Location Intelligence", "Map UI", "Navigation", "Routing", "Spatial Data"]
-tags_normalized: ["access points", "api usage", "azure", "azure maps", "community", "display coordinates", "geocoding", "location intelligence", "map ui", "navigation", "routing", "spatial data"]
+permalink: /azure/community/Azure-Maps-Understanding-View-vs-Routing-Coordinates
+tags:
+- Access Points
+- API Usage
+- Azure
+- Azure Maps
+- Community
+- Display Coordinates
+- Geocoding
+- Location Intelligence
+- Map UI
+- Navigation
+- Routing
+- Spatial Data
+section_names:
+- azure
 ---
-
 IoTGirl from Microsoft breaks down how Azure Maps provides both view and routing coordinates, detailing why each matters for developers and the pitfalls of misusing them in applications.<!--excerpt_end-->
 
 # Azure Maps: Understanding View vs. Routing Coordinates

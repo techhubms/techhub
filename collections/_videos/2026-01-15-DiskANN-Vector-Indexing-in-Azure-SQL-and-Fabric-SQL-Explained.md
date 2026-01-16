@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained"
-description: "This video provides an in-depth look at how vector indexing is implemented in Azure SQL and Fabric SQL using the DiskANN algorithm. It covers how to create and use vector indexes, discusses limitations in the current Public Preview, and explores innovative solutions made possible by integrating AI, vector search, and data storage within the Microsoft SQL Server engine."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NOPTkQcEew4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=NOPTkQcEew4
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-15 17:00:42 +00:00
-permalink: "/2026-01-15-DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure SQL", "Cloud Computing", "Cloud Database", "Data Solutions", "Database", "Demo", "Dev", "Development", "DiskANN", "Fabric SQL", "Ignite", "Machine Learning", "Microsoft", "Microsoft SQL Engine", "ML", "Public Preview", "SQL Server", "Tech", "Technology", "Vector Indexing", "Vector Search", "Videos"]
-tags_normalized: ["ai", "azure", "azure sql", "cloud computing", "cloud database", "data solutions", "database", "demo", "dev", "development", "diskann", "fabric sql", "ignite", "machine learning", "microsoft", "microsoft sql engine", "ml", "public preview", "sql server", "tech", "technology", "vector indexing", "vector search", "videos"]
+permalink: /ai/videos/DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained
+tags:
+- AI
+- Azure
+- Azure SQL
+- Cloud Computing
+- Cloud Database
+- Data Solutions
+- Database
+- Demo
+- Dev
+- Development
+- DiskANN
+- Fabric SQL
+- Ignite
+- Machine Learning
+- Microsoft
+- Microsoft SQL Engine
+- ML
+- Public Preview
+- SQL Server
+- Tech
+- Technology
+- Vector Indexing
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Developer presents an overview of vector indexing in Azure SQL and Fabric SQL with DiskANN, demonstrating how AI and machine learning are integrated for powerful data solutions.<!--excerpt_end-->
 
 {% youtube NOPTkQcEew4 %}

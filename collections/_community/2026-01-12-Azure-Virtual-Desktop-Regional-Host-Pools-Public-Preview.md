@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Virtual Desktop Regional Host Pools Public Preview"
-description: "This article by TomHickling introduces the public preview of regional host pools for Azure Virtual Desktop. It explains the architectural enhancements for service resilience, discusses the benefits for resiliency and data sovereignty, details how to enable and deploy regional host pools using PowerShell and Azure Portal, and outlines current preview limitations and migration planning."
-author: "TomHickling"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Azure Virtual Desktop Regional Host Pools Public Preview
+author: TomHickling
+canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-12 20:30:42 +00:00
-permalink: "/2026-01-12-Azure-Virtual-Desktop-Regional-Host-Pools-Public-Preview.html"
-categories: ["Azure"]
-tags: ["Admin Preview", "Azure", "Azure Portal", "Azure Regions", "Azure Virtual Desktop", "Cloud Infrastructure", "Cloud Services", "Community", "Data Sovereignty", "Database Architecture", "Deployment", "Host Pools", "Migration", "PowerShell", "Regional Host Pools", "Resiliency"]
-tags_normalized: ["admin preview", "azure", "azure portal", "azure regions", "azure virtual desktop", "cloud infrastructure", "cloud services", "community", "data sovereignty", "database architecture", "deployment", "host pools", "migration", "powershell", "regional host pools", "resiliency"]
+permalink: /azure/community/Azure-Virtual-Desktop-Regional-Host-Pools-Public-Preview
+tags:
+- Admin Preview
+- Azure
+- Azure Portal
+- Azure Regions
+- Azure Virtual Desktop
+- Cloud Infrastructure
+- Cloud Services
+- Community
+- Data Sovereignty
+- Database Architecture
+- Deployment
+- Host Pools
+- Migration
+- PowerShell
+- Regional Host Pools
+- Resiliency
+section_names:
+- azure
 ---
-
 TomHickling presents the public preview of regional host pools for Azure Virtual Desktop, highlighting the infrastructure's resiliency improvements and deployment guidance for administrators.<!--excerpt_end-->
 
 # Azure Virtual Desktop Regional Host Pools Public Preview

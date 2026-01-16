@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhancements to GitHub Copilot Bring Your Own Key (BYOK) Capabilities"
-description: "This update covers recent enhancements to GitHub Copilot's Bring Your Own Key (BYOK) feature for enterprises, including expanded API support, integration with more LLM providers, new configuration options like context window control, and improved streaming responses for developer productivity."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Enhancements to GitHub Copilot Bring Your Own Key (BYOK) Capabilities
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 20:01:40 +00:00
-permalink: "/2026-01-15-Enhancements-to-GitHub-Copilot-Bring-Your-Own-Key-BYOK-Capabilities.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Configuration", "AI", "Anthropic", "API Integration", "AWS Bedrock", "Bring Your Own Key", "BYOK", "Copilot", "Copilot Chat", "Enterprise Security", "GitHub Copilot", "Google AI Studio", "LLM Providers", "Microsoft Foundry", "News", "OpenAI", "Responses API", "Streaming Responses", "Xai"]
-tags_normalized: ["admin configuration", "ai", "anthropic", "api integration", "aws bedrock", "bring your own key", "byok", "copilot", "copilot chat", "enterprise security", "github copilot", "google ai studio", "llm providers", "microsoft foundry", "news", "openai", "responses api", "streaming responses", "xai"]
+permalink: /github-copilot/news/Enhancements-to-GitHub-Copilot-Bring-Your-Own-Key-BYOK-Capabilities
+tags:
+- Admin Configuration
+- AI
+- Anthropic
+- API Integration
+- AWS Bedrock
+- Bring Your Own Key
+- BYOK
+- Copilot
+- Copilot Chat
+- Enterprise Security
+- GitHub Copilot
+- Google AI Studio
+- LLM Providers
+- Microsoft Foundry
+- News
+- OpenAI
+- Responses API
+- Streaming Responses
+- Xai
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details enhancements to GitHub Copilot's BYOK feature, highlighting new provider integrations, expanded API support, and configuration improvements for enterprise customers.<!--excerpt_end-->
 
 # GitHub Copilot Bring Your Own Key (BYOK) Enhancements

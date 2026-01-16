@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI-Driven Agents Transforming Supply Chain Management at Blue Yonder"
-description: "This Microsoft Ignite session features Chris Burchett from Blue Yonder discussing how AI-driven agents are revolutionizing supply chain management. The conversation covers automated disruption responses, decision optimization, integration challenges, and real-world industry use cases in retail and manufacturing."
-author: "Microsoft Cloud"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=RZ9DvZC9g6E"
-viewing_mode: "internal"
-feed_name: "Microsoft Cloud YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+﻿---
+layout: post
+title: AI-Driven Agents Transforming Supply Chain Management at Blue Yonder
+author: Microsoft Cloud
+canonical_url: https://www.youtube.com/watch?v=RZ9DvZC9g6E
+viewing_mode: internal
+feed_name: Microsoft Cloud YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2026-01-09 17:00:46 +00:00
-permalink: "/2026-01-09-AI-Driven-Agents-Transforming-Supply-Chain-Management-at-Blue-Yonder.html"
-categories: ["AI"]
-tags: ["#microsoft", "#microsoftcloud", "AI", "AI Challenges", "AI Driven Agents", "Automation", "Blue Yonder", "Data Integration", "Decision Automation", "Enterprise AI", "Explanation in AI", "Manufacturing", "Microsoft Cloud", "Microsoft Ignite", "Retail", "Supply Chain Management", "Videos"]
-tags_normalized: ["sharpmicrosoft", "sharpmicrosoftcloud", "ai", "ai challenges", "ai driven agents", "automation", "blue yonder", "data integration", "decision automation", "enterprise ai", "explanation in ai", "manufacturing", "microsoft cloud", "microsoft ignite", "retail", "supply chain management", "videos"]
+permalink: /ai/videos/AI-Driven-Agents-Transforming-Supply-Chain-Management-at-Blue-Yonder
+tags:
+- '#microsoft'
+- '#microsoftcloud'
+- AI
+- AI Challenges
+- AI Driven Agents
+- Automation
+- Blue Yonder
+- Data Integration
+- Decision Automation
+- Enterprise AI
+- Explanation in AI
+- Manufacturing
+- Microsoft Cloud
+- Microsoft Ignite
+- Retail
+- Supply Chain Management
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Cloud hosts Chris Burchett from Blue Yonder for a session on how AI-driven agents are transforming supply chain management through automation, data integration, and real-world industry solutions.<!--excerpt_end-->
 
 {% youtube RZ9DvZC9g6E %}

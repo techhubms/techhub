@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Generative AI with Large Language Models in C# in 2026"
-description: "This article provides .NET and C# developers with a thorough breakdown of generative AI concepts, the evolution of large language models, and the Microsoft ecosystem's latest tools for building AI-powered applications. It covers foundational AI/LLM terms, engineering principles, model management using Azure OpenAI Service, Microsoft Foundry, GitHub Models, Semantic Kernel, and integration strategies for local and cloud-based solutions."
-author: "Jeremy Likness"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: Generative AI with Large Language Models in C# in 2026
+author: Jeremy Likness
+canonical_url: https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-05 18:05:00 +00:00
-permalink: "/2026-01-05-Generative-AI-with-Large-Language-Models-in-C-in-2026.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic Workflows", "AI", "AI Engineering", "Azure", "Azure OpenAI", "Azure OpenAI Service", "C#", "ChatGPT", "Coding", "Embeddings", "Generative AI", "GitHub Models", "Large Language Models", "MCP", "MEAI", "Microsoft Extensions For AI", "Microsoft Foundry", "News", "Ollama", "Prompt Engineering", "Rag", "Semantic Kernel", "Tokenization", "Vector Databases"]
-tags_normalized: ["dotnet", "agentic workflows", "ai", "ai engineering", "azure", "azure openai", "azure openai service", "csharp", "chatgpt", "coding", "embeddings", "generative ai", "github models", "large language models", "mcp", "meai", "microsoft extensions for ai", "microsoft foundry", "news", "ollama", "prompt engineering", "rag", "semantic kernel", "tokenization", "vector databases"]
+permalink: /ai/news/Generative-AI-with-Large-Language-Models-in-C-in-2026
+tags:
+- .NET
+- Agentic Workflows
+- AI
+- AI Engineering
+- Azure
+- Azure OpenAI
+- Azure OpenAI Service
+- C#
+- ChatGPT
+- Coding
+- Embeddings
+- Generative AI
+- GitHub Models
+- Large Language Models
+- MCP
+- MEAI
+- Microsoft Extensions For AI
+- Microsoft Foundry
+- News
+- Ollama
+- Prompt Engineering
+- Rag
+- Semantic Kernel
+- Tokenization
+- Vector Databases
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Jeremy Likness introduces .NET developers to the essentials of generative AI with large language models, focusing on C# and the evolving Microsoft platform ecosystem.<!--excerpt_end-->
 
 # Generative AI with Large Language Models in C# in 2026

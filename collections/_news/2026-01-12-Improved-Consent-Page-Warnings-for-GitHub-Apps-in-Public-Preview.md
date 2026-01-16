@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Improved Consent Page Warnings for GitHub Apps in Public Preview"
-description: "This update discusses a recent change to the GitHub Apps consent page. Moving forward, the 'Act on your behalf' warning will no longer appear when an application is only requesting read access to a user's profile information, reducing confusion for users and support issues for developers. The update ensures better clarity for sign-in-only scenarios and maintains transparency for broader permission requests."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Improved Consent Page Warnings for GitHub Apps in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-12 22:16:06 +00:00
-permalink: "/2026-01-12-Improved-Consent-Page-Warnings-for-GitHub-Apps-in-Public-Preview.html"
-categories: ["DevOps"]
-tags: ["Application Security", "Authentication", "Consent Page", "Developer Tools", "DevOps", "Ecosystem & Accessibility", "GitHub Apps", "Improvement", "News", "OAuth", "Public Preview", "Sign in Experience", "User Permissions", "User Profile"]
-tags_normalized: ["application security", "authentication", "consent page", "developer tools", "devops", "ecosystem and accessibility", "github apps", "improvement", "news", "oauth", "public preview", "sign in experience", "user permissions", "user profile"]
+permalink: /devops/news/Improved-Consent-Page-Warnings-for-GitHub-Apps-in-Public-Preview
+tags:
+- Application Security
+- Authentication
+- Consent Page
+- Developer Tools
+- DevOps
+- Ecosystem & Accessibility
+- GitHub Apps
+- Improvement
+- News
+- OAuth
+- Public Preview
+- Sign in Experience
+- User Permissions
+- User Profile
+section_names:
+- devops
 ---
-
 Allison details an update to the GitHub Apps consent page, clarifying when the 'Act on your behalf' warning is shown for app authorizations, improving both user experience and developer support.<!--excerpt_end-->
 
 # Improved Consent Page Warnings for GitHub Apps in Public Preview

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Secure and Intelligent: Queryable Encryption and Vector Search in MongoDB EF Core Provider"
-description: "This article, authored by Rishit Bhatia and Luce Carter, explores the latest capabilities in the MongoDB EF Core provider for .NET. It details how developers can implement Queryable Encryption to secure sensitive data while retaining queryability, and leverage Vector Search for AI-driven semantic similarity search directly within EF Core projects. The post includes configuration code, practical examples, and links to further resources for getting started with these advanced features."
-author: "Rishit Bhatia, Luce Carter"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: 'Secure and Intelligent: Queryable Encryption and Vector Search in MongoDB EF Core Provider'
+author: Rishit Bhatia, Luce Carter
+canonical_url: https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-07 18:05:00 +00:00
-permalink: "/2026-01-07-Secure-and-Intelligent-Queryable-Encryption-and-Vector-Search-in-MongoDB-EF-Core-Provider.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "C#", "Coding", "Data Security", "Database Development", "EF", "EF Core", "Encryption", "LINQ", "Mongodb", "News", "Queryable Encryption", "Rag", "Semantic Search", "Vector Embeddings", "Vector Search", "Vectorsearch"]
-tags_normalized: ["dotnet", "ai", "csharp", "coding", "data security", "database development", "ef", "ef core", "encryption", "linq", "mongodb", "news", "queryable encryption", "rag", "semantic search", "vector embeddings", "vector search", "vectorsearch"]
+permalink: /ai/news/Secure-and-Intelligent-Queryable-Encryption-and-Vector-Search-in-MongoDB-EF-Core-Provider
+tags:
+- .NET
+- AI
+- C#
+- Coding
+- Data Security
+- Database Development
+- EF
+- EF Core
+- Encryption
+- LINQ
+- Mongodb
+- News
+- Queryable Encryption
+- Rag
+- Semantic Search
+- Vector Embeddings
+- Vector Search
+- Vectorsearch
+section_names:
+- ai
+- coding
 ---
-
 Rishit Bhatia and Luce Carter discuss how developers can secure data and enable AI-powered search using Queryable Encryption and Vector Search in the MongoDB EF Core provider, with hands-on guidance and code samples.<!--excerpt_end-->
 
 # Secure and Intelligent: Queryable Encryption and Vector Search in MongoDB EF Core Provider

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Deploying Siemens NX on Azure NVads V710 v5-Series with AMD Radeon GPUs"
-description: "This technical overview by Sunita_AZ0708 details how Siemens NX, an advanced CAD/CAM/CAE platform, performs on Azure NVads V710 v5-series virtual machines with AMD Radeon Pro V710 GPUs. The article covers architecture, GPU acceleration requirements, benchmark results, and the business benefits of running high-end engineering workloads in the Azure cloud."
-author: "Sunita_AZ0708"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Deploying Siemens NX on Azure NVads V710 v5-Series with AMD Radeon GPUs
+author: Sunita_AZ0708
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 16:38:08 +00:00
-permalink: "/2026-01-07-Deploying-Siemens-NX-on-Azure-NVads-V710-v5-Series-with-AMD-Radeon-GPUs.html"
-categories: ["Azure"]
-tags: ["Accelerated Networking", "AMD Radeon Pro V710", "Azure", "Azure NVads V710", "Azure Storage", "Azure Virtual Machines", "CAM", "Cloud Architecture", "Community", "GPU Acceleration", "High Performance Computing", "OpenGL", "Remote Engineering", "Siemens NX", "Virtual Desktop"]
-tags_normalized: ["accelerated networking", "amd radeon pro v710", "azure", "azure nvads v710", "azure storage", "azure virtual machines", "cam", "cloud architecture", "community", "gpu acceleration", "high performance computing", "opengl", "remote engineering", "siemens nx", "virtual desktop"]
+permalink: /azure/community/Deploying-Siemens-NX-on-Azure-NVads-V710-v5-Series-with-AMD-Radeon-GPUs
+tags:
+- Accelerated Networking
+- AMD Radeon Pro V710
+- Azure
+- Azure NVads V710
+- Azure Storage
+- Azure Virtual Machines
+- CAM
+- Cloud Architecture
+- Community
+- GPU Acceleration
+- High Performance Computing
+- OpenGL
+- Remote Engineering
+- Siemens NX
+- Virtual Desktop
+section_names:
+- azure
 ---
-
 Sunita_AZ0708 explores how Siemens NX runs on Azure NVads V710 v5 VMs with AMD Radeon GPUs, covering architecture details, performance benchmarks, and benefits for cloud-based engineering teams.<!--excerpt_end-->
 
 # Siemens NX on Azure NVads V710 v5-Series: Technical Overview

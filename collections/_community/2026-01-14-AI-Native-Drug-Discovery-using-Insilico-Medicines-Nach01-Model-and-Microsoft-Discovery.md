@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "AI-Native Drug Discovery using Insilico Medicine’s Nach01 Model and Microsoft Discovery"
-description: "This community post explores the integration of Insilico Medicine’s Nach01 foundation model with Microsoft Discovery, showcasing how AI and cloud-powered workflows can revolutionize drug discovery. The content details how the platform orchestrates multi-step computational biology projects, enables reproducibility, and leverages Azure's scalable infrastructure for scientific R&D."
-author: "JohnGruszczyk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-native-drug-discovery-using-insilico-medicine-s-nach01-model/ba-p/4484497"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: AI-Native Drug Discovery using Insilico Medicine’s Nach01 Model and Microsoft Discovery
+author: JohnGruszczyk
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-native-drug-discovery-using-insilico-medicine-s-nach01-model/ba-p/4484497
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-14 14:00:00 +00:00
-permalink: "/2026-01-14-AI-Native-Drug-Discovery-using-Insilico-Medicines-Nach01-Model-and-Microsoft-Discovery.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["ADMET Prediction", "AI", "AI Workflows", "Azure", "Azure ML Workspace", "Biotechnology", "Chemical Design", "Cloud Orchestration", "Cognition Engine", "Community", "Drug Discovery", "Foundation Models", "Generative AI", "GraphRAG", "Insilico Medicine", "Machine Learning", "Microsoft Discovery", "ML", "Molecular Property Prediction", "Multimodal AI", "Nach01", "Reproducible Research", "Scalable Compute"]
-tags_normalized: ["admet prediction", "ai", "ai workflows", "azure", "azure ml workspace", "biotechnology", "chemical design", "cloud orchestration", "cognition engine", "community", "drug discovery", "foundation models", "generative ai", "graphrag", "insilico medicine", "machine learning", "microsoft discovery", "ml", "molecular property prediction", "multimodal ai", "nach01", "reproducible research", "scalable compute"]
+permalink: /ai/community/AI-Native-Drug-Discovery-using-Insilico-Medicines-Nach01-Model-and-Microsoft-Discovery
+tags:
+- ADMET Prediction
+- AI
+- AI Workflows
+- Azure
+- Azure ML Workspace
+- Biotechnology
+- Chemical Design
+- Cloud Orchestration
+- Cognition Engine
+- Community
+- Drug Discovery
+- Foundation Models
+- Generative AI
+- GraphRAG
+- Insilico Medicine
+- Machine Learning
+- Microsoft Discovery
+- ML
+- Molecular Property Prediction
+- Multimodal AI
+- Nach01
+- Reproducible Research
+- Scalable Compute
+section_names:
+- ai
+- azure
+- ml
 ---
-
 JohnGruszczyk discusses how Insilico Medicine’s Nach01 model integrates with Microsoft Discovery on Azure, enabling AI-driven, reproducible, and scalable drug discovery workflows for researchers.<!--excerpt_end-->
 
 # AI-Native Drug Discovery using Insilico Medicine’s Nach01 Model and Microsoft Discovery

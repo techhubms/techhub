@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe"
-description: "A community post discussing recurring, unplanned platform-initiated redeployments of Azure v6 series virtual machines in the North Europe region. The author seeks others experiencing similar issues, shares observations about Azure Service Health notifications, and requests insights regarding possible hardware or host OS problems."
-author: "Cans"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe
+author: Cans
+canonical_url: https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 15:51:21 +00:00
-permalink: "/2026-01-09-Frequent-Platform-Initiated-Azure-VM-Redeployments-v6-Series-in-North-Europe.html"
-categories: ["Azure"]
-tags: ["Auto Recovery", "Azure", "Azure Support", "Azure VM", "Cloud Infrastructure", "Community", "Firmware Issue", "Host OS", "North Europe", "Platform Initiated Redeployment", "Service Health", "Unplanned Downtime", "V6 Series", "Virtual Machines"]
-tags_normalized: ["auto recovery", "azure", "azure support", "azure vm", "cloud infrastructure", "community", "firmware issue", "host os", "north europe", "platform initiated redeployment", "service health", "unplanned downtime", "v6 series", "virtual machines"]
+permalink: /azure/community/Frequent-Platform-Initiated-Azure-VM-Redeployments-v6-Series-in-North-Europe
+tags:
+- Auto Recovery
+- Azure
+- Azure Support
+- Azure VM
+- Cloud Infrastructure
+- Community
+- Firmware Issue
+- Host OS
+- North Europe
+- Platform Initiated Redeployment
+- Service Health
+- Unplanned Downtime
+- V6 Series
+- Virtual Machines
+section_names:
+- azure
 ---
-
 Cans describes recurring issues with Azure v6 series virtual machines in North Europe, noting frequent platform-initiated redeployments due to host OS and firmware problems, and invites community feedback.<!--excerpt_end-->
 
 # Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe

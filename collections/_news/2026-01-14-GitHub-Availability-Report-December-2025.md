@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Availability Report: December 2025"
-description: "A detailed incident report for December 2025, documenting root causes, mitigation, and infrastructure improvements after five different service degradations across GitHub, including GitHub Actions, Copilot Code Review, Copilot policies, and platform availability."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-december-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: 'GitHub Availability Report: December 2025'
+author: Jakub Oleksy
+canonical_url: https://github.blog/news-insights/company-news/github-availability-report-december-2025/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2026-01-14 22:06:49 +00:00
-permalink: "/2026-01-14-GitHub-Availability-Report-December-2025.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "API Reliability", "Availability Engineering", "Cloud Infrastructure", "Company News", "Copilot Code Review", "Copilot Policies", "DevOps", "GitHub Actions", "GitHub Availability Report", "GitHub Copilot", "Incident Analysis", "Incident Mitigation", "Kafka", "Monitoring", "News", "News & Insights", "Operational Resilience", "Platform Engineering", "Queue Management", "Service Degradation"]
-tags_normalized: ["ai", "api reliability", "availability engineering", "cloud infrastructure", "company news", "copilot code review", "copilot policies", "devops", "github actions", "github availability report", "github copilot", "incident analysis", "incident mitigation", "kafka", "monitoring", "news", "news and insights", "operational resilience", "platform engineering", "queue management", "service degradation"]
+permalink: /github-copilot/news/GitHub-Availability-Report-December-2025
+tags:
+- AI
+- API Reliability
+- Availability Engineering
+- Cloud Infrastructure
+- Company News
+- Copilot Code Review
+- Copilot Policies
+- DevOps
+- GitHub Actions
+- GitHub Availability Report
+- GitHub Copilot
+- Incident Analysis
+- Incident Mitigation
+- Kafka
+- Monitoring
+- News
+- News & Insights
+- Operational Resilience
+- Platform Engineering
+- Queue Management
+- Service Degradation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Jakub Oleksy provides a comprehensive account of GitHub's service stability in December 2025, covering incidents affecting GitHub Actions, Copilot, and core platform availability, along with mitigations and improvements.<!--excerpt_end-->
 
 # GitHub Availability Report: December 2025

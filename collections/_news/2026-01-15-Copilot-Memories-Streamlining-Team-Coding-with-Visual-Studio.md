@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Copilot Memories: Streamlining Team Coding with Visual Studio"
-description: "Explore how the Copilot Memories feature in Visual Studio helps development teams streamline code standards and project guidelines. This guide explains how Copilot Memories intelligently detects, organizes, and shares team preferences, ensuring code consistency and smoother onboarding for new developers."
-author: "Jessie Houghton"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/copilot-memories/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Copilot Memories: Streamlining Team Coding with Visual Studio'
+author: Jessie Houghton
+canonical_url: https://devblogs.microsoft.com/visualstudio/copilot-memories/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2026-01-15 13:00:33 +00:00
-permalink: "/2026-01-15-Copilot-Memories-Streamlining-Team-Coding-with-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Code Consistency", "Code Standards", "Coding", "Coding Best Practices", "Copilot Memories", "Developer Workflow", "GitHub Copilot", "News", "Onboarding", "Project Guidelines", "Team Collaboration", "VS"]
-tags_normalized: ["ai", "ai assisted development", "code consistency", "code standards", "coding", "coding best practices", "copilot memories", "developer workflow", "github copilot", "news", "onboarding", "project guidelines", "team collaboration", "vs"]
+permalink: /github-copilot/news/Copilot-Memories-Streamlining-Team-Coding-with-Visual-Studio
+tags:
+- AI
+- AI Assisted Development
+- Code Consistency
+- Code Standards
+- Coding
+- Coding Best Practices
+- Copilot Memories
+- Developer Workflow
+- GitHub Copilot
+- News
+- Onboarding
+- Project Guidelines
+- Team Collaboration
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Jessie Houghton introduces Copilot Memories, a new feature for Visual Studio users that automates capturing, sharing, and maintaining coding standards and preferences for development teams.<!--excerpt_end-->
 
 # Copilot Memories: Streamlining Team Coding with Visual Studio

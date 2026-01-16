@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide"
-description: "This guide provides a hands-on walkthrough for implementing the Agent-to-Agent Standard (A2AS) protocol within .NET applications. Readers will learn how to set up A2A-compliant agents using ASP.NET Core, manage communication and tasks, and develop clients to interact with agents, all while following best practices for composable AI system architectures."
-author: "MariyamAshai"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide'
+author: MariyamAshai
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-08 08:00:00 +00:00
-permalink: "/2026-01-08-Implementing-the-Agent-to-Agent-A2A-Protocol-in-NET-A-Practical-Guide.html"
-categories: ["AI", "Coding"]
-tags: [".NET 8", "A2AClient", "A2AS", "Agent To Agent Protocol", "AgentCard", "AI", "AI System Integration", "ASP.NET Core", "Coding", "Community", "DataPart Objects", "Error Handling", "Interoperable Agents", "JSON RPC 2.0", "LINUX Foundation", "Multi Agent AI", "Semantic Kernel", "State Machine", "Stateless Agents", "TaskManager", "Traceability Metadata", "VS"]
-tags_normalized: ["dotnet 8", "a2aclient", "a2as", "agent to agent protocol", "agentcard", "ai", "ai system integration", "aspdotnet core", "coding", "community", "datapart objects", "error handling", "interoperable agents", "json rpc 2dot0", "linux foundation", "multi agent ai", "semantic kernel", "state machine", "stateless agents", "taskmanager", "traceability metadata", "vs"]
+permalink: /ai/community/Implementing-the-Agent-to-Agent-A2A-Protocol-in-NET-A-Practical-Guide
+tags:
+- .NET 8
+- A2AClient
+- A2AS
+- Agent To Agent Protocol
+- AgentCard
+- AI
+- AI System Integration
+- ASP.NET Core
+- Coding
+- Community
+- DataPart Objects
+- Error Handling
+- Interoperable Agents
+- JSON RPC 2.0
+- LINUX Foundation
+- Multi Agent AI
+- Semantic Kernel
+- State Machine
+- Stateless Agents
+- TaskManager
+- Traceability Metadata
+- VS
+section_names:
+- ai
+- coding
 ---
-
 MariyamAshai lays out a step-by-step guide for building and integrating Agent-to-Agent protocol-compliant AI agents in .NET, covering setup, practical implementation, and industry-standard best practices.<!--excerpt_end-->
 
 # Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide

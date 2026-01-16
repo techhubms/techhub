@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative"
-description: "This news post introduces Microsoft’s comprehensive 'Community-First AI Infrastructure' initiative, focused on building responsible, large-scale AI-ready datacenters across the United States. The plan highlights Microsoft’s five key commitments addressing electricity, water use, local job creation, tax contributions, and investments in AI training and nonprofits. Each commitment includes actionable strategies for partnering with communities, mitigating environmental and economic impact, and fostering local benefits as AI infrastructure expands."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-13 16:47:51 +00:00
-permalink: "/2026-01-13-Building-Community-First-AI-Infrastructure-Microsofts-5-Point-Initiative.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "AI Literacy", "AI Training", "Azure", "Community Engagement", "Company News", "Electricity Policy", "Environmental Responsibility", "Job Creation", "Microsoft Datacenters", "News", "Nonprofit Investment", "Property Tax", "Public Policy", "Sustainability", "Water Replenishment", "Workforce Development"]
-tags_normalized: ["ai", "ai infrastructure", "ai literacy", "ai training", "azure", "community engagement", "company news", "electricity policy", "environmental responsibility", "job creation", "microsoft datacenters", "news", "nonprofit investment", "property tax", "public policy", "sustainability", "water replenishment", "workforce development"]
+permalink: /ai/news/Building-Community-First-AI-Infrastructure-Microsofts-5-Point-Initiative
+tags:
+- AI
+- AI Infrastructure
+- AI Literacy
+- AI Training
+- Azure
+- Community Engagement
+- Company News
+- Electricity Policy
+- Environmental Responsibility
+- Job Creation
+- Microsoft Datacenters
+- News
+- Nonprofit Investment
+- Property Tax
+- Public Policy
+- Sustainability
+- Water Replenishment
+- Workforce Development
+section_names:
+- ai
+- azure
 ---
-
 stclarke outlines Microsoft’s 5-point plan for building community-focused AI infrastructure, highlighting commitments to responsible datacenter expansion, sustainability, local economic support, and widespread AI education.<!--excerpt_end-->
 
 # Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative

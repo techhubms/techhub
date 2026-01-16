@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid"
-description: "This GitHub Podcast episode features Homebrew project lead Mike McQuaid discussing 16 years of maintaining Homebrew, focusing on sustaining open source projects, evolving leadership models, team dynamics, scaling automation, and how tools like GitHub Copilot assist in open source maintenance. The conversation dives into effective governance, addressing toxicity, managing a volunteer-driven project at scale, and implementing responsible AI usage in development workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mdxYnfPQrzU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: 'Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid'
+author: GitHub
+canonical_url: https://www.youtube.com/watch?v=mdxYnfPQrzU
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-10 15:01:29 +00:00
-permalink: "/2026-01-10-Sustaining-Homebrew-Leadership-Automation-and-AI-with-Mike-McQuaid.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI in Development", "Automation", "Bug Fixing", "Coding", "Community Management", "Continuous Improvement", "Developer Tools", "DevOps", "Documentation", "GitHub", "GitHub Copilot", "Homebrew", "Leadership", "Linux", "MacOS", "Open Source", "Open Source Sustainability", "Project Governance", "Pull Requests", "Software Maintenance", "Team Scaling", "Videos", "Volunteer Management"]
-tags_normalized: ["ai", "ai in development", "automation", "bug fixing", "coding", "community management", "continuous improvement", "developer tools", "devops", "documentation", "github", "github copilot", "homebrew", "leadership", "linux", "macos", "open source", "open source sustainability", "project governance", "pull requests", "software maintenance", "team scaling", "videos", "volunteer management"]
+permalink: /github-copilot/videos/Sustaining-Homebrew-Leadership-Automation-and-AI-with-Mike-McQuaid
+tags:
+- AI
+- AI in Development
+- Automation
+- Bug Fixing
+- Coding
+- Community Management
+- Continuous Improvement
+- Developer Tools
+- DevOps
+- Documentation
+- GitHub
+- GitHub Copilot
+- Homebrew
+- Leadership
+- Linux
+- MacOS
+- Open Source
+- Open Source Sustainability
+- Project Governance
+- Pull Requests
+- Software Maintenance
+- Team Scaling
+- Videos
+- Volunteer Management
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 In this GitHub Podcast episode, GitHub hosts speak with Mike McQuaid, the lead maintainer of Homebrew, exploring leadership, automation, and the integration of GitHub Copilot and AI for open source maintenance and community management.<!--excerpt_end-->
 
 {% youtube mdxYnfPQrzU %}

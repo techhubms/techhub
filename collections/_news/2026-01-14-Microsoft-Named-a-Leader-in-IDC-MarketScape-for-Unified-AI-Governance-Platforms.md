@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Microsoft Named a Leader in IDC MarketScape for Unified AI Governance Platforms"
-description: "This article highlights Microsoft’s recognition as a Leader in the 2025–2026 IDC MarketScape for Unified AI Governance Platforms. It details Microsoft's unified approach to AI governance, security, and compliance, featuring responsible AI principles, advanced protection, and integrated tools like Microsoft Foundry, Agent 365, Purview, Entra, and Defender. The content provides strategic guidance for CISOs and security leaders, emphasizing their practical solutions for responsible AI at scale."
-author: "Herain Oberoi and Don Scott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Microsoft Named a Leader in IDC MarketScape for Unified AI Governance Platforms
+author: Herain Oberoi and Don Scott
+canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-14 17:00:00 +00:00
-permalink: "/2026-01-14-Microsoft-Named-a-Leader-in-IDC-MarketScape-for-Unified-AI-Governance-Platforms.html"
-categories: ["AI", "Security"]
-tags: ["Agent 365", "AI", "AI Governance", "AI Risk Management", "AI Security", "Audit Readiness", "CISO Guidance", "Compliance", "Cybersecurity", "Enterprise AI", "Enterprise Security", "Generative AI", "Microsoft Defender", "Microsoft Entra", "Microsoft Foundry", "Microsoft Purview", "Model Monitoring", "Multicloud", "News", "Responsible AI", "Security", "Transparency"]
-tags_normalized: ["agent 365", "ai", "ai governance", "ai risk management", "ai security", "audit readiness", "ciso guidance", "compliance", "cybersecurity", "enterprise ai", "enterprise security", "generative ai", "microsoft defender", "microsoft entra", "microsoft foundry", "microsoft purview", "model monitoring", "multicloud", "news", "responsible ai", "security", "transparency"]
+permalink: /ai/news/Microsoft-Named-a-Leader-in-IDC-MarketScape-for-Unified-AI-Governance-Platforms
+tags:
+- Agent 365
+- AI
+- AI Governance
+- AI Risk Management
+- AI Security
+- Audit Readiness
+- CISO Guidance
+- Compliance
+- Cybersecurity
+- Enterprise AI
+- Enterprise Security
+- Generative AI
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Foundry
+- Microsoft Purview
+- Model Monitoring
+- Multicloud
+- News
+- Responsible AI
+- Security
+- Transparency
+section_names:
+- ai
+- security
 ---
-
 Herain Oberoi and Don Scott share Microsoft's recognition as a Leader in the IDC MarketScape for Unified AI Governance Platforms, highlighting practical governance, security, and responsible AI strategies for enterprises.<!--excerpt_end-->
 
 # Microsoft Named a Leader in IDC MarketScape for Unified AI Governance Platforms

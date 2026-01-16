@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot"
-description: "This in-depth article by João Moreno details the development of docfind, a performant, fully client-side search engine for the VS Code website. The post explains the project's problem space, technical architecture using Rust and WebAssembly, keyword extraction and compression strategies, and how GitHub Copilot accelerated engineering efforts. It covers both conceptual and hands-on aspects of building a search solution that requires no backend and is open source for use in static sites."
-author: "João Moreno"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/01/15/docfind"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot'
+author: João Moreno
+canonical_url: https://code.visualstudio.com/blogs/2026/01/15/docfind
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2026-01-15 00:00:00 +00:00
-permalink: "/2026-01-15-Building-docfind-Fast-Client-Side-Search-for-VS-Code-Docs-with-Rust-WASM-and-Copilot.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "Blog", "CLI Tools", "Client Side Search", "Coding", "DevOps", "Docfind", "Edge Computing", "FSST", "FST", "Levenshtein Automaton", "News", "Open Source", "RAKE", "Rust", "Search Indexing", "Static Site Search", "VS Code", "Wasm Bindgen", "WebAssembly"]
-tags_normalized: ["ai", "blog", "cli tools", "client side search", "coding", "devops", "docfind", "edge computing", "fsst", "fst", "levenshtein automaton", "news", "open source", "rake", "rust", "search indexing", "static site search", "vs code", "wasm bindgen", "webassembly"]
+permalink: /ai/news/Building-docfind-Fast-Client-Side-Search-for-VS-Code-Docs-with-Rust-WASM-and-Copilot
+tags:
+- AI
+- Blog
+- CLI Tools
+- Client Side Search
+- Coding
+- DevOps
+- Docfind
+- Edge Computing
+- FSST
+- FST
+- Levenshtein Automaton
+- News
+- Open Source
+- RAKE
+- Rust
+- Search Indexing
+- Static Site Search
+- VS Code
+- Wasm Bindgen
+- WebAssembly
+section_names:
+- ai
+- coding
+- devops
 ---
-
 João Moreno from the VS Code team recounts building docfind—a Rust and WebAssembly-based client-side search engine—detailing the engineering journey, technical challenges, and the critical role GitHub Copilot played in delivering a blazing fast, serverless search experience.<!--excerpt_end-->
 
 # Building docfind: Fast Client-Side Search with Rust and WebAssembly

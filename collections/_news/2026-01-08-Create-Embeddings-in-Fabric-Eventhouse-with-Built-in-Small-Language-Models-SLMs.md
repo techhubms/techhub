@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Create Embeddings in Fabric Eventhouse with Built-in Small Language Models (SLMs)"
-description: "This article introduces the new slm_embeddings_fl() user-defined function for Fabric Eventhouse, enabling direct, local generation of text embeddings using small language models like jina-v2-small and e5-small-v2. It outlines operational benefits, usage patterns, code samples, and practical scenarios such as RAG pipelines, semantic search, and automated ingestion. Readers learn how to leverage native KQL and Python integration for scalable, high-throughput vector embedding inside Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Create Embeddings in Fabric Eventhouse with Built-in Small Language Models (SLMs)
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-08 11:00:00 +00:00
-permalink: "/2026-01-08-Create-Embeddings-in-Fabric-Eventhouse-with-Built-in-Small-Language-Models-SLMs.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Data Explorer", "E5 Small V2", "Embedding Generation", "Fabric Eventhouse", "Jina V2 Small", "KQL", "Kusto", "Machine Learning", "ML", "News", "NLP", "Python Plugin", "RAG Pipeline", "Semantic Search", "Slm Embeddings Fl", "Small Language Models", "Update Policy", "Vector Database"]
-tags_normalized: ["ai", "azure", "azure data explorer", "e5 small v2", "embedding generation", "fabric eventhouse", "jina v2 small", "kql", "kusto", "machine learning", "ml", "news", "nlp", "python plugin", "rag pipeline", "semantic search", "slm embeddings fl", "small language models", "update policy", "vector database"]
+permalink: /ai/news/Create-Embeddings-in-Fabric-Eventhouse-with-Built-in-Small-Language-Models-SLMs
+tags:
+- AI
+- Azure
+- Azure Data Explorer
+- E5 Small V2
+- Embedding Generation
+- Fabric Eventhouse
+- Jina V2 Small
+- KQL
+- Kusto
+- Machine Learning
+- ML
+- News
+- NLP
+- Python Plugin
+- RAG Pipeline
+- Semantic Search
+- Slm Embeddings Fl
+- Small Language Models
+- Update Policy
+- Vector Database
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains how slm_embeddings_fl lets users generate embeddings directly inside Fabric Eventhouse using local SLMs, with code samples and scenarios for RAG, semantic search, and large-scale analytics workflows.<!--excerpt_end-->
 
 # Create Embeddings in Fabric Eventhouse with Built-in Small Language Models (SLMs)

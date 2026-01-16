@@ -1,20 +1,53 @@
----
-layout: "post"
-title: "From Vibe Coding to Spec-Driven Development: Practical Spec-Kit Workflow"
-description: "This in-depth blog post by Hidde de Smet walks through Part 2 of a five-part series exploring AI-assisted development using the Spec-Kit approach. The article provides a practical, example-driven guide to replacing ad-hoc 'vibe' coding with a disciplined, specification-led workflow, leveraging GitHub Copilot and .NET/Blazor technologies. Readers will see how to define constitutions, write actionable specs, generate implementation plans, and break down development into testable tasks. The target application is a real-world team task manager, demonstrating best practices in technical and process automation for modern .NET teams."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'From Vibe Coding to Spec-Driven Development: Practical Spec-Kit Workflow'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2026-01-12 00:00:00 +00:00
-permalink: "/2026-01-12-From-Vibe-Coding-to-Spec-Driven-Development-Practical-Spec-Kit-Workflow.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET 9", "AI", "AI Assisted Development", "ASP.NET Core Identity", "Blazor Server", "Blogs", "C# 13", "Claude", "Coding", "Coding Best Practices", "Copilot", "Development", "DevOps", "Docker", "Edge Case Handling", "EF Core", "GitHub", "GitHub Copilot", "MVP", "PostgreSQL", "Quality Assurance", "Series", "SignalR", "Software Architecture", "Spec Kit", "Specification Driven Development", "SQL Server", "Task Management", "Technical Planning", "Test Automation", "User Stories", "Vibe Coding", "Workflow Automation"]
-tags_normalized: ["dotnet 9", "ai", "ai assisted development", "aspdotnet core identity", "blazor server", "blogs", "csharp 13", "claude", "coding", "coding best practices", "copilot", "development", "devops", "docker", "edge case handling", "ef core", "github", "github copilot", "mvp", "postgresql", "quality assurance", "series", "signalr", "software architecture", "spec kit", "specification driven development", "sql server", "task management", "technical planning", "test automation", "user stories", "vibe coding", "workflow automation"]
+permalink: /github-copilot/blogs/From-Vibe-Coding-to-Spec-Driven-Development-Practical-Spec-Kit-Workflow
+tags:
+- .NET 9
+- AI
+- AI Assisted Development
+- ASP.NET Core Identity
+- Blazor Server
+- Blogs
+- C# 13
+- Claude
+- Coding
+- Coding Best Practices
+- Copilot
+- Development
+- DevOps
+- Docker
+- Edge Case Handling
+- EF Core
+- GitHub
+- GitHub Copilot
+- MVP
+- PostgreSQL
+- Quality Assurance
+- Series
+- SignalR
+- Software Architecture
+- Spec Kit
+- Specification Driven Development
+- SQL Server
+- Task Management
+- Technical Planning
+- Test Automation
+- User Stories
+- Vibe Coding
+- Workflow Automation
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Hidde de Smet continues his AI-assisted development series by demonstrating the full Spec-Kit workflow—detailing how to move from requirements to production-ready code using .NET 9, Blazor, and GitHub Copilot. A must-read for software engineers adopting modern, spec-driven workflows.<!--excerpt_end-->
 
 # From Vibe Coding to Spec-Driven Development: Part 2 - The Spec-Kit Workflow

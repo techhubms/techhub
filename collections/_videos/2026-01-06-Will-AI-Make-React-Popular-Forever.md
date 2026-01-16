@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Will AI Make React Popular Forever?"
-description: "Idan Gazit examines how artificial intelligence, especially tools like GitHub Copilot, impacts the popularity of frameworks such as React. The discussion covers the consolidation effect AI has on established frameworks, how AI-powered developer tools can reinforce their dominance, and how they simultaneously lower the barrier for using less popular and more challenging languages like Haskell."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/m24psZGp_bA"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+layout: post
+title: Will AI Make React Popular Forever?
+author: GitHub
+canonical_url: https://www.youtube.com/shorts/m24psZGp_bA
+viewing_mode: internal
+feed_name: GitHub YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-06 17:01:29 +00:00
-permalink: "/2026-01-06-Will-AI-Make-React-Popular-Forever.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Consolidation Effect", "Developer Tools", "Framework Popularity", "GitHub", "GitHub Copilot", "Haskell", "Machine Learning", "Programming Languages", "React", "Software Development", "Videos"]
-tags_normalized: ["ai", "consolidation effect", "developer tools", "framework popularity", "github", "github copilot", "haskell", "machine learning", "programming languages", "react", "software development", "videos"]
+permalink: /github-copilot/videos/Will-AI-Make-React-Popular-Forever
+tags:
+- AI
+- Consolidation Effect
+- Developer Tools
+- Framework Popularity
+- GitHub
+- GitHub Copilot
+- Haskell
+- Machine Learning
+- Programming Languages
+- React
+- Software Development
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this video, Idan Gazit analyzes the impact of AI and GitHub Copilot on the growth and popularity of frameworks like React, and how these tools reshape the programming landscape. Presented by GitHub.<!--excerpt_end-->
 
 {% youtube m24psZGp_bA %}

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud"
-description: "This article details Microsoft's legal and technical actions to disrupt RedVDS, a global cybercrime subscription service providing infrastructure for fraud and AI-enabled scams. It gives insight into RedVDS’s operations, impacts on victims, the role of AI in modern cyberattacks, and collaborative efforts with international law enforcement."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 15:49:33 +00:00
-permalink: "/2026-01-14-Microsoft-Disrupts-Global-RedVDS-Cybercrime-as-a-Service-Platform-Enabling-Massive-Fraud.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Enabled Fraud", "Business Email Compromise", "Cloud Infrastructure", "Company News", "Cybercrime as A Service", "Cybersecurity", "Disposable Virtual Machines", "Europol", "Fraud Prevention", "Law Enforcement", "Microsoft Digital Crimes Unit", "Multifactor Authentication", "News", "On The Issues", "Phishing", "RedVDS", "Security", "Security Best Practices", "Windows"]
-tags_normalized: ["ai", "ai enabled fraud", "business email compromise", "cloud infrastructure", "company news", "cybercrime as a service", "cybersecurity", "disposable virtual machines", "europol", "fraud prevention", "law enforcement", "microsoft digital crimes unit", "multifactor authentication", "news", "on the issues", "phishing", "redvds", "security", "security best practices", "windows"]
+permalink: /ai/news/Microsoft-Disrupts-Global-RedVDS-Cybercrime-as-a-Service-Platform-Enabling-Massive-Fraud
+tags:
+- AI
+- AI Enabled Fraud
+- Business Email Compromise
+- Cloud Infrastructure
+- Company News
+- Cybercrime as A Service
+- Cybersecurity
+- Disposable Virtual Machines
+- Europol
+- Fraud Prevention
+- Law Enforcement
+- Microsoft Digital Crimes Unit
+- Multifactor Authentication
+- News
+- On The Issues
+- Phishing
+- RedVDS
+- Security
+- Security Best Practices
+- Windows
+section_names:
+- ai
+- security
 ---
-
 stclarke’s article covers Microsoft’s disruption of RedVDS, a cybercrime subscription service fueling large-scale fraud with disposable virtual machines and AI tools. It discusses technical methods, real-world impact, and efforts by Microsoft and international authorities to combat cyber-enabled crime.<!--excerpt_end-->
 
 # Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud

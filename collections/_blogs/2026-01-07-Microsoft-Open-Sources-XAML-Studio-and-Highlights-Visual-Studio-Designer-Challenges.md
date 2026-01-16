@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Open Sources XAML Studio and Highlights Visual Studio Designer Challenges"
-description: "This article analyzes Microsoft's decision to open source XAML Studio—a lightweight XAML interface editor—amid ongoing frustration from developers over Visual Studio's lack of modern visual designers for WinUI 3 and .NET MAUI. It details the tool's history, current development status, and what this move means for Windows UI developers."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: Microsoft Open Sources XAML Studio and Highlights Visual Studio Designer Challenges
+author: Tim Anderson
+canonical_url: https://devclass.com/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2026-01-07 14:58:24 +00:00
-permalink: "/2026-01-07-Microsoft-Open-Sources-XAML-Studio-and-Highlights-Visual-Studio-Designer-Challenges.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "Coding", "Desktop Applications", "Development", "Fluent UI", "IntelliSense", "Microsoft", "Microsoft Garage", "Microsoft Store", "Open Source", "UI Design", "UWP", "VS", "Windows Development", "WinUI 3", "XAML", "XAML Studio"]
-tags_normalized: ["dotnet", "blogs", "coding", "desktop applications", "development", "fluent ui", "intellisense", "microsoft", "microsoft garage", "microsoft store", "open source", "ui design", "uwp", "vs", "windows development", "winui 3", "xaml", "xaml studio"]
+permalink: /coding/blogs/Microsoft-Open-Sources-XAML-Studio-and-Highlights-Visual-Studio-Designer-Challenges
+tags:
+- .NET
+- Blogs
+- Coding
+- Desktop Applications
+- Development
+- Fluent UI
+- IntelliSense
+- Microsoft
+- Microsoft Garage
+- Microsoft Store
+- Open Source
+- UI Design
+- UWP
+- VS
+- Windows Development
+- WinUI 3
+- XAML
+- XAML Studio
+section_names:
+- coding
 ---
-
 Tim Anderson reports on Microsoft open sourcing XAML Studio, offering insights into the tool’s new status, ongoing development, and broader implications for the Windows desktop application developer community.<!--excerpt_end-->
 
 # Microsoft Open Sources XAML Studio and Highlights Visual Studio Designer Challenges

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Vibe Coded Applications Full of Security Blunders"
-description: "This article examines the security implications of 'vibe coding', where developers delegate extensive control to AI coding agents. The research, led by Ori David from Tenzai, uncovers recurring vulnerabilities introduced by popular agents such as Claude Code, Cursor, Devin, Open AI Codex, and Replit. It analyzes common flaws, the limits of AI-driven code generation, and discusses why best practices and human reviews remain essential."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: Vibe Coded Applications Full of Security Blunders
+author: Tim Anderson
+canonical_url: https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2026-01-15 17:14:53 +00:00
-permalink: "/2026-01-15-Vibe-Coded-Applications-Full-of-Security-Blunders.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Agent", "AI Code Generation", "AI/ML", "Application Security", "Authorization Logic", "Blogs", "Business Logic Bugs", "Claude", "Claude Code", "Cursor", "Devin", "Open AI Codex", "OpenAI Codex", "Replit", "Secure Coding", "Security", "Security Best Practices", "Security Vulnerabilities", "Server Side Request Forgery", "Tenzai", "Vibe Coding"]
-tags_normalized: ["ai", "ai agent", "ai code generation", "aislashml", "application security", "authorization logic", "blogs", "business logic bugs", "claude", "claude code", "cursor", "devin", "open ai codex", "openai codex", "replit", "secure coding", "security", "security best practices", "security vulnerabilities", "server side request forgery", "tenzai", "vibe coding"]
+permalink: /ai/blogs/Vibe-Coded-Applications-Full-of-Security-Blunders
+tags:
+- AI
+- AI Agent
+- AI Code Generation
+- AI/ML
+- Application Security
+- Authorization Logic
+- Blogs
+- Business Logic Bugs
+- Claude
+- Claude Code
+- Cursor
+- Devin
+- Open AI Codex
+- OpenAI Codex
+- Replit
+- Secure Coding
+- Security
+- Security Best Practices
+- Security Vulnerabilities
+- Server Side Request Forgery
+- Tenzai
+- Vibe Coding
+section_names:
+- ai
+- security
 ---
-
 Tim Anderson reports on Tenzai's research led by Ori David, highlighting how applications built with 'vibe coding' using AI agents like Claude and Codex tend to be insecure due to common flaws and overlooked best practices.<!--excerpt_end-->
 
 # Vibe Coded Applications Full of Security Blunders

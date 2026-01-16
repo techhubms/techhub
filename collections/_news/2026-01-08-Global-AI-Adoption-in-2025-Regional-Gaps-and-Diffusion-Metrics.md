@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Global AI Adoption in 2025: Regional Gaps and Diffusion Metrics"
-description: "This report provides an analysis of global generative AI adoption in 2025, based on Microsoft telemetry and cross-country data. It discusses methodological details, highlights standout countries, and addresses the emerging digital divide as well as the impact of open-source platforms like DeepSeek on accessibility. Practical insights are offered for organizations and policymakers working on digital infrastructure and AI skilling."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'Global AI Adoption in 2025: Regional Gaps and Diffusion Metrics'
+author: stclarke
+canonical_url: https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 15:29:40 +00:00
-permalink: "/2026-01-08-Global-AI-Adoption-in-2025-Regional-Gaps-and-Diffusion-Metrics.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Diffusion", "AI Infrastructure", "AI Platforms", "AI Skilling", "ChatGPT", "Company News", "Country Rankings", "DeepSeek", "Digital Divide", "Digital Infrastructure", "Frontier Models", "Generative AI", "Global AI Usage", "Microsoft", "Microsoft AI Economy Institute", "News", "Open Source AI", "OpenAI", "Policy", "Telemetry"]
-tags_normalized: ["ai", "ai adoption", "ai diffusion", "ai infrastructure", "ai platforms", "ai skilling", "chatgpt", "company news", "country rankings", "deepseek", "digital divide", "digital infrastructure", "frontier models", "generative ai", "global ai usage", "microsoft", "microsoft ai economy institute", "news", "open source ai", "openai", "policy", "telemetry"]
+permalink: /ai/news/Global-AI-Adoption-in-2025-Regional-Gaps-and-Diffusion-Metrics
+tags:
+- AI
+- AI Adoption
+- AI Diffusion
+- AI Infrastructure
+- AI Platforms
+- AI Skilling
+- ChatGPT
+- Company News
+- Country Rankings
+- DeepSeek
+- Digital Divide
+- Digital Infrastructure
+- Frontier Models
+- Generative AI
+- Global AI Usage
+- Microsoft
+- Microsoft AI Economy Institute
+- News
+- Open Source AI
+- OpenAI
+- Policy
+- Telemetry
+section_names:
+- ai
 ---
-
 stclarke examines worldwide generative AI adoption trends in 2025, highlighting data-driven insights into the digital divide, country rankings, and the influence of open-source AI models like DeepSeek.<!--excerpt_end-->
 
 # Global AI Adoption in 2025: Regional Gaps and Diffusion Metrics

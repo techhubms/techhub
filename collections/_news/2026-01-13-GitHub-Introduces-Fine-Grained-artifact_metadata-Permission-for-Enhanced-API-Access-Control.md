@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Introduces Fine-Grained artifact_metadata Permission for Enhanced API Access Control"
-description: "This announcement details GitHub's rollout of the new artifact_metadata permission, offering developers and DevOps teams more precise control over API access to artifact-related metadata. It replaces broader contents permissions, improving security and workflow management. Migrating existing workflows is required before February 2026 deprecation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-13-new-fine-grained-permission-for-artifact-metadata-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: GitHub Introduces Fine-Grained artifact_metadata Permission for Enhanced API Access Control
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-13-new-fine-grained-permission-for-artifact-metadata-is-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 13:30:02 +00:00
-permalink: "/2026-01-13-GitHub-Introduces-Fine-Grained-artifact_metadata-Permission-for-Enhanced-API-Access-Control.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Actions", "API Permissions", "Application Security", "Artifact Metadata", "CI/CD", "DevOps", "Fine Grained Permissions", "GitHub", "GitHub Actions", "News", "Repository Permissions", "Security", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["access control", "actions", "api permissions", "application security", "artifact metadata", "cislashcd", "devops", "fine grained permissions", "github", "github actions", "news", "repository permissions", "security", "supply chain security", "workflow automation"]
+permalink: /devops/news/GitHub-Introduces-Fine-Grained-artifact_metadata-Permission-for-Enhanced-API-Access-Control
+tags:
+- Access Control
+- Actions
+- API Permissions
+- Application Security
+- Artifact Metadata
+- CI/CD
+- DevOps
+- Fine Grained Permissions
+- GitHub
+- GitHub Actions
+- News
+- Repository Permissions
+- Security
+- Supply Chain Security
+- Workflow Automation
+section_names:
+- devops
+- security
 ---
-
 Allison presents GitHub’s new artifact_metadata permission, which enhances security and refines API access control for artifact metadata. Developers and DevOps teams must transition workflows by February 2026.<!--excerpt_end-->
 
 # GitHub Introduces Fine-Grained artifact_metadata Permission for Enhanced API Access Control

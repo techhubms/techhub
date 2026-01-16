@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Visual Studio Code January 2026 Insiders Update (v1.109): Terminal and Chat Improvements"
-description: "This update details new features and fixes in the Visual Studio Code Insiders January 2026 release (version 1.109). Highlights include terminal enhancements like kitty keyboard protocol support, win32-input-mode, advanced formatting sequences, improved chat view discoverability, import options, and enriched extension APIs. Developer workflows and compatibility see targeted improvements."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_109"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Visual Studio Code January 2026 Insiders Update (v1.109): Terminal and Chat Improvements'
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_109
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2026-02-04 17:00:00 +00:00
-permalink: "/2026-02-04-Visual-Studio-Code-January-2026-Insiders-Update-v1109-Terminal-and-Chat-Improvements.html"
-categories: ["Coding"]
-tags: ["Chat View", "Coding", "Developer Tooling", "Extension API", "Kitty Keyboard Protocol", "MCP Apps", "Microsoft", "News", "npm Commands", "Quick Input", "Settings Editor", "SGR 221", "SGR 222", "Terminal", "VS Code", "Win32 Input Mode"]
-tags_normalized: ["chat view", "coding", "developer tooling", "extension api", "kitty keyboard protocol", "mcp apps", "microsoft", "news", "npm commands", "quick input", "settings editor", "sgr 221", "sgr 222", "terminal", "vs code", "win32 input mode"]
+permalink: /coding/news/Visual-Studio-Code-January-2026-Insiders-Update-v1109-Terminal-and-Chat-Improvements
+tags:
+- Chat View
+- Coding
+- Developer Tooling
+- Extension API
+- Kitty Keyboard Protocol
+- MCP Apps
+- Microsoft
+- News
+- npm Commands
+- Quick Input
+- Settings Editor
+- SGR 221
+- SGR 222
+- Terminal
+- VS Code
+- Win32 Input Mode
+section_names:
+- coding
 ---
-
 Visual Studio Code Team shares the January 2026 Insiders update, covering robust terminal upgrades, chat session enhancements, new MCP Apps support, and improvements to extension APIs and settings.<!--excerpt_end-->
 
 # Visual Studio Code January 2026 Insiders Release (v1.109)

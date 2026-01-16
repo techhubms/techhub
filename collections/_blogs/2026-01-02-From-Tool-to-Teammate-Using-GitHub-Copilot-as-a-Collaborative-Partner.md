@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "From Tool to Teammate: Using GitHub Copilot as a Collaborative Partner"
-description: "This article by Randy Pagels explores a new mindset for interacting with GitHub Copilot—moving beyond simple code generation to treating Copilot as an active collaborator. Developers are encouraged to plan, seek feedback, enable clarifying questions, and use Copilot for higher-level thinking, ultimately improving code quality and development outcomes."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+layout: post
+title: 'From Tool to Teammate: Using GitHub Copilot as a Collaborative Partner'
+author: randy.pagels@xebia.com (Randy Pagels)
+canonical_url: https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html
+viewing_mode: external
+feed_name: Randy Pagels's Blog
+feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2026-01-02 00:00:00 +00:00
-permalink: "/2026-01-02-From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Blogs", "Code Review", "Coding Practices", "Collaboration", "Developer Productivity", "Developer Tools", "Feedback Loops", "GitHub Copilot", "Pair Programming", "Programming Workflow", "Software Engineering", "Teammate Mindset"]
-tags_normalized: ["ai", "ai assisted development", "blogs", "code review", "coding practices", "collaboration", "developer productivity", "developer tools", "feedback loops", "github copilot", "pair programming", "programming workflow", "software engineering", "teammate mindset"]
+permalink: /github-copilot/blogs/From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner
+tags:
+- AI
+- AI Assisted Development
+- Blogs
+- Code Review
+- Coding Practices
+- Collaboration
+- Developer Productivity
+- Developer Tools
+- Feedback Loops
+- GitHub Copilot
+- Pair Programming
+- Programming Workflow
+- Software Engineering
+- Teammate Mindset
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels shares practical strategies for treating GitHub Copilot as a true coding teammate in 2026, highlighting collaboration, feedback, and thoughtful interaction as ways to unlock Copilot's full potential.<!--excerpt_end-->
 
 # From Tool to Teammate

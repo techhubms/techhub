@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure"
-description: "This news article highlights how Wayve leverages Azure and deep learning to push the boundaries of self-driving technology. It focuses on the collaborative innovation between Wayve and Microsoft Azure, detailing the AI-centric approach to autonomous vehicles and the technical advancements made possible through Azure’s cloud capabilities."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: 'AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure'
+author: stclarke
+canonical_url: https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 14:36:51 +00:00
-permalink: "/2026-01-08-AI-that-drives-change-Wayve-rewrites-self-driving-playbook-with-deep-learning-in-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Autonomous Vehicles", "Azure", "Azure AI", "Cloud Computing", "Deep Learning", "Innovation", "Machine Learning", "News", "Self Driving Cars", "Wayve"]
-tags_normalized: ["ai", "autonomous vehicles", "azure", "azure ai", "cloud computing", "deep learning", "innovation", "machine learning", "news", "self driving cars", "wayve"]
+permalink: /ai/news/AI-that-drives-change-Wayve-rewrites-self-driving-playbook-with-deep-learning-in-Azure
+tags:
+- AI
+- Autonomous Vehicles
+- Azure
+- Azure AI
+- Cloud Computing
+- Deep Learning
+- Innovation
+- Machine Learning
+- News
+- Self Driving Cars
+- Wayve
+section_names:
+- ai
+- azure
 ---
-
 Chris Welsch explores how Wayve is advancing self-driving technology by harnessing deep learning and Microsoft Azure, offering insights into the technical collaborations driving AI innovation.<!--excerpt_end-->
 
 # AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure

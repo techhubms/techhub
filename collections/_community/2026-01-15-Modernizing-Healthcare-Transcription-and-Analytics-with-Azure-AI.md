@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Modernizing Healthcare Transcription and Analytics with Azure AI"
-description: "This detailed guide explores how healthcare organizations can leverage Azure AI to build a real-time, HIPAA-compliant transcription and analytics solution. It covers Azure Cognitive Services, Speech Services, Text Analytics for Health, and integration with Microsoft Fabric OneLake to improve accuracy, compliance, and research speed."
-author: "hannahabbott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Modernizing Healthcare Transcription and Analytics with Azure AI
+author: hannahabbott
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 19:13:54 +00:00
-permalink: "/2026-01-15-Modernizing-Healthcare-Transcription-and-Analytics-with-Azure-AI.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI", "Azure Cognitive Services", "Azure Functions", "Azure OpenAI", "Azure Storage", "Batch Transcription", "Clinical Insights", "Community", "Data Lake", "Entity Recognition", "FHIR", "Healthcare AI", "HIPAA Compliance", "Microsoft Fabric", "ML", "Real Time Transcription", "Speech Service", "Text Analytics For Health"]
-tags_normalized: ["ai", "azure", "azure ai", "azure cognitive services", "azure functions", "azure openai", "azure storage", "batch transcription", "clinical insights", "community", "data lake", "entity recognition", "fhir", "healthcare ai", "hipaa compliance", "microsoft fabric", "ml", "real time transcription", "speech service", "text analytics for health"]
+permalink: /ai/community/Modernizing-Healthcare-Transcription-and-Analytics-with-Azure-AI
+tags:
+- AI
+- Azure
+- Azure AI
+- Azure Cognitive Services
+- Azure Functions
+- Azure OpenAI
+- Azure Storage
+- Batch Transcription
+- Clinical Insights
+- Community
+- Data Lake
+- Entity Recognition
+- FHIR
+- Healthcare AI
+- HIPAA Compliance
+- Microsoft Fabric
+- ML
+- Real Time Transcription
+- Speech Service
+- Text Analytics For Health
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Hannah Abbott details a demo application for healthcare organizations demonstrating how Azure AI powers real-time, secure transcription and clinical text analytics. Developed alongside Samuel Tauil, this solution helps teams streamline data workflows and analytics using Microsoft cloud technology.<!--excerpt_end-->
 
 # Modernizing Healthcare Transcription and Analytics with Azure AI

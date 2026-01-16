@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure"
-description: "This article, authored by Hidde de Smet, is the first in a five-part series focused on practical techniques for building production-ready applications with AI coding assistants. It explores the pitfalls of unstructured 'vibe coding' and introduces spec-driven development using frameworks like GitHub’s Spec-Kit. The post discusses the evolution of AI-assisted development, common failures in relying solely on AI-generated code, and presents a step-by-step methodology for introducing structure, accountability, and best practices into the development workflow. Readers will learn the foundational concepts for moving from rapid AI prototypes to robust, maintainable code in modern engineering teams."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+layout: post
+title: 'From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure'
+author: Hidde de Smet
+canonical_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development
+viewing_mode: external
+feed_name: Hidde de Smet's Blog
+feed_url: https://hiddedesmet.com/feed.xml
 date: 2026-01-05 00:00:00 +00:00
-permalink: "/2026-01-05-From-Vibe-Coding-to-Spec-Driven-Development-Why-AI-Generated-Code-Needs-Structure.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Assisted Development", "AI Coding Assistants", "AI Safety", "AI Workflows", "Blogs", "Claude", "Code Quality", "Coding", "Context Driven Development", "Copilot", "Copilot Custom Instructions", "Developer Productivity", "Development", "DevOps", "DevOps Practices", "GitHub", "Production Ready Code", "Series", "Software Engineering", "Spec Kit", "Specification Driven Development", "Technical Planning", "Test Automation", "Vibe Coding"]
-tags_normalized: ["ai", "ai assisted development", "ai coding assistants", "ai safety", "ai workflows", "blogs", "claude", "code quality", "coding", "context driven development", "copilot", "copilot custom instructions", "developer productivity", "development", "devops", "devops practices", "github", "production ready code", "series", "software engineering", "spec kit", "specification driven development", "technical planning", "test automation", "vibe coding"]
+permalink: /ai/blogs/From-Vibe-Coding-to-Spec-Driven-Development-Why-AI-Generated-Code-Needs-Structure
+tags:
+- AI
+- AI Assisted Development
+- AI Coding Assistants
+- AI Safety
+- AI Workflows
+- Blogs
+- Claude
+- Code Quality
+- Coding
+- Context Driven Development
+- Copilot
+- Copilot Custom Instructions
+- Developer Productivity
+- Development
+- DevOps
+- DevOps Practices
+- GitHub
+- Production Ready Code
+- Series
+- Software Engineering
+- Spec Kit
+- Specification Driven Development
+- Technical Planning
+- Test Automation
+- Vibe Coding
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Hidde de Smet kicks off a deep-dive series on mastering AI-assisted development, highlighting why uncritical 'vibe coding' falls short and how specification-driven approaches like GitHub’s Spec-Kit help teams achieve robust production code.<!--excerpt_end-->
 
 # From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How to Build Android Widgets with .NET MAUI"
-description: "This article by Toine de Boer provides an in-depth look at developing interactive Android widgets within .NET MAUI applications. It covers topics including AppWidgetProvider, RemoteViews, widget configuration, sharing data between app and widget, and best practices for ensuring performance and reliability when building cross-platform widgets using C# and Android XML layouts."
-author: "Toine de Boer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: How to Build Android Widgets with .NET MAUI
+author: Toine de Boer
+canonical_url: https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-12 18:05:00 +00:00
-permalink: "/2026-01-12-How-to-Build-Android-Widgets-with-NET-MAUI.html"
-categories: ["Coding"]
-tags: [".NET", ".NET For Android", "Android", "Android Studio", "AppWidgetProvider", "BroadcastReceiver", "C#", "Coding", "Cross Platform Development", "Intent", "MAUI", "Mobile Development", "News", "PendingIntent", "Preferences", "RemoteViews", "SharedPreferences", "VS", "Widget Configuration", "Widgets"]
-tags_normalized: ["dotnet", "dotnet for android", "android", "android studio", "appwidgetprovider", "broadcastreceiver", "csharp", "coding", "cross platform development", "intent", "maui", "mobile development", "news", "pendingintent", "preferences", "remoteviews", "sharedpreferences", "vs", "widget configuration", "widgets"]
+permalink: /coding/news/How-to-Build-Android-Widgets-with-NET-MAUI
+tags:
+- .NET
+- .NET For Android
+- Android
+- Android Studio
+- AppWidgetProvider
+- BroadcastReceiver
+- C#
+- Coding
+- Cross Platform Development
+- Intent
+- MAUI
+- Mobile Development
+- News
+- PendingIntent
+- Preferences
+- RemoteViews
+- SharedPreferences
+- VS
+- Widget Configuration
+- Widgets
+section_names:
+- coding
 ---
-
 Toine de Boer explains how to create interactive Android widgets using .NET MAUI, sharing detailed techniques and code examples for building, configuring, and communicating with widgets from your app.<!--excerpt_end-->
 
 # How to Build Android Widgets with .NET MAUI

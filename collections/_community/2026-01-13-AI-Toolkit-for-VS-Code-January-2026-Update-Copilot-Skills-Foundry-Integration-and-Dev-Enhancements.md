@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "AI Toolkit for VS Code: January 2026 Update — Copilot Skills, Foundry Integration, and Dev Enhancements"
-description: "This update post by junjieli details the January 2026 release for AI Toolkit in Visual Studio Code, focusing on alignment with the latest GitHub Copilot standards, integration with Microsoft Foundry, new enterprise model support, enhanced debugging, and improvements for local ML on Windows. The release also prioritizes a shift to Copilot Agent Skills, expanded authentication (including Entra ID), and numerous performance and UX upgrades for AI agent developers."
-author: "junjieli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'AI Toolkit for VS Code: January 2026 Update — Copilot Skills, Foundry Integration, and Dev Enhancements'
+author: junjieli
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 08:34:38 +00:00
-permalink: "/2026-01-13-AI-Toolkit-for-VS-Code-January-2026-Update-Copilot-Skills-Foundry-Integration-and-Dev-Enhancements.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Framework", "Agent Skills", "AI", "AI Toolkit", "Anthropic", "Azure", "Bug Fixes", "Claude", "Code Generation", "Coding", "Community", "Copilot Chat", "Entra Auth", "Evaluation Tools", "GitHub Copilot", "Microsoft Foundry", "Model Catalog", "Performance Tuning", "VS Code", "VS Code Extension", "Windows ML"]
-tags_normalized: ["agent framework", "agent skills", "ai", "ai toolkit", "anthropic", "azure", "bug fixes", "claude", "code generation", "coding", "community", "copilot chat", "entra auth", "evaluation tools", "github copilot", "microsoft foundry", "model catalog", "performance tuning", "vs code", "vs code extension", "windows ml"]
+permalink: /github-copilot/community/AI-Toolkit-for-VS-Code-January-2026-Update-Copilot-Skills-Foundry-Integration-and-Dev-Enhancements
+tags:
+- Agent Framework
+- Agent Skills
+- AI
+- AI Toolkit
+- Anthropic
+- Azure
+- Bug Fixes
+- Claude
+- Code Generation
+- Coding
+- Community
+- Copilot Chat
+- Entra Auth
+- Evaluation Tools
+- GitHub Copilot
+- Microsoft Foundry
+- Model Catalog
+- Performance Tuning
+- VS Code
+- VS Code Extension
+- Windows ML
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 junjieli shares a major January 2026 update for the AI Toolkit in VS Code, spotlighting Copilot Agent Skills, Microsoft Foundry integration, enterprise auth improvements, and developer-focused local model tools.<!--excerpt_end-->
 
 # AI Toolkit for VS Code: January 2026 Update

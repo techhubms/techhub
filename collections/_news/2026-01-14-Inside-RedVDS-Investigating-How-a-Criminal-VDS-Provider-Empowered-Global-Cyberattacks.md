@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Inside RedVDS: Investigating How a Criminal VDS Provider Empowered Global Cyberattacks"
-description: "This in-depth report from Microsoft Threat Intelligence examines RedVDS, a virtual desktop provider leveraged by cybercriminals for business email compromise, phishing, and financial fraud. The investigation details the provider's infrastructure, operational models, tools observed on compromised hosts, and actionable recommendations to guard against related attacks. Readers will also gain insights into how Microsoft Defender XDR, Microsoft Defender for Office 365, and Security Copilot play key roles in detection, response, and mitigation."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: 'Inside RedVDS: Investigating How a Criminal VDS Provider Empowered Global Cyberattacks'
+author: Microsoft Threat Intelligence
+canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-14 15:03:31 +00:00
-permalink: "/2026-01-14-Inside-RedVDS-Investigating-How-a-Criminal-VDS-Provider-Empowered-Global-Cyberattacks.html"
-categories: ["Azure", "Security"]
-tags: ["Anti Phishing", "Azure", "Business Email Compromise", "Cloud Security", "Credential Theft", "Cybercrime", "Defender For Office 365", "Homoglyph Domains", "Indicators Of Compromise", "MFA", "Microsoft Defender XDR", "Microsoft Security Copilot", "News", "Phishing", "Power Automate", "RedVDS", "Remote Desktop", "Security", "Security Monitoring", "Storm 2470", "Threat Intelligence", "Virtual Dedicated Server"]
-tags_normalized: ["anti phishing", "azure", "business email compromise", "cloud security", "credential theft", "cybercrime", "defender for office 365", "homoglyph domains", "indicators of compromise", "mfa", "microsoft defender xdr", "microsoft security copilot", "news", "phishing", "power automate", "redvds", "remote desktop", "security", "security monitoring", "storm 2470", "threat intelligence", "virtual dedicated server"]
+permalink: /azure/news/Inside-RedVDS-Investigating-How-a-Criminal-VDS-Provider-Empowered-Global-Cyberattacks
+tags:
+- Anti Phishing
+- Azure
+- Business Email Compromise
+- Cloud Security
+- Credential Theft
+- Cybercrime
+- Defender For Office 365
+- Homoglyph Domains
+- Indicators Of Compromise
+- MFA
+- Microsoft Defender XDR
+- Microsoft Security Copilot
+- News
+- Phishing
+- Power Automate
+- RedVDS
+- Remote Desktop
+- Security
+- Security Monitoring
+- Storm 2470
+- Threat Intelligence
+- Virtual Dedicated Server
+section_names:
+- azure
+- security
 ---
-
 Microsoft Threat Intelligence, led by its Digital Crimes Unit, exposes the RedVDS criminal infrastructure that enabled widespread cyberattacks. The report by Microsoft Threat Intelligence offers technical insights, tracked malware tools, and recommended mitigations for security professionals.<!--excerpt_end-->
 
 # Inside RedVDS: Investigating How a Criminal VDS Provider Empowered Global Cyberattacks

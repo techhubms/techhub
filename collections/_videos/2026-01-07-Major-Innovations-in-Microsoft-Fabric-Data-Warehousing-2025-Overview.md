@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview"
-description: "This video, hosted by Microsoft Developer as part of the Data Exposed series, highlights the significant updates and new features added to Microsoft Fabric Data Warehousing in 2025. Topics include Data Clustering, IDENTITY columns, the MERGE command, migration tools, and enhanced security features, providing guidance on leveraging these capabilities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9TH1EX_6FMk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: 'Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview'
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=9TH1EX_6FMk
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-07 17:00:14 +00:00
-permalink: "/2026-01-07-Major-Innovations-in-Microsoft-Fabric-Data-Warehousing-2025-Overview.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Administration", "Analytics", "Azure", "Cloud Computing", "Cloud Data", "Data Clustering", "Data Engineering", "Data Exposed", "Data Governance", "Data Warehousing", "Dev", "Development", "Fabric Roadmap", "IDENTITY Columns", "MERGE Statement", "Microsoft", "Microsoft Fabric", "Migration Assistant", "ML", "Security", "Security Features", "SQL", "SQL Server", "Tech", "Technology", "Videos"]
-tags_normalized: ["administration", "analytics", "azure", "cloud computing", "cloud data", "data clustering", "data engineering", "data exposed", "data governance", "data warehousing", "dev", "development", "fabric roadmap", "identity columns", "merge statement", "microsoft", "microsoft fabric", "migration assistant", "ml", "security", "security features", "sql", "sql server", "tech", "technology", "videos"]
+permalink: /ml/videos/Major-Innovations-in-Microsoft-Fabric-Data-Warehousing-2025-Overview
+tags:
+- Administration
+- Analytics
+- Azure
+- Cloud Computing
+- Cloud Data
+- Data Clustering
+- Data Engineering
+- Data Exposed
+- Data Governance
+- Data Warehousing
+- Dev
+- Development
+- Fabric Roadmap
+- IDENTITY Columns
+- MERGE Statement
+- Microsoft
+- Microsoft Fabric
+- Migration Assistant
+- ML
+- Security
+- Security Features
+- SQL
+- SQL Server
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Developer presents an in-depth 2025 roundup on Microsoft Fabric Data Warehousing innovations. Discover insights on clustering, security, migration, and administration enhancements from leading experts.<!--excerpt_end-->
 
 {% youtube 9TH1EX_6FMk %}

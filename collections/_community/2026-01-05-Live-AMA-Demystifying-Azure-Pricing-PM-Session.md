@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Live AMA: Demystifying Azure Pricing (PM Session)"
-description: "This session is a live Ask Me Anything event focused on helping attendees understand and optimize Microsoft Azure pricing. It covers practical tools for cost estimation, such as the Azure Pricing Calculator, and discusses offerings like Reservations, Savings Plans, and Azure Hybrid Benefit. The session also shares best practices for controlling, forecasting, and reducing Azure costs."
-author: "Aaron_Bode"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-pm-session/ec-p/4483198#M666"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Live AMA: Demystifying Azure Pricing (PM Session)'
+author: Aaron_Bode
+canonical_url: https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-pm-session/ec-p/4483198#M666
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-05 21:17:25 +00:00
-permalink: "/2026-01-05-Live-AMA-Demystifying-Azure-Pricing-PM-Session.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Pricing", "Cloud Cost Management", "Cloud Migration", "Cloud Spend", "Community", "Cost Optimization", "Forecasting", "Hybrid Benefit", "Pricing Calculator", "Reservations", "Savings Plans", "Workload Optimization"]
-tags_normalized: ["azure", "azure pricing", "cloud cost management", "cloud migration", "cloud spend", "community", "cost optimization", "forecasting", "hybrid benefit", "pricing calculator", "reservations", "savings plans", "workload optimization"]
+permalink: /azure/community/Live-AMA-Demystifying-Azure-Pricing-PM-Session
+tags:
+- Azure
+- Azure Pricing
+- Cloud Cost Management
+- Cloud Migration
+- Cloud Spend
+- Community
+- Cost Optimization
+- Forecasting
+- Hybrid Benefit
+- Pricing Calculator
+- Reservations
+- Savings Plans
+- Workload Optimization
+section_names:
+- azure
 ---
-
 Aaron_Bode hosts a live AMA to help users understand Azure pricing, covering tools, cost-saving options, and best practices for managing and reducing cloud expenses.<!--excerpt_end-->
 
 # Live AMA: Demystifying Azure Pricing (PM Session)

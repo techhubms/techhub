@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware"
-description: "This article details Microsoft's approach to measuring and reducing the embodied carbon of Azure datacenter hardware. It introduces the in-house Cloud Hardware Emissions Methodology (CHEM) for high-resolution lifecycle assessment, describes technical and organizational initiatives, and highlights the impact on supply chain emissions, hardware architecture, and global sustainability collaborations."
-author: "Leoaspauza"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware
+author: Leoaspauza
+canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 22:08:50 +00:00
-permalink: "/2026-01-15-Advancing-Embodied-Carbon-Measurement-at-Scale-for-Microsoft-Azure-Hardware.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Hardware", "Carbon Accounting", "CHEM", "Cloud Infrastructure", "Community", "Datacenter Design", "Decarbonization", "Embodied Carbon", "Environmental Impact", "ICT Hardware", "Lifecycle Assessment", "Microsoft Azure", "Open Compute Project", "Scope 3 Emissions", "Supply Chain Emissions", "Sustainability"]
-tags_normalized: ["azure", "azure hardware", "carbon accounting", "chem", "cloud infrastructure", "community", "datacenter design", "decarbonization", "embodied carbon", "environmental impact", "ict hardware", "lifecycle assessment", "microsoft azure", "open compute project", "scope 3 emissions", "supply chain emissions", "sustainability"]
+permalink: /azure/community/Advancing-Embodied-Carbon-Measurement-at-Scale-for-Microsoft-Azure-Hardware
+tags:
+- Azure
+- Azure Hardware
+- Carbon Accounting
+- CHEM
+- Cloud Infrastructure
+- Community
+- Datacenter Design
+- Decarbonization
+- Embodied Carbon
+- Environmental Impact
+- ICT Hardware
+- Lifecycle Assessment
+- Microsoft Azure
+- Open Compute Project
+- Scope 3 Emissions
+- Supply Chain Emissions
+- Sustainability
+section_names:
+- azure
 ---
-
 Leoaspauza explains how Microsoft uses the Cloud Hardware Emissions Methodology (CHEM) to measure and manage the embodied carbon of Azure datacenter hardware, providing technical insights for sustainability-minded engineers and architects.<!--excerpt_end-->
 
 # Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware

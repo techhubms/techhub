@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API"
-description: "This post provides a technical deep dive into the Azure NetApp Files object REST API, focusing on how it enables S3-compatible object access to enterprise file data without unnecessary data duplication or movement. The discussion highlights practical integration patterns with Microsoft OneLake (Fabric), Azure Databricks, and advanced AI workloads, showing how solution teams can accelerate analytics, ML, and AI scenarios while maintaining enterprise security and governance. Real-world scenarios, architectural considerations, and step-by-step integration resources are included for architects and practitioners to implement these patterns efficiently."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API
+author: GeertVanTeylingen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 22:47:33 +00:00
-permalink: "/2026-01-15-Unlocking-Advanced-Data-Analytics-and-AI-with-Azure-NetApp-Files-Object-REST-API.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Workloads", "Analytics", "Azure", "Azure Databricks", "Azure NetApp Files", "Cloud Security", "Cloud Storage", "Community", "Data Architecture", "Data Integration", "Enterprise Storage", "Governance", "Machine Learning", "Microsoft Fabric", "Microsoft OneLake", "ML", "NFS", "Object REST API", "Real Time Analytics", "S3 Compatible", "SMB", "Spark"]
-tags_normalized: ["ai", "ai workloads", "analytics", "azure", "azure databricks", "azure netapp files", "cloud security", "cloud storage", "community", "data architecture", "data integration", "enterprise storage", "governance", "machine learning", "microsoft fabric", "microsoft onelake", "ml", "nfs", "object rest api", "real time analytics", "s3 compatible", "smb", "spark"]
+permalink: /ai/community/Unlocking-Advanced-Data-Analytics-and-AI-with-Azure-NetApp-Files-Object-REST-API
+tags:
+- AI
+- AI Workloads
+- Analytics
+- Azure
+- Azure Databricks
+- Azure NetApp Files
+- Cloud Security
+- Cloud Storage
+- Community
+- Data Architecture
+- Data Integration
+- Enterprise Storage
+- Governance
+- Machine Learning
+- Microsoft Fabric
+- Microsoft OneLake
+- ML
+- NFS
+- Object REST API
+- Real Time Analytics
+- S3 Compatible
+- SMB
+- Spark
+section_names:
+- ai
+- azure
+- ml
 ---
-
 GeertVanTeylingen presents a comprehensive exploration of the Azure NetApp Files object REST API, demonstrating how it empowers direct analytics and AI access to enterprise file data via S3-compatible object interfaces.<!--excerpt_end-->
 
 # Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API

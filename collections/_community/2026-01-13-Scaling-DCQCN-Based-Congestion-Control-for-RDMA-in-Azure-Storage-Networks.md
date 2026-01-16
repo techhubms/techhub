@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Scaling DCQCN-Based Congestion Control for RDMA in Azure Storage Networks"
-description: "This deep dive explores how Microsoft Azure implements DCQCN (Data Center Quantized Congestion Notification) for congestion control in its large-scale RDMA (Remote Direct Memory Access) networking. The article details Azure’s real-world challenges, interoperability solutions across hardware generations, protocol tuning, and the substantial benefits realized in throughput, latency, and CPU efficiency."
-author: "VamsiVadlamuri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/data-center-quantized-congestion-notification-scaling-congestion/ba-p/4468417"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Scaling DCQCN-Based Congestion Control for RDMA in Azure Storage Networks
+author: VamsiVadlamuri
+canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/data-center-quantized-congestion-notification-scaling-congestion/ba-p/4468417
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 22:35:21 +00:00
-permalink: "/2026-01-13-Scaling-DCQCN-Based-Congestion-Control-for-RDMA-in-Azure-Storage-Networks.html"
-categories: ["Azure"]
-tags: ["Azure", "Cloud Networking", "Cloud Storage", "Community", "Congestion Control", "Data Center", "DCQCN", "ECN", "Latency", "Network Interface Card", "Network Performance", "Priority Flow Control", "RDMA", "Real Time Tuning", "RoCE", "Scalability", "Storage Infrastructure", "Throughput"]
-tags_normalized: ["azure", "cloud networking", "cloud storage", "community", "congestion control", "data center", "dcqcn", "ecn", "latency", "network interface card", "network performance", "priority flow control", "rdma", "real time tuning", "roce", "scalability", "storage infrastructure", "throughput"]
+permalink: /azure/community/Scaling-DCQCN-Based-Congestion-Control-for-RDMA-in-Azure-Storage-Networks
+tags:
+- Azure
+- Cloud Networking
+- Cloud Storage
+- Community
+- Congestion Control
+- Data Center
+- DCQCN
+- ECN
+- Latency
+- Network Interface Card
+- Network Performance
+- Priority Flow Control
+- RDMA
+- Real Time Tuning
+- RoCE
+- Scalability
+- Storage Infrastructure
+- Throughput
+section_names:
+- azure
 ---
-
 VamsiVadlamuri analyzes how Azure employs DCQCN for congestion control in large-scale RDMA networking, addressing hardware interoperability, protocol tuning, and resulting performance advantages.<!--excerpt_end-->
 
 # Scaling DCQCN-Based Congestion Control for RDMA in Azure Storage Networks

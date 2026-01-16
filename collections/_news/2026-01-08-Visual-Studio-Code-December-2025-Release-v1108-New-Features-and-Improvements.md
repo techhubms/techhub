@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Visual Studio Code December 2025 Release (v1.108): New Features and Improvements"
-description: "This release note from the Visual Studio Code Team covers the December 2025 (version 1.108) update. It introduces new agent skills and Copilot customizations, enhanced chat and terminal experiences, substantial GitHub Copilot improvements, and updates to extension authoring and source control. Additional improvements include accessibility, development workflow features, and debug/test toolbar enhancements."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_108"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+layout: post
+title: 'Visual Studio Code December 2025 Release (v1.108): New Features and Improvements'
+author: Visual Studio Code Team
+canonical_url: https://code.visualstudio.com/updates/v1_108
+viewing_mode: external
+feed_name: Visual Studio Code Releases
+feed_url: https://code.visualstudio.com/feed.xml
 date: 2026-01-08 17:00:00 +00:00
-permalink: "/2026-01-08-Visual-Studio-Code-December-2025-Release-v1108-New-Features-and-Improvements.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Skills", "AI", "Chat Agents", "Code Editing", "Coding", "Copilot Customization", "Debugging", "DevOps", "Extension Development", "Git Integration", "GitHub Copilot", "News", "Productivity Tools", "Release Notes", "Source Control", "Terminal", "Testing", "TypeScript", "V1.108", "VS Code"]
-tags_normalized: ["accessibility", "agent skills", "ai", "chat agents", "code editing", "coding", "copilot customization", "debugging", "devops", "extension development", "git integration", "github copilot", "news", "productivity tools", "release notes", "source control", "terminal", "testing", "typescript", "v1dot108", "vs code"]
+permalink: /github-copilot/news/Visual-Studio-Code-December-2025-Release-v1108-New-Features-and-Improvements
+tags:
+- Accessibility
+- Agent Skills
+- AI
+- Chat Agents
+- Code Editing
+- Coding
+- Copilot Customization
+- Debugging
+- DevOps
+- Extension Development
+- Git Integration
+- GitHub Copilot
+- News
+- Productivity Tools
+- Release Notes
+- Source Control
+- Terminal
+- Testing
+- TypeScript
+- V1.108
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 The Visual Studio Code Team presents the December 2025 (v1.108) update, detailing new agent skill features, Copilot advancements, improved chat and terminal tools, and updates for developers and extension authors.<!--excerpt_end-->
 
 # Visual Studio Code December 2025 Release (v1.108)

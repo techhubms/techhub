@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter - January 2026"
-description: "This edition of the Logic Apps Aviators newsletter offers updates on Azure Logic Apps, BizTalk Server migration, community solutions, and new features like AI connectors and testing tools. It features insights from Sagar Sharma, highlights best practices for enterprise integration on Azure, and showcases recent innovations from both the Microsoft product team and the broader community."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Logic Apps Aviators Newsletter - January 2026
+author: WSilveira
+canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-05 16:00:00 +00:00
-permalink: "/2026-01-05-Logic-Apps-Aviators-Newsletter-January-2026.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Integration", "APIM", "Azure", "Azure Functions", "Azure Logic Apps", "BizTalk Server", "Cloud Migration", "Coding", "Community", "Community Playbook", "Data Mapper", "DevOps", "DevOps Pipelines", "Enterprise Integration", "Hybrid Integration", "Integration Patterns", "JSON Schema Validation", "MCP", "RAG Connectors", "SAP Integration", "Service Bus", "Testing Automation", "Workflow Automation"]
-tags_normalized: ["ai", "ai integration", "apim", "azure", "azure functions", "azure logic apps", "biztalk server", "cloud migration", "coding", "community", "community playbook", "data mapper", "devops", "devops pipelines", "enterprise integration", "hybrid integration", "integration patterns", "json schema validation", "mcp", "rag connectors", "sap integration", "service bus", "testing automation", "workflow automation"]
+permalink: /ai/community/Logic-Apps-Aviators-Newsletter-January-2026
+tags:
+- AI
+- AI Integration
+- APIM
+- Azure
+- Azure Functions
+- Azure Logic Apps
+- BizTalk Server
+- Cloud Migration
+- Coding
+- Community
+- Community Playbook
+- Data Mapper
+- DevOps
+- DevOps Pipelines
+- Enterprise Integration
+- Hybrid Integration
+- Integration Patterns
+- JSON Schema Validation
+- MCP
+- RAG Connectors
+- SAP Integration
+- Service Bus
+- Testing Automation
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 WSilveira curates the January 2026 Logic Apps Aviators Newsletter, covering Azure Logic Apps news, migration guidance, new AI capabilities, and real-world automation tips from product teams and community experts.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter - January 2026

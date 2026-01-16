@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Building an Agentic Memory System for GitHub Copilot"
-description: "This article introduces the cross-agent memory system developed for GitHub Copilot, enabling multiple Copilot agents—such as coding, CLI, and code review—to share and verify repository-specific knowledge across the development lifecycle. It details the reasoning, design challenges, memory verification methodology, implementation, privacy model, and measured improvements realized by this engineering effort."
-author: "Tiferet Gazit"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Building an Agentic Memory System for GitHub Copilot
+author: Tiferet Gazit
+canonical_url: https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2026-01-15 21:31:10 +00:00
-permalink: "/2026-01-15-Building-an-Agentic-Memory-System-for-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Memory", "Agentic Workflows", "AI", "AI & ML", "AI Assisted Development", "Code Review Automation", "Coding", "Copilot CLI", "Copilot Code Review", "Copilot Coding Agent", "Cross Agent Workflows", "Developer Productivity", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Copilot Code Review", "GitHub Copilot Coding Agent", "Just in Time Verification", "Memory Verification", "News", "Prompt Engineering", "Repository Knowledge", "Repository Memory", "Software Engineering"]
-tags_normalized: ["agentic memory", "agentic workflows", "ai", "ai and ml", "ai assisted development", "code review automation", "coding", "copilot cli", "copilot code review", "copilot coding agent", "cross agent workflows", "developer productivity", "github copilot", "github copilot cli", "github copilot code review", "github copilot coding agent", "just in time verification", "memory verification", "news", "prompt engineering", "repository knowledge", "repository memory", "software engineering"]
+permalink: /github-copilot/news/Building-an-Agentic-Memory-System-for-GitHub-Copilot
+tags:
+- Agentic Memory
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Assisted Development
+- Code Review Automation
+- Coding
+- Copilot CLI
+- Copilot Code Review
+- Copilot Coding Agent
+- Cross Agent Workflows
+- Developer Productivity
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHub Copilot Code Review
+- GitHub Copilot Coding Agent
+- Just in Time Verification
+- Memory Verification
+- News
+- Prompt Engineering
+- Repository Knowledge
+- Repository Memory
+- Software Engineering
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Tiferet Gazit explores how GitHub Copilot's new agentic memory system empowers multiple Copilot agents—coding, CLI, and code review—to share validated knowledge across a repository, streamlining developer workflows.<!--excerpt_end-->
 
 # Building an Agentic Memory System for GitHub Copilot

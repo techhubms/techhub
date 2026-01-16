@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Easy MCP: Exposing REST APIs to AI Agents with Azure App Service"
-description: "This post introduces Easy MCP, an open source translation layer that makes REST APIs accessible to AI agents using Model Context Protocol—without any code changes. It describes how developers can modernize legacy applications and APIs on Azure App Service, allowing AI tools like GitHub Copilot to interact with their existing business logic. The post covers deployment options, integration steps, and future plans to make these agentic capabilities native on the Azure App Service platform."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Easy MCP: Exposing REST APIs to AI Agents with Azure App Service'
+author: jordanselig
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-14 19:41:29 +00:00
-permalink: "/2026-01-14-Easy-MCP-Exposing-REST-APIs-to-AI-Agents-with-Azure-App-Service.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "API Gateway", "API Integration", "App Modernization", "Azure", "Azure API Management", "Azure App Service", "Azure Developer CLI", "Cloud Migration", "Community", "Easy MCP", "Legacy Modernization", "MCP", "No Code Changes", "OpenAPI", "REST API"]
-tags_normalized: ["ai", "ai agents", "api gateway", "api integration", "app modernization", "azure", "azure api management", "azure app service", "azure developer cli", "cloud migration", "community", "easy mcp", "legacy modernization", "mcp", "no code changes", "openapi", "rest api"]
+permalink: /ai/community/Easy-MCP-Exposing-REST-APIs-to-AI-Agents-with-Azure-App-Service
+tags:
+- AI
+- AI Agents
+- API Gateway
+- API Integration
+- App Modernization
+- Azure
+- Azure API Management
+- Azure App Service
+- Azure Developer CLI
+- Cloud Migration
+- Community
+- Easy MCP
+- Legacy Modernization
+- MCP
+- No Code Changes
+- OpenAPI
+- REST API
+section_names:
+- ai
+- azure
 ---
-
 jordanselig describes how Easy MCP enables seamless integration of existing REST APIs with AI agents like GitHub Copilot on Azure App Service—with zero code changes required.<!--excerpt_end-->
 
 # Easy MCP: Exposing REST APIs to AI Agents with Azure App Service

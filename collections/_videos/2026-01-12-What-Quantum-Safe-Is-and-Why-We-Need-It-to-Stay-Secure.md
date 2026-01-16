@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "What Quantum Safe Is and Why We Need It to Stay Secure"
-description: "This video explores the fundamentals of classical versus quantum computing and examines the future impact of quantum computing on digital security. It breaks down why quantum-safe cryptography is urgent, current threats like 'harvest now, decrypt later,' and how Microsoft and the industry are preparing for a post-quantum world. Viewers gain practical insight into encryption vulnerabilities, upcoming timelines, and recommended actions for organizations to protect communications in this evolving landscape."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=5--yBhgDrXM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+layout: post
+title: What Quantum Safe Is and Why We Need It to Stay Secure
+author: John Savill's Technical Training
+canonical_url: https://www.youtube.com/watch?v=5--yBhgDrXM
+viewing_mode: internal
+feed_name: John Savill's Technical Training
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2026-01-12 14:39:56 +00:00
-permalink: "/2026-01-12-What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Azure Cloud", "Cloud", "Cloud Security", "Cryptography", "Cybersecurity", "Digital Security", "Encryption", "Microsoft", "Microsoft Azure", "Microsoft Blog", "ML DSA", "Post Quantum Cryptography", "Quantum", "Quantum Computing", "Quantum Safe", "Quantum Safe Security", "Quantum Security", "Quantum Threats", "RSA", "Security", "SymCrypt", "Videos"]
-tags_normalized: ["ai", "azure", "azure cloud", "cloud", "cloud security", "cryptography", "cybersecurity", "digital security", "encryption", "microsoft", "microsoft azure", "microsoft blog", "ml dsa", "post quantum cryptography", "quantum", "quantum computing", "quantum safe", "quantum safe security", "quantum security", "quantum threats", "rsa", "security", "symcrypt", "videos"]
+permalink: /ai/videos/What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure
+tags:
+- AI
+- Azure
+- Azure Cloud
+- Cloud
+- Cloud Security
+- Cryptography
+- Cybersecurity
+- Digital Security
+- Encryption
+- Microsoft
+- Microsoft Azure
+- Microsoft Blog
+- ML DSA
+- Post Quantum Cryptography
+- Quantum
+- Quantum Computing
+- Quantum Safe
+- Quantum Safe Security
+- Quantum Security
+- Quantum Threats
+- RSA
+- Security
+- SymCrypt
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 John Savill's Technical Training walks through the urgent need for quantum-safe cryptography, examining how classical and quantum computing impact security and highlighting actionable steps for organizations and individuals.<!--excerpt_end-->
 
 {% youtube 5--yBhgDrXM %}

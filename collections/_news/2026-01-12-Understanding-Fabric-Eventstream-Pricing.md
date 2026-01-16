@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Understanding Fabric Eventstream Pricing"
-description: "This post offers a deep dive into the pricing model of Microsoft Fabric Eventstream. It covers how costs are calculated across various Eventstream components, operation types, and capacity metrics, backed by practical scenario walkthroughs for accurate capacity planning and cost estimation in Fabric environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Understanding Fabric Eventstream Pricing
+author: Microsoft Fabric Blog
+canonical_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
+viewing_mode: external
+feed_name: Microsoft Fabric Blog
+feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-12 14:00:00 +00:00
-permalink: "/2026-01-12-Understanding-Fabric-Eventstream-Pricing.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Services", "Capacity Metrics", "Cost Estimation", "CU Consumption", "Data Ingestion", "Destinations", "Event Processing", "Eventstream", "Fabric Capacity Estimator", "Microsoft Fabric", "ML", "News", "Operators", "Pricing", "Real Time Analytics", "Streams"]
-tags_normalized: ["azure", "azure data services", "capacity metrics", "cost estimation", "cu consumption", "data ingestion", "destinations", "event processing", "eventstream", "fabric capacity estimator", "microsoft fabric", "ml", "news", "operators", "pricing", "real time analytics", "streams"]
+permalink: /ml/news/Understanding-Fabric-Eventstream-Pricing
+tags:
+- Azure
+- Azure Data Services
+- Capacity Metrics
+- Cost Estimation
+- CU Consumption
+- Data Ingestion
+- Destinations
+- Event Processing
+- Eventstream
+- Fabric Capacity Estimator
+- Microsoft Fabric
+- ML
+- News
+- Operators
+- Pricing
+- Real Time Analytics
+- Streams
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog provides an in-depth guide to understanding Eventstream pricing in Microsoft Fabric, helping technical users estimate costs and optimize architecture.<!--excerpt_end-->
 
 # Understanding Fabric Eventstream Pricing

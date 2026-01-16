@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "What's New with Azure NetApp Files VS Code Extension"
-description: "This article provides an in-depth look at the latest features in the Azure NetApp Files VS Code Extension v1.1.0, including multi-tenant support, context-aware mount code generation, and integration with Azure APIs and Microsoft Entra ID. Developers will learn how the extension streamlines cloud storage management, incorporates AI-powered workflows, and optimizes resource management directly within Visual Studio Code. Step-by-step guidance and practical use cases highlight how these enhancements improve the developer experience and productivity for cloud-native applications."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: What's New with Azure NetApp Files VS Code Extension
+author: GeertVanTeylingen
+canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 21:04:04 +00:00
-permalink: "/2026-01-15-Whats-New-with-Azure-NetApp-Files-VS-Code-Extension.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Powered Commands", "ARM Templates", "Azure", "Azure API", "Azure NetApp Files", "C#", "Cloud Native Applications", "Cloud Storage", "Coding", "Community", "DevOps", "DevOps Tools", "JavaScript", "Microsoft Entra ID", "Mount Code Generation", "Multi Tenant", "NFSv3", "NFSv4.1", "Python", "Resource Management", "TypeScript", "VS Code", "VS Code Extension", "YAML"]
-tags_normalized: ["ai", "ai powered commands", "arm templates", "azure", "azure api", "azure netapp files", "csharp", "cloud native applications", "cloud storage", "coding", "community", "devops", "devops tools", "javascript", "microsoft entra id", "mount code generation", "multi tenant", "nfsv3", "nfsv4dot1", "python", "resource management", "typescript", "vs code", "vs code extension", "yaml"]
+permalink: /ai/community/Whats-New-with-Azure-NetApp-Files-VS-Code-Extension
+tags:
+- AI
+- AI Powered Commands
+- ARM Templates
+- Azure
+- Azure API
+- Azure NetApp Files
+- C#
+- Cloud Native Applications
+- Cloud Storage
+- Coding
+- Community
+- DevOps
+- DevOps Tools
+- JavaScript
+- Microsoft Entra ID
+- Mount Code Generation
+- Multi Tenant
+- NFSv3
+- NFSv4.1
+- Python
+- Resource Management
+- TypeScript
+- VS Code
+- VS Code Extension
+- YAML
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 GeertVanTeylingen explores the new capabilities in the Azure NetApp Files VS Code Extension, focusing on AI-driven productivity boosts, multi-tenant Azure management, and streamlined storage workflows for developers.<!--excerpt_end-->
 
 # What's New with Azure NetApp Files VS Code Extension

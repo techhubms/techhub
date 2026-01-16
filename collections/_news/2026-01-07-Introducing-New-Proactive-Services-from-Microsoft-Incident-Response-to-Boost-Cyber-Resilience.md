@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Introducing New Proactive Services from Microsoft Incident Response to Boost Cyber Resilience"
-description: "This article introduces Microsoft's enhanced proactive Incident Response services designed to help organizations boost their cyber resilience. It details offerings such as incident response plan development, major event support, cyber ranges, identity assessments, and compromise assessments, with the goal of minimizing cyber risk and improving readiness."
-author: "Andrew Rapp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+layout: post
+title: Introducing New Proactive Services from Microsoft Incident Response to Boost Cyber Resilience
+author: Andrew Rapp
+canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/
+viewing_mode: external
+feed_name: Microsoft Security Blog
+feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-07 17:00:00 +00:00
-permalink: "/2026-01-07-Introducing-New-Proactive-Services-from-Microsoft-Incident-Response-to-Boost-Cyber-Resilience.html"
-categories: ["Security"]
-tags: ["Compromise Assessment", "Cyber Range", "Cyber Resilience", "Forensic Investigation", "Identity Assessment", "Identity Hardening", "Incident Recovery", "Incident Response Plan", "Mergers And Acquisitions Security", "Microsoft Incident Response", "Microsoft Security", "News", "Proactive Services", "Risk Management", "Security", "Security Consulting", "Security Operations", "Security Posture", "Tabletop Exercises", "Threat Detection", "Threat Hunting"]
-tags_normalized: ["compromise assessment", "cyber range", "cyber resilience", "forensic investigation", "identity assessment", "identity hardening", "incident recovery", "incident response plan", "mergers and acquisitions security", "microsoft incident response", "microsoft security", "news", "proactive services", "risk management", "security", "security consulting", "security operations", "security posture", "tabletop exercises", "threat detection", "threat hunting"]
+permalink: /security/news/Introducing-New-Proactive-Services-from-Microsoft-Incident-Response-to-Boost-Cyber-Resilience
+tags:
+- Compromise Assessment
+- Cyber Range
+- Cyber Resilience
+- Forensic Investigation
+- Identity Assessment
+- Identity Hardening
+- Incident Recovery
+- Incident Response Plan
+- Mergers And Acquisitions Security
+- Microsoft Incident Response
+- Microsoft Security
+- News
+- Proactive Services
+- Risk Management
+- Security
+- Security Consulting
+- Security Operations
+- Security Posture
+- Tabletop Exercises
+- Threat Detection
+- Threat Hunting
+section_names:
+- security
 ---
-
 Andrew Rapp explores how Microsoft's new proactive Incident Response services help organizations strengthen their cyber defenses, prevent threats, and increase resilience before incidents occur.<!--excerpt_end-->
 
 # Introducing New Proactive Services from Microsoft Incident Response to Boost Cyber Resilience

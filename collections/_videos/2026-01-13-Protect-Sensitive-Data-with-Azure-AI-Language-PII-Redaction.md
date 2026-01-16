@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Protect Sensitive Data with Azure AI Language PII Redaction"
-description: "This video from Microsoft Developer introduces the Azure AI Language PII Redaction service, designed to help organizations detect and redact personally identifiable information across various types of content. It covers PII protection importance, demonstrates redaction features, customization options, real-world use cases in finance and healthcare, and walks viewers through using the service and trying it in Azure AI Foundry Playground."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ZDaog_MJGS8"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+layout: post
+title: Protect Sensitive Data with Azure AI Language PII Redaction
+author: Microsoft Developer
+canonical_url: https://www.youtube.com/watch?v=ZDaog_MJGS8
+viewing_mode: internal
+feed_name: Microsoft Developer YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-13 17:10:44 +00:00
-permalink: "/2026-01-13-Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Compliance", "AI For Developers", "Azure", "Azure AI Foundry", "Azure AI Language", "Cloud Computing", "Cloud Security", "Compliance", "Data Privacy", "Dev", "Development", "Entity Masking", "Finance", "GDPR", "Healthcare", "HIPAA", "Microsoft", "Microsoft Azure", "PII Detection", "PII Redaction", "Redaction Service", "Security", "Sensitive Data", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai compliance", "ai for developers", "azure", "azure ai foundry", "azure ai language", "cloud computing", "cloud security", "compliance", "data privacy", "dev", "development", "entity masking", "finance", "gdpr", "healthcare", "hipaa", "microsoft", "microsoft azure", "pii detection", "pii redaction", "redaction service", "security", "sensitive data", "tech", "technology", "videos"]
+permalink: /ai/videos/Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction
+tags:
+- AI
+- AI Compliance
+- AI For Developers
+- Azure
+- Azure AI Foundry
+- Azure AI Language
+- Cloud Computing
+- Cloud Security
+- Compliance
+- Data Privacy
+- Dev
+- Development
+- Entity Masking
+- Finance
+- GDPR
+- Healthcare
+- HIPAA
+- Microsoft
+- Microsoft Azure
+- PII Detection
+- PII Redaction
+- Redaction Service
+- Security
+- Sensitive Data
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Developer explains how Azure AI Language PII Redaction helps protect sensitive data by detecting and redacting personally identifiable information in text, documents, and transcripts.<!--excerpt_end-->
 
 {% youtube ZDaog_MJGS8 %}

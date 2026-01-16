@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Upcoming Deprecation of Select GitHub Copilot Models from Claude and OpenAI"
-description: "This news update informs developers and administrators about the scheduled deprecation of specific GitHub Copilot models, including Claude Opus 4.1, GPT-5, and GPT-5-Codex, effective February 17, 2026. The announcement provides alternative model recommendations, guidance for Copilot Enterprise administrators on updating model policies, and important timeline details."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Upcoming Deprecation of Select GitHub Copilot Models from Claude and OpenAI
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 19:29:00 +00:00
-permalink: "/2026-01-13-Upcoming-Deprecation-of-Select-GitHub-Copilot-Models-from-Claude-and-OpenAI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Claude Opus", "Copilot", "Copilot Chat", "Enterprise Administration", "GitHub Copilot", "GPT 5", "GPT 5 Codex", "Model Deprecation", "Model Policy", "News", "OpenAI", "Retired", "VS Code", "Workflow Update"]
-tags_normalized: ["ai", "ai models", "claude opus", "copilot", "copilot chat", "enterprise administration", "github copilot", "gpt 5", "gpt 5 codex", "model deprecation", "model policy", "news", "openai", "retired", "vs code", "workflow update"]
+permalink: /github-copilot/news/Upcoming-Deprecation-of-Select-GitHub-Copilot-Models-from-Claude-and-OpenAI
+tags:
+- AI
+- AI Models
+- Claude Opus
+- Copilot
+- Copilot Chat
+- Enterprise Administration
+- GitHub Copilot
+- GPT 5
+- GPT 5 Codex
+- Model Deprecation
+- Model Policy
+- News
+- OpenAI
+- Retired
+- VS Code
+- Workflow Update
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares a news update about the upcoming deprecation of several GitHub Copilot models from Claude and OpenAI, outlining important dates and recommended alternatives for developers and administrators.<!--excerpt_end-->
 
 # Upcoming Deprecation of Select GitHub Copilot Models from Claude and OpenAI

@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "GitHub Copilot CLI: Enhanced Agents, Context Management, and Installation Methods"
-description: "This announcement details the latest features in GitHub Copilot CLI, covering new AI-powered agent capabilities, improved context management for token efficiency, streamlined installation methods for all major operating systems, scripting and automation options, and enhanced terminal experience. Developers can leverage specialized agents for code exploration, planning, reviewing, and automation, together with simple deployment and improved workflow flexibility."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Copilot CLI: Enhanced Agents, Context Management, and Installation Methods'
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-14 20:21:16 +00:00
-permalink: "/2026-01-14-GitHub-Copilot-CLI-Enhanced-Agents-Context-Management-and-Installation-Methods.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "Automation", "CI/CD Authentication", "Client Apps", "Code Analysis", "Code Review", "Context Management", "Copilot", "DevOps Tools", "GitHub Codespaces", "GitHub Copilot", "GitHub Copilot CLI", "GPT 4.1", "GPT 5 Mini", "Homebrew", "Improvement", "Installation", "Model Management", "News", "Project Context", "Scripting", "Session Management", "Terminal", "WinGet"]
-tags_normalized: ["ai", "ai agents", "automation", "cislashcd authentication", "client apps", "code analysis", "code review", "context management", "copilot", "devops tools", "github codespaces", "github copilot", "github copilot cli", "gpt 4dot1", "gpt 5 mini", "homebrew", "improvement", "installation", "model management", "news", "project context", "scripting", "session management", "terminal", "winget"]
+permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Agents-Context-Management-and-Installation-Methods
+tags:
+- AI
+- AI Agents
+- Automation
+- CI/CD Authentication
+- Client Apps
+- Code Analysis
+- Code Review
+- Context Management
+- Copilot
+- DevOps Tools
+- GitHub Codespaces
+- GitHub Copilot
+- GitHub Copilot CLI
+- GPT 4.1
+- GPT 5 Mini
+- Homebrew
+- Improvement
+- Installation
+- Model Management
+- News
+- Project Context
+- Scripting
+- Session Management
+- Terminal
+- WinGet
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces significant improvements to GitHub Copilot CLI, including advanced agents, enhanced context features, improved installation workflows, and better scripting options for developers.<!--excerpt_end-->
 
 # GitHub Copilot CLI: Enhanced Agents, Context Management, and Installation Methods

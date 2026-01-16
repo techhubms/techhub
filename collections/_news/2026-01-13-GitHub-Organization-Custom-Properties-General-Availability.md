@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Organization Custom Properties: General Availability"
-description: "This announcement introduces the general availability of organization custom properties for GitHub Enterprise Cloud administrators. Custom properties allow tagging organizations with metadata, enabling automated rule application across business units, geographic regions, or compliance frameworks. The release increases consistency and scalability in enterprise GitHub management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Organization Custom Properties: General Availability'
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 20:48:28 +00:00
-permalink: "/2026-01-13-GitHub-Organization-Custom-Properties-General-Availability.html"
-categories: ["DevOps"]
-tags: ["Automation", "Compliance", "Configuration Management", "Custom Properties", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Policy", "GitHub Enterprise Cloud", "Improvement", "Metadata Tagging", "News", "Organization Management", "Platform Governance", "Rulesets"]
-tags_normalized: ["automation", "compliance", "configuration management", "custom properties", "devops", "enterprise administration", "enterprise management tools", "enterprise policy", "github enterprise cloud", "improvement", "metadata tagging", "news", "organization management", "platform governance", "rulesets"]
+permalink: /devops/news/GitHub-Organization-Custom-Properties-General-Availability
+tags:
+- Automation
+- Compliance
+- Configuration Management
+- Custom Properties
+- DevOps
+- Enterprise Administration
+- Enterprise Management Tools
+- Enterprise Policy
+- GitHub Enterprise Cloud
+- Improvement
+- Metadata Tagging
+- News
+- Organization Management
+- Platform Governance
+- Rulesets
+section_names:
+- devops
 ---
-
 Allison introduces the general availability of organization custom properties for GitHub Enterprise Cloud, helping administrators manage enterprise governance and policy automation more efficiently.<!--excerpt_end-->
 
 # GitHub Organization Custom Properties: General Availability

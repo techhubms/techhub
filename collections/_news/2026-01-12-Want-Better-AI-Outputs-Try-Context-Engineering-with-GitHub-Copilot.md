@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Want Better AI Outputs? Try Context Engineering with GitHub Copilot"
-description: "This article explores how developers can improve the performance of GitHub Copilot through context engineering practices. It covers the use of custom instructions, reusable prompts, and custom agents to deliver more accurate, consistent, and standards-aligned AI-generated code. Readers will learn practical techniques to guide Copilot using structured context and workflow customization."
-author: "Christina Warren"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Want Better AI Outputs? Try Context Engineering with GitHub Copilot
+author: Christina Warren
+canonical_url: https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2026-01-12 17:00:00 +00:00
-permalink: "/2026-01-12-Want-Better-AI-Outputs-Try-Context-Engineering-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Assisted Development", "Coding Standards", "Context Engineering", "Custom Agents", "Custom Instructions", "Developer Tools", "Generative AI", "GitHub Copilot", "Insider", "LLMs", "News", "Prompt Engineering", "Reusable Prompts", "Software Development", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai and ml", "ai assisted development", "coding standards", "context engineering", "custom agents", "custom instructions", "developer tools", "generative ai", "github copilot", "insider", "llms", "news", "prompt engineering", "reusable prompts", "software development", "vs code", "workflow automation"]
+permalink: /github-copilot/news/Want-Better-AI-Outputs-Try-Context-Engineering-with-GitHub-Copilot
+tags:
+- AI
+- AI & ML
+- AI Assisted Development
+- Coding Standards
+- Context Engineering
+- Custom Agents
+- Custom Instructions
+- Developer Tools
+- Generative AI
+- GitHub Copilot
+- Insider
+- LLMs
+- News
+- Prompt Engineering
+- Reusable Prompts
+- Software Development
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Christina Warren shows how developers can enhance GitHub Copilot's accuracy and consistency by leveraging context engineering techniques, such as custom instructions, reusable prompts, and specialized AI agents.<!--excerpt_end-->
 
 # Want Better AI Outputs? Try Context Engineering with GitHub Copilot

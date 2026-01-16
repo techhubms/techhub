@@ -1,20 +1,36 @@
----
-layout: "post"
-title: ".NET and .NET Framework January 2026 Servicing Releases Updates"
-description: "This article provides a summary of the January 2026 servicing updates for .NET and .NET Framework. It outlines non-security fixes included in the latest .NET 10.0, 9.0, and 8.0 releases, links to relevant changelogs, installers, and known issues, and clarifies that there are no new .NET Framework updates this month. Developers and administrators are encouraged to review the updates and apply the latest servicing releases."
-author: "Rahul Bhandari (MSFT), Tara Overfield"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+layout: post
+title: .NET and .NET Framework January 2026 Servicing Releases Updates
+author: Rahul Bhandari (MSFT), Tara Overfield
+canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/
+viewing_mode: external
+feed_name: Microsoft .NET Blog
+feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-13 21:24:09 +00:00
-permalink: "/2026-01-13-NET-and-NET-Framework-January-2026-Servicing-Releases-Updates.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10.0", ".NET 8.0", ".NET 9.0", ".NET Framework", "ASP.NET Core", "Coding", "EF Core", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Release Notes", "SDK", "Servicing Updates", "Software Updates", "Versioning", "WinForms", "WPF"]
-tags_normalized: ["dotnet", "dotnet 10dot0", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "aspdotnet core", "coding", "ef core", "maintenance", "maintenance and updates", "microsoft", "news", "release notes", "sdk", "servicing updates", "software updates", "versioning", "winforms", "wpf"]
+permalink: /coding/news/NET-and-NET-Framework-January-2026-Servicing-Releases-Updates
+tags:
+- .NET
+- .NET 10.0
+- .NET 8.0
+- .NET 9.0
+- .NET Framework
+- ASP.NET Core
+- Coding
+- EF Core
+- Maintenance
+- Maintenance & Updates
+- Microsoft
+- News
+- Release Notes
+- SDK
+- Servicing Updates
+- Software Updates
+- Versioning
+- WinForms
+- WPF
+section_names:
+- coding
 ---
-
 Rahul Bhandari (MSFT) and Tara Overfield review the .NET and .NET Framework January 2026 servicing updates, summarizing new fixes, changelogs, and download resources for all supported versions.<!--excerpt_end-->
 
 # .NET and .NET Framework January 2026 Servicing Releases Updates

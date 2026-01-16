@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Secret Scanning: Automatic Extended Metadata Checks for Security"
-description: "This news update details GitHub's enhancement to secret scanning, adding support for extended metadata checks within security configurations. The feature, available from February 2026, provides more context for secret alerts—such as owner information and expiry dates—to help security and development teams triage and remediate exposures quickly."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-15-secret-scanning-extended-metadata-to-be-automatically-enabled-for-certain-repositories"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: 'GitHub Secret Scanning: Automatic Extended Metadata Checks for Security'
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-15-secret-scanning-extended-metadata-to-be-automatically-enabled-for-certain-repositories
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 21:59:35 +00:00
-permalink: "/2026-01-15-GitHub-Secret-Scanning-Automatic-Extended-Metadata-Checks-for-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Developer Security", "DevOps", "Enterprise Cloud", "Exposure Assessment", "GitHub", "Improvement", "Incident Response", "Metadata Checks", "News", "Remediation", "Repository Security", "Secret Scanning", "Security", "Security Alerts", "Security Configuration", "Token Security", "Validity Checks"]
-tags_normalized: ["application security", "developer security", "devops", "enterprise cloud", "exposure assessment", "github", "improvement", "incident response", "metadata checks", "news", "remediation", "repository security", "secret scanning", "security", "security alerts", "security configuration", "token security", "validity checks"]
+permalink: /devops/news/GitHub-Secret-Scanning-Automatic-Extended-Metadata-Checks-for-Security
+tags:
+- Application Security
+- Developer Security
+- DevOps
+- Enterprise Cloud
+- Exposure Assessment
+- GitHub
+- Improvement
+- Incident Response
+- Metadata Checks
+- News
+- Remediation
+- Repository Security
+- Secret Scanning
+- Security
+- Security Alerts
+- Security Configuration
+- Token Security
+- Validity Checks
+section_names:
+- devops
+- security
 ---
-
 Allison reports on GitHub's upcoming automatic enablement of extended metadata checks in secret scanning, bringing improved context to security alerts for more effective remediation.<!--excerpt_end-->
 
 # GitHub Secret Scanning: Automatic Extended Metadata Checks for Security

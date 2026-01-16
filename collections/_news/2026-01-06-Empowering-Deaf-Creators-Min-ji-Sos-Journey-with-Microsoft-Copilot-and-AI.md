@@ -1,20 +1,35 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "Empowering Deaf Creators: Min-ji So's Journey with Microsoft Copilot and AI"
-description: "This in-depth feature explores how Deaf webtoon creator Min-ji So leveraged Microsoft Copilot and the Microsoft AI for Impact program to overcome language barriers in creative storytelling. The article highlights her use of AI-driven tools to support Deaf artists, culminating in the creation of the Webtoon Storyboard Assistant to foster independence and creativity in the Deaf community."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+canonical_url: https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-06 15:13:38 +00:00
-permalink: "/2026-01-06-Empowering-Deaf-Creators-Min-ji-Sos-Journey-with-Microsoft-Copilot-and-AI.html"
-categories: ["AI"]
-tags: ["Accessibility", "AI", "AI For Impact", "Assistive Technology", "Company News", "Conversational AI", "Creative Writing", "Digital Art", "Education Workshop", "Grammatical Correction", "Inclusive Design", "Korean Language", "Microsoft AI", "Microsoft Copilot", "Natural Language Processing", "News", "Storyboarding", "Webtoon Creation"]
-tags_normalized: ["accessibility", "ai", "ai for impact", "assistive technology", "company news", "conversational ai", "creative writing", "digital art", "education workshop", "grammatical correction", "inclusive design", "korean language", "microsoft ai", "microsoft copilot", "natural language processing", "news", "storyboarding", "webtoon creation"]
+permalink: /ai/news/Empowering-Deaf-Creators-Min-ji-Sos-Journey-with-Microsoft-Copilot-and-AI
+tags:
+- Accessibility
+- AI
+- AI For Impact
+- Assistive Technology
+- Company News
+- Conversational AI
+- Creative Writing
+- Digital Art
+- Education Workshop
+- Grammatical Correction
+- Inclusive Design
+- Korean Language
+- Microsoft AI
+- Microsoft Copilot
+- Natural Language Processing
+- News
+- Storyboarding
+- Webtoon Creation
+section_names:
+- ai
 ---
-
 stclarke recounts how Min-ji So, a Deaf webtoon creator, used Microsoft Copilot and the AI for Impact program to break down language obstacles and empower herself—and others—to tell richer, more independent stories.<!--excerpt_end-->
 
 # Empowering Deaf Creators: Min-ji So's Journey with Microsoft Copilot and AI

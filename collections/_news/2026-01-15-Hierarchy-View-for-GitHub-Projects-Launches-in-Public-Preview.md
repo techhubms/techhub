@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Hierarchy View for GitHub Projects Launches in Public Preview"
-description: "This announcement details the release of the hierarchy view feature for GitHub Projects, now in public preview. Users can see full issue nesting within project tables, enhancing project management and workflow insights. The update introduces expand/collapse of sub-issues, advanced sorting, and upcoming improvements such as inline sub-issue creation and better performance. Additional project and issue enhancements, including new API endpoints and batch workflow improvements, are also covered."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Hierarchy View for GitHub Projects Launches in Public Preview
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 20:19:53 +00:00
-permalink: "/2026-01-15-Hierarchy-View-for-GitHub-Projects-Launches-in-Public-Preview.html"
-categories: ["DevOps"]
-tags: ["DevOps", "GitHub Projects", "Hierarchy View", "Issue Management", "Merge Queue", "News", "Performance Enhancement", "Productivity Tools", "Project Management", "Project Views", "Projects & Issues", "Public Preview", "Release Update", "REST API", "Sub Issues", "Workflow Improvement"]
-tags_normalized: ["devops", "github projects", "hierarchy view", "issue management", "merge queue", "news", "performance enhancement", "productivity tools", "project management", "project views", "projects and issues", "public preview", "release update", "rest api", "sub issues", "workflow improvement"]
+permalink: /devops/news/Hierarchy-View-for-GitHub-Projects-Launches-in-Public-Preview
+tags:
+- DevOps
+- GitHub Projects
+- Hierarchy View
+- Issue Management
+- Merge Queue
+- News
+- Performance Enhancement
+- Productivity Tools
+- Project Management
+- Project Views
+- Projects & Issues
+- Public Preview
+- Release Update
+- REST API
+- Sub Issues
+- Workflow Improvement
+section_names:
+- devops
 ---
-
 Allison announces the public preview of hierarchy view for GitHub Projects, allowing users to visualize and manage nested sub-issues directly within project tables.<!--excerpt_end-->
 
 # Hierarchy View for GitHub Projects Launches in Public Preview

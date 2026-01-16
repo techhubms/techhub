@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Discrepancies Between Azure AI Foundry Playground and API Responses for GPT-4o-mini"
-description: "A developer encounters unexpected inconsistencies between results from Azure AI Foundry's Chat Playground and the official API when classifying user messages with GPT-4o-mini. This post investigates potential hidden system prompts or differences in pre-processing that might explain divergent outputs, calling for input on how to replicate Playground accuracy through API or LangChain."
-author: "Rakanid"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/weird-problem-when-comparing-the-answers-from-chat-playground/m-p/4486090#M22407"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Discrepancies Between Azure AI Foundry Playground and API Responses for GPT-4o-mini
+author: Rakanid
+canonical_url: https://techcommunity.microsoft.com/t5/azure/weird-problem-when-comparing-the-answers-from-chat-playground/m-p/4486090#M22407
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 20:34:31 +00:00
-permalink: "/2026-01-15-Discrepancies-Between-Azure-AI-Foundry-Playground-and-API-Responses-for-GPT-4o-mini.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Model Behavior", "API Integration", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "AzureChatOpenAI", "Chat Playground", "Chatbot Development", "Classification Logic", "Community", "GPT 4o Mini", "LangChain", "Prompt Engineering", "Python", "Response Discrepancy", "System Prompt"]
-tags_normalized: ["ai", "ai model behavior", "api integration", "azure", "azure ai foundry", "azure openai service", "azurechatopenai", "chat playground", "chatbot development", "classification logic", "community", "gpt 4o mini", "langchain", "prompt engineering", "python", "response discrepancy", "system prompt"]
+permalink: /ai/community/Discrepancies-Between-Azure-AI-Foundry-Playground-and-API-Responses-for-GPT-4o-mini
+tags:
+- AI
+- AI Model Behavior
+- API Integration
+- Azure
+- Azure AI Foundry
+- Azure OpenAI Service
+- AzureChatOpenAI
+- Chat Playground
+- Chatbot Development
+- Classification Logic
+- Community
+- GPT 4o Mini
+- LangChain
+- Prompt Engineering
+- Python
+- Response Discrepancy
+- System Prompt
+section_names:
+- ai
+- azure
 ---
-
 Rakanid describes issues with inconsistent results when using Azure AI Foundry's GPT-4o-mini in the Chat Playground versus the API, and seeks advice from the community on understanding and bridging this gap.<!--excerpt_end-->
 
 # Discrepancies Between Azure AI Foundry Playground and API Responses for GPT-4o-mini

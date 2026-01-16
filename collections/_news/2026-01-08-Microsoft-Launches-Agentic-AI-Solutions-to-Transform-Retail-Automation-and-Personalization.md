@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization"
-description: "Microsoft has announced a suite of new agentic AI capabilities for the retail sector, aimed at automating workflows, enhancing customer engagement, and empowering store associates through intelligent tools. Key solutions include Copilot Checkout, customizable shopping agent templates in Copilot Studio, catalog enrichment agents, and store operations assistants, all designed to improve efficiency and deliver personalized experiences across online and in-store retail functions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+layout: post
+title: Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization
+author: stclarke
+canonical_url: https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/
+viewing_mode: external
+feed_name: Microsoft News
+feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 15:00:05 +00:00
-permalink: "/2026-01-08-Microsoft-Launches-Agentic-AI-Solutions-to-Transform-Retail-Automation-and-Personalization.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Automation", "Catalog Enrichment", "Company News", "Copilot Checkout", "Copilot Studio", "Digital Transformation", "E Commerce", "Intelligent Agents", "Microsoft", "News", "Personalization", "Recommendation Engines", "Retail Technology", "Shopify Integration", "Store Operations"]
-tags_normalized: ["agentic ai", "ai", "ai automation", "catalog enrichment", "company news", "copilot checkout", "copilot studio", "digital transformation", "e commerce", "intelligent agents", "microsoft", "news", "personalization", "recommendation engines", "retail technology", "shopify integration", "store operations"]
+permalink: /ai/news/Microsoft-Launches-Agentic-AI-Solutions-to-Transform-Retail-Automation-and-Personalization
+tags:
+- Agentic AI
+- AI
+- AI Automation
+- Catalog Enrichment
+- Company News
+- Copilot Checkout
+- Copilot Studio
+- Digital Transformation
+- E Commerce
+- Intelligent Agents
+- Microsoft
+- News
+- Personalization
+- Recommendation Engines
+- Retail Technology
+- Shopify Integration
+- Store Operations
+section_names:
+- ai
 ---
-
 stclarke presents Microsoft's announcement of new agentic AI solutions for retail, featuring automation tools like Copilot Checkout and Copilot Studio templates to enhance shopping experiences and streamline retail operations.<!--excerpt_end-->
 
 # Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization

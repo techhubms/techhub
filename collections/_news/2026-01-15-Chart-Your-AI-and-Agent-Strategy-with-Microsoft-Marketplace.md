@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Chart Your AI and Agent Strategy with Microsoft Marketplace"
-description: "This article explores how organizations can leverage Microsoft Marketplace to build, buy, or blend AI-powered solutions and custom agents. It discusses the strategic options for adopting AI, from pro-code and low-code development using prepackaged models and Copilot Studio, to shopping for ready-made applications and integrating them with existing Microsoft environments such as Azure and Microsoft 365. The piece also highlights best practices for integrating AI and machine learning at scale, ensuring governance, and accelerating business transformation."
-author: "Cyril Belikoff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+layout: post
+title: Chart Your AI and Agent Strategy with Microsoft Marketplace
+author: Cyril Belikoff
+canonical_url: https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/
+viewing_mode: external
+feed_name: The Azure Blog
+feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2026-01-15 16:00:00 +00:00
-permalink: "/2026-01-15-Chart-Your-AI-and-Agent-Strategy-with-Microsoft-Marketplace.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI + Machine Learning", "AI Agents", "AI Strategy", "Anthropic", "Azure", "Azure Consumption Commitment", "Cloud Solutions", "Copilot", "Copilot Studio", "Custom AI Applications", "Fraud Detection", "Low Code Development", "Machine Learning", "Microsoft Copilot", "Microsoft Foundry", "Microsoft Marketplace", "ML", "ML Models", "Model Deployment", "News", "OpenAI", "Pro Code Development"]
-tags_normalized: ["ai", "ai plus machine learning", "ai agents", "ai strategy", "anthropic", "azure", "azure consumption commitment", "cloud solutions", "copilot", "copilot studio", "custom ai applications", "fraud detection", "low code development", "machine learning", "microsoft copilot", "microsoft foundry", "microsoft marketplace", "ml", "ml models", "model deployment", "news", "openai", "pro code development"]
+permalink: /ai/news/Chart-Your-AI-and-Agent-Strategy-with-Microsoft-Marketplace
+tags:
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Strategy
+- Anthropic
+- Azure
+- Azure Consumption Commitment
+- Cloud Solutions
+- Copilot
+- Copilot Studio
+- Custom AI Applications
+- Fraud Detection
+- Low Code Development
+- Machine Learning
+- Microsoft Copilot
+- Microsoft Foundry
+- Microsoft Marketplace
+- ML
+- ML Models
+- Model Deployment
+- News
+- OpenAI
+- Pro Code Development
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Cyril Belikoff outlines strategies for navigating AI and agent development with Microsoft Marketplace, detailing options for custom builds, ready-made solutions, and blended approaches to accelerate transformation with Microsoft Azure and AI technologies.<!--excerpt_end-->
 
 # Chart Your AI and Agent Strategy with Microsoft Marketplace

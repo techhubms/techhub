@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS"
-description: "This article by samcogan explores the new Identity Bindings feature (currently in preview) for Azure Kubernetes Service (AKS), which streamlines how Azure Managed Identities are assigned to pods. It explains the operational challenges with previous approaches like Workload Identity, details the RBAC-driven design of Identity Bindings, and provides step-by-step guidance for implementation and automation in Kubernetes, highlighting improved scalability, security, and maintainability for cloud-native workloads."
-author: "samcogan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: 'Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS'
+author: samcogan
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-12 10:42:40 +00:00
-permalink: "/2026-01-12-Identity-Bindings-Simplifying-Multi-Cluster-Managed-Identity-in-AKS.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Application Security", "Azure", "Azure Entra ID", "Azure Key Vault", "Azure Managed Identity", "Cloud Security", "ClusterRole", "ClusterRoleBinding", "Community", "DevOps", "Federated Identity Credential", "Identity Bindings", "Kubernetes Automation", "Kubernetes RBAC", "Managed Identity", "OIDC", "Pod Identity", "Security", "Workload Identity"]
-tags_normalized: ["aks", "application security", "azure", "azure entra id", "azure key vault", "azure managed identity", "cloud security", "clusterrole", "clusterrolebinding", "community", "devops", "federated identity credential", "identity bindings", "kubernetes automation", "kubernetes rbac", "managed identity", "oidc", "pod identity", "security", "workload identity"]
+permalink: /azure/community/Identity-Bindings-Simplifying-Multi-Cluster-Managed-Identity-in-AKS
+tags:
+- AKS
+- Application Security
+- Azure
+- Azure Entra ID
+- Azure Key Vault
+- Azure Managed Identity
+- Cloud Security
+- ClusterRole
+- ClusterRoleBinding
+- Community
+- DevOps
+- Federated Identity Credential
+- Identity Bindings
+- Kubernetes Automation
+- Kubernetes RBAC
+- Managed Identity
+- OIDC
+- Pod Identity
+- Security
+- Workload Identity
+section_names:
+- azure
+- devops
+- security
 ---
-
 samcogan explains the new Identity Bindings feature in AKS, showing how it resolves the scaling and automation issues found in older Managed Identity models by using RBAC-driven authorization within Kubernetes clusters.<!--excerpt_end-->
 
 # Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS

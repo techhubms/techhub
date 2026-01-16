@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Neural Concept Sets New Industrial AI Benchmark on Azure HPC for Automotive Aerodynamics"
-description: "This article details how Neural Concept leveraged Microsoft Azure HPC and AI infrastructure to train state-of-the-art geometric deep learning models for automotive aerodynamic benchmarks using the DrivAerNet++ dataset. It covers the data ingestion, preprocessing, model training, benchmark results, and the industrial implications of deploying AI-enhanced engineering workflows at scale."
-author: "lmiroslaw"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Neural Concept Sets New Industrial AI Benchmark on Azure HPC for Automotive Aerodynamics
+author: lmiroslaw
+canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-12 12:10:23 +00:00
-permalink: "/2026-01-12-Neural-Concept-Sets-New-Industrial-AI-Benchmark-on-Azure-HPC-for-Automotive-Aerodynamics.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["A100 GPU", "Aerodynamics", "AI", "AI Infrastructure", "Automotive Design", "Azure", "Azure HPC", "Community", "Data Engineering", "DrivAerNet++", "Geometric Deep Learning", "High Performance Computing", "Industrial AI", "ML", "ML Benchmark", "Model Training", "Neural Concept", "Scaling AI"]
-tags_normalized: ["a100 gpu", "aerodynamics", "ai", "ai infrastructure", "automotive design", "azure", "azure hpc", "community", "data engineering", "drivaernetplusplus", "geometric deep learning", "high performance computing", "industrial ai", "ml", "ml benchmark", "model training", "neural concept", "scaling ai"]
+permalink: /ai/community/Neural-Concept-Sets-New-Industrial-AI-Benchmark-on-Azure-HPC-for-Automotive-Aerodynamics
+tags:
+- A100 GPU
+- Aerodynamics
+- AI
+- AI Infrastructure
+- Automotive Design
+- Azure
+- Azure HPC
+- Community
+- Data Engineering
+- DrivAerNet++
+- Geometric Deep Learning
+- High Performance Computing
+- Industrial AI
+- ML
+- ML Benchmark
+- Model Training
+- Neural Concept
+- Scaling AI
+section_names:
+- ai
+- azure
+- ml
 ---
-
 lmiroslaw showcases how Neural Concept utilized Azure HPC and AI infrastructure to achieve record-setting accuracy and efficiency for industrial aerodynamic workflows, leveraging massive datasets and advanced machine learning techniques for real-world automotive impact.<!--excerpt_end-->
 
 # Neural Concept Sets New Industrial AI Benchmark on Azure HPC for Automotive Aerodynamics

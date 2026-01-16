@@ -1,17 +1,41 @@
----
-layout: "post"
-title: "Agentic AI, Context Engineering, and Secure Automation Power Tech Progress"
-description: "This week's roundup explores developments in agentic AI and team-focused automation, highlighting GitHub Copilot's integration with collaborative workflows and enhancements in context engineering for Visual Studio Code and Azure. Updates include stronger approaches to disaster recovery, AI-driven testing features in Azure, the role of AI in language selection, and new .NET 10 tools. Security covers continuous fuzzing strategies and improved identity recovery in Microsoft Entra ID."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+layout: post
+title: Agentic AI, Context Engineering, and Secure Automation Power Tech Progress
+author: Tech Hub Team
+viewing_mode: internal
 date: 2026-01-05 09:00:00 +00:00
-permalink: "/2026-01-05-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET 10", "Account Recovery", "Agentic AI", "AI", "AI Integrations", "Azure", "CI/CD", "Cloud Automation", "Coding", "Data Migration", "Developer Workflows", "DevOps", "Fuzz Testing", "GitHub Copilot", "MCP", "Microsoft Agent Framework", "ML", "Roundups", "Security", "Semantic Modeling", "VS Code"]
-tags_normalized: ["dotnet 10", "account recovery", "agentic ai", "ai", "ai integrations", "azure", "cislashcd", "cloud automation", "coding", "data migration", "developer workflows", "devops", "fuzz testing", "github copilot", "mcp", "microsoft agent framework", "ml", "roundups", "security", "semantic modeling", "vs code"]
+permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
+tags:
+- .NET 10
+- Account Recovery
+- Agentic AI
+- AI
+- AI Integrations
+- Azure
+- CI/CD
+- Cloud Automation
+- Coding
+- Data Migration
+- Developer Workflows
+- DevOps
+- Fuzz Testing
+- GitHub Copilot
+- MCP
+- Microsoft Agent Framework
+- ML
+- Roundups
+- Security
+- Semantic Modeling
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 This week’s roundup covers new developments in agentic AI, streamlined team automation, and improved security. GitHub Copilot continues to evolve with context-sensitive agents and simplified integration through Model Context Protocol, while Azure delivers more automation for disaster recovery, AI-supported testing, and practical reliability resources. Updates for .NET 10 and emerging AI frameworks enhance workflow and testing, while recent security changes include identity recovery improvements and new fuzzing guidelines for open source code. These trends point towards more automated, interconnected, and secure development environments.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -48,7 +72,7 @@ The article describes processes for encoding your project’s coding standards, 
 
 This content moves ahead from last week’s coverage of agent and workflow sharing—such as repository-wide settings and Skills.md—by providing tools that enforce norms and support larger collaborative engineering teams.
 
-- [Scaling Context-Aware Workflows with GitHub Copilot in VS Code]({{ "/2025-12-29-Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code.html" | relative_url }})
+- [Scaling Context-Aware Workflows with GitHub Copilot in VS Code](/2025-12-29-Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code.html)
 
 ### Agentic AI, MCP Integration, and Spec-Driven Development
 
@@ -80,7 +104,7 @@ This article offers a follow-up to recent discussions about workflows and langua
 
 The video details the pattern: AI models are most effective with codebases that include clear type information, pushing developers to adopt languages that maximize AI’s benefit. It encourages teams to consider how language selection impacts tooling support and outcomes, especially with AI growing as a default part of the software development process.
 
-- [How AI Influences Programming Language Selection]({{ "/2026-01-02-How-AI-Influences-Programming-Language-Selection.html" | relative_url }})
+- [How AI Influences Programming Language Selection](/2026-01-02-How-AI-Influences-Programming-Language-Selection.html)
 
 ## Azure
 
@@ -184,4 +208,4 @@ Privacy, regulatory policies, and provider stability are addressed, and step-by-
 
 This update fits with previous work to raise the bar for identity security, following MFA, strong authentication, and trusted publishing as mentioned previously.
 
-- [Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification]({{ "/2025-12-29-Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification.html" | relative_url }})
+- [Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification](/2025-12-29-Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification.html)

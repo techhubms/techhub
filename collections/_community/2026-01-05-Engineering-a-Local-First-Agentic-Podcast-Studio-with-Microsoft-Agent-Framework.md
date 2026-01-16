@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Engineering a Local-First Agentic Podcast Studio with Microsoft Agent Framework"
-description: "This technical guide by kinfey details the architecture and implementation of an AI-driven podcast studio powered by the Microsoft Agent Framework. It covers the orchestration of multiple specialized AI agents running locally, integration with VibeVoice for conversational synthesis, and the use of edge technologies for privacy, efficiency, and scalability."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Engineering a Local-First Agentic Podcast Studio with Microsoft Agent Framework
+author: kinfey
+canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-05 13:53:38 +00:00
-permalink: "/2026-01-05-Engineering-a-Local-First-Agentic-Podcast-Studio-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Executor", "Agentic Orchestration", "AI", "AI Agents", "Chain Of Thought", "Coding", "Community", "DevUI", "EdgeAI", "Local First Architecture", "Microsoft Agent Framework", "Modular Codebase", "Ollama", "Production Deployment", "Python", "Qwen 3 8B", "Small Language Models", "Tool Calling", "VibeVoice", "WorkflowBuilder"]
-tags_normalized: ["agent executor", "agentic orchestration", "ai", "ai agents", "chain of thought", "coding", "community", "devui", "edgeai", "local first architecture", "microsoft agent framework", "modular codebase", "ollama", "production deployment", "python", "qwen 3 8b", "small language models", "tool calling", "vibevoice", "workflowbuilder"]
+permalink: /ai/community/Engineering-a-Local-First-Agentic-Podcast-Studio-with-Microsoft-Agent-Framework
+tags:
+- Agent Executor
+- Agentic Orchestration
+- AI
+- AI Agents
+- Chain Of Thought
+- Coding
+- Community
+- DevUI
+- EdgeAI
+- Local First Architecture
+- Microsoft Agent Framework
+- Modular Codebase
+- Ollama
+- Production Deployment
+- Python
+- Qwen 3 8B
+- Small Language Models
+- Tool Calling
+- VibeVoice
+- WorkflowBuilder
+section_names:
+- ai
+- coding
 ---
-
 kinfey presents an in-depth guide on building a local-first, multi-agent podcast studio using Microsoft's Agent Framework, complete with orchestration techniques, local LLM deployment, and advanced audio synthesis methods.<!--excerpt_end-->
 
 # Engineering a Local-First Agentic Podcast Studio: A Deep Dive into Multi-Agent Orchestration

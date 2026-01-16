@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Orleans Deep Dive: Routing, Placement & Balancing"
-description: "This video presents a detailed exploration of routing, placement, and load balancing mechanisms in Orleans, a distributed application framework for .NET. The episode features insights from experts including Reuben Bond, Ledjon Behluli, David Pine, and Frank Boucher, focusing on technical aspects relevant to developers working with Orleans in the .NET ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=87AlzE53bxA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+layout: post
+title: 'Orleans Deep Dive: Routing, Placement & Balancing'
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=87AlzE53bxA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-05 22:35:41 +00:00
-permalink: "/2026-01-05-Orleans-Deep-Dive-Routing-Placement-and-Balancing.html"
-categories: ["Coding"]
-tags: [".NET", "Actor Model", "Cloud Development", "Coding", "Distributed Systems", "Load Balancing", "Microservices", "Orleans", "Orleans Grains", "Placement", "Routing", "Scalability", "Videos"]
-tags_normalized: ["dotnet", "actor model", "cloud development", "coding", "distributed systems", "load balancing", "microservices", "orleans", "orleans grains", "placement", "routing", "scalability", "videos"]
+permalink: /coding/videos/Orleans-Deep-Dive-Routing-Placement-and-Balancing
+tags:
+- .NET
+- Actor Model
+- Cloud Development
+- Coding
+- Distributed Systems
+- Load Balancing
+- Microservices
+- Orleans
+- Orleans Grains
+- Placement
+- Routing
+- Scalability
+- Videos
+section_names:
+- coding
 ---
-
 The dotnet team, joined by Reuben Bond, Ledjon Behluli, David Pine, and Frank Boucher, delivers a technical deep dive into routing, placement, and load balancing in Orleans for .NET developers.<!--excerpt_end-->
 
 {% youtube 87AlzE53bxA %}

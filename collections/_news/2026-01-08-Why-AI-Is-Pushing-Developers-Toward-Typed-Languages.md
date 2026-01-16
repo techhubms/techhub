@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Why AI Is Pushing Developers Toward Typed Languages"
-description: "This article explores the growing trend of developers favoring typed programming languages in the age of AI-generated code. Drawing on 2025's Octoverse report and academic research, Cassidy Williams outlines how type systems serve as safety nets, catching errors that arise when AI tools generate large volumes of code."
-author: "Cassidy Williams"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+layout: post
+title: Why AI Is Pushing Developers Toward Typed Languages
+author: Cassidy Williams
+canonical_url: https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/feed/
 date: 2026-01-08 22:25:54 +00:00
-permalink: "/2026-01-08-Why-AI-Is-Pushing-Developers-Toward-Typed-Languages.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI & ML", "AI Assisted Development", "C#", "C++", "Coding", "Copilot CLI", "Dynamic Typing", "Gradual Typing", "Java", "JavaScript", "LLMs", "Luau", "News", "Octoverse", "Programming Languages", "Programming Languages & Frameworks", "Python", "Static Typing", "Type Safety", "Typed Languages", "TypeScript", "Typst"]
-tags_normalized: ["ai", "ai and ml", "ai assisted development", "csharp", "cplusplus", "coding", "copilot cli", "dynamic typing", "gradual typing", "java", "javascript", "llms", "luau", "news", "octoverse", "programming languages", "programming languages and frameworks", "python", "static typing", "type safety", "typed languages", "typescript", "typst"]
+permalink: /ai/news/Why-AI-Is-Pushing-Developers-Toward-Typed-Languages
+tags:
+- AI
+- AI & ML
+- AI Assisted Development
+- C#
+- C++
+- Coding
+- Copilot CLI
+- Dynamic Typing
+- Gradual Typing
+- Java
+- JavaScript
+- LLMs
+- Luau
+- News
+- Octoverse
+- Programming Languages
+- Programming Languages & Frameworks
+- Python
+- Static Typing
+- Type Safety
+- Typed Languages
+- TypeScript
+- Typst
+section_names:
+- ai
+- coding
 ---
-
 Cassidy Williams analyzes why typed programming languages are surging in popularity, emphasizing how AI-generated code and tools like Copilot are redefining developer safety nets and code reliability.<!--excerpt_end-->
 
 # Why AI Is Pushing Developers Toward Typed Languages

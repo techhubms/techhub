@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+layout: post
 title: "ASP.NET Community Standup: What's Next for Orleans?"
-description: "This episode of the ASP.NET Community Standup features an in-depth discussion on the future of Microsoft Orleans, a framework for building scalable and distributed systems. Hosted by Daniel Roth, Mike Kistler, and Reuben Bond, the session highlights upcoming developments, architecture improvements, and Orleans' integration within the .NET ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GeRsZAc0lNA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+author: dotnet
+canonical_url: https://www.youtube.com/watch?v=GeRsZAc0lNA
+viewing_mode: internal
+feed_name: DotNet YouTube
+feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-09 18:04:43 +00:00
-permalink: "/2026-01-09-ASPNET-Community-Standup-Whats-Next-for-Orleans.html"
-categories: ["Coding"]
-tags: [".NET", "Actor Model", "ASP.NET Core", "Coding", "Community Standup", "Demo", "Developer", "Developer Community", "Developer Tools", "Distributed Systems", "Dotnet10", "Dotnetdeveloper", "Microservices", "Microsoft", "Orleans", "Scalability", "Software Architecture", "Software Developer", "Videos"]
-tags_normalized: ["dotnet", "actor model", "aspdotnet core", "coding", "community standup", "demo", "developer", "developer community", "developer tools", "distributed systems", "dotnet10", "dotnetdeveloper", "microservices", "microsoft", "orleans", "scalability", "software architecture", "software developer", "videos"]
+permalink: /coding/videos/ASPNET-Community-Standup-Whats-Next-for-Orleans
+tags:
+- .NET
+- Actor Model
+- ASP.NET Core
+- Coding
+- Community Standup
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Distributed Systems
+- Dotnet10
+- Dotnetdeveloper
+- Microservices
+- Microsoft
+- Orleans
+- Scalability
+- Software Architecture
+- Software Developer
+- Videos
+section_names:
+- coding
 ---
-
 Daniel Roth, Mike Kistler, and Reuben Bond discuss the future of Microsoft Orleans in this ASP.NET Community Standup, sharing insights on building robust distributed systems.<!--excerpt_end-->
 
 {% youtube GeRsZAc0lNA %}

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Immersive Developer Learning with Visual Studio, .NET, Azure, and GitHub Copilot: VS Live! 2026 Preview"
-description: "This article from Jim Harrer reflects on the value of immersive learning experiences for developers, summarizing the key themes and popular sessions from VS Live! Orlando 2025. It highlights the focus areas for upcoming VS Live! events in 2026, centered on Visual Studio 2026, .NET, Azure, GitHub Copilot, AI-assisted development, modern architectures, security, DevOps, and hands-on scenario-based learning. The post includes details about event structure, benefits for attendees, and registration incentives."
-author: "Jim Harrer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+layout: post
+title: 'Immersive Developer Learning with Visual Studio, .NET, Azure, and GitHub Copilot: VS Live! 2026 Preview'
+author: Jim Harrer
+canonical_url: https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/
+viewing_mode: external
+feed_name: Microsoft VisualStudio Blog
+feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2026-01-05 14:29:43 +00:00
-permalink: "/2026-01-05-Immersive-Developer-Learning-with-Visual-Studio-NET-Azure-and-GitHub-Copilot-VS-Live-2026-Preview.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET", "AI", "AI Assisted Development", "Architecture", "Azure", "C# Source Generators", "Cloud Native", "Code Quality", "Coding", "Debugging", "DevOps", "GitHub Copilot", "Hands On Labs", "News", "Scenario Based Learning", "Security", "Technical Training", "Training", "VS", "Vslive"]
-tags_normalized: ["dotnet", "ai", "ai assisted development", "architecture", "azure", "csharp source generators", "cloud native", "code quality", "coding", "debugging", "devops", "github copilot", "hands on labs", "news", "scenario based learning", "security", "technical training", "training", "vs", "vslive"]
+permalink: /github-copilot/news/Immersive-Developer-Learning-with-Visual-Studio-NET-Azure-and-GitHub-Copilot-VS-Live-2026-Preview
+tags:
+- .NET
+- AI
+- AI Assisted Development
+- Architecture
+- Azure
+- C# Source Generators
+- Cloud Native
+- Code Quality
+- Coding
+- Debugging
+- DevOps
+- GitHub Copilot
+- Hands On Labs
+- News
+- Scenario Based Learning
+- Security
+- Technical Training
+- Training
+- VS
+- Vslive
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 Jim Harrer discusses the major focus areas of developer growth in 2026, emphasizing immersive events like VS Live! that feature Visual Studio 2026, .NET, Azure, and GitHub Copilot. The post explores key learning themes, session highlights, and the value of hands-on experience.<!--excerpt_end-->
 
 # Welcome to 2026: A Growth Year for Developers

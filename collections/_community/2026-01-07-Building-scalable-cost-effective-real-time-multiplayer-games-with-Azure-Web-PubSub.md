@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub"
-description: "This post explores the architectural transformation of a large-scale online RPG game studio as they transition from polling-based synchronization to a real-time, event-driven backend using Azure Web PubSub. It covers the technical and operational benefits, including persistent connections, auto-scaling, cost efficiency, geo-replication, and security best practices, helping game developers design reliable real-time backends."
-author: "kevinguo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+layout: post
+title: Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub
+author: kevinguo
+canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584
+viewing_mode: external
+feed_name: Microsoft Tech Community
+feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 05:27:21 +00:00
-permalink: "/2026-01-07-Building-scalable-cost-effective-real-time-multiplayer-games-with-Azure-Web-PubSub.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Auto Scaling", "Azure", "Azure Front Door", "Azure Web PubSub", "Backend Architecture", "Coding", "Community", "Cost Optimization", "DevOps", "Event Driven Systems", "Game Server Infrastructure", "Geo Replication", "Multiplayer Games", "Persistent Connections", "Real Time Messaging", "Scalability", "Security", "Security Best Practices", "Sharding", "WebSockets"]
-tags_normalized: ["auto scaling", "azure", "azure front door", "azure web pubsub", "backend architecture", "coding", "community", "cost optimization", "devops", "event driven systems", "game server infrastructure", "geo replication", "multiplayer games", "persistent connections", "real time messaging", "scalability", "security", "security best practices", "sharding", "websockets"]
+permalink: /coding/community/Building-scalable-cost-effective-real-time-multiplayer-games-with-Azure-Web-PubSub
+tags:
+- Auto Scaling
+- Azure
+- Azure Front Door
+- Azure Web PubSub
+- Backend Architecture
+- Coding
+- Community
+- Cost Optimization
+- DevOps
+- Event Driven Systems
+- Game Server Infrastructure
+- Geo Replication
+- Multiplayer Games
+- Persistent Connections
+- Real Time Messaging
+- Scalability
+- Security
+- Security Best Practices
+- Sharding
+- WebSockets
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 kevinguo shares how a game studio leveraged Azure Web PubSub to reimagine real-time multiplayer architectures, focusing on scalability, reliability, and cost-effective delivery at global scale.<!--excerpt_end-->
 
 # Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub

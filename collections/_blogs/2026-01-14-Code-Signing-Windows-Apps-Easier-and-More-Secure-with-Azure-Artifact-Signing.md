@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Code Signing Windows Apps Easier and More Secure with Azure Artifact Signing"
-description: "An overview of Microsoft Azure Artifact Signing (AAS), now generally available in the USA, Canada, and Europe. The service streamlines code signing for Windows applications, with daily-renewed certificates, improved security practices, and integrations for developer workflows like GitHub Actions and Azure DevOps."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+layout: post
+title: Code Signing Windows Apps Easier and More Secure with Azure Artifact Signing
+author: Tim Anderson
+canonical_url: https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/
+viewing_mode: external
+feed_name: DevClass
+feed_url: https://devclass.com/feed/
 date: 2026-01-14 15:32:25 +00:00
-permalink: "/2026-01-14-Code-Signing-Windows-Apps-Easier-and-More-Secure-with-Azure-Artifact-Signing.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AAS", "Application Security", "Artifact Signing SDK", "Azure", "Azure Artifact Signing", "Azure DevOps", "Blogs", "Certificate Authority", "Certificates", "Cloud Workflows", "Code Signing", "DevOps", "GitHub Actions", "Security", "Signtool", "Time Stamping", "Windows"]
-tags_normalized: ["aas", "application security", "artifact signing sdk", "azure", "azure artifact signing", "azure devops", "blogs", "certificate authority", "certificates", "cloud workflows", "code signing", "devops", "github actions", "security", "signtool", "time stamping", "windows"]
+permalink: /azure/blogs/Code-Signing-Windows-Apps-Easier-and-More-Secure-with-Azure-Artifact-Signing
+tags:
+- AAS
+- Application Security
+- Artifact Signing SDK
+- Azure
+- Azure Artifact Signing
+- Azure DevOps
+- Blogs
+- Certificate Authority
+- Certificates
+- Cloud Workflows
+- Code Signing
+- DevOps
+- GitHub Actions
+- Security
+- Signtool
+- Time Stamping
+- Windows
+section_names:
+- azure
+- devops
+- security
 ---
-
 Tim Anderson delivers a detailed analysis of Azure Artifact Signing, Microsoft's new service to streamline and secure code signing for Windows applications, addressing modern security requirements and developer workflows.<!--excerpt_end-->
 
 # Code Signing Windows Apps Easier and More Secure with Azure Artifact Signing

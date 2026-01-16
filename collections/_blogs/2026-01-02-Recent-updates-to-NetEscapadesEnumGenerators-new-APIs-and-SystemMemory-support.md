@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Recent updates to NetEscapades.EnumGenerators: new APIs and System.Memory support"
-description: "This post by Andrew Lock details important updates to the NetEscapades.EnumGenerators source generator, focusing on version 1.0.0-beta19. Key changes include options for disabling enum number parsing, support for automatic case transformation, and expanded APIs via the System.Memory NuGet package, improving performance and usability for .NET developers."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/updates-to-netescapaades-enumgenerators-new-apis-and-system-memory-support/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+layout: post
+title: 'Recent updates to NetEscapades.EnumGenerators: new APIs and System.Memory support'
+author: Andrew Lock
+canonical_url: https://andrewlock.net/updates-to-netescapaades-enumgenerators-new-apis-and-system-memory-support/
+viewing_mode: external
+feed_name: Andrew Lock's Blog
+feed_url: https://andrewlock.net/rss.xml
 date: 2026-01-02 09:00:00 +00:00
-permalink: "/2026-01-02-Recent-updates-to-NetEscapadesEnumGenerators-new-APIs-and-SystemMemory-support.html"
-categories: ["Coding"]
-tags: [".NET Core", "API Design", "Blogs", "C#", "Coding", "Enum", "NetEscapades.EnumGenerators", "NuGet", "Parse Methods", "Performance Optimization", "ReadOnlySpan", "Roslyn", "SerializationOptions", "SerializationTransform", "Source Generators", "StringComparison", "System.Memory"]
-tags_normalized: ["dotnet core", "api design", "blogs", "csharp", "coding", "enum", "netescapadesdotenumgenerators", "nuget", "parse methods", "performance optimization", "readonlyspan", "roslyn", "serializationoptions", "serializationtransform", "source generators", "stringcomparison", "systemdotmemory"]
+permalink: /coding/blogs/Recent-updates-to-NetEscapadesEnumGenerators-new-APIs-and-SystemMemory-support
+tags:
+- .NET Core
+- API Design
+- Blogs
+- C#
+- Coding
+- Enum
+- NetEscapades.EnumGenerators
+- NuGet
+- Parse Methods
+- Performance Optimization
+- ReadOnlySpan
+- Roslyn
+- SerializationOptions
+- SerializationTransform
+- Source Generators
+- StringComparison
+- System.Memory
+section_names:
+- coding
 ---
-
 Andrew Lock summarizes recent improvements to the NetEscapades.EnumGenerators package, including new APIs, advanced parsing options, and System.Memory support, offering insights for .NET developers seeking faster enum operations.<!--excerpt_end-->
 
 # Recent Updates to NetEscapades.EnumGenerators: New APIs and System.Memory Support

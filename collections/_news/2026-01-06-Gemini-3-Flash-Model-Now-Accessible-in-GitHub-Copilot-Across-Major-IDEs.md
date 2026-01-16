@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Gemini 3 Flash Model Now Accessible in GitHub Copilot Across Major IDEs"
-description: "This announcement details the public preview release of the Gemini 3 Flash model in GitHub Copilot Chat for users of Copilot Enterprise, Business, Pro, and Pro+. It describes where and how the model is available, required versions for major IDEs (Visual Studio, JetBrains IDEs, Xcode, Eclipse), and how administrators can enable access for their organizations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+layout: post
+title: Gemini 3 Flash Model Now Accessible in GitHub Copilot Across Major IDEs
+author: Allison
+canonical_url: https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+viewing_mode: external
+feed_name: The GitHub Blog
+feed_url: https://github.blog/changelog/feed/
 date: 2026-01-06 19:24:20 +00:00
-permalink: "/2026-01-06-Gemini-3-Flash-Model-Now-Accessible-in-GitHub-Copilot-Across-Major-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admins", "AI", "AI Model", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "Copilot Settings", "Eclipse", "Gemini 3 Flash", "GitHub Copilot", "JetBrains", "Model Deployment", "News", "Public Preview", "VS", "Xcode"]
-tags_normalized: ["admins", "ai", "ai model", "copilot", "copilot business", "copilot enterprise", "copilot pro", "copilot settings", "eclipse", "gemini 3 flash", "github copilot", "jetbrains", "model deployment", "news", "public preview", "vs", "xcode"]
+permalink: /github-copilot/news/Gemini-3-Flash-Model-Now-Accessible-in-GitHub-Copilot-Across-Major-IDEs
+tags:
+- Admins
+- AI
+- AI Model
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Copilot Pro
+- Copilot Settings
+- Eclipse
+- Gemini 3 Flash
+- GitHub Copilot
+- JetBrains
+- Model Deployment
+- News
+- Public Preview
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces that the Gemini 3 Flash model is now publicly available in GitHub Copilot Chat for major IDEs, detailing new access for Copilot Enterprise, Business, Pro, and Pro+ users.<!--excerpt_end-->
 
 # Gemini 3 Flash is Now Available in Visual Studio, JetBrains IDEs, Xcode, and Eclipse

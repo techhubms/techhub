@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)"
-description: "This blog post by Steve Gordon demonstrates how to build a foundation for automatic encryption and decryption of sensitive properties in .NET objects using System.Text.Json and a TypeInfoResolver modifier. The approach is ideal for scenarios where certain fields require protection, such as OAuth tokens, and will evolve to integrate cloud-based key management using Azure Key Vault."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+layout: post
+title: Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)
+author: Steve Gordon
+canonical_url: https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1
+viewing_mode: external
+feed_name: Steve Gordon's Blog
+feed_url: https://www.stevejgordon.co.uk/feed
 date: 2026-01-14 15:09:54 +00:00
-permalink: "/2026-01-14-Encrypting-Properties-with-SystemTextJson-and-a-TypeInfoResolver-Modifier-Part-1.html"
-categories: ["Azure", "Coding", "Security"]
-tags: [".NET", "Attribute Based Encryption", "Azure", "Azure Key Vault", "Blogs", "C#", "Coding", "Custom Serialization", "Data Protection", "Dependency Injection", "Elasticsearch", "Encryption", "GDPR", "GitHub OAuth", "JSON", "JsonSerializer", "Minimal API", "PII Compliance", "POCO", "Security", "Serialization", "System.Text.Json", "Typeinforesolver"]
-tags_normalized: ["dotnet", "attribute based encryption", "azure", "azure key vault", "blogs", "csharp", "coding", "custom serialization", "data protection", "dependency injection", "elasticsearch", "encryption", "gdpr", "github oauth", "json", "jsonserializer", "minimal api", "pii compliance", "poco", "security", "serialization", "systemdottextdotjson", "typeinforesolver"]
+permalink: /coding/blogs/Encrypting-Properties-with-SystemTextJson-and-a-TypeInfoResolver-Modifier-Part-1
+tags:
+- .NET
+- Attribute Based Encryption
+- Azure
+- Azure Key Vault
+- Blogs
+- C#
+- Coding
+- Custom Serialization
+- Data Protection
+- Dependency Injection
+- Elasticsearch
+- Encryption
+- GDPR
+- GitHub OAuth
+- JSON
+- JsonSerializer
+- Minimal API
+- PII Compliance
+- POCO
+- Security
+- Serialization
+- System.Text.Json
+- Typeinforesolver
+section_names:
+- azure
+- coding
+- security
 ---
-
 Steve Gordon explains how to use System.Text.Json's TypeInfoResolver modifier for property-level encryption in C#, outlining a practical approach to securing sensitive data that paves the way for future integration with Azure Key Vault.<!--excerpt_end-->
 
 # Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)
