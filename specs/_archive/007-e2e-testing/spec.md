@@ -19,7 +19,7 @@ Define end-to-end testing strategy using Playwright to validate complete user jo
 
 ## Scope
 
-**Test Scenarios** (from dotnet-migration spec user stories):
+**Test Scenarios**:
 
 **Navigation & Content Discovery**:
 
@@ -68,10 +68,6 @@ Define end-to-end testing strategy using Playwright to validate complete user jo
 
 - All tests pass on Chrome, Firefox, Safari, Edge
 - Mobile viewport tests (iOS Safari, Android Chrome)
-
-## Browser Matrix
-
-See dotnet-migration spec testing requirements section for complete browser support matrix.
 
 ## Implementation Note
 

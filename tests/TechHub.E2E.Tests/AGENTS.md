@@ -348,4 +348,3 @@ All tests should be:
 - [Root AGENTS.md](/AGENTS.md) - Overall development workflow and TDD approach
 - [tests/AGENTS.md](/tests/AGENTS.md) - Testing strategies across all layers
 - [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
-- [specs/dotnet-migration/tasks.md](/specs/dotnet-migration/tasks.md) - Task tracking and completion status

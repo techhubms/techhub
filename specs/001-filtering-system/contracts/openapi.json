@@ -1,0 +1,645 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Tech Hub Filtering API",
+        "version": "1.0.0",
+        "description": "API endpoints for content filtering with tags and date ranges"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5029",
+            "description": "Local development (API)"
+        },
+        {
+            "url": "https://tech.hub.ms/api",
+            "description": "Production"
+        }
+    ],
+    "paths": {
+        "/api/content/filter": {
+            "get": {
+                "summary": "Filter content by tags and date range",
+                "description": "Returns filtered content items matching the specified criteria. Tags use OR logic, date range uses AND logic.",
+                "operationId": "filterContent",
+                "tags": [
+                    "Filtering"
+                ],
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by (OR logic). Can be specified multiple times.",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "maxLength": 50
+                            }
+                        },
+                        "style": "form",
+                        "explode": true,
+                        "example": [
+                            "ai",
+                            "azure"
+                        ]
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Start of date range (ISO 8601 date)",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "example": "2025-10-01"
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "description": "End of date range (ISO 8601 date)",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "example": "2026-01-16"
+                    },
+                    {
+                        "name": "section",
+                        "in": "query",
+                        "description": "Section scope for filtering",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "ai"
+                    },
+                    {
+                        "name": "collection",
+                        "in": "query",
+                        "description": "Collection scope for filtering (requires section parameter)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "news"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully filtered content",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterResponse"
+                                },
+                                "example": {
+                                    "items": [
+                                        {
+                                            "id": "2024-06-07-GitHub-Copilot-Levels-of-enlightenment",
+                                            "title": "GitHub Copilot: Levels of Enlightenment",
+                                            "excerpt": "Explore the journey of GitHub Copilot adoption...",
+                                            "publishDate": "2024-06-07T00:00:00Z",
+                                            "author": "Yvo Schaap",
+                                            "tags": [
+                                                "AI",
+                                                "GitHub Copilot",
+                                                "Developer Productivity"
+                                            ],
+                                            "sectionNames": [
+                                                "ai",
+                                                "github-copilot"
+                                            ],
+                                            "collectionName": "blogs",
+                                            "url": "/blogs/2024-06-07-GitHub-Copilot-Levels-of-enlightenment"
+                                        }
+                                    ],
+                                    "totalCount": 1,
+                                    "appliedFilters": {
+                                        "tags": [
+                                            "ai"
+                                        ],
+                                        "dateFrom": "2025-10-01T00:00:00Z",
+                                        "dateTo": "2026-01-16T00:00:00Z",
+                                        "sectionName": null,
+                                        "collectionName": null,
+                                        "hasActiveFilters": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid filter parameters",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                },
+                                "examples": {
+                                    "invalidDateRange": {
+                                        "summary": "Invalid date range",
+                                        "value": {
+                                            "error": "End date must be after start date",
+                                            "details": {
+                                                "from": "2026-01-16",
+                                                "to": "2025-10-01"
+                                            }
+                                        }
+                                    },
+                                    "futureDate": {
+                                        "summary": "Date in future",
+                                        "value": {
+                                            "error": "Date cannot be in the future",
+                                            "details": {
+                                                "from": "2027-01-01"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Section or collection not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                },
+                                "example": {
+                                    "error": "Section 'invalid-section' not found"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/tags/cloud": {
+            "get": {
+                "summary": "Get tag cloud for specified scope",
+                "description": "Returns top tags with usage counts and size categories for tag cloud rendering",
+                "operationId": "getTagCloud",
+                "tags": [
+                    "Tags"
+                ],
+                "parameters": [
+                    {
+                        "name": "scope",
+                        "in": "query",
+                        "description": "Scope of tag cloud calculation",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "homepage",
+                                "section",
+                                "collection",
+                                "content"
+                            ]
+                        },
+                        "example": "section"
+                    },
+                    {
+                        "name": "section",
+                        "in": "query",
+                        "description": "Section name (required for section/collection/content scopes)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "ai"
+                    },
+                    {
+                        "name": "collection",
+                        "in": "query",
+                        "description": "Collection name (required for collection scope)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "news"
+                    },
+                    {
+                        "name": "contentId",
+                        "in": "query",
+                        "description": "Content item ID (required for content scope)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "2024-06-07-GitHub-Copilot-Levels-of-enlightenment"
+                    },
+                    {
+                        "name": "maxTags",
+                        "in": "query",
+                        "description": "Maximum number of tags to return",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 100,
+                            "default": 20
+                        }
+                    },
+                    {
+                        "name": "minUses",
+                        "in": "query",
+                        "description": "Minimum usage count for tags",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000,
+                            "default": 5
+                        }
+                    },
+                    {
+                        "name": "lastDays",
+                        "in": "query",
+                        "description": "Include only content from last N days (null = all time)",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 365,
+                            "nullable": true,
+                            "default": 90
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully calculated tag cloud",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/TagCloudItem"
+                                    }
+                                },
+                                "example": [
+                                    {
+                                        "tag": "AI",
+                                        "count": 42,
+                                        "size": "Large"
+                                    },
+                                    {
+                                        "tag": "Azure",
+                                        "count": 35,
+                                        "size": "Large"
+                                    },
+                                    {
+                                        "tag": "GitHub Copilot",
+                                        "count": 28,
+                                        "size": "Medium"
+                                    },
+                                    {
+                                        "tag": "DevOps",
+                                        "count": 15,
+                                        "size": "Medium"
+                                    },
+                                    {
+                                        "tag": ".NET",
+                                        "count": 8,
+                                        "size": "Small"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid parameters",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                },
+                                "example": {
+                                    "error": "Section name required for 'section' scope"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/tags/all": {
+            "get": {
+                "summary": "Get all available tags with counts",
+                "description": "Returns all tags in the specified scope, sorted alphabetically, for dropdown filter",
+                "operationId": "getAllTags",
+                "tags": [
+                    "Tags"
+                ],
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "query",
+                        "description": "Section scope (optional)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "ai"
+                    },
+                    {
+                        "name": "collection",
+                        "in": "query",
+                        "description": "Collection scope (optional, requires section)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "news"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved all tags",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AllTagsResponse"
+                                },
+                                "example": {
+                                    "tags": [
+                                        {
+                                            "name": ".NET",
+                                            "count": 8
+                                        },
+                                        {
+                                            "name": "AI",
+                                            "count": 42
+                                        },
+                                        {
+                                            "name": "Azure",
+                                            "count": 35
+                                        },
+                                        {
+                                            "name": "DevOps",
+                                            "count": 15
+                                        },
+                                        {
+                                            "name": "GitHub Copilot",
+                                            "count": 28
+                                        }
+                                    ],
+                                    "totalTagCount": 5
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FilterResponse": {
+                "type": "object",
+                "required": [
+                    "items",
+                    "totalCount",
+                    "appliedFilters"
+                ],
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ContentItemDto"
+                        },
+                        "description": "Filtered content items"
+                    },
+                    "totalCount": {
+                        "type": "integer",
+                        "description": "Total number of filtered items",
+                        "example": 42
+                    },
+                    "appliedFilters": {
+                        "$ref": "#/components/schemas/FilterSummary"
+                    }
+                }
+            },
+            "FilterSummary": {
+                "type": "object",
+                "required": [
+                    "tags",
+                    "hasActiveFilters"
+                ],
+                "properties": {
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Tags used in filtering",
+                        "example": [
+                            "ai",
+                            "azure"
+                        ]
+                    },
+                    "dateFrom": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true,
+                        "description": "Start of date range",
+                        "example": "2025-10-01T00:00:00Z"
+                    },
+                    "dateTo": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true,
+                        "description": "End of date range",
+                        "example": "2026-01-16T00:00:00Z"
+                    },
+                    "sectionName": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "Section scope",
+                        "example": "ai"
+                    },
+                    "collectionName": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "Collection scope",
+                        "example": "news"
+                    },
+                    "hasActiveFilters": {
+                        "type": "boolean",
+                        "description": "Whether any filters are active",
+                        "example": true
+                    }
+                }
+            },
+            "ContentItemDto": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "title",
+                    "publishDate",
+                    "tags",
+                    "sectionNames",
+                    "collectionName",
+                    "url"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Unique content identifier",
+                        "example": "2024-06-07-GitHub-Copilot-Levels-of-enlightenment"
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "Content title",
+                        "example": "GitHub Copilot: Levels of Enlightenment"
+                    },
+                    "excerpt": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "Content excerpt (first 200 words)",
+                        "example": "Explore the journey of GitHub Copilot adoption..."
+                    },
+                    "publishDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Publication date",
+                        "example": "2024-06-07T00:00:00Z"
+                    },
+                    "author": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "Content author",
+                        "example": "Yvo Schaap"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Content tags",
+                        "example": [
+                            "AI",
+                            "GitHub Copilot",
+                            "Developer Productivity"
+                        ]
+                    },
+                    "sectionNames": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Sections this content belongs to",
+                        "example": [
+                            "ai",
+                            "github-copilot"
+                        ]
+                    },
+                    "collectionName": {
+                        "type": "string",
+                        "description": "Collection this content belongs to",
+                        "example": "blogs"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "Relative URL to content detail page",
+                        "example": "/blogs/2024-06-07-GitHub-Copilot-Levels-of-enlightenment"
+                    }
+                }
+            },
+            "TagCloudItem": {
+                "type": "object",
+                "required": [
+                    "tag",
+                    "count",
+                    "size"
+                ],
+                "properties": {
+                    "tag": {
+                        "type": "string",
+                        "description": "Tag name",
+                        "example": "AI"
+                    },
+                    "count": {
+                        "type": "integer",
+                        "description": "Usage count",
+                        "example": 42
+                    },
+                    "size": {
+                        "type": "string",
+                        "enum": [
+                            "Small",
+                            "Medium",
+                            "Large"
+                        ],
+                        "description": "Visual size category (quantile-based)",
+                        "example": "Large"
+                    }
+                }
+            },
+            "AllTagsResponse": {
+                "type": "object",
+                "required": [
+                    "tags",
+                    "totalTagCount"
+                ],
+                "properties": {
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TagWithCount"
+                        },
+                        "description": "All tags sorted alphabetically"
+                    },
+                    "totalTagCount": {
+                        "type": "integer",
+                        "description": "Total number of unique tags",
+                        "example": 127
+                    }
+                }
+            },
+            "TagWithCount": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "count"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Tag name",
+                        "example": "AI"
+                    },
+                    "count": {
+                        "type": "integer",
+                        "description": "Number of items with this tag",
+                        "example": 42
+                    }
+                }
+            },
+            "ErrorResponse": {
+                "type": "object",
+                "required": [
+                    "error"
+                ],
+                "properties": {
+                    "error": {
+                        "type": "string",
+                        "description": "Error message",
+                        "example": "Invalid filter parameters"
+                    },
+                    "details": {
+                        "type": "object",
+                        "nullable": true,
+                        "description": "Additional error details",
+                        "additionalProperties": true
+                    }
+                }
+            }
+        }
+    }
+}

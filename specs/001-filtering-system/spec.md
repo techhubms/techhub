@@ -5,23 +5,34 @@
 **Status**: Draft  
 **Input**: Implement sidebar-based tag and date filtering for section and collection pages to help users discover relevant content quickly
 
+## Clarifications
+
+### Session 2026-01-16
+
+- Q: Tag Selection Interface Architecture - Are sidebar tag clicks and Excel dropdown two separate interfaces or one unified interface? → A: Both interfaces - (1) Sidebar tag cloud showing top 20 most-used tags (scoped to homepage/section/collection/content context), AND (2) Excel-style dropdown for finding specific tags not in top 20. Both work together, synchronized state, complementary purposes.
+- Q: Tag Cloud Sizing Algorithm - How should tag sizes reflect relative popularity (linear, logarithmic, quantile-based, fixed with color)? → A: Quantile-based with 3 size tiers - Divide top 20 into Large (top 25% = 5 tags), Medium (middle 50% = 10 tags), Small (bottom 25% = 5 tags). Prevents excessively large tags while maintaining clear visual hierarchy.- Q: Popular Tag Display Quantity Threshold - Should tag cloud always show exactly 20 tags, or adjust based on content volume and popularity? \u2192 A: Dynamic quantity with minimum threshold - Show top 20 OR all tags with \u22655 uses, whichever is fewer. Prevents displaying rarely-used tags in small sections while capping maximum display size.- Q: Popular Tag Display Quantity Threshold - Should tag cloud always show exactly 20 tags, or adjust based on content volume and popularity? → A: Dynamic quantity with minimum threshold - Show top 20 OR all tags with ≥5 uses, whichever is fewer. Prevents displaying rarely-used tags in small sections while capping maximum display size.
+
 ## User Scenarios & Testing
 
-### User Story 1 - Filter Content by Tags (Priority: P1)
+### User Story 1 - Filter via Sidebar Tag Cloud (Priority: P1)
 
-Users can click tags in the sidebar to filter content items and see only items matching selected tags.
+Users can click tags in the sidebar tag cloud (showing top 20 most-used tags from last 3 months) to filter content, with scoping based on current page context.
 
-**Why this priority**: Primary content discovery mechanism, most requested feature from users.
+**Why this priority**: Primary content discovery mechanism, surfaces trending/popular content, scoped to user's current context.
 
-**Independent Test**: Navigate to any section page, click a tag in sidebar, verify content list updates to show only matching items.
+**Independent Test**: Navigate to section page, verify tag cloud shows top 20 tags for that section, click tag, verify content filters.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on a section page, **When** I click a tag in the sidebar, **Then** the content list updates to show only items with that tag
-2. **Given** I have one tag selected, **When** I click another tag, **Then** the content list shows items matching ANY of the selected tags (OR logic)
-3. **Given** I have tags selected, **When** I click a selected tag again, **Then** it deselects and content list updates
-4. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`)
-5. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view
+1. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see a tag cloud with top 20 most-used tags across entire website (last 3 months)
+2. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section only (last 3 months)
+3. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo (last 3 months)
+4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY the tags of that specific article (not top 20)
+5. **Given** I click a tag in the sidebar cloud, **When** the filter applies, **Then** the content list updates to show only items with that tag
+6. **Given** I have one tag selected, **When** I click another tag in the cloud, **Then** the content list shows items matching ANY of the selected tags (OR logic)
+7. **Given** I have tags selected, **When** I click a selected tag again, **Then** it deselects and content list updates
+8. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`)
+9. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view
 
 ---
 
@@ -133,11 +144,11 @@ Users can select custom date ranges using an interactive slider with from-to con
 
 ### User Story 8 - Excel-Style Tag Dropdown Filter (Priority: P1)
 
-Users can filter content by tags using a modern dropdown interface similar to Excel column filtering, positioned below the date slider for optimal workflow.
+Users can filter content by tags using a modern dropdown interface similar to Excel column filtering, positioned below the date slider. This complements the sidebar tag cloud by providing access to ALL tags, not just the top 20.
 
-**Why this priority**: Intuitive filtering pattern familiar from Excel, provides searchable tag list with checkboxes.
+**Why this priority**: Space-efficient, provides access to tags not in top 20, intuitive filtering pattern familiar from Excel.
 
-**Independent Test**: Click tag dropdown below date slider, search for tag, select via checkbox, verify content filters.
+**Independent Test**: Click tag dropdown below date slider, search for tag not in top 20, select via checkbox, verify content filters.
 
 **Acceptance Scenarios**:
 
@@ -171,23 +182,24 @@ Users see clickable tag clouds on each content item that link directly to filter
 
 ---
 
-### User Story 10 - Popular Tag Clouds on Homepage/Sections (Priority: P2)
+### User Story 10 - Sidebar Tag Cloud Scoping & Display (Priority: P1)
 
-Users see popular tag clouds on homepage and section pages showing the most-used tags in the last 3 months, helping discover trending topics.
+Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used tags from last 3 months, with appropriate scoping based on page type.
 
-**Why this priority**: Surfaces trending content, guides users to popular topics, provides at-a-glance topic overview.
+**Why this priority**: Core navigation feature, surfaces trending content, adapts to user's browsing context.
 
-**Independent Test**: Navigate to homepage, verify popular tags display (based on last 3 months), click tag to filter.
+**Independent Test**: Navigate between homepage/section/collection/content pages, verify tag cloud scoping changes appropriately.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on the homepage, **When** the page loads, **Then** I see a "Popular Tags" cloud showing most-used tags from the last 3 months
-2. **Given** I'm on a section page (e.g., /ai), **When** the page loads, **Then** I see popular tags specific to that section (last 3 months)
-3. **Given** I view the popular tags cloud, **When** I examine the display, **Then** tag sizes reflect relative popularity (larger = more used)
-4. **Given** I click a popular tag, **When** navigation occurs, **Then** I see content filtered by that tag
-5. **Given** I view popular tags, **When** I hover over a tag, **Then** I see a tooltip showing the count (e.g., "42 items")
-6. **Given** the popular tags update, **When** viewing different sections, **Then** each section shows its own popular tags (not global)
-7. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the page, **Then** I do NOT see popular tags (only on homepage/section pages)
+1. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see top 20 tags across entire website (last 3 months)
+2. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section only (last 3 months)
+3. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo (last 3 months)
+4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY that article's tags (not top 20, not limited to last 3 months)
+5. **Given** I view the tag cloud, **When** I examine the display, **Then** tag sizes use 3 discrete tiers (Large/Medium/Small based on quartiles, not continuous scaling)
+6. **Given** I click a tag in the cloud, **When** navigation occurs, **Then** I see content filtered by that tag
+7. **Given** I hover over a tag, **When** I wait briefly, **Then** I see a tooltip showing the count (e.g., "42 items")
+8. **Given** there are fewer than 20 qualifying tags with ≥5 uses, **When** I view the cloud, **Then** I see all tags with ≥5 uses (may be fewer than 20)
 
 ---
 
@@ -196,12 +208,13 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 - What happens when user selects tags that yield zero results? → Show "No results found" message with "Clear All Filters" button
 - What happens when URL has invalid date range parameter? → Fallback to "last 3 months" default, log error
 - What happens when no date range is specified in URL? → Default to last 3 months
-- What happens when tag dropdown has hundreds of tags? → Implement virtual scrolling, show top 100, require search to find others
+- What happens when tag dropdown has 50+ tags? → Implement virtual scrolling at 50 tag threshold, show top 100 in viewport, require search to efficiently find specific tags
 - What happens when user searches in tag dropdown with no matches? → Show "No tags found" message, allow clearing search
 - What happens when there are no popular tags in last 3 months? → Show message "No recent content" or hide popular tags section
 - What happens when content item has many tags (e.g., 20+)? → Show all tags, allow horizontal scroll or wrapping as needed
 - What happens when user clicks tag on content item vs popular tag cloud? → Both navigate to same filtered view, same behavior
 - What happens when URL has invalid tag names? → Ignore invalid tags, apply only valid ones, log warning
+- What happens when tag matching encounters different casing/punctuation? → Normalize both search term and tags (trim, lowercase, punctuation-agnostic) before word boundary matching
 - What happens when user rapidly clicks multiple tags? → Debounce UI updates, only apply final state
 - What happens on slow connections? → Show loading indicator, don't block UI, allow filter changes during load
 - What happens when content is already filtered by collection via SubNav? → Combine collection filter with sidebar filters (AND logic)
@@ -210,29 +223,33 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 
 ### Functional Requirements
 
-- **FR-001**: Sidebar MUST display a "Tags" section with all available tags for the current section/collection
-- **FR-002**: Tags MUST be clickable and toggle between selected/unselected states
+- **FR-001**: Sidebar MUST display a tag cloud with top 20 most-used tags from last 3 months, scoped to current context
+- **FR-001a**: Homepage tag cloud MUST show top 20 tags across entire website
+- **FR-001b**: Section page tag cloud MUST show top 20 tags for that section only
+- **FR-001c**: Collection page tag cloud MUST show top 20 tags for that section/collection combo
+- **FR-001d**: Sidebar tag cloud on content item pages MUST show ONLY that item's tags (not limited to 20 or last 3 months)
+- **FR-002**: Sidebar tag cloud tags MUST be clickable and toggle between selected/unselected states
 - **FR-003**: Selected tags MUST be visually distinguished (highlighted, different color, checkmark icon)
 - **FR-004**: System MUST filter content to show items matching ANY selected tag (OR logic within tags)
 - **FR-005**: System MUST provide date filtering via interactive slider with from-to date range selection
 - **FR-005a**: Date slider MUST default to "last 3 months" when no date range specified in URL
 - **FR-005b**: System MAY provide preset date range buttons (Last 7/30/90 days) as quick shortcuts alongside slider
 - **FR-006**: Date range filters MUST combine with tag filters using AND logic (must match date AND any tag)
-- **FR-006a**: System MUST implement tag subset matching (selecting "AI" matches "AI", "Generative AI", "Azure AI", etc.)
-- **FR-006b**: Subset matching MUST use complete word boundaries ("AI" matches "Azure AI" but not "AIR")
+- **FR-006a**: System MUST implement tag subset matching using case-insensitive word boundaries with punctuation normalization (hyphens, underscores, and spaces treated as word separators before matching; selecting "ai" matches "AI", "Generative AI", "Azure-AI", "Azure_AI")
+- **FR-006b**: Subset matching MUST use complete word boundaries after normalization ("ai" matches "Azure AI" but not "AIR")
 - **FR-007**: System MUST provide Excel-style tag dropdown filter positioned below date slider
 - **FR-007a**: Tag dropdown MUST include search box for filtering tag list
 - **FR-007b**: Tag dropdown MUST show checkboxes for multi-select capability
 - **FR-007c**: Tag dropdown MUST display item counts next to each tag (e.g., "AI (42)")
-- **FR-007d**: Tag dropdown MUST support virtual scrolling for large tag lists (100+ tags)
+- **FR-007d**: Tag dropdown MUST support virtual scrolling when tag count is ≥50 tags
 - **FR-008**: Content items MUST display tag clouds showing all associated tags
 - **FR-008a**: Tags in content item tag clouds MUST be clickable and navigate to filtered views
 - **FR-008b**: Clicking a tag MUST set that tag as active in the tag dropdown filter
-- **FR-009**: Homepage and section pages MUST display popular tag clouds
-- **FR-009a**: Popular tags MUST be calculated based on last 3 months of content
-- **FR-009b**: Popular tag clouds MUST show relative size based on usage frequency
-- **FR-009c**: Each section MUST calculate its own popular tags (not global)
-- **FR-009d**: Collection pages MUST NOT show popular tag clouds (only homepage/sections)
+- **FR-009**: Sidebar tag clouds MUST display top 20 most-used tags OR all tags with ≥5 uses (whichever is fewer)
+- **FR-009a**: Tag cloud calculations MUST be based on last 3 months of content (except content item pages)
+- **FR-009b**: Tag cloud sizes MUST use quantile-based sizing with 3 tiers: Large (top 25%), Medium (middle 50%), Small (bottom 25%)
+- **FR-009c**: Each scope (homepage/section/collection) MUST calculate its own top 20 (not global)
+- **FR-009d**: Content item pages MUST show only that item's tags (no top 20 limit, no 3-month limit)
 - **FR-007**: System MUST update the URL query parameters when filters change (e.g., `?tags=ai,azure&date=last-30-days`)
 - **FR-008**: System MUST parse URL parameters on page load and apply corresponding filters automatically
 - **FR-009**: System MUST provide a "Clear All Filters" button that resets all filters and updates URL
@@ -240,8 +257,12 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 - **FR-011**: System MUST show "No results found" message when filters yield zero items
 - **FR-012**: System MUST preserve filter state when navigating via browser back/forward buttons
 - **FR-013**: Filter operations MUST NOT cause full page reload (client-side filtering only)
-- **FR-014**: Filtered content list MUST update within 50ms of filter selection
-- **FR-015**: All filter controls MUST be keyboard accessible (Tab, Space/Enter for selection)
+- **FR-014**: Client-side filtering MUST update content list within 50ms after API response received (excludes API response time, which has separate <200ms budget)
+- **FR-015**: All filter controls MUST be keyboard accessible with specific interactions:
+  - Tab: Focus navigation between controls
+  - Space/Enter: Select/deselect tags, activate buttons
+  - Arrow keys: Navigate within dropdown lists
+  - Escape: Close dropdowns and modals
 
 ### Key Entities
 
@@ -324,16 +345,38 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 
 ### Component Architecture
 
-**TagDropdownFilter Component** (Excel-style dropdown):
+**SidebarTagCloud Component** (contextually-scoped tag cloud):
+
+- Displays in sidebar above the date slider
+- Shows top 20 most-used tags OR all tags with ≥5 uses (whichever is fewer) from last 3 months (scoped to current page context)
+- Scoping logic:
+  - Homepage: Top 20 across entire website
+  - Section page: Top 20 for that section
+  - Collection page: Top 20 for that section/collection combo
+  - Content item page: Only that item's tags (no limits)
+- Tags are clickable and toggleable (select/deselect)
+- Tag sizes reflect relative popularity using quantile-based sizing:
+  - Large (top 25%): 5 tags - Most popular
+  - Medium (middle 50%): 10 tags - Popular
+  - Small (bottom 25%): 5 tags - Less popular
+- Selected tags visually highlighted
+- Tooltip shows count on hover
+- Updates URL parameters when tags selected
+- Reads URL parameters on load to restore selected state
+- Emits events when tag selection changes
+
+**TagDropdownFilter Component** (Excel-style dropdown - COMPLEMENTARY to cloud):
 
 - Positioned below date range slider in sidebar
+- Provides access to ALL tags (not just top 20 in cloud)
 - Dropdown button shows "Filter by Tags" with count of selected tags
 - Opens to reveal searchable tag list with checkboxes
 - Search box filters available tags in real-time
 - Displays tag counts next to each tag (e.g., "AI (42)")
-- Virtual scrolling for large tag lists (100+ tags)
+- Virtual scrolling activates automatically at ≥50 tags for performance
 - Multi-select with checkboxes (OR logic)
 - "Select All" / "Clear All" quick actions
+- Synchronizes with sidebar tag cloud selections (same filter state)
 - Updates URL parameters when selections change
 - Reads URL parameters on load to restore checked state
 - Keyboard accessible (Tab, Space for checkbox, Arrow keys for navigation)
@@ -362,23 +405,14 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 - Shows result count and "no results" message
 - Integrates with infinite scroll to load more content within date range
 
-**ContentItemTagCloud Component**:
+**ContentItemTagBadges Component** (used ON content item cards in lists):
 
-- Displays all tags associated with a content item
-- Renders tags as clickable pills/badges
-- Each tag navigates to filtered view when clicked
-- Consistent styling across all content item types
-- Responsive layout (wraps or scrolls as needed for many tags)
-
-**PopularTagCloud Component**:
-
-- Displays on homepage and section pages ONLY (not collection pages)
-- Calculates popular tags from last 3 months of content
-- Tag sizes reflect relative popularity (visual weight)
-- Each tag clickable, navigates to filtered view
-- Shows tooltip with count on hover
-- Section-specific calculations (not global)
-- Hides if no content in last 3 months
+- Displays on content item cards/previews in lists (not in sidebar)
+- Shows subset of item's tags as small pills/badges (e.g., first 3-5 tags)
+- Tags are clickable and navigate to filtered view
+- Clicking tag sets it as active in both sidebar cloud AND dropdown
+- Consistent compact styling across all content item types
+- May show "+2 more" indicator if item has many tags
 
 ### URL Parameter Format
 
@@ -441,8 +475,8 @@ Users see popular tag clouds on homepage and section pages showing the most-used
 - Date slider defaults to last 3 months on initial load
 - Clear All button resets state
 - ContentItemTagCloud renders all item tags
-- PopularTagCloud calculates tags from last 3 months
-- PopularTagCloud shows section-specific tags (not global)
+- PopularTagCloud calculates tags from last 3 months with minimum threshold (≥5 uses)
+- PopularTagCloud shows section-specific tags (not global), maximum 20 or all ≥5 uses
 
 **Integration Tests** (API already tested):
 

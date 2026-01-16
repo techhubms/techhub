@@ -44,7 +44,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Name**: Tech Hub
 - **Repository**: techhubms/techhub
 - **Branch**: dotnet-migration (production deployment in progress)
-- **Status**: Production-quality implementation replacing Jekyll
+- **Status**: Implementing production-quality website using the latest modern technologies
 
 ## ABSOLUTELY CRITICAL Rules
 
