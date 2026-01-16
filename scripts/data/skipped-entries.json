@@ -11349,5 +11349,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/using-winui-3-without-xaml/m-p/4486235#M1282",
     "collection": "community",
     "timestamp": "2026-01-16 08:03:26 +00:00"
+  },
+  {
+    "reason": "No categories found: Content was excluded based on the generic exclusion rules for Non-Development Microsoft Products and Business Productivity Tools. The article is about using Microsoft 365 Copilot in Outlook and Teams to find personal praise, which is a business productivity application rather than a developer tool or technical implementation. There is no content focused on coding, AI development, Microsoft platform architecture, or other technical categories. Per workflow rules, articles focused on Microsoft 365 Copilot for document/business productivity use are explicitly excluded from all categories.",
+    "canonical_url": "https://news.microsoft.com/signal/articles/prompt-use-ai-to-hype-you-up/",
+    "collection": "news",
+    "timestamp": "2026-01-16 22:03:31 +00:00"
   }
 ]

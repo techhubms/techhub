@@ -1,0 +1,17 @@
+{
+  "Title": "The Prompt: Use AI to hype you up",
+  "FeedName": "Microsoft News",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "OutputDir": "_news",
+  "PubDate": "2026-01-16T21:56:55+00:00",
+  "ProcessedDate": "2026-01-16 22:02:07",
+  "Description": "The post [The Prompt: Use AI to hype you up](https://news.microsoft.com/signal/articles/prompt-use-ai-to-hype-you-up/) appeared first on [Source](https://news.microsoft.com/source).",
+  "EnhancedContent": "Sometimes, we all need a little reminder of how awesome we are. Luckily, AI is here to help. You can use Microsoft 365 Copilot to find the praise hiding in your inbox or Teams chats. So go ahead and hype yourself up! You’ve earned it.\n\nHead over to Microsoft 365 Copilot and drop this into the chat:\n\n>\n> *Using the emails in my Outlook folder [Folder Name], summarize the recognition I have received. For each email, provide a brief summary including the project or topic, the recognition given, and who provided it. Then, compile a polished paragraph highlighting key themes of my contributions and impact.*\n>\n\nYou can change the prompt slightly if you want to dig up the glowing things people have said about you in Teams.\n\nThe Prompt is a regular Signal feature to give you specific, super-quick ways you can use AI to solve problems, boost your creativity and get more done at work.\n\nLearn more about [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot).",
+  "Author": "stclarke",
+  "FeedLevelAuthor": "Source",
+  "Link": "https://news.microsoft.com/signal/articles/prompt-use-ai-to-hype-you-up/",
+  "Tags": [
+    "AI",
+    "Company News"
+  ]
+}
