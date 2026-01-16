@@ -159,7 +159,7 @@ Users viewing Tech Hub with CSS disabled (browser reading mode, text-only browse
 
 **Color and Contrast**:
 
-- **FR-028**: System MUST use GitHub color palette as base (specific colors from current Jekyll site)
+- **FR-028**: System MUST use Tech Hub color palette (dark theme with Microsoft brand colors)
 - **FR-029**: System MUST audit all color combinations to ensure 4.5:1 contrast ratio for normal text (WCAG 2.1 AA)
 - **FR-030**: System MUST ensure 3:1 contrast ratio for large text (18pt+) and UI components
 - **FR-031**: System MUST NOT rely on color alone to convey information (use icons, labels, or patterns in addition)
@@ -229,7 +229,7 @@ Users viewing Tech Hub with CSS disabled (browser reading mode, text-only browse
 1. **Blazor SSR**: Initial page render is server-side, semantic HTML in initial response
 2. **Progressive Enhancement**: JavaScript enhances but doesn't create initial content
 3. **Modern Browsers**: Target browsers support HTML5 semantic elements (IE11 not supported)
-4. **GitHub Color Palette**: Specific hex values available from current Jekyll site SCSS variables
+4. **Tech Hub Colors**: Dark theme with Microsoft brand colors (primary blue, dark navy, etc.)
 5. **System Fonts Available**: Target OS includes modern system font stack
 6. **Screen Reader Testing**: Team has access to NVDA, JAWS, VoiceOver for testing
 7. **No Dark Mode**: Site color scheme is already dark, no light/dark toggle needed

@@ -114,8 +114,7 @@ public class FrontMatterParserTests
 
     /// <summary>
     /// Test: Frontmatter with only opening --- should extract YAML until EOF
-    /// Why: In practice, parsers tolerate missing closing --- and treat rest of file as YAML
-    /// This matches behavior of many static site generators (Jekyll, Hugo)
+    /// Why: Parser tolerates missing closing --- and treats rest of file as YAML
     /// </summary>
     [Fact]
     public void Parse_UnclosedFrontMatter_ParsesUntilEOF()

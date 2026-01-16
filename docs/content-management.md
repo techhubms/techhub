@@ -38,7 +38,7 @@ GitHub Copilot feature demonstration videos are managed through a special collec
 
 **Special Requirements**:
 
-- Must include `section: "github-copilot"` in frontmatter
+- Must include `section_names: ["github-copilot", "ai"]` in frontmatter
 - Must include `plans: ["Free"|"Pro"|"Business"|"Pro+"|"Enterprise"]` array to specify which subscription tiers support the feature
 - Must include `ghes_support: true|false` to indicate GitHub Enterprise Server support
 - Must include `alt-collection: "features"` to highlight the Features tab instead of the Videos tab
@@ -59,7 +59,7 @@ Visual Studio Code update videos are managed through a special collection struct
 
 **Special Requirements**:
 
-- Must include `section: "github-copilot"` in frontmatter
+- Must include `section_names: ["github-copilot", "ai"]` in frontmatter
 - Must include `alt-collection: "vscode-updates"` to highlight the Visual Studio Code Updates tab instead of the Videos tab
 - Should include `youtube_id` for embedded video playback
 
@@ -140,7 +140,9 @@ Add the `alt-collection` field to the frontmatter of your content:
 ---
 layout: "post"
 title: "Your Video Title"
-section: "github-copilot"
+section_names:
+- github-copilot
+- ai
 alt-collection: "features"  # or "vscode-updates"
 ---
 ```
@@ -158,14 +160,13 @@ The `alt-collection` value is matched against the URL path of collection links i
 
 ### Testing
 
-End-to-end tests verify that the correct tabs are highlighted for:
+End-to-end tests verify that the custom pages work correctly:
 
-- GitHub Copilot Features videos
-- Visual Studio Code Updates videos
-- Regular videos (control group)
-- Collection pages themselves
+- GitHub Copilot Features page (`/github-copilot/features`)
+- Visual Studio Code Updates page (`/github-copilot/vscode-updates`)
+- Other custom pages
 
-Tests are located in `spec/e2e/tests/alt-collection-highlighting.spec.js`.
+Tests are located in [tests/TechHub.E2E.Tests/Web/CustomPagesTests.cs](../tests/TechHub.E2E.Tests/Web/CustomPagesTests.cs).
 
 ## RSS Feed Processing
 
@@ -194,7 +195,7 @@ RSS feeds are configured in `scripts/data/rss-feeds.json`:
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
 - **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
-- **section**: Section Title for categorization ("AI", "GitHub Copilot", etc.) - will be converted to normalized section_names (ai", "github-copilot") in frontmatter
+- **section**: Section display title for categorization (e.g., "AI", "GitHub Copilot") - RSS processing converts these to normalized `section_names` array in frontmatter (e.g., ["ai"], ["github-copilot", "ai"])
 
 **Optional Fields**:
 
@@ -315,4 +316,4 @@ Each RSS item creates a markdown file with:
 
 ### Automatic Deployment
 
-When RSS workflow commits markdown files to main branch, Azure Static Web App deployment is automatically triggered via workflow dispatch. New content appears on the live site within minutes.
+When RSS workflow commits markdown files to main branch, deployment to Azure Container Apps is automatically triggered via CI/CD pipeline. New content appears on the live site within minutes.

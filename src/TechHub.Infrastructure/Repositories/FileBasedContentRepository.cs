@@ -312,7 +312,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
         var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
         var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
-        var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
+        var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_id", string.Empty);
         var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
         var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt-collection", string.Empty);
 

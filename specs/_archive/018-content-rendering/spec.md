@@ -237,15 +237,6 @@ public class YoutubeExtension : IMarkdownExtension
 - YamlDotNet (frontmatter parsing)
 - HtmlAgilityPack (HTML manipulation if needed)
 
-## Migration Notes
-
-**From Jekyll**:
-
-- Replace Liquid templates with Razor
-- Replace Rouge syntax highlighting with Markdig.SyntaxHighlighting
-- Migrate custom Liquid tags to Markdig extensions
-- Ensure same HTML output structure for SEO
-
 ## Open Questions
 
 1. Should we cache rendered HTML in Redis or just in-memory?

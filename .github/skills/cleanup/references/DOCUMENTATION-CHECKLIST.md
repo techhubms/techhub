@@ -110,25 +110,11 @@ After completing sync:
 
 ## Common Issues to Fix
 
-### Outdated Content
-
-```markdown
-❌ "Uses Jekyll to build the site..."
-✅ "Uses .NET Blazor for server-side rendering..."
-```
-
 ### Broken Links
 
 ```markdown
 ❌ [See details](docs/old-file.md)
 ✅ [See details](docs/api-specification.md)
-```
-
-### Incorrect Commands
-
-```markdown
-❌ `bundle exec jekyll serve`
-✅ `Run` function (auto-loaded PowerShell function)
 ```
 
 ### Missing Sections

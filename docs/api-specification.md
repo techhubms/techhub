@@ -86,7 +86,7 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source)
   - Videos and roundups: `"internal"` (content opens on site)
   - All other collections: `"external"` (links open in new tab)
-- `videoId`: YouTube video ID from frontmatter `youtube_video_id` field (for video embeds)
+- `videoId`: YouTube video ID from frontmatter `youtube_id` field (for video embeds)
 
 **Important Behaviors**:
 

@@ -104,11 +104,6 @@ jobs:
           pwsh -File scripts/run-all-tests.ps1
           echo "✅ All tests passed!"
 
-      - name: Validate Jekyll build
-        run: |
-          echo "🏗️ Validating Jekyll can build the site..."
-          bundle exec jekyll build --destination /tmp/jekyll-build
-          echo "✅ Jekyll build validation passed!"
 
       - name: Check for broken links (basic)
         run: |

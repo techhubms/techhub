@@ -2,7 +2,7 @@
 
 > **Current Phase**: Phase 3 - User Story 1 MVP (API Implementation) ✅ Partially Complete
 
-This document tracks the progress of migrating Tech Hub from Jekyll to .NET/Blazor architecture.
+This document tracks the progress of migrating Tech Hub to .NET/Blazor architecture.
 
 ## What's Working
 
@@ -85,7 +85,7 @@ Following the migration plan phases defined in [specs/dotnet-migration/](specs/d
 - TechHubApiClient with resilience policies (retry, circuit breaker, timeout)
 - PrimarySection URL routing (e.g., `/github-copilot/videos/item-id`)
 - ViewingMode support (internal content navigates to detail pages, external opens in new tab)
-- Complete Tech Hub design system (colors from Jekyll _sass)
+- Complete Tech Hub design system (dark theme, Microsoft brand colors)
 - All 8 section background images
 
 **Running the Application**:

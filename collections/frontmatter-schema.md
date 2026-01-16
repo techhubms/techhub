@@ -7,7 +7,6 @@ This document defines the frontmatter fields used in Tech Hub content files for 
 - **Configuration-Driven**: Content structure is defined by frontmatter, not hardcoded in templates
 - **Collection-Based**: Each collection type may have specific required fields
 - **Section Assignment**: Content can belong to multiple sections via `section_names` array
-- **No Jekyll Dependencies**: This schema is specific to the .NET implementation
 
 ## Universal Fields (All Content)
 
@@ -30,7 +29,6 @@ These fields are **required** for ALL content files:
 
 - **Always** set to `"post"` for collection content (_blogs,_news, _community,_videos, _roundups)
 - Set to `"page"` for custom pages (not in collections)
-- **Do not use** for other values - this is a .NET implementation, not Jekyll
 
 #### `viewing_mode`
 
@@ -99,7 +97,7 @@ These fields are optional but commonly used:
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
-| `youtube_video_id` | string | YouTube video ID (deprecated - extracted from content) | `"dQw4w9WgXcQ"` |
+| `youtube_id` | string | YouTube video ID (optional - can be extracted from content) | `"dQw4w9WgXcQ"` |
 | `alt_collection` | string | Subfolder collection name for special categorization | `"ghc-features"` or `"vscode-updates"` |
 
 **YouTube video ID**: The parser can extract YouTube IDs from `{% youtube VIDEO_ID %}` tags in content, so the frontmatter field is optional.
@@ -165,18 +163,18 @@ Roundup summaries use universal fields only. Typically have:
 - `author: "Tech Hub Team"`
 - `section_names: ["ai", "github-copilot"]` (covers all sections)
 
-## Deprecated/Removed Fields
+## Do Not Use These Fields
 
-These fields were used in Jekyll but are **NO LONGER USED** in .NET implementation:
+**Invalid/Unsupported Fields** - Do not include in frontmatter:
 
-| Field | Status | Reason |
-|-------|--------|--------|
-| `categories` | **Replaced** | Use `section_names` instead (normalized identifiers, not display names) |
-| `tags_normalized` | **Removed** | Normalization happens in .NET code, not stored in frontmatter |
-| `excerpt_separator` | **Removed** | Excerpts are detected by `<!--excerpt_end-->` marker in content, not frontmatter |
-| `description` | **Removed** | Not used in .NET implementation - excerpt serves this purpose |
-| `page` | **Removed** | Collection is determined from file path, not frontmatter |
-| `video_id` | **Deprecated** | Use `youtube_video_id` or extract from `{% youtube ID %}` tag in content |
+| Field | Reason |
+|-------|--------|
+| `categories` | Use `section_names` instead (normalized identifiers) |
+| `tags_normalized` | Normalization happens in C# code |
+| `excerpt_separator` | Use `<!--excerpt_end-->` marker in content |
+| `description` | Excerpt serves this purpose |
+| `page` | Collection is determined from file path |
+| `video_id` | Use `youtube_id` instead |
 
 ## Frontmatter Formatting Rules
 
@@ -365,27 +363,13 @@ When processing content, scripts must:
 | `excerpt_separator` | *(removed)* | Use `<!--excerpt_end-->` marker in content |
 | `description` | *(removed)* | Excerpt serves this purpose |
 | `page` | *(removed)* | Derived from file path |
-| `video_id` | `youtube_video_id` | Optional - can extract from content |
+| `video_id` | `youtube_id` | Optional - can extract from content |
 
-## Migration Notes
+## Content Pipeline
 
-### From Jekyll to .NET
+**Content Processing**:
 
-**Migration Status**: ✅ Complete on `dotnet-migration` branch
-
-**Changes implemented:**
-
-1. `categories` → `section_names` (display names → normalized identifiers)
-2. `tags_normalized` removed (handled in C# code)
-3. `excerpt_separator` removed (use `<!--excerpt_end-->` marker)
-4. `description` removed (use excerpt)
-5. `page` removed (derived from path)
-
-**Content Pipeline**:
-
-- **TechHub.ContentFixer**: One-time migration tool for existing Jekyll content (kept for future migrations)
-- **RSS Templates**: Already generate correct .NET frontmatter format (`section_names`, no deprecated fields)
+- **TechHub.ContentFixer**: One-time tool to clean up template variables and frontmatter from existing content
+- **RSS Templates**: Generate correct frontmatter format (`section_names`, all required fields)
 - **process-rss-to-markdown.ps1**: Converts AI categories (display names) → section_names (identifiers)
-- **fix-markdown-files.ps1**: Fixes AI-generated markdown formatting issues ONLY (does NOT modify frontmatter)
-
-**No frontmatter repair needed**: Templates already generate correct .NET format. New content from RSS pipeline requires ONLY markdown formatting fixes, NOT frontmatter fixes.
+- **fix-markdown-files.ps1**: Fixes AI-generated markdown formatting issues (blank lines, heading spacing, etc.)

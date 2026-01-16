@@ -183,8 +183,8 @@ _site/
         It "Should apply include first, then exclude" {
             # Include collections/*, but exclude AGENTS.md and guidelines
             $result = @(Get-MarkdownFiles -Root $script:testRoot `
-                -IncludeDirectoryPatterns @('collections/*') `
-                -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
+                    -IncludeDirectoryPatterns @('collections/*') `
+                    -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
             
             # All files should be from collections
             foreach ($file in $result) {
@@ -200,11 +200,11 @@ _site/
             $guidelineFiles.Count | Should -Be 0
         }
         
-        It "Should handle collections/* pattern correctly for Repair-MarkdownJekyll use case" {
-            # This is the actual pattern used in Repair-MarkdownJekyll
+        It "Should handle collections/* pattern correctly for content processing" {
+            # Pattern used for processing all collection content
             $result = @(Get-MarkdownFiles -Root $script:testRoot `
-                -IncludeDirectoryPatterns @('collections/*') `
-                -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
+                    -IncludeDirectoryPatterns @('collections/*') `
+                    -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
             
             # Should find content files
             $newsFiles = @($result | Where-Object { $_.FullName -match "_news" })
@@ -217,8 +217,8 @@ _site/
             
             # Should NOT find AGENTS.md or guidelines in collections/
             $excludedFiles = @($result | Where-Object { 
-                $_.Name -eq "AGENTS.md" -or $_.Name -like "*-guidelines.md" 
-            })
+                    $_.Name -eq "AGENTS.md" -or $_.Name -like "*-guidelines.md" 
+                })
             $excludedFiles.Count | Should -Be 0
         }
     }
@@ -261,13 +261,13 @@ _site/
         It "Should exclude collections/AGENTS.md to prevent 'No viewingmode found' error" {
             # This test specifically validates the bug fix
             $result = @(Get-MarkdownFiles -Root $script:testRoot `
-                -IncludeDirectoryPatterns @('collections/*') `
-                -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
+                    -IncludeDirectoryPatterns @('collections/*') `
+                    -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', '*-guidelines.md'))
             
             # The specific file that was causing the error should NOT be included
             $collectionsAgents = @($result | Where-Object { 
-                $_.FullName -match "collections[\\/]AGENTS\.md$" 
-            })
+                    $_.FullName -match "collections[\\/]AGENTS\.md$" 
+                })
             
             $collectionsAgents | Should -BeNullOrEmpty -Because "collections/AGENTS.md must be excluded to prevent viewingmode errors"
         }

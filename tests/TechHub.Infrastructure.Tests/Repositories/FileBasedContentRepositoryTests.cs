@@ -418,7 +418,7 @@ public class FileBasedContentRepositoryTests : IDisposable
             date: 2025-01-01
             section_names: [GitHub Copilot]
             tags: [Tutorial]
-            youtube_video_id: dQw4w9WgXcQ
+            youtube_id: dQw4w9WgXcQ
             ---
             
             [YouTube: dQw4w9WgXcQ]
@@ -436,7 +436,7 @@ public class FileBasedContentRepositoryTests : IDisposable
 
     /// <summary>
     /// Test: YouTube shortcode in markdown is converted to iframe
-    /// Why: Jekyll's {% youtube %} tag needs .NET equivalent
+    /// Why: Content files use {% youtube VIDEO_ID %} shortcode syntax
     /// </summary>
     [Fact]
     public async Task GetAllAsync_YouTubeShortcode_ConvertsToIframe()
