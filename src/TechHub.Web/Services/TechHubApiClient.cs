@@ -162,10 +162,11 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         try
         {
             _logger.LogInformation("Fetching all tags from API");
-            var tags = await _httpClient.GetFromJsonAsync<IEnumerable<string>>(
-                "/api/content/tags",
+            var response = await _httpClient.GetFromJsonAsync<AllTagsResponse>(
+                "/api/tags/all",
                 cancellationToken);
 
+            var tags = response?.Tags.Select(t => t.Tag).AsEnumerable();
             _logger.LogInformation("Successfully fetched {Count} tags", tags?.Count() ?? 0);
             return tags;
         }

@@ -3,7 +3,6 @@
 **AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
 
 **🚨 ABSOLUTELY CRITICAL**: This section defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
-**🚨 ABSOLUTELY CRITICAL**: Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
 
 ## Index
 
@@ -45,8 +44,6 @@
   - [Filtering Systems](#filtering-systems)
   - [Content Structure](#content-structure)
   - [RSS Feeds](#rss-feeds)
-- [.NET Migration Status](#net-migration-status)
-  - [Implementation Progress](#implementation-progress)
 
 ## Project Overview
 
@@ -105,9 +102,7 @@ For .NET development patterns, component architecture, API design, and all code 
 **Navigation**:
 
 - See [Documentation Architecture](#documentation-architecture) for complete documentation map
-- See [.NET Migration Status](#net-migration-status) for current implementation progress
 - See [README.md](README.md) for quick start guide
-- See [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status
 
 ## AI Assistant Workflow
 
@@ -418,7 +413,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 - **No backwards compatibility unless requested** - Don't keep old implementations "just in case"
 - **Remove unused files immediately** - Don't leave lingering code that's no longer referenced
 - **Check documentation before removing critical files** - Update all references (e.g., when removing `sections.json`, update all docs mentioning it)
-- **Delete deprecated code** - Remove old implementations after migration is complete
+- **Delete deprecated code** - Remove all code that is no longer used!
 - **Clean up test code** - Remove obsolete test helpers, fixtures, or data files
 - **Update configuration** - Remove unused settings, dependencies, and build artifacts
 
@@ -789,6 +784,16 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 ### Documentation Placement Strategy
 
+**🎯 Core Documentation Philosophy**:
+
+**Describe WHAT and WHY, not HOW**:
+
+- ✅ **WHAT**: Patterns, decisions, key concepts, important behaviors
+- ✅ **WHY**: Architecture rationale, tradeoffs, design principles
+- 🚫 **HOW**: Full implementations, complete class definitions, line-by-line code
+
+**Key Principle**: Documentation guides understanding, not replaces source code. Show structure and patterns, reference actual files for complete implementations.
+
 **Where to Place Information**:
 
 **Root AGENTS.md** (this file):
@@ -802,14 +807,16 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 **src/AGENTS.md** (ALL .NET implementation patterns):
 
-- Minimal API endpoint patterns
-- Blazor component patterns (code-behind, etc.)
-- Repository pattern implementation
+- Minimal API endpoint patterns (structure, not full implementations)
+- Blazor component patterns (code-behind approach, key decisions)
+- Repository pattern implementation (critical rules, caching strategy)
 - Dependency injection patterns and service lifetimes
-- Domain models and DTOs
+- Domain models and DTOs (design principles, not complete classes)
 - Markdown frontmatter mapping
 - HttpClient configuration
 - ALL other .NET code patterns
+
+**Important**: Show patterns and structure, not full class implementations. Reference actual source files for complete code.
 
 **tests/AGENTS.md** (Testing strategies):
 
@@ -820,9 +827,10 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 **Domain-specific AGENTS.md** (src/TechHub.Web/, src/TechHub.Api/, etc.):
 
-- Patterns specific to that project/domain
+- Patterns specific to that project/domain (describe approach, not full code)
 - Project-specific configuration
 - Specialized tooling for that domain
+- Critical implementation decisions (algorithm choice, performance tradeoffs)
 
 **Functional Docs** (docs/):
 
@@ -830,6 +838,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 - API contracts and endpoint specifications
 - Business rules and behavior
 - System architecture diagrams
+- **Never include**: Full implementations, development HOW-TOs, coding instructions
 
 **Content Guidelines** (collections/):
 
@@ -837,13 +846,20 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 - Writing style and tone
 - Content workflow and RSS processing
 
-**Key Principle**: Place information at the **highest applicable level**:
+**Key Principles**:
 
-- If it's a .NET pattern used across projects → src/AGENTS.md
-- If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
-- If it's repository-wide workflow/rules → Root AGENTS.md
-- If it describes behavior → Functional docs
-- If it's about content → Content guidelines
+1. **Place information at the highest applicable level**:
+   - If it's a .NET pattern used across projects → src/AGENTS.md
+   - If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
+   - If it's repository-wide workflow/rules → Root AGENTS.md
+   - If it describes behavior → Functional docs
+   - If it's about content → Content guidelines
+
+2. **Describe patterns, not implementations**:
+   - Show structure and key decisions
+   - Explain WHY choices were made
+   - Reference source files for complete code
+   - Never copy full class/method implementations
 
 ### Complete Documentation Map
 

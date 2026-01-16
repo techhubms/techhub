@@ -52,12 +52,13 @@ TechHub.Api/
 
 ### Endpoint Organization
 
-**Use static extension methods for endpoint mapping**:
+**Key Pattern**: Static extension methods on `WebApplication` with endpoint groups.
+
+**Implementation**: Separate endpoint files in `Endpoints/` directory
+
+**Example Structure**:
 
 ```csharp
-// Endpoints/SectionEndpoints.cs
-namespace TechHub.Api.Endpoints;
-
 public static class SectionEndpoints
 {
     public static void MapSectionEndpoints(this WebApplication app)
@@ -66,38 +67,20 @@ public static class SectionEndpoints
             .WithTags("Sections")
             .WithOpenApi();
         
-        group.MapGet("/", GetAllSections)
-            .WithName("GetAllSections")
-            .WithSummary("Get all sections")
-            .WithDescription("Retrieves all configured sections with their collections");
-        
-        group.MapGet("/{sectionUrl}", GetSectionByUrl)
-            .WithName("GetSectionByUrl")
-            .WithSummary("Get a specific section by URL");
+        group.MapGet("/", GetAllSections).WithName("GetAllSections");
+        group.MapGet("/{sectionUrl}", GetSectionByUrl).WithName("GetSectionByUrl");
     }
     
     private static async Task<IResult> GetAllSections(
-        ISectionRepository repository,
-        CancellationToken ct)
+        ISectionRepository repository, CancellationToken ct)
     {
         var sections = await repository.GetAllAsync(ct);
         return Results.Ok(sections);
     }
-    
-    private static async Task<IResult> GetSectionByUrl(
-        string sectionUrl,
-        ISectionRepository repository,
-        CancellationToken ct)
-    {
-        var section = await repository.GetByUrlAsync(sectionUrl, ct);
-        return section is null 
-            ? Results.NotFound(new { error = $"Section '{sectionUrl}' not found" })
-            : Results.Ok(section);
-    }
 }
 ```
 
-**Register endpoints in Program.cs**:
+**Register in Program.cs**: `app.MapSectionEndpoints();`
 
 ```csharp
 // Program.cs
@@ -136,162 +119,48 @@ group.MapGet("/{sectionUrl}/content", GetContentForSection)
 
 ### Endpoint Handler Patterns
 
-**Use dependency injection directly in handler parameters**:
+**Use dependency injection directly in handler parameters**: DI services, loggers, and `CancellationToken` automatically resolved.
 
-```csharp
-private static async Task<IResult> GetFilteredContent(
-    string sectionUrl,
-    [FromQuery] string? tags,              // Query parameter
-    [FromQuery] string? dateRange,         // Query parameter
-    ISectionRepository sectionRepo,        // DI service
-    IContentRepository contentRepo,        // DI service
-    ILogger<ContentEndpoints> logger,      // DI logger
-    CancellationToken ct)                  // Cancellation token
-{
-    try
-    {
-        // Validation
-        var section = await sectionRepo.GetByUrlAsync(sectionUrl, ct);
-        if (section is null)
-        {
-            logger.LogWarning("Section not found: {SectionUrl}", sectionUrl);
-            return Results.NotFound(new { error = $"Section '{sectionUrl}' not found" });
-        }
-        
-        // Get and filter content
-        var allContent = await contentRepo.GetBySectionAsync(sectionUrl, ct);
-        var filtered = ApplyFilters(allContent, tags, dateRange);
-        
-        logger.LogInformation("Returned {Count} content items for section {Section}", 
-            filtered.Count, sectionUrl);
-            
-        return Results.Ok(filtered);
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "Error retrieving content for section {SectionUrl}", sectionUrl);
-        return Results.Problem("An error occurred while retrieving content");
-    }
-}
-```
+**Important Details**:
+
+- Query parameters: Use `[FromQuery]` attribute
+- Route parameters: No attribute needed
+- Services: Injected automatically
+- Always include `CancellationToken` parameter
+- Validate inputs before processing
+- Return specific error messages with context
 
 ### Response Patterns
 
-**Use Results.* methods for consistent responses**:
+**Use Results.* methods**:
 
-```csharp
-// Success responses
-return Results.Ok(data);                              // 200 with data
-return Results.NoContent();                           // 204 no content
-return Results.Created($"/api/items/{id}", item);     // 201 with location
-
-// Error responses
-return Results.NotFound(new { error = "Not found" }); // 404
-return Results.BadRequest(new { error = "Invalid" }); // 400
-return Results.Problem("Server error");               // 500
-return Results.ValidationProblem(errors);             // 400 with validation errors
-```
+- Success: `Results.Ok(data)`, `Results.NoContent()`, `Results.Created(location, item)`
+- Errors: `Results.NotFound()`, `Results.BadRequest()`, `Results.Problem()`
 
 ### Error Handling
 
-**ALWAYS handle exceptions and log them**:
-
-```csharp
-private static async Task<IResult> GetContent(
-    string id,
-    IContentRepository repository,
-    ILogger<ContentEndpoints> logger,
-    CancellationToken ct)
-{
-    try
-    {
-        var content = await repository.GetByIdAsync(id, ct);
-        return content is null
-            ? Results.NotFound(new { error = $"Content '{id}' not found" })
-            : Results.Ok(content);
-    }
-    catch (ArgumentException ex)
-    {
-        logger.LogWarning(ex, "Invalid content ID: {Id}", id);
-        return Results.BadRequest(new { error = ex.Message });
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "Error retrieving content {Id}", id);
-        return Results.Problem("An error occurred while retrieving content");
-    }
-}
-```
+**ALWAYS handle exceptions and log them** with full context (exception, parameters, operation).
 
 ## Dependency Injection
 
 **Service registration in Program.cs**:
 
-```csharp
-var builder = WebApplication.CreateBuilder(args);
+**Important Details**:
 
-// Add Aspire service defaults (OpenTelemetry, health checks, resilience)
-builder.AddServiceDefaults();
+- Use `builder.AddServiceDefaults()` for Aspire defaults
+- Configure options via `builder.Services.Configure<T>()`
+- Register repositories as Singleton (stateless, cached)
+- Register scoped services for per-request operations
+- Configure CORS for Blazor frontend
+- Add OpenAPI/Swagger with `AddEndpointsApiExplorer()` and `AddOpenApi()`
 
-// Configuration binding
-builder.Services.Configure<ContentOptions>(
-    builder.Configuration.GetSection("Content"));
-
-// Infrastructure services
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton(TimeProvider.System);
-
-// Repositories
-builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
-builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
-
-// Services
-builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
-builder.Services.AddScoped<IRssService, RssService>();
-
-// API features
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi();
-
-// CORS for Blazor frontend
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-        policy.WithOrigins(builder.Configuration["AllowedOrigins"] ?? "https://localhost:5184")
-              .AllowAnyMethod()
-              .AllowAnyHeader());
-});
-```
+See actual `Program.cs` for complete registration.
 
 ## Configuration
 
-**appsettings.json structure**:
+**appsettings.json** contains section definitions, paths, and service settings.
 
-```json
-{
-  "Content": {
-    "CollectionsRootPath": "/workspaces/techhub/collections",
-    "Timezone": "Europe/Brussels",
-    "Sections": {
-      "ai": {
-        "Title": "AI",
-        "Description": "Artificial Intelligence and Machine Learning",
-        "Url": "/ai",
-        "Image": "/images/section-backgrounds/ai.jpg",
-        "Collections": [
-          {
-            "Title": "News",
-            "Name": "news",
-            "Url": "/ai/news",
-            "Description": "Latest AI announcements",
-            "IsCustom": false
-          }
-        ]
-      }
-    }
-  }
-}
-```
+See actual `appsettings.json` for complete structure.
 
 ## Testing
 

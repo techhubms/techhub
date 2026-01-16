@@ -1,4 +1,4 @@
-# Tech Hub .NET Migration
+# Tech Hub
 
 > **Status**: 🚧 In Development
 

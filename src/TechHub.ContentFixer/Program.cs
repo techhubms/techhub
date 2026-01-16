@@ -8,7 +8,7 @@ using YamlDotNet.Serialization.NamingConventions;
 namespace TechHub.ContentFixer;
 
 /// <summary>
-/// Console application to fix markdown frontmatter and content for .NET migration
+/// Console application to fix markdown frontmatter and content for the Tech hub
 /// 
 /// Fixes:
 /// - Rename 'categories' to 'section_names' and normalize values

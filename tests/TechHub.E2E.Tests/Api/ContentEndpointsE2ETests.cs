@@ -1,70 +1,19 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using TechHub.Core.DTOs;
 
 namespace TechHub.E2E.Tests.Api;
 
 /// <summary>
-/// End-to-end tests for API endpoints using real file system data
-/// These tests validate the entire stack from HTTP request to file reading
+/// End-to-end tests for Content API endpoints
+/// Tests: GET /api/content, GET /api/content/filter
 /// </summary>
-public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
+public class ContentEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
 {
     private readonly HttpClient _client = factory.CreateClient();
 
-    #region Section Endpoints
-
-    [Fact]
-    public async Task GetAllSections_ReturnsRealSections()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/sections");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
-        sections.Should().NotBeNull();
-        sections!.Should().NotBeEmpty();
-
-        // Verify expected sections from sections.json
-        sections.Should().Contain(s => s.Name == "ai");
-        sections.Should().Contain(s => s.Name == "github-copilot");
-        sections.Should().Contain(s => s.Name == "azure");
-        sections.Should().Contain(s => s.Name == "ml");
-        sections.Should().Contain(s => s.Name == "coding");
-        sections.Should().Contain(s => s.Name == "devops");
-        sections.Should().Contain(s => s.Name == "security");
-
-        // All sections should have collections
-        sections.Should().AllSatisfy(s => s.Collections.Should().NotBeEmpty());
-    }
-
-    [Fact]
-    public async Task GetSectionByName_ReturnsRealSection()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/sections/ai");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var section = await response.Content.ReadFromJsonAsync<SectionDto>();
-        section.Should().NotBeNull();
-        section!.Name.Should().Be("ai");
-        section.Title.Should().Be("Artificial Intelligence");
-        section.Name.Should().Be("ai");
-        section.Collections.Should().NotBeEmpty();
-    }
-
-    #endregion
-
-    #region Content Endpoints - Collections
+    #region GET /api/content - Basic Retrieval
 
     [Fact]
     public async Task GetAllContent_ReturnsRealContent()
@@ -178,7 +127,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
 
     #endregion
 
-    #region Content Endpoints - Sections
+    #region GET /api/content - Section Filtering
 
     [Fact]
     public async Task GetContentBySection_AI_ReturnsAIItems()
@@ -227,7 +176,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
 
     #endregion
 
-    #region Content Endpoints - Filtering
+    #region GET /api/content/filter - Advanced Filtering
 
     [Fact]
     public async Task FilterContent_BySection_ReturnsFilteredItems()
@@ -305,28 +254,6 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
 
             (containsInTitle || containsInDescription || containsInTags).Should().BeTrue();
         });
-    }
-
-    #endregion
-
-    #region Content Endpoints - Tags
-
-    [Fact]
-    public async Task GetAllTags_ReturnsRealTags()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/content/tags");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var tags = await response.Content.ReadFromJsonAsync<List<string>>();
-        tags.Should().NotBeNull();
-        tags!.Should().NotBeEmpty();
-        tags.Should().OnlyHaveUniqueItems();
-
-        // Tags should be lowercase (normalized)
-        tags.Should().AllSatisfy(tag => tag.Should().Be(tag.ToLowerInvariant()));
     }
 
     #endregion
@@ -433,55 +360,4 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
     }
 
     #endregion
-}
-
-/// <summary>
-/// Custom WebApplicationFactory for E2E tests with real file system
-/// Uses workspace root for content files instead of bin/Debug/net10.0
-/// </summary>
-public class ApiTestFactory : WebApplicationFactory<Program>
-{
-    private readonly string _workspaceRoot;
-
-    public ApiTestFactory()
-    {
-        // Find workspace root by walking up from test assembly location
-        // From: /workspaces/techhub/tests/TechHub.E2E.Tests/bin/Debug/net10.0
-        // To:   /workspaces/techhub (5 levels up)
-        _workspaceRoot = Path.GetFullPath(
-            Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "..")
-        );
-    }
-
-    protected override void ConfigureWebHost(IWebHostBuilder builder)
-    {
-        // Set content root to workspace for file-based content loading
-        builder.UseContentRoot(_workspaceRoot);
-
-        // Configure test-specific settings via in-memory configuration
-        builder.ConfigureAppConfiguration((context, config) =>
-        {
-            // Keep existing configuration sources but add test overrides
-            config.AddJsonFile(Path.Combine(_workspaceRoot, "src", "TechHub.Api", "appsettings.json"), optional: false);
-
-            // Override only the paths that need adjustment for test environment
-            var testOverrides = new Dictionary<string, string?>
-            {
-                ["AppSettings:Content:CollectionsPath"] = Path.Combine(_workspaceRoot, "collections"),
-                ["AppSettings:Caching:ContentAbsoluteExpirationMinutes"] = "60",
-                ["AppSettings:Caching:ApiResponseAbsoluteExpirationMinutes"] = "60"
-            };
-
-            config.AddInMemoryCollection(testOverrides);
-        });
-
-        // Suppress verbose logging during tests
-        builder.ConfigureLogging(logging =>
-        {
-            logging.ClearProviders();
-            logging.SetMinimumLevel(LogLevel.Warning);
-        });
-
-        builder.UseEnvironment("Test");
-    }
 }

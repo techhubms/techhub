@@ -21,7 +21,6 @@ Before starting documentation sync, verify:
 | `README.md` | [ ] Links are not broken | Use `verify-documentation.ps1` |
 | `AGENTS.md` | [ ] Workflow steps are current | Verify commands execute correctly |
 | `AGENTS.md` | [ ] Tech stack list is accurate | Check package references |
-| `MIGRATIONSTATUS.md` | [ ] Progress reflects reality | Count actual completed tasks |
 
 ### Functional Documentation (`docs/`)
 

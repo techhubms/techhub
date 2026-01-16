@@ -827,6 +827,107 @@ curl http://localhost:5184/collection/roundups/feed.xml
 
 **Implementation**: See `TechHubApiClient.cs` for HTTP client methods and `Program.cs` for proxy endpoint routing.
 
+## Tag Endpoints
+
+Tag endpoints provide access to tag information, tag clouds with quantile-based sizing, and tag usage statistics.
+
+### GET /api/tags/all
+
+Get all tags with their usage counts across all content or within a specific scope.
+
+**Parameters** (all optional):
+
+- `sectionName` (query): Filter to specific section (e.g., `ai`, `github-copilot`)
+- `collectionName` (query): Filter to specific collection (e.g., `news`, `blogs`)
+
+**Response**:
+
+```json
+{
+  "tags": [
+    { "tag": "ai", "count": 152 },
+    { "tag": "github-copilot", "count": 89 },
+    { "tag": "azure", "count": 67 }
+  ]
+}
+```
+
+**Ordering**: Tags are sorted by count (descending), then alphabetically
+
+**Example**:
+
+```bash
+# All tags across entire site
+curl http://localhost:5029/api/tags/all
+
+# Tags only from AI section
+curl http://localhost:5029/api/tags/all?sectionName=ai
+
+# Tags from blogs collection in GitHub Copilot section
+curl http://localhost:5029/api/tags/all?sectionName=github-copilot&collectionName=blogs
+```
+
+---
+
+### GET /api/tags/cloud
+
+Get a tag cloud with quantile-based sizing for visual representation.
+
+**Parameters**:
+
+- `scope` (query, **required**): Scoping level - `Homepage`, `Section`, `Collection`, or `Content`
+- `sectionName` (query): Required when `scope=Section`, `Content`, or `Collection` + `Section`
+- `collectionName` (query): Required when `scope=Collection`
+- `maxTags` (query, optional): Maximum number of tags (default: 20)
+- `minUses` (query, optional): Minimum tag usage count (default: 5)
+- `lastDays` (query, optional): Filter to content from last N days (default: 90)
+
+**Response**:
+
+```json
+[
+  { "tag": "ai", "count": 152, "size": 2 },
+  { "tag": "github-copilot", "count": 89, "size": 2 },
+  { "tag": "azure", "count": 67, "size": 1 },
+  { "tag": "devops", "count": 45, "size": 1 },
+  { "tag": "security", "count": 23, "size": 0 }
+]
+```
+
+**Tag Sizes** (quantile-based):
+
+- `2` (Large): Top 25% of tags by usage
+- `1` (Medium): Middle 50% of tags
+- `0` (Small): Bottom 25% of tags
+
+**Examples**:
+
+```bash
+# Homepage tag cloud (top tags across all content)
+curl http://localhost:5029/api/tags/cloud?scope=Homepage
+
+# Section-specific tag cloud
+curl http://localhost:5029/api/tags/cloud?scope=Section&sectionName=ai
+
+# Collection-specific tag cloud
+curl http://localhost:5029/api/tags/cloud?scope=Collection&collectionName=blogs
+
+# Content-specific tag cloud (section + collection)
+curl http://localhost:5029/api/tags/cloud?scope=Content&sectionName=github-copilot&collectionName=videos
+
+# Limit to top 10 tags from last 30 days
+curl "http://localhost:5029/api/tags/cloud?scope=Homepage&maxTags=10&lastDays=30"
+```
+
+**Validation**:
+
+- `400 Bad Request` if scope is invalid or required parameters are missing
+- `400 Bad Request` if `scope=Section` without `sectionName`
+- `400 Bad Request` if `scope=Collection` without `collectionName`
+- `400 Bad Request` if `scope=Content` without both parameters
+
+---
+
 ## Future Enhancements
 
 Planned features (not yet implemented):

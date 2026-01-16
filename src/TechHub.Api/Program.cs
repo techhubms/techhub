@@ -48,6 +48,9 @@ builder.Services.AddSwaggerGen(options =>
 // Configure AppSettings from appsettings.json
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
+// Configure FilteringOptions from appsettings.json
+builder.Services.Configure<FilteringOptions>(builder.Configuration.GetSection("AppSettings:Filtering"));
+
 // Register repositories and services
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
@@ -55,6 +58,10 @@ builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
 builder.Services.AddSingleton<ICustomPageRepository, FileBasedCustomPageRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
 builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
+
+// Register filtering services
+builder.Services.AddSingleton<ITagCloudService, TagCloudService>();
+builder.Services.AddSingleton<ITagMatchingService, TagMatchingService>();
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -96,6 +103,7 @@ app.MapSectionsEndpoints();
 app.MapContentEndpoints();
 app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
+app.MapTagEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();

@@ -50,11 +50,15 @@ public class FileBasedContentRepositoryTests : IDisposable
         var mockEnvironment = new Mock<IHostEnvironment>();
         mockEnvironment.Setup(e => e.ContentRootPath).Returns(_tempDirectory);
 
+        // Setup: Create real TagMatchingService for accurate tag filtering in tests
+        var tagMatchingService = new TagMatchingService();
+
         // Setup: Create dependencies
         _markdownService = new MarkdownService();
         _repository = new FileBasedContentRepository(
             Options.Create(_settings),
             _markdownService,
+            tagMatchingService,
             mockEnvironment.Object
         );
     }
@@ -748,4 +752,470 @@ public class FileBasedContentRepositoryTests : IDisposable
         results[1].Title.Should().Be("Azure Update Old");
         results[0].DateEpoch.Should().BeGreaterThan(results[1].DateEpoch);
     }
+
+    #region FilterAsync Tests
+
+    /// <summary>
+    /// Test: FilterAsync with tag filtering returns only matching items
+    /// Why: Tag-based filtering is core to content discovery
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithTags_ReturnsOnlyMatchingItems()
+    {
+        // Arrange: Create content with different tags
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-10-ai-blog.md"), """
+            ---
+            title: AI Blog
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [ai, machine-learning]
+            ---
+            Content about AI
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-azure-blog.md"), """
+            ---
+            title: Azure Blog
+            date: 2025-01-11
+            section_names: [azure]
+            tags: [azure, cloud]
+            ---
+            Content about Azure
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-copilot-blog.md"), """
+            ---
+            title: Copilot Blog
+            date: 2025-01-12
+            section_names: [github-copilot]
+            tags: [github-copilot, ai]
+            ---
+            Content about Copilot
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = null,
+            SelectedTags = new[] { "ai" },
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter by "ai" tag
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return items with "ai" tag (matches "ai" exactly and "Copilot" which has "ai" tag)
+        results.Should().HaveCount(2);
+        results.Should().Contain(c => c.Title == "AI Blog");
+        results.Should().Contain(c => c.Title == "Copilot Blog");
+        results.Should().NotContain(c => c.Title == "Azure Blog");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with date range filtering returns only items in range
+    /// Why: Date-based filtering is essential for finding recent content
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithDateRange_ReturnsOnlyItemsInRange()
+    {
+        // Arrange: Create content with different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-01-old.md"), """
+            ---
+            title: Old News
+            date: 2025-01-01
+            section_names: [ai]
+            tags: [news]
+            ---
+            Old content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-recent.md"), """
+            ---
+            title: Recent News
+            date: 2025-01-15
+            section_names: [ai]
+            tags: [news]
+            ---
+            Recent content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-20-newest.md"), """
+            ---
+            title: Newest News
+            date: 2025-01-20
+            section_names: [ai]
+            tags: [news]
+            ---
+            Newest content
+            """);
+
+        var dateFrom = new DateTimeOffset(2025, 1, 10, 0, 0, 0, TimeSpan.Zero);
+        var dateTo = new DateTimeOffset(2025, 1, 18, 23, 59, 59, TimeSpan.Zero);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = null,
+            SelectedTags = Array.Empty<string>(),
+            DateFrom = dateFrom,
+            DateTo = dateTo
+        };
+
+        // Act: Filter by date range (Jan 10-18)
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return only item from Jan 15
+        results.Should().HaveCount(1);
+        results[0].Title.Should().Be("Recent News");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with combined filters (tags + date) returns items matching both
+    /// Why: Users often combine multiple filters for precise results
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithTagsAndDateRange_ReturnsItemsMatchingBoth()
+    {
+        // Arrange: Create content with different tags and dates
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-05-old-ai.md"), """
+            ---
+            title: Old AI Blog
+            date: 2025-01-05
+            section_names: [ai]
+            tags: [ai, machine-learning]
+            ---
+            Old AI content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-15-recent-ai.md"), """
+            ---
+            title: Recent AI Blog
+            date: 2025-01-15
+            section_names: [ai]
+            tags: [ai, deep-learning]
+            ---
+            Recent AI content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-16-recent-azure.md"), """
+            ---
+            title: Recent Azure Blog
+            date: 2025-01-16
+            section_names: [azure]
+            tags: [azure, cloud]
+            ---
+            Recent Azure content
+            """);
+
+        var dateFrom = new DateTimeOffset(2025, 1, 10, 0, 0, 0, TimeSpan.Zero);
+        var dateTo = new DateTimeOffset(2025, 1, 20, 23, 59, 59, TimeSpan.Zero);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = null,
+            SelectedTags = new[] { "ai" },
+            DateFrom = dateFrom,
+            DateTo = dateTo
+        };
+
+        // Act: Filter by "ai" tag AND date range (Jan 10-20)
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return only recent AI item (matches both tag and date)
+        results.Should().HaveCount(1);
+        results[0].Title.Should().Be("Recent AI Blog");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with section scope returns only section items
+    /// Why: Section filtering is core to content organization
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithSectionScope_ReturnsOnlySectionItems()
+    {
+        // Arrange: Create content in different sections
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-ai-news.md"), """
+            ---
+            title: AI News
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [ai]
+            ---
+            AI content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-11-azure-news.md"), """
+            ---
+            title: Azure News
+            date: 2025-01-11
+            section_names: [azure]
+            tags: [azure]
+            ---
+            Azure content
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = "ai",
+            CollectionName = null,
+            SelectedTags = Array.Empty<string>(),
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter by section
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return only AI section items
+        results.Should().HaveCount(1);
+        results[0].Title.Should().Be("AI News");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with collection scope returns only collection items
+    /// Why: Collection filtering is core to content type organization
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithCollectionScope_ReturnsOnlyCollectionItems()
+    {
+        // Arrange: Create content in different collections
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(newsDir);
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-news-item.md"), """
+            ---
+            title: News Item
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [ai]
+            ---
+            News content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-blog-item.md"), """
+            ---
+            title: Blog Item
+            date: 2025-01-11
+            section_names: [ai]
+            tags: [ai]
+            ---
+            Blog content
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = "news",
+            SelectedTags = Array.Empty<string>(),
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter by collection
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return only news collection items
+        results.Should().HaveCount(1);
+        results[0].Title.Should().Be("News Item");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with section AND collection scope returns items matching both
+    /// Why: Combined scoping enables precise content filtering
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithSectionAndCollectionScope_ReturnsItemsMatchingBoth()
+    {
+        // Arrange: Create content in different sections and collections
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(newsDir);
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-ai-news.md"), """
+            ---
+            title: AI News
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [ai]
+            ---
+            AI news content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-11-azure-news.md"), """
+            ---
+            title: Azure News
+            date: 2025-01-11
+            section_names: [azure]
+            tags: [azure]
+            ---
+            Azure news content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-ai-blog.md"), """
+            ---
+            title: AI Blog
+            date: 2025-01-12
+            section_names: [ai]
+            tags: [ai]
+            ---
+            AI blog content
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = "ai",
+            CollectionName = "news",
+            SelectedTags = Array.Empty<string>(),
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter by section AND collection
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return only AI news items
+        results.Should().HaveCount(1);
+        results[0].Title.Should().Be("AI News");
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with no filters returns all items sorted by date
+    /// Why: Default behavior should show all content in chronological order
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithNoFilters_ReturnsAllItemsSortedByDate()
+    {
+        // Arrange: Create content with different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-05-old.md"), """
+            ---
+            title: Old Content
+            date: 2025-01-05
+            section_names: [ai]
+            tags: [news]
+            ---
+            Old content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-recent.md"), """
+            ---
+            title: Recent Content
+            date: 2025-01-15
+            section_names: [ai]
+            tags: [news]
+            ---
+            Recent content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-middle.md"), """
+            ---
+            title: Middle Content
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [news]
+            ---
+            Middle content
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = null,
+            SelectedTags = Array.Empty<string>(),
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter with no filters
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return all items sorted by date descending (newest first)
+        results.Should().HaveCount(3);
+        results[0].Title.Should().Be("Recent Content");
+        results[1].Title.Should().Be("Middle Content");
+        results[2].Title.Should().Be("Old Content");
+        results[0].DateEpoch.Should().BeGreaterThan(results[1].DateEpoch);
+        results[1].DateEpoch.Should().BeGreaterThan(results[2].DateEpoch);
+    }
+
+    /// <summary>
+    /// Test: FilterAsync with multiple tags uses OR logic
+    /// Why: Multiple tag filtering should return items matching ANY tag
+    /// </summary>
+    [Fact]
+    public async Task FilterAsync_WithMultipleTags_UsesOrLogic()
+    {
+        // Arrange: Create content with different tags
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-10-ai-only.md"), """
+            ---
+            title: AI Only Blog
+            date: 2025-01-10
+            section_names: [ai]
+            tags: [ai]
+            ---
+            AI content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-azure-only.md"), """
+            ---
+            title: Azure Only Blog
+            date: 2025-01-11
+            section_names: [azure]
+            tags: [azure]
+            ---
+            Azure content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-copilot-only.md"), """
+            ---
+            title: Copilot Only Blog
+            date: 2025-01-12
+            section_names: [github-copilot]
+            tags: [github-copilot]
+            ---
+            Copilot content
+            """);
+
+        var request = new TechHub.Core.DTOs.FilterRequest
+        {
+            SectionName = null,
+            CollectionName = null,
+            SelectedTags = new[] { "ai", "azure" },
+            DateFrom = null,
+            DateTo = null
+        };
+
+        // Act: Filter by "ai" OR "azure" tags
+        var results = await _repository.FilterAsync(request);
+
+        // Assert: Should return items with either "ai" or "azure" tag
+        results.Should().HaveCount(2);
+        results.Should().Contain(c => c.Title == "AI Only Blog");
+        results.Should().Contain(c => c.Title == "Azure Only Blog");
+        results.Should().NotContain(c => c.Title == "Copilot Only Blog");
+    }
+
+    #endregion
 }

@@ -71,173 +71,38 @@ public class Section
 
 ### Entity Design
 
-**Use classes for entities with identity**:
+**Use classes for entities with identity** (can be mutated over lifetime).
 
-```csharp
-namespace TechHub.Core.Models;
+**Example**: `Section`, `ContentItem`
 
-/// <summary>
-/// Represents a thematic section grouping related content.
-/// </summary>
-public class Section
-{
-    /// <summary>
-    /// Unique identifier (URL-friendly, e.g., "ai", "github-copilot").
-    /// </summary>
-    public required string Id { get; init; }
-    
-    /// <summary>
-    /// Display title shown in UI.
-    /// </summary>
-    public required string Title { get; init; }
-    
-    /// <summary>
-    /// Brief description of section purpose.
-    /// </summary>
-    public required string Description { get; init; }
-    
-    /// <summary>
-    /// URL path for section (e.g., "/ai").
-    /// </summary>
-    public required string Url { get; init; }
-    
-    /// <summary>
-    /// Background image path (e.g., "/images/section-backgrounds/ai.jpg").
-    /// </summary>
-    public required string BackgroundImage { get; init; }
-    
-    /// <summary>
-    /// Collections within this section.
-    /// </summary>
-    public required IReadOnlyList<Collection> Collections { get; init; }
-    
-    /// <summary>
-    /// Validates that all required properties are correctly formatted.
-    /// </summary>
-    /// <exception cref="ArgumentException">Thrown when validation fails.</exception>
-    public void Validate()
-    {
-        if (string.IsNullOrWhiteSpace(Id))
-            throw new ArgumentException("Section ID cannot be empty", nameof(Id));
-        
-        if (!Id.All(c => char.IsLower(c) || c == '-'))
-            throw new ArgumentException("Section ID must be lowercase with hyphens only", nameof(Id));
-        
-        if (!Url.StartsWith('/'))
-            throw new ArgumentException("Section URL must start with '/'", nameof(Url));
-        
-        if (Collections.Count == 0)
-            throw new ArgumentException("Section must have at least one collection", nameof(Collections));
-    }
-}
-```
+**Key Properties**:
+
+- `required` for mandatory fields
+- `init` for immutability after construction
+- Validation methods for business rules
+- Avoid public setters
 
 ### Value Object Pattern
 
-**Use records for value objects without identity**:
+**Use records for value objects** (identity defined by values, not reference).
 
-```csharp
-namespace TechHub.Core.Models;
+**Example**: `Collection`, `TagCloudItem`
 
-/// <summary>
-/// Represents a collection reference within a section.
-/// </summary>
-public record Collection
-{
-    public required string Title { get; init; }
-    public required string CollectionName { get; init; }
-    public required string Url { get; init; }
-    public required string Description { get; init; }
-    public required bool IsCustom { get; init; }
-}
-```
-
-**Benefits of records**:
-
-- Value-based equality (two instances with same values are equal)
-- Immutable by default
-- Concise syntax with positional records
-- Built-in `ToString()`, `GetHashCode()`, `Equals()`
+**Benefits**: Value equality, immutability, concise syntax, built-in methods.
 
 ### Content Item Model
 
-**Complex domain entity with many properties**:
+**Complex domain entity** with many properties representing content from markdown files.
 
-```csharp
-namespace TechHub.Core.Models;
+**Critical Properties**:
 
-/// <summary>
-/// Represents a content item (news, blog, video, community post).
-/// </summary>
-public class ContentItem
-{
-    /// <summary>
-    /// URL-friendly slug derived from filename (e.g., "2025-01-15-article-title").
-    /// </summary>
-    public required string Slug { get; init; }
-    
-    /// <summary>
-    /// Title of the content item.
-    /// </summary>
-    public required string Title { get; init; }
-    
-    /// <summary>
-    /// Author name.
-    /// </summary>
-    public string? Author { get; init; }
-    
-    /// <summary>
-    /// Publication date as Unix epoch timestamp (seconds since 1970-01-01 UTC).
-    /// </summary>
-    public required long DateEpoch { get; init; }
-    
-    /// <summary>
-    /// Collection name (e.g., "news", "blogs", "videos").
-    /// </summary>
-    public required string CollectionName { get; init; }
-    
-    /// <summary>
-    /// Section names (lowercase identifiers) this content belongs to (e.g., ["ai", "github-copilot"]).
-    /// Mapped from frontmatter 'categories' field (which contains Section Titles like "AI", "GitHub Copilot").
-    /// </summary>
-    public required IReadOnlyList<string> SectionNames { get; init; }
-    
-    /// <summary>
-    /// Tags (content-specific keywords, normalized to lowercase).
-    /// </summary>
-    public required IReadOnlyList<string> Tags { get; init; }
-    
-    /// <summary>
-    /// Short excerpt (max 200 words, plain text).
-    /// </summary>
-    public string Excerpt { get; init; } = string.Empty;
-    
-    /// <summary>
-    /// Full content rendered as HTML from markdown.
-    /// </summary>
-    public string RenderedHtml { get; init; } = string.Empty;
-    
-    /// <summary>
-    /// External URL (original source, from canonical_url frontmatter).
-    /// </summary>
-    public string? ExternalUrl { get; init; }
-    
-    /// <summary>
-    /// Viewing mode: "internal" (show on site) or "external" (link to source).
-    /// </summary>
-    public string ViewingMode { get; init; } = "external";
-    
-    /// <summary>
-    /// YouTube video ID (for video content, from video_id frontmatter).
-    /// </summary>
-    public string? VideoId { get; init; }
-    
-    /// <summary>
-    /// Alternative collection name for subfolder organization.
-    /// </summary>
-    public string? AltCollection { get; init; }
-}
-```
+- `Slug`: URL-friendly identifier
+- `DateEpoch`: Unix timestamp for dates
+- `SectionNames`: Lowercase section identifiers (mapped from frontmatter `categories`)
+- `Tags`: Normalized lowercase tags
+- `ViewingMode`: "internal" or "external"
+
+See [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping) for complete field mappings.
 
 ## Markdown Frontmatter Mapping
 

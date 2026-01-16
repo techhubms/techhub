@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 
@@ -43,7 +44,16 @@ public class ViewingModeTests : IDisposable
         var mockEnvironment = new Mock<IHostEnvironment>();
         mockEnvironment.Setup(e => e.ContentRootPath).Returns(_testDir);
 
-        _repository = new FileBasedContentRepository(options, markdownService, mockEnvironment.Object);
+        // Setup: Create mock ITagMatchingService
+        var mockTagMatchingService = new Mock<ITagMatchingService>();
+        mockTagMatchingService.Setup(s => s.Normalize(It.IsAny<string>()))
+            .Returns((string tag) => tag.ToLowerInvariant());
+        mockTagMatchingService.Setup(s => s.Matches(It.IsAny<string>(), It.IsAny<string>()))
+            .Returns(true);
+        mockTagMatchingService.Setup(s => s.MatchesAny(It.IsAny<IEnumerable<string>>(), It.IsAny<IEnumerable<string>>()))
+            .Returns(true);
+
+        _repository = new FileBasedContentRepository(options, markdownService, mockTagMatchingService.Object, mockEnvironment.Object);
     }
 
     [Fact]

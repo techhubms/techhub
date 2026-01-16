@@ -28,4 +28,3 @@ Specs are temporary planning documents. Once implemented, the authoritative docu
 1. **For implementation patterns**: Check domain-specific AGENTS.md files
 2. **For architecture**: Check [root AGENTS.md](../../AGENTS.md)
 3. **For functional behavior**: Check [docs/](../../docs/)
-4. **For migration status**: Check [MIGRATIONSTATUS.md](../../MIGRATIONSTATUS.md)

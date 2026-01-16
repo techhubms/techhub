@@ -5,14 +5,31 @@
 
 ## Critical Documentation Rules
 
+### 🎯 Core Documentation Philosophy
+
+**Describe WHAT and WHY, not HOW**:
+
+- ✅ **WHAT**: System behavior, features, capabilities, contracts
+- ✅ **WHY**: Architecture decisions, design rationale, tradeoffs
+- 🚫 **HOW**: Implementation code, step-by-step coding instructions, full class definitions
+
+**Examples**:
+
+- ✅ "Tag filtering uses word boundary matching to prevent false matches" (WHAT)
+- ✅ "Quantile-based sizing ensures consistent distribution across tag counts" (WHY)
+- 🚫 Full `TagMatchingService` class implementation with 40 lines of code (HOW)
+
+**Key Principle**: Documentation should guide developers to understand the system, not replace reading the source code.
+
 ### ✅ Always Do
 
 - **Keep docs/ MINIMAL** - Only functional documentation (WHAT the system does)
+- **Describe patterns, not implementations** - Name the pattern, explain key decisions, reference actual code
 - **Update docs when behavior changes** - Not optional, part of "task complete"
 - **Search before assuming docs don't exist** - Use `grep_search` to find relevant docs
 - **Use framework-agnostic language** - Docs must survive tech stack changes
 - **Cross-reference related files** - Maintain connections between documents
-- **Test all code examples** before including them
+- **Show structure, not full code** - If code is needed, show signatures/patterns only
 - **Verify all links** work correctly
 - **Follow writing-style-guidelines.md** for technical writing
 
@@ -24,8 +41,9 @@
 
 ### 🚫 Never Do
 
+- **Never copy full implementations** into documentation (describe patterns instead)
 - **Never document HOW TO CODE** in docs/ files (belongs in AGENTS.md files)
-- **Never include implementation code examples** in functional documentation
+- **Never include complete class/method implementations** (show structure, reference source)
 - **Never provide step-by-step development instructions** in docs/
 - **Never duplicate content** from other files (link instead)
 - **Never place domain-specific patterns** in root AGENTS.md (use domain-specific AGENTS.md)

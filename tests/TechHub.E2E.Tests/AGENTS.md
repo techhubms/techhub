@@ -62,6 +62,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQual
 ### Structure
 
 ```text
+```text
 tests/TechHub.E2E.Tests/
 ├── Web/                                 ← Playwright-based E2E tests
 │   ├── UrlRoutingTests.cs              ← URL routing, collections, buttons (18 tests)
@@ -74,13 +75,55 @@ tests/TechHub.E2E.Tests/
 │   ├── CustomPagesTests.cs             ← Custom pages (10 tests)
 │   ├── SectionCardLayoutTests.cs       ← Section cards (3 tests)
 │   └── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
-├── Api/
-│   └── ApiEndToEndTests.cs             ← Direct API testing (no Playwright)
+├── Api/                                 ← Direct API testing (no Playwright)
+│   ├── ApiTestFactory.cs               ← Shared WebApplicationFactory for API tests
+│   ├── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
+│   ├── ContentEndpointsE2ETests.cs     ← Content endpoints (23 tests)
+│   ├── TagEndpointsE2ETests.cs         ← Tag endpoints (15 tests)
+│   └── ApiEndToEndTests.cs             ← Legacy test (1 test for backwards compatibility)
 ├── Helpers/
 │   ├── BlazorHelpers.cs                ← Blazor-specific wait patterns
 │   └── PlaywrightExtensions.cs         ← Page interaction helpers
 ├── PlaywrightCollectionFixture.cs      ← Shared browser configuration
 └── xunit.runner.json                   ← Parallel execution settings
+```
+
+**Total**: 115 E2E tests (72 Web + 43 API)
+
+### API Test Organization
+
+API E2E tests are organized by endpoint group for maintainability:
+
+- **ApiTestFactory.cs**: Shared WebApplicationFactory used by all API test classes
+- **SectionEndpointsE2ETests.cs**: Tests for GET /api/sections and GET /api/sections/{name}
+- **ContentEndpointsE2ETests.cs**: Tests for GET /api/content and GET /api/content/filter  
+- **TagEndpointsE2ETests.cs**: Tests for GET /api/tags/all and GET /api/tags/cloud
+- **ApiEndToEndTests.cs**: Legacy test kept for backwards compatibility (1 test)
+
+**Pattern**: One test file per logical endpoint group, all sharing the same test factory.
+
+**Example**:
+
+```csharp
+namespace TechHub.E2E.Tests.Api;
+
+public class TagEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
+{
+    private readonly HttpClient _client = factory.CreateClient();
+    
+    [Fact]
+    public async Task GetAllTags_WithNoParameters_ReturnsAllTagsWithCounts()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/tags/all");
+        
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<AllTagsResponse>();
+        result.Should().NotBeNull();
+        result!.Tags.Should().NotBeEmpty();
+    }
+}
 ```
 
 **Total**: 72 E2E test cases across all Web test files

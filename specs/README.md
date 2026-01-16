@@ -75,10 +75,6 @@ Check docs/ directory:
 - [docs/rss-feeds.md](../docs/rss-feeds.md) - RSS feed specification
 - `docs/filtering-system.md` - **TO BE CREATED** (see specs/001-filtering-system for requirements)
 
-### For Migration Status
-
-Check [MIGRATIONSTATUS.md](../MIGRATIONSTATUS.md) for current implementation progress.
-
 ## Questions?
 
 See [Root AGENTS.md](../AGENTS.md) for development workflow and architecture.

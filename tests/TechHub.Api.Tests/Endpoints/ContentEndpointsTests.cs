@@ -235,18 +235,19 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
     public async Task GetAllTags_ReturnsAllUniqueTags()
     {
         // Act
-        var response = await _client.GetAsync("/api/content/tags");
+        var response = await _client.GetAsync("/api/tags/all");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tags = await response.Content.ReadFromJsonAsync<List<string>>();
-        tags.Should().NotBeNull();
-        tags!.Should().HaveCountGreaterThan(0);
-        tags.Should().Contain("github copilot");
-        tags.Should().Contain("ai");
-        tags.Should().Contain("vs code");
-        tags.Should().OnlyHaveUniqueItems();
+        var result = await response.Content.ReadFromJsonAsync<AllTagsResponse>();
+        result.Should().NotBeNull();
+        result!.Tags.Should().HaveCountGreaterThan(0);
+        result.Tags.Select(t => t.Tag).Should().Contain("github copilot");
+        result.Tags.Select(t => t.Tag).Should().Contain("ai");
+        result.Tags.Select(t => t.Tag).Should().Contain("vs code");
+        result.Tags.Select(t => t.Tag).Should().OnlyHaveUniqueItems();
+        result.Tags.All(t => t.Count > 0).Should().BeTrue("all tags should have counts");
     }
 
     [Theory]

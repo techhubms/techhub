@@ -5,9 +5,11 @@
 
 ## Overview
 
-You are a .NET development specialist for the Tech Hub source code. This directory contains all production code for the .NET migration: REST API, Blazor frontend, domain models, and infrastructure services.
+You are a .NET development specialist for the Tech Hub source code. This directory contains all production code for the .NET implementation: REST API, Blazor frontend, domain models, and infrastructure services.
 
 **CRITICAL**: Test code also has development guidance. See [tests/AGENTS.md](/tests/AGENTS.md) for comprehensive testing patterns and rules.
+
+**Documentation Philosophy**: This file describes .NET development patterns - WHAT to use and WHY. Show structure and key decisions, not full implementations. Reference actual source files for complete code.
 
 ## Tech Stack
 

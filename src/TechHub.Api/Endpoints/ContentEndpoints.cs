@@ -41,13 +41,6 @@ internal static class ContentEndpoints
             .WithDescription("Filter content by multiple criteria: sections, collections, tags, search query. Example: /api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot,azure")
             .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
 
-        // Get all tags for autocomplete/filtering UI
-        group.MapGet("/tags", GetAllTags)
-            .WithName("GetAllTags")
-            .WithSummary("Get all tags")
-            .WithDescription("Returns all unique tags across all content")
-            .Produces<IEnumerable<string>>(StatusCodes.Status200OK);
-
         return endpoints;
     }
 
@@ -212,17 +205,6 @@ internal static class ContentEndpoints
 
         var contentDtos = results.Select(MapToDto);
         return TypedResults.Ok(contentDtos);
-    }
-
-    /// <summary>
-    /// GET /api/content/tags - Get all tags
-    /// </summary>
-    private static async Task<Ok<IEnumerable<string>>> GetAllTags(
-        IContentRepository contentRepository,
-        CancellationToken cancellationToken)
-    {
-        var tags = await contentRepository.GetAllTagsAsync(cancellationToken);
-        return TypedResults.Ok(tags.AsEnumerable());
     }
 
     /// <summary>

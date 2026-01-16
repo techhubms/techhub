@@ -29,365 +29,105 @@ TechHub.Infrastructure/
 
 ### Configuration-Based Repository
 
-**Load sections from appsettings.json** (no file I/O needed):
+**Key Pattern**: Load sections from `appsettings.json` in constructor, cache in readonly field, return Task.FromResult.
 
-```csharp
-namespace TechHub.Infrastructure.Repositories;
+**Implementation**: `ConfigurationBasedSectionRepository`
 
-public sealed class ConfigurationBasedSectionRepository : ISectionRepository
-{
-    private readonly IReadOnlyList<Section> _sections;
-    private readonly ILogger<ConfigurationBasedSectionRepository> _logger;
-    
-    public ConfigurationBasedSectionRepository(
-        IOptions<AppSettings> settings,
-        ILogger<ConfigurationBasedSectionRepository> logger)
-    {
-        ArgumentNullException.ThrowIfNull(settings);
-        _logger = logger;
-        
-        _sections = settings.Value.Content.Sections
-            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
-            .ToList()
-            .AsReadOnly();
-        
-        _logger.LogInformation("Loaded {Count} sections from configuration", _sections.Count);
-    }
-    
-    public Task<IReadOnlyList<Section>> InitializeAsync(CancellationToken ct = default)
-    {
-        return Task.FromResult(_sections);
-    }
-    
-    public Task<IReadOnlyList<Section>> GetAllAsync(CancellationToken ct = default)
-    {
-        return Task.FromResult(_sections);
-    }
-    
-    public Task<Section?> GetByUrlAsync(string sectionUrl, CancellationToken ct = default)
-    {
-        var section = _sections.FirstOrDefault(s => 
-            s.Url.Equals(sectionUrl, StringComparison.OrdinalIgnoreCase) ||
-            s.Url.Equals($"/{sectionUrl}", StringComparison.OrdinalIgnoreCase));
-        
-        return Task.FromResult(section);
-    }
-    
-    private static Section ConvertToSection(string key, SectionConfig config)
-    {
-        return new Section
-        {
-            Name = key,
-            Title = config.Title,
-            Description = config.Description,
-            Url = config.Url,
-            BackgroundImage = config.Image,
-            Collections = config.Collections.Select(c => new CollectionReference
-            {
-                Title = c.Title,
-                Name = c.Name,
-                Url = c.Url,
-                Description = c.Description,
-                IsCustom = c.IsCustom
-            }).ToList()
-        };
-    }
-}
-```
+**Important Details**:
+
+- Uses `IOptions<AppSettings>` to access configuration
+- Converts `SectionConfig` to domain `Section` models in constructor
+- No file I/O - all data loaded from configuration at startup
+- Thread-safe via readonly collections
+- Supports URL matching with and without leading slash
 
 ### File-Based Repository with Caching
 
-**Load content from markdown files with memory caching**:
+**Key Pattern**: Check cache → Load from disk → Sort by date → Cache result → Return.
 
-```csharp
-namespace TechHub.Infrastructure.Repositories;
+**Implementation**: `FileBasedContentRepository`
 
-public sealed class FileBasedContentRepository : IContentRepository
-{
-    private readonly string _collectionsPath;
-    private readonly IMemoryCache _cache;
-    private readonly IMarkdownService _markdownService;
-    private readonly ILogger<FileBasedContentRepository> _logger;
-    private readonly TimeSpan _cacheExpiration = TimeSpan.FromMinutes(30);
-    
-    private const string AllContentCacheKey = "all_content";
-    
-    public FileBasedContentRepository(
-        IOptions<ContentOptions> options,
-        IMemoryCache cache,
-        IMarkdownService markdownService,
-        ILogger<FileBasedContentRepository> logger)
-    {
-        ArgumentNullException.ThrowIfNull(options);
-        _collectionsPath = options.Value.CollectionsRootPath;
-        _cache = cache;
-        _markdownService = markdownService;
-        _logger = logger;
-    }
-    
-    public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default)
-    {
-        // Check cache first
-        if (_cache.TryGetValue(AllContentCacheKey, out IReadOnlyList<ContentItem>? cached))
-        {
-            _logger.LogDebug("Returning {Count} content items from cache", cached!.Count);
-            return cached;
-        }
-        
-        // Load from disk
-        _logger.LogInformation("Loading all content from disk");
-        var content = await LoadAllContentAsync(ct);
-        
-        // Sort by date (newest first) - CRITICAL requirement
-        var sorted = content
-            .OrderByDescending(c => c.DateEpoch)
-            .ToList()
-            .AsReadOnly();
-        
-        // Cache the result
-        _cache.Set(AllContentCacheKey, sorted, _cacheExpiration);
-        _logger.LogInformation("Loaded and cached {Count} content items", sorted.Count);
-        
-        return sorted;
-    }
-    
-    public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
-        string sectionUrl, 
-        CancellationToken ct = default)
-    {
-        var allContent = await GetAllAsync(ct);
-        
-        // Filter by section URL (already sorted by GetAllAsync)
-        var filtered = allContent
-            .Where(c => c.SectionNames.Any(sectionName => 
-                sectionName.Equals(sectionUrl.TrimStart('/'), StringComparison.OrdinalIgnoreCase)))
-            .ToList()
-            .AsReadOnly();
-        
-        _logger.LogDebug("Filtered to {Count} items for section {Section}", 
-            filtered.Count, sectionUrl);
-        
-        return filtered;
-    }
-    
-    public async Task<ContentItem?> GetBySlugAsync(string slug, CancellationToken ct = default)
-    {
-        var allContent = await GetAllAsync(ct);
-        return allContent.FirstOrDefault(c => 
-            c.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
-    }
-    
-    private async Task<IReadOnlyList<ContentItem>> LoadAllContentAsync(CancellationToken ct)
-    {
-        var items = new List<ContentItem>();
-        
-        // Discover all collection directories
-        var collectionDirs = Directory.GetDirectories(_collectionsPath, "_*");
-        
-        foreach (var collectionDir in collectionDirs)
-        {
-            var collectionName = Path.GetFileName(collectionDir);
-            var markdownFiles = Directory.GetFiles(collectionDir, "*.md", SearchOption.AllDirectories);
-            
-            foreach (var filePath in markdownFiles)
-            {
-                try
-                {
-                    var content = await _markdownService.ProcessMarkdownFileAsync(filePath, collectionName, ct);
-                    if (content is not null)
-                    {
-                        items.Add(content);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error processing markdown file: {FilePath}", filePath);
-                    // Continue processing other files
-                }
-            }
-        }
-        
-        return items;
-    }
-}
-```
+**Important Details**:
 
-**CRITICAL Sorting Rule**: All repository methods return content sorted by `DateEpoch` descending (newest first). This sorting happens BEFORE caching so clients never need to sort.
+- **Cache expiration**: 30 minutes (configurable via `TimeSpan`)
+- **Cache key**: `"all_content"` (constant string)
+- **Sorting**: CRITICAL - All methods return content sorted by `DateEpoch` descending (newest first)
+- **Error handling**: Log errors, continue processing other files (one bad file doesn't crash system)
+- **Discovery**: Scans `collections/` for directories matching `_*` pattern
+- **Filtering**: `GetBySectionAsync` filters cached content (no separate cache per section)
 
 ## Markdown Processing
 
 ### Frontmatter Parsing
 
-**Parse YAML frontmatter from markdown files**:
+**Key Pattern**: Extract YAML between `---` delimiters → Parse with YamlDotNet → Return metadata + content.
 
-```csharp
-namespace TechHub.Infrastructure.Services;
+**Implementation**: `FrontMatterParser` (static Parse method)
 
-public class FrontMatterParser
-{
-    public static (FrontMatter metadata, string content) Parse(string markdownText)
-    {
-        // Check for frontmatter delimiters (---)
-        if (!markdownText.StartsWith("---"))
-        {
-            return (new FrontMatter(), markdownText);
-        }
-        
-        // Find end of frontmatter
-        var endIndex = markdownText.IndexOf("---", 3, StringComparison.Ordinal);
-        if (endIndex == -1)
-        {
-            return (new FrontMatter(), markdownText);
-        }
-        
-        // Extract frontmatter and content
-        var frontmatterYaml = markdownText[3..endIndex].Trim();
-        var content = markdownText[(endIndex + 3)..].TrimStart();
-        
-        // Parse YAML
-        var deserializer = new DeserializerBuilder()
-            .WithNamingConvention(UnderscoredNamingConvention.Instance)
-            .Build();
-        
-        var metadata = deserializer.Deserialize<FrontMatter>(frontmatterYaml);
-        
-        return (metadata ?? new FrontMatter(), content);
-    }
-}
+**Important Details**:
 
-/// <summary>
-/// Represents markdown frontmatter fields.
-/// </summary>
-public class FrontMatter
-{
-    public string Title { get; set; } = string.Empty;
-    public string? Author { get; set; }
-    public DateTime? Date { get; set; }
-    public List<string> Categories { get; set; } = new();
-    public List<string> Tags { get; set; } = new();
-    public string? CanonicalUrl { get; set; }
-    public string ViewingMode { get; set; } = "external";
-    public string? VideoId { get; set; }
-    public string? AltCollection { get; set; }
-}
-```
+- Uses `UnderscoredNamingConvention` to map `snake_case` YAML to `PascalCase` C# properties
+- Returns empty `FrontMatter` object if no frontmatter found (graceful degradation)
+- See [src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md#markdown-frontmatter-mapping) for complete field mappings
 
 ### Markdown to HTML Conversion
 
-**Convert markdown content to HTML with Markdig**:
+**Key Pattern**: Read file → Parse frontmatter → Extract excerpt → Convert to HTML → Map to ContentItem.
 
-```csharp
-namespace TechHub.Infrastructure.Services;
+**Implementation**: `MarkdownService`
 
-public class MarkdownService : IMarkdownService
-{
-    private readonly MarkdownPipeline _pipeline;
-    private readonly TimeProvider _timeProvider;
-    private readonly string _timezone;
-    private readonly ILogger<MarkdownService> _logger;
-    
-    public MarkdownService(
-        IOptions<ContentOptions> options,
-        TimeProvider timeProvider,
-        ILogger<MarkdownService> logger)
-    {
-        _timeProvider = timeProvider;
-        _timezone = options.Value.Timezone;
-        _logger = logger;
-        
-        // Configure Markdig pipeline
-        _pipeline = new MarkdownPipelineBuilder()
-            .UseAdvancedExtensions()    // Tables, task lists, etc.
-            .UseAutoIdentifiers()       // Auto-generate heading IDs
-            .UseEmojiAndSmiley()        // :emoji: support
-            .UsePipeTables()            // GitHub-style tables
-            .Build();
-    }
-    
-    public async Task<ContentItem?> ProcessMarkdownFileAsync(
-        string filePath,
-        string collectionName,
-        CancellationToken ct = default)
-    {
-        try
-        {
-            var markdownText = await File.ReadAllTextAsync(filePath, ct);
-            
-            // Parse frontmatter
-            var (metadata, content) = FrontMatterParser.Parse(markdownText);
-            
-            // Extract excerpt (before <!--excerpt_end-->)
-            var excerpt = ExtractExcerpt(content);
-            
-            // Convert markdown to HTML
-            var html = Markdown.ToHtml(content, _pipeline);
-            
-            // Generate slug from filename
-            var slug = Path.GetFileNameWithoutExtension(filePath);
-            
-            // Convert date to Unix epoch
-            var dateEpoch = ConvertToEpoch(metadata.Date);
-            
-            return new ContentItem
-            {
-                Slug = slug,
-                Title = metadata.Title,
-                Author = metadata.Author,
-                DateEpoch = dateEpoch,
-                CollectionName = collectionName,
-                SectionNames = metadata.Categories.AsReadOnly(),
-                Tags = NormalizeTags(metadata.Tags).AsReadOnly(),
-                Excerpt = excerpt,
-                RenderedHtml = html,
-                ExternalUrl = metadata.CanonicalUrl,
-                ViewingMode = metadata.ViewingMode,
-                VideoId = metadata.VideoId,
-                AltCollection = metadata.AltCollection
-            };
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error processing markdown file: {FilePath}", filePath);
-            return null;
-        }
-    }
-    
-    private static string ExtractExcerpt(string content)
-    {
-        var excerptEndIndex = content.IndexOf("<!--excerpt_end-->", StringComparison.Ordinal);
-        if (excerptEndIndex == -1)
-        {
-            // No explicit excerpt marker, take first 200 words
-            var words = content.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            return string.Join(' ', words.Take(200));
-        }
-        
-        return content[..excerptEndIndex].Trim();
-    }
-    
-    private long ConvertToEpoch(DateTime? date)
-    {
-        if (!date.HasValue)
-            return _timeProvider.GetUtcNow().ToUnixTimeSeconds();
-        
-        // Convert to configured timezone
-        var timeZone = TimeZoneInfo.FindSystemTimeZoneById(_timezone);
-        var dateTime = TimeZoneInfo.ConvertTimeToUtc(date.Value, timeZone);
-        
-        return new DateTimeOffset(dateTime).ToUnixTimeSeconds();
-    }
-    
-    private static List<string> NormalizeTags(List<string> tags)
-    {
-        return tags
-            .Select(t => t.ToLowerInvariant().Replace(' ', '-'))
-            .Distinct()
-            .ToList();
-    }
-}
-```
+**Important Details**:
 
-**See [src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md#markdown-frontmatter-mapping)** for complete frontmatter field mappings.
+- **Markdig pipeline**: Uses `UseAdvancedExtensions()`, `UseAutoIdentifiers()`, `UseEmojiAndSmiley()`, `UsePipeTables()`
+- **Excerpt extraction**: Content before `<!--excerpt_end-->` marker, or first 200 words if no marker
+- **Slug generation**: Derived from filename without extension
+- **Date handling**: Converts dates to Unix epoch using configured timezone (`Europe/Brussels`)
+- **Tag normalization**: Lowercase + replace spaces with hyphens + deduplicate
+- **Error handling**: Returns null on error, logs exception details
+
+### Tag Cloud Service
+
+**Key Pattern**: Filter content by scope → Count tags → Filter by min usage → Take top N → Assign quantile sizes.
+
+**Implementation**: `TagCloudService`
+
+**Quantile Size Algorithm**:
+
+- **Top 25%** (index 0-24%): `TagSize.Large`
+- **Middle 50%** (index 25-74%): `TagSize.Medium`
+- **Bottom 25%** (index 75-100%): `TagSize.Small`
+
+**Important Details**:
+
+- **Scoping**: Homepage (all), Section, Collection, or Content (section + collection)
+- **Date filtering**: Optional `lastDays` parameter
+- **Usage filtering**: `MinimumTagUses` (default: 5)
+- **Top-N limiting**: `DefaultMaxTags` (default: 20)
+- **Sorting**: By count descending, then alphabetically
+
+**Why Quantiles?**:
+
+- Consistent visual distribution (not all same size)
+- Scalable (works with 5 or 500 tags)
+- Predictable size distinctions
+
+### Tag Matching Service
+
+**Key Pattern**: Word boundary regex matching with OR logic between selected tags.
+
+**Implementation**: `TagMatchingService`
+
+**Matching Logic**:
+
+- **Exact match**: `"AI"` == `"AI"`
+- **Word boundary match**: Regex pattern `\b{escaped}\b` prevents partial matches
+- **Examples**: `"AI"` matches `"Generative AI"` but NOT `"AIR"`
+
+**Important Details**:
+
+- **Normalization**: Trim + lowercase for case-insensitive matching
+- **MatchesAny** (OR logic): ANY selected tag matches ANY item tag
+- **Empty behavior**: Empty selected = show all, empty item = no match
 
 ## Caching Strategy
 
@@ -436,6 +176,8 @@ public void InvalidateCache()
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
+builder.Services.AddSingleton<ITagMatchingService, TagMatchingService>();
+builder.Services.AddSingleton<ITagCloudService, TagCloudService>();
 
 // Scoped - per-request generation
 builder.Services.AddScoped<IRssService, RssService>();

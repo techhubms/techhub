@@ -2,6 +2,7 @@ using System.Text.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
@@ -17,6 +18,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
     private readonly IMarkdownService _markdownService;
+    private readonly ITagMatchingService _tagMatchingService;
     private IReadOnlyList<ContentItem>? _cachedAllItems;
     private readonly SemaphoreSlim _loadLock = new(1, 1);
 
@@ -33,10 +35,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     public FileBasedContentRepository(
         IOptions<AppSettings> settings,
         IMarkdownService markdownService,
+        ITagMatchingService tagMatchingService,
         IHostEnvironment environment)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
+        ArgumentNullException.ThrowIfNull(tagMatchingService);
         ArgumentNullException.ThrowIfNull(environment);
 
         var configuredPath = settings.Value.Content.CollectionsPath;
@@ -66,6 +70,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
         _frontMatterParser = new FrontMatterParser();
         _markdownService = markdownService;
+        _tagMatchingService = tagMatchingService;
     }
 
     /// <summary>
@@ -404,6 +409,68 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         };
 
         return item;
+    }
+
+    /// <summary>
+    /// Filter content items by tags and/or date range with optional section/collection scoping
+    /// </summary>
+    public async Task<IReadOnlyList<ContentItem>> FilterAsync(
+        FilterRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+
+        // Start with all items or scoped items
+        IReadOnlyList<ContentItem> items;
+
+        if (!string.IsNullOrWhiteSpace(request.CollectionName) && !string.IsNullOrWhiteSpace(request.SectionName))
+        {
+            // Collection scope: filter by collection AND section
+            var collectionItems = await GetByCollectionAsync(request.CollectionName, cancellationToken);
+            items = collectionItems
+                .Where(item => item.SectionNames.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase))
+                .ToList();
+        }
+        else if (!string.IsNullOrWhiteSpace(request.SectionName))
+        {
+            // Section scope
+            items = await GetBySectionAsync(request.SectionName, cancellationToken);
+        }
+        else if (!string.IsNullOrWhiteSpace(request.CollectionName))
+        {
+            // Collection scope only
+            items = await GetByCollectionAsync(request.CollectionName, cancellationToken);
+        }
+        else
+        {
+            // No scope - all items
+            items = await GetAllAsync(cancellationToken);
+        }
+
+        // Apply tag filter if tags are specified
+        if (request.SelectedTags.Length > 0)
+        {
+            items = items
+                .Where(item => _tagMatchingService.MatchesAny(request.SelectedTags, item.Tags))
+                .ToList();
+        }
+
+        // Apply date range filter
+        if (request.DateFrom.HasValue)
+        {
+            var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
+            items = items.Where(item => item.DateEpoch >= fromEpoch).ToList();
+        }
+
+        if (request.DateTo.HasValue)
+        {
+            var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
+            items = items.Where(item => item.DateEpoch <= toEpoch).ToList();
+        }
+
+        // Results are already sorted by DateEpoch descending from GetAllAsync
+        // If we filtered, maintain that order
+        return items.OrderByDescending(x => x.DateEpoch).ToList();
     }
 
     /// <summary>

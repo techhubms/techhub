@@ -1,3 +1,4 @@
+using TechHub.Core.DTOs;
 using TechHub.Core.Models;
 
 namespace TechHub.Core.Interfaces;
@@ -47,4 +48,14 @@ public interface IContentRepository
     /// Get all unique tags across all content
     /// </summary>
     Task<IReadOnlyList<string>> GetAllTagsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Filter content items by tags and/or date range with optional section/collection scoping
+    /// </summary>
+    /// <param name="request">Filter request with tags, date range, and scope</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>Filtered content items</returns>
+    Task<IReadOnlyList<ContentItem>> FilterAsync(
+        FilterRequest request,
+        CancellationToken cancellationToken = default);
 }
