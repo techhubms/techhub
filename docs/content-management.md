@@ -102,24 +102,24 @@ For detailed information about site structure and terminology, see:
 
 - **Missing Frontmatter**: Check requirements in [Markdown Guidelines](../collections/markdown-guidelines.md)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Sections/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section. Note: frontmatter uses `categories` field with Section Titles ("AI", "GitHub Copilot")
+- **Sections/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section. Note: frontmatter uses `section_names` field with normalized section identifiers ("ai", "github-copilot")
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
 
 ### Repair Tools
 
-Use the PowerShell repair script to fix common issues:
+Use the PowerShell repair script to fix AI-generated markdown formatting issues:
 
 ```powershell
 # Fix all markdown files in the repository
-
-.\.github\scripts\fix-markdown-files.ps1
+scripts/content-processing/fix-markdown-files.ps1
 
 # Fix a specific file only
-
-.\.github\scripts\fix-markdown-files.ps1 -FilePath "docs/example-file.md"
+scripts/content-processing/fix-markdown-files.ps1 -FilePath "docs/example-file.md"
 ```
 
-This script automatically fixes formatting, dates, frontmatter, and other common issues.
+This script automatically fixes markdown formatting issues like missing blank lines, heading spacing, and list formatting.
+
+**Note**: New content from RSS feeds already has correct frontmatter format (section_names). This script does NOT modify frontmatter - it only fixes AI-generated markdown formatting problems.
 
 ## Alternative Collection Tab Highlighting
 
@@ -194,7 +194,7 @@ RSS feeds are configured in `scripts/data/rss-feeds.json`:
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
 - **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
-- **section**: Section Title for categorization ("AI", "GitHub Copilot", etc.) - will be added to the frontmatter `categories` array
+- **section**: Section Title for categorization ("AI", "GitHub Copilot", etc.) - will be converted to normalized section_names (ai", "github-copilot") in frontmatter
 
 **Optional Fields**:
 

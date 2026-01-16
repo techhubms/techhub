@@ -18,7 +18,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 ### ✅ Always Do
 
-- **Use Tech Hub design system** - Colors, typography, and spacing defined in `wwwroot/css/site.css` (derived from legacy Jekyll _sass)
+- **Use Tech Hub design system** - Colors, typography, and spacing defined in `wwwroot/css/site.css`
 - **Use Tech Hub color palette** - #1f6feb (primary blue), #bd93f9 (bright purple), #1a1a2e (dark navy), #28a745 (secondary green)
 - **Server-side render initial content** - Use SSR for SEO and performance
 - **Progressive enhancement** - Core functionality works without JavaScript

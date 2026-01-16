@@ -152,11 +152,9 @@ Describe "Convert-RssToMarkdown" {
 ---
 title: {{TITLE}}
 date: {{DATE}}
-categories: {{CATEGORIES}}
+section_names: {{SECTION_NAMES}}
 tags: {{TAGS}}
-tags_normalized: {{TAGS_NORMALIZED}}
 author: {{AUTHOR}}
-description: {{DESCRIPTION}}
 canonical_url: {{CANONICAL_URL}}
 ---
 
@@ -168,11 +166,9 @@ canonical_url: {{CANONICAL_URL}}
 ---
 title: {{TITLE}}
 date: {{DATE}}
-categories: {{CATEGORIES}}
+section_names: {{SECTION_NAMES}}
 tags: {{TAGS}}
-tags_normalized: {{TAGS_NORMALIZED}}
 author: {{AUTHOR}}
-description: {{DESCRIPTION}}
 canonical_url: {{CANONICAL_URL}}
 youtube_id: {{YOUTUBE_ID}}
 ---
@@ -543,8 +539,8 @@ title: "Old Title"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: "https://example.com/test-article"
 author: "Old Author"
-categories: [AI]
-tags: [Old, Tags]
+section_names: ["ai"]
+tags: ["Old", "Tags"]
 ---
 
 This is old content that should be replaced.
@@ -613,8 +609,8 @@ title: "File That Will Be Removed"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: "https://example.com/test-article"
 author: "Test Author"
-categories: [AI]
-tags: [Test]
+section_names: ["ai"]
+tags: ["Test"]
 ---
 
 This file should be removed even if AI processing fails.
@@ -687,8 +683,8 @@ title: "Old Title"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: "https://example.com/test-article"
 author: "Old Author"
-categories: [AI]
-tags: [Old, Tags]
+section_names: ["ai"]
+tags: ["Old", "Tags"]
 ---
 
 This is old content that should be replaced.
@@ -757,8 +753,8 @@ title: "Different Article"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: "https://example.com/different-article"
 author: "Different Author"
-categories: [AI]
-tags: [Different]
+section_names: ["ai"]
+tags: ["Different"]
 ---
 
 This is a different article.
@@ -769,8 +765,8 @@ title: "Target Article"
 date: 2024-12-01 11:00:00 +00:00
 canonical_url: "https://example.com/test-article"
 author: "Target Author"
-categories: [AI]
-tags: [Target]
+section_names: ["ai"]
+tags: ["Target"]
 ---
 
 This is the target article that should be removed.
@@ -896,8 +892,8 @@ title: "Quoted URL Article"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: "https://example.com/test-article"
 author: "Quoted Author"
-categories: [AI]
-tags: [Quoted]
+section_names: ["ai"]
+tags: ["Quoted"]
 ---
 
 This has a quoted canonical URL.
@@ -933,8 +929,8 @@ title: "Unquoted URL Article"
 date: 2024-12-01 10:00:00 +00:00
 canonical_url: https://example.com/unquoted-test-article
 author: "Unquoted Author"
-categories: [AI]
-tags: [Unquoted]
+section_names: ["ai"]
+tags: ["Unquoted"]
 ---
 
 This has an unquoted canonical URL.

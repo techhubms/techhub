@@ -21,7 +21,7 @@ param repositoryBranch string
 // Variables for consistent naming following "abbreviation-name-environment" pattern
 var staticWebAppName = 'stapp-${baseName}-${environment}'
 
-// Static Web Apps resource for Jekyll site
+// Static Web Apps resource for website
 resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
   name: staticWebAppName
   location: location

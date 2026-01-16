@@ -40,10 +40,17 @@
 
 **CRITICAL**: Before creating or editing ANY content in this directory, you MUST read these files:
 
-1. **[writing-style-guidelines.md](writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements
-2. **[markdown-guidelines.md](markdown-guidelines.md)** - Front matter structure, markdown formatting rules, and content organization
+1. **[frontmatter-schema.md](frontmatter-schema.md)** - Complete frontmatter field definitions, required/optional fields, field ordering, and examples for all collection types
+2. **[writing-style-guidelines.md](writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements
+3. **[markdown-guidelines.md](markdown-guidelines.md)** - High-level markdown formatting rules and content structure
 
 These documents contain essential guidance that applies to ALL content creation and editing work.
+
+**Reading Order:**
+
+1. **Start with frontmatter-schema.md** - Understand required fields and structure
+2. **Then read writing-style-guidelines.md** - Learn writing standards
+3. **Finally check markdown-guidelines.md** - Review formatting rules
 
 ## When to Use This Guide
 
@@ -57,10 +64,11 @@ These documents contain essential guidance that applies to ALL content creation 
 
 **Related Documentation**:
 
+- Frontmatter schema → [frontmatter-schema.md](frontmatter-schema.md)
 - Writing style → [writing-style-guidelines.md](writing-style-guidelines.md)
 - Markdown formatting → [markdown-guidelines.md](markdown-guidelines.md)
 - Content workflows → [docs/content-management.md](../docs/content-management.md)
-- RSS processing → [rss/AGENTS.md](../rss/AGENTS.md)
+- RSS processing → [scripts/content-processing/AGENTS.md (future)](../scripts/content-processing/)
 
 ## Collections Structure
 

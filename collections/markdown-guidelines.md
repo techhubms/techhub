@@ -2,20 +2,30 @@
 
 **CRITICAL**: Always follow the writing style guidelines in [writing-style-guidelines.md](writing-style-guidelines.md) for tone, language, and content standards.
 
+**CRITICAL**: For complete frontmatter field definitions and examples, see [frontmatter-schema.md](frontmatter-schema.md).
+
 ## Automated Processing
 
-The repository may include automated scripts that fix common markdown and frontmatter issues including:
+The repository includes automated scripts that validate and repair markdown formatting:
 
-- Date format standardization
-- Frontmatter quoting consistency
-- Tag and section array formatting
-- Filename and permalink consistency for post layout files
-- Duplicate frontmatter key detection
-- Whitespace and formatting cleanup
+- **Repair-MarkdownFormatting**: Fixes AI-generated markdown formatting (headings, lists, whitespace, code blocks)
+- **fix-markdown-files.ps1**: Batch processes files to fix markdown formatting issues
+
+**NOTE**: Frontmatter repair is NOT needed - templates already generate correct .NET format.
 
 **CRITICAL**: Do not automatically run processing scripts!
 
 While following these instructions carefully is important, minor formatting issues may be automatically corrected by automated tooling during processing.
+
+## Quick Reference
+
+**For detailed frontmatter field definitions**, see [frontmatter-schema.md](frontmatter-schema.md).
+
+This document provides high-level guidance for content creation. For complete field-by-field documentation:
+
+- **Universal fields** (all content): [frontmatter-schema.md#universal-fields-all-content](frontmatter-schema.md#universal-fields-all-content)
+- **Collection-specific fields** (videos, features, roundups): [frontmatter-schema.md#collection-specific-fields](frontmatter-schema.md#collection-specific-fields)
+- **Deprecated fields** (no longer used): [frontmatter-schema.md#deprecatedremoved-fields](frontmatter-schema.md#deprecatedremoved-fields)
 
 ## Content Structure Rules
 
@@ -46,63 +56,43 @@ While following these instructions carefully is important, minor formatting issu
 
 **Field-Specific Rules:**
 
-- `layout`: Set to `post` for content files (those in collection folders like `_blogs`, `_news`, `_community`, etc.). Set to `page` for section directory files (those in `/ai`, `/github-copilot`, etc.)
+- `layout`: Always set to `"post"` for collection content (_blogs,_news, _community,_videos, _roundups)
 - `title`: Extract from the article or ask the user if not clear
-- `description`: Write a concise summary of the article's main points and topics (max 100 words). Do not start with phrases like "In this article" or similar
-- `author`: Extract from the article or ask the user if not clear. **For YouTube videos, always use the actual presenter/demonstrator as the author, not the channel owner**. If there is no presenter/demonstrator, use the channel owner.
-- `excerpt_separator`: Always set to `<!--excerpt_end-->`
-- `canonical_url`: Use the provided URL, but remove any querystring parameters. Do not change the rest of the URL
-- `tags`: Array of relevant keywords from the article formatted as `["Tag 1", "Tag 2", "Tag 3", "Tag++", "-Tag", "A . Tag", "C#", "Hyphen-Tag"]`. Do not use generic terms like 'news' or 'update'. At least 10 if possible, but only if they really fit. Don't make up things. Tags can contain spaces and will be automatically filtered and formatted. **Never include names, GitHub handles, or anything not directly related to the actual content of the video/article as tags**
-- `tags_normalized`: Array of lowercase, normalized versions of the tags for consistent programmatic processing. Generated automatically by PowerShell scripts. Format as `["tag 1", "tag 2", "tag 3", "tagplusplus", "mintag", "a dot tag", "csharp", "hyphen-tag"]` with all lowercase and standardized formatting. Order should be identical to tags.
-- `categories`: Array of section display names formatted as `["AI", "GitHub Copilot"]`. Use the exact section titles defined in the application configuration. Note: Field name is 'categories' for historical reasons - it contains section titles (display names like "AI", "GitHub Copilot") which are automatically mapped to section names (lowercase identifiers like "ai", "github-copilot") during content processing. If you include 'GitHub Copilot', always include 'AI' as well. If unsure, leave empty
+- `author`: Extract from the article or ask the user if not clear. **For YouTube videos, always use the actual presenter/demonstrator as the author, not the channel owner**
+- `canonical_url`: Use the provided URL, but remove any querystring parameters
+- `viewing_mode`: `"internal"` for self-contained content (videos, roundups), `"external"` for content that links to original sources (news, blogs, community)
+- `tags`: Array of relevant keywords. Format as `["Tag 1", "Tag 2", "Tag 3"]`. At least 10 if possible, but only if they really fit
+- `section_names`: Array of normalized section identifiers (lowercase, hyphenated). Format as `["ai", "github-copilot"]`. Valid values: `["ai", "azure", "github-copilot", "dotnet", "devops", "security", "coding", "cloud"]`
+- `permalink`: Format is `/section/collection/slug` where section is primary section, collection is the collection name without underscore
 - `feed_name`: Use provided feed name. Omit if not provided
 - `feed_url`: Use provided feed url. Omit if not provided
-- `permalink`: Is `/filename.html`. Replace `.md` with `.html` from the filename. The section is the target directory, without an underscore (e.g. `roundups`, `news`, `videos`, etc)
-- `page`: Automatically set based on directory structure. For `_blogs` directory, use `"blogs"`. For other directories, use the directory name without underscore (e.g., `_news` becomes `"news"`, `_videos` becomes `"videos"`)
-- `viewing_mode`: Determines how content is displayed on the site:
-  - `"internal"`: Self-contained content displayed fully on site (videos, roundups)
-  - `"external"`: Content that links to original sources (news, posts, community, etc)
-- `video_id`: YouTube video identifier (e.g., `"dQw4w9WgXcQ"`). Required for video content. Omit for non-video content
-- `alt_collection`: Alternative collection name for subfolder organization (e.g., `"ghc-features"`, `"vscode-updates"`). Used when content is organized in subfolders within a collection directory like `_videos/ghc-features/`. Omit if content is in the root collection folder
-- `plans`: Array of GitHub Copilot subscription tiers this feature supports. Format as `["Free", "Business", "Enterprise"]`. Used only for GitHub Copilot Features page content. Omit for regular content
-- `ghes_support`: Boolean indicating GitHub Enterprise Server support (`true`/`false`). Used only for GitHub Copilot Features page content. Omit for regular content
-- `coming_soon`: Boolean indicating if a feature is not yet released (`true`/`false`). Used for roadmap and preview features. Omit for released content
 
-**Date and Filename Rules:**
+**Deprecated/Removed Fields** (DO NOT USE):
 
-- Dates should be formatted as `yyyy-MM-dd HH:mm:ss +00:00` (with the colon in the timezone offset, not `+0000`). Use the appropriate timezone if different from UTC. The script will automatically repair common date format issues
-- The filename format is: `yyyy-MM-dd-Article-Title.md`. For `layout: "post"` files, the filename must match the date in the frontmatter, and the permalink will be automatically generated as `/yyyy-MM-dd-Article-Title.html`
+- `categories` - REPLACED by `section_names` (which uses normalized identifiers, not display names)
+- `tags_normalized` - REMOVED (normalization happens in .NET code, not frontmatter)
+- `excerpt_separator` - REMOVED (excerpts detected by `<!--excerpt_end-->` marker in content)
+- `description` - REMOVED (excerpt serves this purpose)
+- `page` - REMOVED (derived from file path in .NET)
 
-**Frontmatter Quoting Rules:**
-
-- Most frontmatter values should be quoted with double quotes, except for: `excerpt_separator` and `date` which should remain unquoted
-- Array values like `tags` and `categories` use square brackets with individual values quoted: `["Value 1", "Value 2", "Value 3"]`
+For complete field definitions and examples, see [frontmatter-schema.md](frontmatter-schema.md).
 
 **Frontmatter Field Order:**
 
-Follow this specific field order to ensure consistency across all content files:
+Follow this order for consistency (see [frontmatter-schema.md](frontmatter-schema.md) for details):
 
 1. `layout`
 2. `title`
-3. `description`
-4. `author`
-5. `excerpt_separator`
-6. `canonical_url` (if applicable)
-7. `viewing_mode`
-8. `feed_name` (if applicable)
-9. `feed_url` (if applicable)
-10. Other custom fields (e.g., `magazine-description-ai`, `download-url`)
-11. `date`
-12. `permalink`
-13. `categories`
-14. `tags`
-15. `tags_normalized`
-
-**Placement Rules:**
-
-- `categories`, `tags`, and `tags_normalized` should always be placed at the bottom of the frontmatter (before the closing `---`)
-- This reduces diff noise when the repair script processes files and ensures consistent formatting
-- Custom fields should be placed after standard fields but before `date`
+3. `author`
+4. `canonical_url` (if applicable)
+5. `viewing_mode`
+6. `feed_name` (if applicable)
+7. `feed_url` (if applicable)
+8. `date`
+9. `permalink`
+10. `tags`
+11. `section_names`
+12. Collection-specific fields (`alt_collection`, `plans`, `ghes_support`, `coming_soon`)
 
 ## Markdown Formatting Rules
 
@@ -188,20 +178,40 @@ Always end with a single blank line.
 
 ## Front-Matter Formatting Example
 
+For complete examples and field definitions, see [frontmatter-schema.md](frontmatter-schema.md).
+
+**News article example:**
+
 ```yaml
 ---
 layout: "post"
-title: "Introducing automatic documentation comment generation in Visual Studio"
-author: "Sinem Akinci, Allie Barry"
-excerpt_separator: "<!--excerpt_end-->"
-canonical_url: "https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/"
+title: "GPT-5 Comes to GitHub Copilot in Visual Studio"
+author: "Rhea Patel"
+canonical_url: "https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/"
 viewing_mode: "external"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
-date: "2025-03-17 15:00:10 +00:00"
-permalink: "/news/2025-03-17-Introducing-automatic-documentation-comment-generation-in-Visual-Studio.html"
-tags: ["AI", "Code Comments", "Developer Tools", "Docs", "Documentation", "GitHub Copilot", "News", "Productivity", "Visual Studio"]
-tags_normalized: ["ai", "code comments", "developer tools", "docs", "documentation", "github copilot", "news", "productivity", "visual studio"]
+feed_name: "Microsoft VisualStudio Blog"
+feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+date: 2025-08-12 17:10:52 +00:00
+permalink: "/github-copilot/news/GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio"
+tags: ["AI", "GitHub Copilot", "GPT-5", "Visual Studio", "News"]
+section_names: ["ai", "github-copilot"]
 ---
 ```
+
+**Video example:**
+
+```yaml
+---
+layout: "post"
+title: "AI-Powered Email Sorting with n8n and OpenAI"
+author: "Alireza Chegini"
+canonical_url: "https://www.youtube.com/watch?v=21HSDwtkHNk"
+viewing_mode: "internal"
+date: 2025-06-04 19:00:03 +00:00
+permalink: "/ai/videos/AI-Powered-Email-Sorting-with-n8n-and-OpenAI"
+tags: ["AI", "Automation", "Email Management", "n8n", "OpenAI", "Videos"]
+section_names: ["ai"]
+---
+```
+
+**See [frontmatter-schema.md](frontmatter-schema.md) for more examples** including blogs, roundups, and GitHub Copilot features.

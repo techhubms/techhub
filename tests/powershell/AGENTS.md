@@ -35,12 +35,13 @@ scripts/content-processing/functions/
 ├── Get-MainContentFromHtml.ps1
 ├── Get-MarkdownFiles.ps1
 ├── Get-MarkdownFromHtml.ps1
+├── Get-SourceRoot.ps1
 ├── Get-WebResponseDetailsFromException.ps1
 ├── Get-YouTubeVideoId.ps1
 ├── Invoke-AiApiCall.ps1
 ├── Invoke-ProcessWithAiModel.ps1
 ├── Repair-JsonResponse.ps1
-├── Repair-MarkdownJekyll.ps1
+├── Repair-MarkdownFormatting.ps1
 ├── Set-FrontMatterValue.ps1
 ├── Test-RateLimitInEffect.ps1
 └── Write-ErrorDetails.ps1

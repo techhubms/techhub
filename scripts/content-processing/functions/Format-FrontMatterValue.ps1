@@ -76,8 +76,9 @@ function Format-FrontMatterValue {
             return '[]'
         }
         
-        # Return as YAML array syntax
-        return '[' + ($formattedItems -join ', ') + ']'
+        # Return as YAML block sequence (with hyphens on separate lines)
+        $blockSequence = $formattedItems | ForEach-Object { "`n  - $_" }
+        return ($blockSequence -join '')
     }
     else {
         # Handle as single value

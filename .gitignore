@@ -1,20 +1,3 @@
-# Jekyll (in jekyll/ subdirectory)
-jekyll/_site/
-jekyll/.sass-cache/
-jekyll/.jekyll-cache/
-jekyll/.jekyll-metadata
-jekyll/.ruby-lsp
-jekyll/.bundle/
-jekyll/vendor/
-jekyll/Gemfile.lock
-jekyll/node_modules/
-jekyll/test-results/
-jekyll/spec/e2e/playwright-report/
-jekyll/spec/e2e/screenshots/
-jekyll/spec/e2e/videos/
-jekyll/spec/e2e/traces/
-.jekyll-metadata
-
 # Content processing (keep execute-with-token.ps1 private)
 scripts/content-processing/execute-with-token.ps1
 
@@ -62,8 +45,8 @@ build/
 # User-specific files
 *.rsuser
 *.suo
-*.user
-*.userosscache
+*.userz
+z*.userosscache
 *.userprefs
 *.sln.docstates
 *.vspscc

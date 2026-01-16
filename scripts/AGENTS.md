@@ -203,12 +203,20 @@ catch {
 - AI-powered content transformation and summarization
 - Collection-aware prioritization
 - Rate limit handling for AI APIs
+- **Generates .NET frontmatter** - Uses `section_names` (normalized identifiers) instead of `categories` (display names)
+- **Template-based output** - Uses [templates/template-generic.md](content-processing/templates/template-generic.md) and [templates/template-videos.md](content-processing/templates/template-videos.md)
+- **Field mapping**: AI returns categories (display names) → converted to section_names (lowercase identifiers)
+  - Example: `"GitHub Copilot"` → `"github-copilot"`, `"AI"` → `"ai"`, `".NET"` → `"dotnet"`
+
+For complete frontmatter schema, see [collections/frontmatter-schema.md](../collections/frontmatter-schema.md).
 
 #### fix-markdown-files.ps1
 
-- Repairs markdown formatting issues
-- Fixes frontmatter structure
-- Validates Jekyll compatibility
+- **Purpose**: Fixes AI-generated markdown formatting issues ONLY
+- **What it does**: Repairs markdown formatting (missing blank lines, heading spacing, list formatting, etc.)
+- **What it does NOT do**: Modify frontmatter (templates already generate correct .NET format)
+- **When to use**: After AI processes content that has markdown formatting issues
+- **Note**: New content from RSS pipeline already has correct frontmatter structure (section_names)
 
 #### iterative-roundup-generation.ps1
 
@@ -256,8 +264,6 @@ For PowerShell script testing (Pester v5), see:
 ./scripts/run-powershell-tests.ps1 -Coverage
 ```
 
-**Note**: Legacy Jekyll test scripts (`run-*-tests.ps1`) are located in `jekyll/scripts/` directory.
-
 ## PowerShell Testing Standards
 
 Use **Pester v5** for all PowerShell testing. For complete testing patterns, test organization, and critical testing rules, see [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md).
@@ -300,7 +306,44 @@ Makes AI API calls with retry logic, rate limit handling, and error recovery. Su
 
 ### Convert-RssToMarkdown.ps1
 
-Transforms RSS feed items into markdown files with proper frontmatter.
+Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter structure.
+
+**Key Features**:
+
+- Generates `section_names` from AI-provided categories (normalized to lowercase identifiers)
+- Removes deprecated Jekyll fields (`categories`, `tags_normalized`, `description`, `excerpt_separator`)
+- Uses proper field ordering per [frontmatter-schema.md](../collections/frontmatter-schema.md)
+- Applies markdown formatting repairs (NOT Jekyll repairs - new files already have correct frontmatter)
+- Tracks processed/skipped entries to avoid reprocessing
+
+**Section Name Normalization**:
+
+```powershell
+# AI returns display names, we convert to identifiers:
+"AI" → "ai"
+"GitHub Copilot" → "github-copilot"
+".NET" → "dotnet"
+"Azure" → "azure"
+"DevOps" → "devops"
+"Security" → "security"
+"Coding" → "coding"
+"Cloud" → "cloud"
+```
+
+**Template Variables** (both template-generic.md and template-videos.md):
+
+- `{{TITLE}}` - Content title
+- `{{AUTHOR}}` - Author name
+- `{{CANONICAL_URL_FORMATTED}}` - Original URL (quoted)
+- `{{FEEDNAME}}` - RSS feed name
+- `{{FEEDURL}}` - RSS feed URL
+- `{{DATE}}` - Publication date with timezone
+- `{{PERMALINK}}` - URL path
+- `{{TAGS}}` - Topic tags array
+- `{{SECTION_NAMES}}` - Normalized section identifiers array
+- `{{CONTENT}}` - Main content
+- `{{EXCERPT}}` - Summary excerpt
+- `{{YOUTUBE_ID}}` - YouTube video ID (videos only)
 
 ### Feed.ps1
 

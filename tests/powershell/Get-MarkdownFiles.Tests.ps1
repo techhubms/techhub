@@ -13,6 +13,16 @@ Describe "Get-MarkdownFiles" {
         $script:testRoot = Join-Path $script:TempPath "markdown-test"
         New-Item -ItemType Directory -Path $script:testRoot -Force | Out-Null
         
+        # Create .gitignore to enable default exclusion patterns
+        $gitignoreContent = @"
+node_modules/
+.git/
+spec/
+_site/
+**/AGENTS.md
+"@
+        Set-Content -Path (Join-Path $script:testRoot ".gitignore") -Value $gitignoreContent -Force
+        
         # Create test directory structure
         $dirs = @(
             "collections/_news",

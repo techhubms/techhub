@@ -2,7 +2,7 @@
 
 > **Status**: 🚧 In Development
 
-This directory contains the .NET/Blazor implementation of Tech Hub, migrating from the Jekyll-based static site.
+This directory contains the .NET/Blazor implementation of Tech Hub.
 
 ## Quick Start
 
@@ -120,14 +120,6 @@ builder.AddServiceDefaults();  // Adds OpenTelemetry, health checks, resilience
 // ...
 app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 ```
-
-## Migration Status
-
-This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](https://github.com/github/spec-kit) methodology. We're in **Phase 3** of the migration with 245/245 unit/integration tests and 60/69 E2E tests passing.
-
-**Quick Status**: API ✅ Complete | Frontend 🔄 In Progress (95%)
-
-For detailed progress, implementation status, and what's working now, see [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md).
 
 ## Documentation
 

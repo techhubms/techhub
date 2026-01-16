@@ -1676,18 +1676,25 @@ Return only JSON with fields: title, tags, description, introduction
 ---
 layout: "post"
 title: "$($metadata.title)"
-description: "$($metadata.description)"
 author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: $publishDate
 permalink: "/$filename.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: $($metadata.tags | ConvertTo-Json -Compress)
-tags_normalized: []
+section_names:
+- ai
+- github-copilot
+- azure
+- dotnet
+- devops
+- security
+- coding
+- cloud
 ---
 
-$($metadata.introduction)<!--excerpt_end-->
+$($metadata.introduction)
+
+<!--excerpt_end-->
 
 ## This Week's Overview
 

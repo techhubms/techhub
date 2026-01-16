@@ -1,7 +1,7 @@
 function Repair-MarkdownFormatting {
     <#
     .SYNOPSIS
-        Fix generic markdown formatting issues (excludes Jekyll-specific and frontmatter processing)
+        Fix generic markdown formatting issues
     .DESCRIPTION
         This function fixes common markdown formatting issues including:
         - MD009: Remove trailing spaces
@@ -192,7 +192,7 @@ function Repair-MarkdownFormatting {
             $prevLine = if ($i -gt 0) { $linesArr[$i - 1] } else { "" }
             $nextLine = if ($i -lt $linesArr.Count - 1) { $linesArr[$i + 1] } else { "" }
             
-            # Skip frontmatter processing - it's handled by Jekyll-specific function
+            # Skip frontmatter processing
             if ($frontmatter_start -ne -1 -and $frontmatter_end -ne -1 -and $i -ge $frontmatter_start -and $i -le $frontmatter_end) {
                 $new_lines += $currentLine
                 $originalLineMapping += $i
@@ -335,18 +335,21 @@ function Repair-MarkdownFormatting {
                     if ($number -ne 1) {
                         $numbered_lines += "$indent" + "1. $content"
                         $lastOrderedNumber = 1
-                    } else {
+                    }
+                    else {
                         $numbered_lines += $line
                         $lastOrderedNumber = 1
                     }
-                } else {
+                }
+                else {
                     # Continuing current list
                     $expectedNumber = $lastOrderedNumber + 1
                     
                     # Only fix if the numbering is wrong
                     if ($number -ne $expectedNumber) {
                         $numbered_lines += "$indent$expectedNumber. $content"
-                    } else {
+                    }
+                    else {
                         $numbered_lines += $line
                     }
                     $lastOrderedNumber = $expectedNumber
@@ -390,7 +393,8 @@ function Repair-MarkdownFormatting {
                     if ($i + 1 -lt $new_lines.Count -and $new_lines[$i + 1] -match '^\s*$') {
                         $i++ # Skip the blank line
                     }
-                } else {
+                }
+                else {
                     # Closing code fence
                     $inCodeFence = $false
                     
@@ -401,7 +405,8 @@ function Repair-MarkdownFormatting {
                     
                     $code_fence_lines += $line
                 }
-            } else {
+            }
+            else {
                 $code_fence_lines += $line
             }
         }

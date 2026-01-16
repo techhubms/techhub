@@ -232,14 +232,40 @@ function Convert-RssToMarkdown {
                 Write-Host "Categories found: $($categories -join ', ')" -ForegroundColor Green
             }        
 
+            # Convert categories (display names) to section_names (normalized identifiers)
+            # Mapping: 'AI' → 'ai', 'GitHub Copilot' → 'github-copilot', '.NET' → 'dotnet', etc.
+            $sectionNameMapping = @{
+                'AI'             = 'ai'
+                'Azure'          = 'azure'
+                'GitHub Copilot' = 'github-copilot'
+                '.NET'           = 'dotnet'
+                'DevOps'         = 'devops'
+                'Security'       = 'security'
+                'Coding'         = 'coding'
+                'Cloud'          = 'cloud'
+            }
+            
+            $section_names = @()
+            foreach ($category in $categories) {
+                if ($sectionNameMapping.ContainsKey($category)) {
+                    $section_names += $sectionNameMapping[$category]
+                }
+                else {
+                    # Fallback: convert to lowercase and replace spaces with hyphens
+                    $normalizedName = $category.ToLower() -replace '\s+', '-' -replace '[^a-z0-9-]', ''
+                    $section_names += $normalizedName
+                    Write-Host "Warning: Unknown category '$category', normalized to '$normalizedName'" -ForegroundColor Yellow
+                }
+            }
+            $section_names = @($section_names | Sort-Object -Unique)
+
             $tags = $item.Tags
             if ($response.tags -and $response.tags.Count -gt 0) {
                 $tags += $response.tags
             }
         
-            $tagResult = Get-FilteredTags -Tags $tags -Categories $categories -Collection $collection_value
-            $tags = $tagResult.tags
-            $tags_normalized = $tagResult.tags_normalized
+            $tags = Get-FilteredTags -Tags $tags -Categories $categories -Collection $collection_value
+            # tags_normalized is deprecated - normalization happens in .NET code, not stored in frontmatter
 
             # Select template based on output directory
             $templatePath = $genericTemplatePath
@@ -252,7 +278,7 @@ function Convert-RssToMarkdown {
                 $youtubeId = Get-YouTubeVideoId -Url $item.Link
             }
 
-            # Format date and fix timezone format from +0000 to +00:00 for Jekyll compatibility
+            # Format date and fix timezone format from +0000 to +00:00
             $dateFormatted = $item.PubDate.ToString("yyyy-MM-dd HH:mm:ss zzz")
             $dateFormatted = $dateFormatted -replace '(\+|-)(\d{2})(\d{2})(?!:)', '$1$2:$3'
         
@@ -265,11 +291,9 @@ function Convert-RssToMarkdown {
             $markdownContent = Get-Content $templatePath -Raw
             $markdownContent = $markdownContent -replace '{{TITLE}}', (Format-FrontMatterValue -Value $response.title)
             $markdownContent = $markdownContent -replace '{{AUTHOR}}', (Format-FrontMatterValue -Value $item.Author)
-            $markdownContent = $markdownContent -replace '{{DESCRIPTION}}', (Format-FrontMatterValue -Value $response.description)
             $markdownContent = $markdownContent -replace '{{TAGS}}', (Format-FrontMatterValue -Value @($tags))
-            $markdownContent = $markdownContent -replace '{{TAGS_NORMALIZED}}', (Format-FrontMatterValue -Value @($tags_normalized))
+            $markdownContent = $markdownContent -replace '{{SECTION_NAMES}}', (Format-FrontMatterValue -Value @($section_names))
             $markdownContent = $markdownContent -replace '{{FEEDNAME}}', (Format-FrontMatterValue -Value $item.FeedName)
-            $markdownContent = $markdownContent -replace '{{CATEGORIES}}', (Format-FrontMatterValue -Value @($categories))
             $markdownContent = $markdownContent -replace '{{PERMALINK}}', (Format-FrontMatterValue -Value $permalink)
             $markdownContent = $markdownContent -replace '{{CANONICAL_URL_FORMATTED}}', (Format-FrontMatterValue -Value $item.Link)
             $markdownContent = $markdownContent -replace '{{CANONICAL_URL}}', $item.Link
@@ -294,8 +318,7 @@ function Convert-RssToMarkdown {
                 Set-Content -Path $filePath -Value $markdownContent -Encoding UTF8 -Force
                 Write-Host "✅ Created file: $filePath" -ForegroundColor Green
 
-                # Fix markdown immediately
-                Repair-MarkdownJekyll -FilePath $filePath
+                # Fix markdown formatting only - new files already have correct .NET frontmatter
                 Repair-MarkdownFormatting -FilePath $filePath
                 
                 # Verify file was created successfully before adding to processed entries

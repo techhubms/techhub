@@ -696,19 +696,13 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 
 ### Option A: Content Qualifies (Has Categories)
 
-Return a JSON object with these 7 fields:
+Return a JSON object with these 6 fields:
 
 **title** (string, max 120 characters)
 
 - Use INPUT title if it fits within 120 characters
 - If too long, create new title based on INPUT title, description, and content
 - Should accurately reflect the content's main focus
-
-**description** (string, target 100 words)
-
-- Concise summary highlighting main points and topics
-- Prioritize quality and completeness over exact word count
-- Focus on what users will learn or accomplish
 
 **categories** (array of strings)
 
@@ -767,7 +761,6 @@ Return a JSON object with only this field:
 ```json
 {
   "title": "Getting Started with Azure OpenAI Service in C#",
-  "description": "A comprehensive guide showing developers how to integrate Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling using Microsoft's cloud-based AI platform.",
   "categories": ["AI", "Azure", "Coding"],
   "tags": ["Azure OpenAI Service", "C#", "API Integration", "Authentication", "GPT-4", "Microsoft Azure", "REST API", "Cloud Development", "AI Development", "Programming Tutorial"],
   "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",

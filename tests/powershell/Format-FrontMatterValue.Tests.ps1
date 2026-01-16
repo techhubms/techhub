@@ -87,7 +87,13 @@ Describe "Format-FrontMatterValue" {
         It "Should format simple string array" {
             $inputArray = @("First", "Second", "Third")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["First", "Second", "Third"]'
+            $expected = @"
+
+  - "First"
+  - "Second"
+  - "Third"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle empty array" {
@@ -99,25 +105,45 @@ Describe "Format-FrontMatterValue" {
         It "Should handle single-item array" {
             $inputArray = @("Single item")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Single item"]'
+            $expected = @"
+
+  - "Single item"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should escape quotes in array items" {
             $inputArray = @('Item with "quotes"', "Another 'item'")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be "[`"Item with \`"quotes\`"`", `"Another 'item'`"]"
+            $expected = @"
+
+  - "Item with `"quotes`""
+  - "Another 'item'"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should clean HTML from array items" {
             $inputArray = @("<p>First item</p>", "<div>Second item</div>")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["First item", "Second item"]'
+            $expected = @"
+
+  - "First item"
+  - "Second item"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle array with null or empty items" {
             $inputArray = @("Valid", "", $null, "Another valid")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Valid", "", "Another valid"]'
+            $expected = @"
+
+  - "Valid"
+  - ""
+  - "Another valid"
+"@
+            $result | Should -Be $expected
         }
     }
     
@@ -134,13 +160,25 @@ Describe "Format-FrontMatterValue" {
         It "Should handle blog tags as array" {
             $inputArray = @("GitHub Copilot", "AI", "Development Tools", 'Feature "Update"')
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["GitHub Copilot", "AI", "Development Tools", "Feature \"Update\""]'
+            $expected = @"
+
+  - "GitHub Copilot"
+  - "AI"
+  - "Development Tools"
+  - "Feature `"Update`""
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle categories as array" {
             $inputArray = @("AI", "GitHub Copilot")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["AI", "GitHub Copilot"]'
+            $expected = @"
+
+  - "AI"
+  - "GitHub Copilot"
+"@
+            $result | Should -Be $expected
         }
     }
     
@@ -202,7 +240,13 @@ Describe "Format-FrontMatterValue" {
         It "Should handle arrays with pre-escaped content" {
             $inputArray = @('Item with \"quotes\"', 'Another\\with\\backslashes', '"Pre-quoted item"')
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Item with \"quotes\"", "Another\\with\\backslashes", "Pre-quoted item"]'
+            $expected = @"
+
+  - "Item with `"quotes`""
+  - "Another\with\backslashes"
+  - "Pre-quoted item"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle empty strings after unescaping" {
@@ -357,43 +401,83 @@ Describe "Format-FrontMatterValue" {
         It "Should handle arrays with bracket characters" {
             $inputArray = @("GitHub [Copilot]", "Azure [Functions]", "Visual Studio [Code]")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["GitHub [Copilot]", "Azure [Functions]", "Visual Studio [Code]"]'
+            $expected = @"
+
+  - "GitHub [Copilot]"
+  - "Azure [Functions]"
+  - "Visual Studio [Code]"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with nested brackets" {
             $inputArray = @("Config [[nested]]", "Data [with [inner] brackets]")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Config [[nested]]", "Data [with [inner] brackets]"]'
+            $expected = @"
+
+  - "Config [[nested]]"
+  - "Data [with [inner] brackets]"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with braces" {
             $inputArray = @("Config {settings}", "Object {properties}", "JSON {key: value}")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Config {settings}", "Object {properties}", "JSON {key: value}"]'
+            $expected = @"
+
+  - "Config {settings}"
+  - "Object {properties}"
+  - "JSON {key: value}"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with mixed bracket types" {
             $inputArray = @("Mixed [square] and {curly}", "Combined (parentheses) and [brackets]")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Mixed [square] and {curly}", "Combined (parentheses) and [brackets]"]'
+            $expected = @"
+
+  - "Mixed [square] and {curly}"
+  - "Combined (parentheses) and [brackets]"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with commas and special characters" {
             $inputArray = @("List, item with comma", "Another, item: with colon")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["List, item with comma", "Another, item: with colon"]'
+            $expected = @"
+
+  - "List, item with comma"
+  - "Another, item: with colon"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with backslashes and quotes" {
             $inputArray = @("C:\Program Files\", 'Quote: "Hello World"', "Path\\with\\backslashes")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["C:\\Program Files\\", "Quote: \"Hello World\"", "Path\\with\\backslashes"]'
+            $expected = @"
+
+  - "C:\Program Files\"
+  - "Quote: `"Hello World`""
+  - "Path\with\backslashes"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle arrays with YAML indicator characters" {
             $inputArray = @("Key: value", "List - item", "Question? mark", "Comment # here")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["Key: value", "List - item", "Question? mark", "Comment # here"]'
+            $expected = @"
+
+  - "Key: value"
+  - "List - item"
+  - "Question? mark"
+  - "Comment # here"
+"@
+            $result | Should -Be $expected
         }
     }
     
@@ -401,19 +485,40 @@ Describe "Format-FrontMatterValue" {
         It "Should handle programming languages and frameworks with brackets" {
             $inputArray = @("C#", "F#", "C++", "ASP.NET [Core]", "Entity Framework [Core]")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["C#", "F#", "C++", "ASP.NET [Core]", "Entity Framework [Core]"]'
+            $expected = @"
+
+  - "C#"
+  - "F#"
+  - "C++"
+  - "ASP.NET [Core]"
+  - "Entity Framework [Core]"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle file paths with various separators" {
             $inputArray = @("/usr/bin/bash", "C:\Windows\System32", "\\network\share", "./relative/path")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["/usr/bin/bash", "C:\\Windows\\System32", "\\network\\share", "./relative/path"]'
+            $expected = @"
+
+  - "/usr/bin/bash"
+  - "C:\Windows\System32"
+  - "\network\share"
+  - "./relative/path"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle URLs and URIs with special characters" {
             $inputArray = @("https://example.com/path?query=value&other=test", "mailto:user@domain.com", "ftp://user:pass@host.com")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["https://example.com/path?query=value&other=test", "mailto:user@domain.com", "ftp://user:pass@host.com"]'
+            $expected = @"
+
+  - "https://example.com/path?query=value&other=test"
+  - "mailto:user@domain.com"
+  - "ftp://user:pass@host.com"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle code snippets and technical content" {
@@ -423,27 +528,46 @@ Describe "Format-FrontMatterValue" {
                 "<div class=""container"">Content</div>"
             )
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be "[`"function test() { return \`"Hello\`"; }`", `"SELECT * FROM table WHERE id = 'value'`", `"Content`"]"
+            $expected = @"
+
+  - "function test() { return `"Hello`"; }"
+  - "SELECT * FROM table WHERE id = 'value'"
+  - "Content"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle mathematical and scientific notation" {
             $inputArray = @("E=mc²", "Temperature: -40°C", "Probability: 0.95 (95%)")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["E=mc²", "Temperature: -40°C", "Probability: 0.95 (95%)"]'
+            $expected = @"
+
+  - "E=mc²"
+  - "Temperature: -40°C"
+  - "Probability: 0.95 (95%)"
+"@
+            $result | Should -Be $expected
         }
         
         It "Should handle version numbers and semantic versioning" {
             $inputArray = @("v1.0.0", "2.3.4-beta.1", "1.0.0-rc.1+build.123")
             $result = Format-FrontMatterValue -Value $inputArray
-            $result | Should -Be '["v1.0.0", "2.3.4-beta.1", "1.0.0-rc.1+build.123"]'
+            $expected = @"
+
+  - "v1.0.0"
+  - "2.3.4-beta.1"
+  - "1.0.0-rc.1+build.123"
+"@
+            $result | Should -Be $expected
         }
     }
     
     Context "YAML Compliance and Edge Cases" {
         It "Should produce valid YAML array syntax" {
             $result = Format-FrontMatterValue -Value @("item1", "item2")
-            # Verify it starts with [ and ends with ]
-            $result | Should -Match '^\[.*\]$'
+            # Verify block sequence format (starts with newline, has hyphens)
+            $result | Should -Match '^\n'
+            $result | Should -Match '  - '
         }
         
         It "Should produce valid YAML string syntax" {
@@ -501,7 +625,13 @@ Describe "Format-FrontMatterValue" {
         It "Should handle mixed types in collection" {
             $inputCollection = @("String", 123, $true)
             $result = Format-FrontMatterValue -Value $inputCollection
-            $result | Should -Be '["String", "123", "True"]'
+            $expected = @"
+
+  - "String"
+  - "123"
+  - "True"
+"@
+            $result | Should -Be $expected
         }
     }
 } 
