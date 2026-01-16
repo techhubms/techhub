@@ -16,8 +16,11 @@ namespace TechHub.ContentFixer;
 /// - Remove 'excerpt_separator' frontmatter field
 /// - Fix permalinks to include /primarySection/collection/ prefix
 /// - Remove 'description' field from frontmatter
-/// - Replace Jekyll variables with actual values
-/// - Keep {% youtube VIDEO_ID %} tags intact
+/// - Replace template variables ({{ page.variable }}) with actual values
+/// - Expand template variables inside tags ({% youtube page.youtube_id %} → {% youtube VIDEO_ID %})
+/// - Remove {% raw %} and {% endraw %} tags
+/// - Process {{ "/path" | relative_url }} filters
+/// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
 /// </summary>
 internal sealed class Program
 {
@@ -241,13 +244,13 @@ internal sealed class Program
             changed = true;
         }
 
-        // 6. Replace Jekyll variables in content
+        // 6. Replace template variables in content
         var originalContent = markdownContent;
-        markdownContent = ReplaceJekyllVariables(markdownContent, frontMatter, description);
+        markdownContent = ReplaceTemplateVariables(markdownContent, frontMatter, description);
         if (markdownContent != originalContent)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("  ✓ Replaced Jekyll variables");
+            Console.WriteLine("  ✓ Replaced template variables");
             Console.ResetColor();
             changed = true;
         }
@@ -306,37 +309,65 @@ internal sealed class Program
         };
     }
 
-    private static string ReplaceJekyllVariables(string content, Dictionary<string, object> frontMatter, string? description)
+    private static string ReplaceTemplateVariables(string content, Dictionary<string, object> frontMatter, string? description)
     {
-        // Replace {{ page.description }} with actual description
+        // Step 1: Remove {% raw %} and {% endraw %} tags (used to escape GitHub Actions syntax)
+        content = Regex.Replace(content, @"\{%\s*(?:raw|endraw)\s*%\}", string.Empty);
+
+        // Step 2: Process {{ "/path" | relative_url }} filter → /path
+        content = Regex.Replace(content, @"\{\{\s*""([^""]+)""\s*\|\s*relative_url\s*\}\}", "$1");
+
+        // Step 3: Expand page.variable inside tags: {% youtube page.youtube_id %} → {% youtube VIDEO_ID %}
+        content = Regex.Replace(content, @"(\{%\s*\w+\s+)page\.(\w+)(\s*%\})", match =>
+        {
+            var variableName = match.Groups[2].Value;
+            if (frontMatter.TryGetValue(variableName, out var value))
+            {
+                var stringValue = ConvertToString(value);
+                return $"{match.Groups[1].Value}{stringValue}{match.Groups[3].Value}";
+            }
+
+            // Variable not found - log warning but keep original
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"  ⚠ Warning: Variable 'page.{variableName}' not found in frontmatter (inside tag)");
+            Console.ResetColor();
+            return match.Value;
+        });
+
+        // Step 4: Replace {{ page.description }} with actual description (if available)
         if (!string.IsNullOrEmpty(description))
         {
             content = Regex.Replace(content, @"\{\{\s*page\.description\s*\}\}", description);
         }
 
-        // Replace {{ "/path" | relative_url }} with /path
-        content = Regex.Replace(content, @"\{\{\s*""([^""]+)""\s*\|\s*relative_url\s*\}\}", "$1");
-
-        // Replace any other {{ page.variable }} with frontmatter values
+        // Step 5: Replace {{ page.variable }} with frontmatter values
         content = Regex.Replace(content, @"\{\{\s*page\.(\w+)\s*\}\}", match =>
         {
             var varName = match.Groups[1].Value;
             if (frontMatter.TryGetValue(varName, out var value))
             {
-                return value switch
-                {
-                    IEnumerable<object> list => string.Join(", ", list.Select(x => x?.ToString() ?? "")),
-                    _ => value?.ToString() ?? match.Value
-                };
+                return ConvertToString(value);
             }
 
+            // Variable not found - log warning but keep original
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"  ⚠ Warning: Variable 'page.{varName}' not found in frontmatter");
+            Console.ResetColor();
             return match.Value;
         });
 
-        // Remove {% raw %} and {% endraw %} tags
-        content = Regex.Replace(content, @"\{%\s*(?:raw|endraw)\s*%\}", "");
-
         return content;
+    }
+
+    private static string ConvertToString(object value)
+    {
+        return value switch
+        {
+            null => string.Empty,
+            string s => s,
+            IEnumerable<object> list => string.Join(", ", list.Select(x => x?.ToString() ?? string.Empty)),
+            _ => value.ToString() ?? string.Empty
+        };
     }
 
     private static string SerializeFrontMatter(Dictionary<string, object> frontMatter)

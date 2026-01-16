@@ -42,7 +42,7 @@ This document provides high-level guidance for content creation. For complete fi
 - After the excerpt and a blank line, provide a summary of the article. This is the main content and it should be a logical followup to the excerpt
 - Never use the standard markdown section separator `---`. Headings automatically get a small underline applied through CSS.
 
-**Content Type Specific Rules:**
+**Specific Rules per Collection:**
 
 - If the file is in the `_videos` directory **never include closing lines like `[Read the entire article here](URL)` for YouTube videos**
 - In all other cases, end the content with a line that looks like this: `[Read the entire article here]([canonical_url]).` Replace `[canonical_url]` with the canonical URL

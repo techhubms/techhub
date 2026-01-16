@@ -1,6 +1,10 @@
 # Filtering System
 
-**⚠️ NOTE**: This document contains implementation details from the Jekyll version and needs major revision to reflect the current .NET/Blazor implementation. Terminology has been updated but code examples may be outdated.
+**⚠️ NOTE**: This document is OUTDATED and describes the Jekyll implementation. The .NET/Blazor implementation uses a different architecture:
+
+- Server-side filtering via API endpoints (not Jekyll/Liquid plugins)
+- Client-side filtering via Blazor components (not JavaScript)
+- See [specs/001-filtering-system/spec.md](../specs/001-filtering-system/spec.md) for current implementation plan.
 
 This document explains how the Tech Hub filtering system works to help users discover content.
 

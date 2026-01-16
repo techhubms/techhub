@@ -1135,8 +1135,8 @@ All user interface components and interactions must be accessible to users with 
 
 - **Definition**: Actual content users consume (articles, videos, announcements, blogs)
 - **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
-- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, categories/sections, tags) and content body
-- **Categories Frontmatter Field**: The `categories` field in frontmatter contains section display names (e.g., "AI", "GitHub Copilot") that determine which sections this content appears in. This field is mapped to `ContentItem.SectionNames` property (lowercase identifiers like "ai", "github-copilot") during parsing.
+- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, sections, tags) and content body
+- **Section Names Frontmatter Field**: The `section_names` field in frontmatter contains section names (e.g., "ai", "gitHub_copilot") that determine which sections this content appears in.
 - **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
 
 ### Content Organization
@@ -1149,7 +1149,7 @@ All user interface components and interactions must be accessible to users with 
 4. Build-time processing prepares all data for client-side consumption
 5. Client-side filtering provides interactive content discovery
 
-**Content Types**:
+**Collections**:
 
 - **News**: Official product updates and announcements
 - **Videos**: Educational and informational video content (may include special subfolders with `alt-collection` frontmatter)

@@ -311,9 +311,9 @@ Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter str
 **Key Features**:
 
 - Generates `section_names` from AI-provided categories (normalized to lowercase identifiers)
-- Removes deprecated Jekyll fields (`categories`, `tags_normalized`, `description`, `excerpt_separator`)
+- Uses .NET frontmatter schema (never includes legacy `categories`, `tags_normalized`, `description`, `excerpt_separator` fields)
 - Uses proper field ordering per [frontmatter-schema.md](../collections/frontmatter-schema.md)
-- Applies markdown formatting repairs (NOT Jekyll repairs - new files already have correct frontmatter)
+- Applies markdown formatting repairs as needed
 - Tracks processed/skipped entries to avoid reprocessing
 
 **Section Name Normalization**:

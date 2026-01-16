@@ -10,10 +10,10 @@ assignees: ''
 
 Please fill out the following information:
 
-**Content Type:** [News / Blog / Video / Community ]
+**Collection:** [News / Blog / Video / Community ]
 **Source URL:** [Paste the URL of the content to process here]
 
-## Explanation for the issuer on the content types
+## Explanation for the issuer on the collection
 
 - **News**: Official announcements and product updates from Microsoft and other technology sources
 - **Blog**: Blogs and technical articles with in-depth analysis or tutorials

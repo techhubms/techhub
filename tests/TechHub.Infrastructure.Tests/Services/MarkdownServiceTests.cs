@@ -300,7 +300,7 @@ public class MarkdownServiceTests
     }
 
     /// <summary>
-    /// Test: Jekyll/Liquid youtube tag format should convert to iframe
+    /// Test: Template youtube tag format should convert to iframe
     /// Why: Migrated content uses {% youtube VIDEO_ID %} syntax
     /// </summary>
     [Theory]
@@ -308,9 +308,9 @@ public class MarkdownServiceTests
     [InlineData("{%youtube abc123%}")]
     [InlineData("{% youtube  abc123  %}")]
     [InlineData("{% YOUTUBE abc123 %}")]
-    public void ProcessYouTubeEmbeds_JekyllTagFormat_ConvertsToIframe(string tag)
+    public void ProcessYouTubeEmbeds_TemplateTagFormat_ConvertsToIframe(string tag)
     {
-        // Act: Process Jekyll youtube tag
+        // Act: Process template youtube tag
         var result = _service.ProcessYouTubeEmbeds(tag);
 
         // Assert: Converted to iframe embed
@@ -384,192 +384,6 @@ public class MarkdownServiceTests
         html.Should().Contain("embed/tutorial123");
         html.Should().Contain("<strong>Key points:</strong>");
         html.Should().Contain("<ul>");
-    }
-
-    #endregion
-
-    #region Jekyll Variable Tests
-
-    /// <summary>
-    /// Test: Jekyll page variables should be replaced with frontmatter values
-    /// Why: Content files may contain {{ page.variable }} syntax from Jekyll
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_PageVariables_ReplacesWithFrontmatter()
-    {
-        // Arrange
-        var content = "Welcome to {{ page.title }}! {{ page.description }}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "title", "My Page" },
-            { "description", "This is a test page." }
-        };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("Welcome to My Page! This is a test page.");
-    }
-
-    /// <summary>
-    /// <summary>
-    /// Test: Variable matching should be case-insensitive
-    /// Why: Frontmatter keys may have different casing than template variables
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_CaseInsensitive_ReplacesCorrectly()
-    {
-        // Arrange
-        var content = "{{ page.YouTubeId }}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "youtubeid", "xyz789" }
-        };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("xyz789");
-    }
-
-    /// <summary>
-    /// Test: Missing variables should throw exception
-    /// Why: Catch content errors early during development
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_MissingVariable_ThrowsException()
-    {
-        // Arrange
-        var content = "Title: {{ page.title }}, Missing: {{ page.missing }}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "title", "Test" }
-        };
-
-        // Act & Assert
-        var act = () => _service.ProcessJekyllVariables(content, frontMatter);
-
-        act.Should().Throw<InvalidOperationException>()
-            .WithMessage("*missing*")
-            .WithMessage("*not found in frontmatter*");
-    }
-
-    /// <summary>
-    /// Test: Variables with extra whitespace should be handled
-    /// Why: Template syntax may have inconsistent spacing
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_WithWhitespace_ReplacesCorrectly()
-    {
-        // Arrange
-        var content = "{{page.title}} and {{  page.description  }}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "title", "Title" },
-            { "description", "Desc" }
-        };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("Title and Desc");
-    }
-
-    /// <summary>
-    /// Test: Null or empty content should be handled gracefully
-    /// Why: Edge case protection
-    /// </summary>
-    [Theory]
-    [InlineData(null)]
-    [InlineData("")]
-    [InlineData("   ")]
-    public void ProcessJekyllVariables_NullOrEmptyContent_ReturnsEmpty(string? content)
-    {
-        // Arrange
-        var frontMatter = new Dictionary<string, object> { { "title", "Test" } };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content!, frontMatter);
-
-        // Assert
-        result.Should().Be(content ?? string.Empty);
-    }
-
-    /// <summary>
-    /// Test: {% raw %} and {% endraw %} tags should be removed
-    /// Why: These Jekyll tags escape GitHub Actions syntax in code samples
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_RawTags_RemovesThem()
-    {
-        // Arrange
-        var content = "Code: {% raw %}${{ secrets.TOKEN }}{% endraw %}";
-        var frontMatter = new Dictionary<string, object>();
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("Code: ${{ secrets.TOKEN }}");
-    }
-
-    /// <summary>
-    /// Test: {{ "/path" | relative_url }} should extract just the path
-    /// Why: Jekyll's relative_url filter is not needed in .NET
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_RelativeUrlFilter_ExtractsPath()
-    {
-        // Arrange
-        var content = """Link: [Video]({{ "/videos/2025-01-01-Test.html" | relative_url }})""";
-        var frontMatter = new Dictionary<string, object>();
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("""Link: [Video](/videos/2025-01-01-Test.html)""");
-    }
-
-    /// <summary>
-    /// Test: Content with no frontmatter should still process raw and relative_url
-    /// Why: Some content files may not have page variables but do have these patterns
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_NullFrontmatter_ProcessesOtherPatterns()
-    {
-        // Arrange
-        var content = """{% raw %}${{ test }}{% endraw %} and {{ "/path" | relative_url }}""";
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, null!);
-
-        // Assert
-        result.Should().Be("""${{ test }} and /path""");
-    }
-
-    /// <summary>
-    /// Test: page.variable inside Jekyll tags should be expanded
-    /// Why: {% youtube page.youtube_id %} should become {% youtube actual_id %}
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_PageVariableInJekyllTag_Expands()
-    {
-        // Arrange
-        var content = "{% youtube page.youtube_id %}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "youtube_id", "dQw4w9WgXcQ" }
-        };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        result.Should().Be("{% youtube dQw4w9WgXcQ %}");
     }
 
     #endregion

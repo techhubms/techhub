@@ -577,20 +577,18 @@ public class ServerSideAnalytics
 - Banner MUST not trap focus
 - Banner settings MUST be accessible via keyboard
 
-## Migration Notes
+## Implementation Notes
 
-**From Jekyll**:
+**Google Analytics 4**:
 
-- Jekyll used `google-analytics.html` include with UA (Universal Analytics)
-- **UPGRADE**: Migrate from UA to GA4
-- **ADDED**: Cookie consent banner (GDPR/CCPA compliance)
-- **ADDED**: Core Web Vitals tracking
-- **ADDED**: Custom event tracking (search, filters, infinite scroll)
-- **ADDED**: Server-side tracking option
-- **ADDED**: IP anonymization and privacy controls
-- Maintain same GA property (migrate UA → GA4 in same property)
+- Use GA4 (Google Analytics 4) not legacy Universal Analytics
+- Implement cookie consent banner for GDPR/CCPA compliance
+- Track Core Web Vitals for performance insights
+- Add custom event tracking (search, filters, infinite scroll interactions)
+- Consider server-side tracking for improved privacy and ad-blocker resistance
+- Enable IP anonymization and privacy controls
 
-**Migration Steps**:
+**Setup Steps**:
 
 1. Create GA4 property in Google Analytics
 2. Update tracking code from UA to GA4

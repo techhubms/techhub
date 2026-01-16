@@ -340,9 +340,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             description = excerpt;
         }
 
-        // Process Jekyll/Liquid variables, YouTube embeds, and render markdown to HTML
-        var processedMarkdown = _markdownService.ProcessJekyllVariables(content, frontMatter);
-        processedMarkdown = _markdownService.ProcessYouTubeEmbeds(processedMarkdown);
+        // Process YouTube embeds and render markdown to HTML
+        var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
 
         // Create temporary ContentItem to get primary section and URL
         var tempItem = new ContentItem

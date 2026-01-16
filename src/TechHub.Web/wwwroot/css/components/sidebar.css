@@ -12,7 +12,7 @@
    All interactive button styles are scoped to .sidebar to ensure they only apply
    within sidebar contexts, preventing style conflicts with main content.
    
-   Used across: Home, Section, SectionContentType, ContentItem pages
+   Used across: Home, Section, Collection, ContentItem pages
    ============================================================================ */
 
 /* ============================================================================
@@ -26,7 +26,7 @@
 }
 
 /* Spacing between sidebar sections */
-.sidebar>*+* {
+.sidebar > * + * {
   margin-top: var(--spacing-4);
 }
 
@@ -348,12 +348,12 @@
 }
 
 /* If there's only one h2 heading, auto-expand it by default */
-.sidebar-toc .toc-list:has(.toc-depth-0:only-child) .toc-depth-0>.toc-sublist {
+.sidebar-toc .toc-list:has(.toc-depth-0:only-child) .toc-depth-0 > .toc-sublist {
   max-height: 2000px;
 }
 
 /* Expanded state only when explicitly set by JavaScript */
-.sidebar-toc .toc-item.expanded>.toc-sublist {
+.sidebar-toc .toc-item.expanded > .toc-sublist {
   max-height: 2000px;
 }
 
@@ -386,16 +386,16 @@
 }
 
 /* Depth-based styling for visual hierarchy */
-.sidebar-toc .toc-depth-0>.toc-link {
+.sidebar-toc .toc-depth-0 > .toc-link {
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
 }
 
-.sidebar-toc .toc-depth-1>.toc-link {
+.sidebar-toc .toc-depth-1 > .toc-link {
   font-size: var(--font-size-sm);
 }
 
-.sidebar-toc .toc-depth-2>.toc-link {
+.sidebar-toc .toc-depth-2 > .toc-link {
   font-size: var(--font-size-xs);
 }
 

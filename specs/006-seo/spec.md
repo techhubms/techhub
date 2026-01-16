@@ -20,7 +20,6 @@ The SEO system ensures optimal search engine discoverability through server-side
 **FR-8**: The system MUST set canonical URLs for all pages  
 **FR-9**: The system MUST generate dynamic og:image for content items  
 **FR-10**: The system MUST implement breadcrumb structured data  
-**FR-11**: The system MUST support URL redirects from old Jekyll structure  
 
 ### Non-Functional Requirements
 
@@ -93,23 +92,6 @@ The SEO system ensures optimal search engine discoverability through server-side
 5. System updates `robots.txt` with sitemap reference
 
 **Postcondition**: Sitemap available for search engines
-
-### UC-4: Handle URL Redirect
-
-**Actor**: User  
-**Precondition**: Old Jekyll URL exists  
-**Trigger**: User visits old URL  
-
-**Flow**:
-
-1. User visits old URL: `/ai/news/copilot-update.html`
-2. System checks redirect map
-3. System finds new URL: `/2025-01-15-copilot-update.html`
-4. System returns 301 Moved Permanently redirect
-5. Browser follows redirect to new URL
-6. User sees content at new URL
-
-**Postcondition**: User reaches content, SEO link equity preserved
 
 ## Structured Data (JSON-LD)
 
@@ -338,49 +320,6 @@ Sitemap: https://tech.hub.ms/sitemap.xml
 - Use service like Cloudinary or og-image.vercel.app
 - Pass title, category as URL parameters
 - Service generates and caches image
-
-## URL Redirect Strategy
-
-### Redirect Mapping
-
-**From Jekyll URLs to Modern URLs**:
-
-| Old Jekyll URL | New URL | Status |
-| ---------------- | --------- | -------- |
-| `/ai/news/post-name.html` | `/2025-01-15-post-name.html` | 301 |
-| `/github-copilot/videos/video-name.html` | `/2025-01-10-video-name.html` | 301 |
-| `/azure/feed.xml` | `/azure/feed.xml` | 200 (same) |
-
-### Implementation
-
-**Middleware Approach**:
-
-```csharp
-public class UrlRedirectMiddleware
-{
-    private readonly RequestDelegate _next;
-    private readonly IReadOnlyDictionary<string, string> _redirects;
-    
-    public UrlRedirectMiddleware(RequestDelegate next, IConfiguration config)
-    {
-        _next = next;
-        _redirects = LoadRedirects(config);
-    }
-    
-    public async Task InvokeAsync(HttpContext context)
-    {
-        var path = context.Request.Path.Value;
-        
-        if (_redirects.TryGetValue(path, out var newPath))
-        {
-            context.Response.Redirect(newPath, permanent: true);
-            return;
-        }
-        
-        await _next(context);
-    }
-}
-```
 
 ## Blazor Components
 
@@ -611,10 +550,9 @@ public class UrlRedirectMiddleware
 **AC-1**: Given any content page, when viewed by search bot, then all meta tags are present  
 **AC-2**: Given any content page, when tested with Google Rich Results, then structured data is valid  
 **AC-3**: Given sitemap URL, when requested, then XML contains all published pages  
-**AC-4**: Given old Jekyll URL, when visited, then 301 redirect to new URL  
-**AC-5**: Given any page, when run through Lighthouse, then SEO score is > 95  
-**AC-6**: Given content URL, when shared on Twitter, then rich preview appears  
-**AC-7**: Given any content, when og:image requested, then image loads within 2 seconds  
+**AC-4**: Given any page, when run through Lighthouse, then SEO score is > 95  
+**AC-5**: Given content URL, when shared on Twitter, then rich preview appears  
+**AC-6**: Given any content, when og:image requested, then image loads within 2 seconds  
 
 ## Performance Optimization
 
@@ -639,25 +577,22 @@ public class UrlRedirectMiddleware
 - Breadcrumbs aid navigation for all users
 - Canonical URLs prevent duplicate content confusion
 
-## Migration Notes
+## Implementation Notes
 
-**From Jekyll**:
+**SEO Foundation**:
 
-- Jekyll used `jekyll-seo-tag` plugin for basic meta tags
-- **ADDED**: Comprehensive JSON-LD structured data
-- **ADDED**: Dynamic og:image generation
-- **ADDED**: Breadcrumb structured data
-- **ADDED**: URL redirect middleware for old Jekyll URLs
-- **ADDED**: Enhanced Open Graph and Twitter Card support
-- Maintain same meta description format (160 char limit)
-- Maintain same timezone handling (Europe/Brussels)
+- Implement comprehensive JSON-LD structured data for all content types
+- Generate dynamic og:image for social sharing
+- Add breadcrumb structured data for navigation
+- Include enhanced Open Graph and Twitter Card support
+- Enforce meta description format (160 char limit)
+- Use Europe/Brussels timezone for all date handling
 
 **URL Strategy**:
 
-- URLs CAN be modernized (redirects acceptable)
-- Set up 301 redirects for SEO link equity preservation
+- Use clean, semantic URLs (e.g., `/ai/content-title`)
 - Monitor Google Search Console for crawl errors
-- Update internal links to use new URL structure
+- Ensure internal links use consistent URL structure
 
 ## Open Questions
 

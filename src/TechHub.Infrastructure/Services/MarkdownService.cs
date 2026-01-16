@@ -172,7 +172,7 @@ public class MarkdownService : IMarkdownService
     /// Process YouTube embeds in markdown
     /// Converts YouTube markers to iframe embeds. Supports multiple formats:
     /// - [YouTube: VIDEO_ID] - Custom markdown format
-    /// - {% youtube VIDEO_ID %} - Jekyll/Liquid tag format
+    /// - {% youtube VIDEO_ID %} - Template tag format
     /// </summary>
     /// <param name="html">HTML content that may contain YouTube embed markers</param>
     /// <returns>HTML with YouTube embeds replaced with iframe HTML</returns>
@@ -205,118 +205,16 @@ public class MarkdownService : IMarkdownService
             System.Text.RegularExpressions.RegexOptions.IgnoreCase
         );
 
-        // Pattern 2: {% youtube VIDEO_ID %} - Jekyll/Liquid tag format
-        var jekyllPattern = @"\{%\s*youtube\s+([a-zA-Z0-9_-]+)\s*%\}";
+        // Pattern 2: {% youtube VIDEO_ID %} - Template tag format
+        var templatePattern = @"\{%\s*youtube\s+([a-zA-Z0-9_-]+)\s*%\}";
         html = System.Text.RegularExpressions.Regex.Replace(
             html,
-            jekyllPattern,
+            templatePattern,
             match => CreateYouTubeEmbed(match.Groups[1].Value),
             System.Text.RegularExpressions.RegexOptions.IgnoreCase
         );
 
         return html;
-    }
-
-    /// <summary>
-    /// Process Jekyll/Liquid template variables like {{ page.variable }}
-    /// Replaces them with values from frontmatter
-    /// </summary>
-    /// <param name="content">Markdown content with Jekyll variables</param>
-    /// <param name="frontMatter">Frontmatter dictionary with values</param>
-    /// <returns>Content with variables replaced</returns>
-    public string ProcessJekyllVariables(string content, Dictionary<string, object> frontMatter)
-    {
-        if (string.IsNullOrWhiteSpace(content))
-        {
-            return content ?? string.Empty;
-        }
-
-        // Step 1: Remove {% raw %} and {% endraw %} tags (used to escape GitHub Actions syntax)
-        content = System.Text.RegularExpressions.Regex.Replace(
-            content,
-            @"\{%\s*(?:raw|endraw)\s*%\}",
-            string.Empty,
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase
-        );
-
-        // Step 2: Process relative_url filter: {{ "/path" | relative_url }} -> /path
-        content = System.Text.RegularExpressions.Regex.Replace(
-            content,
-            @"\{\{\s*""([^""]+)""\s*\|\s*relative_url\s*\}\}",
-            match => match.Groups[1].Value,
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase
-        );
-
-        // Step 3: Process page variables if frontmatter is provided
-        if (frontMatter == null || frontMatter.Count == 0)
-        {
-            return content;
-        }
-
-        // Step 4: Expand page.variable inside Jekyll tags: {% youtube page.youtube_id %} -> {% youtube actual_id %}
-        content = System.Text.RegularExpressions.Regex.Replace(
-            content,
-            @"(\{%\s*\w+\s+)page\.(\w+)(\s*%\})",
-            match =>
-            {
-                var variableName = match.Groups[2].Value;
-                var value = LookupFrontMatterValue(variableName, frontMatter);
-                return $"{match.Groups[1].Value}{value}{match.Groups[3].Value}";
-            },
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase
-        );
-
-        // Step 5: Match patterns like {{ page.variable }} or {{ page.variable_name }}
-        // ONLY match page.variable pattern (not standalone {{ variable }})
-        var pattern = @"\{\{\s*page\.(\w+)\s*\}\}";
-
-        return System.Text.RegularExpressions.Regex.Replace(
-            content,
-            pattern,
-            match => LookupFrontMatterValue(match.Groups[1].Value, frontMatter),
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase
-        );
-    }
-
-    /// <summary>
-    /// Convert frontmatter value to string representation
-    /// </summary>
-    private static string ConvertToString(object value)
-    {
-        return value switch
-        {
-            null => string.Empty,
-            string s => s,
-            IEnumerable<object> list => string.Join(", ", list),
-            _ => value.ToString() ?? string.Empty
-        };
-    }
-
-    /// <summary>
-    /// Look up a variable name in frontmatter (case-insensitive)
-    /// Throws if not found to catch content errors early
-    /// </summary>
-    private static string LookupFrontMatterValue(string variableName, Dictionary<string, object> frontMatter)
-    {
-        // Try exact match first
-        if (frontMatter.TryGetValue(variableName, out var value))
-        {
-            return ConvertToString(value);
-        }
-
-        // Try case-insensitive match
-        var key = frontMatter.Keys.FirstOrDefault(k =>
-            string.Equals(k, variableName, StringComparison.OrdinalIgnoreCase));
-
-        if (key != null && frontMatter.TryGetValue(key, out var caseInsensitiveValue))
-        {
-            return ConvertToString(caseInsensitiveValue);
-        }
-
-        // Variable not found - throw exception to catch content errors early
-        throw new InvalidOperationException(
-            $"Jekyll variable 'page.{variableName}' not found in frontmatter. " +
-            $"Available keys: [{string.Join(", ", frontMatter.Keys)}]");
     }
 
     /// <summary>

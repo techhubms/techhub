@@ -88,41 +88,38 @@ Define GitHub Actions workflows for continuous integration (build, test, lint) a
 
 ⚠️ **This spec is numbered 026 but should be implemented in Phase 2-3**, as soon as testing specs are in place. CI/CD enables automated testing on every commit, critical for quality.
 
-## Migration Cutover Plan
+## Deployment Strategy
 
-### Pre-Migration Checklist
+### Staging Environment
 
-- [ ] All specs completed and reviewed
+**Pre-Deployment Checklist**:
+
+- [ ] All tests passing (unit, integration, component, E2E)
 - [ ] Staging environment deployed and tested
 - [ ] Performance benchmarks met (Lighthouse > 95)
-- [ ] UAT completed successfully
-- [ ] Backup of Jekyll site created
-- [ ] DNS records prepared (not yet updated)
+- [ ] User acceptance testing completed
 - [ ] Monitoring and alerts configured
 
 ### Deployment Window
 
 **Preferred Schedule**: Saturday 2:00 AM - 4:00 AM CET (low traffic period)
 
-**Content Freeze**: 2 hours before deployment start (Saturday 12:00 AM - 4:00 AM CET)
+**Content Freeze**: 2 hours before deployment (for major releases)
 
-- No new content published during this window
-- Jekyll site remains accessible (read-only)
+- Announce planned maintenance window
+- Deploy to staging for final validation
+- Monitor for critical issues
 
-**Maximum Downtime**: 1 hour (acceptable for hobby project)
+**Maximum Downtime**: 1 hour (acceptable for content site)
 
 ### Deployment Steps
 
-1. **T-2h (12:00 AM)**: Announce content freeze, final Jekyll backup
-2. **T-0h (2:00 AM)**: Begin deployment
-   - Deploy .NET containers to Azure Container Apps
-   - Verify health checks pass
-   - Test critical paths (home, sections, content rendering)
-3. **T+15m (2:15 AM)**: Update DNS records to point to Container Apps
-4. **T+30m (2:30 AM)**: Verify DNS propagation, test site from multiple locations
-5. **T+45m (2:45 AM)**: Monitor for errors, validate analytics tracking
-6. **T+1h (3:00 AM)**: Deployment complete, announce site live
-7. **T+1h (3:00 AM - 4:00 AM)**: Extended monitoring period
+1. **Pre-Deployment**: Run automated tests, build Docker images, push to registry
+2. **Deployment**: Deploy containers to Azure Container Apps, verify health checks
+3. **Validation**: Test critical paths (home, sections, content rendering, API endpoints)
+4. **DNS Update**: Update DNS to point to new deployment
+5. **Monitoring**: Monitor error rates, performance, analytics tracking
+6. **Completion**: Announce deployment complete, continue extended monitoring
 
 ### Rollback Plan
 
@@ -134,40 +131,37 @@ Define GitHub Actions workflows for continuous integration (build, test, lint) a
 
 **Rollback Process**:
 
-1. Revert DNS records to Jekyll hosting
-2. Verify Jekyll site accessible
-3. Troubleshoot .NET deployment offline
+1. Revert to previous container image version
+2. Verify site accessible and functioning
+3. Troubleshoot issues offline
 4. Schedule retry deployment
 
-**Jekyll Backup Retention**: 30 days post-migration
+**Deployment Retention**: Keep last 5 successful deployments for quick rollback
 
-- Keep Jekyll site deployable as fallback
-- Decommission Jekyll infrastructure after 30 days of stable .NET operation
-
-### Post-Migration
+### Post-Deployment Monitoring
 
 **First 24 Hours**:
 
 - Active monitoring of error rates and performance
-- Quick response to any critical issues (best effort, no SLA)
+- Quick response to critical issues
 
 **First 7 Days**:
 
 - Daily review of Application Insights metrics
-- Gather user feedback
+- Monitor Core Web Vitals and user experience
 - Address high-priority bugs
 
 **First 30 Days**:
 
 - Weekly performance reviews
-- Content parity validation
-- Plan Jekyll decommissioning
+- User feedback analysis
+- Continuous improvement planning
 
 ---
 
 ## Status
 
-📝 **Placeholder** - Needs complete GitHub Actions workflow YAML files, Azure authentication setup, environment configurations, and detailed rollback automation.
+📝 **Placeholder** - Needs complete GitHub Actions workflow YAML files, Azure authentication setup, environment configurations, and rollback automation.
 
 ## References
 
