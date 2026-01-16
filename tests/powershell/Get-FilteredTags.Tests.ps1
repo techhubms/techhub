@@ -68,14 +68,12 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "news"
         }
         
-        It "Should return both tags and tags_normalized arrays" {
+        It "Should return filtered tags array" {
             $result = Get-FilteredTags -Tags @("test", "another") -Categories @("AI") -Collection "news"
             
-            $result.ContainsKey("tags") | Should -Be $true
-            $result.ContainsKey("tags_normalized") | Should -Be $true
-            # Should be arrays when multiple items
-            $result.tags.Count | Should -BeGreaterThan 1
-            $result.tags_normalized.Count | Should -BeGreaterThan 1
+            ($result -is [Array]) | Should -Be $true
+            # Should contain multiple items
+            $resultlized.Count | Should -BeGreaterThan 1
         }
     }
     
@@ -140,22 +138,22 @@ Describe "Get-FilteredTags" {
     }
     
     Context "Tag Normalization" {
-        It "Should create normalized versions of tags" {
+        It "Should process tags from categories and collection" {
             $result = Get-FilteredTags -Tags @("Azure AI", "GitHub Copilot") -Categories @("AI", "GitHub Copilot") -Collection "news"
             
-            $result.tags_normalized | Should -Contain "azure ai"
-            $result.tags_normalized | Should -Contain "github copilot"
-            $result.tags_normalized | Should -Contain "ai"
-            $result.tags_normalized | Should -Contain "news"
+            # Should contain the passed categories and collection
+            $result | Should -Contain "AI"
+            $result | Should -Contain "GitHub Copilot"
+            $result | Should -Contain "News"
         }
         
         It "Should normalize complex tags correctly" {
             $result = Get-FilteredTags -Tags @("Visual Studio Code Extension", "Infrastructure as Code") -Categories @("Development") -Collection "blogs"
             
-            $result.tags_normalized | Should -Contain "visual studio code extension"
-            $result.tags_normalized | Should -Contain "iac"
-            $result.tags_normalized | Should -Contain "development"
-            $result.tags_normalized | Should -Contain "blogs"
+            # IaC mapping should be applied
+            $result | Should -Contain "IaC"
+            $result | Should -Contain "Development"
+            $result | Should -Contain "Bin "blogs"
         }
     }
     
@@ -189,9 +187,8 @@ Describe "Get-FilteredTags" {
         It "Should handle duplicate tags" {
             $result = Get-FilteredTags -Tags @("AI", "ai", "AI") -Categories @("AI") -Collection "news"
             
-            # Should deduplicate tags (production code preserves duplicates but normalizes case)
-            $result.tags | Should -Not -BeNullOrEmpty
-            $result.tags_normalized | Should -Not -BeNullOrEmpty
+            # Should return filtered tags
+            $resultlized | Should -Not -BeNullOrEmpty
         }
     }
     

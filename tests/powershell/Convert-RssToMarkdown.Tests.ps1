@@ -149,29 +149,20 @@ Describe "Convert-RssToMarkdown" {
 
         # Create template files once in source location
         $genericTemplate = @'
----
-title: {{TITLE}}
-date: {{DATE}}
-section_names: {{SECTION_NAMES}}
-tags: {{TAGS}}
-author: {{AUTHOR}}
-canonical_url: {{CANONICAL_URL}}
----
+{{FRONTMATTER}}
+{{EXCERPT}}<!--excerpt_end-->
 
 {{CONTENT}}
+
+This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANONICAL_URL}})
 '@
         Set-Content -Path (Join-Path $script:TemplateSourcePath "template-generic.md") -Value $genericTemplate
         
         $videoTemplate = @'
----
-title: {{TITLE}}
-date: {{DATE}}
-section_names: {{SECTION_NAMES}}
-tags: {{TAGS}}
-author: {{AUTHOR}}
-canonical_url: {{CANONICAL_URL}}
-youtube_id: {{YOUTUBE_ID}}
----
+{{FRONTMATTER}}
+{{EXCERPT}}<!--excerpt_end-->
+
+{% youtube {{YOUTUBE_ID}} %}
 
 {{CONTENT}}
 '@

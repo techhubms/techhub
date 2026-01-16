@@ -288,20 +288,37 @@ function Convert-RssToMarkdown {
             $filename = "$fileNamePubDate-$fileNameTitle.md"
             $permalink = "$fileNamePubDate-$fileNameTitle.html"
 
+            # Build frontmatter hashtable
+            $frontMatter = @{
+                layout        = "post"
+                title         = $response.title
+                author        = $item.Author
+                canonical_url = $item.Link
+                viewing_mode  = if ($collection_value -eq "videos") { "internal" } else { "external" }
+                feed_name     = $item.FeedName
+                feed_url      = $item.FeedUrl
+                date          = $dateFormatted
+                permalink     = $permalink
+                tags          = @($tags)
+                section_names = @($section_names)
+            }
+            
+            # Add youtube_id for video content if available
+            if ($collection_value -eq "videos" -and $youtubeId) {
+                $frontMatter.youtube_id = $youtubeId
+            }
+            
+            # Convert frontmatter to YAML using YamlDotNet (same library as ContentFixer)
+            $yamlFrontMatter = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
+
+            # Load template and replace placeholders
             $markdownContent = Get-Content $templatePath -Raw
-            $markdownContent = $markdownContent -replace '{{TITLE}}', (Format-FrontMatterValue -Value $response.title)
-            $markdownContent = $markdownContent -replace '{{AUTHOR}}', (Format-FrontMatterValue -Value $item.Author)
-            $markdownContent = $markdownContent -replace '{{TAGS}}', (Format-FrontMatterValue -Value @($tags))
-            $markdownContent = $markdownContent -replace '{{SECTION_NAMES}}', (Format-FrontMatterValue -Value @($section_names))
-            $markdownContent = $markdownContent -replace '{{FEEDNAME}}', (Format-FrontMatterValue -Value $item.FeedName)
-            $markdownContent = $markdownContent -replace '{{PERMALINK}}', (Format-FrontMatterValue -Value $permalink)
-            $markdownContent = $markdownContent -replace '{{CANONICAL_URL_FORMATTED}}', (Format-FrontMatterValue -Value $item.Link)
+            $markdownContent = $markdownContent -replace '{{FRONTMATTER}}', $yamlFrontMatter
             $markdownContent = $markdownContent -replace '{{CANONICAL_URL}}', $item.Link
-            $markdownContent = $markdownContent -replace '{{FEEDURL}}', $item.FeedUrl
+            $markdownContent = $markdownContent -replace '{{FEEDNAME}}', $item.FeedName
             $markdownContent = $markdownContent -replace '{{CONTENT}}', $response.content
             $markdownContent = $markdownContent -replace '{{EXCERPT}}', $response.excerpt
             $markdownContent = $markdownContent -replace '{{YOUTUBE_ID}}', $youtubeId
-            $markdownContent = $markdownContent -replace '{{DATE}}', $dateFormatted
 
             # Create the file
             $filePath = Join-Path $item.OutputDir $filename
