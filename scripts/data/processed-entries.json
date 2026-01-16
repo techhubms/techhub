@@ -23572,5 +23572,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784",
     "reason": "Succesfully added: Assigned 'Azure' category because the content is focused on technical, methodological, and systemic efforts to assess and reduce the embodied carbon of Azure datacenter hardware (Azure inclusion rules 1, 4, 5, and 6). It discusses technical tools (CHEM), supply chain solutions, and infrastructure optimization for Azure specifically. No other category applies: there's no DevOps, Coding, Security, ML, or direct AI component described—focus is on lifecycle assessment and Azure hardware infrastructure. None of the generic exclusion rules apply; the post is technical, English-language, and not promotional, biographical, or business-only in nature.",
     "timestamp": "2026-01-15 23:05:13 +00:00"
+  },
+  {
+    "timestamp": "2026-01-16 01:32:06 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is centrally focused on deploying and optimizing PostgreSQL using Azure services (Azure NetApp Files, Azure VMs). 'DevOps' category is included since the main value is automation of cloud infrastructure and database provisioning via Infrastructure as Code (Terraform, ARM templates, PowerShell) as per DevOps rule 5 and 6. Did not assign 'Coding': while code is used, the focus is on infrastructure automation and configuration, not application or library coding as per Coding inclusion rules. Did not assign 'ML': while AI/ML workloads are mentioned as use cases, there is no substantive ML engineering or analytics implementation. Did not assign 'Security': while security best practices are part of the solution, the post does not provide unique or in-depth coverage of Microsoft security platforms or advanced security techniques but rather covers standard deployment security handling."
   }
 ]
