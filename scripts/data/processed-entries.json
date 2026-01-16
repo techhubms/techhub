@@ -23614,5 +23614,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-file-sync-azure-arc-integration-additional-regions-and/ba-p/4486050",
     "timestamp": "2026-01-16 19:05:36 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-16 20:03:41 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' due to strong focus on Azure DevOps repository management, workflows, policies, and team collaboration (DevOps rules 1-5, 7, 9). Included 'Azure' as the updates specifically concern Azure Repos, a core Azure service (Azure rule 1). Included 'Coding' because the content addresses code review practices, pull requests, branching structures, and repository tooling relevant to development workflows (Coding rules 4-5). No AI or ML features are present. Security is not a substantial focus here.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/whats-new-with-azure-repos/"
   }
 ]
