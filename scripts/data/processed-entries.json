@@ -1116,12 +1116,6 @@
     "reason": "unknown"
   },
   {
-    "timestamp": "2025-08-07 19:21:41 +00:00",
-    "canonical_url": "https://andrewlock.net/creating-provenance-attestations-for-nuget-packages-in-github-actions/",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
     "timestamp": "2025-08-07 19:22:36 +00:00",
     "canonical_url": "https://andrewlock.net/creating-sbom-attestations-in-github-actions/",
     "collection": "blogs",
@@ -1488,18 +1482,6 @@
     "reason": "unknown"
   },
   {
-    "timestamp": "2025-08-07 20:25:26 +00:00",
-    "canonical_url": "https://jessehouwing.net/create-github-issue-hierarchy-using-the-api/",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-07 20:26:11 +00:00",
-    "canonical_url": "https://jessehouwing.net/github-actions-scan-all-workflow-artifacts-for-leaked-secrets/",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
     "timestamp": "2025-08-07 20:26:41 +00:00",
     "canonical_url": "https://jessehouwing.net/github-copilot-free-use-inline-completions-for-more-answers/",
     "collection": "blogs",
@@ -1508,12 +1490,6 @@
   {
     "timestamp": "2025-08-07 20:27:07 +00:00",
     "canonical_url": "https://jessehouwing.net/github-copilot-picking-the-right-model/",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-07 20:27:42 +00:00",
-    "canonical_url": "https://jessehouwing.net/githubs-new-billing-assigning-cost-centers-in-bulk/",
     "collection": "blogs",
     "reason": "unknown"
   },
@@ -1722,12 +1698,6 @@
     "reason": "unknown"
   },
   {
-    "timestamp": "2025-08-07 20:55:31 +00:00",
-    "canonical_url": "https://r-vm.com/limited-to-300-free-premium-requests-by-your-org-heres-an-expensive-workaround.html",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
     "timestamp": "2025-08-07 20:56:12 +00:00",
     "canonical_url": "https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/",
     "collection": "blogs",
@@ -1806,20 +1776,8 @@
     "reason": "unknown"
   },
   {
-    "timestamp": "2025-08-07 21:06:23 +00:00",
-    "canonical_url": "https://weblog.west-wind.com/posts/2025/Jan/19/Comparing-Raw-ASPNET-Request-Throughput-across-Versions-80-to-90-Edition",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
     "timestamp": "2025-08-07 21:07:18 +00:00",
     "canonical_url": "https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-07 21:08:19 +00:00",
-    "canonical_url": "https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing",
     "collection": "blogs",
     "reason": "unknown"
   },
@@ -1898,12 +1856,6 @@
   {
     "timestamp": "2025-08-07 21:18:21 +00:00",
     "canonical_url": "https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-07 21:19:05 +00:00",
-    "canonical_url": "https://devopsjournal.io/blog/2025/06/17/Copilot-premium-requests",
     "collection": "blogs",
     "reason": "unknown"
   },
@@ -2296,12 +2248,6 @@
     "canonical_url": "https://devopsjournal.io/blog/2024/09/29/GitHub-Models-API",
     "collection": "blogs",
     "reason": "Succesfully added: Included 'AI' because the content is about using the Azure Inference AI SDK for AI inference, specifically with Azure OpenAI (AI rule 1). Included 'Azure' because the main technical content revolves around connecting to Azure services (Azure rules 1 and 4). Included 'Coding' because the post shows Python code for integrating with the SDK and managing authentication (Coding rules 1 and 2). Did not assign DevOps, Data, Security, or GitHub Copilot because the content does not cover CI/CD, data engineering/AI model creation from scratch, security architecture, or Copilot features. The content is entirely focused on coding against Microsoft AI endpoints in the Azure ecosystem."
-  },
-  {
-    "timestamp": "2025-08-08 10:27:54 +00:00",
-    "canonical_url": "https://www.hanselman.com/blog/webcam-randomly-pausing-in-obs-discord-and-websites-lsvcam-and-tiktok-studio",
-    "collection": "blogs",
-    "reason": "Succesfully added: Assigned 'Coding' category because the post deeply explores technical troubleshooting on Windows, including device enumeration using PowerShell scripts and JavaScript, understanding system internals, and registry modifications (Coding rules 4 and 5). There is no substantial focus on Azure, AI, Security, Data, DevOps, or GitHub-specific tooling. Although apps such as OBS and browser APIs are involved, the core is Windows device management and coding practices for device enumeration and debugging. No generic exclusion rules apply: content is technical, not biographical, not a sales pitch, not negative, not a job post, and is entirely in English."
   },
   {
     "timestamp": "2025-08-08 10:28:46 +00:00",
@@ -3980,12 +3926,6 @@
   {
     "timestamp": "2025-08-08 19:45:36 +00:00",
     "canonical_url": "https://www.reddit.com/r/GithubCopilot/comments/1mfu87w/agent_cant_memorize_the_full_session/",
-    "collection": "community",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-08 19:45:36 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-a-flexible-predictable-billing-model-for-azure-sre/ba-p/4427270",
     "collection": "community",
     "reason": "unknown"
   },
@@ -6499,12 +6439,6 @@
   },
   {
     "timestamp": "2025-08-15 15:47:39 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117",
-    "collection": "community",
-    "reason": "unknown"
-  },
-  {
-    "timestamp": "2025-08-15 15:47:39 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652",
     "collection": "community",
     "reason": "unknown"
@@ -7272,12 +7206,6 @@
     "reason": "Succesfully added: Assigned AI category because the entire article is about deploying and using GPT-5 via Azure AI Foundry, focusing on an advanced AI feature (AI rules 1 and 4). Assigned Azure category because the content centers on Azure OpenAI and Azure AI Foundry platforms (Azure rule 1). Assigned Coding because the feature empowers direct code execution (Python, SQL) and development automation (Coding rule 4). No other categories were relevant. The categorization is supported by mentions of tool calling, Python, SQL, API authentication, and orchestration chains, clearly targeting technical devs."
   },
   {
-    "timestamp": "2025-08-22 18:17:39 +00:00",
-    "canonical_url": "https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise",
-    "collection": "news",
-    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content focuses on policy management for GitHub Copilot (developer tool), which falls under AI-driven coding assistance (AI rule 2, GitHub Copilot rules 1 and 5). The post is an official update—not a sales pitch, negative post, or non-technical business strategy—so none of the generic exclusion rules apply."
-  },
-  {
     "timestamp": "2025-08-22 20:14:27 +00:00",
     "canonical_url": "https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications",
     "collection": "blogs",
@@ -7942,12 +7870,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567",
     "collection": "community",
     "reason": "Succesfully added: Applied AI category because content is wholly focused on Azure AI (AI inclusion rule 1: Microsoft AI Products/Services). Included Azure category because this is built specifically for and on Azure (Azure inclusion rule 1: Any Azure Service/Technology). Did not assign Coding or ML: the article is an announcement about platform/API capability (not code-level or ML/data science engineering). Did not assign Security, DevOps, or GitHub Copilot as none of those topics are central. No generic or specific exclusions apply (content is technical, in English, and developer-focused)."
-  },
-  {
-    "timestamp": "2025-08-27 19:14:00 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557",
-    "collection": "community",
-    "reason": "Succesfully added: Assigned 'Azure' category as the content centers on deploying Azure Logic Apps and references Azure-specific configuration (Azure rule 1, 4, 5, 6). 'DevOps' is included since the article covers infrastructure setup (Kubernetes cluster, Azure Arc, Docker, Helm, PowerShell, infrastructure provisioning) aligning with DevOps rules for infrastructure, CI/CD, cluster management, and developer workflow (DevOps rules 1, 2, 6, 9). 'Coding' is included because processes include PowerShell scripting, Kubernetes CLI, and automation tasks used for technical implementation (Coding rule 2, 5). Not assigning 'AI', 'GitHub Copilot', 'ML', or 'Security' as there's no substantive AI, Copilot, ML/data science, or security solution focus. The content exceeds community length thresholds and maintains a technical, implementation-oriented perspective."
   },
   {
     "timestamp": "2025-08-27 22:11:40 +00:00",
@@ -9834,12 +9756,6 @@
     "reason": "Succesfully added: Assigned the 'DevOps' category because the entire content focuses on improvements and new capabilities in GitHub Actions, a core DevOps automation tool (DevOps rules 2, 3, 5). None of the generic exclusion rules applied: the announcement is technical, not biographical or sales-oriented, and centers on configuration and CI/CD process improvements. No coding, Azure, AI, ML, Security, or GitHub Copilot categories are appropriate, as the content does not cover programming practices, Microsoft-specific cloud services, AI/ML, or security implementation details, nor is it about Copilot features."
   },
   {
-    "timestamp": "2025-09-18 21:13:10 +00:00",
-    "canonical_url": "https://github.blog/changelog/2025-09-17-upcoming-removal-of-copilot-premium-request-0-budgets-for-enterprise-and-team-accounts",
-    "collection": "news",
-    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content specifically addresses Copilot premium request budgets and management in enterprise and team settings (GitHub Copilot rule 1, 3, 5). Assigned 'AI' because Copilot is an AI-based developer tool (AI rule 2 and 1). Other categories such as Coding, DevOps, Azure, ML, and Security do not apply because the content is about administrative and billing changes, not technical implementation or coding practices. The content does not trigger any generic exclusion rules as it is not biographical, question-only, sales, negative, too short, non-English, job-focused, business/strategy without technical elements, or focused on non-development Microsoft products."
-  },
-  {
     "timestamp": "2025-09-18 21:13:29 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview",
     "collection": "news",
@@ -11028,12 +10944,6 @@
     "reason": "Succesfully added: The content is a comprehensive guide from a Microsoft source about how organizations can use Azure Essentials and a set of Microsoft frameworks, cloud governance resources, and AI tools to maximize cost efficiency in their cloud and AI investments. I assigned the 'Azure' category because the content is focused on Azure frameworks, tools, and adoption best practices (Azure inclusion rules 1, 2, 4, 5). I assigned the 'AI' category because the content refers to Azure AI Foundry, AI workloads, Copilot in Azure, and frameworks like AI Ops and the AI Center of Excellence, making AI usage and strategy a central theme (AI inclusion rules 1, 3, and 5). No other categories like 'DevOps', 'Coding', 'ML', or 'Security' are central or sufficiently detailed for assignment. The post is not a sales pitch, not biographical, has ample technical substance, and is in English, so it passes all generic exclusion rules."
   },
   {
-    "timestamp": "2025-09-29 18:07:36 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba-p/4457932",
-    "collection": "community",
-    "reason": "Succesfully added: Assigned the Azure category because the solution focuses on deploying and configuring SSSD specifically on Azure Linux 3.0 HPC clusters (Azure inclusion rule 1, 4, and 5). Assigned the Security category because the content centers on identity management and authentication using Microsoft Entra ID (Security inclusion rule 1 and 3), and also covers related configuration for secure access and proper permissions. Did not assign ML, AI, Coding, or DevOps: the main thrust is not about machine learning/data science, direct software development, or CI/CD/dev tooling, but rather secure authentication and centralized identity for HPC environments. There are no generic exclusion rules triggered: the content is technical, focused, implementation-rich, and Microsoft technologies are central throughout."
-  },
-  {
     "timestamp": "2025-09-29 19:04:09 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/",
     "collection": "news",
@@ -11110,12 +11020,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075",
     "collection": "community",
     "reason": "Succesfully added: Included the 'Azure' category because the tutorial is centered on Azure Storage Actions and managing Azure Blob/Data Lake Storage (Azure rule 1, 4). It demonstrates how to use the Exclude Prefix feature to configure automation within Azure using the portal and covers task creation and management specifics. The content does not address AI, DevOps, Coding, Security, ML, or GitHub Copilot categories; it focuses solely on platform configuration and storage task automation. No generic exclusion rules applied, and content exceeds the minimum length and provides clear technical value."
-  },
-  {
-    "timestamp": "2025-09-30 11:04:36 +00:00",
-    "canonical_url": "https://andrewlock.net/easily-publishing-nuget-packages-from-github-actions-with-trusted-publishing/",
-    "collection": "blogs",
-    "reason": "Succesfully added: Assigned the DevOps category because the post centers on CI/CD automation (using GitHub Actions for package publishing), which matches DevOps rules 2, 5, and 6. Assigned the Security category because the core focus is improving credential management and workflow security through OIDC token-based authentication, aligning with Security rules 1, 3, and 7. Coding category was not assigned as the main content is automation/configuration rather than development logic. Azure, AI, ML, and GitHub Copilot categories do not apply as the content does not cover those technologies or services."
   },
   {
     "timestamp": "2025-09-30 14:04:49 +00:00",
@@ -11716,12 +11620,6 @@
     "canonical_url": "https://www.youtube.com/watch?v=q7YLP6e0kXA",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode discusses the impact of artificial intelligence and GitHub Copilot on developer education (AI rule 5 and GitHub Copilot rule 1). Added Coding because the primary focus is learning to code and the transformation of coding education (Coding rule 4). Azure, DevOps, ML, and Security do not apply as there is no substantive content focused on those domains. Exclusion rules do not apply because the episode is about technical subject matter, centered on AI coding tools, without biographical focus or business/strategy-only discussion."
-  },
-  {
-    "timestamp": "2025-10-06 10:06:29 +00:00",
-    "canonical_url": "https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/",
-    "collection": "blogs",
-    "reason": "Succesfully added: The content thoroughly compares Azure Functions and Azure Container Apps, focusing on use cases, operating models, architecture, scaling, cost, and developer experience. Assigned 'Azure' because all services and comparisons revolve around Microsoft Azure (Azure rule 1, 4, 5). Assigned 'Coding' because it discusses programming models, language support, automation scripts, APIs, and developer experience (Coding rules 1, 2, 4, 5). Did not assign 'DevOps': while deployment and operational models are discussed, the main focus is application architecture/use case selection, not DevOps practices. There is no AI or ML content. Security is not a central theme. All conclusions and assignments follow the prescribed inclusion rules and quality standards."
   },
   {
     "timestamp": "2025-10-06 13:11:48 +00:00",
@@ -12900,12 +12798,6 @@
     "reason": "Succesfully added: Assigned 'AI' since the service leverages Copilot in Azure, enabling natural language queries and AI-driven insights (AI rule 1, AI rule 5). Assigned 'Azure' because Azure Storage Discovery exclusively analyzes and manages data within Microsoft Azure storage solutions (Azure rules 1 and 4). Assigned 'Security' because the content highlights security best practices, security configuration reporting, and integration with identity systems like Microsoft Entra ID (Security rules 1, 2, 3, 4). Did not assign 'Coding,' 'DevOps,' 'GitHub Copilot,' or 'ML' since the article focuses on platform management and analytics, not application development, code, deployment, or machine learning engineering."
   },
   {
-    "timestamp": "2025-10-17 03:19:11 +00:00",
-    "canonical_url": "https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/",
-    "collection": "news",
-    "reason": "Succesfully added: The content is a Microsoft news announcement about Sora 2 launching in Azure AI Foundry. It qualifies for the 'AI' category because it discusses an advanced OpenAI video generation model available through Microsoft's AI platform (AI rule 1 and 5). The 'Azure' category applies since Azure AI Foundry is central to the offering and integration (Azure rule 1 and 4). No other categories were applied because the focus is on platform features and developer enablement, not on code-level development, DevOps, ML tooling, or security implementation (security is mentioned primarily in the context of platform features, not hands-on technical security integration)."
-  },
-  {
     "timestamp": "2025-10-17 05:04:03 +00:00",
     "canonical_url": "https://devops.com/beyond-the-platform-how-enterprises-can-unify-their-devops-toolchains-for-better-governance-and-ai-readiness/",
     "collection": "blogs",
@@ -13252,12 +13144,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: 'AI' because the sample centers on building and integrating AI agents using LangChain.js v1 and MCP (AI category rule 1 and 5). 'Azure' because all deployment, architecture, and production readiness involve Microsoft's Azure cloud and corresponding services (Azure category rule 1 and 4). 'Coding' because the content walks through implementing Node.js, JavaScript, Azure Functions, and related development tasks (Coding rules 1, 2, and 5). The content is technical, focused on implementation, and avoids any generic exclusion triggers (no biographical, business, or career-centric focus), and is well above length thresholds."
-  },
-  {
-    "timestamp": "2025-10-22 09:06:00 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387",
-    "collection": "community",
-    "reason": "Succesfully added: Assigned the Azure category as the content has a sustained, in-depth focus on Azure Resource Graph and its large-scale querying features (Azure Inclusion Rule 1, 4, 5, 7). Included DevOps because the content directly targets cloud engineers and DevOps professionals working with automation and API/PowerShell scripting for resource management at scale (DevOps Rule 1, 3, 5, 6, 9). Included Coding because the article teaches PowerShell scripting (Coding Rule 5), involves code samples, and explores scripting practices with Azure APIs. Did not assign AI, ML, Security, or GitHub Copilot; the content does not cover AI platforms, machine learning, security features, or GitHub Copilot functionality. No exclusion rules triggered: content is technical, detailed, English, and not biographical or promotional."
   },
   {
     "timestamp": "2025-10-22 13:51:25 +00:00",
@@ -14268,12 +14154,6 @@
     "reason": "Succesfully added: Assigned the 'Coding' category due to the article’s deep emphasis on scripting, PowerShell module usage, and command-line automation to control Windows 11’s virtual desktops. All discussed methods—PowerShell, VirtualDesktopCmd, and AutoHotkey—are development- and scripting-focused, involving coding activities for automation. No Azure, DevOps, AI, ML, or Security relevance is present, and content is technical/implementation-focused rather than end-user or business productivity. This matches the Coding category per the workflow."
   },
   {
-    "timestamp": "2025-10-30 07:05:38 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444",
-    "collection": "community",
-    "reason": "Succesfully added: Assigned the Azure category because Microsoft HPC Pack is an Azure-related solution (Azure rule 1) and the content references Azure integration (Azure High Performance Computing Blog). Assigned Security category because the guide focuses on certificate management—covering secure communications, certificate renewal, and best practices for protecting cluster infrastructure (Security rules 1, 2, 7). Did not assign other categories as the content is specific to cluster admin, PowerShell, and certificate procedures and does not involve coding frameworks, DevOps pipelines, ML/AI processes, or coding beyond administrative scripts."
-  },
-  {
     "timestamp": "2025-10-30 08:05:07 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=B7TUkcCDTOg",
     "collection": "videos",
@@ -14626,12 +14506,6 @@
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/",
     "collection": "news",
     "reason": "Succesfully added: Assigned the Security category because the article centers on a novel malware threat (SesameOp) analyzed by Microsoft’s Incident Response team, with technical details about attack mechanisms, mitigation, and detection (Security rules 1, 2, 5, 7, 8). Assigned AI because the backdoor’s C2 channel abuse is based on the misuse of the OpenAI Assistants API, with a breakdown of how AI service infrastructure is re-purposed for malicious control (AI rule 1, 4). The content does not qualify for DevOps, Azure, Coding, ML, or GitHub Copilot as there is no focus on development, ML engineering, or Microsoft platform automation. Content is not excluded, as it is an in-depth technical security analysis, not biographical, sales, or business-strategy focused."
-  },
-  {
-    "timestamp": "2025-11-03 18:05:32 +00:00",
-    "canonical_url": "https://github.blog/changelog/2025-11-03-control-ai-spending-with-budget-tracking-for-github-ai-tools",
-    "collection": "news",
-    "reason": "Succesfully added: Assigned 'AI' category because the content centers on GitHub's AI tools (GitHub Copilot coding agent and GitHub Spark) and new governance features (AI inclusion rule 1). Assigned 'GitHub Copilot' category because it specifically details Copilot's premium request management and budget tracking (GitHub Copilot inclusion rule 1). Coding, DevOps, Azure, ML, and Security categories were not assigned because the content does not directly address code development, software engineering tools, pipeline/deployment, cloud architectures, machine learning engineering, or security practices. All inclusion rules and distinctions were systematically followed."
   },
   {
     "timestamp": "2025-11-03 18:06:22 +00:00",
@@ -15346,12 +15220,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content is about Azure Container Networking Services and Azure Kubernetes Service (Azure inclusion rule 1). Added DevOps because it focuses on operational monitoring, cost optimization, dynamic configuration, and integrations with observability tooling (DevOps inclusion rules 6 and 7). Did not assign AI, ML, Coding, or Security categories as there is no AI/ML component, no code development focus, and no primary security discussion. The content is technical, English, and substantially above the 200-word minimum, with no exclusion rules triggered."
-  },
-  {
-    "timestamp": "2025-11-08 09:04:48 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-vnet-flow-logs-with-terraform-the-complete-migration-and/ba-p/4468225",
-    "collection": "community",
-    "reason": "Succesfully added: Categories assigned as follows: Azure (focuses centrally on Azure services, migration, and policy), Security (covers network traffic logs, threat detection, segmentation validation, and integration with security tools), DevOps (details Infrastructure as Code practices using Terraform, Azure CLI, and policies), and Coding (provides explicit code/CLI examples for Terraform templates and scripting). All content fits category inclusion rules. Generic exclusions do not apply as this is a technical migration/development tutorial, not biographical, sales, or business content."
   },
   {
     "timestamp": "2025-11-08 12:07:03 +00:00",
@@ -21024,12 +20892,6 @@
     "reason": "Succesfully added: Assigned the AI category because the entire article focuses on new AI paradigms (ambient agents), their architecture, and practical implementation. While Microsoft services (Cosmos DB, EventHub, potentially Azure) are referenced as sources/topics, the text does not involve substantial Azure development, configuration, or deployment—not enough for the Azure category (Azure technologies aren't central, just compatible data sources). DevOps, ML, Coding, Security, and GitHub Copilot did not qualify since the technical content is about AI architectural patterns, change detection, and automated event-driven responses—not code implementation, ML pipelines, or DevOps methodology. AI category is supported by the focus on autonomous agent design and integration with tools like LangChain, Drasi, and the broader event-driven AI landscape. All categorization decisions are directly referenced from the content, with links and examples illustrating the architectural focus."
   },
   {
-    "timestamp": "2025-12-04 01:33:49 +00:00",
-    "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-mistral-large-3-in-microsoft-foundry-open-capable-and-ready-for-production-workloads/",
-    "collection": "news",
-    "reason": "Succesfully added: Assigned AI category because the article centers on Microsoft's AI platform (Mistral Large 3 in Azure Foundry) as outlined in AI rules 1, 4, and 6. Assigned Azure category due to the focus on Azure services, deployment, integration, and Microsoft Foundry (Azure rules 1 and 4). Did NOT assign Coding, ML, Security, DevOps, or GitHub Copilot: there is no in-depth programming guidance, ML engineering, security implementation, DevOps pipeline discussion, or Copilot content. No generic exclusion rules triggered; the input is technical, English-language, and focuses on Microsoft technologies."
-  },
-  {
     "timestamp": "2025-12-04 01:34:45 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=gAmgPEj7JoU",
     "collection": "videos",
@@ -21346,12 +21208,6 @@
     "canonical_url": "https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x",
     "collection": "news",
     "reason": "Succesfully added: Assigned the DevOps category based on the focus on large-scale team management, access control, and governance within the GitHub platform, aligning with DevOps rules 2 (GitHub DevOps Tools), 3 (Team Collaboration/Organization), and 9 (Developer Experience). There is no mention of coding, AI/ML, Azure, or security; thus, those categories do not apply. The news content clearly targets organizational and access management for DevOps teams, not business productivity or executive strategy."
-  },
-  {
-    "timestamp": "2025-12-08 22:05:43 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052",
-    "collection": "community",
-    "reason": "Succesfully added: Assigned the AI category because the content is focused on Microsoft’s agentic AI platforms (Foundry, Copilot Studio) and new intelligence layers (Work IQ, Fabric IQ, Foundry IQ), consistent with AI rule 1 and rule 4. Assigned Azure because plan purchasing and Service usage pivots around Azure tools/platforms and the article repeatedly references Azure-centric procurement and products, aligning with Azure rule 1. Did NOT assign Copilot or ML because although Copilot Studio is mentioned, Copilot for business productivity is excluded under critical Copilot product distinction rules and this content is not focused on Copilot developer tooling or custom ML engineering. Did NOT assign DevOps, Coding, Security, or ML due to lack of substantive developer, operations, or security implementation details beyond high-level platform coverage. Generic exclusion rules do not apply because the content is technical, not business-only, and the length is well over threshold for community content."
   },
   {
     "timestamp": "2025-12-08 23:06:34 +00:00",
@@ -22212,12 +22068,6 @@
     "reason": "Succesfully added: Assigned 'AI' because the episode features AI-assisted development with GitHub Copilot and agent instructions (AI rule 1 and 2). 'GitHub Copilot' is included due to in-depth discussion and live demonstration of Copilot's code completion and automation (GitHub Copilot rule 1-4), and per workflow, 'AI' must be included when GitHub Copilot is present. Assigned 'Coding' as the content revolves around .NET development, coding best practices, and feature implementation (Coding rule 1, 2, and 4). Assigned 'Azure' because Microsoft Azure is featured in the tags and ecosystem context, aligning with cloud-based workflows, though less central than the other topics (Azure rule 1, 4). Assigned 'DevOps' since CI/CD automation with Copilot is demonstrated and discussed (DevOps rule 5, 6). Did not assign 'ML' or 'Security' as there is no substantive mention of ML/data science or detailed security implementation in the description."
   },
   {
-    "timestamp": "2025-12-16 18:06:51 +00:00",
-    "canonical_url": "https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions",
-    "collection": "news",
-    "reason": "Succesfully added: Assigned DevOps category because the content discusses updates to GitHub Actions runner pricing, platform investment, and scalability—all key DevOps practices (DevOps rules 2, 5, 6, 9, 11). Did not assign other categories as the post does not address Microsoft product development, coding specifics, AI/ML, security, or Azure platforms. Tags extracted reflect the main technical themes: GitHub Actions, runners, pricing, DevOps methodologies, autoscaling, billing, and migration, following tag extraction guidelines. No generic exclusion rules apply since the news post contains substantive technical and operational information for practitioners."
-  },
-  {
     "timestamp": "2025-12-16 19:06:28 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/",
     "collection": "news",
@@ -22264,12 +22114,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article addresses Azure messaging technologies including Service Bus, Event Hubs, Event Grid, and discusses schema management within Microsoft Fabric (Azure rule 1, 4, 5). 'Coding' is assigned due to substantial discussion of developer-facing schema design, type systems, code generation, and language integrations (Coding rules 4 and 5). 'ML', 'AI', 'DevOps', and 'Security' are not included since the article focuses on data modeling, schema tooling, and messaging—not on machine learning, AI services, DevOps, or security practices. No generic exclusions apply: content is technical, not biographical, sales, or career-focused, and is well above the community content minimum word count."
-  },
-  {
-    "timestamp": "2025-12-17 12:07:09 +00:00",
-    "canonical_url": "https://devclass.com/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/",
-    "collection": "blogs",
-    "reason": "Succesfully added: Applied the DevOps category because the primary focus is on GitHub Actions pricing (Category: DevOps rule 2) and the impact on continuous integration and workflow automation for development teams. The content covers DevOps tooling, infrastructure choices, CI/CD, workflow management, and the developer experience with GitHub Actions. No Azure, AI, Coding, ML, Security, or GitHub Copilot-specific elements are present, so those categories were not assigned. The article contains clear technical depth and analysis but does not qualify for exclusion under any Generic Exclusion Rules."
   },
   {
     "timestamp": "2025-12-17 15:06:28 +00:00",
