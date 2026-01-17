@@ -1,0 +1,14 @@
+{
+  "PubDate": "2026-01-17T15:01:38+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "ProcessedDate": "2026-01-17 16:02:12",
+  "Author": "GitHub",
+  "Tags": [],
+  "Description": "Andrea and Kedasha sit down with data whisperer, Jeff Luszcz, one of the wizards behind GitHub’s annual Octoverse report, to unpack this year’s biggest shifts. They get into why TypeScript overtook Python on GitHub, how AI-assisted “vibe coding” and agentic workflows are reshaping everyday engineering, and what it means that more than one new developer joins GitHub every second. From 1.12B open source contributions and 518M merged PRs to COBOL’s unexpected comeback, global growth (hello India, Brazil and Indonesia), and “security by default” with CodeQL and Dependabot, this episode turns the numbers into next steps for your career and your open source projects.\n\nLinks mentioned in the episode:\n\nhttps://octoverse.github.com https://github.com/jeffrey-luszcz https://github.com/features/copilot https://codeql.github.com https://docs.github.com/code-security/dependabot https://docs.github.com/code-security/secret-scanning/introduction/about-secret-scanning https://www.typescriptlang.org https://www.python.org https://nextjs.org https://vitejs.dev https://marketplace.visualstudio.com/items?itemName=GitHub.copilot https://www.home-assistant.io https://code.visualstudio.com https://github.com/explore\n\nThe GitHub Podcast is hosted by Abigail Cabunoc Mayes, Kedasha Kerr and Cassidy Williams. The show is edited, mixed and produced by Victoria Marin. Thank you to our production partner, editaudio.\n\n— CHAPTERS — 00:00 - Intro: unpacking the Octoverse report 02:02 - Why typescript overtook python 09:33 - The surprise return of cobol 12:03 - The year of vibe coding 13:49 - 180 million+ developers on GitHub 18:29 - Skills you need for the AI era 24:30 - Global growth: India, Brazil, Indonesia 27:34 - Agentic workflows and ordinary AI 31:38 - Shifting to secure by default 34:06 - Skills in demand in the future 35:15 - Jeff's top takeaway from the data\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "GitHub",
+  "Title": "Inside Octoverse 2025 report: The rise of vibe coding & agentic AI | Episode 7 | The GitHub Podcast",
+  "Link": "https://www.youtube.com/watch?v=ve-tfDEQOG8",
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube"
+}

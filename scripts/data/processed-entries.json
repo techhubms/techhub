@@ -23644,5 +23644,11 @@
     "timestamp": "2026-01-17 13:12:03 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-java-ee-applications-to-jakarta-ee-with-github/ba-p/4486471"
+  },
+  {
+    "timestamp": "2026-01-17 16:03:21 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: AI (major focus on AI, Copilot, and agentic workflows—AI category rules 1, 2, 4, 5). GitHub Copilot (explicit discussion of Copilot’s impact on coding—GitHub Copilot rules 1–4; must include AI as per rules). DevOps (major emphasis on open source contributions, PRs, engineering workflow changes, and security best practices—DevOps rules 2, 3, 4, 5, 9). Coding (discusses programming languages, skill trends, and the developer experience—Coding rules 1, 4, 5). Security (extensive mention of CodeQL, Dependabot, secret scanning, and 'security by default'—Security rules 1, 5, 6). No content excluded by generic exclusion rules as the episode remains technically focused, with AI, security, and development topics at the core.",
+    "canonical_url": "https://www.youtube.com/watch?v=ve-tfDEQOG8",
+    "collection": "videos"
   }
 ]
