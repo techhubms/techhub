@@ -138,7 +138,10 @@ function Run {
         return
     }
 
-    $ErrorActionPreference = "Stop"
+    # Use Continue to allow error handling to work properly
+    # Stop causes the entire script to terminate on any error (including test failures)
+    # which kills the terminal with exit code -1
+    $ErrorActionPreference = "Continue"
     Set-StrictMode -Version Latest
 
     # Script-level variables for process management
@@ -189,20 +192,38 @@ function Run {
         
         # Check .NET SDK
         try {
-            $dotnetVersion = dotnet --version
+            $dotnetVersion = dotnet --version 2>&1
             if ($LASTEXITCODE -ne 0) {
                 throw "dotnet command failed with exit code $LASTEXITCODE"
             }
             Write-Info ".NET SDK version: $dotnetVersion"
         }
         catch {
-            Write-Error ".NET SDK not found. Please install .NET 10 SDK."
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ PREREQUISITES CHECK FAILED - Cannot continue              ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  .NET SDK not found or not working properly" -ForegroundColor Yellow
+            Write-Host "  Please install .NET 10 SDK" -ForegroundColor Yellow
+            Write-Host ""
             exit 1
         }
         
         # Check that solution file exists
         if (-not (Test-Path $solutionPath)) {
-            Write-Error "Solution file not found: $solutionPath"
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ SOLUTION FILE NOT FOUND - Cannot continue                 ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Expected: $solutionPath" -ForegroundColor Yellow
+            Write-Host "  Make sure you're running from the workspace root" -ForegroundColor Yellow
+            Write-Host ""
             exit 1
         }
         
@@ -215,7 +236,16 @@ function Run {
         
         dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel
         if ($LASTEXITCODE -ne 0) {
-            Write-Error "Clean failed with exit code $LASTEXITCODE"
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ CLEAN FAILED - Cannot continue                            ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Clean failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
+            Write-Host "  This is unusual - check file permissions or disk space" -ForegroundColor Yellow
+            Write-Host ""
             exit 1
         }
         
@@ -228,7 +258,16 @@ function Run {
         
         dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel
         if ($LASTEXITCODE -ne 0) {
-            Write-Error "Build failed with exit code $LASTEXITCODE"
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ BUILD FAILED - Cannot continue                            ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Build failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
+            Write-Host "  Fix the compilation errors above and try again" -ForegroundColor Yellow
+            Write-Host ""
             exit 1
         }
         
@@ -261,7 +300,15 @@ function Run {
         
         if ($LASTEXITCODE -ne 0) {
             Write-Host ""
-            Write-Error "Unit/integration tests failed with exit code $LASTEXITCODE"
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Tests failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
+            Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
+            Write-Host ""
             exit 1
         }
         
@@ -325,7 +372,21 @@ function Run {
             
             # Check if AppHost is still alive
             if ($script:appHostProcess.HasExited) {
-                Write-Error "AppHost process exited unexpectedly (exit code: $($script:appHostProcess.ExitCode))"
+                Write-Host ""
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
+                Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
+                Write-Host ""
+                Write-Host "  This usually means:" -ForegroundColor Cyan
+                Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
+                Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
+                Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
+                Write-Host ""
                 Stop-ExistingProcesses
                 exit 1
             }
@@ -370,20 +431,38 @@ function Run {
         }
         
         if (-not $apiReady -or -not $webReady) {
-            Write-Error "Services failed to start within $maxAttempts seconds"
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ SERVERS FAILED TO START - Cannot continue                 ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
             if (-not $apiReady) {
-                Write-Info "  API health check failed at https://localhost:7153/health ($lastApiError)"
+                Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
+                Write-Host "    Expected: https://localhost:7153/health" -ForegroundColor Gray
             }
             if (-not $webReady) {
-                Write-Info "  Web health check failed at https://localhost:7190/health ($lastWebError)"
+                Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
+                Write-Host "    Expected: https://localhost:7190/health" -ForegroundColor Gray
             }
-            Write-Info "  Check Aspire Dashboard logs at the URL shown above"
-            Write-Info "  Try manually: curl -k https://localhost:7153/health"
+            Write-Host ""
+            Write-Host "  Troubleshooting:" -ForegroundColor Cyan
+            Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
+            Write-Host "    2. Try manually: curl -k https://localhost:7153/health" -ForegroundColor Gray
+            Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+            Write-Host ""
             
             # Clean up on startup failure
             if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                $script:appHostProcess.Kill($true)
-                $script:appHostProcess.Dispose()
+                try {
+                    $script:appHostProcess.Kill($false)
+                }
+                catch { }
+                finally {
+                    $script:appHostProcess.Dispose()
+                }
             }
             Stop-ExistingProcesses
             exit 1
@@ -414,47 +493,103 @@ function Run {
             "--blame-hang-timeout", "1m"
         )
         
-        & dotnet @e2eTestArgs
-        
-        $e2eExitCode = $LASTEXITCODE
+        # Run E2E tests with explicit error action to prevent terminal crash
+        try {
+            & dotnet @e2eTestArgs
+            $e2eExitCode = $LASTEXITCODE
+        }
+        catch {
+            Write-Error "E2E test execution failed: $_"
+            $e2eExitCode = 1
+        }
         
         Write-Host ""
         Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
         
         if ($e2eExitCode -ne 0) {
-            # E2E tests failed - clean up AppHost
-            Write-Error "E2E tests failed with exit code $e2eExitCode"
+            # E2E tests failed
+            Write-Host ""
             
-            Write-Info "Stopping AppHost..."
-            
-            if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                $script:appHostProcess.Kill($true)
-                $script:appHostProcess.WaitForExit(2000)
-                $script:appHostProcess.Dispose()
+            # In OnlyTests mode, show different message and exit immediately
+            if ($OnlyTests) {
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ E2E TESTS FAILED                                          ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  Tests failed with exit code: $e2eExitCode" -ForegroundColor Yellow
+                Write-Host "  Run with 'Run -SkipTests' to start servers for debugging" -ForegroundColor Cyan
+                Write-Host ""
+                Write-Info "Stopping AppHost (OnlyTests mode)..."
+                
+                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+                    try {
+                        # Try graceful shutdown first
+                        $script:appHostProcess.CloseMainWindow() | Out-Null
+                        if (-not $script:appHostProcess.WaitForExit(3000)) {
+                            # Force kill only if graceful shutdown fails
+                            $script:appHostProcess.Kill($false)
+                        }
+                    }
+                    catch {
+                        # Suppress errors during cleanup
+                    }
+                    finally {
+                        $script:appHostProcess.Dispose()
+                    }
+                }
+                
+                Stop-ExistingProcesses
+                exit 1
+            }
+            else {
+                # Default mode: Tests failed, keep servers running for debugging
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ⚠️  E2E TESTS FAILED - Website still running for debugging   ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  Tests failed with exit code: $e2eExitCode" -ForegroundColor Yellow
+                Write-Host "  Website is still running so you can investigate the issues" -ForegroundColor Yellow
+                Write-Host ""
             }
             
-            Stop-ExistingProcesses
-            exit 1
+            # In default mode, continue running for debugging
         }
         
-        Write-Success "All tests passed!"
-        
-        # OnlyTests mode: Stop AppHost and exit
+        # OnlyTests mode: Stop AppHost and exit (only if tests passed)
         if ($OnlyTests) {
             Write-Info "Stopping AppHost..."
             
             if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                $script:appHostProcess.Kill($true)
-                $script:appHostProcess.WaitForExit(2000)
-                $script:appHostProcess.Dispose()
+                try {
+                    # Try graceful shutdown first
+                    $script:appHostProcess.CloseMainWindow() | Out-Null
+                    if (-not $script:appHostProcess.WaitForExit(3000)) {
+                        # Force kill only if graceful shutdown fails (but don't kill child processes)
+                        $script:appHostProcess.Kill($false)
+                    }
+                }
+                catch {
+                    # Suppress errors during cleanup
+                }
+                finally {
+                    $script:appHostProcess.Dispose()
+                }
             }
             
             Stop-ExistingProcesses
+            Write-Host ""
+            Write-Success "All tests passed!"
             return
         }
         
-        # Default mode: Keep AppHost running, show URLs
+        # Default mode: tests passed, show message and keep AppHost running
+        Write-Success "All tests passed!"
+        Write-Host ""
         Write-Host ""
         Write-Info "AppHost is running:"
         Write-Info "  API: https://localhost:7153 (Swagger: https://localhost:7153/swagger)"
@@ -478,9 +613,20 @@ function Run {
             Write-Info "`nStopping AppHost..."
             
             if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                $script:appHostProcess.Kill($true)
-                $script:appHostProcess.WaitForExit(2000)
-                $script:appHostProcess.Dispose()
+                try {
+                    # Try graceful shutdown first
+                    $script:appHostProcess.CloseMainWindow() | Out-Null
+                    if (-not $script:appHostProcess.WaitForExit(3000)) {
+                        # Force kill only if graceful shutdown fails (but don't kill child processes)
+                        $script:appHostProcess.Kill($false)
+                    }
+                }
+                catch {
+                    # Suppress errors during cleanup
+                }
+                finally {
+                    $script:appHostProcess.Dispose()
+                }
             }
             
             Stop-ExistingProcesses
@@ -496,6 +642,8 @@ function Run {
         
         $ports = @(5029, 5184)
         $stoppedAny = $false
+        $failedKills = @()
+        
         foreach ($port in $ports) {
             try {
                 $portArg = ":" + $port
@@ -530,6 +678,9 @@ function Run {
                         
                         # Use SIGKILL for immediate termination
                         kill -9 $processId 2>$null
+                        if ($LASTEXITCODE -ne 0) {
+                            $failedKills += "PID $processId on port $port"
+                        }
                     }
                     
                     # Brief wait to ensure ports are released
@@ -537,8 +688,15 @@ function Run {
                 }
             }
             catch {
-                # Ignore errors if no process found
+                if (-not $Silent) {
+                    Write-Warning "Failed to clean up port ${port}: $($_.Exception.Message)"
+                }
             }
+        }
+        
+        if ($failedKills.Count -gt 0 -and -not $Silent) {
+            Write-Warning "Failed to kill some processes: $($failedKills -join ', ')"
+            Write-Warning "You may need to manually kill these processes or restart your environment"
         }
         
         if ($stoppedAny -and -not $Silent) {
@@ -622,6 +780,15 @@ function Run {
         }
         
         $cleanedAny = $false
+        
+        # Clean up log files
+        $logPath = Join-Path $workspaceRoot ".tmp/logs/*.log"
+        if (Test-Path $logPath) {
+            Remove-Item $logPath -Force -ErrorAction SilentlyContinue
+            if (-not $Silent) {
+                Write-Info "  Removed old log files"
+            }
+        }
         
         # First: Kill processes by port
         $ports = @(5029, 5184)
@@ -781,7 +948,7 @@ function Run {
         # OnlyTests mode: Run tests then EXIT (don't start servers)
         if ($OnlyTests) {
             Invoke-Tests -OnlyTests
-            Write-Success "`nAll tests passed!"
+            # Note: Invoke-Tests handles success message and cleanup
             return
         }
         

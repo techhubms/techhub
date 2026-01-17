@@ -82,12 +82,11 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert - Find popular tags section
-        var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
-        _ = tagsSection.Locator("a, .tag");
-
-        var count = await tagsSection.GetElementCountBySelectorAsync("a, .tag");
-        count.Should().BeGreaterThan(0, $"Expected at least one tag link, but found {count}");
+        // Assert - Wait for tag cloud to render, then count tag buttons
+        var tagButtons = Page.Locator(".tag-cloud-item");
+        await Assertions.Expect(tagButtons.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        var count = await tagButtons.CountAsync();
+        count.Should().BeGreaterThan(0, $"Expected at least one tag button, but found {count}");
     }
 
     [Fact]

@@ -7,7 +7,7 @@ namespace TechHub.Web.Services;
 /// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
 #pragma warning disable CA1515 // Public type in non-public assembly - required for unit test mocking
-public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> logger)
+public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> logger) : ITechHubApiClient
 #pragma warning restore CA1515
 {
     private readonly HttpClient _httpClient = httpClient;
@@ -613,6 +613,65 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch SDLC data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get tag cloud for specified scope (Homepage, Section, Collection, or Content)
+    /// </summary>
+    /// <param name="scope">Scope for tag cloud (Homepage/Section/Collection/Content)</param>
+    /// <param name="sectionName">Section name (required for Section/Collection/Content scopes)</param>
+    /// <param name="collectionName">Collection name (required for Collection scope)</param>
+    /// <param name="contentItemId">Content item ID (required for Content scope)</param>
+    /// <param name="maxTags">Maximum number of tags to return (default: 20)</param>
+    /// <param name="minUses">Minimum usage count for tag inclusion (default: 1)</param>
+    /// <param name="lastDays">Only include tags from content published within this many days (default: 90)</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
+        TagCloudScope scope,
+        string? sectionName = null,
+        string? collectionName = null,
+        string? contentItemId = null,
+        int? maxTags = null,
+        int? minUses = null,
+        int? lastDays = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var queryParams = new List<string>
+            {
+                $"scope={scope}"
+            };
+
+            if (!string.IsNullOrWhiteSpace(sectionName))
+                queryParams.Add($"section={Uri.EscapeDataString(sectionName)}");
+            if (!string.IsNullOrWhiteSpace(collectionName))
+                queryParams.Add($"collection={Uri.EscapeDataString(collectionName)}");
+            if (!string.IsNullOrWhiteSpace(contentItemId))
+                queryParams.Add($"contentId={Uri.EscapeDataString(contentItemId)}");
+            if (maxTags.HasValue)
+                queryParams.Add($"maxTags={maxTags.Value}");
+            if (minUses.HasValue)
+                queryParams.Add($"minUses={minUses.Value}");
+            if (lastDays.HasValue)
+                queryParams.Add($"lastDays={lastDays.Value}");
+
+            var queryString = string.Join("&", queryParams);
+            var url = $"/api/tags/cloud?{queryString}";
+
+            _logger.LogInformation("Fetching tag cloud for scope: {Scope}, section: {Section}, collection: {Collection}",
+                scope, sectionName ?? "(none)", collectionName ?? "(none)");
+
+            var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
+
+            _logger.LogInformation("Successfully fetched {Count} tags", tagCloud?.Count ?? 0);
+            return tagCloud;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch tag cloud for scope {Scope}", scope);
             throw;
         }
     }

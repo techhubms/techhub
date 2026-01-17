@@ -1,20 +1,24 @@
 function Get-FilteredTags {
     <#
     .SYNOPSIS
-        Filters and enhances tags based on categories and collection type
+        Filters and enhances tags, removing section/collection names
     .DESCRIPTION
         This function processes tags by:
-        1. Normalizing tag format (custom mappings + word mappings)
-        2. Removing common filter words
-        3. Removing duplicates and empty entries
-        4. Preserving categories and collection values
+        1. Removing all known section/collection names (AI, Azure, Blogs, etc.)
+        2. Normalizing tag format (custom mappings + word mappings)
+        3. Removing common filter words
+        4. Removing duplicates and empty entries
         5. Returns array of processed tags
+        
+        NOTE: Section/collection names are no longer added as tags. With the .NET
+        migration, we can query by section/collection dynamically, so adding them
+        as tags just clutters the tag cloud with obvious values.
     .PARAMETER Tags
         Array of tags to process
     .PARAMETER Categories  
-        Array of categories to preserve (won't be filtered out)
+        Array of categories (used for validation, no longer added to output)
     .PARAMETER Collection
-        Collection name to preserve (won't be filtered out)
+        Collection name (used for validation, no longer added to output)
     #>
     param(
         [string[]]$Tags,
@@ -43,37 +47,10 @@ function Get-FilteredTags {
         throw "Collection parameter cannot be null or empty"
     }
 
-    # Filter out all known categories and collections from original tags first
-    $allKnownCategories = @(
-        'AI', 
-        'GitHub Copilot', 
-        'Azure', 
-        'Coding', 
-        'DevOps', 
-        'Security', 
-        'ML'
-    )
-    
-    $allKnownCollections = @(
-        'News', 
-        'Blogs', 
-        'Videos', 
-        'Community', 
-        'Events', 
-        'Roundups'
-    )
-    
-    # Remove all categories and collections from the original tags
-    $cleanedTags = $Tags | Where-Object {
-        $tag = $_
-        # Filter out if it's a known category or collection
-        $isKnownCategory = $allKnownCategories -contains $tag
-        $isKnownCollection = $allKnownCollections -contains $tag
-        return -not ($isKnownCategory -or $isKnownCollection)
-    }
-    
-    # Now add the current categories and collection
-    $allTags = @($cleanedTags) + @($Categories) + @($Collection)
+    # NOTE: We no longer filter out section/collection names from input tags.
+    # If the AI assigned them as tags, we keep them.
+    # We just don't AUTOMATICALLY ADD categories/collection as tags anymore.
+    $allTags = @($Tags)
 
     # Filter out tags that only contain special characters (no alphanumeric characters)
     $allTags = $allTags | Where-Object { $_ -match '[a-zA-Z0-9]' }
@@ -302,24 +279,9 @@ function Get-FilteredTags {
     }
     $allTags = $newTags
 
-    # if there is a tag as part of the value contains the word 'AI' or 'GitHub Copilot', add 'AI' and 'GitHub Copilot' respectively
-    $aiFound = $false
-    $githubCopilotFound = $false
-    foreach ($tag in $allTags) {
-        if ($tag -match '(?i)\bai\b') {
-            $aiFound = $true
-        }
-        if ($tag -match '(?i)\bgithub copilot\b') {
-            $githubCopilotFound = $true
-        }
-    }
-    if ($aiFound -and ($allTags -notcontains 'AI')) {
-        $allTags += 'AI'
-    }
-    if ($githubCopilotFound -and ($allTags -notcontains 'GitHub Copilot')) {
-        $allTags += 'GitHub Copilot'
-        $allTags += 'AI'
-    }
+    # NOTE: We used to add 'AI' and 'GitHub Copilot' tags when content contained these words,
+    # but with the .NET migration, we no longer need to add section/collection names as tags.
+    # Section filtering is now done dynamically via queries.
 
     # Remove case-insensitive duplicates, keeping the first (most uppercase) version
     $seen = @{}
@@ -427,31 +389,10 @@ function Get-FilteredTags {
     
     $filterWords = $filterWords | ForEach-Object { $_.ToLowerInvariant() }
     
-    # Remove categories and collections from filter words so they never get filtered out accidentally
-    $categoriesToKeep = @()
-    if ($Categories -and $Categories.Count -gt 0) {
-        $categoriesToKeep = $Categories | Where-Object { $_ -and $_.Trim() -ne '' } | ForEach-Object { $_.ToLowerInvariant() }
-    }
-    
-    $collectionToKeep = $null
-    if ($Collection -and $Collection.Trim() -ne '') {
-        $collectionToKeep = $Collection.ToLowerInvariant()
-    }
-
+    # Filter out common filter words (articles, prepositions, etc.)
+    # NOTE: We no longer need to preserve categories/collection since we don't add them anymore
     $filteredTags = $filteredTags | Where-Object {
         $tagLower = $_.ToLowerInvariant()
-        
-        # Keep if it's a category we want to preserve
-        if ($categoriesToKeep -contains $tagLower) {
-            return $true
-        }
-        
-        # Keep if it's the collection we want to preserve
-        if ($collectionToKeep -and $tagLower -eq $collectionToKeep) {
-            return $true
-        }
-        
-        # Otherwise, filter out if it's in the filter words list
         return $tagLower -notin $filterWords
     }
     

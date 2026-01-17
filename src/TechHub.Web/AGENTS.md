@@ -1564,6 +1564,7 @@ window.setupInfiniteScroll = (elementId, dotNetRef) => {
 - `PageHeader.razor` - Universal section header banner
 - `SidebarCollectionNav.razor` - Sidebar collection navigation
 - `SidebarRssLinks.razor` - RSS feed links in sidebar
+- `SidebarTagCloud.razor` - Interactive tag cloud with filtering (see [Tag Filtering Behavior](#tag-filtering-behavior) below)
 
 **Content Components**:
 
@@ -1798,6 +1799,95 @@ Progressive learning path visualization:
     }
 }
 ```
+
+### Tag Filtering Behavior
+
+**`SidebarTagCloud` Component - Interactive Tag Toggle**:
+
+The `SidebarTagCloud` component provides interactive tag filtering with toggle behavior:
+
+**Key Features**:
+
+- **Visual active state**: Selected tags are highlighted with `.selected` CSS class (purple background/border)
+- **Toggle behavior**: Clicking a tag toggles it on/off (add to filter or remove from filter)
+- **URL state management**: Tags are stored in URL query parameter `?tags=tag1,tag2,tag3`
+- **Duplicate prevention**: Tags are automatically deduplicated and normalized (lowercased) when parsing from URL
+- **Case-insensitive matching**: Tag comparison uses `StringComparer.OrdinalIgnoreCase`
+
+**Implementation Pattern**:
+
+```csharp
+// In SidebarTagCloud.razor.cs
+private HashSet<string> selectedTagsInternal = new();
+
+protected override async Task OnInitializedAsync()
+{
+    // Initialize from URL with deduplication and normalization
+    if (SelectedTags != null)
+    {
+        selectedTagsInternal = new HashSet<string>(
+            SelectedTags.Select(t => t.Trim().ToLowerInvariant()),
+            StringComparer.OrdinalIgnoreCase);
+    }
+}
+
+private async Task ToggleTagAndUpdateUrl(string tag)
+{
+    // Normalize for consistent comparison
+    var normalizedTag = tag.Trim().ToLowerInvariant();
+    
+    // Toggle selection
+    if (selectedTagsInternal.Contains(normalizedTag))
+    {
+        selectedTagsInternal.Remove(normalizedTag);
+    }
+    else
+    {
+        selectedTagsInternal.Add(normalizedTag);
+    }
+    
+    // Update URL with new selection
+    UpdateUrlWithTags();
+}
+```
+
+**Page Integration Pattern** (Section.razor, SectionCollection.razor):
+
+```csharp
+[SupplyParameterFromQuery(Name = "tags")]
+public string? TagsParam { get; set; }
+
+private List<string> selectedTags = new();
+
+private void ParseTagsFromUrl()
+{
+    if (!string.IsNullOrEmpty(TagsParam))
+    {
+        // Parse, deduplicate, and normalize tags
+        selectedTags = TagsParam.Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => Uri.UnescapeDataString(t.Trim()).ToLowerInvariant())
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+}
+```
+
+**CSS Active State** (`SidebarTagCloud.razor.css`):
+
+```css
+.tag-cloud-item.selected {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+.tag-cloud-item.selected:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+}
+```
+
+**E2E Testing**: See [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs) for comprehensive tag toggle behavior tests.
 
 ## Related Documentation
 

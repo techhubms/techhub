@@ -269,6 +269,17 @@
   transform: translateY(-2px);
 }
 
+.sidebar-tag-button.active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+}
+
+.sidebar-tag-button.active:hover {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
+}
+
 /* Tags cloud container - spacing between tags */
 .sidebar-tags-cloud {
   display: flex;

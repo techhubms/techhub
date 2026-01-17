@@ -1,0 +1,42 @@
+@using TechHub.Core.DTOs
+@rendermode InteractiveServer
+
+@* Tag cloud component for sidebar filtering *@
+<nav class="sidebar-section" aria-label="Filter by tags">
+    <h2 class="sidebar-h2">@Title</h2>
+
+    @if (isLoading)
+    {
+        <p class="sidebar-text">Loading tags...</p>
+    }
+    else if (hasError)
+    {
+        <p class="sidebar-text error">Error loading tags</p>
+    }
+    else if (tags != null && tags.Count > 0)
+    {
+        <div class="tag-cloud">
+            @foreach (var tagItem in tags)
+            {
+                var sizeClass = tagItem.Size switch
+                {
+                    TagSize.Large => "tag-size-large",
+                    TagSize.Medium => "tag-size-medium",
+                    TagSize.Small => "tag-size-small",
+                    _ => ""
+                };
+
+                var isSelected = selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
+                var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")}".Trim();
+
+                <button type="button" class="@cssClass" @onclick="() => HandleTagClick(tagItem.Tag)">
+                    @tagItem.Tag
+                </button>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="sidebar-text">No tags available</p>
+    }
+</nav>

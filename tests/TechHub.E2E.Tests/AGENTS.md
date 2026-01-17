@@ -241,6 +241,59 @@ return await Browser.NewContextAsync(new()
 - Assertions: 5s (vs Playwright default 30s)
 - Managed centrally via constants in `BlazorHelpers.cs`
 
+### Blazor JavaScript Initializers (Ready Detection)
+
+**The Challenge**: Blazor Server uses SignalR for interactivity. After the initial HTML loads, Blazor needs to:
+
+1. Initialize the Blazor runtime (`window.Blazor`)
+2. Establish the SignalR circuit (for Server rendering)
+3. Attach event handlers (`@onclick`, `@onchange`, etc.)
+
+Until step 3 completes, clicking buttons does nothing. Tests that click too early will fail.
+
+**The Solution**: We use [Blazor JavaScript initializers](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup) to set flags when each stage completes.
+
+**File**: [TechHub.Web.lib.module.js](../../src/TechHub.Web/wwwroot/TechHub.Web.lib.module.js) (MUST be in wwwroot root, not wwwroot/js)
+
+```javascript
+// Called when Blazor Web starts (SSR complete)
+export function afterWebStarted(blazor) {
+    window.__blazorWebReady = true;
+}
+
+// Called when Blazor Server circuit is ready (event handlers attached)
+export function afterServerStarted(blazor) {
+    window.__blazorServerReady = true;
+}
+
+// Called when WebAssembly runtime is ready
+export function afterWebAssemblyStarted(blazor) {
+    window.__blazorWasmReady = true;
+}
+```
+
+**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` waits for these flags:
+
+```csharp
+await page.WaitForFunctionAsync(@"
+    () => window.__blazorServerReady === true || 
+          window.__blazorWasmReady === true || 
+          window.__blazorWebReady === true
+");
+```
+
+**Key Methods That Use This**:
+
+- `GotoRelativeAsync()` - Navigates and waits for Blazor ready
+- `ClickBlazorElementAsync()` - Clicks element after ensuring Blazor ready
+- `ClickAndNavigateAsync()` - High-level click + navigate + verify pattern
+
+**Why URL Waiting Is Default**: `ClickBlazorElementAsync()` waits for URL changes by default (`waitForUrlChange = true`) because:
+
+- Blazor Server updates URLs via SignalR (not HTTP redirects)
+- Standard `WaitForNavigationAsync()` doesn't detect SignalR URL changes
+- Most Blazor element clicks (navigation, tag toggles, filters) DO change URLs
+
 ## Writing New Tests
 
 ### Test Naming Convention

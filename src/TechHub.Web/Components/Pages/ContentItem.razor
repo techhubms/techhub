@@ -1,6 +1,7 @@
 @page "/{sectionName}/{collection}/{itemId}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@using TechHub.Web.Components.Shared
 @using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -20,8 +21,11 @@
     <aside class="sidebar">
         @if (item != null)
         {
-            <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
-                CssClass="article-tags" />
+            var navigationUrl = GetPrimarySectionUrl();
+            @* Tag cloud for this content item - navigate to primary section with tag filter *@
+            <SidebarTagCloud Scope="TagCloudScope.Content" SectionName="@SectionName" CollectionName="@Collection"
+                ContentItemId="@ItemId" Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
+                NavigationBaseUrl="@navigationUrl" />
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
         }
     </aside>
@@ -93,6 +97,23 @@
     private void ScrollToTop()
     {
         Navigation.NavigateTo(Navigation.Uri.Split('#')[0], forceLoad: false);
+    }
+
+    /// <summary>
+    /// Gets the URL for the primary section (used for tag click navigation)
+    /// Falls back to current section if primarySection is not available
+    /// </summary>
+    private string GetPrimarySectionUrl()
+    {
+        var primarySection = item?.PrimarySection;
+        if (!string.IsNullOrEmpty(primarySection))
+        {
+            // Convert display name to URL slug if needed
+            return $"/{SectionHelper.GetSectionUrl(primarySection)}";
+        }
+
+        // Fallback to current section
+        return $"/{SectionName.ToLowerInvariant()}";
     }
 
     private string FormatDate(long epochSeconds)

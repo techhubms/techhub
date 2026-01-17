@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components.Pages;
+using TechHub.Web.Components.Shared;
 using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;
@@ -15,7 +16,7 @@ namespace TechHub.Web.Tests.Components;
 public class SectionTests : TestContext
 {
     [Fact]
-    public async Task Section_RendersWithPageStructure()
+    public void Section_RendersWithPageStructure()
     {
         // Arrange
         var mockApiClient = new Mock<TechHubApiClient>(
@@ -52,7 +53,22 @@ public class SectionTests : TestContext
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
             .ReturnsAsync([]);
 
+        // Mock ITechHubApiClient for SidebarTagCloud component
+        var mockApiInterface = new Mock<ITechHubApiClient>();
+        mockApiInterface
+            .Setup(x => x.GetTagCloudAsync(
+                It.IsAny<TagCloudScope>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync([]);
+
         Services.AddSingleton(mockApiClient.Object);
+        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
 
@@ -60,26 +76,27 @@ public class SectionTests : TestContext
         var cut = RenderComponent<Section>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
-        // Wait for async rendering
-        await Task.Delay(200);
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            // Verify page structure is rendered with section data
+            var pageStructure = cut.Find(".page-with-sidebar");
+            pageStructure.Should().NotBeNull();
 
-        // Assert - Verify page structure is rendered with section data
-        var pageStructure = cut.Find(".page-with-sidebar");
-        pageStructure.Should().NotBeNull();
+            var sidebar = cut.Find(".sidebar");
+            sidebar.Should().NotBeNull();
 
-        var sidebar = cut.Find(".sidebar");
-        sidebar.Should().NotBeNull();
+            var mainContent = cut.Find(".page-main-content");
+            mainContent.Should().NotBeNull();
 
-        var mainContent = cut.Find(".page-main-content");
-        mainContent.Should().NotBeNull();
-
-        // Verify section header is displayed
-        var markup = cut.Markup;
-        markup.Should().Contain("Artificial Intelligence");
+            // Verify section header is displayed
+            var markup = cut.Markup;
+            markup.Should().Contain("Artificial Intelligence");
+        });
     }
 
     [Fact]
-    public async Task Section_DisplaysContent_WhenLoaded()
+    public void Section_DisplaysContent_WhenLoaded()
     {
         // Arrange
         var mockApiClient = new Mock<TechHubApiClient>(
@@ -116,7 +133,22 @@ public class SectionTests : TestContext
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
             .ReturnsAsync([]);
 
+        // Mock ITechHubApiClient for SidebarTagCloud component
+        var mockApiInterface = new Mock<ITechHubApiClient>();
+        mockApiInterface
+            .Setup(x => x.GetTagCloudAsync(
+                It.IsAny<TagCloudScope>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync([]);
+
         Services.AddSingleton(mockApiClient.Object);
+        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
 
@@ -124,11 +156,12 @@ public class SectionTests : TestContext
         var cut = RenderComponent<Section>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
-        // Wait for async rendering
-        await Task.Delay(200);
-
-        // Assert - Verify section header is displayed
-        var markup = cut.Markup;
-        markup.Should().Contain("Artificial Intelligence");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            // Verify section header is displayed
+            var markup = cut.Markup;
+            markup.Should().Contain("Artificial Intelligence");
+        });
     }
 }

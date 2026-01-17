@@ -228,32 +228,52 @@ public static class BlazorHelpers
     }
 
     /// <summary>
-    /// Waits for Blazor runtime to be loaded and ready.
-    /// This is the foundation - all Blazor functionality depends on this.
+    /// Waits for Blazor runtime to be loaded and interactive.
+    /// 
+    /// Uses the official Blazor JavaScript initializer pattern:
+    /// - TechHub.Web.lib.module.js exports afterServerStarted() which sets window.__blazorServerReady
+    /// - This method waits for that flag, ensuring the SignalR circuit is fully established
+    ///   and @onclick handlers are attached
     ///
-    /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync.
+    /// This approach is cleaner than Task.Delay as it uses Blazor's own lifecycle callbacks.
+    /// 
+    /// @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
+    /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickBlazorElementAsync.
     /// </summary>
     public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = DefaultNavigationTimeout)
     {
         try
         {
-            // Wait for Blazor object to exist
+            // Wait for Blazor object to exist (basic requirement)
             await page.WaitForFunctionAsync(
                 "() => typeof window.Blazor !== 'undefined'",
                 new PageWaitForFunctionOptions { Timeout = timeoutMs }
             );
 
-            // Wait for enhanced navigation to be initialized (Blazor SSR with streaming)
-            // This ensures click handlers are attached before we try to interact
+            // Wait for Blazor interactivity to be ready
+            // This uses the official JavaScript initializer callback (afterServerStarted or afterWebAssemblyStarted)
+            // which sets window.__blazorServerReady or window.__blazorWasmReady when the circuit is established
+            // and event handlers are attached.
+            //
+            // For pages that only use SSR without interactivity (no InteractiveServer/InteractiveWebAssembly),
+            // we check for window.__blazorWebReady which is set by afterWebStarted.
             await page.WaitForFunctionAsync(@"
                 () => {
-                    if (!window.Blazor) return false;
-                    // Enhanced navigation is ready when this exists
-                    if (window.Blazor._internal?.navigationEnhancementCallbacks) return true;
-                    // For simpler pages, Blazor existing is enough
-                    return true;
+                    // Check if Blazor Server or WebAssembly interactivity is ready
+                    // These flags are set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted
+                    if (window.__blazorServerReady === true || window.__blazorWasmReady === true) {
+                        return true;
+                    }
+                    
+                    // Check for SSR-only pages (Blazor Web started but no interactive runtime)
+                    if (window.__blazorWebReady === true) {
+                        return true;
+                    }
+                    
+                    // Not ready yet
+                    return false;
                 }
-            ", new PageWaitForFunctionOptions { Timeout = 3000 });
+            ", new PageWaitForFunctionOptions { Timeout = timeoutMs });
         }
         catch (TimeoutException)
         {
@@ -276,25 +296,34 @@ public static class BlazorHelpers
     ///
     /// This method:
     /// 1. Waits for element to be visible (auto-retrying assertion)
-    /// 2. Waits for Blazor enhanced navigation to be initialized
-    /// 3. Uses Force=true to bypass stability checks (safe because we've already
+    /// 2. Waits for Blazor interactivity to be ready (using official JS initializer callbacks)
+    /// 3. Captures current URL before click
+    /// 4. Uses Force=true to bypass stability checks (safe because we've already
     ///    verified Blazor is ready and the element is visible)
+    /// 5. Waits for URL to change (Blazor Server updates URL via SignalR)
+    /// 6. Waits for network to settle
     ///
     /// This is NOT a hack - it's the correct pattern for Blazor Server testing.
     /// The "stability" check is designed for CSS animations, not for Blazor's
     /// continuous DOM updates.
     /// </summary>
     /// <param name="locator">The element to click</param>
-    /// <param name="timeoutMs">Maximum time to wait for interactivity</param>
+    /// <param name="timeoutMs">Maximum time to wait for interactivity and URL change</param>
+    /// <param name="waitForUrlChange">Whether to wait for URL to change after click (default: true)</param>
     public static async Task ClickBlazorElementAsync(
         this ILocator locator,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultNavigationTimeout,
+        bool waitForUrlChange = true)
     {
+        var page = locator.Page;
+        var urlBeforeClick = page.Url;
+
         // Step 1: Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync(timeoutMs);
 
-        // Step 2: Ensure Blazor enhanced navigation handlers are attached
-        await locator.Page.WaitForBlazorReadyAsync(timeoutMs);
+        // Step 2: Ensure Blazor interactivity is ready (SignalR circuit established, event handlers attached)
+        // This uses the official Blazor JS initializer callback - no arbitrary delays needed
+        await page.WaitForBlazorReadyAsync(timeoutMs);
 
         // Step 3: Click with Force=true to bypass stability checks
         // This is necessary because Blazor's continuous DOM updates prevent
@@ -302,6 +331,18 @@ public static class BlazorHelpers
         // We've already verified the element is visible and Blazor is ready,
         // so the click will work correctly.
         await locator.ClickAsync(new() { Force = true, Timeout = timeoutMs });
+
+        // Step 4: Wait for URL to change (Blazor Server updates URL via SignalR/WebSocket)
+        // This is the default because most interactive Blazor elements change the URL
+        // (navigation links, tag toggles, collection buttons, etc.)
+        if (waitForUrlChange)
+        {
+            await page.WaitForURLAsync(url => url != urlBeforeClick,
+                new() { Timeout = timeoutMs });
+
+            // Wait for any remaining network activity to settle
+            await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        }
     }
 
     /// <summary>

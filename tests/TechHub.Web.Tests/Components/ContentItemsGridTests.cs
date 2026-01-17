@@ -81,98 +81,98 @@ public class ContentItemsGridTests : TestContext
     }
 
     [Fact]
-    public async Task ContentItemsGrid_GitHubCopilot_AllCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_GitHubCopilot_AllCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "all"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse All GitHub Copilot Content");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse All GitHub Copilot Content");
+        });
     }
 
     [Fact]
-    public async Task ContentItemsGrid_GitHubCopilot_NewsCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_GitHubCopilot_NewsCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "news"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse GitHub Copilot News");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse GitHub Copilot News");
+        });
     }
 
     [Fact]
-    public async Task ContentItemsGrid_GitHubCopilot_CommunityCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_GitHubCopilot_CommunityCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "community"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse GitHub Copilot Community Posts");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse GitHub Copilot Community Posts");
+        });
     }
 
     [Fact]
-    public async Task ContentItemsGrid_GitHubCopilot_VideosCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_GitHubCopilot_VideosCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "videos"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse GitHub Copilot Videos");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse GitHub Copilot Videos");
+        });
     }
 
     [Fact]
-    public async Task ContentItemsGrid_AllSection_AllCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_AllSection_AllCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse All Posts");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse All Posts");
+        });
     }
 
     [Fact]
-    public async Task ContentItemsGrid_AllSection_NewsCollection_DisplaysCorrectTitle()
+    public void ContentItemsGrid_AllSection_NewsCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "news"));
 
-        // Wait for async rendering
-        await Task.Delay(100);
-
-        // Assert
-        var h1 = cut.Find("h1.page-h1");
-        h1.TextContent.Should().Be("Browse All News");
+        // Assert - Use WaitForAssertion to wait for async rendering
+        cut.WaitForAssertion(() =>
+        {
+            var h1 = cut.Find("h1.page-h1");
+            h1.TextContent.Should().Be("Browse All News");
+        });
     }
 }

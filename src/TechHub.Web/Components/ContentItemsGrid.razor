@@ -41,13 +41,19 @@
             <button @onclick="LoadContent" aria-label="Retry loading content">Retry</button>
         </div>
     }
-    else if (contentItems.Any())
+    else if (FilteredContentItems.Any())
     {
         <div class="content-grid" role="feed" aria-busy="false">
-            @foreach (var item in contentItems)
+            @foreach (var item in FilteredContentItems)
             {
                 <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" />
             }
+        </div>
+    }
+    else if (FilterTags != null && FilterTags.Count > 0 && contentItems.Any())
+    {
+        <div class="no-content" role="status">
+            <p>No content matches the selected tags. Try selecting different tags or clearing filters.</p>
         </div>
     }
     else
@@ -65,18 +71,47 @@
     [Parameter, EditorRequired]
     public required string CollectionName { get; set; }
 
+    /// <summary>
+    /// Tags to filter content by (client-side filtering with OR logic)
+    /// </summary>
+    [Parameter]
+    public List<string>? FilterTags { get; set; }
+
     private List<ContentItemDto> contentItems = new();
     private bool isLoading = true;
     private string? errorMessage;
     private string previousCollectionName = string.Empty;
+    private List<string>? previousFilterTags;
 
     private bool ShowCollectionBadge =>
     SectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
     CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
+    /// <summary>
+    /// Returns content items filtered by selected tags (if any)
+    /// </summary>
+    private IEnumerable<ContentItemDto> FilteredContentItems
+    {
+        get
+        {
+            if (FilterTags == null || FilterTags.Count == 0)
+            {
+                return contentItems;
+            }
+
+            // Filter items that have ANY of the selected tags (OR logic)
+            // Case-insensitive matching
+            var normalizedTags = FilterTags.Select(t => t.ToLowerInvariant()).ToHashSet();
+            return contentItems.Where(item =>
+            item.Tags != null &&
+            item.Tags.Any(tag => normalizedTags.Contains(tag.ToLowerInvariant())));
+        }
+    }
+
     protected override async Task OnInitializedAsync()
     {
         previousCollectionName = CollectionName;
+        previousFilterTags = FilterTags?.ToList();
         await LoadContent();
     }
 
@@ -88,6 +123,23 @@
             previousCollectionName = CollectionName;
             await LoadContent();
         }
+
+        // Check if filter tags changed (triggers re-render but not reload)
+        var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
+        if (tagsChanged)
+        {
+            previousFilterTags = FilterTags?.ToList();
+            // No need to reload - filtering is done client-side via FilteredContentItems
+            StateHasChanged();
+        }
+    }
+
+    private static bool TagsAreEqual(List<string>? a, List<string>? b)
+    {
+        if (a == null && b == null) return true;
+        if (a == null || b == null) return false;
+        if (a.Count != b.Count) return false;
+        return a.OrderBy(x => x).SequenceEqual(b.OrderBy(x => x));
     }
 
     private async Task LoadContent()

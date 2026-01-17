@@ -1,5 +1,7 @@
 @page "/{sectionName}/{collectionName}"
+@using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@using TechHub.Web.Components.Shared
 @using static TechHub.Web.Services.SectionHelper
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
@@ -15,11 +17,15 @@
 
 <div class="page-with-sidebar">
     <aside class="sidebar">
+        <SidebarTagCloud Scope="TagCloudScope.Collection" SectionName="@SectionName" CollectionName="@CollectionName"
+            Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
+            OnSelectionChanged="HandleTagSelectionChanged" />
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
     <main class="page-main-content">
-        <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" @key="@CollectionName" />
+        <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" FilterTags="@selectedTags"
+            @key="@CollectionName" />
     </main>
 </div>
 
@@ -30,12 +36,71 @@
     [Parameter]
     public string CollectionName { get; set; } = null!;
 
+    [SupplyParameterFromQuery(Name = "tags")]
+    public string? TagsParam { get; set; }
+
+    private List<string> selectedTags = new();
+
     protected override void OnInitialized()
     {
         // Verify section exists, redirect to 404 if not
         if (SectionCache.GetSectionByName(SectionName) == null)
         {
             Navigation.NavigateTo("/not-found");
+            return;
         }
+
+        // Parse tags from URL
+        ParseTagsFromUrl();
+    }
+
+    protected override void OnParametersSet()
+    {
+        ParseTagsFromUrl();
+    }
+
+    private void ParseTagsFromUrl()
+    {
+        if (!string.IsNullOrEmpty(TagsParam))
+        {
+            // Parse tags from URL
+            var rawTags = TagsParam.Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => Uri.UnescapeDataString(t.Trim()).ToLowerInvariant())
+            .ToList();
+
+            // Deduplicate and normalize tags
+            selectedTags = rawTags
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+            // If duplicates were removed, clean up the URL
+            if (rawTags.Count != selectedTags.Count)
+            {
+                CleanupUrlWithDeduplicatedTags();
+            }
+        }
+        else
+        {
+            selectedTags = new List<string>();
+        }
+    }
+
+    private void CleanupUrlWithDeduplicatedTags()
+    {
+        if (selectedTags.Count == 0)
+        {
+            Navigation.NavigateTo($"/{SectionName}/{CollectionName}", replace: true);
+        }
+        else
+        {
+            var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
+            Navigation.NavigateTo($"/{SectionName}/{CollectionName}?tags={tagsParam}", replace: true);
+        }
+    }
+
+    private void HandleTagSelectionChanged(List<string> tags)
+    {
+        selectedTags = tags;
+        StateHasChanged();
     }
 }

@@ -119,3 +119,8 @@ public class SectionCardLayoutCollection : ICollectionFixture<PlaywrightCollecti
 public class SectionPageKeyboardNavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("Tag Filtering Tests")]
+public class TagFilteringCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}

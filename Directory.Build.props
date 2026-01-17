@@ -27,6 +27,10 @@
     
     <!-- Code quality -->
     <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+    
+    <!-- Exclude all non-src directories from dotnet watch (only src/ affects running website) -->
+    <!-- Prevents duplicate file detection errors like "YamlDotNet.dll already added" -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);tests/**;scripts/**;collections/**;docs/**;specs/**;infra/**;.git/**;.github/**;.devcontainer/**;.tmp/**;.vscode/**;node_modules/**</DefaultItemExcludes>
   </PropertyGroup>
 
   <!-- Global package references -->

@@ -172,13 +172,14 @@ src/
 │   │   └── FilterStateService.cs     # NEW: URL state management
 │   └── wwwroot/
 │       ├── css/
-│       │   ├── components/
-│       │   │   ├── tag-cloud.css     # NEW: Tag cloud styling
-│       │   │   ├── tag-dropdown.css  # NEW: Dropdown styling
-│       │   │   └── date-slider.css   # NEW: Slider styling
 │       │   └── design-tokens.css     # REFERENCE: Tech Hub colors
 │       └── js/
 │           └── filtering.js          # NEW: Client-side filter logic
+│
+# NOTE: Component CSS is scoped via Blazor's CSS isolation (.razor.css files):
+# - Components/Shared/SidebarTagCloud.razor.css
+# - Components/Shared/TagDropdownFilter.razor.css
+# - Components/Shared/DateRangeSlider.razor.css
 │
 ├── TechHub.Core/                      # Domain Models & Interfaces
 │   ├── DTOs/

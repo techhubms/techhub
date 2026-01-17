@@ -95,6 +95,8 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(30);
 });
+// Register interface for dependency injection (scoped to match HttpClient lifetime)
+builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 // Note: Resilience handler is already configured by AddServiceDefaults()
 
 var app = builder.Build();

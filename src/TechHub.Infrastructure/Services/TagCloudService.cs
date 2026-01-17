@@ -180,6 +180,12 @@ public class TagCloudService : ITagCloudService
         string collectionName,
         CancellationToken cancellationToken)
     {
+        // Handle "all" virtual collection - returns all content for the section across all collections
+        if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return await _contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+        }
+
         var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
 
         return allCollectionItems

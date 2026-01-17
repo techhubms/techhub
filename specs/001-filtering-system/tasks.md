@@ -20,7 +20,7 @@
 **Purpose**: Project initialization and configuration updates
 
 - [ ] T001 [P] Add filter configuration to src/TechHub.Api/appsettings.json (tag cloud defaults, virtual scroll threshold, quantile percentiles, date presets)
-- [ ] T002 [P] Create CSS files for filtering components in src/TechHub.Web/wwwroot/css/components/ (tag-cloud.css, tag-dropdown.css, date-slider.css)
+- [X] T002 [P] Create component-scoped CSS for filtering components using Blazor CSS isolation (.razor.css files co-located with components: SidebarTagCloud.razor.css, TagDropdownFilter.razor.css, DateRangeSlider.razor.css)
 - [ ] T003 [P] Create JavaScript file for client-side filtering in src/TechHub.Web/wwwroot/js/filtering.js
 
 ---
@@ -36,21 +36,21 @@
 - [ ] T004 [P] Create FilterRequest DTO in src/TechHub.Core/DTOs/FilterRequest.cs
 - [ ] T005 [P] Create FilterResponse DTO in src/TechHub.Core/DTOs/FilterResponse.cs
 - [ ] T006 [P] Create FilterSummaryDto in src/TechHub.Core/DTOs/FilterSummaryDto.cs
-- [ ] T007 [P] Create TagCloudItem DTO in src/TechHub.Core/DTOs/TagCloudItem.cs
-- [ ] T008 [P] Create TagCloudRequest DTO in src/TechHub.Core/DTOs/TagCloudRequest.cs
+- [X] T007 [P] Create TagCloudItem DTO in src/TechHub.Core/DTOs/TagCloudItem.cs
+- [X] T008 [P] Create TagCloudRequest DTO in src/TechHub.Core/DTOs/TagCloudRequest.cs
 - [ ] T009 [P] Create AllTagsResponse DTO in src/TechHub.Core/DTOs/AllTagsResponse.cs
 - [ ] T010 [P] Create TagWithCount DTO in src/TechHub.Core/DTOs/TagWithCount.cs
 - [ ] T011 [P] Create DateRangePreset enum in src/TechHub.Core/Models/DateRangePreset.cs
 
 ### Service Interfaces
 
-- [ ] T012 Create ITagCloudService interface in src/TechHub.Core/Interfaces/ITagCloudService.cs
+- [X] T012 Create ITagCloudService interface in src/TechHub.Core/Interfaces/ITagCloudService.cs
 - [ ] T013 Create ITagMatchingService interface in src/TechHub.Core/Interfaces/ITagMatchingService.cs
 - [ ] T014 Modify IContentRepository interface to add FilterAsync method in src/TechHub.Core/Interfaces/IContentRepository.cs
 
 ### Service Implementations
 
-- [ ] T015 Implement TagCloudService in src/TechHub.Infrastructure/Services/TagCloudService.cs (quantile-based sizing, dynamic quantity, scoping logic)
+- [X] T015 Implement TagCloudService in src/TechHub.Infrastructure/Services/TagCloudService.cs (quantile-based sizing, dynamic quantity, scoping logic)
 - [ ] T016 Implement TagMatchingService in src/TechHub.Infrastructure/Services/TagMatchingService.cs (normalized subset matching, word boundaries)
 - [ ] T017 Modify FileBasedContentRepository to implement FilterAsync method in src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs
 
@@ -90,7 +90,7 @@
 
 **Component Tests**:
 
-- [ ] T023 [P] [US1] Create SidebarTagCloudTests in tests/TechHub.Web.Tests/Components/SidebarTagCloudTests.cs
+- [X] T023 [P] [US1] Create SidebarTagCloudTests in tests/TechHub.Web.Tests/Components/SidebarTagCloudTests.cs
   - Test tag cloud renders with correct tags
   - Test tag selection toggles state
   - Test selected tags are highlighted
@@ -132,16 +132,16 @@
 
 **Blazor Components**:
 
-- [ ] T028 [P] [US1] Create SidebarTagCloud.razor in src/TechHub.Web/Components/Shared/SidebarTagCloud.razor (contextual tag cloud with selection)
-- [ ] T029 [P] [US1] Create SidebarTagCloud.razor.cs code-behind in src/TechHub.Web/Components/Shared/SidebarTagCloud.razor.cs
+- [X] T028 [P] [US1] Create SidebarTagCloud.razor in src/TechHub.Web/Components/Shared/SidebarTagCloud.razor (contextual tag cloud with selection)
+- [X] T029 [P] [US1] Create SidebarTagCloud.razor.cs code-behind in src/TechHub.Web/Components/Shared/SidebarTagCloud.razor.cs
 
 **API Client**:
 
-- [ ] T030 [US1] Modify TechHubApiClient.cs to add FilterContentAsync, GetTagCloudAsync, GetAllTagsAsync methods in src/TechHub.Web/Services/TechHubApiClient.cs
+- [X] T030 [US1] Modify TechHubApiClient.cs to add FilterContentAsync, GetTagCloudAsync, GetAllTagsAsync methods in src/TechHub.Web/Services/TechHubApiClient.cs
 
 **Page Integration**:
 
-- [ ] T031 [US1] Modify Section.razor to add SidebarTagCloud component in src/TechHub.Web/Components/Pages/Section.razor
+- [X] T031 [US1] Modify Section.razor to add SidebarTagCloud component in src/TechHub.Web/Components/Pages/Section.razor
 - [ ] T032 [US1] Modify Section.razor.cs to handle filter state and URL parameters in src/TechHub.Web/Components/Pages/Section.razor.cs
 
 **Validation**:

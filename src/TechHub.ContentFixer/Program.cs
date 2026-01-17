@@ -21,6 +21,7 @@ namespace TechHub.ContentFixer;
 /// - Remove {% raw %} and {% endraw %} tags
 /// - Process {{ "/path" | relative_url }} filters
 /// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
+/// - Remove section/collection names from tags (AI, Azure, Blogs, Videos, etc.)
 /// </summary>
 internal sealed class Program
 {
@@ -34,6 +35,32 @@ internal sealed class Program
         ["Security"] = "security",
         ["Coding"] = "coding",
         ["Cloud"] = "cloud"
+    };
+
+    /// <summary>
+    /// Tags to remove from frontmatter - these are section/collection names that were added
+    /// for Jekyll static filtering but are no longer needed with dynamic .NET queries.
+    /// Case-insensitive matching.
+    /// </summary>
+    private static readonly HashSet<string> _tagsToRemove = new(StringComparer.OrdinalIgnoreCase)
+    {
+        // Section names (display names and URL slugs)
+        "AI", "Artificial Intelligence",
+        "Azure",
+        "GitHub Copilot",
+        ".NET", "Coding", "dotnet",
+        "DevOps",
+        "Security",
+        "Machine Learning", "ML",
+        "Cloud",
+        "All",
+        // Collection names
+        "News",
+        "Blogs",
+        "Videos",
+        "Community",
+        "Roundups",
+        "Events"
     };
 
     private static async Task<int> Main(string[] args)
@@ -196,7 +223,27 @@ internal sealed class Program
             changed = true;
         }
 
-        // 3. Remove excerpt_separator
+        // 3. Remove section/collection names from tags
+        if (frontMatter.TryGetValue("tags", out var tagsObj))
+        {
+            var currentTags = GetListValue(frontMatter, "tags");
+            var filteredTags = currentTags
+                .Where(tag => !_tagsToRemove.Contains(tag))
+                .ToList();
+
+            var removedCount = currentTags.Count - filteredTags.Count;
+            if (removedCount > 0)
+            {
+                var removedTags = currentTags.Where(tag => _tagsToRemove.Contains(tag)).ToList();
+                frontMatter["tags"] = filteredTags;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Removed {removedCount} section/collection tags: {string.Join(", ", removedTags)}");
+                Console.ResetColor();
+                changed = true;
+            }
+        }
+
+        // 4. Remove excerpt_separator
         if (frontMatter.Remove("excerpt_separator"))
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -205,7 +252,7 @@ internal sealed class Program
             changed = true;
         }
 
-        // 4. Fix permalink to include /section/collection/ prefix
+        // 5. Fix permalink to include /section/collection/ prefix
         if (frontMatter.TryGetValue("permalink", out var permalinkObj))
         {
             var permalink = permalinkObj?.ToString() ?? string.Empty;
@@ -234,7 +281,7 @@ internal sealed class Program
             }
         }
 
-        // 5. Save description for variable replacement, then remove from frontmatter
+        // 6. Save description for variable replacement, then remove from frontmatter
         var description = frontMatter.TryGetValue("description", out var descObj) ? descObj?.ToString() : null;
         if (frontMatter.Remove("description"))
         {
@@ -244,7 +291,7 @@ internal sealed class Program
             changed = true;
         }
 
-        // 6. Replace template variables in content
+        // 7. Replace template variables in content
         var originalContent = markdownContent;
         markdownContent = ReplaceTemplateVariables(markdownContent, frontMatter, description);
         if (markdownContent != originalContent)

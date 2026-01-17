@@ -10,7 +10,9 @@
 ### Session 2026-01-16
 
 - Q: Tag Selection Interface Architecture - Are sidebar tag clicks and Excel dropdown two separate interfaces or one unified interface? → A: Both interfaces - (1) Sidebar tag cloud showing top 20 most-used tags (scoped to homepage/section/collection/content context), AND (2) Excel-style dropdown for finding specific tags not in top 20. Both work together, synchronized state, complementary purposes.
-- Q: Tag Cloud Sizing Algorithm - How should tag sizes reflect relative popularity (linear, logarithmic, quantile-based, fixed with color)? → A: Quantile-based with 3 size tiers - Divide top 20 into Large (top 25% = 5 tags), Medium (middle 50% = 10 tags), Small (bottom 25% = 5 tags). Prevents excessively large tags while maintaining clear visual hierarchy.- Q: Popular Tag Display Quantity Threshold - Should tag cloud always show exactly 20 tags, or adjust based on content volume and popularity? \u2192 A: Dynamic quantity with minimum threshold - Show top 20 OR all tags with \u22655 uses, whichever is fewer. Prevents displaying rarely-used tags in small sections while capping maximum display size.- Q: Popular Tag Display Quantity Threshold - Should tag cloud always show exactly 20 tags, or adjust based on content volume and popularity? → A: Dynamic quantity with minimum threshold - Show top 20 OR all tags with ≥5 uses, whichever is fewer. Prevents displaying rarely-used tags in small sections while capping maximum display size.
+- Q: Tag Cloud Sizing Algorithm - How should tag sizes reflect relative popularity (linear, logarithmic, quantile-based, fixed with color)? → A: Quantile-based with 3 size tiers - Divide top 20 into Large (top 25% = 5 tags), Medium (middle 50% = 10 tags), Small (bottom 25% = 5 tags). Prevents excessively large tags while maintaining clear visual hierarchy.
+- Q: Popular Tag Display Quantity Threshold - Should tag cloud always show exactly 20 tags, or adjust based on content volume and popularity? → A: Dynamic quantity with minimum threshold - Show top 20 OR all tags with ≥5 uses, whichever is fewer. Prevents displaying rarely-used tags in small sections while capping maximum display size.
+- Q: Section/Collection Names in Tags - The content processing pipeline was adding section and collection names (e.g., "AI", "GitHub Copilot", "Blogs", "Videos") as tags to every content item for Jekyll static filtering. Should these remain in the tag cloud? → A: Stop ADDING them automatically, but keep them if AI assigned them. The old pipeline added these to EVERY item which cluttered tag clouds. **Action**: (1) Update ContentFixer to remove these auto-added tags from existing content (one-time cleanup), (2) Update content-processing pipeline to stop automatically adding categories/collection to tags, (3) Do NOT filter out section names if they're legitimately in the AI's tag response.
 
 ## User Scenarios & Testing
 
@@ -30,9 +32,27 @@ Users can click tags in the sidebar tag cloud (showing top 20 most-used tags fro
 4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY the tags of that specific article (not top 20)
 5. **Given** I click a tag in the sidebar cloud, **When** the filter applies, **Then** the content list updates to show only items with that tag
 6. **Given** I have one tag selected, **When** I click another tag in the cloud, **Then** the content list shows items matching ANY of the selected tags (OR logic)
-7. **Given** I have tags selected, **When** I click a selected tag again, **Then** it deselects and content list updates
-8. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`)
-9. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view
+7. **Given** I have tags selected, **When** I click a selected tag again, **Then** it toggles off (deselects), the tag's visual highlight is removed, and content list updates to exclude that tag
+8. **Given** I click a tag to select it, **When** the tag becomes active, **Then** it displays a visual indicator (highlighted background/border) showing it's selected
+9. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`) with no duplicates
+10. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view with the same tags selected and visually highlighted
+
+**Tag Click Navigation Behavior**:
+
+When clicking a tag, the navigation behavior depends on the current page context:
+
+| Current Page                                     | Navigation Behavior                                                              | Example                                                   |
+| ------------------------------------------------ | -------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Homepage (`/`)                                   | Navigate to `/all?tags={tag}`                                                    | Click "AI" → `/all?tags=ai`                               |
+| Section page (`/github-copilot`)                 | Stay on section, add filter: `/{section}?tags={tag}`                             | Click "VS Code" → `/github-copilot?tags=vs-code`          |
+| Collection page (`/github-copilot/videos`)       | Stay on collection, add filter: `/{section}/{collection}?tags={tag}`             | Click "Tutorial" → `/github-copilot/videos?tags=tutorial` |
+| Content item (`/github-copilot/videos/my-video`) | Navigate to content's primarySection with filter: `/{primarySection}?tags={tag}` | Click "AI" → `/github-copilot?tags=ai`                    |
+
+**Rationale**:
+
+- Homepage has no filtering context, so redirect to `/all` (shows all content with filter)
+- Section/Collection pages already have context, so filter in place
+- Content items don't have a content list to filter, so navigate to the item's primary section
 
 ---
 

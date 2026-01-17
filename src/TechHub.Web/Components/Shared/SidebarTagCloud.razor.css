@@ -1,0 +1,109 @@
+/* ============================================================================
+   SidebarTagCloud Component - Interactive Tag Cloud for Filtering
+   
+   Component-scoped styles for the tag cloud sidebar widget.
+   Uses the same design language as other sidebar interactive elements.
+   Tag cloud uses size variations to show tag popularity (quantile-based).
+   ============================================================================ */
+
+/* Tag Cloud Container - Tighter spacing for cloud effect */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Individual Tag Button - Base styling */
+.tag-cloud-item {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all var(--duration-fast) var(--easing-ease);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tag-cloud-item:hover {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+    transform: translateY(-1px);
+}
+
+.tag-cloud-item:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+}
+
+.tag-cloud-item:active {
+    transform: translateY(0);
+}
+
+/* Selected state - tag is currently active filter */
+.tag-cloud-item.selected {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+.tag-cloud-item.selected:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+}
+
+/* Size variations - Bigger differences for clear visual hierarchy */
+.tag-size-small {
+    font-size: 0.75rem;
+    /* 12px - noticeably smaller */
+    padding: 0.0625rem 0.375rem;
+}
+
+.tag-size-medium {
+    font-size: 0.9375rem;
+    /* 15px - default readable size */
+    padding: 0.125rem 0.5rem;
+}
+
+.tag-size-large {
+    font-size: 1.125rem;
+    /* 18px - clearly prominent */
+    font-weight: var(--font-weight-semibold);
+    padding: 0.1875rem 0.625rem;
+}
+
+/* Text/status messages within the sidebar section */
+.sidebar-text {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+}
+
+.sidebar-text.error {
+    color: var(--color-accent-danger);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .tag-cloud {
+        gap: 0.25rem;
+    }
+
+    .tag-size-small {
+        font-size: 0.6875rem;
+    }
+
+    .tag-size-medium {
+        font-size: 0.8125rem;
+    }
+
+    .tag-size-large {
+        font-size: 0.9375rem;
+    }
+}
