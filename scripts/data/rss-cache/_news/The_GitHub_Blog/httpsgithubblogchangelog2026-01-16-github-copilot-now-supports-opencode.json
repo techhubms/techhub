@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-01-16T23:03:03+00:00",
+  "Description": "GitHub is officially supporting using your Copilot Pro, Pro+, Business, or Enterprise subscription with OpenCode. GitHub Copilot now fully supports authentication with OpenCode through a formal partnership, allowing you to…\n\nThe post [GitHub Copilot now supports OpenCode](https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "GitHub is officially supporting using your Copilot Pro, Pro+, Business, or Enterprise subscription with OpenCode.\n\nGitHub Copilot now fully supports authentication with OpenCode through a formal partnership, allowing you to use your existing Copilot subscription across more of your development workflow.\n\n## What is OpenCode?\n\nOpenCode is an open source agent that helps you write code in your terminal, IDE, or desktop. You can learn more at [OpenCode’s site](https://opencode.ai/).\n\n## How it works\n\nGetting started with OpenCode and GitHub Copilot is simple:\n\n- In OpenCode, run `/connect`\nand select **GitHub Copilot**.\n- Complete the GitHub device login flow.\n- Start using OpenCode powered by Copilot.\n\n## Who can use this feature\n\nAll developers with paid GitHub Copilot subscriptions (Pro, Pro+, Business, or Enterprise) can now authenticate into OpenCode using their Copilot credentials—no additional AI license needed.\n\nLearn more about [OpenCode’s Copilot provider setup](https://opencode.ai/docs/providers/#github-copilot-support).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "GitHub Copilot now supports OpenCode",
+  "ProcessedDate": "2026-01-17 01:30:00",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news"
+}

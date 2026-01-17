@@ -11355,5 +11355,11 @@
     "canonical_url": "https://news.microsoft.com/signal/articles/prompt-use-ai-to-hype-you-up/",
     "collection": "news",
     "timestamp": "2026-01-16 22:03:31 +00:00"
+  },
+  {
+    "timestamp": "2026-01-17 00:05:48 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/4Ed3dY8UkMU",
+    "reason": "No categories found: No categories assigned. The input lacks any substantive content (the 'content' field is null) and the description is purely a generic teaser without specifying what the extension is, its technical details, or its relation to any relevant Microsoft developer technologies. Without actual content or details about the extension, there is insufficient information to determine category inclusion according to core rules and quality standards.",
+    "collection": "videos"
   }
 ]

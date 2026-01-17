@@ -23632,5 +23632,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the entire content is focused on Azure Arc, an official Azure management offering, including its onboarding, management capabilities, and new portal features. It does not qualify for other categories because the article does not delve into coding, DevOps, ML, Security, AI, or GitHub Copilot topics, nor does it present code, development frameworks, or AI/ML architecture. The content surpasses the minimum length for community contributions and is technical in nature, describing platform tools and enhancements—not business productivity or management topics.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-arc-portal-update-simplifying-onboarding-and-management-at/ba-p/4477355"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode",
+    "timestamp": "2026-01-17 01:31:43 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the news is specifically about GitHub Copilot's integration and authentication support with OpenCode (GitHub Copilot inclusion rules 1, 2, 3). 'AI' is included because Copilot is an AI-powered coding tool (AI inclusion rule 2, and the critical instruction to always include both categories together for GitHub Copilot). No other categories qualify since the focus is not on coding techniques, DevOps, Azure, ML, or Security. Content is a news update about developer tool integration and meets all content quality and relevance criteria."
   }
 ]
