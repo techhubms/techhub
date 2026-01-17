@@ -23638,5 +23638,11 @@
     "canonical_url": "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode",
     "timestamp": "2026-01-17 01:31:43 +00:00",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the news is specifically about GitHub Copilot's integration and authentication support with OpenCode (GitHub Copilot inclusion rules 1, 2, 3). 'AI' is included because Copilot is an AI-powered coding tool (AI inclusion rule 2, and the critical instruction to always include both categories together for GitHub Copilot). No other categories qualify since the focus is not on coding techniques, DevOps, Azure, ML, or Security. Content is a news update about developer tool integration and meets all content quality and relevance criteria."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centrally discusses the use of GitHub Copilot app modernization (AI rules 1, 2, and GitHub Copilot rules 1-6). Assigned 'DevOps' because the migration depends on CI/CD automation, dependency management, and build-fix cycles (DevOps rules 3, 5, 6). Did NOT assign Azure or Coding since there is no direct Azure usage or explicit code implementation in .NET, C#, or Microsoft-first languages—focus is on modernizing Java applications using Microsoft AI tooling and DevOps practices.",
+    "timestamp": "2026-01-17 13:12:03 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-java-ee-applications-to-jakarta-ee-with-github/ba-p/4486471"
   }
 ]
