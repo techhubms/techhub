@@ -11361,5 +11361,17 @@
     "canonical_url": "https://www.youtube.com/shorts/4Ed3dY8UkMU",
     "reason": "No categories found: No categories assigned. The input lacks any substantive content (the 'content' field is null) and the description is purely a generic teaser without specifying what the extension is, its technical details, or its relation to any relevant Microsoft developer technologies. Without actual content or details about the extension, there is insufficient information to determine category inclusion according to core rules and quality standards.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-17 18:03:29 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/zz6yge9p6e0",
+    "reason": "No categories found: No categories were assigned because the content is focused on announcing general statistics about GitHub's user growth (the Octoverse report), with no substantive technical or implementation details about Microsoft technologies, developer tools, coding, DevOps, AI, ML, Security, or Azure. The content is high-level, promotional, and does not provide educational or hands-on technical value as required by inclusion rules in Chapters 2 and 4. This qualifies as a sales/brand announcement (generic exclusion), not actionable technical knowledge.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/YRU5VrISYWs",
+    "reason": "No categories found: Content excluded due to lack of substantive technical content related to Microsoft technology categories. The description indicates the video is about '8 quick VS Code UI tricks to make your editor cleaner, faster, and way more comfortable to use,' which focuses on user interface tips and usability enhancements in Visual Studio Code. There is no indication of developer tool usage at a technical depth, coding practices, automation, or any of the qualifying inclusion rules for 'Coding,' 'DevOps,' or other categories. The provided tags and description also do not describe development, programming, or integration for Microsoft technologies—only editor UI tricks (such as hidden features, navigation, or theme settings). Therefore, no categories qualify under the provided rules.",
+    "collection": "videos",
+    "timestamp": "2026-01-18 09:03:34 +00:00"
   }
 ]

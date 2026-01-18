@@ -23650,5 +23650,11 @@
     "reason": "Succesfully added: Categories assigned as follows: AI (major focus on AI, Copilot, and agentic workflows—AI category rules 1, 2, 4, 5). GitHub Copilot (explicit discussion of Copilot’s impact on coding—GitHub Copilot rules 1–4; must include AI as per rules). DevOps (major emphasis on open source contributions, PRs, engineering workflow changes, and security best practices—DevOps rules 2, 3, 4, 5, 9). Coding (discusses programming languages, skill trends, and the developer experience—Coding rules 1, 4, 5). Security (extensive mention of CodeQL, Dependabot, secret scanning, and 'security by default'—Security rules 1, 5, 6). No content excluded by generic exclusion rules as the episode remains technically focused, with AI, security, and development topics at the core.",
     "canonical_url": "https://www.youtube.com/watch?v=ve-tfDEQOG8",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-18 13:11:38 +00:00",
+    "reason": "Succesfully added: Assigned the Security category. The article's primary focus is governing and securing external sharing in Microsoft 365 ecosystems, with extensive technical, policy, and compliance recommendations: configuring SharePoint/OneDrive/Teams settings, using Azure AD, enforcing Conditional Access, conducting audits, and preventing data leakage (Security inclusion rules 1, 2, 3, 4, 5, and 9). Microsoft 365, SharePoint, and Teams are covered, but the content is not developer-focused (no custom code, programming, or dev tools), so Coding, DevOps, or Azure categories do not apply. No AI or ML technologies are discussed. No exclusion rules trigger: the article is technical (not business/strategy-only), avoids purely business productivity or general end-user features, and is written in English with substantial length.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/managing-external-sharing-in-microsoft-365-without-chaos/"
   }
 ]
