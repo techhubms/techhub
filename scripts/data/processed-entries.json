@@ -23662,5 +23662,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-on-behalf-of-flow-for-entra-based-mcp-servers/ba-p/4486760",
     "timestamp": "2026-01-19 08:04:48 +00:00"
+  },
+  {
+    "timestamp": "2026-01-19 09:08:00 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part3",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the post focuses on best practices, debugging, and workflow patterns for AI-assisted development and spec-driven workflows (AI rule 4). 'DevOps' is included as the article thoroughly explores developer workflows, automation, debugging scripts, CI/CD, and team practices (DevOps rules 3, 5, 9, 10, 11). 'Coding' is assigned due to the in-depth discussions of developer practices, code quality, iteration patterns, debugging, implementation patterns and architecture (Coding rules 1-4). 'GitHub Copilot' is not assigned, as while Copilot is mentioned, the article is not specifically about its features or configuration and uses it more in passing. Azure and ML categories are not applicable, as there is no direct focus on Microsoft Azure technologies or significant coverage of ML engineering/data science. Security is not assigned as a main category; although security topics (OWASP, XSS) are discussed, the main thrust of the post is not security implementation. The content fits developmental and workflow knowledge aggregation use cases for Microsoft professionals."
   }
 ]
