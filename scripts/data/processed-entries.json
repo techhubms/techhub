@@ -23698,5 +23698,11 @@
     "canonical_url": "https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/",
     "timestamp": "2026-01-19 21:03:28 +00:00",
     "reason": "Succesfully added: Assigned Azure category because the feature pertains directly to Azure Boards as part of Azure DevOps (Azure rule 1). DevOps category applies as Azure Boards is a core DevOps tool and the improvements relate to backlog and Kanban management (DevOps rule 1 & 3). AI, GitHub Copilot, Coding, ML, and Security categories are not applicable as the post focuses on work tracking, filtering features, and workflow optimizations, not programming, AI/ML, security, or GitHub Copilot functionalities. No generic exclusion rules apply—the content is technical, in English, and aimed at practitioners."
+  },
+  {
+    "timestamp": "2026-01-19 23:03:56 +00:00",
+    "reason": "Succesfully added: Assigned Azure because the article focuses on optimizing resources and automation using Azure services and APIs (Azure rule 1, 2, 4, and 5). Assigned Security because there is a significant focus on continuous security checks, best practice enforcement, and integration with Key Vault and NSGs (Security rules 1, 2, 4, and 5). Assigned DevOps because of the integration with GitHub, continuous monitoring, scheduled checks, notification automation, and discussion of operational workflows (DevOps rules 1, 2, 3, 5, and 7). Did not assign ML or AI, as the content does not discuss AI/ML workloads or development. Did not assign Coding, as it focuses on cloud operations and configuration rather than code or programming practices directly.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-cloud-ops-with-sre-agent-scheduled-checks-for-cloud/ba-p/4487261"
   }
 ]
