@@ -23686,5 +23686,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-reporting-in-playwright-workspaces/ba-p/4487059",
     "reason": "Succesfully added: I assigned the Azure category because the content describes features integrated directly with the Azure portal, storage, and App Testing services (Azure rule 1 and 2). DevOps is included due to its focus on streamlining continuous integration/continuous deployment (CI/CD) workflows through centralized reporting, artifact management, and team collaboration (DevOps rules 1, 5, 6, and 9). The content is not fundamentally about coding, AI, ML, Security, or GitHub Copilot, so those categories are excluded. No generic exclusion rules apply, and the announcement is technical and directly relevant to Azure-based testing workflows.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' due to the deep technical focus on Azure Kubernetes Service (AKS) and its provisioning (Azure rule 1, 4, and 5). Assigned 'DevOps' because the content concerns Infrastructure as Code (IaC) practices, automation of cloud resources, operational optimization, and CI/CD-related provisioning tasks (DevOps rule 6, 7, 8; also methodology and developer experience with Crossplane, Terraform, Helm, and managed identities). Did not assign 'AI', 'GitHub Copilot', 'ML', 'Coding', or 'Security' as there is no substantial coverage of AI/ML, GitHub Copilot usage, custom coding, or security-specific implementation. The content meets all quality criteria, is technical, non-biographical, in English, and aimed at practitioners.",
+    "timestamp": "2026-01-19 16:05:08 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/parallel-aks-node-pool-creation-with-crossplane-a-version/ba-p/4477936"
   }
 ]

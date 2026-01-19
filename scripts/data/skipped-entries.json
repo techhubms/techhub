@@ -11385,5 +11385,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=sg_pjLsqT34",
     "reason": "No categories found: Content is excluded due to the generic exclusion rule for sales pitches and promotional content. The description and available content focus primarily on promoting a free C# course on Dometrain, encouraging viewers to comment, like, and subscribe, without offering substantive technical or educational depth on C# or .NET itself. There is no detailed technical content, tutorial, or hands-on guidance provided in the excerpt, making it ineligible for category assignment.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because this content is about the release of jQuery 4.0, a JavaScript library that is not a Microsoft technology and does not centrally involve Microsoft platforms, tools, or services. None of the Microsoft-focused inclusion rules for AI, GitHub Copilot, Coding (requires central Microsoft language or framework), DevOps, Azure, ML, or Security are met. The content only mentions Edge Legacy as a dropped browser but does not focus on Microsoft Edge development or involve any core Microsoft technologies. Generic exclusion rules do not trigger, but the threshold for Microsoft technology centrality is not met, as required by Chapter 2 and clarified in Chapter 4.",
+    "collection": "blogs",
+    "timestamp": "2026-01-19 14:07:00 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/19/jquery-4-0-released-first-major-version-since-2016/"
   }
 ]
