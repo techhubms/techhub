@@ -121,12 +121,12 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
     {
         // Arrange - Navigate to a section page with a pre-selected tag
         // Use /github-copilot instead of /all as it has guaranteed tags
-        await Page.GotoRelativeAsync("/github-copilot?tags=github%20copilot");
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
         await WaitForTagCloudReadyAsync();
 
         // Assert - Tag button should have selected/active state
         var selectedTagButton = Page.Locator(".tag-cloud-item.selected")
-            .Filter(new() { HasTextRegex = new Regex("github copilot", RegexOptions.IgnoreCase) });
+            .Filter(new() { HasTextRegex = new Regex("vs code", RegexOptions.IgnoreCase) });
 
         await Assertions.Expect(selectedTagButton).ToBeVisibleAsync(new()
         {
@@ -143,18 +143,18 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
     {
         // Arrange - Navigate to a section page with multiple pre-selected tags
         // Use /github-copilot instead of /all as it has guaranteed tags
-        await Page.GotoRelativeAsync("/github-copilot?tags=github%20copilot,ai");
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code,developer%20tools");
         await WaitForTagCloudReadyAsync();
 
         // Assert - Both tag buttons should have selected/active state
-        var githubCopilotTag = Page.Locator(".tag-cloud-item.selected")
-            .Filter(new() { HasTextRegex = new Regex("github copilot", RegexOptions.IgnoreCase) });
+        var vsCodeTag = Page.Locator(".tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new Regex("vs code", RegexOptions.IgnoreCase) });
 
-        var aiTag = Page.Locator(".tag-cloud-item.selected")
-            .Filter(new() { HasTextRegex = new Regex("^ai$", RegexOptions.IgnoreCase) });
+        var devToolsTag = Page.Locator(".tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new Regex("developer tools", RegexOptions.IgnoreCase) });
 
-        await Assertions.Expect(githubCopilotTag).ToBeVisibleAsync(new() { Timeout = 5000 });
-        await Assertions.Expect(aiTag).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(vsCodeTag).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(devToolsTag).ToBeVisibleAsync(new() { Timeout = 5000 });
     }
 
     [Fact]
@@ -162,7 +162,7 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
     {
         // Arrange - Navigate to URL with duplicate tags
         // The component should internally deduplicate and only show unique selected tags
-        await Page.GotoRelativeAsync("/github-copilot?tags=github%20copilot,ai,github%20copilot,devops,ai");
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code,developer%20tools,vs%20code,productivity,developer%20tools");
         await WaitForTagCloudReadyAsync();
 
         // Wait for page to load and process tags
@@ -177,13 +177,13 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         count.Should().BeGreaterThan(0, "At least one tag should be selected");
 
         // Verify the selected tags are the expected ones (each unique tag once)
-        var githubCopilotSelected = Page.Locator(".tag-cloud-item.selected")
-            .Filter(new() { HasTextRegex = new Regex("github copilot", RegexOptions.IgnoreCase) });
-        var aiSelected = Page.Locator(".tag-cloud-item.selected")
-            .Filter(new() { HasTextRegex = new Regex("^ai$", RegexOptions.IgnoreCase) });
+        var vsCodeSelected = Page.Locator(".tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new Regex("vs code", RegexOptions.IgnoreCase) });
+        var devToolsSelected = Page.Locator(".tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new Regex("developer tools", RegexOptions.IgnoreCase) });
 
-        await Assertions.Expect(githubCopilotSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
-        await Assertions.Expect(aiSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(vsCodeSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(devToolsSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
     }
 
     [Fact]
@@ -323,7 +323,7 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
     public async Task TagFiltering_InSection_FiltersWithinSectionOnly()
     {
         // Arrange - Navigate to GitHub Copilot section with a tag
-        await Page.GotoRelativeAsync("/github-copilot?tags=github%20copilot");
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
         await WaitForTagCloudReadyAsync();
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
@@ -332,7 +332,7 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
 
         // Assert - Verify we have results
         visibleItems.Should().BeGreaterThan(0,
-            "Filtering by 'github copilot' tag in GitHub Copilot section should return results");
+            "Filtering by 'vs code' tag in GitHub Copilot section should return results");
 
         // Section and tag filtering are verified by:
         // 1. Items are returned (not zero) - proven above

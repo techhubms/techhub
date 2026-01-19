@@ -26,7 +26,7 @@ section_names:
 ---
 Fokko Veegens covers VS Code 1.102 features including the open-sourcing of GitHub Copilot Chat extension, custom chat modes, custom instruction generation, and terminal auto approval.<!--excerpt_end-->
 
-{% youtube vcKTx7CQ1_c %}
+{% youtube bLjFNi9_RUk %}
 
 ## Key Features in VS Code 1.102
 

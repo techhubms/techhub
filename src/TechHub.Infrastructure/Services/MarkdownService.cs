@@ -183,14 +183,14 @@ public class MarkdownService : IMarkdownService
             return string.Empty;
         }
 
-        // Helper to create YouTube embed HTML
+        // Helper to create YouTube embed HTML with privacy-enhanced mode
         static string CreateYouTubeEmbed(string videoId) => $"""
             <div class="video-container">
                 <iframe
-                    src="https://www.youtube.com/embed/{videoId}"
+                    src="https://www.youtube-nocookie.com/embed/{videoId}"
                     title="YouTube video player"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="encrypted-media; picture-in-picture; web-share"
                     allowfullscreen>
                 </iframe>
             </div>

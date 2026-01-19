@@ -28,7 +28,7 @@ section_names:
 ---
 Fokko Veegens explores VS Code 1.103 features including Checkpoints for time travel in Agent mode, Todo lists tracking AI tasks, GPT-5 model support, and enhanced terminal capabilities.<!--excerpt_end-->
 
-{% youtube JmZs62vX8j0 %}
+{% youtube mc1jCt2HYAc %}
 
 ## Key Features in VS Code 1.103
 

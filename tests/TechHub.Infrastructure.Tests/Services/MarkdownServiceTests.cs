@@ -251,12 +251,13 @@ public class MarkdownServiceTests
         // Act: Process YouTube embeds
         var result = _service.ProcessYouTubeEmbeds(markdown);
 
-        // Assert: Shortcode replaced with iframe HTML
+        // Assert: Shortcode replaced with iframe HTML using privacy-enhanced mode
         result.Should().Contain("<iframe");
-        result.Should().Contain("https://www.youtube.com/embed/dQw4w9WgXcQ");
+        result.Should().Contain("https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ");
         result.Should().Contain("allowfullscreen");
         result.Should().Contain("class=\"video-container\"");
         result.Should().NotContain("[YouTube:");
+        result.Should().NotContain("www.youtube.com"); // Ensure privacy-enhanced domain is used
     }
 
     /// <summary>

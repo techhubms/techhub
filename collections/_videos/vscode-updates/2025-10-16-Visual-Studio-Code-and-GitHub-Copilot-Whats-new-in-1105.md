@@ -26,7 +26,7 @@ section_names:
 ---
 Fokko Veegens provides a comprehensive walkthrough of Visual Studio Code 1.105, released in October 2025, highlighting significant enhancements to GitHub Copilot integration and developer productivity tools. The release introduces AI-powered assistance for complex workflows, improved terminal integration, and enhanced code testing capabilities.<!--excerpt_end-->
 
-{% youtube EZx42sdoUj4 %}
+{% youtube zsCBEVCQ98I %}
 
 ## Full summary based on transcript
 

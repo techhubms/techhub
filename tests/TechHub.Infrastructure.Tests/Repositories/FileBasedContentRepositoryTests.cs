@@ -465,10 +465,11 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Act: Load content
         var content = await _repository.GetAllAsync();
 
-        // Assert: YouTube shortcode converted to iframe in rendered HTML
+        // Assert: YouTube shortcode converted to privacy-enhanced iframe in rendered HTML
         content.Should().ContainSingle();
         content[0].RenderedHtml.Should().Contain("<iframe");
-        content[0].RenderedHtml.Should().Contain("youtube.com/embed/ABC123xyz");
+        content[0].RenderedHtml.Should().Contain("youtube-nocookie.com/embed/ABC123xyz");
+        content[0].RenderedHtml.Should().NotContain("www.youtube.com"); // Ensure privacy mode is used
     }
 
     /// <summary>
