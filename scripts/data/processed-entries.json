@@ -23668,5 +23668,17 @@
     "collection": "blogs",
     "canonical_url": "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part3",
     "reason": "Succesfully added: Categories assigned: 'AI' because the post focuses on best practices, debugging, and workflow patterns for AI-assisted development and spec-driven workflows (AI rule 4). 'DevOps' is included as the article thoroughly explores developer workflows, automation, debugging scripts, CI/CD, and team practices (DevOps rules 3, 5, 9, 10, 11). 'Coding' is assigned due to the in-depth discussions of developer practices, code quality, iteration patterns, debugging, implementation patterns and architecture (Coding rules 1-4). 'GitHub Copilot' is not assigned, as while Copilot is mentioned, the article is not specifically about its features or configuration and uses it more in passing. Azure and ML categories are not applicable, as there is no direct focus on Microsoft Azure technologies or significant coverage of ML engineering/data science. Security is not assigned as a main category; although security topics (OWASP, XSS) are discussed, the main thrust of the post is not security implementation. The content fits developmental and workflow knowledge aggregation use cases for Microsoft professionals."
+  },
+  {
+    "timestamp": "2026-01-19 12:04:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uDVkcZwB0EU",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content centers on the use of Microsoft AI services (Foundry IQ and Azure AI Search), and goes into details about RAG, large language models, and agentic reasoning (AI inclusion rules 1, 4, and 5). Assigned Azure category because main features, deployment, and architecture are deeply tied to Azure services (Azure inclusion rules 1, 3, and 4). Coding, ML, DevOps, Security, and GitHub Copilot categories were not included as the video does not explicitly cover coding practices/frameworks, custom ML engineering, DevOps pipelines, security features, or GitHub Copilot. The source and structure do not trigger any exclusion rules: presentation is technical, educational, and development/architecture-focused."
+  },
+  {
+    "timestamp": "2026-01-19 12:05:08 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-playwright-testing-service-preview-run-playwright-tests-on/ba-p/4487103",
+    "collection": "community",
+    "reason": "Succesfully added: Included 'Azure' because the content is focused on a cloud service in the Azure ecosystem, including detailed instructions for configuring and running tests with Azure Playwright Testing Service (Azure rule 1). Included 'DevOps' due to emphasis on automated testing, CI/CD pipeline integration, and workflow automation using Azure and Playwright (DevOps rules 3, 5, and 9). Included 'Coding' because the guide addresses TypeScript development, code-based test structures, and tool integration in Visual Studio/VS Code (Coding rules 1, 2, and 4). No AI, ML, GitHub Copilot, or Security content is present. The content is technical, hands-on, exceeds the 200-word minimum for community posts, and does not trigger any generic exclusion rules."
   }
 ]
