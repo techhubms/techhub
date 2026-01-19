@@ -35,7 +35,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 1: Build and Test Verification
 
-**Execute**: `Run -Clean -OnlyTests`
+**Execute**: `Run`
 
 **Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
@@ -140,7 +140,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 **After making changes**:
 
-- Run `Run -OnlyTests` to verify changes
+- Run `Run` to verify changes
 - Use `get_errors` tool to check for new VS Code diagnostics
 - Fix any new issues introduced by changes
 
@@ -182,7 +182,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 **After user approval**:
 
 - Execute `find-dead-code.ps1 -Fix` (if user confirmed)
-- Run `Run -OnlyTests` to verify nothing broke
+- Run `Run` to verify nothing broke
 - Use `get_errors` to check for new compilation issues
 
 ---
@@ -550,7 +550,7 @@ Provide an overall test quality grade based on findings:
 - Fix test issues using `replace_string_in_file` or `multi_replace_string_in_file`
 - Move misplaced tests to correct projects
 - Add missing test coverage
-- Run `Run -OnlyTests` to verify all tests still pass
+- Run `Run` to verify all tests still pass
 - Use `get_errors` to check for new issues
 
 ---
@@ -682,14 +682,14 @@ Provide an overall test quality grade based on findings:
 **After user approval**:
 
 - Fix issues using `replace_string_in_file` or `multi_replace_string_in_file`
-- Run `Run -OnlyTests` to verify changes
+- Run `Run` to verify changes
 - Use `get_errors` to check for new issues
 
 ---
 
 ### Step 9: Final Validation
 
-**Execute**: `Run -Clean -OnlyTests`
+**Execute**: `Run`
 
 **Purpose**: Final verification that all changes are correct and nothing is broken.
 

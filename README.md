@@ -20,8 +20,8 @@ This directory contains the .NET/Blazor implementation of Tech Hub.
 # Build and run both API and Web
 Run
 
-# Clean build and test first, then start both API and Web if tests pass
-Run -Clean -Test
+# Run all tests, then start servers
+Run -Test
 ```
 
 **Stop the Application**: Press `Ctrl+C` in the terminal where the function is running.
@@ -40,11 +40,8 @@ Tech Hub uses **.NET Aspire** for orchestration, observability, and service disc
 #### Via Run Function (Recommended)
 
 ```powershell
-# Default mode - uses Aspire AppHost to orchestrate API + Web
+# Uses Aspire AppHost to orchestrate API + Web
 Run
-
-# With Aspire Dashboard for telemetry visualization
-Run -Dashboard
 ```
 
 #### Direct AppHost

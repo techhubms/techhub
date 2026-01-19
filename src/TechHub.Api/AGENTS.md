@@ -13,25 +13,14 @@ This project implements the REST API backend using ASP.NET Core Minimal APIs. It
 
 ## Starting & Running
 
-**ALWAYS refer to [Root AGENTS.md](../../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
+**ALWAYS refer to [Root AGENTS.md - Starting, Stopping and Testing the Website](../../AGENTS.md#starting-stopping-and-testing-the-website)** for complete instructions on:
 
 - Starting the website with the `Run` function
-- Running tests with `Run -OnlyTests`
+- Running tests with `Run`
 - Using Playwright MCP tools for testing
 - Proper terminal management
 
 **Quick reference for API-only operations** (when you don't need the full site):
-
-```powershell
-# Build API project only
-dotnet build src/TechHub.Api/TechHub.Api.csproj
-
-# Run API project directly (no orchestration)
-dotnet run --project src/TechHub.Api/TechHub.Api.csproj
-
-# Test API endpoints
-dotnet test tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj
-```
 
 ## Project Structure
 

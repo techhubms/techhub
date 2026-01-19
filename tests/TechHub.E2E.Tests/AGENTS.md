@@ -11,12 +11,17 @@ End-to-end tests using Playwright to verify complete user workflows and function
 **Always use `Run`** - it handles server startup, test execution, and cleanup automatically:
 
 ```powershell
-# Run all tests, then exit (recommended for verifying changes)
-Run -OnlyTests
-
-# Run tests first, then keep servers running for debugging
+# Run all tests (clean build + all tests, then start servers)
 Run
+
+# Run only E2E tests (clean build + E2E tests, then start servers)
+Run -TestProject E2E.Tests
+
+# Run specific E2E tests by name pattern
+Run -TestProject E2E.Tests -TestName UrlRouting
 ```
+
+⚠️ **WARNING**: Direct `dotnet test` commands **WILL FAIL** because servers aren't running. Always use `Run` which handles server startup automatically.
 
 ### Interactive Debugging with Playwright MCP
 
@@ -24,7 +29,7 @@ For investigating bugs or exploring UI behavior interactively:
 
 ```powershell
 # Start servers without running tests
-Run -SkipTests
+Run -WithoutTests
 
 # Then use Playwright MCP tools directly in GitHub Copilot Chat to:
 # - Navigate pages and inspect elements
@@ -39,23 +44,6 @@ Run -SkipTests
 - More powerful than curl/wget for UI testing
 - Investigate bugs, test interactions, verify behavior interactively
 - Afterwards, write E2E tests that reproduce the debugged issues
-
-### Running Specific Tests
-
-**Only when servers are already running** (via `Run -SkipTests`):
-
-```powershell
-# Run all E2E tests
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
-
-# Run specific test file
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests"
-
-# Run single test method
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests.NavigateToSection_DefaultsToAllCollection"
-```
-
-⚠️ **WARNING**: `dotnet test` requires servers at `localhost:5029` (API) and `localhost:5184` (Web). It **WILL FAIL** if servers aren't running. Always prefer `Run -OnlyTests`.
 
 ## Test Architecture
 

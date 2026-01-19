@@ -54,21 +54,40 @@ dotnet build TechHub.slnx /p:ErrorLog=analysis.sarif
 
 ## Test Commands
 
+**Use the Run function** (see [AGENTS.md - Using the Run Function](../../../AGENTS.md#using-the-run-function) for complete documentation):
+
 ```bash
+# Common workflows
+pwsh -Command "Run"                              # Build + all tests + servers
+pwsh -Command "Run -WithoutTests"                # Build + servers (no tests)
+pwsh -Command "Run -WithoutClean"                # Build + all tests + servers (faster)
+pwsh -Command "Run -Rebuild"                     # Clean rebuild only
+
+# Testing workflows
+pwsh -Command "Run -TestProject powershell"      # PowerShell tests only (fast)
+pwsh -Command "Run -TestProject Web.Tests"       # Web component tests only
+pwsh -Command "Run -TestProject E2E.Tests"       # E2E tests only
+pwsh -Command "Run -TestName SectionCard"        # Tests matching 'SectionCard'
+pwsh -Command "Run -TestProject E2E.Tests -TestName Navigation"  # E2E navigation tests
+```
+
+**Low-level dotnet test commands** (for reference only - use Run instead):
+
+```bash
+# ⚠️ WARNING: Use 'Run' function for normal workflows.
+# E2E tests WILL FAIL if you run them directly without servers.
+
 # Run all tests
 dotnet test TechHub.slnx
 
 # Run with verbose output
 dotnet test TechHub.slnx --verbosity normal
 
-# Run specific test project
+# Run specific test project  
 dotnet test tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj
 
 # Run tests matching a filter
 dotnet test TechHub.slnx --filter "FullyQualifiedName~ContentItem"
-
-# Run using Run function (recommended)
-pwsh -Command "Run -OnlyTests"
 ```
 
 ## PowerShell Script Tests
@@ -123,7 +142,7 @@ dotnet format TechHub.slnx
 dotnet format TechHub.slnx --diagnostics IDE0005
 
 # 4. Run all tests
-pwsh -Command "Run -OnlyTests"
+pwsh -Command "Run"
 
 # 5. Verify documentation
 pwsh -File .github/skills/cleanup/scripts/verify-documentation.ps1

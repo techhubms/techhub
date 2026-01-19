@@ -23,53 +23,51 @@ function Run {
         from the command line. It supports cleaning, building, testing, and running both the API
         and Web projects. Uses .NET Aspire for orchestration, service discovery, and observability.
 
-    .PARAMETER Clean
-        Clean all build artifacts before building.
+    .PARAMETER WithoutClean
+        Skip clean build step. By default, Run does a clean build.
 
-    .PARAMETER Build
-        Only build the solution without running the application.
+    .PARAMETER WithoutTests
+        Skip all tests and start servers directly.
 
-    .PARAMETER Test
-        Run all tests before starting the application (servers keep running after tests).
+    .PARAMETER Rebuild
+        Do a clean rebuild only, then exit (don't run tests or start servers).
 
-    .PARAMETER SkipTests
-        Skip tests and start servers directly (for interactive debugging with Playwright MCP).
-        
-        Use this for:
-        - AI agents doing interactive debugging with Playwright MCP tools
-        - Humans manually testing or using Playwright MCP
-        - Fast startup when you don't need to verify all tests first
+    .PARAMETER TestProject
+        Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests").
+        Can be combined with -TestName to further filter tests.
 
-    .PARAMETER OnlyTests
-        Run all tests and exit without starting servers (for CI/automated testing).
-        
-        Use this for:
-        - Automated verification that all changes work correctly
-        - CI/CD pipelines
-        - Final verification before committing changes
+    .PARAMETER TestName
+        Scope tests by name pattern (e.g., "SectionCard", "Repository").
+        Uses dotnet test --filter with FullyQualifiedName~pattern.
+        Can be combined with -TestProject to scope to specific project.
 
     .EXAMPLE
         Run
-        Default: Builds, runs all tests, then starts both API and Web projects.
+        Default: Clean build, run all tests (PowerShell + .NET), then start servers.
 
     .EXAMPLE
-        Run -SkipTests
-        Builds and starts servers without tests (for interactive debugging).
-        AI agents: Use this with Playwright MCP for fast interactive testing!
-        Humans: Use this for manual testing or Playwright MCP exploration.
+        Run -WithoutClean
+        Build without cleaning, run all tests, then start servers.
 
     .EXAMPLE
-        Run -OnlyTests
-        Builds, runs all tests, then exits (for automated verification).
-        Use this when you want to verify all changes work correctly.
+        Run -WithoutTests
+        Clean build and start servers without running tests.
 
     .EXAMPLE
-        Run -Clean -Test
-        Cleans, builds, runs all tests, then starts both projects.
+        Run -Rebuild
+        Clean rebuild only, then exit (for fixing build errors).
 
     .EXAMPLE
-        Run -Build
-        Only builds the solution without running.
+        Run -TestProject TechHub.Web.Tests
+        Clean build, run only Web component tests, then start servers.
+
+    .EXAMPLE
+        Run -TestName SectionCard
+        Clean build, run all tests matching "SectionCard" pattern, then start servers.
+
+    .EXAMPLE
+        Run -TestProject TechHub.E2E.Tests -TestName Navigation
+        Clean build, run E2E tests matching "Navigation" pattern, then start servers.
 
     .NOTES
         Author: Tech Hub Team
@@ -83,19 +81,19 @@ function Run {
         [switch]$Help,
 
         [Parameter(Mandatory = $false)]
-        [switch]$Clean,
+        [switch]$WithoutClean,
 
         [Parameter(Mandatory = $false)]
-        [switch]$Build,
+        [switch]$WithoutTests,
 
         [Parameter(Mandatory = $false)]
-        [switch]$Test,
+        [switch]$Rebuild,
 
         [Parameter(Mandatory = $false)]
-        [switch]$SkipTests,
+        [string]$TestProject,
 
         [Parameter(Mandatory = $false)]
-        [switch]$OnlyTests
+        [string]$TestName
     )
 
     # Show help if requested
@@ -109,27 +107,30 @@ function Run {
         
         Write-Host "OPTIONS:" -ForegroundColor Yellow
         Write-Host "  -Help          Show this help message" -ForegroundColor White
-        Write-Host "  -Build         Build only, don't run servers" -ForegroundColor White
-        Write-Host "  -Clean         Clean build artifacts before building" -ForegroundColor White
-        Write-Host "  -Test          Run all tests before starting servers" -ForegroundColor White
-        Write-Host "  -SkipTests     Skip tests, start servers directly" -ForegroundColor White
-        Write-Host "  -OnlyTests     Run tests only, then exit`n" -ForegroundColor White
+        Write-Host "  -WithoutClean  Skip clean build step (faster)" -ForegroundColor White
+        Write-Host "  -WithoutTests  Skip all tests, start servers directly" -ForegroundColor White
+        Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor White
+        Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests)" -ForegroundColor White
+        Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)`n" -ForegroundColor White
         
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
-        Write-Host "  Run                    Build, test, and start servers (default)" -ForegroundColor Gray
-        Write-Host "  Run -OnlyTests         Run all tests, then exit (for verification)" -ForegroundColor Gray
-        Write-Host "  Run -SkipTests         Skip tests, start servers (for debugging)" -ForegroundColor Gray
-        Write-Host "  Run -Clean             Clean build before starting" -ForegroundColor Gray
-        Write-Host "  Run -Build             Build only, don't run servers`n" -ForegroundColor Gray
+        Write-Host "  Run                          Clean build + all tests + servers (default)" -ForegroundColor Gray
+        Write-Host "  Run -WithoutClean            Build + all tests + servers (faster)" -ForegroundColor Gray
+        Write-Host "  Run -WithoutTests            Clean build + servers (no tests)" -ForegroundColor Gray
+        Write-Host "  Run -Rebuild                 Clean rebuild only" -ForegroundColor Gray
+        Write-Host "  Run -TestProject powershell  Run only PowerShell/Pester tests" -ForegroundColor Gray
+        Write-Host "  Run -TestProject Web.Tests   Run only Web component tests" -ForegroundColor Gray
+        Write-Host "  Run -TestName SectionCard    Run tests matching 'SectionCard'" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -TestName Nav  Run E2E navigation tests`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
-        Write-Host "  Automated testing:     Run -OnlyTests" -ForegroundColor Gray
-        Write-Host "  Interactive debugging: Run -SkipTests" -ForegroundColor Gray
-        Write-Host "  Full clean build:      Run -Clean -OnlyTests`n" -ForegroundColor Gray
+        Write-Host "  Automated testing:     Run" -ForegroundColor Gray
+        Write-Host "  Interactive debugging: Run -WithoutTests" -ForegroundColor Gray
+        Write-Host "  Fix build errors:      Run -Rebuild`n" -ForegroundColor Gray
         
         Write-Host "SERVICES:" -ForegroundColor Yellow
-        Write-Host "  API:       http://localhost:5029 (Swagger: /swagger)" -ForegroundColor Gray
-        Write-Host "  Web:       http://localhost:5184" -ForegroundColor Gray
+        Write-Host "  API:       https://localhost:7153 (Swagger: /swagger)" -ForegroundColor Gray
+        Write-Host "  Web:       https://localhost:7190" -ForegroundColor Gray
         Write-Host "  Dashboard: https://localhost:17101 (Aspire Dashboard)`n" -ForegroundColor Gray
         
         Write-Host "For detailed help: " -NoNewline -ForegroundColor White
@@ -146,6 +147,7 @@ function Run {
 
     # Script-level variables for process management
     $script:appHostProcess = $null
+    $script:serversAlreadyRunning = $false
 
     # Determine workspace root - navigate up from scripts directory
     $workspaceRoot = Split-Path $PSScriptRoot -Parent
@@ -274,245 +276,333 @@ function Run {
         Write-Success "Build completed"
     }
 
-    # Run tests
-    function Invoke-Tests {
+    # Run PowerShell/Pester tests
+    function Invoke-PowerShellTests {
         param(
-            [switch]$OnlyTests
+            [string]$TestName
         )
         
-        # PHASE 1: Run all non-E2E tests first (fast, no server needed)
-        Write-Step "Running unit and integration tests"
+        Write-Step "Running PowerShell/Pester tests"
         Write-Host ""
         
-        # Run all tests except E2E using solution-level test with filter
-        # Integration tests use WebApplicationFactory which manages its own environment
-        $testArgs = @(
-            "test",
-            $solutionPath,
-            "--configuration", $configuration,
-            "--no-build",
-            "--filter", "FullyQualifiedName!~E2E",
-            "--settings", (Join-Path $workspaceRoot ".runsettings"),
-            "--blame-hang-timeout", "1m"
-        )
+        # Call the existing PowerShell test runner script
+        $pwshTestScript = Join-Path $workspaceRoot "scripts/run-powershell-tests.ps1"
         
-        & dotnet @testArgs
+        if (-not (Test-Path $pwshTestScript)) {
+            Write-Warning "PowerShell test script not found: $pwshTestScript"
+            return
+        }
         
-        if ($LASTEXITCODE -ne 0) {
+        try {
+            if ($TestName) {
+                Write-Info "Filtering PowerShell tests by name: $TestName"
+                & $pwshTestScript -TestName $TestName
+            }
+            else {
+                & $pwshTestScript
+            }
+            $pwshExitCode = $LASTEXITCODE
+        }
+        catch {
+            Write-Error "PowerShell test execution failed: $_"
+            $pwshExitCode = 1
+        }
+        
+        Write-Host ""
+        
+        if ($pwshExitCode -ne 0) {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
+            Write-Host "║  ✗ POWERSHELL TESTS FAILED - Cannot continue                 ║" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
-            Write-Host "  Tests failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
+            Write-Host "  PowerShell tests failed with exit code $pwshExitCode" -ForegroundColor Yellow
             Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
             Write-Host ""
             exit 1
         }
         
-        Write-Host ""
-        Write-Success "Unit and integration tests passed"
+        Write-Success "PowerShell tests passed"
+    }
+
+    # Run tests
+    function Invoke-Tests {
+        param(
+            [string]$TestProject,
+            [string]$TestName
+        )
         
-        # PHASE 2: Start AppHost for E2E tests
-        Write-Step "Starting Aspire AppHost for E2E tests"
+        # PHASE 0: Run PowerShell tests FIRST (independent of .NET)
+        if (-not $TestProject -or $TestProject -match "powershell|pester|scripts") {
+            Invoke-PowerShellTests -TestName $TestName
+            Write-Host ""
+        }
         
-        # Start AppHost in background with output capture
-        $script:appHostProcess = $null
-        $script:dashboardUrl = $null
+        # Determine which .NET tests to run based on TestProject parameter
+        $runUnitTests = $true
+        $runE2ETests = $true
         
-        $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $appHostStartInfo.FileName = "dotnet"
-        $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
-        $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
-        $appHostStartInfo.UseShellExecute = $false
-        $appHostStartInfo.RedirectStandardOutput = $false
-        $appHostStartInfo.RedirectStandardError = $false
-        $appHostStartInfo.CreateNoWindow = $false
-        # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
-        # This provides cleaner console output (Error only) and proper test log files
-        $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-        # Keep Aspire orchestration logs (useful for debugging startup issues)
-        # but suppress noisy Microsoft.AspNetCore.* framework logs
-        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
-        # Disable Aspire dashboard authentication for local development (no login token required)
-        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
-        # Disable automatic browser launch in DevContainer (prevents DBus errors)
-        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_OPEN_BROWSER"] = "false"
+        if ($TestProject) {
+            # If TestProject specified, only run that project
+            if ($TestProject -notmatch "E2E") {
+                $runE2ETests = $false
+            }
+            if ($TestProject -match "E2E") {
+                $runUnitTests = $false
+            }
+        }
         
-        $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
-        
-        Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
-        
-        # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
-        Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
-        $maxAttempts = 60
-        $attempt = 0
-        $apiReady = $false
-        $webReady = $false
-        $lastApiError = ""
-        $lastWebError = ""
-        
-        while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
-            Start-Sleep -Seconds 1
-            $attempt++
+        # PHASE 1: Run all non-E2E tests (fast, no server needed)
+        if ($runUnitTests) {
+            Write-Step "Running unit and integration tests"
+            Write-Host ""
             
-            # Show progress every 10 seconds with diagnostic info
-            if ($attempt % 10 -eq 0) {
-                Write-Info "  Still waiting... ($attempt seconds elapsed)"
-                if (-not $apiReady -and $lastApiError) {
-                    Write-Info "    API: $lastApiError"
-                }
-                if (-not $webReady -and $lastWebError) {
-                    Write-Info "    Web: $lastWebError"
-                }
+            # Build filter expression
+            $filterParts = @("FullyQualifiedName!~E2E")
+            
+            if ($TestProject) {
+                # Add project filter
+                $filterParts += "FullyQualifiedName~$TestProject"
             }
             
-            # Check if AppHost is still alive
-            if ($script:appHostProcess.HasExited) {
+            if ($TestName) {
+                # Add name filter
+                $filterParts += "FullyQualifiedName~$TestName"
+            }
+            
+            # Combine filters with & (AND logic)
+            $filter = $filterParts -join "&"
+            
+            # Run all tests except E2E using solution-level test with filter
+            # Integration tests use WebApplicationFactory which manages its own environment
+            $testArgs = @(
+                "test",
+                $solutionPath,
+                "--configuration", $configuration,
+                "--no-build",
+                "--filter", $filter,
+                "--settings", (Join-Path $workspaceRoot ".runsettings"),
+                "--blame-hang-timeout", "1m"
+            )
+            
+            & dotnet @testArgs
+            
+            if ($LASTEXITCODE -ne 0) {
                 Write-Host ""
                 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
+                Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
                 Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
                 Write-Host ""
-                Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
-                Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
+                Write-Host "  Tests failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
+                Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
                 Write-Host ""
-                Write-Host "  This usually means:" -ForegroundColor Cyan
-                Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
-                Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
-                Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
+                exit 1
+            }
+            
+            Write-Host ""
+            Write-Success "Unit and integration tests passed"
+        }
+        
+        # PHASE 2: Run E2E tests (requires servers)
+        if ($runE2ETests) {
+            # Start AppHost for E2E tests
+            Write-Step "Starting Aspire AppHost for E2E tests"
+            
+            # Start AppHost in background with output capture
+            $script:appHostProcess = $null
+            $script:dashboardUrl = $null
+            
+            $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+            $appHostStartInfo.FileName = "dotnet"
+            $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
+            $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
+            $appHostStartInfo.UseShellExecute = $false
+            $appHostStartInfo.RedirectStandardOutput = $false
+            $appHostStartInfo.RedirectStandardError = $false
+            $appHostStartInfo.CreateNoWindow = $false
+            # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
+            # This provides cleaner console output (Error only) and proper test log files
+            $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+            # Keep Aspire orchestration logs (useful for debugging startup issues)
+            # but suppress noisy Microsoft.AspNetCore.* framework logs
+            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+            # Disable Aspire dashboard authentication for local development (no login token required)
+            $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
+            # Disable automatic browser launch in DevContainer (prevents DBus errors)
+            $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_OPEN_BROWSER"] = "false"
+            
+            $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
+            
+            Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
+            
+            # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
+            Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
+            $maxAttempts = 60
+            $attempt = 0
+            $apiReady = $false
+            $webReady = $false
+            $lastApiError = ""
+            $lastWebError = ""
+            
+            while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
+                Start-Sleep -Seconds 1
+                $attempt++
+                
+                # Show progress every 10 seconds with diagnostic info
+                if ($attempt % 10 -eq 0) {
+                    Write-Info "  Still waiting... ($attempt seconds elapsed)"
+                    if (-not $apiReady -and $lastApiError) {
+                        Write-Info "    API: $lastApiError"
+                    }
+                    if (-not $webReady -and $lastWebError) {
+                        Write-Info "    Web: $lastWebError"
+                    }
+                }
+                
+                # Check if AppHost is still alive
+                if ($script:appHostProcess.HasExited) {
+                    Write-Host ""
+                    Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                    Write-Host "║                                                              ║" -ForegroundColor Red
+                    Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
+                    Write-Host "║                                                              ║" -ForegroundColor Red
+                    Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                    Write-Host ""
+                    Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
+                    Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host "  This usually means:" -ForegroundColor Cyan
+                    Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
+                    Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
+                    Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
+                    Write-Host ""
+                    Stop-ExistingProcesses
+                    exit 1
+                }
+                
+                if (-not $apiReady) {
+                    # Use HTTPS endpoint (Aspire configures HTTPS by default)
+                    # -k ignores self-signed certificate validation for local dev
+                    $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7153/health" 2>&1
+                    $exitCode = $LASTEXITCODE
+                    
+                    if ($exitCode -eq 0 -and $curlOutput -match "200$") {
+                        $apiReady = $true
+                        Write-Info "  API ready ✓"
+                    }
+                    elseif ($exitCode -ne 0) {
+                        $lastApiError = "Connection failed (exit code: $exitCode)"
+                    }
+                    else {
+                        $httpCode = ($curlOutput -split "`n")[-1]
+                        $lastApiError = "HTTP $httpCode"
+                    }
+                }
+                
+                if (-not $webReady) {
+                    # Use HTTPS endpoint (Aspire configures HTTPS by default)
+                    # -k ignores self-signed certificate validation for local dev
+                    $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7190/health" 2>&1
+                    $exitCode = $LASTEXITCODE
+                    
+                    if ($exitCode -eq 0 -and $curlOutput -match "200$") {
+                        $webReady = $true
+                        Write-Info "  Web ready ✓"
+                    }
+                    elseif ($exitCode -ne 0) {
+                        $lastWebError = "Connection failed (exit code: $exitCode)"
+                    }
+                    else {
+                        $httpCode = ($curlOutput -split "`n")[-1]
+                        $lastWebError = "HTTP $httpCode"
+                    }
+                }
+            }
+            
+            if (-not $apiReady -or -not $webReady) {
                 Write-Host ""
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ SERVERS FAILED TO START - Cannot continue                 ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
+                if (-not $apiReady) {
+                    Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
+                    Write-Host "    Expected: https://localhost:7153/health" -ForegroundColor Gray
+                }
+                if (-not $webReady) {
+                    Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
+                    Write-Host "    Expected: https://localhost:7190/health" -ForegroundColor Gray
+                }
+                Write-Host ""
+                Write-Host "  Troubleshooting:" -ForegroundColor Cyan
+                Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
+                Write-Host "    2. Try manually: curl -k https://localhost:7153/health" -ForegroundColor Gray
+                Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+                Write-Host ""
+                
+                # Clean up on startup failure
+                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+                    try {
+                        $script:appHostProcess.Kill($false)
+                    }
+                    catch { }
+                    finally {
+                        $script:appHostProcess.Dispose()
+                    }
+                }
                 Stop-ExistingProcesses
                 exit 1
             }
             
-            if (-not $apiReady) {
-                # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                # -k ignores self-signed certificate validation for local dev
-                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7153/health" 2>&1
-                $exitCode = $LASTEXITCODE
-                
-                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                    $apiReady = $true
-                    Write-Info "  API ready ✓"
-                }
-                elseif ($exitCode -ne 0) {
-                    $lastApiError = "Connection failed (exit code: $exitCode)"
-                }
-                else {
-                    $httpCode = ($curlOutput -split "`n")[-1]
-                    $lastApiError = "HTTP $httpCode"
-                }
-            }
+            Write-Success "Services ready"
             
-            if (-not $webReady) {
-                # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                # -k ignores self-signed certificate validation for local dev
-                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7190/health" 2>&1
-                $exitCode = $LASTEXITCODE
-                
-                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                    $webReady = $true
-                    Write-Info "  Web ready ✓"
-                }
-                elseif ($exitCode -ne 0) {
-                    $lastWebError = "Connection failed (exit code: $exitCode)"
-                }
-                else {
-                    $httpCode = ($curlOutput -split "`n")[-1]
-                    $lastWebError = "HTTP $httpCode"
-                }
-            }
-        }
-        
-        if (-not $apiReady -or -not $webReady) {
-            Write-Host ""
-            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ SERVERS FAILED TO START - Cannot continue                 ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-            Write-Host ""
-            Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
-            if (-not $apiReady) {
-                Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
-                Write-Host "    Expected: https://localhost:7153/health" -ForegroundColor Gray
-            }
-            if (-not $webReady) {
-                Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
-                Write-Host "    Expected: https://localhost:7190/health" -ForegroundColor Gray
-            }
-            Write-Host ""
-            Write-Host "  Troubleshooting:" -ForegroundColor Cyan
-            Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
-            Write-Host "    2. Try manually: curl -k https://localhost:7153/health" -ForegroundColor Gray
-            Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+            # PHASE 3: Run E2E tests
+            Write-Step "Running E2E tests"
             Write-Host ""
             
-            # Clean up on startup failure
-            if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                try {
-                    $script:appHostProcess.Kill($false)
-                }
-                catch { }
-                finally {
-                    $script:appHostProcess.Dispose()
-                }
+            # Optimize thread count based on environment
+            if ($env:CI) {
+                Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
             }
-            Stop-ExistingProcesses
-            exit 1
-        }
-        
-        Write-Success "Services ready"
-        
-        # PHASE 3: Run E2E tests
-        Write-Step "Running E2E tests"
-        Write-Host ""
-        
-        # Optimize thread count based on environment
-        if ($env:CI) {
-            Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
-        }
-        else {
-            Write-Info "Local environment - using 8 threads for faster execution"
-            $env:XUNIT_MAX_PARALLEL_THREADS = 8
-        }
-        
-        $e2eTestArgs = @(
-            "test",
-            $e2eTestProjectPath,
-            "--configuration", $configuration,
-            "--no-build",
-            "--settings", (Join-Path $workspaceRoot ".runsettings"),
-            "--logger", "console;verbosity=detailed",
-            "--blame-hang-timeout", "1m"
-        )
-        
-        # Run E2E tests with explicit error action to prevent terminal crash
-        try {
+            else {
+                Write-Info "Local environment - using 8 threads for faster execution"
+                $env:XUNIT_MAX_PARALLEL_THREADS = 8
+            }
+            
+            $e2eTestArgs = @(
+                "test",
+                $e2eTestProjectPath,
+                "--configuration", $configuration,
+                "--no-build",
+                "--settings", (Join-Path $workspaceRoot ".runsettings"),
+                "--logger", "console;verbosity=detailed",
+                "--blame-hang-timeout", "1m"
+            )
+            
+            # Add name filter if specified
+            if ($TestName) {
+                $e2eTestArgs += "--filter"
+                $e2eTestArgs += "FullyQualifiedName~$TestName"
+            }
+            
+            # Run E2E tests with explicit error action to prevent terminal crash
             & dotnet @e2eTestArgs
             $e2eExitCode = $LASTEXITCODE
-        }
-        catch {
-            Write-Error "E2E test execution failed: $_"
-            $e2eExitCode = 1
-        }
-        
-        Write-Host ""
-        Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
-        Write-Host ""
-        
-        if ($e2eExitCode -ne 0) {
-            # E2E tests failed
+            
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
             Write-Host ""
             
-            # In OnlyTests mode, show different message and exit immediately
-            if ($OnlyTests) {
+            if ($e2eExitCode -ne 0) {
+                Write-Host ""
                 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
                 Write-Host "║  ✗ E2E TESTS FAILED                                          ║" -ForegroundColor Red
@@ -520,117 +610,30 @@ function Run {
                 Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
                 Write-Host ""
                 Write-Host "  Tests failed with exit code: $e2eExitCode" -ForegroundColor Yellow
-                Write-Host "  Run with 'Run -SkipTests' to start servers for debugging" -ForegroundColor Cyan
+                Write-Host "  Run with 'Run -WithoutTests' to start servers for debugging" -ForegroundColor Cyan
                 Write-Host ""
-                Write-Info "Stopping AppHost (OnlyTests mode)..."
                 
+                # Stop AppHost on failure
+                Write-Info "Stopping AppHost..."
                 if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
                     try {
-                        # Try graceful shutdown first
-                        $script:appHostProcess.CloseMainWindow() | Out-Null
-                        if (-not $script:appHostProcess.WaitForExit(3000)) {
-                            # Force kill only if graceful shutdown fails
-                            $script:appHostProcess.Kill($false)
-                        }
+                        $script:appHostProcess.Kill($false)
                     }
-                    catch {
-                        # Suppress errors during cleanup
-                    }
+                    catch { }
                     finally {
                         $script:appHostProcess.Dispose()
                     }
                 }
-                
                 Stop-ExistingProcesses
+                
                 exit 1
             }
-            else {
-                # Default mode: Tests failed, keep servers running for debugging
-                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ⚠️  E2E TESTS FAILED - Website still running for debugging   ║" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-                Write-Host ""
-                Write-Host "  Tests failed with exit code: $e2eExitCode" -ForegroundColor Yellow
-                Write-Host "  Website is still running so you can investigate the issues" -ForegroundColor Yellow
-                Write-Host ""
-            }
             
-            # In default mode, continue running for debugging
-        }
-        
-        # OnlyTests mode: Stop AppHost and exit (only if tests passed)
-        if ($OnlyTests) {
-            Write-Info "Stopping AppHost..."
+            Write-Success "E2E tests passed - servers will remain running for development"
             
-            if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                try {
-                    # Try graceful shutdown first
-                    $script:appHostProcess.CloseMainWindow() | Out-Null
-                    if (-not $script:appHostProcess.WaitForExit(3000)) {
-                        # Force kill only if graceful shutdown fails (but don't kill child processes)
-                        $script:appHostProcess.Kill($false)
-                    }
-                }
-                catch {
-                    # Suppress errors during cleanup
-                }
-                finally {
-                    $script:appHostProcess.Dispose()
-                }
-            }
-            
-            Stop-ExistingProcesses
-            Write-Host ""
-            Write-Success "All tests passed!"
-            return
-        }
-        
-        # Default mode: tests passed, show message and keep AppHost running
-        Write-Success "All tests passed!"
-        Write-Host ""
-        Write-Host ""
-        Write-Info "AppHost is running:"
-        Write-Info "  API: https://localhost:7153 (Swagger: https://localhost:7153/swagger)"
-        Write-Info "  Web: https://localhost:7190"
-        Write-Info "  Dashboard: https://localhost:17101 (no login required)"
-        Write-Host ""
-        Write-Host "Press Ctrl+C to stop" -ForegroundColor Yellow
-        
-        # Wait for user to stop (Ctrl+C)
-        try {
-            while ($true) {
-                if ($script:appHostProcess.HasExited) {
-                    Write-Error "`nAppHost stopped unexpectedly"
-                    break
-                }
-                Start-Sleep -Milliseconds 500
-            }
-        }
-        finally {
-            # Clean up when user presses Ctrl+C
-            Write-Info "`nStopping AppHost..."
-            
-            if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                try {
-                    # Try graceful shutdown first
-                    $script:appHostProcess.CloseMainWindow() | Out-Null
-                    if (-not $script:appHostProcess.WaitForExit(3000)) {
-                        # Force kill only if graceful shutdown fails (but don't kill child processes)
-                        $script:appHostProcess.Kill($false)
-                    }
-                }
-                catch {
-                    # Suppress errors during cleanup
-                }
-                finally {
-                    $script:appHostProcess.Dispose()
-                }
-            }
-            
-            Stop-ExistingProcesses
-            Write-Success "AppHost stopped"
+            # Mark that E2E tests already started the servers
+            # so we don't restart them later
+            $script:serversAlreadyRunning = $true
         }
     }
 
@@ -906,59 +909,61 @@ function Run {
         Write-Host "║      Tech Hub Development Runner       ║" -ForegroundColor Cyan
         Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
         
-        # Validate parameter combinations
-        if ($SkipTests -and $OnlyTests) {
-            Write-Error "Cannot use both -SkipTests and -OnlyTests"
-            exit 1
-        }
-        
-        if ($Test -and ($SkipTests -or $OnlyTests)) {
-            Write-Error "Cannot use -Test with -SkipTests or -OnlyTests"
-            exit 1
-        }
-        
-        # Default behavior: Run tests unless explicitly skipped or -Build specified
-        if (-not $Test -and -not $SkipTests -and -not $OnlyTests -and -not $Build) {
-            $Test = $true
-            Write-Info "Running tests by default (use -SkipTests to skip, -OnlyTests to run tests and exit)"
-            Write-Host ""
-        }
-        
         # Validate prerequisites
         Test-Prerequisites
         
         # ALWAYS clean up orphaned processes at start (ports + browsers + test runners)
         Invoke-FullCleanup
         
-        # Clean build artifacts if requested
-        if ($Clean) {
+        # Clean build artifacts by default (skip if -WithoutClean specified)
+        if (-not $WithoutClean) {
             Invoke-Clean
         }
         
-        # Always build (use -Build to build-only)
+        # Always build
         Invoke-Build
         
-        # Test if requested - run tests FIRST before starting servers
-        if ($Test) {
-            Invoke-Tests
-            # If tests pass, continue to start servers normally (unless Build-only mode)
-            Write-Success "`nAll tests passed! Starting servers...`n"
-        }
-        
-        # OnlyTests mode: Run tests then EXIT (don't start servers)
-        if ($OnlyTests) {
-            Invoke-Tests -OnlyTests
-            # Note: Invoke-Tests handles success message and cleanup
-            return
-        }
-        
-        # If only build was requested, exit here
-        if ($Build) {
+        # Rebuild mode: Clean rebuild only, then EXIT
+        if ($Rebuild) {
             Write-Success "`nBuild completed successfully!"
             return
         }
         
-        # Run projects via Aspire AppHost
+        # Test by default unless -WithoutTests specified
+        if (-not $WithoutTests) {
+            Invoke-Tests -TestProject $TestProject -TestName $TestName
+            
+            # If servers are already running from E2E tests, we're done
+            if ($script:serversAlreadyRunning) {
+                Write-Host ""
+                Write-Success "All tests passed! Servers are running and ready for development.`n"
+                Write-Info "Services:"
+                Write-Info "  API: http://localhost:5029 (Swagger: http://localhost:5029/swagger)"
+                Write-Info "  Web: http://localhost:5184"
+                Write-Info "  Dashboard: https://localhost:17101 (Aspire Dashboard)"
+                Write-Host ""
+                Write-Info "Press Ctrl+C to stop"
+                Write-Host ""
+                
+                # Wait for user to stop (Ctrl+C)
+                # The AppHost process is already running, just wait for it to exit
+                try {
+                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+                        $script:appHostProcess.WaitForExit()
+                    }
+                }
+                finally {
+                    Stop-ExistingProcesses
+                    Write-Success "All projects stopped"
+                }
+                
+                return
+            }
+            
+            Write-Success "`nAll tests passed! Starting servers...`n"
+        }
+        
+        # Run projects via Aspire AppHost (only if not already running from E2E tests)
         Start-BothProjects
     }
     catch {

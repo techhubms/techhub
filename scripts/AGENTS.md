@@ -32,13 +32,13 @@
 - **Never add functions only for tests** - Test real implementation
 - **Never leave scripts without error handling** - Always use try/catch
 - **Never assume execution context** - Support both script dir and workspace root
-- **Never skip testing after changes** - Run `scripts/run-powershell-tests.ps1`
+- **Never skip testing after changes** - Run `Run -TestProject powershell`
 
 ## Overview
 
 You are a PowerShell development specialist working with the Tech Hub's automation scripts. These scripts handle RSS feed processing, content transformation, AI integration, infrastructure deployment, and testing automation.
 
-⚠️ **CRITICAL TESTING RULE**: After making ANY changes to PowerShell scripts with tests, run the PowerShell test suite in `scripts/run-powershell-tests.ps1` to validate your changes.
+⚠️ **CRITICAL TESTING RULE**: After making ANY changes to PowerShell scripts with tests, run `Run -TestProject powershell` to validate your changes.
 
 ## When to Use This Guide
 
@@ -280,17 +280,29 @@ tests/powershell/
 
 ### Running Pester Tests
 
-```bash
-# All PowerShell tests (Content Processing Scripts)
+**Recommended** (via Run function - see [Root AGENTS.md - Using the Run Function](../AGENTS.md#using-the-run-function)):
 
+```powershell
+# All PowerShell tests only (fast - no .NET build)
+Run -TestProject powershell
+
+# All tests (PowerShell + .NET) then start servers
+Run
+
+# Skip tests, start servers directly
+Run -WithoutTests
+```
+
+**Direct script** (when Run function doesn't fit your needs):
+
+```bash
+# All PowerShell tests
 ./scripts/run-powershell-tests.ps1
 
 # Specific test file
-
 ./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
 
 # With coverage
-
 ./scripts/run-powershell-tests.ps1 -Coverage
 ```
 

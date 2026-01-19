@@ -75,15 +75,17 @@ See actual tests in `Endpoints/` for implementation examples.
 
 ## Running Tests
 
+**Use the Run function for all test execution** (see [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function)):
+
 ```powershell
-# Run all API tests
-dotnet test tests/TechHub.Api.Tests
+# Run all tests (recommended)
+Run
+
+# Run only API integration tests
+Run -TestProject Api.Tests
 
 # Run specific test class
-dotnet test tests/TechHub.Api.Tests --filter "FullyQualifiedName~SectionsEndpointsTests"
-
-# Run with detailed output
-dotnet test tests/TechHub.Api.Tests --logger "console;verbosity=detailed"
+Run -TestName SectionsEndpoints
 ```
 
 ## Best Practices

@@ -57,7 +57,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **For bug fixes**: Write failing test that reproduces bug, THEN fix it
 - **For new features**: Write tests defining expected behavior, THEN implement
 - **E2E tests are MANDATORY** for ALL UI/frontend changes (URL routing, components, buttons, navigation)
-- **Never skip tests**: Run `Run -OnlyTests` after ANY code change to verify
+- **Never skip tests**: Run `Run` after ANY code change to verify
 - **Clean slate principle**: Fix ALL broken tests before starting new work
 - **No exceptions**: Documentation-only changes are the ONLY case where tests can be skipped
 

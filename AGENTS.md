@@ -1,8 +1,27 @@
 # Tech Hub Development Guide
 
-**AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
+## What is AGENTS.md?
 
-**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
+**This file is specifically for YOU - an AI coding agent.** AGENTS.md files provide the context, instructions, and conventions you need to work effectively on this project. Think of it as a README for agents.
+
+**Why separate from README.md?**
+
+- **README.md** is for humans: quick starts, project descriptions, contribution guidelines
+- **AGENTS.md** is for AI agents: detailed build steps, testing workflows, coding conventions, and precise instructions that might clutter a README
+
+**How to use this file**:
+
+- This is your **primary source of truth** for how to work on Tech Hub
+- Follow the [10-step AI Assistant Workflow](#ai-assistant-workflow) for every task
+- When working in a specific domain (e.g., `src/`, `tests/`, `tests/TechHub.Web`, `src/TechHub.Api`, etc), **ALSO** read the domain-specific `AGENTS.md` in that directory
+- Nested AGENTS.md files provide specialized instructions for their domain
+- Human developers can read this too, but it's optimized for your consumption
+
+**Learn more about AGENTS.md**: <https://agents.md/>
+
+---
+
+**🚨 ABSOLUTELY CRITICAL**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 
 ## Index
 
@@ -19,13 +38,12 @@
   - [8. Validate & Fix](#8-validate--fix)
   - [9. Update Documentation](#9-update-documentation)
   - [10. Report Completion](#10-report-completion)
-- [Starting & Stopping the Website](#starting--stopping-the-website)
+- [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website)
   - [Starting the Website](#starting-the-website)
-  - [Testing the Running Website](#testing-the-running-website)
-  - [If CLI Tools Are Absolutely Required](#if-cli-tools-are-absolutely-required)
+  - [Testing Workflows and Strategies](#testing-workflows-and-strategies)
   - [Stopping the Website](#stopping-the-website)
-  - [Run Function Parameters (for AI Agents)](#run-function-parameters-for-ai-agents)
-  - [Building/Testing Individual Projects](#buildingtesting-individual-projects)
+  - [Using the Run Function](#using-the-run-function)
+  - [Advanced Development Scenarios](#advanced-development-scenarios)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
   - [Documentation Placement Strategy](#documentation-placement-strategy)
@@ -382,8 +400,12 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 **Running and Testing**:
 
-- See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions
-- Quick reference: Use `Run -OnlyTests` for automated testing, `Run -SkipTests` for interactive debugging
+- See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete instructions on:
+  - How to start the website with the `Run` function
+  - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
+  - When to use `-WithoutTests` vs other parameters
+  - How to safely interact with the running website
+- Quick reference: Use `Run` for default workflow, `Run -WithoutTests` for interactive debugging
 
 **Critical Requirements**:
 
@@ -431,12 +453,13 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 **Run Full Test Suite**:
 
-- **For AI agents**: Use `Run -OnlyTests` to run all tests (unit, integration, component, E2E) and exit
-- **For humans**: Use `Run` to run tests and keep servers running for interactive debugging
+- **Default workflow**: Use `Run` to run all tests, then start servers
+- **Scoped testing**: Use `Run -TestProject <name>` to run specific test projects
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
 - **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
 - Use test scripts appropriate for the domain you're working in
+- See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete testing workflows
 - See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategy
 
 **Check for Regressions**:
@@ -550,7 +573,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 - Never stop working until task is complete
 - Include all relevant details in completion report
 
-## Starting & Stopping the Website
+## Starting, Stopping and Testing the Website
 
 **🚨 CRITICAL FOR AI AGENTS**: This section defines how to properly start, interact with, and stop the running website without breaking it.
 
@@ -563,17 +586,15 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 # Default behavior: runs tests, then keeps servers running
 Run
 
-# For automated testing (AI agents verifying changes)
-Run -OnlyTests
-
 # For interactive debugging with Playwright MCP (AI agents AND humans)
-Run -SkipTests
+# Skip all tests, start servers directly
+Run -WithoutTests
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
 🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
-✅ **ALWAYS** use `Run -OnlyTests` which handles server startup, testing, and shutdown automatically.
+✅ **ALWAYS** use `Run` (runs all tests including E2E, then starts servers) or `Run -TestProject E2E.Tests` for E2E tests only.
 
 **CRITICAL RULES**:
 
@@ -581,8 +602,8 @@ Run -SkipTests
 ✅ **DO**: Let it run in the background - NEVER touch that terminal again  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
-✅ **DO**: Use `Run -OnlyTests` for automated testing (run all tests, verify changes, exit)
-✅ **DO**: Use `Run -SkipTests` for interactive debugging (AI agents AND humans using Playwright MCP)
+✅ **DO**: Use `Run -WithoutTests` for interactive debugging (skip tests, start servers)
+✅ **DO**: Use `Run -TestProject <project>` to run specific test projects
 
 🚫 **NEVER**: Type ANY command in the terminal running the website  
 🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
@@ -591,7 +612,113 @@ Run -SkipTests
 
 **Why This Matters**: ANY interaction with the terminal running the website (typing a command, pressing Enter, Ctrl+C accidentally) will **IMMEDIATELY SHUTDOWN** the website and cause the command to fail.
 
-### Testing the Running Website
+### Testing Workflows and Strategies
+
+#### When to Run Tests - Decision Tree
+
+**Simple decision tree for running tests**:
+
+```text
+┌─────────────────────────────────────────────────────┐
+│ What are you doing?                                 │
+└─────────────────────────────────────────────────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+  
+  📝 Changed        🐛 Fixing         🔍 Exploring/
+  any code?         a bug?            Debugging?
+        │               │                   │
+        ▼               ▼                   ▼
+  Run               Run -WithoutTests  Run -WithoutTests
+  (verify all       (debug first,      (explore with
+   tests pass)       write test,        Playwright MCP
+                     then fix)          interactively)
+
+  📜 Changed PowerShell scripts only?
+        │
+        ▼
+  Run -TestProject powershell
+  (fast - only PowerShell/Pester tests,
+   no .NET build or E2E tests)
+```
+
+#### Quick Reference
+
+**Run (default) - ✅ Most Common**:
+
+- Use when: You changed ANY code (C#, JavaScript, PowerShell, templates)
+- What it does: Clean build, runs ALL tests (PowerShell, unit, integration, component, E2E), then starts servers
+- When: Default workflow - verifies tests pass then keeps servers running
+
+**Run -WithoutTests**:
+
+- Use when: Debugging, exploring behavior, using Playwright MCP interactively
+- What it does: Clean build, starts servers, skips all tests
+- When: Investigating bugs, manual testing, interactive exploration
+
+**Run -WithoutClean**:
+
+- Use when: Quick iteration during development (tests already passing)
+- What it does: Build (without clean), runs all tests, then starts servers
+- When: Fast development loop when no major changes
+
+#### What Tests Get Run?
+
+All `Run` commands execute these test types (unless `-WithoutTests` is specified):
+
+1. **PowerShell Tests** - Script validation (Pester) - **RUN FIRST**
+   - Location: `tests/powershell`
+   - Tests content processing scripts
+   - Independent of .NET build/tests
+
+2. **Unit Tests** - Fast, isolated tests of individual classes/methods
+   - Location: `tests/TechHub.Core.Tests`, `tests/TechHub.Infrastructure.Tests`
+
+3. **Integration Tests** - API endpoints, data access
+   - Location: `tests/TechHub.Api.Tests`
+
+4. **Component Tests** - Blazor components (bUnit)
+   - Location: `tests/TechHub.Web.Tests`
+
+5. **E2E Tests** - Full user workflows (Playwright)
+   - Location: `tests/TechHub.E2E.Tests`
+   - 🚨 **MANDATORY** for ALL UI/frontend changes
+
+#### When to Run Specific Test Types
+
+**Changed C# backend code?** → `Run`
+
+**Changed Blazor components?** → `Run` (E2E tests **MANDATORY**)
+
+**Changed PowerShell scripts?** → `Run -TestProject powershell` (fast - only PowerShell tests, no .NET build)
+
+**Changed markdown/content?** → No tests needed
+
+**Not sure what you changed?** → `Run`
+
+**Testing specific area?** → Use `-TestProject` and/or `-TestName`:
+
+- `Run -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
+- `Run -TestProject Web.Tests` - Run only Web component tests
+- `Run -TestName SectionCard` - Run tests matching 'SectionCard'
+- `Run -TestProject E2E -TestName Navigation` - Run E2E navigation tests
+- `Run -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
+
+#### Testing Best Practices
+
+✅ **Always run tests BEFORE committing**
+✅ **Write tests FIRST, then implement** (Test-Driven Development)
+✅ **Fix ALL broken tests before starting new work**
+✅ **Run full suite after refactoring**
+
+🚫 **Never commit failing tests**
+🚫 **Never skip E2E tests for UI changes**
+🚫 **Never run E2E tests manually without servers** (use `Run` instead)
+
+**For detailed testing patterns**, see [tests/AGENTS.md](tests/AGENTS.md) and domain-specific test AGENTS.md files.
+
+#### Interactive Testing with Playwright MCP
 
 **ALWAYS use Playwright MCP tools directly in GitHub Copilot Chat** - NO terminal commands needed:
 
@@ -624,7 +751,7 @@ mcp_playwright_browser_type(element: "input field", text: "test query")
 - Allows complex interactions (click, type, navigate)
 - Can verify page state and behavior
 
-### If CLI Tools Are Absolutely Required
+#### If CLI Tools Are Absolutely Required
 
 **ONLY if Playwright MCP cannot accomplish the task**, and you MUST use curl/wget/other CLI tools:
 
@@ -658,92 +785,54 @@ curl http://localhost:5184/api/sections
 - Port cleanup on exit
 - Clean console output (warnings/errors only, info logs suppressed)
 
-### Run Function Parameters (for AI Agents)
+### Using the Run Function
 
-**Common Options**:
+The `Run` function is your **primary tool** for building, testing, and running the Tech Hub website. It handles all standard development workflows automatically.
 
-- **Default** (no args) - Run tests, then keep servers running
-- `-OnlyTests` - Run all tests, then exit (for automated testing and verification)
-- `-SkipTests` - Skip tests, start servers directly (for interactive debugging with Playwright MCP)
-  - **AI agents**: Use this when investigating bugs, testing UI, or exploring behavior interactively
-  - **Humans**: Use this when manually testing or using Playwright MCP tools
-  - **Why**: Playwright MCP is faster than writing tests for exploration and debugging
-- `-Clean` - Clean all build artifacts before building
-- `-Build` - Build only, don't run servers
-
-**Examples**:
+**Common Workflows**:
 
 ```powershell
-# Automated testing - verify all changes work
-Run -OnlyTests
+# Default: Build + test + run servers
+Run                     # Clean build, all tests, then keep servers running
+Run -WithoutClean       # Skip clean, all tests, then keep servers running
 
-# Interactive debugging - AI agents OR humans using Playwright MCP
-Run -SkipTests
+# Interactive debugging (no tests)
+Run -WithoutTests       # Clean build, skip all tests, start servers only
 
-# Default - run tests first, then keep servers running
-Run
-
-# Clean build and test first
-Run -Clean
-
-# Build only, don't run
-Run -Build
+# Only rebuild (no tests, no servers)
+Run -Rebuild            # Clean rebuild only, then exit
 ```
 
-**Built-in Features**:
-
-- **Port Cleanup**: Automatically kills processes using required ports before starting
-- **Ctrl+C Handling**: Properly stops all processes and cleans up ports when interrupted
-- **Conflict Prevention**: Safe to run even if ports are already in use
-- **Health Checks**: Verifies services are responding before declaring ready
-
-### Building/Testing Individual Projects
-
-**ALWAYS prefer the Run function for build and test operations**:
+**Testing Workflows**:
 
 ```powershell
-# Build and test everything (recommended)
-Run -OnlyTests
+# Test specific projects
+Run -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
+Run -TestProject Web.Tests      # Web component tests only
+Run -TestProject E2E.Tests      # E2E tests only (requires servers)
 
-# Build everything with clean slate
-Run -Clean -OnlyTests
+# Test by name pattern (substring match)
+Run -TestName SectionCard       # All tests with "SectionCard" in name
+Run -TestName Navigation        # All tests with "Navigation" in name
 
-# Build only
-Run -Build
+# Combine project + name filters
+Run -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
+Run -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
 ```
 
-**Only use low-level dotnet commands when the Run function doesn't support the operation**:
+**Key Features**:
 
-```powershell
-# Restore NuGet packages (not in Run function)
-dotnet restore
+- **Automatic hot reload**: Changes recompile automatically via `dotnet watch`
+- **Integrated testing**: Runs PowerShell, unit, integration, component, and E2E tests
+- **Server orchestration**: Uses Aspire AppHost to manage API + Web together
+- **Clean shutdown**: Press `Ctrl+C` for graceful cleanup
 
-# Clean build artifacts only (without rebuild)
-dotnet clean TechHub.slnx
+**When to use advanced dotnet commands**: See [Advanced Development Scenarios](#advanced-development-scenarios) below for Entity Framework migrations, test diagnostics, and specialized operations.
 
-# Watch mode for development (not in Run function)
-dotnet watch --project src/TechHub.Api/TechHub.Api.csproj
-dotnet watch --project src/TechHub.Web/TechHub.Web.csproj
+## Advanced Development Scenarios
 
-# Code coverage (not in Run function)
-dotnet test --collect:"XPlat Code Coverage"
-
-# Entity Framework migrations (future, not in Run function)
-dotnet ef migrations add MigrationName --project src/TechHub.Infrastructure
-dotnet ef database update --project src/TechHub.Api
-
-# Global tools management (not in Run function)
-dotnet tool install --global dotnet-ef
-dotnet tool update --global dotnet-ef
-```
-
-**Why prefer the Run function**:
-
-- Handles server startup/shutdown correctly
-- Runs E2E tests with proper infrastructure
-- Cleans up ports automatically
-- Provides consistent experience across operations
-- Prevents common errors (like running E2E tests without servers)
+**🚨 IMPORTANT**: The `Run` function handles all standard development workflows (build, test, run). The commands below are for **advanced scenarios only** that `Run` doesn't support.
+**⚠️ WARNING**: Direct `dotnet test` commands will **FAIL for E2E tests** because servers aren't running. Always use `Run` for normal testing workflows.
 
 ## Documentation Architecture
 
@@ -908,7 +997,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 **Working on PowerShell scripts?**
 
 1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
+2. Review [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for build/test commands
 
 **Working on content?**
 
@@ -926,7 +1015,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
    - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
    - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
    - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
-3. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
+3. Review [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for build/test commands
 
 **Understanding system behavior?**
 

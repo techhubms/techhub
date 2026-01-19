@@ -51,7 +51,34 @@ For complete implementation details, patterns, and best practices, see [scripts/
 
 ## Running Tests
 
-### From Repository Root
+**🚨 ALWAYS prefer the Run function over direct script execution.**
+
+See [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function) for complete documentation.
+
+### Using Run Function (Recommended)
+
+```powershell
+# All PowerShell tests only (fast - no .NET build)
+Run -TestProject powershell
+
+# PowerShell tests by name pattern
+Run -TestProject powershell -TestName "RSS"
+Run -TestProject powershell -TestName "FrontMatter"
+
+# All tests (PowerShell + .NET), then start servers
+Run
+
+# Skip all tests, start servers directly
+Run -WithoutTests
+```
+
+**Aliases**: The following are equivalent:
+
+- `Run -TestProject powershell`
+- `Run -TestProject pester`
+- `Run -TestProject scripts`
+
+### Direct Script Execution (Only When Run Doesn't Support Operation)
 
 ```bash
 # All PowerShell tests
@@ -77,7 +104,7 @@ For complete implementation details, patterns, and best practices, see [scripts/
 
 ### From VS Code
 
-Use the integrated terminal and run the commands above. The test runner will automatically detect the DevContainer environment.
+Use the integrated terminal and run the Run function commands above. The test runner will automatically detect the DevContainer environment.
 
 ## Testing Framework
 

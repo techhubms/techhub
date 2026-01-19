@@ -71,15 +71,20 @@ See actual tests for implementation examples.
 
 ## Running Tests
 
+**Use the Run function for all test execution** (see [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function)):
+
 ```powershell
-# Run all Infrastructure tests
-dotnet test tests/TechHub.Infrastructure.Tests
+# Run all tests (recommended)
+Run
+
+# Run only Infrastructure tests
+Run -TestProject Infrastructure.Tests
 
 # Run specific test class
-dotnet test tests/TechHub.Infrastructure.Tests --filter "FullyQualifiedName~FrontMatterParserTests"
+Run -TestName FrontMatterParser
 
 # Run repository tests only
-dotnet test tests/TechHub.Infrastructure.Tests --filter "FullyQualifiedName~Repository"
+Run -TestName Repository
 ```
 
 ## Best Practices

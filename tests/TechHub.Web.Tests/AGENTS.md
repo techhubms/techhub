@@ -74,15 +74,17 @@ See actual tests in `Components/` and bUnit documentation for examples.
 
 ## Running Tests
 
+**Use the Run function for all test execution** (see [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function)):
+
 ```powershell
-# Run all Blazor component tests
-dotnet test tests/TechHub.Web.Tests
+# Run all tests (recommended)
+Run
+
+# Run only Web component tests
+Run -TestProject Web.Tests
 
 # Run specific component tests
-dotnet test tests/TechHub.Web.Tests --filter "FullyQualifiedName~SectionCardTests"
-
-# Run with detailed output
-dotnet test tests/TechHub.Web.Tests --logger "console;verbosity=detailed"
+Run -TestName SectionCard
 ```
 
 ## Best Practices

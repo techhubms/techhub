@@ -46,7 +46,7 @@ Implement client-side tag and date filtering for Tech Hub content discovery. Use
 5. Verify behavior (will use Playwright MCP for testing)
 6. Tests first (TDD enforced)
 7. Implementation (after tests)
-8. Validate & fix (Run -OnlyTests)
+8. Validate & fix (Run)
 9. Update documentation (docs/filtering-system.md rewrite required)
 10. Report completion
 

@@ -67,15 +67,17 @@ See actual tests in `Models/` for implementation examples.
 
 ## Running Tests
 
+**Use the Run function for all test execution** (see [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function)):
+
 ```powershell
-# Run all Core tests
-dotnet test tests/TechHub.Core.Tests
+# Run all tests (recommended)
+Run
+
+# Run only Core unit tests
+Run -TestProject Core.Tests
 
 # Run specific test class
-dotnet test tests/TechHub.Core.Tests --filter "FullyQualifiedName~ContentItemTests"
-
-# Run with code coverage
-dotnet test tests/TechHub.Core.Tests --collect:"XPlat Code Coverage"
+Run -TestName ContentItem
 ```
 
 ## Best Practices
